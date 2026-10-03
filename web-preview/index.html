@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Video Recap Maker — Preview</title>
+  <style>
+    :root{--bg:#0b1020;--panel:#121a2d;--panel2:#182238;--text:#f7f9ff;--muted:#9ba9c4;--line:#26324c;--accent:#8b5cf6;--accent2:#6d28d9;--ok:#22c55e}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 20% 0,#1c2444 0,transparent 34%),var(--bg);color:var(--text);min-height:100vh}
+    .shell{max-width:980px;margin:0 auto;padding:28px 18px 72px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}.brand h1{font-size:30px;margin:0 0 6px}.brand p{margin:0;color:var(--muted)}.badge{font-size:12px;background:#241b43;color:#c4b5fd;border:1px solid #49337d;border-radius:999px;padding:8px 11px;white-space:nowrap}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.card{background:linear-gradient(180deg,var(--panel),#0f1728);border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 20px 60px #0005}.title{font-weight:700;font-size:16px;margin-bottom:10px}.upload{border:1px dashed #455372;border-radius:20px;padding:28px;text-align:center;background:#0d1425;cursor:pointer;transition:.2s}.upload:hover{border-color:#8b5cf6}.upload .icon{font-size:34px;margin-bottom:8px}.small{font-size:12px;color:var(--muted)}.file{margin-top:12px;color:#d7def0;font-size:14px;min-height:20px}.section{margin-top:18px}.chips{display:flex;flex-wrap:wrap;gap:9px}.chip{border:1px solid var(--line);background:#0e1628;color:#cbd5e1;border-radius:999px;padding:9px 13px;cursor:pointer}.chip.active{border-color:#8b5cf6;background:#2b1f4a;color:white}.primary{margin-top:22px;width:100%;border:0;border-radius:16px;padding:15px 18px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 10px 30px #6d28d944}.primary:disabled{opacity:.45;cursor:not-allowed}.status{display:none;margin-top:16px}.bar{height:10px;border-radius:999px;background:#0d1424;border:1px solid var(--line);overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#22d3ee);transition:width .45s}.steps{margin-top:12px;color:#d6dded;font-size:14px}.preview{aspect-ratio:16/9;border-radius:18px;background:linear-gradient(145deg,#1f2b45,#0a0f1c);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.preview:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:#7c3aed33;filter:blur(10px)}.play{z-index:1;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:white;color:#111827;font-size:22px}.result{display:none}.script{width:100%;min-height:150px;margin-top:10px;border-radius:16px;border:1px solid var(--line);background:#0c1425;color:#e8edf9;padding:14px;resize:vertical}.actions{display:flex;gap:10px;margin-top:12px}.secondary{flex:1;border:1px solid var(--line);background:#121a2d;color:white;border-radius:14px;padding:12px;cursor:pointer}.metric{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.metric div{background:#0c1425;border:1px solid var(--line);border-radius:14px;padding:12px}.metric b{display:block;font-size:18px}.metric span{font-size:11px;color:var(--muted)}.note{margin-top:18px;padding:14px;border-radius:16px;background:#0e1b2a;border:1px solid #1e3a4a;color:#b8cadb;font-size:13px;line-height:1.5}.footer{margin-top:24px;text-align:center;color:#71809d;font-size:12px}@media(max-width:760px){.grid{grid-template-columns:1fr}.top{align-items:flex-start}.brand h1{font-size:25px}.metric{grid-template-columns:1fr 1fr}.badge{display:none}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <div class="top"><div class="brand"><h1>AI Video Recap Maker</h1><p>Private, local-first recap creation for videos you own or may use.</p></div><div class="badge">Browser Preview Mode</div></div>
+  <div class="grid">
+    <section class="card">
+      <div class="title">1. Select Video</div>
+      <label class="upload" for="video"><div class="icon">🎬</div><b>Choose a movie or video</b><div class="small">This browser preview does not upload your file.</div><div class="file" id="fileName">No video selected</div></label>
+      <input id="video" type="file" accept="video/*" hidden />
+
+      <div class="section"><div class="title">2. Recap Length</div><div class="chips" data-group="length"><button class="chip active">1 min</button><button class="chip">3 min</button><button class="chip">5 min</button><button class="chip">10 min</button></div></div>
+      <div class="section"><div class="title">3. Language</div><div class="chips" data-group="lang"><button class="chip active">မြန်မာ</button><button class="chip">English</button></div></div>
+      <div class="section"><div class="title">4. Style</div><div class="chips" data-group="style"><button class="chip active">Storytelling</button><button class="chip">Short & Fast</button><button class="chip">Dramatic</button><button class="chip">Funny</button></div></div>
+      <button id="create" class="primary" disabled>✨ Create Recap</button>
+      <div id="status" class="status"><div class="bar"><i id="progress"></i></div><div id="step" class="steps">Preparing video…</div></div>
+    </section>
+
+    <section class="card">
+      <div class="title">Result Preview</div>
+      <div class="preview"><div class="play">▶</div></div>
+      <div id="empty"><div class="note">Choose a video and press <b>Create Recap</b> to preview the app flow. The real Android app performs transcription, recap generation, scene selection, subtitles, narration and MP4 rendering on-device.</div></div>
+      <div id="result" class="result">
+        <div class="metric"><div><b id="mLength">1 min</b><span>Recap length</span></div><div><b>Local</b><span>Processing</span></div><div><b>MP4</b><span>Export</span></div></div>
+        <div class="section"><div class="title">Edit Script</div><textarea class="script">The video is analyzed locally. Important moments are selected and arranged into a concise recap. You can edit this script and re-render before sharing the final MP4.</textarea></div>
+        <div class="actions"><button class="secondary">↻ Re-render</button><button class="secondary">Share MP4</button></div>
+      </div>
+    </section>
+  </div>
+  <div class="footer">AI Video Recap Maker • Preview only • No paid API or backend required</div>
+</div>
+<script>
+  let chosen=false; const input=document.getElementById('video'), create=document.getElementById('create');
+  input.addEventListener('change',()=>{if(input.files[0]){chosen=true;document.getElementById('fileName').textContent=input.files[0].name;create.disabled=false;}});
+  document.querySelectorAll('.chips').forEach(group=>group.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click',()=>{group.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));btn.classList.add('active');})));
+  create.addEventListener('click',()=>{if(!chosen)return; const status=document.getElementById('status'),bar=document.getElementById('progress'),step=document.getElementById('step');status.style.display='block';create.disabled=true;const stages=[['Preparing video…',12],['Transcribing audio…',32],['Understanding story…',50],['Selecting best scenes…',68],['Creating narration…',80],['Generating subtitles…',90],['Rendering MP4…',100]];let i=0;const timer=setInterval(()=>{step.textContent=stages[i][0];bar.style.width=stages[i][1]+'%';i++;if(i===stages.length){clearInterval(timer);setTimeout(()=>{step.textContent='Preview ready ✓';document.getElementById('empty').style.display='none';document.getElementById('result').style.display='block';document.getElementById('mLength').textContent=document.querySelector('[data-group="length"] .active').textContent;create.disabled=false;},500)}},480)});
+</script>
+</body>
+</html>
