@@ -19,6 +19,9 @@ jobs:
           unzip -q /tmp/academy-source.zip
           curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-v5-patch.zip https://futurecode-movie-recap.floot.app/_cdn/static/815b544d-ada4-4c6b-aa5a-2c5c79ea0850-future-code-studio-beta5-update.zip
           unzip -q -o /tmp/academy-v5-patch.zip
+          curl --fail --location --retry 2 --silent --show-error --output /tmp/recap-pro-v6.zip https://futurecode-movie-recap.floot.app/_cdn/static/251f2da7-c615-47a6-91fc-ef47634a5227-future-code-recap-pro-beta6-patch.zip
+          unzip -q -o /tmp/recap-pro-v6.zip
+          grep -q 'Movie Recap Pro Editor' video_studio_rebuild/training-app/assets/sections/recap-studio.html
 
           test -s video_studio_rebuild/training-app/assets/index.html
           test -s video_studio_rebuild/training-app/assets/sections/academy.html
@@ -62,11 +65,11 @@ jobs:
           PY
           "$BT/zipalign" -f -p 4 build/academy/base.apk build/academy/aligned.apk
           keytool -genkeypair -v -keystore build/academy/beta.keystore -alias beta -keyalg RSA -keysize 2048 -validity 90 -storepass changeme -keypass changeme -dname 'CN=Future Code Beta, O=Future Code, C=MM' -noprompt
-          "$BT/apksigner" sign --ks build/academy/beta.keystore --ks-key-alias beta --ks-pass pass:changeme --key-pass pass:changeme --out build/academy/Future-Code-AI-Video-Studio-BETA-v5.apk build/academy/aligned.apk
-          "$BT/apksigner" verify --verbose build/academy/Future-Code-AI-Video-Studio-BETA-v5.apk
+          "$BT/apksigner" sign --ks build/academy/beta.keystore --ks-key-alias beta --ks-pass pass:changeme --key-pass pass:changeme --out build/academy/Future-Code-AI-Video-Studio-BETA-v6.apk build/academy/aligned.apk
+          "$BT/apksigner" verify --verbose build/academy/Future-Code-AI-Video-Studio-BETA-v6.apk
       - uses: actions/upload-artifact@v4
         with:
-          name: Future-Code-AI-Video-Studio-BETA-v5
-          path: build/academy/Future-Code-AI-Video-Studio-BETA-v5.apk
+          name: Future-Code-AI-Video-Studio-BETA-v6
+          path: build/academy/Future-Code-AI-Video-Studio-BETA-v6.apk
           retention-days: 7
           if-no-files-found: error
