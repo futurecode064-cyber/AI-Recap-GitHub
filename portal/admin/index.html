@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="my"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Future Code · Admin Dashboard</title><link rel="stylesheet" href="../theme.css"><meta name="robots" content="noindex,nofollow"></head>
+<body><main class="container">
+<header class="mast"><div class="logo">FC</div><div><div class="eyebrow">FUTURE CODE AI STUDIO · ADMIN ONLY</div><h1>သင်တန်းသား စီမံခန့်ခွဲမှု</h1></div></header>
+<section class="panel" id="loginPanel" style="max-width:520px;margin:auto"><h2>Admin Login</h2><p class="muted">Admin ကပဲ Student Account ဖွင့်ပေးနိုင်ပါတယ်။</p>
+<form id="loginForm"><label class="field">Username<input id="loginName" autocomplete="username" required></label>
+<label class="field">Password<input id="loginPassword" type="password" autocomplete="current-password" required></label>
+<button type="submit" class="primary">Admin Login</button></form></section>
+<div id="dashboard" class="hidden"><div class="flex"><button id="refresh" class="secondary">↻ Refresh Data</button><button id="logout" class="secondary">Logout</button></div>
+<div class="grid"><section class="panel"><h2>➕ Student Account ဖွင့်ရန်</h2>
+<form id="createForm"><label class="field">Username<input id="newName" autocomplete="off" pattern="[a-z0-9._-]{3,40}" minlength="3" required></label>
+<label class="field">Password (အနည်းဆုံး 4 လုံး)<input id="newPassword" type="password" minlength="4" maxlength="128" autocomplete="new-password" required></label>
+<button type="submit" class="primary">Create Student</button></form>
+<p class="muted">Username တစ်ခုကို ဖုန်း သို့မဟုတ် ကွန်ပျူတာ တစ်လုံးနဲ့သာ စတင်ချိတ်ဆက်နိုင်ပါတယ်။</p></section>
+<section class="panel"><h2>📣 ကြေညာချက်</h2><form id="announcementForm"><label class="field">Announcement<textarea id="announcement" rows="4" maxlength="2000" required></textarea></label><button class="secondary" type="submit">Publish Announcement</button></form></section></div>
+<section class="panel"><h2>👥 Student Accounts</h2><p class="muted">Reset Device လုပ်ရင် အရင်ဖုန်း/Browser Session ပိတ်သွားပါမယ်။</p><div id="students"></div></section>
+<section class="panel"><h2>🗂 Section Control</h2><div id="sectionList"></div></section>
+<section class="panel"><h2>🔐 Admin Password ပြောင်းရန်</h2>
+<form id="changePasswordForm"><label class="field">New Admin Password<input id="newAdminPassword" type="password" minlength="4" maxlength="128" autocomplete="new-password" required></label>
+<button type="submit" class="secondary">Change Password & Logout</button></form></section></div>
+<p id="status" class="status" role="status" aria-live="polite"></p>
+<footer>Future Code AI Studio · Secure Backend</footer></main>
+<script>
+"use strict";
+const API="https://mxwervqihaqlxybghdak.supabase.co/functions/v1/video-studio-gate";
+const $=id=>document.getElementById(id),tokenKey="future_code_video_studio_admin_session";
+let token=sessionStorage.getItem(tokenKey)||"";
+function say(msg,bad=false){$("status").textContent=msg;$("status").classList.toggle("error",bad)}
+function create(tag,txt,cls){const n=document.createElement(tag);if(txt!=null)n.textContent=txt;if(cls)n.className=cls;return n}
+async function api(action,data={}){const res=await fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...data,action,token})});let val;try{val=await res.json()}catch{throw Error("Server response မမှန်ပါ")}if(!res.ok)throw Error(val.error||"Server error");return val}
+function show(yes){$("dashboard").classList.toggle("hidden",!yes);$("loginPanel").classList.toggle("hidden",yes)}
+function button(text,fn,bad=false){const n=create("button",text,bad?"danger":"secondary");n.type="button";n.onclick=fn;return n}
+async function edit(action,user,extra={}){if(!confirm(user.username+" — "+action+" လုပ်မလား?"))return;try{await api(action,{user_id:user.id,...extra});say("✓ "+user.username+" ပြင်ပြီးပါပြီ");await reload()}catch(e){say(e.message,true)}}
+async function reload(){
+try{const data=await api("admin_list");show(true);$("students").replaceChildren();
+for(const u of data.users||[]){
+const row=create("div",null,"record"),info=create("div"),title=create("strong",u.username),desc=create("small",(u.disabled?"Disabled":"Active")+" • "+(u.device_bound?"📱 Device Bound":"No device"));
+info.append(title,desc);const actions=create("div",null,"flex");
+actions.append(
+button("Device Reset",()=>edit("admin_reset_device",u)),
+button(u.disabled?"Enable":"Disable",()=>edit("admin_toggle_user",u,{disabled:!u.disabled}),!u.disabled),
+button("Password Reset",()=>{const password=prompt("New Student Password (4+ characters)");if(password===null)return;if(password.length<4)return say("Password 4 လုံးအနည်းဆုံးလိုပါတယ်",true);edit("admin_reset_password",u,{password})})
+);row.append(info,actions);$("students").append(row)}
+if(!(data.users||[]).length)$("students").append(create("p","Student မရှိသေးပါ","muted"));
+$("sectionList").replaceChildren();
+for(const s of data.sections||[]){
+const row=create("label",null,"record row"),name=create("span",s.title),check=document.createElement("input");
+check.type="checkbox";check.checked=!!s.enabled;check.setAttribute("aria-label","Enable "+s.title);
+check.onchange=async()=>{try{await api("admin_set_section",{section_key:s.section_key,enabled:check.checked});say("✓ "+s.title+" updated")}catch(e){check.checked=!check.checked;say(e.message,true)}};
+row.append(name,check);$("sectionList").append(row)}
+}catch(e){say(e.message,true);if(/unauthoriz|expired/i.test(e.message)){token="";sessionStorage.removeItem(tokenKey);show(false)}}
+}
+$("loginForm").onsubmit=async e=>{e.preventDefault();const btn=e.submitter;btn.disabled=true;try{const result=await api("admin_login",{username:$("loginName").value.trim(),password:$("loginPassword").value});token=result.token;sessionStorage.setItem(tokenKey,token);$("loginPassword").value="";say("✓ Admin Login");await reload()}catch(err){say(err.message,true)}finally{btn.disabled=false}};
+$("createForm").onsubmit=async e=>{e.preventDefault();const btn=e.submitter;btn.disabled=true;try{await api("admin_create",{username:$("newName").value.trim().toLowerCase(),password:$("newPassword").value});$("newPassword").value="";$("newName").value="";say("✓ Student Account created");await reload()}catch(err){say(err.message,true)}finally{btn.disabled=false}};
+$("announcementForm").onsubmit=async e=>{e.preventDefault();try{await api("admin_announce",{content:$("announcement").value});$("announcement").value="";say("✓ Announcement posted")}catch(err){say(err.message,true)}};
+$("changePasswordForm").onsubmit=async e=>{e.preventDefault();try{await api("admin_change_password",{password:$("newAdminPassword").value});sessionStorage.removeItem(tokenKey);token="";show(false);$("newAdminPassword").value="";say("Password changed. Sign in again.")}catch(err){say(err.message,true)}};
+$("refresh").onclick=reload;$("logout").onclick=async()=>{await api("logout").catch(()=>{});token="";sessionStorage.removeItem(tokenKey);show(false);say("Logout success")};
+if(token)reload();
+</script></body></html>
