@@ -1,0 +1,19 @@
+name: Browser Studio Check
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'web-app/**'
+      - '.github/workflows/web-check.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and integration smoke tests
+        run: |
+          node --check web-app/app.js
+          node web-app/tests/check.mjs
