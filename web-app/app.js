@@ -334,7 +334,7 @@
     const input = [{type:"text",text:buildPrompt()}];
     let origin = "link";
     if (state.mode === "link") {
-      try { loadYouTube(); if (!state.youtubeUrl) return; }
+      try { parseYouTube($("youtube").value); loadYouTube(); if (!state.youtubeUrl) return; }
       catch (err) { notify(err.message,true); return; }
       input.push({type:"video",uri:state.youtubeUrl});
     } else {
@@ -502,6 +502,94 @@
     catch{notify("Browser clipboard permission မရပါ။",true);}
   });
   $("downloadTxt").addEventListener("click",()=>fileTextDownload($("fullScript").value,"future-code-recap-script.txt"));
+
+
+  function parseSrtTime(text) {
+    const match=String(text).trim().match(/^(\d{2}):(\d{2}):(\d{2})[,.](\d{1,3})$/);
+    if(!match)return NaN;
+    return (+match[1]*3600 + +match[2]*60 + +match[3])*1000 + Number(match[4].padEnd(3,"0"));
+  }
+  function parseSrt(text){
+    const blocks=String(text).replace(/\r/g,"").replace(/^\uFEFF/,"").trim().split(/\n\s*\n/);
+    const scenes=[];
+    for(const block of blocks){
+      const lines=block.split("\n").map(s=>s.trim()).filter(Boolean);
+      if(!lines.length)continue;
+      const at=lines.findIndex(line=>line.includes("-->"));
+      if(at<0)continue;
+      const m=lines[at].match(/(\d{2}:\d{2}:\d{2}[,.]\d{1,3})\s*-->\s*(\d{2}:\d{2}:\d{2}[,.]\d{1,3})/);
+      if(!m)continue;
+      const start=parseSrtTime(m[1]),end=parseSrtTime(m[2]);
+      const text=lines.slice(at+1).join(" ").trim();
+      if(!Number.isFinite(start)||!Number.isFinite(end)||end<=start||!text)continue;
+      scenes.push({startMs:start,endMs:end,text:text.slice(0,1000),enabled:true});
+      if(scenes.length===80)break;
+    }
+    if(!scenes.length)throw Error("SRT timecoded subtitle format မမှန်ပါ။");
+    return scenes;
+  }
+  $("importSrtBtn").addEventListener("click",()=>$("srtFile").click());
+  $("srtFile").addEventListener("change",async(e)=>{
+    const file=e.target.files[0];if(!file)return;
+    try{
+      if(file.size>2*1024*1024)throw Error("SRT file 2MB အောက် ဖြစ်ရပါမယ်။");
+      const scenes=parseSrt(await file.text());
+      if(state.scenes.length&&!confirm("Existing scenes ကို SRT နဲ့ အစားထိုးမှာလား?"))return;
+      state.scenes=scenes;state.selected=0;invalidateVoice();renderScenes();
+      notify(scenes.length+" SRT scenes imported.");
+      $("editor").scrollIntoView({behavior:"smooth"});
+    }catch(err){notify(err.message,true);}
+    finally{e.target.value="";}
+  });
+  async function importOwnAudio(file){
+    if(state.busy)return;
+    const scenes=selectedScenes();
+    if(!scenes.length)return notify("စာသား Scene တွေ အရင်ပြုလုပ်ထားပါ။",true);
+    if(!file||file.size>80*1024*1024)return notify("80MB အောက် Audio file ကိုသာ သုံးပါ။",true);
+    state.busy=true;setStatus("ttsStatus","Decoding your narration locally…");
+    let context;
+    try{
+      context=new (window.AudioContext||window.webkitAudioContext)();
+      const decoded=await context.decodeAudioData(await file.arrayBuffer());
+      if(decoded.duration>1200)throw Error("Imported Audio ကို 20 minutes အောက်ထားပါ။");
+      if(decoded.duration<.3)throw Error("Audio File အလွန်တိုနေပါတယ်။");
+      const samples=Math.ceil(decoded.duration*24000);
+      const offline=new OfflineAudioContext(1,samples,24000);
+      const source=offline.createBufferSource();source.buffer=decoded;source.connect(offline.destination);
+      source.start();
+      const rendered=await offline.startRendering();
+      const floats=rendered.getChannelData(0);
+      const weights=scenes.map(s=>Math.max(1500,Math.min(18000,s.endMs-s.startMs)));
+      const total=weights.reduce((a,b)=>a+b,0);
+      const parts=[];let cursor=0;let passed=0;
+      for(let i=0;i<weights.length;i++){
+        passed+=weights[i];
+        const end=i===weights.length-1?floats.length:Math.round(floats.length*passed/total);
+        const n=Math.max(0,end-cursor);
+        if(n<200)throw Error("Audio File ထဲမှာ Scene တစ်ခုချင်းစီအတွက် အသံမလုံလောက်ပါ။");
+        const bytes=new Uint8Array(n*2);
+        const view=new DataView(bytes.buffer);
+        for(let j=0;j<n;j++){
+          const v=Math.max(-1,Math.min(1,floats[cursor+j]));
+          view.setInt16(j*2,Math.round(v<0?v*32768:v*32767),true);
+        }
+        cursor=end;parts.push(bytes);
+      }
+      invalidateVoice();
+      state.audioParts=parts;state.audioDurations=parts.map(p=>Math.round(p.length/2/24));
+      state.audioBlob=wavBlob(parts);state.audioUrl=URL.createObjectURL(state.audioBlob);
+      $("voicePlayer").src=state.audioUrl;
+      $("audioResult").classList.remove("hidden");
+      setStatus("ttsStatus","Own voice ready • "+formatTime(state.audioDurations.reduce((a,b)=>a+b,0)));
+      notify("Your narration imported. Preview / render to check alignment.");
+    }catch(err){setStatus("ttsStatus",err.message,true);notify(err.message,true);}
+    finally{if(context)await context.close().catch(()=>{});state.busy=false;}
+  }
+  $("ownAudioFile").addEventListener("change",async(e)=>{
+    const file=e.target.files[0];
+    if(file)await importOwnAudio(file);
+    e.target.value="";
+  });
 
   function exportSrtText(){
     const scenes=selectedScenes();
