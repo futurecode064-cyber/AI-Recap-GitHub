@@ -14,7 +14,7 @@
 <section class="panel"><div class="row"><div><div class="eyebrow">WELCOME BACK</div><h2 id="welcome">မင်္ဂလာပါ</h2><p class="muted">Future Code AI Studio · Student Dashboard</p></div><button id="logout" class="secondary">Logout</button></div></section>
 <section class="panel"><h2>📚 သင်တန်း Section များ</h2><p class="muted">Admin က ဖွင့်ထားတဲ့ Section တွေကို ဒီနေရာမှာ ပြပါတယ်။ Web အတွက် ရနိုင်တဲ့ Section တွေကို Browser ကနေဖွင့်နိုင်ပြီး အခြားသင်ခန်းစာတွေကို Android APK ထဲမှာ ဖတ်ရှုနိုင်ပါတယ်။</p><div id="cards" class="cards"></div></section>
 <section class="panel"><h2>📢 ကြေညာချက်များ</h2><div id="announcements" class="muted"></div></section>
-<section class="panel"><h2>🧰 Browser Studio</h2><p class="muted">Movie Recap Browser Studio ကို စမ်းသုံးနိုင်ပါတယ်။ API Key မျှဝေမထားပါနဲ့။</p><button id="recap" class="primary">🎬 Movie Recap Studio ဖွင့်ရန်</button></section>
+<section class="panel"><h2>🧰 Browser Studio</h2><p class="muted">Movie Recap, Image Studio နဲ့ Video Maker ကို Browser မှာ စမ်းသုံးနိုင်ပါတယ်။ API Key ကို အခြားသူများ မမျှဝေပါနဲ့။</p><button id="recap" class="primary">🎬 Movie Recap Studio ဖွင့်ရန်</button></section>
 </div>
 <p id="status" class="status" role="status" aria-live="polite"></p>
 <footer>Future Code AI Studio · Student Account Access</footer></main>
@@ -32,8 +32,8 @@ const pair=await crypto.subtle.generateKey({name:"ECDSA",namedCurve:"P-256"},fal
 await new Promise((resolve,reject)=>{const transaction=db.transaction(STORE,"readwrite");transaction.objectStore(STORE).put(pair,name);transaction.oncomplete=resolve;transaction.onerror=()=>reject(transaction.error)});db.close();return pair}
 function base64(buffer){const bytes=new Uint8Array(buffer);let str="";for(let i=0;i<bytes.length;i++)str+=String.fromCharCode(bytes[i]);return btoa(str)}
 async function proof(pair,message){return base64(await crypto.subtle.sign({name:"ECDSA",hash:"SHA-256"},pair.privateKey,new TextEncoder().encode(message)))}
-const icons={"future":"🏠","downloads":"⬇️","academy":"🎓","guides":"📖","tools":"🧰","design":"🎨","invoice":"🧾","course":"📚","recap":"🎬","recap-guide":"📘","image-studio":"🖼️","video-maker":"🎞️"};
-const descriptions={"future":"Future Code AI Studio","academy":"AI Video လေ့လာနည်းများ","guides":"Professional AI Video Guide","tools":"AI Tools Directory","recap":"Burmese Movie Recap Generator","recap-guide":"Movie Recap အစအဆုံးအသုံးပြုနည်း","image-studio":"AI Image Create & Edit","video-maker":"Text to Video & Video Assembly"};
+const icons={"future":"🏠","downloads":"⬇️","academy":"🎓","guides":"📖","tools":"🧰","design":"🎨","invoice":"🧾","course":"📚","recap":"🎬","recap-guide":"📘","image-studio":"🖼️","image-guide":"📗","video-maker":"🎞️","video-guide":"📙"};
+const descriptions={"future":"Future Code AI Studio","academy":"AI Video လေ့လာနည်းများ","guides":"Professional AI Video Guide","tools":"AI Tools Directory","recap":"Burmese Movie Recap Generator","recap-guide":"Movie Recap အစအဆုံးအသုံးပြုနည်း","image-studio":"AI Image Create & Edit","image-guide":"Image Studio API, Poster, Editing နဲ့ Export လမ်းညွှန်","video-maker":"Text to Video & Video Assembly","video-guide":"Video Maker Scene, Voice, Veo နဲ့ Export လမ်းညွှန်"};
 function render(data){$("welcome").textContent="မင်္ဂလာပါ · "+(data.username||currentUsername);
 $("cards").replaceChildren();
 for(const s of data.sections||[]){if(!s.enabled)continue;const card=document.createElement("button");card.className="tile";card.type="button";
@@ -42,8 +42,8 @@ const title=document.createElement("strong");title.textContent=s.title;
 const desc=document.createElement("p");desc.textContent=descriptions[s.section_key]||"အကြောင်းအရာကို APK မှာ ကြည့်ရှုနိုင်ပါတယ်";
 card.append(icon,title,desc);
 card.onclick=()=>{
-if(s.section_key==="recap")location.href="../recap/";
-else if(s.section_key==="recap-guide")location.href="../recap-guide/";
+const routes={"recap":"../recap/","recap-guide":"../recap-guide/","image-studio":"../image-studio/","image-guide":"../image-guide/","video-maker":"../video-maker/","video-guide":"../video-guide/"};
+if(routes[s.section_key])location.href=routes[s.section_key];
 else status("ဒီ Section ရဲ့ Full Content ကို Android APK ထဲမှာ ရနိုင်ပါတယ်။ Browser Version အတွက် ပြင်ဆင်နေဆဲပါ။");
 };$("cards").append(card)}
 $("announcements").replaceChildren();
