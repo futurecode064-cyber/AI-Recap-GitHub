@@ -28,6 +28,9 @@ jobs:
           unzip -q /tmp/academy-v4.zip
           curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-v5-patch.zip https://futurecode-movie-recap.floot.app/_cdn/static/815b544d-ada4-4c6b-aa5a-2c5c79ea0850-future-code-studio-beta5-update.zip
           unzip -q -o /tmp/academy-v5-patch.zip
+          curl --fail --location --retry 2 --silent --show-error --output /tmp/recap-pro-v6.zip https://futurecode-movie-recap.floot.app/_cdn/static/251f2da7-c615-47a6-91fc-ef47634a5227-future-code-recap-pro-beta6-patch.zip
+          unzip -q -o /tmp/recap-pro-v6.zip
+          grep -q 'Movie Recap Pro Editor' video_studio_rebuild/training-app/assets/sections/recap-studio.html
           mkdir -p portal/recap portal/image-studio portal/image-guide portal/video-maker portal/video-guide
           cp video_studio_rebuild/training-app/assets/sections/recap-studio.html portal/recap/index.html
           cp video_studio_rebuild/training-app/assets/sections/image-studio.html portal/image-studio/index.html
