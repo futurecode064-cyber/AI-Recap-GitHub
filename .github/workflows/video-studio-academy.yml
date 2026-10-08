@@ -1,4 +1,4 @@
-name: Future Code AI Video Studio APK v4
+name: Future Code AI Video Studio APK v5
 on:
   workflow_dispatch:
   push:
@@ -17,6 +17,9 @@ jobs:
         run: |
           curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-source.zip https://futurecode-movie-recap.floot.app/_cdn/static/6bb4561c-f3e3-409c-86f5-b4c296968e40-future-code-video-studio-beta-v4-standalone.zip
           unzip -q /tmp/academy-source.zip
+          curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-v5-patch.zip https://futurecode-movie-recap.floot.app/_cdn/static/815b544d-ada4-4c6b-aa5a-2c5c79ea0850-future-code-studio-beta5-update.zip
+          unzip -q -o /tmp/academy-v5-patch.zip
+
           test -s video_studio_rebuild/training-app/assets/index.html
           test -s video_studio_rebuild/training-app/assets/sections/academy.html
           test -s video_studio_rebuild/training-app/assets/sections/academy-advanced.html
@@ -27,6 +30,9 @@ jobs:
           test -s video_studio_rebuild/training-app/assets/sections/image-studio.html
           test -s video_studio_rebuild/training-app/assets/sections/video-maker.html
           test -s video_studio_rebuild/training-app/assets/sections/recap-studio.html
+          test -s video_studio_rebuild/training-app/assets/sections/image-studio-guide.html
+          test -s video_studio_rebuild/training-app/assets/sections/video-maker-guide.html
+          grep -q 'Video Prompt Builder' video_studio_rebuild/training-app/src/mm/futurecode/videostudio/MainActivity.java
           cp -r video_studio_rebuild/training-app ./training-app
       - uses: actions/setup-java@v4
         with:
@@ -56,11 +62,11 @@ jobs:
           PY
           "$BT/zipalign" -f -p 4 build/academy/base.apk build/academy/aligned.apk
           keytool -genkeypair -v -keystore build/academy/beta.keystore -alias beta -keyalg RSA -keysize 2048 -validity 90 -storepass changeme -keypass changeme -dname 'CN=Future Code Beta, O=Future Code, C=MM' -noprompt
-          "$BT/apksigner" sign --ks build/academy/beta.keystore --ks-key-alias beta --ks-pass pass:changeme --key-pass pass:changeme --out build/academy/Future-Code-AI-Video-Studio-BETA-v4.apk build/academy/aligned.apk
-          "$BT/apksigner" verify --verbose build/academy/Future-Code-AI-Video-Studio-BETA-v4.apk
+          "$BT/apksigner" sign --ks build/academy/beta.keystore --ks-key-alias beta --ks-pass pass:changeme --key-pass pass:changeme --out build/academy/Future-Code-AI-Video-Studio-BETA-v5.apk build/academy/aligned.apk
+          "$BT/apksigner" verify --verbose build/academy/Future-Code-AI-Video-Studio-BETA-v5.apk
       - uses: actions/upload-artifact@v4
         with:
-          name: Future-Code-AI-Video-Studio-BETA-v4
-          path: build/academy/Future-Code-AI-Video-Studio-BETA-v4.apk
+          name: Future-Code-AI-Video-Studio-BETA-v5
+          path: build/academy/Future-Code-AI-Video-Studio-BETA-v5.apk
           retention-days: 7
           if-no-files-found: error
