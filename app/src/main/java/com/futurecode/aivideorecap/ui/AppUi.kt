@@ -204,6 +204,15 @@ fun RecapApp(vm: RecapViewModel = viewModel()) {
                             Column(Modifier.padding(16.dp),
                                 verticalArrangement = Arrangement.spacedBy(12.dp)) {
                                 Text("07  •  Export", style = MaterialTheme.typography.titleLarge)
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Checkbox(checked = state.cloudVoiceEnabled,
+                                        onCheckedChange = vm::setCloudVoiceEnabled, enabled = !busy)
+                                    Column {
+                                        Text("Use Gemini Cloud Burmese voice")
+                                        Text("Optional • real Burmese AI voice • uses your API key and may consume paid/free quota",
+                                            style = MaterialTheme.typography.bodySmall)
+                                    }
+                                }
                                 Button(onClick = vm::exportVoiceover, modifier = Modifier.fillMaxWidth(),
                                     enabled = !busy) { Text("Generate Burmese voiceover WAV") }
                                 OutlinedButton(onClick = vm::exportEdited, modifier = Modifier.fillMaxWidth(),
