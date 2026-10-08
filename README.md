@@ -59,3 +59,9 @@ Note: a green Android build verifies compilation, **not** successful Google API 
 ## Copyright and privacy
 
 Use only public links you are allowed to analyze and footage you may legally reuse. Summaries are not automatically free from copyright restrictions; check licensing/fair use and platform terms. Google receives the video URL and AI prompts when you choose cloud analysis. The app does not scrape YouTube, TikTok, or Facebook media.
+
+## Browser Web App (live)
+
+**Live site:** https://futurecode-movie-recap.floot.app
+
+The existing `web-preview/index.html` is now a real browser-side implementation (not a simulated progress animation) of public YouTube/local short-video AI analysis, editable Myanmar-language scene narration, Gemini 3.8 Burmese TTS WAV export, SRT/TXT/JSON project export, and optional locally permissioned footage rendering with MediaRecorder. The published Floot mirror serves this same HTML inside the app and uses a small no-storage `/_api/gemini` proxy to avoid direct-browser Gemini CORS restrictions. A personal Google Gemini API key is still required; no key is embedded or stored. Google model availability and rates may change. Uploaded local video for direct inline analysis is capped at 14MB; YouTube links can handle larger public footage subject to Gemini limits. Browser video export selects MP4 when supported, otherwise WebM, and requires a locally chosen matching movie file and narration audio. **Live Gemini calls and real-device render tests require a supplied key and permitted test media and have not yet been end-to-end verified.**
