@@ -1,0 +1,42 @@
+name: Future Code Student and Admin Web Portals
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'portal/**'
+      - 'web-preview/index.html'
+      - '.github/workflows/future-code-portal-pages.yml'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: future-code-pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare publicly accessible student and admin portals
+        run: |
+          mkdir -p portal/recap
+          cp web-preview/index.html portal/recap/index.html
+          test -s portal/student/index.html
+          test -s portal/admin/index.html
+          test -s portal/recap/index.html
+          test -s portal/recap-guide/index.html
+          touch portal/.nojekyll
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: portal
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4
