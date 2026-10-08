@@ -42,6 +42,7 @@ data class RecapUiState(
     val video: VideoInfo? = null,
     val youtubeUrl: String = "",
     val fromYoutube: Boolean = false,
+    val cloudVoiceEnabled: Boolean = false,
     val recapLength: RecapLength = RecapLength.ONE_MINUTE,
     val language: RecapLanguage = RecapLanguage.BURMESE,
     val style: RecapStyle = RecapStyle.STORYTELLING,
