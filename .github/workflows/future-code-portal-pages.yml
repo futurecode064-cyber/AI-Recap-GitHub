@@ -24,11 +24,23 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare publicly accessible student and admin portals
         run: |
-          mkdir -p portal/recap
-          cp web-preview/index.html portal/recap/index.html
+          curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-v4.zip https://futurecode-movie-recap.floot.app/_cdn/static/6bb4561c-f3e3-409c-86f5-b4c296968e40-future-code-video-studio-beta-v4-standalone.zip
+          unzip -q /tmp/academy-v4.zip
+          curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-v5-patch.zip https://futurecode-movie-recap.floot.app/_cdn/static/815b544d-ada4-4c6b-aa5a-2c5c79ea0850-future-code-studio-beta5-update.zip
+          unzip -q -o /tmp/academy-v5-patch.zip
+          mkdir -p portal/recap portal/image-studio portal/image-guide portal/video-maker portal/video-guide
+          cp video_studio_rebuild/training-app/assets/sections/recap-studio.html portal/recap/index.html
+          cp video_studio_rebuild/training-app/assets/sections/image-studio.html portal/image-studio/index.html
+          cp video_studio_rebuild/training-app/assets/sections/image-studio-guide.html portal/image-guide/index.html
+          cp video_studio_rebuild/training-app/assets/sections/video-maker.html portal/video-maker/index.html
+          cp video_studio_rebuild/training-app/assets/sections/video-maker-guide.html portal/video-guide/index.html
           test -s portal/student/index.html
           test -s portal/admin/index.html
           test -s portal/recap/index.html
+          test -s portal/image-studio/index.html
+          test -s portal/image-guide/index.html
+          test -s portal/video-maker/index.html
+          test -s portal/video-guide/index.html
           test -s portal/recap-guide/index.html
           touch portal/.nojekyll
       - name: Configure GitHub Pages
