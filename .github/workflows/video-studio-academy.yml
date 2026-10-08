@@ -1,0 +1,57 @@
+name: Future Code Video Studio APK
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/video-studio-academy.yml'
+    branches: [ main ]
+permissions:
+  contents: read
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Load video academy independent source
+        run: |
+          curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-source.zip https://futurecode-movie-recap.floot.app/_cdn/static/45d6cd70-9419-413d-ae3c-9f3a702252df-future-code-video-academy-beta.zip
+          unzip -q /tmp/academy-source.zip
+          test -s video_studio_rebuild/training-app/assets/index.html
+          cp -r video_studio_rebuild/training-app ./training-app
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Build and sign installable Android beta
+        shell: bash
+        run: |
+          set -euo pipefail
+          BT="$ANDROID_HOME/build-tools/35.0.0"
+          AJ="$ANDROID_HOME/platforms/android-35/android.jar"
+          if [ ! -f "$AJ" ] || [ ! -x "$BT/aapt2" ]; then
+            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install 'platforms;android-35' 'build-tools;35.0.0' || true
+          fi
+          test -f "$AJ"; test -x "$BT/aapt2"
+          mkdir -p build/academy/{classes,generated,dex}
+          "$BT/aapt2" compile --dir training-app/res -o build/academy/resources.zip
+          "$BT/aapt2" link -I "$AJ" --manifest training-app/AndroidManifest.xml -A training-app/assets -o build/academy/base.apk --java build/academy/generated build/academy/resources.zip
+          find training-app/src build/academy/generated -name '*.java' > build/academy/sources.txt
+          javac -encoding UTF-8 -source 8 -target 8 -classpath "$AJ" -d build/academy/classes @build/academy/sources.txt
+          find build/academy/classes -name '*.class' -print0 | xargs -0 "$BT/d8" --min-api 26 --lib "$AJ" --output build/academy/dex
+          python3 - <<'PY'
+          import pathlib,zipfile
+          p=pathlib.Path('build/academy')
+          with zipfile.ZipFile(p/'base.apk','a',compression=zipfile.ZIP_DEFLATED) as z:
+              for f in (p/'dex').glob('*.dex'): z.write(f,f.name)
+          PY
+          "$BT/zipalign" -f -p 4 build/academy/base.apk build/academy/aligned.apk
+          keytool -genkeypair -v -keystore build/academy/beta.keystore -alias beta -keyalg RSA -keysize 2048 -validity 90 -storepass changeme -keypass changeme -dname 'CN=Future Code Beta, O=Future Code, C=MM' -noprompt
+          "$BT/apksigner" sign --ks build/academy/beta.keystore --ks-key-alias beta --ks-pass pass:changeme --key-pass pass:changeme --out build/academy/Future-Code-AI-Video-Studio-BETA.apk build/academy/aligned.apk
+          "$BT/apksigner" verify --verbose build/academy/Future-Code-AI-Video-Studio-BETA.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Future-Code-AI-Video-Studio-BETA
+          path: build/academy/Future-Code-AI-Video-Studio-BETA.apk
+          retention-days: 7
+          if-no-files-found: error
