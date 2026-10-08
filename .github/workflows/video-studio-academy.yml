@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Load video academy independent source
         run: |
-          curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-source.zip https://futurecode-movie-recap.floot.app/_cdn/static/ff6ca1f0-8f45-4346-9471-6fb2e133f70c-future-code-video-studio-beta-v4-final.zip
+          curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-source.zip https://futurecode-movie-recap.floot.app/_cdn/static/856a6036-2733-4f53-ae74-51838554cf9d-future-code-video-studio-beta-v4-compilefix.zip
           unzip -q /tmp/academy-source.zip
           test -s video_studio_rebuild/training-app/assets/index.html
           test -s video_studio_rebuild/training-app/assets/sections/academy.html
