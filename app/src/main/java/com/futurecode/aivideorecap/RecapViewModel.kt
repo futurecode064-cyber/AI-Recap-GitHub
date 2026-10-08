@@ -47,6 +47,7 @@ class RecapViewModel(application: Application) : AndroidViewModel(application) {
     fun setLength(value: RecapLength) { _state.value = _state.value.copy(recapLength = value) }
     fun setLanguage(value: RecapLanguage) { _state.value = _state.value.copy(language = value) }
     fun setStyle(value: RecapStyle) { _state.value = _state.value.copy(style = value) }
+    fun setCloudVoiceEnabled(value: Boolean) { _state.value = _state.value.copy(cloudVoiceEnabled = value) }
 
     /** Real model-driven video analysis: public YouTube link -> timestamped Burmese script. */
     fun createLinkRecap() {
@@ -154,8 +155,8 @@ class RecapViewModel(application: Application) : AndroidViewModel(application) {
             try {
                 stage(PipelineStage.NARRATING, .25f, "Generating Burmese narration with installed TTS voice…")
                 val work = File(context.cacheDir, "recap_voice").apply { deleteRecursively(); mkdirs() }
-                val narration = TtsNarrator(context).synthesize(scenes, _state.value.language, work)
-                    ?: error("No compatible Myanmar voice is installed in Android Text-to-Speech. Install/enable a my-MM voice in device TTS settings.")
+                val narration = synthesizeScenes(scenes, work)
+                    ?: error("No compatible Myanmar voice on this phone. Enable Gemini Cloud Voice with your API key, or install a my-MM Android TTS voice.")
                 val music = context.getExternalFilesDir(Environment.DIRECTORY_MUSIC) ?: context.filesDir
                 music.mkdirs()
                 val wav = File(music, "Future-Code-Recap-Voice-${System.currentTimeMillis()}.wav")
@@ -171,7 +172,7 @@ class RecapViewModel(application: Application) : AndroidViewModel(application) {
         require(video.durationMs > 500) { "Selected video does not contain readable duration metadata." }
         stage(PipelineStage.NARRATING, .35f, "Creating voice narration (if installed)…")
         val work = File(context.cacheDir, "recap_export").apply { deleteRecursively(); mkdirs() }
-        val narration = TtsNarrator(context).synthesize(scenes, _state.value.language, File(work, "narration"))
+        val narration = synthesizeScenes(scenes, File(work, "narration"))
         val movies = context.getExternalFilesDir(Environment.DIRECTORY_MOVIES) ?: context.filesDir
         movies.mkdirs()
         val base = "$prefix-${System.currentTimeMillis()}"
@@ -189,6 +190,10 @@ class RecapViewModel(application: Application) : AndroidViewModel(application) {
         _state.value = _state.value.copy(stage = PipelineStage.COMPLETE, progress = 1f,
             status = note, outputPath = output.absolutePath, error = null)
     }
+
+    private suspend fun synthesizeScenes(scenes: List<RecapScene>, dir: File): List<TtsNarrator.Narration>? =
+        if (_state.value.cloudVoiceEnabled) GeminiTtsNarrator().synthesize(scenes, savedApiKey(), dir)
+        else TtsNarrator(context).synthesize(scenes, _state.value.language, dir)
 
     fun shareIntent(): Intent? = shareFile(_state.value.outputPath, "video/mp4")
     fun shareVoiceIntent(): Intent? = shareFile(_state.value.narrationPath, "audio/wav")
