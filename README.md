@@ -1,51 +1,61 @@
-# AI Video Recap Maker — Android MVP
+# Future Code Movie Recap Maker — Android
 
-A local-first Android app that converts a user-selected video into a short recap. It is designed to avoid creator-side server bills and paid AI APIs.
+Native Kotlin / Jetpack Compose / Media3 project for Myanmar-language movie recaps.
+This continues the existing `AI-Recap-GitHub` repository, not a new project.
 
-## What works in this MVP
+## Modes
 
-- Pick a local video using Android's document picker.
-- Decode its audio locally to 16 kHz mono PCM.
-- Split audio into time-stamped chunks.
-- Auto-transcribe each chunk with Android SpeechRecognizer using injected PCM (Android 13/API 33+).
-- Prefer the device's on-device recognizer when available; fall back to the installed system recognizer otherwise.
-- Generate a factual, extractive recap locally (no cloud LLM, no fabricated plot facts).
-- Auto-select source scenes using transcript importance and timestamps.
-- Generate narration with the phone's TextToSpeech engine when the selected language is available.
-- Burn recap captions onto each selected video clip using Media3 TextOverlay.
-- Export an MP4 with Media3 Transformer.
-- Generate a matching `.srt` subtitle file.
-- Preview, edit recap lines, enable/disable clips, re-render, and share the MP4.
+### 1. Public YouTube link → AI Burmese recap
 
-## Cost model
+1. Obtain your own API key at https://aistudio.google.com/apikey .
+2. Open the APK, paste a **public YouTube** or youtu.be link and enter your key.
+3. Select 1 / 3 / 5 / 10 minute target and storytelling style.
+4. Tap **Analyze & write Burmese recap**.
+5. Gemini Video Understanding analyzes the public YouTube video and returns a time-coded Burmese story script. You can edit every line, enable/disable scenes, adjust start/end in 5-second increments.
+6. Tap **Generate Burmese voiceover WAV** to make a shareable narration file.
+7. For an MP4 with actual movie footage, **select a matching locally accessible video that you own or have permission to use**, then tap **Render edited MP4**.
 
-There is no app-owned backend, database, paid API, or paid AI service. Processing happens on the user's phone. A device's fallback speech-recognition provider can require internet, depending on the phone; on-device recognition is preferred automatically.
+No unauthorized YouTube download, DRM bypass, or movie database is included. The public YouTube link alone can produce the script and voiceover; it **cannot** automatically package downloaded movie clips into a recap video.
 
-## Requirements
+### 2. Local video → offline extractive recap
 
-- Android Studio with Android SDK 36.
-- JDK 17.
-- Android 13+ (API 33+) for reliable prerecorded-audio injection into SpeechRecognizer.
-- A speech recognition engine that supports the selected language.
-- A TTS engine/voice for narration; if unavailable, the export keeps the original clip audio and still burns captions.
+Pick a local video and tap **Create transcript-based recap**. This extracts important spoken passages via Android speech recognition. It is a heuristic transcript summary, *not* full AI movie plot understanding. Language support depends on the device recognizer, and prerecorded PCM support requires Android API 33+.
 
-## Build
+## Narration choices
 
-1. Open this folder in Android Studio.
-2. Let Gradle sync dependencies.
-3. Build `app` or run it on a physical Android 13+ phone.
-4. For release distribution, create your own release signing configuration. Do not commit signing keys.
+- **Phone TTS** (default): no additional cloud requests. Requires an installed TTS engine/voice for the selected language. Without the selected language voice, the renderer explains that it kept original clip sound rather than falsely claiming Burmese narration.
+- **Gemini Cloud Burmese voice** (explicit opt-in checkbox): real Burmese synthesis via the `gemini-3.8-flash-tts` model using **your** key. This is intended for phones without a my-MM voice; subject to Gemini quotas, model availability, and any billing enabled on your API project. Output is a WAV file and can be included during video rendering. API provider receives the narration text.
 
-## Important limitations
+The YouTube AI script feature uses `gemini-3.5-flash-lite`, which may have free-tier allowances; **zero cost is not guaranteed**, especially if you have enabled billing. The APK has no hard-coded secret, no user account and no app-owned paid backend. The user key is stored in app-private preferences and Android backup is disabled.
 
-- This reconstruction cannot include uncommitted files from the user's interrupted Codex workspace; those files were not present in GitHub or ChatGPT Library. This project preserves the requested product goal rather than pretending to recover unavailable files.
-- The v1 summarizer is extractive rather than an LLM. This keeps it fully local, fast, and free while reducing hallucinations.
-- Burmese speech recognition and Burmese TTS depend on the speech/TTS engine installed on the phone.
-- Very long films are computationally expensive; processing time depends on device performance.
-- The app only processes videos supplied by the user. It includes no movie downloader, DRM bypass, or copyrighted-content database.
+## Workflow and output
 
-## Architecture
+```
+YouTube URL → Gemini scene/timestamp analysis → Editable Burmese text
+         → Android or Gemini TTS → Narration WAV
+         → Matching, permissioned local video + captions → Media3 MP4 + SRT
+```
 
-`AudioDecoder` → `PcmChunker` → `DeviceSpeechTranscriber` → `RecapGenerator` → `TtsNarrator` → `SubtitleWriter` → `VideoRenderer`
+- MP4 saved in the app-specific Movies directory; share directly through Android sharesheet.
+- WAV saved in the app-specific Music directory; share to another video editor.
+- SRT saved alongside the MP4.
+- The program does not guarantee every AI timestamp/plot fact is perfect. Review content, edits, rights, TTS pronunciation and exported video.
 
-Media3 version: 1.11.1.
+## Get the APK
+
+Go to [GitHub Actions](https://github.com/futurecode064-cyber/AI-Recap-GitHub/actions/workflows/android-build.yml).
+Open the latest **successful** Android Build run and download artifact `ai-video-recap-maker-debug`. Unzip to obtain `app-debug.apk`.
+
+Note: a green Android build verifies compilation, **not** successful Google API access, narration on an individual handset, or runtime MP4 export. Test on a real Android 13+ device with your own permitted media.
+
+## Build locally
+
+- Android SDK 36, JDK 17, Gradle 8.13.
+- `gradle :app:assembleDebug`
+- Result: `app/build/outputs/apk/debug/app-debug.apk`
+- CI workflow: `.github/workflows/android-build.yml`.
+- Distribute to users only after release signing and real-device functional tests.
+
+## Copyright and privacy
+
+Use only public links you are allowed to analyze and footage you may legally reuse. Summaries are not automatically free from copyright restrictions; check licensing/fair use and platform terms. Google receives the video URL and AI prompts when you choose cloud analysis. The app does not scrape YouTube, TikTok, or Facebook media.
