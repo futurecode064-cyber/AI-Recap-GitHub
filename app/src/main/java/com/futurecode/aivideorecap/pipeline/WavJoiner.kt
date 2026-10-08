@@ -25,7 +25,7 @@ object WavJoiner {
         RandomAccessFile(result, "rw").use { out ->
             out.setLength(0)
             out.write("RIFF".toByteArray(Charsets.US_ASCII))
-            out.write(i32((36 + dataSize).toInt()))
+            out.write(i32((20 + format.size + (format.size % 2) + dataSize).toInt()))
             out.write("WAVEfmt ".toByteArray(Charsets.US_ASCII))
             out.write(i32(format.size))
             out.write(format)
