@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0e13">
+  <meta name="description" content="Future Code AI Studio Movie Recap Maker: Burmese recap scripts, AI narration, subtitle editing and video export.">
+  <title>Future Code · Movie Recap Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="#top" aria-label="Future Code home"><span class="brand-icon">F<span>✦</span></span><span><strong>FUTURE CODE</strong><small>AI MOVIE STUDIO</small></span></a>
+    <div class="side-label">WORKSPACE</div>
+    <nav aria-label="Workspace sections">
+      <a class="nav-link active" href="#source"><span class="nav-icon">◫</span> Import Studio <span class="nav-number">01</span></a>
+      <a class="nav-link" href="#story"><span class="nav-icon">✧</span> AI Story Engine <span class="nav-number">02</span></a>
+      <a class="nav-link" href="#editor"><span class="nav-icon">▤</span> Timeline Editor <span class="nav-number">03</span></a>
+      <a class="nav-link" href="#voice"><span class="nav-icon">◉</span> Voice Lab <span class="nav-number">04</span></a>
+      <a class="nav-link" href="#export"><span class="nav-icon">⇧</span> Export Center <span class="nav-number">05</span></a>
+    </nav>
+    <div class="side-note"><span class="status-pulse"></span><strong>REAL WORKFLOW</strong><p>UI Demo မဟုတ်ပါ။ ကိုယ်ပိုင် API Key ဖြင့် တကယ် AI ချိတ်ဆက်အသုံးပြုနိုင်ပါတယ်။</p></div>
+    <div class="side-bottom">✦  Built by Future Code AI Studio<br><a href="https://github.com/futurecode064-cyber/AI-Recap-GitHub" target="_blank" rel="noopener noreferrer">GitHub Source ↗</a></div>
+  </aside>
+
+  <main class="workspace" id="top">
+    <header class="topbar"><div class="breadcrumb">Future Code <span>/</span> Apps <span>/</span> <strong>Movie Recap Studio</strong></div><div class="top-actions"><span class="chip-status"><i></i> BROWSER EDITION</span><button id="saveProject" class="small-button" type="button">↓ Save Project</button></div></header>
+    <div class="main-inner">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">THE NEXT GENERATION OF RECAP CREATION</span>
+          <h1>ဇာတ်ကားတစ်ကားမှ<br><em>စိတ်ဝင်စားဖွယ် Recap</em> တစ်ခုဆီ</h1>
+          <p>Video Link သို့မဟုတ် File ထည့်ပါ။ AI နဲ့ မြန်မာလို ဇာတ်လမ်းပြော Script ဖန်တီး၊ Scene ပြင်၊ အသံထုတ်ပြီး ဗီဒီယိုတစ်ခုအဖြစ် ဖန်တီးပါ။</p>
+          <div class="hero-points"><span>◈ Gemini Video AI</span><span>◈ Myanmar Voice</span><span>◈ Visual Editor</span></div>
+        </div>
+        <div class="hero-card" aria-hidden="true"><div class="film-frame"><div class="film-glow"></div><span class="film-play">▶</span><span class="film-caption">YOUR NEXT STORY<br><b>STARTS HERE.</b></span></div><div class="mini-timeline"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="frame-meta"><span>SCENE ANALYSIS</span><span>◉ AI ACTIVE</span></div></div>
+      </div>
+      <div class="stepper"><div><b>01</b><span>Import</span></div><i></i><div><b>02</b><span>Analyze</span></div><i></i><div><b>03</b><span>Edit</span></div><i></i><div><b>04</b><span>Narrate</span></div><i></i><div><b>05</b><span>Export</span></div></div>
+
+      <section class="panel" id="source">
+        <div class="panel-heading"><div><div class="overline">STEP 01 · MEDIA IMPORT</div><h2>ဗီဒီယို ရွေးချယ်ရန်</h2><p>AI ကို အမှန်တကယ် Video နားလည်စေဖို့ Public YouTube Link သို့မဟုတ် ကိုယ်ပိုင် Video File ကို အသုံးပြုပါ။</p></div><span class="section-symbol">◫</span></div>
+        <div class="mode-switch" role="tablist" aria-label="Media source"><button class="mode-btn selected" id="modeLink" type="button" role="tab" aria-selected="true">↗ YouTube Link</button><button class="mode-btn" id="modeFile" type="button" role="tab" aria-selected="false">▣ Local Video File</button></div>
+        <div id="linkInput" class="input-group"><label for="youtube">PUBLIC YOUTUBE VIDEO URL</label><div class="url-row"><input type="url" id="youtube" placeholder="https://www.youtube.com/watch?v=..." autocomplete="off"><button id="loadYoutube" class="action-button" type="button">Load Link ↗</button></div><small>Public YouTube Video များကိုသာ တိုက်ရိုက် AI နဲ့ Analyse လုပ်နိုင်ပါတယ်။ TikTok / Facebook Video Link များကို အလိုအလျောက် Download မလုပ်ပါ။</small></div>
+        <div id="fileInput" class="input-group hidden"><label for="videoFile">LOCAL VIDEO FILE</label><label for="videoFile" class="upload-area" id="dropzone"><span class="upload-icon">⇧</span><b>Click or drag your video here</b><span>MP4, WebM, MOV (browser support depends on codec)</span></label><input id="videoFile" type="file" accept="video/*" class="visually-hidden"><small>Video File ကို သင့် Browser ကနေ ဖွင့်ပါတယ်။ Cloud Analyze လုပ်တဲ့အခါမှသာ Gemini ဆီ ပို့ပါတယ်။</small></div>
+        <div id="assetInfo" class="asset-info hidden"><span id="assetName">No video</span><span id="assetDuration"></span></div>
+        <div class="two-col config-grid">
+          <label class="field">RECAP LENGTH<select id="duration"><option value="60">1 minute</option><option value="180" selected>3 minutes</option><option value="300">5 minutes</option><option value="600">10 minutes</option></select></label>
+          <label class="field">NARRATION STYLE<select id="style"><option value="cinematic" selected>Cinematic Storytelling</option><option value="fast">TikTok / Fast Hook</option><option value="suspense">Suspense & Thriller</option><option value="emotional">Emotional / Romance</option><option value="educational">Clear & Detailed</option></select></label>
+          <label class="field">TITLE (OPTIONAL)<input id="movieTitle" placeholder="Movie title or topic"></label>
+          <label class="field">SOURCE LANGUAGE<select id="sourceLanguage"><option value="auto" selected>Auto Detect</option><option value="English">English</option><option value="Myanmar">Myanmar</option><option value="Hindi">Hindi</option><option value="Korean">Korean</option><option value="Chinese">Chinese</option><option value="Japanese">Japanese</option></select></label>
+        </div>
+        <div class="divider-line"></div>
+        <div class="key-head"><div><strong>AI Connection</strong><p>Gemini API Key ကို Browser Memory ထဲမှာပဲ ထားမယ်။ Project Export ထဲ မပါပါဘူး။</p></div><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Get Gemini API Key ↗</a></div>
+        <div class="url-row"><input type="password" id="apiKey" placeholder="Paste your Gemini API key" autocomplete="off" spellcheck="false"><button type="button" id="showKey" class="ghost-button">Show</button></div>
+        <p class="hint">အခမဲ့ Hosting အသုံးပြုပေမယ့် Gemini အသုံးပြုမှုက Google ရဲ့ Quota/Billing အပေါ် မူတည်ပါတယ်။ Public Computer မှာ Key မသုံးပါနဲ့။</p>
+      </section>
+
+      <section class="panel" id="story">
+        <div class="panel-heading"><div><div class="overline">STEP 02 · AI STORY ENGINE</div><h2>မြန်မာ Recap Script ထုတ်ရန်</h2><p>ဇာတ်လမ်းအကြောင်း မထင်မှတ်ဘဲ တီထွင်မရေးရန်၊ Video ထဲက မြင်ရကြားရတဲ့ အကြောင်းအရာအပေါ် အခြေခံပြီး Scene Timecode တွေနဲ့ထုတ်ပေးပါတယ်။</p></div><span class="section-symbol">✧</span></div>
+        <div class="engine-info"><div><span class="engine-dot"></span><strong>Gemini 3.8 Flash</strong><small>Visual + Audio Understanding</small></div><div><strong>my-MM</strong><small>Myanmar Storytelling</small></div><div><strong>Scene Mapping</strong><small>Editable Timestamps</small></div></div>
+        <div class="action-row"><button id="analyzeBtn" type="button" class="primary-button">✦ Generate Burmese Recap</button><button id="cancelBtn" type="button" class="outline-button hidden">Cancel</button><span id="aiStatus" class="status-message" role="status">Ready to analyze</span></div>
+        <div class="progress hidden" id="progressWrap"><div id="progressBar"></div></div>
+        <div class="notice">AI က ဇာတ်လမ်းအချက်အလက်၊ နာမည်၊ Ending နဲ့ Timecode ကို တစ်ခါတစ်ရံ မှားနိုင်ပါတယ်။ Export မလုပ်ခင် Preview ပြန်စစ်ပါ။</div>
+      </section>
+
+      <section class="panel" id="editor">
+        <div class="panel-heading"><div><div class="overline">STEP 03 · EDITING WORKSPACE</div><h2>Scene & Script Editor</h2><p>Scene တစ်ခုချင်းစီကို စာသား၊ Video အချိန်၊ အစီအစဉ်နဲ့ ဖွင့်/ပိတ် စိတ်ကြိုက်ပြန်ပြင်နိုင်ပါတယ်။</p></div><span class="section-symbol">▤</span></div>
+        <div class="editing-layout">
+          <div class="preview-column">
+            <div id="previewBox" class="player-container"><div id="youtubeEmbed" class="hidden yt-wrap"></div><video id="localPlayer" controls playsinline class="hidden"></video><div id="emptyPreview"><span>▶</span><p>Video Preview</p><small>YouTube Link သို့မဟုတ် Local Video ထည့်ပါ</small></div></div>
+            <div class="preview-tools"><button id="previewScene" type="button" class="outline-button">▶ Preview selected scene</button><span id="timeInfo">00:00 / 00:00</span></div>
+            <div class="script-panel"><div class="script-head"><b>RECAPPER'S FULL SCRIPT</b><button id="downloadTxt" type="button" class="text-button">↓ TXT</button></div><textarea id="fullScript" placeholder="AI Generated Narration Script will appear here. သင်ကိုယ်တိုင်လည်း ရေးထည့်နိုင်ပါတယ်။"></textarea><div class="script-actions"><button id="applyScript" class="outline-button" type="button">Apply Script to Scenes</button><button id="copyScript" class="ghost-button" type="button">Copy All</button></div><small>တစ်ကြောင်းကို Scene တစ်ခုအဖြစ် ချိတ်ဆက်ပါတယ်။</small></div>
+          </div>
+          <div class="timeline-column">
+            <div class="timeline-head"><strong>SCENE TIMELINE</strong><div><span id="sceneCount">0 scenes</span><button id="addScene" class="icon-button" type="button" title="Add a scene">＋</button></div></div>
+            <div id="sceneList" class="scene-list"><div class="empty-scenes">Script ထုတ်ပြီး Scene များ ဒီနေရာမှာ ပြင်ဆင်နိုင်ပါမယ်။</div></div>
+          </div>
+        </div>
+        <div class="advanced-row"><label class="field">SUBTITLE TEXT COLOR<input id="subtitleColor" type="color" value="#ffffff"></label><label class="field">SUBTITLE BACKGROUND<input id="subtitleBg" type="color" value="#090909"></label><label class="field">SUBTITLE FONT SIZE<input id="subtitleSize" type="range" min="20" max="64" value="34"><span id="fontValue" class="range-label">34 px</span></label><label class="field">EXPORT RATIO<select id="ratio"><option value="9:16" selected>9:16 · TikTok / Reels</option><option value="16:9">16:9 · YouTube</option><option value="1:1">1:1 · Square</option></select></label></div>
+      </section>
+
+      <section class="panel" id="voice">
+        <div class="panel-heading"><div><div class="overline">STEP 04 · MYANMAR VOICE LAB</div><h2>မြန်မာဇာတ်လမ်းပြော အသံထုတ်ရန်</h2><p>AI Burmese TTS နဲ့ Narration WAV ဖိုင်တစ်ခု ထုတ်နိုင်ပါတယ်။ အသံတစ်ခုချင်း Scene စာသားအတိုင်း ထုတ်ပေးပါတယ်။</p></div><span class="section-symbol">◉</span></div>
+        <div class="two-col"><label class="field">AI VOICE<select id="voiceName"><option value="Kore" selected>Kore — Clear & Bold</option><option value="Puck">Puck — Energetic</option><option value="Charon">Charon — Deep</option><option value="Aoede">Aoede — Gentle</option><option value="Fenrir">Fenrir — Strong</option></select></label><label class="field">VOICE DELIVERY<select id="voiceStyle"><option value="Confident and expressive Burmese movie recap storyteller" selected>Cinematic Narrator</option><option value="Energetic, fast-paced Burmese short-video storytelling">Fast Recap</option><option value="Soft, warm and emotional Burmese storyteller">Emotional</option><option value="Deep suspenseful Burmese narrator">Suspense</option></select></label></div>
+        <div class="action-row"><button id="ttsBtn" class="primary-button" type="button">◉ Generate Burmese Voiceover</button><span id="ttsStatus" class="status-message" role="status">No voice generated yet</span></div>
+        <div id="audioResult" class="audio-result hidden"><audio id="voicePlayer" controls></audio><button id="downloadWav" class="outline-button" type="button">↓ Download WAV</button></div>
+        <div class="notice">Voice Generation အတွက် Gemini TTS Quota လိုအပ်ပါတယ်။ Myanmar accent ကို အတည်ပြုနားထောင်ပြီးမှ ထုတ်ဝေပါ။ Voice မထုတ်နိုင်ရင် စနစ်က အသံရှိသလို မဟုတ်မမှန် မပြပါဘူး။</div>
+      </section>
+
+      <section class="panel" id="export">
+        <div class="panel-heading"><div><div class="overline">STEP 05 · EXPORT CENTER</div><h2>သင့်ရဲ့ Recap ကို Export လုပ်ရန်</h2><p>Script, Timecoded SRT, Project JSON, WAV နဲ့ Local Video တင်ထားရင် Browser Video Recording ကို Download လုပ်နိုင်ပါတယ်။</p></div><span class="section-symbol">⇧</span></div>
+        <div class="export-grid">
+          <button id="exportSrt" class="export-card" type="button"><span>▤</span><b>Subtitles</b><small>Download .SRT</small></button>
+          <button id="exportJson" class="export-card" type="button"><span>{ }</span><b>Project</b><small>Download .JSON</small></button>
+          <button id="importJson" class="export-card" type="button"><span>↶</span><b>Restore</b><small>Import Project</small></button>
+          <button id="exportVideo" class="export-card accent-export" type="button"><span>▶</span><b>Render Video</b><small>MP4 / WebM (browser support)</small></button>
+          <input id="importFile" type="file" accept="application/json,.json" class="visually-hidden">
+        </div>
+        <div class="render-info"><div id="renderStatus" role="status">Video Export အတွက် Local Video File လိုအပ်ပါတယ်။ YouTube Video ကို အလိုအလျောက် Download မလုပ်ပါ။</div><div class="progress hidden" id="renderProgressWrap"><div id="renderProgress"></div></div><button type="button" id="stopRender" class="outline-button hidden">Stop render</button><a id="videoDownload" class="download-link hidden" download>↓ Download rendered video</a></div>
+        <div class="notice">Render က Browser ထဲမှာ Video Playback ကို Record လုပ်တာဖြစ်လို့ အချိန်ယူပြီး Chrome/Edge တွင် ပိုသင့်လျော်ပါတယ်။ MP4 ကို Browser က မထောက်ပံ့လျှင် WebM အဖြစ် သိမ်းနိုင်ပါတယ်။ မူရင်း Audio ကို အလိုအလျောက် သုံးမထားဘဲ အသံထုတ်ထားရင် AI Voiceover ထည့်ပေးပါတယ်။ မူပိုင်ခွင့်ရှိတဲ့ Content ကိုသာ အသုံးပြုပါ။</div>
+      </section>
+      <footer class="footer"><span>© 2026 Future Code AI Studio · Built for Myanmar Creators</span><span>Privacy-first • No app server • Your own Gemini key</span></footer>
+    </div>
+  </main>
+</div>
+<div id="toast" class="toast" role="alert" aria-live="polite"></div>
+</body>
+</html>
