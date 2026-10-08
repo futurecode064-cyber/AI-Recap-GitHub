@@ -1,4 +1,4 @@
-name: Future Code AI Video Studio APK v5
+name: Future Code AI Video Studio APK v6
 on:
   workflow_dispatch:
   push:
@@ -36,6 +36,7 @@ jobs:
           test -s video_studio_rebuild/training-app/assets/sections/image-studio-guide.html
           test -s video_studio_rebuild/training-app/assets/sections/video-maker-guide.html
           grep -q 'Video Prompt Builder' video_studio_rebuild/training-app/src/mm/futurecode/videostudio/MainActivity.java
+          python3 -c "from pathlib import Path; f=Path('video_studio_rebuild/training-app/AndroidManifest.xml'); s=f.read_text().replace('beta5','beta6').replace('Studio Beta 5','Studio Beta 6'); f.write_text(s)"
           cp -r video_studio_rebuild/training-app ./training-app
       - uses: actions/setup-java@v4
         with:
