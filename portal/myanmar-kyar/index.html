@@ -37,6 +37,11 @@
     .download { display: flex; align-items: center; justify-content: space-between; gap: 30px; min-height: 50px; padding: 12px 20px; border-radius: 12px; background: #102239; color: #fff; text-decoration: none; font-size: 15px; font-weight: 750; }
     .download:hover { background: #1e4e77; }
     .download-row small { color: #64748b; font-size: 12px; }
+    .web-play { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 22px; margin-top: 24px; border-top: 1px solid #e1e7ee; }
+    .web-play h3 { margin: 0 0 4px; font-size: 14px; }
+    .web-play p { margin: 0; color: #58687c; font-size: 12px; }
+    .play-button { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 18px; min-height: 50px; border-radius: 12px; background: #157568; color: #fff; text-decoration: none; font-size: 14px; font-weight: 750; flex-shrink: 0; }
+    .play-button:hover { background: #105c53; }
     .social-section { margin-top: 27px; }
     .social-section h2 { margin-bottom: 5px; font-size: 18px; }
     .social-section p { margin: 0 0 14px; color: #52637a; font-size: 14px; }
@@ -60,6 +65,7 @@
       .app { align-items: flex-start; flex-direction: column; gap: 14px; }
       .app img { width: 78px; height: 78px; }
       .download-row { align-items: stretch; flex-direction: column; gap: 8px; margin-top: 20px; }
+      .web-play { align-items: stretch; flex-direction: column; gap: 14px; }
       .social-links { grid-template-columns: 1fr; gap: 12px; }
       .help { padding: 20px; }
       h2 { font-size: 21px; }
@@ -72,9 +78,9 @@
 <body>
   <header><img src="../apps/myanmar-kyar.png" width="42" height="42" alt="">မြန်မာကျားကွက်</header>
   <main>
-    <span class="tag">ANDROID APK DOWNLOAD</span>
+    <span class="tag">ANDROID APK · iOS PLAY</span>
     <h1>သင့်အတွက် မြန်မာကျားကွက် APK</h1>
-    <p class="intro">မြန်မာကျားကွက် app ကို အောက်ပါခလုတ်မှ တိုက်ရိုက် ဒေါင်းလုပ်ဆွဲနိုင်ပါသည်။</p>
+    <p class="intro">Android အတွက် APK ဒေါင်းလုပ်ဆွဲနိုင်ပြီး iPhone / iOS မှာ browser ဖြင့် တိုက်ရိုက်ကစားနိုင်ပါသည်။</p>
     <article class="card" aria-labelledby="app-name">
       <div class="app">
         <img src="../apps/myanmar-kyar.png" width="100" height="100" alt="မြန်မာကျားကွက် app icon">
@@ -87,6 +93,13 @@
       <div class="download-row">
         <a class="download" href="../apps/Myanmar-Kyar-Kwet.apk" download="Myanmar-Kyar-Kwet.apk">APK ဒေါင်းလုပ်ဆွဲမည် <span aria-hidden="true">↓</span></a>
         <small>1.56 MB · APK ဒေါင်းလုပ် အခမဲ့</small>
+      </div>
+      <div class="web-play">
+        <div>
+          <h3>iPhone / iOS သုံးသူများအတွက်</h3>
+          <p>ဖုန်း၏ browser မှ တိုက်ရိုက်ကစားနိုင်ပါသည်။</p>
+        </div>
+        <a class="play-button" href="https://myanmar-kyar.futurecode-dubai-86851bf2.workers.dev/" target="_blank" rel="noopener noreferrer">iOS မှာ တိုက်ရိုက်ကစားရန် <span aria-hidden="true">↗</span></a>
       </div>
     </article>
     <section class="social-section" aria-labelledby="social-title">
