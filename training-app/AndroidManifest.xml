@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="mm.futurecode.videostudio.pro" android:versionCode="8" android:versionName="1.4.1">
+ <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35" />
+ <uses-permission android:name="android.permission.INTERNET" />
+ <application android:label="Future Code AI Studio" android:icon="@drawable/ic_original" android:allowBackup="false" android:usesCleartextTraffic="false" android:theme="@style/StudioTheme" android:supportsRtl="true">
+  <activity android:name="mm.futurecode.videostudio.MainActivity" android:exported="true" android:configChanges="keyboardHidden|orientation|screenSize|uiMode"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+ </application>
+</manifest>

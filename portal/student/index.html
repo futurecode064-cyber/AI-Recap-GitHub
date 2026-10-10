@@ -1,70 +1,19 @@
 <!doctype html>
-<html lang="my"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Future Code · Student Portal</title><link rel="stylesheet" href="../theme.css"><meta name="robots" content="noindex,nofollow"></head>
-<body><main class="container">
-<header class="mast"><div class="logo">FC</div><div><div class="eyebrow">FUTURE CODE AI STUDIO</div><h1>သင်တန်းသား Student Portal</h1></div></header>
-<section id="loginPanel" class="panel" style="max-width:540px;margin:auto"><h2>🔐 Student Login</h2>
-<p class="muted">Admin က ဖွင့်ပေးထားတဲ့ Account နဲ့သာ ဝင်ပါ။ Account တစ်ခုကို ဖုန်း သို့မဟုတ် ကွန်ပျူတာ တစ်လုံးသာ ချိတ်လို့ရပါတယ်။</p>
-<form id="loginForm"><label class="field">Username<input id="user" required minlength="3" autocomplete="username"></label>
-<label class="field">Password<input id="pass" required type="password" autocomplete="current-password" minlength="4"></label>
-<button type="submit" class="primary">Student Login ဝင်ရန်</button></form>
-<p class="muted">ဤ Browser က Device Key တစ်ခုဖန်တီးပြီး သိမ်းထားပါမယ်။ Browser Data / Site Storage ဖျက်လိုက်ရင် Admin ဆီက Device Reset တောင်းရနိုင်ပါတယ်။</p>
-</section>
+<html lang="my"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#090f1a"><title>Future Code · Student Portal</title><link rel="stylesheet" href="../theme.css"><link rel="stylesheet" href="student.css"><script defer src="access.js"></script><script defer src="app.js"></script></head>
+<body><main class="container" id="portal">
+<header class="mast"><div class="logo">FC</div><div><div class="eyebrow">FUTURE CODE AI STUDIO</div><h1>သင်တန်းသား Student Portal</h1></div><span class="chip version">v8 · Web & Android</span></header>
+<section id="loginPanel" class="panel" style="max-width:540px;margin:auto"><h2>🔐 Student Login</h2><p class="muted">Admin က ဖွင့်ပေးထားတဲ့ Account နဲ့ ဝင်ပါ။ Account တစ်ခုကို ဖုန်း သို့မဟုတ် Browser တစ်ခုသာ ချိတ်လို့ရပါတယ်။</p>
+<form id="loginForm"><label class="field">Username<input id="user" type="text" required minlength="3" maxlength="40" autocomplete="username"></label><label class="field">Password<input id="pass" required type="password" autocomplete="current-password" minlength="4" maxlength="128"></label><button type="submit" class="primary">Student Login ဝင်ရန်</button></form>
+<p class="muted">APK မှာ ချိတ်ပြီးသား account ကို Web မှာ သုံးချင်လျှင် Admin က Device Reset လုပ်ပေးပြီးမှ ဝင်ပါ။ Site Storage ဖျက်လိုက်ရင်လည်း Device Reset လိုနိုင်ပါတယ်။</p></section>
 <div id="dashboard" class="hidden">
-<section class="panel"><div class="row"><div><div class="eyebrow">WELCOME BACK</div><h2 id="welcome">မင်္ဂလာပါ</h2><p class="muted">Future Code AI Studio · Student Dashboard</p></div><button id="logout" class="secondary">Logout</button></div></section>
-<section class="panel"><h2>📚 သင်တန်း Section များ</h2><p class="muted">Admin က ဖွင့်ထားတဲ့ Section တွေကို ဒီနေရာမှာ ပြပါတယ်။ Web အတွက် ရနိုင်တဲ့ Section တွေကို Browser ကနေဖွင့်နိုင်ပြီး အခြားသင်ခန်းစာတွေကို Android APK ထဲမှာ ဖတ်ရှုနိုင်ပါတယ်။</p><div id="cards" class="cards"></div></section>
+<section class="panel"><div class="row"><div><div class="eyebrow">WELCOME BACK</div><h2 id="welcome">မင်္ဂလာပါ</h2><p class="muted">သင်ခန်းစာမှ ဖန်တီးမှုအထိ တစ်နေရာတည်းမှာ အသုံးပြုပါ။</p></div><div class="flex"><button id="refresh" class="secondary">↻ ပြန်စစ်မည်</button><button id="logout" class="secondary">Logout</button></div></div></section>
+<section class="panel"><h2>📚 သင်တန်းနှင့် Studio များ</h2><p class="muted">အောက်ပါ Section တိုင်းကို Browser မှာ ဖွင့်နိုင်ပါတယ်။ AI ဖန်တီးမှုအတွက် ကိုယ်ပိုင် Google API Key လိုပါမယ်။</p><div id="cards" class="cards"></div><p id="noSections" class="muted hidden">Admin က ဖွင့်ပေးထားတဲ့ Section မရှိသေးပါ။</p></section>
 <section class="panel"><h2>📢 ကြေညာချက်များ</h2><div id="announcements" class="muted"></div></section>
-<section class="panel"><h2>🧰 Browser Studio</h2><p class="muted">Movie Recap, Image Studio နဲ့ Video Maker ကို Browser မှာ စမ်းသုံးနိုင်ပါတယ်။ API Key ကို အခြားသူများ မမျှဝေပါနဲ့။</p><button id="recap" class="primary">🎬 Movie Recap Studio ဖွင့်ရန်</button></section>
 </div>
-<p id="status" class="status" role="status" aria-live="polite"></p>
-<footer>Future Code AI Studio · Student Account Access</footer></main>
-<script>
-"use strict";
-const API="https://mxwervqihaqlxybghdak.supabase.co/functions/v1/video-studio-gate",DB_NAME="fc_video_student_keys_v1",STORE="device_keys",tokenKey="fc_student_browser_session";
-const $=id=>document.getElementById(id);let session=sessionStorage.getItem(tokenKey)||"",currentUsername=sessionStorage.getItem("fc_student_username")||"";
-function status(t,bad=false){$("status").textContent=t;$("status").classList.toggle("error",bad)}
-function view(isLoggedIn){$("loginPanel").classList.toggle("hidden",isLoggedIn);$("dashboard").classList.toggle("hidden",!isLoggedIn)}
-async function post(action,fields={}){const res=await fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...fields,action})});let data;try{data=await res.json()}catch{throw Error("API response မမှန်ပါ")}if(!res.ok)throw Error(data.error||"Server error");return data}
-function dbOpen(){return new Promise((resolve,reject)=>{const r=indexedDB.open(DB_NAME,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
-async function deviceKey(name){const db=await dbOpen();const existing=await new Promise((resolve,reject)=>{const r=db.transaction(STORE,"readonly").objectStore(STORE).get(name);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
-if(existing){db.close();return existing}
-const pair=await crypto.subtle.generateKey({name:"ECDSA",namedCurve:"P-256"},false,["sign","verify"]);
-await new Promise((resolve,reject)=>{const transaction=db.transaction(STORE,"readwrite");transaction.objectStore(STORE).put(pair,name);transaction.oncomplete=resolve;transaction.onerror=()=>reject(transaction.error)});db.close();return pair}
-function base64(buffer){const bytes=new Uint8Array(buffer);let str="";for(let i=0;i<bytes.length;i++)str+=String.fromCharCode(bytes[i]);return btoa(str)}
-async function proof(pair,message){return base64(await crypto.subtle.sign({name:"ECDSA",hash:"SHA-256"},pair.privateKey,new TextEncoder().encode(message)))}
-const icons={"future":"🏠","downloads":"⬇️","academy":"🎓","guides":"📖","tools":"🧰","design":"🎨","invoice":"🧾","course":"📚","recap":"🎬","recap-guide":"📘","image-studio":"🖼️","image-guide":"📗","video-maker":"🎞️","video-guide":"📙"};
-const descriptions={"future":"Future Code AI Studio","academy":"AI Video လေ့လာနည်းများ","guides":"Professional AI Video Guide","tools":"AI Tools Directory","recap":"Burmese Movie Recap Generator","recap-guide":"Movie Recap အစအဆုံးအသုံးပြုနည်း","image-studio":"AI Image Create & Edit","image-guide":"Image Studio API, Poster, Editing နဲ့ Export လမ်းညွှန်","video-maker":"Text to Video & Video Assembly","video-guide":"Video Maker Scene, Voice, Veo နဲ့ Export လမ်းညွှန်"};
-function render(data){$("welcome").textContent="မင်္ဂလာပါ · "+(data.username||currentUsername);
-$("cards").replaceChildren();
-for(const s of data.sections||[]){if(!s.enabled)continue;const card=document.createElement("button");card.className="tile";card.type="button";
-const icon=document.createElement("span");icon.className="emoji";icon.textContent=icons[s.section_key]||"✦";
-const title=document.createElement("strong");title.textContent=s.title;
-const desc=document.createElement("p");desc.textContent=descriptions[s.section_key]||"အကြောင်းအရာကို APK မှာ ကြည့်ရှုနိုင်ပါတယ်";
-card.append(icon,title,desc);
-card.onclick=()=>{
-const routes={"recap":"../recap/","recap-guide":"../recap-guide/","image-studio":"../image-studio/","image-guide":"../image-guide/","video-maker":"../video-maker/","video-guide":"../video-guide/"};
-if(routes[s.section_key])location.href=routes[s.section_key];
-else status("ဒီ Section ရဲ့ Full Content ကို Android APK ထဲမှာ ရနိုင်ပါတယ်။ Browser Version အတွက် ပြင်ဆင်နေဆဲပါ။");
-};$("cards").append(card)}
-$("announcements").replaceChildren();
-for(const x of data.announcements||[]){const p=document.createElement("p");p.textContent=x.content;$("announcements").append(p)}
-if(!(data.announcements||[]).length)$("announcements").textContent="ကြေညာချက်မရှိသေးပါ။";
-view(true)}
-async function login(e){e.preventDefault();const button=e.submitter;button.disabled=true;
-try{const username=$("user").value.trim().toLowerCase(),password=$("pass").value;
-if(!/^[a-z0-9._-]{3,40}$/.test(username))throw Error("Username a-z, 0-9 နဲ့ 3 လုံးအနည်းဆုံး လိုပါတယ်");
-status("Device လုံခြုံရေး စစ်ဆေးနေပါတယ်...");
-const pair=await deviceKey(username);
-const nonce=(await post("challenge",{username})).nonce;
-const spki=base64(await crypto.subtle.exportKey("spki",pair.publicKey));
-const signature=await proof(pair,username+"|"+nonce);
-const data=await post("student_login",{username,password,nonce,spki,signature});
-session=data.token;currentUsername=username;sessionStorage.setItem(tokenKey,session);sessionStorage.setItem("fc_student_username",username);
-$("pass").value="";render(data);status("✓ Student Login အောင်မြင်ပါပြီ");
-}catch(err){status(err.message,true)}finally{button.disabled=false}}
-async function restore(){if(!session||!currentUsername)return;try{const pair=await deviceKey(currentUsername),timestamp=Date.now();const signature=await proof(pair,"me|"+session+"|"+timestamp);const data=await post("student_me",{token:session,timestamp,signature});render(data)}catch(err){session="";sessionStorage.removeItem(tokenKey);view(false);status("Session အဟောင်း ပြတ်သွားပါပြီ။ Login ပြန်ဝင်ပါ။",true)}}
-$("loginForm").onsubmit=login;
-$("logout").onclick=async()=>{await post("logout",{token:session}).catch(()=>{});session="";currentUsername="";sessionStorage.removeItem(tokenKey);sessionStorage.removeItem("fc_student_username");view(false);status("Logout ပြီးပါပြီ")};
-$("recap").onclick=()=>location.href="../recap/";
-if(!window.isSecureContext||!crypto.subtle||!indexedDB){status("ဒီ Browser မှာ Secure Storage မရပါ။ Chrome/Edge HTTPS ကိုသုံးပါ။",true);$("loginForm").querySelector("button").disabled=true}else restore();
-</script></body></html>
+<p id="status" class="status" role="status" aria-live="polite"></p><button id="retry" class="secondary hidden">အင်တာနက် ပြန်ချိတ်ပြီး ပြန်စမ်းမည်</button><footer>Future Code AI Studio · v8</footer>
+</main>
+<section id="workspace" class="hidden" aria-label="Studio workspace">
+<header class="workspace-bar"><button id="back" class="secondary">‹ ပြန်</button><div class="workspace-heading"><span class="eyebrow">FUTURE CODE AI STUDIO</span><strong id="sectionTitle"></strong></div><button id="home" class="secondary">⌂ ပင်မ</button></header>
+<p id="workspaceStatus" class="workspace-status" role="status" aria-live="polite"></p><div id="frames"></div>
+</section>
+</body></html>

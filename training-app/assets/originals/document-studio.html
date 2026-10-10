@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <title>Myanmar Document Studio</title>
+  <style>
+    :root{
+      --app-bg:#f4f7fb;
+      --panel:#ffffff;
+      --ink:#111827;
+      --muted:#667085;
+      --line:#e5e7eb;
+      --brand:#6d5dfc;
+      --brand-2:#8b7cff;
+      --danger:#dc2626;
+      --success:#16a34a;
+      --shadow:0 16px 40px rgba(15,23,42,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Noto Sans Myanmar","Pyidaungsu","Myanmar Text",Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--app-bg);
+      color:var(--ink);
+    }
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    .app{min-height:100vh;display:grid;grid-template-columns:250px 1fr}
+    .sidebar{
+      position:sticky;top:0;height:100vh;background:#0f172a;color:#fff;padding:20px 14px;
+      display:flex;flex-direction:column;gap:18px;z-index:30;
+    }
+    .brand{display:flex;align-items:center;gap:12px;padding:8px 10px}
+    .brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#8b5cf6,#06b6d4);font-weight:900;box-shadow:0 10px 22px rgba(124,58,237,.35)}
+    .brand h1{font-size:16px;margin:0;line-height:1.3}.brand small{display:block;color:#cbd5e1;margin-top:4px;font-size:11px}
+    .maker-list{display:grid;gap:7px;overflow:auto;padding-right:3px}
+    .maker-btn{border:0;background:transparent;color:#cbd5e1;padding:12px 12px;border-radius:12px;display:flex;gap:10px;align-items:center;text-align:left;font-weight:700;transition:.2s}
+    .maker-btn:hover{background:#1e293b;color:#fff}.maker-btn.active{background:linear-gradient(135deg,#6d5dfc,#8b7cff);color:#fff;box-shadow:0 8px 20px rgba(109,93,252,.28)}
+    .maker-icon{font-size:19px;width:24px;text-align:center}.sidebar-note{margin-top:auto;color:#94a3b8;font-size:11px;line-height:1.65;padding:0 10px}
+    .main{min-width:0}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(244,247,251,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,231,235,.85);padding:14px 20px;display:flex;align-items:center;gap:12px;justify-content:space-between}
+    .mobile-menu{display:none;width:40px;height:40px;border-radius:11px;border:1px solid var(--line);background:#fff}
+    .title-wrap h2{font-size:18px;margin:0}.title-wrap p{margin:3px 0 0;color:var(--muted);font-size:12px}
+    .top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .btn{border:1px solid var(--line);background:#fff;color:#111827;padding:10px 13px;border-radius:11px;font-weight:800;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:7px;transition:.2s}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(15,23,42,.08)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border-color:transparent}.btn.danger{color:var(--danger)}.btn.success{color:#fff;background:#0f172a;border-color:#0f172a}
+    .workspace{padding:18px;display:grid;grid-template-columns:minmax(350px,520px) minmax(0,1fr);gap:18px;align-items:start}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .control-panel{position:relative}
+    .tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);padding:10px;gap:6px;background:#fbfcfe}
+    .tab{border:0;background:transparent;padding:11px 9px;border-radius:10px;font-weight:800;color:#667085;font-size:12px}.tab.active{background:#fff;color:#111827;box-shadow:0 2px 10px rgba(15,23,42,.06);border:1px solid #eef0f3}
+    .panel-body{padding:16px}
+    .section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.section-title h3{font-size:15px;margin:0}.section-title span{font-size:11px;color:var(--muted)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:800;color:#475467}.field input,.field textarea,.field select{width:100%;border:1px solid #dfe3ea;border-radius:10px;padding:10px 11px;background:#fff;color:#111827;outline:none;transition:.2s}.field textarea{min-height:90px;resize:vertical;line-height:1.7}.field input:focus,.field textarea:focus,.field select:focus{border-color:#8b7cff;box-shadow:0 0 0 3px rgba(109,93,252,.10)}
+    .hint{font-size:10px;color:#98a2b3;line-height:1.5}.image-row{display:flex;gap:10px;align-items:center}.image-thumb{width:58px;height:58px;border-radius:12px;background:#f1f5f9;border:1px dashed #cbd5e1;display:grid;place-items:center;overflow:hidden;color:#94a3b8;font-size:10px;flex:0 0 auto}.image-thumb img{width:100%;height:100%;object-fit:cover}
+    .subcard{border:1px solid #e8ebf0;border-radius:14px;padding:12px;background:#fbfcfe;margin-top:12px}.subcard-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.subcard-head strong{font-size:12px}.icon-btn{width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;font-weight:900}.icon-btn.remove{color:var(--danger)}
+    .items-table{display:grid;gap:8px}.item-row{display:grid;grid-template-columns:minmax(0,1.5fr) .55fr .75fr 34px;gap:8px;align-items:center}.item-row input{min-width:0;border:1px solid #dfe3ea;border-radius:9px;padding:9px}
+    .form-footer{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+    .design-toolbar{display:flex;gap:8px;margin-bottom:12px}.design-toolbar input,.design-toolbar select{border:1px solid var(--line);border-radius:10px;padding:9px 10px;background:#fff;min-width:0}.design-toolbar input{flex:1}
+    .design-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.theme-card{border:1px solid #e5e7eb;background:#fff;border-radius:13px;padding:9px;text-align:left;transition:.18s;position:relative}.theme-card:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(15,23,42,.08)}.theme-card.active{outline:2px solid var(--brand);border-color:transparent}.theme-preview{height:78px;border-radius:9px;overflow:hidden;position:relative;background:var(--tb);border:1px solid rgba(0,0,0,.04)}.theme-preview .bar{height:16px;background:var(--ta)}.theme-preview .side{position:absolute;left:0;top:16px;bottom:0;width:26%;background:color-mix(in srgb,var(--ta) 14%,var(--tb))}.theme-preview .line{height:5px;border-radius:99px;background:var(--ti);opacity:.16;margin:8px 8px 0 34%}.theme-preview .line.short{width:38%}.theme-meta{display:flex;align-items:center;justify-content:space-between;margin-top:8px;gap:6px}.theme-meta strong{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.swatches{display:flex;gap:3px}.swatches i{width:8px;height:8px;border-radius:50%;display:block}
+    .load-more{width:100%;margin-top:12px}
+    .export-box{display:grid;gap:12px}.export-note{padding:12px;border-radius:12px;background:#f8fafc;color:#475467;font-size:11px;line-height:1.7;border:1px solid #e5e7eb}.export-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.project-name{display:grid;gap:7px}.project-name input{border:1px solid var(--line);border-radius:10px;padding:10px}
+    .preview-panel{padding:14px;position:sticky;top:78px;min-height:calc(100vh - 96px)}
+    .preview-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.preview-toolbar strong{font-size:12px}.zoom-controls{display:flex;gap:6px;align-items:center}.zoom-controls button{width:30px;height:30px;border:1px solid var(--line);border-radius:9px;background:#fff}.zoom-label{font-size:10px;color:var(--muted);min-width:38px;text-align:center}
+    .preview-stage{background:#e9eef5;border-radius:14px;min-height:650px;padding:24px;overflow:auto;display:flex;align-items:flex-start;justify-content:center;border:1px solid #dfe5ec}
+    .paper-wrap{width:min(100%,820px);transform-origin:top center;transition:transform .15s}
+    .document{
+      --a:#4f46e5;--a2:#7c3aed;--bg:#fff;--ink:#111827;--soft:#eef2ff;--muted:#64748b;
+      background:var(--bg);color:var(--ink);width:100%;min-height:1080px;box-shadow:0 10px 30px rgba(15,23,42,.12);position:relative;overflow:hidden;font-family:"Noto Sans Myanmar","Pyidaungsu","Myanmar Text",Arial,sans-serif;
+    }
+    .document.certificate{min-height:560px;aspect-ratio:1.414/1}.document.business-card{min-height:auto;aspect-ratio:1.75/1;max-width:760px}.document.receipt{min-height:700px}.doc-inner{position:relative;z-index:2;padding:54px}.document.business-card .doc-inner{padding:34px}.document.certificate .doc-inner{padding:46px}
+    .doc-kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--a);font-weight:900}.doc-title{font-size:34px;line-height:1.2;margin:6px 0 10px;font-weight:900}.doc-subtitle{color:var(--muted);font-size:14px;line-height:1.7}.doc-rule{height:3px;background:linear-gradient(90deg,var(--a),var(--a2));width:72px;border-radius:99px;margin:14px 0 24px}.doc-section{margin:24px 0}.doc-section h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px;color:var(--a)}.doc-section p{margin:0;color:var(--ink);line-height:1.75;font-size:13px}.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.pill-wrap{display:flex;flex-wrap:wrap;gap:6px}.pill{padding:5px 9px;border-radius:999px;background:var(--soft);color:var(--ink);font-size:11px}.meta{display:flex;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:11px;margin-top:10px}.meta span{display:inline-flex;align-items:center;gap:5px}.avatar{width:94px;height:94px;border-radius:22px;object-fit:cover;border:4px solid #fff;box-shadow:0 7px 20px rgba(15,23,42,.15)}.logo{max-width:82px;max-height:82px;object-fit:contain}.doc-header-row{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}.doc-header-row .head-text{min-width:0}.right{text-align:right}.small{font-size:11px;color:var(--muted);line-height:1.7}.big-number{font-size:24px;font-weight:900;color:var(--a)}
+    .doc-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:12px}.doc-table th{background:var(--soft);color:var(--ink);text-align:left;padding:11px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.06em}.doc-table td{padding:11px 10px;border-bottom:1px solid rgba(100,116,139,.17)}.doc-table th:nth-child(n+2),.doc-table td:nth-child(n+2){text-align:right}.totals{margin-left:auto;width:min(320px,100%);margin-top:18px}.total-row{display:flex;justify-content:space-between;gap:14px;padding:7px 0;font-size:12px}.total-row.grand{font-size:17px;font-weight:900;border-top:2px solid var(--a);margin-top:5px;padding-top:12px;color:var(--a)}
+    .contact-box{background:var(--soft);padding:15px;border-radius:14px;font-size:11px;line-height:1.8}.signature-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:45px}.signature{padding-top:35px;border-top:1px solid rgba(100,116,139,.35);text-align:center;font-size:11px}.certificate-center{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:470px}.certificate-center .doc-title{font-size:42px}.certificate-name{font-size:36px;font-weight:900;color:var(--a);margin:18px 0 8px}.certificate-reason{font-size:15px;max-width:650px;line-height:1.8}.card-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:25px;align-items:center;height:100%}.card-name{font-size:29px;font-weight:900;margin:3px 0}.card-role{font-size:13px;color:var(--a);font-weight:800}.card-contact{margin-top:22px;display:grid;gap:7px;font-size:11px}.card-brand{display:flex;align-items:center;justify-content:center;min-height:180px;background:var(--soft);border-radius:20px;text-align:center;padding:20px}.card-brand .logo{max-width:110px;max-height:80px}
+    .letter-body{white-space:pre-wrap;line-height:1.95;font-size:13px}.application-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}.app-field{padding:10px 0;border-bottom:1px solid rgba(100,116,139,.25)}.app-field b{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}.app-field span{font-size:12px}.app-field.full{grid-column:1/-1}
+    /* 10 layout families */
+    .document.layout-1:before{content:"";position:absolute;left:0;top:0;bottom:0;width:26px;background:linear-gradient(var(--a),var(--a2))}.document.layout-1 .doc-inner{padding-left:72px}
+    .document.layout-2:before{content:"";position:absolute;left:0;right:0;top:0;height:160px;background:linear-gradient(135deg,var(--a),var(--a2));z-index:0}.document.layout-2 .doc-inner{padding-top:44px}.document.layout-2 .doc-header-row:first-child,.document.layout-2 .certificate-center{position:relative}.document.layout-2 .doc-header-row:first-child .doc-title,.document.layout-2 .doc-header-row:first-child .doc-subtitle,.document.layout-2 .doc-header-row:first-child .meta,.document.layout-2 .doc-header-row:first-child .doc-kicker{color:#fff}.document.layout-2 .doc-header-row:first-child .doc-rule{background:#fff}
+    .document.layout-3{box-shadow:0 0 0 1px #e5e7eb}.document.layout-3 .doc-rule{height:1px;width:100%;background:#d1d5db}.document.layout-3 .doc-section h3{color:var(--ink)}
+    .document.layout-4:after{content:"";position:absolute;inset:18px;border:2px solid var(--a);opacity:.45;pointer-events:none}.document.layout-4 .doc-inner{padding:70px}
+    .document.layout-5{background:linear-gradient(90deg,var(--soft) 0 31%,var(--bg) 31%)}.document.layout-5 .doc-inner{padding-left:62px}
+    .document.layout-6{border-radius:24px}.document.layout-6 .doc-section{background:rgba(255,255,255,.72);border:1px solid rgba(100,116,139,.13);border-radius:16px;padding:16px}.document.layout-6 .doc-table{border-radius:14px;overflow:hidden}
+    .document.layout-7 .doc-title{font-size:46px}.document.layout-7 .doc-section h3{font-size:15px}.document.layout-7:before{content:"";position:absolute;right:-90px;top:-90px;width:230px;height:230px;border-radius:50%;background:var(--soft)}
+    .document.layout-8:before,.document.layout-8:after{content:"";position:absolute;z-index:0;opacity:.11}.document.layout-8:before{width:260px;height:260px;background:var(--a);clip-path:polygon(0 0,100% 0,0 100%);left:0;top:0}.document.layout-8:after{width:260px;height:260px;background:var(--a2);clip-path:polygon(100% 0,100% 100%,0 100%);right:0;bottom:0}
+    .document.layout-9 .doc-inner{padding:42px 58px}.document.layout-9 .doc-title{font-family:Georgia,"Times New Roman",serif;font-weight:800}.document.layout-9 .doc-section h3{font-family:Georgia,"Times New Roman",serif;text-transform:none;font-size:16px;letter-spacing:0}
+    .empty-note{padding:30px;text-align:center;color:#94a3b8;font-size:12px;border:1px dashed #d0d5dd;border-radius:12px}
+    .toast{position:fixed;right:18px;bottom:18px;background:#111827;color:#fff;padding:11px 14px;border-radius:12px;box-shadow:0 12px 28px rgba(15,23,42,.2);font-size:12px;z-index:100;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}
+    .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:25}.overlay.show{display:block}
+    .saved-list{display:grid;gap:8px;max-height:240px;overflow:auto}.saved-item{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--line);border-radius:10px;padding:9px}.saved-item small{color:var(--muted)}
+    @media(max-width:1100px){.app{grid-template-columns:215px 1fr}.workspace{grid-template-columns:420px minmax(0,1fr)}.doc-inner{padding:40px}.preview-stage{padding:14px}}
+    @media(max-width:900px){.app{display:block}.sidebar{position:fixed;left:-270px;top:0;width:250px;transition:.25s}.sidebar.open{left:0}.mobile-menu{display:grid;place-items:center}.workspace{grid-template-columns:1fr}.preview-panel{position:relative;top:auto;min-height:0}.preview-stage{min-height:520px}.topbar{padding:12px}.top-actions .btn span{display:none}}
+    @media(max-width:560px){.workspace{padding:10px;gap:10px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.design-grid{grid-template-columns:1fr 1fr}.item-row{grid-template-columns:1fr .45fr .65fr 32px}.doc-inner{padding:28px}.document.layout-4 .doc-inner{padding:38px}.document.layout-1 .doc-inner{padding-left:46px}.document.layout-9 .doc-inner{padding:28px}.doc-title{font-size:26px}.doc-grid,.signature-grid,.application-grid,.card-grid{grid-template-columns:1fr}.certificate-center .doc-title{font-size:31px}.certificate-name{font-size:27px}.topbar{align-items:flex-start}.title-wrap p{display:none}.export-actions{grid-template-columns:1fr}.preview-stage{padding:7px}.tabs{position:sticky;top:0;z-index:3}}
+    @media print{
+      @page{margin:0}
+      body{background:#fff}
+      .sidebar,.topbar,.control-panel,.preview-toolbar,.toast,.overlay{display:none!important}
+      .app,.main,.workspace,.panel,.preview-panel,.preview-stage,.paper-wrap{display:block!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important;background:#fff!important;min-height:0!important;width:100%!important;max-width:none!important;transform:none!important}
+      .document{box-shadow:none!important;width:100%!important;min-height:100vh!important}
+      .document.business-card{max-width:none!important;min-height:auto!important;margin:0 auto!important}
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">MD</div><div><h1>Myanmar Document Studio</h1><small>Offline • No API • One HTML</small></div></div>
+    <nav class="maker-list" id="makerList"></nav>
+    <div class="sidebar-note">အချက်အလက်ဖြည့် → ဒီဇိုင်းရွေး → တန်းပြီး Preview → Print / Save as PDF။ Data ကို browser ထဲမှာပဲ သိမ်းထားပါတယ်။</div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <main class="main">
+    <header class="topbar">
+      <div style="display:flex;gap:10px;align-items:center;min-width:0">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div class="title-wrap"><h2 id="pageTitle">CV Maker</h2><p id="pageDesc">အချက်အလက်ထည့်ပြီး professional CV ကိုချက်ချင်းပြုလုပ်ပါ</p></div>
+      </div>
+      <div class="top-actions">
+        <button class="btn" id="sampleBtn">✨ <span>နမူနာဖြည့်</span></button>
+        <button class="btn" id="saveBtn">💾 <span>Project သိမ်း</span></button>
+        <button class="btn primary" id="printBtn">🖨️ <span>Print / PDF</span></button>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <section class="panel control-panel">
+        <div class="tabs">
+          <button class="tab active" data-tab="form">① အချက်အလက်</button>
+          <button class="tab" data-tab="design">② ဒီဇိုင်း 100</button>
+          <button class="tab" data-tab="export">③ Export</button>
+        </div>
+        <div class="panel-body" id="tabContent"></div>
+      </section>
+
+      <section class="panel preview-panel">
+        <div class="preview-toolbar"><strong>Live Preview</strong><div class="zoom-controls"><button id="zoomOut">−</button><span class="zoom-label" id="zoomLabel">100%</span><button id="zoomIn">＋</button></div></div>
+        <div class="preview-stage" id="previewStage"><div class="paper-wrap" id="paperWrap"><div id="documentPreview"></div></div></div>
+      </section>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<input type="file" id="jsonImport" accept="application/json" hidden>
+
+<script>
+(() => {
+  'use strict';
+
+  const makerDefs = {
+    cv: {
+      icon:'👤', title:'CV Maker', desc:'အချက်အလက်ထည့်ပြီး professional CV ကိုချက်ချင်းပြုလုပ်ပါ',
+      fields:[
+        ['fullName','အမည်','text','မောင်မောင်'],['jobTitle','ရာထူး / Profession','text','Graphic Designer'],
+        ['email','Email','email','name@example.com'],['phone','ဖုန်း','text','09 123 456 789'],
+        ['location','လိပ်စာ','text','Yangon, Myanmar'],['website','Website / Portfolio','text','yourname.com'],
+        ['summary','ကိုယ်ရေးအကျဉ်း','textarea','မိမိအကြောင်း အကျဉ်းချုပ်...','full'],
+        ['experience','လုပ်ငန်းအတွေ့အကြုံ','textarea','Company | Role | 2024–2026 | တာဝန်နှင့်အောင်မြင်မှု\nCompany B | Role | 2022–2024 | ...','full'],
+        ['education','ပညာရေး','textarea','University | Degree | 2020–2024\nSchool | Certificate | 2019','full'],
+        ['skills','ကျွမ်းကျင်မှုများ','textarea','Communication, Excel, Photoshop, Sales','full'],
+        ['languages','ဘာသာစကား','text','Myanmar, English'],
+        ['photo','Profile Photo','image','','full']
+      ],
+      sample:{fullName:'Thiri Aung',jobTitle:'Digital Marketing Specialist',email:'thiri@example.com',phone:'09 777 888 999',location:'Yangon, Myanmar',website:'thiriaung.me',summary:'ရလဒ်အခြေပြု Digital Marketing Specialist တစ်ယောက်ဖြစ်ပြီး Social Media Campaign, Content Strategy နှင့် Brand Growth ပိုင်းများတွင် အတွေ့အကြုံရှိပါသည်။',experience:'Future Commerce | Digital Marketing Specialist | 2024–2026 | Facebook campaign များကို စီမံပြီး engagement 45% တိုးမြှင့်ခဲ့သည်။\nBright Media | Content Executive | 2022–2024 | Monthly content plan နှင့် client reporting ကိုတာဝန်ယူခဲ့သည်။',education:'University of Yangon | B.A. English | 2018–2022\nGoogle Career Certificate | Digital Marketing | 2023',skills:'Digital Marketing, Facebook Ads, Content Strategy, Canva, Excel, Communication',languages:'Myanmar, English'}
+    },
+    invoice:{icon:'🧾',title:'Invoice Maker',desc:'ကုန်ပစ္စည်း/ဝန်ဆောင်မှု invoice ကို စနစ်တကျထုတ်ပါ',commercial:true,fields:[
+      ['businessName','လုပ်ငန်းအမည်','text','Future Trading'],['businessInfo','လိပ်စာ / ဖုန်း / Email','textarea','Yangon, Myanmar\n09 123 456 789\nhello@example.com'],['docNo','Invoice No.','text','INV-0001'],['date','Invoice Date','date',''],['dueDate','Due Date','date',''],['customerName','Customer Name','text','Customer Name'],['customerInfo','Customer အချက်အလက်','textarea','Address / Phone / Email'],['tax','Tax %','number','0'],['discount','Discount','number','0'],['notes','မှတ်ချက်','textarea','ကျေးဇူးတင်ပါသည်။','full'],['logo','Business Logo','image','','full']
+    ],sample:{businessName:'Future Trading Co., Ltd.',businessInfo:'No. 12, Bogyoke Road, Yangon\n09 420 000 111\nsales@futuretrading.mm',docNo:'INV-2026-091',customerName:'Mingalar Mart',customerInfo:'Mandalay, Myanmar\n09 790 123 456',tax:'5',discount:'10000',notes:'ငွေပေးချေမှုအတွက် ကျေးဇူးတင်ပါသည်။'}},
+    quotation:{icon:'📑',title:'Quotation Maker',desc:'ဖောက်သည်ထံပို့မယ့် အဆိုပြုဈေးနှုန်းစာရွက်ကို အမြန်ပြုလုပ်ပါ',commercial:true,fields:[
+      ['businessName','လုပ်ငန်းအမည်','text','Future Services'],['businessInfo','လိပ်စာ / ဖုန်း / Email','textarea','Yangon, Myanmar\n09 123 456 789'],['docNo','Quotation No.','text','QT-0001'],['date','Date','date',''],['validUntil','Valid Until','date',''],['customerName','Customer / Company','text','Customer Name'],['customerInfo','Customer အချက်အလက်','textarea','Address / Phone / Email'],['tax','Tax %','number','0'],['discount','Discount','number','0'],['notes','Terms / မှတ်ချက်','textarea','Quotation valid for 14 days.','full'],['logo','Business Logo','image','','full']
+    ],sample:{businessName:'Future Creative Studio',businessInfo:'Yangon, Myanmar\n09 555 222 111\nhello@futurecreative.mm',docNo:'QT-2026-041',customerName:'Golden Star Co.',customerInfo:'Nay Pyi Taw, Myanmar',tax:'0',discount:'0',notes:'ဤ quotation သည် 14 ရက်အတွင်း အကျုံးဝင်ပါသည်။ Project စတင်ရန် 50% deposit လိုအပ်ပါသည်။'}},
+    receipt:{icon:'🧮',title:'Receipt Maker',desc:'ငွေလက်ခံပြေစာကို အချက်အလက်ဖြည့်ရုံနဲ့ တန်းထုတ်ပါ',fields:[
+      ['businessName','လုပ်ငန်း / အဖွဲ့အစည်း','text','Future Store'],['businessInfo','ဆက်သွယ်ရန်','textarea','Yangon, Myanmar\n09 123 456 789'],['docNo','Receipt No.','text','RC-0001'],['date','ရက်စွဲ','date',''],['receivedFrom','ငွေပေးသူ','text','Customer Name'],['amount','လက်ခံငွေ','number','0'],['paymentMethod','ပေးချေမှုနည်းလမ်း','select','Cash|KBZPay|WavePay|MMQR|Bank Transfer|Other'],['forWhat','ဘာအတွက်','textarea','Product / Service payment','full'],['receivedBy','လက်ခံသူ','text','Name'],['notes','မှတ်ချက်','textarea','Paid in full.','full'],['logo','Logo','image','','full']
+    ],sample:{businessName:'Future Store',businessInfo:'Yangon, Myanmar\n09 777 111 222',docNo:'RC-2026-088',receivedFrom:'Aung Min',amount:'125000',paymentMethod:'KBZPay',forWhat:'အဝတ်အစား ၅ ထည် ဝယ်ယူမှုအတွက်',receivedBy:'Thiri',notes:'ငွေအပြည့်အစုံ လက်ခံရရှိပါသည်။'}},
+    certificate:{icon:'🏅',title:'Certificate Maker',desc:'သင်တန်း၊ ဆု၊ အသိအမှတ်ပြု certificate များကို ပြုလုပ်ပါ',fields:[
+      ['organization','အဖွဲ့အစည်း / သင်တန်း','text','Future Code Academy'],['certificateTitle','Certificate Title','text','Certificate of Completion'],['recipient','လက်ခံသူအမည်','text','Mg Mg'],['reason','ပေးအပ်ရသည့်အကြောင်း','textarea','သင်တန်းကို အောင်မြင်စွာပြီးမြောက်ခဲ့သည့်အတွက်...','full'],['course','Course / Award','text','AI Video Creation Professional'],['date','ရက်စွဲ','date',''],['signer1','လက်မှတ်ထိုးသူ ၁','text','Instructor Name'],['signer1Title','ရာထူး ၁','text','Lead Instructor'],['signer2','လက်မှတ်ထိုးသူ ၂','text','Director Name'],['signer2Title','ရာထူး ၂','text','Program Director'],['certificateNo','Certificate ID','text','FC-2026-0001'],['logo','Logo','image','','full']
+    ],sample:{organization:'Future Code Academy',certificateTitle:'Certificate of Completion',recipient:'Nandar Hlaing',reason:'AI Video Creation Professional သင်တန်းကို စည်းကမ်းပြည့်မီစွာ လေ့လာပြီး project များကို အောင်မြင်စွာ ပြီးမြောက်ခဲ့သည့်အတွက် ဤလက်မှတ်ကို ပေးအပ်ပါသည်။',course:'AI Video Creation Professional',signer1:'Ko Aung',signer1Title:'Lead Instructor',signer2:'Su Myat',signer2Title:'Program Director',certificateNo:'FC-2026-0098'}},
+    letter:{icon:'✉️',title:'Letter Maker',desc:'Business / Official / Personal letter များကို သပ်ရပ်စွာပြုလုပ်ပါ',fields:[
+      ['senderName','ပေးပို့သူအမည် / Company','text','Future Company'],['senderInfo','ပေးပို့သူဆက်သွယ်ရန်','textarea','Yangon, Myanmar\n09 123 456 789\nhello@example.com'],['date','ရက်စွဲ','date',''],['recipientName','လက်ခံသူ','text','Dear Sir / Madam'],['recipientInfo','လက်ခံသူအချက်အလက်','textarea','Company / Address'],['subject','အကြောင်းအရာ','text','Subject'],['body','စာကိုယ်','textarea','စာသားကို ဒီနေရာတွင်ရေးပါ...','full'],['closing','အဆုံးသတ်စကား','text','Sincerely'],['signer','လက်မှတ်အမည်','text','Your Name'],['signerTitle','ရာထူး','text','Manager'],['logo','Logo','image','','full']
+    ],sample:{senderName:'Future Solutions',senderInfo:'No. 88, Pyay Road, Yangon\n09 420 555 777\ncontact@futuresolutions.mm',recipientName:'Managing Director',recipientInfo:'Golden Myanmar Co., Ltd.\nYangon, Myanmar',subject:'Business Partnership Proposal',body:'မင်္ဂလာပါ။\n\nကျွန်ုပ်တို့ Future Solutions မှ သင့်ကုမ္ပဏီနှင့် ရေရှည်ပူးပေါင်းဆောင်ရွက်နိုင်မည့် အခွင့်အလမ်းများအတွက် ဆက်သွယ်လိုပါသည်။ ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများနှင့် သင့်လုပ်ငန်း၏ လိုအပ်ချက်များကို ပေါင်းစပ်ကာ နှစ်ဖက်အကျိုးရှိသော အစီအစဉ်တစ်ခု ဖန်တီးနိုင်မည်ဟု ယုံကြည်ပါသည်။\n\nအသေးစိတ်ဆွေးနွေးရန် အဆင်ပြေသည့်အချိန်ကို ပြန်လည်အသိပေးစေလိုပါသည်။',closing:'လေးစားစွာဖြင့်',signer:'Aung Khant',signerTitle:'Business Development Manager'}},
+    application:{icon:'📝',title:'Application Form Maker',desc:'အလုပ်၊ သင်တန်း၊ အသင်းဝင် application form ကို တစ်ခါတည်းပြုလုပ်ပါ',fields:[
+      ['organization','အဖွဲ့အစည်း / Company','text','Future Company'],['formTitle','Form Title','text','Employment Application Form'],['applicantName','လျှောက်ထားသူအမည်','text','Applicant Name'],['dob','မွေးသက္ကရာဇ်','date',''],['gender','Gender','select','Male|Female|Other|Prefer not to say'],['phone','ဖုန်း','text','09...'],['email','Email','email','name@example.com'],['address','လိပ်စာ','textarea','Address','full'],['position','လျှောက်ထားသည့်ရာထူး / Program','text','Position'],['education','ပညာရေး','textarea','Education background...','full'],['experience','အတွေ့အကြုံ','textarea','Work / relevant experience...','full'],['skills','ကျွမ်းကျင်မှု','textarea','Skills...','full'],['reference','Reference','textarea','Reference name / contact...','full'],['statement','Declaration','textarea','အထက်ပါအချက်အလက်များ မှန်ကန်ကြောင်း အတည်ပြုပါသည်။','full'],['date','Application Date','date',''],['photo','Applicant Photo','image','','full']
+    ],sample:{organization:'Future Technology Co., Ltd.',formTitle:'Employment Application Form',applicantName:'Min Thu',gender:'Male',phone:'09 789 456 123',email:'minthu@example.com',address:'Kamayut Township, Yangon, Myanmar',position:'Junior UI Designer',education:'B.C.Sc. — University of Computer Studies Yangon, 2025',experience:'Freelance UI Designer — Mobile app mockups, social media design and brand assets.',skills:'Figma, Photoshop, Illustrator, HTML/CSS',reference:'Su Su — Senior Designer — 09 111 222 333',statement:'အထက်ပါအချက်အလက်များသည် မိမိသိရှိသမျှအတိုင်း မှန်ကန်ပြည့်စုံကြောင်း အတည်ပြုပါသည်။'}},
+    businessCard:{icon:'💳',title:'Business Card Maker',desc:'Personal / Company business card ကို mobile ကနေ လွယ်လွယ်ကူကူပြုလုပ်ပါ',fields:[
+      ['name','အမည်','text','Your Name'],['title','ရာထူး','text','Founder & CEO'],['company','Company / Brand','text','Future Code'],['phone','ဖုန်း','text','09 123 456 789'],['email','Email','email','hello@example.com'],['website','Website','text','futurecode.mm'],['address','လိပ်စာ','textarea','Yangon, Myanmar','full'],['tagline','Tagline','text','Build • Learn • Grow'],['logo','Logo / Photo','image','','full']
+    ],sample:{name:'William Aung',title:'Founder & Creative Director',company:'Future Code',phone:'09 420 888 999',email:'hello@futurecode.mm',website:'futurecode.mm',address:'Myanmar',tagline:'Learn AI. Build the Future.'}}
+  };
+
+  const palettes = [
+    ['Indigo','#4f46e5','#7c3aed','#ffffff','#111827','#eef2ff'],
+    ['Ocean','#0369a1','#06b6d4','#ffffff','#0f172a','#ecfeff'],
+    ['Emerald','#047857','#10b981','#ffffff','#102a23','#ecfdf5'],
+    ['Ruby','#be123c','#ef4444','#ffffff','#2a0d14','#fff1f2'],
+    ['Amber','#b45309','#f59e0b','#fffdfa','#2b1d0e','#fffbeb'],
+    ['Slate','#334155','#64748b','#ffffff','#0f172a','#f1f5f9'],
+    ['Violet','#7e22ce','#a855f7','#ffffff','#24103a','#faf5ff'],
+    ['Teal','#0f766e','#14b8a6','#ffffff','#0f2926','#f0fdfa'],
+    ['Rose','#be185d','#fb7185','#ffffff','#35111f','#fff1f2'],
+    ['Midnight','#111827','#475569','#ffffff','#0b1020','#f8fafc']
+  ];
+  const layouts = ['Classic','Accent Rail','Top Banner','Minimal','Framed','Split','Soft Cards','Bold','Geometric','Editorial'];
+
+  const today = () => new Date().toISOString().slice(0,10);
+  const deepClone = o => JSON.parse(JSON.stringify(o));
+  const esc = (v='') => String(v ?? '').replace(/[&<>'"]/g, s => ({'&':'&','<':'<','>':'>',"'":''','"':'"'}[s]));
+  const nl2br = v => esc(v).replace(/\n/g,'<br>');
+  const splitLines = v => String(v || '').split(/\n+/).map(x=>x.trim()).filter(Boolean);
+  const fmt = n => Number(n || 0).toLocaleString('en-US');
+  const formatDate = v => { if(!v) return ''; const d=new Date(v+'T00:00:00'); if(isNaN(d)) return esc(v); return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}); };
+
+  let currentMaker = 'cv';
+  let currentTab = 'form';
+  let visibleThemes = 24;
+  let zoom = 1;
+  let state = JSON.parse(localStorage.getItem('mds_state') || '{}');
+  let projects = JSON.parse(localStorage.getItem('mds_projects') || '[]');
+
+  function defaultData(key){
+    const d={};
+    makerDefs[key].fields.forEach(f=>{ d[f[0]] = f[2]==='date' ? today() : ''; });
+    if(makerDefs[key].commercial){ d.items=[{description:'Product / Service',qty:1,price:0},{description:'',qty:1,price:0}]; }
+    return d;
+  }
+  function ensureState(key){
+    if(!state[key]) state[key]={data:defaultData(key),theme:0};
+    if(makerDefs[key].commercial && !Array.isArray(state[key].data.items)) state[key].data.items=[{description:'Product / Service',qty:1,price:0}];
+  }
+  Object.keys(makerDefs).forEach(ensureState);
+
+  const makerList = document.getElementById('makerList');
+  const tabContent = document.getElementById('tabContent');
+  const pageTitle = document.getElementById('pageTitle');
+  const pageDesc = document.getElementById('pageDesc');
+  const preview = document.getElementById('documentPreview');
+  const paperWrap = document.getElementById('paperWrap');
+  const zoomLabel = document.getElementById('zoomLabel');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
+
+  function persist(){ localStorage.setItem('mds_state', JSON.stringify(state)); }
+  function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove('show'),1800); }
+
+  function renderMakerList(){
+    makerList.innerHTML = Object.entries(makerDefs).map(([k,d]) => `<button class="maker-btn ${k===currentMaker?'active':''}" data-maker="${k}"><span class="maker-icon">${d.icon}</span><span>${d.title}</span></button>`).join('');
+    makerList.querySelectorAll('[data-maker]').forEach(btn=>btn.onclick=()=>switchMaker(btn.dataset.maker));
+  }
+
+  function switchMaker(key){
+    currentMaker=key; currentTab='form'; visibleThemes=24; ensureState(key);
+    pageTitle.textContent=makerDefs[key].title; pageDesc.textContent=makerDefs[key].desc;
+    document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab==='form'));
+    renderMakerList(); renderTab(); renderPreview(); closeSidebar();
+  }
+
+  function fieldHTML(f){
+    const [key,label,type,placeholder='',span=''] = f; const v = state[currentMaker].data[key] ?? '';
+    let control='';
+    if(type==='textarea') control=`<textarea data-field="${key}" placeholder="${esc(placeholder)}">${esc(v)}</textarea>`;
+    else if(type==='select') control=`<select data-field="${key}">${placeholder.split('|').map(opt=>`<option ${String(v)===opt?'selected':''}>${esc(opt)}</option>`).join('')}</select>`;
+    else if(type==='image') control=`<div class="image-row"><div class="image-thumb">${v?`<img src="${v}" alt="">`:'No image'}</div><div style="display:grid;gap:6px;flex:1"><input type="file" data-image="${key}" accept="image/*"><button class="btn" type="button" data-remove-image="${key}">ပုံဖျက်</button></div></div>`;
+    else control=`<input data-field="${key}" type="${type}" value="${esc(v)}" placeholder="${esc(placeholder)}" ${type==='number'?'min="0" step="0.01"':''}>`;
+    return `<div class="field ${span==='full'?'full':''}"><label>${esc(label)}</label>${control}</div>`;
+  }
+
+  function renderCommercialItems(){
+    const items=state[currentMaker].data.items || [];
+    return `<div class="subcard"><div class="subcard-head"><strong>Items / Services</strong><button class="btn" type="button" id="addItem">＋ Add Item</button></div><div class="items-table" id="itemsTable">${items.map((it,i)=>`<div class="item-row"><input data-item="description" data-index="${i}" value="${esc(it.description)}" placeholder="Description"><input data-item="qty" data-index="${i}" type="number" value="${esc(it.qty)}" min="0" step="1"><input data-item="price" data-index="${i}" type="number" value="${esc(it.price)}" min="0" step="0.01"><button class="icon-btn remove" data-remove-item="${i}">×</button></div>`).join('')}</div><div class="hint" style="margin-top:8px">Qty နှင့် Unit Price ထည့်ရုံနဲ့ Total ကို အလိုအလျောက်တွက်ပေးမယ်။</div></div>`;
+  }
+
+  function renderFormTab(){
+    const def=makerDefs[currentMaker];
+    tabContent.innerHTML=`<div class="section-title"><h3>${def.icon} ${def.title} အချက်အလက်</h3><span>Auto-save</span></div><div class="form-grid">${def.fields.map(fieldHTML).join('')}</div>${def.commercial?renderCommercialItems():''}<div class="form-footer"><button class="btn danger" id="resetBtn">↺ အလွတ်ပြန်</button><button class="btn primary" id="goDesign">ဒီဇိုင်းရွေး →</button></div>`;
+    bindFormEvents();
+  }
+
+  function bindFormEvents(){
+    tabContent.querySelectorAll('[data-field]').forEach(el=>{
+      const evt = el.tagName==='SELECT' ? 'change' : 'input';
+      el.addEventListener(evt,()=>{state[currentMaker].data[el.dataset.field]=el.value;persist();renderPreview();});
+    });
+    tabContent.querySelectorAll('[data-image]').forEach(inp=>inp.onchange=e=>{
+      const file=e.target.files?.[0]; if(!file)return; if(file.size>2.5*1024*1024){toast('ပုံဖိုင် 2.5MB အောက်သုံးပါ');return;}
+      const r=new FileReader();r.onload=()=>{state[currentMaker].data[inp.dataset.image]=r.result;persist();renderFormTab();renderPreview();};r.readAsDataURL(file);
+    });
+    tabContent.querySelectorAll('[data-remove-image]').forEach(btn=>btn.onclick=()=>{state[currentMaker].data[btn.dataset.removeImage]='';persist();renderFormTab();renderPreview();});
+    if(makerDefs[currentMaker].commercial){
+      tabContent.querySelectorAll('[data-item]').forEach(inp=>inp.addEventListener('input',()=>{const i=+inp.dataset.index;state[currentMaker].data.items[i][inp.dataset.item]=inp.dataset.item==='description'?inp.value:Number(inp.value||0);persist();renderPreview();}));
+      document.getElementById('addItem').onclick=()=>{state[currentMaker].data.items.push({description:'',qty:1,price:0});persist();renderFormTab();renderPreview();};
+      tabContent.querySelectorAll('[data-remove-item]').forEach(btn=>btn.onclick=()=>{state[currentMaker].data.items.splice(+btn.dataset.removeItem,1);if(!state[currentMaker].data.items.length)state[currentMaker].data.items.push({description:'',qty:1,price:0});persist();renderFormTab();renderPreview();});
+    }
+    document.getElementById('resetBtn').onclick=resetCurrent;
+    document.getElementById('goDesign').onclick=()=>setTab('design');
+  }
+
+  function getTheme(i){
+    const p=palettes[i%10]; const l=Math.floor(i/10)%10;
+    return {id:i,name:`${layouts[l]} ${p[0]}`,layout:l,palette:p[0],a:p[1],a2:p[2],bg:p[3],ink:p[4],soft:p[5]};
+  }
+
+  function renderDesignTab(){
+    const active=state[currentMaker].theme||0;
+    tabContent.innerHTML=`<div class="section-title"><h3>🎨 Design Library</h3><span>100 designs • ${esc(makerDefs[currentMaker].title)}</span></div><div class="design-toolbar"><input id="themeSearch" placeholder="Design ရှာမယ်..."><select id="layoutFilter"><option value="all">Layout အားလုံး</option>${layouts.map((x,i)=>`<option value="${i}">${esc(x)}</option>`).join('')}</select></div><div class="design-grid" id="designGrid"></div><button class="btn load-more" id="loadMore">နောက်ထပ် Design များပြပါ</button>`;
+    const grid=document.getElementById('designGrid'), search=document.getElementById('themeSearch'), filter=document.getElementById('layoutFilter'), load=document.getElementById('loadMore');
+    const draw=()=>{
+      const q=search.value.toLowerCase().trim(), f=filter.value;
+      let arr=Array.from({length:100},(_,i)=>getTheme(i)).filter(t=>(f==='all'||String(t.layout)===f)&&(!q||t.name.toLowerCase().includes(q)||String(t.id+1).includes(q)));
+      const shown=arr.slice(0,visibleThemes);
+      grid.innerHTML=shown.map(t=>`<button class="theme-card ${t.id===active?'active':''}" data-theme="${t.id}" style="--ta:${t.a};--tb:${t.bg};--ti:${t.ink}"><div class="theme-preview"><div class="bar"></div><div class="side"></div><div class="line"></div><div class="line short"></div><div class="line"></div></div><div class="theme-meta"><strong>#${String(t.id+1).padStart(3,'0')} ${esc(t.name)}</strong><span class="swatches"><i style="background:${t.a}"></i><i style="background:${t.a2}"></i><i style="background:${t.soft}"></i></span></div></button>`).join('') || '<div class="empty-note" style="grid-column:1/-1">Design မတွေ့ပါ</div>';
+      grid.querySelectorAll('[data-theme]').forEach(btn=>btn.onclick=()=>{state[currentMaker].theme=+btn.dataset.theme;persist();renderPreview();draw();toast(`Design #${+btn.dataset.theme+1} ရွေးပြီးပါပြီ`);});
+      load.style.display=arr.length>visibleThemes?'block':'none';
+    };
+    search.oninput=()=>{visibleThemes=24;draw();};filter.onchange=()=>{visibleThemes=24;draw();};load.onclick=()=>{visibleThemes=Math.min(100,visibleThemes+24);draw();};draw();
+  }
+
+  function renderExportTab(){
+    tabContent.innerHTML=`<div class="section-title"><h3>📦 Export & Projects</h3><span>Offline tools</span></div><div class="export-box"><div class="export-note"><b>PDF ထုတ်ရန်:</b> Print / Save PDF ကိုနှိပ်ပြီး browser ရဲ့ Print dialog ထဲက <b>Save as PDF</b> ကိုရွေးပါ။ ဒီ App က AI API / paid server မလိုဘဲ offline အသုံးပြုနိုင်ပါတယ်။</div><div class="project-name"><label style="font-size:11px;font-weight:800;color:#475467">Project Name</label><input id="projectName" value="${esc(makerDefs[currentMaker].title)} - ${today()}"></div><div class="export-actions"><button class="btn primary" id="saveProjectBtn">💾 Project သိမ်း</button><button class="btn success" id="printExportBtn">🖨️ Print / PDF</button><button class="btn" id="downloadJsonBtn">⬇ JSON Backup</button><button class="btn" id="importJsonBtn">⬆ JSON Restore</button></div><div class="subcard"><div class="subcard-head"><strong>Saved Projects</strong><span class="hint">Browser ထဲတွင်သိမ်းထားသည်</span></div><div class="saved-list" id="savedList"></div></div></div>`;
+    document.getElementById('saveProjectBtn').onclick=()=>saveProject(document.getElementById('projectName').value.trim());
+    document.getElementById('printExportBtn').onclick=()=>window.print();
+    document.getElementById('downloadJsonBtn').onclick=downloadJSON;
+    document.getElementById('importJsonBtn').onclick=()=>document.getElementById('jsonImport').click();
+    renderSavedList();
+  }
+
+  function renderSavedList(){
+    const el=document.getElementById('savedList'); if(!el)return;
+    const list=projects.filter(p=>p.maker===currentMaker).slice().reverse();
+    el.innerHTML=list.length?list.map(p=>`<div class="saved-item"><div><b style="font-size:11px">${esc(p.name)}</b><br><small>${new Date(p.savedAt).toLocaleString()}</small></div><div style="display:flex;gap:5px"><button class="icon-btn" data-load-project="${p.id}">↺</button><button class="icon-btn remove" data-delete-project="${p.id}">×</button></div></div>`).join(''):'<div class="empty-note">သိမ်းထားသော Project မရှိသေးပါ</div>';
+    el.querySelectorAll('[data-load-project]').forEach(b=>b.onclick=()=>loadProject(b.dataset.loadProject));
+    el.querySelectorAll('[data-delete-project]').forEach(b=>b.onclick=()=>deleteProject(b.dataset.deleteProject));
+  }
+
+  function saveProject(name){
+    if(!name) name=`${makerDefs[currentMaker].title} ${new Date().toLocaleDateString()}`;
+    projects.push({id:String(Date.now()),name,maker:currentMaker,savedAt:new Date().toISOString(),payload:deepClone(state[currentMaker])});
+    if(projects.length>60) projects=projects.slice(-60);
+    localStorage.setItem('mds_projects',JSON.stringify(projects)); toast('Project သိမ်းပြီးပါပြီ'); renderSavedList();
+  }
+  function loadProject(id){ const p=projects.find(x=>x.id===id); if(!p)return; state[p.maker]=deepClone(p.payload);currentMaker=p.maker;persist();renderMakerList();pageTitle.textContent=makerDefs[currentMaker].title;pageDesc.textContent=makerDefs[currentMaker].desc;renderTab();renderPreview();toast('Project ပြန်ဖွင့်ပြီးပါပြီ'); }
+  function deleteProject(id){ projects=projects.filter(x=>x.id!==id);localStorage.setItem('mds_projects',JSON.stringify(projects));renderSavedList();toast('Project ဖျက်ပြီးပါပြီ'); }
+
+  function downloadJSON(){
+    const blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),state},null,2)],{type:'application/json'}); const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='myanmar-document-studio-backup.json';a.click();URL.revokeObjectURL(a.href);toast('JSON Backup ထုတ်ပြီးပါပြီ');
+  }
+
+  document.getElementById('jsonImport').onchange=e=>{
+    const f=e.target.files?.[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const obj=JSON.parse(r.result);if(obj.state)state=obj.state;else if(obj.cv||obj.invoice)state=obj;Object.keys(makerDefs).forEach(ensureState);persist();renderTab();renderPreview();toast('Backup Restore ပြီးပါပြီ');}catch(err){toast('JSON file မမှန်ပါ');}};r.readAsText(f);e.target.value='';
+  };
+
+  function renderTab(){ if(currentTab==='form')renderFormTab();else if(currentTab==='design')renderDesignTab();else renderExportTab(); }
+  function setTab(tab){currentTab=tab;document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===tab));renderTab();}
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>setTab(t.dataset.tab));
+
+  function resetCurrent(){ if(!confirm('ဒီ Maker ရဲ့ လက်ရှိအချက်အလက်တွေကို အလွတ်ပြန်လုပ်မလား?'))return;state[currentMaker]={data:defaultData(currentMaker),theme:state[currentMaker].theme||0};persist();renderTab();renderPreview();toast('အလွတ်ပြန်လုပ်ပြီးပါပြီ'); }
+  function applySample(){ const def=makerDefs[currentMaker]; const cur=defaultData(currentMaker); Object.assign(cur,deepClone(def.sample||{})); if(def.commercial)cur.items=[{description:'Premium Product',qty:2,price:45000},{description:'Delivery / Service',qty:1,price:5000}];state[currentMaker].data=cur;persist();renderTab();renderPreview();toast('နမူနာအချက်အလက် ဖြည့်ပြီးပါပြီ'); }
+
+  function themeStyle(){const t=getTheme(state[currentMaker].theme||0);return `--a:${t.a};--a2:${t.a2};--bg:${t.bg};--ink:${t.ink};--soft:${t.soft};--muted:#64748b`;}
+  function shell(content,extra=''){const t=getTheme(state[currentMaker].theme||0);return `<div class="document ${extra} layout-${t.layout}" style="${themeStyle()}"><div class="doc-inner">${content}</div></div>`;}
+
+  function parsePipeLines(v){return splitLines(v).map(line=>line.split('|').map(x=>x.trim()));}
+  function contactMeta(d){return [d.email?`✉ ${esc(d.email)}`:'',d.phone?`☎ ${esc(d.phone)}`:'',d.location?`⌖ ${esc(d.location)}`:'',d.website?`◉ ${esc(d.website)}`:''].filter(Boolean).map(x=>`<span>${x}</span>`).join('');}
+
+  function renderCV(d){
+    const exp=parsePipeLines(d.experience), edu=parsePipeLines(d.education), skills=String(d.skills||'').split(/,|\n/).map(x=>x.trim()).filter(Boolean);
+    return shell(`<div class="doc-header-row"><div class="head-text"><div class="doc-kicker">Curriculum Vitae</div><div class="doc-title">${esc(d.fullName||'Your Name')}</div><div class="doc-subtitle">${esc(d.jobTitle||'Professional Title')}</div><div class="doc-rule"></div><div class="meta">${contactMeta(d)}</div></div>${d.photo?`<img class="avatar" src="${d.photo}" alt="">`:''}</div>
+    <div class="doc-section"><h3>Profile</h3><p>${nl2br(d.summary||'မိမိအကြောင်း အကျဉ်းချုပ်ကို ဒီနေရာတွင် ဖော်ပြပါ။')}</p></div>
+    <div class="doc-section"><h3>Experience</h3>${exp.length?exp.map(x=>`<div style="margin:0 0 14px"><b style="font-size:13px">${esc(x[1]||x[0]||'')}</b><div class="small">${esc(x[0]&&x[1]?x[0]:'')} ${x[2]?`• ${esc(x[2])}`:''}</div>${x[3]?`<p style="margin-top:5px">${esc(x.slice(3).join(' | '))}</p>`:''}</div>`).join(''):'<p>လုပ်ငန်းအတွေ့အကြုံ ထည့်ပါ။</p>'}</div>
+    <div class="doc-grid"><div class="doc-section"><h3>Education</h3>${edu.length?edu.map(x=>`<div style="margin-bottom:12px"><b style="font-size:12px">${esc(x[1]||x[0]||'')}</b><div class="small">${esc(x[0]&&x[1]?x[0]:'')} ${x[2]?`• ${esc(x[2])}`:''}</div></div>`).join(''):'<p>ပညာရေးအချက်အလက်</p>'}</div><div class="doc-section"><h3>Skills</h3><div class="pill-wrap">${skills.length?skills.map(x=>`<span class="pill">${esc(x)}</span>`).join(''):'<span class="pill">Skill</span>'}</div>${d.languages?`<h3 style="margin-top:20px">Languages</h3><p>${esc(d.languages)}</p>`:''}</div></div>`,'cv');
+  }
+
+  function calcCommercial(d){const subtotal=(d.items||[]).reduce((s,it)=>s+Number(it.qty||0)*Number(it.price||0),0);const tax=subtotal*Number(d.tax||0)/100;const discount=Number(d.discount||0);return {subtotal,tax,discount,total:subtotal+tax-discount};}
+  function commercialDoc(d,type){
+    const c=calcCommercial(d); const isQ=type==='quotation';
+    const date2=isQ?d.validUntil:d.dueDate;
+    return shell(`<div class="doc-header-row"><div><div class="doc-kicker">${isQ?'Quotation':'Invoice'}</div><div class="doc-title">${esc(d.businessName||'Business Name')}</div><div class="doc-subtitle">${nl2br(d.businessInfo||'Business contact information')}</div></div><div class="right">${d.logo?`<img class="logo" src="${d.logo}" alt="">`:''}<div class="big-number" style="margin-top:10px">${esc(d.docNo||'#0001')}</div><div class="small">Date: ${formatDate(d.date)}<br>${isQ?'Valid Until':'Due'}: ${formatDate(date2)}</div></div></div><div class="doc-rule"></div>
+    <div class="doc-grid"><div class="contact-box"><b>${isQ?'Prepared for':'Bill to'}</b><br><strong>${esc(d.customerName||'Customer')}</strong><br>${nl2br(d.customerInfo||'')}</div><div></div></div>
+    <table class="doc-table"><thead><tr><th>Description</th><th>Qty</th><th>Unit Price</th><th>Amount</th></tr></thead><tbody>${(d.items||[]).filter(it=>it.description||it.price).map(it=>`<tr><td>${esc(it.description||'')}</td><td>${fmt(it.qty)}</td><td>${fmt(it.price)}</td><td>${fmt(Number(it.qty||0)*Number(it.price||0))}</td></tr>`).join('')||'<tr><td>Item / Service</td><td>1</td><td>0</td><td>0</td></tr>'}</tbody></table>
+    <div class="totals"><div class="total-row"><span>Subtotal</span><b>${fmt(c.subtotal)} Ks</b></div><div class="total-row"><span>Tax (${fmt(d.tax)}%)</span><b>${fmt(c.tax)} Ks</b></div><div class="total-row"><span>Discount</span><b>${fmt(c.discount)} Ks</b></div><div class="total-row grand"><span>Total</span><span>${fmt(c.total)} Ks</span></div></div>
+    ${d.notes?`<div class="doc-section"><h3>${isQ?'Terms & Notes':'Notes'}</h3><p>${nl2br(d.notes)}</p></div>`:''}` ,type);
+  }
+
+  function renderReceipt(d){return shell(`<div class="doc-header-row"><div><div class="doc-kicker">Payment Receipt</div><div class="doc-title">${esc(d.businessName||'Business Name')}</div><div class="doc-subtitle">${nl2br(d.businessInfo||'')}</div></div><div class="right">${d.logo?`<img class="logo" src="${d.logo}">`:''}<div class="big-number">${esc(d.docNo||'RC-0001')}</div><div class="small">${formatDate(d.date)}</div></div></div><div class="doc-rule"></div>
+  <div class="doc-section"><h3>Received From</h3><div style="font-size:25px;font-weight:900">${esc(d.receivedFrom||'Customer Name')}</div></div><div class="doc-grid"><div class="contact-box"><span class="small">AMOUNT RECEIVED</span><div class="big-number">${fmt(d.amount)} Ks</div></div><div class="contact-box"><span class="small">PAYMENT METHOD</span><div style="font-size:17px;font-weight:900;margin-top:4px">${esc(d.paymentMethod||'Cash')}</div></div></div><div class="doc-section"><h3>For</h3><p>${nl2br(d.forWhat||'Payment description')}</p></div>${d.notes?`<div class="doc-section"><h3>Notes</h3><p>${nl2br(d.notes)}</p></div>`:''}<div class="signature-grid"><div class="signature">Customer</div><div class="signature"><b>${esc(d.receivedBy||'Received By')}</b><br>Authorized Receiver</div></div>`,'receipt');}
+
+  function renderCertificate(d){return shell(`<div class="certificate-center">${d.logo?`<img class="logo" src="${d.logo}" style="margin-bottom:14px">`:''}<div class="doc-kicker">${esc(d.organization||'Organization')}</div><div class="doc-title">${esc(d.certificateTitle||'Certificate')}</div><div class="doc-rule"></div><div class="small">This certificate is proudly presented to</div><div class="certificate-name">${esc(d.recipient||'Recipient Name')}</div>${d.course?`<div style="font-size:16px;font-weight:800;margin-bottom:10px">${esc(d.course)}</div>`:''}<div class="certificate-reason">${nl2br(d.reason||'Certificate description')}</div><div class="small" style="margin-top:18px">${formatDate(d.date)} ${d.certificateNo?`• ID: ${esc(d.certificateNo)}`:''}</div><div class="signature-grid" style="width:min(650px,100%)"><div class="signature"><b>${esc(d.signer1||'Signer')}</b><br>${esc(d.signer1Title||'Title')}</div><div class="signature"><b>${esc(d.signer2||'Signer')}</b><br>${esc(d.signer2Title||'Title')}</div></div></div>`,'certificate');}
+
+  function renderLetter(d){return shell(`<div class="doc-header-row"><div><div class="doc-title" style="font-size:25px">${esc(d.senderName||'Sender / Company')}</div><div class="doc-subtitle">${nl2br(d.senderInfo||'')}</div></div>${d.logo?`<img class="logo" src="${d.logo}">`:''}</div><div class="doc-rule"></div><div class="small">${formatDate(d.date)}</div><div class="doc-section"><p><b>${esc(d.recipientName||'Recipient')}</b><br>${nl2br(d.recipientInfo||'')}</p></div><div class="doc-section"><h3>Subject</h3><p style="font-weight:900">${esc(d.subject||'Letter Subject')}</p></div><div class="letter-body">${esc(d.body||'စာကိုယ်ကို ဒီနေရာတွင်ရေးပါ။')}</div><div class="doc-section" style="margin-top:36px"><p>${esc(d.closing||'Sincerely')},</p><p style="margin-top:30px"><b>${esc(d.signer||'Your Name')}</b><br><span class="small">${esc(d.signerTitle||'')}</span></p></div>`,'letter');}
+
+  function renderApplication(d){
+    const fields=[['Applicant Name',d.applicantName],['Date of Birth',formatDate(d.dob)],['Gender',d.gender],['Phone',d.phone],['Email',d.email],['Position / Program',d.position],['Address',d.address,'full'],['Education',d.education,'full'],['Experience',d.experience,'full'],['Skills',d.skills,'full'],['Reference',d.reference,'full']];
+    return shell(`<div class="doc-header-row"><div><div class="doc-kicker">${esc(d.organization||'Organization')}</div><div class="doc-title">${esc(d.formTitle||'Application Form')}</div><div class="doc-subtitle">Application Date: ${formatDate(d.date)}</div></div>${d.photo?`<img class="avatar" src="${d.photo}">`:''}</div><div class="doc-rule"></div><div class="application-grid">${fields.map(x=>`<div class="app-field ${x[2]==='full'?'full':''}"><b>${esc(x[0])}</b><span>${nl2br(x[1]||'—')}</span></div>`).join('')}</div><div class="doc-section"><h3>Declaration</h3><p>${nl2br(d.statement||'အထက်ပါအချက်အလက်များ မှန်ကန်ကြောင်း အတည်ပြုပါသည်။')}</p></div><div class="signature-grid"><div class="signature">Applicant Signature</div><div class="signature">Authorized Signature</div></div>`,'application');
+  }
+
+  function renderBusinessCard(d){return shell(`<div class="card-grid"><div><div class="doc-kicker">${esc(d.company||'Company')}</div><div class="card-name">${esc(d.name||'Your Name')}</div><div class="card-role">${esc(d.title||'Your Title')}</div>${d.tagline?`<div class="small" style="margin-top:8px">${esc(d.tagline)}</div>`:''}<div class="card-contact">${d.phone?`<div>☎ ${esc(d.phone)}</div>`:''}${d.email?`<div>✉ ${esc(d.email)}</div>`:''}${d.website?`<div>◉ ${esc(d.website)}</div>`:''}${d.address?`<div>⌖ ${nl2br(d.address)}</div>`:''}</div></div><div class="card-brand">${d.logo?`<img class="logo" src="${d.logo}">`:`<div><div style="font-size:40px;font-weight:900;color:var(--a)">${esc((d.company||'FC').slice(0,2).toUpperCase())}</div><div class="small">${esc(d.company||'Your Brand')}</div></div>`}</div></div>`,'business-card');}
+
+  function renderPreview(){
+    ensureState(currentMaker); const d=state[currentMaker].data; let html='';
+    switch(currentMaker){
+      case 'cv':html=renderCV(d);break;
+      case 'invoice':html=commercialDoc(d,'invoice');break;
+      case 'quotation':html=commercialDoc(d,'quotation');break;
+      case 'receipt':html=renderReceipt(d);break;
+      case 'certificate':html=renderCertificate(d);break;
+      case 'letter':html=renderLetter(d);break;
+      case 'application':html=renderApplication(d);break;
+      case 'businessCard':html=renderBusinessCard(d);break;
+    }
+    preview.innerHTML=html; paperWrap.style.transform=`scale(${zoom})`; paperWrap.style.marginBottom=`${Math.max(0,(zoom-1)*600)}px`; zoomLabel.textContent=Math.round(zoom*100)+'%';
+  }
+
+  document.getElementById('sampleBtn').onclick=applySample;
+  document.getElementById('saveBtn').onclick=()=>{const n=prompt('Project အမည်ရေးပါ',`${makerDefs[currentMaker].title} - ${today()}`);if(n!==null)saveProject(n.trim());};
+  document.getElementById('printBtn').onclick=()=>window.print();
+  document.getElementById('zoomIn').onclick=()=>{zoom=Math.min(1.35,+(zoom+.1).toFixed(2));renderPreview();};
+  document.getElementById('zoomOut').onclick=()=>{zoom=Math.max(.55,+(zoom-.1).toFixed(2));renderPreview();};
+  document.getElementById('mobileMenu').onclick=()=>{sidebar.classList.add('open');overlay.classList.add('show');};
+  overlay.onclick=closeSidebar;
+  function closeSidebar(){sidebar.classList.remove('open');overlay.classList.remove('show');}
+
+  window.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();saveProject(`${makerDefs[currentMaker].title} - ${today()}`);}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='p'){e.preventDefault();window.print();}});
+
+  renderMakerList();
+  pageTitle.textContent=makerDefs[currentMaker].title; pageDesc.textContent=makerDefs[currentMaker].desc;
+  renderTab(); renderPreview(); persist();
+})();
+</script>
+</body>
+</html>

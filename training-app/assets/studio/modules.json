@@ -1,0 +1,10 @@
+[
+  {"id":"future","title":"သင်ခန်းစာနှင့် Prompt Builder","icon":"📚","description":"AI သင်ခန်းစာများ၊ အသင့်သုံး Prompt များနှင့် ကိုယ်ပိုင် Prompt ဖန်တီးရန်","asset":"sections/academy-advanced.html","permissions":["future","guides"]},
+  {"id":"downloads","title":"AI Tools Download","icon":"📥","description":"AI app များကို တရားဝင် Store မှ ဖွင့်ရန်","asset":"sections/ai-apps-download.html","permissions":["downloads"]},
+  {"id":"tools","title":"AI Tools စုစည်းမှု","icon":"🧰","description":"AI tool များ ရှာဖွေ၊ အမျိုးအစားရွေး၊ အကြိုက်ဆုံးများ သိမ်းရန်","asset":"sections/ai-directory.html","permissions":["tools"]},
+  {"id":"documents","title":"Design နှင့် Invoice","icon":"🧾","description":"စာရွက်စာတမ်း၊ လက်မှတ်၊ Invoice နှင့် Design ဖန်တီးရန်","asset":"sections/document-studio.html","permissions":["design","invoice"]},
+  {"id":"image-studio","title":"Future Code AI Image Studio","icon":"✨","description":"ပုံဖန်တီး၊ ကိုယ်ပိုင်ပုံတင်၊ Reference သတ်မှတ်ပြီး ပြန်ပြင်ရန်","asset":"sections/image-studio.html","permissions":["image-studio"]},
+  {"id":"video-maker","title":"Future Code AI Video Maker","icon":"🎥","description":"ဇာတ်လမ်း၊ ဇာတ်ကောင်နှင့် Reference မှ Video ဖန်တီး၊ ကိုယ်ပိုင် Video ပြင်ရန်","asset":"sections/video-maker.html","permissions":["video-maker"]},
+  {"id":"recap","title":"Movie Recap Studio","icon":"🎞","description":"Scene ဖြတ်တောက်၊ အသံနှင့် Subtitle ထည့်၊ Preview ကြည့်ပြီး ပြန်ပြင်ရန်","asset":"sections/media-editor.html?mode=recap","permissions":["recap"]},
+  {"id":"lesson-videos","title":"သင်ခန်းစာ ဗီဒီယိုများကြည့်ရန်","icon":"▶","description":"Facebook Group နှင့် Telegram Group သို့ တိုက်ရိုက် ဝင်ရန်","asset":"sections/lesson-videos.html","permissions":["future","guides"]}
+]

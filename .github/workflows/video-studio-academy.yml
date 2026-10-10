@@ -1,10 +1,9 @@
-name: Future Code AI Video Studio APK v6
+name: Future Code AI Studio APK
 on:
   workflow_dispatch:
   push:
-    paths:
-      - '.github/workflows/video-studio-academy.yml'
-    branches: [ main ]
+    paths: ['training-app/**', 'scripts/**', 'tests/**', '.github/workflows/video-studio-academy.yml']
+    branches: [main]
 permissions:
   contents: read
 jobs:
@@ -13,64 +12,63 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - name: Load video academy independent source
-        run: |
-          curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-source.zip https://futurecode-movie-recap.floot.app/_cdn/static/6bb4561c-f3e3-409c-86f5-b4c296968e40-future-code-video-studio-beta-v4-standalone.zip
-          unzip -q /tmp/academy-source.zip
-          curl --fail --location --retry 2 --silent --show-error --output /tmp/academy-v5-patch.zip https://futurecode-movie-recap.floot.app/_cdn/static/815b544d-ada4-4c6b-aa5a-2c5c79ea0850-future-code-studio-beta5-update.zip
-          unzip -q -o /tmp/academy-v5-patch.zip
-          curl --fail --location --retry 2 --silent --show-error --output /tmp/recap-pro-v6.zip https://futurecode-movie-recap.floot.app/_cdn/static/251f2da7-c615-47a6-91fc-ef47634a5227-future-code-recap-pro-beta6-patch.zip
-          unzip -q -o /tmp/recap-pro-v6.zip
-          grep -q 'Movie Recap Pro Editor' video_studio_rebuild/training-app/assets/sections/recap-studio.html
-
-          test -s video_studio_rebuild/training-app/assets/index.html
-          test -s video_studio_rebuild/training-app/assets/sections/academy.html
-          test -s video_studio_rebuild/training-app/assets/sections/academy-advanced.html
-          test -s video_studio_rebuild/training-app/assets/sections/ai-directory.html
-          test -s video_studio_rebuild/training-app/assets/sections/pro-video-guide.html
-          test -s video_studio_rebuild/training-app/assets/sections/document-studio.html
-          test -s video_studio_rebuild/training-app/assets/sections/ai-apps-download.html
-          test -s video_studio_rebuild/training-app/assets/sections/image-studio.html
-          test -s video_studio_rebuild/training-app/assets/sections/video-maker.html
-          test -s video_studio_rebuild/training-app/assets/sections/recap-studio.html
-          test -s video_studio_rebuild/training-app/assets/sections/image-studio-guide.html
-          test -s video_studio_rebuild/training-app/assets/sections/video-maker-guide.html
-          grep -q 'Video Prompt Builder' video_studio_rebuild/training-app/src/mm/futurecode/videostudio/MainActivity.java
-          python3 -c "from pathlib import Path; f=Path('video_studio_rebuild/training-app/AndroidManifest.xml'); s=f.read_text().replace('beta5','beta6').replace('Studio Beta 5','Studio Beta 6'); f.write_text(s)"
-          cp -r video_studio_rebuild/training-app ./training-app
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-      - name: Build and sign installable Android beta
-        shell: bash
-        run: |
-          set -euo pipefail
-          BT="$ANDROID_HOME/build-tools/35.0.0"
-          AJ="$ANDROID_HOME/platforms/android-35/android.jar"
-          if [ ! -f "$AJ" ] || [ ! -x "$BT/aapt2" ]; then
-            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install 'platforms;android-35' 'build-tools;35.0.0' || true
-          fi
-          test -f "$AJ"; test -x "$BT/aapt2"
-          mkdir -p build/academy/{classes,generated,dex}
-          "$BT/aapt2" compile --dir training-app/res -o build/academy/resources.zip
-          "$BT/aapt2" link -I "$AJ" --manifest training-app/AndroidManifest.xml -A training-app/assets -o build/academy/base.apk --java build/academy/generated build/academy/resources.zip
-          find training-app/src build/academy/generated -name '*.java' > build/academy/sources.txt
-          javac -encoding UTF-8 -source 8 -target 8 -classpath "$AJ" -d build/academy/classes @build/academy/sources.txt
-          find build/academy/classes -name '*.class' -print0 | xargs -0 "$BT/d8" --min-api 26 --lib "$AJ" --output build/academy/dex
-          python3 - <<'PY'
-          import pathlib,zipfile
-          p=pathlib.Path('build/academy')
-          with zipfile.ZipFile(p/'base.apk','a',compression=zipfile.ZIP_DEFLATED) as z:
-              for f in (p/'dex').glob('*.dex'): z.write(f,f.name)
-          PY
-          "$BT/zipalign" -f -p 4 build/academy/base.apk build/academy/aligned.apk
-          keytool -genkeypair -v -keystore build/academy/beta.keystore -alias beta -keyalg RSA -keysize 2048 -validity 90 -storepass changeme -keypass changeme -dname 'CN=Future Code Beta, O=Future Code, C=MM' -noprompt
-          "$BT/apksigner" sign --ks build/academy/beta.keystore --ks-key-alias beta --ks-pass pass:changeme --key-pass pass:changeme --out build/academy/Future-Code-AI-Video-Studio-BETA-v6.apk build/academy/aligned.apk
-          "$BT/apksigner" verify --verbose build/academy/Future-Code-AI-Video-Studio-BETA-v6.apk
-      - uses: actions/upload-artifact@v4
+      - uses: actions/setup-node@v4
         with:
-          name: Future-Code-AI-Video-Studio-BETA-v6
-          path: build/academy/Future-Code-AI-Video-Studio-BETA-v6.apk
-          retention-days: 7
+          node-version: '22'
+      - name: Verify bundled assets and studio workflows
+        run: |
+          python3 scripts/build_portal.py
+          python3 tests/validate_assets.py
+          node tests/studio.test.js
+          node tests/access.test.js
+          node tests/portal.test.js
+      - name: Check owner signing configuration
+        id: signing
+        env:
+          RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+        run: |
+          if [ -n "$RELEASE_KEYSTORE_BASE64" ] && [ -n "$RELEASE_KEYSTORE_PASSWORD" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Source checks passed. Signed APK builds require the owner's release-key repository secrets." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Prepare Android tools
+        if: steps.signing.outputs.ready == 'true'
+        run: |
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Restore owner release key
+        if: steps.signing.outputs.ready == 'true'
+        env:
+          RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+        run: |
+          test -n "$RELEASE_KEYSTORE_BASE64"
+          test -n "$RELEASE_KEYSTORE_PASSWORD"
+          mkdir -p "$RUNNER_TEMP/future-code-signing"
+          python3 - <<'PYCODE'
+          import os, pathlib, base64
+          p = pathlib.Path(os.environ['RUNNER_TEMP']) / 'future-code-signing'
+          (p / 'release.p12').write_bytes(base64.b64decode(os.environ['RELEASE_KEYSTORE_BASE64'], validate=True))
+          (p / 'password.txt').write_text(os.environ['RELEASE_KEYSTORE_PASSWORD'] + chr(10))
+          for f in p.iterdir(): f.chmod(0o600)
+          PYCODE
+      - name: Build checked-in source and sign
+        if: steps.signing.outputs.ready == 'true'
+        run: |
+          python3 scripts/build_apk.py --android-jar "$ANDROID_HOME/platforms/android-35/android.jar" --build-tools "$ANDROID_HOME/build-tools/35.0.0" --keystore "$RUNNER_TEMP/future-code-signing/release.p12" --password-file "$RUNNER_TEMP/future-code-signing/password.txt"
+      - name: Remove private signing material
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/future-code-signing"
+      - uses: actions/upload-artifact@v4
+        if: steps.signing.outputs.ready == 'true'
+        with:
+          name: Future-Code-AI-Studio-v8
+          path: build/Future_Code_AI_Studio_v8.apk
+          retention-days: 14
           if-no-files-found: error

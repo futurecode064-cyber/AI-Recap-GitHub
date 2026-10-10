@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="my"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="light dark" name="color-scheme"/><title>AI Tools Professional Future Code Guides</title><style>
+:root{--bg:#f5f7fb;--surface:#ffffff;--surface2:#f8fafc;--text:#162033;--muted:#64748b;--line:#dce3ee;--accent:#5b5ee9;--accent2:#7c3aed;--shadow:0 16px 50px rgba(15,23,42,.09);--sidebar:310px;--code:#101728;--codeText:#e7eefc;--tip:#ecfdf5;--tipBorder:#10b981;--warn:#fff7ed;--warnBorder:#f97316;--formula:#eef2ff;--formulaBorder:#6366f1}
+[data-theme="dark"]{--bg:#0b1020;--surface:#111827;--surface2:#151e31;--text:#eef2ff;--muted:#a8b3c7;--line:#26334a;--accent:#8b8df3;--accent2:#a78bfa;--shadow:0 18px 55px rgba(0,0,0,.3);--code:#050914;--codeText:#e8eeff;--tip:#09261e;--tipBorder:#10b981;--warn:#2a1908;--warnBorder:#fb923c;--formula:#151a3c;--formulaBorder:#818cf8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans Myanmar","Myanmar Text","Pyidaungsu","Padauk",Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.75}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar);background:var(--surface);border-right:1px solid var(--line);padding:22px 16px;overflow:auto;z-index:50}.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 20px}.brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;box-shadow:var(--shadow)}.brand strong{display:block;font-size:15px}.brand small{display:block;color:var(--muted);font-size:11px}.nav-label{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--muted);padding:8px 10px;text-transform:uppercase}.guide-nav{display:grid;gap:6px}.guide-button{width:100%;border:0;background:transparent;color:var(--text);display:flex;align-items:center;gap:10px;padding:11px;border-radius:14px;cursor:pointer;text-align:left;font:inherit}.guide-button:hover{background:var(--surface2)}.guide-button.active{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,transparent),color-mix(in srgb,var(--accent2) 10%,transparent));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent)}.guide-badge{flex:0 0 34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--surface2);border:1px solid var(--line);font-weight:850;font-size:12px}.guide-button.active .guide-badge{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#fff}.guide-button span:last-child{font-size:13px;font-weight:720}.section-nav{margin:8px 0 4px 54px;display:none;gap:3px}.guide-button.active + .section-nav{display:grid}.section-nav a{font-size:11px;line-height:1.45;color:var(--muted);text-decoration:none;padding:5px 7px;border-radius:8px}.section-nav a:hover{color:var(--text);background:var(--surface2)}.sidebar-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}.side-btn{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:12px;padding:9px 10px;font:inherit;font-size:12px;cursor:pointer}.main{margin-left:var(--sidebar);min-height:100vh}.topbar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid color-mix(in srgb,var(--line) 80%,transparent);height:70px;display:flex;align-items:center;gap:12px;padding:0 5vw}.menu-btn{display:none;border:1px solid var(--line);background:var(--surface);color:var(--text);width:40px;height:40px;border-radius:12px;cursor:pointer;font-size:18px}.search{position:relative;max-width:680px;flex:1}.search input{width:100%;height:42px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--text);font:inherit;padding:0 44px 0 15px;outline:none}.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent)}.search kbd{position:absolute;right:10px;top:9px;color:var(--muted);background:var(--surface2);border:1px solid var(--line);border-radius:7px;padding:1px 6px;font-size:10px}.top-actions{margin-left:auto;display:flex;gap:8px}.icon-btn{height:40px;min-width:40px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);cursor:pointer;padding:0 12px}.content{width:min(980px,90%);margin:0 auto;padding:42px 0 90px}.guide{display:none}.guide.active{display:block}.hero{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(145deg,#111827 0%,#282b7a 58%,#6d28d9 100%);color:#fff;padding:48px 46px;box-shadow:var(--shadow);margin-bottom:34px}.hero:after{content:"";position:absolute;width:290px;height:290px;border-radius:50%;right:-80px;top:-110px;background:rgba(255,255,255,.1);filter:blur(2px)}.hero:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:120px;bottom:-130px;background:rgba(255,255,255,.08)}.hero>*{position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#d9ddff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:6px 10px;border-radius:999px}.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.28;margin:16px 0 8px;letter-spacing:-.02em}.hero .subtitle{font-size:15px;color:#e3e6ff;max-width:760px;margin:0 0 13px}.hero .description{font-size:14px;color:#cfd4f8;max-width:790px}.meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.meta-chip{font-size:11px;padding:7px 10px;border-radius:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16)}.doc-section{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px 32px;margin:18px 0;box-shadow:0 4px 18px rgba(15,23,42,.035);scroll-margin-top:90px}.doc-section h2{font-size:24px;line-height:1.45;margin:0 0 18px;letter-spacing:-.01em}.doc-section h3{font-size:17px;line-height:1.5;margin:28px 0 12px;color:color-mix(in srgb,var(--text) 92%,var(--accent));scroll-margin-top:90px}.doc-section p{margin:11px 0}.doc-section ul,.doc-section ol{padding-left:24px;margin:12px 0}.doc-section li{margin:7px 0}.doc-section a{color:var(--accent);text-underline-offset:3px;word-break:break-word}.lead-note{background:var(--surface2);border:1px dashed var(--line);padding:13px 15px;border-radius:12px;color:var(--muted);font-size:12px}.contents-section{background:linear-gradient(180deg,var(--surface),var(--surface2))}.contents-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.contents-item{display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:var(--text)!important;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:13px;transition:.18s}.contents-item:hover{transform:translateY(-1px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));box-shadow:0 8px 20px rgba(15,23,42,.06)}.contents-item span{display:grid;place-items:center;flex:0 0 32px;height:32px;border-radius:10px;background:color-mix(in srgb,var(--accent) 10%,var(--surface));color:var(--accent);font-size:11px;font-weight:850}.contents-item strong{font-size:12px;line-height:1.55}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin:16px 0}table{border-collapse:collapse;width:100%;min-width:620px;font-size:12px;line-height:1.6}th,td{text-align:left;padding:12px 13px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--surface2);font-weight:800}tbody tr:last-child td{border-bottom:0}.callout{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;overflow:hidden;margin:16px 0;background:var(--surface2)}.callout.formula{background:var(--formula);border-left-color:var(--formulaBorder)}.callout.tip{background:var(--tip);border-left-color:var(--tipBorder)}.callout.important{background:var(--warn);border-left-color:var(--warnBorder)}.callout.workflow{border-left-color:#0ea5e9}.callout-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;border-bottom:1px solid color-mix(in srgb,var(--line) 85%,transparent)}.callout-label{font-size:10px;font-weight:900;letter-spacing:.08em;color:var(--muted)}.copy-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:10px;border-radius:8px;padding:4px 8px;cursor:pointer}.callout pre{margin:0;padding:15px 16px;white-space:pre-wrap;word-break:break-word;font-family:"Noto Sans Myanmar","Myanmar Text","Pyidaungsu","Padauk",ui-monospace,"SFMono-Regular",Consolas,monospace;font-size:12px;line-height:1.8;color:var(--text);background:transparent}.search-hidden{display:none!important}.empty-search{display:none;text-align:center;padding:40px;border:1px dashed var(--line);border-radius:18px;color:var(--muted);background:var(--surface)}.footer{color:var(--muted);text-align:center;font-size:11px;margin-top:28px}.overlay{display:none}
+@media(max-width:900px){.sidebar{transform:translateX(-103%);transition:.22s;box-shadow:var(--shadow)}.sidebar.open{transform:none}.main{margin-left:0}.menu-btn{display:inline-grid;place-items:center}.topbar{padding:0 18px}.content{width:min(94%,760px);padding-top:24px}.hero{padding:34px 25px;border-radius:22px}.doc-section{padding:24px 20px;border-radius:18px}.contents-grid{grid-template-columns:1fr}.overlay{position:fixed;inset:0;background:rgba(2,6,23,.46);z-index:45}.overlay.show{display:block}}@media(max-width:560px){.top-actions .print-btn{display:none}.search kbd{display:none}.search input{padding-right:12px}.hero h1{font-size:31px}.hero{padding:30px 21px}.doc-section h2{font-size:20px}.doc-section{padding:21px 16px}.content{width:94%}.meta-chip{font-size:10px}table{min-width:540px}.brand{padding-bottom:12px}}
+@media print{.sidebar,.topbar,.overlay,.copy-btn{display:none!important}.main{margin:0}.content{width:100%;padding:0}.guide{display:none!important}.guide.active{display:block!important}.hero{box-shadow:none;border-radius:0;margin:0 0 18px}.doc-section{box-shadow:none;break-inside:avoid;border-color:#bbb}.callout{break-inside:avoid}body{background:#fff;color:#000}}
+</style></head><body>
+<div class="app"><aside class="sidebar" id="sidebar"><div class="brand"><div class="brand-mark">AI</div><div><strong>Future Code Guides</strong><small>AI Tools Professional - မြန်မာဘာသာ</small></div></div><div class="nav-label">AI ကိရိယာများ</div><nav class="guide-nav"><button class="guide-button active" data-guide="video" type="button"><span class="guide-badge">VD</span><span>AI ဗီဒီယို ဖန်တီးနည်း</span></button><div class="section-nav"><a href="#video-1" onclick="showGuide('video',false)">AI ဗီဒီယို အစမှအဆုံးလုပ်ငန်းစဉ်</a><a href="#video-2" onclick="showGuide('video',false)">ChatGPT ဇာတ်လမ်းတည်ဆောက်ခြင်း</a><a href="#video-3" onclick="showGuide('video',false)">ဇာတ်ကောင်မလွဲအောင်လုပ်ခြင်း</a><a href="#video-4" onclick="showGuide('video',false)">နေရာနှင့် ရုပ်ပုံပုံစံအတည်ပြုခြင်း</a><a href="#video-5" onclick="showGuide('video',false)">ဇာတ်ဝင်ခန်းခွဲခြမ်းခြင်း</a><a href="#video-6" onclick="showGuide('video',false)">ဇာတ်ဝင်ခန်းတည်ငြိမ်မှု</a><a href="#video-7" onclick="showGuide('video',false)">ဗီဒီယို Prompt ထုတ်ခြင်း</a><a href="#video-8" onclick="showGuide('video',false)">မြန်မာစကားပြော Prompt</a><a href="#video-9" onclick="showGuide('video',false)">Gemini ဗီဒီယို</a><a href="#video-10" onclick="showGuide('video',false)">Google Flow ဗီဒီယို</a><a href="#video-11" onclick="showGuide('video',false)">Reference ပုံမှ ဗီဒီယို</a><a href="#video-12" onclick="showGuide('video',false)">Prompt အရည်အသွေးစစ်ခြင်း</a><a href="#video-13" onclick="showGuide('video',false)">Future Code နမူနာ</a><a href="#video-14" onclick="showGuide('video',false)">ပြဿနာဖြေရှင်းခြင်း</a><a href="#video-15" onclick="showGuide('video',false)">တရားဝင်အကိုးအကားများ</a></div></nav><div class="sidebar-actions"><button class="side-btn" id="themeBtn" type="button">အမှောင်ပုံစံ</button><button class="side-btn" id="printBtn" type="button">ပုံနှိပ် / PDF</button></div></aside><div class="overlay" id="overlay"></div>
+<main class="main"><div class="topbar"><button aria-label="Open menu" class="menu-btn" id="menuBtn" type="button">☰</button><div class="search"><input autocomplete="off" id="searchInput" placeholder="ဒီလမ်းညွှန်ထဲမှာ စာရှာရန်..." type="search"/><kbd>Ctrl K</kbd></div><div class="top-actions"><button class="icon-btn print-btn" onclick="window.print()" type="button">ပုံနှိပ်</button><button class="icon-btn" onclick="document.getElementById('themeBtn').click()" type="button">အရောင်ပုံစံ</button></div></div><div class="content"><article class="guide active" data-guide="video" data-title="AI Video Creation">
+<header class="hero"><div class="eyebrow">AI Tools Professional Future Code Guides</div><h1>ပရော်ဖက်ရှင်နယ် AI ဗီဒီယို ဖန်တီးနည်း</h1><p class="subtitle">ChatGPT နဲ့ ဇာတ်လမ်း/ဇာတ်ကောင်တည်ဆောက်ခြင်း → Gemini / Google Flow → မြန်မာစကားပြော ဗီဒီယိုထုတ်ခြင်း</p><p class="description">ဇာတ်လမ်း၊ ဇာတ်ကောင်၊ ဇာတ်ဝင်ခန်းတည်ငြိမ်မှု၊ Prompt ရေးနည်းနဲ့ မြန်မာစကားပြော AI ဗီဒီယိုထုတ်လုပ်မှုကို အစမှအဆုံး လက်တွေ့လုပ်နိုင်အောင် မြန်မာလို အဓိကရှင်းပြထားတဲ့ Future Code သင်ခန်းစာ။</p><div class="meta-row"><span class="meta-chip">Future Code</span><span class="meta-chip">ဗီဒီယိုဖန်တီးမှု</span><span class="meta-chip">ဇာတ်ကောင်တည်ငြိမ်မှု</span><span class="meta-chip">မြန်မာစကားပြော</span><span class="meta-chip">Gemini + Google Flow</span><span class="meta-chip">၂၀၂၆ စက်တင်ဘာ နောက်ဆုံးပြင်ဆင်</span></div></header>
+<div class="empty-search">ရှာဖွေတဲ့စာနဲ့ ကိုက်ညီတဲ့ အပိုင်း မတွေ့ပါ။</div>
+<section class="doc-section" id="video-1"><h2>1. AI ဗီဒီယိုကို အစမှအဆုံး ဖန်တီးမည့် လုပ်ငန်းစဉ်</h2>
+<p>AI နဲ့ ဗီဒီယိုကောင်းတစ်ခုထုတ်ချင်ရင် Prompt တစ်ကြောင်းတည်းနဲ့ မစပါနဲ့။ ပထမဆုံး <strong>ဇာတ်လမ်းစနစ်</strong> တည်ဆောက်ပြီး ဇာတ်ကောင်၊ နေရာ၊ အရောင်ပုံစံနဲ့ ဇာတ်ဝင်ခန်းဆက်စပ်မှုကို အတည်ပြုပြီးမှ ဇာတ်ဝင်ခန်းတစ်ခုချင်းကို ဗီဒီယို Prompt အဖြစ် ပြောင်းပါ။</p>
+<div class="callout workflow"><div class="callout-head"><span class="callout-label">FUTURE CODE ဗီဒီယိုလုပ်ငန်းစဉ်</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>စိတ်ကူး
+→ ဇာတ်လမ်းအကျဉ်းချုပ်
+→ ဇာတ်ကောင်အချက်အလက်မှတ်တမ်း
+→ နေရာနှင့် ရုပ်ပုံပုံစံ အချက်အလက်မှတ်တမ်း
+→ ဇာတ်ဝင်ခန်းများ ခွဲခြမ်းခြင်း
+→ ဇာတ်ဝင်ခန်းမလွဲအောင် အတည်ပြုခြင်း
+→ ဇာတ်ကောင် / ရုပ်ပုံ Reference အတည်ပြုခြင်း
+→ ဇာတ်ဝင်ခန်းတစ်ခုချင်းအတွက် ဗီဒီယို Prompt ထုတ်ခြင်း
+→ မြန်မာစကားပြော စာသားအတည်ပြုခြင်း
+→ Gemini / Google Flow ဖြင့် ဗီဒီယိုထုတ်ခြင်း
+→ ရလဒ်စစ်ခြင်းနှင့် ပြန်ထုတ်ခြင်း
+→ Clip များဆက်ခြင်း / တည်းဖြတ်ခြင်း / နောက်ဆုံး Export</pre></div>
+<div class="callout important"><div class="callout-head"><span class="callout-label">အရေးကြီး</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>AI က ဖန်တီးပေးတဲ့ မြန်မာစကားအသံဟာ အသုံးပြုတဲ့ model၊ account၊ region နဲ့ generation အလိုက် အနည်းငယ်ကွာနိုင်ပါတယ်။ “မြန်မာစကား ၁၀၀% အမြဲမှန်မယ်” လို့ အာမခံလို့မရပါ။ ဒီသင်ခန်းစာက အသံထွက်၊ နှုတ်ခမ်းလှုပ်ရှားမှု၊ ဇာတ်ကောင်တည်ငြိမ်မှုနဲ့ Prompt ကိုလိုက်နာမှု ပိုကောင်းအောင် စနစ်တကျ လုပ်နည်းကို သင်ပေးတာဖြစ်ပါတယ်။</pre></div>
+</section>
+<section class="doc-section" id="video-2"><h2>2. ChatGPT ထဲမှာ ဇာတ်လမ်းအကျဉ်းချုပ် တည်ဆောက်နည်း</h2>
+<p>ဇာတ်လမ်းကို ချက်ချင်း ဗီဒီယို Prompt မရေးသေးပါနဲ့။ အရင်ဆုံး <strong>ရည်ရွယ်ချက်၊ ကြည့်မယ့်ပရိသတ်၊ ကြာချိန်၊ အဓိကဇာတ်ကောင်၊ ပြဿနာ၊ စိတ်ခံစားမှုပြောင်းလဲမှု၊ အဆုံးသတ်နဲ့ ရုပ်ပုံအနေအထား</strong> ကို သတ်မှတ်ပါ။</p>
+<h3>ဇာတ်လမ်းအကျဉ်းချုပ် ပုံသေနည်း</h3>
+<div class="callout formula"><div class="callout-head"><span class="callout-label">ပုံသေနည်း</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ရည်ရွယ်ချက် + ပရိသတ် + စုစုပေါင်းကြာချိန် + ဇာတ်လမ်းအမျိုးအစား + အဓိကဇာတ်ကောင် + ပြဿနာ + စိတ်ခံစားမှုအပြောင်းအလဲ + အဆုံးသတ် + ရုပ်ပုံပုံစံ + တင်မည့် Platform</pre></div>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ChatGPT အမိန့်စာ</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>မင်းဟာ AI ရုပ်ရှင်ဒါရိုက်တာနဲ့ ဇာတ်လမ်းဒီဇိုင်နာတစ်ယောက်အဖြစ် လုပ်ပါ။
+Future Code အတွက် AI ဗီဒီယိုအတို ဇာတ်လမ်းတစ်ခု ဖန်တီးပေးပါ။
+
+ရည်ရွယ်ချက် - AI ဗီဒီယိုဖန်တီးနည်း သင်ယူချင်စိတ်ဖြစ်လာစေရန်။
+ပရိသတ် - မြန်မာဘာသာပြော AI စတင်လေ့လာသူများနှင့် Content Creator များ။
+စုစုပေါင်းကြာချိန် - ၃၀ မှ ၄၅ စက္ကန့်၊ Clip အတိုများဖြင့်တည်ဆောက်ရန်။
+ဇာတ်လမ်းအမျိုးအစား - ခေတ်မီနည်းပညာဆိုင်ရာ အားပေးစိတ်ဖြစ်စေသော ဇာတ်လမ်း။
+အဓိကဇာတ်ကောင် - အသက် ၂၄ နှစ်အရွယ် မြန်မာအမျိုးသမီးတစ်ယောက်။
+စိတ်ခံစားမှုအပြောင်းအလဲ - မသိမသာရှုပ်ထွေးနေခြင်း → လုပ်ငန်းစဉ်ရှင်းလင်းသွားခြင်း → ယုံကြည်မှုရှိသော ဖန်တီးသူဖြစ်လာခြင်း။
+အဆုံးသတ် - သူမက ပထမဆုံး AI ဗီဒီယိုကို အောင်မြင်စွာ ဖန်တီးနိုင်သွားသည်။
+ရုပ်ပုံအနေအထား - cinematic၊ ခေတ်မီ၊ တကယ့်လူပုံစံ၊ နွေးထွေးပြီး ယုံကြည်စိတ်ချရသော mood။
+တင်မည့်နေရာ - Facebook Reels / TikTok / Shorts၊ ဒေါင်လိုက် 9:16။
+
+ပထမအဆင့်မှာ အောက်ပါ ၄ ခုပဲ ထုတ်ပေးပါ။
+၁။ ဇာတ်လမ်းအကျဉ်းချုပ် တစ်ပိုဒ်
+၂။ ဇာတ်ကောင်စာရင်း
+၃။ ဇာတ်ဝင်ခန်းစာရင်းနဲ့ ဇာတ်ဝင်ခန်းတစ်ခုစီရဲ့ ရည်ရွယ်ချက်
+၄။ ဇာတ်ကောင်/နေရာ/အဝတ်အစား မလွဲအောင် သတိထားရမယ့်အချက်များ
+နောက်ဆုံး ဗီဒီယို Prompt တွေကို မရေးသေးပါနဲ့။</pre></div>
+</section>
+<section class="doc-section" id="video-3"><h2>3. ဇာတ်ကောင်အချက်အလက်မှတ်တမ်း - ဇာတ်ကောင်မလွဲအောင် တည်ဆောက်နည်း</h2>
+<p>ဇာတ်ဝင်ခန်းတိုင်းမှာ “လှပတဲ့ မြန်မာမိန်းကလေး” လို့သာရေးရင် မျက်နှာ၊ ဆံပင်၊ အသက်၊ အဝတ်အစားနဲ့ ခန္ဓာကိုယ်ပုံစံ ပြောင်းသွားနိုင်ပါတယ်။ ဒါကြောင့် ဇာတ်ကောင်တစ်ယောက်အတွက် <strong>မပြောင်းလဲရမည့် ကိုယ်ပိုင်အချက်အလက်</strong> ကို အရင်တည်ဆောက်ပြီး ဇာတ်ဝင်ခန်းတိုင်းမှာ ထပ်အသုံးပြုပါ။</p>
+<h3>ဇာတ်ကောင်အချက်အလက် ပုံသေနည်း</h3>
+<div class="callout formula"><div class="callout-head"><span class="callout-label">ပုံသေနည်း</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>အမည် + အသက် + လူမျိုး/နိုင်ငံ + မျက်နှာပုံစံ + အသားအရောင် + ဆံပင် + မျက်လုံး + အရပ်/ကိုယ်ထည် + အမြဲဝတ်မည့်အဝတ်အစား + အဆင်တန်ဆာ + ကိုယ်ရည်ကိုယ်သွေး + အသံပုံစံ + လုံးဝမပြောင်းရမည့်အချက်များ</pre></div>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ChatGPT အမိန့်စာ</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ဒီဇာတ်လမ်းအတွက် ဇာတ်ဝင်ခန်းတိုင်းမှာ ပြန်သုံးနိုင်မယ့် “ဇာတ်ကောင်အချက်အလက်မှတ်တမ်း” တစ်ခု ဖန်တီးပေးပါ။ ဇာတ်ကောင်ရဲ့ ရုပ်ရည်နဲ့ ကိုယ်ပိုင်လက္ခဏာတွေ ဇာတ်ဝင်ခန်းတိုင်းမှာ တူညီနေစေရမယ်။
+
+ဇာတ်ကောင်အခြေခံအချက်အလက်
+- အမည် - မေသီရိ (May Thiri)
+- အသက် - ၂၄ နှစ်
+- မြန်မာအမျိုးသမီး
+- AI Content Creator စတင်လေ့လာနေသူ
+- ရုပ်ပုံပုံစံ - realistic cinematic
+
+အောက်ပါအချက်တွေကို တိတိကျကျ ထုတ်ပေးပါ။
+၁။ ဇာတ်ကောင် ID
+၂။ မျက်နှာပုံစံနဲ့ မျက်နှာအသေးစိတ်
+၃။ ဆံပင်ပုံစံ၊ အရှည်၊ ခွဲထားတဲ့ဘက်
+၄။ အသားအရောင်နဲ့ မျက်လုံးအသေးစိတ်
+၅။ အရပ်နဲ့ ကိုယ်ထည်
+၆။ အမြဲတူရမယ့် အဝတ်အစားနဲ့ အရောင်
+၇။ အဆင်တန်ဆာ
+၈။ ကိုယ်ရည်ကိုယ်သွေးနဲ့ မူလမျက်နှာအမူအရာ
+၉။ အသံ - နွေးထွေး၊ ရှင်းလင်း၊ ယုံကြည်မှုရှိပြီး သဘာဝမြန်မာအသံထွက်ရှိသော အရွယ်ရောက်မြန်မာအမျိုးသမီးအသံ
+၁၀။ လုံးဝ မပြောင်းရမည့်အချက်များ
+၁၁။ ဇာတ်ဝင်ခန်း Prompt တိုင်းရဲ့အစမှာ ပြန်ကူးထည့်နိုင်မယ့် စာကြောင်း ၂-၃ ကြောင်းစာ “ဇာတ်ကောင်အတည်ပြုစာပိုဒ်”</pre></div>
+<h3>ဇာတ်ကောင်အတည်ပြုစာပိုဒ် နမူနာ</h3>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ပြန်သုံးနိုင်သော ဇာတ်ကောင်စာပိုဒ်</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>မေသီရိသည် အသက် ၂၄ နှစ်အရွယ် မြန်မာအမျိုးသမီးဖြစ်သည်။ မျက်နှာပုံစံမှာ အနည်းငယ်ဝိုင်းသော ဘဲဥပုံ၊ နွေးထွေးသော အလတ်စားအသားအရောင်၊ အညိုရင့် almond-shaped မျက်လုံးနှင့် ပခုံးအထိရှိသော အနက်ရောင်ဆံပင်တည့်တည့်ကို ဘယ်ဘက်နည်းနည်းခွဲထားသည်။ ဇာတ်ဝင်ခန်းတိုင်းမှာ cream ရောင် blouse၊ navy အပြာရင့် longyi၊ ငွေရောင်နားကပ်သေးသေးနှင့် အနက်ရောင် smartwatch ကိုပဲ ဝတ်ထားရမည်။ မျက်နှာ၊ အသက်၊ ဆံပင်၊ အသားအရောင်၊ အဝတ်အစားအရောင်၊ ကိုယ်ထည်နဲ့ အဆင်တန်ဆာတို့ကို မပြောင်းပါနှင့်။</pre></div>
+<div class="callout tip"><div class="callout-head"><span class="callout-label">အထူးအကြံပြုချက်</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ဇာတ်ကောင် Reference ပုံကို အရင်ဖန်တီးပါ။ ရှေ့တည့်တည့်ပုံ၊ 3/4 portrait နဲ့ ကိုယ်လုံးပြည့်ပုံ ၂-၃ ပုံထားနိုင်ရင် ဇာတ်ကောင်တည်ငြိမ်မှု ပိုကောင်းတတ်ပါတယ်။ Google Flow မှာ Character / Ingredients / References ရနိုင်ရင် ပုံကိုအကြိမ်ကြိမ် ပြန်တင်တာထက် တစ်ခါသတ်မှတ်ထားတဲ့ ဇာတ်ကောင်အဖြစ် ပြန်သုံးပါ။</pre></div>
+</section>
+<section class="doc-section" id="video-4"><h2>4. နေရာနှင့် ရုပ်ပုံပုံစံ အချက်အလက် - ဇာတ်ဝင်ခန်းအရောင်၊ နေရာ၊ Mood မလွဲအောင်</h2>
+<p>ဇာတ်ကောင်တူနေပေမယ့် ဇာတ်ဝင်ခန်းတိုင်းမှာ အလင်းရောင်၊ ကင်မရာပုံစံ၊ နေရာအလှဆင်ပုံနဲ့ အရောင်အနေအထား မတူသွားရင် ဇာတ်ကားတစ်ခုတည်းလို မခံစားရပါဘူး။ ဒါကြောင့် ဇာတ်လမ်းကမ္ဘာနဲ့ ရုပ်ပုံပုံစံကိုပါ အတည်ပြုထားပါ။</p>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ChatGPT အမိန့်စာ</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>အပေါ်က ဇာတ်လမ်းအတွက် “နေရာနှင့် ရုပ်ပုံပုံစံ အချက်အလက်မှတ်တမ်း” တစ်ခု ဖန်တီးပေးပါ။ ဇာတ်ဝင်ခန်းအားလုံးမှာ အောက်ပါအချက်တွေ တူညီနေစေရမယ်။
+
+- နေရာ/ယဉ်ကျေးမှု - ခေတ်မီ မြန်မာမြို့ပြပတ်ဝန်းကျင်
+- အခန်းဒီဇိုင်း - သန့်ရှင်းသော ခေတ်မီအလုပ်ခန်း၊ မြန်မာပုံစံအရိပ်အမြွက်သေးသေးများ
+- အဓိကအရောင် - နွေးထွေးသော neutral အရောင် + blue-violet နည်းပညာအရောင်အနည်းငယ်
+- အလင်း - ပျော့ပျောင်းသော natural key light + cinematic practical light
+- ကင်မရာ - realistic cinema၊ 35mm / 50mm lens feel၊ လိုအပ်မှ shallow depth of field
+- လှုပ်ရှားမှု - ချောမွေ့ပြီး တကယ့်လူလှုပ်ရှားမှုလို သဘာဝကျရမည်
+- တကယ်ဆန်မှု - အသားအရေ၊ လက်၊ ပစ္စည်းလှုပ်ရှားမှုနဲ့ physics သဘာဝကျရမည်
+- အဓိက mood - အားပေးစိတ်ဖြစ်စေသော၊ လက်တွေ့ကျသော၊ premium ဖြစ်သော်လည်း မလွန်ကဲသောပုံစံ
+
+အောက်ပါ ၄ ပိုင်းနဲ့ ထုတ်ပေးပါ။
+၁။ မပြောင်းရမည့် နေရာဆိုင်ရာစည်းကမ်းများ
+၂။ မပြောင်းရမည့် ရုပ်ပုံပုံစံစည်းကမ်းများ
+၃။ ဇာတ်ဝင်ခန်းအလိုက် ပြောင်းလို့ရသောအရာများ
+၄။ လုံးဝ မပြောင်းရမည့်အရာများ</pre></div>
+</section>
+<section class="doc-section" id="video-5"><h2>5. ဇာတ်ဝင်ခန်းခွဲခြမ်းခြင်း - ဇာတ်လမ်းကို Clip အတိုများအဖြစ် ခွဲနည်း</h2>
+<p>AI ဗီဒီယိုကို Clip အတိုတွေအဖြစ် ခွဲထုတ်ရင် ထိန်းချုပ်ရပိုလွယ်ပါတယ်။ <strong>ဇာတ်ဝင်ခန်းတစ်ခု = အဓိကလုပ်ဆောင်ချက်တစ်ခု + ကင်မရာအယူအဆတစ်ခု + စကားပြောစာကြောင်းအတိုတစ်ခု</strong> ဆိုတဲ့သဘောနဲ့ ခွဲပါ။</p>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ChatGPT ဇာတ်ဝင်ခန်းခွဲခြမ်း အမိန့်စာ</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>အတည်ပြုပြီးသား ဇာတ်လမ်းအကျဉ်းချုပ်၊ ဇာတ်ကောင်အချက်အလက်နဲ့ နေရာ/ရုပ်ပုံပုံစံအချက်အလက်ကို အသုံးပြုပြီး ဇာတ်လမ်းကို ဗီဒီယိုဇာတ်ဝင်ခန်း ၆ ခုအဖြစ် ခွဲပေးပါ။
+
+ဇာတ်ဝင်ခန်းတစ်ခုစီမှာ အောက်ပါအချက်တွေ ပါရမယ်။
+- ဇာတ်ဝင်ခန်းအမှတ်နဲ့ ရည်ရွယ်ချက်
+- ရည်မှန်းကြာချိန် - ၄ မှ ၈ စက္ကန့်
+- နေရာ
+- ပါဝင်မယ့် ဇာတ်ကောင်
+- စတင်အနေအထား
+- အဓိကလုပ်ဆောင်ချက် တစ်ခုပဲ
+- Camera shot + camera movement
+- အလင်းရောင်
+- စိတ်ခံစားမှု
+- လိုအပ်ရင် မြန်မာစကားပြောစာကြောင်းအတိအကျ
+- ပတ်ဝန်းကျင်အသံ / SFX
+- အရင်ဇာတ်ဝင်ခန်းကနေ ဆက်စပ်ပုံ
+- နောက်ဇာတ်ဝင်ခန်းဆီ ဆက်သွားလို့ကောင်းမယ့် နောက်ဆုံး frame
+
+စည်းကမ်း - စကားပြောစာကြောင်းကို Clip အတွင်း သဘာဝကျကျ ပြောပြီးဆုံးနိုင်လောက်အောင်တိုစေပါ။</pre></div>
+<h3>ဇာတ်ဝင်ခန်းတည်ငြိမ်မှု စစ်ဆေးဇယား</h3>
+<div class="table-wrap"><table><thead><tr><th>အတည်ပြုရမည့်အချက်</th><th>ဇာတ်ဝင်ခန်း ၁</th><th>ဇာတ်ဝင်ခန်း ၂ နှင့်နောက်ပိုင်း</th></tr></thead><tbody>
+<tr><td>မျက်နှာ / အသက်</td><td>အတည်ပြု Reference</td><td>တူညီရမည်</td></tr>
+<tr><td>ဆံပင် / အဝတ်အစား</td><td>အရောင်နှင့်ပုံစံ အတည်ပြု</td><td>အကြောင်းပြချက်မရှိရင် မပြောင်းရ</td></tr>
+<tr><td>အသုံးအဆောင်</td><td>ပစ္စည်း၊ အရောင်၊ ကိုင်ထားသည့်ဘက် မှတ်ထား</td><td>ပြောင်းလဲရင် ဆက်စပ်မှုမှတ်ချက် ထည့်</td></tr>
+<tr><td>အချိန် / အလင်း</td><td>မနက် / ညနေ စသတ်မှတ်</td><td>ဇာတ်လမ်းအချိန်နဲ့ ကိုက်ညီစေ</td></tr>
+<tr><td>ကင်မရာ</td><td>Shot နဲ့ movement သတ်မှတ်</td><td>Clip ဆက်ရလွယ်အောင် နောက်ဆုံး frame စဉ်းစား</td></tr>
+<tr><td>စကားပြော</td><td>ပြောသူ + စာသားအတိအကျ</td><td>စာကြောင်းတို၊ ပြောသူမရှုပ်စေ</td></tr>
+</tbody></table></div>
+</section>
+<section class="doc-section" id="video-6"><h2>6. ဇာတ်ဝင်ခန်းမလွဲအောင် အတည်ပြုစည်းကမ်း</h2>
+<p>ဇာတ်ဝင်ခန်း Prompt တိုင်းရဲ့အစမှာ မပြောင်းရမယ့် ဇာတ်ကောင်အချက်အလက်ကို ပြန်ထည့်ပြီး <strong>ဒီဇာတ်ဝင်ခန်းမှာ ပြောင်းမယ့်အရာ</strong> ကိုသာ နောက်ကရေးပါ။ Model က အရင်ဇာတ်ဝင်ခန်းကို အလိုအလျောက် မှတ်မယ်လို့ မယူဆပါနဲ့။</p>
+<div class="callout formula"><div class="callout-head"><span class="callout-label">တည်ငြိမ်မှု ပုံသေနည်း</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>မပြောင်းရမည့် ဇာတ်ကောင်အချက်အလက်
++ မပြောင်းရမည့် အဝတ်အစား / အသုံးအဆောင်
++ မပြောင်းရမည့် နေရာ / ရုပ်ပုံပုံစံ
++ လက်ရှိဇာတ်ဝင်ခန်းနေရာ
++ စတင်အနေအထား
++ အဓိကလုပ်ဆောင်ချက် တစ်ခု
++ ကင်မရာ
++ အလင်းရောင်
++ စိတ်ခံစားမှု
++ အသံ
++ စကားပြောစာသားအတိအကျ
++ နောက်ဆုံးအနေအထား
++ မဖြစ်စေရမည့်အချက်များ</pre></div>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ChatGPT တည်ငြိမ်မှုစစ်ဆေး အမိန့်စာ</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ဇာတ်ဝင်ခန်း Prompt အားလုံးကို တည်ငြိမ်မှုအရ စစ်ဆေးပေးပါ။
+အောက်ပါအချက်တွေကို ဇယားနဲ့ နှိုင်းယှဉ်ပါ - မျက်နှာ၊ အသက်၊ ဆံပင်၊ အဝတ်အစား၊ အဆင်တန်ဆာ၊ အသုံးအဆောင်၊ နေရာ၊ နေ့အချိန်၊ အလင်းလာရာဘက်၊ စိတ်ခံစားမှု၊ လူကကြည့်/လှည့်နေရာဘက်၊ စကားပြောစာသား၊ နောက်ဆုံး frame ဆက်စပ်မှု။
+မတော်တဆ ပြောင်းနေတဲ့အချက်တိုင်းကို ထောက်ပြပါ။
+ဇာတ်လမ်းရည်ရွယ်ချက်ကို မပြောင်းဘဲ မတည်ငြိမ်တဲ့ Prompt တွေကိုပဲ ပြန်ရေးပေးပါ။</pre></div>
+</section>
+<section class="doc-section" id="video-7"><h2>7. ChatGPT ကနေ Gemini / Google Flow အတွက် ဗီဒီယို Prompt ထုတ်နည်း</h2>
+<p>ChatGPT ကို “ဗီဒီယို Prompt ရေးပေး” လို့ပဲ မခိုင်းပါနဲ့။ ဇာတ်ဝင်ခန်းတိုင်းမှာ အချက်တူတူပါစေဖို့ <strong>အဖြေပုံစံ</strong> ကို တိတိကျကျ သတ်မှတ်ပါ။</p>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">အဓိက Prompt ထုတ်ပေးစနစ်</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>မင်းဟာ ငါ့ရဲ့ AI ဗီဒီယို Prompt ဒါရိုက်တာအဖြစ် လုပ်ပါ။
+အတည်ပြုပြီးသား ဇာတ်ကောင်အချက်အလက်၊ နေရာ/ရုပ်ပုံပုံစံအချက်အလက်နဲ့ ဇာတ်ဝင်ခန်းအစီအစဉ်ကိုပဲ အသုံးပြုပါ။
+Gemini နဲ့ Google Flow မှာ တိုက်ရိုက်သုံးလို့ရမယ့် production-ready Prompt ကို ဇာတ်ဝင်ခန်းတစ်ခုစီအတွက် ထုတ်ပေးပါ။
+
+တည်ငြိမ်မှုအတွက် လိုအပ်တဲ့ ဇာတ်ကောင်အသေးစိတ်ကို ဇာတ်ဝင်ခန်း Prompt တိုင်းမှာ ပြန်ထည့်ပါ။
+အောက်ပါအစဉ်အတိုင်း ရေးပါ။
+၁။ ဇာတ်ကောင်အတည်ပြုချက်
+၂။ နေရာနှင့် အချိန်
+၃။ စတင်မြင်ကွင်းဖွဲ့စည်းပုံ
+၄။ အဓိကလုပ်ဆောင်ချက်
+၅။ Camera shot နှင့် movement
+၆။ အလင်းနှင့် အရောင်
+၇။ မျက်နှာအမူအရာ / သရုပ်ဆောင်ပုံ
+၈။ အသံနှင့် ပတ်ဝန်းကျင်အသံ
+၉။ စကားပြော - quotation mark ထဲမှာ မြန်မာစာအတိအကျ
+၁၀။ နောက်ဆုံး frame / ကူးပြောင်းမှု
+၁၁။ မဖြစ်စေရမည့်အရာများ
+
+မြန်မာစကားပြော စည်းကမ်း
+- မြန်မာစာသားကို ရေးထားသလို အတိအကျထားပါ။
+- ဘာသာမပြန်ပါနှင့်။
+- အဓိပ္ပာယ်တူစကားဖြင့် မပြန်ရေးပါနှင့်။
+- ဖြစ်နိုင်ရင် ပြောသူတစ်ယောက်ကို စာကြောင်းတစ်ကြောင်းတိုပဲ ထားပါ။
+- စာကြောင်းမတိုင်ခင် ပြောသူအမည် ထည့်ပါ။
+- သဘာဝကျသော မြန်မာအသံထွက်နှင့် နှုတ်ခမ်းကိုက်ညီမှုကို တောင်းဆိုပါ။
+- မတောင်းဆိုထားရင် subtitle / caption မထည့်ပါနှင့်။
+
+Prompt တစ်ခုစီအဆုံးမှာ “မပြောင်းရမည့်အချက်များ” ကို တစ်ကြောင်းနဲ့ ပြန်ရေးပါ။</pre></div>
+</section>
+<section class="doc-section" id="video-8"><h2>8. မြန်မာစကား ပိုမှန်အောင် Prompt ရေးနည်း</h2>
+<p>စကားပြောညွှန်ကြားချက်ကို ရုပ်ပုံဖော်ပြချက်ထဲမှာ မရောထားပါနဲ့။ <strong>အသံနှင့် စကားပြော</strong> ဆိုတဲ့သီးသန့်အပိုင်းတစ်ခုထားပြီး ပြောသူအမည်၊ အသံနေအသွေးနဲ့ စာသားအတိအကျကို ရေးပါ။</p>
+<div class="callout formula"><div class="callout-head"><span class="callout-label">မြန်မာစကားပြော ပုံသေနည်း</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ပြောသူအမည် + ဘာသာစကား + အသံပုံစံ + စိတ်ခံစားမှု + quotation mark ထဲက စကားအတိအကျ + သဘာဝမြန်မာအသံထွက် + lip-sync + အခြားအသံ + အပိုစကားမထည့်ရန်</pre></div>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">လူတစ်ယောက် စကားပြော နမူနာ</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>အသံနှင့် စကားပြော -
+မေသီရိက သဘာဝကျသော အရွယ်ရောက်မြန်မာအမျိုးသမီးအသံ၊ နွေးထွေးပြီး ယုံကြည်မှုရှိသောအသံနေအသွေးဖြင့် မြန်မာဘာသာစကားပြောပါ။
+သူမက “ဗီဒီယိုလုပ်တာ မခက်ပါဘူး။ အဆင့်လိုက် လုပ်ရင် ရပါတယ်။” လို့ စာသားအတိုင်း အတိအကျ ပြောပါ။
+မြန်မာနိုင်ငံမှာ သဘာဝကျကျပြောသလို အသံထွက်ရှင်းရှင်းနဲ့ စကားအရှိန်သဘာဝကျစေပါ။
+နှုတ်ခမ်းလှုပ်ရှားမှုက မြန်မာစကားသံနဲ့ ကိုက်ညီရမည်။
+ဘာသာမပြန်ပါနှင့်၊ စကားလုံးအစားထိုးမရေးပါနှင့်၊ အပိုစကားမထည့်ပါနှင့်။
+Subtitle၊ caption နဲ့ screen ပေါ်စာ မထည့်ပါနှင့်။
+ပတ်ဝန်းကျင်အသံ - အခန်းအတွင်း အသံတိတ်တိတ်နဲ့ laptop fan အသံနည်းနည်းသာ၊ စကားသံထက် ပိုတိုးမနေစေရ။</pre></div>
+<h3>လူနှစ်ယောက် စကားပြော နမူနာ</h3>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">လူနှစ်ယောက် စကားပြော</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>အရွယ်ရောက် မြန်မာလူနှစ်ယောက် သဘာဝကျကျ စကားတိုတိုပြောပါ။ တစ်ချိန်တည်းမှာ လူတစ်ယောက်ပဲ ပြောရမည်။
+မေသီရိက အံ့သြပြီး သိချင်စိတ်ရှိသောအမူအရာနဲ့ “ဒါကို ဘယ်လိုလုပ်တာလဲ။” လို့ အတိအကျ ပြောပါ။
+ကိုမင်းက တည်ငြိမ်ပြီး ဖော်ရွေသောအသံနဲ့ “အရင် ဇာတ်ကောင်ကို တည်ငြိမ်အောင်လုပ်မယ်။” လို့ အတိအကျ ပြန်ပြောပါ။
+သဘာဝမြန်မာအသံထွက်၊ ပြောသူနှစ်ယောက်အသံကွဲပြားမှု၊ နှုတ်ခမ်းကိုက်ညီမှု ရှင်းလင်းစေပါ။
+စကားသံနှစ်ခု ထပ်မပြောစေပါနှင့်။ အပိုစကား၊ subtitle မထည့်ပါနှင့်။</pre></div>
+<div class="callout tip"><div class="callout-head"><span class="callout-label">အသံထွက်မမှန်ရင် ဒီလိုပြင်ပါ</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>၁။ စာကြောင်းကို ပိုတိုအောင် ခွဲပါ။
+၂။ Clip တစ်ခုမှာ ပြောသူတစ်ယောက်တည်းနဲ့ စမ်းပါ။
+၃။ မြန်မာစာအတိအကျကို quotation mark ထဲ ပြန်ထည့်ပါ။
+၄။ “ဘာသာမပြန်ပါနှင့်၊ စကားလုံးအစားထိုးမရေးပါနှင့်” လို့ ထည့်ပါ။
+၅။ နောက်ခံအသံညွှန်ကြားချက်ကို လျှော့ပါ။
+၆။ ဇာတ်ကောင် Reference ကို မပြောင်းဘဲ အသစ်ပြန်ထုတ်ပါ။
+၇။ အသံတိကျမှုက မဖြစ်မနေလိုအပ်ရင် AI ဗီဒီယိုထဲက မူလအသံကို နောက်ဆုံးအသံအဖြစ် မယူဘဲ Burmese TTS / voice recording + lip-sync တည်းဖြတ်နည်းကို အစားထိုးသုံးပါ။</pre></div>
+</section>
+<section class="doc-section" id="video-9"><h2>9. Gemini နဲ့ မြန်မာစကားပြော ဗီဒီယိုထုတ်နည်း</h2>
+<p>Gemini ရဲ့ ဗီဒီယိုဖန်တီးမှုမှာ စာသား Prompt နဲ့ Reference ပုံ/ဗီဒီယိုတွေကို အသုံးပြုနိုင်တဲ့အခါ <strong>ဇာတ်ကောင်အတည်ပြုချက်၊ လုပ်ဆောင်ချက်၊ ကင်မရာ၊ အသံနှင့် စကားပြော</strong> ကို သီးသန့်အပိုင်းခွဲရေးပါ။</p>
+<h3>အဆင့်လိုက် လုပ်နည်း</h3>
+<ol>
+<li>ChatGPT မှာ ဇာတ်ကောင်အချက်အလက်နဲ့ ဇာတ်ဝင်ခန်း Prompt ကို အရင်အတည်ပြုပါ။</li>
+<li>Gemini ထဲက ဗီဒီယိုဖန်တီးမှုအပိုင်းကို ဖွင့်ပါ။</li>
+<li>အတည်ပြုထားတဲ့ ဇာတ်ကောင် Reference ပုံရှိရင် upload လုပ်ပါ။</li>
+<li>ဇာတ်ဝင်ခန်း Prompt ကိုထည့်ပြီး “အသံနှင့် စကားပြော” ကို နောက်ဆုံးနားမှာ သီးသန့်ထားပါ။</li>
+<li>အသံလိုချင်ရင် အသံထုတ်ရန် တိတိကျကျ တောင်းပါ။</li>
+<li>ထွက်လာတဲ့ ဗီဒီယိုကို မျက်နှာ၊ အဝတ်အစား၊ ကင်မရာ၊ စကားစာသား၊ အသံထွက်နဲ့ lip-sync အလိုက် တစ်ချက်ချင်းစစ်ပါ။</li>
+<li>မမှန်ရင် Prompt အားလုံးမပြောင်းဘဲ မှားတဲ့အချက်တစ်ခုကိုပဲ ရည်ရွယ်ပြင်ပြီး ပြန်ထုတ်ပါ။</li>
+</ol>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">Gemini ဗီဒီယို Prompt</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ဒေါင်လိုက် 9:16 cinematic ဗီဒီယို Clip တစ်ခု ဖန်တီးပါ။
+
+ဇာတ်ကောင်အတည်ပြုချက် -
+Reference ပုံထဲက မေသီရိကိုပဲ အသုံးပြုပါ။ သူမသည် အသက် ၂၄ နှစ်အရွယ် မြန်မာအမျိုးသမီး၊ အနည်းငယ်ဝိုင်းသော ဘဲဥပုံမျက်နှာ၊ နွေးထွေးသော အလတ်စားအသားအရောင်၊ အညိုရင့်မျက်လုံး၊ ပခုံးအထိ အနက်ရောင်ဆံပင်တည့်တည့်၊ cream blouse၊ navy longyi၊ ငွေရောင်နားကပ်နဲ့ အနက်ရောင် smartwatch ဝတ်ထားသည်။ မျက်နှာနဲ့ အဝတ်အစားကို Reference နဲ့ အတိအကျ တူအောင်ထားပါ။
+
+ဇာတ်ဝင်ခန်း -
+ရန်ကုန်ရှိ ခေတ်မီအိမ်တွင်းအလုပ်ခန်း၊ ညနေစောစော။ သူမက အရင်ဇာတ်ဝင်ခန်းမှာ သုံးခဲ့တဲ့ သစ်သားစားပွဲနဲ့ silver laptop အတူတူကို အသုံးပြုနေသည်။ ဘယ်ဘက်က နွေးထွေးသောမီး၊ monitor က blue-violet အလင်းနည်းနည်း မျက်နှာပေါ်ကျနေသည်။
+
+လုပ်ဆောင်ချက် -
+သူမက laptop ကိုကြည့်ပြီး လုပ်ငန်းစဉ်ကို နားလည်သွားသည်။ သဘာဝကျကျ ပြုံးပြီး camera ဘက်ကို နည်းနည်းလှည့်သည်။
+
+ကင်မရာ -
+Medium close-up၊ မျက်စိအမြင့်၊ slow push-in အနည်းငယ်၊ realistic 50mm cinematic look၊ ကင်မရာလှုပ်ရှားမှု တည်ငြိမ်ရမည်။
+
+သရုပ်ဆောင်မှု -
+စိတ်အေးသွားပြီး ယုံကြည်မှုရှိလာသော ဖော်ရွေသည့်အမူအရာ။ မျက်နှာလှုပ်ရှားမှုနဲ့ လက်ပုံစံ သဘာဝကျရမည်။
+
+အသံနှင့် စကားပြော -
+အသံကို ဗီဒီယိုနဲ့ တစ်ပြိုင်နက် ဖန်တီးပါ။
+မေသီရိက နွေးထွေးပြီး ရှင်းလင်းသော အရွယ်ရောက်မြန်မာအမျိုးသမီးအသံနဲ့ မြန်မာလို ပြောပါ။
+“အဆင့်လိုက် လုပ်ရင် ဗီဒီယိုတစ်ခု ဖန်တီးတာ လွယ်ပါတယ်။” လို့ အတိအကျ ပြောပါ။
+ဒီမြန်မာစာကို ဘာသာမပြန်ပါနှင့်၊ စကားလုံးမပြောင်းပါနှင့်၊ အပိုစကားမထည့်ပါနှင့်။
+သဘာဝမြန်မာအသံထွက်၊ သဘာဝစကားအရှိန်နဲ့ တိကျတဲ့ lip-sync ရှိရမည်။
+ပတ်ဝန်းကျင်အသံက တိတ်တိတ်လေးသာ ဖြစ်ရမည်။
+Subtitle၊ caption၊ screen ပေါ်စာ မထည့်ပါနှင့်။
+
+တည်ငြိမ်မှု -
+မျက်နှာ၊ ဆံပင်၊ အသက်၊ အဝတ်အစား၊ အဆင်တန်ဆာ၊ စားပွဲ၊ laptop နဲ့ အလင်းလာရာဘက်ကို မပြောင်းပါနှင့်။</pre></div>
+</section>
+<section class="doc-section" id="video-10"><h2>10. Google Flow နဲ့ ဇာတ်ကောင်တည်ငြိမ်မှု + မြန်မာစကားပြော ဗီဒီယိုထုတ်နည်း</h2>
+<p>Google Flow မှာ Reference images / Ingredients / Characters လို အင်္ဂါရပ်တွေ ရနိုင်တဲ့အခါ ဇာတ်ကောင်ပုံနဲ့ အသံကို ပရောဂျက်တစ်ခုလုံးမှာ ပြန်သုံးနိုင်ပါတယ်။ Character ကို <strong>@name</strong> နဲ့ ခေါ်သုံးနိုင်တဲ့အတွေ့အကြုံ ရှိရင် ဇာတ်ကောင်မလွဲအောင် အထူးအသုံးဝင်ပါတယ်။</p>
+<h3>Flow အဆင့်လိုက် လုပ်ငန်းစဉ်</h3>
+<ol>
+<li>ဇာတ်လမ်းနဲ့ သက်ဆိုင်တဲ့ asset အားလုံးကို Project တစ်ခုတည်းမှာ ထားပါ။</li>
+<li>Characters ရနိုင်ရင် မေသီရိကို ဇာတ်ကောင်အဖြစ် တည်ဆောက်ပြီး Reference ပုံရှင်းရှင်း ၁-၂ ပုံ ထည့်ပါ။ Voice reference ရနိုင်ရင် ဇာတ်ကောင်နဲ့ ချိတ်ပါ။</li>
+<li>Characters မရရင် Ingredients / References ထဲမှာ အတည်ပြုထားတဲ့ ဇာတ်ကောင်ပုံကို သုံးပါ။</li>
+<li>Prompt ထဲမှာ <strong>@MayThiri</strong> သို့မဟုတ် Reference asset ကို တိတိကျကျ ခေါ်သုံးပါ။</li>
+<li>စကားပြောလိုတဲ့ဇာတ်ဝင်ခန်းမှာ “အသံနှင့် စကားပြော” ကို သီးသန့်ရေးပြီး မြန်မာစာကို quotation mark ထဲထည့်ပါ။</li>
+<li>First frame / last frame ရနိုင်တဲ့ mode ကိုသုံးရင် အတည်ပြုထားတဲ့ frame နဲ့ Clip တစ်ခုကနေတစ်ခု ဆက်ပါ။</li>
+<li>Extend / edit လုပ်တဲ့အခါ ဇာတ်ကောင်၊ အဝတ်အစား၊ အသံနဲ့ နေရာအတည်ပြုချက်ကို ပြန်ရေးပါ။</li>
+</ol>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">Google Flow ဗီဒီယို Prompt</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>@MayThiri သည် ဒီ Clip မှာ စကားပြောမယ့် တစ်ဦးတည်းသော ဇာတ်ကောင်ဖြစ်ရမည်။ သူမရဲ့ သိမ်းထားပြီးသား မျက်နှာ၊ အဝတ်အစားနဲ့ voice reference ကို တိတိကျကျ ပြန်သုံးပါ။
+
+ရန်ကုန်မြို့ရှိ အရင်ဇာတ်ဝင်ခန်းအတိုင်း ခေတ်မီအလုပ်ခန်းထဲမှာ realistic cinematic medium close-up ဖြစ်ရမည်။ @MayThiri က သစ်သားစားပွဲမှာ အရင်ကသုံးတဲ့ silver laptop ဘေးမှာ ထိုင်နေသည်။ Camera-left ဘက်က နွေးထွေးသောမီး၊ monitor က blue-violet အလင်းနည်းနည်း၊ ညနေစောစောအချိန်။
+
+သူမက screen ကိုကြည့်ပြီး တည်ငြိမ်ယုံကြည်မှုရှိစွာ ပြုံးသည်။ ကြော်ငြာသရုပ်ဆောင်ပုံမျိုးမဟုတ်ဘဲ သဘာဝကျကျ ပြောသည်။
+
+ကင်မရာ - eye-level medium close-up၊ slow push-in အနည်းငယ်၊ stable movement၊ realistic 50mm cinema lens feel။
+
+စကားပြော - @MayThiri က မြန်မာလို “အခုကနေ ကိုယ်တိုင် ဗီဒီယို ဖန်တီးကြည့်မယ်။” လို့ အတိအကျ ပြောပါ။
+သဘာဝမြန်မာအသံထွက်၊ နွေးထွေးသော အရွယ်ရောက်အမျိုးသမီးအသံ၊ စကားသံရှင်းလင်းမှုနဲ့ သဘာဝစကားအရှိန် ရှိရမည်။ နှုတ်ခမ်းလှုပ်ရှားမှုက အသံနဲ့ ကိုက်ညီရမည်။
+ဘာသာမပြန်ပါနှင့်၊ အဓိပ္ပာယ်တူစကားမပြောင်းပါနှင့်၊ ထပ်မပြောပါနှင့်၊ အပိုစကားမထည့်ပါနှင့်။
+အခြားလူ မပြောစေရ။ Subtitle / caption မထည့်ပါနှင့်။
+
+ပတ်ဝန်းကျင်အသံ - အိမ်တွင်းတိတ်တိတ်လေး၊ အစမှာ keyboard ထိတဲ့အသံ အလွန်နည်းနည်းသာ၊ စကားသံပေါ် music မဖုံးစေရ။
+
+တည်ငြိမ်မှု - @MayThiri ရဲ့ မျက်နှာ၊ အသက်၊ ဆံပင်၊ cream blouse၊ navy longyi၊ ငွေရောင်နားကပ်၊ အနက်ရောင် smartwatch၊ စားပွဲ၊ laptop နဲ့ အလင်းလာရာဘက်ကို မပြောင်းပါနှင့်။</pre></div>
+<div class="callout tip"><div class="callout-head"><span class="callout-label">အသံတည်ငြိမ်အောင် လုပ်နည်း</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>Flow မှာ Character / Voice References ရနိုင်ရင် ဇာတ်ဝင်ခန်းတိုင်းမှာ အသံပုံစံကို စာနဲ့အသစ်ပြန်ဖော်ပြတာထက် သိမ်းထားတဲ့ character/voice ကို ပြန်ခေါ်သုံးပါ။ Voice reference အင်္ဂါရပ်ဟာ model/mode အလိုက် ကွာနိုင်တဲ့အတွက် generation settings ထဲမှာ လက်ရှိအသုံးပြုနေတဲ့ model က support လုပ်မလုပ် စစ်ပါ။</pre></div>
+</section>
+<section class="doc-section" id="video-11"><h2>11. Reference ပုံကနေ ဗီဒီယိုထုတ်ခြင်း - ဇာတ်ကောင်ပြောင်းလဲမှု လျှော့နည်း</h2>
+<p>Text-to-video နဲ့ ဇာတ်ကောင်ကို အစကနေ အကြိမ်ကြိမ် ပြန်ဖန်တီးခိုင်းတာထက် အတည်ပြုပြီးသား still image ကို first frame / reference အဖြစ်သုံးပြီး <strong>လှုပ်ရှားမှုကိုပဲ တောင်း</strong>တာက ဇာတ်ကောင်ပုံစံလွဲမှု လျှော့နိုင်ပါတယ်။</p>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">လှုပ်ရှားမှုသာ ထည့်ရန် Prompt</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ပေးထားတဲ့ Reference ပုံကို ဇာတ်ကောင်ရဲ့ အတိအကျရုပ်ရည်နဲ့ စတင်မြင်ကွင်းအဖြစ် အသုံးပြုပါ။
+ဇာတ်ကောင်၊ မျက်နှာ၊ ဆံပင်၊ အဝတ်အစား၊ အဆင်တန်ဆာ၊ ပရိဘောဂနဲ့ အခန်းကို အသစ်ပြန်ဒီဇိုင်းမလုပ်ပါနှင့်။
+အောက်ပါလှုပ်ရှားမှုတွေကိုပဲ ထည့်ပါ။
+- သဘာဝကျကျ အသက်တစ်ချက်ရှူသည်။
+- laptop ကနေ camera ဘက်ကို မျက်လုံးလှည့်ကြည့်သည်။
+- သဘာဝကျသော အပြုံးသေးသေး ပြုံးသည်။
+- အောက်မှာပေးထားတဲ့ မြန်မာစာကြောင်းကို အတိအကျ ပြောသည်။
+ကင်မရာအမြင့်နဲ့ composition ကို မပြောင်းဘဲ slow push-in အလွန်နည်းနည်းပဲ လုပ်ပါ။
+အသားအရေ၊ လက်၊ အလင်းလာရာဘက်နဲ့ နောက်ခံအခန်းပုံစံကို တကယ်ဆန်အောင် ထိန်းပါ။</pre></div>
+<h3>နောက်ဆုံး Frame နဲ့ နောက်ဇာတ်ဝင်ခန်း ချိတ်နည်း</h3>
+<div class="callout workflow"><div class="callout-head"><span class="callout-label">လုပ်ဆောင်မှုအစဉ်</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ဇာတ်ဝင်ခန်း ၁ ထုတ် → အကောင်းဆုံး နောက်ဆုံး frame ရွေး → အဲဒီ frame ကို ဇာတ်ဝင်ခန်း ၂ ရဲ့ Reference / First Frame အဖြစ်သုံး → နောက်တစ်ခန်းမှာ ဖြစ်မယ့် လုပ်ဆောင်ချက်ကိုပဲ ရေး → ဇာတ်ကောင်အတည်ပြုချက် ပြန်ထည့် → ထုတ် → ချိတ်ဆက်မှုကို စစ်။</pre></div>
+</section>
+<section class="doc-section" id="video-12"><h2>12. ဗီဒီယို Prompt မထုတ်ခင် အရည်အသွေးစစ်ဆေးနည်း</h2>
+<div class="table-wrap"><table><thead><tr><th>စစ်ဆေးရန်</th><th>ကောင်းသော Prompt</th><th>ပြဿနာဖြစ်လွယ်သော Prompt</th></tr></thead><tbody>
+<tr><td>ဇာတ်ကောင်</td><td>တိကျသော ဇာတ်ကောင်အချက်အလက် + Reference</td><td>“မြန်မာမိန်းကလေးတစ်ယောက်” လို့သာရေး</td></tr>
+<tr><td>လုပ်ဆောင်ချက်</td><td>အဓိကလုပ်ဆောင်ချက် တစ်ခုပဲ</td><td>လုပ်ဆောင်ချက် ၅-၆ ခု တစ်ခါတည်း</td></tr>
+<tr><td>ကင်မရာ</td><td>Shot တစ်မျိုး + movement တစ်မျိုး</td><td>wide + close-up + drone + orbit ကို Clip တစ်ခုထဲထည့်</td></tr>
+<tr><td>စကားပြော</td><td>ပြောသူအမည် + quotation mark ထဲက မြန်မာစာအတိအကျ</td><td>“မြန်မာလို တစ်ခုခုပြော” လို့သာရေး</td></tr>
+<tr><td>အသံ</td><td>စကား / ပတ်ဝန်းကျင်အသံ / SFX ကို ခွဲရေး</td><td>အသံညွှန်ကြားချက် မရှိ</td></tr>
+<tr><td>တည်ငြိမ်မှု</td><td>မပြောင်းရမည့်အချက်များကို ပြန်ထည့်</td><td>Model က အရင်ဇာတ်ဝင်ခန်းကို မှတ်မယ်လို့ ယူဆ</td></tr>
+<tr><td>ကြာချိန်</td><td>စကားတို၊ သဘာဝကျသော pacing</td><td>စာပိုဒ်ရှည်ကို Clip အတိုထဲထည့်</td></tr>
+</tbody></table></div>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ChatGPT နောက်ဆုံးစစ်ဆေး အမိန့်စာ</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>ဒီ Prompt ကို Gemini သို့မဟုတ် Google Flow ထဲ မထည့်ခင် အောက်ပါအချက်တွေကို ၀ မှ ၁၀ အထိ အမှတ်ပေးစစ်ပါ။
+- ဇာတ်ကောင်တည်ငြိမ်မှု
+- ဇာတ်ဝင်ခန်းရှင်းလင်းမှု
+- ကင်မရာညွှန်ကြားချက်ရှင်းလင်းမှု
+- လုပ်ဆောင်ချက်ရိုးရှင်းမှု
+- မြန်မာစကားပြောစာသားရှင်းလင်းမှု
+- အသံညွှန်ကြားချက်ရှင်းလင်းမှု
+- ဇာတ်ဝင်ခန်းဆက်စပ်မှု
+- Clip ကြာချိန်နဲ့ စကားပြောကြာချိန် ကိုက်ညီမှု
+
+၉ မှတ်အောက်ရှိတဲ့အပိုင်းကိုပဲ ပြန်ရေးပါ။
+အတည်ပြုပြီးသား ဇာတ်ကောင်ရုပ်ရည်နဲ့ ဇာတ်လမ်းကို မပြောင်းပါနှင့်။</pre></div>
+</section>
+<section class="doc-section" id="video-13"><h2>13. Future Code အတွက် ဇာတ်ဝင်ခန်း ၃ ခုပါ ဗီဒီယို နမူနာအပြည့်အစုံ</h2>
+<h3>ဇာတ်ဝင်ခန်း ၁ - ပြဿနာ</h3>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ဇာတ်ဝင်ခန်း ၁</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>အတည်ပြုထားတဲ့ မေသီရိရဲ့ မျက်နှာ၊ အသက်၊ ဆံပင်နဲ့ အဝတ်အစားကို အတိအကျ ပြန်သုံးပါ။ သူမက ရန်ကုန်ရှိ အလုပ်ခန်းထဲမှာ laptop ပေါ် creative tab အများကြီးဖွင့်ထားတာကိုကြည့်ပြီး နည်းနည်းရှုပ်ထွေးနေသည်။ Medium shot၊ eye level၊ very slow push-in၊ နွေးထွေးသော ညနေမီး၊ monitor အလင်းနည်းနည်း။ သူမက အသက်တစ်ချက်ဖြည်းဖြည်းရှူပြီး “ဘယ်ကစရမလဲ မသိတော့ဘူး။” လို့ မြန်မာလို အတိအကျ ပြောပါ။ သဘာဝမြန်မာအသံထွက်၊ အခန်းအသံတိတ်တိတ်၊ တိကျသော lip-sync၊ subtitle မပါ။ ဇာတ်ဝင်ခန်းအဆုံးမှာ screen ပေါ်က အဆင့်လိုက်လမ်းညွှန်တစ်ခုကို သူမ သတိထားမိသွားစေပါ။</pre></div>
+<h3>ဇာတ်ဝင်ခန်း ၂ - နည်းလမ်းတွေ့ရှိခြင်း</h3>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ဇာတ်ဝင်ခန်း ၂</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>မေသီရိရဲ့ မျက်နှာ၊ အဝတ်အစား၊ စားပွဲနဲ့ အလင်းရောင်ကို ဇာတ်ဝင်ခန်း ၁ နဲ့ အတိအကျတူအောင် ထိန်းပါ။ အရင်ဇာတ်ဝင်ခန်းရဲ့ နောက်ဆုံးအနေအထားကနေ စပါ။ Over-the-shoulder angle နဲ့ သူမက laptop ပေါ်မှာ AI ဗီဒီယိုဖန်တီးမှု အဆင့်တွေကို လိုက်လုပ်နေသည်။ နေရာမပြောင်းဘဲ camera movement သဘာဝကျကျနဲ့ medium close-up ဆီ နည်းနည်းရွှေ့ပါ။ သူမက ပြုံးပြီး “အရင် ဇာတ်ကောင်နဲ့ ဇာတ်လမ်းကို တည်ဆောက်မယ်။” လို့ မြန်မာလို အတိအကျ ပြောပါ။ နွေးထွေးသော မြန်မာအမျိုးသမီးအသံ၊ အသံထွက်ရှင်းလင်းမှု၊ lip-sync ကိုက်ညီမှု ရှိရမည်။ အပိုစကားနဲ့ subtitle မထည့်ပါနှင့်။</pre></div>
+<h3>ဇာတ်ဝင်ခန်း ၃ - ရလဒ်</h3>
+<div class="callout prompt"><div class="callout-head"><span class="callout-label">ဇာတ်ဝင်ခန်း ၃</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>မေသီရိ၊ အလုပ်ခန်းနဲ့ အဝတ်အစားအားလုံးကို အရင်ဇာတ်ဝင်ခန်းတွေနဲ့ အတိအကျတူအောင် ထိန်းပါ။ သူမက laptop ပေါ်မှာ ပြီးစီးသွားတဲ့ AI ဗီဒီယိုကို ကြည့်ပြီး camera ဘက်ကို ယုံကြည်မှုရှိစွာ သဘာဝကျကျ ပြုံးလှည့်လာသည်။ Medium close-up၊ ပျော့ပျောင်းသော cinematic lighting၊ gentle push-in။ သူမက “အခုတော့ ကိုယ်တိုင် ဖန်တီးလို့ရပြီ။” လို့ မြန်မာလို အတိအကျ ပြောပါ။ သဘာဝမြန်မာအသံထွက်၊ နွေးထွေးယုံကြည်မှုရှိသောအသံ၊ တိကျသော lip-sync၊ အပိုစကားမရှိ၊ subtitle မပါ။ နောက်ဆုံး Edit ဖြတ်ဖို့ သင့်တော်တဲ့ သန့်ရှင်းပြီး ယုံကြည်မှုရှိတဲ့အပြုံးနဲ့ အဆုံးသတ်ပါ။</pre></div>
+</section>
+<section class="doc-section" id="video-14"><h2>14. ပြဿနာတက်ရင် ဘာကို ဘယ်လိုပြင်မလဲ</h2>
+<div class="table-wrap"><table><thead><tr><th>ပြဿနာ</th><th>ပြင်နည်း</th></tr></thead><tbody>
+<tr><td>မျက်နှာပြောင်း</td><td>အတည်ပြုထားတဲ့ Character Reference ကို ပြန်သုံး၊ ဇာတ်ကောင်အတည်ပြုစာပိုဒ်ကို ပြန်ထည့်၊ အဝတ်အစားအရောင်ကို တိတိကျကျ ထပ်ရေးပါ။</td></tr>
+<tr><td>အဝတ်အစားပြောင်း</td><td>ဇာတ်ဝင်ခန်းတိုင်းမှာ အဝတ်အစားအမျိုးအစားနဲ့ အရောင်ကို စာသားနဲ့ ပြန်ရေးပါ။ “Reference နဲ့တူအောင်” လို့သာ မရေးပါနဲ့။</td></tr>
+<tr><td>မြန်မာစကားလွဲ</td><td>စာကြောင်းတိုအောင်ခွဲ၊ quotation mark ထဲ စာသားအတိအကျထည့်၊ ပြောသူတစ်ယောက်တည်းထား၊ ဘာသာမပြန်ရန်/စကားလုံးမပြောင်းရန် ထည့်ပြီး အသစ်ပြန်ထုတ်ပါ။</td></tr>
+<tr><td>စကားမထွက်</td><td>အသံထုတ်ရန် တိတိကျကျ ရေးပါ။ အသုံးပြုနေတဲ့ video model/mode က audio support လုပ်မလုပ် စစ်ပါ။</td></tr>
+<tr><td>နှုတ်ခမ်းမကိုက်</td><td>စကားကို ပိုတို၊ ပြောနေစဉ်လှုပ်ရှားမှုကို ရိုးရှင်း၊ မျက်နှာရှင်းရှင်းမြင်စေ၊ camera movement ကို လျှော့ပါ။</td></tr>
+<tr><td>ဇာတ်ဝင်ခန်းပုံစံပြောင်း</td><td>နေရာ/အရောင်/အလင်း/ကင်မရာပုံစံအတည်ပြုချက်ကို Prompt တိုင်းမှာ အတိုချုံး ပြန်ထည့်ပါ။</td></tr>
+<tr><td>လုပ်ဆောင်ချက်များလွန်း</td><td>Clip ၂ ခု သို့မဟုတ် ၃ ခုအဖြစ် ခွဲပြီး နောက်ဆုံးမှာ Scene Builder / editor နဲ့ ပြန်ဆက်ပါ။</td></tr>
+</tbody></table></div>
+<div class="callout important"><div class="callout-head"><span class="callout-label">နောက်ဆုံးစည်းကမ်း</span><button aria-label="စာသားကို ကူးယူရန်" class="copy-btn" type="button">ကူးယူ</button></div><pre>Generation တစ်ခု မကောင်းရင် Prompt အားလုံးကို တစ်ခါတည်း မပြောင်းပါနဲ့။ “ဘာတစ်ချက်ပဲ မှားတာလဲ” ကို အရင်ခွဲပါ။ ပြီးရင် အဲဒီအချက်တစ်ခုကိုပဲ ပြင်ပြီး ပြန်ထုတ်ပါ။ ပရော်ဖက်ရှင်နယ် AI ဗီဒီယိုလုပ်ငန်းစဉ်က “ထုတ် → စစ် → ပြဿနာတစ်ချက်ခွဲ → အဲဒီတစ်ချက်ပြင် → ပြန်ထုတ်” ဖြစ်ပါတယ်။</pre></div>
+</section>
+<section class="doc-section" id="video-15"><h2>15. တရားဝင် အင်္ဂါရပ်မှတ်ချက်များနှင့် အကိုးအကားများ</h2>
+<p>ဒီအပိုင်းကို ၂၀၂၆ စက်တင်ဘာအထိ Google ရဲ့ လက်ရှိ Help / Documentation ကို အခြေခံပြီး ရေးထားပါတယ်။ UI၊ model နဲ့ feature ရရှိနိုင်မှုဟာ account၊ plan၊ platform နဲ့ region အလိုက် ကွာနိုင်ပါတယ်။</p>
+<ul>
+<li><a href="https://support.google.com/flow/answer/16353334" rel="noopener" target="_blank">Google Flow Help - Google Flow နဲ့ ဗီဒီယိုဖန်တီးခြင်း</a></li>
+<li><a href="https://support.google.com/flow/answer/16935308" rel="noopener" target="_blank">Google Flow Help - Project၊ Asset နဲ့ Character စီမံခြင်း</a></li>
+<li><a href="https://support.google.com/flow/answer/16352836" rel="noopener" target="_blank">Google Flow Help - Model နဲ့ အင်္ဂါရပ်ရရှိနိုင်မှု</a></li>
+<li><a href="https://support.google.com/gemini/answer/16126339" rel="noopener" target="_blank">Gemini Apps Help - Gemini နဲ့ ဗီဒီယိုဖန်တီးခြင်း</a></li>
+<li><a href="https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1" rel="noopener" target="_blank">Google Cloud - Veo Prompt ရေးနည်းလမ်းညွှန်</a></li>
+</ul>
+<p class="lead-note">AI က ဖန်တီးတဲ့ dialogue/audio က model အလိုက် ပြောင်းနိုင်ပါတယ်။ Flow ရဲ့ support လုပ်တဲ့အတွေ့အကြုံတွေမှာ visual/audio character reference ပြန်သုံးနိုင်ပြီး Veo prompting မှာ စကားပြောစာသား၊ sound effect နဲ့ ပတ်ဝန်းကျင်အသံကို ခွဲရေးတာ ပိုကောင်းပါတယ်။</p>
+</section>
+<div class="footer">AI Tools Professional Future Code Guides - မြန်မာဘာသာဦးစားပေး</div>
+</article></div></main></div><script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const guides=$$('.guide'), buttons=$$('.guide-button');
+function showGuide(key, push=true){
+  guides.forEach(g=>g.classList.toggle('active',g.dataset.guide===key));
+  buttons.forEach(b=>b.classList.toggle('active',b.dataset.guide===key));
+  if(push) history.replaceState(null,'','#'+key);
+  const active=$(`.guide[data-guide="${key}"]`); if(active) document.title=active.dataset.title+' - AI Tools Professional Future Code Guides';
+  $('#searchInput').value=''; clearSearch();
+  if(window.innerWidth<901){$('#sidebar').classList.remove('open');$('#overlay').classList.remove('show')}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+buttons.forEach(b=>b.addEventListener('click',()=>showGuide(b.dataset.guide)));
+function clearSearch(){ $$('.doc-section').forEach(s=>s.classList.remove('search-hidden')); $$('.empty-search').forEach(x=>x.style.display='none'); }
+$('#searchInput').addEventListener('input',e=>{
+  const q=e.target.value.trim().toLowerCase(), active=$('.guide.active'); if(!active) return;
+  if(!q){clearSearch();return;} let n=0;
+  $$('.doc-section',active).forEach(s=>{const ok=s.textContent.toLowerCase().includes(q);s.classList.toggle('search-hidden',!ok);if(ok)n++});
+  const msg=$('.empty-search',active); if(msg) msg.style.display=n?'none':'block';
+});
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#searchInput').focus()}if(e.key==='Escape'){$('#searchInput').value='';clearSearch();$('#sidebar').classList.remove('open');$('#overlay').classList.remove('show')}});
+$$('.copy-btn').forEach(btn=>btn.addEventListener('click',async()=>{const t=btn.closest('.callout').querySelector('pre').innerText;try{await navigator.clipboard.writeText(t);const old=btn.textContent;btn.textContent='ကူးယူပြီး';setTimeout(()=>btn.textContent=old,1200)}catch{}}));
+$('#themeBtn').addEventListener('click',()=>{const root=document.documentElement;const dark=root.dataset.theme==='dark';root.dataset.theme=dark?'light':'dark';localStorage.setItem('aiGuideTheme',root.dataset.theme);$('#themeBtn').textContent=dark?'အမှောင်ပုံစံ':'အလင်းပုံစံ'});
+const saved=localStorage.getItem('aiGuideTheme');if(saved){document.documentElement.dataset.theme=saved;$('#themeBtn').textContent=saved==='dark'?'အလင်းပုံစံ':'အမှောင်ပုံစံ'}
+$('#printBtn').addEventListener('click',()=>window.print());
+$('#menuBtn').addEventListener('click',()=>{$('#sidebar').classList.toggle('open');$('#overlay').classList.toggle('show')});
+$('#overlay').addEventListener('click',()=>{$('#sidebar').classList.remove('open');$('#overlay').classList.remove('show')});
+$$('.section-nav a,.contents-item').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<901){$('#sidebar').classList.remove('open');$('#overlay').classList.remove('show')}}));
+let key=location.hash.slice(1); if(!guides.some(g=>g.dataset.guide===key)) key=guides[0]?.dataset.guide; if(key) showGuide(key,false);
+
+showGuide('video',false);</script></body></html>

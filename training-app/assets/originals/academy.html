@@ -1,0 +1,2810 @@
+<!DOCTYPE html>
+
+<html lang="my">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#080b16" name="theme-color"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="Future Code" name="apple-mobile-web-app-title"/>
+<title>Future Code AI Video Academy</title>
+<style>
+:root{
+ --bg:#080b16;
+ --card:#101728;
+ --card2:#151e32;
+ --text:#f6f7fb;
+ --muted:#96a2b8;
+ --line:#26324a;
+ --p:#7957ff;
+ --p2:#00d4ff;
+ --ok:#28d17c;
+ --warn:#ffb84d;
+ --danger:#ff6675;
+}
+*{box-sizing:border-box}
+html,body{
+ margin:0;
+ background:var(--bg);
+ color:var(--text);
+ font-family:system-ui,-apple-system,"Noto Sans Myanmar","Myanmar Text",sans-serif
+}
+body{
+ min-height:100vh
+}
+button,input,textarea,select{
+ font-family:inherit
+}
+.app{
+ width:min(780px,100%);
+ margin:auto;
+ min-height:100vh;
+ padding-bottom:calc(84px + env(safe-area-inset-bottom))
+}
+.header{
+ position:sticky;
+ top:0;
+ z-index:30;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:12px 15px;
+ background:#080b16ee;
+ backdrop-filter:blur(16px);
+ border-bottom:1px solid var(--line)
+}
+.brand{
+ display:flex;
+ gap:10px;
+ align-items:center
+}
+.logo{
+ width:43px;
+ height:43px;
+ border-radius:13px;
+ display:grid;
+ place-items:center;
+ font-weight:900;
+ background:linear-gradient(135deg,var(--p),var(--p2));
+ box-shadow:0 8px 28px #0006;
+ user-select:none;
+ cursor:pointer
+}
+.brand h2{
+ font-size:16px;
+ margin:0
+}
+.brand p{
+ font-size:10px;
+ color:var(--muted);
+ margin:2px 0
+}
+.content{
+ padding:15px
+}
+.page{
+ display:none
+}
+.page.active{
+ display:block
+}
+.hero{
+ border:1px solid var(--line);
+ border-radius:22px;
+ padding:20px;
+ background:linear-gradient(135deg,#12192a,#1a1533);
+ margin-bottom:14px
+}
+.hero h1{
+ font-size:24px;
+ line-height:1.3;
+ margin:0 0 9px
+}
+.hero p{
+ color:#c8d1df;
+ line-height:1.75;
+ margin:0
+}
+.section-title{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ margin:18px 2px 10px
+}
+.section-title h2{
+ font-size:18px;
+ margin:0
+}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:10px
+}
+.card{
+ background:var(--card);
+ border:1px solid var(--line);
+ border-radius:17px;
+ padding:15px;
+ margin-bottom:10px
+}
+.quick{
+ cursor:pointer;
+ min-height:112px;
+ transition:.2s
+}
+.quick:active{
+ transform:scale(.98)
+}
+.quick h3{
+ margin:7px 0 4px
+}
+.quick p,.small{
+ font-size:11px;
+ color:var(--muted);
+ line-height:1.65
+}
+.btn{
+ background:var(--p);
+ color:#fff;
+ border:0;
+ border-radius:11px;
+ padding:11px 14px;
+ font-weight:750;
+ cursor:pointer
+}
+.btn.secondary{
+ background:#202b41
+}
+.btn.danger{
+ background:#3b1821;
+ color:#ffabb5
+}
+.btn.ok{
+ background:#123b29;
+ color:#9affc7
+}
+.btn.warn{
+ background:#4a3214;
+ color:#ffd894
+}
+.btn.full{
+ width:100%
+}
+.row{
+ display:flex;
+ gap:8px;
+ flex-wrap:wrap
+}
+.search,.input,.textarea,.select{
+ width:100%;
+ background:#0a0f1c;
+ color:#fff;
+ border:1px solid var(--line);
+ border-radius:11px;
+ padding:12px;
+ outline:0
+}
+.search:focus,.input:focus,.textarea:focus,.select:focus{
+ border-color:var(--p)
+}
+.textarea{
+ min-height:125px;
+ resize:vertical
+}
+.form-group{
+ margin:11px 0
+}
+.form-group label{
+ display:block;
+ font-size:11px;
+ color:#bac5d8;
+ margin-bottom:6px
+}
+.prompt-tabs{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:7px;
+ margin-bottom:10px
+}
+.prompt-tab{
+ background:#141d30;
+ color:#aeb9cc;
+ border:1px solid var(--line);
+ padding:10px 5px;
+ border-radius:10px;
+ cursor:pointer
+}
+.prompt-tab.active{
+ background:#29204f;
+ color:#fff;
+ border-color:#7559ff
+}
+.prompt-box{
+ background:#090e19;
+ border:1px solid #222d42;
+ border-radius:11px;
+ padding:12px;
+ font-size:11px;
+ line-height:1.7;
+ color:#cbd5e1;
+ white-space:pre-wrap;
+ max-height:300px;
+ overflow:auto
+}
+.tag{
+ display:inline-block;
+ background:#251d45;
+ color:#bdaeff;
+ border-radius:7px;
+ padding:4px 7px;
+ font-size:9px
+}
+.tag.ok{
+ background:#123b29;
+ color:#9affc7
+}
+.tag.warn{
+ background:#4a3214;
+ color:#ffd894
+}
+.tag.danger{
+ background:#3b1821;
+ color:#ffabb5
+}
+.lesson-day{
+ border-left:3px solid var(--p)
+}
+.check{
+ display:flex;
+ gap:9px;
+ align-items:flex-start;
+ padding:9px 0;
+ color:#dbe3ef;
+ font-size:12px
+}
+.check input{
+ margin-top:3px
+}
+.video{
+ width:100%;
+ aspect-ratio:16/9;
+ border:0;
+ border-radius:12px;
+ background:#000;
+ margin-top:10px
+}
+.resource{
+ display:flex;
+ justify-content:space-between;
+ gap:8px;
+ align-items:center;
+ text-decoration:none;
+ color:#fff;
+ background:var(--card);
+ border:1px solid var(--line);
+ padding:13px;
+ border-radius:12px;
+ margin:8px 0
+}
+.bottom{
+ position:fixed;
+ bottom:0;
+ left:50%;
+ transform:translateX(-50%);
+ width:min(780px,100%);
+ height:70px;
+ background:#080b16f5;
+ backdrop-filter:blur(18px);
+ border-top:1px solid var(--line);
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ z-index:40
+}
+.nav{
+ background:none;
+ border:0;
+ color:#69758b;
+ font-size:9px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ gap:4px;
+ cursor:pointer
+}
+.nav span{
+ font-size:18px
+}
+.nav.active{
+ color:#fff
+}
+.admin-link{
+ display:none
+}
+.admin-box{
+ border:1px solid var(--line);
+ background:var(--card);
+ border-radius:20px;
+ padding:18px
+}
+.stat{
+ font-size:25px;
+ font-weight:900
+}
+.modal{
+ display:none;
+ position:fixed;
+ inset:0;
+ background:#000b;
+ z-index:100;
+ padding:16px;
+ align-items:flex-end
+}
+.modal.show{
+ display:flex
+}
+.modal-box{
+ width:min(650px,100%);
+ max-height:92vh;
+ overflow:auto;
+ margin:auto;
+ background:#0f1728;
+ border:1px solid var(--line);
+ border-radius:20px;
+ padding:18px
+}
+.modal-head{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ margin-bottom:12px
+}
+.toast{
+ position:fixed;
+ left:50%;
+ bottom:84px;
+ transform:translateX(-50%);
+ background:#182237;
+ border:1px solid var(--line);
+ padding:11px 15px;
+ border-radius:11px;
+ display:none;
+ z-index:200;
+ font-size:11px;
+ max-width:90%;
+ text-align:center
+}
+.toast.show{
+ display:block
+}
+.hidden{
+ display:none!important
+}
+.empty{
+ text-align:center;
+ color:var(--muted);
+ padding:25px
+}
+.favorite{
+ color:#ff6680!important
+}
+.divider{
+ height:1px;
+ background:var(--line);
+ margin:14px 0
+}
+.course-progress{
+ height:8px;
+ background:#0b1120;
+ border-radius:20px;
+ overflow:hidden;
+ margin-top:8px
+}
+.course-progress > div{
+ height:100%;
+ background:linear-gradient(90deg,var(--p),var(--p2));
+ border-radius:20px;
+ width:0
+}
+.stat-card{
+ text-align:center;
+ padding:15px 8px
+}
+.stat-card .emoji{
+ font-size:22px
+}
+.stat-card .num{
+ font-size:23px;
+ font-weight:900;
+ margin-top:5px
+}
+.tool-icon{
+ font-size:32px
+}
+.ai-tool{
+ cursor:pointer;
+ transition:.2s
+}
+.ai-tool:active{
+ transform:scale(.98)
+}
+.note-item{
+ display:flex;
+ justify-content:space-between;
+ gap:10px;
+ align-items:flex-start
+}
+.lesson-admin-item{
+ border:1px solid var(--line);
+ border-radius:13px;
+ padding:12px;
+ margin:8px 0;
+ background:#0c1321
+}
+.lesson-admin-item h4{
+ margin:0 0 5px;
+ font-size:13px
+}
+.action-row{
+ display:flex;
+ gap:6px;
+ flex-wrap:wrap;
+ margin-top:9px
+}
+.action-row .btn{
+ padding:8px 10px;
+ font-size:10px
+}
+.song-meaning{
+ background:#111a2a;
+ border-left:3px solid #d88cff;
+ padding:9px 11px;
+ border-radius:8px;
+ margin:8px 0;
+ color:#bac5d8;
+ font-size:11px;
+ line-height:1.65
+}
+.badge-number{
+ display:inline-grid;
+ place-items:center;
+ width:25px;
+ height:25px;
+ border-radius:50%;
+ background:#2b2151;
+ color:#c6b9ff;
+ font-size:10px;
+ font-weight:900
+}
+@media(max-width:520px){
+ .grid{
+  grid-template-columns:1fr 1fr
+ }
+ .hero h1{
+  font-size:21px
+ }
+ .card{
+  padding:13px
+ }
+}
+</style>
+<meta content="no-referrer" name="referrer"/>
+<style>
+body{line-height:1.7}button{touch-action:manipulation}button:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,a:focus-visible{outline:2px solid var(--p2);outline-offset:3px}
+.header{gap:8px}.brand{min-width:0}.header .btn{padding:8px 10px;font-size:11px}
+.header-actions{display:flex;gap:6px;align-items:center}.status-strip{border:1px solid var(--line);background:var(--card);padding:10px 13px;border-radius:12px;margin:0 0 13px;font-size:12px}
+.status-strip.error{border-color:var(--danger)}.status-strip.ok{border-color:var(--ok)}
+.small{font-size:12px}.form-group label{font-size:12px}.description{white-space:pre-wrap;overflow-wrap:anywhere}
+.file-drop{border:1px dashed var(--p);border-radius:14px;background:#101329;padding:14px}
+.file-drop input{padding:10px 0;max-width:100%}.file-drop input::file-selector-button{border:0;border-radius:8px;padding:10px;background:var(--p);color:white;cursor:pointer;margin-right:10px}
+progress{width:100%;height:14px;accent-color:var(--p2)}.upload-panel{border:1px solid var(--line);padding:12px;border-radius:12px;margin:12px 0}
+.upload-line{display:flex;justify-content:space-between;gap:8px}.upload-line strong{font-size:15px}
+.upload-panel .small{overflow-wrap:anywhere}.mini-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0}
+.mini-stats .card{margin:0;text-align:center;padding:12px 7px}.mini-stats b{display:block;font-size:23px}
+.lesson-cover{aspect-ratio:16/6;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,#171833,#102c3c);display:flex;align-items:center;justify-content:space-between;padding:20px;margin:10px 0;gap:12px}
+.lesson-cover .play-icon{width:52px;height:52px;border-radius:50%;background:#ffffff12;display:grid;place-items:center;font-size:24px}
+.lesson-cover .label{font-size:12px;color:#c5cde1}.lesson-meta{display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.lesson-actions{display:flex;align-items:center;gap:10px;justify-content:space-between;flex-wrap:wrap;margin-top:12px}
+#playerVideo{width:100%;background:#000;aspect-ratio:16/9;border-radius:14px;display:block}
+#videoPreview{max-height:240px;width:100%;background:#000;border-radius:10px;margin-top:10px}
+#adminCard{cursor:pointer}.connection-list{margin:12px 0}.connection-list > div{border-bottom:1px solid var(--line);padding:9px 0;font-size:12px;overflow-wrap:anywhere}
+#loginError,#formError,#playerError{white-space:pre-wrap;color:#ffb5bd;overflow-wrap:anywhere;font-size:12px}
+#videoUploadStatus{white-space:pre-wrap;overflow-wrap:anywhere;margin-bottom:12px}
+#profileEmail{overflow-wrap:anywhere}#modal{align-items:center}fieldset{border:0;margin:0;padding:0;min-width:0}
+#uploadResumeNotice{margin-bottom:12px}code{overflow-wrap:anywhere}
+@media(max-width:420px){.brand h2{font-size:14px}.brand p{font-size:9px}.logo{width:35px;height:35px}.header .btn{font-size:10px;padding:7px}.lesson-cover{padding:14px}.mini-stats b{font-size:20px}}
+</style></head>
+<body>
+<div class="app">
+<header class="header">
+<div class="brand">
+<div class="logo" id="secretLogo">FC</div>
+<div>
+<h2>Future Code</h2>
+<p>AI Video Creation Academy</p>
+</div>
+</div>
+
+<div class="header-actions">
+<button class="btn secondary" id="accountButton" onclick="openLogin()">ဝင်ရန်</button>
+<button class="btn secondary hidden" id="adminOut" onclick="adminLogout()">ထွက်ရန်</button>
+</div>
+</header>
+<main class="content"><div class="status-strip" id="connectionBanner" role="status">Supabase ချိတ်ဆက်မှု စစ်ဆေးနေသည်…</div>
+<!-- ================= HOME ================= -->
+<section class="page active" id="home">
+<div class="hero">
+<h1>AI နဲ့ ကိုယ့်အိပ်မက်ကို ဖန်တီးပါ 🚀</h1>
+<p>
+   AI အခြေခံကနေ Story၊ Character၊ Image၊ Video၊
+   Google Flow Workflow နဲ့ Video Editing အထိ
+   လေ့လာပြီး လက်တွေ့ဖန်တီးနိုင်အောင်
+   Future Code မှာ စနစ်တကျပြင်ဆင်ထားပါတယ်။
+  </p>
+<div class="row" style="margin-top:14px">
+<button class="btn" onclick="showPage('course')">
+📚 သင်ခန်းစာစတင်မည်
+</button>
+<button class="btn secondary" onclick="showPage('prompts')">
+🧠 Prompt Library
+</button>
+</div>
+</div>
+<div class="hidden" id="studentSummary">
+<p class="small" id="welcomeText"></p>
+<div class="mini-stats">
+<div class="card"><b id="availableCount">0</b><span class="small">သင်ခန်းစာများ</span></div>
+<div class="card"><b id="completedCount">0</b><span class="small">ပြီးဆုံးထားသည်</span></div>
+<div class="card"><b id="remainingCount">0</b><span class="small">ဆက်လေ့လာရန်</span></div>
+</div>
+<div id="continueLearning"></div>
+<div class="section-title"><h2>🆕 နောက်ဆုံးသင်ခန်းစာများ</h2></div>
+<div id="recentLessons"></div>
+</div>
+<div class="section-title">
+<h2>⚡ Quick Access</h2>
+</div>
+<div class="grid">
+<div class="card quick" onclick="showPage('prompts')">
+   🧠
+   <h3>Ready Prompts</h3>
+<p>Video / Song / Image Prompt Library</p>
+</div>
+<div class="card quick" onclick="showPage('character')">
+   🎭
+   <h3>Character Builder</h3>
+<p>Character consistency prompt</p>
+</div>
+<div class="card quick" onclick="showPage('story')">
+   ✍️
+   <h3>Story Builder</h3>
+<p>Short video story structure</p>
+</div>
+<div class="card quick" onclick="showPage('scene')">
+   🎬
+   <h3>Scene Builder</h3>
+<p>Scene-by-scene video prompt</p>
+</div>
+<div class="card quick" onclick="showPage('notes')">
+   📝
+   <h3>My Notes</h3>
+<p>ကိုယ်တိုင်မှတ်စုရေးရန်</p>
+</div>
+</div>
+<div class="section-title">
+<h2>📊 My Learning</h2>
+</div>
+<div class="card">
+<div style="display:flex;justify-content:space-between">
+<span class="small">Course Progress</span>
+<b id="homeProgress">0%</b>
+</div>
+<div class="course-progress">
+<div id="homeProgressBar"></div>
+</div>
+</div>
+<div class="section-title">
+<h2>📢 Announcement</h2>
+</div>
+<div id="homeAnnouncements"></div>
+</section>
+<!-- ================= COURSE ================= -->
+<section class="page" id="course">
+<div class="section-title">
+<h2>📚 ဗီဒီယိုသင်ခန်းစာများ</h2>
+<span id="coursePercent">0%</span>
+</div>
+
+<div class="card">
+<p class="small">အကောင့်ဝင်ပြီး ဆရာက Publish လုပ်ထားသော ဗီဒီယိုများကို ကြည့်ရှုနိုင်ပါတယ်။ လေ့လာမှုမှတ်တမ်းကို ဤစက်ရှိ အကောင့်တစ်ခုချင်းစီအတွက် သီးခြားသိမ်းထားပါတယ်။</p>
+<div class="row"><input class="search" id="lessonSearch" oninput="renderCourses()" placeholder="သင်ခန်းစာ ရှာရန်…"/>
+<button class="btn secondary" onclick="refreshLessons()">↻ ပြန်ဖတ်မည်</button></div>
+</div>
+<div id="courseContainer"></div>
+</section>
+<!-- ================= PROMPTS ================= -->
+<section class="page" id="prompts">
+<div class="section-title">
+<h2>🧠 Ready-to-Use Prompts</h2>
+<span id="promptCount">0 Prompts</span>
+</div>
+<div class="prompt-tabs">
+<button class="prompt-tab active" data-category="Video" onclick="setPromptCategory('Video')">
+🎬 Video
+</button>
+<button class="prompt-tab" data-category="Song" onclick="setPromptCategory('Song')">
+🎵 Song
+</button>
+<button class="prompt-tab" data-category="Image" onclick="setPromptCategory('Image')">
+🖼️ Image
+</button>
+</div>
+<input class="search" id="promptSearch" oninput="renderPrompts()" placeholder="Prompt ရှာရန်..."/>
+<div id="promptContainer"></div>
+</section>
+<!-- ================= CHARACTER ================= -->
+<section class="page" id="character">
+<div class="section-title">
+<h2>🎭 Character Builder</h2>
+</div>
+<div class="card">
+<div class="form-group">
+<label>ဇာတ်ကောင်အမည်</label>
+<input class="input" id="charName" placeholder="မင်းသက်"/>
+</div>
+<div class="form-group">
+<label>အသက်</label>
+<input class="input" id="charAge" placeholder="25"/>
+</div>
+<div class="form-group">
+<label>ကျား/မ</label>
+<select class="select" id="charGender">
+<option>အမျိုးသား</option>
+<option>အမျိုးသမီး</option>
+</select>
+</div>
+<div class="form-group">
+<label>Face</label>
+<input class="input" id="charFace" placeholder="oval face, warm brown eyes"/>
+</div>
+<div class="form-group">
+<label>Hair</label>
+<input class="input" id="charHair" placeholder="short black hair"/>
+</div>
+<div class="form-group">
+<label>Clothing</label>
+<input class="input" id="charClothing" placeholder="white shirt, dark trousers"/>
+</div>
+<div class="form-group">
+<label>Personality</label>
+<input class="input" id="charPersonality" placeholder="calm, intelligent, brave"/>
+</div>
+<button class="btn full" onclick="buildCharacter()">
+🎭 Character Prompt ဖန်တီးမည်
+</button>
+</div>
+<div id="characterResult"></div>
+</section>
+<!-- ================= STORY ================= -->
+<section class="page" id="story">
+<div class="section-title">
+<h2>✍️ Story Builder</h2>
+</div>
+<div class="card">
+<div class="form-group">
+<label>Story Idea</label>
+<textarea class="textarea" id="storyIdea" placeholder="ဥပမာ — ဟိုတယ်အခန်း 307 မှာ ည 12 နာရီကျော်ရင် တံခါးခေါက်သံကြားရတဲ့အကြောင်း..."></textarea>
+</div>
+<div class="form-group">
+<label>Genre</label>
+<select class="select" id="storyGenre">
+<option>Horror</option>
+<option>Romance</option>
+<option>Action</option>
+<option>Mystery</option>
+<option>Comedy</option>
+<option>Drama</option>
+</select>
+</div>
+<div class="form-group">
+<label>Scenes</label>
+<input class="input" id="storyScenes" max="30" min="1" type="number" value="8"/>
+</div>
+<button class="btn full" onclick="buildStory()">
+✨ Story Prompt ဖန်တီးမည်
+</button>
+</div>
+<div id="storyResult"></div>
+</section>
+<!-- ================= SCENE ================= -->
+<section class="page" id="scene">
+<div class="section-title">
+<h2>🎬 AI Video Scene Builder</h2>
+</div>
+<div class="card">
+<div class="form-group">
+<label>Character</label>
+<input class="input" id="sceneCharacter" placeholder="မင်းသက်"/>
+</div>
+<div class="form-group">
+<label>Location</label>
+<input class="input" id="sceneLocation" placeholder="Old Hotel Room"/>
+</div>
+<div class="form-group">
+<label>Action</label>
+<textarea class="textarea" id="sceneAction" placeholder="တံခါးကို ဖြည်းဖြည်းဖွင့်သည်..."></textarea>
+</div>
+<div class="form-group">
+<label>Emotion</label>
+<input class="input" id="sceneEmotion" placeholder="Fear"/>
+</div>
+<div class="form-group">
+<label>Camera</label>
+<select class="select" id="sceneCamera">
+<option>Cinematic Slow Push In</option>
+<option>Handheld Camera</option>
+<option>Wide Shot</option>
+<option>Close Up</option>
+<option>Tracking Shot</option>
+<option>Over The Shoulder</option>
+</select>
+</div>
+<button class="btn full" onclick="buildScene()">
+🎬 Video Prompt ဖန်တီးမည်
+</button>
+</div>
+<div id="sceneResult"></div>
+</section>
+<!-- ================= NOTES ================= -->
+<section class="page" id="notes">
+<div class="section-title">
+<h2>📝 My Notes</h2>
+</div>
+<div class="card">
+<div class="form-group">
+<label>မှတ်စုရေးရန်</label>
+<textarea class="textarea" id="noteInput" placeholder="ဒီနေရာမှာ သင်ခန်းစာနဲ့ပတ်သက်တဲ့ မှတ်စုတွေ ရေးထားနိုင်ပါတယ်..."></textarea>
+</div>
+<button class="btn full" onclick="saveNote()">
+💾 မှတ်စုသိမ်းမည်
+</button>
+</div>
+<div id="notesContainer"></div>
+</section>
+<!-- ================= PROFILE ================= -->
+
+<section class="page" id="profile">
+<div class="hero"><h1>Future Code Student</h1><p id="profileEmail">သင်တန်းအကောင့်ဖြင့် ဝင်ပါ။</p><span class="tag" id="profileRole">Guest</span></div>
+<div class="card"><h3>👤 အကောင့်</h3>
+<p class="small">Admin နှင့် Student နှစ်မျိုးလုံးသည် Supabase Authentication အကောင့်ဖြင့် ဝင်ရပါမယ်။ အကောင့်မရှိသေးပါက သင်တန်းဆရာထံ ဆက်သွယ်ပါ။</p>
+<p class="small" id="profileUid"></p>
+<div class="row"><button class="btn" id="profileLogin" onclick="openLogin()">🔐 Login</button><button class="btn secondary" onclick="showPage('course')">📚 Course ဆက်လေ့လာမည်</button></div></div>
+<div class="card"><h3>❤️ Favorites</h3><p class="small">Favorites၊ Notes နှင့် ဗီဒီယိုကြည့်ပြီးသည့်နေရာကို ဤ browser ထဲမှာ အကောင့်တစ်ခုချင်းစီအတွက် သိမ်းထားပါတယ်။ အခြားစက်သို့ အလိုအလျောက် မပြောင်းပါ။</p>
+<button class="btn secondary full" onclick="showFavorites()">❤️ Favorite Prompts ကြည့်မည်</button></div>
+<div class="card admin-link" id="adminCard" onclick="openAdmin()"><b>🛡️ Admin Area</b><p class="small">Video upload / Lessons / Prompts / Announcements</p></div>
+<div class="card"><h3>🔌 ချိတ်ဆက်မှု စစ်ဆေးရန်</h3>
+<p class="small">Login၊ Table columns နှင့် Private bucket ကို စစ်ဆေးပေးပါမယ်။ RLS security audit အပြည့်အစုံ မဟုတ်ပါ။</p>
+<button class="btn secondary" id="diagnosticsButton" onclick="runDiagnostics()">စစ်ဆေးမည်</button><div class="connection-list" id="diagnostics"></div></div>
+</section>
+<!-- ================= ADMIN ================= -->
+<section class="page" id="admin">
+<div class="section-title">
+<h2>🛡️ Admin Dashboard</h2>
+</div>
+<div class="grid">
+<div class="card stat-card">
+<div class="emoji">📚</div>
+<div class="num" id="adminLessonCount">
+    0
+   </div>
+<div class="small">
+    Lessons
+   </div>
+</div>
+<div class="card stat-card">
+<div class="emoji">🧠</div>
+<div class="num" id="adminPromptCount">
+    0
+   </div>
+<div class="small">
+    Prompts
+   </div>
+</div>
+</div>
+<!-- COURSE MANAGER -->
+
+<div class="admin-box">
+<div class="section-title"><h2>📚 Course Manager</h2><span class="tag">PRIVATE UPLOAD</span></div>
+<p class="small">ဗီဒီယိုဖိုင်ကို တိုက်ရိုက်ရွေးပါ။ Upload ပြီး၍ Database ထဲ သိမ်းပြီးမှ သင်ခန်းစာရရှိပါမယ်။ YouTube link မလိုပါ။</p>
+<div class="status-strip hidden" id="uploadResumeNotice"></div>
+<form id="lessonForm" onsubmit="event.preventDefault();saveLesson()">
+<fieldset id="lessonFields">
+<input id="editingLessonId" type="hidden"/>
+<div class="form-group"><label for="adminDay">Day / အစီအစဉ်</label><input class="input" id="adminDay" maxlength="120" placeholder="ဥပမာ — Day 1, Introduction" required=""/></div>
+<div class="form-group"><label for="adminLessonTitle">Lesson Title</label><input class="input" id="adminLessonTitle" maxlength="300" placeholder="ဥပမာ — ChatGPT အခြေခံ" required=""/></div>
+<div class="form-group"><label for="adminLessonDescription">Description</label><textarea class="textarea" id="adminLessonDescription" maxlength="10000" placeholder="ဒီသင်ခန်းစာမှာ ဘာတွေသင်မလဲ…"></textarea></div>
+<div class="form-group file-drop">
+<label for="adminVideoFile">🎬 Video ဖိုင် ရွေးချယ်ရန်</label>
+<input accept=".mp4,.webm,.mov,video/mp4,video/webm,video/quicktime" id="adminVideoFile" onchange="handleVideoSelection()" type="file"/>
+<p class="small" id="selectedVideoInfo">MP4 ကို ဦးစားပေးပါ။ ဗီဒီယိုပြင်မည်ဆိုပါက ဖိုင်အသစ်ကို ရွေးပါ။ စာသားပဲပြင်မည်ဆိုပါက ဖိုင်ပြန်ရွေးရန် မလိုပါ။</p>
+<video class="hidden" controls="" id="videoPreview" playsinline="" preload="metadata"></video>
+<p class="small">ဖိုင်အရွယ်အစားကို သင့် Supabase plan၊ global limit နှင့် bucket limit တို့က ကန့်သတ်ထားပါတယ်။</p></div>
+<label class="check"><input id="adminPublished" type="checkbox"/><span>Publish လုပ်မည် — ကျောင်းသားများ ကြည့်နိုင်မည်။ အမှန်ခြစ်မရှိပါက Draft အဖြစ် သိမ်းမည်။</span></label>
+</fieldset>
+<div aria-live="polite" class="upload-panel hidden" id="uploadPanel" role="status">
+<div class="upload-line"><span id="uploadPhase">Upload</span><strong id="uploadPercent">0%</strong></div>
+<progress id="uploadProgress" max="100" value="0"></progress>
+<p class="small" id="uploadDetail"></p>
+<div class="row"><button class="btn secondary hidden" id="pauseUploadButton" onclick="toggleUploadPause()" type="button">ခဏရပ်မည်</button>
+<button class="btn danger hidden" id="cancelUploadButton" onclick="cancelUpload()" type="button">Upload ပယ်ဖျက်မည်</button></div>
+</div>
+<div class="small" id="videoUploadStatus" role="status"></div><div id="formError" role="alert"></div>
+<div class="row"><button class="btn" id="saveLessonButton" type="submit">💾 Upload & Lesson သိမ်းမည်</button>
+<button class="btn secondary" id="resetLessonButton" onclick="resetLessonForm()" type="button">↩️ အသစ်ပြန်လုပ်မည်</button></div>
+</form></div>
+<!-- CURRENT LESSONS -->
+<div class="admin-box" style="margin-top:12px">
+<div class="section-title">
+<h2>📋 လက်ရှိသင်ခန်းစာများ</h2>
+</div>
+<div id="adminLessons"></div>
+</div>
+<!-- PROMPT MANAGER -->
+<div class="admin-box" style="margin-top:12px">
+<div class="section-title">
+<h2>🧠 Prompt Manager</h2><p class="small">Custom Prompts ကို Supabase Database ထဲ သိမ်းပြီး Login ဝင်ထားသူများထံ မျှဝေပါမယ်။</p>
+</div>
+<input id="editingPromptId" type="hidden"/>
+<div class="form-group">
+<label>Category</label>
+<select class="select" id="adminPromptCategory">
+<option>Video</option>
+<option>Song</option>
+<option>Image</option>
+</select>
+</div>
+<div class="form-group">
+<label>Title</label>
+<input class="input" id="adminPromptTitle"/>
+</div>
+<div class="form-group">
+<label>Prompt</label>
+<textarea class="textarea" id="adminPromptText"></textarea>
+</div>
+<div class="row">
+<button class="btn" onclick="savePrompt()">
+💾 Prompt သိမ်းမည်
+</button>
+<button class="btn secondary" onclick="resetPromptForm()">
+↩️ Clear
+</button>
+</div>
+</div>
+<!-- ANNOUNCEMENT -->
+<div class="admin-box" style="margin-top:12px">
+<h3>📢 Announcement</h3>
+<div class="form-group">
+<label>Title</label>
+<input class="input" id="adminAnnouncementTitle"/>
+</div>
+<div class="form-group">
+<label>Message</label>
+<textarea class="textarea" id="adminAnnouncementText"></textarea>
+</div>
+<button class="btn full" onclick="addAnnouncement()">
+📢 Publish Announcement
+</button>
+</div>
+<div class="admin-box" style="margin-top:12px">
+<h3>⚙️ Course Data</h3>
+<p class="small">Default သင်ခန်းစာများကို Draft အဖြစ်သာ ထည့်ပါမယ်။ လက်ရှိသင်ခန်းစာနှင့် ဗီဒီယိုများကို မဖျက်ပါ။</p>
+<button class="btn warn full" onclick="restoreDefaultCourses()">♻️ မရှိသေးသော Default 6-Day Draft များ ထည့်မည်</button>
+</div>
+
+<div class="admin-box" style="margin-top:12px">
+<h3>🧹 Storage Cleanup</h3><p class="small">Lesson သိမ်းပြီးနောက် ဖိုင်ဟောင်းဖျက်ရာတွင် Network error ဖြစ်ခဲ့ပါက ဒီနေရာမှ ထပ်စမ်းနိုင်ပါတယ်။ အသုံးပြုဆဲဖိုင်ကို မဖျက်ပါ။</p>
+<button class="btn secondary" onclick="retryCleanup()">ဖိုင်ဟောင်းများ ရှင်းမည်</button><p class="small" id="cleanupStatus"></p>
+</div></section>
+
+<section class="page" id="watch">
+<div class="section-title"><button class="btn secondary" onclick="showPage('course')">← သင်ခန်းစာများ</button><span class="tag" id="playerDay"></span></div>
+<div class="card">
+<h2 id="playerTitle"></h2><p class="small" id="playerDate"></p>
+<video controls="" id="playerVideo" playsinline="" preload="metadata"></video>
+<div id="playerError" role="alert"></div>
+<div class="row" style="margin-top:12px">
+<button class="btn secondary" id="retryVideoButton" onclick="retryVideo()">↻ Video ပြန်ဖွင့်မည်</button>
+<button class="btn ok" id="completeVideoButton" onclick="markCurrentComplete()">✓ လေ့လာပြီးပြီ</button>
+</div>
+<p class="small description" id="playerDescription"></p>
+<p class="small">🔒 Private Storage မှ အချိန်ကန့်သတ်ထားသော link ဖြင့် ဖွင့်ထားသည်။ လင့်ခ်နှင့် အကောင့်ကို မမျှဝေပါနှင့်။</p>
+</div></section></main>
+<!-- ================= BOTTOM NAV ================= -->
+<nav class="bottom">
+<button class="nav active" data-page="home" onclick="showPage('home')">
+<span>🏠</span>
+Home
+</button>
+<button class="nav" data-page="course" onclick="showPage('course')">
+<span>📚</span>
+Course
+</button>
+<button class="nav" data-page="prompts" onclick="showPage('prompts')">
+<span>🧠</span>
+Prompts
+</button>
+<button class="nav" data-page="profile" onclick="showPage('profile')">
+<span>👤</span>
+Profile
+</button>
+</nav>
+</div>
+<!-- ================= ADMIN LOGIN ================= -->
+
+<div aria-labelledby="loginTitle" aria-modal="true" class="modal" id="modal" onclick="if(event.target===this)closeModal()" role="dialog">
+<div class="modal-box">
+<div class="modal-head"><b id="loginTitle">🔐 Future Code Login</b><button aria-label="Close" class="btn secondary" onclick="closeModal()">×</button></div>
+<p class="small">Admin / Student အတွက် သင်တန်းအကောင့်၏ Email နှင့် Password ကို ထည့်ပါ။</p>
+<form id="loginForm" onsubmit="event.preventDefault();adminLogin()">
+<div class="form-group"><label for="aEmail">Email</label><input autocomplete="username" class="input" id="aEmail" placeholder="you@example.com" required="" type="email"/></div>
+<div class="form-group"><label for="aPass">Password</label><input autocomplete="current-password" class="input" id="aPass" required="" type="password"/></div>
+<div id="loginError" role="alert"></div><button class="btn full" id="loginButton" type="submit">🔐 Login</button>
+</form>
+<p class="small">သင်တန်းအကောင့်သည် Supabase Dashboard ဝင်သည့် အကောင့်နှင့် မတူနိုင်ပါ။ Admin ဟုတ်/မဟုတ်ကို Database ရှိ admins စာရင်းဖြင့် စစ်ဆေးပါတယ်။</p>
+</div></div>
+<div class="toast" id="toast" role="status">
+</div>
+<noscript>ဤ app ကို အသုံးပြုရန် JavaScript ဖွင့်ထားပါ။</noscript><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tus-js-client@4.3.1/dist/tus.min.js"></script>
+<script>
+const defaultCourses=[
+{
+day:"Day 1",
+title:"ChatGPT အခြေခံနှင့် AI နဲ့ ဆွေးနွေးနည်း",
+description:"Conversation, Context, Role, Goal, Requirements, Format နဲ့ AI ကို တိတိကျကျ အလုပ်ပေးနည်း။"
+},
+{
+day:"Day 2",
+title:"Story & Character Creation",
+description:"Story Structure, Character Bible နဲ့ Character Consistency တည်ဆောက်နည်း။"
+},
+{
+day:"Day 3",
+title:"AI Image Creation",
+description:"Image Prompt, Reference Image နဲ့ Character Visual Consistency လေ့ကျင့်နည်း။"
+},
+{
+day:"Day 4",
+title:"AI Video Creation",
+description:"Story / Scene Prompt ကနေ AI Video Clip တွေ ထုတ်လုပ်တဲ့ Workflow။"
+},
+{
+day:"Day 5",
+title:"Google Flow Project Workflow",
+description:"Project တစ်ခုချင်းစီ စနစ်တကျလုပ်ပြီး Story / Character Continuity ထိန်းနည်း။"
+},
+{
+day:"Day 6",
+title:"Video Editing",
+description:"AI Clips တွေကို Timeline ပေါ်မှာ ဖြတ်တောက်၊ ဆက်စပ်၊ Subtitle / Music / Voice ထည့်ပြီး Final Export လုပ်နည်း။"
+}
+];
+
+const VIDEO=[
+"cinematic sunrise over Bagan temples",
+"rainy night in downtown Yangon",
+"traditional Myanmar tea shop at dawn",
+"lonely traveler on a misty mountain road",
+"luxury car driving through neon city streets",
+"young detective entering an abandoned hotel",
+"hero walking through a burning battlefield",
+"couple meeting at a riverside train station",
+"ancient warrior preparing for battle",
+"astronaut exploring an alien desert",
+"robot serving tea in a quiet café",
+"child flying a paper kite on a windy beach",
+"chef preparing a signature dish in a modern kitchen",
+"street dancer performing under city lights",
+"fashion model walking through futuristic architecture",
+"musician performing on a rooftop at sunset",
+"fisherman returning home during a storm",
+"old monk walking through a forest monastery",
+"magical library opening at midnight",
+"underwater city glowing beneath the ocean",
+"dragon flying above snow-covered mountains",
+"samurai crossing a bamboo forest",
+"vampire walking through Victorian London",
+"zombie survivor searching an empty supermarket",
+"superhero landing in a rain-soaked street",
+"spy escaping from a high-security facility",
+"princess running through an enchanted garden",
+"pirate ship sailing through a violent storm",
+"cowboy riding across a golden desert",
+"medieval village preparing for a festival",
+"cyberpunk courier racing through neon alleys",
+"android discovering human emotions",
+"scientist activating a mysterious portal",
+"explorer entering a hidden jungle temple",
+"archaeologist uncovering an ancient artifact",
+"pilot landing during a tropical storm",
+"firefighter rescuing a child from a building",
+"doctor working through a chaotic emergency room",
+"teacher inspiring students in a rural classroom",
+"photographer chasing a rare bird through wetlands",
+"wildlife ranger tracking elephants at dusk",
+"surfer riding a massive ocean wave",
+"mountaineer reaching a snowy summit",
+"cyclist racing through mountain roads",
+"runner training alone before sunrise",
+"boxer preparing backstage before a championship",
+"football player entering a packed stadium",
+"basketball player making a dramatic final shot",
+"traditional dancer performing on a festival stage",
+"puppeteer bringing a handmade character to life",
+"woodworker crafting a beautiful chair",
+"potter shaping clay in a warm studio",
+"blacksmith forging a sword in a medieval workshop",
+"watchmaker repairing an antique clock",
+"florist arranging flowers for a wedding",
+"barista creating latte art in a cozy café",
+"baker preparing fresh bread before sunrise",
+"farmer harvesting rice during golden hour",
+"street vendor cooking noodles in evening rain",
+"train traveling through a foggy mountain valley",
+"boat crossing a peaceful lake at blue hour",
+"motorbike traveling along a coastal road",
+"vintage bus moving through a busy market",
+"helicopter flying over a tropical island",
+"drone revealing a vast waterfall",
+"cinematic aerial view of a futuristic megacity",
+"timelapse of clouds over a sacred mountain",
+"moonlit forest with fireflies",
+"desert caravan crossing at sunset",
+"arctic expedition under the northern lights",
+"volcanic landscape during a dramatic eruption",
+"thunderstorm rolling over a coastal village",
+"cherry blossom street in spring",
+"autumn forest with falling leaves",
+"winter cabin surrounded by fresh snow",
+"summer beach party at golden hour",
+"romantic wedding in a garden",
+"birthday surprise in a small apartment",
+"family reunion at a countryside home",
+"grandmother telling stories to grandchildren",
+"father teaching a child to ride a bicycle",
+"friends camping beside a lake",
+"best friends walking home after school",
+"first date at a quiet bookstore",
+"farewell at an airport terminal",
+"reunion at a train station after many years",
+"secret letter discovered inside an old book",
+"mysterious door appearing in a city wall",
+"time traveler arriving in modern Yangon",
+"future city transforming at sunrise",
+"miniature world inside a coffee cup",
+"giant whale swimming above a city",
+"magical tree growing in an empty street",
+"paper drawing transforming into a real landscape",
+"musical notes becoming visible waves of light",
+"old photograph coming alive with motion",
+"final hero shot after a long journey",
+"ancient pagoda glowing beneath a star-filled sky",
+"young entrepreneur launching a dream business",
+"cinematic train journey across Myanmar countryside"
+];
+
+const SONG=[
+"uplifting dream-chasing pop anthem",
+"emotional heartbreak piano ballad",
+"romantic acoustic love song",
+"Myanmar-inspired cinematic folk song",
+"energetic festival dance anthem",
+"dark cinematic villain theme",
+"hopeful comeback anthem",
+"nostalgic childhood memory song",
+"friendship and loyalty anthem",
+"peaceful healing song",
+"summer road-trip pop song",
+"rainy-night city love song",
+"motivational workout anthem",
+"wedding first-dance ballad",
+"mother appreciation song",
+"father appreciation song",
+"best-friend tribute song",
+"long-distance relationship ballad",
+"new beginning anthem",
+"goodbye graduation song",
+"mysterious detective soundtrack",
+"epic fantasy adventure theme",
+"sci-fi space exploration anthem",
+"cyberpunk night-drive song",
+"pirate adventure folk-rock song",
+"medieval kingdom theme",
+"western desert country song",
+"horror suspense soundtrack",
+"superhero origin anthem",
+"magical fairytale lullaby",
+"chill lo-fi study song",
+"coffee-shop jazz love song",
+"late-night R&B confession",
+"soulful gospel-inspired hope song",
+"funky retro dance track",
+"1980s synth-pop nostalgia song",
+"1990s pop-rock nostalgia song",
+"modern Afrobeats celebration song",
+"reggae beach freedom song",
+"Latin summer romance song",
+"traditional percussion festival song",
+"acoustic campfire friendship song",
+"indie folk travel song",
+"cinematic orchestral victory theme",
+"minimalist piano reflection",
+"dreamy ambient meditation song",
+"deep house night-drive track",
+"melodic techno sunrise track",
+"future bass emotional anthem",
+"drum-and-bass adrenaline track",
+"trap confidence anthem",
+"conscious hip-hop about ambition",
+"storytelling rap about overcoming hardship",
+"old-school boom-bap wisdom track",
+"melodic rap breakup song",
+"female empowerment pop anthem",
+"self-love R&B anthem",
+"teen coming-of-age pop song",
+"parenthood emotional ballad",
+"newborn welcome lullaby",
+"rainy monsoon romance song",
+"river journey folk ballad",
+"mountain freedom anthem",
+"village homecoming song",
+"city survival hip-hop",
+"small-business dream anthem",
+"artist struggling to create song",
+"filmmaker chasing a dream anthem",
+"student exam motivation song",
+"teacher appreciation song",
+"doctor and nurse tribute song",
+"frontline worker gratitude anthem",
+"soldier returning home ballad",
+"immigrant homesickness song",
+"diaspora identity anthem",
+"cultural heritage celebration song",
+"language and identity song",
+"unity and friendship anthem",
+"environment protection anthem",
+"ocean conservation song",
+"climate hope anthem",
+"anti-bullying school song",
+"mental-strength resilience anthem",
+"forgiving yourself ballad",
+"letting go of the past song",
+"finding purpose after failure song",
+"quiet midnight confession song",
+"secret crush playful pop song",
+"unexpected love story song",
+"second-chance romance song",
+"summer festival closing anthem",
+"victory after struggle stadium anthem",
+"epic movie trailer song",
+"romantic cinematic end-credits song",
+"mysterious dream-pop song",
+"haunting psychological thriller theme",
+"dark villain redemption ballad",
+"heroic sacrifice orchestral song",
+"time-travel nostalgia song",
+"final goodbye before a journey"
+];
+
+const SONG_META=[
+["အိပ်မက်နောက်လိုက်သူ","မိမိရဲ့အိပ်မက်ကို မလျော့ဘဲ ဆက်လက်လိုက်လံအကောင်အထည်ဖော်သူတစ်ယောက်အကြောင်း။"],
+["မင်းမရှိတဲ့နောက်","ချစ်ရသူနဲ့ခွဲခွာပြီးနောက် ရင်ထဲမှာကျန်နေတဲ့ နာကျင်မှုအကြောင်း။"],
+["မင်းနဲ့အတူ","ချစ်ရသူနဲ့အတူ ဘဝခရီးကို အတူတူလျှောက်လှမ်းချင်တဲ့ ချစ်ခြင်းမေတ္တာအကြောင်း။"],
+["မြန်မာ့မြေ၊ မြန်မာ့နှလုံးသား","မြန်မာ့ယဉ်ကျေးမှု၊ မြေ၊ လူမျိုးနဲ့ အမွေအနှစ်တွေကို ဂုဏ်ယူချစ်မြတ်နိုးခြင်းအကြောင်း။"],
+["ပျော်ရွှင်ခြင်းည","ပွဲတော်ညတစ်ညမှာ လူတိုင်းအတူတူ ပျော်ရွှင်ကခုန်ကြတဲ့ အခိုက်အတန့်အကြောင်း။"],
+["အမှောင်ထဲက သူ","မကောင်းမှုတွေနဲ့ ရင်ဆိုင်နေရတဲ့ မှောင်မိုက်တဲ့ဇာတ်ကောင်တစ်ယောက်ရဲ့ အတွင်းစိတ်အကြောင်း။"],
+["ပြန်ထလာမယ်","ကျရှုံးခဲ့ပေမယ့် ပြန်လည်ထူထောင်ပြီး အောင်မြင်မှုဆီ ပြန်သွားမယ့်စိတ်ဓာတ်အကြောင်း။"],
+["ကလေးဘဝရဲ့နွေ","ကလေးဘဝတုန်းက ရိုးရှင်းပြီး နွေးထွေးခဲ့တဲ့ အမှတ်တရတွေကို ပြန်လည်လွမ်းဆွတ်ခြင်း။"],
+["မင်းဘက်က ငါ့ဘက်က","အခက်အခဲတိုင်းမှာ တစ်ယောက်ကိုတစ်ယောက် သစ္စာရှိရှိ ရပ်တည်ပေးတဲ့ ခင်မင်မှုအကြောင်း။"],
+["အနာကျက်တဲ့နေ့","နာကျင်မှုတွေကို ဖြည်းဖြည်းချင်းကျော်ဖြတ်ပြီး စိတ်နှလုံးပြန်လည်ငြိမ်းချမ်းလာခြင်းအကြောင်း။"],
+["နွေရာသီလမ်းမပေါ်","သူငယ်ချင်းတွေနဲ့ ခရီးထွက်ရင်း လွတ်လပ်ပျော်ရွှင်ခဲ့တဲ့ အမှတ်တရအကြောင်း။"],
+["မိုးရေထဲကအချစ်","မိုးရွာတဲ့မြို့ညတစ်ညမှာ ချစ်ခြင်းနဲ့ လွမ်းဆွတ်မှုတွေ ရောနှောနေတဲ့အကြောင်း။"],
+["မနားမနေ","မိမိရဲ့ရည်မှန်းချက်ကို ရောက်အောင် ကြိုးစားနေသူတစ်ယောက်ရဲ့ စိတ်ဓာတ်အကြောင်း။"],
+["ငါတို့ရဲ့မင်္ဂလာနေ့","ဘဝတစ်လျှောက် အတူတူနေမယ့် ချစ်သူနှစ်ယောက်ရဲ့ မင်္ဂလာနေ့အကြောင်း။"],
+["အမေ့ရဲ့လက်","အမေ့ရဲ့မေတ္တာ၊ စောင့်ရှောက်မှုနဲ့ ကျေးဇူးတရားကို ဖော်ပြထားတဲ့ သီချင်း။"],
+["အဖေ့ရဲ့အရိပ်","မိသားစုအတွက် အမြဲကာကွယ်ပေးခဲ့တဲ့ အဖေရဲ့မေတ္တာနဲ့ ကျေးဇူးတရားအကြောင်း။"],
+["သူငယ်ချင်းတစ်ယောက်အတွက်","ဘဝမှာ အမြဲတမ်းအနားမှာ ရပ်တည်ပေးခဲ့တဲ့ သူငယ်ချင်းတစ်ယောက်ကို ဂုဏ်ပြုခြင်း။"],
+["အဝေးကမင်း","အဝေးမှာနေတဲ့ ချစ်ရသူကို နေ့တိုင်းလွမ်းဆွတ်နေတဲ့ ခံစားချက်အကြောင်း။"],
+["အသစ်စမယ့်နေ့","အတိတ်ကိုထားခဲ့ပြီး ဘဝအသစ်တစ်ခုကို ရဲရဲဝံ့ဝံ့စတင်ခြင်းအကြောင်း။"],
+["နောက်ဆုံးနှုတ်ဆက်ခြင်း","ကျောင်းဘဝပြီးဆုံးချိန်မှာ သူငယ်ချင်းတွေနဲ့ ခွဲခွာရတဲ့ ဝမ်းနည်းမှုအကြောင်း။"],
+["ညသန်းခေါင်က လျှို့ဝှက်ချက်","စုံထောက်တစ်ယောက်က အမှန်တရားကို ရှာဖွေဖော်ထုတ်နေတဲ့ လျှို့ဝှက်ဆန်တဲ့ဇာတ်လမ်း။"],
+["အိပ်မက်ကမ္ဘာထဲ","စိတ်ကူးယဉ်ကမ္ဘာတစ်ခုထဲမှာ စွန့်စားခန်းတွေကို ဖြတ်သန်းသွားတဲ့အကြောင်း။"],
+["ကြယ်တွေအောက်မှာ","အာကာသထဲကို ထွက်ခွာပြီး မသိသေးတဲ့ကမ္ဘာတွေကို ရှာဖွေချင်တဲ့ အိပ်မက်အကြောင်း။"],
+["နီယွန်ည","အနာဂတ်မြို့ကြီးထဲက နီယွန်မီးရောင်တွေအောက်မှာ လွတ်လပ်စွာဖြတ်သန်းနေတဲ့ညအကြောင်း။"],
+["မုန်တိုင်းထဲကခရီး","အန္တရာယ်များတဲ့ ပင်လယ်ခရီးကို သတ္တိရှိရှိ ဖြတ်သန်းသွားတဲ့ စွန့်စားခန်းအကြောင်း။"],
+["ဘုရင့်နိုင်ငံ","ရှေးဟောင်းနိုင်ငံတော်တစ်ခုရဲ့ ဂုဏ်သိက္ခာ၊ အာဏာနဲ့ အိပ်မက်တွေအကြောင်း။"],
+["သဲကန္တာရလမ်း","ကျယ်ပြန့်တဲ့ သဲကန္တာရထဲမှာ တစ်ယောက်တည်း ခရီးဆက်နေတဲ့ အထီးကျန်မှုအကြောင်း။"],
+["ကြောက်စရာည","မသိတဲ့အရာတစ်ခုကို စောင့်ဆိုင်းရင်း တဖြည်းဖြည်းကြောက်ရွံ့လာတဲ့ ခံစားချက်အကြောင်း။"],
+["သူရဲကောင်းမွေးဖွားခြင်း","သာမန်လူတစ်ယောက်က အခက်အခဲတွေကြားမှာ သူရဲကောင်းတစ်ယောက်ဖြစ်လာတဲ့အကြောင်း။"],
+["အိပ်မက်ထဲကပုံပြင်","ကလေးငယ်တစ်ယောက်အတွက် နူးညံ့ပြီး မှော်ဆန်တဲ့ အိပ်ရာဝင်ပုံပြင်တစ်ပုဒ်။"],
+["စာကြည့်တိုက်ည","စာအုပ်တွေကြားမှာ တိတ်တိတ်ဆိတ်ဆိတ် အာရုံစူးစိုက်လေ့လာနေတဲ့ ညအကြောင်း။"],
+["ကော်ဖီနံ့နဲ့အချစ်","ကော်ဖီဆိုင်လေးတစ်ဆိုင်မှာ တဖြည်းဖြည်းမွေးဖွားလာတဲ့ ချစ်ခြင်းအကြောင်း။"],
+["မပြောဖြစ်တဲ့စကား","ညနက်ချိန်မှာ ရင်ထဲကနေ ထုတ်မပြောနိုင်ခဲ့တဲ့ ခံစားချက်တွေကို ဖွင့်ဟခြင်း။"],
+["မျှော်လင့်ချက်အလင်း","အမှောင်ထဲမှာတောင် မျှော်လင့်ချက်ကို မပျောက်စေဘဲ ရှေ့ဆက်သွားခြင်းအကြောင်း။"],
+["ပြန်လည်ကခုန်မယ်","အတိတ်ကဂီတနဲ့ အမှတ်တရတွေကို ပြန်လည်ခံစားရင်း ပျော်ရွှင်ခြင်းအကြောင်း။"],
+["အတိတ်ရဲ့တေးသံ","လွန်ခဲ့တဲ့နှစ်တွေက အမှတ်တရတွေကို သီချင်းတစ်ပုဒ်လို ပြန်လည်ခံစားခြင်း။"],
+["မနေ့ကလိုပဲ","လွန်ခဲ့တဲ့အချိန်တွေကို ပြန်လည်သတိရပြီး အတိတ်ကို လွမ်းဆွတ်ခြင်း။"],
+["ဒီညပျော်ကြမယ်","သူငယ်ချင်းတွေနဲ့အတူ ပျော်ပွဲရွှင်ပွဲတစ်ခုမှာ လွတ်လပ်စွာပျော်ရွှင်ခြင်း။"],
+["ပင်လယ်နဲ့လွတ်လပ်ခြင်း","ပင်လယ်ကမ်းခြေမှာ စိတ်လွတ်လပ်ပြီး ဘဝကို ပေါ့ပေါ့ပါးပါးခံစားခြင်း။"],
+["နွေရဲ့အချစ်","နွေရာသီရဲ့နွေးထွေးမှုနဲ့ ပေါင်းစပ်ထားတဲ့ ရင်ခုန်စရာအချစ်ဇာတ်လမ်း။"],
+["ရွာကပွဲတော်","ရွာလေးတစ်ရွာရဲ့ ရိုးရာပွဲတော်မှာ လူတွေအားလုံး စည်းလုံးပျော်ရွှင်ကြတဲ့အကြောင်း။"],
+["မီးပုံဘေးကသူငယ်ချင်း","ညဘက်မီးပုံဘေးမှာ သူငယ်ချင်းတွေနဲ့ အမှတ်တရတွေ ပြောဆိုကြတဲ့အကြောင်း။"],
+["လမ်းပေါ်ကအိပ်မက်","ခရီးသွားရင်း ကိုယ့်အိပ်မက်နဲ့ ကိုယ့်ဘဝရဲ့ အဓိပ္ပါယ်ကို ရှာဖွေခြင်း။"],
+["အောင်ပွဲရဲ့နေ့","အခက်အခဲများစွာကို ကျော်ဖြတ်ပြီး အောင်မြင်မှုကို ရရှိတဲ့အခိုက်အတန့်။"],
+["တိတ်ဆိတ်တဲ့ည","တစ်ယောက်တည်းနေပြီး မိမိရဲ့အတွင်းစိတ်ကို ပြန်လည်စဉ်းစားတဲ့ ညတစ်ည။"],
+["အေးချမ်းရာ","စိတ်ပင်ပန်းမှုတွေကနေ ခဏတာလွတ်မြောက်ပြီး ငြိမ်းချမ်းမှုကို ရှာဖွေခြင်း။"],
+["ညလမ်းပေါ်ကအလင်း","ညနက်မြို့ထဲမှာ မီးရောင်တွေအောက် ဖြည်းဖြည်းလျှောက်သွားတဲ့ ခံစားချက်။"],
+["နေထွက်ချိန်","ညမှောင်ပြီးနောက် နေထွက်လာသလို ဘဝအသစ်ကို စတင်ခြင်း။"],
+["မနက်ဖြန်ပိုကောင်းမယ်","လက်ရှိအခက်အခဲတွေကို ကျော်ဖြတ်ပြီး အနာဂတ်ကောင်းမွန်လာမယ်လို့ ယုံကြည်ခြင်း။"],
+["ရင်ထဲကမီး","ကိုယ့်ရည်မှန်းချက်အတွက် မငြိမ်းနိုင်တဲ့ စိတ်အားထက်သန်မှုအကြောင်း။"],
+["ငါလုပ်နိုင်တယ်","မိမိကိုယ်ကို ယုံကြည်ပြီး ဘယ်အခက်အခဲမဆို ကျော်ဖြတ်နိုင်တယ်ဆိုတဲ့ ယုံကြည်ချက်။"],
+["အိပ်မက်အတွက်တိုက်ပွဲ","အောင်မြင်မှုရဖို့အတွက် အခက်အခဲတွေကြားက မရပ်မနားကြိုးစားခြင်း။"],
+["နာကျင်မှုကသင်ခန်းစာ","ဘဝမှာ ကြုံတွေ့ခဲ့ရတဲ့ နာကျင်မှုတွေက မိမိကို ပိုခိုင်မာစေခြင်းအကြောင်း။"],
+["အတိတ်ကိုလွှတ်လိုက်","အတိတ်ကနာကျင်မှုတွေကို လက်လွှတ်ပြီး ရှေ့ဆက်သွားဖို့ ဆုံးဖြတ်ခြင်း။"],
+["ကိုယ့်ကိုယ်ကိုချစ်ပါ","မိမိကိုယ်ကို တန်ဖိုးထားပြီး ကိုယ့်အပေါ် ကိုယ်မေတ္တာထားတတ်ဖို့ အားပေးခြင်း။"],
+["ငါ့ဘဝ ငါ့လမ်း","သူများနဲ့မနှိုင်းယှဉ်ဘဲ မိမိဘဝလမ်းကို မိမိကိုယ်တိုင်ရွေးချယ်ခြင်း။"],
+["လူငယ်ရဲ့အိပ်မက်","လူငယ်ဘဝမှာ ရှိတဲ့ အိပ်မက်တွေ၊ မျှော်လင့်ချက်တွေနဲ့ အနာဂတ်အကြောင်း။"],
+["မိဘဖြစ်လာတဲ့နေ့","ကလေးတစ်ယောက်ရဲ့ မိဘဖြစ်လာချိန်မှာ ခံစားရတဲ့ မေတ္တာနဲ့ တာဝန်အကြောင်း။"],
+["ကလေးလေးအတွက်","မွေးကင်းစကလေးလေးကို နွေးထွေးစွာ ကြိုဆိုတဲ့ မိဘရဲ့ မေတ္တာ။"],
+["မိုးရာသီအချစ်","မိုးရာသီရဲ့အေးမြမှုနဲ့အတူ ပြန်လည်ရှင်သန်လာတဲ့ ချစ်ခြင်းအကြောင်း။"],
+["မြစ်တစ်စင်းရဲ့ခရီး","မြစ်တစ်စင်းလို ဘဝခရီးကို ဖြည်းဖြည်းချင်းဆက်လက်စီးဆင်းသွားခြင်း။"],
+["တောင်ထိပ်အထိ","အခက်အခဲတွေ ဘယ်လောက်ရှိရှိ ရည်မှန်းချက်ရောက်အောင် ဆက်လက်တက်လှမ်းခြင်း။"],
+["အိမ်ပြန်တဲ့လမ်း","အဝေးကနေ ကိုယ့်မွေးရပ်မြေကို ပြန်လာရတဲ့ နွေးထွေးတဲ့ခံစားချက်။"],
+["မြို့ကြီးရဲ့တိုက်ပွဲ","မြို့ကြီးထဲမှာ ရှင်သန်ဖို့ အခက်အခဲတွေကို နေ့စဉ်ရင်ဆိုင်ရတဲ့ဘဝ။"],
+["ကိုယ့်ဆိုင်လေး","အိပ်မက်ထဲက ကိုယ်ပိုင်စီးပွားရေးလုပ်ငန်းကို တည်ဆောက်ဖို့ ကြိုးစားခြင်း။"],
+["မဖန်တီးနိုင်တဲ့နေ့","အနုပညာရှင်တစ်ယောက် ဖန်တီးချင်ပေမယ့် စိတ်ပိတ်ဆို့နေတဲ့အချိန်ကို ဖော်ပြခြင်း။"],
+["အိပ်မက်နောက်ကင်မရာ","ရုပ်ရှင်ဖန်တီးသူတစ်ယောက်ရဲ့ အိပ်မက်နောက်ကို မရပ်မနားလိုက်ခြင်း။"],
+["စာမေးပွဲကျော်မယ်","ကျောင်းသားတစ်ယောက်ရဲ့ စာမေးပွဲအောင်မြင်ဖို့ ကြိုးစားအားထုတ်မှု။"],
+["ဆရာ့ကျေးဇူး","ကျောင်းသားတွေရဲ့ ဘဝကို အလင်းပေးခဲ့တဲ့ ဆရာ၊ ဆရာမတွေရဲ့ ကျေးဇူးတရား။"],
+["အသက်ကယ်သူများ","လူနာတွေရဲ့အသက်ကို ကယ်တင်ပေးနေတဲ့ ဆရာဝန်နဲ့ သူနာပြုတွေရဲ့ ကြိုးစားမှု။"],
+["ရှေ့တန်းကသူများ","အန္တရာယ်တွေကြားမှာ လူတွေအတွက် ရပ်တည်ပေးနေသူတွေရဲ့ ကျေးဇူးတရား။"],
+["အိမ်ပြန်လာတဲ့သူရဲကောင်း","အချိန်အကြာကြီး ခွဲခွာပြီးနောက် မိသားစုဆီ ပြန်လာတဲ့သူရဲ့ ခံစားချက်။"],
+["အဝေးမှာရှိတဲ့အိမ်","မွေးရပ်မြေနဲ့ မိသားစုကို အဝေးကနေ လွမ်းဆွတ်နေတဲ့ ခံစားချက်။"],
+["ငါတို့အမြစ်","ကိုယ့်ရဲ့ မူလဇစ်မြစ်၊ ယဉ်ကျေးမှုနဲ့ ကိုယ်ပိုင်အမှတ်အသားကို မမေ့ခြင်း။"],
+["အမွေအနှစ်","မျိုးဆက်တစ်ဆက်ကနေ တစ်ဆက်ကို လက်ဆင့်ကမ်းပေးရမယ့် ယဉ်ကျေးမှုအမွေအနှစ်။"],
+["တစ်ဘာသာတည်းသောနှလုံးသား","ဘာသာစကားနဲ့ နောက်ခံကွဲပြားပေမယ့် လူသားတွေ အတူတူဖြစ်ကြောင်း ဖော်ပြခြင်း။"],
+["လက်တွဲကြမယ်","သူငယ်ချင်းတွေ၊ မိသားစုတွေနဲ့ အတူတူရပ်တည်ပြီး အခက်အခဲကို ကျော်ဖြတ်ခြင်း။"],
+["ကမ္ဘာကြီးအတွက်","သဘာဝပတ်ဝန်းကျင်ကို ထိန်းသိမ်းဖို့ လူတိုင်းမှာ တာဝန်ရှိကြောင်း အားပေးခြင်း။"],
+["ပင်လယ်ကိုကယ်ပါ","ပင်လယ်နဲ့ ရေသတ္တဝါတွေကို အမှိုက်နဲ့ညစ်ညမ်းမှုကနေ ကာကွယ်ဖို့ အားပေးခြင်း။"],
+["မနက်ဖြန်ကမ္ဘာ","ရာသီဥတုပြောင်းလဲမှုကို ရင်ဆိုင်ရင်း အနာဂတ်ကမ္ဘာအတွက် မျှော်လင့်ချက်ထားခြင်း။"],
+["တစ်ယောက်ကိုမနှိမ်ပါနဲ့","ကျောင်းသားတွေကြား အနိုင်ကျင့်မှုကို ရပ်တန့်ပြီး အချင်းချင်းလေးစားဖို့ အားပေးခြင်း။"],
+["ငါမကျိုးဘူး","အခက်အခဲတွေကြားမှာ စိတ်ဓာတ်မကျဘဲ ပြန်လည်ရပ်တည်နိုင်တဲ့ စိတ်ခွန်အားအကြောင်း။"],
+["ကိုယ့်ကိုယ်ကိုခွင့်လွှတ်ပါ","အတိတ်ကအမှားတွေကြောင့် ကိုယ့်ကိုယ်ကို အပြစ်မတင်တော့ဘဲ ခွင့်လွှတ်ခြင်း။"],
+["ပြီးခဲ့တာပြီးပြီ","အတိတ်ကို ထားခဲ့ပြီး ပစ္စုပ္ပန်နဲ့ အနာဂတ်ကို အာရုံစိုက်ခြင်း။"],
+["ရှုံးနိမ့်ပြီးနောက်","ရှုံးနိမ့်မှုနောက်ကနေ ဘဝရဲ့ရည်ရွယ်ချက်အသစ်ကို ပြန်လည်ရှာဖွေခြင်း။"],
+["သန်းခေါင်ယံဝန်ခံချက်","ညနက်ချိန်မှာ ရင်ထဲက ဖုံးကွယ်ထားခဲ့တဲ့ အချစ်နဲ့ခံစားချက်တွေကို ဖွင့်ဟခြင်း။"],
+["လျှို့ဝှက်ချစ်ခြင်း","ကိုယ်ချစ်နေတဲ့သူကို မပြောရဲသေးတဲ့ ရင်ခုန်စရာခံစားချက်။"],
+["မထင်မှတ်တဲ့အချစ်","မမျှော်လင့်ဘဲ တွေ့ဆုံပြီး ချစ်ခြင်းဖြစ်ပေါ်လာတဲ့ ဇာတ်လမ်း။"],
+["တစ်ခါထပ်အခွင့်အရေး","ပျက်စီးခဲ့တဲ့ဆက်ဆံရေးကို ပြန်လည်တည်ဆောက်ဖို့ ဒုတိယအခွင့်အရေးရခြင်း။"],
+["ပွဲတော်ရဲ့နောက်ဆုံးည","ပျော်ရွှင်စရာပွဲတော်တစ်ခု ပြီးဆုံးခါနီးမှာ ကျန်ရှိနေတဲ့ အမှတ်တရများ။"],
+["အောင်ပွဲရဲ့ကြွေးကြော်သံ","အခက်အခဲတွေအားလုံးကို ကျော်ဖြတ်ပြီး အောင်မြင်ခဲ့တဲ့အချိန်မှာ လူတိုင်းအတူတူ အောင်ပွဲခံခြင်း။"],
+["ရုပ်ရှင်မစခင်","ရုပ်ရှင်တစ်ကားစတင်မယ့်အချိန်မှာ ပေါ်လာတဲ့ စွန့်စားခန်းနဲ့ အိပ်မက်ခံစားချက်။"],
+["နောက်ဆုံးစာသား","ရုပ်ရှင်ပြီးဆုံးချိန်မှာ ဇာတ်ကောင်တွေရဲ့ ဘဝကို ပြန်လည်စဉ်းစားစေတဲ့ ချစ်ခြင်းဇာတ်လမ်း။"],
+["အိပ်မက်ထဲကလူ","အိပ်မက်နဲ့ အမှန်တရားကြားမှာ မသေချာတဲ့ ခံစားချက်တွေအကြောင်း။"],
+["မကြောက်ဘဲရင်ဆိုင်","အန္တရာယ်နဲ့ကြောက်ရွံ့မှုတွေကို ရဲရဲဝံ့ဝံ့ ရင်ဆိုင်ခြင်း။"],
+["သူ့အပြစ်မဟုတ်တော့ဘူး","မကောင်းမှုတွေကို ကျော်ဖြတ်ပြီး မိမိအမှားကို ပြန်လည်နားလည်လာတဲ့ ဇာတ်ကောင်။"],
+["နောက်ဆုံးပေးဆပ်မှု","ချစ်ရသူနဲ့ အခြားသူတွေကို ကယ်တင်ဖို့ မိမိကိုယ်ကို ပေးဆပ်ခြင်း။"],
+["အချိန်တစ်လျှောက်","အတိတ်နဲ့ ပစ္စုပ္ပန်ကြား ခရီးသွားရင်း မပြောင်းလဲတဲ့ အမှတ်တရတစ်ခုအကြောင်း။"],
+["ခရီးမစခင်နှုတ်ဆက်","ခရီးရှည်မထွက်ခွာခင် ချစ်ရသူကို နောက်ဆုံးအကြိမ် နှုတ်ဆက်ရတဲ့ ခံစားချက်။"]
+];
+
+const IMAGE=[
+"cinematic portrait of a young Myanmar traveler",
+"professional headshot of a creative entrepreneur",
+"fashion editorial portrait in neon city light",
+"traditional Myanmar cultural portrait",
+"elegant wedding couple portrait",
+"dramatic detective character portrait",
+"fantasy warrior character design",
+"cyberpunk hero character design",
+"mysterious female protagonist portrait",
+"wise elderly storyteller portrait",
+"child playing with a paper kite",
+"family portrait at golden hour",
+"friends laughing at a street café",
+"romantic couple beside a river",
+"lonely traveler on a mountain",
+"musician with a vintage guitar",
+"chef in a modern kitchen",
+"street dancer in motion",
+"professional athlete portrait",
+"doctor in a futuristic hospital",
+"teacher in a warm classroom",
+"photographer in a rainforest",
+"wildlife ranger with elephants",
+"fisherman at sunrise",
+"farmer in a rice field",
+"monk walking through a monastery",
+"craftsman in a traditional workshop",
+"potter shaping clay",
+"blacksmith at a forge",
+"florist arranging flowers",
+"cozy coffee shop interior",
+"luxury modern living room",
+"minimalist creative studio",
+"traditional wooden Myanmar house",
+"mysterious abandoned hotel room",
+"detective office at midnight",
+"futuristic laboratory interior",
+"spaceship cockpit interior",
+"magical library interior",
+"underground cyberpunk market",
+"ancient jungle temple",
+"golden pagoda at sunset",
+"misty mountain monastery",
+"tropical waterfall landscape",
+"peaceful lake at blue hour",
+"stormy ocean coastline",
+"snow-covered mountain village",
+"northern lights over a cabin",
+"desert oasis at sunset",
+"dense rainforest after rain",
+"neon cyberpunk megacity",
+"futuristic Asian city skyline",
+"old Yangon street in rain",
+"busy traditional market",
+"quiet rural village road"
+];
+
+const VIDEO_TITLES=[
+"ပုဂံဘုရားများပေါ် နေထွက်ချိန်၏ ရုပ်ရှင်ဆန်သောမြင်ကွင်း",
+"ရန်ကုန်မြို့လယ် မိုးရွာသောည",
+"အရုဏ်တက်ချိန် မြန်မာ့ရိုးရာ လက်ဖက်ရည်ဆိုင်",
+"မြူထူသော တောင်လမ်းပေါ်က အထီးကျန်ခရီးသွား",
+"နီယွန်မြို့လမ်းများပေါ် မောင်းနှင်နေသော ဇိမ်ခံကား",
+"စွန့်ပစ်ဟိုတယ်ထဲ ဝင်လာသော လူငယ်စုံထောက်",
+"မီးလောင်နေသော စစ်မြေပြင်ကို ဖြတ်လျှောက်လာသော သူရဲကောင်း",
+"မြစ်ကမ်းဘေး ရထားဘူတာမှာ တွေ့ဆုံကြသော ချစ်သူနှစ်ဦး",
+"စစ်တိုက်ရန် ပြင်ဆင်နေသော ရှေးခေတ်စစ်သည်",
+"ဂြိုဟ်သားသဲကန္တာရကို စူးစမ်းနေသော အာကာသယာဉ်မှူး",
+"တိတ်ဆိတ်သော ကော်ဖီဆိုင်မှာ လက်ဖက်ရည်ဝန်ဆောင်မှုပေးနေသော စက်ရုပ်",
+"လေပြင်းတိုက်သော ကမ်းခြေမှာ စက္ကူစွန်လွှတ်နေသော ကလေး",
+"ခေတ်မီမီးဖိုချောင်မှာ အထူးဟင်းလျာပြင်ဆင်နေသော စားဖိုမှူး",
+"မြို့မီးရောင်အောက် ဖျော်ဖြေနေသော လမ်းပေါ်အကသမား",
+"အနာဂတ်ဗိသုကာလက်ရာများကြား လမ်းလျှောက်လာသော ဖက်ရှင်မော်ဒယ်",
+"နေဝင်ချိန် အဆောက်အအုံခေါင်မိုးပေါ် ဖျော်ဖြေနေသော ဂီတသမား",
+"မုန်တိုင်းအတွင်း အိမ်ပြန်လာသော တံငါသည်",
+"တောအတွင်း ဘုန်းတော်ကြီးကျောင်းမှ ဖြတ်လျှောက်လာသော ရဟန်း",
+"သန်းခေါင်ယံမှာ ဖွင့်လှစ်လာသော မှော်စာကြည့်တိုက်",
+"ပင်လယ်အောက်မှာ တောက်ပနေသော ရေအောက်မြို့",
+"နှင်းဖုံးတောင်တန်းများပေါ် ပျံသန်းနေသော နဂါး",
+"ဝါးတောကို ဖြတ်ကျော်လာသော ဆာမူရိုင်း",
+"ဗစ်တိုးရီးယားခေတ် လန်ဒန်မြို့ထဲ လမ်းလျှောက်နေသော သွေးစုပ်ဖုတ်ကောင်",
+"လူသူကင်းမဲ့သော စူပါမားကတ်ထဲ ရှာဖွေနေသော ဖုတ်ကောင်ရှင်သန်သူ",
+"မိုးရေစိုလမ်းပေါ် ဆင်းသက်လာသော စူပါဟီးရိုး",
+"လုံခြုံရေးတင်းကျပ်သော စက်ရုံမှ ထွက်ပြေးလာသော သူလျှို",
+"မှော်ဆန်သောဥယျာဉ်ထဲ ပြေးလွှားနေသော မင်းသမီး",
+"ပြင်းထန်သော မုန်တိုင်းအတွင်း ရွက်လွှင့်နေသော ပင်လယ်ဓားပြသင်္ဘော",
+"ရွှေရောင်သဲကန္တာရကို ဖြတ်စီးလာသော ကောင်းဘွိုင်",
+"အလယ်ခေတ်ရွာတစ်ရွာ ပွဲတော်အတွက် ပြင်ဆင်နေခြင်း",
+"နီယွန်လမ်းကြားများထဲ အရှိန်ပြင်းစွာ ပြေးနေသော ဆိုက်ဘာပန့်ခ်စာပို့သမား",
+"လူသားခံစားချက်များကို စတင်နားလည်လာသော အန်ဒရွိုက်",
+"လျှို့ဝှက်ဆန်းကြယ်သော တံခါးပေါက်ကို ဖွင့်နေသော သိပ္ပံပညာရှင်",
+"တောနက်အတွင်း ဝှက်ထားသော ရှေးဟောင်းဘုရားကျောင်းထဲ ဝင်ရောက်လာသော စူးစမ်းရှာဖွေသူ",
+"ရှေးဟောင်းပစ္စည်းတစ်ခုကို တူးဖော်တွေ့ရှိသော ရှေးဟောင်းသုတေသနပညာရှင်",
+"အပူပိုင်းမုန်တိုင်းအတွင်း လေယာဉ်ဆင်းသက်နေသော လေယာဉ်မှူး",
+"အဆောက်အအုံထဲမှ ကလေးတစ်ဦးကို ကယ်ဆယ်နေသော မီးသတ်သမား",
+"အရေးပေါ်ခန်းအတွင်း ရှုပ်ထွေးစွာ အလုပ်လုပ်နေသော ဆရာဝန်",
+"ကျေးလက်စာသင်ခန်းထဲ ကျောင်းသားများကို အားပေးလှုံ့ဆော်နေသော ဆရာ",
+"ရေစိုမြေပြင်ထဲ ရှားပါးငှက်နောက် လိုက်နေသော ဓာတ်ပုံဆရာ",
+"နေဝင်ရီတရောမှာ ဆင်များကို ခြေရာခံနေသော တောရိုင်းတိရစ္ဆာန်စောင့်ရှောက်သူ",
+"ပင်လယ်လှိုင်းကြီးပေါ် စီးနင်းနေသော လှိုင်းစီးသမား",
+"နှင်းဖုံးတောင်ထိပ်ကို ရောက်ရှိလာသော တောင်တက်သမား",
+"တောင်လမ်းများပေါ် အပြိုင်အဆိုင် စက်ဘီးစီးနေသူ",
+"နေမထွက်မီ တစ်ယောက်တည်း လေ့ကျင့်နေသော အပြေးသမား",
+"ချန်ပီယံပြိုင်ပွဲမတိုင်မီ နောက်ကွယ်မှာ ပြင်ဆင်နေသော လက်ဝှေ့သမား",
+"လူပြည့်ကျပ်နေသော အားကစားကွင်းထဲ ဝင်လာသော ဘောလုံးသမား",
+"နောက်ဆုံးအချိန် အံ့မခန်းပစ်ချက်ဖြင့် အမှတ်ရနေသော ဘတ်စကက်ဘောသမား",
+"ပွဲတော်စင်မြင့်ပေါ် ရိုးရာအက ဖျော်ဖြေနေသူ",
+"လက်လုပ်ဇာတ်ကောင်ကို အသက်ဝင်လာအောင် ဖန်တီးနေသော ရုပ်သေးဆရာ",
+"လှပသောကုလားထိုင်တစ်လုံး ဖန်တီးနေသော သစ်သားလက်မှုပညာရှင်",
+"နွေးထွေးသောအလုပ်ခန်းထဲ မြေစေးပုံဖော်နေသော အိုးလုပ်သူ",
+"အလယ်ခေတ်အလုပ်ရုံမှာ ဓားသွေးနေသော ပန်းပဲသမား",
+"ရှေးဟောင်းနာရီတစ်လုံးကို ပြုပြင်နေသော နာရီပညာရှင်",
+"မင်္ဂလာပွဲအတွက် ပန်းစည်းပြင်ဆင်နေသော ပန်းဆိုင်ပညာရှင်",
+"နွေးထွေးသော ကော်ဖီဆိုင်မှာ လက်တေးပုံဖော်နေသော ဘာရစ်စတာ",
+"နေမထွက်မီ လတ်ဆတ်သောပေါင်မုန့် ဖုတ်နေသော မုန့်ဖုတ်သမား",
+"ရွှေရောင်အလင်းချိန်မှာ စပါးရိတ်သိမ်းနေသော လယ်သမား",
+"ညနေမိုးရေထဲ ခေါက်ဆွဲချက်ပြုတ်နေသော လမ်းဘေးဈေးသည်",
+"မြူထူသော တောင်ကြားကို ဖြတ်သန်းသွားသော ရထား",
+"အပြာရောင်ဆည်းဆာချိန် ငြိမ်းချမ်းသောရေကန်ကို ဖြတ်ကူးနေသော လှေ",
+"ကမ်းရိုးတန်းလမ်းတစ်လျှောက် သွားလာနေသော ဆိုင်ကယ်",
+"စည်ကားသောဈေးထဲ ဖြတ်သန်းသွားသော ရှေးဟောင်းဘတ်စ်ကား",
+"အပူပိုင်းကျွန်းပေါ် ပျံသန်းနေသော ရဟတ်ယာဉ်",
+"အလွန်ကြီးမားသော ရေတံခွန်ကို အပေါ်စီးမှ ဖော်ပြပေးသော ဒရုန်းမြင်ကွင်း",
+"အနာဂတ်မဟာမြို့ကြီး၏ ရုပ်ရှင်ဆန်သော အပေါ်စီးမြင်ကွင်း",
+"မြင့်မြတ်သောတောင်ပေါ် မိုးတိမ်များ၏ အချိန်မြန်မြင်ကွင်း",
+"ပိုးစုန်းကြူးများလင်းလက်နေသော လရောင်တော",
+"နေဝင်ချိန် သဲကန္တာရကို ဖြတ်သန်းသွားသော ကုန်သည်ယာဉ်တန်း",
+"မြောက်အလင်းတန်းအောက် အာတိတ်ဒေသ စူးစမ်းခရီး",
+"ပြင်းထန်စွာ မီးတောင်ပေါက်ကွဲနေသော မီးတောင်မြေပြင်",
+"ကမ်းရိုးတန်းရွာပေါ် ဖြတ်သန်းလာသော မိုးကြိုးမုန်တိုင်း",
+"နွေဦးရာသီ ချယ်ရီပန်းများပွင့်နေသော လမ်း",
+"သစ်ရွက်များကြွေကျနေသော ဆောင်းဦးတော",
+"နှင်းသစ်များဝန်းရံထားသော ဆောင်းရာသီအိမ်လေး",
+"ရွှေရောင်အလင်းချိန် နွေရာသီကမ်းခြေပွဲ",
+"ဥယျာဉ်ထဲက ရင်ခုန်စရာမင်္ဂလာပွဲ",
+"တိုက်ခန်းလေးထဲ မွေးနေ့အံ့အားသင့်ပွဲ",
+"ကျေးလက်အိမ်မှာ မိသားစုစုံညီပွဲ",
+"အဘွားက မြေးများကို ပုံပြင်ပြောပြနေခြင်း",
+"ဖခင်က ကလေးကို စက်ဘီးစီးသင်ပေးနေခြင်း",
+"ရေကန်ဘေး သူငယ်ချင်းများ စခန်းချနေခြင်း",
+"ကျောင်းဆင်းပြီးနောက် အရင်းနှီးဆုံးသူငယ်ချင်းများ အိမ်ပြန်လမ်းလျှောက်ခြင်း",
+"တိတ်ဆိတ်သော စာအုပ်ဆိုင်မှာ ပထမဆုံးချိန်းတွေ့ခြင်း",
+"လေဆိပ်ခန်းမမှာ နောက်ဆုံးနှုတ်ဆက်ခြင်း",
+"နှစ်ပေါင်းများစွာကြာပြီးနောက် ရထားဘူတာမှာ ပြန်လည်တွေ့ဆုံခြင်း",
+"ရှေးဟောင်းစာအုပ်ထဲ ဝှက်ထားသော လျှို့ဝှက်စာ",
+"မြို့ရိုးပေါ် ရုတ်တရက်ပေါ်လာသော လျှို့ဝှက်တံခါး",
+"အချိန်ခရီးသွားတစ်ဦး ခေတ်သစ်ရန်ကုန်သို့ ရောက်ရှိလာခြင်း",
+"အနာဂတ်မြို့ကြီး နေထွက်ချိန်မှာ ပြောင်းလဲသွားခြင်း",
+"ကော်ဖီခွက်အတွင်းက သေးငယ်သောကမ္ဘာ",
+"မြို့အပေါ် ပျံသန်းကူးခတ်နေသော ဧရာမဝေလငါး",
+"လူသူကင်းမဲ့သော လမ်းပေါ် ပေါက်ဖွားလာသော မှော်သစ်ပင်",
+"စက္ကူပေါ်ရေးဆွဲထားသော ပုံတစ်ပုံ တကယ့်ရှုခင်းအဖြစ် ပြောင်းလဲခြင်း",
+"ဂီတသံစဉ်များ အလင်းလှိုင်းများအဖြစ် မြင်တွေ့လာခြင်း",
+"ရှေးဟောင်းဓာတ်ပုံတစ်ပုံ အသက်ဝင်လှုပ်ရှားလာခြင်း",
+"ခရီးရှည်ပြီးနောက် နောက်ဆုံးသူရဲကောင်းမြင်ကွင်း",
+"ကြယ်များပြည့်နေသော ကောင်းကင်အောက် တောက်ပနေသော ရှေးဟောင်းဘုရား",
+"အိပ်မက်စီးပွားရေးလုပ်ငန်းကို စတင်ဖွင့်လှစ်နေသော လူငယ်စွန့်ဦးတီထွင်သူ",
+"မြန်မာ့ကျေးလက်ဒေသကို ဖြတ်သန်းသွားသော ရုပ်ရှင်ဆန်သည့် ရထားခရီး"
+];
+
+const IMAGE_TITLES=[
+"လူငယ်မြန်မာခရီးသွားတစ်ဦး၏ ရုပ်ရှင်ဆန်သောပုံတူ",
+"ဖန်တီးမှုလုပ်ငန်းရှင်တစ်ဦး၏ ပရော်ဖက်ရှင်နယ် ဦးခေါင်းပုံ",
+"နီယွန်မြို့မီးရောင်အောက် ဖက်ရှင်ဓာတ်ပုံပုံစံ ပုံတူ",
+"မြန်မာ့ရိုးရာယဉ်ကျေးမှု ပုံတူ",
+"ကြော့ရှင်းသော မင်္ဂလာမောင်နှံပုံတူ",
+"အံ့ဩဖွယ် စုံထောက်ဇာတ်ကောင်ပုံတူ",
+"စိတ်ကူးယဉ်စစ်သည် ဇာတ်ကောင်ဒီဇိုင်း",
+"ဆိုက်ဘာပန့်ခ် သူရဲကောင်းဇာတ်ကောင်ဒီဇိုင်း",
+"လျှို့ဝှက်ဆန်းကြယ်သော အမျိုးသမီးဇာတ်ဆောင်ပုံတူ",
+"ပညာရှိ အသက်ကြီးပုံပြင်ပြောသူပုံတူ",
+"စက္ကူစွန်ကစားနေသော ကလေး",
+"ရွှေရောင်အလင်းချိန် မိသားစုပုံတူ",
+"လမ်းဘေးကော်ဖီဆိုင်မှာ ရယ်မောနေသော သူငယ်ချင်းများ",
+"မြစ်ကမ်းဘေးက ရင်ခုန်စရာချစ်သူစုံတွဲ",
+"တောင်ပေါ်က အထီးကျန်ခရီးသွား",
+"ရှေးဟောင်းဂစ်တာကိုင်ထားသော ဂီတသမား",
+"ခေတ်မီမီးဖိုချောင်ထဲက စားဖိုမှူး",
+"လှုပ်ရှားမှုအပြည့်ဖြင့် လမ်းပေါ်အကသမား",
+"ပရော်ဖက်ရှင်နယ် အားကစားသမားပုံတူ",
+"အနာဂတ်ဆေးရုံထဲက ဆရာဝန်",
+"နွေးထွေးသော စာသင်ခန်းထဲက ဆရာ",
+"မိုးသစ်တောထဲက ဓာတ်ပုံဆရာ",
+"ဆင်များနှင့်အတူ တောရိုင်းတိရစ္ဆာန်စောင့်ရှောက်သူ",
+"နေထွက်ချိန် တံငါသည်",
+"စပါးခင်းထဲက လယ်သမား",
+"ဘုန်းတော်ကြီးကျောင်းထဲ လမ်းလျှောက်နေသော ရဟန်း",
+"ရိုးရာအလုပ်ရုံထဲက လက်မှုပညာရှင်",
+"မြေစေးပုံဖော်နေသော အိုးလုပ်သူ",
+"ပန်းပဲမီးဖိုရှေ့က ပန်းပဲသမား",
+"ပန်းစည်းပြင်ဆင်နေသော ပန်းဆိုင်ပညာရှင်",
+"နွေးထွေးသော ကော်ဖီဆိုင်အတွင်းခန်း",
+"ဇိမ်ခံခေတ်မီ ဧည့်ခန်း",
+"ရိုးရှင်းသန့်ရှင်းသော ဖန်တီးမှုစတူဒီယို",
+"မြန်မာ့ရိုးရာ သစ်သားအိမ်",
+"စွန့်ပစ်ထားသော လျှို့ဝှက်ဟိုတယ်အခန်း",
+"သန်းခေါင်ယံ စုံထောက်ရုံးခန်း",
+"အနာဂတ်ဓာတ်ခွဲခန်းအတွင်းခန်း",
+"အာကာသယာဉ် မောင်းခန်းအတွင်းခန်း",
+"မှော်စာကြည့်တိုက်အတွင်းခန်း",
+"မြေအောက် ဆိုက်ဘာပန့်ခ်ဈေး",
+"ရှေးဟောင်းတောတွင်းဘုရားကျောင်း",
+"နေဝင်ချိန် ရွှေရောင်ဘုရားစေတီ",
+"မြူထူသော တောင်ပေါ်ဘုန်းတော်ကြီးကျောင်း",
+"အပူပိုင်းဒေသ ရေတံခွန်ရှုခင်း",
+"အပြာရောင်ဆည်းဆာချိန် ငြိမ်းချမ်းသောရေကန်",
+"မုန်တိုင်းထန်သော ပင်လယ်ကမ်းရိုးတန်း",
+"နှင်းဖုံးတောင်ရွာ",
+"အိမ်လေးပေါ် မြောက်အလင်းတန်း",
+"နေဝင်ချိန် သဲကန္တာရအိုအေစစ်",
+"မိုးရွာပြီးနောက် တောနက်ရှုခင်း",
+"နီယွန်ဆိုက်ဘာပန့်ခ် မဟာမြို့ကြီး",
+"အနာဂတ်အာရှမြို့ ကောင်းကင်မြင်ကွင်း",
+"မိုးရွာသော ရန်ကုန်မြို့ဟောင်းလမ်း",
+"စည်ကားသော ရိုးရာဈေး",
+"တိတ်ဆိတ်သော ကျေးလက်ရွာလမ်း"
+];
+
+function titleFor(cat,x,n){
+if(cat==="Video"){
+const title=VIDEO_TITLES[n-1]||VIDEO_TITLES[(n-1)%VIDEO_TITLES.length];
+return `ဗီဒီယိုဖန်တီးရန် — ${title}`;
+}
+if(cat==="Image"){
+const title=IMAGE_TITLES[n-1]||IMAGE_TITLES[(n-1)%IMAGE_TITLES.length];
+return `ပုံဖန်တီးရန် — ${title}`;
+}
+const meta=SONG_META[n-1];
+const title=
+meta
+? meta[0]
+: `ရင်ထဲထိစေမယ့် သီချင်း ${String(n).padStart(3,"0")}`;
+return `ရင်ထဲထိစေမယ့် — ${title}`;
+}
+function promptText(cat,x,n){
+if(cat==="Video"){
+return `Create a breathtaking cinematic AI video based on this concept: ${x}.
+Make it feel like a premium Myanmar/Asian film.
+Include clear visual storytelling, realistic human movement, natural expressions, consistent characters and wardrobe, cinematic camera movement, appropriate lighting, atmospheric depth, realistic textures, film-quality composition and a memorable ending.
+CAMERA:
+Specify lens, framing, camera movement and focus changes.
+MOTION:
+Realistic physics, hair, cloth, water and environmental movement.
+QUALITY:
+Photorealistic, cinematic, 4K, high temporal consistency.
+AVOID:
+Flicker, morphing, duplicate people, broken anatomy, warped hands, floating objects, sudden cuts, text, logos and watermarks.`;
+}
+if(cat==="Image"){
+return `Create an extremely beautiful premium-quality image of ${x}.
+Use professional composition, clear focal subject, cinematic lighting, realistic textures, believable proportions, accurate perspective, atmospheric depth, refined color grading, realistic shadows, tasteful depth of field and high dynamic range.
+OUTPUT:
+Photorealistic, ultra-detailed, cinematic, high-end campaign quality, 4K.
+AVOID:
+Distorted faces, extra fingers, duplicate objects, warped geometry, plastic skin, random artifacts, text, logos and watermarks.`;
+}
+const meta=SONG_META[n-1];
+const title=meta
+? meta[0]
+: "ရင်ထဲက သီချင်း";
+const meaning=meta
+? meta[1]
+: "နားထောင်သူရဲ့ခံစားချက်ကို ထိတွေ့စေမယ့် မူရင်းသီချင်းအကြောင်း။";
+return `Create a deeply emotional original Burmese/Myanmar song.
+SONG TITLE:
+${title}
+TITLE MEANING:
+${meaning}
+MAIN CONCEPT:
+${x}
+LANGUAGE:
+Burmese / Myanmar language.
+Define:
+
+- Genre
+- Mood
+- BPM / Tempo
+- Key
+- Vocal type
+- Vocal emotion
+- Instruments
+- Rhythm / Groove
+- Production style
+  LYRICS STRUCTURE:
+  [Intro]
+  [Verse 1]
+  [Pre-Chorus]
+  [Chorus]
+  [Verse 2]
+  [Pre-Chorus]
+  [Chorus]
+  [Bridge]
+  [Final Chorus]
+  [Outro]
+  Make the chorus memorable, poetic, emotional and easy to sing.
+  Write completely original lyrics.
+  Do not imitate a named artist.
+  OUTPUT:
+  Song Title
+  Title Meaning in Burmese
+  Music Style
+  Mood / Emotion
+  BPM & Key
+  Instruments
+  Full Burmese Lyrics
+  Short AI Music Generation Prompt`;
+  }
+
+
+
+
+/* Future Code - Supabase edition.
+   Only the PUBLIC key is embedded. All authorization MUST also be enforced by RLS.
+   Schema contract and policies: setup_supabase.sql. No service-role key is used.
+*/
+const CONFIG = Object.freeze({
+  url: "https://elfmdvybxcvczrnzjesw.supabase.co",
+  key: "sb_publishable_N_KVnlhnrf2NBYLZP_Ut9Q_9EwUnHLG",
+  lessons: "lessons", admins: "admins",
+  prompts: "fc_prompts", announcements: "fc_announcements",
+  bucket: "lesson-videos",
+  signedUrlSeconds: 7200,
+  tusEndpoint: "https://elfmdvybxcvczrnzjesw.storage.supabase.co/storage/v1/upload/resumable"
+});
+const LESSON_COLUMNS = "id,day,title,description,video_path,video_name,video_size,video_mime,is_published,created_at,updated_at,created_by";
+const $ = id => document.getElementById(id);
+const state = {
+  sb: null, user: null, admin: false, lessons: [], prompts: [], announcements: [],
+  ready: false, busy: false, loading: false, authEpoch: 0, authTask: null, syncingUid: undefined,
+  page: "home", promptCategory: "Video", favoritesOnly: false,
+  previewUrl: null, staged: null, upload: null, uploadReject: null, paused: false, cancelling: false,
+  bucketInfo: null, editingVersion: null, formId: null, loadEpoch: -1, lessonError: "", roleError: "",
+  playerLesson: null, playerNonce: 0, signedUntil: 0, renewing: false, lastProgressSave: 0,
+  pollTimer: null, draftOffered: false
+};
+const local = {
+  read(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } },
+  write(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch { return false; } },
+  remove(key) { try { localStorage.removeItem(key); } catch {} }
+};
+const userKey = key => "fc_v2_" + (state.user?.id || "guest") + "_" + key;
+const val = id => $(id)?.value.trim() || "";
+const esc = value => String(value ?? "").replace(/[&<>"']/g, c =>
+  ({"&":"&","<":"<",">":">",'"':""","'":"'"})[c]);
+const uuid = () => {
+  if (crypto.randomUUID) return crypto.randomUUID();
+  const a = crypto.getRandomValues(new Uint8Array(16));
+  a[6] = (a[6] & 15) | 64; a[8] = (a[8] & 63) | 128;
+  const s = Array.from(a, n => n.toString(16).padStart(2, "0")).join("");
+  return `${s.slice(0,8)}-${s.slice(8,12)}-${s.slice(12,16)}-${s.slice(16,20)}-${s.slice(20)}`;
+};
+const arrayLocal = key => { const a=local.read(userKey(key),[]); return Array.isArray(a)?a:[]; };
+const sizeText = n => {
+  n = Number(n) || 0; if (n < 1024) return n + " B";
+  const k = Math.min(3, Math.floor(Math.log(n)/Math.log(1024)));
+  return (n/1024**k).toFixed(1)+" "+["B","KB","MB","GB"][k];
+};
+const dateText = s => {
+  const d = new Date(s); if (!s || Number.isNaN(+d)) return "";
+  return d.toLocaleDateString("en-GB", {day:"numeric",month:"short",year:"numeric"});
+};
+const clock = n => `${Math.floor((Number(n)||0)/60)}:${String(Math.floor((Number(n)||0)%60)).padStart(2,"0")}`;
+function toast(message) {
+  $("toast").textContent=message; $("toast").classList.add("show");
+  clearTimeout(toast.timer); toast.timer=setTimeout(()=>$("toast").classList.remove("show"),5000);
+}
+function banner(text, kind="") { $("connectionBanner").textContent=text; $("connectionBanner").className="status-strip "+kind; }
+function readableError(e) {
+  const raw=String(e?.message || e?.error_description || e || "Unknown error");
+  const code=String(e?.code || "");
+  if (/Invalid login credentials/i.test(raw)) return "Email သို့မဟုတ် Password မမှန်ပါ။ သင်တန်း Auth အကောင့်ကို အသုံးပြုပါ။";
+  if (/Email not confirmed/i.test(raw)) return "Email အတည်ပြုထားခြင်း မရှိသေးပါ။ သင်တန်းဆရာထံ ဆက်သွယ်ပါ။";
+  if (/row.level security|permission denied|42501/i.test(raw+" "+code)) return "ခွင့်ပြုချက် မရှိပါ။ Admin UID နှင့် Database / Storage RLS policies ကို စစ်ပါ။\n"+raw;
+  if (/PGRST20[45]|42P01|42703/.test(code) || /schema cache|does not exist|Could not find/i.test(raw))
+    return "Table / column သတ်မှတ်ချက် မကိုက်ပါ။ setup_supabase.sql နှင့် သင့် schema ကို စစ်ပါ။\n"+raw;
+  if (/bucket.*not found/i.test(raw)) return `Private bucket "${CONFIG.bucket}" မတွေ့ပါ။ Bucket name ကို စစ်ပါ။`;
+  if (/exceeded.*size|too large|413|maximum.*size/i.test(raw)) return "ဗီဒီယိုဖိုင်သည် Supabase plan / global / bucket size limit ထက် ကြီးနေပါတယ်။";
+  if (/Failed to fetch|NetworkError|network|fetch failed|Load failed/i.test(raw)) return "ကွန်ရက်ချိတ်ဆက်မှု မအောင်မြင်ပါ။ Internet၊ Supabase URL နှင့် App Creator network permissions ကို စစ်ပါ။";
+  return raw;
+}
+function requireClient() {
+  if (!state.sb) throw new Error("Supabase library မတက်သေးပါ။ Internet / script permissions ကို စစ်ပါ။");
+  return state.sb;
+}
+function requireAdmin() {
+  requireClient();
+  if (!state.user || !state.admin) throw new Error("Admin အကောင့်ဖြင့် Login ဝင်ရန် လိုအပ်ပါတယ်။");
+}
+function visibleLessons() {
+  // RLS, not this client-side filter, is the security boundary.
+  return state.lessons.filter(x=>state.admin || (x.is_published && x.video_path));
+}
+function sortedLessons(list=visibleLessons()) {
+  return [...list].sort((a,b)=>String(a.day).localeCompare(String(b.day),undefined,{numeric:true}) ||
+    String(a.created_at).localeCompare(String(b.created_at)));
+}
+function getCompletedLessons() { return arrayLocal("completed"); }
+function getWatchPositions() {
+  const p=local.read(userKey("positions"),{});
+  return p && typeof p==="object" && !Array.isArray(p) ? p : {};
+}
+function updateProgress() {
+  const lessons=visibleLessons().filter(x=>x.is_published && x.video_path);
+  const completed=getCompletedLessons();
+  const done=lessons.filter(x=>completed.includes(x.id)).length;
+  const pct=lessons.length ? Math.round(done/lessons.length*100) : 0;
+  $("coursePercent").textContent=pct+"%"; $("homeProgress").textContent=pct+"%";
+  $("homeProgressBar").style.width=pct+"%";
+  $("availableCount").textContent=lessons.length;
+  $("completedCount").textContent=done; $("remainingCount").textContent=lessons.length-done;
+}
+function toggleLessonComplete(id) {
+  if (!state.user) return openLogin();
+  let completed=getCompletedLessons();
+  completed=completed.includes(id) ? completed.filter(x=>x!==id) : [...completed,id];
+  local.write(userKey("completed"),completed); renderCourses(); renderHome(); updateProgress();
+}
+function markCurrentComplete() {
+  if (!state.playerLesson || !state.user) return;
+  const ids=getCompletedLessons();
+  if (!ids.includes(state.playerLesson.id)) {
+    ids.push(state.playerLesson.id); local.write(userKey("completed"),ids);
+  }
+  $("completeVideoButton").textContent="✓ လေ့လာပြီးပြီ"; updateProgress(); toast("လေ့လာပြီးကြောင်း သိမ်းထားပါပြီ။");
+}
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); }
+  catch {
+    const el=document.createElement("textarea"); el.value=text; document.body.appendChild(el);
+    el.select(); const ok=document.execCommand("copy"); el.remove();
+    if (!ok) return toast("Copy မလုပ်နိုင်ပါ။ စာသားကို ရွေးပြီး Copy လုပ်ပါ။");
+  }
+  toast("Copy လုပ်ပြီးပါပြီ ✓");
+}
+function showPage(id, push=true) {
+  if (!document.querySelector(`section.page[id="${CSS.escape(id)}"]`)) id="home";
+  if (id==="admin" && !state.admin) { if (state.ready) openAdmin(); id="profile"; }
+  if (state.page==="watch" && id!=="watch") stopPlayer();
+  state.page=id;
+  document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===id));
+  document.querySelectorAll(".nav").forEach(x=>x.classList.toggle("active",x.dataset.page===id || (id==="watch" && x.dataset.page==="course")));
+  if (id==="course") renderCourses();
+  if (id==="prompts") renderPrompts(state.favoritesOnly);
+  if (id==="notes") renderNotes();
+  if (id==="profile") updateAccountUI();
+  if (id==="admin") { renderAdmin(); offerDraftRecovery(); }
+  if (push && location.hash!=="#"+id) {
+    try { history.pushState({page:id},"","#"+id); } catch {}
+  }
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function openLogin(adminIntent=false) {
+  if (state.user) return showPage(adminIntent && state.admin ? "admin" : "profile");
+  state.loginAdminIntent=adminIntent;
+  $("loginTitle").textContent=adminIntent ? "🛡️ Admin Login" : "🔐 Future Code Login";
+  $("loginError").textContent=""; $("modal").classList.add("show");
+  setTimeout(()=>$("aEmail").focus(),40);
+}
+function openAdmin() {
+  if (state.admin) return showPage("admin");
+  if (!state.user) return openLogin(true);
+  showPage("profile"); toast(state.roleError || "ဤအကောင့်သည် Student ဖြစ်ပါတယ်။ admins table ထဲရှိ UID ကို စစ်ပါ။");
+}
+function closeModal() { $("modal").classList.remove("show"); $("aPass").value=""; }
+function updateAccountUI() {
+  $("accountButton").textContent=state.user ? (state.admin ? "🛡️ Admin" : "👤 Student") : "ဝင်ရန်";
+  $("accountButton").onclick=()=>state.user?showPage(state.admin?"admin":"profile"):openLogin();
+  $("adminOut").classList.toggle("hidden",!state.user);
+  $("profileLogin").classList.toggle("hidden",!!state.user);
+  $("profileEmail").textContent=state.user?.email || "သင်တန်းအကောင့်ဖြင့် ဝင်ပါ။";
+  $("profileRole").textContent=state.user?(state.admin?"Admin":"Student"):"Guest";
+  $("profileUid").textContent=state.user?"User ID: "+state.user.id:"";
+  $("adminCard").style.display=state.admin?"block":"none";
+  $("studentSummary").classList.toggle("hidden",!state.user);
+  $("welcomeText").textContent=state.user ? "မင်္ဂလာပါ — "+state.user.email : "";
+}
+function clearSessionUI() {
+  stopPlayer();
+  if (state.upload) {
+    state.upload.abort(false).catch(()=>{});
+    state.uploadReject?.(new Error("Session ပြီးဆုံးသွားပါပြီ။ Login ပြန်ဝင်ပါ။"));
+  }
+  state.user=null; state.admin=false; state.lessons=[]; state.prompts=[]; state.announcements=[];
+  state.bucketInfo=null; state.staged=null; state.editingVersion=null; state.formId=null; state.draftOffered=false; state.loading=false;
+  revokePreview(); $("lessonForm").reset(); $("editingLessonId").value="";
+  $("formError").textContent=""; $("videoUploadStatus").textContent="";
+  $("uploadPanel").classList.add("hidden"); $("uploadResumeNotice").classList.add("hidden");
+  $("adminLessons").replaceChildren(); $("diagnostics").replaceChildren();
+  updateAccountUI(); renderCourses(); renderPrompts(); renderAnnouncements(); renderNotes(); renderHome();
+  if (state.page==="admin" || state.page==="watch") showPage("home");
+}
+async function applySession(session) {
+  const uid=session?.user?.id || null;
+  if (state.authTask && state.syncingUid===uid) return state.authTask;
+  if (uid && state.ready && state.user?.id===uid) return;
+  const epoch=++state.authEpoch;
+  state.syncingUid=uid;
+  const task=(async()=>{
+    if (!session) {
+      clearSessionUI(); state.ready=true;
+      banner("သင်ခန်းစာဗီဒီယိုများ ကြည့်ရန် သင်တန်းအကောင့်ဖြင့် Login ဝင်ပါ။");
+      return;
+    }
+    try {
+      // Never infer admin status from user_metadata or a local flag.
+      const {data:userData,error:userError}=await requireClient().auth.getUser();
+      if (userError) throw userError;
+      if (epoch!==state.authEpoch) return;
+      if (state.user?.id && state.user.id!==userData.user.id) clearSessionUI();
+      state.user=userData.user; state.admin=false; state.roleError="";
+      const {data,error}=await state.sb.from(CONFIG.admins).select("user_id").eq("user_id",state.user.id).maybeSingle();
+      if (epoch!==state.authEpoch) return;
+      if (error) state.roleError=readableError(error);
+      else state.admin=!!data;
+      state.ready=true; updateAccountUI();
+      await refreshLessons(false,epoch);
+      if (epoch!==state.authEpoch) return;
+      await Promise.allSettled([loadCustomPrompts(),loadAnnouncements()]);
+      if (epoch!==state.authEpoch) return;
+      renderPrompts(); renderAnnouncements(); renderNotes(); renderHome(); renderAdmin();
+      if (state.roleError) banner("Login ဝင်ပြီးပါပြီ။ Admin ခွင့်ပြုချက် စစ်မရသေးပါ — "+state.roleError,"error");
+      else if (!state.lessonError) banner((state.admin?"Admin":"Student")+" အဖြစ် ဝင်ထားသည် · သင်ခန်းစာများ Supabase မှ ဖတ်ထားသည်","ok");
+      if (state.admin) offerDraftRecovery();
+    } catch (e) {
+      if (epoch!==state.authEpoch) return;
+      clearSessionUI(); state.ready=true; banner(readableError(e),"error"); throw e;
+    }
+  })();
+  state.authTask=task;
+  try { await task; }
+  finally { if (state.authTask===task) { state.authTask=null; state.syncingUid=undefined; } }
+}
+async function adminLogin() {
+  const form=$("loginForm");
+  if (!form.reportValidity()) return;
+  const btn=$("loginButton"); btn.disabled=true; btn.textContent="ဝင်နေသည်…"; $("loginError").textContent="";
+  try {
+    const {data,error}=await requireClient().auth.signInWithPassword({email:val("aEmail"),password:$("aPass").value});
+    if (error) throw error;
+    await applySession(data.session);
+    closeModal();
+    showPage(state.admin?"admin":"course");
+    toast(state.admin?"Admin Login အောင်မြင်ပါတယ် ✓":"Login အောင်မြင်ပါတယ် ✓");
+  } catch(e) { $("loginError").textContent=readableError(e); }
+  finally { btn.disabled=false; btn.textContent="🔐 Login"; }
+}
+async function adminLogout() {
+  if (state.busy) return toast("Upload / သိမ်းဆည်းမှု ပြီးသည်အထိ စောင့်ပါ သို့မဟုတ် Upload ကို ပယ်ဖျက်ပါ။");
+  saveWatchPosition();
+  try {
+    const {error}=await requireClient().auth.signOut({scope:"local"});
+    if (error) throw error;
+    ++state.authEpoch; clearSessionUI(); banner("Logout လုပ်ပြီးပါပြီ။"); showPage("home");
+  } catch(e) { toast(readableError(e)); }
+}
+async function refreshLessons(notify=true,epoch=state.authEpoch) {
+  if (!state.user || !state.sb) { renderCourses(); return; }
+  if (state.loading && state.loadEpoch===epoch) return;
+  state.loading=true; state.loadEpoch=epoch; state.lessonError="";
+  try {
+    let all=[],from=0;
+    // Fetch deterministic pages; do not silently stop at the default 1000-row limit.
+    for (;;) {
+      let q=state.sb.from(CONFIG.lessons).select(LESSON_COLUMNS).order("created_at",{ascending:true}).order("id",{ascending:true}).range(from,from+499);
+      if (!state.admin) q=q.eq("is_published",true);
+      const {data,error}=await q;
+      if (error) throw error;
+      if (epoch!==state.authEpoch) return;
+      all.push(...(data||[])); if (!data || data.length<500) break; from+=500;
+    }
+    state.lessons=all;
+    if (state.playerLesson) {
+      const still=all.find(x=>x.id===state.playerLesson.id);
+      if (!still || (!state.admin && !still.is_published)) {
+        stopPlayer(); showPage("course"); toast("ဤသင်ခန်းစာကို မရရှိနိုင်တော့ပါ။");
+      } else if (still.video_path!==state.playerLesson.video_path) {
+        stopPlayer(); showPage("course"); toast("ဗီဒီယို ပြင်ဆင်ထားပါသည်။ သင်ခန်းစာကို ပြန်ဖွင့်ပါ။");
+      }
+    }
+    if (notify) toast("သင်ခန်းစာများ ပြန်ဖတ်ပြီးပါပြီ။");
+    if (!state.roleError) banner((state.admin?"Admin":"Student")+" · Supabase မှ သင်ခန်းစာများ ဖတ်ထားသည်","ok");
+  } catch(e) {
+    if (epoch!==state.authEpoch) return;
+    state.lessonError=readableError(e);
+    banner(state.lessonError,"error");
+    if (notify) toast("သင်ခန်းစာများ ဖတ်မရပါ။ ချိတ်ဆက်မှုစစ်ဆေးရန်ကို ကြည့်ပါ။");
+  } finally {
+    if (state.loadEpoch===epoch) state.loading=false;
+    if (epoch===state.authEpoch) { renderCourses(); renderHome(); renderAdmin(); updateProgress(); }
+  }
+}
+function lessonCard(lesson, compact=false) {
+  const card=document.createElement("div"); card.className="card lesson-day";
+  const done=getCompletedLessons().includes(lesson.id);
+  const positions=getWatchPositions(); const position=positions[lesson.id]?.seconds||0;
+  card.innerHTML=`<div class="lesson-meta"><span class="tag">${esc(lesson.day)}</span>
+  <span class="${lesson.is_published?"tag ok":"tag warn"}">${lesson.is_published?"Published":"Draft"}</span></div>
+  ${compact?"":`<div class="lesson-cover"><span class="play-icon">▶</span><div class="label">FUTURE CODE<br>${lesson.video_path?esc(lesson.video_mime || "VIDEO"):"VIDEO မတင်ရသေးပါ"}</div><span class="tag">${sizeText(lesson.video_size)}</span></div>`}
+  <h3>${esc(lesson.title)}</h3><p class="small description">${esc(compact?(lesson.description||"").slice(0,150):lesson.description)}</p>
+  <p class="small">${dateText(lesson.created_at)}${position>0?" · "+clock(position)+" မှ ဆက်ကြည့်ရန်":""}</p>
+  <div class="lesson-actions"><button class="btn" data-watch ${lesson.video_path?"":"disabled"}>${position>0?"▶ ဆက်ကြည့်မည်":"▶ သင်ခန်းစာကြည့်မည်"}</button>
+  <span class="${done?"tag ok":"small"}">${done?"လေ့လာပြီးပြီ ✓":""}</span></div>`;
+  card.querySelector("[data-watch]").onclick=()=>watchLesson(lesson.id);
+  if (!compact) {
+    const label=document.createElement("label"); label.className="check";
+    const checkbox=document.createElement("input"); checkbox.type="checkbox"; checkbox.checked=done;
+    checkbox.onchange=()=>toggleLessonComplete(lesson.id);
+    label.append(checkbox,document.createTextNode("ဒီသင်ခန်းစာကို လေ့လာပြီးပါပြီ")); card.append(label);
+  }
+  return card;
+}
+function renderCourses() {
+  const box=$("courseContainer"); box.replaceChildren();
+  if (!state.user) {
+    box.innerHTML='<div class="card empty"><h3>🔒 သင်တန်းအကောင့်ဖြင့် ဝင်ပါ</h3><p class="small">သင်ခန်းစာဗီဒီယိုများကို Login ဝင်ထားသော ကျောင်းသားများသာ ကြည့်နိုင်ပါတယ်။</p><button class="btn" onclick="openLogin()">🔐 Login</button></div>'; updateProgress(); return;
+  }
+  if (state.lessonError) {
+    const err=document.createElement("div"); err.className="status-strip error"; err.textContent=state.lessonError; box.append(err);
+  }
+  const q=val("lessonSearch").toLowerCase();
+  const list=sortedLessons().filter(x=>(x.title+" "+x.day+" "+x.description).toLowerCase().includes(q));
+  if (!list.length) {
+    const empty=document.createElement("div"); empty.className="card empty";
+    empty.textContent=state.loading?"သင်ခန်းစာများ ဖတ်နေသည်…":(q?"သင်ခန်းစာ မတွေ့ပါ။":"Publish လုပ်ထားသော သင်ခန်းစာ မရှိသေးပါ။");
+    box.append(empty);
+  }
+  list.forEach(x=>box.append(lessonCard(x))); updateProgress();
+}
+function renderHome() {
+  updateAccountUI(); updateProgress(); const recent=$("recentLessons"); recent.replaceChildren();
+  const lessons=visibleLessons().filter(x=>x.is_published && x.video_path);
+  [...lessons].sort((a,b)=>String(b.created_at).localeCompare(String(a.created_at))).slice(0,3)
+    .forEach(x=>recent.append(lessonCard(x,true)));
+  const cont=$("continueLearning"); cont.replaceChildren();
+  const positions=getWatchPositions(),done=getCompletedLessons();
+  const last=lessons.filter(x=>positions[x.id]?.seconds>0 && !done.includes(x.id))
+    .sort((a,b)=>(positions[b.id]?.at||0)-(positions[a.id]?.at||0))[0];
+  if (last) { const h=document.createElement("h3"); h.textContent="▶ ဆက်လေ့လာရန်"; cont.append(h,lessonCard(last,true)); }
+}
+function renderAdmin() {
+  if (!state.admin) return;
+  $("adminLessonCount").textContent=state.lessons.length;
+  $("adminPromptCount").textContent=state.prompts.length+300;
+  const box=$("adminLessons"); box.replaceChildren();
+  if (!state.lessons.length) { box.innerHTML='<p class="small">သင်ခန်းစာ မရှိသေးပါ။ အပေါ်မှ ဖိုင်ရွေးပြီး တင်နိုင်ပါတယ်။</p>'; return; }
+  sortedLessons(state.lessons).forEach(x=>{
+    const card=document.createElement("div"); card.className="lesson-admin-item";
+    card.innerHTML=`<div class="lesson-meta"><span class="tag">${esc(x.day)}</span><span class="tag ${x.is_published?"ok":"warn"}">${x.is_published?"Published":"Draft"}</span></div>
+    <h4 style="margin-top:9px">${esc(x.title)}</h4><p class="small description">${esc(x.description)}</p>
+    <p class="small">${x.video_path?"🎬 "+esc(x.video_name||"Video")+" · "+sizeText(x.video_size):"Video မတင်ရသေးပါ"} · ${dateText(x.created_at)}</p>
+    <div class="action-row"><button class="btn" data-edit>✏️ ပြင်မည်</button><button class="btn secondary" data-view ${x.video_path?"":"disabled"}>▶ ကြည့်မည်</button>
+    <button class="btn secondary" data-publish>${x.is_published?"Draft ပြောင်းမည်":"Publish လုပ်မည်"}</button><button class="btn danger" data-delete>🗑️ ဖျက်မည်</button></div>`;
+    card.querySelector("[data-edit]").onclick=()=>editLesson(x.id);
+    card.querySelector("[data-view]").onclick=()=>watchLesson(x.id);
+    card.querySelector("[data-publish]").onclick=()=>togglePublish(x.id);
+    card.querySelector("[data-delete]").onclick=()=>deleteLesson(x.id);
+    if (state.busy) card.querySelectorAll("button").forEach(b=>b.disabled=true);
+    box.append(card);
+  });
+}
+
+
+
+/* Upload / metadata commit are two separate services. Staging plus an unused-file
+   cleanup queue avoids deleting a working video when the metadata request fails. */
+function setBusy(value) {
+  state.busy=value;
+  $("lessonFields").disabled=value;
+  $("saveLessonButton").disabled=value; $("resetLessonButton").disabled=value;
+  $("saveLessonButton").textContent=value?"လုပ်ဆောင်နေသည်…":"💾 Upload & Lesson သိမ်းမည်";
+  renderAdmin();
+}
+function revokePreview() {
+  const video=$("videoPreview"); video.pause(); video.removeAttribute("src"); video.load(); video.classList.add("hidden");
+  if (state.previewUrl) URL.revokeObjectURL(state.previewUrl);
+  state.previewUrl=null;
+}
+function fileIdentity(file) { return [file.name,file.size,file.lastModified,file.type].join("|"); }
+function formData() {
+  return {day:val("adminDay"),title:val("adminLessonTitle"),description:val("adminLessonDescription"),is_published:$("adminPublished").checked};
+}
+function persistStaged() {
+  if (state.staged && state.user)
+    local.write(userKey("pending_upload"),{...state.staged,form:formData(),editingVersion:state.editingVersion});
+}
+function clearStaged() {
+  local.remove(userKey("pending_upload")); state.staged=null;
+  $("uploadResumeNotice").classList.add("hidden");
+}
+function cleanupQueue() { return arrayLocal("cleanup"); }
+function queueCleanup(path) {
+  if (!path) return;
+  const q=cleanupQueue(); if (!q.includes(path)) q.push(path);
+  local.write(userKey("cleanup"),q);
+}
+async function removeUnusedFile(path) {
+  if (!path) return true;
+  requireAdmin();
+  // Check live references first; never remove a file still referenced by a lesson.
+  const {data,error}=await state.sb.from(CONFIG.lessons).select("id").eq("video_path",path).limit(1);
+  if (error) throw error;
+  if (data?.length) return false;
+  const {error:removeError}=await state.sb.storage.from(CONFIG.bucket).remove([path]);
+  if (removeError) throw removeError;
+  return true;
+}
+async function retryCleanup(quiet=false) {
+  if (!state.admin || (state.busy && !quiet)) return;
+  const q=cleanupQueue(), remaining=[];
+  for (const path of q) {
+    try { await removeUnusedFile(path); }
+    catch { remaining.push(path); }
+  }
+  local.write(userKey("cleanup"),remaining);
+  $("cleanupStatus").textContent=remaining.length ?
+    `${remaining.length} ဖိုင် ရှင်းရန်ကျန်သည်။ Network / Storage DELETE policy ကို စစ်ပါ။` :
+    "ဖျက်ရန်ကျန်သည့် ဖိုင်ဟောင်း မရှိပါ။";
+  if (!quiet) toast($("cleanupStatus").textContent);
+}
+async function discardStaged() {
+  if (state.staged?.path) {
+    queueCleanup(state.staged.path);
+    await retryCleanup(true);
+  }
+  clearStaged();
+}
+async function handleVideoSelection() {
+  const input=$("adminVideoFile"),file=input.files?.[0]; if (!file) return;
+  if (state.staged && state.staged.fileIdentity!==fileIdentity(file)) {
+    if (!confirm("မပြီးသေးသော Upload တစ်ခု ရှိပါတယ်။ အဲဒီဖိုင်ကို ပယ်ဖျက်ပြီး ဖိုင်အသစ်ရွေးမလား?")) { input.value=""; return; }
+    await discardStaged();
+  }
+  revokePreview();
+  $("selectedVideoInfo").textContent=file.name+" · "+sizeText(file.size);
+  state.previewUrl=URL.createObjectURL(file); $("videoPreview").src=state.previewUrl;
+  $("videoPreview").classList.remove("hidden");
+  $("videoPreview").onerror=()=>{
+    $("selectedVideoInfo").textContent=file.name+" · "+sizeText(file.size)+" — ဒီ browser မှာ Preview မဖွင့်နိုင်ပါ။ MP4 (H.264/AAC) ဖြင့် ပြန် export လုပ်ရန် လိုနိုင်ပါတယ်။";
+  };
+  $("formError").textContent="";
+}
+async function resetLessonForm(force=false) {
+  if (state.busy && !force) return;
+  if (!force && !state.staged) {
+    const pending=local.read(userKey("pending_upload"),null);
+    if (pending?.userId===state.user?.id) state.staged=pending;
+  }
+  if (!force && state.staged) {
+    if (!confirm("မပြီးသေးသော Upload ကို ပယ်ဖျက်ပြီး Form အသစ်စမလား?")) return false;
+    await discardStaged();
+  }
+  revokePreview();
+  $("lessonForm").reset(); $("editingLessonId").value="";
+  state.editingVersion=null; state.formId=null;
+  $("uploadPanel").classList.add("hidden"); $("formError").textContent="";
+  $("videoUploadStatus").textContent="";
+  $("selectedVideoInfo").textContent="MP4 ကို ဦးစားပေးပါ။ စာသားပဲပြင်မည်ဆိုပါက ဖိုင်ပြန်ရွေးရန် မလိုပါ။";
+  $("uploadResumeNotice").classList.add("hidden");
+  return true;
+}
+function offerDraftRecovery() {
+  if (!state.admin || state.staged || state.draftOffered) return;
+  const draft=local.read(userKey("pending_upload"),null);
+  if (!draft?.path || draft.userId!==state.user.id) return;
+  state.draftOffered=true;
+  const box=$("uploadResumeNotice"); box.classList.remove("hidden"); box.replaceChildren();
+  const text=document.createElement("p"); text.className="small";
+  text.textContent=`မပြီးသေးသော Upload: ${draft.video_name} (${sizeText(draft.video_size)})`;
+  const recover=document.createElement("button"); recover.type="button"; recover.className="btn secondary"; recover.textContent="ဆက်လုပ်မည်";
+  const discard=document.createElement("button"); discard.type="button"; discard.className="btn danger"; discard.textContent="ပယ်ဖျက်မည်"; discard.style.marginLeft="8px";
+  recover.onclick=()=>{
+    state.staged=draft; state.editingVersion=draft.editingVersion || null;
+    $("editingLessonId").value=draft.editingId || "";
+    $("adminDay").value=draft.form?.day || "";
+    $("adminLessonTitle").value=draft.form?.title || "";
+    $("adminLessonDescription").value=draft.form?.description || "";
+    $("adminPublished").checked=!!draft.form?.is_published;
+    $("selectedVideoInfo").textContent=draft.video_name+" · "+sizeText(draft.video_size);
+    $("videoUploadStatus").textContent=draft.uploaded ?
+      "ဖိုင် Upload ပြီးသားဖြစ်သည်။ Form ကို စစ်ပြီး Save နှိပ်ပါ။" :
+      "မူလဗီဒီယိုဖိုင်ကို ပြန်ရွေးပြီး Save နှိပ်ပါ။ ရရှိနိုင်ပါက Upload ကျန်သည့်နေရာမှ ဆက်တင်ပါမယ်။";
+    box.classList.add("hidden");
+  };
+  discard.onclick=async()=>{state.staged=draft;await discardStaged();toast("Upload မူကြမ်း ပယ်ဖျက်ထားပါပြီ။");};
+  box.append(text,recover,discard);
+}
+async function getPrivateBucket(force=false) {
+  requireAdmin();
+  if (state.bucketInfo && !force) return state.bucketInfo;
+  const {data,error}=await state.sb.storage.getBucket(CONFIG.bucket);
+  if (error) throw error;
+  if (!data) throw new Error(`Private bucket "${CONFIG.bucket}" မတွေ့ပါ။`);
+  if (data.public) throw new Error(`"${CONFIG.bucket}" သည် Public ဖြစ်နေသည်။ Private ပြောင်းပြီးမှ Upload ပြုလုပ်ပါ။`);
+  state.bucketInfo=data; return data;
+}
+function validateVideo(file,bucket) {
+  if (!file?.size) throw new Error("ဗီဒီယိုဖိုင်သည် အလွတ်ဖြစ်နေပါတယ်။");
+  const ext=file.name.split(".").pop().toLowerCase();
+  const mime={mp4:"video/mp4",webm:"video/webm",mov:"video/quicktime"}[ext];
+  if (!mime) throw new Error("MP4, WebM သို့မဟုတ် MOV ဖိုင်ကို ရွေးပါ။ MP4 ကို ဦးစားပေးပါ။");
+  if (file.type && !["video/mp4","video/webm","video/quicktime","application/octet-stream"].includes(file.type))
+    throw new Error("ရွေးထားသော ဖိုင်အမျိုးအစားသည် ဗီဒီယိုဖိုင် မဟုတ်ပါ။");
+  if (bucket.file_size_limit && file.size>Number(bucket.file_size_limit))
+    throw new Error(`ဖိုင် ${sizeText(file.size)} သည် bucket limit ${sizeText(bucket.file_size_limit)} ထက် ကြီးနေပါတယ်။`);
+  const allowed=bucket.allowed_mime_types;
+  if (Array.isArray(allowed) && allowed.length && !allowed.includes(mime) && !allowed.includes("video/*") && !allowed.includes("*/*"))
+    throw new Error(`${mime} ကို bucket မှ ခွင့်ပြုမထားပါ။ Allowed MIME types ကို စစ်ပါ။`);
+  return {ext,mime};
+}
+function setUploadProgress(percent,phase,detail="") {
+  $("uploadPanel").classList.remove("hidden");
+  $("uploadProgress").value=percent; $("uploadPercent").textContent=Math.floor(percent)+"%";
+  $("uploadPhase").textContent=phase; $("uploadDetail").textContent=detail;
+}
+async function uploadFile(file,staged) {
+  if (!window.tus?.Upload) throw new Error("Upload library မတက်သေးပါ။ Internet / CDN script permissions ကို စစ်ပါ။");
+  const start=Date.now(); let latest=0;
+  setUploadProgress(0,"Private Storage နှင့် ချိတ်ဆက်နေသည်…",sizeText(file.size));
+  $("pauseUploadButton").classList.remove("hidden"); $("cancelUploadButton").classList.remove("hidden");
+  $("pauseUploadButton").textContent="ခဏရပ်မည်"; state.paused=false; state.cancelling=false;
+  return new Promise((resolve,reject)=>{
+    state.uploadReject=reject;
+    const upload=new tus.Upload(file,{
+      endpoint:CONFIG.tusEndpoint,
+      retryDelays:[0,3000,5000,10000,20000],
+      chunkSize:6*1024*1024,
+      uploadDataDuringCreation:true,
+      removeFingerprintOnSuccess:true,
+      metadata:{bucketName:CONFIG.bucket,objectName:staged.path,contentType:staged.video_mime,cacheControl:"3600"},
+      headers:{apikey:CONFIG.key},
+      // Scope resuming to both account and target object, never only the filename.
+      fingerprint:async()=>["fc-v2",CONFIG.url,staged.userId,staged.path,staged.fileIdentity].join("|"),
+      onBeforeRequest:async request=>{
+        if (state.cancelling) throw new Error("Upload ပယ်ဖျက်ထားသည်။");
+        const {data,error}=await state.sb.auth.getSession();
+        if (error) throw error;
+        if (!data.session || data.session.user.id!==staged.userId) throw new Error("Upload ဆက်ရန် မူလအကောင့်ဖြင့် Login ပြန်ဝင်ပါ။");
+        // The publishable key is NOT a JWT. Storage receives the user's JWT.
+        request.setHeader("Authorization","Bearer "+data.session.access_token);
+        request.setHeader("apikey",CONFIG.key);
+      },
+      onProgress:(sent,total)=>{
+        latest=sent;
+        const seconds=Math.max(1,(Date.now()-start)/1000);
+        setUploadProgress(total?sent/total*100:0,"ဗီဒီယို တင်နေသည်",`${sizeText(sent)} / ${sizeText(total)} · ${sizeText(sent/seconds)}/s`);
+      },
+      onShouldRetry:(error,attempt,options)=>{
+        const status=error.originalResponse?.getStatus?.() || 0;
+        if (state.cancelling) return false;
+        const retry=status===0 || status===408 || status===409 || status===423 || status===429 || status>=500;
+        if (retry) $("uploadDetail").textContent=`ကွန်ရက်ကို ပြန်ကြိုးစားနေသည်… (${attempt+1}) · ${sizeText(latest)} ပို့ထားသည်`;
+        return retry;
+      },
+      onError:error=>reject(new Error("Upload မအောင်မြင်ပါ။ "+(error.originalResponse?.getBody?.() || error.message))),
+      onSuccess:()=>{ staged.uploaded=true; persistStaged(); resolve(staged.path); }
+    });
+    state.upload=upload;
+    (async()=>{
+      try {
+        const previous=await upload.findPreviousUploads();
+        const matching=previous.find(p=>p.metadata?.objectName===staged.path && p.metadata?.bucketName===CONFIG.bucket);
+        if (matching) upload.resumeFromPreviousUpload(matching);
+      } catch { /* Browser storage can be unavailable; a fresh upload still works. */ }
+      if (!state.cancelling) upload.start();
+    })().catch(reject);
+  }).finally(()=>{
+    state.upload=null; state.uploadReject=null; state.paused=false;
+    $("pauseUploadButton").classList.add("hidden"); $("cancelUploadButton").classList.add("hidden");
+  });
+}
+async function toggleUploadPause() {
+  if (!state.upload || state.cancelling) return;
+  const btn=$("pauseUploadButton"); btn.disabled=true;
+  try {
+    if (!state.paused) {
+      await state.upload.abort(false); state.paused=true;
+      btn.textContent="ဆက်တင်မည်"; $("uploadPhase").textContent="ခဏရပ်ထားသည်";
+    } else {
+      state.paused=false; btn.textContent="ခဏရပ်မည်"; state.upload.start();
+    }
+  } catch(e) { toast(readableError(e)); }
+  finally { btn.disabled=false; }
+}
+async function cancelUpload() {
+  if (!state.upload || state.cancelling || !confirm("Upload ကို ပယ်ဖျက်မလား?")) return;
+  state.cancelling=true;
+  const up=state.upload, reject=state.uploadReject;
+  try { await up.abort(true); }
+  catch { try { await up.abort(false); } catch {} }
+  const error=new Error("Upload ပယ်ဖျက်ထားပါပြီ။"); error.cancelled=true; reject?.(error);
+}
+async function verifyUploadedObject(staged) {
+  // This read also verifies that the complete object exists before committing a lesson.
+  const {data,error}=await state.sb.storage.from(CONFIG.bucket).createSignedUrl(staged.path,60);
+  if (error || !data?.signedUrl) throw error || new Error("Upload ပြီးသည့် ဖိုင်ကို Storage မှ စစ်မရသေးပါ။ Save ကို ထပ်စမ်းပါ။");
+}
+async function saveLesson() {
+  if (state.busy) return;
+  try { requireAdmin(); } catch(e) { toast(readableError(e)); return; }
+  if (!$("lessonForm").reportValidity()) return;
+  const pending=local.read(userKey("pending_upload"),null);
+  if (!state.staged && pending?.userId===state.user.id) {
+    state.draftOffered=false; offerDraftRecovery();
+    return toast("မပြီးသေးသော Upload ကို ဆက်လုပ်မည် သို့မဟုတ် ပယ်ဖျက်မည်ကို အရင်ရွေးပါ။");
+  }
+  const fields=formData(),editingId=val("editingLessonId");
+  let existing=editingId ? state.lessons.find(x=>x.id===editingId) : null;
+  if (editingId && !existing) return toast("မူလသင်ခန်းစာ မတွေ့ပါ။ Lessons ကို ပြန်ဖတ်ပါ။");
+  const file=$("adminVideoFile").files?.[0];
+  if (fields.is_published && !file && !state.staged?.uploaded && !existing?.video_path)
+    return toast("Publish မလုပ်မီ ဗီဒီယိုဖိုင် ရွေးပါ။ Video မရှိသေးပါက Draft အဖြစ် သိမ်းနိုင်ပါတယ်။");
+  setBusy(true); $("formError").textContent=""; $("videoUploadStatus").textContent="";
+  const actor=state.user.id;
+  let saved=false;
+  try {
+    if (file || state.staged) {
+      const bucket=await getPrivateBucket(true);
+      if (file) {
+        const {ext,mime}=validateVideo(file,bucket);
+        if (state.staged && state.staged.fileIdentity!==fileIdentity(file))
+          throw new Error("မူကြမ်းနှင့် ရွေးထားသောဖိုင် မတူပါ။ မူလဖိုင်ကို ရွေးပါ သို့မဟုတ် မူကြမ်းကို ပယ်ဖျက်ပါ။");
+        if (!state.staged) {
+          const targetId=editingId || state.formId || uuid();
+          state.formId=targetId;
+          state.staged={userId:actor,id:targetId,editingId,path:`${actor}/${targetId}/${uuid()}.${ext}`,
+            fileIdentity:fileIdentity(file),video_name:file.name,video_size:file.size,video_mime:mime,uploaded:false};
+          persistStaged();
+        }
+      }
+      if (!state.staged) throw new Error("Upload မူကြမ်း မတွေ့ပါ။");
+      if (state.staged.editingId!==editingId) throw new Error("Upload မူကြမ်းနှင့် Lesson မကိုက်ပါ။ Form ကို အသစ်ပြန်စပါ။");
+      if (!state.staged.uploaded) {
+        if (!file) throw new Error("Upload ဆက်ရန် မူလဗီဒီယိုဖိုင်ကို ပြန်ရွေးပါ။");
+        persistStaged(); await uploadFile(file,state.staged);
+      }
+      setUploadProgress(100,"Storage စစ်ဆေးနေသည်","ဗီဒီယိုတင်ပြီးပါပြီ။ Database ထဲ မသိမ်းရသေးပါ။");
+      await verifyUploadedObject(state.staged);
+    }
+    const id=editingId || state.staged?.id || state.formId || uuid();
+    state.formId=id;
+    const payload={...fields,
+      video_path:state.staged?.path || existing?.video_path || null,
+      video_name:state.staged?.video_name || existing?.video_name || null,
+      video_size:state.staged?.video_size ?? existing?.video_size ?? 0,
+      video_mime:state.staged?.video_mime || existing?.video_mime || null
+    };
+    $("videoUploadStatus").textContent="Database ထဲ သိမ်းနေသည်…";
+    if (state.staged) { persistStaged(); setUploadProgress(100,"Database ထဲ သိမ်းနေသည်","Upload ပြီးသည်။ Lesson သိမ်းဆည်းမှု စောင့်နေသည်။"); }
+    if (!state.user || state.user.id!==actor) throw new Error("မူလအကောင့်ဖြင့် Login ပြန်ဝင်ပါ။");
+    let result;
+    if (editingId) {
+      let q=state.sb.from(CONFIG.lessons).update(payload).eq("id",id);
+      if (state.editingVersion) q=q.eq("updated_at",state.editingVersion);
+      result=await q.select(LESSON_COLUMNS).maybeSingle();
+    } else {
+      result=await state.sb.from(CONFIG.lessons).insert({id,...payload,created_by:actor}).select(LESSON_COLUMNS).single();
+    }
+    if (result.error || !result.data) {
+      // A lost response or a stale update version does not prove failure.
+      // Reconcile identical content before reporting a conflict or cleaning files.
+      const check=await state.sb.from(CONFIG.lessons).select(LESSON_COLUMNS).eq("id",id).maybeSingle();
+      const matches=check.data && Object.entries(payload).every(([k,v])=>(check.data[k]??null)===(v??null));
+      if (check.error || !matches) throw result.error || check.error ||
+        new Error("ဤသင်ခန်းစာကို အခြားနေရာမှ ပြင်ထားခြင်း သို့မဟုတ် ဖျက်ထားခြင်း ဖြစ်နိုင်ပါတယ်။ စာရင်းကို ပြန်ဖတ်ပြီး စစ်ပါ။ မူကြမ်း Upload ကို ထိန်းထားပါတယ်။");
+      result=check;
+    }
+    saved=true;
+    if (existing?.video_path && existing.video_path!==payload.video_path) queueCleanup(existing.video_path);
+    clearStaged(); await resetLessonForm(true);
+    await refreshLessons(false);
+    if (result.data && !state.lessons.some(x=>x.id===result.data.id)) state.lessons.push(result.data);
+    renderAdmin();
+    $("videoUploadStatus").textContent=payload.is_published?"✓ Lesson သိမ်းပြီး Publish လုပ်ပြီးပါပြီ။":"✓ Lesson ကို Draft အဖြစ် သိမ်းပြီးပါပြီ။";
+    toast(payload.is_published?"သင်ခန်းစာ Publish လုပ်ပြီးပါပြီ ✓":"Draft သိမ်းပြီးပါပြီ ✓");
+    await retryCleanup(true);
+  } catch(e) {
+    if (e.cancelled) {
+      if (state.staged?.path) queueCleanup(state.staged.path);
+      clearStaged(); $("videoUploadStatus").textContent="Upload ပယ်ဖျက်ထားပါပြီ။";
+      await retryCleanup(true);
+    } else {
+      $("formError").textContent=readableError(e)+(state.staged?.uploaded?"\nဖိုင် Upload ပြီးသားကို ထိန်းထားပါတယ်။ Error ပြင်ပြီး Save ကို ထပ်နှိပ်နိုင်ပါတယ်။":"");
+      persistStaged();
+    }
+    if (!saved) toast("Lesson မသိမ်းရသေးပါ။ Form အောက်က အကြောင်းရင်းကို ကြည့်ပါ။");
+  } finally { setBusy(false); state.cancelling=false; }
+}
+async function editLesson(id) {
+  if (state.busy) return;
+  try { requireAdmin(); } catch(e) { return toast(readableError(e)); }
+  const pending=local.read(userKey("pending_upload"),null);
+  if (!state.staged && pending?.userId===state.user.id) state.staged=pending;
+  if (state.staged && !(await resetLessonForm())) return;
+  const lesson=state.lessons.find(x=>x.id===id); if (!lesson) return;
+  revokePreview(); $("adminVideoFile").value=""; clearStaged();
+  $("editingLessonId").value=lesson.id; state.editingVersion=lesson.updated_at;
+  $("adminDay").value=lesson.day || ""; $("adminLessonTitle").value=lesson.title || "";
+  $("adminLessonDescription").value=lesson.description || ""; $("adminPublished").checked=!!lesson.is_published;
+  $("formError").textContent=""; $("uploadPanel").classList.add("hidden");
+  $("selectedVideoInfo").textContent=lesson.video_path?"လက်ရှိဖိုင်: "+(lesson.video_name||lesson.video_path)+" · "+sizeText(lesson.video_size):"ဗီဒီယို မရှိသေးပါ။";
+  $("videoUploadStatus").textContent="Edit Mode — Video မပြောင်းပါက ဖိုင်အသစ်ရွေးရန် မလိုပါ။";
+  showPage("admin"); window.scrollTo({top:0,behavior:"smooth"});
+}
+async function togglePublish(id) {
+  if (state.busy) return;
+  try {
+    requireAdmin();
+    const lesson=state.lessons.find(x=>x.id===id); if (!lesson) return;
+    if (!lesson.is_published && !lesson.video_path) return toast("Publish မလုပ်မီ Video တင်ပါ။");
+    setBusy(true);
+    if (!lesson.is_published) await verifyUploadedObject({path:lesson.video_path});
+    const {data,error}=await state.sb.from(CONFIG.lessons).update({is_published:!lesson.is_published})
+      .eq("id",id).eq("updated_at",lesson.updated_at).select("id").maybeSingle();
+    if (error) throw error;
+    if (!data) throw new Error("သင်ခန်းစာကို အခြားနေရာမှ ပြင်ထားပါတယ်။ Refresh လုပ်ပြီး ထပ်စမ်းပါ။");
+    await refreshLessons(false); toast(lesson.is_published?"Draft ပြောင်းပြီးပါပြီ။":"Publish လုပ်ပြီးပါပြီ။");
+  } catch(e) { toast(readableError(e)); }
+  finally { setBusy(false); }
+}
+async function deleteLesson(id) {
+  if (state.busy) return;
+  try {
+    requireAdmin();
+    const lesson=state.lessons.find(x=>x.id===id); if (!lesson) return;
+    if (!confirm(`"${lesson.title}" ကို ဖျက်မှာ သေချာပါသလား?\nLesson နှင့် သက်ဆိုင်သော Video ဖိုင်ကိုပါ ဖျက်ပါမယ်။`)) return;
+    setBusy(true);
+    const {data,error}=await state.sb.from(CONFIG.lessons).delete().eq("id",id).eq("updated_at",lesson.updated_at).select("id").maybeSingle();
+    if (error) throw error;
+    if (!data) throw new Error("Lesson ကို ဖျက်မရပါ။ အခြားနေရာမှ ပြင်ထားနိုင်ပါတယ်။ Refresh လုပ်ပါ။");
+    if (state.playerLesson?.id===id) stopPlayer();
+    if (lesson.video_path) queueCleanup(lesson.video_path);
+    await retryCleanup(true); await refreshLessons(false);
+    if (val("editingLessonId")===id) { if(state.staged?.path)queueCleanup(state.staged.path); clearStaged(); await resetLessonForm(true); await retryCleanup(true); }
+    toast(cleanupQueue().length?"Lesson ဖျက်ပြီးပါပြီ။ ဖိုင်ဟောင်းရှင်းရန် Storage Cleanup ကို စစ်ပါ။":"Lesson နှင့် Video ဖိုင်ကို ဖျက်ပြီးပါပြီ။");
+  } catch(e) { $("formError").textContent=readableError(e); toast("ဖျက်မှု မအောင်မြင်ပါ။ အကြောင်းရင်းကို စစ်ပါ။"); }
+  finally { setBusy(false); }
+}
+async function restoreDefaultCourses() {
+  if (state.busy) return;
+  try {
+    requireAdmin();
+    if (!confirm("မရှိသေးသော Default သင်ခန်းစာများကို Draft အဖြစ် ထည့်မလား?")) return;
+    setBusy(true);
+    const missing=defaultCourses.filter(d=>!state.lessons.some(x=>x.day===d.day && x.title===d.title));
+    if (!missing.length) return toast("Default သင်ခန်းစာများ ရှိပြီးသားပါ။");
+    const {error}=await state.sb.from(CONFIG.lessons).insert(missing.map(x=>({...x,id:uuid(),is_published:false,created_by:state.user.id})));
+    if (error) throw error;
+    await refreshLessons(false); toast(`${missing.length} Draft သင်ခန်းစာ ထည့်ပြီးပါပြီ။`);
+  } catch(e) { $("formError").textContent=readableError(e); }
+  finally { setBusy(false); }
+}
+
+
+
+/* Signed URLs exist only in memory; the database stores an object path, never
+   an expiring URL. Playback is not DRM and cannot prevent screen recording. */
+function saveWatchPosition() {
+  const lesson=state.playerLesson,v=$("playerVideo");
+  if (!state.user || !lesson || !Number.isFinite(v.currentTime) || v.currentTime<1) return;
+  const positions=getWatchPositions();
+  positions[lesson.id]={seconds:v.currentTime,duration:Number.isFinite(v.duration)?v.duration:0,at:Date.now()};
+  local.write(userKey("positions"),positions);
+}
+function stopPlayer() {
+  saveWatchPosition(); ++state.playerNonce;
+  const v=$("playerVideo"); v.pause(); v.removeAttribute("src"); v.load();
+  state.playerLesson=null; state.signedUntil=0; state.renewing=false;
+}
+async function watchLesson(id) {
+  if (!state.user) return openLogin();
+  stopPlayer();
+  const nonce=state.playerNonce,uid=state.user.id;
+  showPage("watch");
+  $("playerTitle").textContent="သင်ခန်းစာ ဖွင့်နေသည်…"; $("playerError").textContent="";
+  $("playerDescription").textContent=""; $("playerDay").textContent=""; $("playerDate").textContent="";
+  try {
+    const {data:lesson,error}=await requireClient().from(CONFIG.lessons).select(LESSON_COLUMNS).eq("id",id).maybeSingle();
+    if (error) throw error;
+    if (nonce!==state.playerNonce || state.user?.id!==uid) return;
+    if (!lesson || !lesson.video_path || (!state.admin && !lesson.is_published))
+      throw new Error("ဤသင်ခန်းစာကို ကြည့်ရှုခွင့် မရှိပါ သို့မဟုတ် ဗီဒီယို မတင်ရသေးပါ။");
+    state.playerLesson=lesson;
+    $("playerTitle").textContent=lesson.title; $("playerDay").textContent=lesson.day;
+    $("playerDescription").textContent=lesson.description||""; $("playerDate").textContent=dateText(lesson.created_at);
+    $("completeVideoButton").textContent=getCompletedLessons().includes(id)?"✓ လေ့လာပြီးပြီ":"✓ လေ့လာပြီးပြီဟု မှတ်မည်";
+    await loadPlayerSource(getWatchPositions()[id]?.seconds||0,false,nonce);
+  } catch(e) { if (nonce===state.playerNonce) $("playerError").textContent=readableError(e); }
+}
+async function loadPlayerSource(position=0,shouldPlay=false,nonce=state.playerNonce) {
+  const lesson=state.playerLesson; if (!lesson || !state.user) return;
+  const {data,error}=await state.sb.storage.from(CONFIG.bucket).createSignedUrl(lesson.video_path,CONFIG.signedUrlSeconds);
+  if (nonce!==state.playerNonce || !state.user) return;
+  if (error) throw error;
+  if (!data?.signedUrl) throw new Error("ဗီဒီယိုအတွက် Private link မရရှိပါ။ Storage SELECT policy ကို စစ်ပါ။");
+  const v=$("playerVideo");
+  state.signedUntil=Date.now()+CONFIG.signedUrlSeconds*1000;
+  $("playerError").textContent="";
+  v.onloadedmetadata=()=>{
+    if (nonce!==state.playerNonce) return;
+    if (position>0 && Number.isFinite(v.duration)) v.currentTime=Math.min(position,Math.max(0,v.duration-1));
+    if (shouldPlay) v.play().catch(()=>{});
+  };
+  v.src=data.signedUrl; v.load();
+}
+async function retryVideo() {
+  if (!state.playerLesson || state.renewing) return;
+  state.renewing=true; $("retryVideoButton").disabled=true;
+  try { await loadPlayerSource($("playerVideo").currentTime||0,!$("playerVideo").paused); }
+  catch(e) { $("playerError").textContent=readableError(e); }
+  finally { state.renewing=false; $("retryVideoButton").disabled=false; }
+}
+function setupPlayerEvents() {
+  const v=$("playerVideo");
+  v.addEventListener("timeupdate",()=>{
+    if (Date.now()-state.lastProgressSave>5000) { saveWatchPosition(); state.lastProgressSave=Date.now(); }
+  });
+  v.addEventListener("pause",saveWatchPosition);
+  v.addEventListener("ended",()=>{saveWatchPosition();markCurrentComplete();});
+  v.addEventListener("error",()=>{
+    if (!state.playerLesson || !v.getAttribute("src")) return;
+    $("playerError").textContent="Video ဖွင့်မရပါ။ “Video ပြန်ဖွင့်မည်” ကို နှိပ်ပါ။ Network သို့မဟုတ် ဖိုင်၏ codec ကိုလည်း စစ်ပါ။";
+  });
+  v.addEventListener("play",()=>{
+    if (state.signedUntil && Date.now()>state.signedUntil-120000) retryVideo();
+  });
+  setInterval(()=>{
+    if (state.playerLesson && state.user && !v.paused && Date.now()>state.signedUntil-120000) retryVideo();
+  },30000);
+}
+function fill100(arr) {
+  const r=[...arr]; let i=1;
+  while(r.length<100) { r.push(`${arr[(i-1)%arr.length]} — variation ${i}`); i++; }
+  return r.slice(0,100);
+}
+const BUILTIN=Object.fromEntries([["Video",VIDEO],["Song",SONG],["Image",IMAGE]].map(([category,items])=>
+  [category,fill100(items).map((x,i)=>({
+    id:({Video:"bv",Song:"bs",Image:"bi"})[category]+i,
+    category,title:titleFor(category,x,i+1),text:promptText(category,x,i+1),
+    meaning:category==="Song"?(SONG_META[i]?.[1]||""):""
+  }))]
+));
+function getFavorites() { return arrayLocal("favorites"); }
+function toggleFavorite(id) {
+  let f=getFavorites(); f=f.includes(id)?f.filter(x=>x!==id):[...f,id];
+  local.write(userKey("favorites"),f); renderPrompts(state.favoritesOnly);
+}
+function showFavorites() { state.favoritesOnly=true; showPage("prompts"); renderPrompts(true); }
+function setPromptCategory(category) {
+  if (!["Video","Song","Image"].includes(category)) return;
+  state.promptCategory=category; state.favoritesOnly=false;
+  document.querySelectorAll(".prompt-tab").forEach(x=>x.classList.toggle("active",x.dataset.category===category));
+  renderPrompts();
+}
+async function loadCustomPrompts() {
+  if (!state.user || !state.sb) {state.prompts=[];return;}
+  const epoch=state.authEpoch;
+  const {data,error}=await state.sb.from(CONFIG.prompts).select("id,category,title,text,meaning,created_at").order("created_at",{ascending:false}).limit(1000);
+  if (epoch!==state.authEpoch) return;
+  if (error) {state.prompts=[];state.promptError=readableError(error);return;}
+  state.prompts=data||[];state.promptError="";
+}
+function renderPrompts(favoritesOnly=state.favoritesOnly) {
+  state.favoritesOnly=favoritesOnly;
+  let pool=favoritesOnly?[...state.prompts,...Object.values(BUILTIN).flat()]:
+    [...state.prompts.filter(x=>x.category===state.promptCategory),...BUILTIN[state.promptCategory]];
+  const fav=getFavorites(),q=val("promptSearch").toLowerCase();
+  if (favoritesOnly) pool=pool.filter(x=>fav.includes(x.id));
+  pool=pool.filter(x=>(x.title+" "+x.text+" "+(x.meaning||"")).toLowerCase().includes(q));
+  $("promptCount").textContent=pool.length+" Prompts";
+  const box=$("promptContainer");box.replaceChildren();
+  if (state.user && state.promptError) {
+    const warning=document.createElement("div"); warning.className="status-strip error";
+    warning.textContent="Custom Prompts ဖတ်မရပါ။ "+state.promptError; box.append(warning);
+  }
+  if (!pool.length) {box.innerHTML='<div class="card empty">Prompt မတွေ့ပါ။</div>';return;}
+  pool.forEach(x=>{
+    const card=document.createElement("div");card.className="card";
+    card.innerHTML=`<div class="lesson-meta"><span class="tag">${esc(x.category)}</span><button class="btn secondary" data-fav aria-label="Favorite">${fav.includes(x.id)?"❤️":"♡"}</button></div>
+    <h3>${esc(x.title)}</h3>${x.meaning?`<div class="song-meaning"><b>💡 ခေါင်းစဉ်အဓိပ္ပါယ်</b><br>${esc(x.meaning)}</div>`:""}
+    <div class="prompt-box">${esc(x.text)}</div><div class="action-row"><button class="btn" data-copy>📋 Copy</button></div>`;
+    card.querySelector("[data-copy]").onclick=()=>copyText(x.text);
+    card.querySelector("[data-fav]").onclick=()=>toggleFavorite(x.id);
+    box.append(card);
+  });
+}
+function resetPromptForm() { $("editingPromptId").value=""; $("adminPromptTitle").value=""; $("adminPromptText").value=""; }
+async function savePrompt() {
+  if (state.busy) return;
+  try {
+    requireAdmin();
+    const title=val("adminPromptTitle"),text=val("adminPromptText"),category=val("adminPromptCategory");
+    if (!title || !text) return toast("Title နှင့် Prompt ဖြည့်ပါ။");
+    if (!["Video","Song","Image"].includes(category)) return;
+    const id=val("editingPromptId");
+    const payload={title,text,category};
+    const {error}=id?await state.sb.from(CONFIG.prompts).update(payload).eq("id",id):
+      await state.sb.from(CONFIG.prompts).insert({...payload,created_by:state.user.id});
+    if (error) throw error;
+    resetPromptForm();await loadCustomPrompts();renderPrompts();renderAdmin();toast("Prompt ကို Database ထဲ သိမ်းပြီးပါပြီ။");
+  } catch(e) {toast(readableError(e));$("formError").textContent=readableError(e);}
+}
+async function loadAnnouncements() {
+  if (!state.user || !state.sb) {state.announcements=[];return;}
+  const epoch=state.authEpoch;
+  const {data,error}=await state.sb.from(CONFIG.announcements).select("id,title,text,created_at").order("created_at",{ascending:false}).limit(5);
+  if (epoch!==state.authEpoch) return;
+  if (error) {state.announcements=[];state.announcementError=readableError(error);return;}
+  state.announcements=data||[];state.announcementError="";
+}
+function renderAnnouncements() {
+  const box=$("homeAnnouncements");box.replaceChildren();
+  if (state.user && state.announcementError) {
+    const warning=document.createElement("div"); warning.className="status-strip error";
+    warning.textContent="Announcement ဖတ်မရပါ။ "+state.announcementError; box.append(warning); return;
+  }
+  if (!state.announcements.length) {
+    box.innerHTML=`<div class="card"><p class="small">${state.user?"Announcement မရှိသေးပါ။":"သင်တန်းကြေညာချက်များ ဖတ်ရန် Login ဝင်ပါ။"}</p></div>`;return;
+  }
+  state.announcements.forEach(x=>{
+    const card=document.createElement("div");card.className="card";
+    card.innerHTML=`<span class="tag">ANNOUNCEMENT · ${dateText(x.created_at)}</span><h3>${esc(x.title)}</h3><p class="small description">${esc(x.text)}</p>`;
+    box.append(card);
+  });
+}
+async function addAnnouncement() {
+  if (state.busy) return;
+  try {
+    requireAdmin();const title=val("adminAnnouncementTitle"),text=val("adminAnnouncementText");
+    if (!title || !text) return toast("Title နှင့် Message ဖြည့်ပါ။");
+    const {error}=await state.sb.from(CONFIG.announcements).insert({title,text,created_by:state.user.id});
+    if (error) throw error;
+    $("adminAnnouncementTitle").value="";$("adminAnnouncementText").value="";
+    await loadAnnouncements();renderAnnouncements();toast("Announcement တင်ပြီးပါပြီ။");
+  } catch(e) {toast(readableError(e));$("formError").textContent=readableError(e);}
+}
+function getNotes() {return arrayLocal("notes");}
+function saveNote() {
+  const text=val("noteInput");if(!text)return toast("မှတ်စုရေးပါ။");
+  const notes=getNotes();notes.unshift({id:uuid(),text,date:new Date().toLocaleString()});
+  if (!local.write(userKey("notes"),notes)) return toast("Browser storage ပြည့်နေ၍ မှတ်စု မသိမ်းနိုင်ပါ။");
+  $("noteInput").value="";renderNotes();toast("ဤ browser ထဲတွင် မှတ်စုသိမ်းပြီးပါပြီ။");
+}
+function deleteNote(id) {local.write(userKey("notes"),getNotes().filter(x=>x.id!==id));renderNotes();}
+function renderNotes() {
+  const box=$("notesContainer");box.replaceChildren();const notes=getNotes();
+  if (!notes.length) {box.innerHTML='<div class="card empty">📝 မှတ်စုမရှိသေးပါ။</div>';return;}
+  notes.forEach(x=>{
+    const card=document.createElement("div");card.className="card";
+    card.innerHTML=`<div class="note-item"><div><span class="small">${esc(x.date)}</span><p class="description">${esc(x.text)}</p></div><button class="btn danger">ဖျက်</button></div>`;
+    card.querySelector("button").onclick=()=>deleteNote(x.id);box.append(card);
+  });
+}
+async function runDiagnostics() {
+  const box=$("diagnostics"),btn=$("diagnosticsButton");box.replaceChildren();btn.disabled=true;
+  function line(name,detail,ok=true) {
+    const div=document.createElement("div");div.textContent=(ok?"✓ ":"⚠ ")+name+" — "+detail;box.append(div);
+  }
+  try {
+    if (!state.sb) {line("Supabase SDK","မတက်သေးပါ။ CDN / Internet စစ်ပါ။",false);return;}
+    line("Project",new URL(CONFIG.url).hostname);
+    line("Upload library",window.tus?.Upload?"TUS အသင့်ဖြစ်သည်":"မတက်သေးပါ",!!window.tus?.Upload);
+    const {data,error}=await state.sb.auth.getSession();if(error)throw error;
+    if (!data.session) {line("Login","အကောင့်ဝင်ပြီး ထပ်စစ်ပါ။",false);return;}
+    const verified=await state.sb.auth.getUser();if(verified.error)throw verified.error;
+    line("Auth",verified.data.user.email);
+    const role=await state.sb.from(CONFIG.admins).select("user_id").eq("user_id",verified.data.user.id).maybeSingle();
+    line("Admin",role.error?readableError(role.error):(role.data?"Admin UID တွေ့သည်":"Student အကောင့်"),!role.error);
+    for (const [name,cols] of [[CONFIG.lessons,LESSON_COLUMNS],[CONFIG.prompts,"id,category,title,text,meaning,created_at"],[CONFIG.announcements,"id,title,text,created_at"]]) {
+      const result=await state.sb.from(name).select(cols).limit(1);
+      line(name,result.error?readableError(result.error):"Table / columns ဖတ်နိုင်သည်",!result.error);
+    }
+    if (role.data) {
+      try {
+        const bucket=await getPrivateBucket(true);
+        line("Storage",`${CONFIG.bucket} · PRIVATE · bucket limit: ${bucket.file_size_limit?sizeText(bucket.file_size_limit):"project default"}`);
+      } catch(e) {line("Storage",readableError(e),false);}
+    } else line("Storage","ဖိုင် Upload စစ်ရန် Admin အကောင့် လိုအပ်သည်။");
+    line("လုံခြုံရေး","စစ်ဆေးမှုသည် ဖိုင်တင်ခြင်း၊ ဖျက်ခြင်း မပြုပါ။ Policies ကို audit_supabase.sql ဖြင့် ထပ်စစ်ပါ။");
+  } catch(e) {line("Error",readableError(e),false);}
+  finally {btn.disabled=false;}
+}
+async function init() {
+  updateAccountUI();renderCourses();renderPrompts();renderNotes();renderAnnouncements();renderHome();setupPlayerEvents();
+  window.addEventListener("popstate",()=>showPage(location.hash.slice(1)||"home",false));
+  window.addEventListener("online",()=>{if(state.user)refreshLessons(false);});
+  window.addEventListener("offline",()=>banner("Internet ပြတ်တောက်နေသည်။ Online ပြန်ရချိန်တွင် ဆက်လုပ်ပါ။","error"));
+  window.addEventListener("beforeunload",e=>{saveWatchPosition();persistStaged();if(state.busy){e.preventDefault();e.returnValue="";}});
+  document.addEventListener("visibilitychange",()=>{if(document.hidden)saveWatchPosition();else if(state.user&&!state.busy)refreshLessons(false);});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+  $("modal").addEventListener("keydown",e=>{
+    if(e.key!=="Tab")return;
+    const els=[...$("modal").querySelectorAll("button,input")].filter(x=>!x.disabled);
+    const first=els[0],last=els[els.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+  let taps=0,timer;
+  $("secretLogo").addEventListener("click",()=>{clearTimeout(timer);timer=setTimeout(()=>taps=0,1800);if(++taps>=7){taps=0;openAdmin();}});
+  if (!window.supabase?.createClient) {
+    state.ready=true;banner("Supabase SDK မတက်ပါ။ Internet သို့မဟုတ် App Creator ၏ external scripts ခွင့်ပြုချက်ကို စစ်ပြီး Refresh လုပ်ပါ။","error");return;
+  }
+  try {
+    state.sb=supabase.createClient(CONFIG.url,CONFIG.key,{
+      auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false,storageKey:"fc-auth-"+new URL(CONFIG.url).hostname}
+    });
+    // The callback must stay synchronous. SDK calls are deferred out of its auth lock.
+    state.sb.auth.onAuthStateChange((event,session)=>{
+      if(event==="SIGNED_OUT"){++state.authEpoch;clearSessionUI();banner("အကောင့်မှ ထွက်ထားသည်။");}
+      else if(event==="SIGNED_IN" || event==="INITIAL_SESSION" || event==="USER_UPDATED") {
+        setTimeout(()=>applySession(session).catch(e=>banner(readableError(e),"error")),0);
+      }
+    });
+    const {data,error}=await state.sb.auth.getSession();if(error)throw error;
+    await applySession(data.session);
+    const initial=location.hash.slice(1);
+    if(initial==="watch")showPage("course",false);
+    else if(initial)showPage(initial,false);
+    state.pollTimer=setInterval(()=>{
+      if(!document.hidden && state.user && !state.busy) refreshLessons(false);
+    },60000);
+  } catch(e) {state.ready=true;banner(readableError(e),"error");}
+}
+
+
+window.buildCharacter=function(){
+const n=val("charName");
+const a=val("charAge");
+const g=val("charGender");
+const f=val("charFace");
+const h=val("charHair");
+const cl=val("charClothing");
+const p=val("charPersonality");
+if(!n){
+toast("ဇာတ်ကောင်အမည်ထည့်ပါ");
+return;
+}
+const out=
+`Create a professional AI character reference.
+Character Name: ${n}
+Age: ${a}
+Gender: ${g}
+FACE:
+${f}
+HAIR:
+${h}
+CLOTHING:
+${cl}
+PERSONALITY:
+${p}
+CHARACTER CONSISTENCY RULES:
+Maintain the exact same face identity, facial structure, hairstyle, hair color, clothing, body proportions and age in every generated image and video.
+Do not redesign the character.
+Do not change the face, hairstyle, clothing or age unless explicitly requested.
+Create a cinematic, high-quality character reference for AI image and video generation.`;
+document.getElementById(
+"characterResult"
+).innerHTML=
+`<div class="card">
+   <div class="prompt-box">
+    ${esc(out)}
+   </div>
+   <button
+    class="btn"
+    style="margin-top:9px"
+    id="copyCharacter">
+    📋 Copy Character Prompt
+   </button>
+  </div>`;
+ document.getElementById(
+  "copyCharacter"
+ ).onclick=
+  ()=>copyText(out);
+};
+/* =========================================================
+STORY BUILDER
+========================================================= */
+window.buildStory=function(){
+const idea=val("storyIdea");
+const genre=val("storyGenre");
+const scenes=
+val("storyScenes")||"8";
+if(!idea){
+toast("Story Idea ထည့်ပါ");
+return;
+}
+const out=
+`မင်းက Professional Short Film Story Writer တစ်ယောက်အနေနဲ့ အလုပ်လုပ်ပါ။
+STORY IDEA:
+${idea}
+GENRE:
+${genre}
+NUMBER OF SCENES:
+${scenes}
+STORY STRUCTURE:
+HOOK
+↓
+BEGINNING
+↓
+PROBLEM
+↓
+DEVELOPMENT
+↓
+CONFLICT
+↓
+CLIMAX
+↓
+TWIST
+↓
+ENDING
+ပြီးရင် Scene ${scenes} ခုအတွက် Scene-by-Scene Plan ဖန်တီးပါ။
+Scene တစ်ခုစီမှာ အောက်ပါအချက်တွေ ပါရမယ်။
+
+1. Scene Number
+2. Location
+3. Time
+4. Character
+5. Action
+6. Emotion
+7. Dialogue
+8. Camera
+9. Lighting
+10. Visual Description
+11. Character Consistency Notes
+    ဇာတ်လမ်းတစ်လျှောက် Character ရဲ့ မျက်နှာ၊ အသက်၊ ဆံပင်၊ အဝတ်အစားနဲ့ ကိုယ်ခန္ဓာအချိုးအစားကို တသမတ်တည်း ထိန်းသိမ်းပါ။`;
+     document.getElementById(
+      "storyResult"
+     ).innerHTML=
+     `<div class="card">
+
+   <div class="prompt-box">
+    ${esc(out)}
+   </div>
+   <button
+    class="btn"
+    style="margin-top:9px"
+    id="copyStory">
+    📋 Copy Story Prompt
+   </button>
+  </div>`;
+ document.getElementById(
+  "copyStory"
+ ).onclick=
+  ()=>copyText(out);
+};
+/* =========================================================
+SCENE BUILDER
+========================================================= */
+window.buildScene=function(){
+const c=val("sceneCharacter");
+const l=val("sceneLocation");
+const a=val("sceneAction");
+const e=val("sceneEmotion");
+const cam=val("sceneCamera");
+if(!c||!l||!a){
+toast(
+"Character, Location, Action ဖြည့်ပါ"
+);
+return;
+}
+const out=
+`Create a cinematic AI video scene.
+CHARACTER:
+${c}
+LOCATION:
+${l}
+ACTION:
+${a}
+EMOTION:
+${e}
+CAMERA:
+${cam}
+CHARACTER CONSISTENCY:
+Maintain the exact same character identity, face, hairstyle, clothing, age and body proportions.
+MOTION:
+Use natural human motion, realistic physics, believable hair and cloth movement.
+CAMERA:
+Specify lens, framing, focus and camera movement.
+LIGHTING:
+Use cinematic lighting appropriate to the location and emotion.
+TEMPORAL CONSISTENCY:
+Maintain smooth motion and consistent environment throughout the scene.
+AVOID:
+Morphing, flicker, duplicate people, anatomy errors, floating objects, sudden cuts, text and watermarks.`;
+document.getElementById(
+"sceneResult"
+).innerHTML=
+`<div class="card">
+   <div class="prompt-box">
+    ${esc(out)}
+   </div>
+   <button
+    class="btn"
+    style="margin-top:9px"
+    id="copyScene">
+    📋 Copy Scene Prompt
+   </button>
+  </div>`;
+ document.getElementById(
+  "copyScene"
+ ).onclick=
+  ()=>copyText(out);
+};
+
+init();
+
+</script>
+</body></html>
