@@ -1,0 +1,44 @@
+{
+  "updatedAt": "2026-10-10",
+  "apps": [
+    {
+      "id": "ai-studio",
+      "name": "Future Code AI Studio",
+      "packageName": "mm.futurecode.videostudio.pro",
+      "versionName": "1.4.1",
+      "versionCode": 8,
+      "minSdk": 26,
+      "file": "Future-Code-AI-Studio.apk",
+      "sizeBytes": 510614,
+      "sha256": "cd360c22c701074da324d4db6401eeb474abf7afea6af77f5d99a454023368a5",
+      "certificateSha256": "e46c3dfab7df42adc81c4fd796c8efc6a50812bca8e465c7d6ba29b936301118",
+      "releasedAt": "2026-10-10"
+    },
+    {
+      "id": "app-creator",
+      "name": "Future Code",
+      "packageName": "mm.futurecode.academy",
+      "versionName": "1.3.2",
+      "versionCode": 6,
+      "minSdk": 26,
+      "file": "Future-Code-App-Creator.apk",
+      "sizeBytes": 263160,
+      "sha256": "9d181a90a8a69d031f7189b453a6686a7fce08f14727e031d170c2ca97d2b425",
+      "certificateSha256": "8250c2dec832ffa15c68a3b649af6bbac4131ecd753b7a48a921ec53ce622771",
+      "releasedAt": "2026-10-10"
+    },
+    {
+      "id": "myanmar-kyar",
+      "name": "မြန်မာ ကျားကွက်",
+      "packageName": "mm.futurecode.myanmarkyar",
+      "versionName": "4.2.4",
+      "versionCode": 40204,
+      "minSdk": 26,
+      "file": "Myanmar-Kyar-Kwet.apk",
+      "sizeBytes": 1639006,
+      "sha256": "c6c3270ae41e82f4b40f7da5fca9231a5b007c78b1ee5cef090ccc297b5483b4",
+      "certificateSha256": "f92280389bda918d496d604172baf2b3febd8dcd2b9a48f84e540a8acb6e1e5d",
+      "releasedAt": "2026-10-10"
+    }
+  ]
+}
