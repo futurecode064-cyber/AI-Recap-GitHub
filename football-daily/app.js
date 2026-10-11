@@ -69,10 +69,24 @@ function renderMatch(match,i){
  const expand=node("button","analysis-toggle","▾ သုံးသပ်ချက်ကို ဖတ်မည် / ခေါက်မည်");expand.type="button";expand.setAttribute("aria-expanded","true");
  const body=node("div","analysis-body");
  body.appendChild(node("h4","","ပွဲကြိုသုံးသပ်ချက်"));
- const paras=splitAnalysis(match);
- if(paras.length)paras.forEach(p=>body.appendChild(node("p","",p)));
- else body.appendChild(node("p","","အသင်းအင်အားနှင့် နောက်ဆုံးအချက်အလက်ကို စစ်ဆေးပြီးမှ သုံးသပ်ချက်ကို ထည့်သွင်းပါမည်။"));
- if(match.verdict || match.predictedScore || match.asianHandicap){
+ // Canonical text: the exact message delivered in the user's daily ChatGPT briefing.
+ // Never summarize, paraphrase, regenerate or reformat it for website publishing.
+ const original=textOrEmpty(match.dailyPreviewText);
+ if(original){
+   body.appendChild(node("p","daily-preview-verbatim",original));
+ }else{
+   const paras=splitAnalysis(match); // Legacy fallback only, not a new write.
+   if(paras.length)paras.forEach(p=>body.appendChild(node("p","",p)));
+   else body.appendChild(node("p","","နေ့စဉ် မူရင်းသုံးသပ်ချက်စာသား မရရှိသေးပါ။"));
+ }
+ // Only Special Choice receives a separate, researched editorial assessment.
+ if(selectedLeague==="special"&&match.specialChoice&&Array.isArray(match.specialAnalysisParagraphs)&&match.specialAnalysisParagraphs.length){
+   const special=node("section","special-analysis");
+   special.appendChild(node("h4","","★ Special Choice — အချက်အလက်အပြည့်အစုံ သုံးသပ်ချက်"));
+   match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()).forEach(p=>special.appendChild(node("p","",p)));
+   body.appendChild(special);
+ }
+ if(!original&&(match.verdict || match.predictedScore || match.asianHandicap)){
   const verdict=node("div","verdict-panel");verdict.appendChild(node("h4","","အဆုံးသတ် သုံးသပ်အမြင်"));
   if(match.verdict)verdict.appendChild(node("p","",match.verdict));
   const bottom=node("div","verdict-bottom");
