@@ -76,7 +76,7 @@ function renderMatch(match,i){
   const verdict=node("div","verdict-panel");verdict.appendChild(node("h4","","အဆုံးသတ် သုံးသပ်အမြင်"));
   if(match.verdict)verdict.appendChild(node("p","",match.verdict));
   const bottom=node("div","verdict-bottom");
-  for(const [label,value] of [["ခန့်မှန်းရလဒ်",match.predictedScore],["Asian Handicap",match.asianHandicap],["ရွေးချယ်မှုအဆင့်",match.selectionConfidence]]){
+  for(const [label,value] of [["ခန့်မှန်းရလဒ်",match.predictedScore],["Asian Handicap",match.asianHandicap]]){
    if(value){const item=node("span","",label+" — ");item.appendChild(node("b","",value));bottom.appendChild(item)}
   }
   verdict.appendChild(bottom);body.appendChild(verdict);
