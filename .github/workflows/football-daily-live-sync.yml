@@ -4,7 +4,7 @@ name: Future Code Football Live Scores and H2H
 # The site and data remain on football-daily-render.
 on:
   schedule:
-    - cron: '15 * * * *'
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
 
 permissions:
