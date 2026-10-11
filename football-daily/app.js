@@ -21,7 +21,7 @@ function append(parent,...items){items.forEach(n=>{if(n)parent.appendChild(n)});
 function appendBoldText(parent,plainText){
  // Trusted editorial formatting only: **text** becomes bold, never parsed as HTML.
  // Every other character remains literal text, preserving the author's wording.
- const chunks=String(plainText).split(/(\\*\\*[^*\\n]+\\*\\*)/g);
+ const chunks=String(plainText).split(/(\*\*[^*\n]+\*\*)/g);
  for(const part of chunks){
    if(!part)continue;
    if(part.startsWith("**")&&part.endsWith("**")&&part.length>4){
