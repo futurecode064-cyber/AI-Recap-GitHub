@@ -363,7 +363,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "0-0"
+      "liveScore": "1-1"
     },
     {
       "league": "Premier League",
@@ -876,7 +876,7 @@
       ],
       "historyCheckedOn": "2026-10-11",
       "status": "live",
-      "liveScore": "1-0"
+      "liveScore": "1-1"
     },
     {
       "league": "Bundesliga",
@@ -1386,7 +1386,9 @@
           "homeGoals": 1,
           "awayGoals": 1
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-0"
     },
     {
       "league": "La Liga",
@@ -2110,7 +2112,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "2-0"
+      "liveScore": "2-1"
     },
     {
       "league": "Serie A",
