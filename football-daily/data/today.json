@@ -180,8 +180,8 @@
           "awayGoals": 1
         }
       ],
-      "status": "live",
-      "liveScore": "3-1"
+      "status": "finished",
+      "finalScore": "3-1"
     },
     {
       "league": "Premier League",
@@ -362,8 +362,8 @@
           "awayGoals": 1
         }
       ],
-      "status": "live",
-      "liveScore": "2-2"
+      "status": "finished",
+      "finalScore": "2-2"
     },
     {
       "league": "Premier League",
@@ -876,7 +876,7 @@
       ],
       "historyCheckedOn": "2026-10-11",
       "status": "live",
-      "liveScore": "1-1"
+      "liveScore": "2-1"
     },
     {
       "league": "Bundesliga",
@@ -2111,8 +2111,8 @@
           "awayGoals": 2
         }
       ],
-      "status": "live",
-      "liveScore": "3-1"
+      "status": "finished",
+      "finalScore": "3-1"
     },
     {
       "league": "Serie A",
@@ -2291,8 +2291,8 @@
           "awayGoals": 0
         }
       ],
-      "status": "live",
-      "liveScore": "1-2"
+      "status": "finished",
+      "finalScore": "1-2"
     },
     {
       "league": "Serie A",
@@ -2832,8 +2832,8 @@
           "awayGoals": 3
         }
       ],
-      "status": "live",
-      "liveScore": "2-1"
+      "status": "finished",
+      "finalScore": "2-1"
     },
     {
       "league": "Ligue 1",
@@ -3012,7 +3012,9 @@
           "homeGoals": 0,
           "awayGoals": 0
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-0"
     },
     {
       "league": "Ligue 1",
