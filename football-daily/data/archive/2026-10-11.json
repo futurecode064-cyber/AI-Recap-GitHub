@@ -1922,9 +1922,9 @@
           "awayGoals": 0
         }
       ],
-      "status": "live",
-      "liveScore": "0-0",
-      "historyCheckedOn": "2026-10-11"
+      "status": "finished",
+      "historyCheckedOn": "2026-10-11",
+      "finalScore": "0-0"
     },
     {
       "league": "Serie A",
