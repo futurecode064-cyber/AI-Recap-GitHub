@@ -159,7 +159,8 @@ function renderMatch(match,i){
  const headline=node("div","match-topline");
  const league=node("span","league-name","◈ "+(LEAGUE_NAMES[match.league]||match.league||"ပွဲကြိုသုံးသပ်ချက်"));
  if(match.specialChoice)league.appendChild(node("span","special-mark","★ SPECIAL CHOICE"));
- append(headline,league,node("span","match-time",textOrEmpty(match.kickoffYangon)||"ကန်ချိန် မအတည်ပြုရသေး"));
+ const liveLabel=match.status==="live"&&/^\d+\s*[-:]\s*\d+$/.test(String(match.liveScore||""))?"🔴 LIVE "+match.liveScore+" · ":"";
+ append(headline,league,node("span","match-time",liveLabel+(textOrEmpty(match.kickoffYangon)||"ကန်ချိန် မအတည်ပြုရသေး")));
  card.appendChild(headline);
  const banner=node("div","vs-banner");
  append(banner,teamSide(match,"home"),node("div","vs-circle","VS"),teamSide(match,"away"));
