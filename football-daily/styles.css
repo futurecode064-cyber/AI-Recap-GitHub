@@ -57,3 +57,42 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
 .myanmar-market-pair strong{color:#ffc08e;min-width:123px;font-weight:800}
 .myanmar-market-pair span{color:#f8f0e0;overflow-wrap:anywhere}
 @media(max-width:620px){.myanmar-market-pair{font-size:12px;gap:5px}.myanmar-market-pair strong{min-width:110px}}
+
+
+/* Date navigation: yesterday results, today's previews and verified tomorrow fixtures. */
+.date-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:-3px 0 22px}
+.date-tabs button{border:1px solid #49605b;background:#1b2c2d;color:#cedbd6;border-radius:12px;padding:15px 8px;font-size:14px;font-weight:800}
+.date-tabs button small{display:block;font-size:10px;font-weight:500;color:#aabeb4;margin-top:6px}
+.date-tabs button.active{background:#eaa36f;border-color:#ffcf9c;color:#172321}
+.date-tabs button.active small{color:#344239}
+.date-tabs button:hover{border-color:#ffbb84}
+.form-h2h{margin:0 25px 21px;border:1px solid #4c5e58;border-radius:12px;padding:18px 20px;background:#182a2c}
+.form-title{font-size:14px;color:#ffca9c;margin:0 0 18px}
+.form-lastfive{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.form-team{min-width:0;background:#243538;border-radius:9px;padding:13px}
+.form-team-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:13px}
+.form-crest{width:31px;height:31px;object-fit:contain;flex-shrink:0}
+.form-result-row{display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:8px;align-items:center;font-size:11px;padding:9px 2px;border-top:1px solid #405051;line-height:1.6}
+.form-result-row b{font-size:12px;white-space:nowrap}
+.form-opponent{overflow-wrap:anywhere}
+.form-result{border-radius:5px;background:#495853;text-align:center;font-weight:800;font-family:var(--heading);padding:3px 0}
+.form-result.form-w{background:#28644a;color:#d9f8e7}
+.form-result.form-d{background:#756747;color:#fff2cf}
+.form-result.form-l{background:#754243;color:#ffe3e3}
+.form-empty{color:#aebfb9;line-height:1.9;font-size:11px;margin:5px 0 7px}
+.h2h-records{margin-top:16px;border-top:1px solid #3c5755;padding-top:12px}
+.h2h-records h5{color:#d7e5df;font-size:12px;margin:0 0 10px}
+.h2h-row{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 0;border-top:1px solid #394b4d;font-size:11px}
+.h2h-date{color:#9fb8b0}.h2h-score{color:#f3dbb5;white-space:nowrap}
+.result-score{font:900 37px var(--heading);color:#fff1d9;display:grid;place-items:center;align-self:center;justify-self:center;white-space:nowrap}
+.result-meta{text-align:center;padding:20px;color:#cedad3;font-size:12px}
+.match-actions{align-items:center;flex-wrap:wrap;gap:10px}
+.poster-size{padding:13px 12px;min-width:240px;max-width:100%;border:1px solid #61766b;border-radius:12px;color:#f1eee3;background:#192b2a;font:700 12px var(--font)}
+@media(max-width:620px){
+ .date-tabs{gap:5px}.date-tabs button{font-size:11px;padding:11px 3px}.date-tabs button small{font-size:9px}
+ .form-h2h{margin:0 12px 17px;padding:14px 11px}.form-lastfive{grid-template-columns:minmax(0,1fr);gap:9px}
+ .form-result-row{font-size:10px}.h2h-row{grid-template-columns:65px minmax(0,1fr) auto;font-size:10px;gap:6px}
+ .poster-size{width:100%;min-width:0}.match-actions{gap:9px}
+ .match-download{min-width:0}
+ .result-score{font-size:25px}
+}
