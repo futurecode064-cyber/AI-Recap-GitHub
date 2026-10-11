@@ -134,12 +134,12 @@
      for(const l of detailed)y=drawLines(ctx,l,y,26,49)+26;
    }
    rect(ctx,M,H-109,W-M*2,2,C.line);
-   text(ctx,"FUTURE CODE FOOTBALL",M,H-86,26,C.orange,true);
+   text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M,H-86,26,C.orange,true);
    text(ctx,"DAILY FOOTBALL MATCH PREVIEW",W-M,H-81,19,C.muted,false,"right");
    const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error("PNG failed")),"image/png"));
    const url=URL.createObjectURL(blob),aLink=document.createElement("a");
    const safe=s=>String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
-   aLink.href=url;aLink.download="future-code-"+safe(match.home)+"-vs-"+safe(match.away)+".png";
+   aLink.href=url;aLink.download=safe(opts.brandName||"FUTURE CODE FOOTBALL")+"-"+safe(match.home)+"-vs-"+safe(match.away)+".png";
    document.body.append(aLink);aLink.click();aLink.remove();
    setTimeout(()=>URL.revokeObjectURL(url),60000);
  }
