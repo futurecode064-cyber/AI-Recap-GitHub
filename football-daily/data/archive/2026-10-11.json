@@ -547,7 +547,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "0-2"
+      "liveScore": "0-3"
     },
     {
       "league": "Championship",
@@ -1038,7 +1038,7 @@
       ],
       "historyCheckedOn": "2026-10-11",
       "status": "live",
-      "liveScore": "1-1"
+      "liveScore": "2-1"
     },
     {
       "league": "La Liga",
@@ -1584,7 +1584,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "1-0"
+      "liveScore": "2-0"
     },
     {
       "league": "La Liga",
@@ -3021,8 +3021,8 @@
           "awayGoals": 0
         }
       ],
-      "status": "live",
-      "liveScore": "2-1"
+      "status": "finished",
+      "finalScore": "4-1"
     },
     {
       "league": "Ligue 1",
