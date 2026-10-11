@@ -152,6 +152,7 @@ function renderMatch(match,i){
      if(!window.FutureCodeCardExport)throw Error("Export module missing");
      await window.FutureCodeCardExport.save(match,{
        leagueLabel:LEAGUE_NAMES[match.league]||match.league,
+       brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
        special:selectedLeague==="special"
      });
      button.textContent="✓ PNG ပုံ Download စတင်ပြီး";
@@ -193,7 +194,7 @@ function render(){
 async function load(){
  $("statusText").textContent="ရယူနေသည်";
  try{
-  const path="./data/today.json";
+  const path=document.documentElement.dataset.footballDataUrl||"./data/today.json";
   const response=await fetch(path+"?t="+Date.now(),{cache:"no-store"});
   if(!response.ok)throw new Error("HTTP "+response.status);
   const json=await response.json();
