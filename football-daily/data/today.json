@@ -179,7 +179,9 @@
           "homeGoals": 1,
           "awayGoals": 1
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-1"
     },
     {
       "league": "Premier League",
@@ -359,7 +361,9 @@
           "homeGoals": 5,
           "awayGoals": 1
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-0"
     },
     {
       "league": "Premier League",
@@ -702,8 +706,8 @@
         }
       ],
       "historyCheckedOn": "2026-10-11",
-      "status": "live",
-      "liveScore": "1-0"
+      "status": "finished",
+      "finalScore": "1-0"
     },
     {
       "league": "Bundesliga",
@@ -2102,7 +2106,9 @@
           "homeGoals": 0,
           "awayGoals": 2
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "1-0"
     },
     {
       "league": "Serie A",
@@ -2280,7 +2286,9 @@
           "homeGoals": 4,
           "awayGoals": 0
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-1"
     },
     {
       "league": "Serie A",
@@ -2819,7 +2827,9 @@
           "homeGoals": 1,
           "awayGoals": 3
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-0"
     },
     {
       "league": "Ligue 1",
