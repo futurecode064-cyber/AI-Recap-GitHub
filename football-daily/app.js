@@ -209,39 +209,32 @@ function renderMatch(match,i){
  expand.addEventListener("click",()=>{let visible=!body.hidden;body.hidden=visible;expand.setAttribute("aria-expanded",String(!visible))});
  append(card,expand,body);
  const actions=node("div","match-actions");
- const select=node("select","poster-size");select.setAttribute("aria-label","PNG ပုံအရွယ်အစား ရွေးရန်");
- for(const [value,label] of [["full","သုံးသပ်ချက်အပြည့် PNG"],["square","Facebook 1:1 · 1080×1080"],["feed","Facebook 4:5 · 1080×1350"],["story","Story 9:16 · 1080×1920"]]){
-   const option=node("option","",label);option.value=value;select.appendChild(option);
- }
- const button=node("button","match-download","↓ PNG ပုံ Download မယ်");
+ // One action, one complete PNG: no format dropdown or truncated social poster.
+ const button=node("button","match-download","↓ အချက်အလက်အပြည့်အစုံ PNG သိမ်းမယ်");
  button.type="button";
- button.setAttribute("aria-label",match.home+" နှင့် "+match.away+" ပွဲပုံကို PNG အဖြစ် သိမ်းရန်");
+ button.setAttribute("aria-label",match.home+" နှင့် "+match.away+" ပွဲ၏ အချက်အလက်အပြည့်အစုံကို PNG သိမ်းရန်");
  button.addEventListener("click",async()=>{
-   if(button.disabled)return;
-   const old=button.textContent;
-   button.disabled=true;button.textContent="PNG ပုံ ပြင်ဆင်နေသည်…";
-   try{
-     const opts={leagueLabel:LEAGUE_NAMES[match.league]||match.league,
-       brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
-       brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
-       special:selectedLeague==="special"};
-     if(select.value==="full"){
-       if(!window.FutureCodeCardExport)throw Error("Full export module missing");
-       await window.FutureCodeCardExport.save(match,opts);
-     }else{
-       if(!window.FutureCodeSocialExport)throw Error("Social export module missing");
-       await window.FutureCodeSocialExport.save(match,{...opts,format:select.value});
-     }
-     button.textContent="✓ PNG Download စတင်ပြီး";
-   }catch(err){
-     console.error("Match PNG download error",err);
-     button.textContent="Download မအောင်မြင်ပါ — ပြန်နှိပ်ရန်";
-   }finally{
-     button.disabled=false;
-     setTimeout(()=>{if(button.isConnected)button.textContent=old},2500);
-   }
+  if(button.disabled)return;
+  const old=button.textContent;
+  button.disabled=true;button.textContent="PNG အပြည့်အစုံ ပြင်ဆင်နေသည်…";
+  try{
+   if(!window.FutureCodeCardExport)throw Error("Full export module missing");
+   await window.FutureCodeCardExport.save(match,{
+    leagueLabel:LEAGUE_NAMES[match.league]||match.league,
+    brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
+    brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
+    special:match.specialChoice===true
+   });
+   button.textContent="✓ PNG Download စတင်ပြီး";
+  }catch(err){
+   console.error("Match PNG download error",err);
+   button.textContent="Download မအောင်မြင်ပါ — ပြန်နှိပ်ရန်";
+  }finally{
+   button.disabled=false;
+   setTimeout(()=>{if(button.isConnected)button.textContent=old},2500);
+  }
  });
- actions.appendChild(select);actions.appendChild(button);
+ actions.appendChild(button);
  card.appendChild(actions);
  return card;
 }
