@@ -4,7 +4,7 @@ const LEAGUE_NAMES={
  "Bundesliga":"ဘွန်ဒက်စ်လီဂါ","Ligue 1":"လီဂူးဝမ်း","Championship":"ချန်ပီယံရှစ်"
 };
 const TZ="Asia/Yangon";
-let report={matches:[],published:false},selectedLeague="all",demo=false;
+let report={matches:[],published:false},selectedLeague="all";
 const $=id=>document.getElementById(id);
 function dateParts(){
  const pieces=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
@@ -24,24 +24,17 @@ function splitAnalysis(m){
  if(Array.isArray(m.analysisParagraphs))return m.analysisParagraphs.filter(x=>typeof x==="string"&&x.trim());
  return String(m.analysis||"").split(/\n\s*\n/g).map(x=>x.trim()).filter(Boolean);
 }
-function playerSide(match,prefix){
+function teamSide(match,prefix){
  const side=node("div","side");
  const wrap=node("div","player-wrap");
- const name=textOrEmpty(match[prefix+"PlayerName"]);
- const image=textOrEmpty(match[prefix+"PlayerImage"]);
- if(image&&goodUrl(image)){
-   const picture=node("img","player-photo");picture.src=image;picture.alt=name?name+" ပုံ":prefix+" အသင်းကစားသမား";picture.loading="lazy";picture.referrerPolicy="no-referrer";
-   picture.onerror=()=>{picture.remove();wrap.prepend(node("div","player-fallback",(name||match[prefix]).trim().slice(0,1)))};
-   wrap.appendChild(picture);
- }else wrap.appendChild(node("div","player-fallback",(name||match[prefix]).trim().slice(0,1)));
- wrap.appendChild(node("div","player-name",name||match[prefix]));
- const credits=Array.isArray(match.imageCredits)?match.imageCredits:[];
- const credit=credits[prefix==="home"?0:1];
- if(image && credit && goodUrl(credit.url)){
-   const link=node("a","player-photo-credit",credit.name||"Image credit");
-   link.href=credit.url;link.target="_blank";link.rel="noopener noreferrer";
-   wrap.appendChild(link);
- }
+ const name=textOrEmpty(match[prefix]);
+ const crest=textOrEmpty(match[prefix+"CrestUrl"]);
+ if(crest&&goodUrl(crest)){
+   const img=node("img","team-crest");img.src=crest;img.alt=name+" အသင်းလိုဂို";img.loading="lazy";img.decoding="async";
+   img.onerror=()=>{img.remove();wrap.prepend(node("div","team-crest-fallback",name.slice(0,2).toUpperCase()));};
+   wrap.appendChild(img);
+ }else wrap.appendChild(node("div","team-crest-fallback",name.slice(0,2).toUpperCase()));
+ wrap.appendChild(node("div","player-name",name||"Team"));
  return append(side,wrap);
 }
 function oddBox(title,value){
@@ -57,18 +50,22 @@ function renderMatch(match,i){
  append(headline,league,node("span","match-time",textOrEmpty(match.kickoffYangon)||"ကန်ချိန် မအတည်ပြုရသေး"));
  card.appendChild(headline);
  const banner=node("div","vs-banner");
- append(banner,playerSide(match,"home"),node("div","vs-circle","VS"),playerSide(match,"away"));
+ append(banner,teamSide(match,"home"),node("div","vs-circle","VS"),teamSide(match,"away"));
  card.appendChild(banner);
  const title=node("div","fixture-title");
  const h=node("h3");
- append(h,document.createTextNode((match.home||"Home")+(match.homeOdds?" ("+match.homeOdds+")":"")),node("span","versus","VS"),document.createTextNode((match.away||"Away")+(match.awayOdds?" ("+match.awayOdds+")":"")));
+ append(h,document.createTextNode(match.home||"Home"),node("span","versus","VS"),document.createTextNode(match.away||"Away"));
  append(title,h,node("p","",match.venue||"မြန်မာစံတော်ချိန်အတိုင်း ပွဲကြိုသုံးသပ်ချက်"));
  card.appendChild(title);
  const markets=node("div","odds-grid");
- append(markets,oddBox((match.home||"အိမ်ရှင်")+" ပေါက်ကြေး",match.homeOdds),
- oddBox("ဂိုးပေါင်း / O-U",match.goalLine),
- oddBox((match.away||"ဧည့်သည်")+" ပေါက်ကြေး",match.awayOdds));
+ append(markets,oddBox((match.home||"အိမ်ရှင်")+" နိုင် (1)",match.homeOdds),
+ oddBox("သရေ (X)",match.drawOdds),
+ oddBox((match.away||"ဧည့်သည်")+" နိုင် (2)",match.awayOdds));
  card.appendChild(markets);
+ if(match.oddsProvider){
+   const sourceLine=node("div","odds-source","1X2 · Decimal odds · "+match.oddsProvider+" မှ ဖော်ပြထားသော ဈေးနှုန်း");
+   card.appendChild(sourceLine);
+ }
  const expand=node("button","analysis-toggle","▾ သုံးသပ်ချက်ကို ဖတ်မည် / ခေါက်မည်");expand.type="button";expand.setAttribute("aria-expanded","true");
  const body=node("div","analysis-body");
  body.appendChild(node("h4","","ပွဲကြိုသုံးသပ်ချက်"));
@@ -84,7 +81,7 @@ function renderMatch(match,i){
   }
   verdict.appendChild(bottom);body.appendChild(verdict);
  }
- if(match.marketUpdatedAt&&match.homeOdds){body.appendChild(node("div","match-meta","Myanmar market စစ်ဆေးချိန် — "+match.marketUpdatedAt))}
+
  expand.addEventListener("click",()=>{let visible=!body.hidden;body.hidden=visible;expand.setAttribute("aria-expanded",String(!visible))});
  append(card,expand,body);
  return card;
@@ -95,8 +92,7 @@ function render(){
  const picks=all.filter(m=>m.specialChoice===true);
  const selected=all.filter(m=>selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||m.league===selectedLeague);
  $("matchCount").textContent=String(all.length);$("specialCount").textContent=String(picks.length);
- $("statusText").textContent=demo?"DEMO PREVIEW":report.published?"ထုတ်ဝေပြီး":"မထုတ်ဝေရသေး";
- $("demoNotice").hidden=!demo;
+ $("statusText").textContent=report.published?"ထုတ်ဝေပြီး":"မထုတ်ဝေရသေး";
  $("sectionNote").textContent=selectedLeague==="special"
  ?"လက်ရှိသတင်း၊ အသင်းအင်အားနဲ့ ဈေးကွက်အခြေအနေများကို အစုံစစ်ဆေးပြီး သီးသန့်ရွေးထားသည့် ပွဲများသာ ပါဝင်ပါမည်။"
  :`${selected.length} ပွဲကို ပြသနေသည် · မြန်မာစံတော်ချိန် ${dateParts().day}`;
@@ -116,13 +112,11 @@ function render(){
 async function load(){
  $("statusText").textContent="ရယူနေသည်";
  try{
-  const url=new URLSearchParams(location.search);
-  demo=url.get("demo")==="1";
-  const path=demo?"./data/demo.json":"./data/today.json";
+  const path="./data/today.json";
   const response=await fetch(path+"?t="+Date.now(),{cache:"no-store"});
   if(!response.ok)throw new Error("HTTP "+response.status);
   const json=await response.json();
-  if(!demo&&json.reportDate!==dateParts().key){report={matches:[],published:false};}
+  if(json.reportDate!==dateParts().key){report={matches:[],published:false};}
   else report=json;
   render();
  }catch(e){
