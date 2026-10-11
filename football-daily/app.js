@@ -35,6 +35,13 @@ function playerSide(match,prefix){
    wrap.appendChild(picture);
  }else wrap.appendChild(node("div","player-fallback",(name||match[prefix]).trim().slice(0,1)));
  wrap.appendChild(node("div","player-name",name||match[prefix]));
+ const credits=Array.isArray(match.imageCredits)?match.imageCredits:[];
+ const credit=credits[prefix==="home"?0:1];
+ if(image && credit && goodUrl(credit.url)){
+   const link=node("a","player-photo-credit",credit.name||"Image credit");
+   link.href=credit.url;link.target="_blank";link.rel="noopener noreferrer";
+   wrap.appendChild(link);
+ }
  return append(side,wrap);
 }
 function oddBox(title,value){
