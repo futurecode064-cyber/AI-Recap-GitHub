@@ -1582,7 +1582,9 @@
           "homeGoals": 0,
           "awayGoals": 2
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-0"
     },
     {
       "league": "La Liga",
@@ -3020,7 +3022,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "1-1"
+      "liveScore": "2-1"
     },
     {
       "league": "Ligue 1",
