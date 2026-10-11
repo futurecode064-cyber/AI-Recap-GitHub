@@ -546,8 +546,8 @@
           "awayGoals": 1
         }
       ],
-      "status": "live",
-      "liveScore": "0-3"
+      "status": "finished",
+      "finalScore": "0-3"
     },
     {
       "league": "Championship",
@@ -707,7 +707,7 @@
           "awayGoals": 0
         }
       ],
-      "historyCheckedOn": "2026-10-11",
+      "historyCheckedOn": "2026-10-12",
       "status": "finished",
       "finalScore": "1-0"
     },
@@ -876,7 +876,7 @@
           "awayGoals": 0
         }
       ],
-      "historyCheckedOn": "2026-10-11",
+      "historyCheckedOn": "2026-10-12",
       "status": "finished",
       "finalScore": "2-1"
     },
@@ -1036,9 +1036,9 @@
           "awayGoals": 2
         }
       ],
-      "historyCheckedOn": "2026-10-11",
-      "status": "live",
-      "liveScore": "2-1"
+      "historyCheckedOn": "2026-10-12",
+      "status": "finished",
+      "finalScore": "2-1"
     },
     {
       "league": "La Liga",
@@ -1210,7 +1210,7 @@
           "awayGoals": 1
         }
       ],
-      "historyCheckedOn": "2026-10-11",
+      "historyCheckedOn": "2026-10-12",
       "status": "finished",
       "finalScore": "0-0"
     },
@@ -1583,8 +1583,8 @@
           "awayGoals": 2
         }
       ],
-      "status": "live",
-      "liveScore": "2-0"
+      "status": "finished",
+      "finalScore": "5-2"
     },
     {
       "league": "La Liga",
@@ -1762,7 +1762,9 @@
           "homeGoals": 0,
           "awayGoals": 0
         }
-      ]
+      ],
+      "status": "finished",
+      "finalScore": "2-2"
     },
     {
       "league": "Serie A",
@@ -1937,7 +1939,7 @@
         }
       ],
       "status": "finished",
-      "historyCheckedOn": "2026-10-11",
+      "historyCheckedOn": "2026-10-12",
       "finalScore": "0-0"
     },
     {
@@ -2479,8 +2481,8 @@
           "awayGoals": 5
         }
       ],
-      "status": "live",
-      "liveScore": "0-0"
+      "status": "finished",
+      "finalScore": "1-1"
     },
     {
       "league": "Serie A",
@@ -2660,7 +2662,9 @@
           "homeGoals": 2,
           "awayGoals": 2
         }
-      ]
+      ],
+      "status": "finished",
+      "finalScore": "1-1"
     },
     {
       "league": "Ligue 1",
@@ -3181,7 +3185,9 @@
           "awayGoals": 2
         }
       ],
-      "historyCheckedOn": "2026-10-11"
+      "historyCheckedOn": "2026-10-12",
+      "status": "finished",
+      "finalScore": "0-2"
     }
   ],
   "noFixturesLeagues": [],
