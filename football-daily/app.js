@@ -55,32 +55,36 @@ function oddBox(title,value){
  return box;
 }
 function renderMyanmarOdds(match){
- const odds=match.myanmarOdds||{};
- const h=odds.handicap||{},g=odds.goals||{};
- const has=v=>v!==null&&v!==undefined&&String(v).trim()!=="";
- const any=[h.line,h.home,h.away,g.line,g.over,g.under].some(has);
+ const source=match.myanmarOdds||{};
+ const has=x=>x!==null&&x!==undefined&&String(x).trim()!=="";
+ // Keep provider's raw Myanmar odds notation. No conversion to 1X2.
+ const formatBody=()=>{
+   if(has(source.bodyOdds))return String(source.bodyOdds);
+   const hd=source.handicap||{};
+   if(![hd.line,hd.home,hd.away].some(has))return "—";
+   return [(has(hd.line)?"အကျော "+hd.line:""),
+           (has(hd.home)?match.home+" "+hd.home:""),
+           (has(hd.away)?match.away+" "+hd.away:"")].filter(Boolean).join(" · ");
+ };
+ const formatGoals=()=>{
+   if(has(source.goalTotalOdds))return String(source.goalTotalOdds);
+   const gl=source.goals||{};
+   if(![gl.line,gl.over,gl.under].some(has))return "—";
+   return [(has(gl.line)?"ဂိုးပေါင်း "+gl.line:""),
+           (has(gl.over)?"Over "+gl.over:""),
+           (has(gl.under)?"Under "+gl.under:"")].filter(Boolean).join(" · ");
+ };
  const section=node("section","myanmar-market");
  section.appendChild(node("h4","myanmar-market-title","IBET789 · Myanmar ကြေး"));
- if(!any){
-   section.appendChild(node("p","myanmar-market-empty","ပွဲလိုက် Myanmar ကြေး မရရှိသေးပါ"));
-   return section;
+ const content=node("div","myanmar-market-pairs");
+ for(const [label,value] of [["ဘော်ဒီကြေး =",formatBody()],["ဂိုးပေါင်းကြေး =",formatGoals()]]){
+   const row=node("div","myanmar-market-pair");
+   row.appendChild(node("strong","",label));
+   row.appendChild(node("span","",value));
+   content.appendChild(row);
  }
- const rows=node("div","myanmar-market-rows");
- const line=(heading,parts)=>{
-   const row=node("div","myanmar-market-row");
-   row.appendChild(node("strong","",heading));
-   parts.forEach(([name,val])=>{
-     const item=node("span","");
-     item.appendChild(node("small","",name));
-     item.appendChild(node("b","",has(val)?String(val):"—"));
-     row.appendChild(item);
-   });
-   return row;
- };
- if([h.line,h.home,h.away].some(has))rows.appendChild(line("ဘော်ဒီ / HDP",[["အကျော",h.line],[match.home,h.home],[match.away,h.away]]));
- if([g.line,g.over,g.under].some(has))rows.appendChild(line("ဂိုးပေါင်း / O-U",[["ဂိုးပေါင်း",g.line],["Over",g.over],["Under",g.under]]));
- section.appendChild(rows);
- if(odds.checkedAt)section.appendChild(node("small","myanmar-market-meta","IBET789 · "+odds.checkedAt));
+ section.appendChild(content);
+ if(source.checkedAt)section.appendChild(node("small","myanmar-market-meta","IBET789 · "+source.checkedAt));
  return section;
 }
 function renderMatch(match,i){
