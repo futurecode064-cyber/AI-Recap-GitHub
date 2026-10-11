@@ -54,7 +54,7 @@ function renderMatch(match,i){
  card.appendChild(banner);
  const title=node("div","fixture-title");
  const h=node("h3");
- append(h,document.createTextNode(match.home||"Home"),node("span","versus","VS"),document.createTextNode(match.away||"Away"));
+ append(h,document.createTextNode((match.home||"Home")+(match.homeOdds?" ("+match.homeOdds+")":"")),node("span","versus","VS"),document.createTextNode((match.away||"Away")+(match.awayOdds?" ("+match.awayOdds+")":"")));
  append(title,h,node("p","",match.venue||"မြန်မာစံတော်ချိန်အတိုင်း ပွဲကြိုသုံးသပ်ချက်"));
  card.appendChild(title);
  const markets=node("div","odds-grid");
