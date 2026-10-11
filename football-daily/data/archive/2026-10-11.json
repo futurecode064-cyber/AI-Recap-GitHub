@@ -700,7 +700,8 @@
           "homeGoals": 0,
           "awayGoals": 0
         }
-      ]
+      ],
+      "historyCheckedOn": "2026-10-11"
     },
     {
       "league": "Bundesliga",
@@ -866,7 +867,8 @@
           "homeGoals": 0,
           "awayGoals": 0
         }
-      ]
+      ],
+      "historyCheckedOn": "2026-10-11"
     },
     {
       "league": "Bundesliga",
@@ -1023,7 +1025,8 @@
           "homeGoals": 0,
           "awayGoals": 2
         }
-      ]
+      ],
+      "historyCheckedOn": "2026-10-11"
     },
     {
       "league": "La Liga",
@@ -1194,7 +1197,8 @@
           "homeGoals": 0,
           "awayGoals": 1
         }
-      ]
+      ],
+      "historyCheckedOn": "2026-10-11"
     },
     {
       "league": "La Liga",
@@ -1913,7 +1917,10 @@
           "homeGoals": 2,
           "awayGoals": 0
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-0",
+      "historyCheckedOn": "2026-10-11"
     },
     {
       "league": "Serie A",
@@ -3145,7 +3152,8 @@
           "homeGoals": 0,
           "awayGoals": 2
         }
-      ]
+      ],
+      "historyCheckedOn": "2026-10-11"
     }
   ],
   "noFixturesLeagues": [],
