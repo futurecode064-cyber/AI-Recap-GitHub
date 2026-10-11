@@ -1,3 +1,24 @@
+# Cloudflare Pages Free deployment (recommended)
+
+The site is ready for Cloudflare Pages Git integration. It has a top-level `index.html` inside `football-daily/` and a `_headers` file for daily JSON freshness.
+
+Go to https://dash.cloudflare.com/ → **Workers & Pages** → **Create application** → **Pages** → **Import an existing Git repository** / **Connect to Git**. Connect GitHub and select repo `futurecode064-cyber/AI-Recap-GitHub`. Use:
+
+| Setting | Value |
+|---|---|
+| Project name | `future-code-football-daily` (or another available name) |
+| Production branch | `football-daily-render` |
+| Framework preset | `None` |
+| Build command | `exit 0` |
+| Build output directory | `football-daily` |
+| Root directory (if asked) | repository root / `/` |
+| Environment variables | none |
+| Plan | Cloudflare Free |
+
+Then **Save and Deploy**. Cloudflare gives the *actual* deployed `*.pages.dev` URL once the project is created; do not guess this address before deployment. Test from Myanmar without VPN on several ISPs; availability is not guaranteed by choice of host. If the production branch picker chooses `main` by default, manually select `football-daily-render`. Pages Git integration auto-redeploys on subsequent GitHub pushes.
+
+Sources: https://developers.cloudflare.com/pages/framework-guides/deploy-anything/ and https://developers.cloudflare.com/pages/configuration/git-integration/.
+
 # Future Code Football — independent static website
 
 This website lives under `football-daily/` on the dedicated `football-daily-render` branch. It does **not** run on Floot.
