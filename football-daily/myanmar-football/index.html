@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="my" data-football-data-url="../data/today.json" data-football-brand-name="MYANMAR FOOTBALL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d151a">
+<meta name="description" content="Myanmar Football — မြန်မာဘာသာဖြင့် နေ့စဉ် ဘောလုံးပွဲကြိုသုံးသပ်ချက်များ">
+<title>နေ့စဉ် ဘောလုံးပွဲကြိုသုံးသပ်ချက် | Myanmar Football</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="../card-export.js"></script>
+<script defer src="../app.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a class="logo" href="./" aria-label="Myanmar Football"><span class="logo-icon">MF<span>+</span></span><span class="logo-lines"><b>MYANMAR</b><small>FOOTBALL ANALYSIS</small></span></a>
+  <span class="top-edition"><span class="orange-dot"></span> MYANMAR DAILY EDITION</span>
+</div></header>
+<main>
+ <section class="hero"><div class="container">
+  <div class="hero-topline"><span class="slim-label">SPORTS EDITORIAL / DAILY REPORT</span><span class="hero-date" id="heroDate"></span></div>
+  <div class="hero-main"><div><p class="eyebrow"><span class="orange-dot"></span> MYANMAR FOOTBALL</p><h1>နေ့စဉ် <span>ဘောလုံးပွဲကြို</span><br>သုံးသပ်ချက်</h1><p class="hero-desc">လက်ရှိအသင်းအင်အား၊ ခြေစွမ်း၊ ကစားပုံ၊ ဂိုးပေါင်းနှင့် Asian Handicap အချက်အလက်များကို ပေါင်းစပ်ပြီး မြန်မာလို ပရော်ဖက်ရှင်နယ်သုံးသပ်ထားတဲ့ နေ့စဉ်ပွဲကြိုအစီအစဉ်။</p></div><div class="hero-number"><span>06<span>:</span>00</span><small>EVERY MORNING · MMT</small></div></div>
+  <div class="hero-foot"><span><span class="green-dot"></span> ဒီနေ့အတွက်ပဲ ဖော်ပြသည်</span><span>Asia/Yangon · UTC+06:30</span></div>
+ </div></section>
+ <section class="content container">
+   <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">TODAY'S MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
+   <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2>ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill">● TODAY ONLY</span></div>
+   <nav class="filters" id="filters" aria-label="League filters">
+    <button data-league="all" class="selected" type="button">ပွဲအားလုံး</button>
+    <button data-league="Premier League" type="button">ပရီးမီးယားလိဂ်</button>
+    <button data-league="La Liga" type="button">လာလီဂါ</button>
+    <button data-league="Serie A" type="button">စီးရီးအေ</button>
+    <button data-league="Bundesliga" type="button">ဘွန်ဒက်စ်လီဂါ</button>
+    <button data-league="Ligue 1" type="button">လီဂူးဝမ်း</button>
+    <button data-league="Championship" type="button">ချန်ပီယံရှစ်</button>
+    <button data-league="special" class="filter-special" type="button">★ Special Choice</button>
+   </nav>
+   <div class="section-note" id="sectionNote"></div>
+   <div id="matchList" class="matches" aria-live="polite"><div class="empty-card"><span class="empty-icon">↻</span><h3>သုံးသပ်ချက်များ ရယူနေပါတယ်…</h3></div></div>
+ </section>
+</main>
+<footer><div class="container footer-inner"><div><strong>MYANMAR <span>FOOTBALL</span></strong><p>Independent Myanmar Football Analysis</p></div><p>နေ့စဉ် အကြောင်းအရာအသစ်တင်သည့် စာမျက်နှာ</p></div></footer>
+</body>
+</html>
