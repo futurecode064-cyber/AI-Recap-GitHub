@@ -107,9 +107,9 @@
      text(ctx,odds(pair[1]),cx,589,30,C.cream,true,"center");
      if(i<2)rect(ctx,M+boxW*(i+1),519,1,142,C.line);
    });
-   text(ctx,match.oddsProvider?"1X2 · "+match.oddsProvider:"1X2 · Decimal Odds",W-M,668,17,C.muted,false,"right");
+   text(ctx,"1X2 · Decimal Odds",W-M,668,17,C.muted,false,"right");
    rounded(ctx,M,707,W-M*2,142,12,"#293d35","#6a795b");
-   text(ctx,"IBET789 · Myanmar ကြေး",M+20,725,21,C.orange,true);
+   text(ctx,"မြန်မာကြေး",M+20,725,21,C.orange,true);
    const a=match.myanmarOdds||{},h=a.handicap||{},g=a.goals||{};
    const present=v=>v!==null&&v!==undefined&&String(v).trim()!=="";
    const body=present(a.bodyOdds)?String(a.bodyOdds):
