@@ -106,7 +106,7 @@ def verified_history(event,league):
     h5=[r for e in sorted(home,key=lambda e:e["date"],reverse=True) if (r:=single_result(e,hid))][:5]
     a5=[r for e in sorted(away,key=lambda e:e["date"],reverse=True) if (r:=single_result(e,aid))][:5]
     history=list(home)
-    for yr in range(season-1,max(season-6,2017),-1):
+    for yr in range(season-1,max(season-19,2005),-1):
         matches=[e for e in history if
           {str((players(e).get("home") or {}).get("id")),str((players(e).get("away") or {}).get("id"))}=={hid,aid}]
         if len(matches)>=5:break
