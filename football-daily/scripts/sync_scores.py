@@ -65,6 +65,7 @@ def players(event):
 def name(player):return (player or {}).get("team",{}).get("displayName","")
 def score(player):
     value=(player or {}).get("score")
+    if isinstance(value,dict):value=value.get("value",value.get("displayValue"))
     return int(str(value)) if re.fullmatch(r"\d+",str(value)) else None
 
 def state(event):
