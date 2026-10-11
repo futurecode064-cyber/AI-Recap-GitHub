@@ -65,7 +65,84 @@
         "checkedAt": "2026-10-11 · user screenshot (not live IBET789-verified)",
         "bodyOdds": "နော်တင်ဟမ် -၁၀",
         "goalTotalOdds": "၃+၉၀"
-      }
+      },
+      "espnEventId": "401879266",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879266",
+      "homeLastFive": [
+        {
+          "opponent": "Leeds United",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Ipswich Town",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Fulham",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Manchester City",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "date": "2026-08-28"
+        },
+        {
+          "opponent": "Everton",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-08-22"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Coventry City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Aston Villa",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Liverpool",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Leeds United",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-22"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/eng.1"
     },
     {
       "league": "Premier League",
@@ -131,7 +208,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401878774",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878774",
+      "homeLastFive": [
+        {
+          "opponent": "Newcastle United",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Chelsea",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Aston Villa",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Coventry City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Manchester United",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-22"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Ipswich Town",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Manchester United",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Crystal Palace",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-22"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/eng.1"
     },
     {
       "league": "Premier League",
@@ -199,7 +353,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401879264",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879264",
+      "homeLastFive": [
+        {
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Fulham",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Ipswich Town",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-04"
+        },
+        {
+          "opponent": "Nottingham Forest",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Newcastle United",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-08-23"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Sunderland",
+          "teamGoals": 5,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Manchester United",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Coventry City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Crystal Palace",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-08-28"
+        },
+        {
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-23"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/eng.1"
     },
     {
       "league": "Championship",
@@ -265,7 +496,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401880237",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880237",
+      "homeLastFive": [
+        {
+          "opponent": "Wrexham",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Bristol City",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Swansea City",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-08"
+        },
+        {
+          "opponent": "Lincoln City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Birmingham City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-01"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Charlton Athletic",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Cardiff City",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Derby County",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-01"
+        },
+        {
+          "opponent": "Bristol City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-08-29"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/eng.2"
     },
     {
       "league": "Bundesliga",
@@ -331,7 +639,70 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401884774",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884774",
+      "homeLastFive": [
+        {
+          "opponent": "Hamburg SV",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Werder Bremen",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "VfB Stuttgart",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "date": "2026-09-04"
+        },
+        {
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-08-29"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Mainz",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "SC Freiburg",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "SV Elversberg",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "RB Leipzig",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-08-29"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/ger.1"
     },
     {
       "league": "Bundesliga",
@@ -409,7 +780,70 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401884778",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884778",
+      "homeLastFive": [
+        {
+          "opponent": "Eintracht Frankfurt",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Borussia Mönchengladbach",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "SC Paderborn 07",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Werder Bremen",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-30"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "SV Elversberg",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "1. FC Union Berlin",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-11"
+        },
+        {
+          "opponent": "Bayern Munich",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "FC Augsburg",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-08-30"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/ger.1"
     },
     {
       "league": "La Liga",
@@ -473,7 +907,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401882854",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882854",
+      "homeLastFive": [
+        {
+          "opponent": "Espanyol",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-18"
+        },
+        {
+          "opponent": "Real Madrid",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-09-15"
+        },
+        {
+          "opponent": "Athletic Club",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Real Sociedad",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-09-07"
+        },
+        {
+          "opponent": "Racing Santander",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-08-28"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Racing Santander",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Málaga",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Getafe",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-07"
+        },
+        {
+          "opponent": "Real Sociedad",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-03"
+        },
+        {
+          "opponent": "Athletic Club",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-08-30"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/esp.1"
     },
     {
       "league": "La Liga",
@@ -537,7 +1048,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401882847",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882847",
+      "homeLastFive": [
+        {
+          "opponent": "Valencia",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Atlético Madrid",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Elche",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-07"
+        },
+        {
+          "opponent": "Celta Vigo",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-03"
+        },
+        {
+          "opponent": "Espanyol",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-29"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Real Betis",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Sevilla",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-16"
+        },
+        {
+          "opponent": "Getafe",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Villarreal",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Valencia",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-30"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/esp.1"
     },
     {
       "league": "La Liga",
@@ -613,7 +1201,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401882855",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882855",
+      "homeLastFive": [
+        {
+          "opponent": "Deportivo",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Getafe",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-17"
+        },
+        {
+          "opponent": "Villarreal",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-14"
+        },
+        {
+          "opponent": "Real Madrid",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-04"
+        },
+        {
+          "opponent": "Levante",
+          "teamGoals": 2,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "date": "2026-08-29"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Rayo Vallecano",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Atlético Madrid",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "date": "2026-09-16"
+        },
+        {
+          "opponent": "Espanyol",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Alavés",
+          "teamGoals": 2,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Getafe",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-31"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/esp.1"
     },
     {
       "league": "La Liga",
@@ -677,7 +1342,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401882850",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882850",
+      "homeLastFive": [
+        {
+          "opponent": "Celta Vigo",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Barcelona",
+          "teamGoals": 2,
+          "opponentGoals": 7,
+          "venueSide": "away",
+          "date": "2026-09-16"
+        },
+        {
+          "opponent": "Alavés",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Rayo Vallecano",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Elche",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-08-28"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Real Sociedad",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Alavés",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-15"
+        },
+        {
+          "opponent": "Sevilla",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-11"
+        },
+        {
+          "opponent": "Barcelona",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "home",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Deportivo",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-08-30"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/esp.1"
     },
     {
       "league": "Serie A",
@@ -743,7 +1485,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401874940",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874940",
+      "homeLastFive": [
+        {
+          "opponent": "Frosinone",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Parma",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-14"
+        },
+        {
+          "opponent": "Genoa",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-04"
+        },
+        {
+          "opponent": "Napoli",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-08-30"
+        },
+        {
+          "opponent": "Udinese",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-08-22"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Internazionale",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Torino",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-14"
+        },
+        {
+          "opponent": "Atalanta",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Lecce",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-08-31"
+        },
+        {
+          "opponent": "Fiorentina",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-24"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/ita.1"
     },
     {
       "league": "Serie A",
@@ -807,7 +1626,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401874951",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874951",
+      "homeLastFive": [
+        {
+          "opponent": "Venezia",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "AC Milan",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Udinese",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-07"
+        },
+        {
+          "opponent": "Genoa",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-30"
+        },
+        {
+          "opponent": "Bologna",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-08-24"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Sassuolo",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-18"
+        },
+        {
+          "opponent": "Lecce",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Parma",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Udinese",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Internazionale",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "date": "2026-08-22"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/ita.1"
     },
     {
       "league": "Serie A",
@@ -871,7 +1767,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401874776",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874776",
+      "homeLastFive": [
+        {
+          "opponent": "AC Milan",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Monza",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Cagliari",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-07"
+        },
+        {
+          "opponent": "AS Roma",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "date": "2026-08-31"
+        },
+        {
+          "opponent": "Venezia",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-08-23"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Torino",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Napoli",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Sassuolo",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Atalanta",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-08-31"
+        },
+        {
+          "opponent": "Lazio",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-24"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/ita.1"
     },
     {
       "league": "Serie A",
@@ -937,7 +1910,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401874789",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874789",
+      "homeLastFive": [
+        {
+          "opponent": "Monza",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-18"
+        },
+        {
+          "opponent": "Juventus",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Bologna",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Torino",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Atalanta",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-08-23"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Lecce",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Lazio",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Juventus",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Venezia",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-28"
+        },
+        {
+          "opponent": "Torino",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-08-23"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/ita.1"
     },
     {
       "league": "Serie A",
@@ -1003,7 +2053,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401874764",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874764",
+      "homeLastFive": [
+        {
+          "opponent": "Udinese",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Atalanta",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Lecce",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-07"
+        },
+        {
+          "opponent": "Internazionale",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-30"
+        },
+        {
+          "opponent": "Parma",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-08-22"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Atalanta",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Sassuolo",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "AC Milan",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Parma",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Frosinone",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "date": "2026-08-23"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/ita.1"
     },
     {
       "league": "Ligue 1",
@@ -1068,7 +2195,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401876443",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876443",
+      "homeLastFive": [
+        {
+          "opponent": "Lille",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "AJ Auxerre",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Le Mans",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-05"
+        },
+        {
+          "opponent": "Paris FC",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-08-30"
+        },
+        {
+          "opponent": "Lorient",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-22"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Paris FC",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "AS Monaco",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Troyes",
+          "teamGoals": 6,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Lens",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Marseille",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "date": "2026-08-21"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/fra.1"
     },
     {
       "league": "Ligue 1",
@@ -1133,7 +2337,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401876441",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876441",
+      "homeLastFive": [
+        {
+          "opponent": "Lyon",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Marseille",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-11"
+        },
+        {
+          "opponent": "Angers",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Le Mans",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-08-30"
+        },
+        {
+          "opponent": "Paris Saint-Germain",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-08-23"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Brest",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Nice",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-09-12"
+        },
+        {
+          "opponent": "Lyon",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "date": "2026-09-04"
+        },
+        {
+          "opponent": "Angers",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Lens",
+          "teamGoals": 2,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "date": "2026-08-22"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/fra.1"
     },
     {
       "league": "Ligue 1",
@@ -1198,7 +2479,84 @@
         "checkedAt": null,
         "bodyOdds": null,
         "goalTotalOdds": null
-      }
+      },
+      "espnEventId": "401876440",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876440",
+      "homeLastFive": [
+        {
+          "opponent": "Angers",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-19"
+        },
+        {
+          "opponent": "Lille",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-09-13"
+        },
+        {
+          "opponent": "Strasbourg",
+          "teamGoals": 2,
+          "opponentGoals": 6,
+          "venueSide": "home",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "Lorient",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-08-29"
+        },
+        {
+          "opponent": "Paris FC",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-22"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "opponent": "Paris Saint-Germain",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "date": "2026-09-20"
+        },
+        {
+          "opponent": "Stade Rennais",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "date": "2026-09-11"
+        },
+        {
+          "opponent": "Paris FC",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "date": "2026-09-06"
+        },
+        {
+          "opponent": "AS Monaco",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "date": "2026-08-30"
+        },
+        {
+          "opponent": "Strasbourg",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "date": "2026-08-21"
+        }
+      ],
+      "historySourceUrl": "https://www.espn.com/soccer/league/_/name/fra.1"
     }
   ],
   "noFixturesLeagues": [],
