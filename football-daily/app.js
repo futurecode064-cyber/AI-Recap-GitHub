@@ -54,6 +54,35 @@ function oddBox(title,value){
  append(box,node("small","",title),node("strong",value?"":"missing",value||"ဈေးမရရှိသေး"));
  return box;
 }
+function renderMyanmarOdds(match){
+ const odds=match.myanmarOdds||{};
+ const h=odds.handicap||{},g=odds.goals||{};
+ const has=v=>v!==null&&v!==undefined&&String(v).trim()!=="";
+ const any=[h.line,h.home,h.away,g.line,g.over,g.under].some(has);
+ const section=node("section","myanmar-market");
+ section.appendChild(node("h4","myanmar-market-title","IBET789 · Myanmar ကြေး"));
+ if(!any){
+   section.appendChild(node("p","myanmar-market-empty","ပွဲလိုက် Myanmar ကြေး မရရှိသေးပါ"));
+   return section;
+ }
+ const rows=node("div","myanmar-market-rows");
+ const line=(heading,parts)=>{
+   const row=node("div","myanmar-market-row");
+   row.appendChild(node("strong","",heading));
+   parts.forEach(([name,val])=>{
+     const item=node("span","");
+     item.appendChild(node("small","",name));
+     item.appendChild(node("b","",has(val)?String(val):"—"));
+     row.appendChild(item);
+   });
+   return row;
+ };
+ if([h.line,h.home,h.away].some(has))rows.appendChild(line("ဘော်ဒီ / HDP",[["အကျော",h.line],[match.home,h.home],[match.away,h.away]]));
+ if([g.line,g.over,g.under].some(has))rows.appendChild(line("ဂိုးပေါင်း / O-U",[["ဂိုးပေါင်း",g.line],["Over",g.over],["Under",g.under]]));
+ section.appendChild(rows);
+ if(odds.checkedAt)section.appendChild(node("small","myanmar-market-meta","IBET789 · "+odds.checkedAt));
+ return section;
+}
 function renderMatch(match,i){
  const card=node("article","match-card"+(match.specialChoice?" is-special":""));
  const headline=node("div","match-topline");
@@ -78,6 +107,7 @@ function renderMatch(match,i){
    const sourceLine=node("div","odds-source","1X2 · Decimal odds · "+match.oddsProvider+" မှ ဖော်ပြထားသော ဈေးနှုန်း");
    card.appendChild(sourceLine);
  }
+ card.appendChild(renderMyanmarOdds(match));
  const expand=node("button","analysis-toggle","▾ သုံးသပ်ချက်ကို ဖတ်မည် / ခေါက်မည်");expand.type="button";expand.setAttribute("aria-expanded","true");
  const body=node("div","analysis-body");
  body.appendChild(node("h4","","ပွဲကြိုသုံးသပ်ချက်"));
@@ -109,6 +139,31 @@ function renderMatch(match,i){
 
  expand.addEventListener("click",()=>{let visible=!body.hidden;body.hidden=visible;expand.setAttribute("aria-expanded",String(!visible))});
  append(card,expand,body);
+ const actions=node("div","match-actions");
+ const button=node("button","match-download","↓  ဒီပွဲပုံကို Download မယ်");
+ button.type="button";
+ button.setAttribute("aria-label",match.home+" နှင့် "+match.away+" ပွဲပုံကို PNG အဖြစ် သိမ်းရန်");
+ button.addEventListener("click",async()=>{
+   if(button.disabled)return;
+   const old=button.textContent;
+   button.disabled=true;button.textContent="PNG ပုံ ပြင်ဆင်နေသည်…";
+   try{
+     if(!window.FutureCodeCardExport)throw Error("Export module missing");
+     await window.FutureCodeCardExport.save(match,{
+       leagueLabel:LEAGUE_NAMES[match.league]||match.league,
+       special:selectedLeague==="special"
+     });
+     button.textContent="✓ PNG ပုံ Download စတင်ပြီး";
+   }catch(err){
+     console.error("Match card download error",err);
+     button.textContent="Download မအောင်မြင်ပါ — ပြန်နှိပ်ရန်";
+   }finally{
+     button.disabled=false;
+     setTimeout(()=>{if(button.isConnected)button.textContent=old},2500);
+   }
+ });
+ actions.appendChild(button);
+ card.appendChild(actions);
  return card;
 }
 function render(){
