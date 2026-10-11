@@ -322,6 +322,43 @@
           "venueSide": "home",
           "date": "2026-08-22"
         }
+      ],
+      "headToHead": [
+        {
+          "date": "2017-03-18",
+          "home": "Everton",
+          "away": "Hull City",
+          "homeGoals": 4,
+          "awayGoals": 0
+        },
+        {
+          "date": "2016-12-30",
+          "home": "Hull City",
+          "away": "Everton",
+          "homeGoals": 2,
+          "awayGoals": 2
+        },
+        {
+          "date": "2014-05-11",
+          "home": "Hull City",
+          "away": "Everton",
+          "homeGoals": 0,
+          "awayGoals": 2
+        },
+        {
+          "date": "2013-10-19",
+          "home": "Everton",
+          "away": "Hull City",
+          "homeGoals": 2,
+          "awayGoals": 1
+        },
+        {
+          "date": "2010-03-07",
+          "home": "Everton",
+          "away": "Hull City",
+          "homeGoals": 5,
+          "awayGoals": 1
+        }
       ]
     },
     {
@@ -1298,6 +1335,43 @@
           "venueSide": "home",
           "date": "2026-08-30"
         }
+      ],
+      "headToHead": [
+        {
+          "date": "2018-02-02",
+          "home": "Real Sociedad",
+          "away": "Deportivo",
+          "homeGoals": 5,
+          "awayGoals": 0
+        },
+        {
+          "date": "2017-09-10",
+          "home": "Deportivo",
+          "away": "Real Sociedad",
+          "homeGoals": 2,
+          "awayGoals": 4
+        },
+        {
+          "date": "2017-04-23",
+          "home": "Real Sociedad",
+          "away": "Deportivo",
+          "homeGoals": 1,
+          "awayGoals": 0
+        },
+        {
+          "date": "2016-12-05",
+          "home": "Deportivo",
+          "away": "Real Sociedad",
+          "homeGoals": 5,
+          "awayGoals": 1
+        },
+        {
+          "date": "2016-01-16",
+          "home": "Real Sociedad",
+          "away": "Deportivo",
+          "homeGoals": 1,
+          "awayGoals": 1
+        }
       ]
     },
     {
@@ -1628,6 +1702,43 @@
           "opponentGoals": 3,
           "venueSide": "away",
           "date": "2026-08-30"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2012-01-29",
+          "home": "Racing Santander",
+          "away": "Valencia",
+          "homeGoals": 2,
+          "awayGoals": 2
+        },
+        {
+          "date": "2011-08-27",
+          "home": "Valencia",
+          "away": "Racing Santander",
+          "homeGoals": 4,
+          "awayGoals": 3
+        },
+        {
+          "date": "2011-01-31",
+          "home": "Racing Santander",
+          "away": "Valencia",
+          "homeGoals": 1,
+          "awayGoals": 1
+        },
+        {
+          "date": "2010-09-11",
+          "home": "Valencia",
+          "away": "Racing Santander",
+          "homeGoals": 1,
+          "awayGoals": 0
+        },
+        {
+          "date": "2010-03-08",
+          "home": "Valencia",
+          "away": "Racing Santander",
+          "homeGoals": 0,
+          "awayGoals": 0
         }
       ]
     },
