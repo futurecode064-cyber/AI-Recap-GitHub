@@ -63,13 +63,33 @@ def main():
         if len(matches) == 0 and not LEAGUES.issubset(set(str(x) for x in no_fixtures)):
             errors.append("No previews and all six leagues are not explicitly confirmed to have no fixtures")
         if matches:
-            missing = [
-                idx for idx, m in enumerate(matches, start=1)
-                if not isinstance(m, dict) or not m.get("home") or not m.get("away")
-                or not (m.get("analysisParagraphs") or m.get("analysis"))
-            ]
+            # 2026-10-12 onward, require the exact canonical daily-briefing text.
+            # Oct 11 and earlier were a legacy format; do not mislabel them verbatim.
+            require_canonical = today >= "2026-10-12"
+            missing = []
+            unsupported_odds = []
+            for idx, match in enumerate(matches, start=1):
+                if not isinstance(match, dict) or not match.get("home") or not match.get("away"):
+                    missing.append(idx)
+                    continue
+                canonical = match.get("dailyPreviewText")
+                if require_canonical and (not isinstance(canonical, str) or len(canonical.strip()) < 150):
+                    missing.append(idx)
+                elif not require_canonical and not (
+                    canonical or match.get("analysisParagraphs") or match.get("analysis")
+                ):
+                    missing.append(idx)
+                # Warn, but don't manufacture missing odds. Confirm triplet and source together.
+                odds = [match.get("homeOdds"), match.get("drawOdds"), match.get("awayOdds")]
+                if any(v is not None for v in odds) and (
+                    not all(v is not None for v in odds) or
+                    not match.get("oddsProvider") or not match.get("oddsSourceUrl")
+                ):
+                    unsupported_odds.append(idx)
             if missing:
-                errors.append(f"Matches missing teams or editorial analysis at index: {missing}")
+                errors.append(f"Matches lacking teams or original daily-preview text: {missing}")
+            if unsupported_odds:
+                errors.append(f"1X2 odds require all three prices and a bookmaker source: {unsupported_odds}")
     if errors:
         print("DAILY REPORT CHECK FAILED:")
         for err in errors:
