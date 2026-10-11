@@ -2,7 +2,7 @@
 Version: 2026-10-11. Applies to ALL ordinary match previews, not only Special Choice.
 
 ## Mission
-Collect football sources first, then write one canonical Burmese preview per real same-day match. Send the **exact same, unchanged, verbatim** `dailyPreviewText` to the user in ChatGPT and the deployed Website. The website must not independently generate/rewrite/summarize normal previews. Special Choice is the only section permitted to add separate, deeper original analysis using `specialAnalysisParagraphs`.
+User's 22-point prompt is the **FORMULA for writing fresh original daily WEBSITE match previews**. Research all available data for real same-day matches, then write a fresh Burmese narrative for each match into `dailyPreviewText`. Do NOT demand the user supply old ChatGPT messages, and do NOT treat this formula as text to paste. Special Choice adds separate deeper analysis using `specialAnalysisParagraphs`.
 
 ## 22 research areas (for **every** match)
 1. COMPETITION — confirmed competition, season, matchweek/round, kickoff, venue, match status, teams.
@@ -33,7 +33,7 @@ Prioritize Tier 1 official league, official club, and official competition site;
 
 Research the essentials for BOTH teams: table, last five, relevant home/away form, goal stats, H2H, injuries, suspensions, projected lineups, key players, tactical styles, stakes, latest news. Read actual source pages, not just website names. If a category cannot be verified, **do not invent the data or print a filler heading for it**. Mark internally as unavailable and omit unsupported claims from the preview. If a match has too little verified information for a defensible choice, say so and do not mark as Special Choice.
 
-## Final analysis: ONE original draft in Burmese
+## Final analysis: a freshly researched original website article in Burmese
 Transform the sourced research into one fluent, readable professional match preview—not a pasted 22-heading checklist and not a standalone source dump. Write through this order:
 **DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT**.
 Answer, backed by cited research:
@@ -50,24 +50,24 @@ Main site: https://future-code-football-daily.pages.dev/
 Repo: futurecode064-cyber/AI-Recap-GitHub
 Branch: football-daily-render
 File: football-daily/data/today.json
-Per match: `dailyPreviewText` = EXACT SAME ORIGINAL canonical Burmese text delivered to user's ChatGPT daily report (preserve linebreaks, punctuation, words). The browser displays it verbatim, without rewriting. Never replace it with an independently-created `analysisParagraphs` draft.
+Per match: `dailyPreviewText` = FRESH Burmese analysis produced using the user's 22-category research formula for today's actual fixture. The browser displays this newly researched text directly. Do not require old daily chat messages, and do not reuse an unrelated previous-day preview.
 Keep already-existing club logos using `homeCrestUrl`, `awayCrestUrl`. Keep `homeOdds`, `drawOdds`, `awayOdds` as numbers/decimal strings or null; carry `oddsProvider` and `oddsSourceUrl` after genuine source verification.
 Store `researchSources` as a private editorial-style record **in JSON if useful** (the public JSON URL itself is accessible: do NOT store secrets or privacy-sensitive data). Source URLs need not appear in page text.
 Add `specialAnalysisParagraphs` **only** for `specialChoice:true` games. The frontend renders this extra researched content only in the Special Choice filter.
 No demo preview link; no selection-confidence label; only today's date in Asia/Yangon; unknown categories omitted.
 
 ## Special Choice
-This is separate analysis, **additional to and never a replacement for** normal `dailyPreviewText`. Research more deeply using latest 5-game form, home-away splits, tactical mismatch, 1X2, Asian Handicap and risk/value where authentic prices exist; prove each conclusion and name risks. Use no guaranteed-win language. Can be zero Special Choices.
+This is separate, more intensive analysis, **additional to and never a replacement for** normal freshly researched `dailyPreviewText`. Research more deeply using latest 5-game form, home-away splits, tactical mismatch, 1X2, Asian Handicap and risk/value where authentic prices exist; prove each conclusion and name risks. Use no guaranteed-win language. Can be zero Special Choices.
 
 ## Daily publishing sequence
 1. Verify same-day fixtures and kickoffs in Asia/Yangon.
 2. Gather 22 category inputs; prioritize trustworthy latest source docs.
-3. Write each canonical `dailyPreviewText` ONCE.
+3. Research and write today's NEW `dailyPreviewText` article separately for each verified real fixture following the 22-item formula.
 4. Research Special Choice separately.
 5. Prepare JSON for the correct Yangon date, commit to GitHub with current SHA.
-6. Read back the committed JSON and verify all canonical texts are unchanged.
-7. Deliver the *same* canonical strings to the user in ChatGPT.
+6. Read back the committed JSON and verify today's match articles are present, complete, and correspond to sources.
+7. Tell the user that today's website match analysis has been published, and optionally summarize or share the website link in ChatGPT.
 8. Check Pages live `data/today.json` if possible; do not claim success until verified.
 
-## Today's transitional data
-Before this protocol was installed, 2026-10-11 site's 18 previews were generated separately from the user's ChatGPT daily message and therefore are **NOT verified verbatim copies**. Never misrepresent old `analysisParagraphs` fields as the user's original message. Leave historical day's previews intact until exact canonical source or fully sourced new compliant replacement is available.
+## 2026-10-11 implementation
+All 18 match articles were freshly researched and rewritten from the 22-category formula on 11 October 2026. Missing data categories were omitted. The data is published under `football-daily/data/today.json`, and source links are stored with each article.
