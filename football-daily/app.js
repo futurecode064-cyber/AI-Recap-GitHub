@@ -18,6 +18,18 @@ function node(tag,classes="",txt){
  return el;
 }
 function append(parent,...items){items.forEach(n=>{if(n)parent.appendChild(n)});return parent}
+function appendBoldText(parent,plainText){
+ // Trusted editorial formatting only: **text** becomes bold, never parsed as HTML.
+ // Every other character remains literal text, preserving the author's wording.
+ const chunks=String(plainText).split(/(\\*\\*[^*\\n]+\\*\\*)/g);
+ for(const part of chunks){
+   if(!part)continue;
+   if(part.startsWith("**")&&part.endsWith("**")&&part.length>4){
+     parent.appendChild(node("strong","editorial-highlight",part.slice(2,-2)));
+   }else parent.appendChild(document.createTextNode(part));
+ }
+ return parent;
+}
 function goodUrl(url){try{let u=new URL(url);return u.protocol==="https:"||u.protocol==="http:"}catch{return false}}
 function textOrEmpty(value){return typeof value==="string"&&value.trim()?value.trim():""}
 function splitAnalysis(m){
@@ -69,15 +81,14 @@ function renderMatch(match,i){
  const expand=node("button","analysis-toggle","▾ သုံးသပ်ချက်ကို ဖတ်မည် / ခေါက်မည်");expand.type="button";expand.setAttribute("aria-expanded","true");
  const body=node("div","analysis-body");
  body.appendChild(node("h4","","ပွဲကြိုသုံးသပ်ချက်"));
- // Canonical text: the exact message delivered in the user's daily ChatGPT briefing.
- // Never summarize, paraphrase, regenerate or reformat it for website publishing.
+ // Today's freshly researched normal analysis: one flowing Burmese commentary.
  const original=textOrEmpty(match.dailyPreviewText);
  if(original){
-   body.appendChild(node("p","daily-preview-verbatim",original));
+   body.appendChild(appendBoldText(node("p","daily-preview-verbatim"),original));
  }else{
-   const paras=splitAnalysis(match); // Legacy fallback only, not a new write.
+   const paras=splitAnalysis(match);
    if(paras.length)paras.forEach(p=>body.appendChild(node("p","",p)));
-   else body.appendChild(node("p","","နေ့စဉ် မူရင်းသုံးသပ်ချက်စာသား မရရှိသေးပါ။"));
+   else body.appendChild(node("p","","ပွဲကြိုသုံးသပ်ချက်ကို မကြာမီဖော်ပြပါမည်။"));
  }
  // Only Special Choice receives a separate, researched editorial assessment.
  if(selectedLeague==="special"&&match.specialChoice&&Array.isArray(match.specialAnalysisParagraphs)&&match.specialAnalysisParagraphs.length){
