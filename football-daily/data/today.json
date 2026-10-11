@@ -10,8 +10,8 @@
       "venue": "Selhurst Park",
       "homePlayerName": "Jean-Philippe Mateta",
       "awayPlayerName": "Morgan Gibbs-White",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.55",
+      "awayOdds": "2.70",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -23,7 +23,12 @@
       "verdict": "အိမ်ကွင်းအားသာချက်ရှိပေမယ့် နှစ်သင်းစလုံး တည်ငြိမ်မှုလိုနေသေးသဖြင့် သရေဘက်ကို ပိုမြင်ပါတယ်။",
       "predictedScore": "1-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Crystal%20Palace.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Nottingham%20Forest.png",
+      "drawOdds": "3.35",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/crystal-palace-nottingham-forest-378043/"
     },
     {
       "league": "Premier League",
@@ -33,8 +38,8 @@
       "venue": "MKM Stadium",
       "homePlayerName": "Mohamed Belloumi",
       "awayPlayerName": "Jack Grealish",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "3.60",
+      "awayOdds": "2.03",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -46,7 +51,12 @@
       "verdict": "Everton မရှုံးနိုင်ခြေကို ပိုမြင်သော်လည်း အဝေးကွင်းဖြစ်လို့ အကြိတ်အနယ်ရှိနိုင်ပါတယ်။",
       "predictedScore": "1-2",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Hull%20City.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Everton%20FC.png",
+      "drawOdds": "3.45",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/hull-everton-378065/"
     },
     {
       "league": "Premier League",
@@ -56,20 +66,8 @@
       "venue": "Anfield",
       "homePlayerName": "Virgil van Dijk",
       "awayPlayerName": "Erling Haaland",
-      "homePlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Virgil%20van%20Dijk%2006042025%20(2).jpg?width=420",
-      "awayPlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Erling%20Haaland%20June%202025.jpg?width=420",
-      "imageCredits": [
-        {
-          "name": "Virgil van Dijk photo — Timmy96 (CC0)",
-          "url": "https://commons.wikimedia.org/wiki/File:Virgil_van_Dijk_06042025_(2).jpg"
-        },
-        {
-          "name": "Erling Haaland photo — MichaelEmilio (CC BY 4.0)",
-          "url": "https://commons.wikimedia.org/wiki/File:Erling_Haaland_June_2025.jpg"
-        }
-      ],
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "3.00",
+      "awayOdds": "2.23",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -82,7 +80,12 @@
       "verdict": "City ဘက်ကို အနည်းငယ်သာမြင်ပါတယ်။ Liverpool ရဲ့အိမ်ကွင်းတွန်းအားကြောင့် handicap မကြည့်ဘဲ အပြတ်ရွေးမသင့်ပါ။",
       "predictedScore": "1-2",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Liverpool%20FC.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Manchester%20City.png",
+      "drawOdds": "3.70",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/liverpool-manchester-city-378106/"
     },
     {
       "league": "Championship",
@@ -92,8 +95,8 @@
       "venue": "St Mary's Stadium",
       "homePlayerName": "Caspar Jander",
       "awayPlayerName": "",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.55",
+      "awayOdds": "5.20",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -105,7 +108,12 @@
       "verdict": "Southampton အိမ်ကွင်းအနည်းငယ်သာ၊ ဒါဘီဖြစ်လို့ ရွေးချယ်မှုကို သတိထားသင့်ပါတယ်။",
       "predictedScore": "2-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/JoseArroyave/football-logos@main/logos/england/Southampton.svg",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/JoseArroyave/football-logos@main/logos/england/Portsmouth.svg",
+      "drawOdds": "4.20",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/southampton-portsmouth-378010/"
     },
     {
       "league": "Bundesliga",
@@ -115,8 +123,8 @@
       "venue": "RheinEnergieStadion",
       "homePlayerName": "Said El Mala",
       "awayPlayerName": "Tim Kleindienst",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.02",
+      "awayOdds": "3.20",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -128,7 +136,12 @@
       "verdict": "တစ်ဖက်သတ်မဟုတ်တဲ့ဒါဘီဖြစ်လို့ သရေဘက်ကို ပိုမြင်ပါတယ်။",
       "predictedScore": "1-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Germany%20-%20Bundesliga/1.FC%20K%C3%B6ln.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Germany%20-%20Bundesliga/Borussia%20M%C3%B6nchengladbach.png",
+      "drawOdds": "3.95",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/koln-monchengladbach-378059/"
     },
     {
       "league": "Bundesliga",
@@ -138,8 +151,8 @@
       "venue": "Europa-Park Stadion",
       "homePlayerName": "Derry Scherhant",
       "awayPlayerName": "Moussa Sylla",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.62",
+      "awayOdds": "5.00",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -151,7 +164,12 @@
       "verdict": "Special Choice — Freiburg ၏ အိမ်ကွင်းခြေစွမ်းနှင့် နောက်ဆုံး form ကိုကြည့်ပြီး ရိုးရိုးအနိုင်ရနိုင်ခြေဘက်ကို ရွေးထားပါတယ်။ Handicap ဈေးမသိမချင်း အကျောပေးဘက်ကို မတင်ပြပါ။",
       "predictedScore": "2-0",
       "specialChoice": true,
-      "selectionConfidence": "အလယ်အလတ် — အချက်အလက်အခြေပြု"
+      "selectionConfidence": "အလယ်အလတ် — အချက်အလက်အခြေပြု",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Germany%20-%20Bundesliga/SC%20Freiburg.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Germany%20-%20Bundesliga/FC%20Schalke%2004.png",
+      "drawOdds": "4.10",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/freiburg-schalke-04-378073/"
     },
     {
       "league": "La Liga",
@@ -161,8 +179,8 @@
       "venue": "Estadio Martínez Valero",
       "homePlayerName": "",
       "awayPlayerName": "",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.80",
+      "awayOdds": "2.48",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -174,7 +192,12 @@
       "verdict": "Celta Vigo အနိုင်ကို အနည်းငယ်ပိုမျှော်မှန်းပေမယ့် အိမ်ရှင်ပြန်တုံ့ပြန်နိုင်တဲ့ပွဲပါ။",
       "predictedScore": "1-2",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Elche%20CF.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Celta%20de%20Vigo.png",
+      "drawOdds": "3.30",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/elche-celta-vigo-378211/"
     },
     {
       "league": "La Liga",
@@ -184,8 +207,8 @@
       "venue": "Reale Arena",
       "homePlayerName": "Ander Barrenetxea",
       "awayPlayerName": "",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.56",
+      "awayOdds": "5.60",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -197,7 +220,12 @@
       "verdict": "Real Sociedad အိမ်ကွင်းအနည်းငယ်သာဖြစ်ပြီး ဂိုးတစ်လုံးအသာမျိုးကို မျှော်မှန်းပါတယ်။",
       "predictedScore": "2-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Real%20Sociedad.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Deportivo%20A%20Coru%C3%B1a.png",
+      "drawOdds": "4.10",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/real-sociedad-la-coruna-378226/"
     },
     {
       "league": "La Liga",
@@ -207,8 +235,8 @@
       "venue": "Estadio La Cartuja",
       "homePlayerName": "Antony",
       "awayPlayerName": "Ante Budimir",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.52",
+      "awayOdds": "6.00",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -220,7 +248,12 @@
       "verdict": "Special Choice — အိမ်ကွင်း Betis ရိုးရိုးအနိုင်ဘက်ကို ရွေးထားပါတယ်။ လက်ရှိအကျောပေးပေါက်ကြေး မအတည်ပြုရသေးသဖြင့် -0.5/-1 စသည်ဖြင့် မဖန်တီးပါ။",
       "predictedScore": "2-0",
       "specialChoice": true,
-      "selectionConfidence": "အလယ်အလတ် — အချက်အလက်အခြေပြု"
+      "selectionConfidence": "အလယ်အလတ် — အချက်အလက်အခြေပြု",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Real%20Betis%20Balompi%C3%A9.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/CA%20Osasuna.png",
+      "drawOdds": "4.50",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/betis-osasuna-378236/"
     },
     {
       "league": "La Liga",
@@ -230,8 +263,8 @@
       "venue": "El Sardinero",
       "homePlayerName": "Yassir Zabiri",
       "awayPlayerName": "Hugo Duro",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.26",
+      "awayOdds": "2.95",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -243,7 +276,12 @@
       "verdict": "အိမ်ရှင်က တိုက်စစ်ပေါက်နိုင်ပေမယ့် သရေအလားအလာလည်း မြင့်တဲ့ ပွဲပါ။",
       "predictedScore": "1-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Racing%20Santander.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Valencia%20CF.png",
+      "drawOdds": "3.55",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/racing-santander-valencia-378250/"
     },
     {
       "league": "Serie A",
@@ -253,8 +291,8 @@
       "venue": "Stadio Giuseppe Sinigaglia",
       "homePlayerName": "Nico Paz",
       "awayPlayerName": "Paulo Dybala",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.48",
+      "awayOdds": "2.75",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -266,7 +304,12 @@
       "verdict": "Roma နာမည်ကြီးပေမယ့် Como အိမ်ကွင်းမှာ သရေအလားအလာရှိတယ်လို့ မြင်ပါတယ်။",
       "predictedScore": "1-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Como%201907.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/AS%20Roma.png",
+      "drawOdds": "3.55",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/como-calcio-roma-378141/"
     },
     {
       "league": "Serie A",
@@ -276,8 +319,8 @@
       "venue": "Stadio Olimpico",
       "homePlayerName": "Mattia Zaccagni",
       "awayPlayerName": "Patrick Cutrone",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.59",
+      "awayOdds": "5.40",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -289,7 +332,12 @@
       "verdict": "Lazio အိမ်ကွင်းအနိုင်ကို ပိုမျှော်မှန်းပါတယ်၊ ဒါပေမယ့် ပေါက်ကြေးမသိမချင်း handicap ဘက်ကို မရွေးပါ။",
       "predictedScore": "2-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/SS%20Lazio.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/AC%20Monza.png",
+      "drawOdds": "4.00",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/lazio-monza-378217/"
     },
     {
       "league": "Serie A",
@@ -299,8 +347,8 @@
       "venue": "Via del Mare",
       "homePlayerName": "",
       "awayPlayerName": "Riccardo Orsolini",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "4.13",
+      "awayOdds": "2.13",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -312,7 +360,12 @@
       "verdict": "Bologna ရဲ့ရာသီအစ ရုန်းကန်မှုကြောင့် Lecce အိမ်ကွင်းသရေအခွင့်အရေးရှိပါတယ်။",
       "predictedScore": "1-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/US%20Lecce.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Bologna%20FC%201909.png",
+      "drawOdds": "3.30",
+      "oddsProvider": "1xbet · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/odds/lecce-bologna-8522149/"
     },
     {
       "league": "Serie A",
@@ -322,8 +375,8 @@
       "venue": "Mapei Stadium",
       "homePlayerName": "Vasilije Adzic",
       "awayPlayerName": "Diego Moreira",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "4.20",
+      "awayOdds": "1.79",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -335,7 +388,12 @@
       "verdict": "AC Milan အနိုင်ဘက်ကို အနည်းငယ်ပိုမြင်ပါတယ်၊ အကျောပေးဈေးကို အတည်မပြုနိုင်သေးပါ။",
       "predictedScore": "1-2",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/US%20Sassuolo.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/AC%20Milan.png",
+      "drawOdds": "3.80",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/sassuolo-ac-milan-378233/"
     },
     {
       "league": "Serie A",
@@ -345,8 +403,8 @@
       "venue": "Unipol Domus",
       "homePlayerName": "",
       "awayPlayerName": "Kenan Yildiz",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "6.00",
+      "awayOdds": "1.55",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -358,7 +416,12 @@
       "verdict": "Cagliari ရဲ့ရာသီအစခြေစွမ်းကြောင့် Juventus အဝေးကွင်းအနိုင်ကို မစိတ်ချပါ။ သရေဘက်ကို ထည့်တွက်ပါတယ်။",
       "predictedScore": "1-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Cagliari%20Calcio.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Juventus%20FC.png",
+      "drawOdds": "4.00",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/cagliari-juventus-378245/"
     },
     {
       "league": "Ligue 1",
@@ -368,8 +431,8 @@
       "venue": "Allianz Riviera",
       "homePlayerName": "",
       "awayPlayerName": "",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.29",
+      "awayOdds": "2.90",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -381,7 +444,12 @@
       "verdict": "Nice ရဲ့အိမ်ကွင်းပြန်တက်မှုနဲ့ Strasbourg ရဲ့တန်ပြန်တိုက်စစ်ကြောင့် သရေအလားအလာရှိပါတယ်။",
       "predictedScore": "1-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/France%20-%20Ligue%201/OGC%20Nice.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/France%20-%20Ligue%201/RC%20Strasbourg%20Alsace.png",
+      "drawOdds": "3.55",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/nice-racing-strasbourg-378221/"
     },
     {
       "league": "Ligue 1",
@@ -391,8 +459,8 @@
       "venue": "Roazhon Park",
       "homePlayerName": "",
       "awayPlayerName": "",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.43",
+      "awayOdds": "6.20",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -404,7 +472,12 @@
       "verdict": "Rennes အိမ်ကွင်းပြန်တုံ့ပြန်နိုင်ခြေ ပိုများပေမယ့် clean sheet ကို မယုံကြည်ပါ။",
       "predictedScore": "2-1",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/France%20-%20Ligue%201/Stade%20Rennais%20FC.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/France%20-%20Ligue%201/AJ%20Auxerre.png",
+      "drawOdds": "5.00",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/rennes-auxerre-378231/"
     },
     {
       "league": "Ligue 1",
@@ -414,8 +487,8 @@
       "venue": "Stade de l'Aube",
       "homePlayerName": "",
       "awayPlayerName": "",
-      "homeOdds": null,
-      "awayOdds": null,
+      "homeOdds": "3.70",
+      "awayOdds": "1.89",
       "goalLine": null,
       "asianHandicap": null,
       "marketUpdatedAt": null,
@@ -427,7 +500,12 @@
       "verdict": "Marseille အရည်အသွေးအရ ပိုသာပေမယ့် နှစ်သင်းစလုံး မတည်ငြိမ်လို့ အထူးရွေးချယ်မှု မဟုတ်ပါ။",
       "predictedScore": "1-2",
       "specialChoice": false,
-      "selectionConfidence": "သတိထားရွေးချယ်ရန်"
+      "selectionConfidence": "သတိထားရွေးချယ်ရန်",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/France%20-%20Ligue%201/ESTAC%20Troyes.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/France%20-%20Ligue%201/Olympique%20Marseille.png",
+      "drawOdds": "3.85",
+      "oddsProvider": "Stake · SportyTrader",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/betting-tips/troyes-marseille-378244/"
     }
   ],
   "noFixturesLeagues": [],
@@ -439,5 +517,12 @@
     "https://www.gazzetta.it/Calcio/prob_form/?match=2558743",
     "https://www.theguardian.com/football/2026/oct/09/premier-league-team-news-predicted-lineups-for-the-weekend-action"
   ],
-  "editorialNote": "All UK kickoff times converted to Asia/Yangon (+5h30 from BST). Late Sunday UK games are Monday early morning in Yangon. Betting price fields remain null without verified live Myanmar market quotes. Photos: see imageCredits for mandatory author attribution. Editorial judgment is an opinion; predicted scores are not guarantees."
+  "editorialNote": "All UK kickoff times converted to Asia/Yangon (+5h30 from BST). Late Sunday UK games are Monday early morning in Yangon. Betting price fields remain null without verified live Myanmar market quotes. Photos: see imageCredits for mandatory author attribution. Editorial judgment is an opinion; predicted scores are not guarantees.",
+  "oddsInfo": {
+    "market": "Full Time Result 1X2",
+    "format": "Decimal odds",
+    "sources": "Named bookmaker quotes as displayed by SportyTrader; snapshot only, subject to change",
+    "verifiedDate": "2026-10-11",
+    "disclaimer": "Prices are not official football association odds. Check with the actual bookmaker before any decision."
+  }
 }
