@@ -1200,7 +1200,9 @@
           "awayGoals": 1
         }
       ],
-      "historyCheckedOn": "2026-10-11"
+      "historyCheckedOn": "2026-10-11",
+      "status": "live",
+      "liveScore": "0-0"
     },
     {
       "league": "La Liga",
