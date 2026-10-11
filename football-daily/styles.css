@@ -50,3 +50,10 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
 .match-download:hover{filter:brightness(1.08)}
 .match-download:disabled{cursor:wait;opacity:.7}
 @media(max-width:620px){.myanmar-market{margin:0 12px 16px;padding:14px 12px}.myanmar-market-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.myanmar-market-row>strong{grid-column:1/-1}.myanmar-market-row small{font-size:9px}.myanmar-market-row b{font-size:12px}.match-actions{padding:12px 15px 20px}.match-download{width:100%;font-size:12px}}
+
+/* Two-line-only IBET789 market presentation */
+.myanmar-market-pairs{display:grid;gap:12px}
+.myanmar-market-pair{display:flex;align-items:baseline;flex-wrap:wrap;gap:13px;border-top:1px solid #475e54;padding:12px 0 0;font-size:13px;line-height:1.9}
+.myanmar-market-pair strong{color:#ffc08e;min-width:123px;font-weight:800}
+.myanmar-market-pair span{color:#f8f0e0;overflow-wrap:anywhere}
+@media(max-width:620px){.myanmar-market-pair{font-size:12px;gap:5px}.myanmar-market-pair strong{min-width:110px}}
