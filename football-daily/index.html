@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css">
 <script defer src="./card-export.js"></script>
+<script defer src="./social-export.js"></script>
 <script defer src="./app.js"></script>
 </head>
 <body>
@@ -26,7 +27,12 @@
  </div></section>
  <section class="content container">
    <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">TODAY'S MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
-   <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2>ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill">● TODAY ONLY</span></div>
+   <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2 id="reportHeading">ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill" id="reportPill">● TODAY</span></div>
+   <nav class="date-tabs" id="dateTabs" aria-label="မြန်မာစံတော်ချိန်ဖြင့် ရက်စွဲရွေးရန်">
+     <button type="button" data-day="-1">မနေ့ကရလဒ် <small id="dateYesterday"></small></button>
+     <button type="button" data-day="0" class="active">ဒီနေ့ပွဲ <small id="dateToday"></small></button>
+     <button type="button" data-day="1">မနက်ဖြန်ပွဲ <small id="dateTomorrow"></small></button>
+   </nav>
    <nav class="filters" id="filters" aria-label="League filters">
     <button data-league="all" class="selected" type="button">ပွဲအားလုံး</button>
     <button data-league="Premier League" type="button">ပရီးမီးယားလိဂ်</button>
