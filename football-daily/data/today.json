@@ -181,7 +181,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "0-1"
+      "liveScore": "2-1"
     },
     {
       "league": "Premier League",
@@ -363,7 +363,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "0-1"
+      "liveScore": "0-0"
     },
     {
       "league": "Premier League",
@@ -876,7 +876,7 @@
       ],
       "historyCheckedOn": "2026-10-11",
       "status": "live",
-      "liveScore": "0-0"
+      "liveScore": "1-0"
     },
     {
       "league": "Bundesliga",
@@ -1207,8 +1207,8 @@
         }
       ],
       "historyCheckedOn": "2026-10-11",
-      "status": "live",
-      "liveScore": "0-0"
+      "status": "finished",
+      "finalScore": "0-0"
     },
     {
       "league": "La Liga",
@@ -2831,7 +2831,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "0-0"
+      "liveScore": "1-1"
     },
     {
       "league": "Ligue 1",
