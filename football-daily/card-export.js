@@ -84,7 +84,12 @@
    const extras=opts.special&&Array.isArray(match.specialAnalysisParagraphs)?match.specialAnalysisParagraphs: [];
    const detailed=extras.map(p=>lines(meter,p,W-M*2,26));
    const extraHeight=extras.length?90+detailed.reduce((sum,l)=>sum+l.length*49+26,0):0;
-   const H=1160+preview.length*53+extraHeight;
+   const homeFive=Array.isArray(match.homeLastFive)?match.homeLastFive.slice(0,5):[];
+   const awayFive=Array.isArray(match.awayLastFive)?match.awayLastFive.slice(0,5):[];
+   const h2h=Array.isArray(match.headToHead)?match.headToHead.slice(0,5):[];
+   const rowCount=Math.max(homeFive.length,awayFive.length,1);
+   const historyHeight=145+rowCount*38+Math.max(h2h.length,1)*36;
+   const H=1160+preview.length*53+extraHeight+historyHeight;
    const canvas=document.createElement("canvas");canvas.width=W;canvas.height=H;
    const ctx=canvas.getContext("2d");if(!ctx)throw new Error("Browser cannot export PNG");
    rect(ctx,0,0,W,H,C.bg);rounded(ctx,15,15,W-30,H-30,20,C.panel,C.line);
@@ -127,8 +132,34 @@
      [present(g.line)?"ဂိုးပေါင်း "+g.line:"",present(g.over)?"Over "+g.over:"",present(g.under)?"Under "+g.under:""].filter(Boolean).join(" · ")||"—";
    text(ctx,"ဘော်ဒီကြေး = "+body,M+20,766,20,C.cream);
    text(ctx,"ဂိုးပေါင်းကြေး = "+goals,M+20,809,20,C.cream);
-   text(ctx,"ပွဲကြိုသုံးသပ်ချက်",M,887,28,C.orange,true);
-   let y=957;y=drawLines(ctx,preview,y,28,53);
+   // Keep last-five and H2H in the complete, variable-height download.
+   const formY=867;
+   rounded(ctx,M,formY,W-M*2,historyHeight-14,12,"#243935",C.line);
+   text(ctx,"နောက်ဆုံး ၅ ပွဲ နှင့် ထိပ်တိုက်တွေ့ဆုံမှု (H2H)",M+20,formY+16,24,C.orange,true);
+   text(ctx,match.home,M+20,formY+55,20,C.cream,true);
+   text(ctx,match.away,624,formY+55,20,C.cream,true);
+   rect(ctx,600,formY+52,2,rowCount*38+21,C.line);
+   function fiveRows(games,x){
+     if(!games.length){text(ctx,"အတည်ပြုစာရင်း မရရှိသေး",x,formY+94,18,C.muted);return}
+     games.forEach((game,i)=>{
+       const score=Number.isInteger(game.teamGoals)&&Number.isInteger(game.opponentGoals)
+         ?game.teamGoals+" – "+game.opponentGoals:"—";
+       const ground=game.venueSide==="home"?"H":game.venueSide==="away"?"A":"";
+       text(ctx,ground+" "+String(game.opponent||"").slice(0,28),x,formY+94+i*38,18,C.cream);
+       text(ctx,score,x+440,formY+94+i*38,18,C.muted,false,"right");
+     });
+   }
+   fiveRows(homeFive,M+20);fiveRows(awayFive,624);
+   const h2hTitleY=formY+99+rowCount*38;
+   text(ctx,"H2H · နောက်ဆုံး တွေ့ဆုံမှုများ",M+20,h2hTitleY,20,C.orange,true);
+   if(!h2h.length) text(ctx,"အတည်ပြုစာရင်း မရရှိသေး",M+20,h2hTitleY+37,18,C.muted);
+   h2h.forEach((g,i)=>{
+     const score=Number.isInteger(g.homeGoals)&&Number.isInteger(g.awayGoals)
+      ?g.homeGoals+" – "+g.awayGoals:"—";
+     text(ctx,[g.date||"",g.home||"",score,g.away||""].join("  ·  "),M+20,h2hTitleY+37+i*36,18,C.cream);
+   });
+   text(ctx,"ပွဲကြိုသုံးသပ်ချက်",M,887+historyHeight,28,C.orange,true);
+   let y=957+historyHeight;y=drawLines(ctx,preview,y,28,53);
    if(extras.length){
      y+=38;text(ctx,"★ SPECIAL CHOICE — အသေးစိတ်သုံးသပ်ချက်",M,y,27,C.orange,true);y+=64;
      for(const l of detailed)y=drawLines(ctx,l,y,26,49)+26;
