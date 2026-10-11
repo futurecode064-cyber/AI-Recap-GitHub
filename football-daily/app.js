@@ -4,13 +4,21 @@ const LEAGUE_NAMES={
  "Bundesliga":"ဘွန်ဒက်စ်လီဂါ","Ligue 1":"လီဂူးဝမ်း","Championship":"ချန်ပီယံရှစ်"
 };
 const TZ="Asia/Yangon";
-let report={matches:[],published:false},selectedLeague="all";
+let report={matches:[],published:false},selectedLeague="all",selectedDay=0;
 const $=id=>document.getElementById(id);
 function dateParts(){
  const pieces=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
  const p=Object.fromEntries(pieces.filter(x=>x.type!=="literal").map(x=>[x.type,x.value]));
  return {key:`${p.year}-${p.month}-${p.day}`,day:`${p.day}/${p.month}/${p.year}`};
 }
+function selectedDateKey(offset=selectedDay){
+ const today=dateParts().key;
+ const d=new Date(today+"T12:00:00Z");
+ d.setUTCDate(d.getUTCDate()+Number(offset));
+ return d.toISOString().slice(0,10);
+}
+function displayDate(key){const [y,m,d]=key.split("-");return d+"/"+m+"/"+y}
+function validFinal(m){return m?.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(String(m.finalScore||""))}
 function node(tag,classes="",txt){
  const el=document.createElement(tag);
  if(classes) el.className=classes;
@@ -87,6 +95,64 @@ function renderMyanmarOdds(match){
 
  return section;
 }
+
+function recentGames(match,side){
+ const items=Array.isArray(match[side+"LastFive"])?match[side+"LastFive"].slice(0,5):[];
+ const wrap=node("div","form-team");
+ const head=node("div","form-team-head");
+ const img=node("img","form-crest");
+ img.src=match[side+"CrestUrl"]||"";img.alt="";img.loading="lazy";
+ img.onerror=()=>img.remove();
+ head.appendChild(img);head.appendChild(node("strong","",match[side]||"Team"));
+ wrap.appendChild(head);
+ if(!items.length){wrap.appendChild(node("p","form-empty","နောက်ဆုံး ၅ ပွဲ အတည်ပြုစာရင်း မတင်ရသေးပါ"));return wrap}
+ for(const item of items){
+   if(!item||typeof item!=="object")continue;
+   const row=node("div","form-result-row");
+   const score=Number.isInteger(item.teamGoals)&&Number.isInteger(item.opponentGoals)
+     ?item.teamGoals+" – "+item.opponentGoals:"—";
+   let result="";
+   if(Number.isInteger(item.teamGoals)&&Number.isInteger(item.opponentGoals)){
+     result=item.teamGoals>item.opponentGoals?"W":item.teamGoals<item.opponentGoals?"L":"D";
+   }
+   row.appendChild(node("span","form-result "+(result?"form-"+result.toLowerCase():""),result||"·"));
+   const descr=node("span","form-opponent",(item.venueSide==="home"?"အိမ်ကွင်း · ":item.venueSide==="away"?"အဝေးကွင်း · ":"")+(item.opponent||""));
+   row.appendChild(descr);row.appendChild(node("b","",score));
+   wrap.appendChild(row);
+ }
+ return wrap;
+}
+function renderFormAndH2H(match){
+ const section=node("section","form-h2h");
+ section.appendChild(node("h4","form-title","ထိပ်တိုက်တွေ့ဆုံမှု (H2H) နှင့် နောက်ဆုံး ၅ ပွဲ"));
+ const split=node("div","form-lastfive");
+ split.appendChild(recentGames(match,"home"));split.appendChild(recentGames(match,"away"));
+ section.appendChild(split);
+ const h2h=node("div","h2h-records");
+ h2h.appendChild(node("h5","","Head-to-Head · နောက်ဆုံး ၅ ကြိမ်"));
+ const games=Array.isArray(match.headToHead)?match.headToHead.slice(0,5):[];
+ if(!games.length) h2h.appendChild(node("p","form-empty","အတည်ပြုထားသော H2H ရလဒ် မတင်ရသေးပါ"));
+ else for(const g of games){
+   if(!g||typeof g!=="object")continue;
+   const row=node("div","h2h-row");
+   row.appendChild(node("span","h2h-date",g.date||""));
+   row.appendChild(node("span","h2h-teams",(g.home||"")+" – "+(g.away||"")));
+   row.appendChild(node("b","h2h-score",Number.isInteger(g.homeGoals)&&Number.isInteger(g.awayGoals)?g.homeGoals+" – "+g.awayGoals:"—"));
+   h2h.appendChild(row);
+ }
+ section.appendChild(h2h);
+ return section;
+}
+function renderFinished(match){
+ const card=node("article","match-card result-card");
+ card.appendChild(node("div","match-topline","◈ "+(LEAGUE_NAMES[match.league]||match.league||"")));
+ const banner=node("div","vs-banner");
+ const centre=node("div","result-score",match.finalScore);
+ append(banner,teamSide(match,"home"),centre,teamSide(match,"away"));
+ card.appendChild(banner);
+ card.appendChild(node("div","result-meta",(match.home||"")+"  ·  "+(match.away||"")+"  |  ပွဲပြီး · "+(match.kickoffYangon||"")));
+ return card;
+}
 function renderMatch(match,i){
  const card=node("article","match-card"+(match.specialChoice?" is-special":""));
  const headline=node("div","match-topline");
@@ -109,6 +175,7 @@ function renderMatch(match,i){
  card.appendChild(markets);
 
  card.appendChild(renderMyanmarOdds(match));
+ card.appendChild(renderFormAndH2H(match));
  const expand=node("button","analysis-toggle","▾ သုံးသပ်ချက်ကို ဖတ်မည် / ခေါက်မည်");expand.type="button";expand.setAttribute("aria-expanded","true");
  const body=node("div","analysis-body");
  body.appendChild(node("h4","","ပွဲကြိုသုံးသပ်ချက်"));
@@ -141,7 +208,11 @@ function renderMatch(match,i){
  expand.addEventListener("click",()=>{let visible=!body.hidden;body.hidden=visible;expand.setAttribute("aria-expanded",String(!visible))});
  append(card,expand,body);
  const actions=node("div","match-actions");
- const button=node("button","match-download","↓  ဒီပွဲပုံကို Download မယ်");
+ const select=node("select","poster-size");select.setAttribute("aria-label","PNG ပုံအရွယ်အစား ရွေးရန်");
+ for(const [value,label] of [["full","သုံးသပ်ချက်အပြည့် PNG"],["square","Facebook 1:1 · 1080×1080"],["feed","Facebook 4:5 · 1080×1350"],["story","Story 9:16 · 1080×1920"]]){
+   const option=node("option","",label);option.value=value;select.appendChild(option);
+ }
+ const button=node("button","match-download","↓ PNG ပုံ Download မယ်");
  button.type="button";
  button.setAttribute("aria-label",match.home+" နှင့် "+match.away+" ပွဲပုံကို PNG အဖြစ် သိမ်းရန်");
  button.addEventListener("click",async()=>{
@@ -149,22 +220,27 @@ function renderMatch(match,i){
    const old=button.textContent;
    button.disabled=true;button.textContent="PNG ပုံ ပြင်ဆင်နေသည်…";
    try{
-     if(!window.FutureCodeCardExport)throw Error("Export module missing");
-     await window.FutureCodeCardExport.save(match,{
-       leagueLabel:LEAGUE_NAMES[match.league]||match.league,
+     const opts={leagueLabel:LEAGUE_NAMES[match.league]||match.league,
        brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
-       special:selectedLeague==="special"
-     });
-     button.textContent="✓ PNG ပုံ Download စတင်ပြီး";
+       brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
+       special:selectedLeague==="special"};
+     if(select.value==="full"){
+       if(!window.FutureCodeCardExport)throw Error("Full export module missing");
+       await window.FutureCodeCardExport.save(match,opts);
+     }else{
+       if(!window.FutureCodeSocialExport)throw Error("Social export module missing");
+       await window.FutureCodeSocialExport.save(match,{...opts,format:select.value});
+     }
+     button.textContent="✓ PNG Download စတင်ပြီး";
    }catch(err){
-     console.error("Match card download error",err);
+     console.error("Match PNG download error",err);
      button.textContent="Download မအောင်မြင်ပါ — ပြန်နှိပ်ရန်";
    }finally{
      button.disabled=false;
      setTimeout(()=>{if(button.isConnected)button.textContent=old},2500);
    }
  });
- actions.appendChild(button);
+ actions.appendChild(select);actions.appendChild(button);
  card.appendChild(actions);
  return card;
 }
@@ -172,19 +248,22 @@ function render(){
  const list=$("matchList");list.replaceChildren();
  const all=Array.isArray(report.matches)?report.matches:[];
  const picks=all.filter(m=>m.specialChoice===true);
- const selected=all.filter(m=>selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||m.league===selectedLeague);
+ const selected=all.filter(m=>(selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||m.league===selectedLeague)&&(selectedDay!==-1||validFinal(m)));
  $("matchCount").textContent=String(all.length);$("specialCount").textContent=String(picks.length);
- $("statusText").textContent=report.published?"ထုတ်ဝေပြီး":"မထုတ်ဝေရသေး";
+ $("statusText").textContent=report.published?(selectedDay===-1?"ရလဒ်အတည်ပြုပြီး":"ထုတ်ဝေပြီး"):"Data မရရှိသေး";
+ const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"],"1":["မနက်ဖြန် ပွဲကြိုသုံးသပ်ချက်များ","● TOMORROW"]};
+ $("reportHeading").textContent=labels[selectedDay][0];
+ $("reportPill").textContent=labels[selectedDay][1];
  $("sectionNote").textContent=selectedLeague==="special"
  ?"လက်ရှိသတင်း၊ အသင်းအင်အားနဲ့ ဈေးကွက်အခြေအနေများကို အစုံစစ်ဆေးပြီး သီးသန့်ရွေးထားသည့် ပွဲများသာ ပါဝင်ပါမည်။"
- :`${selected.length} ပွဲကို ပြသနေသည် · မြန်မာစံတော်ချိန် ${dateParts().day}`;
- if(selected.length)selected.forEach((m,i)=>list.appendChild(renderMatch(m,i)));
+ :`${selected.length} ပွဲကို ပြသနေသည် · မြန်မာစံတော်ချိန် ${displayDate(selectedDateKey())}`;
+ if(selected.length)selected.forEach((m,i)=>list.appendChild(selectedDay===-1?renderFinished(m):renderMatch(m,i)));
  else{
   const card=node("div","empty-card");
   append(card,node("div","empty-icon",selectedLeague==="special"?"★":"○"),
-   node("h3","",selectedLeague==="special"?"ဒီနေ့ Special Choice မရွေးရသေးပါ":report.published?"ဒီ Filter အတွက် ပွဲမရှိပါ":"ဒီနေ့ သုံးသပ်ချက် မထုတ်ဝေရသေးပါ"),
+   node("h3","",selectedDay===-1?"မနေ့က အတည်ပြုရလဒ် မတင်ရသေးပါ":selectedDay===1&&!report.published?"မနက်ဖြန် ပွဲစဉ်များ မတင်ရသေးပါ":selectedLeague==="special"?"Special Choice မရွေးရသေးပါ":report.published?"ဒီ Filter အတွက် ပွဲမရှိပါ":"ဒီနေ့ သုံးသပ်ချက် မထုတ်ဝေရသေးပါ"),
    node("p","",selectedLeague==="special"?"စစ်ဆေးမှုမပြည့်စုံသေးလျှင် ရွေးချယ်မှုကို အတင်းမဖော်ပြပါ။":
-     "ဒီနေ့အတွက် အချက်အလက်အသစ်မရသေးပါ။ မနေ့ကပွဲတွေကို ဒီနေရာမှာ ပြန်မပြပါ။"));
+     selectedDay===-1?"ပွဲပြီးရလဒ်ကို အတည်ပြုပြီးမှသာ ဤနေရာတွင် ဖော်ပြပါမည်။":selectedDay===1?"မနက်ဖြန်ပွဲစဉ် အတည်ပြုချက်ရရှိလျှင် ဖော်ပြပါမည်။":"ဒီနေ့အတွက် အချက်အလက်အသစ်မရသေးပါ။"));
   list.appendChild(card);
  }
  if(Array.isArray(report.noFixturesLeagues)&&report.noFixturesLeagues.length){
@@ -194,12 +273,15 @@ function render(){
 async function load(){
  $("statusText").textContent="ရယူနေသည်";
  try{
-  const path=document.documentElement.dataset.footballDataUrl||"./data/today.json";
-  const response=await fetch(path+"?t="+Date.now(),{cache:"no-store"});
+  const target=selectedDateKey();
+  const path=selectedDay===0?(document.documentElement.dataset.footballDataUrl||"./data/today.json"):
+    selectedDay===-1?"./data/archive/"+target+".json":"./data/upcoming/"+target+".json";
+  const url=new URL(path,document.baseURI);url.searchParams.set("t",Date.now());
+  const response=await fetch(url.toString(),{cache:"no-store"});
+  if(response.status===404){report={reportDate:target,matches:[],published:false};render();return}
   if(!response.ok)throw new Error("HTTP "+response.status);
   const json=await response.json();
-  if(json.reportDate!==dateParts().key){report={matches:[],published:false};}
-  else report=json;
+  report=json.reportDate===target?json:{reportDate:target,matches:[],published:false};
   render();
  }catch(e){
   $("statusText").textContent="ချိတ်ဆက်မှု မအောင်မြင်";
@@ -211,6 +293,16 @@ async function load(){
 }
 function init(){
  $("heroDate").textContent="MYANMAR · "+dateParts().day;
+ for(const button of $("dateTabs").querySelectorAll("button")){
+   const offset=Number(button.dataset.day);
+   const small=$("date"+(offset===-1?"Yesterday":offset===0?"Today":"Tomorrow"));
+   small.textContent=displayDate(selectedDateKey(offset));
+   button.addEventListener("click",()=>{
+     selectedDay=offset;
+     $("dateTabs").querySelectorAll("button").forEach(b=>{b.classList.toggle("active",b===button);b.setAttribute("aria-current",String(b===button))});
+     report={matches:[],published:false};load();
+   });
+ }
  $("filters").querySelectorAll("button").forEach(button=>button.addEventListener("click",()=>{
   selectedLeague=button.dataset.league||"all";
   $("filters").querySelectorAll("button").forEach(b=>b.classList.toggle("selected",b===button));
