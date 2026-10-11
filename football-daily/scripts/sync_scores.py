@@ -161,9 +161,11 @@ def enrich(match,e,slug):
         match["status"]="live"
         match["liveScore"]=f"{hg}-{ag}"
     # Keep the publisher's Burmese commentary, predictions and odds untouched.
-    if not all(isinstance(match.get(k),list) and len(match[k])>=5 for k in
+    check_day=dt.datetime.now(TZ).date().isoformat()
+    if match.get("historyCheckedOn")!=check_day and not all(isinstance(match.get(k),list) and len(match[k])>=5 for k in
                ("homeLastFive","awayLastFive","headToHead")):
         home,away,h2h=verified_history(e,slug)
+        match["historyCheckedOn"]=check_day
         if home:match["homeLastFive"]=home
         if away:match["awayLastFive"]=away
         if h2h:match["headToHead"]=h2h
