@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: wasteland-command-multiplayer
+    runtime: node
+    plan: free
+    buildCommand: node --check server/server.mjs
+    startCommand: node server/server.mjs
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: ALLOWED_ORIGIN
+        value: https://wasteland-command-hd.cheeky-elf-5504.chatgpt.site
