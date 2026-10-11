@@ -20,3 +20,11 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
 .team-crest-fallback{height:135px;width:135px;display:grid;place-items:center;border-radius:50%;border:2px solid #779085;background:#203c39;color:#fcebcf;font:900 54px var(--heading)}
 .odds-source{font-size:10px;line-height:1.9;color:#aabfb7;text-align:right;padding:0 25px 16px;margin-top:-12px}
 @media(max-width:620px){.team-crest{width:min(115px,86%);height:107px}.team-crest-fallback{height:86px;width:86px;font-size:32px}.odds-source{font-size:9px;padding:0 12px 14px}}
+
+/* Exact daily-preview text is retained byte-for-byte and rendered without paraphrasing. */
+.daily-preview-verbatim{white-space:pre-wrap;overflow-wrap:anywhere}
+/* Research appears exclusively when the visitor explicitly opens Special Choice. */
+.special-analysis{margin:22px 0 0;padding:21px 22px;border:1px solid #775e3b;border-radius:13px;background:linear-gradient(145deg,#322e25,#28332d)}
+.special-analysis h4{color:#ffd2a0;font-size:15px;margin:0 0 17px}
+.special-analysis p{color:#eee8d8;line-height:2.25}
+@media(max-width:620px){.special-analysis{padding:16px 14px}}
