@@ -63,22 +63,38 @@ def main():
         if len(matches) == 0 and not LEAGUES.issubset(set(str(x) for x in no_fixtures)):
             errors.append("No previews and all six leagues are not explicitly confirmed to have no fixtures")
         if matches:
-            # 2026-10-12 onward, require the exact canonical daily-briefing text.
-            # Oct 11 and earlier were a legacy format; do not mislabel them verbatim.
-            require_canonical = today >= "2026-10-12"
+            # Guard the requested regular prose format and BOTH teams' actual league records.
+            # This only checks the data schema, not the accuracy of the cited sports sources.
+            require_structured_standings = today >= "2026-10-12"
             missing = []
+            invalid_standings = []
+            wrong_format = []
             unsupported_odds = []
             for idx, match in enumerate(matches, start=1):
                 if not isinstance(match, dict) or not match.get("home") or not match.get("away"):
                     missing.append(idx)
                     continue
-                canonical = match.get("dailyPreviewText")
-                if require_canonical and (not isinstance(canonical, str) or len(canonical.strip()) < 150):
+                preview = match.get("dailyPreviewText")
+                if not isinstance(preview, str) or len(preview.strip()) < 150:
                     missing.append(idx)
-                elif not require_canonical and not (
-                    canonical or match.get("analysisParagraphs") or match.get("analysis")
-                ):
-                    missing.append(idx)
+                elif "\\n\\n" in preview or preview.count("**") != 4:
+                    wrong_format.append(idx)
+                if require_structured_standings:
+                    for side in ("home", "away"):
+                        record = match.get(f"{side}Standing")
+                        if not isinstance(record, dict) or not all(
+                            isinstance(record.get(k), int) and not isinstance(record.get(k), bool)
+                            for k in ("played", "wins", "draws", "losses", "points", "position")
+                        ):
+                            invalid_standings.append(f"{idx}:{side}")
+                        elif (
+                            record["played"] != record["wins"] + record["draws"] + record["losses"]
+                            or record["points"] < 0 or record["position"] < 1
+                            or record["position"] > (24 if match.get("league") == "Championship" else 20)
+                        ):
+                            invalid_standings.append(f"{idx}:{side}")
+                    if not match.get("standingsSourceUrl"):
+                        invalid_standings.append(f"{idx}:source")
                 # Warn, but don't manufacture missing odds. Confirm triplet and source together.
                 odds = [match.get("homeOdds"), match.get("drawOdds"), match.get("awayOdds")]
                 if any(v is not None for v in odds) and (
@@ -87,7 +103,11 @@ def main():
                 ):
                     unsupported_odds.append(idx)
             if missing:
-                errors.append(f"Matches lacking teams or original daily-preview text: {missing}")
+                errors.append(f"Matches lacking teams or full Burmese daily preview text: {missing}")
+            if wrong_format:
+                errors.append(f"Normal preview must be one paragraph with two bold spans: {wrong_format}")
+            if invalid_standings:
+                errors.append(f"Missing/invalid verified standings for BOTH sides (played, W-D-L, pts, pos, source): {invalid_standings}")
             if unsupported_odds:
                 errors.append(f"1X2 odds require all three prices and a bookmaker source: {unsupported_odds}")
     if errors:
