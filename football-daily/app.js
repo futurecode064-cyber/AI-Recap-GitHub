@@ -75,7 +75,7 @@ function renderMyanmarOdds(match){
            (has(gl.under)?"Under "+gl.under:"")].filter(Boolean).join(" · ");
  };
  const section=node("section","myanmar-market");
- section.appendChild(node("h4","myanmar-market-title","IBET789 · Myanmar ကြေး"));
+ section.appendChild(node("h4","myanmar-market-title","မြန်မာကြေး"));
  const content=node("div","myanmar-market-pairs");
  for(const [label,value] of [["ဘော်ဒီကြေး =",formatBody()],["ဂိုးပေါင်းကြေး =",formatGoals()]]){
    const row=node("div","myanmar-market-pair");
@@ -84,7 +84,7 @@ function renderMyanmarOdds(match){
    content.appendChild(row);
  }
  section.appendChild(content);
- if(source.checkedAt)section.appendChild(node("small","myanmar-market-meta","IBET789 · "+source.checkedAt));
+
  return section;
 }
 function renderMatch(match,i){
@@ -107,10 +107,7 @@ function renderMatch(match,i){
  oddBox("သရေ (X)",match.drawOdds),
  oddBox((match.away||"ဧည့်သည်")+" နိုင် (2)",match.awayOdds));
  card.appendChild(markets);
- if(match.oddsProvider){
-   const sourceLine=node("div","odds-source","1X2 · Decimal odds · "+match.oddsProvider+" မှ ဖော်ပြထားသော ဈေးနှုန်း");
-   card.appendChild(sourceLine);
- }
+
  card.appendChild(renderMyanmarOdds(match));
  const expand=node("button","analysis-toggle","▾ သုံးသပ်ချက်ကို ဖတ်မည် / ခေါက်မည်");expand.type="button";expand.setAttribute("aria-expanded","true");
  const body=node("div","analysis-body");
