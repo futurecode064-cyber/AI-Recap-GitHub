@@ -110,11 +110,14 @@
    text(ctx,match.oddsProvider?"1X2 · "+match.oddsProvider:"1X2 · Decimal Odds",W-M,668,17,C.muted,false,"right");
    rounded(ctx,M,707,W-M*2,142,12,"#293d35","#6a795b");
    text(ctx,"IBET789 · Myanmar ကြေး",M+20,725,21,C.orange,true);
-   const a=match.myanmarOdds||{}, h=a.handicap||{},g=a.goals||{};
-   if(amount(a)){
-     text(ctx,"ဘော်ဒီ  "+odds(h.line)+"   "+match.home+": "+odds(h.home)+"   "+match.away+": "+odds(h.away),M+20,770,19,C.cream);
-     text(ctx,"ဂိုးပေါင်း  "+odds(g.line)+"    Over: "+odds(g.over)+"    Under: "+odds(g.under),M+20,807,19,C.cream);
-   }else text(ctx,"ပွဲလိုက် Myanmar ကြေး မရရှိသေးပါ",M+20,786,20,C.muted);
+   const a=match.myanmarOdds||{},h=a.handicap||{},g=a.goals||{};
+   const present=v=>v!==null&&v!==undefined&&String(v).trim()!=="";
+   const body=present(a.bodyOdds)?String(a.bodyOdds):
+     [present(h.line)?"အကျော "+h.line:"",present(h.home)?match.home+" "+h.home:"",present(h.away)?match.away+" "+h.away:""].filter(Boolean).join(" · ")||"—";
+   const goals=present(a.goalTotalOdds)?String(a.goalTotalOdds):
+     [present(g.line)?"ဂိုးပေါင်း "+g.line:"",present(g.over)?"Over "+g.over:"",present(g.under)?"Under "+g.under:""].filter(Boolean).join(" · ")||"—";
+   text(ctx,"ဘော်ဒီကြေး = "+body,M+20,766,20,C.cream);
+   text(ctx,"ဂိုးပေါင်းကြေး = "+goals,M+20,809,20,C.cream);
    text(ctx,"ပွဲကြိုသုံးသပ်ချက်",M,887,28,C.orange,true);
    let y=957;y=drawLines(ctx,preview,y,28,53);
    if(extras.length){
