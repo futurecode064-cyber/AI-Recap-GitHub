@@ -80,3 +80,19 @@ The browser uses `Asia/Yangon` today as its date. Any JSON where `reportDate` do
 - The public match cards omit source lists, checked-time footers and disclaimer paragraphs by user preference, but fact-checking and sources remain essential to generating the underlying report.
 - 06:00 publishing cannot be guaranteed until the connected ChatGPT task or another scheduler actually updates this GitHub JSON. Rendering a fixed page does not automatically generate new analyses.
 - No API keys or paid services are embedded in this site.
+
+## Work maintenance — 2026-10-11
+
+Continue this existing project in ChatGPT Work using `futurecode064-cyber/AI-Recap-GitHub`, branch `football-daily-render`, directory `football-daily/`. The existing production address is https://future-code-football-daily.pages.dev/; retain its Cloudflare Pages Git integration and branding.
+
+- Main and `/myanmar-football/` pages share scripts and the same data directory.
+- Today reads `data/today.json`; yesterday reads `data/archive/YYYY-MM-DD.json`; tomorrow reads `data/upcoming/YYYY-MM-DD.json`, using Asia/Yangon dates.
+- Reports require `published: true`, matching `reportDate`, and a `matches` array. Yesterday displays only `status: "finished"` with a valid `finalScore`; predictions are never substituted for final results.
+- Daily rollover preserves a prior published report in the archive if absent, and never overwrites a results-enriched archive. Archiving previews does not verify match results.
+- H2H / last-five panels need verified `headToHead`, `homeLastFive`, and `awayLastFive` records. Existing missing-data labels are intentional. Do not fabricate them.
+- Keep user-provided Myanmar odds verbatim and public odds sources hidden. Preserve flowing Burmese preview prose and the separate Special Choice analysis.
+- PNG exports support full article, square, 4:5 feed, and 9:16 story. Fixed-size exports summarize long articles.
+- Run `node --test football-daily/tests/navigation.test.cjs` and `python football-daily/scripts/daily_guard.py audit` before updates. The latter checks schema/freshness, not independent sports fact accuracy.
+- A daily 06:00 MMT publishing promise requires a working external scheduler; this static site itself does not research or publish new reports.
+
+Removed failure modes: out-of-order request errors overwriting the current date, same-date refresh races, branded-page startup failure, incorrect branded archive paths, missing branded social-export script, unpublished data rendering, and destructive unarchived rollover.

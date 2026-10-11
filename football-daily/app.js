@@ -5,6 +5,7 @@ const LEAGUE_NAMES={
 };
 const TZ="Asia/Yangon";
 let report={matches:[],published:false},selectedLeague="all",selectedDay=0;
+let loadSequence=0,loading=false;
 const $=id=>document.getElementById(id);
 function dateParts(){
  const pieces=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
@@ -246,6 +247,10 @@ function renderMatch(match,i){
 }
 function render(){
  const list=$("matchList");list.replaceChildren();
+ if(loading){
+  $("matchCount").textContent="—";$("specialCount").textContent="—";
+  list.appendChild(node("div","empty-card","သုံးသပ်ချက်များ ရယူနေပါတယ်…"));return;
+ }
  const all=Array.isArray(report.matches)?report.matches:[];
  const picks=all.filter(m=>m.specialChoice===true);
  const selected=all.filter(m=>(selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||m.league===selectedLeague)&&(selectedDay!==-1||validFinal(m)));
@@ -270,29 +275,51 @@ function render(){
   list.appendChild(node("p","no-fixtures","ပွဲမရှိသည့် လိဂ်များ — "+report.noFixturesLeagues.map(x=>LEAGUE_NAMES[x]||x).join("၊ ")));
  }
 }
+function refreshDateLabels(){
+ $("heroDate").textContent="MYANMAR · "+dateParts().day;
+ for(const [id,offset] of [["dateYesterday",-1],["dateToday",0],["dateTomorrow",1]]){
+  $(id).textContent=displayDate(selectedDateKey(offset));
+ }
+ const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"],"1":["မနက်ဖြန် ပွဲကြိုသုံးသပ်ချက်များ","● TOMORROW"]};
+ $("reportHeading").textContent=labels[selectedDay][0];
+ $("reportPill").textContent=labels[selectedDay][1];
+}
 async function load(){
+ const sequence=++loadSequence;
+ const offset=selectedDay,target=selectedDateKey(offset);
+ const isCurrent=()=>sequence===loadSequence&&offset===selectedDay&&target===selectedDateKey(offset);
+ loading=true;refreshDateLabels();render();
  $("statusText").textContent="ရယူနေသည်";
+ $("sectionNote").textContent="မြန်မာစံတော်ချိန် "+displayDate(target);
+ $("matchList").setAttribute("aria-busy","true");
+ const controller=new AbortController();
+ const timeout=setTimeout(()=>controller.abort(),15000);
  try{
-  const offset=selectedDay;
-  const target=selectedDateKey(offset);
-  const path=offset===0?(document.documentElement.dataset.footballDataUrl||"./data/today.json"):
-    offset===-1?"./data/archive/"+target+".json":"./data/upcoming/"+target+".json";
-  const url=new URL(path,document.baseURI);url.searchParams.set("t",Date.now());
-  const response=await fetch(url.toString(),{cache:"no-store"});
-  if(offset!==selectedDay)return;
-  if(response.status===404){report={reportDate:target,matches:[],published:false};render();return}
+  // Resolve every date relative to the configured data directory, including branded pages.
+  const todayUrl=new URL(document.documentElement.dataset.footballDataUrl||"./data/today.json",document.baseURI);
+  const url=offset===0?todayUrl:new URL((offset===-1?"archive/":"upcoming/")+target+".json",todayUrl);
+  url.searchParams.set("t",Date.now());
+  const response=await fetch(url.toString(),{cache:"no-store",signal:controller.signal});
+  if(!isCurrent())return;
+  if(response.status===404){report={reportDate:target,matches:[],published:false};loading=false;render();return}
   if(!response.ok)throw new Error("HTTP "+response.status);
   const json=await response.json();
-  if(offset!==selectedDay)return;
-  report=json.reportDate===target?json:{reportDate:target,matches:[],published:false};
-  render();
+  if(!isCurrent())return;
+  if(!json||typeof json!=="object"||!Array.isArray(json.matches)||json.matches.some(m=>!m||typeof m!=="object"||typeof m.home!=="string"||typeof m.away!=="string"))throw new Error("Invalid report data");
+  report=json.reportDate===target&&json.published===true?json:{reportDate:target,matches:[],published:false};
+  loading=false;render();
  }catch(e){
-  if(typeof offset!=="undefined"&&offset!==selectedDay)return;
+  if(!isCurrent())return;
+  loading=false;report={reportDate:target,matches:[],published:false};
   $("statusText").textContent="ချိတ်ဆက်မှု မအောင်မြင်";
+  $("matchCount").textContent="—";$("specialCount").textContent="—";
   $("matchList").replaceChildren();
   const card=node("div","empty-card");
   append(card,node("div","empty-icon","!"),node("h3","","အချက်အလက် ယူမရသေးပါ"),node("p","","Internet ချိတ်ဆက်မှု စစ်ပြီး Refresh လုပ်ပါ။"));
   $("matchList").appendChild(card);
+ }finally{
+  clearTimeout(timeout);
+  if(sequence===loadSequence){loading=false;$("matchList").setAttribute("aria-busy","false")}
  }
 }
 function init(){
@@ -303,7 +330,7 @@ function init(){
    small.textContent=displayDate(selectedDateKey(offset));
    button.addEventListener("click",()=>{
      selectedDay=offset;
-     $("dateTabs").querySelectorAll("button").forEach(b=>{b.classList.toggle("active",b===button);b.setAttribute("aria-current",String(b===button))});
+     $("dateTabs").querySelectorAll("button").forEach(b=>{b.classList.toggle("active",b===button);b.setAttribute("aria-current",b===button?"date":"false")});
      report={matches:[],published:false};load();
    });
  }

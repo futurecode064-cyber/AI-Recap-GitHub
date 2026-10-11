@@ -38,6 +38,16 @@ def main():
         if report.get("reportDate") == today:
             print(f"Already set for {today}; preserving current report.")
             return
+        previous_date = report.get("reportDate", "")
+        try:
+            valid_date = dt.date.fromisoformat(previous_date).isoformat() == previous_date
+        except (ValueError, TypeError):
+            valid_date = False
+        if valid_date and previous_date < today and report.get("published") is True:
+            archive = REPORT.parent / "archive" / f"{previous_date}.json"
+            archive.parent.mkdir(parents=True, exist_ok=True)
+            if not archive.exists():
+                archive.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         new_report = {
             "reportDate": today,
             "published": False,
