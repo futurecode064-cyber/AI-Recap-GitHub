@@ -96,7 +96,16 @@
    rect(ctx,18,92,W-36,292,grad);
    const imgs=await Promise.all([logo(match.homeCrestUrl),logo(match.awayCrestUrl)]);
    crest(ctx,imgs[0],match.home,260);crest(ctx,imgs[1],match.away,940);
-   rounded(ctx,538,167,124,100,48,"#142529",C.orange);text(ctx,"VS",600,182,48,"#ffe0b5",true,"center");
+   // Align the VS glyph around the exact geometric centre of the PNG badge.
+   const vsLeft=538,vsTop=167,vsWidth=124,vsHeight=100;
+   rounded(ctx,vsLeft,vsTop,vsWidth,vsHeight,48,"#142529",C.orange);
+   ctx.save();
+   ctx.font=font(48,true);
+   ctx.fillStyle="#ffe0b5";
+   ctx.textAlign="center";
+   ctx.textBaseline="middle";
+   ctx.fillText("VS",vsLeft+vsWidth/2,vsTop+vsHeight/2);
+   ctx.restore();
    text(ctx,match.home+"  vs  "+match.away,600,417,34,C.cream,true,"center");
    text(ctx,match.venue||"",600,466,18,C.muted,false,"center");
    const boxW=(W-M*2)/3;
