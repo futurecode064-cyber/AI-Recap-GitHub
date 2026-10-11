@@ -204,6 +204,8 @@ def main():
     boards=fetch_games(today)
     if not any(boards.values()):raise SystemExit("No sports data available; refusing to modify reports")
     changed=update(current,boards)
+    existing=DATA/"archive"/f"{today.isoformat()}.json"
+    if existing.exists():changed+=update(existing,boards)
     yesterday=today-dt.timedelta(days=1)
     archive=DATA/"archive"/f"{yesterday.isoformat()}.json"
     if archive.exists():
