@@ -545,7 +545,9 @@
           "homeGoals": 1,
           "awayGoals": 1
         }
-      ]
+      ],
+      "status": "live",
+      "liveScore": "0-0"
     },
     {
       "league": "Championship",
@@ -875,8 +877,8 @@
         }
       ],
       "historyCheckedOn": "2026-10-11",
-      "status": "live",
-      "liveScore": "2-1"
+      "status": "finished",
+      "finalScore": "2-1"
     },
     {
       "league": "Bundesliga",
@@ -1034,7 +1036,9 @@
           "awayGoals": 2
         }
       ],
-      "historyCheckedOn": "2026-10-11"
+      "historyCheckedOn": "2026-10-11",
+      "status": "live",
+      "liveScore": "0-0"
     },
     {
       "league": "La Liga",
@@ -1388,7 +1392,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "2-0"
+      "liveScore": "3-0"
     },
     {
       "league": "La Liga",
@@ -3014,7 +3018,7 @@
         }
       ],
       "status": "live",
-      "liveScore": "0-0"
+      "liveScore": "1-0"
     },
     {
       "league": "Ligue 1",
