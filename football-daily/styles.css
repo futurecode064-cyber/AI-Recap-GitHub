@@ -33,3 +33,20 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
 .daily-preview-verbatim{white-space:normal;line-height:2.45;text-align:left}
 .editorial-highlight{font-weight:800;color:#ffe0b4}
 @media(max-width:620px){.daily-preview-verbatim{line-height:2.3}}
+
+/* IBET789 Myanmar odds are separate from 1X2 decimals; market type is never confused. */
+.myanmar-market{margin:0 25px 22px;padding:17px 20px;background:#263a33;border:1px solid #607359;border-radius:12px}
+.myanmar-market-title{margin:0 0 12px;font-size:14px;color:#ffc08e}
+.myanmar-market-empty{margin:0;color:#b9cbc2;font-size:12px}
+.myanmar-market-rows{display:grid;gap:11px}
+.myanmar-market-row{display:grid;grid-template-columns:minmax(110px,1.2fr) repeat(3,minmax(0,1fr));align-items:center;border-top:1px solid #475e54;padding-top:11px;gap:10px}
+.myanmar-market-row>strong{font-size:12px;color:#ffcd9d}
+.myanmar-market-row>span{display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center}
+.myanmar-market-row small{font-size:10px;color:#adc6b7}
+.myanmar-market-row b{font-size:14px;color:#f8f0e0}
+.myanmar-market-meta{display:block;text-align:right;font-size:10px;color:#9cafaa;margin-top:10px}
+.match-actions{display:flex;justify-content:center;padding:14px 25px 24px}
+.match-download{border:1px solid #ffb682;border-radius:12px;background:linear-gradient(110deg,#f9a46b,#ffcf9b);color:#18302a;font-weight:800;font-size:13px;padding:14px 22px;min-width:250px;max-width:100%;transition:filter .2s}
+.match-download:hover{filter:brightness(1.08)}
+.match-download:disabled{cursor:wait;opacity:.7}
+@media(max-width:620px){.myanmar-market{margin:0 12px 16px;padding:14px 12px}.myanmar-market-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.myanmar-market-row>strong{grid-column:1/-1}.myanmar-market-row small{font-size:9px}.myanmar-market-row b{font-size:12px}.match-actions{padding:12px 15px 20px}.match-download{width:100%;font-size:12px}}
