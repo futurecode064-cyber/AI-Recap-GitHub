@@ -249,8 +249,8 @@ function render(){
  const all=Array.isArray(report.matches)?report.matches:[];
  const picks=all.filter(m=>m.specialChoice===true);
  const selected=all.filter(m=>(selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||m.league===selectedLeague)&&(selectedDay!==-1||validFinal(m)));
- $("matchCount").textContent=String(all.length);$("specialCount").textContent=String(picks.length);
- $("statusText").textContent=report.published?(selectedDay===-1?"ရလဒ်အတည်ပြုပြီး":"ထုတ်ဝေပြီး"):"Data မရရှိသေး";
+ $("matchCount").textContent=String(selectedDay===-1?all.filter(validFinal).length:all.length);$("specialCount").textContent=String(selectedDay===-1?picks.filter(validFinal).length:picks.length);
+ $("statusText").textContent=selectedDay===-1?(all.some(validFinal)?"ရလဒ်အတည်ပြုပြီး":"ရလဒ်မရရှိသေး"):(report.published?"ထုတ်ဝေပြီး":"Data မရရှိသေး");
  const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"],"1":["မနက်ဖြန် ပွဲကြိုသုံးသပ်ချက်များ","● TOMORROW"]};
  $("reportHeading").textContent=labels[selectedDay][0];
  $("reportPill").textContent=labels[selectedDay][1];
@@ -273,17 +273,21 @@ function render(){
 async function load(){
  $("statusText").textContent="ရယူနေသည်";
  try{
-  const target=selectedDateKey();
-  const path=selectedDay===0?(document.documentElement.dataset.footballDataUrl||"./data/today.json"):
-    selectedDay===-1?"./data/archive/"+target+".json":"./data/upcoming/"+target+".json";
+  const offset=selectedDay;
+  const target=selectedDateKey(offset);
+  const path=offset===0?(document.documentElement.dataset.footballDataUrl||"./data/today.json"):
+    offset===-1?"./data/archive/"+target+".json":"./data/upcoming/"+target+".json";
   const url=new URL(path,document.baseURI);url.searchParams.set("t",Date.now());
   const response=await fetch(url.toString(),{cache:"no-store"});
+  if(offset!==selectedDay)return;
   if(response.status===404){report={reportDate:target,matches:[],published:false};render();return}
   if(!response.ok)throw new Error("HTTP "+response.status);
   const json=await response.json();
+  if(offset!==selectedDay)return;
   report=json.reportDate===target?json:{reportDate:target,matches:[],published:false};
   render();
  }catch(e){
+  if(typeof offset!=="undefined"&&offset!==selectedDay)return;
   $("statusText").textContent="ချိတ်ဆက်မှု မအောင်မြင်";
   $("matchList").replaceChildren();
   const card=node("div","empty-card");
