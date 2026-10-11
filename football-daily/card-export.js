@@ -84,7 +84,7 @@
    const extras=opts.special&&Array.isArray(match.specialAnalysisParagraphs)?match.specialAnalysisParagraphs: [];
    const detailed=extras.map(p=>lines(meter,p,W-M*2,26));
    const extraHeight=extras.length?90+detailed.reduce((sum,l)=>sum+l.length*49+26,0):0;
-   const H=1010+preview.length*53+extraHeight;
+   const H=1160+preview.length*53+extraHeight;
    const canvas=document.createElement("canvas");canvas.width=W;canvas.height=H;
    const ctx=canvas.getContext("2d");if(!ctx)throw new Error("Browser cannot export PNG");
    rect(ctx,0,0,W,H,C.bg);rounded(ctx,15,15,W-30,H-30,20,C.panel,C.line);
