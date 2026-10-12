@@ -23,15 +23,31 @@
 .odds-table .upper{color:#ffe0a3}.odds-table .price{font:800 17px 'Barlow Condensed',sans-serif;color:#cce2d6}
 .odds-table .time{color:#ffbb8b}.odds-status{border:1px solid #41585a;border-radius:15px;background:#192629;padding:23px;text-align:center;color:#c3d2cf;line-height:2}
 .odds-note{padding:17px 22px;margin-top:24px;background:#202e31;border-left:3px solid #e8a270;color:#bed1c9;font-size:12px;line-height:2}
+
+/* Screenshot-style matchup: club / small crest / VS / crest / club */
+.odds-league-heading{display:flex;gap:12px;align-items:center}
+.league-crest{width:36px;height:36px;object-fit:contain;border-radius:8px;background:#f4f4f4;padding:4px;flex:none}
+.league-mark{width:36px;height:36px;display:grid;place-items:center;flex:none;background:#eff3f1;color:#173240;border-radius:8px;font:800 22px system-ui,sans-serif}
+.odds-matchup{display:flex;gap:8px;justify-content:center;align-items:center;min-width:225px}
+.odds-matchup .club-label{font-size:12px;line-height:1.65;flex:1 1 0;min-width:0}
+.odds-matchup .club-label:first-child{text-align:right}.odds-matchup .club-label:last-child{text-align:left}
+.team-badge{height:27px;width:27px;display:inline-grid;place-items:center;flex:none;overflow:hidden;border-radius:50%;background:#e7f2f0}
+.team-logo{width:100%;height:100%;object-fit:contain;padding:2px}
+.logo-fallback{font-size:9px;font-weight:800;color:#172b2c}
+.mini-vs{color:#ffbd8a;font:800 10px 'Barlow Condensed',sans-serif}
+.odds-table .team-pair{min-width:250px;padding-left:12px;padding-right:12px}
+.odds-table .prediction{font:800 15px 'Barlow Condensed',sans-serif;color:#ffe0a9;white-space:nowrap}
+@media(max-width:600px){.odds-table{min-width:740px}.odds-matchup{min-width:200px}.team-badge{height:23px;width:23px}.odds-matchup .club-label{font-size:11px}}
+
 @media(max-width:600px){.odds-hero{padding:23px 0}.odds-content{padding-top:20px}.odds-table{min-width:665px}.odds-group h2{font-size:14px}.odds-nav a{flex:1;text-align:center}}
 </style>
 </head><body>
 <header class="site-header"><div class="container header-inner"><a class="logo" href="./" aria-label="Future Code Football"><span class="logo-icon">FC<span>+</span></span><span class="logo-lines"><b>FUTURE CODE</b><small>FOOTBALL ANALYSIS</small></span></a><span class="top-edition">MYANMAR DAILY EDITION</span></div></header>
-<section class="odds-hero"><div class="container"><span class="odds-kicker">MYANMAR FOOTBALL MARKET · DAILY SHEET</span><h1>ယနေ့ ကန်မည့် <span>ပွဲကောင်းများ၏ ပေါက်ကြေးများ</span></h1><p class="odds-subtitle">ပို့ပေးထားသော နေ့စဉ်ကြေးစာရင်းမှ ဘော်ဒီကြေးနှင့် ဂိုးပေါင်းကြေးများကို မူရင်းအတိုင်း ဖော်ပြထားပါသည်။</p><nav class="odds-nav" aria-label="Football pages"><a href="./">ပွဲကြိုသုံးသပ်ချက်များ</a><a class="active" href="./odds.html" aria-current="page">ယနေ့ ပေါက်ကြေးများ</a></nav></div></section>
+<section class="odds-hero"><div class="container"><span class="odds-kicker">MYANMAR FOOTBALL MARKET · DAILY SHEET</span><h1>ယနေ့ ကန်မည့် <span>ပွဲကောင်းများ၏ ပေါက်ကြေးများ</span></h1><p class="odds-subtitle">အာရှ စျေးကွက် မြန်မာကြေး မနက်ပိုင်း ဖွင့်လှစ်မှုများ</p><nav class="odds-nav" aria-label="Football pages"><a href="./">ပွဲကြိုသုံးသပ်ချက်များ</a><a class="active" href="./odds.html" aria-current="page">ယနေ့ ပေါက်ကြေးများ</a></nav></div></section>
 <main class="container odds-content">
 <div class="odds-overview"><div><div class="odds-small" id="oddsDate">မြန်မာစံတော်ချိန်</div><div class="odds-small">ပွဲစဉ်အသီးသီး၏ မူလကြေးစာရင်း</div></div><div><strong class="odds-count" id="oddsCount">—</strong><span class="odds-small"> ပွဲ</span></div></div>
 <div id="oddsList" aria-live="polite"><div class="odds-status">ပေါက်ကြေးစာရင်း ရယူနေပါတယ်…</div></div>
-<div class="odds-note"><strong>မှတ်ချက်:</strong> အချက်အလက်များမှာ ပေးပို့ထားသည့် ရက်စွဲပါ PDF ကြေးစာရင်းမှ ကူးယူထားသော snapshot ဖြစ်သည်။ Live ပြောင်းလဲနေသောကြေးမဟုတ်ပါ။ မူရင်းစာရင်း၏ နောက်ဆုံးကော်လံကို သီးခြားဖော်ပြထားပြီး ပွဲပြီးရလဒ်ဟု မဆိုလိုပါ။ ည ၁၂ နာရီနောက်ပိုင်းပွဲများကို နောက်နေ့မနက်ဟု ခွဲပြထားပါသည်။</div>
+<div class="odds-note">အာရှ စျေးကွက် မြန်မာကြေး မနက်ပိုင်း ဖွင့်လှစ်မှုများ</div>
 </main>
 <footer><div class="container footer-inner"><div><strong>FUTURE CODE <span>FOOTBALL</span></strong><p>Independent Myanmar Football Analysis</p></div><p>အချက်အလက်ကို ပေးပို့ထားသည့်ကြေးစာရင်းအရ ဖော်ပြသည်။</p></div></footer>
 </body></html>
