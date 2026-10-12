@@ -76,7 +76,9 @@
       "bodyOdds": "-30",
       "goalTotalOdds": "3+85",
       "pdfLastColumn": "1-1",
-      "eligibleForPreview": false
+      "eligibleForPreview": false,
+      "homeCrestUrl": "https://logotyp.us/file/vps.svg",
+      "awayCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/IF_Gnistan_logo.svg"
     },
     {
       "number": 6,
@@ -89,7 +91,8 @@
       "bodyOdds": "1+60",
       "goalTotalOdds": "3+50",
       "pdfLastColumn": "1-2",
-      "eligibleForPreview": false
+      "eligibleForPreview": false,
+      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/AC_Oulu_logo.svg"
     },
     {
       "number": 7,
@@ -117,7 +120,9 @@
       "bodyOdds": "1-90",
       "goalTotalOdds": "3=",
       "pdfLastColumn": "2-1",
-      "eligibleForPreview": false
+      "eligibleForPreview": false,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/529.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3017.png"
     },
     {
       "number": 9,
@@ -131,7 +136,8 @@
       "goalTotalOdds": "3+65",
       "pdfLastColumn": "2-1",
       "eligibleForPreview": false,
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2720.png"
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2720.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3052.png"
     },
     {
       "number": 10,
@@ -144,7 +150,8 @@
       "bodyOdds": "1=",
       "goalTotalOdds": "3-40",
       "pdfLastColumn": "2-1",
-      "eligibleForPreview": false
+      "eligibleForPreview": false,
+      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/AGF_Logo.png"
     },
     {
       "number": 11,
