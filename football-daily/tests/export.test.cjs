@@ -1,97 +1,97 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-const path=require('node:path');
 const vm=require('node:vm');
+const path=require('node:path');
 const root=path.join(__dirname,'..');
-const source=fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8');
-const cardSource=fs.readFileSync(path.join(root,'card-export.js'),'utf8');
+const sources=['canvas-image-kit.js','daily-image-export.js','card-export.js'].map(file=>fs.readFileSync(path.join(root,file),'utf8'));
 const sheet=JSON.parse(fs.readFileSync(path.join(root,'data/odds/2026-10-12.json'),'utf8'));
-class Node{
- constructor(tag='div'){this.tag=tag;this.children=[];this.className='';this.style={};this.textContent='';this.parentNode=null;}
- appendChild(el){this.children.push(el);el.parentNode=this;return el}
- remove(){if(this.parentNode)this.parentNode.children=this.parentNode.children.filter(e=>e!==this)}
- cloneNode(deep){const n=new Node(this.tag);n.className=this.className;n.textContent=this.textContent;
-  if(deep)this.children.forEach(c=>n.appendChild(c.cloneNode(true)));return n}
- querySelectorAll(selector){
-  const result=[];const search=(node)=>{
-   for(const c of node.children){
-    if(selector==='.odds-group'&&c.className==='odds-group')result.push(c);
-    if(selector==='.odds-table tbody tr'&&c.tag==='tr')result.push(c);
-    search(c);
-   }
-  };search(this);return result;
- }
-}
+const report=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
 function harness(){
- const capture=[],live=new Node();
- const leagues=[...new Set(sheet.matches.map(m=>m.league))];
- for(const league of leagues){
-  const group=new Node();group.className='odds-group';group.textContent=league;
-  for(const m of sheet.matches.filter(x=>x.league===league)){
-   const row=new Node('tr');row.textContent=[m.home,m.away,m.bodyOdds,m.goalTotalOdds,m.pdfLastColumn].join('|');
-   group.appendChild(row);
+ const drawn=[],clicked=[],canvases=[];
+ const document={
+  fonts:{ready:Promise.resolve()},
+  body:{appendChild(){}},
+  createElement(type){
+   if(type==='a')return {click(){clicked.push(this.download)},remove(){}};
+   if(type!=='canvas')throw Error('unexpected DOM creation: '+type);
+   const canvas={width:0,height:0,toBlob(cb){cb({size:500,type:'image/png'})}};
+   const ctx={
+    canvas,fillRect(){},beginPath(){},roundRect(){},fill(){},drawImage(){drawn.push({type:'logo'})},
+    measureText(value){return {width:String(value).length*11}},
+    fillText(value){drawn.push({type:'text',value:String(value)})}
+   };
+   canvas.getContext=()=>ctx;canvases.push(canvas);return canvas;
   }
-  live.appendChild(group);
+ };
+ class FakeImage{constructor(){this.naturalWidth=100;this.naturalHeight=100}
+  set src(value){queueMicrotask(()=>this.onload?.())}
  }
- const body=new Node();
- const document={body,getElementById(id){return id==='oddsList'?live:null},
-  createElement(tag){return new Node(tag)}};
- const window={FutureCodeDomCapture:{
-  async save(node,filename,options){capture.push({node,filename,options});return true},
-  appendHeading(node,title,subtitle){const h=new Node('h2');h.textContent=title;node.appendChild(h);
-   const p=new Node('p');p.textContent=subtitle;node.appendChild(p)}
- }};
- const context=vm.createContext({window,document,console});
- vm.runInContext(source,context);
- return {exporter:window.FutureCodeDailyExport,capture,live,body};
+ const BrowserURL={createObjectURL(){return 'blob:png'},revokeObjectURL(){}};
+ const window={};
+ const sandbox={window,document,Image:FakeImage,URL:BrowserURL,setTimeout,clearTimeout,Promise,console};
+ const context=vm.createContext(sandbox);
+ for(const src of sources)vm.runInContext(src,context);
+ return {window,drawn,clicked,canvases};
 }
-test('odds image is an exact cloned DOM table with all 17 fixtures and unchanged original prices',async()=>{
- const h=harness();
- await h.exporter.saveOdds(sheet);
- assert.equal(h.capture.length,1);
- assert.equal(h.capture[0].filename,'future-code-odds-2026-10-12.png');
- assert.equal(h.capture[0].options.width,1180);
- const snapshot=h.capture[0].node;
- assert.equal(snapshot.querySelectorAll('.odds-group').length,[...new Set(sheet.matches.map(m=>m.league))].length);
- const rows=snapshot.querySelectorAll('.odds-table tbody tr');
- assert.equal(rows.length,17);
+test('fast Canvas odds PNG renders every original league table row, prices, prediction and header',async()=>{
+ const x=harness();await x.window.FutureCodeDailyExport.saveOdds(sheet);
+ assert.equal(x.clicked[0],'future-code-odds-2026-10-12.png');
+ assert.equal(x.canvases[0].width,1360);
+ const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
+ assert.ok(labels.includes('ယနေ့ ပေါက်ကြေးများ'));
  for(const m of sheet.matches){
-  const text=rows.map(r=>r.textContent).join('\n');
-  assert.ok(text.includes(m.home+'|'+m.away+'|'+m.bodyOdds+'|'+m.goalTotalOdds+'|'+m.pdfLastColumn),'Missing odds row '+m.number);
+  assert.ok(labels.includes(m.home),m.home+' missing');
+  assert.ok(labels.includes(m.away),m.away+' missing');
+  assert.ok(labels.includes(m.bodyOdds),m.bodyOdds+' missing');
+  assert.ok(labels.includes(m.goalTotalOdds),m.goalTotalOdds+' missing');
+  assert.ok(labels.includes(m.pdfLastColumn),m.pdfLastColumn+' missing');
  }
- assert.ok(snapshot.children[0].children.some(c=>c.textContent==='ယနေ့ ပေါက်ကြေးများ'));
- assert.equal(h.body.children.length,0,'offscreen capture stage not cleaned up');
+ for(const name of ['ပွဲချိန်','ယှဉ်ပြိုင်မည့်အသင်း','အပေါ်အသင်း','ဘော်ဒီကြေး','ဂိုးပေါင်းကြေး','အင်တာနက်ခန့်မှန်းချက်']){
+  assert.equal(labels.filter(x=>x===name).length,new Set(sheet.matches.map(m=>m.league)).size);
+ }
+ assert.ok(x.drawn.some(n=>n.type==='logo'),'logo should render');
 });
-test('results export only clones true finished results through the existing website renderer',async()=>{
- const h=harness();
- await assert.rejects(()=>h.exporter.saveResults({date:'2026-10-11',matches:[
-  {home:'Bad prediction',away:'Team',finalScore:'2-0',status:'scheduled'}
- ],renderResult:m=>new Node('article')}),/ရလဒ်များ မရှိသေးပါ/);
- const matches=[
-  {home:'Home',away:'Away',status:'finished',finalScore:'2-1'},
-  {home:'Guess',away:'Prediction',status:'scheduled',finalScore:'9-9'},
-  {home:'Incomplete',away:'No result',status:'finished',finalScore:'TBD'}
- ];
- const rendered=[];
- await h.exporter.saveResults({matches,date:'2026-10-11',renderResult:m=>{
-  rendered.push(m.home);const node=new Node('article');node.className='match-card result-card';node.textContent=m.finalScore;return node;
- }});
- assert.equal(h.capture[0].filename,'football-goal-results-2026-10-11.png');
- assert.deepEqual(rendered,['Home']);
- assert.ok(h.capture[0].node.children[0].textContent==='ဂိုးရလဒ်များ');
- assert.equal(h.capture[0].node.children[2].children.length,1);
- assert.equal(h.capture[0].node.children[2].children[0].textContent,'2-1');
+test('goal results canvas includes only confirmed final-score fixtures',async()=>{
+ const x=harness();
+ await assert.rejects(()=>x.window.FutureCodeDailyExport.saveResults({date:'2026-10-11',matches:[
+  {status:'scheduled',finalScore:'9-0'}
+ ]}),/ရလဒ်များ မရှိသေးပါ/);
+ await x.window.FutureCodeDailyExport.saveResults({date:'2026-10-11',matches:[
+  {homeDisplay:'အိမ်ရှင်',awayDisplay:'ဧည့်သည်',league:'Premier League',status:'finished',finalScore:'2-1'},
+  {home:'Fake',away:'Future',status:'scheduled',finalScore:'9-9'},
+  {home:'Invalid',away:'Invalid',status:'finished',finalScore:'TBD'}
+ ]});
+ assert.equal(x.clicked[0],'football-goal-results-2026-10-11.png');
+ const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
+ assert.ok(labels.includes('ဂိုးရလဒ်များ'));
+ assert.ok(labels.includes('2-1'));
+ assert.ok(!labels.includes('9-9'));
+ assert.ok(!labels.includes('TBD'));
 });
-test('preview export passes real card DOM to screenshot helper; never reconstructs canvas rows',async()=>{
- const calls=[],node={classList:{contains:x=>x==='match-card'},getBoundingClientRect(){return {width:465}}};
- const window={FutureCodeDomCapture:{async save(...args){calls.push(args);return true}}};
- const context=vm.createContext({window});
- vm.runInContext(cardSource,context);
- await window.FutureCodeCardExport.save({home:'Burgos CF',away:'Granada'},{cardNode:node,brandName:'Future Code'});
- assert.equal(calls.length,1);
- assert.equal(calls[0][0],node);
- assert.equal(calls[0][2].width,465);
- assert.equal(calls[0][2].excludeControls,true);
- assert.match(calls[0][1],/burgos-cf-vs-granada.png$/);
+test('preview card export preserves all three side-by-side histories and complete editorial copy',async()=>{
+ const x=harness(),match=report.matches.find(m=>m.homeLastFive?.length&&m.headToHead?.length);
+ assert.ok(match);
+ const translated={...match,home:match.homeDisplay||match.home,away:match.awayDisplay||match.away};
+ await x.window.FutureCodeCardExport.save(translated,{brandName:'FUTURE CODE FOOTBALL',leagueLabel:'စပိန် လာလီဂါ ၂'});
+ const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
+ assert.equal(x.canvases[1].width,1200);
+ assert.ok(labels.includes('ပွဲကြိုသုံးသပ်ချက်'));
+ assert.ok(labels.includes('အိမ်ရှင် နောက်ဆုံး ၅ ပွဲ'));
+ assert.ok(labels.includes('ထိပ်တိုက်တွေ့ဆုံမှု H2H'));
+ assert.ok(labels.includes('ဧည့်သည် နောက်ဆုံး ၅ ပွဲ'));
+ assert.ok(labels.includes(String(match.homeOdds)));
+ assert.ok(labels.includes(String(match.drawOdds)));
+ assert.ok(labels.includes(String(match.awayOdds)));
+ assert.ok(labels.includes(translated.home));
+ assert.ok(labels.includes(translated.away));
+ assert.ok(labels.join(' ').includes(match.dailyPreviewText.replace(/\*\*/g,'').slice(0,10)));
+ assert.ok(x.clicked[0].endsWith('.png'));
+});
+test('native Canvas export contains no DOM snapshot / external export dependency',()=>{
+ const js=sources.join('\n');
+ assert.ok(!js.includes('domtoimage'));
+ assert.ok(!js.includes('html2canvas'));
+ assert.ok(!js.includes('cloneNode('));
+ assert.ok(js.includes('canvas.toBlob'));
 });
