@@ -25,9 +25,9 @@
         "position": 22
       },
       "standingsSourceUrl": "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-real-valladolid-cf-albacete-bp-9",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.984",
+      "drawOdds": "3.34",
+      "awayOdds": "4.00",
       "myanmarOdds": {
         "upperTeam": "ဗယ်လာဒိုလစ်",
         "bodyOdds": "-85",
@@ -205,7 +205,12 @@
       "awayDisplay": "အယ်လ်ဘာစီတီ",
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/27687-spain-segunda-division/758831669-real-valladolid-albacete-balompie",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     },
     {
       "league": "La Liga 2",
@@ -230,9 +235,9 @@
         "position": 9
       },
       "standingsSourceUrl": "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-burgos-cf-granada-cf-9",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.45",
+      "drawOdds": "3.28",
+      "awayOdds": "2.936",
       "myanmarOdds": {
         "upperTeam": "ဘာဂို့စ်",
         "bodyOdds": "-30",
@@ -406,7 +411,12 @@
       "awayDisplay": "ဂရန်နာဒါ",
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/27687-spain-segunda-division/758832426-burgos-granada",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     },
     {
       "league": "Serie A",
@@ -431,9 +441,9 @@
         "position": 20
       },
       "standingsSourceUrl": "https://www.thescore.com/seri/event/97637",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.60",
+      "drawOdds": "4.30",
+      "awayOdds": "5.40",
       "myanmarOdds": {
         "upperTeam": "အတ္တလန်တာ",
         "bodyOdds": "1-20",
@@ -615,7 +625,12 @@
       "awayDisplay": "ဗင်နီဇီယာ",
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://www.telecomasia.net/sports-betting/tips/football/italy-serie-a/atalanta-vs-venezia-fc-match-prediction-12-october-2026/",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     },
     {
       "league": "La Liga 2",
@@ -640,9 +655,9 @@
         "position": 1
       },
       "standingsSourceUrl": "https://www.laliga.com/en-AR/match/temporada-2026-2027-laliga-hypermotion-real-oviedo-sd-eibar-9",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.165",
+      "drawOdds": "3.26",
+      "awayOdds": "3.50",
       "myanmarOdds": {
         "upperTeam": "အိုဗီဒို",
         "bodyOdds": "-40",
@@ -819,7 +834,12 @@
       "awayDisplay": "အီဘာ",
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/27687-spain-segunda-division/758832420-real-oviedo-eibar",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     },
     {
       "league": "Premier League",
@@ -965,15 +985,20 @@
         "goalTotalOdds": "3+45"
       },
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "3.30",
+      "drawOdds": "3.65",
+      "awayOdds": "2.10",
       "specialChoice": false,
       "espnEventId": "401879267",
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879267",
       "historyCheckedOn": "2026-10-12",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://www.telecomasia.net/sports-betting/tips/football/england-premier-league/coventry-city-vs-newcastle-united-match-prediction-12-october-2026/",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     },
     {
       "league": "Serie A",
@@ -1122,15 +1147,20 @@
         "goalTotalOdds": "2-70"
       },
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.304",
+      "drawOdds": "3.22",
+      "awayOdds": "3.22",
       "specialChoice": false,
       "espnEventId": "401874763",
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874763",
       "historyCheckedOn": "2026-10-12",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/110163-italy-serie-a/753391576-torino-udinese-calcio",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     },
     {
       "league": "La Liga",
@@ -1172,15 +1202,20 @@
         "goalTotalOdds": "2-70"
       },
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.65",
+      "drawOdds": "3.30",
+      "awayOdds": "2.70",
       "specialChoice": false,
       "espnEventId": "401882852",
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882852",
       "historyCheckedOn": "2026-10-12",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://www.telecomasia.net/sports-betting/tips/football/spain-la-liga/levante-vs-sevilla-match-prediction-12-october-2026/",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     },
     {
       "league": "La Liga 2",
@@ -1223,15 +1258,20 @@
         "goalTotalOdds": "2-55"
       },
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "3.05",
+      "drawOdds": "3.20",
+      "awayOdds": "2.29",
       "specialChoice": false,
       "espnEventId": "401883181",
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883181",
       "historyCheckedOn": "2026-10-12",
       "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/CD_Tenerife_logo.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9812.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9812.png",
+      "oddsProvider": "Stake",
+      "oddsSourceUrl": "https://stake.com/hi/sports/soccer/spain/la-liga-2/46739374-tenerife-cd-girona",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     },
     {
       "league": "Ligue 2",
@@ -1422,12 +1462,17 @@
         "goalTotalOdds": "3+55"
       },
       "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.60",
+      "drawOdds": "3.50",
+      "awayOdds": "2.45",
       "specialChoice": false,
       "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dijon_FCO_Badge.jpg",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png",
+      "oddsProvider": "Sportingbet",
+      "oddsSourceUrl": "https://www.sportingbet.com/en/sports/events/dijon-fco-fc-metz-2%3A7872628",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false
     }
   ],
   "noFixturesLeagues": [],
