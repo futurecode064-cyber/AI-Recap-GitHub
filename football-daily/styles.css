@@ -101,3 +101,15 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
 .odds-feature-link{margin:11px 0 19px}
 .odds-feature-link a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 22px;border:1px solid #986943;background:linear-gradient(110deg,#443329,#2b342f);color:#ffe2bc;border-radius:14px;font-size:14px;font-weight:700;line-height:1.7}
 .odds-feature-link a:hover,.odds-feature-link a:focus-visible{border-color:#ffac71;background:linear-gradient(110deg,#61452f,#31413b)}
+
+
+/* 2026-10-12: authentic small crests within sourced form and head-to-head records */
+.mini-club-logo{display:inline-grid;place-items:center;flex:none;width:23px;height:23px;background:#edf4f1;border-radius:50%;overflow:hidden}
+.mini-club-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
+.mini-logo-fallback{color:#223a39;font:800 9px var(--font)}
+.form-opponent{display:flex;align-items:center;gap:8px;min-width:0}
+.form-opponent > span:last-child{min-width:0;overflow-wrap:anywhere}
+.h2h-teams{display:flex;align-items:center;gap:6px;min-width:0;flex-wrap:wrap}
+.h2h-dash{color:#ffc289;padding:0 3px}
+.h2h-row{grid-template-columns:85px minmax(0,1fr) auto}
+@media(max-width:620px){.mini-club-logo{width:19px;height:19px}.h2h-row{grid-template-columns:73px minmax(0,1fr) auto;gap:6px}.h2h-teams{gap:4px}}
