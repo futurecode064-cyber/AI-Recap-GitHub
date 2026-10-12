@@ -27,6 +27,7 @@ jobs:
           node --check football-daily/odds.js
           node --check football-daily/daily-image-export.js
           node --check football-daily/card-export.js
+          node --check football-daily/canvas-image-kit.js
       - name: Football navigation, date and active league tests
         run: node --test football-daily/tests/*.test.cjs
       - name: Football score and report Python syntax
