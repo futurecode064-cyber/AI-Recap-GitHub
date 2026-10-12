@@ -4,9 +4,9 @@ Approved format source of truth: [DAILY_APPROVED_FORMAT.md](./DAILY_APPROVED_FOR
 
 ## Current production structure
 * Main Future Code Football Daily: `/` / `odds.html`
-* First branded website: **YKZ FAMILY GROUP**, slogan **ရှေ့ဆက် YKZ** at `/ykz-family/` and `/ykz-family/odds.html`
+* First branded website: **YKZ FAMILY GROUP**, slogan **အတူရှေ့ဆက် YKZ** at `/ykz-family/` and `/ykz-family/odds.html`
 * Branded logo: `ykz-family/assets/logo.webp`, derived by cropping/optimizing the exact user-supplied YKZ FAMILY logo (no replacement mark).
-* YKZ branding only: `ykz-family/brand.css` and `ykz-family/brand.js`; red/maroon + gold + navy. The root website keeps its original teal colors.
+* YKZ branding only: `ykz-family/brand.css` and `ykz-family/brand.js`; pure scarlet red (#e00000) + gold (#ffcf58) + charcoal black (#111111). The root website keeps its original teal colors.
 * Two branded HTML entrypoints reuse `../app.js`, `../odds.js`, `../styles.css`, `../canvas-image-kit.js`, `../card-export.js`, and `../daily-image-export.js`. There are **no cloned football data JSON files**.
 
 ## SINGLE SOURCE OF TRUTH — DO NOT DUPLICATE
