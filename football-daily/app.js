@@ -1,8 +1,38 @@
 "use strict";
 const LEAGUE_NAMES={
- "Premier League":"ပရီးမီးယားလိဂ်","La Liga":"လာလီဂါ","Serie A":"စီးရီးအေ",
- "Bundesliga":"ဘွန်ဒက်စ်လီဂါ","Ligue 1":"လီဂူးဝမ်း","Championship":"ချန်ပီယံရှစ်"
+ "Premier League":"ပရီးမီးယားလိဂ်","Championship":"ချန်ပီယံရှစ်",
+ "League One":"အင်္ဂလန် လိဂ်ဝမ်း","La Liga":"လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂",
+ "Serie A":"စီးရီးအေ","Serie B":"အီတလီ စီးရီးဘီ",
+ "Bundesliga":"ဘွန်ဒက်စ်လီဂါ","2. Bundesliga":"ဂျာမနီ ဘွန်ဒက်စ်လီဂါ ၂",
+ "Ligue 1":"လီဂူးဝမ်း","Ligue 2":"ပြင်သစ် လီဂူး ၂",
+ "FA Cup":"အင်္ဂလန် FA ဖလား","EFL Cup":"အင်္ဂလန် လိဂ်ဖလား",
+ "Coppa Italia":"အီတလီဖလား","Copa del Rey":"စပိန် ဘုရင့်ဖလား",
+ "DFB-Pokal":"ဂျာမနီဖလား","Coupe de France":"ပြင်သစ်ဖလား",
+ "UEFA Champions League":"ချန်ပီယံလိဂ်","UEFA Europa League":"ယူရိုပါလိဂ်",
+ "UEFA Conference League":"ယူရိုပါ ကွန်ဖရင့်လိဂ်",
+ "UEFA Nations League":"နိုင်ငံအသင်း နေးရှင်းလိဂ်",
+ "FIFA World Cup":"ကမ္ဘာ့ဖလား","FIFA World Cup Qualifying":"ကမ္ဘာ့ဖလား ခြေစစ်ပွဲ",
+ "UEFA Euro":"ဥရောပနိုင်ငံများဖလား","UEFA Euro Qualifying":"ယူရို ခြေစစ်ပွဲ"
 };
+const LEAGUE_ALIASES={
+ "England League 1":"League One","EFL League One":"League One",
+ "League 1":"League One","English League One":"League One",
+ "Italy Serie B":"Serie B","Italian Serie B":"Serie B",
+ "Spain LaLiga 2":"La Liga 2","Spanish LALIGA 2":"La Liga 2",
+ "Segunda Division":"La Liga 2","LaLiga 2":"La Liga 2",
+ "Germany Bundesliga 2":"2. Bundesliga","German 2. Bundesliga":"2. Bundesliga",
+ "France Ligue 2":"Ligue 2","French Ligue 2":"Ligue 2",
+ "English FA Cup":"FA Cup","English Carabao Cup":"EFL Cup","Carabao Cup":"EFL Cup","League Cup":"EFL Cup",
+ "Italy Cup":"Coppa Italia","Spain Cup":"Copa del Rey",
+ "Germany Cup":"DFB-Pokal","France Cup":"Coupe de France",
+ "Champions League":"UEFA Champions League","Europa League":"UEFA Europa League",
+ "Europa Conference League":"UEFA Conference League","UEFA Europa Conference League":"UEFA Conference League",
+ "National League":"UEFA Nations League","Nations League":"UEFA Nations League",
+ "World Cup":"FIFA World Cup","World Cup Qualifiers":"FIFA World Cup Qualifying",
+ "EURO":"UEFA Euro","European Championship":"UEFA Euro","Euro Qualifiers":"UEFA Euro Qualifying"
+};
+function canonicalLeague(value){return LEAGUE_ALIASES[value]||value;}
+function leagueName(value){const key=canonicalLeague(value);return LEAGUE_NAMES[key]||value||"ပွဲကြိုသုံးသပ်ချက်";}
 const TZ="Asia/Yangon";
 let report={matches:[],published:false},selectedLeague="all",selectedDay=0;
 let loadSequence=0,loading=false;
@@ -146,7 +176,7 @@ function renderFormAndH2H(match){
 }
 function renderFinished(match){
  const card=node("article","match-card result-card");
- card.appendChild(node("div","match-topline","◈ "+(LEAGUE_NAMES[match.league]||match.league||"")));
+ card.appendChild(node("div","match-topline","◈ "+leagueName(match.league)));
  const banner=node("div","vs-banner");
  const centre=node("div","result-score",match.finalScore);
  append(banner,teamSide(match,"home"),centre,teamSide(match,"away"));
@@ -158,7 +188,7 @@ function renderFixtureOnly(match){
  const card=node("article","match-card fixture-only");
  const headline=node("div","match-topline");
  append(headline,
-  node("span","league-name","◈ "+(LEAGUE_NAMES[match.league]||match.league||"")),
+  node("span","league-name","◈ "+leagueName(match.league)),
   node("span","match-time",(match.status==="live"?"🔴 LIVE "+(match.liveScore||"")+" · ":"")+(match.kickoffYangon||"")));
  card.appendChild(headline);
  const banner=node("div","vs-banner");
@@ -175,7 +205,7 @@ function renderFixtureOnly(match){
 function renderMatch(match,i){
  const card=node("article","match-card"+(match.specialChoice?" is-special":""));
  const headline=node("div","match-topline");
- const league=node("span","league-name","◈ "+(LEAGUE_NAMES[match.league]||match.league||"ပွဲကြိုသုံးသပ်ချက်"));
+ const league=node("span","league-name","◈ "+leagueName(match.league));
  if(match.specialChoice)league.appendChild(node("span","special-mark","★ SPECIAL CHOICE"));
  const liveLabel=match.status==="live"&&/^\d+\s*[-:]\s*\d+$/.test(String(match.liveScore||""))?"🔴 LIVE "+match.liveScore+" · ":"";
  append(headline,league,node("span","match-time",liveLabel+(textOrEmpty(match.kickoffYangon)||"ကန်ချိန် မအတည်ပြုရသေး")));
@@ -239,7 +269,7 @@ function renderMatch(match,i){
   try{
    if(!window.FutureCodeCardExport)throw Error("Full export module missing");
    await window.FutureCodeCardExport.save(match,{
-    leagueLabel:LEAGUE_NAMES[match.league]||match.league,
+    leagueLabel:leagueName(match.league),
     brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
     brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
     special:match.specialChoice===true
@@ -257,6 +287,25 @@ function renderMatch(match,i){
  card.appendChild(actions);
  return card;
 }
+function renderLeagueFilters(all){
+ const available=new Set(all.filter(m=>selectedDay!==-1||validFinal(m)).map(m=>canonicalLeague(m.league)));
+ const ordered=Object.keys(LEAGUE_NAMES).filter(league=>available.has(league));
+ // Preserve future competition data without exposing empty/no-fixture filters.
+ for(const league of available)if(league&&!ordered.includes(league))ordered.push(league);
+ const picks=all.some(m=>(selectedDay!==-1||validFinal(m))&&m.specialChoice===true);
+ if(selectedLeague!=="all"&&(selectedLeague!=="special"||!picks)&&!ordered.includes(selectedLeague))selectedLeague="all";
+ const filters=$("filters");filters.replaceChildren();
+ const add=(value,label,special=false)=>{
+  const button=node("button",special?"filter-special":"",label);
+  button.type="button";button.dataset.league=value;
+  button.classList.toggle("selected",selectedLeague===value);
+  button.addEventListener("click",()=>{selectedLeague=value;render()});
+  filters.appendChild(button);
+ };
+ add("all","ပွဲအားလုံး");
+ for(const league of ordered)add(league,leagueName(league));
+ if(picks)add("special","★ Special Choice",true);
+}
 function render(){
  const list=$("matchList");list.replaceChildren();
  if(loading){
@@ -264,11 +313,12 @@ function render(){
   list.appendChild(node("div","empty-card","သုံးသပ်ချက်များ ရယူနေပါတယ်…"));return;
  }
  const all=Array.isArray(report.matches)?report.matches:[];
+ renderLeagueFilters(all);
  const picks=all.filter(m=>m.specialChoice===true);
- const selected=all.filter(m=>(selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||m.league===selectedLeague)&&(selectedDay!==-1||validFinal(m)));
+ const selected=all.filter(m=>(selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||canonicalLeague(m.league)===selectedLeague)&&(selectedDay!==-1||validFinal(m)));
  $("matchCount").textContent=String(selectedDay===-1?all.filter(validFinal).length:all.length);$("specialCount").textContent=String(selectedDay===-1?picks.filter(validFinal).length:picks.length);
  $("statusText").textContent=report.fixtureSnapshot?"ပွဲစဉ်အတည်ပြုထားပြီး · သုံးသပ်ချက်စောင့်ဆိုင်း":selectedDay===-1?(all.some(validFinal)?"ရလဒ်အတည်ပြုပြီး":"ရလဒ်မရရှိသေး"):(report.published?"ထုတ်ဝေပြီး":"Data မရရှိသေး");
- const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"],"1":["မနက်ဖြန် ပွဲကြိုသုံးသပ်ချက်များ","● TOMORROW"]};
+ const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"]};
  $("reportHeading").textContent=labels[selectedDay][0];
  $("reportPill").textContent=labels[selectedDay][1];
  $("sectionNote").textContent=report.fixtureSnapshot?"အတည်ပြုပွဲစဉ်စာရင်းသာဖြစ်ပြီး သုံးသပ်ချက်နှင့် Odds ကို မထုတ်ဝေရသေးပါ။":selectedLeague==="special"
@@ -278,21 +328,19 @@ function render(){
  else{
   const card=node("div","empty-card");
   append(card,node("div","empty-icon",selectedLeague==="special"?"★":"○"),
-   node("h3","",selectedDay===-1?"မနေ့က အတည်ပြုရလဒ် မတင်ရသေးပါ":selectedDay===1&&!report.published?"မနက်ဖြန် ပွဲစဉ်များ မတင်ရသေးပါ":selectedLeague==="special"?"Special Choice မရွေးရသေးပါ":report.published?"ဒီ Filter အတွက် ပွဲမရှိပါ":"ဒီနေ့ သုံးသပ်ချက် မထုတ်ဝေရသေးပါ"),
+   node("h3","",selectedDay===-1?"မနေ့က အတည်ပြုရလဒ် မတင်ရသေးပါ":selectedLeague==="special"?"Special Choice မရွေးရသေးပါ":report.published?"ဒီ Filter အတွက် ပွဲမရှိပါ":"ဒီနေ့ သုံးသပ်ချက် မထုတ်ဝေရသေးပါ"),
    node("p","",selectedLeague==="special"?"စစ်ဆေးမှုမပြည့်စုံသေးလျှင် ရွေးချယ်မှုကို အတင်းမဖော်ပြပါ။":
-     selectedDay===-1?"ပွဲပြီးရလဒ်ကို အတည်ပြုပြီးမှသာ ဤနေရာတွင် ဖော်ပြပါမည်။":selectedDay===1?"မနက်ဖြန်ပွဲစဉ် အတည်ပြုချက်ရရှိလျှင် ဖော်ပြပါမည်။":"ဒီနေ့အတွက် အချက်အလက်အသစ်မရသေးပါ။"));
+     selectedDay===-1?"ပွဲပြီးရလဒ်ကို အတည်ပြုပြီးမှသာ ဤနေရာတွင် ဖော်ပြပါမည်။":"ဒီနေ့အတွက် အချက်အလက်အသစ်မရသေးပါ။"));
   list.appendChild(card);
  }
- if(Array.isArray(report.noFixturesLeagues)&&report.noFixturesLeagues.length){
-  list.appendChild(node("p","no-fixtures","ပွဲမရှိသည့် လိဂ်များ — "+report.noFixturesLeagues.map(x=>LEAGUE_NAMES[x]||x).join("၊ ")));
- }
+ // No-fixture leagues/cups are intentionally hidden from the public UI.
 }
 function refreshDateLabels(){
  $("heroDate").textContent="MYANMAR · "+dateParts().day;
- for(const [id,offset] of [["dateYesterday",-1],["dateToday",0],["dateTomorrow",1]]){
+ for(const [id,offset] of [["dateYesterday",-1],["dateToday",0]]){
   $(id).textContent=displayDate(selectedDateKey(offset));
  }
- const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"],"1":["မနက်ဖြန် ပွဲကြိုသုံးသပ်ချက်များ","● TOMORROW"]};
+ const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"]};
  $("reportHeading").textContent=labels[selectedDay][0];
  $("reportPill").textContent=labels[selectedDay][1];
 }
@@ -309,7 +357,7 @@ async function load(){
  try{
   // Resolve every date relative to the configured data directory, including branded pages.
   const todayUrl=new URL(document.documentElement.dataset.footballDataUrl||"./data/today.json",document.baseURI);
-  const url=offset===0?todayUrl:new URL((offset===-1?"archive/":"upcoming/")+target+".json",todayUrl);
+  const url=offset===0?todayUrl:new URL("archive/"+target+".json",todayUrl);
   url.searchParams.set("t",Date.now());
   const response=await fetch(url.toString(),{cache:"no-store",signal:controller.signal});
   if(!isCurrent())return;
@@ -357,7 +405,7 @@ function init(){
  $("heroDate").textContent="MYANMAR · "+dateParts().day;
  for(const button of $("dateTabs").querySelectorAll("button")){
    const offset=Number(button.dataset.day);
-   const small=$("date"+(offset===-1?"Yesterday":offset===0?"Today":"Tomorrow"));
+   const small=$("date"+(offset===-1?"Yesterday":"Today"));
    small.textContent=displayDate(selectedDateKey(offset));
    button.addEventListener("click",()=>{
      selectedDay=offset;
@@ -365,11 +413,6 @@ function init(){
      report={matches:[],published:false};load();
    });
  }
- $("filters").querySelectorAll("button").forEach(button=>button.addEventListener("click",()=>{
-  selectedLeague=button.dataset.league||"all";
-  $("filters").querySelectorAll("button").forEach(b=>b.classList.toggle("selected",b===button));
-  render();
- }));
  $("reloadBtn").addEventListener("click",load);
  load();
 }
