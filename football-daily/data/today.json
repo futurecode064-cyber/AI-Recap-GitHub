@@ -884,7 +884,10 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "specialChoice": false
+      "specialChoice": false,
+      "espnEventId": "401879267",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879267",
+      "historyCheckedOn": "2026-10-12"
     },
     {
       "league": "Serie A",
@@ -1021,7 +1024,10 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "specialChoice": false
+      "specialChoice": false,
+      "espnEventId": "401874763",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874763",
+      "historyCheckedOn": "2026-10-12"
     },
     {
       "league": "La Liga",
@@ -1066,7 +1072,10 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "specialChoice": false
+      "specialChoice": false,
+      "espnEventId": "401882852",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882852",
+      "historyCheckedOn": "2026-10-12"
     },
     {
       "league": "La Liga 2",
@@ -1112,7 +1121,10 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "specialChoice": false
+      "specialChoice": false,
+      "espnEventId": "401883181",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883181",
+      "historyCheckedOn": "2026-10-12"
     },
     {
       "league": "Ligue 2",
