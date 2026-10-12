@@ -70,6 +70,7 @@ function appendBoldText(parent,plainText){
  return parent;
 }
 function goodUrl(url){try{let u=new URL(url);return u.protocol==="https:"||u.protocol==="http:"}catch{return false}}
+function teamLabel(match,side){return textOrEmpty(match[side+"Display"])||textOrEmpty(match[side])||"Team"}
 function textOrEmpty(value){return typeof value==="string"&&value.trim()?value.trim():""}
 function splitAnalysis(m){
  if(Array.isArray(m.analysisParagraphs))return m.analysisParagraphs.filter(x=>typeof x==="string"&&x.trim());
@@ -78,7 +79,7 @@ function splitAnalysis(m){
 function teamSide(match,prefix){
  const side=node("div","side");
  const wrap=node("div","player-wrap");
- const name=textOrEmpty(match[prefix]);
+ const name=teamLabel(match,prefix);
  const crest=textOrEmpty(match[prefix+"CrestUrl"]);
  if(crest&&goodUrl(crest)){
    const img=node("img","team-crest");img.src=crest;img.alt=name+" အသင်းလိုဂို";img.loading="lazy";img.decoding="async";
@@ -102,8 +103,8 @@ function renderMyanmarOdds(match){
    const hd=source.handicap||{};
    if(![hd.line,hd.home,hd.away].some(has))return "—";
    return [(has(hd.line)?"အကျော "+hd.line:""),
-           (has(hd.home)?match.home+" "+hd.home:""),
-           (has(hd.away)?match.away+" "+hd.away:"")].filter(Boolean).join(" · ");
+           (has(hd.home)?teamLabel(match,"home")+" "+hd.home:""),
+           (has(hd.away)?teamLabel(match,"away")+" "+hd.away:"")].filter(Boolean).join(" · ");
  };
  const formatGoals=()=>{
    if(has(source.goalTotalOdds))return String(source.goalTotalOdds);
@@ -134,7 +135,7 @@ function recentGames(match,side){
  const img=node("img","form-crest");
  img.src=match[side+"CrestUrl"]||"";img.alt="";img.loading="lazy";
  img.onerror=()=>img.remove();
- head.appendChild(img);head.appendChild(node("strong","",match[side]||"Team"));
+ head.appendChild(img);head.appendChild(node("strong","",teamLabel(match,side)));
  wrap.appendChild(head);
  if(!items.length){wrap.appendChild(node("p","form-empty","နောက်ဆုံး ၅ ပွဲ အတည်ပြုစာရင်း မတင်ရသေးပါ"));return wrap}
  for(const item of items){
@@ -181,7 +182,7 @@ function renderFinished(match){
  const centre=node("div","result-score",match.finalScore);
  append(banner,teamSide(match,"home"),centre,teamSide(match,"away"));
  card.appendChild(banner);
- card.appendChild(node("div","result-meta",(match.home||"")+"  ·  "+(match.away||"")+"  |  ပွဲပြီး · "+(match.kickoffYangon||"")));
+ card.appendChild(node("div","result-meta",teamLabel(match,"home")+"  ·  "+teamLabel(match,"away")+"  |  ပွဲပြီး · "+(match.kickoffYangon||"")));
  return card;
 }
 function renderFixtureOnly(match){
@@ -196,7 +197,7 @@ function renderFixtureOnly(match){
  card.appendChild(banner);
  const title=node("div","fixture-title");
  const heading=node("h3");
- append(heading,document.createTextNode(match.home||"Home"),node("span","versus","VS"),document.createTextNode(match.away||"Away"));
+ append(heading,document.createTextNode(teamLabel(match,"home")),node("span","versus","VS"),document.createTextNode(teamLabel(match,"away")));
  append(title,heading,node("p","",match.venue||"အတည်ပြုပွဲစဉ် · မြန်မာစံတော်ချိန်"));
  card.appendChild(title);
  card.appendChild(node("p","section-note","ပွဲစဉ်ကို အတည်ပြုထားပါသည်။ AI ပွဲကြိုသုံးသပ်ချက်ကို မထုတ်ဝေရသေးပါ။"));
@@ -261,14 +262,14 @@ function renderMatch(match,i){
  // One action, one complete PNG: no format dropdown or truncated social poster.
  const button=node("button","match-download","↓ အချက်အလက်အပြည့်အစုံ PNG သိမ်းမယ်");
  button.type="button";
- button.setAttribute("aria-label",match.home+" နှင့် "+match.away+" ပွဲ၏ အချက်အလက်အပြည့်အစုံကို PNG သိမ်းရန်");
+ button.setAttribute("aria-label",teamLabel(match,"home")+" နှင့် "+teamLabel(match,"away")+" ပွဲ၏ အချက်အလက်အပြည့်အစုံကို PNG သိမ်းရန်");
  button.addEventListener("click",async()=>{
   if(button.disabled)return;
   const old=button.textContent;
   button.disabled=true;button.textContent="PNG အပြည့်အစုံ ပြင်ဆင်နေသည်…";
   try{
    if(!window.FutureCodeCardExport)throw Error("Full export module missing");
-   await window.FutureCodeCardExport.save(match,{
+   await window.FutureCodeCardExport.save({...match,home:teamLabel(match,"home"),away:teamLabel(match,"away")},{
     leagueLabel:leagueName(match.league),
     brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
     brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
