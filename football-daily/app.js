@@ -315,7 +315,8 @@ function renderMatch(match,i){
     leagueLabel:leagueName(match.league),
     brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
     brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
-    special:match.specialChoice===true
+    special:match.specialChoice===true,
+    cardNode:card
    });
    button.textContent="✓ PNG Download စတင်ပြီး";
   }catch(err){
@@ -466,7 +467,7 @@ function init(){
    button.disabled=true;const previous=button.textContent;button.textContent="ဂိုးရလဒ်ပုံ ထုတ်နေပါတယ်…";
    try{
      await window.FutureCodeDailyExport.saveResults({
-       date:selectedDateKey(),matches:finals,
+       date:selectedDateKey(),matches:finals,renderResult:renderFinished,
        brand:document.documentElement.dataset.footballBrandName||"Future Code Football"
      });
      button.textContent="✓ ဂိုးရလဒ်များ PNG ထုတ်ပြီး";
