@@ -33,6 +33,25 @@ const LEAGUE_ALIASES={
 };
 function canonicalLeague(value){return LEAGUE_ALIASES[value]||value;}
 function leagueName(value){const key=canonicalLeague(value);return LEAGUE_NAMES[key]||value||"ပွဲကြိုသုံးသပ်ချက်";}
+const TEAM_NAMES_MM={
+ "Coventry City":"ကိုဗင်ထရီ","Newcastle United":"နယူးကာဆယ်","Atalanta":"အတ္တလန်တာ","Venezia":"ဗင်နီဇီယာ",
+ "Torino":"တိုရီနို","Udinese":"အူဒီးနီးစ်","Levante":"လီဗန်တေး","Sevilla":"ဆီဗီလာ",
+ "Real Valladolid":"ဗယ်လာဒိုလစ်","Albacete":"အယ်လ်ဘာစီတီ","Burgos CF":"ဘာဂို့စ်","Granada":"ဂရန်နာဒါ",
+ "Real Oviedo":"အိုဗီဒို","Eibar":"အီဘာ","Tenerife":"တီနီရီဖီ","Girona":"ဂီရိုနာ","Dijon":"ဒီဂျွန်","Metz":"မက်ဇ်",
+ "Arsenal":"အာဆင်နယ်","Hull City":"ဟားလ်စီးတီး","Manchester City":"မန်ချက်စတာစီးတီး",
+ "Brighton":"ဘရိုက်တန်","Nottingham Forest":"နော်တင်ဟမ်ဖောရက်စ်","Liverpool":"လီဗာပူး",
+ "Tottenham Hotspur":"တော့တင်ဟမ်","Bournemouth":"ဘုန်းမောက်","Leeds United":"လိဒ်စ်ယူနိုက်တက်",
+ "Milan":"အေစီမီလန်","Sassuolo":"ဆာဆူအိုလို","Fiorentina":"ဖီအိုရင်တီးနား","Roma":"ရိုးမား",
+ "Bologna":"ဘိုလော့ညာ","Cagliari":"ကာဂလီယာရီ","Como":"ကိုမို",
+ "Lazio":"လာဇီယို","Hapoel Tel Aviv":"ဟာပိုရယ် တဲလ်အဗစ်","Juventus":"ဂျူဗင်တပ်စ်",
+ "Las Palmas":"လာ့စ်ပါလ်မက်စ်","Córdoba":"ကော်ဒိုဘာ","AD Ceuta":"ဆီယူတာ",
+ "FC Andorra":"အန်ဒိုရာ","Eldense":"အယ်လ်ဒန်ဆီ","Leganés":"လီဂါနက်စ်","Sporting Gijón":"စပို့တင်းဂီဟွန်",
+ "Sabadell":"ဆာဘာဒဲလ်","Almería":"အယ်လ်မေရီယာ","Real Sociedad II":"ဆိုစီဒက် ဘီ",
+ "Mallorca":"မယ်ယောကာ","Annecy":"အန်နက်စီ","Laval":"လာဗယ်","Boulogne-sur-Mer":"ဘူလိုနီ",
+ "Saint-Étienne":"စိန့်အက်တီယန်","Clermont":"ကလယ်မွန့်","Red Star":"ရက်ဒ်စတား",
+ "Rodez":"ရိုဒက်ဇ်","Celtа Fortuna":"ဆယ်လ်တာ ဖော်ကျူနာ"
+};
+function localizedTeam(value){return TEAM_NAMES_MM[value]||value||"";}
 const TZ="Asia/Yangon";
 let report={matches:[],published:false},selectedLeague="all",selectedDay=0;
 let loadSequence=0,loading=false;
@@ -148,7 +167,7 @@ function recentGames(match,side){
      result=item.teamGoals>item.opponentGoals?"W":item.teamGoals<item.opponentGoals?"L":"D";
    }
    row.appendChild(node("span","form-result "+(result?"form-"+result.toLowerCase():""),result||"·"));
-   const descr=node("span","form-opponent",(item.venueSide==="home"?"အိမ်ကွင်း · ":item.venueSide==="away"?"အဝေးကွင်း · ":"")+(item.opponent||""));
+   const descr=node("span","form-opponent",(item.venueSide==="home"?"အိမ်ကွင်း · ":item.venueSide==="away"?"အဝေးကွင်း · ":"")+localizedTeam(item.opponent));
    row.appendChild(descr);row.appendChild(node("b","",score));
    wrap.appendChild(row);
  }
@@ -168,7 +187,7 @@ function renderFormAndH2H(match){
    if(!g||typeof g!=="object")continue;
    const row=node("div","h2h-row");
    row.appendChild(node("span","h2h-date",g.date||""));
-   row.appendChild(node("span","h2h-teams",(g.home||"")+" – "+(g.away||"")));
+   row.appendChild(node("span","h2h-teams",localizedTeam(g.home)+" – "+localizedTeam(g.away)));
    row.appendChild(node("b","h2h-score",Number.isInteger(g.homeGoals)&&Number.isInteger(g.awayGoals)?g.homeGoals+" – "+g.awayGoals:"—"));
    h2h.appendChild(row);
  }
