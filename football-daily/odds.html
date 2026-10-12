@@ -4,7 +4,7 @@
 <title>ယနေ့ ကန်မည့် ပွဲကောင်းများ၏ ပေါက်ကြေးများ | Future Code Football</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css"><script defer src="./odds.js"></script>
+<link rel="stylesheet" href="./styles.css"><script defer src="./daily-image-export.js"></script><script defer src="./odds.js"></script>
 <style>
 .odds-hero{padding:34px 0 28px;border-bottom:1px solid #3f5352;background:linear-gradient(115deg,#16282b,#273b34)}
 .odds-hero h1{font-size:clamp(23px,4vw,38px);line-height:1.8;margin:8px 0 12px}.odds-hero h1 span{color:#ffab6f}
@@ -40,12 +40,44 @@
 @media(max-width:600px){.odds-table{min-width:740px}.odds-matchup{min-width:200px}.team-badge{height:23px;width:23px}.odds-matchup .club-label{font-size:11px}}
 
 @media(max-width:600px){.odds-hero{padding:23px 0}.odds-content{padding-top:20px}.odds-table{min-width:665px}.odds-group h2{font-size:14px}.odds-nav a{flex:1;text-align:center}}
+
+/* Mobile-first compact odds list: no sideways scrolling, all four prices visible. */
+.odds-export-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:18px}
+.odds-export-actions button{font:700 13px "Noto Sans Myanmar",sans-serif;line-height:1.8;border:1px solid #ffc28a;background:linear-gradient(120deg,#df965b,#f0b57e);color:#172727;border-radius:12px;padding:13px 19px;cursor:pointer}
+.odds-export-actions button:disabled{opacity:.48;cursor:not-allowed}
+#oddsExportStatus{font-size:11px;color:#c4d2cb}
+@media(max-width:700px){
+ .odds-content{width:calc(100% - 22px)}
+ .odds-table-wrap{overflow:visible;width:100%}
+ .odds-table{min-width:0;width:100%;display:block;table-layout:auto}
+ .odds-table thead{display:none}
+ .odds-table tbody{display:block}
+ .odds-table tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:8px;margin:0 0 9px;border:1px solid #405451;border-radius:12px;background:#213439}
+ .odds-table td{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3px;min-width:0;min-height:49px;text-align:center;white-space:normal;padding:6px 3px;font-size:11px;overflow-wrap:anywhere;border:0}
+ .odds-table td.time{grid-column:span 1;align-self:stretch;border-right:1px solid #455756;font-size:10px}
+ .odds-table td.team-pair{grid-column:span 3;min-width:0;padding:5px 3px}
+ .odds-matchup{min-width:0;width:100%;gap:3px;justify-content:center}
+ .odds-matchup .club-label{font-size:10px;min-width:0;line-height:1.6;overflow-wrap:anywhere}
+ .odds-matchup .team-badge{height:23px;width:23px}
+ .odds-matchup .mini-vs{font-size:9px}
+ .odds-table td.upper,.odds-table td.price,.odds-table td.prediction{font-size:12px;border-top:1px solid #455756;justify-content:start;min-height:57px}
+ .odds-table td.upper::before{content:"အပေါ်အသင်း"}
+ .odds-table td.price:nth-child(4)::before{content:"ဘော်ဒီကြေး"}
+ .odds-table td.price:nth-child(5)::before{content:"ဂိုးပေါင်းကြေး"}
+ .odds-table td.prediction::before{content:"အင်တာနက်ခန့်မှန်း"}
+ .odds-table td:nth-child(n+3)::before{display:block;color:#abc2ba;font:500 9px "Noto Sans Myanmar",sans-serif;line-height:1.7;white-space:nowrap}
+ .odds-league-heading{font-size:14px;padding:12px 10px}
+ .odds-group{margin:16px 0}
+ .odds-export-actions button{width:100%}
+}
+
 </style>
 </head><body>
 <header class="site-header"><div class="container header-inner"><a class="logo" href="./" aria-label="Future Code Football"><span class="logo-icon">FC<span>+</span></span><span class="logo-lines"><b>FUTURE CODE</b><small>FOOTBALL ANALYSIS</small></span></a><span class="top-edition">MYANMAR DAILY EDITION</span></div></header>
 <section class="odds-hero"><div class="container"><span class="odds-kicker">MYANMAR FOOTBALL MARKET · DAILY SHEET</span><h1>ယနေ့ ကန်မည့် <span>ပွဲကောင်းများ၏ ပေါက်ကြေးများ</span></h1><p class="odds-subtitle">အာရှ စျေးကွက် မြန်မာကြေး မနက်ပိုင်း ဖွင့်လှစ်မှုများ</p><nav class="odds-nav" aria-label="Football pages"><a href="./">ပွဲကြိုသုံးသပ်ချက်များ</a><a class="active" href="./odds.html" aria-current="page">ယနေ့ ပေါက်ကြေးများ</a></nav></div></section>
 <main class="container odds-content">
 <div class="odds-overview"><div><div class="odds-small" id="oddsDate">မြန်မာစံတော်ချိန်</div><div class="odds-small">ပွဲစဉ်အသီးသီး၏ မူလကြေးစာရင်း</div></div><div><strong class="odds-count" id="oddsCount">—</strong><span class="odds-small"> ပွဲ</span></div></div>
+<div class="odds-export-actions"><button type="button" id="oddsPngBtn" disabled>⬇ ယနေ့ ပေါက်ကြေးများ PNG Download</button><span id="oddsExportStatus" role="status">ပေါက်ကြေးစာရင်း ရယူနေသည်…</span></div>
 <div id="oddsList" aria-live="polite"><div class="odds-status">ပေါက်ကြေးစာရင်း ရယူနေပါတယ်…</div></div>
 <div class="odds-note">အာရှ စျေးကွက် မြန်မာကြေး မနက်ပိုင်း ဖွင့်လှစ်မှုများ</div>
 </main>
