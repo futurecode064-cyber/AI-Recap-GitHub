@@ -189,9 +189,11 @@ function recentGames(match,side){
 function renderFormAndH2H(match){
  const section=node("section","form-h2h");
  section.appendChild(node("h4","form-title","ထိပ်တိုက်တွေ့ဆုံမှု (H2H) နှင့် နောက်ဆုံး ၅ ပွဲ"));
- const split=node("div","form-lastfive");
- split.appendChild(recentGames(match,"home"));split.appendChild(recentGames(match,"away"));
- section.appendChild(split);
+ const split=node("div","form-three-grid");
+ const homeForm=recentGames(match,"home");
+ const awayForm=recentGames(match,"away");
+ homeForm.classList.add("form-home");
+ awayForm.classList.add("form-away");
  const h2h=node("div","h2h-records");
  h2h.appendChild(node("h5","","Head-to-Head · နောက်ဆုံး ၅ ကြိမ်"));
  const games=Array.isArray(match.headToHead)?match.headToHead.slice(0,5):[];
@@ -210,7 +212,9 @@ function renderFormAndH2H(match){
    row.appendChild(node("b","h2h-score",Number.isInteger(g.homeGoals)&&Number.isInteger(g.awayGoals)?g.homeGoals+" – "+g.awayGoals:"—"));
    h2h.appendChild(row);
  }
- section.appendChild(h2h);
+ h2h.classList.add("form-middle");
+ append(split,homeForm,h2h,awayForm);
+ section.appendChild(split);
  return section;
 }
 function renderFinished(match){
@@ -346,6 +350,8 @@ function renderLeagueFilters(all){
  if(picks)add("special","★ Special Choice",true);
 }
 function render(){
+ const bar=$("resultsDownloadBar");
+ if(bar)bar.hidden=selectedDay!==-1||loading||!Array.isArray(report.matches)||!report.matches.some(validFinal);
  const list=$("matchList");list.replaceChildren();
  if(loading){
   $("matchCount").textContent="—";$("specialCount").textContent="—";
@@ -453,6 +459,25 @@ function init(){
    });
  }
  $("reloadBtn").addEventListener("click",load);
+ $("resultsPngBtn").addEventListener("click",async()=>{
+   const button=$("resultsPngBtn");
+   const finals=(Array.isArray(report.matches)?report.matches:[]).filter(validFinal);
+   if(selectedDay!==-1||!finals.length||!window.FutureCodeDailyExport?.saveResults)return;
+   button.disabled=true;const previous=button.textContent;button.textContent="ဂိုးရလဒ်ပုံ ထုတ်နေပါတယ်…";
+   try{
+     await window.FutureCodeDailyExport.saveResults({
+       date:selectedDateKey(),matches:finals,
+       brand:document.documentElement.dataset.footballBrandName||"Future Code Football"
+     });
+     button.textContent="✓ ဂိုးရလဒ်များ PNG ထုတ်ပြီး";
+   }catch(err){
+     console.error("Verified results PNG error",err);
+     button.textContent="PNG မအောင်မြင်ပါ — ပြန်နှိပ်ပါ";
+   }finally{
+     button.disabled=false;
+     setTimeout(()=>{if(button.isConnected)button.textContent=previous;},2500);
+   }
+ });
  load();
 }
 document.addEventListener("DOMContentLoaded",init);
