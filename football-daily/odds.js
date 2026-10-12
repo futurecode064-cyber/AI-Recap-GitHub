@@ -72,7 +72,9 @@ async function load(){
  const query=new URLSearchParams(location.search).get("date");
  const day=/^\d{4}-\d{2}-\d{2}$/.test(query||"")?query:dateKey();
  try{
-  const response=await fetch("./data/odds/"+day+".json",{cache:"no-store"});
+  const base=new URL(document.documentElement.dataset.footballOddsDataUrl||"./data/odds/",document.baseURI);
+  const source=new URL(day+".json",base);
+  const response=await fetch(source.href,{cache:"no-store"});
   if(!response.ok)throw Error("HTTP "+response.status);
   const data=await response.json();
   if(data.reportDate!==day||!Array.isArray(data.matches))throw Error("invalid sheet");

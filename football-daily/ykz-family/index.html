@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="my" data-football-brand-name="YKZ FAMILY GROUP" data-football-brand-slogan="ရှေ့ဆက် YKZ" data-football-data-url="../data/today.json">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#651523">
+<meta name="description" content="YKZ FAMILY GROUP — မြန်မာလို နေ့စဉ် ဘောလုံးပွဲကြိုသုံးသပ်ချက်နှင့် ပေါက်ကြေးများ">
+<title>YKZ FAMILY GROUP | နေ့စဉ် ပွဲကြိုသုံးသပ်ချက်</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/webp" href="./assets/logo.webp"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="./brand.css">
+<script defer src="./brand.js"></script>
+<script defer src="../card-export.js"></script>
+<script defer src="../social-export.js"></script>
+<script defer src="../canvas-image-kit.js"></script>
+<script defer src="../daily-image-export.js"></script>
+<script defer src="../app.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a class="logo" href="./" aria-label="YKZ FAMILY GROUP"><img class="ykz-site-logo" src="./assets/logo.webp" alt="YKZ FAMILY GROUP Logo" width="50" height="63"><span class="logo-lines"><b>YKZ FAMILY GROUP</b><small>ရှေ့ဆက် YKZ</small></span></a>
+  <span class="top-edition"><span class="orange-dot"></span> YKZ FAMILY GROUP · ရှေ့ဆက် YKZ</span>
+</div></header>
+<main>
+ <section class="hero"><div class="container">
+  <div class="hero-topline"><span class="slim-label">YKZ FAMILY GROUP / FOOTBALL DAILY</span><span class="hero-date" id="heroDate"></span></div>
+  <div class="hero-main"><div><p class="eyebrow"><span class="orange-dot"></span> YKZ FAMILY GROUP</p><h1>နေ့စဉ် <span>ဘောလုံးပွဲကြို</span><br>သုံးသပ်ချက်</h1><p class="ykz-hero-slogan">ရှေ့ဆက် YKZ</p><p class="hero-desc">လက်ရှိအသင်းအင်အား၊ ခြေစွမ်း၊ ကစားပုံ၊ ဂိုးပေါင်းနှင့် Asian Handicap အချက်အလက်များကို ပေါင်းစပ်ပြီး မြန်မာလို ပရော်ဖက်ရှင်နယ်သုံးသပ်ထားတဲ့ နေ့စဉ်ပွဲကြိုအစီအစဉ်။</p></div><div class="hero-number"><span>06<span>:</span>00</span><small>DAILY FOOTBALL · MMT</small></div></div>
+  <div class="hero-foot"><span><span class="green-dot"></span> ရက်စွဲအလိုက် ပွဲစဉ်များ</span><span>Asia/Yangon · UTC+06:30</span></div>
+ </div></section>
+ <section class="content container">
+   <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">SELECTED DATE MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
+   <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2 id="reportHeading">ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill" id="reportPill">● TODAY</span></div>
+   <nav class="date-tabs" id="dateTabs" aria-label="မြန်မာစံတော်ချိန်ဖြင့် ရက်စွဲရွေးရန်">
+     <button type="button" data-day="-1">မနေ့ကရလဒ် <small id="dateYesterday"></small></button>
+     <button type="button" data-day="0" class="active">ဒီနေ့ပွဲ <small id="dateToday"></small></button>
+     <a class="date-tab-odds" href="./odds.html">ယနေ့ ပေါက်ကြေးများ<small>ပွဲအားလုံး၏ ကြေးစာရင်း ↗</small></a>
+   </nav>
+   <nav class="filters" id="filters" aria-label="ဒီနေ့ပွဲရှိသည့် ပြိုင်ပွဲများ">
+    <button data-league="all" class="selected" type="button">ပွဲအားလုံး</button>
+   </nav>
+   <div class="section-note" id="sectionNote"></div>
+   <div id="resultsDownloadBar" class="results-download-bar" hidden><button id="resultsPngBtn" type="button" class="results-png-btn">⬇ ဂိုးရလဒ်များ PNG Download</button><span>ပွဲပြီးအတည်ပြုထားသော ရလဒ်အားလုံး</span></div>
+   <div id="matchList" class="matches" aria-live="polite"><div class="empty-card"><span class="empty-icon">↻</span><h3>သုံးသပ်ချက်များ ရယူနေပါတယ်…</h3></div></div>
+ </section>
+</main>
+<footer><div class="container footer-inner"><div><strong>YKZ <span>FAMILY GROUP</span></strong><p>ရှေ့ဆက် YKZ</p></div><p>နေ့စဉ် အကြောင်းအရာအသစ်တင်သည့် စာမျက်နှာ</p></div></footer>
+</body>
+</html>
