@@ -3,9 +3,11 @@
  const W=1200,M=54,C={bg:"#111d22",panel:"#1c2d31",line:"#45605c",orange:"#ffa96c",cream:"#f4f1e9",muted:"#b6cbc3"};
  const font=(s,b)=>String(b?800:500)+" "+s+'px "Noto Sans Myanmar", sans-serif';
  function rect(ctx,x,y,w,h,color){ctx.fillStyle=color;ctx.fillRect(x,y,w,h)}
- function text(ctx,t,x,y,size=23,color=C.cream,bold=false,align="left"){
+ function text(ctx,t,x,y,size=23,color=C.cream,bold=false,align="left",maxWidth=null){
    ctx.textAlign=align;ctx.textBaseline="top";ctx.font=font(size,bold);
-   ctx.fillStyle=color;ctx.fillText(String(t||""),x,y);
+   ctx.fillStyle=color;
+   if(maxWidth)ctx.fillText(String(t||""),x,y,maxWidth);
+   else ctx.fillText(String(t||""),x,y);
  }
  function rounded(ctx,x,y,w,h,r,color,border){
    ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fillStyle=color;ctx.fill();
@@ -88,7 +90,8 @@
    const awayFive=Array.isArray(match.awayLastFive)?match.awayLastFive.slice(0,5):[];
    const h2h=Array.isArray(match.headToHead)?match.headToHead.slice(0,5):[];
    const rowCount=Math.max(homeFive.length,awayFive.length,1);
-   const historyHeight=145+rowCount*38+Math.max(h2h.length,1)*36;
+   // Three horizontal history panels shorten the full-length article PNG.
+   const historyHeight=140+Math.max(rowCount,h2h.length,1)*52;
    const H=1160+preview.length*53+extraHeight+historyHeight;
    const canvas=document.createElement("canvas");canvas.width=W;canvas.height=H;
    const ctx=canvas.getContext("2d");if(!ctx)throw new Error("Browser cannot export PNG");
@@ -132,32 +135,39 @@
      [present(g.line)?"ဂိုးပေါင်း "+g.line:"",present(g.over)?"Over "+g.over:"",present(g.under)?"Under "+g.under:""].filter(Boolean).join(" · ")||"—";
    text(ctx,"ဘော်ဒီကြေး = "+body,M+20,766,20,C.cream);
    text(ctx,"ဂိုးပေါင်းကြေး = "+goals,M+20,809,20,C.cream);
-   // Keep last-five and H2H in the complete, variable-height download.
-   const formY=867;
-   rounded(ctx,M,formY,W-M*2,historyHeight-14,12,"#243935",C.line);
-   text(ctx,"နောက်ဆုံး ၅ ပွဲ နှင့် ထိပ်တိုက်တွေ့ဆုံမှု (H2H)",M+20,formY+16,24,C.orange,true);
-   text(ctx,match.home,M+20,formY+55,20,C.cream,true);
-   text(ctx,match.away,624,formY+55,20,C.cream,true);
-   rect(ctx,600,formY+52,2,rowCount*38+21,C.line);
-   function fiveRows(games,x){
-     if(!games.length){text(ctx,"အတည်ပြုစာရင်း မရရှိသေး",x,formY+94,18,C.muted);return}
+   // The same Home Last 5 | H2H | Away Last 5 layout as the website.
+   const formY=867,panelGap=12,colWidth=(W-M*2-panelGap*2)/3;
+   const hx=M,mx=M+colWidth+panelGap,ax=mx+colWidth+panelGap;
+   const panelHeight=historyHeight-20;
+   for(const x of [hx,mx,ax])rounded(ctx,x,formY,colWidth,panelHeight,11,"#243935",C.line);
+   text(ctx,"အိမ်ရှင် နောက်ဆုံး ၅ ပွဲ",hx+13,formY+15,20,C.orange,true,"left",colWidth-26);
+   text(ctx,"ထိပ်တိုက်တွေ့ဆုံမှု (H2H)",mx+13,formY+15,19,C.orange,true,"left",colWidth-26);
+   text(ctx,"ဧည့်သည် နောက်ဆုံး ၅ ပွဲ",ax+13,formY+15,20,C.orange,true,"left",colWidth-26);
+   text(ctx,match.home,hx+13,formY+49,18,C.cream,true,"left",colWidth-24);
+   text(ctx,match.away,ax+13,formY+49,18,C.cream,true,"left",colWidth-24);
+   function compactFive(games,x){
+     if(!games.length){text(ctx,"အတည်ပြုစာရင်း မရရှိသေး",x+13,formY+92,16,C.muted,false,"left",colWidth-26);return;}
      games.forEach((game,i)=>{
        const score=Number.isInteger(game.teamGoals)&&Number.isInteger(game.opponentGoals)
          ?game.teamGoals+" – "+game.opponentGoals:"—";
        const ground=game.venueSide==="home"?"H":game.venueSide==="away"?"A":"";
-       text(ctx,ground+" "+String(game.opponent||"").slice(0,28),x,formY+94+i*38,18,C.cream);
-       text(ctx,score,x+440,formY+94+i*38,18,C.muted,false,"right");
+       const lineY=formY+90+i*52;
+       rect(ctx,x+12,lineY-6,colWidth-24,1,C.line);
+       text(ctx,ground+" "+String(game.opponent||""),x+13,lineY+5,16,C.cream,false,"left",colWidth-104);
+       text(ctx,score,x+colWidth-13,lineY+5,17,C.muted,true,"right",75);
      });
    }
-   fiveRows(homeFive,M+20);fiveRows(awayFive,624);
-   const h2hTitleY=formY+99+rowCount*38;
-   text(ctx,"H2H · နောက်ဆုံး တွေ့ဆုံမှုများ",M+20,h2hTitleY,20,C.orange,true);
-   if(!h2h.length) text(ctx,"အတည်ပြုစာရင်း မရရှိသေး",M+20,h2hTitleY+37,18,C.muted);
-   h2h.forEach((g,i)=>{
+   compactFive(homeFive,hx);compactFive(awayFive,ax);
+   if(!h2h.length)text(ctx,"အတည်ပြုစာရင်း မရရှိသေး",mx+13,formY+92,16,C.muted,false,"left",colWidth-26);
+   for(const [i,g] of h2h.entries()){
      const score=Number.isInteger(g.homeGoals)&&Number.isInteger(g.awayGoals)
       ?g.homeGoals+" – "+g.awayGoals:"—";
-     text(ctx,[g.date||"",g.home||"",score,g.away||""].join("  ·  "),M+20,h2hTitleY+37+i*36,18,C.cream);
-   });
+     const yRow=formY+90+i*52;
+     rect(ctx,mx+12,yRow-6,colWidth-24,1,C.line);
+     text(ctx,g.date||"",mx+13,yRow,14,C.muted,false,"left",colWidth-105);
+     text(ctx,score,mx+colWidth-13,yRow,17,C.orange,true,"right",95);
+     text(ctx,(g.home||"")+" – "+(g.away||""),mx+13,yRow+23,14,C.cream,false,"left",colWidth-26);
+   }
    text(ctx,"ပွဲကြိုသုံးသပ်ချက်",M,887+historyHeight,28,C.orange,true);
    let y=957+historyHeight;y=drawLines(ctx,preview,y,28,53);
    if(extras.length){
