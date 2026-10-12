@@ -26,7 +26,7 @@ YKZ main page has `data-football-data-url="../data/today.json"`. The *shared* `a
 6. A separate pages.dev **hostname** or purchased custom domain is optional; using the existing Cloudflare Pages project, each `/<brand-slug>/` is already a distinct branded entrypoint on the same host. Creating another Cloudflare project or domain requires that account's deployment permissions, not just GitHub repository access.
 
 ## Daily operational workflow (unchanged)
-6 AM Yangon: scheduled assistant research/preparation and notification; NO automatic publish. User explicitly approves GitHub publication. Commit today's approved data and its dated odds **once** on `football-daily-render`; both root and YKZ use it. Avoid fabricated data; PDF last-column internet predictions are not verified final scores.
+6 AM Yangon: scheduled assistant research/preparation and notification; NO automatic publish. User explicitly approves GitHub publication. Commit today's approved data and its dated odds **once** to `futurecode064-cyber/future-code-football-daily` branch `main`; the guarded legacy-repo mirror transfers that update to the original Cloudflare Pages production branch. Both root and YKZ use it. Avoid fabricated data; PDF last-column internet predictions are not verified final scores.
 
 ## Notes
 - Do not serve the YKZ files under a duplicate separate root with local `data/` copies; that would break synchronized updates.
