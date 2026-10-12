@@ -1,3 +1,5 @@
+> **CURRENT APPROVED STANDARD (2026-10-12):** Read [DAILY_APPROVED_FORMAT.md](./DAILY_APPROVED_FORMAT.md) FIRST before preparing, uploading or redesigning any daily reports, odds tables or downloadable PNGs. That document supersedes older examples below, including automatic 06:00 publishing, tomorrow tab and DOM screenshot exports. Daily 06:00 task prepares only; USER explicitly approves each GitHub publish.
+
 # Cloudflare Pages Free deployment (recommended)
 
 The site is ready for Cloudflare Pages Git integration. It has a top-level `index.html` inside `football-daily/` and a `_headers` file for daily JSON freshness.
