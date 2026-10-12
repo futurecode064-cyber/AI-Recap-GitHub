@@ -258,9 +258,9 @@ function renderMatch(match,i){
  append(title,h,node("p","",match.venue||"မြန်မာစံတော်ချိန်အတိုင်း ပွဲကြိုသုံးသပ်ချက်"));
  card.appendChild(title);
  const markets=node("div","odds-grid");
- append(markets,oddBox((match.home||"အိမ်ရှင်")+" နိုင် (1)",match.homeOdds),
+ append(markets,oddBox(teamLabel(match,"home")+" နိုင် (1)",match.homeOdds),
  oddBox("သရေ (X)",match.drawOdds),
- oddBox((match.away||"ဧည့်သည်")+" နိုင် (2)",match.awayOdds));
+ oddBox(teamLabel(match,"away")+" နိုင် (2)",match.awayOdds));
  card.appendChild(markets);
 
  card.appendChild(renderMyanmarOdds(match));
