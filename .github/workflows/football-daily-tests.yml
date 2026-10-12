@@ -27,7 +27,7 @@ jobs:
           node --check football-daily/odds.js
           node --check football-daily/daily-image-export.js
       - name: Football navigation, date and active league tests
-        run: node --test football-daily/tests/navigation.test.cjs
+        run: node --test football-daily/tests/*.test.cjs
       - name: Football score and report Python syntax
         run: |
           python -m py_compile football-daily/scripts/daily_guard.py football-daily/scripts/sync_scores.py
