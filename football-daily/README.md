@@ -96,3 +96,13 @@ Continue this existing project in ChatGPT Work using `futurecode064-cyber/AI-Rec
 - A daily 06:00 MMT publishing promise requires a working external scheduler; this static site itself does not research or publish new reports.
 
 Removed failure modes: out-of-order request errors overwriting the current date, same-date refresh races, branded-page startup failure, incorrect branded archive paths, missing branded social-export script, unpublished data rendering, and destructive unarchived rollover.
+  
+
+## 2026-10-12 UI and scheduled-research update
+The current site supports only **YESTERDAY / TODAY** tabs, no TOMORROW tab. Competition filters are generated from the matches in the currently selected published report (both normal and fixture-snapshot reports), not from a permanent list. Empty competitions and the no-fixture league list are hidden. This preserves separate previous-day verified FT results, ordinary Burmese preview text, 1X2, Myanmar odds, form/H2H, Special Choice and PNG export.
+
+Approved competitions: Premier League, Championship, League One, La Liga, La Liga 2, Serie A, Serie B, Bundesliga, 2. Bundesliga, Ligue 1, Ligue 2, FA Cup, EFL Cup, Coppa Italia, Copa del Rey, DFB-Pokal, Coupe de France, UEFA Champions League, UEFA Europa League, UEFA Conference League, UEFA Nations League, FIFA World Cup, FIFA World Cup Qualifying, UEFA Euro, UEFA Euro Qualifying.
+
+IMPORTANT: the daily 06:00 Asia/Yangon ChatGPT Task is **research / JSON preparation only**. It must not commit or publish to GitHub; publishing happens only on a fresh explicit user instruction. The public website is not an AI-model runtime and needs a published JSON. Read RESEARCH_STANDARD.md's latest section for the 25-competition editorial rules. ESPN public scoreboard sync, AiScore/LiveScore available source pages and official results may enrich verified last-five/H2H; source availability and licensing must be respected.
+
+For Myanmar body/goals odds: keep exact same-day user-supplied prices; a public Myanmar-odds page may be checked but cannot be represented as verified IBET789 quotes without matching current source evidence. No API key required and no invented rates.
