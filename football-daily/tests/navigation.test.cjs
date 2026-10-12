@@ -187,8 +187,8 @@ test('three-box history and H2H layout preserves all three datasets',()=>{
 test('PNG exporter includes all odds entries and only confirmed results',()=>{
  const js=fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8');
  assert.ok(js.includes('async function saveOdds(data)'));
- assert.ok(js.includes('async function saveResults({matches,date,brand})'));
- assert.ok(js.includes('data.matches.length*110'));
+ assert.ok(js.includes('async function saveResults({matches,date,renderResult})'));
+ assert.ok(js.includes('league.cloneNode(true)'));
  assert.ok(js.includes('matches.filter(verified)'));
  assert.ok(js.includes('m.status==="finished"'));
  assert.ok(js.includes('window.FutureCodeDailyExport={saveOdds,saveResults}'));
@@ -196,4 +196,18 @@ test('PNG exporter includes all odds entries and only confirmed results',()=>{
  const odds=fs.readFileSync(path.join(root,'odds.js'),'utf8');
  assert.ok(app.includes('window.FutureCodeDailyExport.saveResults'));
  assert.ok(odds.includes('window.FutureCodeDailyExport.saveOdds'));
+});
+
+test('DOM PNG renderer is vendored and loaded ahead of exporters on every entry page',()=>{
+ const vendor=fs.readFileSync(path.join(root,'vendor/dom-to-image.min.js'),'utf8');
+ const lib=fs.readFileSync(path.join(root,'dom-capture.js'),'utf8');
+ assert.ok(vendor.includes('domtoimage'));
+ assert.ok(lib.includes('window.domtoimage.toBlob'));
+ assert.ok(!lib.includes('ctx.drawImage'));
+ for(const file of ['index.html','myanmar-football/index.html','odds.html']){
+  const html=fs.readFileSync(path.join(root,file),'utf8');
+  const a=html.indexOf('vendor/dom-to-image.min.js'),b=html.indexOf('dom-capture.js');
+  const c=html.indexOf('daily-image-export.js');
+  assert.ok(a>0&&b>a&&c>b,'Image scripts are not ordered in '+file);
+ }
 });
