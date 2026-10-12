@@ -2,7 +2,7 @@
 (function(){
  const branded=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
  const C=branded?
-  {bg:"#150f1a",head:"#481a2b",panel:"#311d2b",panelAlt:"#4a2738",divider:"#81505b",orange:"#ffcb70",pale:"#fff5e9",muted:"#e0bdc6",white:"#fff8ed"}:
+  {bg:"#111111",head:"#960000",panel:"#242424",panelAlt:"#353030",divider:"#812f2f",orange:"#ffcf58",pale:"#fff8e9",muted:"#e0cbc0",white:"#fff9ee"}:
   {bg:"#101b20",head:"#1d3135",panel:"#203436",panelAlt:"#263d3d",divider:"#425855",orange:"#ffac75",pale:"#f7f5eb",muted:"#bcd0c9",white:"#f5f7f3"};
  const FONT='"Noto Sans Myanmar",sans-serif';
  const imageCache=new Map();
@@ -87,7 +87,7 @@
   fill(ctx,0,0,W,13,C.orange);fill(ctx,0,13,W,195,C.head);
   text(ctx,branded?"YKZ FAMILY GROUP":"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
   if(branded){
-   text(ctx,"ရှေ့ဆက် YKZ",Math.min(W-260,340),48,19,C.pale,true);
+   text(ctx,"အတူရှေ့ဆက် YKZ",Math.min(W-260,340),48,19,C.pale,true);
    crest(ctx,document.documentElement?.dataset?.footballBrandLogoUrl,W-113,22,78,"YKZ");
   }
   text(ctx,title,28,110,38,C.white,true);
