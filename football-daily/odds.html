@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="my"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10191d"><meta name="description" content="Future Code Football Daily: ယနေ့ ပွဲကောင်းများ၏ မြန်မာကြေးနှင့် ဂိုးပေါင်းကြေးများ">
+<title>ယနေ့ ကန်မည့် ပွဲကောင်းများ၏ ပေါက်ကြေးများ | Future Code Football</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css"><script defer src="./odds.js"></script>
+<style>
+.odds-hero{padding:34px 0 28px;border-bottom:1px solid #3f5352;background:linear-gradient(115deg,#16282b,#273b34)}
+.odds-hero h1{font-size:clamp(23px,4vw,38px);line-height:1.8;margin:8px 0 12px}.odds-hero h1 span{color:#ffab6f}
+.odds-kicker{font:700 13px 'Barlow Condensed',sans-serif;letter-spacing:.13em;color:#e5b48d}
+.odds-subtitle{font-size:13px;color:#b9cec6;line-height:2}
+.odds-nav{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 0}.odds-nav a{padding:12px 20px;border:1px solid #536960;border-radius:999px;background:#203336;font-size:12px}.odds-nav a.active{color:#182321;background:#ffae75;border-color:#ffae75;font-weight:700}
+.odds-content{padding:30px 0 75px}.odds-overview{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;background:#1a292c;border:1px solid #35474a;padding:18px 23px;border-radius:15px;margin-bottom:24px}
+.odds-count{font:800 31px 'Barlow Condensed',sans-serif;color:#ffb384}.odds-small{font-size:12px;color:#afc4be}
+.odds-group{margin:26px 0;background:#19272a;border:1px solid #38494b;border-radius:15px;overflow:hidden}
+.odds-group h2{font-size:17px;margin:0;padding:15px 19px;background:#223538;color:#ffc195;border-bottom:1px solid #384b4a;line-height:1.6}
+.odds-table-wrap{overflow-x:auto}.odds-table{border-collapse:collapse;width:100%;min-width:730px;font-size:12px;text-align:center}
+.odds-table th{padding:13px 9px;background:#263839;color:#bdd8d0;font-size:11px;white-space:nowrap}
+.odds-table td{padding:14px 9px;border-bottom:1px solid #354448;vertical-align:middle;white-space:nowrap}
+.odds-table tr:last-child td{border-bottom:none}.odds-table tr:hover td{background:#273a3a}
+.odds-table .team-pair{text-align:left;font-weight:600;white-space:normal;min-width:195px}
+.odds-table .upper{color:#ffe0a3}.odds-table .price{font:800 17px 'Barlow Condensed',sans-serif;color:#cce2d6}
+.odds-table .time{color:#ffbb8b}.odds-status{border:1px solid #41585a;border-radius:15px;background:#192629;padding:23px;text-align:center;color:#c3d2cf;line-height:2}
+.odds-note{padding:17px 22px;margin-top:24px;background:#202e31;border-left:3px solid #e8a270;color:#bed1c9;font-size:12px;line-height:2}
+@media(max-width:600px){.odds-hero{padding:23px 0}.odds-content{padding-top:20px}.odds-table{min-width:665px}.odds-group h2{font-size:14px}.odds-nav a{flex:1;text-align:center}}
+</style>
+</head><body>
+<header class="site-header"><div class="container header-inner"><a class="logo" href="./" aria-label="Future Code Football"><span class="logo-icon">FC<span>+</span></span><span class="logo-lines"><b>FUTURE CODE</b><small>FOOTBALL ANALYSIS</small></span></a><span class="top-edition">MYANMAR DAILY EDITION</span></div></header>
+<section class="odds-hero"><div class="container"><span class="odds-kicker">MYANMAR FOOTBALL MARKET · DAILY SHEET</span><h1>ယနေ့ ကန်မည့် <span>ပွဲကောင်းများ၏ ပေါက်ကြေးများ</span></h1><p class="odds-subtitle">ပို့ပေးထားသော နေ့စဉ်ကြေးစာရင်းမှ ဘော်ဒီကြေးနှင့် ဂိုးပေါင်းကြေးများကို မူရင်းအတိုင်း ဖော်ပြထားပါသည်။</p><nav class="odds-nav" aria-label="Football pages"><a href="./">ပွဲကြိုသုံးသပ်ချက်များ</a><a class="active" href="./odds.html" aria-current="page">ယနေ့ ပေါက်ကြေးများ</a></nav></div></section>
+<main class="container odds-content">
+<div class="odds-overview"><div><div class="odds-small" id="oddsDate">မြန်မာစံတော်ချိန်</div><div class="odds-small">ပွဲစဉ်အသီးသီး၏ မူလကြေးစာရင်း</div></div><div><strong class="odds-count" id="oddsCount">—</strong><span class="odds-small"> ပွဲ</span></div></div>
+<div id="oddsList" aria-live="polite"><div class="odds-status">ပေါက်ကြေးစာရင်း ရယူနေပါတယ်…</div></div>
+<div class="odds-note"><strong>မှတ်ချက်:</strong> အချက်အလက်များမှာ ပေးပို့ထားသည့် ရက်စွဲပါ PDF ကြေးစာရင်းမှ ကူးယူထားသော snapshot ဖြစ်သည်။ Live ပြောင်းလဲနေသောကြေးမဟုတ်ပါ။ မူရင်းစာရင်း၏ နောက်ဆုံးကော်လံကို သီးခြားဖော်ပြထားပြီး ပွဲပြီးရလဒ်ဟု မဆိုလိုပါ။ ည ၁၂ နာရီနောက်ပိုင်းပွဲများကို နောက်နေ့မနက်ဟု ခွဲပြထားပါသည်။</div>
+</main>
+<footer><div class="container footer-inner"><div><strong>FUTURE CODE <span>FOOTBALL</span></strong><p>Independent Myanmar Football Analysis</p></div><p>အချက်အလက်ကို ပေးပို့ထားသည့်ကြေးစာရင်းအရ ဖော်ပြသည်။</p></div></footer>
+</body></html>
