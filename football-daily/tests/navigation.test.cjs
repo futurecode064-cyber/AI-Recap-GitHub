@@ -136,3 +136,20 @@ test('form and H2H sections use record-level verified opponent logos',()=>{
  assert.ok(js.includes('g.homeCrestUrl'));
  assert.ok(js.includes('g.awayCrestUrl'));
 });
+
+test('all nine published previews contain complete single-provider sourced 1X2 decimal prices',()=>{
+ const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ assert.equal(today.reportDate,'2026-10-12');assert.equal(today.matches.length,9);
+ for(const m of today.matches){
+  for(const key of ['homeOdds','drawOdds','awayOdds']){
+   assert.ok(Number(m[key])>1,'Missing real 1X2 '+key+' for '+m.home);
+  }
+  assert.ok(m.oddsProvider && /^https:\/\//.test(m.oddsSourceUrl),'Odds not attributable to bookmaker '+m.home);
+  assert.equal(m.oddsMarket,'Full-time 1X2');
+  assert.equal(m.oddsIsLive,false);
+  assert.ok(m.myanmarOdds.bodyOdds && m.myanmarOdds.goalTotalOdds,'Original Myanmar odds were lost');
+ }
+ const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
+ assert.ok(js.includes('oddBox(teamLabel(match,"home")+" နိုင် (1)"'));
+ assert.ok(js.includes('oddBox(teamLabel(match,"away")+" နိုင် (2)"'));
+});
