@@ -1,0 +1,124 @@
+name: Mirror Verified Football Site to Cloudflare Production
+on:
+  schedule:
+    - cron: '11,41 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/football-standalone-sync.yml']
+
+permissions:
+  contents: write
+concurrency:
+  group: football-standalone-prod-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'futurecode064-cyber/AI-Recap-GitHub'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout existing Pages production branch
+        uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Fetch standalone Football source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet --depth 1 --single-branch --branch main https://github.com/futurecode064-cyber/future-code-football-daily.git "$RUNNER_TEMP/standalone-football"
+          test -s "$RUNNER_TEMP/standalone-football/football-daily/data/today.json"
+          test -s "$RUNNER_TEMP/standalone-football/football-daily/index.html"
+          test -s "$RUNNER_TEMP/standalone-football/football-daily/ykz-family/assets/logo.webp"
+      - name: Guard against overwriting independent production edits
+        id: plan
+        shell: bash
+        run: |
+          set -euo pipefail
+          OLD_TREE="$(git rev-parse HEAD:football-daily)"
+          SRC_TREE="$(git -C "$RUNNER_TEMP/standalone-football" rev-parse HEAD:football-daily)"
+          EXPECTED_TREE="$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('.github/football-sync-state.json')
+          if not p.exists(): raise SystemExit('Sync marker absent: refusing to overwrite production.')
+          state=json.loads(p.read_text(encoding='utf-8'))
+          assert state['source_repository']=='futurecode064-cyber/future-code-football-daily'
+          assert state['source_branch']=='main'
+          print(state['target_tree'])
+          PY
+          )"
+          if [[ "$OLD_TREE" != "$EXPECTED_TREE" ]]; then
+            echo "::error::Production football source changed outside the sync workflow; stopping to prevent data loss."
+            exit 1
+          fi
+          if [[ "$SRC_TREE" == "$OLD_TREE" ]]; then
+            echo "No football changes. No GitHub commit and no Cloudflare deployment."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          rsync -a --delete "$RUNNER_TEMP/standalone-football/football-daily/" football-daily/
+          git add -A -- football-daily
+          STAGED_ROOT="$(git write-tree)"
+          STAGED_TREE="$(git rev-parse "$STAGED_ROOT:football-daily")"
+          if [[ "$STAGED_TREE" != "$SRC_TREE" ]]; then
+            echo "::error::File parity verification failed, production unchanged."
+            exit 1
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "SRC_TREE=$SRC_TREE" >> "$GITHUB_ENV"
+          echo "STAGED_TREE=$STAGED_TREE" >> "$GITHUB_ENV"
+          echo "SRC_SHA=$(git -C "$RUNNER_TEMP/standalone-football" rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: Node setup
+        if: steps.plan.outputs.changed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Python setup
+        if: steps.plan.outputs.changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax and branded-site tests
+        if: steps.plan.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check football-daily/app.js
+          node --check football-daily/odds.js
+          node --check football-daily/daily-image-export.js
+          node --check football-daily/card-export.js
+          node --check football-daily/canvas-image-kit.js
+          node --test football-daily/tests/*.test.cjs
+      - name: Football report audit
+        if: steps.plan.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile football-daily/scripts/daily_guard.py football-daily/scripts/sync_scores.py
+          python football-daily/scripts/daily_guard.py audit
+      - name: Record sync marker and publish to unchanged Cloudflare Pages branch
+        if: steps.plan.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,os
+          from datetime import datetime,timezone
+          from pathlib import Path
+          p=Path('.github/football-sync-state.json')
+          state=json.loads(p.read_text(encoding='utf-8'))
+          state.update(source_commit=os.environ['SRC_SHA'],
+                       source_tree=os.environ['SRC_TREE'],
+                       target_tree=os.environ['STAGED_TREE'],
+                       last_synced_utc=datetime.now(timezone.utc).isoformat())
+          p.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+          git add .github/football-sync-state.json
+          git config user.name "future-code-football-sync[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Mirror approved Football Daily changes from standalone repository"
+          git push origin HEAD:refs/heads/football-daily-render
