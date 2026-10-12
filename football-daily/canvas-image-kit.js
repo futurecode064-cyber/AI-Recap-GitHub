@@ -1,6 +1,9 @@
 "use strict";
 (function(){
- const C={bg:"#101b20",head:"#1d3135",panel:"#203436",panelAlt:"#263d3d",divider:"#425855",orange:"#ffac75",pale:"#f7f5eb",muted:"#bcd0c9",white:"#f5f7f3"};
+ const branded=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
+ const C=branded?
+  {bg:"#150f1a",head:"#481a2b",panel:"#311d2b",panelAlt:"#4a2738",divider:"#81505b",orange:"#ffcb70",pale:"#fff5e9",muted:"#e0bdc6",white:"#fff8ed"}:
+  {bg:"#101b20",head:"#1d3135",panel:"#203436",panelAlt:"#263d3d",divider:"#425855",orange:"#ffac75",pale:"#f7f5eb",muted:"#bcd0c9",white:"#f5f7f3"};
  const FONT='"Noto Sans Myanmar",sans-serif';
  const imageCache=new Map();
  function sleep(ms){return new Promise(done=>setTimeout(done,ms))}
@@ -66,7 +69,8 @@
  }
  const resolved=new Map();
  async function preloadImages(urls){
-  await Promise.all([...new Set(urls.filter(Boolean))].map(async url=>{const im=await loadImage(url);resolved.set(url,im)}));
+  const brandUrl=document.documentElement?.dataset?.footballBrandLogoUrl;
+  await Promise.all([...new Set([...urls,brandUrl].filter(Boolean))].map(async url=>{const im=await loadImage(url);resolved.set(url,im)}));
  }
  async function download(canvas,filename){
   if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
@@ -81,7 +85,11 @@
  function day(v){return /^\d{4}-\d{2}-\d{2}$/.test(v||"")?v:"unknown"}
  function top(ctx,W,title,date,detail){
   fill(ctx,0,0,W,13,C.orange);fill(ctx,0,13,W,195,C.head);
-  text(ctx,"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
+  text(ctx,branded?"YKZ FAMILY GROUP":"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
+  if(branded){
+   text(ctx,"ရှေ့ဆက် YKZ",Math.min(W-260,340),48,19,C.pale,true);
+   crest(ctx,document.documentElement?.dataset?.footballBrandLogoUrl,W-113,22,78,"YKZ");
+  }
   text(ctx,title,28,110,38,C.white,true);
   text(ctx,"မြန်မာစံတော်ချိန်  ·  "+day(date),28,164,18,C.muted);
   text(ctx,detail,W-28,164,19,C.orange,true,"right");

@@ -28,11 +28,16 @@
   // Actual website's competition/time headline
   fill(ctx,M,20,W-2*M,66,C.bg,13);
   text(ctx,"◈ "+(opts.leagueLabel||MM[match.league]||match.league),M+18,53,22,C.orange,true);
-  text(ctx,match.kickoffYangon||"",W-M-18,53,18,C.muted,true,"right",260);
+  const isYKZ=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
+  if(isYKZ){
+    text(ctx,"YKZ FAMILY GROUP · ရှေ့ဆက် YKZ",W/2,52,18,C.orange,true,"center");
+    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-100,26,51,"YKZ");
+  }
+  text(ctx,match.kickoffYangon||"",isYKZ?W-113:W-M-18,53,18,C.muted,true,"right",isYKZ?190:260);
   // VS banner with home/away logos and matching teal background
-  fill(ctx,M,87,W-2*M,238,"#29453f");
-  fill(ctx,M,87,376,238,"#263639");
-  fill(ctx,W-M-376,87,376,238,"#263639");
+  fill(ctx,M,87,W-2*M,238,isYKZ?"#74233d":"#29453f");
+  fill(ctx,M,87,376,238,isYKZ?"#402038":"#263639");
+  fill(ctx,W-M-376,87,376,238,isYKZ?"#402038":"#263639");
   const homeName=String(match.home||""),awayName=String(match.away||"");
   crest(ctx,match.homeCrestUrl,190,110,118,homeName);
   crest(ctx,match.awayCrestUrl,W-310,110,118,awayName);

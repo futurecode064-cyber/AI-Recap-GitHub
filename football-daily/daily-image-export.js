@@ -45,7 +45,8 @@
    y+=18;
   }
   text(ctx,"အာရှ စျေးကွက် မြန်မာကြေး မနက်ပိုင်း ဖွင့်လှစ်မှုများ",W/2,H-37,21,C.muted,false,"center");
-  await download(canvas,"future-code-odds-"+kit.day(data.reportDate)+".png");
+  const brand=window.FutureCodeBrandConfig?.id||"future-code";
+  await download(canvas,brand+"-odds-"+kit.day(data.reportDate)+".png");
  }
  async function saveResults({matches,date}){
   const finals=Array.isArray(matches)?matches.filter(verified):[];
@@ -76,7 +77,8 @@
    y+=18;
   }
   text(ctx,"ပွဲပြီးအတည်ပြုထားသော ဂိုးရလဒ်များ",W/2,H-32,20,C.muted,false,"center");
-  await download(canvas,"football-goal-results-"+kit.day(date)+".png");
+  const brand=window.FutureCodeBrandConfig?.id;
+  await download(canvas,(brand?brand+"-":"football-")+"goal-results-"+kit.day(date)+".png");
  }
  window.FutureCodeDailyExport={saveOdds,saveResults};
 })();
