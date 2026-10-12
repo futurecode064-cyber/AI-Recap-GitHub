@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="./styles.css">
 <script defer src="./card-export.js"></script>
 <script defer src="./social-export.js"></script>
+<script defer src="./daily-image-export.js"></script>
 <script defer src="./app.js"></script>
 </head>
 <body>
@@ -31,12 +32,13 @@
    <nav class="date-tabs" id="dateTabs" aria-label="မြန်မာစံတော်ချိန်ဖြင့် ရက်စွဲရွေးရန်">
      <button type="button" data-day="-1">မနေ့ကရလဒ် <small id="dateYesterday"></small></button>
      <button type="button" data-day="0" class="active">ဒီနေ့ပွဲ <small id="dateToday"></small></button>
+     <a class="date-tab-odds" href="./odds.html">ယနေ့ ပေါက်ကြေးများ<small>ပွဲအားလုံး၏ ကြေးစာရင်း ↗</small></a>
    </nav>
-   <div class="odds-feature-link"><a href="./odds.html"> <span>📋 ယနေ့ ကန်မည့် ပွဲကောင်းများ၏ ပေါက်ကြေးများ</span><span aria-hidden="true">→</span></a></div>
    <nav class="filters" id="filters" aria-label="ဒီနေ့ပွဲရှိသည့် ပြိုင်ပွဲများ">
     <button data-league="all" class="selected" type="button">ပွဲအားလုံး</button>
    </nav>
    <div class="section-note" id="sectionNote"></div>
+   <div id="resultsDownloadBar" class="results-download-bar" hidden><button id="resultsPngBtn" type="button" class="results-png-btn">⬇ ဂိုးရလဒ်များ PNG Download</button><span>ပွဲပြီးအတည်ပြုထားသော ရလဒ်အားလုံး</span></div>
    <div id="matchList" class="matches" aria-live="polite"><div class="empty-card"><span class="empty-icon">↻</span><h3>သုံးသပ်ချက်များ ရယူနေပါတယ်…</h3></div></div>
  </section>
 </main>
