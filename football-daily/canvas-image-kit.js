@@ -1,0 +1,90 @@
+"use strict";
+(function(){
+ const C={bg:"#101b20",head:"#1d3135",panel:"#203436",panelAlt:"#263d3d",divider:"#425855",orange:"#ffac75",pale:"#f7f5eb",muted:"#bcd0c9",white:"#f5f7f3"};
+ const FONT='"Noto Sans Myanmar",sans-serif';
+ const imageCache=new Map();
+ function sleep(ms){return new Promise(done=>setTimeout(done,ms))}
+ async function fonts(){if(document.fonts?.ready)await Promise.race([document.fonts.ready.catch(()=>{}),sleep(900)])}
+ function create(width,height){
+  const canvas=document.createElement("canvas");canvas.width=width;canvas.height=Math.ceil(height);
+  const ctx=canvas.getContext("2d");if(!ctx)throw Error("Canvas 2D is not supported");
+  return {canvas,ctx};
+ }
+ function fill(ctx,x,y,w,h,color,r=0){
+  ctx.fillStyle=color;
+  if(r&&typeof ctx.roundRect==="function"){ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}
+  else ctx.fillRect(x,y,w,h);
+ }
+ function line(ctx,x,y,w,color=C.divider){fill(ctx,x,y,w,1,color)}
+ function font(px,bold){return (bold?800:500)+" "+px+"px "+FONT}
+ function text(ctx,str,x,y,px=21,color=C.pale,bold=false,align="left",max){
+  ctx.font=font(px,bold);ctx.fillStyle=color;ctx.textAlign=align;ctx.textBaseline="middle";
+  const value=String(str??"");
+  if(max)ctx.fillText(value,x,y,max);else ctx.fillText(value,x,y);
+ }
+ function fit(ctx,str,maxWidth,base=21,min=13){
+  for(let n=base;n>=min;n--){ctx.font=font(n,true);if(ctx.measureText(String(str??"")).width<=maxWidth)return n}return min;
+ }
+ function wrap(ctx,str,maxWidth,px=21){
+  ctx.font=font(px,false);
+  const words=String(str||"").replace(/\*\*/g,"").split(/(\s+)/);
+  const lines=[];let current="";
+  for(const word of words){
+   const candidate=current+word;
+   if(ctx.measureText(candidate).width<=maxWidth||!current){current=candidate;continue}
+   lines.push(current.trim());current=word.trimStart();
+  }
+  if(current.trim())lines.push(current.trim());
+  return lines.length?lines:[""];
+ }
+ function loadImage(src){
+  if(typeof src!=="string"||!/^https:\/\//i.test(src))return Promise.resolve(null);
+  if(imageCache.has(src))return imageCache.get(src);
+  const task=new Promise(resolve=>{
+   const img=new Image();let done=false;
+   const finish=v=>{if(done)return;done=true;clearTimeout(timer);resolve(v)};
+   const timer=setTimeout(()=>finish(null),950);
+   img.crossOrigin="anonymous";img.onload=()=>finish(img);img.onerror=()=>finish(null);img.src=src;
+  });
+  imageCache.set(src,task);return task;
+ }
+ async function preload(urls){
+  await Promise.all([...new Set(urls.filter(Boolean))].map(loadImage));
+ }
+ function crest(ctx,url,x,y,size,label=""){
+  fill(ctx,x,y,size,size,"#eef2f0",size/2);
+  const img=imageCache.get(url);
+  if(img){ // data is loaded asynchronously. drawLogo() receives resolved images via resolved cache
+   const found=resolved.get(url);
+   if(found&&found.naturalWidth&&found.naturalHeight){
+    const k=Math.min((size-8)/found.naturalWidth,(size-8)/found.naturalHeight);
+    const w=found.naturalWidth*k,h=found.naturalHeight*k;
+    try{ctx.drawImage(found,x+(size-w)/2,y+(size-h)/2,w,h);return}catch(_){}
+   }
+  }
+  text(ctx,String(label||"?").slice(0,2),x+size/2,y+size/2,Math.max(10,Math.floor(size*.27)),"#263e3f",true,"center",size-6);
+ }
+ const resolved=new Map();
+ async function preloadImages(urls){
+  await Promise.all([...new Set(urls.filter(Boolean))].map(async url=>{const im=await loadImage(url);resolved.set(url,im)}));
+ }
+ async function download(canvas,filename){
+  if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
+  const blob=await Promise.race([
+   new Promise((resolve,reject)=>{try{canvas.toBlob(v=>v&&v.size?resolve(v):reject(Error("PNG encoding failed")),"image/png")}catch(e){reject(e)}}),
+   sleep(12000).then(()=>{throw Error("PNG encoding timed out")})
+  ]);
+  const url=URL.createObjectURL(blob),link=document.createElement("a");
+  link.href=url;link.download=filename;document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),30000);
+ }
+ function day(v){return /^\d{4}-\d{2}-\d{2}$/.test(v||"")?v:"unknown"}
+ function top(ctx,W,title,date,detail){
+  fill(ctx,0,0,W,13,C.orange);fill(ctx,0,13,W,195,C.head);
+  text(ctx,"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
+  text(ctx,title,28,110,38,C.white,true);
+  text(ctx,"မြန်မာစံတော်ချိန်  ·  "+day(date),28,164,18,C.muted);
+  text(ctx,detail,W-28,164,19,C.orange,true,"right");
+ }
+ window.FutureCodeCanvasKit={C,create,fill,line,text,fit,wrap,fonts,preloadImages,crest,download,day,top};
+})();
