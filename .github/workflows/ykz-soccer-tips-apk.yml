@@ -100,6 +100,7 @@ jobs:
           import android.os.Bundle;
           import android.os.Environment;
           import android.provider.MediaStore;
+          import android.webkit.MimeTypeMap;
           import android.util.Base64;
           import android.view.Gravity;
           import android.view.View;
@@ -120,6 +121,7 @@ jobs:
           import android.widget.TextView;
           import android.widget.Toast;
           import java.io.OutputStream;
+          import java.util.Locale;
           
           public class MainActivity extends Activity {
             static final String HOME="https://future-code-football-daily.pages.dev/ykz-family/";
@@ -128,6 +130,7 @@ jobs:
             ProgressBar progress;
             LinearLayout offline;
             ValueCallback<Uri[]> chooser;
+          volatile String currentPage=HOME;
             @SuppressLint({"SetJavaScriptEnabled","AddJavascriptInterface"})
             @Override public void onCreate(Bundle b) {
               super.onCreate(b);
@@ -169,8 +172,13 @@ jobs:
                   }return true;
                 }
                 @Override public void onPageStarted(WebView w,String u,android.graphics.Bitmap f){
+                  currentPage=u;
                   offline.setVisibility(View.GONE);progress.setVisibility(View.VISIBLE);}
-                @Override public void onPageFinished(WebView w,String u){progress.setVisibility(View.GONE);}
+                @Override public void onPageFinished(WebView w,String u){
+                  currentPage=u;
+                  if(u.startsWith(HOME))installSaveHook();
+                  progress.setVisibility(View.GONE);
+                }
                 @Override public void onReceivedError(WebView w,WebResourceRequest r,android.webkit.WebResourceError e){
                   if(r.isForMainFrame()){offline.setVisibility(View.VISIBLE);progress.setVisibility(View.GONE);}}
                 @Override public void onReceivedSslError(WebView w,android.webkit.SslErrorHandler h,android.net.http.SslError e){
@@ -186,7 +194,7 @@ jobs:
               web.setDownloadListener((url,agent,disposition,mime,size)->{
                 String name=URLUtil.guessFileName(url,disposition,mime);
                 if(url.startsWith("blob:")||url.startsWith("data:")){
-                  String js="(async()=>{try{let b=await(await fetch("+quote(url)+")).blob();let r=new FileReader();r.onload=()=>YKZNative.save(r.result,"+quote(name)+",b.type||'image/png');r.readAsDataURL(b);}catch(e){YKZNative.error();}})();";
+                  String js="if(window.YKZSaveBlob){window.YKZSaveBlob("+quote(url)+","+quote(name)+");}else{YKZNative.error();}";
                   web.evaluateJavascript(js,null);
                 }else if(url.startsWith("https://")){
                   try{DownloadManager.Request req=new DownloadManager.Request(Uri.parse(url));
@@ -201,37 +209,65 @@ jobs:
               if(b==null)web.loadUrl(HOME);else web.restoreState(b);
             }
             static String quote(String s){return "\""+s.replace("\\","\\\\").replace("\"","\\\"").replace("\n","\\n")+"\"";}
-            class NativeDownload {
-              @JavascriptInterface public void error(){runOnUiThread(()->msg("Download မရပါ"));}
-              @JavascriptInterface public void save(String data,String name,String mime){
-                try{
-                  Uri active=Uri.parse(web.getUrl()==null?"":web.getUrl());
-                  if(!HOST.equals(active.getHost())||!"https".equals(active.getScheme()))return;
-                  if(!data.startsWith("data:")||data.length()>35000000||!data.substring(0,data.indexOf(",")).contains(";base64"))return;
-                  byte[] content=Base64.decode(data.substring(data.indexOf(",")+1),Base64.DEFAULT);
-                  if(content.length>24000000)return;
-                  name=name.replaceAll("[\\\\/:*?\"<>|]","_");
-                  if(name.isEmpty()||name.equals("download"))name="YKZ-Tips-"+System.currentTimeMillis()+".png";
-                  if(Build.VERSION.SDK_INT>=29){
-                    ContentValues v=new ContentValues();
-                    v.put(MediaStore.Downloads.DISPLAY_NAME,name);
-                    v.put(MediaStore.Downloads.MIME_TYPE,mime==null||mime.isEmpty()?"image/png":mime);
-                    v.put(MediaStore.Downloads.RELATIVE_PATH,"Download/YKZ Soccer Tips");
-                    v.put(MediaStore.Downloads.IS_PENDING,1);
-                    Uri out=getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI,v);
-                    if(out==null)throw new Exception("no URI");
-                    try(OutputStream stream=getContentResolver().openOutputStream(out)){stream.write(content);}
-                    v.clear();v.put(MediaStore.Downloads.IS_PENDING,0);
-                    getContentResolver().update(out,v,null,null);
-                  }else{
-                    java.io.File out=new java.io.File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS),name);
-                    try(OutputStream stream=new java.io.FileOutputStream(out)){stream.write(content);}
-                  }
-                  runOnUiThread(()->msg("ပုံကို Downloads မှာ သိမ်းပြီးပါပြီ"));
-                }catch(Exception e){runOnUiThread(()->msg("ပုံသိမ်းမရပါ"));}
-              }
+            void installSaveHook() {
+            web.evaluateJavascript("(function(){\n  if (window.__YKZSaveInstalled) return;\n  window.__YKZSaveInstalled = true;\n  const objects = new Map();\n  const oldCreate = URL.createObjectURL.bind(URL);\n  const oldRevoke = URL.revokeObjectURL.bind(URL);\n  URL.createObjectURL = function(value){\n    const url = oldCreate(value);\n    if (value instanceof Blob) objects.set(url, value);\n    return url;\n  };\n  URL.revokeObjectURL = function(url){\n    setTimeout(function(){objects.delete(url);}, 60000);\n    return oldRevoke(url);\n  };\n  function notifyError(){\n    if (window.YKZNative && window.YKZNative.error) window.YKZNative.error();\n  }\n  async function saveUrl(url,filename){\n    try {\n      let blob = objects.get(url);\n      if (!blob) {\n        const response = await fetch(url);\n        if (!response.ok) throw new Error('Unable to fetch image');\n        blob = await response.blob();\n      }\n      if (blob.size > 24000000) throw new Error('Image exceeds allowed size');\n      const reader = new FileReader();\n      reader.onload = function(){\n        if (typeof reader.result === 'string' && window.YKZNative){\n          window.YKZNative.save(reader.result, filename || 'YKZ-Soccer-Tips.png', blob.type || 'image/png');\n        }\n      };\n      reader.onerror = notifyError;\n      reader.readAsDataURL(blob);\n    } catch (err) { notifyError(); }\n  }\n  window.YKZSaveBlob = saveUrl;\n  function trySave(anchor){\n    if (!anchor || !anchor.hasAttribute('download')) return false;\n    const href = anchor.href || anchor.getAttribute('href') || '';\n    if (/^(blob:|data:)/i.test(href) ||\n      (/^https:\\/\\/future-code-football-daily\\.pages\\.dev\\//i.test(href) && /\\.(png|jpe?g|webp)(\\?|#|$)/i.test(href))) {\n      saveUrl(href, anchor.getAttribute('download') || 'YKZ-Soccer-Tips.png');\n      return true;\n    }\n    return false;\n  }\n  const oldClick = HTMLAnchorElement.prototype.click;\n  HTMLAnchorElement.prototype.click = function(){\n    if (trySave(this)) return;\n    return oldClick.apply(this,arguments);\n  };\n  document.addEventListener('click',function(event){\n    const target = event.target;\n    const anchor = target && target.closest && target.closest('a[download]');\n    if (trySave(anchor)){\n      event.preventDefault();\n      event.stopImmediatePropagation();\n    }\n  },true);\n  const oldWindowOpen = window.open;\n  window.open = function(url){\n    if (typeof url === 'string' && /^(blob:|data:)/i.test(url)) {\n      saveUrl(url,'YKZ-Soccer-Tips.png');\n      return null;\n    }\n    return oldWindowOpen.apply(this,arguments);\n  };\n})();", null);
+          }
+          class NativeDownload {
+            @JavascriptInterface public void error(){
+              runOnUiThread(()->msg("ပုံသိမ်းမရပါ။ နောက်တစ်ကြိမ် ပြန်ကြိုးစားပါ။"));
             }
-            @Override protected void onActivityResult(int code,int result,Intent data){
+            @JavascriptInterface public void save(String data,String name,String mime) {
+              try {
+                Uri page = Uri.parse(currentPage);
+                if (!"https".equals(page.getScheme()) || !HOST.equals(page.getHost())) return;
+                if (data==null || data.length()>35000000 || !data.startsWith("data:")) throw new Exception("invalid image");
+                int comma=data.indexOf(',');
+                if(comma<0 || comma>150 || !data.substring(0,comma).contains(";base64")) throw new Exception("invalid base64");
+                String realMime=data.substring(5,data.indexOf(';')).toLowerCase(Locale.ROOT);
+                if (!realMime.equals("image/png") && !realMime.equals("image/jpeg") &&
+                    !realMime.equals("image/webp") && !realMime.equals("image/gif")) throw new Exception("not image");
+                byte[] bytes=Base64.decode(data.substring(comma+1),Base64.DEFAULT);
+                if(bytes.length==0 || bytes.length>24000000)throw new Exception("image too large");
+                String ext = realMime.equals("image/jpeg")?".jpg":realMime.equals("image/webp")?".webp":realMime.equals("image/gif")?".gif":".png";
+                String filename = name==null?"":name.replaceAll("[^a-zA-Z0-9._-]","_");
+                if(filename.length()>90) filename=filename.substring(0,90);
+                if(filename.isEmpty()||filename.equals("download"))filename="YKZ-Soccer-Tips-"+System.currentTimeMillis()+ext;
+                else if(!filename.matches("(?i).*\\.(png|jpg|jpeg|webp|gif)$"))filename+=ext;
+                if (Build.VERSION.SDK_INT>=29) {
+                  ContentValues v=new ContentValues();
+                  v.put(MediaStore.Images.Media.DISPLAY_NAME,filename);
+                  v.put(MediaStore.Images.Media.MIME_TYPE,realMime);
+                  v.put(MediaStore.Images.Media.RELATIVE_PATH,Environment.DIRECTORY_PICTURES+"/YKZ Soccer Tips");
+                  v.put(MediaStore.Images.Media.IS_PENDING,1);
+                  Uri output=getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,v);
+                  if(output==null)throw new Exception("could not create image");
+                  try {
+                    try(OutputStream stream=getContentResolver().openOutputStream(output)){
+                      if(stream==null)throw new Exception("could not open image");
+                      stream.write(bytes);
+                    }
+                    ContentValues published=new ContentValues();
+                    published.put(MediaStore.Images.Media.IS_PENDING,0);
+                    getContentResolver().update(output,published,null,null);
+                  }catch(Exception e){
+                    getContentResolver().delete(output,null,null);
+                    throw e;
+                  }
+                  runOnUiThread(()->msg("ပုံကို Gallery / Pictures ထဲ သိမ်းပြီးပါပြီ"));
+                } else {
+                  java.io.File dir=getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+                  if(dir==null)throw new Exception("storage unavailable");
+                  if(!dir.exists()&&!dir.mkdirs())throw new Exception("create folder failed");
+                  java.io.File file=new java.io.File(dir,filename);
+                  try(OutputStream stream=new java.io.FileOutputStream(file)){stream.write(bytes);}
+                  android.media.MediaScannerConnection.scanFile(MainActivity.this,
+                    new String[]{file.getAbsolutePath()},new String[]{realMime},null);
+                  runOnUiThread(()->msg("ပုံကို App Pictures Folder ထဲ သိမ်းပြီးပါပြီ"));
+                }
+              }catch(Exception e){runOnUiThread(()->msg("ပုံသိမ်းမရပါ။ နောက်တစ်ကြိမ် ပြန်ကြိုးစားပါ။"));}
+            }
+          }
+          @Override protected void onActivityResult(int code,int result,Intent data){
               super.onActivityResult(code,result,data);
               if(code==8&&chooser!=null){chooser.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(result,data));chooser=null;}
             }
@@ -265,8 +301,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
-          if gh release view ykz-soccer-tips-v1.0.0 >/dev/null 2>&1; then
-            gh release upload ykz-soccer-tips-v1.0.0 ykz-apk-output/YKZ-Soccer-Tips.apk --clobber
+          if gh release view ykz-soccer-tips-v1.1.0 >/dev/null 2>&1; then
+            gh release upload ykz-soccer-tips-v1.1.0 ykz-apk-output/YKZ-Soccer-Tips.apk --clobber
           else
-            gh release create ykz-soccer-tips-v1.0.0 ykz-apk-output/YKZ-Soccer-Tips.apk --title 'YKZ Soccer Tips v1.0.0' --notes 'WebView Android APK for YKZ FAMILY GROUP. Website content updates automatically.'
+            gh release create ykz-soccer-tips-v1.1.0 ykz-apk-output/YKZ-Soccer-Tips.apk --title 'YKZ Soccer Tips v1.1.0' --notes 'Image saving fix: blob/data PNG poster export to Android Gallery Pictures; website stays live.'
           fi
