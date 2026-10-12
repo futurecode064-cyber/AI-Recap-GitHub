@@ -241,6 +241,7 @@ jobs:
           }
           __YKZ_END_app_src_main_java_com_futurecode_ykzsoccertips_MainActivity_java
           
+          sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
           mkdir -p app/src/main/res/drawable-nodpi
           if curl -fsSL --retry 2 --connect-timeout 15 'https://future-code-football-daily.pages.dev/ykz-family/assets/logo.webp' -o /tmp/ykz-logo.webp; then
             convert /tmp/ykz-logo.webp -thumbnail 512x512 -background '#D50000' -gravity center -extent 512x512 app/src/main/res/drawable-nodpi/ykz_logo.png
