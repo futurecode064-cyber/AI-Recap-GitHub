@@ -109,3 +109,30 @@ test('odds page and its browser script are linked from both football entry pages
   assert.ok(html.includes('odds.html'),file);
  }
 });
+
+test('every featured match has correctly linked home/away crests and native Burmese labels',()=>{
+ const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ for(const m of today.matches){
+  assert.ok(m.homeDisplay && m.awayDisplay,'Burmese team label missing: '+m.home);
+  assert.match(m.homeCrestUrl||'',/^https:\/\//,'Missing home crest '+m.home);
+  assert.match(m.awayCrestUrl||'',/^https:\/\//,'Missing away crest '+m.away);
+  for(const g of m.headToHead||[]){
+   assert.ok(g.homeCrestUrl && g.awayCrestUrl,'H2H crests missing '+m.home+' / '+m.away);
+  }
+ }
+});
+test('odds sheet clearly labels internet predictions and morning Myanmar market openings',()=>{
+ const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
+ const js=fs.readFileSync(path.join(root,'odds.js'),'utf8');
+ assert.ok(html.includes('အာရှ စျေးကွက် မြန်မာကြေး မနက်ပိုင်း ဖွင့်လှစ်မှုများ'));
+ assert.ok(!html.includes('မူရင်းစာရင်း၏ နောက်ဆုံးကော်လံကို'));
+ assert.ok(js.includes('အင်တာနက်ခန့်မှန်းချက်'));
+ assert.ok(js.includes('homeCrestUrl') && js.includes('awayCrestUrl'));
+ assert.ok(js.includes('odds-matchup'));
+});
+test('form and H2H sections use record-level verified opponent logos',()=>{
+ const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
+ assert.ok(js.includes('item.opponentCrestUrl'));
+ assert.ok(js.includes('g.homeCrestUrl'));
+ assert.ok(js.includes('g.awayCrestUrl'));
+});
