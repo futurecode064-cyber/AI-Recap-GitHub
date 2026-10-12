@@ -1,6 +1,718 @@
 {
   "reportDate": "2026-10-12",
-  "published": false,
-  "matches": [],
+  "published": true,
+  "matches": [
+    {
+      "league": "La Liga 2",
+      "home": "Real Valladolid",
+      "away": "Albacete",
+      "kickoffYangon": "18:30 · 12 Oct",
+      "venue": "Estadio José Zorrilla, Valladolid",
+      "homeStanding": {
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "points": 9,
+        "position": 17
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 0,
+        "draws": 1,
+        "losses": 7,
+        "points": 1,
+        "position": 22
+      },
+      "standingsSourceUrl": "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-real-valladolid-cf-albacete-bp-9",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "myanmarOdds": {},
+      "homeLastFive": [
+        {
+          "date": "2026-10-04",
+          "venueSide": "away",
+          "opponent": "Las Palmas",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-27",
+          "venueSide": "home",
+          "opponent": "Córdoba",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "AD Ceuta",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-13",
+          "venueSide": "home",
+          "opponent": "Real Oviedo",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-05",
+          "venueSide": "home",
+          "opponent": "FC Andorra",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-03",
+          "venueSide": "home",
+          "opponent": "Eibar",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-25",
+          "venueSide": "away",
+          "opponent": "Girona",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-18",
+          "venueSide": "home",
+          "opponent": "Córdoba",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-12",
+          "venueSide": "away",
+          "opponent": "Granada",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "away",
+          "opponent": "Castellón",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2026-01-24",
+          "home": "Real Valladolid",
+          "away": "Albacete",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2025-09-21",
+          "home": "Albacete",
+          "away": "Real Valladolid",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2024-02-12",
+          "home": "Real Valladolid",
+          "away": "Albacete",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2023-09-01",
+          "home": "Albacete",
+          "away": "Real Valladolid",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2018-05-12",
+          "home": "Real Valladolid",
+          "away": "Albacete",
+          "homeGoals": 3,
+          "awayGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        }
+      ],
+      "dailyPreviewText": "စပိန် လာလီဂါ (၂) ပွဲစဉ် (၉) မှာ ရီးယဲလ် ဗယ်လာဒိုလစ်က အယ်လ်ဘာစီတီကို အိမ်ကွင်းမှာ လက်ခံကစားရမှာဖြစ်ပါတယ်။ ပွဲမတိုင်မီ ဗယ်လာဒိုလစ်က ၈ ပွဲကစားပြီး ၂ ပွဲနိုင်၊ ၃ ပွဲသရေ၊ ၃ ပွဲရှုံးကာ ၉ မှတ်နဲ့ အဆင့် (၁၇) မှာရှိနေပြီး အယ်လ်ဘာစီတီက ၈ ပွဲမှာ ၁ ပွဲသရေ၊ ၇ ပွဲရှုံး၊ နိုင်ပွဲမရှိသေးတာကြောင့် ၁ မှတ်နဲ့ အဆင့် (၂၂) မှာ ရပ်တည်နေပါတယ်။ အိမ်ရှင်ရဲ့ နောက်ဆုံး ၅ ပွဲက ၂ နိုင်၊ ၂ သရေ၊ ၁ ရှုံးဖြစ်ပြီး ကော်ဒိုဘာကို ၃-၁ နိုင်ခဲ့သလို လာ့စ်ပါလ်မက်စ်နဲ့ ၂-၂ သရေကျထားပါတယ်။ ဧည့်သည်ကတော့ နောက်ဆုံး ၅ ပွဲမှာ ၄ ပွဲရှုံးပြီး အီဘာကို ၁-၃၊ ဂျီရိုနာကို ၀-၂ ရှုံးခဲ့တဲ့အတွက် ပွဲချိန်တစ်လျှောက် ခံစစ်တည်ငြိမ်မှု ရှာမရသေးပါဘူး။ ဗယ်လာဒိုလစ်ရဲ့ အလယ်တန်းကို ချိတ်ဆက်တဲ့ ကစားပုံက အိမ်ကွင်းအသာစီးရနိုင်ပေမဲ့ အယ်လ်ဘာစီတီနဲ့ နောက်ဆုံး ၂ ကြိမ်တွေ့ရာမှာ နှစ်ကြိမ်လုံးရှုံးထားတာ သတိထားရမယ့်အချက်ပါ။ နှစ်သင်းရဲ့ လတ်တလော ကစားပုံကိုပါ ထည့်တွက်ရင် **ဗယ်လာဒိုလစ်ဘက်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဒါပေမဲ့ ဂိုးအများကြီးပြတ်မယ်လို့ မမျှော်လင့်ဘဲ **၁-၀ သို့မဟုတ် ၂-၁** ကို ခန့်မှန်းပါတယ်။",
+      "specialChoice": false,
+      "researchSources": [
+        "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-real-valladolid-cf-albacete-bp-9",
+        "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+        "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+        "https://www.fotmob.com/en-GB/matches/albacete-vs-real-valladolid/2vti1w"
+      ]
+    },
+    {
+      "league": "La Liga 2",
+      "home": "Burgos CF",
+      "away": "Granada",
+      "kickoffYangon": "20:45 · 12 Oct",
+      "venue": "Estadio Municipal El Plantío, Burgos",
+      "homeStanding": {
+        "played": 8,
+        "wins": 4,
+        "draws": 2,
+        "losses": 2,
+        "points": 14,
+        "position": 7
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "points": 11,
+        "position": 9
+      },
+      "standingsSourceUrl": "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-burgos-cf-granada-cf-9",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "myanmarOdds": {},
+      "homeLastFive": [
+        {
+          "date": "2026-10-03",
+          "venueSide": "away",
+          "opponent": "Almería",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-27",
+          "venueSide": "home",
+          "opponent": "Eldense",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "Las Palmas",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-11",
+          "venueSide": "home",
+          "opponent": "AD Ceuta",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "away",
+          "opponent": "Real Oviedo",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-04",
+          "venueSide": "away",
+          "opponent": "Real Sociedad II",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-26",
+          "venueSide": "home",
+          "opponent": "FC Andorra",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "Leganés",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-12",
+          "venueSide": "home",
+          "opponent": "Albacete",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "away",
+          "opponent": "Eibar",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2026-05-16",
+          "home": "Granada",
+          "away": "Burgos CF",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2025-09-22",
+          "home": "Burgos CF",
+          "away": "Granada",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2025-01-10",
+          "home": "Granada",
+          "away": "Burgos CF",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2024-09-29",
+          "home": "Burgos CF",
+          "away": "Granada",
+          "homeGoals": 2,
+          "awayGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2023-03-04",
+          "home": "Burgos CF",
+          "away": "Granada",
+          "homeGoals": 1,
+          "awayGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        }
+      ],
+      "dailyPreviewText": "လာလီဂါ (၂) ပွဲစဉ် (၉) အဖြစ် ဘာဂို့စ်နဲ့ ဂရန်နာဒါတို့ El Plantío ကွင်းမှာ တွေ့ဆုံကြမှာပါ။ အမှတ်ပေးဇယားမှာ ဘာဂို့စ်က ၈ ပွဲကစားပြီး ၄ ပွဲနိုင်၊ ၂ ပွဲသရေ၊ ၂ ပွဲရှုံး၊ ၁၄ မှတ်နဲ့ အဆင့် (၇) မှာရှိပြီး ဂရန်နာဒါက ၈ ပွဲမှာ ၃ ပွဲနိုင်၊ ၂ ပွဲသရေ၊ ၃ ပွဲရှုံးထားကာ ၁၁ မှတ်နဲ့ အဆင့် (၉) ကို ရောက်နေပါတယ်။ ဘာဂို့စ်ဟာ နောက်ဆုံး ၅ ပွဲကနေ ၃ နိုင်၊ ၁ သရေ၊ ၁ ရှုံးရရှိပြီး အယ်လ်ဒန်ဆီကို ၁-၀၊ လာ့စ်ပါလ်မက်စ်ကို ၂-၁ နိုင်ခဲ့တာကြောင့် အိမ်ကွင်းမှာ ခံစစ်တည်ငြိမ်ပြီး အခွင့်အရေးကို ထိရောက်စွာအသုံးချနိုင်တဲ့အနေအထားပါ။ ဂရန်နာဒါက နောက်ဆုံး ၅ ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၃ ရှုံးဖြစ်ပြီး ၁၂ ဂိုးပေးထားရတာကြောင့် တိုက်စစ်နဲ့ ခံစစ်ကြား အကွာအဝေးထိန်းမနိုင်တဲ့အချိန်တွေမှာ ပြန်လည်ထိုးဖောက်ခံနေရပါတယ်။ သို့ပေမဲ့ ဂရန်နာဒါရဲ့ အဝေးကွင်း ရုတ်တရက်တန်ပြန်တိုက်စစ်ကို မလျှော့တွက်သင့်ပါဘူး။ နောက်ဆုံးထိပ်တိုက် ၅ ကြိမ်မှာ သရေ ၃ ကြိမ်ပါပြီး ပွဲတွေ တင်းကျပ်လေ့ရှိတာကြောင့် ဘာဂို့စ်အတွက်လည်း အလွယ်နိုင်ပွဲ မဟုတ်နိုင်ပါ။ လက်ရှိ form နဲ့ အိမ်ကွင်းအသာစီးကြောင့် **ဘာဂို့စ်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ခန့်မှန်းရလဒ်ကတော့ **၁-၀ သို့မဟုတ် ၂-၁** ဖြစ်ပါတယ်။",
+      "specialChoice": false,
+      "researchSources": [
+        "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-burgos-cf-granada-cf-9",
+        "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+        "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+        "https://www.fotmob.com/en-GB/matches/burgos-cf-vs-granada/21w3wd"
+      ]
+    },
+    {
+      "league": "Serie A",
+      "home": "Atalanta",
+      "away": "Venezia",
+      "kickoffYangon": "23:00 · 12 Oct",
+      "venue": "New Balance Arena, Bergamo",
+      "homeStanding": {
+        "played": 5,
+        "wins": 2,
+        "draws": 0,
+        "losses": 3,
+        "points": 6,
+        "position": 11
+      },
+      "awayStanding": {
+        "played": 5,
+        "wins": 0,
+        "draws": 0,
+        "losses": 5,
+        "points": 0,
+        "position": 20
+      },
+      "standingsSourceUrl": "https://www.thescore.com/seri/event/97637",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "myanmarOdds": {},
+      "homeLastFive": [
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "Juventus",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        },
+        {
+          "date": "2026-09-12",
+          "venueSide": "home",
+          "opponent": "Cagliari",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        },
+        {
+          "date": "2026-09-05",
+          "venueSide": "away",
+          "opponent": "Roma",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        },
+        {
+          "date": "2026-08-31",
+          "venueSide": "home",
+          "opponent": "Bologna",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        },
+        {
+          "date": "2026-08-27",
+          "venueSide": "away",
+          "opponent": "Hapoel Tel Aviv",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "UEFA Conference League Qualifying",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-09-19",
+          "venueSide": "home",
+          "opponent": "Lazio",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        },
+        {
+          "date": "2026-09-11",
+          "venueSide": "home",
+          "opponent": "Fiorentina",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "away",
+          "opponent": "Frosinone",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        },
+        {
+          "date": "2026-09-02",
+          "venueSide": "away",
+          "opponent": "Udinese",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Coppa Italia",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        },
+        {
+          "date": "2026-08-28",
+          "venueSide": "away",
+          "opponent": "Milan",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2025-03-01",
+          "home": "Atalanta",
+          "away": "Venezia",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800"
+        },
+        {
+          "date": "2024-10-20",
+          "home": "Venezia",
+          "away": "Atalanta",
+          "homeGoals": 0,
+          "awayGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800"
+        },
+        {
+          "date": "2022-04-23",
+          "home": "Venezia",
+          "away": "Atalanta",
+          "homeGoals": 1,
+          "awayGoals": 3,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800"
+        },
+        {
+          "date": "2022-01-12",
+          "home": "Atalanta",
+          "away": "Venezia",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "Coppa Italia",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800"
+        },
+        {
+          "date": "2021-11-30",
+          "home": "Atalanta",
+          "away": "Venezia",
+          "homeGoals": 4,
+          "awayGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800"
+        }
+      ],
+      "dailyPreviewText": "အီတလီ စီးရီးအေ ပွဲစဉ် (၆) မှာ ဘာဂါမိုမြေက အတ္တလန်တာနဲ့ ဗင်နီဇီယာတို့ တွေ့ဆုံကြမှာပါ။ ပွဲမတိုင်မီ အတ္တလန်တာက ၅ ပွဲကစားပြီး ၂ ပွဲနိုင်၊ သရေမရှိ၊ ၃ ပွဲရှုံး၊ ၆ မှတ်နဲ့ အဆင့် (၁၁) မှာ ရပ်တည်နေချိန် ဗင်နီဇီယာက ၅ ပွဲလုံးရှုံး၊ ရမှတ်မရှိဘဲ အဆင့် (၂၀) မှာ ရှိနေပါတယ်။ အိမ်ရှင်ဟာ ပထမနှစ်ပွဲအနိုင်ရခဲ့ပေမဲ့ ရိုးမား၊ ကာဂလီယာရီနဲ့ ဂျူဗင်တပ်စ်တို့ကို ဆက်တိုက်ရှုံးခဲ့လို့ နည်းပြ ဆာရီရဲ့ အသင်းအနေနဲ့ အခြေအနေပြန်ထိန်းဖို့ လိုနေပါတယ်။ ဗင်နီဇီယာဘက်က နောက်ဆုံး လိဂ် ၅ ပွဲမှာ ၄ ဂိုးသာသွင်းပြီး ၁၃ ဂိုးအထိ ပေးထားရတာက ခံစစ်ပိုင်း အားနည်းချက်ကြီးပါ။ အတ္တလန်တာရဲ့ ဒီကီတီလာရေး၊ စကာမက်ကာနဲ့ ရိုးဝ်တို့ကို အခြေခံတဲ့ တိုက်စစ်က ဧည့်သည်ရဲ့ နောက်တန်းသုံးယောက်ကြား နေရာလွတ်ကို တိုက်ခိုက်နိုင်ပေမဲ့ ဟီယန်၊ ကိုဆူနူးတို့ရဲ့ ဒဏ်ရာအခြေအနေကြောင့် အိမ်ရှင်ခံစစ်ကလည်း စိတ်ချရသေးတာ မဟုတ်ပါဘူး။ နောက်ဆုံးထိပ်တိုက် ၅ ကြိမ်မှာ အတ္တလန်တာ ၄ ပွဲနိုင်၊ ၁ ပွဲသရေနဲ့ အသာစီးရှိတာကိုပါ ထည့်တွက်ရင် **အတ္တလန်တာကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** အနိုင်ရဖို့ အိမ်ရှင်ဘက်က အခွင့်အရေးပိုကောင်းပေမဲ့ နောက်ပိုင်းခြေစွမ်းကြောင့် အပြတ်မခန့်မှန်းသင့်ဘဲ ဖြစ်နိုင်တဲ့ရလဒ်ကတော့ **၂-၀ သို့မဟုတ် ၂-၁** ဖြစ်ပါတယ်။",
+      "specialChoice": false,
+      "researchSources": [
+        "https://www.thescore.com/seri/event/97637",
+        "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+        "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800",
+        "https://www.legaseriea.it/serie-a/match/d3515f39846a468281f856a8e225fe92/atalanta-vs-venezia",
+        "https://www.sportsmole.co.uk/football/atalanta-bc/preview/atalanta-vs-venezia-prediction-team-news-lineups_606609.html",
+        "https://www.udinese.it/news/squad/coppa-italia-udinese-2-1-venezia"
+      ]
+    },
+    {
+      "league": "La Liga 2",
+      "home": "Real Oviedo",
+      "away": "Eibar",
+      "kickoffYangon": "23:00 · 12 Oct",
+      "venue": "Estadio Carlos Tartiere, Oviedo",
+      "homeStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "points": 11,
+        "position": 10
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 7,
+        "draws": 0,
+        "losses": 1,
+        "points": 21,
+        "position": 1
+      },
+      "standingsSourceUrl": "https://www.laliga.com/en-AR/match/temporada-2026-2027-laliga-hypermotion-real-oviedo-sd-eibar-9",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "myanmarOdds": {},
+      "homeLastFive": [
+        {
+          "date": "2026-10-02",
+          "venueSide": "away",
+          "opponent": "Eldense",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-27",
+          "venueSide": "home",
+          "opponent": "Sporting Gijón",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "Sabadell",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-13",
+          "venueSide": "away",
+          "opponent": "Real Valladolid",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "home",
+          "opponent": "Burgos CF",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-03",
+          "venueSide": "away",
+          "opponent": "Albacete",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-27",
+          "venueSide": "home",
+          "opponent": "Las Palmas",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-19",
+          "venueSide": "away",
+          "opponent": "Eldense",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-14",
+          "venueSide": "away",
+          "opponent": "Celta Fortuna",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "home",
+          "opponent": "Granada",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2025-04-05",
+          "home": "Eibar",
+          "away": "Real Oviedo",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2024-09-29",
+          "home": "Real Oviedo",
+          "away": "Eibar",
+          "homeGoals": 1,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2024-06-12",
+          "home": "Eibar",
+          "away": "Real Oviedo",
+          "homeGoals": 0,
+          "awayGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2024-06-08",
+          "home": "Real Oviedo",
+          "away": "Eibar",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2024-06-02",
+          "home": "Eibar",
+          "away": "Real Oviedo",
+          "homeGoals": 4,
+          "awayGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        }
+      ],
+      "dailyPreviewText": "လာလီဂါ (၂) ပွဲစဉ် (၉) မှာ အိုဗီဒိုက အမှတ်ပေးဇယား ဦးဆောင်သူ အီဘာကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမှာပါ။ ပွဲမတိုင်မီ အိုဗီဒိုက ၈ ပွဲကစားပြီး ၃ ပွဲနိုင်၊ ၂ ပွဲသရေ၊ ၃ ပွဲရှုံး၊ ၁၁ မှတ်နဲ့ အဆင့် (၁၀) မှာရှိနေချိန် အီဘာက ၈ ပွဲမှာ ၇ ပွဲနိုင်၊ သရေမရှိ၊ ၁ ပွဲရှုံးပြီး ၂၁ မှတ်နဲ့ အဆင့် (၁) ကို ကိုင်ထားပါတယ်။ နောက်ဆုံး ၅ ပွဲကို ကြည့်ရင် အိုဗီဒိုက ၂ နိုင်၊ ၁ သရေ၊ ၂ ရှုံးဖြစ်ပြီး အယ်လ်ဒန်ဆီကို ၁-၄ ရှုံးထားတာဟာ ခံစစ်ပြဿနာကို ပြနေပါတယ်။ အီဘာဘက်ကတော့ နောက်ဆုံး ၅ ပွဲလုံးနိုင်၊ ၁၅ ဂိုးသွင်းပြီး ၄ ဂိုးပဲ ပေးထားသလို အယ်လ်ဘာစီတီကို ၃-၁ နိုင်ပြီး လာ့စ်ပါလ်မက်စ်ကို ၃-၂ အနိုင်ရထားတာကြောင့် တိုက်စစ်ယုံကြည်မှု မြင့်မားပါတယ်။ အီဘာရဲ့ လျင်မြန်တဲ့ တိုက်စစ်ပြောင်းလဲမှုနဲ့ အပေါ်ကနေ ဖိအားပေးတဲ့ ကစားပုံကို အိုဗီဒိုက အိမ်ကွင်းအားနဲ့ တုံ့ပြန်နိုင်ပေမဲ့ လူစာရင်းဒဏ်ရာပြဿနာတချို့ရှိတာက အိမ်ရှင်အတွက် စိုးရိမ်စရာပါ။ ထိပ်တိုက်တွေ့ဆုံမှုတွေမှာ သရေပွဲတွေ မနည်းခဲ့တာကြောင့် ပြိုင်ပွဲတင်းကျပ်နိုင်ပေမဲ့ လက်ရှိအရှိန်အဟုန်နဲ့ ဂိုးသွင်းအားကြောင့် **အီဘာကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဖြစ်နိုင်တဲ့ရလဒ်ကိုတော့ **၁-၂ သို့မဟုတ် ၁-၁** လို့ မြင်ပါတယ်။",
+      "specialChoice": false,
+      "researchSources": [
+        "https://www.laliga.com/en-AR/match/temporada-2026-2027-laliga-hypermotion-real-oviedo-sd-eibar-9",
+        "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+        "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+        "https://www.sdeibar.com/noticias/previa-or-lider-con-los-pies-en-el-suelo",
+        "https://www.fotmob.com/matches/eibar-vs-real-oviedo/2egts9"
+      ]
+    }
+  ],
   "noFixturesLeagues": []
 }
