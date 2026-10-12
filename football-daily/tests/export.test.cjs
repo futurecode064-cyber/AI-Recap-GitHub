@@ -38,6 +38,9 @@ test('fast Canvas odds PNG renders every original league table row, prices, pred
  const x=harness();await x.window.FutureCodeDailyExport.saveOdds(sheet);
  assert.equal(x.clicked[0],'future-code-odds-2026-10-12.png');
  assert.equal(x.canvases[0].width,1360);
+ const groups=new Set(sheet.matches.map(m=>m.league));
+ assert.equal(x.canvases[0].height,222+groups.size*131+sheet.matches.length*73+80,
+  'PNG height must include all league headings and every match without clipping');
  const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
  assert.ok(labels.includes('ယနေ့ ပေါက်ကြေးများ'));
  for(const m of sheet.matches){
