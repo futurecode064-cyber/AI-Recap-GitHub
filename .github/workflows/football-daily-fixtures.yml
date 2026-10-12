@@ -1,9 +1,6 @@
 name: Football Daily Key-Free Fixture Snapshots
 
 on:
-  schedule:
-    # Every three hours. UTC times; Myanmar is UTC+06:30.
-    - cron: '23 0,3,6,9,12,15,18,21 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -13,7 +10,7 @@ on:
 permissions:
   contents: write
 
-# Share GitHub publishing lock with the existing 15-minute live score sync.
+# Manual-only legacy fixture snapshot action; recurring polling removed by owner request.
 concurrency:
   group: future-code-football-live-data
   cancel-in-progress: false

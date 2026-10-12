@@ -1,12 +1,8 @@
 name: Future Code Football Daily Guard
 
-# GitHub only runs scheduled workflows from the repository default branch.
-# 23:25 UTC = 05:55 the next day in Asia/Yangon.
-# 00:30 UTC = 07:00 the same day in Asia/Yangon.
+# Manual-only legacy guard: scheduled writes to old production removed to prevent
+# overwriting the authoritative standalone repo or causing sync conflicts.
 on:
-  schedule:
-    - cron: '25 23 * * *'
-    - cron: '30 0 * * *'
   workflow_dispatch:
     inputs:
       mode:

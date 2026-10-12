@@ -1,10 +1,10 @@
 name: Future Code Football Live Scores and H2H
 
 # Scheduled workflows must exist on GitHub's default branch (main).
+# DISABLED automatic every-15-minute score polling by owner request (2026-10-12).
+# Legacy manual-only emergency tool. Publish approved edits to standalone repo main instead.
 # The site and data remain on football-daily-render.
 on:
-  schedule:
-    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
 
 permissions:
