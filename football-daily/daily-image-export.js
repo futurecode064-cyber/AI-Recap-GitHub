@@ -26,15 +26,16 @@
    y+=44;
    for(const m of matches){
     fill(ctx,M,y,W-M*2,73,C.panel);line(ctx,M,y+72,W-2*M,C.divider);
-    const isNext=m.kickoffDate!==data.reportDate;
-    const clock=(isNext?"၁၃ ရက် မနက် · ":"")+(m.kickoff||"");
+    const isNext=Boolean(m.kickoffDate&&m.kickoffDate!==data.reportDate);
+    const clock=(isNext?Number(m.kickoffDate.slice(-2))+" ရက် မနက် · ":"")+(m.kickoff||"");
     text(ctx,clock,xs[0]+widths[0]/2,y+37,17,C.orange,true,"center",widths[0]-12);
     const mid=xs[1]+widths[1]/2;
-    crest(ctx,m.homeCrestUrl,mid-31,y+19,35,m.home);
-    crest(ctx,m.awayCrestUrl,mid+9,y+19,35,m.away);
+    crest(ctx,m.homeCrestUrl,mid-72,y+19,35,m.home);
+    crest(ctx,m.awayCrestUrl,mid+37,y+19,35,m.away);
     const h=String(m.home||""),a=String(m.away||"");
-    text(ctx,h,mid-40,y+37,fit(ctx,h,132,18,13),C.white,true,"right",132);
-    text(ctx,a,mid+53,y+37,fit(ctx,a,136,18,13),C.white,true,"left",136);
+    text(ctx,h,mid-82,y+37,fit(ctx,h,111,18,12),C.white,true,"right",111);
+    text(ctx,"VS",mid,y+37,14,C.orange,true,"center");
+    text(ctx,a,mid+82,y+37,fit(ctx,a,109,18,12),C.white,true,"left",109);
     text(ctx,m.upperTeam||"—",xs[2]+widths[2]/2,y+37,18,C.orange,true,"center",widths[2]-12);
     text(ctx,m.bodyOdds??"—",xs[3]+widths[3]/2,y+37,20,C.pale,true,"center");
     text(ctx,m.goalTotalOdds??"—",xs[4]+widths[4]/2,y+37,20,C.pale,true,"center");
