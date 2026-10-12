@@ -96,3 +96,8 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
  .match-download{min-width:0}
  .result-score{font-size:25px}
 }
+
+/* Daily Myanmar odds navigation from both football entry pages. */
+.odds-feature-link{margin:11px 0 19px}
+.odds-feature-link a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 22px;border:1px solid #986943;background:linear-gradient(110deg,#443329,#2b342f);color:#ffe2bc;border-radius:14px;font-size:14px;font-weight:700;line-height:1.7}
+.odds-feature-link a:hover,.odds-feature-link a:focus-visible{border-color:#ffac71;background:linear-gradient(110deg,#61452f,#31413b)}
