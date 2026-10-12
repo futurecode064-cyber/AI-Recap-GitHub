@@ -154,6 +154,24 @@ function renderFinished(match){
  card.appendChild(node("div","result-meta",(match.home||"")+"  ·  "+(match.away||"")+"  |  ပွဲပြီး · "+(match.kickoffYangon||"")));
  return card;
 }
+function renderFixtureOnly(match){
+ const card=node("article","match-card fixture-only");
+ const headline=node("div","match-topline");
+ append(headline,
+  node("span","league-name","◈ "+(LEAGUE_NAMES[match.league]||match.league||"")),
+  node("span","match-time",(match.status==="live"?"🔴 LIVE "+(match.liveScore||"")+" · ":"")+(match.kickoffYangon||"")));
+ card.appendChild(headline);
+ const banner=node("div","vs-banner");
+ append(banner,teamSide(match,"home"),node("div","vs-circle","VS"),teamSide(match,"away"));
+ card.appendChild(banner);
+ const title=node("div","fixture-title");
+ const heading=node("h3");
+ append(heading,document.createTextNode(match.home||"Home"),node("span","versus","VS"),document.createTextNode(match.away||"Away"));
+ append(title,heading,node("p","",match.venue||"အတည်ပြုပွဲစဉ် · မြန်မာစံတော်ချိန်"));
+ card.appendChild(title);
+ card.appendChild(node("p","section-note","ပွဲစဉ်ကို အတည်ပြုထားပါသည်။ AI ပွဲကြိုသုံးသပ်ချက်ကို မထုတ်ဝေရသေးပါ။"));
+ return card;
+}
 function renderMatch(match,i){
  const card=node("article","match-card"+(match.specialChoice?" is-special":""));
  const headline=node("div","match-topline");
@@ -249,14 +267,14 @@ function render(){
  const picks=all.filter(m=>m.specialChoice===true);
  const selected=all.filter(m=>(selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||m.league===selectedLeague)&&(selectedDay!==-1||validFinal(m)));
  $("matchCount").textContent=String(selectedDay===-1?all.filter(validFinal).length:all.length);$("specialCount").textContent=String(selectedDay===-1?picks.filter(validFinal).length:picks.length);
- $("statusText").textContent=selectedDay===-1?(all.some(validFinal)?"ရလဒ်အတည်ပြုပြီး":"ရလဒ်မရရှိသေး"):(report.published?"ထုတ်ဝေပြီး":"Data မရရှိသေး");
+ $("statusText").textContent=report.fixtureSnapshot?"ပွဲစဉ်အတည်ပြုထားပြီး · သုံးသပ်ချက်စောင့်ဆိုင်း":selectedDay===-1?(all.some(validFinal)?"ရလဒ်အတည်ပြုပြီး":"ရလဒ်မရရှိသေး"):(report.published?"ထုတ်ဝေပြီး":"Data မရရှိသေး");
  const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"],"1":["မနက်ဖြန် ပွဲကြိုသုံးသပ်ချက်များ","● TOMORROW"]};
  $("reportHeading").textContent=labels[selectedDay][0];
  $("reportPill").textContent=labels[selectedDay][1];
- $("sectionNote").textContent=selectedLeague==="special"
+ $("sectionNote").textContent=report.fixtureSnapshot?"အတည်ပြုပွဲစဉ်စာရင်းသာဖြစ်ပြီး သုံးသပ်ချက်နှင့် Odds ကို မထုတ်ဝေရသေးပါ။":selectedLeague==="special"
  ?"လက်ရှိသတင်း၊ အသင်းအင်အားနဲ့ ဈေးကွက်အခြေအနေများကို အစုံစစ်ဆေးပြီး သီးသန့်ရွေးထားသည့် ပွဲများသာ ပါဝင်ပါမည်။"
  :`${selected.length} ပွဲကို ပြသနေသည် · မြန်မာစံတော်ချိန် ${displayDate(selectedDateKey())}`;
- if(selected.length)selected.forEach((m,i)=>list.appendChild(selectedDay===-1?renderFinished(m):renderMatch(m,i)));
+ if(selected.length)selected.forEach((m,i)=>list.appendChild(selectedDay===-1?renderFinished(m):report.fixtureSnapshot?renderFixtureOnly(m):renderMatch(m,i)));
  else{
   const card=node("div","empty-card");
   append(card,node("div","empty-icon",selectedLeague==="special"?"★":"○"),
@@ -295,12 +313,31 @@ async function load(){
   url.searchParams.set("t",Date.now());
   const response=await fetch(url.toString(),{cache:"no-store",signal:controller.signal});
   if(!isCurrent())return;
-  if(response.status===404){report={reportDate:target,matches:[],published:false};loading=false;render();return}
-  if(!response.ok)throw new Error("HTTP "+response.status);
-  const json=await response.json();
+  if(response.status!==404&&!response.ok)throw new Error("HTTP "+response.status);
+  const json=response.ok?await response.json():null;
   if(!isCurrent())return;
-  if(!json||typeof json!=="object"||!Array.isArray(json.matches)||json.matches.some(m=>!m||typeof m!=="object"||typeof m.home!=="string"||typeof m.away!=="string"))throw new Error("Invalid report data");
-  report=json.reportDate===target&&json.published===true?json:{reportDate:target,matches:[],published:false};
+  if(json&&(!Array.isArray(json.matches)||json.matches.some(m=>!m||typeof m!=="object"||typeof m.home!=="string"||typeof m.away!=="string")))throw new Error("Invalid report data");
+  if(json&&json.reportDate===target&&json.published===true){
+    report=json;
+  }else{
+    // A separately verified public-data snapshot is displayed as fixtures ONLY.
+    // Never describe it as an AI-published preview, invent odds or offer poster exports.
+    let snapshot=null;
+    try{
+      const fixtureUrl=new URL("fixtures/"+target+".json",todayUrl);
+      fixtureUrl.searchParams.set("t",Date.now());
+      const fixtureResponse=await fetch(fixtureUrl.toString(),{cache:"no-store",signal:controller.signal});
+      if(fixtureResponse.ok){
+        const candidate=await fixtureResponse.json();
+        if(candidate?.reportDate===target&&candidate.fixtureSnapshot===true&&Array.isArray(candidate.matches)
+          &&candidate.matches.every(m=>m&&typeof m.home==="string"&&typeof m.away==="string"&&m.fixtureOnly===true)){
+          snapshot=candidate;
+        }
+      }
+    }catch(err){console.warn("Optional fixture-only snapshot unavailable",err);}
+    if(!isCurrent())return;
+    report=snapshot?{...snapshot,published:false}:{reportDate:target,matches:[],published:false};
+  }
   loading=false;render();
  }catch(e){
   if(!isCurrent())return;
