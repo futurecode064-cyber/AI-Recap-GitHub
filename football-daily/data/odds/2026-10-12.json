@@ -92,7 +92,8 @@
       "goalTotalOdds": "3+50",
       "pdfLastColumn": "1-2",
       "eligibleForPreview": false,
-      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/AC_Oulu_logo.svg"
+      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/AC_Oulu_logo.svg",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/502.png"
     },
     {
       "number": 7,
@@ -151,7 +152,8 @@
       "goalTotalOdds": "3-40",
       "pdfLastColumn": "2-1",
       "eligibleForPreview": false,
-      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/AGF_Logo.png"
+      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/AGF_Logo.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8118.png"
     },
     {
       "number": 11,
