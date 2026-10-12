@@ -10,7 +10,7 @@
   const kit=K();if(!kit)throw Error("Canvas export module missing");
   const {C,create,fill,line,text,fit,fonts,preloadImages,crest,download,top}=kit;
   const groups=grouped(data.matches);
-  const W=1360,M=24,H=216+groups.reduce((n,g)=>n+94+g[1].length*73+18,0)+72;
+  const W=1360,M=24,H=222+groups.reduce((n,g)=>n+131+g[1].length*73,0)+80;
   const {canvas,ctx}=create(W,H);
   await Promise.all([fonts(),preloadImages(data.matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).concat(groups.map(g=>crests[g[0]])))]);
   fill(ctx,0,0,W,H,C.bg);top(ctx,W,"ယနေ့ ပေါက်ကြေးများ",data.reportDate,data.matches.length+" ပွဲ");
