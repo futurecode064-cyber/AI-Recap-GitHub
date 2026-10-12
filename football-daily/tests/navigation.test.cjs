@@ -9,7 +9,7 @@ function setup(branded=false){
  function element(tag='div'){
   const classes=new Set();
   return {tagName:tag,textContent:'',children:[],attrs:{},dataset:{},
-    classList:{toggle(name,force){if(force)classes.add(name);else classes.delete(name)},contains(name){return classes.has(name)}},
+    classList:{toggle(name,force){if(force)classes.add(name);else classes.delete(name)},add(name){classes.add(name)},contains(name){return classes.has(name)}},
     appendChild(n){this.children.push(n);return n},replaceChildren(...items){this.children=items},
     setAttribute(k,v){this.attrs[k]=v},addEventListener(){},
     querySelectorAll(){return this.children.filter(x=>x.tagName==='button')}
@@ -152,4 +152,48 @@ test('all nine published previews contain complete single-provider sourced 1X2 d
  const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
  assert.ok(js.includes('oddBox(teamLabel(match,"home")+" နိုင် (1)"'));
  assert.ok(js.includes('oddBox(teamLabel(match,"away")+" နိုင် (2)"'));
+});
+
+test('navigation has three equally grouped Yesterday/Today/Odds boxes in both entry pages',()=>{
+ for(const filename of ['index.html','myanmar-football/index.html']){
+  const html=fs.readFileSync(path.join(root,filename),'utf8');
+  const from=html.indexOf('<nav class="date-tabs"');
+  const to=html.indexOf('</nav>',from);
+  const nav=html.slice(from,to);
+  assert.equal((nav.match(/data-day=/g)||[]).length,2);
+  assert.ok(nav.includes('date-tab-odds'),filename);
+  assert.ok(nav.includes('odds.html'),filename);
+  assert.ok(!html.includes('odds-feature-link'),filename);
+  assert.ok(html.includes('id="resultsPngBtn"'),filename);
+  assert.ok(html.includes('daily-image-export.js'),filename);
+ }
+});
+test('mobile odds shows all four columns without horizontal table scrolling',()=>{
+ const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
+ assert.ok(html.includes('id="oddsPngBtn"'));
+ assert.ok(html.includes('daily-image-export.js'));
+ assert.match(html,/\.odds-table\{min-width:0;width:100%;display:block/);
+ assert.ok(html.includes('grid-template-columns:repeat(4,minmax(0,1fr))'));
+ assert.match(html,/\.odds-table thead\{display:none\}/);
+});
+test('three-box history and H2H layout preserves all three datasets',()=>{
+ const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
+ const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
+ assert.ok(js.includes('const split=node("div","form-three-grid")'));
+ assert.ok(js.includes('append(split,homeForm,h2h,awayForm)'));
+ assert.ok(css.includes('.form-three-grid{display:grid;grid-template-columns:repeat(3'));
+ assert.ok(css.includes('.form-three-grid{grid-template-columns:1fr}'));
+});
+test('PNG exporter includes all odds entries and only confirmed results',()=>{
+ const js=fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8');
+ assert.ok(js.includes('async function saveOdds(data)'));
+ assert.ok(js.includes('async function saveResults({matches,date,brand})'));
+ assert.ok(js.includes('data.matches.length*110'));
+ assert.ok(js.includes('matches.filter(verified)'));
+ assert.ok(js.includes('m.status==="finished"'));
+ assert.ok(js.includes('window.FutureCodeDailyExport={saveOdds,saveResults}'));
+ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+ const odds=fs.readFileSync(path.join(root,'odds.js'),'utf8');
+ assert.ok(app.includes('window.FutureCodeDailyExport.saveResults'));
+ assert.ok(odds.includes('window.FutureCodeDailyExport.saveOdds'));
 });
