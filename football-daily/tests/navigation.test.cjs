@@ -84,3 +84,28 @@ test('both entry pages contain navigation targets and both export modules',()=>{
   for(const script of ['card-export.js','social-export.js','app.js'])assert.ok(html.includes(script));
  }
 });
+
+test('daily PDF odds page keeps all 17 user supplied entries and nine eligible previews',()=>{
+ const sheet=JSON.parse(fs.readFileSync(path.join(root,'data/odds/2026-10-12.json'),'utf8'));
+ const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ assert.equal(sheet.reportDate,'2026-10-12');
+ assert.equal(sheet.matches.length,17);
+ assert.equal(sheet.matches.filter(x=>x.eligibleForPreview).length,9);
+ assert.equal(today.matches.length,9);
+ assert.equal(today.matches.filter(x=>x.homeDisplay&&x.awayDisplay).length,9);
+ for(const m of today.matches){
+  const quote=sheet.matches.find(x=>x.home===m.homeDisplay&&x.away===m.awayDisplay);
+  assert.ok(quote,'No PDF odds fixture found for '+m.homeDisplay);
+  assert.equal(m.myanmarOdds.bodyOdds,quote.bodyOdds);
+  assert.equal(m.myanmarOdds.goalTotalOdds,quote.goalTotalOdds);
+  assert.equal(m.dailyPreviewText.split('**').length,5);
+ }
+});
+test('odds page and its browser script are linked from both football entry pages',()=>{
+ assert.ok(fs.existsSync(path.join(root,'odds.html')));
+ assert.ok(fs.existsSync(path.join(root,'odds.js')));
+ for(const file of ['index.html','myanmar-football/index.html']){
+  const html=fs.readFileSync(path.join(root,file),'utf8');
+  assert.ok(html.includes('odds.html'),file);
+ }
+});
