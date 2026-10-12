@@ -163,3 +163,18 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
  .form-h2h{margin-left:10px;margin-right:10px;padding:12px 9px}
  .results-download-bar{padding:11px}
 }
+
+
+/* Results image inherits exactly the result cards' live website styles. */
+.results-export-sheet .snapshot-heading{
+  padding:20px 22px;margin:0 0 18px;background:#213739;border:1px solid #4a605a;
+  border-radius:13px;color:#f5eede
+}
+.results-export-sheet .snapshot-heading h2{font-size:29px;line-height:1.6;margin:0;color:#ffbf84}
+.results-export-sheet .snapshot-heading p{font-size:12px;line-height:1.8;margin:5px 0 0;color:#c5d8d0}
+.results-export-sheet .matches{display:grid;gap:15px}
+.results-export-sheet .result-card{margin:0;max-width:none}
+.results-export-sheet .team-crest{max-width:155px}
+.results-export-sheet .result-card .vs-banner{min-height:210px}
+.results-export-sheet .result-card .result-score{font-size:41px}
+.football-snapshot-stage .analysis-body{display:block!important;max-height:none!important;overflow:visible!important}
