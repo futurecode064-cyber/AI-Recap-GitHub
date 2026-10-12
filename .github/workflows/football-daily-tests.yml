@@ -2,7 +2,8 @@ name: Football Daily Website Tests
 on:
   push:
     branches:
-      - football-daily-render
+      - main
+      - football-standalone-ready
     paths:
       - 'football-daily/**'
       - '.github/workflows/football-daily-tests.yml'

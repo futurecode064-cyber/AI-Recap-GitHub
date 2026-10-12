@@ -1,33 +1,21 @@
-# Future Code AI Studio
+# Future Code Football Daily — Standalone Repository (Cutover Staging)
 
-Current delivery: **v8 / 1.4.1**, native package `mm.futurecode.videostudio.pro`.
+This repository contains ONLY the Football Daily project, its original YKZ FAMILY GROUP branded clone, original designs, PNG download scripts, tests and daily data. All football application files remain in `football-daily/`; the Cloudflare Pages build output path stays **football-daily** so the URLs remain `/`, `/odds.html`, and `/ykz-family/`.
 
-[Student Portal](https://futurecode064-cyber.github.io/AI-Recap-GitHub/student/) · [Admin Dashboard](https://futurecode064-cyber.github.io/AI-Recap-GitHub/admin/)
+## Critical production safety
+**DO NOT disconnect or delete the original GitHub source or change the Cloudflare Pages project until a new repository and preview are verified.** Current production source is [AI-Recap-GitHub](https://github.com/futurecode064-cyber/AI-Recap-GitHub), production branch `football-daily-render`. Original Pages project: `future-code-football-daily` and hostname https://future-code-football-daily.pages.dev/.
 
-The current academy APK source is `training-app/`. `portal/` contains the account dashboards and generated browser copies of the current academy/studio pages. The earlier Kotlin `app/` and standalone `web-app/` prototypes are retained separately and do not produce this academy APK.
+## New repository target
+Proposed name: `futurecode064-cyber/future-code-football-daily`, default branch `main`. This staging copy can be used as the source for that new repo; it includes ONLY `.github/workflows/football-daily-tests.yml`, `football-daily/` and this README. Do not copy Android apps or the old unrelated workflows.
 
-Eight modules share `training-app/assets/studio/modules.json`: lessons/prompt builders, downloads, tool directory, documents/design/invoice, image studio, video maker, recap editor, and lesson-video groups. Lessons and tool guides are nested; the group section is last. Existing gate section keys remain compatible through permission aliases. Accounts bind to one APK device or browser device key; switching requires the owner's Admin Device Reset. An app update keeps the existing APK device key.
+## Verification and safe cutover
+1. Create a NEW GitHub repository under `futurecode064-cyber` (do not rename/delete old).
+2. Push/import this standalone staging tree to `main` of the new repo, preserving all binary logos and all files.
+3. Verify `node --test football-daily/tests/*.test.cjs` and `python football-daily/scripts/daily_guard.py audit` on the new repo; confirm real source JSON, odds, result cards and YKZ logo.
+4. Create a temporary SEPARATE Cloudflare Pages preview project using new repo main (build command empty for static site; output directory `football-daily`). Ensure its `/`, `/odds.html`, `/ykz-family/`, `/ykz-family/odds.html`, data JSON endpoints and PNG downloads all work.
+5. Only after that, cut over the existing Pages project (if Cloudflare supports safe repository change), or move the domain with a controlled DNS/Pages migration. Do not leave production `future-code-football-daily.pages.dev` disconnected. If Cloudflare cannot change the repository on an existing Pages project, retaining the original Pages project is safer than moving and losing the hostname; use the new repo as the separate development and backup source until a controlled hostname strategy is approved.
+6. Update all daily AI publisher instructions from `AI-Recap-GitHub:football-daily-render` to `future-code-football-daily:main` only AFTER the new Pages production workflow has been validated. Preserve 6AM research-only and manual publish after approval.
 
-## Validate and publish
+Daily authoritative format: `football-daily/DAILY_APPROVED_FORMAT.md`. Multi-brand guidance: `football-daily/BRAND_SITES.md`.
 
-```bash
-python3 scripts/build_portal.py
-python3 tests/validate_assets.py
-node tests/access.test.js
-node tests/portal.test.js
-node tests/studio.test.js
-```
-
-Pushes of portal/current assets run `.github/workflows/future-code-portal-pages.yml`, validate source, then deploy `portal/` to GitHub Pages. Builds do not download previous app ZIPs.
-
-## Build the signed APK
-
-Use the owner's existing release key, never a new generated key:
-
-```bash
-python3 scripts/build_apk.py --android-jar /path/to/android.jar --build-tools /path/to/build-tools --keystore /private/release.p12 --password-file /private/password.txt
-```
-
-Use `--ecj-jar` if javac is unavailable. Output is `build/Future_Code_AI_Studio_v8.apk`. Keep private signing files outside this public repository. Optional GitHub build secrets are `RELEASE_KEYSTORE_BASE64` and `RELEASE_KEYSTORE_PASSWORD`; when absent, CI validates source and explicitly skips signed artifact production. The locally delivered APK is signed using the owner's preserved v7 key.
-
-Image/video/voice AI requests use the student's own Google API key in memory. Model availability, region, quota and billing are provider-specific. Manual scene editing and local export work without an AI key when the browser/device supports the selected media codecs. Do not commit API keys or account passwords. See `VERIFICATION.md` for tested behavior and physical-device/live-generation limits.
+Source snapshot SHA: `d21dae40e6805cd0300999fdd810987364ff8ee1` as checked during staging.
