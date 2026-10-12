@@ -147,6 +147,17 @@ function renderMyanmarOdds(match){
  return section;
 }
 
+function inlineClubLogo(url,name,classes="mini-club-logo"){
+ const src=textOrEmpty(url);
+ const frame=node("span",classes);
+ frame.title=name;
+ if(src&&goodUrl(src)){
+  const img=node("img");img.src=src;img.alt=name+" အသင်းလိုဂို";img.loading="lazy";img.decoding="async";
+  img.onerror=()=>{img.remove();frame.appendChild(node("span","mini-logo-fallback",name.slice(0,2)));};
+  frame.appendChild(img);
+ }else frame.appendChild(node("span","mini-logo-fallback",name.slice(0,2)));
+ return frame;
+}
 function recentGames(match,side){
  const items=Array.isArray(match[side+"LastFive"])?match[side+"LastFive"].slice(0,5):[];
  const wrap=node("div","form-team");
@@ -167,7 +178,9 @@ function recentGames(match,side){
      result=item.teamGoals>item.opponentGoals?"W":item.teamGoals<item.opponentGoals?"L":"D";
    }
    row.appendChild(node("span","form-result "+(result?"form-"+result.toLowerCase():""),result||"·"));
-   const descr=node("span","form-opponent",(item.venueSide==="home"?"အိမ်ကွင်း · ":item.venueSide==="away"?"အဝေးကွင်း · ":"")+localizedTeam(item.opponent));
+   const descr=node("span","form-opponent");
+   append(descr,inlineClubLogo(item.opponentCrestUrl,localizedTeam(item.opponent)),
+      node("span","",(item.venueSide==="home"?"အိမ်ကွင်း · ":item.venueSide==="away"?"အဝေးကွင်း · ":"")+localizedTeam(item.opponent)));
    row.appendChild(descr);row.appendChild(node("b","",score));
    wrap.appendChild(row);
  }
@@ -187,7 +200,13 @@ function renderFormAndH2H(match){
    if(!g||typeof g!=="object")continue;
    const row=node("div","h2h-row");
    row.appendChild(node("span","h2h-date",g.date||""));
-   row.appendChild(node("span","h2h-teams",localizedTeam(g.home)+" – "+localizedTeam(g.away)));
+   const matchup=node("span","h2h-teams");
+   append(matchup,inlineClubLogo(g.homeCrestUrl|| (g.home===match.home?match.homeCrestUrl:""),localizedTeam(g.home)),
+     node("span","",localizedTeam(g.home)),
+     node("span","h2h-dash","–"),
+     inlineClubLogo(g.awayCrestUrl|| (g.away===match.away?match.awayCrestUrl:""),localizedTeam(g.away)),
+     node("span","",localizedTeam(g.away)));
+   row.appendChild(matchup);
    row.appendChild(node("b","h2h-score",Number.isInteger(g.homeGoals)&&Number.isInteger(g.awayGoals)?g.homeGoals+" – "+g.awayGoals:"—"));
    h2h.appendChild(row);
  }
