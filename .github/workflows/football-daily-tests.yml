@@ -1,0 +1,29 @@
+name: Football Daily Website Tests
+on:
+  push:
+    branches:
+      - football-daily-render
+    paths:
+      - 'football-daily/**'
+      - '.github/workflows/football-daily-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: JavaScript syntax
+        run: node --check football-daily/app.js
+      - name: Football navigation, date and active league tests
+        run: node --test football-daily/tests/navigation.test.cjs
+      - name: Football score and report Python syntax
+        run: python -m py_compile football-daily/scripts/daily_guard.py football-daily/scripts/sync_scores.py
