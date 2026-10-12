@@ -1,0 +1,53 @@
+name: Football Daily Publication Audit
+on:
+  schedule:
+    # 00:17 UTC = 06:47 Asia/Yangon, after the 06:00 editorial task.
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: future-code-football-publication-audit
+  cancel-in-progress: true
+
+jobs:
+  verify-publication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out live Cloudflare Pages source branch
+        uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          persist-credentials: false
+
+      - name: Audit today's Yangon-local published report
+        id: daily
+        continue-on-error: true
+        run: python3 football-daily/scripts/daily_guard.py audit
+
+      - name: Check website navigation and date tabs
+        id: frontend
+        continue-on-error: true
+        run: node --test football-daily/tests/navigation.test.cjs
+
+      - name: Summarize publish health
+        if: always()
+        env:
+          AUDIT_RESULT: ${{ steps.daily.outcome }}
+          FRONTEND_RESULT: ${{ steps.frontend.outcome }}
+        run: |
+          {
+            echo '## Future Code Football Daily publishing health'
+            echo ''
+            echo "Yangon publication audit: ${AUDIT_RESULT}"
+            echo ''
+            echo "Frontend tests: ${FRONTEND_RESULT}"
+            echo ''
+            echo 'Repository data audit checks report freshness and shape, not independent sports facts.'
+            echo ''
+            echo 'An enabled ChatGPT publishing task does not prove a successful commit or Cloudflare deploy.'
+          } >> "$GITHUB_STEP_SUMMARY"
+          test "$AUDIT_RESULT" = success && test "$FRONTEND_RESULT" = success
