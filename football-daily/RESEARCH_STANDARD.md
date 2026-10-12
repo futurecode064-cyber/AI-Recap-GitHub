@@ -1,3 +1,5 @@
+> **AUTHORITATIVE DAILY FORMAT:** Read [DAILY_APPROVED_FORMAT.md](./DAILY_APPROVED_FORMAT.md) before this research specification. It locks the user-approved Burmese names, full daily odds list, one-paragraph commentary, 3-panel Last 5/H2H, 1X2, opening-price usage, Canvas image layouts and manual publication. If older sections disagree, the approved format wins.
+
 # Future Code Football — Daily Match-Preview Research Standard
 Version: 2026-10-11. Applies to ALL ordinary match previews, not only Special Choice.
 
