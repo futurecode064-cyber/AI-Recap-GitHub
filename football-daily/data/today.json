@@ -28,7 +28,11 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "myanmarOdds": {},
+      "myanmarOdds": {
+        "upperTeam": "ဗယ်လာဒိုလစ်",
+        "bodyOdds": "-85",
+        "goalTotalOdds": "2-100"
+      },
       "homeLastFive": [
         {
           "date": "2026-10-04",
@@ -179,7 +183,10 @@
         "https://www.fotmob.com/en-GB/matches/albacete-vs-real-valladolid/2vti1w"
       ],
       "espnEventId": "401883159",
-      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883159"
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883159",
+      "homeDisplay": "ဗယ်လာဒိုလစ်",
+      "awayDisplay": "အယ်လ်ဘာစီတီ",
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12"
     },
     {
       "league": "La Liga 2",
@@ -207,7 +214,11 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "myanmarOdds": {},
+      "myanmarOdds": {
+        "upperTeam": "ဘာဂို့စ်",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "2-45"
+      },
       "homeLastFive": [
         {
           "date": "2026-10-03",
@@ -356,7 +367,10 @@
         "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
         "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
         "https://www.fotmob.com/en-GB/matches/burgos-cf-vs-granada/21w3wd"
-      ]
+      ],
+      "homeDisplay": "ဘာဂို့စ်",
+      "awayDisplay": "ဂရန်နာဒါ",
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12"
     },
     {
       "league": "Serie A",
@@ -384,7 +398,11 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "myanmarOdds": {},
+      "myanmarOdds": {
+        "upperTeam": "အတ္တလန်တာ",
+        "bodyOdds": "1-20",
+        "goalTotalOdds": "3-20"
+      },
       "homeLastFive": [
         {
           "date": "2026-09-20",
@@ -537,7 +555,10 @@
         "https://www.udinese.it/news/squad/coppa-italia-udinese-2-1-venezia"
       ],
       "espnEventId": "401875005",
-      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875005"
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875005",
+      "homeDisplay": "အတ္တလန်တာ",
+      "awayDisplay": "ဗင်နီဇီယာ",
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12"
     },
     {
       "league": "La Liga 2",
@@ -565,7 +586,11 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "myanmarOdds": {},
+      "myanmarOdds": {
+        "upperTeam": "အိုဗီဒို",
+        "bodyOdds": "-40",
+        "goalTotalOdds": "2-40"
+      },
       "homeLastFive": [
         {
           "date": "2026-10-02",
@@ -717,8 +742,563 @@
         "https://www.fotmob.com/matches/eibar-vs-real-oviedo/2egts9"
       ],
       "espnEventId": "401883182",
-      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883182"
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883182",
+      "homeDisplay": "အိုဗီဒို",
+      "awayDisplay": "အီဘာ",
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12"
+    },
+    {
+      "league": "Premier League",
+      "home": "Coventry City",
+      "away": "Newcastle United",
+      "kickoffYangon": "01:30 · 13 Oct",
+      "venue": "Coventry Building Society Arena",
+      "homeStanding": {
+        "played": 5,
+        "wins": 1,
+        "draws": 0,
+        "losses": 4,
+        "points": 3,
+        "position": 18
+      },
+      "awayStanding": {
+        "played": 5,
+        "wins": 2,
+        "draws": 2,
+        "losses": 1,
+        "points": 8,
+        "position": 9
+      },
+      "standingsSourceUrl": "https://en.as.com/resultados/futbol/inglaterra/2026_2027/directo/regular_a_6_6a38cde9456a552/amp/",
+      "researchSources": [
+        "https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season",
+        "https://en.as.com/resultados/futbol/inglaterra/2026_2027/directo/regular_a_6_6a38cde9456a552/amp/",
+        "https://www.premierleague.com/en/clubs/4/newcastle-united/overview",
+        "https://www.premierleague.com/en/clubs/9/stats"
+      ],
+      "dailyPreviewText": "အင်္ဂလန် ပရီးမီးယားလိဂ်ရဲ့ တနင်္လာညအပိတ်ပွဲမှာ တန်းတက်အသင်း ကိုဗင်ထရီက နယူးကာဆယ်ကို အိမ်ကွင်းမှာ လက်ခံကစားရမှာပါ။ ပွဲမတိုင်မီ ကိုဗင်ထရီက ၅ ပွဲမှာ ၁ ပွဲနိုင်၊ သရေမရှိ၊ ၄ ပွဲရှုံးပြီး ၃ မှတ်နဲ့ အဆင့် ၁၈ မှာရှိနေချိန် နယူးကာဆယ်က ၅ ပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၁ ရှုံး၊ ၈ မှတ်နဲ့ အဆင့် ၉ မှာ ရပ်တည်နေပါတယ်။ ဖရန့်ခ် လမ်းပတ်ရဲ့ ကိုဗင်ထရီဟာ နော်တင်ဟမ်ဖောရက်စ်ကို အဝေးကွင်းမှာ ၁-၀ အနိုင်ရခဲ့ပေမဲ့ ဘရိုက်တန်ကို အိမ်ကွင်းမှာ ၀-၅ ရှုံးခဲ့ရတဲ့ခံစစ်က အဓိက စိုးရိမ်စရာပါ။ နယူးကာဆယ်ဘက်က ဟားလ်ကို ၂-၁ နိုင်ထားပြီး လီဗာပူးနဲ့ ဘုန်းမောက်တို့လို အသင်းတွေကို သရေခံကစားနိုင်ခဲ့တာက အမှတ်တစ်မှတ်ကောင်းစွာယူနိုင်တဲ့ အင်အားရှိကြောင်း ပြနေပါတယ်။ အိမ်ရှင်က ပွဲစမှာ အရှိန်ပြင်းပြင်း ဖိအားပေးနိုင်ပေမဲ့ ဧည့်သည်ရဲ့ အမြန်ကူးပြောင်းတိုက်စစ်ကို ထိန်းဖို့ လိုပါတယ်။ လက်ရှိကစားပုံနဲ့ အမှတ်ပေးအနေအထားကို ကြည့်ရင် **နယူးကာဆယ်ဘက်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဒါပေမဲ့ အဝေးကွင်းအခက်အခဲကို ထည့်တွက်ပြီး **၀-၁ သို့မဟုတ် ၁-၂** လို့ ခန့်မှန်းပါတယ်။",
+      "homeLastFive": [
+        {
+          "date": "2026-09-19",
+          "opponent": "Nottingham Forest",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Brighton",
+          "venueSide": "home",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Manchester City",
+          "venueSide": "away",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Hull City",
+          "venueSide": "home",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats"
+        },
+        {
+          "date": "2026-08-22",
+          "opponent": "Arsenal",
+          "venueSide": "away",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-09-19",
+          "opponent": "Hull City",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Leeds United",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Bournemouth",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Tottenham Hotspur",
+          "venueSide": "away",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview"
+        },
+        {
+          "date": "2026-08-22",
+          "opponent": "Liverpool",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview"
+        }
+      ],
+      "headToHead": [],
+      "homeDisplay": "ကိုဗင်ထရီ",
+      "awayDisplay": "နယူးကာဆယ်",
+      "myanmarOdds": {
+        "upperTeam": "နယူးကာဆယ်",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "3+45"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "specialChoice": false
+    },
+    {
+      "league": "Serie A",
+      "home": "Torino",
+      "away": "Udinese",
+      "kickoffYangon": "01:15 · 13 Oct",
+      "venue": "Stadio Olimpico Grande Torino",
+      "homeStanding": {
+        "played": 5,
+        "wins": 1,
+        "draws": 1,
+        "losses": 3,
+        "points": 4,
+        "position": 15
+      },
+      "awayStanding": {
+        "played": 5,
+        "wins": 1,
+        "draws": 1,
+        "losses": 3,
+        "points": 4,
+        "position": 14
+      },
+      "standingsSourceUrl": "https://supersport.com/football/match/3f66cd54-a047-4d32-94f3-8f6d566fb14e",
+      "researchSources": [
+        "https://en.legaseriea.it/serie-a/news/torino-vs-udinese-rounds-off-matchday-6",
+        "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314",
+        "https://supersport.com/football/match/3f66cd54-a047-4d32-94f3-8f6d566fb14e"
+      ],
+      "dailyPreviewText": "အီတလီ စီးရီးအေ ပွဲစဉ် (၆) ကို တိုရီနိုနဲ့ အူဒီးနီးစ်တို့ရဲ့ ထိပ်တိုက်တွေ့ဆုံမှုနဲ့ အဆုံးသတ်မှာပါ။ ပွဲမတိုင်မီ တိုရီနိုက ၅ ပွဲကစားပြီး ၁ နိုင်၊ ၁ သရေ၊ ၃ ရှုံး၊ ၄ မှတ်နဲ့ အဆင့် ၁၅ မှာရှိနေသလို အူဒီးနီးစ်ကလည်း ၅ ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၃ ရှုံး၊ ၄ မှတ်နဲ့ အဆင့် ၁၄ မှာ ရပ်တည်နေပါတယ်။ နှစ်သင်းလုံးက ရမှတ်တူနေပြီး အောက်ပိုင်းဇယားကနေ ရုန်းထွက်ဖို့ လိုအပ်နေတဲ့အချိန်ပါ။ တိုရီနိုဟာ ဖီအိုရင်တီးနားကို အနိုင်ရခဲ့ပေမဲ့ ရိုးမားနဲ့ မီလန်တို့ကို ရှုံးထားပြီး နောက်ဆုံး ဘိုလော့ညာနဲ့ ၁-၁ သရေကျခဲ့ပါတယ်။ အူဒီးနီးစ်ကလည်း စတင်ချိန်မှာ ရလဒ်ကောင်းရခဲ့ပေမဲ့ နောက်ဆုံး လိဂ် ၃ ပွဲဆက် ရှုံးထားတာကြောင့် ခံစစ်ပြန်စုစည်းဖို့ လိုနေပါတယ်။ တိုရီနိုက အိမ်ကွင်းအသာစီးရပေမဲ့ နောက်ဆုံးတွေ့ဆုံမှုမှာ အူဒီးနီးစ်ကို ၀-၂ ရှုံးခဲ့တာကို သတိထားရမှာပါ။ နှစ်ဖက်လုံး အမှားနည်းအောင် ကစားလာနိုင်တဲ့ ပွဲမျိုးဖြစ်လို့ **သရေရလဒ်ဘက်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဂိုးအရေအတွက် မများနိုင်ဘူးလို့ မြင်ပြီး **၁-၁ သို့မဟုတ် ၀-၀** ကို ခန့်မှန်းပါတယ်။",
+      "homeLastFive": [
+        {
+          "date": "2026-09-19",
+          "opponent": "Bologna",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Roma",
+          "venueSide": "home",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Fiorentina",
+          "venueSide": "away",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Sassuolo",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314"
+        },
+        {
+          "date": "2026-08-23",
+          "opponent": "Milan",
+          "venueSide": "home",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314"
+        }
+      ],
+      "awayLastFive": [],
+      "headToHead": [
+        {
+          "date": "2026-05-02",
+          "home": "Udinese",
+          "away": "Torino",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12"
+        },
+        {
+          "date": "2026-01-07",
+          "home": "Torino",
+          "away": "Udinese",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12"
+        },
+        {
+          "date": "2025-04-23",
+          "home": "Torino",
+          "away": "Udinese",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12"
+        },
+        {
+          "date": "2024-12-29",
+          "home": "Udinese",
+          "away": "Torino",
+          "homeGoals": 2,
+          "awayGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12"
+        },
+        {
+          "date": "2024-03-16",
+          "home": "Udinese",
+          "away": "Torino",
+          "homeGoals": 0,
+          "awayGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12"
+        }
+      ],
+      "homeDisplay": "တိုရီနို",
+      "awayDisplay": "အူဒီးနီးစ်",
+      "myanmarOdds": {
+        "upperTeam": "တိုရီနို",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "2-70"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "specialChoice": false
+    },
+    {
+      "league": "La Liga",
+      "home": "Levante",
+      "away": "Sevilla",
+      "kickoffYangon": "01:30 · 13 Oct",
+      "venue": "Estadio Ciutat de València",
+      "homeStanding": {
+        "played": 6,
+        "wins": 1,
+        "draws": 2,
+        "losses": 3,
+        "points": 5,
+        "position": 17
+      },
+      "awayStanding": {
+        "played": 7,
+        "wins": 4,
+        "draws": 1,
+        "losses": 2,
+        "points": 13,
+        "position": 5
+      },
+      "standingsSourceUrl": "https://www.laliga.com/es-MX/partido/temporada-2026-2027-laliga-ea-sports-levante-ud-sevilla-fc-8",
+      "researchSources": [
+        "https://www.laliga.com/es-MX/partido/temporada-2026-2027-laliga-ea-sports-levante-ud-sevilla-fc-8",
+        "https://fbref.com/en/squads/9800b6a1/2026-2027/matchlogs/c12/schedule/Levante-Scores-and-Fixtures-La-Liga",
+        "https://fbref.com/en/squads/ad2be733/2026-2027/matchlogs/c12/schedule/Sevilla-Scores-and-Fixtures-La-Liga"
+      ],
+      "dailyPreviewText": "စပိန် လာလီဂါ ပွဲစဉ် (၈) အဖြစ် လီဗန်တေးက ဆီဗီလာကို Ciutat de València ကွင်းမှာ ဧည့်ခံကစားရမှာပါ။ ပွဲမတိုင်မီ လီဗန်တေးက ၆ ပွဲကစားပြီး ၁ နိုင်၊ ၂ သရေ၊ ၃ ရှုံး၊ ၅ မှတ်နဲ့ အဆင့် ၁၇ မှာ ရှိနေချိန် ဆီဗီလာက ၇ ပွဲမှာ ၄ နိုင်၊ ၁ သရေ၊ ၂ ရှုံး၊ ၁၃ မှတ်နဲ့ အဆင့် ၅ ကို ရောက်နေပါတယ်။ လီဗန်တေးက ဒီရာသီ လိဂ်ပွဲတွေမှာ ၈ ဂိုးသွင်းပေမဲ့ ၁၂ ဂိုးပြန်ပေးထားရတာကြောင့် တိုက်စစ်တက်တဲ့အချိန် နောက်တန်းနေရာလွတ်များသွားတဲ့ ပြဿနာရှိပါတယ်။ ဆီဗီလာက ၁၀ ဂိုးသွင်း၊ ၉ ဂိုးပေးထားပြီး အဝေးကွင်းမှာ နှစ်ပွဲနိုင်၊ တစ်ပွဲသရေထိန်းနိုင်ခဲ့တာက ယနေ့ပွဲအတွက် အားသာချက်ပါ။ ဒါပေမဲ့ နောက်ဆုံးပွဲမှာ ဘာစီလိုနာကို ၁-၃ ရှုံးထားတာကြောင့် ဆီဗီလာခံစစ်ကလည်း ဖိအားခံရချိန် ပြဿနာရှိနိုင်ပါတယ်။ လီဗန်တေးက အိမ်ကွင်းအားနဲ့ သရေတစ်မှတ်ရဖို့ ကြိုးစားမယ်ဆိုပေမဲ့ နောက်ဆုံးရလဒ်နဲ့ ကစားသမားအင်အားကို နှိုင်းယှဉ်ကြည့်ရင် **ဆီဗီလာဘက်ကို ပိုရွေးချယ်ချင်ပါတယ်။** သို့ပေမဲ့ ဧည့်သည်အတွက် အလွယ်တကူ အပြတ်နိုင်ပွဲ မဟုတ်နိုင်ဘဲ **၁-၂ သို့မဟုတ် ၁-၁** လို့ ခန့်မှန်းပါတယ်။",
+      "homeLastFive": [],
+      "awayLastFive": [],
+      "headToHead": [],
+      "homeDisplay": "လီဗန်တေး",
+      "awayDisplay": "ဆီဗီလာ",
+      "myanmarOdds": {
+        "upperTeam": "လီဗန်တေး",
+        "bodyOdds": "-5",
+        "goalTotalOdds": "2-70"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "specialChoice": false
+    },
+    {
+      "league": "La Liga 2",
+      "home": "Tenerife",
+      "away": "Girona",
+      "kickoffYangon": "01:30 · 13 Oct",
+      "venue": "Estadio Heliodoro Rodríguez López",
+      "homeStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "points": 11,
+        "position": 12
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 4,
+        "draws": 2,
+        "losses": 2,
+        "points": 14,
+        "position": 4
+      },
+      "standingsSourceUrl": "https://as.com/resultados/futbol/segunda/2026_2027/directo/regular_a_9_6a44993ebed9953/",
+      "researchSources": [
+        "https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-hypermotion-cd-tenerife-girona-fc-9",
+        "https://as.com/resultados/futbol/segunda/2026_2027/directo/regular_a_9_6a44993ebed9953/",
+        "https://fbref.com/en/squads/27cc9c62/2026-2027/matchlogs/all_comps/schedule/Tenerife-Scores-and-Fixtures-All-Competitions",
+        "https://fbref.com/en/squads/9024a00a/2026-2027/matchlogs/all_comps/schedule/Girona-Scores-and-Fixtures-All-Competitions"
+      ],
+      "dailyPreviewText": "စပိန် လာလီဂါ (၂) ပွဲစဉ် (၉) အဖြစ် တီနီရီဖီက ဂီရိုနာကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမှာ ဖြစ်ပါတယ်။ ပွဲမတိုင်မီ အမှတ်ပေးဇယားမှာ တီနီရီဖီက ၈ ပွဲကစားပြီး ၃ နိုင်၊ ၂ သရေ၊ ၃ ရှုံး၊ ၁၁ မှတ်နဲ့ အဆင့် ၁၂ မှာရှိနေချိန် ဂီရိုနာက ၈ ပွဲမှာ ၄ နိုင်၊ ၂ သရေ၊ ၂ ရှုံး၊ ၁၄ မှတ်နဲ့ အဆင့် ၄ ကို ရောက်နေပါတယ်။ တီနီရီဖီရဲ့ အိမ်ကွင်းအသာစီးနဲ့ ဖိအားကို အသုံးချနိုင်မယ့်အခွင့်အရေးရှိပေမဲ့ ယခုရာသီ ၁၂ ဂိုးအထိ ပေးထားရတာကြောင့် တိုက်စစ်တက်ချိန် နောက်တန်းလုံခြုံမှုက အဓိကစမ်းသပ်ချက် ဖြစ်ပါတယ်။ ဂီရိုနာက ၈ ပွဲမှာ ၁၄ ဂိုးသွင်း၊ ၈ ဂိုးပဲ ပေးထားပြီး ဘောလုံးကို ထိန်းထားနိုင်မှုနဲ့ အခွင့်အရေးဖန်တီးမှုမှာ ပိုမိုတည်ငြိမ်တဲ့ပုံစံ ပြသနေပါတယ်။ သို့ပေမဲ့ အိမ်ရှင်က Heliodoro Rodríguez López ကွင်းမှာ အစောပိုင်းဖိအားပေးပြီး ဧည့်သည်ရဲ့ တိုက်စစ်ပြောင်းလဲချိန်ကို ပိတ်နိုင်ရင် အကြိတ်အနယ်ဖြစ်နိုင်ပါတယ်။ နောက်ဆုံးအမှတ်ပေးအခြေအနေနဲ့ ဂိုးကွာခြားချက်ကို ချိန်ကြည့်ရင် **ဂီရိုနာကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** တီနီရီဖီကလည်း ဂိုးရနိုင်တဲ့အတွက် **၁-၂ သို့မဟုတ် ၁-၁** လို့ ခန့်မှန်းပါတယ်။",
+      "homeLastFive": [],
+      "awayLastFive": [],
+      "headToHead": [],
+      "homeDisplay": "တီနီရီဖီ",
+      "awayDisplay": "ဂီရိုနာ",
+      "myanmarOdds": {
+        "upperTeam": "ဂီရိုနာ",
+        "bodyOdds": "-10",
+        "goalTotalOdds": "2-55"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "specialChoice": false
+    },
+    {
+      "league": "Ligue 2",
+      "home": "Dijon",
+      "away": "Metz",
+      "kickoffYangon": "01:15 · 13 Oct",
+      "venue": "Stade Gaston-Gérard",
+      "homeStanding": {
+        "played": 7,
+        "wins": 2,
+        "draws": 3,
+        "losses": 2,
+        "points": 9,
+        "position": 9
+      },
+      "awayStanding": {
+        "played": 7,
+        "wins": 2,
+        "draws": 4,
+        "losses": 1,
+        "points": 10,
+        "position": 5
+      },
+      "standingsSourceUrl": "https://ligue1.com/fr/feuille-de-match/l1_championship_match_74191/summary",
+      "researchSources": [
+        "https://ligue1.com/fr/feuille-de-match/l1_championship_match_74191/summary",
+        "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon",
+        "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz",
+        "https://www.ouest-france.fr/sport/football/resultats-matchs/match-dijon-metz-1285-1314/"
+      ],
+      "dailyPreviewText": "ပြင်သစ် လိဂ် (၂) ပွဲစဉ် (၈) မှာ ဒီဂျွန်က မက်ဇ်ကို Stade Gaston-Gérard ကွင်းမှာ လက်ခံကစားရမှာ ဖြစ်ပါတယ်။ ပွဲမတိုင်မီ ဒီဂျွန်က ၇ ပွဲကစားပြီး ၂ နိုင်၊ ၃ သရေ၊ ၂ ရှုံး၊ ၉ မှတ်နဲ့ အဆင့် ၉ ဝန်းကျင်မှာ ရှိနေချိန် မက်ဇ်က ၇ ပွဲမှာ ၂ နိုင်၊ ၄ သရေ၊ ၁ ရှုံး၊ ၁၀ မှတ်နဲ့ အဆင့် ၅ ဝန်းကျင်မှာ ရပ်တည်နေပါတယ်။ ဒီဂျွန်ဟာ နောက်ဆုံးပွဲမှာ အန်နက်စီကို အဝေးကွင်း ၂-၁ အနိုင်ရခဲ့ပြီး လာဗယ်ကိုလည်း ၃-၂ နိုင်ထားတာကြောင့် တိုက်စစ်ယုံကြည်မှု ပြန်လည်တက်လာပါတယ်။ ဒါပေမဲ့ တစ်ရာသီအတွင်း ဂိုးပေးနှုန်းထက် ဂိုးပြန်သွင်းဖို့ အားစိုက်ရတာများနေပါတယ်။ မက်ဇ်က နောက်ဆုံးပွဲမှာ စိန့်အက်တီယန်နဲ့ ၂-၂ သရေကျခဲ့ပြီး သရေပွဲများတဲ့ အသင်းဖြစ်တာကြောင့် ရလဒ်ကို အလွယ်ဆုံးဖြတ်လို့မရတဲ့ ပြိုင်ဘက်ပါ။ မက်ဇ်က အဝေးကွင်းမှာ စိတ်ရှည်လက်ရှည် ခံစစ်ပြန်စုဖွဲ့နိုင်ပေမဲ့ ဒီဂျွန်က အိမ်ကွင်းဖိအားနဲ့ ဂိုးရနိုင်တဲ့အခွင့်အရေးရှိပါတယ်။ နှစ်သင်းအကြား တစ်မှတ်သာကွာနေတဲ့အတွက် **သရေရလဒ်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဖြစ်နိုင်တဲ့ရလဒ်ကတော့ **၁-၁ သို့မဟုတ် ၂-၂** ဖြစ်ပါတယ်။",
+      "homeLastFive": [
+        {
+          "date": "2026-09-18",
+          "opponent": "Annecy",
+          "venueSide": "away",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Laval",
+          "venueSide": "home",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Boulogne-sur-Mer",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        },
+        {
+          "date": "2026-08-31",
+          "opponent": "Saint-Étienne",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        },
+        {
+          "date": "2026-08-21",
+          "opponent": "Clermont",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-09-19",
+          "opponent": "Saint-Étienne",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Red Star",
+          "venueSide": "away",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Rodez",
+          "venueSide": "home",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Annecy",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        },
+        {
+          "date": "2026-08-22",
+          "opponent": "Laval",
+          "venueSide": "home",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2023-02-18",
+          "home": "Dijon",
+          "away": "Metz",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574"
+        },
+        {
+          "date": "2022-08-27",
+          "home": "Metz",
+          "away": "Dijon",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574"
+        },
+        {
+          "date": "2021-05-02",
+          "home": "Dijon",
+          "away": "Metz",
+          "homeGoals": 1,
+          "awayGoals": 5,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574"
+        },
+        {
+          "date": "2020-11-08",
+          "home": "Metz",
+          "away": "Dijon",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574"
+        },
+        {
+          "date": "2020-08-07",
+          "home": "Dijon",
+          "away": "Metz",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574"
+        }
+      ],
+      "homeDisplay": "ဒီဂျွန်",
+      "awayDisplay": "မက်ဇ်",
+      "myanmarOdds": {
+        "upperTeam": "မက်ဇ်",
+        "bodyOdds": "-20",
+        "goalTotalOdds": "3+55"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "specialChoice": false
     }
   ],
-  "noFixturesLeagues": []
+  "noFixturesLeagues": [],
+  "oddsSheetPath": "data/odds/2026-10-12.json",
+  "reportNote": "ပွဲစာရင်းသည် 12 Oct PDF session အတွက် ဖြစ်ပြီး 13 Oct မနက် အစောပိုင်းပွဲများ ပါဝင်သည်။"
 }
