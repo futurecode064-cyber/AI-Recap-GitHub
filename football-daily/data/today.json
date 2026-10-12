@@ -186,7 +186,9 @@
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883159",
       "homeDisplay": "ဗယ်လာဒိုလစ်",
       "awayDisplay": "အယ်လ်ဘာစီတီ",
-      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12"
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png"
     },
     {
       "league": "La Liga 2",
@@ -370,7 +372,9 @@
       ],
       "homeDisplay": "ဘာဂို့စ်",
       "awayDisplay": "ဂရန်နာဒါ",
-      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12"
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png"
     },
     {
       "league": "Serie A",
@@ -558,7 +562,9 @@
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875005",
       "homeDisplay": "အတ္တလန်တာ",
       "awayDisplay": "ဗင်နီဇီယာ",
-      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12"
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png"
     },
     {
       "league": "La Liga 2",
@@ -745,7 +751,9 @@
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883182",
       "homeDisplay": "အိုဗီဒို",
       "awayDisplay": "အီဘာ",
-      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12"
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png"
     },
     {
       "league": "Premier League",
@@ -887,7 +895,9 @@
       "specialChoice": false,
       "espnEventId": "401879267",
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879267",
-      "historyCheckedOn": "2026-10-12"
+      "historyCheckedOn": "2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png"
     },
     {
       "league": "Serie A",
@@ -1027,7 +1037,9 @@
       "specialChoice": false,
       "espnEventId": "401874763",
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874763",
-      "historyCheckedOn": "2026-10-12"
+      "historyCheckedOn": "2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png"
     },
     {
       "league": "La Liga",
@@ -1075,7 +1087,9 @@
       "specialChoice": false,
       "espnEventId": "401882852",
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882852",
-      "historyCheckedOn": "2026-10-12"
+      "historyCheckedOn": "2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png"
     },
     {
       "league": "La Liga 2",
@@ -1124,7 +1138,9 @@
       "specialChoice": false,
       "espnEventId": "401883181",
       "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883181",
-      "historyCheckedOn": "2026-10-12"
+      "historyCheckedOn": "2026-10-12",
+      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/CD_Tenerife_logo.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9812.png"
     },
     {
       "league": "Ligue 2",
@@ -1308,7 +1324,9 @@
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
-      "specialChoice": false
+      "specialChoice": false,
+      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dijon_FCO_Badge.jpg",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png"
     }
   ],
   "noFixturesLeagues": [],
