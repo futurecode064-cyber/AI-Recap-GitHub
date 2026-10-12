@@ -99,7 +99,7 @@ function renderMyanmarOdds(match){
  const has=x=>x!==null&&x!==undefined&&String(x).trim()!=="";
  // Keep provider's raw Myanmar odds notation. No conversion to 1X2.
  const formatBody=()=>{
-   if(has(source.bodyOdds))return String(source.bodyOdds);
+   if(has(source.bodyOdds))return (has(source.upperTeam)?String(source.upperTeam)+"  ":"")+String(source.bodyOdds);
    const hd=source.handicap||{};
    if(![hd.line,hd.home,hd.away].some(has))return "—";
    return [(has(hd.line)?"အကျော "+hd.line:""),
