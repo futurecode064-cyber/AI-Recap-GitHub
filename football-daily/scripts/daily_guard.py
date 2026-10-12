@@ -12,7 +12,19 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 REPORT = Path(__file__).resolve().parents[1] / "data" / "today.json"
-LEAGUES = {"Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Championship"}
+LEAGUES = {
+    "Premier League", "Championship", "League One", "La Liga", "La Liga 2",
+    "Serie A", "Serie B", "Bundesliga", "2. Bundesliga", "Ligue 1", "Ligue 2",
+    "FA Cup", "EFL Cup", "Coppa Italia", "Copa del Rey", "DFB-Pokal",
+    "Coupe de France", "UEFA Champions League", "UEFA Europa League",
+    "UEFA Conference League", "UEFA Nations League", "FIFA World Cup",
+    "FIFA World Cup Qualifying", "UEFA Euro", "UEFA Euro Qualifying"
+}
+LEAGUE_STANDINGS = {
+    "Premier League": 20, "Championship": 24, "League One": 24,
+    "La Liga": 20, "La Liga 2": 22, "Serie A": 20, "Serie B": 20,
+    "Bundesliga": 18, "2. Bundesliga": 18, "Ligue 1": 18, "Ligue 2": 18
+}
 today = dt.datetime.now(ZoneInfo("Asia/Yangon")).date().isoformat()
 
 
@@ -89,7 +101,7 @@ def main():
                     missing.append(idx)
                 elif "\\n\\n" in preview or preview.count("**") != 4:
                     wrong_format.append(idx)
-                if require_structured_standings:
+                if require_structured_standings and match.get("league") in LEAGUE_STANDINGS:
                     for side in ("home", "away"):
                         record = match.get(f"{side}Standing")
                         if not isinstance(record, dict) or not all(
@@ -100,7 +112,7 @@ def main():
                         elif (
                             record["played"] != record["wins"] + record["draws"] + record["losses"]
                             or record["points"] < 0 or record["position"] < 1
-                            or record["position"] > (24 if match.get("league") == "Championship" else 20)
+                            or record["position"] > LEAGUE_STANDINGS[match["league"]]
                         ):
                             invalid_standings.append(f"{idx}:{side}")
                     if not match.get("standingsSourceUrl"):
