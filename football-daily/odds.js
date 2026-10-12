@@ -59,6 +59,15 @@ function render(data){
   table.appendChild(tbody);wrap.appendChild(table);section.appendChild(wrap);root.appendChild(section);
  }
 }
+let loadedSheet=null;
+async function downloadOdds(){
+ const button=document.getElementById("oddsPngBtn"),status=document.getElementById("oddsExportStatus");
+ if(!loadedSheet||!window.FutureCodeDailyExport?.saveOdds)return;
+ button.disabled=true;status.textContent="ပွဲအားလုံးပါ PNG ပုံထုတ်နေပါတယ်…";
+ try{await window.FutureCodeDailyExport.saveOdds(loadedSheet);status.textContent="ပွဲအားလုံးပါ PNG ဖိုင်ထုတ်ပြီးပါပြီ။";}
+ catch(err){console.error(err);status.textContent="PNG ထုတ်မရသေးပါ — ပြန်စမ်းပါ။";}
+ finally{button.disabled=false;}
+}
 async function load(){
  const query=new URLSearchParams(location.search).get("date");
  const day=/^\d{4}-\d{2}-\d{2}$/.test(query||"")?query:dateKey();
@@ -67,11 +76,19 @@ async function load(){
   if(!response.ok)throw Error("HTTP "+response.status);
   const data=await response.json();
   if(data.reportDate!==day||!Array.isArray(data.matches))throw Error("invalid sheet");
-  render(data);
+  loadedSheet=data;render(data);
+  document.getElementById("oddsPngBtn").disabled=!data.matches.length;
+  document.getElementById("oddsExportStatus").textContent=data.matches.length+" ပွဲလုံးကို ပုံတစ်ပုံတည်း Download လုပ်နိုင်ပါပြီ။";
  }catch(err){
   console.error("Daily odds loading error",err);
+  loadedSheet=null;
+  document.getElementById("oddsPngBtn").disabled=true;
+  document.getElementById("oddsExportStatus").textContent="ကြေးဒေတာမရှိသေးပါ။";
   document.getElementById("oddsCount").textContent="0";
   document.getElementById("oddsList").replaceChildren(element("div","odds-status","ဒီနေ့အတွက် ပေါက်ကြေးစာရင်း မတင်ရသေးပါ။"));
  }
 }
-document.addEventListener("DOMContentLoaded",load);
+document.addEventListener("DOMContentLoaded",()=>{
+ document.getElementById("oddsPngBtn").addEventListener("click",downloadOdds);
+ load();
+});
