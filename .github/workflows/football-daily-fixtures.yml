@@ -1,0 +1,57 @@
+name: Football Daily Key-Free Fixture Snapshots
+
+on:
+  schedule:
+    # Every three hours. UTC times; Myanmar is UTC+06:30.
+    - cron: '23 0,3,6,9,12,15,18,21 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/football-daily-fixtures.yml'
+
+permissions:
+  contents: write
+
+# Share GitHub publishing lock with the existing 15-minute live score sync.
+concurrency:
+  group: future-code-football-live-data
+  cancel-in-progress: false
+
+jobs:
+  fixture-snapshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Read source code from production website branch
+        uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check syntax and navigation
+        run: |
+          python -m py_compile football-daily/scripts/sync_scores.py football-daily/scripts/sync_fixtures.py
+          node --check football-daily/app.js
+          node --test football-daily/tests/navigation.test.cjs
+
+      - name: Fetch fully verified public fixture snapshots
+        run: python football-daily/scripts/sync_fixtures.py
+
+      - name: Commit fixture-only snapshots without altering AI articles
+        run: |
+          set -euo pipefail
+          git add football-daily/data/fixtures/
+          if git diff --cached --quiet; then
+            echo 'No fixture changes.'
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m 'data(football): update verified fixture-only snapshots'
+          git push origin HEAD:football-daily-render
