@@ -50,7 +50,7 @@ jobs:
           # Keep the uploaded emblem's black-and-gold look: remove the
           # website logo's solid gold square outside the circular badge.
           patch = '''convert app/src/main/res/drawable-nodpi/kt_logo.png -fuzz 15% -fill black -draw "color 0,0 floodfill" -draw "color 511,0 floodfill" -draw "color 0,511 floodfill" -draw "color 511,511 floodfill" app/src/main/res/drawable-nodpi/kt_logo.png
-'''
+          '''
           script=script.replace("for spec in 'mdpi 48'",patch+"for spec in 'mdpi 48'")
           Path('/tmp/build_ko_thet_family.sh').write_text(script)
           PY
