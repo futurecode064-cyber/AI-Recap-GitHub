@@ -14,7 +14,7 @@
       "nightEditorialDate": "2026-10-13",
       "venue": "Stade Bollaert-Delelis",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Portugal%20-%20Liga%20Portugal/Sporting%20CP.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2250.png",
       "homeOdds": "2.40",
       "drawOdds": "3.75",
       "awayOdds": "2.75",
@@ -25,76 +25,116 @@
       "oddsVerifiedDate": "2026-10-13",
       "homeLastFive": [
         {
+          "date": "2026-10-09",
           "opponent": "Lyon",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
-          "date": "2026-10-09"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876447",
+          "matchId": "401876447",
+          "verificationProvider": "ESPN 2026 team schedule"
         },
         {
+          "date": "2026-10-02",
+          "opponent": "Standard Liege",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/559.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928123",
+          "matchId": "401928123",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-18",
           "opponent": "AS Monaco",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
-          "date": "2026-09-18"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876453",
+          "matchId": "401876453",
+          "verificationProvider": "ESPN 2026 team schedule"
         },
         {
+          "date": "2026-09-13",
           "opponent": "Le Mans",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
-          "date": "2026-09-13"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876463",
+          "matchId": "401876463",
+          "verificationProvider": "ESPN 2026 team schedule"
         },
         {
+          "date": "2026-09-10",
           "opponent": "Slavia Prague",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "away",
-          "date": "2026-09-10"
-        },
-        {
-          "opponent": "Lorient",
-          "teamGoals": 0,
-          "opponentGoals": 1,
-          "venueSide": "home",
-          "date": "2026-09-05"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915440",
+          "matchId": "401915440",
+          "verificationProvider": "ESPN 2026 team schedule"
         }
       ],
       "awayLastFive": [
         {
-          "opponent": "SC Braga",
+          "date": "2026-10-09",
+          "opponent": "Braga",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "away",
-          "date": "2026-10-09"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885427",
+          "matchId": "401885427",
+          "verificationProvider": "ESPN 2026 team schedule"
         },
         {
-          "opponent": "FC Arouca",
+          "date": "2026-09-19",
+          "opponent": "Arouca",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
-          "date": "2026-09-19"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/15784.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885431",
+          "matchId": "401885431",
+          "verificationProvider": "ESPN 2026 team schedule"
         },
         {
+          "date": "2026-09-13",
           "opponent": "FC Famalicao",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "away",
-          "date": "2026-09-13"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12698.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885443",
+          "matchId": "401885443",
+          "verificationProvider": "ESPN 2026 team schedule"
         },
         {
+          "date": "2026-09-09",
           "opponent": "Galatasaray",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "home",
-          "date": "2026-09-09"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915447",
+          "matchId": "401915447",
+          "verificationProvider": "ESPN 2026 team schedule"
         },
         {
-          "opponent": "CD Nacional",
+          "date": "2026-09-05",
+          "opponent": "C.D. Nacional",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
-          "date": "2026-09-05"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3472.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885449",
+          "matchId": "401885449",
+          "verificationProvider": "ESPN 2026 team schedule"
         }
       ],
       "headToHead": [],
@@ -132,7 +172,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": ""
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/175/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/2250/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/lens-vs-sporting-cp/1882863/h2h/",
+      "headToHeadVerificationStatus": "No previous head-to-head history confirmed at LiveScore; do not manufacture matches."
     },
     {
       "league": "UEFA Champions League",
@@ -146,7 +190,7 @@
       "nightEditorialDate": "2026-10-13",
       "venue": "Baku Olympic Stadium",
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21922.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Czech%20Republic%20-%20Chance%20Liga/SK%20Slavia%20Prague.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
       "homeOdds": "3.45",
       "drawOdds": "3.75",
       "awayOdds": "2.05",
@@ -157,76 +201,116 @@
       "oddsVerifiedDate": "2026-10-13",
       "homeLastFive": [
         {
-          "opponent": "Neftçi",
-          "teamGoals": 0,
-          "opponentGoals": 0,
-          "venueSide": "away",
-          "date": "2026-10-09"
-        },
-        {
-          "opponent": "Imisli FK",
-          "teamGoals": 3,
-          "opponentGoals": 1,
-          "venueSide": "home",
-          "date": "2026-09-19"
-        },
-        {
-          "opponent": "Shafa FK",
-          "teamGoals": 3,
-          "opponentGoals": 0,
-          "venueSide": "away",
-          "date": "2026-09-14"
-        },
-        {
+          "date": "2026-09-10",
           "opponent": "Manchester United",
           "teamGoals": 0,
           "opponentGoals": 4,
           "venueSide": "away",
-          "date": "2026-09-10"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915442",
+          "matchId": "401915442",
+          "verificationProvider": "ESPN 2026 team schedule"
         },
         {
-          "opponent": "Zira FK",
-          "teamGoals": 5,
+          "date": "2026-08-19",
+          "opponent": "Hapoel Be'er",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/13083.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401909193",
+          "matchId": "401909193",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-08-11",
+          "opponent": "AGF",
+          "teamGoals": 4,
           "opponentGoals": 0,
           "venueSide": "home",
-          "date": "2026-09-05"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7853.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401902676",
+          "matchId": "401902676",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-08-05",
+          "opponent": "AGF",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7853.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401902678",
+          "matchId": "401902678",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-07-28",
+          "opponent": "KuPS Kuopio",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8169.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401891534",
+          "matchId": "401891534",
+          "verificationProvider": "ESPN 2026 team schedule"
         }
       ],
       "awayLastFive": [
         {
+          "date": "2026-10-09",
           "opponent": "FC Zlin",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
-          "date": "2026-10-09"
+          "opponentCrestUrl": "https://www.footylogos.com/dls/logo/fc-zlin.png",
+          "sourceUrl": "https://www.slavia.cz/cze/match/6838",
+          "resultVerified": true,
+          "verificationProvider": "LiveScore + Slavia Prague official site"
         },
         {
+          "date": "2026-09-20",
           "opponent": "Viktoria Plzen",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
-          "date": "2026-09-20"
+          "opponentCrestUrl": "https://www.footylogos.com/dls/logo/viktoria-plzen.png",
+          "sourceUrl": "https://www.slavia.cz/eng/match/6837",
+          "resultVerified": true,
+          "verificationProvider": "LiveScore + Slavia Prague official site"
         },
         {
+          "date": "2026-09-16",
           "opponent": "Varnsdorf",
           "teamGoals": 5,
           "opponentGoals": 1,
           "venueSide": "away",
-          "date": "2026-09-16"
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.slavia.cz/",
+          "resultVerified": true,
+          "verificationProvider": "LiveScore + Slavia Prague official site"
         },
         {
+          "date": "2026-09-13",
           "opponent": "Teplice",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "away",
-          "date": "2026-09-13"
+          "opponentCrestUrl": "https://www.footylogos.com/dls/logo/fk-teplice.png",
+          "sourceUrl": "https://www.slavia.cz/cze/matches/1?competition=382&season=2027&type=played",
+          "resultVerified": true,
+          "verificationProvider": "LiveScore + Slavia Prague official site"
         },
         {
+          "date": "2026-09-10",
           "opponent": "Lens",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "home",
-          "date": "2026-09-10"
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/slavia-prague-vs-lens/1882869/",
+          "resultVerified": true,
+          "verificationProvider": "LiveScore + Slavia Prague official site"
         }
       ],
       "headToHead": [],
@@ -264,7 +348,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": ""
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/21922/schedule?dates=2026",
+      "lastFiveSourceAway": "https://www.slavia.cz/",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/sabah-fk-vs-slavia-prague/1882879/h2h/",
+      "headToHeadVerificationStatus": "No previous head-to-head history confirmed at LiveScore; do not manufacture matches."
     },
     {
       "league": "UEFA Champions League",
@@ -277,8 +365,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Arsenal%20FC.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/France%20-%20Ligue%201/LOSC%20Lille.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
       "homeOdds": "1.22",
       "drawOdds": "6.50",
       "awayOdds": "13.00",
@@ -287,8 +375,120 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Leeds United",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879268",
+          "matchId": "401879268",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Brighton & Hove Albion",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879274",
+          "matchId": "401879274",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Ipswich Town",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914268",
+          "matchId": "401914268",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Sunderland",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878779",
+          "matchId": "401878779",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Napoli",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915423",
+          "matchId": "401915423",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Le Havre AC",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876446",
+          "matchId": "401876446",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-10-02",
+          "opponent": "Zulte-Waregem",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4691.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401923811",
+          "matchId": "401923811",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Nice",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876452",
+          "matchId": "401876452",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Troyes",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876462",
+          "matchId": "401876462",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Real Betis",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915450",
+          "matchId": "401915450",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
       "headToHead": [],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
@@ -320,7 +520,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented."
+      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented.",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/359/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/166/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/arsenal-vs-lille/1882760/h2h/",
+      "headToHeadVerificationStatus": "No previous head-to-head history confirmed at LiveScore; do not manufacture matches."
     },
     {
       "league": "UEFA Champions League",
@@ -333,8 +537,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Atl%C3%A9tico%20de%20Madrid.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Manchester%20United.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
       "homeOdds": "2.40",
       "drawOdds": "3.80",
       "awayOdds": "2.70",
@@ -343,9 +547,166 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Alavés",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882856",
+          "matchId": "401882856",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Real Madrid",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882865",
+          "matchId": "401882865",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Osasuna",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882875",
+          "matchId": "401882875",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Real Sociedad",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882879",
+          "matchId": "401882879",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Liverpool",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915446",
+          "matchId": "401915446",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878773",
+          "matchId": "401878773",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Fulham",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878777",
+          "matchId": "401878777",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Brighton & Hove Albion",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914261",
+          "matchId": "401914261",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Manchester City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879278",
+          "matchId": "401879278",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "Sabah FK",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21922.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915442",
+          "matchId": "401915442",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Manchester United",
+          "away": "Atletico Madrid",
+          "homeGoals": 2,
+          "awayGoals": 1,
+          "date": "",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/atletico-madrid-vs-manchester-united/1882765/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png"
+        },
+        {
+          "home": "Manchester United",
+          "away": "Atletico Madrid",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/atletico-madrid-vs-manchester-united/1882765/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png"
+        },
+        {
+          "home": "Manchester United",
+          "away": "Atletico Madrid",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "2021/22",
+          "seasonLabel": "21/22",
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/atletico-madrid-vs-manchester-united/1882765/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png"
+        },
+        {
+          "home": "Atletico Madrid",
+          "away": "Manchester United",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "date": "2021/22",
+          "seasonLabel": "21/22",
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/atletico-madrid-vs-manchester-united/1882765/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -376,7 +737,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented."
+      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented.",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/1068/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/360/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/atletico-madrid-vs-manchester-united/1882765/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable."
     },
     {
       "league": "UEFA Champions League",
@@ -389,8 +754,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/T%C3%BCrkiye%20-%20S%C3%BCper%20Lig/Galatasaray.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/FC%20Barcelona.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
       "homeOdds": "7.50",
       "drawOdds": "5.75",
       "awayOdds": "1.35",
@@ -399,9 +764,177 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Kasimpasa",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6870.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888280",
+          "matchId": "401888280",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-10-02",
+          "opponent": "Pendikspor",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9104.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927423",
+          "matchId": "401927423",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Trabzonspor",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888291",
+          "matchId": "401888291",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Kocaelispor",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/995.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888293",
+          "matchId": "401888293",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Sporting CP",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2250.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915447",
+          "matchId": "401915447",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Getafe",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882853",
+          "matchId": "401882853",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Sevilla",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882859",
+          "matchId": "401882859",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Racing Santander",
+          "teamGoals": 7,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/87.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882871",
+          "matchId": "401882871",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Levante",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882883",
+          "matchId": "401882883",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Feyenoord Rotterdam",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915424",
+          "matchId": "401915424",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Galatasaray",
+          "away": "Barcelona",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "date": "2021/22",
+          "seasonLabel": "21/22",
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/galatasaray-vs-barcelona/1882842/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png"
+        },
+        {
+          "home": "Barcelona",
+          "away": "Galatasaray",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "date": "2021/22",
+          "seasonLabel": "21/22",
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/galatasaray-vs-barcelona/1882842/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png"
+        },
+        {
+          "home": "Barcelona",
+          "away": "Galatasaray",
+          "homeGoals": 3,
+          "awayGoals": 1,
+          "date": "2021/22",
+          "seasonLabel": "21/22",
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/galatasaray-vs-barcelona/1882842/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png"
+        },
+        {
+          "home": "Galatasaray",
+          "away": "Barcelona",
+          "homeGoals": 0,
+          "awayGoals": 2,
+          "date": "2021/22",
+          "seasonLabel": "21/22",
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/galatasaray-vs-barcelona/1882842/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png"
+        },
+        {
+          "home": "Galatasaray",
+          "away": "Barcelona",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "2021/22",
+          "seasonLabel": "21/22",
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/galatasaray-vs-barcelona/1882842/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -431,7 +964,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented."
+      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented.",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/432/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/83/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/galatasaray-vs-barcelona/1882842/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable."
     },
     {
       "league": "UEFA Champions League",
@@ -444,8 +981,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Inter%20Milan.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Belgium%20-%20Jupiler%20Pro%20League/Club%20Brugge%20KV.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/570.png",
       "homeOdds": "1.30",
       "drawOdds": "5.50",
       "awayOdds": "9.50",
@@ -454,8 +991,120 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Parma",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875021",
+          "matchId": "401875021",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Lumezzane",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927454",
+          "matchId": "401927454",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "AS Roma",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874753",
+          "matchId": "401874753",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Udinese",
+          "teamGoals": 5,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874966",
+          "matchId": "401874966",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Real Madrid",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915451",
+          "matchId": "401915451",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "RAAL La Louvière",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131235.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878978",
+          "matchId": "401878978",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Racing Genk",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/938.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878980",
+          "matchId": "401878980",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Antwerp",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17544.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878991",
+          "matchId": "401878991",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Aston Villa",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915426",
+          "matchId": "401915426",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Lommel SK",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/22269.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879005",
+          "matchId": "401879005",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
       "headToHead": [],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
@@ -487,7 +1136,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented."
+      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented.",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/110/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/570/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/inter-vs-club-brugge/1882752/h2h/",
+      "headToHeadVerificationStatus": "No previous head-to-head history confirmed at LiveScore; do not manufacture matches."
     },
     {
       "league": "UEFA Champions League",
@@ -500,8 +1153,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Germany%20-%20Bundesliga/RB%20Leipzig.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Netherlands%20-%20Eredivisie/PSV%20Eindhoven.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
       "homeOdds": "2.05",
       "drawOdds": "3.90",
       "awayOdds": "3.25",
@@ -510,8 +1163,120 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Eintracht Frankfurt",
+          "teamGoals": 6,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884780",
+          "matchId": "401884780",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884788",
+          "matchId": "401884788",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Hamburg SV",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884798",
+          "matchId": "401884798",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "Como",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915441",
+          "matchId": "401915441",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Werder Bremen",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884802",
+          "matchId": "401884802",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Heerenveen",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875592",
+          "matchId": "401875592",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "FC Twente",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875593",
+          "matchId": "401875593",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Sparta Rotterdam",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875605",
+          "matchId": "401875605",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "Shakhtar Donetsk",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915422",
+          "matchId": "401915422",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Ajax Amsterdam",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875618",
+          "matchId": "401875618",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
       "headToHead": [],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
@@ -542,7 +1307,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented."
+      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented.",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/11420/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/148/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/rb-leipzig-vs-psv-eindhoven/1882825/h2h/",
+      "headToHeadVerificationStatus": "No previous head-to-head history confirmed at LiveScore; do not manufacture matches."
     },
     {
       "league": "UEFA Champions League",
@@ -555,8 +1324,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Norway%20-%20Eliteserien/Viking%20FK.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Germany%20-%20Bundesliga/Bayern%20Munich.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
       "homeOdds": "16.00",
       "drawOdds": "12.00",
       "awayOdds": "1.10",
@@ -565,8 +1334,120 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "SK Brann",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843455",
+          "matchId": "401843455",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Lillestrom",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/987.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843444",
+          "matchId": "401843444",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Kristiansund BK",
+          "teamGoals": 8,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6672.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843437",
+          "matchId": "401843437",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "VfB Stuttgart",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915448",
+          "matchId": "401915448",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Sandefjord",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3279.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873920",
+          "matchId": "401873920",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "FC Augsburg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884777",
+          "matchId": "401884777",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "1. FC Union Berlin",
+          "teamGoals": 7,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884790",
+          "matchId": "401884790",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "SV Elversberg",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884791",
+          "matchId": "401884791",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "Bodo/Glimt",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915443",
+          "matchId": "401915443",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Schalke 04",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884801",
+          "matchId": "401884801",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
       "headToHead": [],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
@@ -597,7 +1478,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented."
+      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented.",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/510/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/132/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/viking-vs-bayern-munich/1882874/h2h/",
+      "headToHeadVerificationStatus": "No previous head-to-head history confirmed at LiveScore; do not manufacture matches."
     },
     {
       "league": "UEFA Champions League",
@@ -610,8 +1495,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Villarreal%20CF.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/SSC%20Napoli.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
       "homeOdds": "2.35",
       "drawOdds": "3.45",
       "awayOdds": "2.95",
@@ -620,9 +1505,177 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Real Madrid",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882848",
+          "matchId": "401882848",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Levante",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882857",
+          "matchId": "401882857",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Málaga",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882869",
+          "matchId": "401882869",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Real Betis",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882877",
+          "matchId": "401882877",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Borussia Dortmund",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915449",
+          "matchId": "401915449",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Frosinone",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874754",
+          "matchId": "401874754",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Fiorentina",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874934",
+          "matchId": "401874934",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Bologna",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874792",
+          "matchId": "401874792",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Arsenal",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915423",
+          "matchId": "401915423",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Internazionale",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874937",
+          "matchId": "401874937",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Napoli",
+          "away": "Villarreal",
+          "homeGoals": 2,
+          "awayGoals": 3,
+          "date": "",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/villarreal-vs-napoli/1882830/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png"
+        },
+        {
+          "home": "Napoli",
+          "away": "Villarreal",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "date": "",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/villarreal-vs-napoli/1882830/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png"
+        },
+        {
+          "home": "Villarreal",
+          "away": "Napoli",
+          "homeGoals": 1,
+          "awayGoals": 0,
+          "date": "",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/villarreal-vs-napoli/1882830/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png"
+        },
+        {
+          "home": "Villarreal",
+          "away": "Napoli",
+          "homeGoals": 0,
+          "awayGoals": 2,
+          "date": "",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/villarreal-vs-napoli/1882830/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png"
+        },
+        {
+          "home": "Napoli",
+          "away": "Villarreal",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "date": "",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/europe/champions-league/villarreal-vs-napoli/1882830/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -653,7 +1706,11 @@
       "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
       "specialChoice": false,
       "status": "scheduled",
-      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented."
+      "previewQualityNotes": "All unsupported historic Last Five / H2H rows are intentionally left blank rather than invented.",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/102/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/114/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/europe/champions-league/villarreal-vs-napoli/1882830/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable."
     },
     {
       "league": "Championship",
@@ -666,8 +1723,8 @@
       "kickoffUtc": "2026-10-13T18:45:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
       "homeOdds": "2.05",
       "drawOdds": "3.30",
       "awayOdds": "3.60",
@@ -676,9 +1733,182 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880242",
+          "matchId": "401880242",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Crystal Palace",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927456",
+          "matchId": "401927456",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Watford",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880255",
+          "matchId": "401880255",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Lincoln City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880274",
+          "matchId": "401880274",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Southampton",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880261",
+          "matchId": "401880261",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Cardiff City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880244",
+          "matchId": "401880244",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Portsmouth",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880249",
+          "matchId": "401880249",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Millwall",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880268",
+          "matchId": "401880268",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Sheffield United",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880276",
+          "matchId": "401880276",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Preston North End",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880287",
+          "matchId": "401880287",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Blackburn Rovers",
+          "away": "Bristol City",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "date": "2026-02-24",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/bristol-city-vs-blackburn-rovers/1802433/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/bristol-city/blackburn-rovers"
+        },
+        {
+          "home": "Bristol City",
+          "away": "Blackburn Rovers",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "2025-11-04",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/bristol-city-vs-blackburn-rovers/1802433/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/bristol-city/blackburn-rovers"
+        },
+        {
+          "home": "Bristol City",
+          "away": "Blackburn Rovers",
+          "homeGoals": 2,
+          "awayGoals": 1,
+          "date": "2025-01-25",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/bristol-city-vs-blackburn-rovers/1802433/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/bristol-city/blackburn-rovers"
+        },
+        {
+          "home": "Blackburn Rovers",
+          "away": "Bristol City",
+          "homeGoals": 3,
+          "awayGoals": 0,
+          "date": "2024-09-14",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/bristol-city-vs-blackburn-rovers/1802433/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/bristol-city/blackburn-rovers"
+        },
+        {
+          "home": "Bristol City",
+          "away": "Blackburn Rovers",
+          "homeGoals": 5,
+          "awayGoals": 0,
+          "date": "2024-04-10",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/bristol-city-vs-blackburn-rovers/1802433/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/bristol-city/blackburn-rovers"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -727,7 +1957,12 @@
         "position": 13
       },
       "standingsSourceUrl": "https://www.footballwebpages.co.uk/championship/league-table",
-      "standingsAsOf": "2026-10-11 13:55 UK"
+      "standingsAsOf": "2026-10-11 13:55 UK",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/333/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/365/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/england/championship/bristol-city-vs-blackburn-rovers/1802433/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable.",
+      "headToHeadExactDatesSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/bristol-city/blackburn-rovers"
     },
     {
       "league": "Championship",
@@ -740,8 +1975,8 @@
       "kickoffUtc": "2026-10-13T18:45:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
       "homeOdds": "1.60",
       "drawOdds": "4.00",
       "awayOdds": "5.00",
@@ -750,9 +1985,182 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Watford",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880235",
+          "matchId": "401880235",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Derby County",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880254",
+          "matchId": "401880254",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Swansea City",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880260",
+          "matchId": "401880260",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Wrexham",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880269",
+          "matchId": "401880269",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Bristol City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880291",
+          "matchId": "401880291",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Bristol City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880242",
+          "matchId": "401880242",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Cardiff City",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880253",
+          "matchId": "401880253",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Portsmouth",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880266",
+          "matchId": "401880266",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880272",
+          "matchId": "401880272",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Stoke City",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880284",
+          "matchId": "401880284",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Charlton Athletic",
+          "away": "Burnley",
+          "homeGoals": 0,
+          "awayGoals": 3,
+          "date": "2016-05-07",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/burnley-vs-charlton-athletic/1802435/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/burnley/charlton-athletic"
+        },
+        {
+          "home": "Burnley",
+          "away": "Charlton Athletic",
+          "homeGoals": 4,
+          "awayGoals": 0,
+          "date": "2015-12-19",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/burnley-vs-charlton-athletic/1802435/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/burnley/charlton-athletic"
+        },
+        {
+          "home": "Charlton Athletic",
+          "away": "Burnley",
+          "homeGoals": 0,
+          "awayGoals": 3,
+          "date": "2014-03-22",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/burnley-vs-charlton-athletic/1802435/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/burnley/charlton-athletic"
+        },
+        {
+          "home": "Burnley",
+          "away": "Charlton Athletic",
+          "homeGoals": 3,
+          "awayGoals": 0,
+          "date": "2013-09-28",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/burnley-vs-charlton-athletic/1802435/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/burnley/charlton-athletic"
+        },
+        {
+          "home": "Charlton Athletic",
+          "away": "Burnley",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "2013-03-02",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/burnley-vs-charlton-athletic/1802435/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/burnley/charlton-athletic"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -802,7 +2210,12 @@
         "position": 12
       },
       "standingsSourceUrl": "https://www.footballwebpages.co.uk/championship/league-table",
-      "standingsAsOf": "2026-10-11 13:55 UK"
+      "standingsAsOf": "2026-10-11 13:55 UK",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/379/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/372/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/england/championship/burnley-vs-charlton-athletic/1802435/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable.",
+      "headToHeadExactDatesSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/burnley/charlton-athletic"
     },
     {
       "league": "Championship",
@@ -815,8 +2228,8 @@
       "kickoffUtc": "2026-10-13T18:45:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
       "homeOdds": "1.67",
       "drawOdds": "4.00",
       "awayOdds": "4.40",
@@ -825,9 +2238,182 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880244",
+          "matchId": "401880244",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880253",
+          "matchId": "401880253",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880267",
+          "matchId": "401880267",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Stoke City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880273",
+          "matchId": "401880273",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Portsmouth",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880288",
+          "matchId": "401880288",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Burnley",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880235",
+          "matchId": "401880235",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Bristol City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880255",
+          "matchId": "401880255",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Stoke City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880259",
+          "matchId": "401880259",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Preston North End",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880278",
+          "matchId": "401880278",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "West Bromwich Albion",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880282",
+          "matchId": "401880282",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Cardiff City",
+          "away": "Watford",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "date": "2025-01-14",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/cardiff-city-vs-watford/1802436/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/cardiff-city/watford"
+        },
+        {
+          "home": "Watford",
+          "away": "Cardiff City",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "date": "2024-12-29",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/cardiff-city-vs-watford/1802436/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/cardiff-city/watford"
+        },
+        {
+          "home": "Watford",
+          "away": "Cardiff City",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "2024-02-03",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/cardiff-city-vs-watford/1802436/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/cardiff-city/watford"
+        },
+        {
+          "home": "Cardiff City",
+          "away": "Watford",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "date": "2023-10-07",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/cardiff-city-vs-watford/1802436/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/cardiff-city/watford"
+        },
+        {
+          "home": "Watford",
+          "away": "Cardiff City",
+          "homeGoals": 1,
+          "awayGoals": 3,
+          "date": "2023-04-19",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/cardiff-city-vs-watford/1802436/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/cardiff-city/watford"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -877,7 +2463,12 @@
         "position": 20
       },
       "standingsSourceUrl": "https://www.footballwebpages.co.uk/championship/league-table",
-      "standingsAsOf": "2026-10-11 13:55 UK"
+      "standingsAsOf": "2026-10-11 13:55 UK",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/347/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/395/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/england/championship/cardiff-city-vs-watford/1802436/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable.",
+      "headToHeadExactDatesSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/cardiff-city/watford"
     },
     {
       "league": "Championship",
@@ -890,8 +2481,8 @@
       "kickoffUtc": "2026-10-13T18:45:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
       "homeOdds": "2.40",
       "drawOdds": "3.50",
       "awayOdds": "2.75",
@@ -900,9 +2491,182 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Preston North End",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880239",
+          "matchId": "401880239",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "West Ham United",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880251",
+          "matchId": "401880251",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Middlesbrough",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880280",
+          "matchId": "401880280",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880268",
+          "matchId": "401880268",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Newcastle United",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914255",
+          "matchId": "401914255",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Norwich City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880236",
+          "matchId": "401880236",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Lincoln City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880252",
+          "matchId": "401880252",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Burnley",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880260",
+          "matchId": "401880260",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Southampton",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880279",
+          "matchId": "401880279",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Wrexham",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880283",
+          "matchId": "401880283",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Millwall",
+          "away": "Swansea City",
+          "homeGoals": 2,
+          "awayGoals": 1,
+          "date": "2026-01-04",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/millwall-vs-swansea-city/1802437/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/millwall/swansea-city"
+        },
+        {
+          "home": "Swansea City",
+          "away": "Millwall",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "date": "2025-09-27",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/millwall-vs-swansea-city/1802437/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/millwall/swansea-city"
+        },
+        {
+          "home": "Millwall",
+          "away": "Swansea City",
+          "homeGoals": 1,
+          "awayGoals": 0,
+          "date": "2025-04-26",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/millwall-vs-swansea-city/1802437/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/millwall/swansea-city"
+        },
+        {
+          "home": "Swansea City",
+          "away": "Millwall",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "2024-10-26",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/millwall-vs-swansea-city/1802437/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/millwall/swansea-city"
+        },
+        {
+          "home": "Swansea City",
+          "away": "Millwall",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "2024-05-04",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/millwall-vs-swansea-city/1802437/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/millwall/swansea-city"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -951,7 +2715,12 @@
         "position": 1
       },
       "standingsSourceUrl": "https://www.footballwebpages.co.uk/championship/league-table",
-      "standingsAsOf": "2026-10-11 13:55 UK"
+      "standingsAsOf": "2026-10-11 13:55 UK",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/391/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/318/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/england/championship/millwall-vs-swansea-city/1802437/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable.",
+      "headToHeadExactDatesSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/millwall/swansea-city"
     },
     {
       "league": "Championship",
@@ -964,8 +2733,8 @@
       "kickoffUtc": "2026-10-13T18:45:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
       "homeOdds": "2.25",
       "drawOdds": "3.30",
       "awayOdds": "3.10",
@@ -974,9 +2743,155 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Derby County",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880241",
+          "matchId": "401880241",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Southampton",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880245",
+          "matchId": "401880245",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "West Ham United",
+          "teamGoals": 0,
+          "opponentGoals": 6,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880257",
+          "matchId": "401880257",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Burnley",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880269",
+          "matchId": "401880269",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Swansea City",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880283",
+          "matchId": "401880283",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Birmingham City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880234",
+          "matchId": "401880234",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880246",
+          "matchId": "401880246",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880258",
+          "matchId": "401880258",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Derby County",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880271",
+          "matchId": "401880271",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Watford",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880282",
+          "matchId": "401880282",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2026-04-03",
+          "home": "West Bromwich Albion",
+          "away": "Wrexham",
+          "homeGoals": 2,
+          "awayGoals": 2,
+          "sourceUrl": "https://www.footballwebpages.co.uk/head-to-head/wrexham/west-bromwich-albion",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/wrexham/west-bromwich-albion"
+        },
+        {
+          "date": "2025-08-16",
+          "home": "Wrexham",
+          "away": "West Bromwich Albion",
+          "homeGoals": 2,
+          "awayGoals": 3,
+          "sourceUrl": "https://www.footballwebpages.co.uk/head-to-head/wrexham/west-bromwich-albion",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/wrexham/west-bromwich-albion"
+        },
+        {
+          "date": "1930-01-11",
+          "home": "Wrexham",
+          "away": "West Bromwich Albion",
+          "homeGoals": 1,
+          "awayGoals": 0,
+          "sourceUrl": "https://www.footballwebpages.co.uk/head-to-head/wrexham/west-bromwich-albion",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/wrexham/west-bromwich-albion"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -1025,7 +2940,12 @@
         "position": 9
       },
       "standingsSourceUrl": "https://www.footballwebpages.co.uk/championship/league-table",
-      "standingsAsOf": "2026-10-11 13:55 UK"
+      "standingsAsOf": "2026-10-11 13:55 UK",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/352/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/383/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/wrexham/west-bromwich-albion",
+      "headToHeadVerificationStatus": "Verified historic meetings on Football Web Pages and club archive; latest two Championship meetings were in 2025/26. Third prior match dated 1930. LiveScore page omitted its H2H section, so independent historical database used.",
+      "headToHeadExactDatesSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/wrexham/west-bromwich-albion"
     },
     {
       "league": "Championship",
@@ -1038,8 +2958,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
       "homeOdds": "1.57",
       "drawOdds": "4.10",
       "awayOdds": "5.50",
@@ -1048,9 +2968,182 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "West Bromwich Albion",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880234",
+          "matchId": "401880234",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Middlesbrough",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880256",
+          "matchId": "401880256",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Derby County",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880265",
+          "matchId": "401880265",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Norwich City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880270",
+          "matchId": "401880270",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-06",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880292",
+          "matchId": "401880292",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Millwall",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880239",
+          "matchId": "401880239",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880248",
+          "matchId": "401880248",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Lincoln City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880263",
+          "matchId": "401880263",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Watford",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880278",
+          "matchId": "401880278",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880287",
+          "matchId": "401880287",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Birmingham City",
+          "away": "Preston North End",
+          "homeGoals": 2,
+          "awayGoals": 1,
+          "date": "2026-04-22",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/birmingham-city-vs-preston-north-end/1802434/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/birmingham-city/preston-north-end"
+        },
+        {
+          "home": "Preston North End",
+          "away": "Birmingham City",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "date": "2025-10-21",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/birmingham-city-vs-preston-north-end/1802434/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/birmingham-city/preston-north-end"
+        },
+        {
+          "home": "Birmingham City",
+          "away": "Preston North End",
+          "homeGoals": 1,
+          "awayGoals": 0,
+          "date": "2024-04-01",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/birmingham-city-vs-preston-north-end/1802434/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/birmingham-city/preston-north-end"
+        },
+        {
+          "home": "Preston North End",
+          "away": "Birmingham City",
+          "homeGoals": 2,
+          "awayGoals": 1,
+          "date": "2023-09-19",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/birmingham-city-vs-preston-north-end/1802434/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/birmingham-city/preston-north-end"
+        },
+        {
+          "home": "Birmingham City",
+          "away": "Preston North End",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "date": "2023-01-21",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/birmingham-city-vs-preston-north-end/1802434/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/birmingham-city/preston-north-end"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -1099,7 +3192,12 @@
         "position": 24
       },
       "standingsSourceUrl": "https://www.footballwebpages.co.uk/championship/league-table",
-      "standingsAsOf": "2026-10-11 13:55 UK"
+      "standingsAsOf": "2026-10-11 13:55 UK",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/392/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/394/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/england/championship/birmingham-city-vs-preston-north-end/1802434/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable.",
+      "headToHeadExactDatesSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/birmingham-city/preston-north-end"
     },
     {
       "league": "Championship",
@@ -1112,8 +3210,8 @@
       "kickoffUtc": "2026-10-13T19:00:00Z",
       "nightEditorialDate": "2026-10-13",
       "venue": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
       "homeOdds": "3.50",
       "drawOdds": "3.60",
       "awayOdds": "1.95",
@@ -1122,9 +3220,182 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-13",
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "headToHead": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880243",
+          "matchId": "401880243",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Sheffield United",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880247",
+          "matchId": "401880247",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Watford",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880259",
+          "matchId": "401880259",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Cardiff City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880273",
+          "matchId": "401880273",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880284",
+          "matchId": "401880284",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880240",
+          "matchId": "401880240",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Birmingham City",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880256",
+          "matchId": "401880256",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Millwall",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880280",
+          "matchId": "401880280",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Norwich City",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880264",
+          "matchId": "401880264",
+          "verificationProvider": "ESPN 2026 team schedule"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Crystal Palace",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914269",
+          "matchId": "401914269",
+          "verificationProvider": "ESPN 2026 team schedule"
+        }
+      ],
+      "headToHead": [
+        {
+          "home": "Stoke City",
+          "away": "Middlesbrough",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "date": "2026-01-21",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/stoke-city-vs-middlesbrough/1802440/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/stoke-city/middlesbrough"
+        },
+        {
+          "home": "Middlesbrough",
+          "away": "Stoke City",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "date": "2025-09-30",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/stoke-city-vs-middlesbrough/1802440/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/stoke-city/middlesbrough"
+        },
+        {
+          "home": "Stoke City",
+          "away": "Middlesbrough",
+          "homeGoals": 1,
+          "awayGoals": 3,
+          "date": "2025-02-25",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/stoke-city-vs-middlesbrough/1802440/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/stoke-city/middlesbrough"
+        },
+        {
+          "home": "Middlesbrough",
+          "away": "Stoke City",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "date": "2024-09-28",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/stoke-city-vs-middlesbrough/1802440/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/stoke-city/middlesbrough"
+        },
+        {
+          "home": "Middlesbrough",
+          "away": "Stoke City",
+          "homeGoals": 0,
+          "awayGoals": 5,
+          "date": "2024-08-27",
+          "seasonLabel": null,
+          "sourceUrl": "https://www.livescore.com/en/football/england/championship/stoke-city-vs-middlesbrough/1802440/h2h/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "exactDateSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/stoke-city/middlesbrough"
+        }
+      ],
       "myanmarOdds": {
         "provider": "User-supplied 13.pdf",
         "market": "Myanmar opening prices",
@@ -1174,7 +3445,12 @@
         "position": 2
       },
       "standingsSourceUrl": "https://www.footballwebpages.co.uk/championship/league-table",
-      "standingsAsOf": "2026-10-11 13:55 UK"
+      "standingsAsOf": "2026-10-11 13:55 UK",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/336/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/369/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.livescore.com/en/football/england/championship/stoke-city-vs-middlesbrough/1802440/h2h/",
+      "headToHeadVerificationStatus": "Match scores verified at LiveScore H2H; exact game dates may be unavailable.",
+      "headToHeadExactDatesSourceUrl": "https://www.footballwebpages.co.uk/head-to-head/stoke-city/middlesbrough"
     }
   ],
   "noFixturesLeagues": [],
@@ -1182,5 +3458,5 @@
   "sourceList": "13.pdf, user-provided; all 21 odds rows preserved",
   "previewEligibility": "9 UEFA Champions League + 7 English Championship = 16 verified eligible games; Swedish second division and German third division displayed only on odds sheet",
   "nightTimeConvention": "Late games actually on 14 October at 01:15/01:30 MMT are editorially labelled 13 ရက်နေ့ ည ၁:၁၅/၁:၃၀ as explicitly requested; true kickoff calendar dates retained in kickoffCalendarDate.",
-  "reportNote": "The separate PDF odds last column is internet prediction, not final score. Authentic bookmaker 1X2 markets from Interwetten (UCL) and PokerStars Sports (Championship) recorded separately with source URLs. Unverified historical H2H and form rows are omitted rather than invented. Results for 12 October are in data/archive/2026-10-12.json."
+  "reportNote": "The separate PDF odds last column is internet prediction, not final score. Authentic bookmaker 1X2 markets from Interwetten (UCL) and PokerStars Sports (Championship) recorded separately with source URLs. Unverified historical H2H and form rows are omitted rather than invented. Results for 12 October are in data/archive/2026-10-12.json. Updated 13 Oct: Every featured team has verified last-five full-time scores with event-level citations and badge URLs. H2H uses previous confirmed LiveScore records; no historical meetings invented."
 }

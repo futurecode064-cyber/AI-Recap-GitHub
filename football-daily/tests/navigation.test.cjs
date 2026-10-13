@@ -272,3 +272,61 @@ test('Myanmar overnight convention is shared across odds HTML, full Canvas PNG a
  const preview=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
  assert.ok(preview.matches.some(m=>m.kickoffCalendarDate==='2026-10-14'&&m.kickoffYangon.includes('၁၃ ရက်နေ့ ည ၁:၃၀')));
 });
+
+test('all 21 supplied Myanmar-odds matches have both verified club badge source URLs',()=>{
+ const sheet=JSON.parse(fs.readFileSync(path.join(root,'data/odds/2026-10-13.json'),'utf8'));
+ assert.equal(sheet.matches.length,21);
+ for(const match of sheet.matches){
+  assert.ok(match.homeCrestUrl?.startsWith('https://'),'Missing home badge '+match.canonicalHome);
+  assert.ok(match.awayCrestUrl?.startsWith('https://'),'Missing away badge '+match.canonicalAway);
+ }
+});
+
+test('all 16 previews contain authentic five-by-two prior finished games with event-level citations and opponent logos where sourced',()=>{
+ const report=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ const research=[
+  JSON.parse(fs.readFileSync(path.join(root,'data/research/2026-10-13-team-forms-01.json'),'utf8')),
+  JSON.parse(fs.readFileSync(path.join(root,'data/research/2026-10-13-team-forms-02.json'),'utf8'))
+ ];
+ const provider=new Map(research.flatMap(x=>x.teams).map(t=>[t.name,t]));
+ let count=0;
+ for(const match of report.matches){
+  assert.ok(match.homeCrestUrl?.startsWith('https://'),'Missing preview home badge '+match.home);
+  assert.ok(match.awayCrestUrl?.startsWith('https://'),'Missing preview away badge '+match.away);
+  assert.equal(match.homeLastFive.length,5,'Missing home form '+match.home);
+  assert.equal(match.awayLastFive.length,5,'Missing away form '+match.away);
+  assert.ok(match.headToHeadSourceUrl?.startsWith('https://'),'H2H citation missing '+match.home);
+  for(const [team,form] of [[match.home,match.homeLastFive],[match.away,match.awayLastFive]]){
+   assert.ok(provider.has(team),'Research missing for '+team);
+   for(const item of form){
+    assert.ok(item.sourceUrl?.startsWith('https://'),'Source missing '+team);
+    assert.ok(item.date<='2026-10-12','Future game used as prior match '+team);
+    assert.ok(Number.isInteger(item.teamGoals)&&Number.isInteger(item.opponentGoals),'Score malformed '+team);
+    assert.ok(['home','away'].includes(item.venueSide),'No venue '+team);
+    count++;
+   }
+  }
+ }
+ assert.equal(count,160);
+});
+
+test('live 13 October H2H cards contain verified actual prior scores only, never predicted results',()=>{
+ const report=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ const historic=JSON.parse(fs.readFileSync(path.join(root,'data/research/2026-10-13-livescore-h2h.json'),'utf8'));
+ let total=0;
+ for(const match of report.matches){
+  const src=historic.matches.find(x=>x.home===match.home&&x.away===match.away);
+  assert.ok(src,'Missing LiveScore H2H page reference '+match.home);
+  assert.equal(match.headToHead.length,src.previousMeetings.length,'Unverified extra H2H '+match.home);
+  for(const [i,g] of match.headToHead.entries()){
+   const s=src.previousMeetings[i];
+   assert.equal(g.home,s.home);
+   assert.equal(g.away,s.away);
+   assert.equal(g.homeGoals,s.homeGoals);
+   assert.equal(g.awayGoals,s.awayGoals);
+   assert.ok(g.sourceUrl?.startsWith('https://'),'H2H match source URL missing');
+   total++;
+  }
+ }
+ assert.ok(total>=40,'Expected verified historical H2H records for matches with actual prior meetings');
+});
