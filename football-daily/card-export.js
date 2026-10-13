@@ -1,118 +1,164 @@
 "use strict";
 (function(){
- const MM={"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","La Liga":"စပိန် လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂","Serie A":"အီတလီ စီးရီးအေ","Serie B":"အီတလီ စီးရီးဘီ","Bundesliga":"ဂျာမနီ ဘွန်ဒက်စ်လီဂါ","Ligue 2":"ပြင်သစ် လိဂ် ၂"};
- const mmNames={"Real Oviedo":"အိုဗီဒို","Eibar":"အီဘာ","Burgos CF":"ဘာဂို့စ်","Granada":"ဂရန်နာဒါ","Atalanta":"အတ္တလန်တာ","Venezia":"ဗင်နီဇီယာ","Coventry City":"ကိုဗင်ထရီ","Newcastle United":"နယူးကာဆယ်"};
- function sourceOdds(v){return v!==undefined&&v!==null&&String(v).trim()?String(v):"ကြေးမရရှိသေး"}
- function result(g){return Number.isInteger(g.teamGoals)&&Number.isInteger(g.opponentGoals)?g.teamGoals+" – "+g.opponentGoals:"—"}
- function safeName(v){return String(v||"match").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"").slice(0,70)||"match"}
+ // A complete, responsive-height Canvas PNG that mirrors the user-approved on-screen
+ // hero → Myanmar prices → Home WDL | 1X2 | Away WDL → full Burmese preview.
+ const MM={"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Championship":"ချန်ပီယံရှစ်","La Liga":"လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂","Serie A":"အီတလီ စီးရီးအေ","Serie B":"အီတလီ စီးရီးဘီ","Bundesliga":"ဘွန်ဒက်စ်လီဂါ","Ligue 1":"လီဂူးဝမ်း","Ligue 2":"ပြင်သစ် လိဂ် ၂","UEFA Champions League":"ချန်ပီယံလိဂ်"};
+ function present(v){return v!==undefined&&v!==null&&String(v).trim()?String(v):"—";}
+ function filePart(v){return String(v||"football").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"").slice(0,60)||"football";}
+ function wdl(g){if(!g||!Number.isInteger(g.teamGoals)||!Number.isInteger(g.opponentGoals))return "–";return g.teamGoals>g.opponentGoals?"W":g.teamGoals<g.opponentGoals?"L":"D";}
+ function paragraphLines(ctx,paragraph,maxWidth,size){
+  const chunks=String(paragraph||"ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ").split(/(\*\*[^*\n]+\*\*)/g);
+  const lines=[[]];let width=0;
+  for(const chunk of chunks){
+   const bold=chunk.startsWith("**")&&chunk.endsWith("**");
+   const words=(bold?chunk.slice(2,-2):chunk).split(/(\s+)/);
+   for(const word of words){
+    if(!word)continue;
+    if(word.includes("\n")){
+     const bits=word.split("\n");
+     for(let i=0;i<bits.length;i++){
+      if(i){lines.push([]);width=0}
+      if(bits[i]){ctx.font=(bold?800:500)+" "+size+'px "Noto Sans Myanmar",sans-serif';const w=ctx.measureText(bits[i]).width;lines[lines.length-1].push({str:bits[i],bold});width+=w}
+     }
+     continue;
+    }
+    ctx.font=(bold?800:500)+" "+size+'px "Noto Sans Myanmar",sans-serif';
+    const w=ctx.measureText(word).width;
+    if(width+w>maxWidth&&width>0&&word.trim()){lines.push([]);width=0}
+    if(width===0&&!word.trim())continue;
+    const line=lines[lines.length-1];
+    const previous=line[line.length-1];
+    if(previous&&previous.bold===bold)previous.str+=word;
+    else line.push({str:word,bold});
+    width+=w;
+   }
+  }
+  return lines;
+ }
+ function drawParagraph(ctx,k,lines,x,y,px,lineGap){
+  for(const row of lines){
+   let cursor=x;
+   for(const run of row){
+    const val=run.str;
+    k.text(ctx,val,cursor,y,px,run.bold?k.C.orange:k.C.white,run.bold);
+    ctx.font=(run.bold?800:500)+" "+px+'px "Noto Sans Myanmar",sans-serif';
+    cursor+=ctx.measureText(val).width;
+   }
+   y+=lineGap;
+  }
+  return y;
+ }
+ function centerBadge(ctx,k,x,y,letter,size=38){
+  const color=letter==="W"?"#1f9c5d":letter==="D"?"#2588d3":letter==="L"?"#d94950":"#536363";
+  k.fill(ctx,x,y,size,size,color,size/2);
+  k.text(ctx,letter,x+size/2,y+size/2,16,"#ffffff",true,"center");
+ }
+ function heroKit(ctx,k,x,y,w,h,away){
+  k.fill(ctx,x,y,w,h,away?"#1b5f4d":"#682427");
+  const glow=ctx.createRadialGradient(x+w/2,y+60,5,x+w/2,y+100,w*.83);
+  glow.addColorStop(0,away?"#52bd9588":"#ff985788");
+  glow.addColorStop(1,"#00000000");k.fill(ctx,x,y,w,h,glow);
+  k.fill(ctx,x+w*.23,y+h*.36,w*.54,h*.71,away?"#e5f1e9":"#b63436",65);
+  if(away){
+   for(let i=0;i<4;i++)k.fill(ctx,x+w*.23,y+h*.42+i*38,w*.54,17,"#22846c");
+  }else{
+   for(let i=1;i<5;i++)k.fill(ctx,x+w*(.23+i*.095),y+h*.36,15,h*.6,"#e2ae44");
+  }
+  k.fill(ctx,x+w*.42,y+h*.17,w*.16,h*.21,"#ad8977",45);
+ }
  async function save(match,opts={}){
-  if(!match||!match.home||!match.away)throw Error("Invalid match");
-  const k=window.FutureCodeCanvasKit;if(!k)throw Error("Canvas export module not ready");
-  const {C,create,fill,line,text,fit,wrap,fonts,preloadImages,crest,download}=k;
+  if(!match||!match.home||!match.away)throw Error("Missing team identities");
+  const k=window.FutureCodeCanvasKit;
+  if(!k)throw Error("Canvas exporter is unavailable");
+  const {C,create,fill,line,text,fit,fonts,preloadImages,crest,photoCover,download}=k;
   await fonts();
-  const W=1200,M=24;
-  const previewText=match.dailyPreviewText||"";
-  const extra=opts.special&&Array.isArray(match.specialAnalysisParagraphs)?match.specialAnalysisParagraphs:[];
-  // Use the same 3 side-by-side panels as the match card on desktop.
-  const measure=create(30,30).ctx;
-  const previewLines=wrap(measure,previewText,1090,24);
-  const moreLines=extra.flatMap(p=>[...wrap(measure,p,1090,22),""]);
-  const mainH=Math.max(215,previewLines.length*43+85);
-  const extraH=extra.length?80+moreLines.length*39:0;
-  const H=1057+mainH+extraH+95;
+  const W=1200,M=24,fullWidth=W-2*M;
+  const home=String(match.home||""),away=String(match.away||"");
+  const preview=String(match.dailyPreviewText||"ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ");
+  const extra=opts.special&&Array.isArray(match.specialAnalysisParagraphs)?match.specialAnalysisParagraphs.filter(Boolean):[];
+  const measure=create(1200,120).ctx;
+  const lines=paragraphLines(measure,preview,fullWidth-54,25);
+  const extraLines=extra.flatMap(p=>paragraphLines(measure,p,fullWidth-54,23));
+  const anaY=925,mainHeight=Math.max(210,lines.length*49+92);
+  const extraHeight=extra.length?80+extraLines.length*43:0;
+  const H=Math.ceil(anaY+mainHeight+extraHeight+80);
   const {canvas,ctx}=create(W,H);
-  const games=[...(match.homeLastFive||[]),...(match.awayLastFive||[]),...(match.headToHead||[])];
-  const urls=[match.homeCrestUrl,match.awayCrestUrl,...games.flatMap(g=>[g.opponentCrestUrl,g.homeCrestUrl,g.awayCrestUrl])].filter(Boolean);
-  await preloadImages(urls);
-  fill(ctx,0,0,W,H,C.bg);fill(ctx,M,20,W-2*M,H-40,C.head,16);
-  // Actual website's competition/time headline
-  fill(ctx,M,20,W-2*M,66,C.bg,13);
-  text(ctx,"◈ "+(opts.leagueLabel||MM[match.league]||match.league),M+18,53,22,C.orange,true);
   const isYKZ=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
-  if(isYKZ){
-    text(ctx,"YKZ FAMILY GROUP · အတူရှေ့ဆက် YKZ",W/2,52,18,C.orange,true,"center");
-    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-100,26,51,"YKZ");
-  }
-  text(ctx,match.kickoffYangon||"",isYKZ?W-113:W-M-18,53,18,C.muted,true,"right",isYKZ?190:260);
-  // VS banner with home/away logos and matching teal background
-  fill(ctx,M,87,W-2*M,238,isYKZ?"#990000":"#29453f");
-  fill(ctx,M,87,376,238,isYKZ?"#400000":"#263639");
-  fill(ctx,W-M-376,87,376,238,isYKZ?"#400000":"#263639");
-  const homeName=String(match.home||""),awayName=String(match.away||"");
-  crest(ctx,match.homeCrestUrl,190,110,118,homeName);
-  crest(ctx,match.awayCrestUrl,W-310,110,118,awayName);
-  text(ctx,homeName,250,278,fit(ctx,homeName,330,24,17),C.white,true,"center",330);
-  text(ctx,awayName,950,278,fit(ctx,awayName,330,24,17),C.white,true,"center",330);
-  fill(ctx,W/2-53,157,106,100,C.bg,53);
-  text(ctx,"VS",W/2,207,43,C.orange,true,"center");
-  // Centered title and stadium (same elements as the website)
-  text(ctx,homeName+"  VS  "+awayName,W/2,362,fit(ctx,homeName+" VS "+awayName,1060,32,22),C.white,true,"center",1060);
-  text(ctx,match.venue||"",W/2,404,16,C.muted,false,"center",1000);
-  // Full-time 1X2 price row, no invented prices
-  const oddsY=434,cellW=(W-2*M)/3;
-  fill(ctx,M,oddsY,W-M*2,112,C.panelAlt,12);
-  for(const [i,pair] of [[homeName+" နိုင် (1)",match.homeOdds],["သရေ (X)",match.drawOdds],[awayName+" နိုင် (2)",match.awayOdds]].entries()){
-   const x=M+cellW*(i+.5);
-   text(ctx,pair[0],x,oddsY+30,18,C.muted,true,"center",cellW-20);
-   text(ctx,sourceOdds(pair[1]),x,oddsY+76,24,C.white,true,"center",cellW-15);
-   if(i<2)fill(ctx,M+cellW*(i+1),oddsY,1,112,C.divider);
-  }
-  // Myanmar Asian market snapshots beneath 1X2
   const my=match.myanmarOdds||{};
-  const myY=566;
-  fill(ctx,M,myY,W-M*2,117,C.panel,10);
-  text(ctx,"မြန်မာကြေး",M+19,myY+28,21,C.orange,true);
-  const body=my.bodyOdds!=null?(my.upperTeam?my.upperTeam+"  ":"")+my.bodyOdds:"—";
-  text(ctx,"ဘော်ဒီကြေး · "+body,M+20,myY+77,21,C.white,true,"left",500);
-  text(ctx,"ဂိုးပေါင်းကြေး · "+(my.goalTotalOdds??"—"),M+590,myY+77,21,C.white,true,"left",510);
-  // Historical results in exactly THREE SIDE-BY-SIDE cards (Home | H2H | Away).
-  const historyY=707,panelW=(W-2*M-20)/3;
-  const homeX=M,headX=M+panelW+10,awayX=M+2*(panelW+10);
-  for(const x of [homeX,headX,awayX])fill(ctx,x,historyY,panelW,340,C.panelAlt,10);
-  const fmtDate=v=>String(v||"").slice(5,10);
-  const homeFive=(match.homeLastFive||[]).slice(0,5);
-  const awayFive=(match.awayLastFive||[]).slice(0,5);
-  const head=(match.headToHead||[]).slice(0,5);
-  function five(x,label,arr,club){
-   text(ctx,label,x+13,historyY+24,18,C.orange,true,"left",panelW-26);
-   text(ctx,club,x+13,historyY+57,20,C.white,true,"left",panelW-26);
-   if(!arr.length)text(ctx,"ရလဒ်မရရှိသေးပါ",x+14,historyY+114,15,C.muted);
-   arr.forEach((g,i)=>{
-    const row=historyY+96+i*47;line(ctx,x+13,row-13,panelW-26);
-    const clubName=mmNames[g.opponent]||g.opponent||"";
-    crest(ctx,g.opponentCrestUrl,x+12,row-5,24,clubName);
-    const score=result(g),state=g.teamGoals>g.opponentGoals?"W":g.teamGoals<g.opponentGoals?"L":"D";
-    text(ctx,state,x+46,row+7,15,state==="W"?"#7fd4aa":state==="L"?"#ff9797":C.muted,true);
-    text(ctx,clubName,x+70,row+7,fit(ctx,clubName,panelW-178,15,12),C.white,false,"left",panelW-178);
-    text(ctx,score,x+panelW-10,row+7,16,C.white,true,"right",65);
-   });
+  await preloadImages([match.homeCrestUrl,match.awayCrestUrl,match.homeHeroImageUrl,match.awayHeroImageUrl,opts.brandLogoUrl].filter(Boolean));
+  fill(ctx,0,0,W,H,C.bg);
+  fill(ctx,M,14,fullWidth,H-34,C.head,12);
+  fill(ctx,M,14,fullWidth,66,C.bg,10);
+  text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+16,46,22,C.orange,true);
+  if(isYKZ){
+   text(ctx,"YKZ FAMILY GROUP · အတူရှေ့ဆက် YKZ",W/2,44,17,C.orange,true,"center");
+   crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"YKZ");
+  }else text(ctx,match.kickoffYangon||"",W-M-18,45,19,C.muted,true,"right");
+  const heroY=86,heroH=387,sideW=450,middleW=252;
+  const lx=M,rx=W-M-sideW;
+  heroKit(ctx,k,lx,heroY,sideW,heroH,false);
+  heroKit(ctx,k,rx,heroY,sideW,heroH,true);
+  photoCover(ctx,match.homeHeroImageUrl,lx,heroY,sideW,heroH);
+  photoCover(ctx,match.awayHeroImageUrl,rx,heroY,sideW,heroH);
+  const light=ctx.createLinearGradient(W/2-145,heroY,W/2+145,heroY+heroH);
+  light.addColorStop(0,"#092333");light.addColorStop(.5,"#1b344f");light.addColorStop(1,"#051521");
+  fill(ctx,lx+sideW,heroY,middleW,heroH,light);
+  crest(ctx,match.homeCrestUrl,lx+38,heroY+232,126,home);
+  crest(ctx,match.awayCrestUrl,rx+sideW-161,heroY+232,126,away);
+  text(ctx,"◈",W/2,heroY+75,62,C.white,true,"center");
+  text(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
+  text(ctx,"VS",W/2,heroY+244,90,C.white,true,"center");
+  const infoY=473,infoH=83,outer=(fullWidth-middleW)/2;
+  fill(ctx,M,infoY,outer,infoH,isYKZ?"#250707":"#14090d");
+  fill(ctx,M+outer,infoY,middleW,infoH,isYKZ?"#8f0000":"#83141b");
+  fill(ctx,M+outer+middleW,infoY,outer,infoH,isYKZ?"#250707":"#14090d");
+  text(ctx,home,M+outer/2,infoY+39,fit(ctx,home,outer-24,25,16),C.orange,true,"center",outer-24);
+  text(ctx,home+" နှင့် "+away,W/2,infoY+39,fit(ctx,home+" နှင့် "+away,middleW-12,20,12),C.white,true,"center",middleW-12);
+  text(ctx,match.kickoffYangon||"",M+outer+middleW+outer/2,infoY+39,fit(ctx,match.kickoffYangon||"",outer-24,24,15),C.orange,true,"center",outer-24);
+  const marketY=570;
+  fill(ctx,M,marketY,fullWidth,90,C.panel);
+  text(ctx,"မြန်မာကြေး",M+18,marketY+28,22,C.orange,true);
+  const upper=present(my.upperTeam);
+  const body=present(my.bodyOdds);
+  text(ctx,"အပေါ်အသင်း: "+upper,M+198,marketY+28,20,C.white,true,"left",470);
+  text(ctx,"ဘော်ဒီကြေး: "+body,M+18,marketY+64,20,C.white,true,"left",500);
+  text(ctx,"ဂိုးပေါင်းကြေး: "+present(my.goalTotalOdds),M+600,marketY+64,20,C.white,true,"left",450);
+  const rowY=676,rowH=225,side=(fullWidth-15)/3;
+  const x1=M,x2=x1+side+7.5,x3=x2+side+7.5;
+  for(const x of [x1,x2,x3])fill(ctx,x,rowY,side,rowH,C.panelAlt,11);
+  const five=(x,sideName,club,logo,items)=>{
+   crest(ctx,logo,x+18,rowY+12,50,club);
+   text(ctx,sideName,x+78,rowY+31,18,C.orange,true);
+   text(ctx,club,x+16,rowY+94,fit(ctx,club,side-30,21,14),C.white,true,"left",side-30);
+   const games=Array.isArray(items)?items.slice(0,5):[];
+   for(let i=0;i<5;i++){
+    const letter=games[i]?wdl(games[i]):"–";
+    centerBadge(ctx,k,x+14+i*70,rowY+130,letter,45);
+   }
+   text(ctx,"W = နိုင်  •  D = သရေ  •  L = ရှုံး",x+14,rowY+205,14,C.muted,false,"left",side-24);
+  };
+  five(x1,"အိမ်ရှင် နောက်ဆုံး ၅ ပွဲ",home,match.homeCrestUrl,match.homeLastFive);
+  five(x3,"ဧည့်သည် နောက်ဆုံး ၅ ပွဲ",away,match.awayCrestUrl,match.awayLastFive);
+  text(ctx,"ပွဲပြီး 1X2 ကြေး",x2+side/2,rowY+39,21,C.orange,true,"center");
+  const odds=[["အိမ်ရှင် (1)",match.homeOdds],["သရေ (X)",match.drawOdds],["ဧည့်သည် (2)",match.awayOdds]];
+  for(let i=0;i<3;i++){
+   const x=x2+i*side/3;
+   fill(ctx,x+3,rowY+86,side/3-6,101,C.panel,6);
+   text(ctx,odds[i][0],x+side/6,rowY+119,15,C.muted,true,"center",side/3-8);
+   text(ctx,present(odds[i][1]),x+side/6,rowY+166,24,C.white,true,"center",side/3-8);
   }
-  five(homeX,"အိမ်ရှင် နောက်ဆုံး ၅ ပွဲ",homeFive,homeName);
-  five(awayX,"ဧည့်သည် နောက်ဆုံး ၅ ပွဲ",awayFive,awayName);
-  text(ctx,"ထိပ်တိုက်တွေ့ဆုံမှု H2H",headX+13,historyY+24,18,C.orange,true,"left",panelW-26);
-  if(!head.length)text(ctx,"H2H မရရှိသေးပါ",headX+13,historyY+114,16,C.muted);
-  head.forEach((g,i)=>{
-   const row=historyY+67+i*51;line(ctx,headX+13,row-12,panelW-26);
-   text(ctx,fmtDate(g.date),headX+13,row+1,14,C.muted);
-   const s=Number.isInteger(g.homeGoals)&&Number.isInteger(g.awayGoals)?g.homeGoals+" – "+g.awayGoals:"—";
-   text(ctx,s,headX+panelW-13,row+1,15,C.orange,true,"right");
-   const pair=(mmNames[g.home]||g.home||"")+" – "+(mmNames[g.away]||g.away||"");
-   text(ctx,pair,headX+13,row+24,13,C.white,false,"left",panelW-26);
-  });
-  // Complete editorial copy, never truncate the preview to an arbitrary screenshot crop.
-  const anaY=1070;
-  fill(ctx,M,anaY,W-2*M,H-anaY-62,C.panel,11);
-  text(ctx,"ပွဲကြိုသုံးသပ်ချက်",M+19,anaY+39,24,C.orange,true);
-  let y=anaY+94;
-  for(const l of previewLines){text(ctx,l,M+23,y,24,C.white,false,"left",W-M*2-46);y+=43;}
+  // Complete, never-clipped commentary: reserve height from measured wrapped lines.
+  fill(ctx,M,anaY,fullWidth,H-anaY-64,C.panel,10);
+  text(ctx,"ပွဲကြိုသုံးသပ်ချက်",M+23,anaY+45,26,C.orange,true);
+  let y=anaY+99;
+  y=drawParagraph(ctx,k,lines,M+25,y,25,49);
   if(extra.length){
-   y+=18;text(ctx,"★ SPECIAL CHOICE — အသေးစိတ်သုံးသပ်ချက်",M+19,y,23,C.orange,true);y+=43;
-   for(const l of moreLines){if(l)text(ctx,l,M+23,y,22,C.white,false,"left",W-M*2-46);y+=39;}
+   y+=22;text(ctx,"★ SPECIAL CHOICE — အသေးစိတ်သုံးသပ်ချက်",M+23,y,23,C.orange,true);
+   y+=43;drawParagraph(ctx,k,extraLines,M+25,y,23,43);
   }
-  line(ctx,M,H-53,W-2*M);
-  text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+8,H-30,19,C.orange,true);
-  const filename=safeName(opts.brandName||"future-code")+"-"+safeName(match.home)+"-vs-"+safeName(match.away)+".png";
-  await download(canvas,filename);
+  line(ctx,M,H-55,fullWidth);
+  text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+10,H-31,20,C.orange,true);
+  await download(canvas,filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png");
  }
  window.FutureCodeCardExport={save};
 })();
