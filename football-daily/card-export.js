@@ -98,13 +98,12 @@
   text(ctx,"◈",W/2,heroY+75,62,C.white,true,"center");
   text(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
   text(ctx,"VS",W/2,heroY+244,90,C.white,true,"center");
-  const infoY=473,infoH=83,outer=(fullWidth-middleW)/2;
+  const infoY=473,infoH=83,infoMiddle=460,outer=(fullWidth-infoMiddle)/2;
   fill(ctx,M,infoY,outer,infoH,isYKZ?"#250707":"#14090d");
-  fill(ctx,M+outer,infoY,middleW,infoH,isYKZ?"#8f0000":"#83141b");
-  fill(ctx,M+outer+middleW,infoY,outer,infoH,isYKZ?"#250707":"#14090d");
-  text(ctx,home,M+outer/2,infoY+39,fit(ctx,home,outer-24,25,16),C.orange,true,"center",outer-24);
-  text(ctx,home+" နှင့် "+away,W/2,infoY+39,fit(ctx,home+" နှင့် "+away,middleW-12,20,12),C.white,true,"center",middleW-12);
-  text(ctx,away,M+outer+middleW+outer/2,infoY+39,fit(ctx,away,outer-24,25,16),C.orange,true,"center",outer-24);
+  fill(ctx,M+outer,infoY,infoMiddle,infoH,isYKZ?"#8f0000":"#83141b");
+  fill(ctx,M+outer+infoMiddle,infoY,outer,infoH,isYKZ?"#250707":"#14090d");
+  // Only the full fixture is printed: no duplicate standalone club names or time.
+  text(ctx,home+" နှင့် "+away,W/2,infoY+39,fit(ctx,home+" နှင့် "+away,infoMiddle-24,27,15),C.white,true,"center",infoMiddle-24);
   const marketY=570;
   fill(ctx,M,marketY,fullWidth,90,C.panel);
   text(ctx,"မြန်မာကြေး",M+18,marketY+28,22,C.orange,true);
