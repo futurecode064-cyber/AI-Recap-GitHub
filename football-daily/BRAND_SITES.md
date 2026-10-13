@@ -32,3 +32,8 @@ YKZ main page has `data-football-data-url="../data/today.json"`. The *shared* `a
 - Do not serve the YKZ files under a duplicate separate root with local `data/` copies; that would break synchronized updates.
 - Do not replace the fast Canvas export with slow DOM screenshots.
 - Google/ISP restrictions on `pages.dev` in Myanmar still depend on the user's mobile network. Multiple branded paths on the same domain share this network limitation.
+
+
+## Match hero / WDL visual contract (user update: 2026-10-13)
+The user approved redesigned match cards with a full two-team hero, correct logos, three-cell team/match/kickoff band, Myanmar opening-quote strip, Home W/D/L five-result badges | bookmaker 1X2 | Away W/D/L five-result badges, no visible historical H2H and a more readable full Burmese preview paragraph. Full PNG exports reproduce that layout without clipping. This supersedes old H2H panels and previous canvas poster layouts.
+Photo URLs (homeHeroImageUrl, awayHeroImageUrl) are optional for verified team photos with appropriate rights; without them, draw branded illustrated kits + genuine crests. The shared app.js and card-export.js must always serve BOTH root and /ykz-family/, while brand.css overrides only YKZ colors and its actual YKZ FAMILY logo/slogan. Never create duplicate per-brand data JSONs.
