@@ -241,8 +241,11 @@ test('new screenshot-inspired team hero and WDL–1X2–WDL layout is responsive
  assert.ok(!js.includes('hero-player-silhouette'));
  assert.ok(!js.includes('match[side+"HeroImageUrl"]'));
  assert.ok(js.includes('renderQuoteAndForm(match)'));
- assert.ok(js.includes('node("strong","hero-info-home",teamLabel(match,"home"))'));
- assert.ok(js.includes('node("strong","hero-info-away",teamLabel(match,"away"))'));
+ assert.ok(js.includes('node("span","hero-info-side hero-info-left")'));
+ assert.ok(!js.includes('node("strong","hero-info-home"'));
+ assert.ok(js.includes('node("span","hero-info-side hero-info-right")'));
+ assert.ok(!js.includes('node("strong","hero-info-away"'));
+ assert.ok(js.includes('node("strong","hero-info-fixture",teamLabel(match,"home")+" နှင့် "+teamLabel(match,"away"))'));
  assert.ok(!js.includes('hero-info-kickoff'));
  assert.ok(css.includes('.hero-team{display:grid;place-items:center'));
  assert.ok(css.includes('.hero-team-crest{position:static'));
@@ -256,7 +259,10 @@ test('new screenshot-inspired team hero and WDL–1X2–WDL layout is responsive
  assert.ok(exporter.includes('const crestY=heroY+(heroH-badgeSize)/2'));
  assert.ok(!exporter.includes('heroKit('));
  assert.ok(!exporter.includes('kickoffYangon'));
- assert.ok(exporter.includes('text(ctx,away,M+outer+middleW+outer/2'));
+ assert.ok(exporter.includes('const infoY=473,infoH=83,infoMiddle=460'));
+ assert.ok(!exporter.includes('text(ctx,home,M+outer/2'));
+ assert.ok(!exporter.includes('text(ctx,away,M+outer+'));
+ assert.ok(exporter.includes('text(ctx,home+" နှင့် "+away,W/2'));
  assert.ok(!exporter.includes('photoCover(ctx,'));
  assert.ok(!exporter.includes('ထိပ်တိုက်တွေ့ဆုံမှု H2H'));
 });
