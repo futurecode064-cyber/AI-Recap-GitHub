@@ -37,3 +37,15 @@ YKZ main page has `data-football-data-url="../data/today.json"`. The *shared* `a
 ## Match hero / WDL visual contract (user update: 2026-10-13)
 The user approved redesigned match cards with a full two-team hero, correct logos, three-cell team/match/kickoff band, Myanmar opening-quote strip, Home W/D/L five-result badges | bookmaker 1X2 | Away W/D/L five-result badges, no visible historical H2H and a more readable full Burmese preview paragraph. Full PNG exports reproduce that layout without clipping. This supersedes old H2H panels and previous canvas poster layouts.
 Photo URLs (homeHeroImageUrl, awayHeroImageUrl) are optional for verified team photos with appropriate rights; without them, draw branded illustrated kits + genuine crests. The shared app.js and card-export.js must always serve BOTH root and /ykz-family/, while brand.css overrides only YKZ colors and its actual YKZ FAMILY logo/slogan. Never create duplicate per-brand data JSONs.
+
+
+## BW SPORT ဘောလုံးဂျာနယ် — launched 2026-10-13
+- Public branded home: https://future-code-football-daily.pages.dev/bw-sport/
+- Public all-match Myanmar odds: https://future-code-football-daily.pages.dev/bw-sport/odds.html
+- Main canonical source: football-daily/bw-sport/index.html and odds.html.
+- Real user-uploaded original BW Sport metallic soccer/chart symbol: football-daily/bw-sport/assets/logo.webp (web-optimized original uploaded logo, not an AI replacement).
+- Exclusive theme: football-daily/bw-sport/brand.css, brand.js. Colors: #06162d deep navy, #0b74ef cobalt/electric blue, #3ec1ff sky-blue neon, #ddecfc metallic silver. Slogan: MORE THAN A GAME.
+- Shares root football-daily/data/today.json, data/odds/YYYY-MM-DD.json, archive and results, root app.js, odds.js, card-export.js, daily-image-export.js, canvas-image-kit.js, and original special-choice editorial rules. NO duplicated data/ folder or separate schedule.
+- Custom blue Canvas PNG identity, original logo in header/favicons/export, and Special Choice content. Keep no-H2H and crest-only match hero rule from current DAILY_APPROVED_FORMAT.md.
+- Original Future Code, YKZ FAMILY GROUP and BW SPORT are independent site looks but share one single source of football facts, odds, and dates. When publishing validated daily data, all three must reflect the new report automatically.
+- The base domain is unchanged; Myanmar ISP/VPN reachability of Pages applies identically to all branded paths. Do not promise that a new branded subpath works without VPN if the parent domain is blocked.

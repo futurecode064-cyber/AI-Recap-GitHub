@@ -1,8 +1,11 @@
 "use strict";
 (function(){
  const branded=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
+ const bwBranded=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
  const C=branded?
   {bg:"#111111",head:"#960000",panel:"#242424",panelAlt:"#353030",divider:"#812f2f",orange:"#ffcf58",pale:"#fff8e9",muted:"#e0cbc0",white:"#fff9ee"}:
+ bwBranded?
+  {bg:"#061122",head:"#103869",panel:"#0e2a4c",panelAlt:"#16395d",divider:"#326ea5",orange:"#59c3ff",pale:"#e3f5ff",muted:"#b6d8f7",white:"#f3f9ff"}:
   {bg:"#101b20",head:"#1d3135",panel:"#203436",panelAlt:"#263d3d",divider:"#425855",orange:"#ffac75",pale:"#f7f5eb",muted:"#bcd0c9",white:"#f5f7f3"};
  const FONT='"Noto Sans Myanmar",sans-serif';
  const imageCache=new Map();
@@ -98,10 +101,13 @@
  function day(v){return /^\d{4}-\d{2}-\d{2}$/.test(v||"")?v:"unknown"}
  function top(ctx,W,title,date,detail){
   fill(ctx,0,0,W,13,C.orange);fill(ctx,0,13,W,195,C.head);
-  text(ctx,branded?"YKZ FAMILY GROUP":"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
+  text(ctx,branded?"YKZ FAMILY GROUP":bwBranded?"BW SPORT ဘောလုံးဂျာနယ်":"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
   if(branded){
    text(ctx,"အတူရှေ့ဆက် YKZ",Math.min(W-260,340),48,19,C.pale,true);
    crest(ctx,document.documentElement?.dataset?.footballBrandLogoUrl,W-113,22,78,"YKZ");
+  }else if(bwBranded){
+   text(ctx,"MORE THAN A GAME",Math.min(W-260,500),48,16,C.pale,true);
+   crest(ctx,document.documentElement?.dataset?.footballBrandLogoUrl,W-113,22,78,"BW");
   }
   text(ctx,title,28,110,38,C.white,true);
   text(ctx,"မြန်မာစံတော်ချိန်  ·  "+day(date),28,164,18,C.muted);

@@ -71,6 +71,7 @@
   const H=Math.ceil(anaY+mainHeight+extraHeight+80);
   const {canvas,ctx}=create(W,H);
   const isYKZ=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
+  const isBW=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
   const my=match.myanmarOdds||{};
   await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl].filter(Boolean));
   fill(ctx,0,0,W,H,C.bg);
@@ -80,16 +81,19 @@
   if(isYKZ){
    text(ctx,"YKZ FAMILY GROUP · အတူရှေ့ဆက် YKZ",W/2,44,17,C.orange,true,"center");
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"YKZ");
+  }else if(isBW){
+   text(ctx,"BW SPORT · MORE THAN A GAME",W/2,44,18,C.orange,true,"center");
+   crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"BW");
   }
   const heroY=86,heroH=387,sideW=450,middleW=252;
   const lx=M,rx=W-M-sideW;
   // Only genuine football club logos, centered in each team's half.
-  fill(ctx,lx,heroY,sideW,heroH,isYKZ?"#321317":"#26343b");
-  fill(ctx,rx,heroY,sideW,heroH,isYKZ?"#2b2118":"#193c37");
+  fill(ctx,lx,heroY,sideW,heroH,isYKZ?"#321317":isBW?"#12386d":"#26343b");
+  fill(ctx,rx,heroY,sideW,heroH,isYKZ?"#2b2118":isBW?"#082744":"#193c37");
   const light=ctx.createLinearGradient(W/2-145,heroY,W/2+145,heroY+heroH);
-  light.addColorStop(0,isYKZ?"#21080c":"#092333");
-  light.addColorStop(.5,isYKZ?"#401616":"#1b344f");
-  light.addColorStop(1,isYKZ?"#1a0b0b":"#051521");
+  light.addColorStop(0,isYKZ?"#21080c":isBW?"#062041":"#092333");
+  light.addColorStop(.5,isYKZ?"#401616":isBW?"#146ab3":"#1b344f");
+  light.addColorStop(1,isYKZ?"#1a0b0b":isBW?"#09172f":"#051521");
   fill(ctx,lx+sideW,heroY,middleW,heroH,light);
   const badgeSize=178;
   const crestY=heroY+(heroH-badgeSize)/2;
@@ -99,9 +103,9 @@
   text(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
   text(ctx,"VS",W/2,heroY+244,90,C.white,true,"center");
   const infoY=473,infoH=83,infoMiddle=460,outer=(fullWidth-infoMiddle)/2;
-  fill(ctx,M,infoY,outer,infoH,isYKZ?"#250707":"#14090d");
-  fill(ctx,M+outer,infoY,infoMiddle,infoH,isYKZ?"#8f0000":"#83141b");
-  fill(ctx,M+outer+infoMiddle,infoY,outer,infoH,isYKZ?"#250707":"#14090d");
+  fill(ctx,M,infoY,outer,infoH,isYKZ?"#250707":isBW?"#082347":"#14090d");
+  fill(ctx,M+outer,infoY,infoMiddle,infoH,isYKZ?"#8f0000":isBW?"#096ed5":"#83141b");
+  fill(ctx,M+outer+infoMiddle,infoY,outer,infoH,isYKZ?"#250707":isBW?"#082347":"#14090d");
   // Only the full fixture is printed: no duplicate standalone club names or time.
   text(ctx,home+" နှင့် "+away,W/2,infoY+39,fit(ctx,home+" နှင့် "+away,infoMiddle-24,27,15),C.white,true,"center",infoMiddle-24);
   const marketY=570;

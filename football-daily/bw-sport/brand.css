@@ -1,0 +1,92 @@
+/* BW SPORT - exclusive logo-based navy / electric blue / metallic silver skin.
+   Shared football fixtures, reports, filters and Canvas renderers remain unchanged. */
+:root.bw-theme{color-scheme:dark;--ink:#060e21;--panel:#0d2445;--panel2:#13345b;--border:#285886;--cream:#f2f8ff;--muted:#bbd1ed;--orange:#52c5ff;--green:#33b8ff;--bw-navy:#06162d;--bw-blue:#0b74ef;--bw-electric:#3ec1ff;--bw-silver:#ddecfc}
+.bw-theme body{background:radial-gradient(ellipse at 50% 0%,#114d8b44,transparent 64%),#060f22;color:#edf5ff}
+.bw-theme .site-header{background:linear-gradient(100deg,#06122a,#0e3160 60%,#061a37);border-bottom:1px solid #358ddd;box-shadow:0 2px 24px #0989ff20}
+.bw-theme .header-inner{min-height:92px;height:auto;padding:11px 0;gap:18px}
+.bw-theme .logo{gap:15px}
+.bw-theme .bw-site-logo{display:block;width:74px;height:74px;object-fit:contain;flex:none;border-radius:50%;background:#030b1b;border:2px solid #329fff;box-shadow:0 0 22px #2399ff66}
+.bw-theme .logo-lines b{font-size:clamp(18px,2.8vw,26px);color:#f3f9ff;text-shadow:0 0 16px #4fc5ff66;line-height:1.5}
+.bw-theme .logo-lines small{font:800 12px var(--heading);letter-spacing:.19em;color:#54c6ff}
+.bw-theme .top-edition{color:#c5e8ff;font-size:12px}
+.bw-theme .hero{background:radial-gradient(ellipse at 87% 18%,#157def66,transparent 42%),linear-gradient(110deg,#0a1b3d 0%,#123d74 55%,#07142b 100%);border-bottom:1px solid #2567a6;box-shadow:inset 0 0 35px #28a0ff24}
+.bw-theme .hero:after{border-color:#55c2ff4a;box-shadow:0 0 0 75px #3eaeff12,0 0 0 165px #267eff0b}
+.bw-theme .hero-topline,.bw-theme .hero-foot{border-color:#3275ac;color:#bbd8ef}
+.bw-theme .eyebrow,.bw-theme .hero-number small{color:#73d8ff}
+.bw-theme .hero-main h1 span{color:#7bd7ff;text-shadow:0 0 22px #209bff88}
+.bw-theme .hero-desc{color:#d4e8ff}
+.bw-theme .bw-hero-slogan{display:inline-block;margin:0 0 10px;padding:7px 19px;border:1px solid #57cdff;border-radius:999px;color:#eefaff;font:800 12px var(--heading);letter-spacing:.19em;background:linear-gradient(90deg,#0757a4,#0b2855);box-shadow:0 0 14px #1bb1ff33}
+.bw-theme .dashboard-bar,.bw-theme .match-card{background:#0c2341;border-color:#2e6093;box-shadow:0 6px 24px #020a192b}
+.bw-theme .dashboard-stat{border-color:#27557f}
+.bw-theme .dashboard-stat .status-label{color:#62ceff}
+.bw-theme .reload-btn:hover{background:#1c4a7e}
+.bw-theme .section-eyebrow,.bw-theme .section-heading h2,.bw-theme .stat-label{color:#c3e4ff}
+.bw-theme .today-pill{background:#0d4693;color:#eef9ff;border:1px solid #41b6ff}
+.bw-theme .date-tabs button,.bw-theme .date-tab-odds{border-color:#376fa8;background:#0e2b4c;color:#dbeeff}
+.bw-theme .date-tabs button.active{background:linear-gradient(130deg,#096bdb,#35bdff);border-color:#77d4ff;color:#fff;box-shadow:0 0 19px #268aff66}
+.bw-theme .date-tabs .date-tab-odds:hover{color:#fff;border-color:#5bcaff}
+.bw-theme .filters button{background:#0f2b4d;border-color:#356ca1;color:#d8ecff}
+.bw-theme .filters button.selected{background:linear-gradient(115deg,#0764cf,#199afa);border-color:#81d4ff;color:white}
+.bw-theme .filters .filter-special{background:linear-gradient(110deg,#312c1a,#13294c);border-color:#dcaf58;color:#ffdc8f}
+.bw-theme .match-card.is-special{border-color:#d5ac5f;box-shadow:0 0 0 1px #dfb96760,0 0 25px #ffc15b1d}
+.bw-theme .special-mark{background:#76521e;color:#ffe1a8}
+.bw-theme .match-topline,.bw-theme .match-card:has(.match-hero)>.match-topline{background:#092a55;border-color:#3178b5}
+.bw-theme .hero-team-home{background:radial-gradient(ellipse at 30% 18%,#268efa66,transparent 67%),linear-gradient(100deg,#06162d,#143b70)}
+.bw-theme .hero-team-away{background:radial-gradient(ellipse at 75% 18%,#38d1ff40,transparent 68%),linear-gradient(260deg,#071a34,#0a356a)}
+.bw-theme .match-hero-art{background:#07132b}
+.bw-theme .match-hero-versus{background:linear-gradient(90deg,#07162be0,#123761f2,#07162be0)}
+.bw-theme .hero-competition{color:#b8e9ff}
+.bw-theme .hero-big-vs{color:#fff;text-shadow:0 0 24px #36c9ff,0 4px 20px #000}
+.bw-theme .hero-info-bar{background:#081a34;color:#cbeeff}
+.bw-theme .hero-info-bar>.hero-info-fixture{background:linear-gradient(120deg,#075fc4,#0c3f85)}
+.bw-theme .match-market-layout,.bw-theme .market-form-row{background:#0b1b34}
+.bw-theme .match-market-strip.myanmar-market{background:#092749;border-bottom-color:#3c96d6}
+.bw-theme .match-market-strip .myanmar-market-title,.bw-theme .match-market-strip .myanmar-market-pair{color:#a8e4ff}
+.bw-theme .quick-form,.bw-theme .market-center{background:#112c4e;border-color:#2b6ba7}
+.bw-theme .quick-form-heading{color:#e4f4ff}
+.bw-theme .market-center .odds-grid{border-color:#2e7ebf}
+.bw-theme .market-center .odd{background:#071f3d}
+.bw-theme .market-center-heading,.bw-theme .market-center .odd small,.bw-theme .quick-form-heading small{color:#8dd9ff}
+.bw-theme .vs-banner{background:radial-gradient(circle at 50% 48%,#10519c,#081527 67%)}
+.bw-theme .vs-circle{background:#092e60;border-color:#55b9ff;color:#fff}
+.bw-theme .odds-grid{border-color:#3379b2}
+.bw-theme .odd{background:#132c4d}
+.bw-theme .odd+.odd{border-color:#3379b2}
+.bw-theme .odd small{color:#a4d4ff}
+.bw-theme .match-card:has(.match-hero) .analysis-body,.bw-theme .match-card:has(.match-hero) .match-actions{background:#0c213f}
+.bw-theme .match-card:has(.match-hero) .analysis-body h4,.bw-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#8ed6ff}
+.bw-theme .match-card:has(.match-hero) .analysis-body p{color:#f0f6ff}
+.bw-theme .match-card:has(.match-hero) .analysis-toggle{background:#0a274a;color:#c1e9ff}
+.bw-theme .special-analysis{border-color:#b99756;background:linear-gradient(145deg,#223656,#142949)}
+.bw-theme .special-analysis h4{color:#ffdb89}
+.bw-theme .special-analysis p{color:#f1f7ff}
+.bw-theme .match-download,.bw-theme .results-png-btn{background:linear-gradient(125deg,#0b68cc,#35bfff);color:#fff;border-color:#66ceff}
+.bw-theme .results-download-bar{background:#132b4e;border-color:#2b76bb}
+.bw-theme footer{background:#051329;border-color:#21558a}
+.bw-theme .footer-inner p{color:#afcce5}
+/* The odds.html inline stylesheet is placed BEFORE this brand sheet; override it for the same shared odds data. */
+.bw-theme .odds-hero{background:linear-gradient(110deg,#0d3566,#07132b);border-color:#2776b8}
+.bw-theme .odds-hero h1 span,.bw-theme .odds-kicker{color:#78d4ff}
+.bw-theme .odds-nav a{background:#112f55;color:#dbeeff;border-color:#3274b3}
+.bw-theme .odds-nav a.active{background:#168aff;color:#fff;border-color:#70d4ff}
+.bw-theme .odds-overview,.bw-theme .odds-group,.bw-theme .odds-status{background:#0c2444;border-color:#30679c}
+.bw-theme .odds-count,.bw-theme .odds-group h2,.bw-theme .odds-table .time{color:#90dfff}
+.bw-theme .odds-group h2{background:#103661;border-color:#306fa9}
+.bw-theme .odds-table th{background:#164374;color:#d4edff}
+.bw-theme .odds-table td{border-color:#264f80}
+.bw-theme .odds-table tr:hover td{background:#174470}
+.bw-theme .odds-table .upper,.bw-theme .odds-table .prediction{color:#c7e9ff}
+.bw-theme .odds-table .price{color:#e9f6ff}
+.bw-theme .odds-note{background:#0e294d;color:#b9d9f2;border-left-color:#39b8ff}
+.bw-theme .odds-export-actions button{background:linear-gradient(110deg,#0b64c9,#33baff);border-color:#74d6ff;color:white}
+@media(max-width:620px){
+ .bw-theme .bw-site-logo{width:56px;height:56px}
+ .bw-theme .header-inner{min-height:76px}
+ .bw-theme .logo-lines b{font-size:17px}
+ .bw-theme .top-edition{display:none}
+ .bw-theme .hero{padding-top:22px}
+ .bw-theme .logo-lines small{font-size:9px}
+ .bw-theme .hero-info-bar>.hero-info-fixture{font-size:12px}
+ .bw-theme .odds-table tr{background:#102b50;border-color:#3777ad}
+ .bw-theme .odds-table td.price,.bw-theme .odds-table td.prediction{border-color:#33547d}
+}
