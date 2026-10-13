@@ -288,7 +288,7 @@ function renderMatch(match,i){
  const card=node("article","match-card"+(match.specialChoice?" is-special":""));
  const headline=node("div","match-topline");
  const league=node("span","league-name","◈ "+leagueName(match.league));
- if(match.specialChoice)league.appendChild(node("span","special-mark","★ SPECIAL CHOICE"));
+ if(match.specialChoice)league.appendChild(node("span","special-mark","★ SPECIAL CHOICE"+(Number.isInteger(match.specialChoiceRank)?" #"+match.specialChoiceRank:"")));
  headline.appendChild(league);
  card.appendChild(headline);
  card.appendChild(renderMatchHero(match));
@@ -308,7 +308,7 @@ function renderMatch(match,i){
  // Only Special Choice receives a separate, researched editorial assessment.
  if(selectedLeague==="special"&&match.specialChoice&&Array.isArray(match.specialAnalysisParagraphs)&&match.specialAnalysisParagraphs.length){
    const special=node("section","special-analysis");
-   special.appendChild(node("h4","","★ Special Choice — အချက်အလက်အပြည့်အစုံ သုံးသပ်ချက်"));
+   special.appendChild(node("h4","","★ Special Choice"+(Number.isInteger(match.specialChoiceRank)?" #"+match.specialChoiceRank:"")+" — အထူးပွဲကြိုသုံးသပ်ချက်"));
    match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()).forEach(p=>special.appendChild(node("p","",p)));
    body.appendChild(special);
  }
@@ -377,6 +377,7 @@ function render(){
  renderLeagueFilters(all);
  const picks=all.filter(m=>m.specialChoice===true);
  const selected=all.filter(m=>(selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||canonicalLeague(m.league)===selectedLeague)&&(selectedDay!==-1||validFinal(m)));
+ if(selectedLeague==="special")selected.sort((a,b)=>(a.specialChoiceRank||99)-(b.specialChoiceRank||99));
  $("matchCount").textContent=String(selectedDay===-1?all.filter(validFinal).length:all.length);$("specialCount").textContent=String(selectedDay===-1?picks.filter(validFinal).length:picks.length);
  $("statusText").textContent=selectedDay===-1?(all.some(validFinal)?"ရလဒ်အတည်ပြုပြီး":"ရလဒ်မရရှိသေး"):(report.published?"ထုတ်ဝေပြီး":NO_PREVIEW_TEXT);
  const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"]};
