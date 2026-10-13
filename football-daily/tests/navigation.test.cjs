@@ -236,17 +236,28 @@ test('new screenshot-inspired team hero and WDL–1X2–WDL layout is responsive
  const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
  const exporter=fs.readFileSync(path.join(root,'card-export.js'),'utf8');
  assert.ok(js.includes('function renderMatchHero(match)'));
- assert.ok(js.includes('hero-team-photo'));
  assert.ok(js.includes('hero-team-crest'));
+ assert.ok(!js.includes('hero-team-photo'));
+ assert.ok(!js.includes('hero-player-silhouette'));
+ assert.ok(!js.includes('match[side+"HeroImageUrl"]'));
  assert.ok(js.includes('renderQuoteAndForm(match)'));
- assert.ok(js.includes('match[side+"HeroImageUrl"]'));
+ assert.ok(js.includes('node("strong","hero-info-home",teamLabel(match,"home"))'));
+ assert.ok(js.includes('node("strong","hero-info-away",teamLabel(match,"away"))'));
+ assert.ok(!js.includes('hero-info-kickoff'));
+ assert.ok(css.includes('.hero-team{display:grid;place-items:center'));
+ assert.ok(css.includes('.hero-team-crest{position:static'));
+ assert.ok(!css.includes('.hero-player-silhouette'));
  assert.ok(js.includes('renderWdlStrip(match,"home")'));
  assert.ok(js.includes('renderWdlStrip(match,"away")'));
  assert.ok(css.includes('.market-form-row{display:grid;grid-template-columns:'));
  assert.ok(css.includes('.hero-info-bar{display:grid'));
  assert.ok(css.includes('.analysis-body p{font-size:18px'));
  assert.ok(css.includes('font-size:16.5px;line-height:2.05'));
- assert.ok(exporter.includes('photoCover(ctx,match.homeHeroImageUrl'));
+ assert.ok(exporter.includes('const crestY=heroY+(heroH-badgeSize)/2'));
+ assert.ok(!exporter.includes('heroKit('));
+ assert.ok(!exporter.includes('kickoffYangon'));
+ assert.ok(exporter.includes('text(ctx,away,M+outer+middleW+outer/2'));
+ assert.ok(!exporter.includes('photoCover(ctx,'));
  assert.ok(!exporter.includes('ထိပ်တိုက်တွေ့ဆုံမှု H2H'));
 });
 test('Canvas exporter includes all odds entries and only confirmed results',()=>{
@@ -342,4 +353,13 @@ test('live 13 October H2H cards contain verified actual prior scores only, never
   }
  }
  assert.ok(total>=40,'Expected verified historical H2H records for matches with actual prior meetings');
+});
+
+test('match preview header has no duplicate top-line date or time',()=>{
+ const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
+ const part=js.slice(js.indexOf('function renderMatch(match,i){'),js.indexOf('function renderLeagueFilters('));
+ assert.ok(!part.includes('node("span","match-time"'));
+ assert.ok(!part.includes('textOrEmpty(match.kickoffYangon)'));
+ assert.ok(!part.includes('hero-info-kickoff'));
+ assert.ok(part.includes('card.appendChild(renderMatchHero(match))'));
 });
