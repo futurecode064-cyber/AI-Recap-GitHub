@@ -2,7 +2,7 @@
 (function(){
  const K=()=>window.FutureCodeCanvasKit;
  function grouped(matches){const g=new Map();for(const m of matches){const name=m.league||"အခြားပြိုင်ပွဲ";if(!g.has(name))g.set(name,[]);g.get(name).push(m)}return [...g.entries()]}
- const leagues={"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Veikkausliiga":"ဖင်လန် လိဂ်","Eliteserien":"နော်ဝေး လိဂ်","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","Turkish Super Lig":"တူရကီ စူပါလိဂ်"};
+ const leagues={"UEFA Champions League":"ချန်ပီယံလိဂ်","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","Swedish Superettan":"ဆွီဒင် စူပါတန် လိဂ်","German 3. Liga":"ဂျာမန် ဘွန်ဒစ်လီဂါ ၃","Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Veikkausliiga":"ဖင်လန် လိဂ်","Eliteserien":"နော်ဝေး လိဂ်","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","Turkish Super Lig":"တူရကီ စူပါလိဂ်"};
  const crests={"Premier League":"https://crests.football-data.org/PL.png","Serie A":"https://crests.football-data.org/SA.png","La Liga":"https://crests.football-data.org/PD.png","La Liga 2":"https://crests.football-data.org/SD.png"};
  function verified(m){return m&&m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(String(m.finalScore||""))}
  async function saveOdds(data){
@@ -27,8 +27,8 @@
    for(const m of matches){
     fill(ctx,M,y,W-M*2,73,C.panel);line(ctx,M,y+72,W-2*M,C.divider);
     const isNext=Boolean(m.kickoffDate&&m.kickoffDate!==data.reportDate);
-    const clock=(isNext?Number(m.kickoffDate.slice(-2))+" ရက် မနက် · ":"")+(m.kickoff||"");
-    text(ctx,clock,xs[0]+widths[0]/2,y+37,17,C.orange,true,"center",widths[0]-12);
+    const clock=m.kickoffDisplay||((isNext?Number(m.kickoffDate.slice(-2))+" ရက် · ":"")+(m.kickoff||""));
+    text(ctx,clock,xs[0]+widths[0]/2,y+37,fit(ctx,clock,widths[0]-12,17,11),C.orange,true,"center",widths[0]-12);
     const mid=xs[1]+widths[1]/2;
     crest(ctx,m.homeCrestUrl,mid-72,y+19,35,m.home);
     crest(ctx,m.awayCrestUrl,mid+37,y+19,35,m.away);

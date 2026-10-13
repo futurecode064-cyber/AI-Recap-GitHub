@@ -17,7 +17,7 @@ function badge(name,url,cls="team-badge"){
  }else frame.appendChild(element("span","logo-fallback",name.slice(0,2)));
  return frame;
 }
-const groups={"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","Veikkausliiga":"ဖင်လန် လိဂ်","Eliteserien":"နော်ဝေး လိဂ်","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Turkish Super Lig":"တူရကီ စူပါလိဂ်"};
+const groups={"UEFA Champions League":"ချန်ပီယံလိဂ်","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","Swedish Superettan":"ဆွီဒင် စူပါတန် လိဂ်","German 3. Liga":"ဂျာမန် ဘွန်ဒစ်လီဂါ ၃","Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","Veikkausliiga":"ဖင်လန် လိဂ်","Eliteserien":"နော်ဝေး လိဂ်","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Turkish Super Lig":"တူရကီ စူပါလိဂ်"};
 const leagueLogos={"Premier League":"https://crests.football-data.org/PL.png","Serie A":"https://crests.football-data.org/SA.png","La Liga":"https://crests.football-data.org/PD.png","La Liga 2":"https://crests.football-data.org/SD.png","Primeira Liga":"https://crests.football-data.org/PPL.png"};
 function matchCell(m){
  const div=element("div","odds-matchup");
@@ -50,7 +50,7 @@ function render(data){
   thead.appendChild(tr);table.appendChild(thead);const tbody=element("tbody");
   for(const m of matches){
    const row=element("tr");
-   const time=(m.kickoffDate===data.reportDate?"":"၁၃ ရက် မနက် · ")+m.kickoff;
+   const time=m.kickoffDisplay||m.kickoff||"";
    const t=element("td","time",time),pair=element("td","team-pair");
    pair.appendChild(matchCell(m));
    append(row,t,pair,element("td","upper",m.upperTeam),element("td","price",m.bodyOdds),element("td","price",m.goalTotalOdds),element("td","prediction",m.pdfLastColumn));
