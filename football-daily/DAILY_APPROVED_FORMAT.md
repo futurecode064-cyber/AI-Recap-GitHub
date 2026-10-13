@@ -91,3 +91,15 @@ Shared branding: Original dark teal/charcoal and orange for Future Code Football
 Future daily research MUST obtain both teams' actual verified recent five completed games and genuine 1X2, but it need NOT collect new H2H for public previews. Team hero photographs are OPTIONAL until trustworthy, correctly attributed photo assets are available. Do not fabricate images or claim an illustrated kit is an actual player photo.
 
 Verify JS and Node suite, daily Python guard on data updates, PNG completeness, mobile/Desktop and YKZ styles, then write to canonical repository and production mirror on the user's explicit instruction. GitHub commit does not by itself confirm live Cloudflare deployment; check actual live JS/CSS/data.
+
+ 
+## 2026-10-13 FINAL HERO CORRECTION — USER SCREENSHOT OVERRIDE (highest-priority hero rule)
+
+The user reviewed the actual rendered match hero and requested a simpler design. This section **overrides all previous photo/kit/silhouette/date-time hero requirements**. It applies to main Football and YKZ branded shared preview cards and to each match's full Canvas PNG:
+
+- Hero left half: ONLY the real HOME club crest, centered both vertically and horizontally, large and clear, on an attractive unobtrusive dark club-colored background. Hero right half: ONLY the real AWAY club crest, centered identically. No illustrated human, jersey or player image, no photo overlays, no extra name caption under the crest. Do not load optional HeroImageUrl photos in this header.
+- Center still shows the league and large VS.
+- Exactly three columns in the bottom bar: **home Burmese name | home နှင့် away Burmese names | away Burmese name**. The right column NO LONGER displays the match date/time.
+- Do not display a kickoff date/time in the top strip of the ordinary preview match card either. (Keep kickoff date/time accurately stored in JSON and the odds schedule/results where needed; this request is limited to the preview graphic.)
+- The W/D/L – bookmaker 1X2 – W/D/L strip, Myanmar prices, larger fluent Burmese commentary, H2H removal, original YKZ colors and complete PNG download still remain exactly as previously approved.
+- Guard via regression tests and verify BOTH GitHub production mirror and the actual Cloudflare public JS/CSS. Do not reintroduce player photos merely because they appear in older editorial notes.
