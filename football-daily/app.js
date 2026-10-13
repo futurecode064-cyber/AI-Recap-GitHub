@@ -54,6 +54,7 @@ const TEAM_NAMES_MM={
 function localizedTeam(value){return TEAM_NAMES_MM[value]||value||"";}
 const TZ="Asia/Yangon";
 let report={matches:[],published:false},selectedLeague="all",selectedDay=0;
+const NO_PREVIEW_TEXT="ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ";
 let loadSequence=0,loading=false;
 const $=id=>document.getElementById(id);
 function dateParts(){
@@ -242,7 +243,7 @@ function renderFixtureOnly(match){
  append(heading,document.createTextNode(teamLabel(match,"home")),node("span","versus","VS"),document.createTextNode(teamLabel(match,"away")));
  append(title,heading,node("p","",match.venue||"အတည်ပြုပွဲစဉ် · မြန်မာစံတော်ချိန်"));
  card.appendChild(title);
- card.appendChild(node("p","section-note","ပွဲစဉ်ကို အတည်ပြုထားပါသည်။ AI ပွဲကြိုသုံးသပ်ချက်ကို မထုတ်ဝေရသေးပါ။"));
+ card.appendChild(node("p","section-note",NO_PREVIEW_TEXT));
  return card;
 }
 function renderMatch(match,i){
@@ -279,7 +280,7 @@ function renderMatch(match,i){
  }else{
    const paras=splitAnalysis(match);
    if(paras.length)paras.forEach(p=>body.appendChild(node("p","",p)));
-   else body.appendChild(node("p","","ပွဲကြိုသုံးသပ်ချက်ကို မကြာမီဖော်ပြပါမည်။"));
+   else body.appendChild(node("p","",NO_PREVIEW_TEXT));
  }
  // Only Special Choice receives a separate, researched editorial assessment.
  if(selectedLeague==="special"&&match.specialChoice&&Array.isArray(match.specialAnalysisParagraphs)&&match.specialAnalysisParagraphs.length){
@@ -363,20 +364,24 @@ function render(){
  const picks=all.filter(m=>m.specialChoice===true);
  const selected=all.filter(m=>(selectedLeague==="all"||selectedLeague==="special"&&m.specialChoice===true||canonicalLeague(m.league)===selectedLeague)&&(selectedDay!==-1||validFinal(m)));
  $("matchCount").textContent=String(selectedDay===-1?all.filter(validFinal).length:all.length);$("specialCount").textContent=String(selectedDay===-1?picks.filter(validFinal).length:picks.length);
- $("statusText").textContent=report.fixtureSnapshot?"ပွဲစဉ်အတည်ပြုထားပြီး · သုံးသပ်ချက်စောင့်ဆိုင်း":selectedDay===-1?(all.some(validFinal)?"ရလဒ်အတည်ပြုပြီး":"ရလဒ်မရရှိသေး"):(report.published?"ထုတ်ဝေပြီး":"Data မရရှိသေး");
+ $("statusText").textContent=selectedDay===-1?(all.some(validFinal)?"ရလဒ်အတည်ပြုပြီး":"ရလဒ်မရရှိသေး"):(report.published?"ထုတ်ဝေပြီး":NO_PREVIEW_TEXT);
  const labels={"-1":["မနေ့က ပွဲရလဒ်များ","● YESTERDAY"],"0":["ဒီနေ့ ပွဲကြိုသုံးသပ်ချက်များ","● TODAY"]};
  $("reportHeading").textContent=labels[selectedDay][0];
  $("reportPill").textContent=labels[selectedDay][1];
- $("sectionNote").textContent=report.fixtureSnapshot?"အတည်ပြုပွဲစဉ်စာရင်းသာဖြစ်ပြီး သုံးသပ်ချက်နှင့် Odds ကို မထုတ်ဝေရသေးပါ။":selectedLeague==="special"
+ $("sectionNote").textContent=selectedDay!==-1&&!report.published?NO_PREVIEW_TEXT:selectedLeague==="special"
  ?"လက်ရှိသတင်း၊ အသင်းအင်အားနဲ့ ဈေးကွက်အခြေအနေများကို အစုံစစ်ဆေးပြီး သီးသန့်ရွေးထားသည့် ပွဲများသာ ပါဝင်ပါမည်။"
  :`${selected.length} ပွဲကို ပြသနေသည် · မြန်မာစံတော်ချိန် ${displayDate(selectedDateKey())}`;
  if(selected.length)selected.forEach((m,i)=>list.appendChild(selectedDay===-1?renderFinished(m):report.fixtureSnapshot?renderFixtureOnly(m):renderMatch(m,i)));
  else{
   const card=node("div","empty-card");
+  const previewUnavailable=selectedDay!==-1&&!report.published;
   append(card,node("div","empty-icon",selectedLeague==="special"?"★":"○"),
-   node("h3","",selectedDay===-1?"မနေ့က အတည်ပြုရလဒ် မတင်ရသေးပါ":selectedLeague==="special"?"Special Choice မရွေးရသေးပါ":report.published?"ဒီ Filter အတွက် ပွဲမရှိပါ":"ဒီနေ့ သုံးသပ်ချက် မထုတ်ဝေရသေးပါ"),
-   node("p","",selectedLeague==="special"?"စစ်ဆေးမှုမပြည့်စုံသေးလျှင် ရွေးချယ်မှုကို အတင်းမဖော်ပြပါ။":
-     selectedDay===-1?"ပွဲပြီးရလဒ်ကို အတည်ပြုပြီးမှသာ ဤနေရာတွင် ဖော်ပြပါမည်။":"ဒီနေ့အတွက် အချက်အလက်အသစ်မရသေးပါ။"));
+   node("h3","",previewUnavailable?NO_PREVIEW_TEXT:selectedDay===-1?"မနေ့က အတည်ပြုရလဒ် မတင်ရသေးပါ":selectedLeague==="special"?"Special Choice မရွေးရသေးပါ":"ဒီ Filter အတွက် ပွဲမရှိပါ"));
+  if(selectedDay===-1){
+   card.appendChild(node("p","","ပွဲပြီးရလဒ်ကို အတည်ပြုပြီးမှသာ ဤနေရာတွင် ဖော်ပြပါမည်။"));
+  }else if(!previewUnavailable&&selectedLeague==="special"){
+   card.appendChild(node("p","","စစ်ဆေးမှုမပြည့်စုံသေးလျှင် ရွေးချယ်မှုကို အတင်းမဖော်ပြပါ။"));
+  }
   list.appendChild(card);
  }
  // No-fixture leagues/cups are intentionally hidden from the public UI.
