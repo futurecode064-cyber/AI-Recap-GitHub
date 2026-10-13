@@ -180,11 +180,14 @@ test('odds sheet clearly labels internet predictions and morning Myanmar market 
  assert.ok(js.includes('homeCrestUrl') && js.includes('awayCrestUrl'));
  assert.ok(js.includes('odds-matchup'));
 });
-test('form and H2H sections use record-level verified opponent logos',()=>{
+test('compact WDL badges are derived from verified finished games and no H2H UI is rendered',()=>{
  const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
- assert.ok(js.includes('item.opponentCrestUrl'));
- assert.ok(js.includes('g.homeCrestUrl'));
- assert.ok(js.includes('g.awayCrestUrl'));
+ assert.ok(js.includes('function formLetter(game)'));
+ assert.ok(js.includes('game.teamGoals>game.opponentGoals?"W"'));
+ assert.ok(js.includes('renderWdlStrip(match,"home")'));
+ assert.ok(js.includes('renderWdlStrip(match,"away")'));
+ assert.ok(!js.includes('renderFormAndH2H(match)'));
+ assert.ok(!js.includes('Head-to-Head · နောက်ဆုံး ၅ ကြိမ်'));
 });
 
 test('old source bookie odds stay in 12 Oct archive and new report has verified independently sourced coherent 1X2 triplets',()=>{
@@ -202,8 +205,8 @@ test('old source bookie odds stay in 12 Oct archive and new report has verified 
   assert.equal(m.oddsProvider,m.league==='Championship'?'PokerStars Sports':'Interwetten');
  }
  const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
- assert.ok(js.includes('oddBox(teamLabel(match,"home")+" နိုင် (1)"'));
- assert.ok(js.includes('oddBox(teamLabel(match,"away")+" နိုင် (2)"'));
+ assert.ok(js.includes('oddBox("အိမ်ရှင် (1)",match.homeOdds)'));
+ assert.ok(js.includes('oddBox("ဧည့်သည် (2)",match.awayOdds)'));
 });
 
 test('navigation has three equally grouped Yesterday/Today/Odds boxes in both entry pages',()=>{
@@ -228,13 +231,23 @@ test('mobile odds shows all four columns without horizontal table scrolling',()=
  assert.ok(html.includes('grid-template-columns:repeat(4,minmax(0,1fr))'));
  assert.match(html,/\.odds-table thead\{display:none\}/);
 });
-test('three-box history and H2H layout preserves all three datasets',()=>{
+test('new screenshot-inspired team hero and WDL–1X2–WDL layout is responsive and has no H2H panel',()=>{
  const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
  const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
- assert.ok(js.includes('const split=node("div","form-three-grid")'));
- assert.ok(js.includes('append(split,homeForm,h2h,awayForm)'));
- assert.ok(css.includes('.form-three-grid{display:grid;grid-template-columns:repeat(3'));
- assert.ok(css.includes('.form-three-grid{grid-template-columns:1fr}'));
+ const exporter=fs.readFileSync(path.join(root,'card-export.js'),'utf8');
+ assert.ok(js.includes('function renderMatchHero(match)'));
+ assert.ok(js.includes('hero-team-photo'));
+ assert.ok(js.includes('hero-team-crest'));
+ assert.ok(js.includes('renderQuoteAndForm(match)'));
+ assert.ok(js.includes('match[side+"HeroImageUrl"]'));
+ assert.ok(js.includes('renderWdlStrip(match,"home")'));
+ assert.ok(js.includes('renderWdlStrip(match,"away")'));
+ assert.ok(css.includes('.market-form-row{display:grid;grid-template-columns:'));
+ assert.ok(css.includes('.hero-info-bar{display:grid'));
+ assert.ok(css.includes('.analysis-body p{font-size:18px'));
+ assert.ok(css.includes('font-size:16.5px;line-height:2.05'));
+ assert.ok(exporter.includes('photoCover(ctx,match.homeHeroImageUrl'));
+ assert.ok(!exporter.includes('ထိပ်တိုက်တွေ့ဆုံမှု H2H'));
 });
 test('Canvas exporter includes all odds entries and only confirmed results',()=>{
  const js=fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8');
