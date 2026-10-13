@@ -53,24 +53,11 @@
   k.fill(ctx,x,y,size,size,color,size/2);
   k.text(ctx,letter,x+size/2,y+size/2,16,"#ffffff",true,"center");
  }
- function heroKit(ctx,k,x,y,w,h,away){
-  k.fill(ctx,x,y,w,h,away?"#1b5f4d":"#682427");
-  const glow=ctx.createRadialGradient(x+w/2,y+60,5,x+w/2,y+100,w*.83);
-  glow.addColorStop(0,away?"#52bd9588":"#ff985788");
-  glow.addColorStop(1,"#00000000");k.fill(ctx,x,y,w,h,glow);
-  k.fill(ctx,x+w*.23,y+h*.36,w*.54,h*.71,away?"#e5f1e9":"#b63436",65);
-  if(away){
-   for(let i=0;i<4;i++)k.fill(ctx,x+w*.23,y+h*.42+i*38,w*.54,17,"#22846c");
-  }else{
-   for(let i=1;i<5;i++)k.fill(ctx,x+w*(.23+i*.095),y+h*.36,15,h*.6,"#e2ae44");
-  }
-  k.fill(ctx,x+w*.42,y+h*.17,w*.16,h*.21,"#ad8977",45);
- }
  async function save(match,opts={}){
   if(!match||!match.home||!match.away)throw Error("Missing team identities");
   const k=window.FutureCodeCanvasKit;
   if(!k)throw Error("Canvas exporter is unavailable");
-  const {C,create,fill,line,text,fit,fonts,preloadImages,crest,photoCover,download}=k;
+  const {C,create,fill,line,text,fit,fonts,preloadImages,crest,download}=k;
   await fonts();
   const W=1200,M=24,fullWidth=W-2*M;
   const home=String(match.home||""),away=String(match.away||"");
@@ -85,7 +72,7 @@
   const {canvas,ctx}=create(W,H);
   const isYKZ=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
   const my=match.myanmarOdds||{};
-  await preloadImages([match.homeCrestUrl,match.awayCrestUrl,match.homeHeroImageUrl,match.awayHeroImageUrl,opts.brandLogoUrl].filter(Boolean));
+  await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl].filter(Boolean));
   fill(ctx,0,0,W,H,C.bg);
   fill(ctx,M,14,fullWidth,H-34,C.head,12);
   fill(ctx,M,14,fullWidth,66,C.bg,10);
@@ -93,18 +80,21 @@
   if(isYKZ){
    text(ctx,"YKZ FAMILY GROUP · အတူရှေ့ဆက် YKZ",W/2,44,17,C.orange,true,"center");
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"YKZ");
-  }else text(ctx,match.kickoffYangon||"",W-M-18,45,19,C.muted,true,"right");
+  }
   const heroY=86,heroH=387,sideW=450,middleW=252;
   const lx=M,rx=W-M-sideW;
-  heroKit(ctx,k,lx,heroY,sideW,heroH,false);
-  heroKit(ctx,k,rx,heroY,sideW,heroH,true);
-  photoCover(ctx,match.homeHeroImageUrl,lx,heroY,sideW,heroH);
-  photoCover(ctx,match.awayHeroImageUrl,rx,heroY,sideW,heroH);
+  // Only genuine football club logos, centered in each team's half.
+  fill(ctx,lx,heroY,sideW,heroH,isYKZ?"#321317":"#26343b");
+  fill(ctx,rx,heroY,sideW,heroH,isYKZ?"#2b2118":"#193c37");
   const light=ctx.createLinearGradient(W/2-145,heroY,W/2+145,heroY+heroH);
-  light.addColorStop(0,"#092333");light.addColorStop(.5,"#1b344f");light.addColorStop(1,"#051521");
+  light.addColorStop(0,isYKZ?"#21080c":"#092333");
+  light.addColorStop(.5,isYKZ?"#401616":"#1b344f");
+  light.addColorStop(1,isYKZ?"#1a0b0b":"#051521");
   fill(ctx,lx+sideW,heroY,middleW,heroH,light);
-  crest(ctx,match.homeCrestUrl,lx+38,heroY+232,126,home);
-  crest(ctx,match.awayCrestUrl,rx+sideW-161,heroY+232,126,away);
+  const badgeSize=178;
+  const crestY=heroY+(heroH-badgeSize)/2;
+  crest(ctx,match.homeCrestUrl,lx+(sideW-badgeSize)/2,crestY,badgeSize,home);
+  crest(ctx,match.awayCrestUrl,rx+(sideW-badgeSize)/2,crestY,badgeSize,away);
   text(ctx,"◈",W/2,heroY+75,62,C.white,true,"center");
   text(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
   text(ctx,"VS",W/2,heroY+244,90,C.white,true,"center");
@@ -114,7 +104,7 @@
   fill(ctx,M+outer+middleW,infoY,outer,infoH,isYKZ?"#250707":"#14090d");
   text(ctx,home,M+outer/2,infoY+39,fit(ctx,home,outer-24,25,16),C.orange,true,"center",outer-24);
   text(ctx,home+" နှင့် "+away,W/2,infoY+39,fit(ctx,home+" နှင့် "+away,middleW-12,20,12),C.white,true,"center",middleW-12);
-  text(ctx,match.kickoffYangon||"",M+outer+middleW+outer/2,infoY+39,fit(ctx,match.kickoffYangon||"",outer-24,24,15),C.orange,true,"center",outer-24);
+  text(ctx,away,M+outer+middleW+outer/2,infoY+39,fit(ctx,away,outer-24,25,16),C.orange,true,"center",outer-24);
   const marketY=570;
   fill(ctx,M,marketY,fullWidth,90,C.panel);
   text(ctx,"မြန်မာကြေး",M+18,marketY+28,22,C.orange,true);
