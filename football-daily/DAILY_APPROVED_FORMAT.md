@@ -73,3 +73,21 @@ The league/cup filters show **only competitions actually present in the selected
 7. No format redesign unless the user explicitly changes this approved standard.
 
 Last implementation approval: 2026-10-12. Latest tested fast Canvas branch includes `canvas-image-kit.js`, `daily-image-export.js` and `card-export.js`.
+
+
+## 2026-10-13 VISUAL REDESIGN — NEW USER-APPROVED HIGHEST PRIORITY (overrides previous 3-column H2H rules)
+The user supplied a specific reference screenshot on 13 October 2026 and explicitly authorized implementation and website publication. This replaces older H2H in the preview and three panel Home Last 5 | H2H | Away Last 5 requirements. Preserve unrelated odds tables, finished results, original date/tabs, team names, verified content, multi-brand sharing and daily preparation rules.
+
+Every ordinary match card / full-length PNG now shows in this exact order:
+
+1. Large cinematic club-versus-club hero: home-team football figure/photo on LEFT, away team on RIGHT, center competition name and VS, genuine team logos. Beneath, three-section band with exact Burmese home name | both Burmese team names | Myanmar-night kickoff. Optional licensed per-match team photo URLs are homeHeroImageUrl and awayHeroImageUrl, with photo credit URLs homeHeroImageCreditUrl and awayHeroImageCreditUrl. Never present incorrect or unlicensed player photos as verified. With no sourced photograph, render a striking club-colored football-kit illustration plus genuine crest, never an empty or broken hero.
+2. Compact မြန်မာကြေး strip preserves exact source-provided upperTeam, bodyOdds, goalTotalOdds. Empty remains dash, never guessed or converted to 1X2.
+3. Three adjacent compact panels are NOW: HOME last 5 verified result badges (W/D/L), bookmaker 1X2 HOME/DRAW/AWAY, AWAY last 5 verified result badges (W/D/L). Green W=win, blue D=draw, red L=loss; newest first, missing entries become neutral dashes. NO H2H panel on website or in export. Historical H2H remains optional private/research/archival data only.
+4. ပွဲကြိုသုံးသပ်ချက် title followed by the exact single-paragraph professionally researched Burmese commentator narrative. Include two bold spans for a reasoned verdict and exactly two plausible scorelines. Desktop preview font around 18px and mobile around 16.5px; line-height about 2.
+5. One full, fast native Canvas PNG containing same hero, logos, original odds, Home WDL | 1X2 | Away WDL, large full-text analysis and brand colors. Height grows to prevent narrative clipping, no H2H.
+
+Shared branding: Original dark teal/charcoal and orange for Future Code Football; the YKZ FAMILY GROUP path preserves its separate scarlet/gold/black palette, correct original brand logo and slogan. Shared JS/CSS/Canvas files and shared dated JSON feed both sites. The full Odds page and Yesterday final-result PNG keep their existing behavior.
+
+Future daily research MUST obtain both teams' actual verified recent five completed games and genuine 1X2, but it need NOT collect new H2H for public previews. Team hero photographs are OPTIONAL until trustworthy, correctly attributed photo assets are available. Do not fabricate images or claim an illustrated kit is an actual player photo.
+
+Verify JS and Node suite, daily Python guard on data updates, PNG completeness, mobile/Desktop and YKZ styles, then write to canonical repository and production mirror on the user's explicit instruction. GitHub commit does not by itself confirm live Cloudflare deployment; check actual live JS/CSS/data.
