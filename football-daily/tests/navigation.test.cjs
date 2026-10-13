@@ -85,22 +85,48 @@ test('both entry pages contain navigation targets and both export modules',()=>{
  }
 });
 
-test('daily PDF odds page keeps all 17 user supplied entries and nine eligible previews',()=>{
+test('archived 12 Oct editorial sheet preserves all 17 user-submitted prices and nine historical previews',()=>{
  const sheet=JSON.parse(fs.readFileSync(path.join(root,'data/odds/2026-10-12.json'),'utf8'));
- const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ const archive=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-12.json'),'utf8'));
  assert.equal(sheet.reportDate,'2026-10-12');
+ assert.equal(archive.reportDate,'2026-10-12');
  assert.equal(sheet.matches.length,17);
  assert.equal(sheet.matches.filter(x=>x.eligibleForPreview).length,9);
- assert.equal(today.matches.length,9);
- assert.equal(today.matches.filter(x=>x.homeDisplay&&x.awayDisplay).length,9);
- for(const m of today.matches){
+ assert.equal(archive.matches.length,9);
+ for(const m of archive.matches){
   const quote=sheet.matches.find(x=>x.home===m.homeDisplay&&x.away===m.awayDisplay);
-  assert.ok(quote,'No PDF odds fixture found for '+m.homeDisplay);
+  assert.ok(quote,'No historical PDF price row for '+m.homeDisplay);
   assert.equal(m.myanmarOdds.bodyOdds,quote.bodyOdds);
   assert.equal(m.myanmarOdds.goalTotalOdds,quote.goalTotalOdds);
   assert.equal(m.dailyPreviewText.split('**').length,5);
+  assert.equal(m.status,'finished');
+  assert.ok(/^\d+-\d+$/.test(m.finalScore),'Invalid verified final score for '+m.home);
+  assert.ok(m.finalScoreSourceUrl?.startsWith('https://'),'Final score source missing '+m.home);
  }
 });
+
+test('current Yangon-day report includes every independently confirmed fixture, full Burmese preview, verified form and no made-up opening prices',()=>{
+ const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ const fixtures=JSON.parse(fs.readFileSync(path.join(root,'data/fixtures/2026-10-13.json'),'utf8'));
+ assert.equal(today.reportDate,'2026-10-13');
+ assert.equal(today.published,true);
+ const eligible=fixtures.matches.filter(x=>x.league==='UEFA Champions League'&&x.kickoffYangon.includes('13 Oct'));
+ assert.equal(today.matches.length,eligible.length);
+ for(const m of today.matches){
+  assert.ok(eligible.some(x=>x.home===m.home&&x.away===m.away));
+  assert.equal(m.dailyPreviewText.split('**').length,5);
+  assert.ok(m.dailyPreviewText.length>150);
+  assert.ok(m.researchSources.length>=2);
+  assert.equal(m.homeLastFive.length,5);
+  assert.equal(m.awayLastFive.length,5);
+  assert.ok(Array.isArray(m.headToHead));
+  assert.ok(m.myanmarOdds && m.myanmarOdds.bodyOdds===null);
+  assert.equal(m.homeOdds,null);
+  assert.equal(m.drawOdds,null);
+  assert.equal(m.awayOdds,null);
+ }
+});
+
 test('odds page and its browser script are linked from both football entry pages',()=>{
  assert.ok(fs.existsSync(path.join(root,'odds.html')));
  assert.ok(fs.existsSync(path.join(root,'odds.js')));
@@ -137,17 +163,23 @@ test('form and H2H sections use record-level verified opponent logos',()=>{
  assert.ok(js.includes('g.awayCrestUrl'));
 });
 
-test('all nine published previews contain complete single-provider sourced 1X2 decimal prices',()=>{
- const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
- assert.equal(today.reportDate,'2026-10-12');assert.equal(today.matches.length,9);
- for(const m of today.matches){
+test('historical sourced 1X2 prices stay in the archived report; missing current market prices are not invented',()=>{
+ const archive=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-12.json'),'utf8'));
+ assert.equal(archive.matches.length,9);
+ for(const m of archive.matches){
   for(const key of ['homeOdds','drawOdds','awayOdds']){
-   assert.ok(Number(m[key])>1,'Missing real 1X2 '+key+' for '+m.home);
+   assert.ok(Number(m[key])>1,'Missing historical sourced 1X2 '+key+' for '+m.home);
   }
-  assert.ok(m.oddsProvider && /^https:\/\//.test(m.oddsSourceUrl),'Odds not attributable to bookmaker '+m.home);
+  assert.ok(m.oddsProvider&&m.oddsSourceUrl?.startsWith('https://'),'Historical odds attribution missing '+m.home);
   assert.equal(m.oddsMarket,'Full-time 1X2');
   assert.equal(m.oddsIsLive,false);
-  assert.ok(m.myanmarOdds.bodyOdds && m.myanmarOdds.goalTotalOdds,'Original Myanmar odds were lost');
+  assert.ok(m.myanmarOdds.bodyOdds&&m.myanmarOdds.goalTotalOdds);
+ }
+ const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ for(const m of today.matches){
+  assert.equal(m.homeOdds,null);
+  assert.equal(m.drawOdds,null);
+  assert.equal(m.awayOdds,null);
  }
  const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
  assert.ok(js.includes('oddBox(teamLabel(match,"home")+" နိုင် (1)"'));

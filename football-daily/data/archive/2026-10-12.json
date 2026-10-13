@@ -1,0 +1,1528 @@
+{
+  "reportDate": "2026-10-12",
+  "published": true,
+  "matches": [
+    {
+      "league": "La Liga 2",
+      "home": "Real Valladolid",
+      "away": "Albacete",
+      "kickoffYangon": "18:30 · 12 Oct",
+      "venue": "Estadio José Zorrilla, Valladolid",
+      "homeStanding": {
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "points": 9,
+        "position": 17
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 0,
+        "draws": 1,
+        "losses": 7,
+        "points": 1,
+        "position": 22
+      },
+      "standingsSourceUrl": "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-real-valladolid-cf-albacete-bp-9",
+      "homeOdds": "1.984",
+      "drawOdds": "3.34",
+      "awayOdds": "4.00",
+      "myanmarOdds": {
+        "upperTeam": "ဗယ်လာဒိုလစ်",
+        "bodyOdds": "-85",
+        "goalTotalOdds": "2-100"
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-04",
+          "venueSide": "away",
+          "opponent": "Las Palmas",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/98.png"
+        },
+        {
+          "date": "2026-09-27",
+          "venueSide": "home",
+          "opponent": "Córdoba",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8447.png"
+        },
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "AD Ceuta",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        },
+        {
+          "date": "2026-09-13",
+          "venueSide": "home",
+          "opponent": "Real Oviedo",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png"
+        },
+        {
+          "date": "2026-09-05",
+          "venueSide": "home",
+          "opponent": "FC Andorra",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-03",
+          "venueSide": "home",
+          "opponent": "Eibar",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png"
+        },
+        {
+          "date": "2026-09-25",
+          "venueSide": "away",
+          "opponent": "Girona",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9812.png"
+        },
+        {
+          "date": "2026-09-18",
+          "venueSide": "home",
+          "opponent": "Córdoba",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8447.png"
+        },
+        {
+          "date": "2026-09-12",
+          "venueSide": "away",
+          "opponent": "Granada",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "away",
+          "opponent": "Castellón",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2026-01-24",
+          "home": "Real Valladolid",
+          "away": "Albacete",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png"
+        },
+        {
+          "date": "2025-09-21",
+          "home": "Albacete",
+          "away": "Real Valladolid",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png"
+        },
+        {
+          "date": "2024-02-12",
+          "home": "Real Valladolid",
+          "away": "Albacete",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png"
+        },
+        {
+          "date": "2023-09-01",
+          "home": "Albacete",
+          "away": "Real Valladolid",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png"
+        },
+        {
+          "date": "2018-05-12",
+          "home": "Real Valladolid",
+          "away": "Albacete",
+          "homeGoals": 3,
+          "awayGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png"
+        }
+      ],
+      "dailyPreviewText": "စပိန် လာလီဂါ (၂) ပွဲစဉ် (၉) မှာ ရီးယဲလ် ဗယ်လာဒိုလစ်က အယ်လ်ဘာစီတီကို အိမ်ကွင်းမှာ လက်ခံကစားရမှာဖြစ်ပါတယ်။ ပွဲမတိုင်မီ ဗယ်လာဒိုလစ်က ၈ ပွဲကစားပြီး ၂ ပွဲနိုင်၊ ၃ ပွဲသရေ၊ ၃ ပွဲရှုံးကာ ၉ မှတ်နဲ့ အဆင့် (၁၇) မှာရှိနေပြီး အယ်လ်ဘာစီတီက ၈ ပွဲမှာ ၁ ပွဲသရေ၊ ၇ ပွဲရှုံး၊ နိုင်ပွဲမရှိသေးတာကြောင့် ၁ မှတ်နဲ့ အဆင့် (၂၂) မှာ ရပ်တည်နေပါတယ်။ အိမ်ရှင်ရဲ့ နောက်ဆုံး ၅ ပွဲက ၂ နိုင်၊ ၂ သရေ၊ ၁ ရှုံးဖြစ်ပြီး ကော်ဒိုဘာကို ၃-၁ နိုင်ခဲ့သလို လာ့စ်ပါလ်မက်စ်နဲ့ ၂-၂ သရေကျထားပါတယ်။ ဧည့်သည်ကတော့ နောက်ဆုံး ၅ ပွဲမှာ ၄ ပွဲရှုံးပြီး အီဘာကို ၁-၃၊ ဂျီရိုနာကို ၀-၂ ရှုံးခဲ့တဲ့အတွက် ပွဲချိန်တစ်လျှောက် ခံစစ်တည်ငြိမ်မှု ရှာမရသေးပါဘူး။ ဗယ်လာဒိုလစ်ရဲ့ အလယ်တန်းကို ချိတ်ဆက်တဲ့ ကစားပုံက အိမ်ကွင်းအသာစီးရနိုင်ပေမဲ့ အယ်လ်ဘာစီတီနဲ့ နောက်ဆုံး ၂ ကြိမ်တွေ့ရာမှာ နှစ်ကြိမ်လုံးရှုံးထားတာ သတိထားရမယ့်အချက်ပါ။ နှစ်သင်းရဲ့ လတ်တလော ကစားပုံကိုပါ ထည့်တွက်ရင် **ဗယ်လာဒိုလစ်ဘက်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဒါပေမဲ့ ဂိုးအများကြီးပြတ်မယ်လို့ မမျှော်လင့်ဘဲ **၁-၀ သို့မဟုတ် ၂-၁** ကို ခန့်မှန်းပါတယ်။",
+      "specialChoice": false,
+      "researchSources": [
+        "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-real-valladolid-cf-albacete-bp-9",
+        "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+        "https://last5games.com/head-to-head/albacete-vs-real-valladolid/361-3169/",
+        "https://www.fotmob.com/en-GB/matches/albacete-vs-real-valladolid/2vti1w"
+      ],
+      "espnEventId": "401883159",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883159",
+      "homeDisplay": "ဗယ်လာဒိုလစ်",
+      "awayDisplay": "အယ်လ်ဘာစီတီ",
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/27687-spain-segunda-division/758831669-real-valladolid-albacete-balompie",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "5-0",
+      "finalScoreSourceUrl": "https://www.laliga.com/en-ES/clubs/r-valladolid-cf/results?rel=mas",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    },
+    {
+      "league": "La Liga 2",
+      "home": "Burgos CF",
+      "away": "Granada",
+      "kickoffYangon": "20:45 · 12 Oct",
+      "venue": "Estadio Municipal El Plantío, Burgos",
+      "homeStanding": {
+        "played": 8,
+        "wins": 4,
+        "draws": 2,
+        "losses": 2,
+        "points": 14,
+        "position": 7
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "points": 11,
+        "position": 9
+      },
+      "standingsSourceUrl": "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-burgos-cf-granada-cf-9",
+      "homeOdds": "2.45",
+      "drawOdds": "3.28",
+      "awayOdds": "2.936",
+      "myanmarOdds": {
+        "upperTeam": "ဘာဂို့စ်",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "2-45"
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-03",
+          "venueSide": "away",
+          "opponent": "Almería",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6832.png"
+        },
+        {
+          "date": "2026-09-27",
+          "venueSide": "home",
+          "opponent": "Eldense",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "Las Palmas",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/98.png"
+        },
+        {
+          "date": "2026-09-11",
+          "venueSide": "home",
+          "opponent": "AD Ceuta",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "away",
+          "opponent": "Real Oviedo",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-04",
+          "venueSide": "away",
+          "opponent": "Real Sociedad II",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-26",
+          "venueSide": "home",
+          "opponent": "FC Andorra",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "Leganés",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/"
+        },
+        {
+          "date": "2026-09-12",
+          "venueSide": "home",
+          "opponent": "Albacete",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "away",
+          "opponent": "Eibar",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2026-05-16",
+          "home": "Granada",
+          "away": "Burgos CF",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png"
+        },
+        {
+          "date": "2025-09-22",
+          "home": "Burgos CF",
+          "away": "Granada",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png"
+        },
+        {
+          "date": "2025-01-10",
+          "home": "Granada",
+          "away": "Burgos CF",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png"
+        },
+        {
+          "date": "2024-09-29",
+          "home": "Burgos CF",
+          "away": "Granada",
+          "homeGoals": 2,
+          "awayGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png"
+        },
+        {
+          "date": "2023-03-04",
+          "home": "Burgos CF",
+          "away": "Granada",
+          "homeGoals": 1,
+          "awayGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png"
+        }
+      ],
+      "dailyPreviewText": "လာလီဂါ (၂) ပွဲစဉ် (၉) အဖြစ် ဘာဂို့စ်နဲ့ ဂရန်နာဒါတို့ El Plantío ကွင်းမှာ တွေ့ဆုံကြမှာပါ။ အမှတ်ပေးဇယားမှာ ဘာဂို့စ်က ၈ ပွဲကစားပြီး ၄ ပွဲနိုင်၊ ၂ ပွဲသရေ၊ ၂ ပွဲရှုံး၊ ၁၄ မှတ်နဲ့ အဆင့် (၇) မှာရှိပြီး ဂရန်နာဒါက ၈ ပွဲမှာ ၃ ပွဲနိုင်၊ ၂ ပွဲသရေ၊ ၃ ပွဲရှုံးထားကာ ၁၁ မှတ်နဲ့ အဆင့် (၉) ကို ရောက်နေပါတယ်။ ဘာဂို့စ်ဟာ နောက်ဆုံး ၅ ပွဲကနေ ၃ နိုင်၊ ၁ သရေ၊ ၁ ရှုံးရရှိပြီး အယ်လ်ဒန်ဆီကို ၁-၀၊ လာ့စ်ပါလ်မက်စ်ကို ၂-၁ နိုင်ခဲ့တာကြောင့် အိမ်ကွင်းမှာ ခံစစ်တည်ငြိမ်ပြီး အခွင့်အရေးကို ထိရောက်စွာအသုံးချနိုင်တဲ့အနေအထားပါ။ ဂရန်နာဒါက နောက်ဆုံး ၅ ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၃ ရှုံးဖြစ်ပြီး ၁၂ ဂိုးပေးထားရတာကြောင့် တိုက်စစ်နဲ့ ခံစစ်ကြား အကွာအဝေးထိန်းမနိုင်တဲ့အချိန်တွေမှာ ပြန်လည်ထိုးဖောက်ခံနေရပါတယ်။ သို့ပေမဲ့ ဂရန်နာဒါရဲ့ အဝေးကွင်း ရုတ်တရက်တန်ပြန်တိုက်စစ်ကို မလျှော့တွက်သင့်ပါဘူး။ နောက်ဆုံးထိပ်တိုက် ၅ ကြိမ်မှာ သရေ ၃ ကြိမ်ပါပြီး ပွဲတွေ တင်းကျပ်လေ့ရှိတာကြောင့် ဘာဂို့စ်အတွက်လည်း အလွယ်နိုင်ပွဲ မဟုတ်နိုင်ပါ။ လက်ရှိ form နဲ့ အိမ်ကွင်းအသာစီးကြောင့် **ဘာဂို့စ်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ခန့်မှန်းရလဒ်ကတော့ **၁-၀ သို့မဟုတ် ၂-၁** ဖြစ်ပါတယ်။",
+      "specialChoice": false,
+      "researchSources": [
+        "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-burgos-cf-granada-cf-9",
+        "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+        "https://last5games.com/head-to-head/burgos-vs-granada/103-8366/",
+        "https://www.fotmob.com/en-GB/matches/burgos-cf-vs-granada/21w3wd"
+      ],
+      "homeDisplay": "ဘာဂို့စ်",
+      "awayDisplay": "ဂရန်နာဒါ",
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/27687-spain-segunda-division/758832426-burgos-granada",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "0-1",
+      "finalScoreSourceUrl": "https://www.laliga.com/en-NL/match/temporada-2026-2027-laliga-hypermotion-burgos-cf-granada-cf-9",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    },
+    {
+      "league": "Serie A",
+      "home": "Atalanta",
+      "away": "Venezia",
+      "kickoffYangon": "23:00 · 12 Oct",
+      "venue": "New Balance Arena, Bergamo",
+      "homeStanding": {
+        "played": 5,
+        "wins": 2,
+        "draws": 0,
+        "losses": 3,
+        "points": 6,
+        "position": 11
+      },
+      "awayStanding": {
+        "played": 5,
+        "wins": 0,
+        "draws": 0,
+        "losses": 5,
+        "points": 0,
+        "position": 20
+      },
+      "standingsSourceUrl": "https://www.thescore.com/seri/event/97637",
+      "homeOdds": "1.60",
+      "drawOdds": "4.30",
+      "awayOdds": "5.40",
+      "myanmarOdds": {
+        "upperTeam": "အတ္တလန်တာ",
+        "bodyOdds": "1-20",
+        "goalTotalOdds": "3-20"
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "Juventus",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png"
+        },
+        {
+          "date": "2026-09-12",
+          "venueSide": "home",
+          "opponent": "Cagliari",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png"
+        },
+        {
+          "date": "2026-09-05",
+          "venueSide": "away",
+          "opponent": "Roma",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png"
+        },
+        {
+          "date": "2026-08-31",
+          "venueSide": "home",
+          "opponent": "Bologna",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png"
+        },
+        {
+          "date": "2026-08-27",
+          "venueSide": "away",
+          "opponent": "Hapoel Tel Aviv",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "UEFA Conference League Qualifying",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-09-19",
+          "venueSide": "home",
+          "opponent": "Lazio",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png"
+        },
+        {
+          "date": "2026-09-11",
+          "venueSide": "home",
+          "opponent": "Fiorentina",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "away",
+          "opponent": "Frosinone",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png"
+        },
+        {
+          "date": "2026-09-02",
+          "venueSide": "away",
+          "opponent": "Udinese",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Coppa Italia",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png"
+        },
+        {
+          "date": "2026-08-28",
+          "venueSide": "away",
+          "opponent": "Milan",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2025-03-01",
+          "home": "Atalanta",
+          "away": "Venezia",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png"
+        },
+        {
+          "date": "2024-10-20",
+          "home": "Venezia",
+          "away": "Atalanta",
+          "homeGoals": 0,
+          "awayGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png"
+        },
+        {
+          "date": "2022-04-23",
+          "home": "Venezia",
+          "away": "Atalanta",
+          "homeGoals": 1,
+          "awayGoals": 3,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png"
+        },
+        {
+          "date": "2022-01-12",
+          "home": "Atalanta",
+          "away": "Venezia",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "Coppa Italia",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png"
+        },
+        {
+          "date": "2021-11-30",
+          "home": "Atalanta",
+          "away": "Venezia",
+          "homeGoals": 4,
+          "awayGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png"
+        }
+      ],
+      "dailyPreviewText": "အီတလီ စီးရီးအေ ပွဲစဉ် (၆) မှာ ဘာဂါမိုမြေက အတ္တလန်တာနဲ့ ဗင်နီဇီယာတို့ တွေ့ဆုံကြမှာပါ။ ပွဲမတိုင်မီ အတ္တလန်တာက ၅ ပွဲကစားပြီး ၂ ပွဲနိုင်၊ သရေမရှိ၊ ၃ ပွဲရှုံး၊ ၆ မှတ်နဲ့ အဆင့် (၁၁) မှာ ရပ်တည်နေချိန် ဗင်နီဇီယာက ၅ ပွဲလုံးရှုံး၊ ရမှတ်မရှိဘဲ အဆင့် (၂၀) မှာ ရှိနေပါတယ်။ အိမ်ရှင်ဟာ ပထမနှစ်ပွဲအနိုင်ရခဲ့ပေမဲ့ ရိုးမား၊ ကာဂလီယာရီနဲ့ ဂျူဗင်တပ်စ်တို့ကို ဆက်တိုက်ရှုံးခဲ့လို့ နည်းပြ ဆာရီရဲ့ အသင်းအနေနဲ့ အခြေအနေပြန်ထိန်းဖို့ လိုနေပါတယ်။ ဗင်နီဇီယာဘက်က နောက်ဆုံး လိဂ် ၅ ပွဲမှာ ၄ ဂိုးသာသွင်းပြီး ၁၃ ဂိုးအထိ ပေးထားရတာက ခံစစ်ပိုင်း အားနည်းချက်ကြီးပါ။ အတ္တလန်တာရဲ့ ဒီကီတီလာရေး၊ စကာမက်ကာနဲ့ ရိုးဝ်တို့ကို အခြေခံတဲ့ တိုက်စစ်က ဧည့်သည်ရဲ့ နောက်တန်းသုံးယောက်ကြား နေရာလွတ်ကို တိုက်ခိုက်နိုင်ပေမဲ့ ဟီယန်၊ ကိုဆူနူးတို့ရဲ့ ဒဏ်ရာအခြေအနေကြောင့် အိမ်ရှင်ခံစစ်ကလည်း စိတ်ချရသေးတာ မဟုတ်ပါဘူး။ နောက်ဆုံးထိပ်တိုက် ၅ ကြိမ်မှာ အတ္တလန်တာ ၄ ပွဲနိုင်၊ ၁ ပွဲသရေနဲ့ အသာစီးရှိတာကိုပါ ထည့်တွက်ရင် **အတ္တလန်တာကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** အနိုင်ရဖို့ အိမ်ရှင်ဘက်က အခွင့်အရေးပိုကောင်းပေမဲ့ နောက်ပိုင်းခြေစွမ်းကြောင့် အပြတ်မခန့်မှန်းသင့်ဘဲ ဖြစ်နိုင်တဲ့ရလဒ်ကတော့ **၂-၀ သို့မဟုတ် ၂-၁** ဖြစ်ပါတယ်။",
+      "specialChoice": false,
+      "researchSources": [
+        "https://www.thescore.com/seri/event/97637",
+        "https://www.fotmob.com/en-GB/matches/venezia-vs-atalanta/284hmb",
+        "https://www.transfermarkt.com/vergleich/vereineBegegnungen/statistik/607_800",
+        "https://www.legaseriea.it/serie-a/match/d3515f39846a468281f856a8e225fe92/atalanta-vs-venezia",
+        "https://www.sportsmole.co.uk/football/atalanta-bc/preview/atalanta-vs-venezia-prediction-team-news-lineups_606609.html",
+        "https://www.udinese.it/news/squad/coppa-italia-udinese-2-1-venezia"
+      ],
+      "espnEventId": "401875005",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875005",
+      "homeDisplay": "အတ္တလန်တာ",
+      "awayDisplay": "ဗင်နီဇီယာ",
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://www.telecomasia.net/sports-betting/tips/football/italy-serie-a/atalanta-vs-venezia-fc-match-prediction-12-october-2026/",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "3-1",
+      "finalScoreSourceUrl": "https://www.beinsports.com/en-us/soccer/serie-a/atalanta-vs-venezia-2026-10-11",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    },
+    {
+      "league": "La Liga 2",
+      "home": "Real Oviedo",
+      "away": "Eibar",
+      "kickoffYangon": "23:00 · 12 Oct",
+      "venue": "Estadio Carlos Tartiere, Oviedo",
+      "homeStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "points": 11,
+        "position": 10
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 7,
+        "draws": 0,
+        "losses": 1,
+        "points": 21,
+        "position": 1
+      },
+      "standingsSourceUrl": "https://www.laliga.com/en-AR/match/temporada-2026-2027-laliga-hypermotion-real-oviedo-sd-eibar-9",
+      "homeOdds": "2.165",
+      "drawOdds": "3.26",
+      "awayOdds": "3.50",
+      "myanmarOdds": {
+        "upperTeam": "အိုဗီဒို",
+        "bodyOdds": "-40",
+        "goalTotalOdds": "2-40"
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-02",
+          "venueSide": "away",
+          "opponent": "Eldense",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-27",
+          "venueSide": "home",
+          "opponent": "Sporting Gijón",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-20",
+          "venueSide": "away",
+          "opponent": "Sabadell",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-13",
+          "venueSide": "away",
+          "opponent": "Real Valladolid",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "home",
+          "opponent": "Burgos CF",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-03",
+          "venueSide": "away",
+          "opponent": "Albacete",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png"
+        },
+        {
+          "date": "2026-09-27",
+          "venueSide": "home",
+          "opponent": "Las Palmas",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/98.png"
+        },
+        {
+          "date": "2026-09-19",
+          "venueSide": "away",
+          "opponent": "Eldense",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-14",
+          "venueSide": "away",
+          "opponent": "Celta Fortuna",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/"
+        },
+        {
+          "date": "2026-09-06",
+          "venueSide": "home",
+          "opponent": "Granada",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2025-04-05",
+          "home": "Eibar",
+          "away": "Real Oviedo",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png"
+        },
+        {
+          "date": "2024-09-29",
+          "home": "Real Oviedo",
+          "away": "Eibar",
+          "homeGoals": 1,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png"
+        },
+        {
+          "date": "2024-06-12",
+          "home": "Eibar",
+          "away": "Real Oviedo",
+          "homeGoals": 0,
+          "awayGoals": 2,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png"
+        },
+        {
+          "date": "2024-06-08",
+          "home": "Real Oviedo",
+          "away": "Eibar",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png"
+        },
+        {
+          "date": "2024-06-02",
+          "home": "Eibar",
+          "away": "Real Oviedo",
+          "homeGoals": 4,
+          "awayGoals": 3,
+          "competition": "La Liga 2",
+          "sourceUrl": "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png"
+        }
+      ],
+      "dailyPreviewText": "လာလီဂါ (၂) ပွဲစဉ် (၉) မှာ အိုဗီဒိုက အမှတ်ပေးဇယား ဦးဆောင်သူ အီဘာကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမှာပါ။ ပွဲမတိုင်မီ အိုဗီဒိုက ၈ ပွဲကစားပြီး ၃ ပွဲနိုင်၊ ၂ ပွဲသရေ၊ ၃ ပွဲရှုံး၊ ၁၁ မှတ်နဲ့ အဆင့် (၁၀) မှာရှိနေချိန် အီဘာက ၈ ပွဲမှာ ၇ ပွဲနိုင်၊ သရေမရှိ၊ ၁ ပွဲရှုံးပြီး ၂၁ မှတ်နဲ့ အဆင့် (၁) ကို ကိုင်ထားပါတယ်။ နောက်ဆုံး ၅ ပွဲကို ကြည့်ရင် အိုဗီဒိုက ၂ နိုင်၊ ၁ သရေ၊ ၂ ရှုံးဖြစ်ပြီး အယ်လ်ဒန်ဆီကို ၁-၄ ရှုံးထားတာဟာ ခံစစ်ပြဿနာကို ပြနေပါတယ်။ အီဘာဘက်ကတော့ နောက်ဆုံး ၅ ပွဲလုံးနိုင်၊ ၁၅ ဂိုးသွင်းပြီး ၄ ဂိုးပဲ ပေးထားသလို အယ်လ်ဘာစီတီကို ၃-၁ နိုင်ပြီး လာ့စ်ပါလ်မက်စ်ကို ၃-၂ အနိုင်ရထားတာကြောင့် တိုက်စစ်ယုံကြည်မှု မြင့်မားပါတယ်။ အီဘာရဲ့ လျင်မြန်တဲ့ တိုက်စစ်ပြောင်းလဲမှုနဲ့ အပေါ်ကနေ ဖိအားပေးတဲ့ ကစားပုံကို အိုဗီဒိုက အိမ်ကွင်းအားနဲ့ တုံ့ပြန်နိုင်ပေမဲ့ လူစာရင်းဒဏ်ရာပြဿနာတချို့ရှိတာက အိမ်ရှင်အတွက် စိုးရိမ်စရာပါ။ ထိပ်တိုက်တွေ့ဆုံမှုတွေမှာ သရေပွဲတွေ မနည်းခဲ့တာကြောင့် ပြိုင်ပွဲတင်းကျပ်နိုင်ပေမဲ့ လက်ရှိအရှိန်အဟုန်နဲ့ ဂိုးသွင်းအားကြောင့် **အီဘာကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဖြစ်နိုင်တဲ့ရလဒ်ကိုတော့ **၁-၂ သို့မဟုတ် ၁-၁** လို့ မြင်ပါတယ်။",
+      "specialChoice": false,
+      "researchSources": [
+        "https://www.laliga.com/en-AR/match/temporada-2026-2027-laliga-hypermotion-real-oviedo-sd-eibar-9",
+        "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+        "https://last5games.com/head-to-head/real-oviedo-vs-sd-eibar/60-93/",
+        "https://www.sdeibar.com/noticias/previa-or-lider-con-los-pies-en-el-suelo",
+        "https://www.fotmob.com/matches/eibar-vs-real-oviedo/2egts9"
+      ],
+      "espnEventId": "401883182",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883182",
+      "homeDisplay": "အိုဗီဒို",
+      "awayDisplay": "အီဘာ",
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/27687-spain-segunda-division/758832420-real-oviedo-eibar",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "3-1",
+      "finalScoreSourceUrl": "https://www.laliga.com/en-EG/match/temporada-2026-2027-laliga-hypermotion-real-oviedo-sd-eibar-9",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    },
+    {
+      "league": "Premier League",
+      "home": "Coventry City",
+      "away": "Newcastle United",
+      "kickoffYangon": "01:30 · 13 Oct",
+      "venue": "Coventry Building Society Arena",
+      "homeStanding": {
+        "played": 5,
+        "wins": 1,
+        "draws": 0,
+        "losses": 4,
+        "points": 3,
+        "position": 18
+      },
+      "awayStanding": {
+        "played": 5,
+        "wins": 2,
+        "draws": 2,
+        "losses": 1,
+        "points": 8,
+        "position": 9
+      },
+      "standingsSourceUrl": "https://en.as.com/resultados/futbol/inglaterra/2026_2027/directo/regular_a_6_6a38cde9456a552/amp/",
+      "researchSources": [
+        "https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season",
+        "https://en.as.com/resultados/futbol/inglaterra/2026_2027/directo/regular_a_6_6a38cde9456a552/amp/",
+        "https://www.premierleague.com/en/clubs/4/newcastle-united/overview",
+        "https://www.premierleague.com/en/clubs/9/stats",
+        "https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-202627-premier-league-season"
+      ],
+      "dailyPreviewText": "အင်္ဂလန် ပရီးမီးယားလိဂ်ရဲ့ တနင်္လာညအပိတ်ပွဲမှာ တန်းတက်အသင်း ကိုဗင်ထရီက နယူးကာဆယ်ကို အိမ်ကွင်းမှာ လက်ခံကစားရမှာပါ။ ပွဲမတိုင်မီ ကိုဗင်ထရီက ၅ ပွဲမှာ ၁ ပွဲနိုင်၊ သရေမရှိ၊ ၄ ပွဲရှုံးပြီး ၃ မှတ်နဲ့ အဆင့် ၁၈ မှာရှိနေချိန် နယူးကာဆယ်က ၅ ပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၁ ရှုံး၊ ၈ မှတ်နဲ့ အဆင့် ၉ မှာ ရပ်တည်နေပါတယ်။ ဖရန့်ခ် လမ်းပတ်ရဲ့ ကိုဗင်ထရီဟာ နော်တင်ဟမ်ဖောရက်စ်ကို အဝေးကွင်းမှာ ၁-၀ အနိုင်ရခဲ့ပေမဲ့ ဘရိုက်တန်ကို အိမ်ကွင်းမှာ ၀-၅ ရှုံးခဲ့ရတဲ့ခံစစ်က အဓိက စိုးရိမ်စရာပါ။ နယူးကာဆယ်ဘက်က ဟားလ်ကို ၂-၁ နိုင်ထားပြီး လီဗာပူးနဲ့ ဘုန်းမောက်တို့လို အသင်းတွေကို သရေခံကစားနိုင်ခဲ့တာက အမှတ်တစ်မှတ်ကောင်းစွာယူနိုင်တဲ့ အင်အားရှိကြောင်း ပြနေပါတယ်။ အိမ်ရှင်က ပွဲစမှာ အရှိန်ပြင်းပြင်း ဖိအားပေးနိုင်ပေမဲ့ ဧည့်သည်ရဲ့ အမြန်ကူးပြောင်းတိုက်စစ်ကို ထိန်းဖို့ လိုပါတယ်။ လက်ရှိကစားပုံနဲ့ အမှတ်ပေးအနေအထားကို ကြည့်ရင် **နယူးကာဆယ်ဘက်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဒါပေမဲ့ အဝေးကွင်းအခက်အခဲကို ထည့်တွက်ပြီး **၀-၁ သို့မဟုတ် ၁-၂** လို့ ခန့်မှန်းပါတယ်။",
+      "homeLastFive": [
+        {
+          "date": "2026-09-19",
+          "opponent": "Nottingham Forest",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Brighton",
+          "venueSide": "home",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Manchester City",
+          "venueSide": "away",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Hull City",
+          "venueSide": "home",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png"
+        },
+        {
+          "date": "2026-08-21",
+          "opponent": "Arsenal",
+          "venueSide": "away",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/9/stats",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-09-19",
+          "opponent": "Hull City",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Leeds United",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Bournemouth",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Tottenham Hotspur",
+          "venueSide": "away",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
+        },
+        {
+          "date": "2026-08-23",
+          "opponent": "Liverpool",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "competition": "Premier League",
+          "sourceUrl": "https://www.premierleague.com/en/clubs/4/newcastle-united/overview",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png"
+        }
+      ],
+      "headToHead": [],
+      "homeDisplay": "ကိုဗင်ထရီ",
+      "awayDisplay": "နယူးကာဆယ်",
+      "myanmarOdds": {
+        "upperTeam": "နယူးကာဆယ်",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "3+45"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": "3.30",
+      "drawOdds": "3.65",
+      "awayOdds": "2.10",
+      "specialChoice": false,
+      "espnEventId": "401879267",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879267",
+      "historyCheckedOn": "2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://www.telecomasia.net/sports-betting/tips/football/england-premier-league/coventry-city-vs-newcastle-united-match-prediction-12-october-2026/",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "4-1",
+      "finalScoreSourceUrl": "https://www.reuters.com/sports/soccer/coventry-savour-first-home-premier-league-win-25-years-2026-10-12/",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    },
+    {
+      "league": "Serie A",
+      "home": "Torino",
+      "away": "Udinese",
+      "kickoffYangon": "01:15 · 13 Oct",
+      "venue": "Stadio Olimpico Grande Torino",
+      "homeStanding": {
+        "played": 5,
+        "wins": 1,
+        "draws": 1,
+        "losses": 3,
+        "points": 4,
+        "position": 15
+      },
+      "awayStanding": {
+        "played": 5,
+        "wins": 1,
+        "draws": 1,
+        "losses": 3,
+        "points": 4,
+        "position": 14
+      },
+      "standingsSourceUrl": "https://supersport.com/football/match/3f66cd54-a047-4d32-94f3-8f6d566fb14e",
+      "researchSources": [
+        "https://en.legaseriea.it/serie-a/news/torino-vs-udinese-rounds-off-matchday-6",
+        "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314",
+        "https://supersport.com/football/match/3f66cd54-a047-4d32-94f3-8f6d566fb14e"
+      ],
+      "dailyPreviewText": "အီတလီ စီးရီးအေ ပွဲစဉ် (၆) ကို တိုရီနိုနဲ့ အူဒီးနီးစ်တို့ရဲ့ ထိပ်တိုက်တွေ့ဆုံမှုနဲ့ အဆုံးသတ်မှာပါ။ ပွဲမတိုင်မီ တိုရီနိုက ၅ ပွဲကစားပြီး ၁ နိုင်၊ ၁ သရေ၊ ၃ ရှုံး၊ ၄ မှတ်နဲ့ အဆင့် ၁၅ မှာရှိနေသလို အူဒီးနီးစ်ကလည်း ၅ ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၃ ရှုံး၊ ၄ မှတ်နဲ့ အဆင့် ၁၄ မှာ ရပ်တည်နေပါတယ်။ နှစ်သင်းလုံးက ရမှတ်တူနေပြီး အောက်ပိုင်းဇယားကနေ ရုန်းထွက်ဖို့ လိုအပ်နေတဲ့အချိန်ပါ။ တိုရီနိုဟာ ဖီအိုရင်တီးနားကို အနိုင်ရခဲ့ပေမဲ့ ရိုးမားနဲ့ မီလန်တို့ကို ရှုံးထားပြီး နောက်ဆုံး ဘိုလော့ညာနဲ့ ၁-၁ သရေကျခဲ့ပါတယ်။ အူဒီးနီးစ်ကလည်း စတင်ချိန်မှာ ရလဒ်ကောင်းရခဲ့ပေမဲ့ နောက်ဆုံး လိဂ် ၃ ပွဲဆက် ရှုံးထားတာကြောင့် ခံစစ်ပြန်စုစည်းဖို့ လိုနေပါတယ်။ တိုရီနိုက အိမ်ကွင်းအသာစီးရပေမဲ့ နောက်ဆုံးတွေ့ဆုံမှုမှာ အူဒီးနီးစ်ကို ၀-၂ ရှုံးခဲ့တာကို သတိထားရမှာပါ။ နှစ်ဖက်လုံး အမှားနည်းအောင် ကစားလာနိုင်တဲ့ ပွဲမျိုးဖြစ်လို့ **သရေရလဒ်ဘက်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဂိုးအရေအတွက် မများနိုင်ဘူးလို့ မြင်ပြီး **၁-၁ သို့မဟုတ် ၀-၀** ကို ခန့်မှန်းပါတယ်။",
+      "homeLastFive": [
+        {
+          "date": "2026-09-19",
+          "opponent": "Bologna",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Roma",
+          "venueSide": "home",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Fiorentina",
+          "venueSide": "away",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Sassuolo",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png"
+        },
+        {
+          "date": "2026-08-23",
+          "opponent": "Milan",
+          "venueSide": "home",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://www.torinofc.it/en/calendario/2026-2027/prima-squadra/43314",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png"
+        }
+      ],
+      "awayLastFive": [],
+      "headToHead": [
+        {
+          "date": "2026-05-02",
+          "home": "Udinese",
+          "away": "Torino",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png"
+        },
+        {
+          "date": "2026-01-07",
+          "home": "Torino",
+          "away": "Udinese",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png"
+        },
+        {
+          "date": "2025-04-23",
+          "home": "Torino",
+          "away": "Udinese",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png"
+        },
+        {
+          "date": "2024-12-29",
+          "home": "Udinese",
+          "away": "Torino",
+          "homeGoals": 2,
+          "awayGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png"
+        },
+        {
+          "date": "2024-03-16",
+          "home": "Udinese",
+          "away": "Torino",
+          "homeGoals": 0,
+          "awayGoals": 2,
+          "competition": "Serie A",
+          "sourceUrl": "https://ontourfootball.com/fixtures/torino-vs-udinese-2026-10-12",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png"
+        }
+      ],
+      "homeDisplay": "တိုရီနို",
+      "awayDisplay": "အူဒီးနီးစ်",
+      "myanmarOdds": {
+        "upperTeam": "တိုရီနို",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "2-70"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": "2.304",
+      "drawOdds": "3.22",
+      "awayOdds": "3.22",
+      "specialChoice": false,
+      "espnEventId": "401874763",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874763",
+      "historyCheckedOn": "2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/110163-italy-serie-a/753391576-torino-udinese-calcio",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "2-1",
+      "finalScoreSourceUrl": "https://www.torinofc.it/en/news/12/10/2026/torino-udinese-2-1_45187",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    },
+    {
+      "league": "La Liga",
+      "home": "Levante",
+      "away": "Sevilla",
+      "kickoffYangon": "01:30 · 13 Oct",
+      "venue": "Estadio Ciutat de València",
+      "homeStanding": {
+        "played": 6,
+        "wins": 1,
+        "draws": 2,
+        "losses": 3,
+        "points": 5,
+        "position": 17
+      },
+      "awayStanding": {
+        "played": 7,
+        "wins": 4,
+        "draws": 1,
+        "losses": 2,
+        "points": 13,
+        "position": 5
+      },
+      "standingsSourceUrl": "https://www.laliga.com/es-MX/partido/temporada-2026-2027-laliga-ea-sports-levante-ud-sevilla-fc-8",
+      "researchSources": [
+        "https://www.laliga.com/es-MX/partido/temporada-2026-2027-laliga-ea-sports-levante-ud-sevilla-fc-8",
+        "https://fbref.com/en/squads/9800b6a1/2026-2027/matchlogs/c12/schedule/Levante-Scores-and-Fixtures-La-Liga",
+        "https://fbref.com/en/squads/ad2be733/2026-2027/matchlogs/c12/schedule/Sevilla-Scores-and-Fixtures-La-Liga"
+      ],
+      "dailyPreviewText": "စပိန် လာလီဂါ ပွဲစဉ် (၈) အဖြစ် လီဗန်တေးက ဆီဗီလာကို Ciutat de València ကွင်းမှာ ဧည့်ခံကစားရမှာပါ။ ပွဲမတိုင်မီ လီဗန်တေးက ၆ ပွဲကစားပြီး ၁ နိုင်၊ ၂ သရေ၊ ၃ ရှုံး၊ ၅ မှတ်နဲ့ အဆင့် ၁၇ မှာ ရှိနေချိန် ဆီဗီလာက ၇ ပွဲမှာ ၄ နိုင်၊ ၁ သရေ၊ ၂ ရှုံး၊ ၁၃ မှတ်နဲ့ အဆင့် ၅ ကို ရောက်နေပါတယ်။ လီဗန်တေးက ဒီရာသီ လိဂ်ပွဲတွေမှာ ၈ ဂိုးသွင်းပေမဲ့ ၁၂ ဂိုးပြန်ပေးထားရတာကြောင့် တိုက်စစ်တက်တဲ့အချိန် နောက်တန်းနေရာလွတ်များသွားတဲ့ ပြဿနာရှိပါတယ်။ ဆီဗီလာက ၁၀ ဂိုးသွင်း၊ ၉ ဂိုးပေးထားပြီး အဝေးကွင်းမှာ နှစ်ပွဲနိုင်၊ တစ်ပွဲသရေထိန်းနိုင်ခဲ့တာက ယနေ့ပွဲအတွက် အားသာချက်ပါ။ ဒါပေမဲ့ နောက်ဆုံးပွဲမှာ ဘာစီလိုနာကို ၁-၃ ရှုံးထားတာကြောင့် ဆီဗီလာခံစစ်ကလည်း ဖိအားခံရချိန် ပြဿနာရှိနိုင်ပါတယ်။ လီဗန်တေးက အိမ်ကွင်းအားနဲ့ သရေတစ်မှတ်ရဖို့ ကြိုးစားမယ်ဆိုပေမဲ့ နောက်ဆုံးရလဒ်နဲ့ ကစားသမားအင်အားကို နှိုင်းယှဉ်ကြည့်ရင် **ဆီဗီလာဘက်ကို ပိုရွေးချယ်ချင်ပါတယ်။** သို့ပေမဲ့ ဧည့်သည်အတွက် အလွယ်တကူ အပြတ်နိုင်ပွဲ မဟုတ်နိုင်ဘဲ **၁-၂ သို့မဟုတ် ၁-၁** လို့ ခန့်မှန်းပါတယ်။",
+      "homeLastFive": [],
+      "awayLastFive": [],
+      "headToHead": [],
+      "homeDisplay": "လီဗန်တေး",
+      "awayDisplay": "ဆီဗီလာ",
+      "myanmarOdds": {
+        "upperTeam": "လီဗန်တေး",
+        "bodyOdds": "-5",
+        "goalTotalOdds": "2-70"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": "2.65",
+      "drawOdds": "3.30",
+      "awayOdds": "2.70",
+      "specialChoice": false,
+      "espnEventId": "401882852",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882852",
+      "historyCheckedOn": "2026-10-12",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://www.telecomasia.net/sports-betting/tips/football/spain-la-liga/levante-vs-sevilla-match-prediction-12-october-2026/",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "3-3",
+      "finalScoreSourceUrl": "https://www.laliga.com/en-US/match/temporada-2026-2027-laliga-ea-sports-levante-ud-sevilla-fc-8",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    },
+    {
+      "league": "La Liga 2",
+      "home": "Tenerife",
+      "away": "Girona",
+      "kickoffYangon": "01:30 · 13 Oct",
+      "venue": "Estadio Heliodoro Rodríguez López",
+      "homeStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "points": 11,
+        "position": 12
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 4,
+        "draws": 2,
+        "losses": 2,
+        "points": 14,
+        "position": 4
+      },
+      "standingsSourceUrl": "https://as.com/resultados/futbol/segunda/2026_2027/directo/regular_a_9_6a44993ebed9953/",
+      "researchSources": [
+        "https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-hypermotion-cd-tenerife-girona-fc-9",
+        "https://as.com/resultados/futbol/segunda/2026_2027/directo/regular_a_9_6a44993ebed9953/",
+        "https://fbref.com/en/squads/27cc9c62/2026-2027/matchlogs/all_comps/schedule/Tenerife-Scores-and-Fixtures-All-Competitions",
+        "https://fbref.com/en/squads/9024a00a/2026-2027/matchlogs/all_comps/schedule/Girona-Scores-and-Fixtures-All-Competitions"
+      ],
+      "dailyPreviewText": "စပိန် လာလီဂါ (၂) ပွဲစဉ် (၉) အဖြစ် တီနီရီဖီက ဂီရိုနာကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမှာ ဖြစ်ပါတယ်။ ပွဲမတိုင်မီ အမှတ်ပေးဇယားမှာ တီနီရီဖီက ၈ ပွဲကစားပြီး ၃ နိုင်၊ ၂ သရေ၊ ၃ ရှုံး၊ ၁၁ မှတ်နဲ့ အဆင့် ၁၂ မှာရှိနေချိန် ဂီရိုနာက ၈ ပွဲမှာ ၄ နိုင်၊ ၂ သရေ၊ ၂ ရှုံး၊ ၁၄ မှတ်နဲ့ အဆင့် ၄ ကို ရောက်နေပါတယ်။ တီနီရီဖီရဲ့ အိမ်ကွင်းအသာစီးနဲ့ ဖိအားကို အသုံးချနိုင်မယ့်အခွင့်အရေးရှိပေမဲ့ ယခုရာသီ ၁၂ ဂိုးအထိ ပေးထားရတာကြောင့် တိုက်စစ်တက်ချိန် နောက်တန်းလုံခြုံမှုက အဓိကစမ်းသပ်ချက် ဖြစ်ပါတယ်။ ဂီရိုနာက ၈ ပွဲမှာ ၁၄ ဂိုးသွင်း၊ ၈ ဂိုးပဲ ပေးထားပြီး ဘောလုံးကို ထိန်းထားနိုင်မှုနဲ့ အခွင့်အရေးဖန်တီးမှုမှာ ပိုမိုတည်ငြိမ်တဲ့ပုံစံ ပြသနေပါတယ်။ သို့ပေမဲ့ အိမ်ရှင်က Heliodoro Rodríguez López ကွင်းမှာ အစောပိုင်းဖိအားပေးပြီး ဧည့်သည်ရဲ့ တိုက်စစ်ပြောင်းလဲချိန်ကို ပိတ်နိုင်ရင် အကြိတ်အနယ်ဖြစ်နိုင်ပါတယ်။ နောက်ဆုံးအမှတ်ပေးအခြေအနေနဲ့ ဂိုးကွာခြားချက်ကို ချိန်ကြည့်ရင် **ဂီရိုနာကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** တီနီရီဖီကလည်း ဂိုးရနိုင်တဲ့အတွက် **၁-၂ သို့မဟုတ် ၁-၁** လို့ ခန့်မှန်းပါတယ်။",
+      "homeLastFive": [],
+      "awayLastFive": [],
+      "headToHead": [],
+      "homeDisplay": "တီနီရီဖီ",
+      "awayDisplay": "ဂီရိုနာ",
+      "myanmarOdds": {
+        "upperTeam": "ဂီရိုနာ",
+        "bodyOdds": "-10",
+        "goalTotalOdds": "2-55"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": "3.05",
+      "drawOdds": "3.20",
+      "awayOdds": "2.29",
+      "specialChoice": false,
+      "espnEventId": "401883181",
+      "matchSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883181",
+      "historyCheckedOn": "2026-10-12",
+      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/CD_Tenerife_logo.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/9812.png",
+      "oddsProvider": "Stake",
+      "oddsSourceUrl": "https://stake.com/hi/sports/soccer/spain/la-liga-2/46739374-tenerife-cd-girona",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "1-1",
+      "finalScoreSourceUrl": "https://www.clubdeportivotenerife.es/noticias/un-partido-completo-y-un-nuevo-punto",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    },
+    {
+      "league": "Ligue 2",
+      "home": "Dijon",
+      "away": "Metz",
+      "kickoffYangon": "01:15 · 13 Oct",
+      "venue": "Stade Gaston-Gérard",
+      "homeStanding": {
+        "played": 7,
+        "wins": 2,
+        "draws": 3,
+        "losses": 2,
+        "points": 9,
+        "position": 9
+      },
+      "awayStanding": {
+        "played": 7,
+        "wins": 2,
+        "draws": 4,
+        "losses": 1,
+        "points": 10,
+        "position": 5
+      },
+      "standingsSourceUrl": "https://ligue1.com/fr/feuille-de-match/l1_championship_match_74191/summary",
+      "researchSources": [
+        "https://ligue1.com/fr/feuille-de-match/l1_championship_match_74191/summary",
+        "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon",
+        "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz",
+        "https://www.ouest-france.fr/sport/football/resultats-matchs/match-dijon-metz-1285-1314/"
+      ],
+      "dailyPreviewText": "ပြင်သစ် လိဂ် (၂) ပွဲစဉ် (၈) မှာ ဒီဂျွန်က မက်ဇ်ကို Stade Gaston-Gérard ကွင်းမှာ လက်ခံကစားရမှာ ဖြစ်ပါတယ်။ ပွဲမတိုင်မီ ဒီဂျွန်က ၇ ပွဲကစားပြီး ၂ နိုင်၊ ၃ သရေ၊ ၂ ရှုံး၊ ၉ မှတ်နဲ့ အဆင့် ၉ ဝန်းကျင်မှာ ရှိနေချိန် မက်ဇ်က ၇ ပွဲမှာ ၂ နိုင်၊ ၄ သရေ၊ ၁ ရှုံး၊ ၁၀ မှတ်နဲ့ အဆင့် ၅ ဝန်းကျင်မှာ ရပ်တည်နေပါတယ်။ ဒီဂျွန်ဟာ နောက်ဆုံးပွဲမှာ အန်နက်စီကို အဝေးကွင်း ၂-၁ အနိုင်ရခဲ့ပြီး လာဗယ်ကိုလည်း ၃-၂ နိုင်ထားတာကြောင့် တိုက်စစ်ယုံကြည်မှု ပြန်လည်တက်လာပါတယ်။ ဒါပေမဲ့ တစ်ရာသီအတွင်း ဂိုးပေးနှုန်းထက် ဂိုးပြန်သွင်းဖို့ အားစိုက်ရတာများနေပါတယ်။ မက်ဇ်က နောက်ဆုံးပွဲမှာ စိန့်အက်တီယန်နဲ့ ၂-၂ သရေကျခဲ့ပြီး သရေပွဲများတဲ့ အသင်းဖြစ်တာကြောင့် ရလဒ်ကို အလွယ်ဆုံးဖြတ်လို့မရတဲ့ ပြိုင်ဘက်ပါ။ မက်ဇ်က အဝေးကွင်းမှာ စိတ်ရှည်လက်ရှည် ခံစစ်ပြန်စုဖွဲ့နိုင်ပေမဲ့ ဒီဂျွန်က အိမ်ကွင်းဖိအားနဲ့ ဂိုးရနိုင်တဲ့အခွင့်အရေးရှိပါတယ်။ နှစ်သင်းအကြား တစ်မှတ်သာကွာနေတဲ့အတွက် **သရေရလဒ်ကို အနည်းငယ်ပိုရွေးချယ်ချင်ပါတယ်။** ဖြစ်နိုင်တဲ့ရလဒ်ကတော့ **၁-၁ သို့မဟုတ် ၂-၂** ဖြစ်ပါတယ်။",
+      "homeLastFive": [
+        {
+          "date": "2026-09-18",
+          "opponent": "Annecy",
+          "venueSide": "away",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Laval",
+          "venueSide": "home",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Boulogne-sur-Mer",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        },
+        {
+          "date": "2026-08-31",
+          "opponent": "Saint-Étienne",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        },
+        {
+          "date": "2026-08-21",
+          "opponent": "Clermont",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/dijon"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-09-19",
+          "opponent": "Saint-Étienne",
+          "venueSide": "home",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Red Star",
+          "venueSide": "away",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Rodez",
+          "venueSide": "home",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Annecy",
+          "venueSide": "away",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        },
+        {
+          "date": "2026-08-22",
+          "opponent": "Laval",
+          "venueSide": "home",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "competition": "Ligue 2",
+          "sourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-calendrier-general/metz"
+        }
+      ],
+      "headToHead": [
+        {
+          "date": "2023-02-18",
+          "home": "Dijon",
+          "away": "Metz",
+          "homeGoals": 0,
+          "awayGoals": 0,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574",
+          "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dijon_FCO_Badge.jpg",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png"
+        },
+        {
+          "date": "2022-08-27",
+          "home": "Metz",
+          "away": "Dijon",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png",
+          "awayCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dijon_FCO_Badge.jpg"
+        },
+        {
+          "date": "2021-05-02",
+          "home": "Dijon",
+          "away": "Metz",
+          "homeGoals": 1,
+          "awayGoals": 5,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574",
+          "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dijon_FCO_Badge.jpg",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png"
+        },
+        {
+          "date": "2020-11-08",
+          "home": "Metz",
+          "away": "Dijon",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574",
+          "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png",
+          "awayCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dijon_FCO_Badge.jpg"
+        },
+        {
+          "date": "2020-08-07",
+          "home": "Dijon",
+          "away": "Metz",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "competition": "League/Cup",
+          "sourceUrl": "https://www.forebet.com/fr/football/matches/dijon-fco-metz-2497574",
+          "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dijon_FCO_Badge.jpg",
+          "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png"
+        }
+      ],
+      "homeDisplay": "ဒီဂျွန်",
+      "awayDisplay": "မက်ဇ်",
+      "myanmarOdds": {
+        "upperTeam": "မက်ဇ်",
+        "bodyOdds": "-20",
+        "goalTotalOdds": "3+55"
+      },
+      "myanmarOddsSource": "အသုံးပြုသူပေးပို့သော 12.pdf · 2026-10-12",
+      "homeOdds": "2.60",
+      "drawOdds": "3.50",
+      "awayOdds": "2.45",
+      "specialChoice": false,
+      "homeCrestUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dijon_FCO_Badge.jpg",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/177.png",
+      "oddsProvider": "Sportingbet",
+      "oddsSourceUrl": "https://www.sportingbet.com/en/sports/events/dijon-fco-fc-metz-2%3A7872628",
+      "oddsVerifiedAt": "2026-10-12T09:03:20+06:30",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "status": "finished",
+      "finalScore": "4-2",
+      "finalScoreSourceUrl": "https://ke.soccerway.com/match/dijon-dIvQQaE7/metz-4v0yqlWc/?mid=2eIFXB2C",
+      "finalScoreCheckedAt": "2026-10-13T01:15:00Z",
+      "finalScoreIsVerified": true
+    }
+  ],
+  "noFixturesLeagues": [],
+  "oddsSheetPath": "data/odds/2026-10-12.json",
+  "reportNote": "12 October 2026 Myanmar editorial report archived with 9 source-verified final scores on 13 October. European fixtures concluding shortly after midnight Yangon are retained in the original October 12 editorial grouping; result values are full-time scores, never internet predictions.",
+  "resultsVerified": true,
+  "resultsVerifiedAt": "2026-10-13T01:15:00Z"
+}

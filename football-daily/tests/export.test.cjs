@@ -6,7 +6,9 @@ const path=require('node:path');
 const root=path.join(__dirname,'..');
 const sources=['canvas-image-kit.js','daily-image-export.js','card-export.js'].map(file=>fs.readFileSync(path.join(root,file),'utf8'));
 const sheet=JSON.parse(fs.readFileSync(path.join(root,'data/odds/2026-10-12.json'),'utf8'));
-const report=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+const report=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-12.json'),'utf8'));
+const current=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+
 function harness(){
  const drawn=[],clicked=[],canvases=[];
  const document={
@@ -97,4 +99,17 @@ test('native Canvas export contains no DOM snapshot / external export dependency
  assert.ok(!js.includes('html2canvas'));
  assert.ok(!js.includes('cloneNode('));
  assert.ok(js.includes('canvas.toBlob'));
+});
+
+test('today preview PNG accepts verified teams and five-game form when no historical H2H/odds exist',async()=>{
+ const x=harness(),match=current.matches[0];
+ assert.ok(match.homeLastFive?.length===5&&match.awayLastFive?.length===5);
+ assert.equal(match.headToHead.length,0);
+ assert.equal(match.homeOdds,null);
+ await x.window.FutureCodeCardExport.save({...match,home:match.homeDisplay,away:match.awayDisplay},{brandName:'FUTURE CODE FOOTBALL',leagueLabel:'UEFA Champions League'});
+ const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
+ assert.ok(labels.includes(match.homeDisplay));
+ assert.ok(labels.includes(match.awayDisplay));
+ assert.ok(labels.includes('ထိပ်တိုက်တွေ့ဆုံမှု H2H'));
+ assert.ok(x.clicked[0]?.endsWith('.png'));
 });
