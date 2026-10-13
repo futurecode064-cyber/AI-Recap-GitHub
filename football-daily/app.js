@@ -92,10 +92,6 @@ function appendBoldText(parent,plainText){
 function goodUrl(url){try{let u=new URL(url);return u.protocol==="https:"||u.protocol==="http:"}catch{return false}}
 function teamLabel(match,side){return textOrEmpty(match[side+"Display"])||textOrEmpty(match[side])||"Team"}
 function textOrEmpty(value){return typeof value==="string"&&value.trim()?value.trim():""}
-function splitAnalysis(m){
- if(Array.isArray(m.analysisParagraphs))return m.analysisParagraphs.filter(x=>typeof x==="string"&&x.trim());
- return String(m.analysis||"").split(/\n\s*\n/g).map(x=>x.trim()).filter(Boolean);
-}
 function teamSide(match,prefix){
  const side=node("div","side");
  const wrap=node("div","player-wrap");
@@ -259,7 +255,7 @@ function renderMatch(match,i){
  card.appendChild(banner);
  const title=node("div","fixture-title");
  const h=node("h3");
- append(h,document.createTextNode(match.home||"Home"),node("span","versus","VS"),document.createTextNode(match.away||"Away"));
+ append(h,document.createTextNode(teamLabel(match,"home")),node("span","versus","နှင့်"),document.createTextNode(teamLabel(match,"away")));
  append(title,h,node("p","",match.venue||"မြန်မာစံတော်ချိန်အတိုင်း ပွဲကြိုသုံးသပ်ချက်"));
  card.appendChild(title);
  const markets=node("div","odds-grid");
@@ -278,9 +274,9 @@ function renderMatch(match,i){
  if(original){
    body.appendChild(appendBoldText(node("p","daily-preview-verbatim"),original));
  }else{
-   const paras=splitAnalysis(match);
-   if(paras.length)paras.forEach(p=>body.appendChild(node("p","",p)));
-   else body.appendChild(node("p","",NO_PREVIEW_TEXT));
+   // Never display old multi-paragraph or disconnected verdict templates.
+   // All normal previews must be one verified Burmese commentary paragraph.
+   body.appendChild(node("p","",NO_PREVIEW_TEXT));
  }
  // Only Special Choice receives a separate, researched editorial assessment.
  if(selectedLeague==="special"&&match.specialChoice&&Array.isArray(match.specialAnalysisParagraphs)&&match.specialAnalysisParagraphs.length){
@@ -288,15 +284,6 @@ function renderMatch(match,i){
    special.appendChild(node("h4","","★ Special Choice — အချက်အလက်အပြည့်အစုံ သုံးသပ်ချက်"));
    match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()).forEach(p=>special.appendChild(node("p","",p)));
    body.appendChild(special);
- }
- if(!original&&(match.verdict || match.predictedScore || match.asianHandicap)){
-  const verdict=node("div","verdict-panel");verdict.appendChild(node("h4","","အဆုံးသတ် သုံးသပ်အမြင်"));
-  if(match.verdict)verdict.appendChild(node("p","",match.verdict));
-  const bottom=node("div","verdict-bottom");
-  for(const [label,value] of [["ခန့်မှန်းရလဒ်",match.predictedScore],["Asian Handicap",match.asianHandicap]]){
-   if(value){const item=node("span","",label+" — ");item.appendChild(node("b","",value));bottom.appendChild(item)}
-  }
-  verdict.appendChild(bottom);body.appendChild(verdict);
  }
 
  expand.addEventListener("click",()=>{let visible=!body.hidden;body.hidden=visible;expand.setAttribute("aria-expanded",String(!visible))});
