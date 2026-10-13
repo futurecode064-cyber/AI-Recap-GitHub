@@ -91,3 +91,24 @@
 .ykz-theme .vs-banner{background:linear-gradient(90deg,#660000,#242424 37%,#242424 63%,#660000)}
 .ykz-theme .results-png-btn,.ykz-theme .odds-export-actions button{background:#d50000;color:white;border-color:#ffcf58}
 @media(max-width:700px){.ykz-theme .odds-table tr{background:#282525;border-color:#882b2b}}
+
+
+/* Approved 2026-10-13 preview redesign: preserve YKZ brand colors on shared layout. */
+.ykz-theme .match-hero-art{background:radial-gradient(circle at center,#7b0808 0%,#190909 62%,#070707)}
+.ykz-theme .hero-team-home{background:radial-gradient(ellipse at 22% 15%,#e000005e,transparent 73%),#160909}
+.ykz-theme .hero-team-away{background:radial-gradient(ellipse at 80% 15%,#d0a0464f,transparent 72%),#111111}
+.ykz-theme .match-hero-versus{background:linear-gradient(90deg,#250707dc,#3f1717e0,#230707da)}
+.ykz-theme .hero-competition,.ykz-theme .hero-info-bar{color:#ffcf58}
+.ykz-theme .hero-big-vs{color:#ffedc6}
+.ykz-theme .hero-info-bar{background:#0c0505}
+.ykz-theme .hero-info-bar>.hero-info-fixture{background:#990000}
+.ykz-theme .match-market-layout,.ykz-theme .market-form-row{background:#141010}
+.ykz-theme .match-market-strip.myanmar-market{background:#290b0b;border-bottom-color:#ffcf58}
+.ykz-theme .match-market-strip .myanmar-market-title,.ykz-theme .match-market-strip .myanmar-market-pair{color:#ffcf58}
+.ykz-theme .quick-form,.ykz-theme .market-center{background:#271c1c;border-color:#804242}
+.ykz-theme .market-center .odds-grid{border-color:#843333}
+.ykz-theme .market-center .odd{background:#191414}
+.ykz-theme .market-center-heading,.ykz-theme .market-center .odd small,.ykz-theme .quick-form-heading small{color:#ffcf58}
+.ykz-theme .match-card:has(.match-hero) .analysis-body,.ykz-theme .match-card:has(.match-hero) .match-actions{background:#202020}
+.ykz-theme .match-card:has(.match-hero) .analysis-body h4,.ykz-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#ffcf58}
+.ykz-theme .match-card:has(.match-hero) .analysis-toggle{background:#282020;color:#ffcf58}
