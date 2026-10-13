@@ -119,3 +119,13 @@ Keep the most current fixed crest-only hero, sole centered match-title, Myanmar 
 - Concrete upset/draw risk, reasoned preferred match outcome, and two plausible completed-score scenarios, phrased without certain-win rhetoric.
 
 Each picked fixture must carry specialChoice:true, specialChoiceRank (1–3, contiguous), specialRiskNote, at least two specialResearchSources URLs, the day's specialPreparedDate, and substantial specialAnalysisParagraphs. Sort the Special Choice filter by specialChoiceRank; the ordinary 'all games' tab should retain every match. 2026-10-13 selected three ranked games: Birmingham City–Preston (1), Galatasaray–Barcelona (2), Inter–Club Brugge (3). Keep each match's exact Burmese source labels; do not replace the original normal preview or bookmaker odds. Run tests/special-choice.test.cjs plus the normal test suite before publishing. The standing 06:00 scheduled preparation task follows this rule; publishing still requires separate explicit user instruction.
+
+ 
+## 2026-10-13 Special Choice single-article display override — user screenshot correction
+This supersedes every prior instruction that Special Choice should display BOTH the normal paragraph AND a separate special block.
+
+- When a visitor selects the **★ Special Choice** filter, a selected match displays **ONLY** its verified 4+ paragraph `specialAnalysisParagraphs`, headed `★ Special Choice #N — အထူးပွဲကြိုသုံးသပ်ချက်`. DO NOT render `dailyPreviewText`, its normal `ပွဲကြိုသုံးသပ်ချက်` heading, or a second ordinary-preview panel above/below the special narrative. If special analysis is genuinely absent, show only `ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ` instead of leaking the normal one.
+- In regular **ပွဲအားလုံး** and competition filters, display ONLY `dailyPreviewText` (even for a match flagged specialChoice=true); do not append special-analysis paragraphs in those views.
+- The **downloaded single-match Canvas PNG** must always match the selected view: Special Choice filter => specialAnalysisParagraphs only, one Special Choice heading, full article with auto-growing canvas height. Normal/league filter => dailyPreviewText only, one normal heading. Never duplicate a regular and a special narrative in the same PNG.
+- Keep the published expert articles, original team crests, sole centered Burmese match title, odds, W/D/L, no public H2H, Special Choice ranking and exact brand color themes untouched. Apply to Future Code, YKZ and BW SPORT because they all import the shared root app.js/card-export.js.
+- Regression tests must assert both DOM-branch exclusivity and actual Canvas strings in each mode; run tests/special-choice.test.cjs, tests/export.test.cjs and full Node suite prior to declaring production ready.

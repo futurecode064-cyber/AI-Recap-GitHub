@@ -61,14 +61,21 @@
   await fonts();
   const W=1200,M=24,fullWidth=W-2*M;
   const home=String(match.home||""),away=String(match.away||"");
+  // Special Choice exports contain ONLY specialAnalysisParagraphs; no duplicate normal preview.
+  const specialOnly=opts.special===true;
   const preview=String(match.dailyPreviewText||"ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ");
-  const extra=opts.special&&Array.isArray(match.specialAnalysisParagraphs)?match.specialAnalysisParagraphs.filter(Boolean):[];
+  const extra=specialOnly&&Array.isArray(match.specialAnalysisParagraphs)
+   ?match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()):[];
   const measure=create(1200,120).ctx;
-  const lines=paragraphLines(measure,preview,fullWidth-54,25);
-  const extraLines=extra.flatMap(p=>paragraphLines(measure,p,fullWidth-54,23));
-  const anaY=925,mainHeight=Math.max(210,lines.length*49+92);
-  const extraHeight=extra.length?80+extraLines.length*43:0;
-  const H=Math.ceil(anaY+mainHeight+extraHeight+80);
+  const lines=specialOnly?[]:paragraphLines(measure,preview,fullWidth-54,25);
+  const extraBlocks=specialOnly
+   ?(extra.length?extra:["ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ"]).map(p=>paragraphLines(measure,p,fullWidth-54,23))
+   :[];
+  const anaY=925;
+  const paragraphHeight=specialOnly
+   ?extraBlocks.reduce((n,block)=>n+block.length*43+18,0)
+   :lines.length*49;
+  const H=Math.ceil(anaY+Math.max(210,paragraphHeight+116)+80);
   const {canvas,ctx}=create(W,H);
   const isYKZ=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
   const isBW=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
@@ -140,14 +147,18 @@
    text(ctx,odds[i][0],x+side/6,rowY+119,15,C.muted,true,"center",side/3-8);
    text(ctx,present(odds[i][1]),x+side/6,rowY+166,24,C.white,true,"center",side/3-8);
   }
-  // Complete, never-clipped commentary: reserve height from measured wrapped lines.
+  // Reserve full height from the article actually visible in its selected tab.
   fill(ctx,M,anaY,fullWidth,H-anaY-64,C.panel,10);
-  text(ctx,"ပွဲကြိုသုံးသပ်ချက်",M+23,anaY+45,26,C.orange,true);
+  text(ctx,specialOnly?"★ SPECIAL CHOICE — အထူးပွဲကြိုသုံးသပ်ချက်":"ပွဲကြိုသုံးသပ်ချက်",M+23,anaY+45,26,C.orange,true);
   let y=anaY+99;
-  y=drawParagraph(ctx,k,lines,M+25,y,25,49);
-  if(extra.length){
-   y+=22;text(ctx,"★ SPECIAL CHOICE — အသေးစိတ်သုံးသပ်ချက်",M+23,y,23,C.orange,true);
-   y+=43;drawParagraph(ctx,k,extraLines,M+25,y,23,43);
+  if(specialOnly){
+   // Do not print the standard dailyPreviewText or a second article heading.
+   for(const block of extraBlocks){
+    y=drawParagraph(ctx,k,block,M+25,y,23,43);
+    y+=18;
+   }
+  }else{
+   y=drawParagraph(ctx,k,lines,M+25,y,25,49);
   }
   line(ctx,M,H-55,fullWidth);
   text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+10,H-31,20,C.orange,true);

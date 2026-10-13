@@ -295,22 +295,25 @@ function renderMatch(match,i){
  card.appendChild(renderQuoteAndForm(match));
  const expand=node("button","analysis-toggle","▾ သုံးသပ်ချက်ကို ဖတ်မည် / ခေါက်မည်");expand.type="button";expand.setAttribute("aria-expanded","true");
  const body=node("div","analysis-body");
- body.appendChild(node("h4","","ပွဲကြိုသုံးသပ်ချက်"));
- // Today's freshly researched normal analysis: one flowing Burmese commentary.
- const original=textOrEmpty(match.dailyPreviewText);
- if(original){
-   body.appendChild(appendBoldText(node("p","daily-preview-verbatim"),original));
- }else{
-   // Never display old multi-paragraph or disconnected verdict templates.
-   // All normal previews must be one verified Burmese commentary paragraph.
-   body.appendChild(node("p","",NO_PREVIEW_TEXT));
- }
- // Only Special Choice receives a separate, researched editorial assessment.
- if(selectedLeague==="special"&&match.specialChoice&&Array.isArray(match.specialAnalysisParagraphs)&&match.specialAnalysisParagraphs.length){
+ const isSpecialView=selectedLeague==="special"&&match.specialChoice===true;
+ if(isSpecialView){
+   // Special Choice: show ONLY the research-grade extended assessment.
+   // The standard article must not appear here a second time.
    const special=node("section","special-analysis");
    special.appendChild(node("h4","","★ Special Choice"+(Number.isInteger(match.specialChoiceRank)?" #"+match.specialChoiceRank:"")+" — အထူးပွဲကြိုသုံးသပ်ချက်"));
-   match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()).forEach(p=>special.appendChild(node("p","",p)));
+   const paragraphs=Array.isArray(match.specialAnalysisParagraphs)
+    ?match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()):[];
+   if(paragraphs.length){
+    paragraphs.forEach(p=>special.appendChild(appendBoldText(node("p","special-preview-paragraph"),p)));
+   }else special.appendChild(node("p","",NO_PREVIEW_TEXT));
    body.appendChild(special);
+ }else{
+   // All matches and league views retain ONE normal commentator-style preview.
+   body.appendChild(node("h4","","ပွဲကြိုသုံးသပ်ချက်"));
+   const original=textOrEmpty(match.dailyPreviewText);
+   body.appendChild(original
+    ?appendBoldText(node("p","daily-preview-verbatim"),original)
+    :node("p","",NO_PREVIEW_TEXT));
  }
 
  expand.addEventListener("click",()=>{let visible=!body.hidden;body.hidden=visible;expand.setAttribute("aria-expanded",String(!visible))});
@@ -330,7 +333,7 @@ function renderMatch(match,i){
     leagueLabel:leagueName(match.league),
     brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
     brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
-    special:match.specialChoice===true,
+    special:selectedLeague==="special"&&match.specialChoice===true,
     cardNode:card
    });
    button.textContent="✓ PNG Download စတင်ပြီး";

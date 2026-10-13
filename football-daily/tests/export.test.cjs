@@ -98,6 +98,34 @@ test('preview PNG keeps full text, both 5-game WDL strips and central 1X2 withou
  assert.ok(labels.join(' ').includes(match.dailyPreviewText.replace(/\*\*/g,'').slice(0,10)));
  assert.ok(x.clicked[0].endsWith('.png'));
 });
+test('Special Choice PNG renders only exclusive special article, not normal article',async()=>{
+ const match=current.matches.find(m=>m.specialChoice===true);
+ assert.ok(match,"Need at least one special match to validate");
+ const synthetic={...match,
+  home:match.homeDisplay,away:match.awayDisplay,
+  dailyPreviewText:"REGULAR_ONLY_MARKER — do not duplicate the normal match analysis in Special Choice",
+  specialAnalysisParagraphs:["EXCLUSIVE_SPECIAL_MARKER — အထူးသုံးသပ်ချက် တစ်ခုတည်းသာ ပြသမည်။",
+   "SECOND_SPECIAL_PARAGRAPH — အခြားအထူးသုံးသပ်ချက် အကြောင်းအရာ။"]
+ };
+ const normal=harness();
+ await normal.window.FutureCodeCardExport.save(synthetic,{brandName:"FUTURE CODE FOOTBALL",special:false});
+ const regularText=normal.drawn.filter(x=>x.type==="text").map(x=>x.value).join(" ");
+ assert.ok(regularText.includes("REGULAR_ONLY_MARKER"));
+ assert.ok(!regularText.includes("EXCLUSIVE_SPECIAL_MARKER"));
+ assert.ok(regularText.includes("ပွဲကြိုသုံးသပ်ချက်"));
+ const special=harness();
+ await special.window.FutureCodeCardExport.save(synthetic,{brandName:"FUTURE CODE FOOTBALL",special:true});
+ const specialLabels=special.drawn.filter(x=>x.type==="text").map(x=>x.value);
+ const specialText=specialLabels.join(" ");
+ assert.ok(specialText.includes("EXCLUSIVE_SPECIAL_MARKER"));
+ assert.ok(specialText.includes("SECOND_SPECIAL_PARAGRAPH"));
+ assert.ok(!specialText.includes("REGULAR_ONLY_MARKER"));
+ assert.ok(!specialLabels.includes("ပွဲကြိုသုံးသပ်ချက်"),"No second normal-analysis title");
+ assert.ok(specialLabels.some(x=>x.includes("★ SPECIAL CHOICE")));
+ assert.ok(special.canvases[1].height>925,"Full special analysis must fit");
+ assert.ok(special.clicked[0]?.endsWith(".png"));
+});
+
 test('native Canvas export contains no DOM snapshot / external export dependency',()=>{
  const js=sources.join('\n');
  assert.ok(!js.includes('domtoimage'));

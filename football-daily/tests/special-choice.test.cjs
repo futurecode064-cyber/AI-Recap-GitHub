@@ -31,8 +31,13 @@ test("Special Choice filter orders ranked picks and shows in-depth Burmese analy
  assert.ok(app.includes('if(selectedLeague==="special")selected.sort'));
  assert.ok(app.includes('Number.isInteger(match.specialChoiceRank)'));
  assert.ok(app.includes('Array.isArray(match.specialAnalysisParagraphs)'));
- assert.ok(app.includes('selectedLeague==="special"&&match.specialChoice'));
- assert.ok(app.includes('special:match.specialChoice===true'));
- assert.ok(exporter.includes('opts.special&&Array.isArray(match.specialAnalysisParagraphs)'));
- assert.ok(exporter.includes('extraLines=extra.flatMap'));
+ assert.ok(app.includes('const isSpecialView=selectedLeague==="special"&&match.specialChoice===true'));
+ assert.ok(app.includes('if(isSpecialView){'));
+ assert.ok(app.includes('}else{\n   // All matches and league views retain ONE normal commentator-style preview.'));
+ assert.ok(app.includes('special:selectedLeague==="special"&&match.specialChoice===true'));
+ assert.ok(exporter.includes('const specialOnly=opts.special===true'));
+ assert.ok(exporter.includes('const lines=specialOnly?[]:paragraphLines('));
+ assert.ok(exporter.includes('for(const block of extraBlocks)'));
+ assert.ok(!exporter.includes('y=drawParagraph(ctx,k,lines,M+25,y,25,49);\n  if(extra.length)'));
+ assert.ok(exporter.includes('text(ctx,specialOnly?"★ SPECIAL CHOICE'));
 });
