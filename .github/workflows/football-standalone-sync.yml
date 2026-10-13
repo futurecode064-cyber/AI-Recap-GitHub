@@ -1,5 +1,5 @@
 # The new standalone repository is the approved source of truth.
-# Run once on this metadata-only workflow update to verify real changed-source mirroring.
+# Production delivery requested 2026-10-13: mirror verified 12 Oct results and 13 Oct previews.
 # No scraping of sports results occurs in this workflow.
 name: Mirror Verified Football Site to Cloudflare Production
 on:
