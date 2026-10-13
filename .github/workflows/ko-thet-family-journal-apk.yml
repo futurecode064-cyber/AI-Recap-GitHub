@@ -1,0 +1,71 @@
+name: Ko Thet Family Journal Android APK
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/ko-thet-family-journal-apk.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android SDK
+        run: |
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Generate BW Sport application from tested YKZ Android implementation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          src=Path('.github/workflows/ykz-soccer-tips-apk.yml').read_text()
+          block=src.split('      - name: Build YKZ Soccer Tips APK\n        shell: bash\n        run: |\n',1)[1]
+          block=block.split('      - uses: actions/upload-artifact@v4',1)[0]
+          script='\n'.join(l[10:] if l.startswith('          ') else l for l in block.splitlines())+'\n'
+          for a,b in [
+              ('YKZ Soccer Tips','Ko Thet Family ဘောလုံးဂျာနယ်'),
+              ('YKZ-Soccer-Tips','Ko-Thet-Family-Journal'),
+              ('ykz-soccer-tips','ko-thet-family-journal'),
+              ('YKZSoccerTips','KoThetFamilyJournal'),
+              ('YKZ-Tips','Ko-Thet'),
+              ('ykz-family','ko-thet-family'),
+              ('com.futurecode.ykzsoccertips','com.futurecode.kothetfamilyjournal'),
+              ('ykzsoccertips','kothetfamilyjournal'),
+              ('ykz_logo','kt_logo'),('ykz-logo','kt-logo'),
+              ('ykz-apk-output','ko-thet-apk-output'),
+              ('YKZ','KT'),('ykz','kt'),
+              ("'#D50000'","'#C9AA3C'"),
+              ('Color.rgb(165,0,0)','Color.rgb(33,28,20)'),
+              ('versionCode 2','versionCode 1'),
+              ("versionName '1.1.0'","versionName '1.0.0'")
+          ]: script=script.replace(a,b)
+          Path('/tmp/build_ko_thet_family.sh').write_text(script)
+          PY
+      - name: Build APK
+        run: bash /tmp/build_ko_thet_family.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Ko-Thet-Family-Journal-APK
+          path: ko-thet-apk-output/Ko-Thet-Family-Journal.apk
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Ko-Thet-Family-App-Icon
+          path: /tmp/ko-thet-family-journal/app/src/main/res/drawable-nodpi/kt_logo.png
+      - name: Publish APK
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view ko-thet-family-journal-v1.0.0 >/dev/null 2>&1; then
+            gh release upload ko-thet-family-journal-v1.0.0 ko-thet-apk-output/Ko-Thet-Family-Journal.apk --clobber
+          else
+            gh release create ko-thet-family-journal-v1.0.0 ko-thet-apk-output/Ko-Thet-Family-Journal.apk --title 'Ko Thet Family ဘောလုံးဂျာနယ် v1.0.0' --notes 'Android WebView APK with image/poster save support and BW Sport live website updates.'
+          fi
