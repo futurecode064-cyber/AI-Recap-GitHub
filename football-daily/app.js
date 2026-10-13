@@ -234,9 +234,9 @@ function renderMatchHero(match){
  append(artwork,heroSide(match,"home"),middle,heroSide(match,"away"));
  hero.appendChild(artwork);
  const info=node("div","hero-info-bar");
- append(info,node("strong","hero-info-home",teamLabel(match,"home")),
+ append(info,node("span","hero-info-side hero-info-left"),
   node("strong","hero-info-fixture",teamLabel(match,"home")+" နှင့် "+teamLabel(match,"away")),
-  node("strong","hero-info-away",teamLabel(match,"away")));
+  node("span","hero-info-side hero-info-right"));
  hero.appendChild(info);
  return hero;
 }
