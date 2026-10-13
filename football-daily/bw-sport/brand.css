@@ -15,7 +15,6 @@
 .bw-theme .eyebrow,.bw-theme .hero-number small{color:#73d8ff}
 .bw-theme .hero-main h1 span{color:#7bd7ff;text-shadow:0 0 22px #209bff88}
 .bw-theme .hero-desc{color:#d4e8ff}
-.bw-theme .bw-hero-slogan{display:inline-block;margin:0 0 10px;padding:7px 19px;border:1px solid #57cdff;border-radius:999px;color:#eefaff;font:800 12px var(--heading);letter-spacing:.19em;background:linear-gradient(90deg,#0757a4,#0b2855);box-shadow:0 0 14px #1bb1ff33}
 .bw-theme .dashboard-bar,.bw-theme .match-card{background:#0c2341;border-color:#2e6093;box-shadow:0 6px 24px #020a192b}
 .bw-theme .dashboard-stat{border-color:#27557f}
 .bw-theme .dashboard-stat .status-label{color:#62ceff}
@@ -85,7 +84,6 @@
  .bw-theme .logo-lines b{font-size:17px}
  .bw-theme .top-edition{display:none}
  .bw-theme .hero{padding-top:22px}
- .bw-theme .logo-lines small{font-size:9px}
  .bw-theme .hero-info-bar>.hero-info-fixture{font-size:12px}
  .bw-theme .odds-table tr{background:#102b50;border-color:#3777ad}
  .bw-theme .odds-table td.price,.bw-theme .odds-table td.prediction{border-color:#33547d}

@@ -89,7 +89,7 @@
    text(ctx,"YKZ FAMILY GROUP · အတူရှေ့ဆက် YKZ",W/2,44,17,C.orange,true,"center");
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"YKZ");
   }else if(isBW){
-   text(ctx,"BW SPORT · MORE THAN A GAME",W/2,44,18,C.orange,true,"center");
+   text(ctx,"BW SPORT ဘောလုံးဂျာနယ်",W/2,44,18,C.orange,true,"center");
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"BW");
   }
   const heroY=86,heroH=387,sideW=450,middleW=252;
