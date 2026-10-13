@@ -211,32 +211,18 @@ function renderWdlStrip(match,side){
 }
 // Optional editorial photograph URL is used only when the publisher has rights.
 // With no sourced photo, render a designed football-kit silhouette and genuine crest.
+// Each hero half contains only the authentic club crest, centered in its own space.
 function heroSide(match,side){
  const name=teamLabel(match,side);
  const wrap=node("div","hero-team hero-team-"+side);
- const artwork=node("div","hero-team-art");
- artwork.setAttribute("aria-label",name+" အသင်း");
- artwork.appendChild(node("div","hero-stadium-glow"));
- artwork.appendChild(node("div","hero-player-silhouette"));
- const photo=textOrEmpty(match[side+"HeroImageUrl"]);
- if(photo&&goodUrl(photo)){
-  const img=node("img","hero-team-photo");img.src=photo;
-  img.alt=name+" အသင်း၏ ဓာတ်ပုံ";img.loading="lazy";img.decoding="async";
-  img.onerror=()=>img.remove();
-  artwork.appendChild(img);
- }
  const crest=textOrEmpty(match[side+"CrestUrl"]);
  if(crest&&goodUrl(crest)){
-  const badge=node("img","hero-team-crest");badge.src=crest;badge.alt=name+" Logo";badge.loading="lazy";badge.decoding="async";
-  badge.onerror=()=>{badge.remove();artwork.appendChild(node("span","hero-crest-fallback",name.slice(0,2)));};
-  artwork.appendChild(badge);
- }else artwork.appendChild(node("span","hero-crest-fallback",name.slice(0,2)));
- wrap.appendChild(artwork);
- const credit=textOrEmpty(match[side+"HeroImageCreditUrl"]);
- if(photo&&credit&&goodUrl(credit)){
-  const a=node("a","hero-image-credit","ပုံရင်းမြစ်");
-  a.href=credit;a.target="_blank";a.rel="noopener noreferrer";wrap.appendChild(a);
- }
+  const badge=node("img","hero-team-crest");
+  badge.src=crest;badge.alt=name+" အသင်းလိုဂို";
+  badge.loading="lazy";badge.decoding="async";
+  badge.onerror=()=>{badge.remove();wrap.appendChild(node("span","hero-crest-fallback",name.slice(0,2)))};
+  wrap.appendChild(badge);
+ }else wrap.appendChild(node("span","hero-crest-fallback",name.slice(0,2)));
  return wrap;
 }
 function renderMatchHero(match){
@@ -250,7 +236,7 @@ function renderMatchHero(match){
  const info=node("div","hero-info-bar");
  append(info,node("strong","hero-info-home",teamLabel(match,"home")),
   node("strong","hero-info-fixture",teamLabel(match,"home")+" နှင့် "+teamLabel(match,"away")),
-  node("strong","hero-info-kickoff",textOrEmpty(match.kickoffYangon)||"ပွဲချိန် မရရှိသေး"));
+  node("strong","hero-info-away",teamLabel(match,"away")));
  hero.appendChild(info);
  return hero;
 }
@@ -303,8 +289,7 @@ function renderMatch(match,i){
  const headline=node("div","match-topline");
  const league=node("span","league-name","◈ "+leagueName(match.league));
  if(match.specialChoice)league.appendChild(node("span","special-mark","★ SPECIAL CHOICE"));
- const liveLabel=match.status==="live"&&/^\d+\s*[-:]\s*\d+$/.test(String(match.liveScore||""))?"🔴 LIVE "+match.liveScore+" · ":"";
- append(headline,league,node("span","match-time",liveLabel+(textOrEmpty(match.kickoffYangon)||"ကန်ချိန် မအတည်ပြုရသေး")));
+ headline.appendChild(league);
  card.appendChild(headline);
  card.appendChild(renderMatchHero(match));
  card.appendChild(renderQuoteAndForm(match));
