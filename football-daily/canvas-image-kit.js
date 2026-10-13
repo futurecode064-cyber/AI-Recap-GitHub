@@ -72,6 +72,19 @@
   const brandUrl=document.documentElement?.dataset?.footballBrandLogoUrl;
   await Promise.all([...new Set([...urls,brandUrl].filter(Boolean))].map(async url=>{const im=await loadImage(url);resolved.set(url,im)}));
  }
+
+ // Optional sourced photos are cropped to the visual hero area. Returns false when unavailable.
+ function photoCover(ctx,url,x,y,w,h){
+  const img=resolved.get(url);
+  if(!img||!img.naturalWidth||!img.naturalHeight)return false;
+  const scale=Math.max(w/img.naturalWidth,h/img.naturalHeight);
+  const cropW=w/scale,cropH=h/scale;
+  const sx=(img.naturalWidth-cropW)/2,sy=Math.max(0,(img.naturalHeight-cropH)*.20);
+  ctx.save();
+  ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();
+  try{ctx.drawImage(img,sx,sy,cropW,cropH,x,y,w,h)}catch(_){ctx.restore();return false}
+  ctx.restore();return true;
+ }
  async function download(canvas,filename){
   if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
   const blob=await Promise.race([
@@ -94,5 +107,5 @@
   text(ctx,"မြန်မာစံတော်ချိန်  ·  "+day(date),28,164,18,C.muted);
   text(ctx,detail,W-28,164,19,C.orange,true,"right");
  }
- window.FutureCodeCanvasKit={C,create,fill,line,text,fit,wrap,fonts,preloadImages,crest,download,day,top};
+ window.FutureCodeCanvasKit={C,create,fill,line,text,fit,wrap,fonts,preloadImages,crest,photoCover,download,day,top};
 })();
