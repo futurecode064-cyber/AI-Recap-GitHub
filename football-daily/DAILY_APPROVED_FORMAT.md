@@ -129,3 +129,10 @@ This supersedes every prior instruction that Special Choice should display BOTH 
 - The **downloaded single-match Canvas PNG** must always match the selected view: Special Choice filter => specialAnalysisParagraphs only, one Special Choice heading, full article with auto-growing canvas height. Normal/league filter => dailyPreviewText only, one normal heading. Never duplicate a regular and a special narrative in the same PNG.
 - Keep the published expert articles, original team crests, sole centered Burmese match title, odds, W/D/L, no public H2H, Special Choice ranking and exact brand color themes untouched. Apply to Future Code, YKZ and BW SPORT because they all import the shared root app.js/card-export.js.
 - Regression tests must assert both DOM-branch exclusivity and actual Canvas strings in each mode; run tests/special-choice.test.cjs, tests/export.test.cjs and full Node suite prior to declaring production ready.
+
+
+## 2026-10-13 PUBLIC HERO AVAILABILITY NOTICE (latest user-approved text)
+In the public homepage hero for ALL THREE branded websites — Future Code Football, YKZ FAMILY GROUP and BW SPORT ဘောလုံးဂျာနယ် — replace the old large '06:00 / DAILY FOOTBALL · MMT' (or 'EVERY MORNING · MMT') right-hand hero clock with a compact, readable, responsive two-paragraph notice. Use the user's exact spelling and wording:
+1. `နေ့စဥ် မနက် ၇ နာရီ နှင့် ၈ နာရီကြားတွင်`
+2. `နေ့စဥ် ကန်မည့် ပွဲများ အားလုံး ကို update ကြည့်ရှူ နိုင်ပါပြီ`
+Display exactly once per homepage in `hero-update-notice`, and keep all three sites' existing color palettes. Do not reintroduce English '06:00 DAILY FOOTBALL · MMT' copy. The 06:00 Asia/Yangon AUTOMATION is still a prepare/research-only background task; this visible notice does NOT authorize automatic publication, changing the actual background task schedule, or publishing any unverified football data. Live updates remain subject to the established manual publication approval rule. Keep static copy and real publishing behavior distinct. Regression test: `tests/daily-update-notice.test.cjs`.

@@ -265,3 +265,24 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
  .match-card:has(.match-hero) .analysis-body p{font-size:16.5px;line-height:2.05}
  .match-card:has(.match-hero) .analysis-toggle{padding:12px 14px;font-size:12px}
 }
+
+
+/* User-approved daily update availability notice; replaces the misleading 06:00 clock.
+   This is public display text only; internal 06:00 research schedule is separate. */
+.hero-update-notice{
+ flex:0 1 405px;min-width:260px;max-width:405px;text-align:center;
+ padding:24px 22px;background:linear-gradient(145deg,#ffffff0c,#00000035);
+ border:1px solid color-mix(in srgb,var(--orange) 65%,transparent);
+ border-radius:17px;box-shadow:0 9px 35px #0003,inset 0 1px 0 #ffffff18;
+}
+.hero-update-notice p{font-family:var(--font);margin:0;line-height:1.95;overflow-wrap:anywhere}
+.hero-update-notice p:first-child{font-size:clamp(16px,1.5vw,20px);font-weight:800;color:var(--orange);padding-bottom:12px}
+.hero-update-notice p:last-child{font-size:clamp(14px,1.25vw,17px);font-weight:650;color:var(--cream)}
+@media(max-width:850px){
+ .hero-update-notice{flex-basis:330px;min-width:240px;padding:20px 16px}
+}
+@media(max-width:620px){
+ .hero-update-notice{margin-top:24px;max-width:none;width:100%;min-width:0;padding:18px 16px}
+ .hero-update-notice p:first-child{font-size:17px}
+ .hero-update-notice p:last-child{font-size:15px;line-height:2}
+}
