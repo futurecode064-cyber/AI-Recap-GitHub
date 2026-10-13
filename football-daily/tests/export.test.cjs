@@ -20,7 +20,9 @@ function harness(){
    if(type!=='canvas')throw Error('unexpected DOM creation: '+type);
    const canvas={width:0,height:0,toBlob(cb){cb({size:500,type:'image/png'})}};
    const ctx={
-    canvas,fillRect(){},beginPath(){},roundRect(){},fill(){},drawImage(){drawn.push({type:'logo'})},
+    canvas,fillRect(){},beginPath(){},roundRect(){},fill(){},save(){},restore(){},rect(){},clip(){},
+    createLinearGradient(){return {addColorStop(){}}},createRadialGradient(){return {addColorStop(){}}},
+    drawImage(){drawn.push({type:'logo'})},
     measureText(value){return {width:String(value).length*11}},
     fillText(value){drawn.push({type:'text',value:String(value)})}
    };
@@ -75,7 +77,7 @@ test('goal results canvas includes only confirmed final-score fixtures',async()=
  assert.ok(!labels.includes('9-9'));
  assert.ok(!labels.includes('TBD'));
 });
-test('preview card export preserves all three side-by-side histories and complete editorial copy',async()=>{
+test('preview PNG keeps full text, both 5-game WDL strips and central 1X2 without H2H',async()=>{
  const x=harness(),match=report.matches.find(m=>m.homeLastFive?.length&&m.headToHead?.length);
  assert.ok(match);
  const translated={...match,home:match.homeDisplay||match.home,away:match.awayDisplay||match.away};
@@ -84,7 +86,9 @@ test('preview card export preserves all three side-by-side histories and complet
  assert.equal(x.canvases[1].width,1200);
  assert.ok(labels.includes('ပွဲကြိုသုံးသပ်ချက်'));
  assert.ok(labels.includes('အိမ်ရှင် နောက်ဆုံး ၅ ပွဲ'));
- assert.ok(labels.includes('ထိပ်တိုက်တွေ့ဆုံမှု H2H'));
+ assert.ok(!labels.some(x=>String(x).includes('H2H')));
+ assert.ok(labels.includes('ပွဲပြီး 1X2 ကြေး'));
+ assert.ok(labels.includes('W = နိုင်  •  D = သရေ  •  L = ရှုံး'));
  assert.ok(labels.includes('ဧည့်သည် နောက်ဆုံး ၅ ပွဲ'));
  assert.ok(labels.includes(String(match.homeOdds)));
  assert.ok(labels.includes(String(match.drawOdds)));
@@ -102,7 +106,7 @@ test('native Canvas export contains no DOM snapshot / external export dependency
  assert.ok(js.includes('canvas.toBlob'));
 });
 
-test('today preview PNG accepts bookmaker odds and verified form with no fabricated H2H',async()=>{
+test('today preview PNG accepts bookmaker odds and verified form with no H2H panel',async()=>{
  const x=harness(),match=current.matches[0];
  assert.ok(match.homeLastFive?.length===5&&match.awayLastFive?.length===5);
  assert.equal(match.headToHead.length,0);
@@ -111,7 +115,9 @@ test('today preview PNG accepts bookmaker odds and verified form with no fabrica
  const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
  assert.ok(labels.includes(match.homeDisplay));
  assert.ok(labels.includes(match.awayDisplay));
- assert.ok(labels.includes('ထိပ်တိုက်တွေ့ဆုံမှု H2H'));
+ assert.ok(!labels.some(x=>String(x).includes('H2H')));
+ assert.ok(labels.includes('ပွဲပြီး 1X2 ကြေး'));
+ assert.ok(labels.includes('W = နိုင်  •  D = သရေ  •  L = ရှုံး'));
  assert.ok(x.clicked[0]?.endsWith('.png'));
 });
 
