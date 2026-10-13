@@ -1,0 +1,181 @@
+/* KO THET FAMILY — PURE RED #e00000 / GOLD #ffcf58 / BLACK #111111. Brand-only theme. */
+:root.ktf-theme{
+ color-scheme:dark;
+ --ink:#111111;--panel:#202020;--panel2:#292929;--border:#6f2424;
+ --cream:#fff9ed;--muted:#d4c8bd;--orange:#ffcf58;--green:#ffcf58;
+ --ktf-red:#e00000;--ktf-red-dark:#960000;--ktf-gold:#ffcf58;--ktf-navy:#171717
+}
+.ktf-theme body{background:#111111;color:#fff9ed}
+.ktf-theme .site-header{background:linear-gradient(105deg,#b00000,#4a0000);border-bottom:1px solid #b43333}
+.ktf-theme .header-inner{min-height:86px;height:auto;padding:10px 0}
+.ktf-theme .logo{gap:12px}
+.ktf-theme .ktf-site-logo{width:53px;height:64px;object-fit:contain;background:transparent;border-radius:50%;padding:0;flex:none}
+.ktf-theme .logo-lines b{font-size:23px;line-height:1.15;letter-spacing:.04em;color:#fff9ec}
+.ktf-theme .logo-lines small{font:700 12px var(--font);color:#ffdc83}
+.ktf-theme .top-edition{color:#ffe1a2;font-size:11px}
+.ktf-theme .hero{background:radial-gradient(circle at 87% 12%,#e0000055,transparent 38%),linear-gradient(120deg,#9f0000,#151515 82%);
+ border-bottom:1px solid #a72f2f}
+.ktf-theme .hero:after{border-color:#dd00004c;box-shadow:0 0 0 75px #ca000020,0 0 0 160px #a0000012}
+.ktf-theme .hero-topline,.ktf-theme .hero-foot{border-color:#a33838;color:#e2d2c5}
+.ktf-theme .eyebrow,.ktf-theme .hero-number small{color:#ffdc91}
+.ktf-theme .ktf-hero-slogan{display:inline-block;margin:0 0 10px;padding:8px 17px;color:#fff2cd;
+ background:#dc0000;border:1px solid #ffcf58;border-radius:999px;font-weight:800;font-size:12px}
+.ktf-theme .hero-desc{color:#f0dfd6}
+.ktf-theme .dashboard-bar,.ktf-theme .match-card{background:#202020;border-color:#823131}
+.ktf-theme .dashboard-stat{border-color:#823131}
+.ktf-theme .dashboard-stat .status-label{color:#ffcf58}
+.ktf-theme .reload-btn:hover{background:#431717}
+.ktf-theme .filters button{background:#292929;border-color:#933333;color:#f2e5dc}
+.ktf-theme .filters button.selected{background:#d50000;border-color:#ff4a4a;color:#fff}
+.ktf-theme .filters .filter-special{background:#302a1c;border-color:#b18b32;color:#ffdf96}
+.ktf-theme .match-topline{background:#980000;border-color:#ad3434}
+.ktf-theme .vs-banner{background:radial-gradient(circle at 50% 50%,#bc0000 0,#252525 44%,#1b1b1b 100%)}
+.ktf-theme .side:first-child{background:linear-gradient(120deg,#790000,#9b000055)}
+.ktf-theme .side:last-child{background:linear-gradient(240deg,#262626,#ad000047)}
+.ktf-theme .player-name{background:#151515e6}
+.ktf-theme .vs-circle{background:#191919;border-color:#ffcf58;color:#ffdf98}
+.ktf-theme .odds-grid{border-color:#9c3e3e}
+.ktf-theme .odd{background:#292929}
+.ktf-theme .odd+.odd{border-color:#9c3e3e}
+.ktf-theme .odd small{color:#e6d5c7}
+.ktf-theme .analysis-body p{color:#fff0e5}
+.ktf-theme .form-three-grid>.form-team,.ktf-theme .form-three-grid>.h2h-records{background:#2c2525;border-color:#8a3535}
+.ktf-theme .form-h2h,.ktf-theme .form-team,.ktf-theme .h2h-records{border-color:#8b3333}
+.ktf-theme .date-tabs button,.ktf-theme .date-tab-odds{border-color:#923333;background:#292525;color:#faf0e5}
+.ktf-theme .date-tabs button.active{background:#d00000;color:white;border-color:#ff4a4a}
+.ktf-theme .date-tabs .date-tab-odds:hover{color:#ffdc8a;border-color:#ffcf58}
+.ktf-theme .results-download-bar{background:#292525;border-color:#903030}
+.ktf-theme .results-png-btn{background:linear-gradient(120deg,#d50000,#ffcb58);color:white;border-color:#ffcf82}
+.ktf-theme footer{background:#151515;border-color:#882a2a}
+.ktf-theme .footer-inner p{color:#d5c5ba}
+/* Same odds markup and compact mobile layout, brand-specific coloring only */
+.ktf-theme .odds-hero{background:linear-gradient(115deg,#ba0000,#181818);border-color:#a93434}
+.ktf-theme .odds-hero h1 span{color:#ffcf58}
+.ktf-theme .odds-kicker{color:#ffda90}
+.ktf-theme .odds-subtitle{color:#e4d1c6}
+.ktf-theme .odds-nav a{background:#2d2424;border-color:#933333}
+.ktf-theme .odds-nav a.active{background:#d50000;border-color:#ff6666;color:#fff}
+.ktf-theme .odds-overview{background:#282828;border-color:#873333}
+.ktf-theme .odds-group{background:#202020;border-color:#8e3030}
+.ktf-theme .odds-group h2{background:linear-gradient(90deg,#bd0000,#390000);color:#ffe099;border-color:#913333}
+.ktf-theme .odds-table th{background:#870000;color:#ffe5bc}
+.ktf-theme .odds-table td{border-color:#7a3434}
+.ktf-theme .odds-table tr:hover td{background:#302020}
+.ktf-theme .odds-table .upper{color:#ffdc82}
+.ktf-theme .odds-table .price{color:#fff6de}
+.ktf-theme .odds-table .prediction{color:#ffdd94}
+.ktf-theme .odds-table .time{color:#ffcd90}
+.ktf-theme .odds-note{background:#292525;border-left-color:#ffcf58;color:#f1ded3}
+.ktf-theme .odds-export-actions button{background:linear-gradient(120deg,#d10000,#ffcf58);
+ border-color:#ffcf86;color:white}
+.ktf-theme .odds-table tr{background:#292525}
+.ktf-theme .team-badge{background:#fff}
+.ktf-theme .league-mark{background:#fff9ef}
+@media(max-width:620px){
+ .ktf-theme .ktf-site-logo{width:44px;height:52px}
+ .ktf-theme .header-inner{min-height:74px}
+ .ktf-theme .logo-lines b{font-size:16px;letter-spacing:.01em}
+ .ktf-theme .logo-lines small{font-size:10px}
+ .ktf-theme .hero-main{padding:34px 0 32px}
+ .ktf-theme .ktf-hero-slogan{font-size:11px}
+}
+
+/* Strong KO THET scarlet treatment for headers, navigation, tables and mobile cards. */
+.ktf-theme .site-header{background:linear-gradient(110deg,#c50000,#720000 67%,#151515);border-bottom:2px solid #ffcf58}
+.ktf-theme .hero{background:radial-gradient(circle at 82% 15%,#e0000055,transparent 42%),linear-gradient(110deg,#a80000,#4c0000 64%,#151515);border-color:#b43333}
+.ktf-theme .odds-hero{background:linear-gradient(110deg,#ba0000,#5c0000 70%,#151515)}
+.ktf-theme .odds-group h2{background:linear-gradient(90deg,#bb0000,#590000);color:#ffcf58}
+.ktf-theme .odds-table th{background:#8f0000}
+.ktf-theme .date-tabs button.active,.ktf-theme .filters button.selected,.ktf-theme .odds-nav a.active{background:#d50000;color:#fff;border-color:#ff4545}
+.ktf-theme .match-topline{background:linear-gradient(90deg,#a50000,#500000);border-color:#a93434}
+.ktf-theme .vs-banner{background:linear-gradient(90deg,#660000,#242424 37%,#242424 63%,#660000)}
+.ktf-theme .results-png-btn,.ktf-theme .odds-export-actions button{background:#d50000;color:white;border-color:#ffcf58}
+@media(max-width:700px){.ktf-theme .odds-table tr{background:#282525;border-color:#882b2b}}
+
+
+/* Approved 2026-10-13 preview redesign: preserve KO THET brand colors on shared layout. */
+.ktf-theme .match-hero-art{background:radial-gradient(circle at center,#7b0808 0%,#190909 62%,#070707)}
+.ktf-theme .hero-team-home{background:radial-gradient(ellipse at 22% 15%,#e000005e,transparent 73%),#160909}
+.ktf-theme .hero-team-away{background:radial-gradient(ellipse at 80% 15%,#d0a0464f,transparent 72%),#111111}
+.ktf-theme .match-hero-versus{background:linear-gradient(90deg,#250707dc,#3f1717e0,#230707da)}
+.ktf-theme .hero-competition,.ktf-theme .hero-info-bar{color:#ffcf58}
+.ktf-theme .hero-big-vs{color:#ffedc6}
+.ktf-theme .hero-info-bar{background:#0c0505}
+.ktf-theme .hero-info-bar>.hero-info-fixture{background:#990000}
+.ktf-theme .match-market-layout,.ktf-theme .market-form-row{background:#141010}
+.ktf-theme .match-market-strip.myanmar-market{background:#290b0b;border-bottom-color:#ffcf58}
+.ktf-theme .match-market-strip .myanmar-market-title,.ktf-theme .match-market-strip .myanmar-market-pair{color:#ffcf58}
+.ktf-theme .quick-form,.ktf-theme .market-center{background:#271c1c;border-color:#804242}
+.ktf-theme .market-center .odds-grid{border-color:#843333}
+.ktf-theme .market-center .odd{background:#191414}
+.ktf-theme .market-center-heading,.ktf-theme .market-center .odd small,.ktf-theme .quick-form-heading small{color:#ffcf58}
+.ktf-theme .match-card:has(.match-hero) .analysis-body,.ktf-theme .match-card:has(.match-hero) .match-actions{background:#202020}
+.ktf-theme .match-card:has(.match-hero) .analysis-body h4,.ktf-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#ffcf58}
+.ktf-theme .match-card:has(.match-hero) .analysis-toggle{background:#282020;color:#ffcf58}
+
+/* KO THET FAMILY / metallic-gold-on-deep-burgundy from user's reference. */
+:root.ktf-theme{--ink:#13080c;--panel:#2c1418;--panel2:#401b22;--border:#956b32;--cream:#fff5df;--muted:#d5c2b0;--orange:#ffdb70;--green:#f3d177;--ktf-red:#770c13;--ktf-gold:#ffd65f;--ktf-silver:#d9d9df}
+.ktf-theme body{background:radial-gradient(ellipse at 50% 0%,#8b162342,transparent 65%),#11070b;color:#fff5e6}
+.ktf-theme .site-header{background:linear-gradient(115deg,#240305,#81070d 45%,#240609 91%);border-bottom:2px solid #e3b54a;box-shadow:0 6px 30px #0b0104a8}
+.ktf-theme .header-inner{min-height:92px;height:auto;gap:16px;padding:12px 0}
+.ktf-theme .ktf-site-logo{width:78px;height:78px;object-fit:contain;display:block;flex:none;border:0;border-radius:50%;padding:0;background:transparent;filter:drop-shadow(0 0 10px #ffd05a70)}
+.ktf-theme .logo-lines b{font-size:clamp(18px,2.5vw,27px);font-weight:900;line-height:1.5;color:#ffdb74;text-shadow:0 0 16px #ffa6374d}
+.ktf-theme .logo-lines small,.ktf-theme .top-edition{font-size:12px;color:#f1dcc4}
+.ktf-theme .hero{background:radial-gradient(ellipse at 87% 10%,#ffc55952,transparent 42%),linear-gradient(112deg,#63050a,#940a12 51%,#260609 100%);border-bottom:2px solid #bc8e3d}
+.ktf-theme .hero:after{border-color:#f5cb7a63;box-shadow:0 0 0 70px #e6af2020,0 0 0 155px #f8ca140d}
+.ktf-theme .hero-topline,.ktf-theme .hero-foot{border-color:#be903d;color:#f4debf}
+.ktf-theme .eyebrow,.ktf-theme .hero h1 span{color:#ffdf72;text-shadow:0 0 15px #ffb43a54}
+.ktf-theme .hero-desc{color:#f5e1d0}
+.ktf-theme .hero-update-notice{background:linear-gradient(130deg,#38070c,#7e1017a9);border-color:#f0bf56}
+.ktf-theme .dashboard-bar,.ktf-theme .match-card{background:#291317;border-color:#9a6e3a}
+.ktf-theme .dashboard-stat{border-color:#79532e}
+.ktf-theme .section-heading h2,.ktf-theme .section-eyebrow,.ktf-theme .dashboard-stat .status-label{color:#ffdf77}
+.ktf-theme .today-pill{background:#571018;color:#ffe7a6;border:1px solid #d7a34f}
+.ktf-theme .date-tabs button,.ktf-theme .date-tab-odds,.ktf-theme .filters button{background:#33191e;border-color:#9b6e37;color:#ffe6c2}
+.ktf-theme .date-tabs button.active,.ktf-theme .filters button.selected{background:linear-gradient(125deg,#ffe28b,#dfac36);color:#300509;border:1px solid #ffedb0;font-weight:800}
+.ktf-theme .filters .filter-special,.ktf-theme .special-mark{background:linear-gradient(115deg,#5f0d12,#24090e);color:#ffe48c;border-color:#dfb35a}
+.ktf-theme .match-card.is-special{border-color:#f9d46b;box-shadow:0 0 0 1px #edbb6077,0 0 26px #c28d2838}
+.ktf-theme .match-topline,.ktf-theme .match-card:has(.match-hero)>.match-topline{background:#3b0b11;border-color:#b07a34}
+.ktf-theme .match-hero-art{background:#1c080c}
+.ktf-theme .hero-team-home{background:radial-gradient(ellipse at 30% 25%,#8a1b2a66,transparent 70%),#3c1117}
+.ktf-theme .hero-team-away{background:radial-gradient(ellipse at 80% 25%,#c49c4260,transparent 70%),#3c1117}
+.ktf-theme .match-hero-versus{background:linear-gradient(90deg,#1a070aea,#562029eb,#1a070aea)}
+.ktf-theme .hero-big-vs{color:#fff3cb;text-shadow:0 0 22px #f4ce70a0}
+.ktf-theme .hero-competition{color:#ffe1a6}
+.ktf-theme .hero-info-bar{background:#21090c;color:#ffdc7f}
+.ktf-theme .hero-info-bar>.hero-info-fixture{background:linear-gradient(120deg,#79030f,#b9131b,#6c020c);color:#ffdd7c}
+.ktf-theme .match-market-layout,.ktf-theme .market-form-row{background:#2c1419}
+.ktf-theme .match-market-strip.myanmar-market{background:#3c151a;border-bottom-color:#bc8942}
+.ktf-theme .match-market-strip .myanmar-market-title,.ktf-theme .match-market-strip .myanmar-market-pair{color:#ffe085}
+.ktf-theme .quick-form,.ktf-theme .market-center{background:#382025;border-color:#a97c44}
+.ktf-theme .market-center .odds-grid{border-color:#b7893f}
+.ktf-theme .market-center .odd{background:#260f13}
+.ktf-theme .market-center-heading,.ktf-theme .market-center .odd small,.ktf-theme .quick-form-heading small{color:#ffdf8c}
+.ktf-theme .match-card:has(.match-hero) .analysis-body,.ktf-theme .match-card:has(.match-hero) .match-actions{background:#261418}
+.ktf-theme .match-card:has(.match-hero) .analysis-body p,.ktf-theme .special-analysis p{color:#fff4e4}
+.ktf-theme .match-card:has(.match-hero) .analysis-body h4,.ktf-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#ffe38d}
+.ktf-theme .match-card:has(.match-hero) .analysis-toggle{background:#32171b;color:#ffe39b}
+.ktf-theme .special-analysis{background:linear-gradient(150deg,#562027,#2b1418);border-color:#dcb455}
+.ktf-theme .special-analysis h4{color:#ffe38d}
+.ktf-theme .match-download,.ktf-theme .results-png-btn,.ktf-theme .odds-export-actions button{background:linear-gradient(125deg,#ffe69a,#d8a02b);border:1px solid #ffdf9e;color:#2a080c;font-weight:900}
+.ktf-theme .odds-hero{background:radial-gradient(ellipse at 80% 10%,#ca97404d,transparent 40%),linear-gradient(110deg,#700a10,#23070b);border-color:#bb8d47}
+.ktf-theme .odds-hero h1 span,.ktf-theme .odds-kicker,.ktf-theme .odds-count{color:#ffe088}
+.ktf-theme .odds-nav a{background:#40171d;border:1px solid #a67541;color:#ffe7c6}
+.ktf-theme .odds-nav a.active{background:linear-gradient(115deg,#ffe18b,#dca52a);color:#280508;border-color:#ffeaa9}
+.ktf-theme .odds-overview,.ktf-theme .odds-group,.ktf-theme .odds-status{background:#291419;border-color:#89602d}
+.ktf-theme .odds-group h2{background:linear-gradient(90deg,#850b12,#40090e);color:#ffdc7a}
+.ktf-theme .odds-table th{background:#72232d;color:#ffebc7}
+.ktf-theme .odds-table td{border-color:#52332d}
+.ktf-theme .odds-table tr:hover td{background:#442026}
+.ktf-theme .odds-table .time,.ktf-theme .odds-table .upper,.ktf-theme .odds-table .prediction{color:#ffe6a1}
+.ktf-theme .odds-note{background:#33191d;border-left-color:#ffcf59;color:#f1d2aa}
+.ktf-theme footer{background:#1c080e;border-color:#8b612b}
+.ktf-theme .footer-inner p{color:#ecd7b6}
+@media(max-width:620px){
+ .ktf-theme .ktf-site-logo{width:58px;height:58px}
+ .ktf-theme .header-inner{min-height:75px}
+ .ktf-theme .logo-lines b{font-size:17px}
+ .ktf-theme .top-edition{display:none}
+ .ktf-theme .hero-info-bar>.hero-info-fixture{font-size:12px}
+ .ktf-theme .odds-table tr{background:#381820;border-color:#926834}
+}

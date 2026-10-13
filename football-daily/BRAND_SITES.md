@@ -49,3 +49,12 @@ Photo URLs (homeHeroImageUrl, awayHeroImageUrl) are optional for verified team p
 - Custom blue Canvas PNG identity, original logo in header/favicons/export, and Special Choice content. Keep no-H2H and crest-only match hero rule from current DAILY_APPROVED_FORMAT.md.
 - Original Future Code, YKZ FAMILY GROUP and BW SPORT are independent site looks but share one single source of football facts, odds, and dates. When publishing validated daily data, all three must reflect the new report automatically.
 - The base domain is unchanged; Myanmar ISP/VPN reachability of Pages applies identically to all branded paths. Do not promise that a new branded subpath works without VPN if the parent domain is blocked.
+
+
+## Ko Thet Family ဘောလုံးဂျာနယ် (2026-10-13)
+- Branded home /ko-thet-family/ and Myanmar opening odds /ko-thet-family/odds.html on existing Cloudflare Pages domain.
+- Original first uploaded black/gold/silver circular **KO THET FAMILY KT** emblem at ko-thet-family/assets/logo.webp, transparent outside the original circle.
+- The second user-uploaded red/gold banner serves as visual COLOR reference only (deep glossy burgundy red #770c13, vibrant metallic gold #ffd65f, near-black #13080c, metallic-silver accents). Promotional percentages and phone imagery in that reference are NOT inserted into the journal.
+- Every feature shares ../data/today.json, ../data/odds/, root app.js, odds.js, results/archive, Special Choice, full Canvas PNG exporters, the one-fixture-title crest-only hero and the 7–8 AM public homepage notice. No per-brand duplicated data or scheduled publishing.
+- Shared Canvas kit and match-poster exporter choose Ko Thet specific dark-red/gold/silver palette and genuine crest; all previous brands retain existing colors and files.
+- Display source disclaimer on odds footer matches user-approved iBet789 wording. Manual authorization requirement for publication is unchanged.
