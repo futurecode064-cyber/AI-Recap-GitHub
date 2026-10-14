@@ -82,3 +82,45 @@ test("quote changes compute point difference on same handicap line and detect li
  assert.equal(o.difference("1-10","1+45").text,"+55 မှတ်");
  assert.equal(o.difference("3+30","3+90").text,"+60 မှတ်");
 });
+
+test("evening PNG save always gives the user a clickable image preview and second save route",()=>{
+ const clicks=[],appended=[];
+ function element(tag){
+  const e={tag,children:[],attrs:{},isConnected:true,
+   appendChild(c){this.children.push(c);c.parentNode=this;},
+   setAttribute(k,v){this.attrs[k]=v;},
+   addEventListener(type,handler){this["on"+type]=handler;},
+   click(){clicks.push(this);},
+   remove(){this.removed=true;}
+  };
+  return e;
+ }
+ const body=element("body");
+ const doc={currentScript:{src:"https://example.test/evening-odds.js"},
+  documentElement:{dataset:{}},readyState:"loading",createElement:element,
+  head:{appendChild:e=>appended.push(e)},body,
+  getElementById:()=>null,
+  addEventListener:()=>{}
+ };
+ const win={};
+ vm.runInNewContext(read("evening-odds.js"),{document:doc,window:win,URL,console});
+ assert.equal(appended.length,1);
+ const imageData="data:image/png;base64,UE5HREFUQQ==";
+ win.FutureCodeEveningOdds.showPngPreview({toDataURL:()=>imageData},"brand-evening-odds-2026-10-14.png");
+ assert.equal(body.children.length,1);
+ const overlay=body.children[0],panel=overlay.children[0];
+ assert.equal(overlay.id,"eveningPngPreview");
+ const actions=panel.children.find(x=>x.className==="evening-preview-actions");
+ assert.ok(actions);
+ const save=actions.children[0],open=actions.children[1];
+ assert.equal(save.download,"brand-evening-odds-2026-10-14.png");
+ assert.equal(save.href,imageData);
+ assert.equal(open.href,imageData);
+ assert.equal(open.target,"_blank");
+ assert.equal(clicks[0],save,"automatic attempt made, explicit Save link remains");
+ const image=panel.children.find(x=>x.tag==="img");
+ assert.equal(image.src,imageData,"long-press-save preview is available");
+ assert.ok(read("evening-odds.js").includes("bindDownload(button,data,league)"));
+ assert.ok(read("evening-odds.js").includes("bindDownload(allButton,data,null)"));
+ assert.ok(read("evening-odds.js").includes("PNG ထုတ်မရပါ — ပြန်နှိပ်ပါ"));
+});

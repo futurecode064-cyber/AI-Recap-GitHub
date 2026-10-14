@@ -4,7 +4,7 @@
   const me=document.currentScript;
   const rootUrl=new URL("./",me&&me.src?me.src:document.baseURI);
   const style=document.createElement("link");
-  style.rel="stylesheet";style.href=new URL("evening-odds.css?v=20261014-1",rootUrl).href;
+  style.rel="stylesheet";style.href=new URL("evening-odds.css?v=20261014-savefix-2",rootUrl).href;
   document.head.appendChild(style);
 
   const leagueLabels={
@@ -84,13 +84,70 @@
            id==="ko-thet-family"?{header:"#830b15",deep:"#45060c",accent:"#ffdc78"}:
            {header:"#215c55",deep:"#163e3b",accent:"#ffcb92"};
   }
+  // A direct click on an asynchronous blob link can be blocked by mobile browsers.
+  // Keep a visible, user-clickable PNG link and image preview as a reliable fallback.
+  function showPngPreview(canvas,filename){
+    if(typeof canvas.toDataURL!=="function")throw Error("PNG image preview unavailable");
+    const pngUrl=canvas.toDataURL("image/png");
+    if(!/^data:image\/png;base64,/i.test(pngUrl))throw Error("PNG encoding failed");
+    document.getElementById("eveningPngPreview")?.remove();
+    const backdrop=el("div","evening-preview-backdrop");
+    backdrop.id="eveningPngPreview";
+    backdrop.setAttribute("role","dialog");
+    backdrop.setAttribute("aria-modal","true");
+    backdrop.setAttribute("aria-label","ညနေခင်းကြေးပြောင်း PNG");
+    const panel=el("div","evening-preview-panel");
+    const bar=el("div","evening-preview-top");
+    const heading=el("h3","","ညနေခင်းကြေးပြောင်း — PNG ပုံ");
+    const close=el("button","evening-preview-close","✕ ပိတ်ရန်");
+    close.type="button";
+    const dismiss=()=>backdrop.remove();
+    close.addEventListener("click",dismiss);
+    backdrop.addEventListener("click",event=>{if(event.target===backdrop)dismiss();});
+    bar.appendChild(heading);bar.appendChild(close);panel.appendChild(bar);
+    const actions=el("div","evening-preview-actions");
+    const save=el("a","evening-preview-save","⬇ PNG Download / Save");
+    save.href=pngUrl;save.download=filename;
+    save.setAttribute("aria-label",filename+" PNG ပုံကို သိမ်းရန်");
+    const open=el("a","evening-preview-open","ပုံကို သီးသန့်ဖွင့်ရန်");
+    open.href=pngUrl;open.target="_blank";open.rel="noopener";
+    actions.appendChild(save);actions.appendChild(open);panel.appendChild(actions);
+    panel.appendChild(el("p","evening-preview-help","Download မစတင်ပါက အပေါ်က Save ကို ထပ်နှိပ်ပါ။ ဖုန်းမှာ ပုံကို ဖိထားပြီး Save Image လည်း လုပ်နိုင်ပါတယ်။"));
+    const img=el("img","evening-preview-image");
+    img.src=pngUrl;img.alt="ညနေခင်းကြေးပြောင်း PNG Preview";
+    panel.appendChild(img);backdrop.appendChild(panel);document.body.appendChild(backdrop);
+    // Attempt immediate save; fallback link remains available even if the device blocks it.
+    try{save.click();}catch(err){console.info("Manual PNG Save link available",err);}
+  }
+  function bindDownload(button,data,league){
+    const label=button.textContent;
+    button.addEventListener("click",async()=>{
+      if(button.disabled)return;
+      button.disabled=true;button.textContent="PNG ပုံပြင်ဆင်နေသည်…";
+      try{
+        await png(data,league);
+        button.textContent="✓ PNG ပုံ ဖွင့်ပြီးပါပြီ";
+      }catch(err){
+        console.error("Evening odds PNG error",err);
+        button.textContent="PNG ထုတ်မရပါ — ပြန်နှိပ်ပါ";
+        const existing=document.getElementById("eveningPngError");
+        existing?.remove();
+        const notice=el("p","evening-preview-error","PNG ပုံထုတ်မရသေးပါ။ Browser မှာ ပြန်စမ်းပါ။");
+        notice.id="eveningPngError";
+        button.parentNode.appendChild(notice);
+      }finally{
+        button.disabled=false;
+        setTimeout(()=>{if(button.isConnected)button.textContent=label;},3500);
+      }
+    });
+  }
   async function png(data,onlyLeague){
     const groups=groupMatches(onlyLeague?data.matches.filter(m=>m.league===onlyLeague):data.matches);
     const included=groups.flatMap(g=>g[1]);
     if(!included.length)throw Error("No comparison data");
     const kit=window.FutureCodeCanvasKit;
     if(!kit)throw Error("PNG exporter unavailable");
-    const {create,fill,text,fit,fonts,download}=kit;
+    const {create,fill,text,fit,fonts}=kit;
     const M=24, widths=[145,330,180,132,132,230,132,132,230],W=widths.reduce((a,b)=>a+b,0)+2*M;
     const H=230+groups.reduce((s,g)=>s+113+g[1].length*82,s)+65;
     const xs=[M];for(const w of widths)xs.push(xs[xs.length-1]+w);
@@ -123,7 +180,7 @@
       y+=7;
     }
     const brand=window.FutureCodeBrandConfig?.id||"future-code";
-    await download(canvas,brand+"-evening-odds-"+data.reportDate+(onlyLeague?"-"+onlyLeague.replace(/[^a-z0-9]+/ig,"-"):"")+".png");
+    showPngPreview(canvas,brand+"-evening-odds-"+data.reportDate+(onlyLeague?"-"+onlyLeague.replace(/[^a-z0-9]+/ig,"-"):"")+".png");
   }
   function boot(){
     const main=document.querySelector(".odds-content");
@@ -154,14 +211,14 @@
         const holder=el("div","evening-competition");
         const leagueActions=el("div","evening-league-actions"),button=el("button","evening-league-png","⬇ ဒီလိဂ် PNG");
         button.type="button";
-        button.addEventListener("click",async()=>{button.disabled=true;try{await png(data,league);}catch(e){console.error(e);}finally{button.disabled=false;}});
+        bindDownload(button,data,league);
         leagueActions.appendChild(button);holder.appendChild(leagueActions);holder.appendChild(tableFor(league,items));root.appendChild(holder);
       }
       allButton.disabled=false;
-      allButton.addEventListener("click",async()=>{allButton.disabled=true;try{await png(data);}catch(e){console.error(e);}finally{allButton.disabled=false;}});
+      bindDownload(allButton,data,null);
     }).catch(e=>{console.info("Evening odds not available for this date",e);section.remove();link.remove();});
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);
   else boot();
-  window.FutureCodeEveningOdds={parseQuote,difference};
+  window.FutureCodeEveningOdds={parseQuote,difference,showPngPreview};
 })();

@@ -66,3 +66,38 @@
  .evening-table td{padding:10px 5px;font-size:11px}
  .evening-head h2{font-size:21px}
 }
+
+/* Mobile-compatible image preview: never leave a failed download invisible. */
+.evening-preview-backdrop{
+  position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.86);
+  display:flex;align-items:center;justify-content:center;padding:12px;
+}
+.evening-preview-panel{
+  max-width:min(98vw,1100px);width:100%;max-height:94dvh;overflow:auto;
+  background:#14262b;color:#fff;border:1px solid #65817e;border-radius:14px;
+  box-shadow:0 8px 50px #0009;padding:14px;overscroll-behavior:contain;
+}
+.evening-preview-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.evening-preview-top h3{font-size:16px!important;line-height:1.7!important;color:#fff!important;margin:0!important}
+.evening-preview-close{
+  flex:none;border:1px solid #82908c;background:#28383b;color:#fff;
+  border-radius:9px;padding:8px 10px;cursor:pointer
+}
+.evening-preview-actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0 7px}
+.evening-preview-actions a{
+  display:inline-block;padding:9px 13px;border-radius:8px;
+  border:1px solid #f8c792;font:700 13px/1.6 "Noto Sans Myanmar",sans-serif;
+  background:#ffd49f;color:#182721;text-decoration:none
+}
+.evening-preview-actions a.evening-preview-open{background:#263c42;color:#fff}
+.evening-preview-help{font-size:12px;line-height:1.8;margin:8px 0;color:#dae5e2}
+.evening-preview-image{
+  display:block;width:100%;height:auto;object-fit:contain;background:#fff;
+  border-radius:5px;-webkit-touch-callout:default;user-select:auto
+}
+.evening-preview-error{color:#ffcfbd;font-size:12px;line-height:1.8;margin:6px 0}
+@media(max-width:700px){
+  .evening-preview-backdrop{padding:4px}
+  .evening-preview-panel{max-width:100%;max-height:98dvh;padding:10px}
+  .evening-preview-actions a{font-size:12px;padding:9px 11px}
+}
