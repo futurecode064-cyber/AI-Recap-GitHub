@@ -7,10 +7,11 @@
   "namePolicy": "The 17 Burmese labels were manually matched against the user's MyanmarAngoun-font original; raw legacy characters retained per row. No PDF handicap or goals quote is converted into 1X2.",
   "nightTimePolicy": "15 October 01:00/01:15/01:30 AM is editorially ၁၄ ရက်နေ့ ည, while kickoffDate keeps actual calendar date.",
   "notes": [
-    "17 original rows = 9 UEFA Champions League, 5 EFL Championship, 3 Italian Serie C; all source prices and internet forecast column values preserved exactly.",
-    "PDF last column is an internet match prediction, NOT a confirmed FT result.",
-    "Date conflicts verified: Burnley–Wolves, Livorno–Grosseto and Pro Vercelli–Lecco are listed on 14.pdf, while official fixtures place all three on 16 Oct. Their PDF odds remain in the full source list, highlighted as date-conflicted; no 14 Oct preview for these rows.",
-    "Italian Serie C Latina–Atalanta U23 genuinely takes place 14 October but is odds-list only, outside the approved featured-preview leagues."
+    "14.pdf contains 17 source rows; user requested removing the last two Italian Serie C matches. The visible Oct 14 list now has 15 matches (9 UEFA Champions League, 5 EFL Championship, 1 Italian Serie C).",
+    "Only the two requested odds rows were removed; existing predictions and remaining body/goal quotes are unchanged.",
+    "PDF last column is an internet score prediction, not a confirmed full-time result.",
+    "Burnley vs Wolverhampton Wanderers is still displayed with its existing date-conflict warning; the verified actual fixture is scheduled for 16 October.",
+    "Italian Serie C Latina vs Atalanta U23 is odds-list only."
   ],
   "matches": [
     {
@@ -447,64 +448,8 @@
       "scheduleVerificationStatus": "confirmed",
       "externallyVerifiedKickoffDate": "2026-10-14",
       "scheduleVerificationSource": "https://www.seriec.com/home"
-    },
-    {
-      "number": 16,
-      "league": "Italian Serie C",
-      "home": "လီဗော်နို",
-      "away": "ဂရိုဆက်တို",
-      "upperTeam": "လီဗော်နို",
-      "kickoff": "01:00",
-      "kickOffUntrustedFromPdf": true,
-      "pdfKickoffDisplay": "၁၄ ရက်နေ့ ည ၁:၀၀",
-      "kickoffDisplay": "၁၄ ရက်နေ့ ည ၁:၀၀ ⚠ ရက်စွဲကွာခြား",
-      "kickoffDate": "2026-10-15",
-      "bodyOdds": "-50",
-      "goalTotalOdds": "2-100",
-      "pdfLastColumn": "1-0",
-      "eligibleForPreview": false,
-      "canonicalHome": "Livorno",
-      "canonicalAway": "Grosseto",
-      "pdfOriginalLegacy": {
-        "home": "vDaAmfedk",
-        "away": "*&dkpufwdk",
-        "upperTeam": "vDaAmfedk"
-      },
-      "sourceNameEncoding": "MyanmarAngoun PDF legacy font; original encoded names preserved verbatim",
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
-      "scheduleVerificationStatus": "PDF date conflicts with official 16 October fixture",
-      "externallyVerifiedKickoffDate": "2026-10-16",
-      "scheduleVerificationSource": "https://www.seriec.com/home"
-    },
-    {
-      "number": 17,
-      "league": "Italian Serie C",
-      "home": "ပရိုဗာချယ်လီ",
-      "away": "လက်ကို",
-      "upperTeam": "ပရိုဗာချယ်လီ",
-      "kickoff": "01:00",
-      "kickOffUntrustedFromPdf": true,
-      "pdfKickoffDisplay": "၁၄ ရက်နေ့ ည ၁:၀၀",
-      "kickoffDisplay": "၁၄ ရက်နေ့ ည ၁:၀၀ ⚠ ရက်စွဲကွာခြား",
-      "kickoffDate": "2026-10-15",
-      "bodyOdds": "-5",
-      "goalTotalOdds": "2-50",
-      "pdfLastColumn": "0-0",
-      "eligibleForPreview": false,
-      "canonicalHome": "Pro Vercelli",
-      "canonicalAway": "Lecco",
-      "pdfOriginalLegacy": {
-        "home": "Amp,fvD",
-        "away": "vufpDdukd",
-        "upperTeam": "Amp,fvD"
-      },
-      "sourceNameEncoding": "MyanmarAngoun PDF legacy font; original encoded names preserved verbatim",
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
-      "scheduleVerificationStatus": "PDF date conflicts with official 16 October fixture",
-      "externallyVerifiedKickoffDate": "2026-10-16",
-      "scheduleVerificationSource": "https://www.seriec.com/home"
     }
-  ]
+  ],
+  "visibleRows": 15,
+  "derivedFromUserCorrection": "2026-10-14: two final Serie C rows omitted from public odds listings and PNG."
 }
