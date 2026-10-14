@@ -121,6 +121,6 @@ document.addEventListener("DOMContentLoaded",()=>{
  const script=document.currentScript;
  const base=new URL("./",script&&script.src?script.src:document.baseURI);
  const module=document.createElement("script");
- module.src=new URL("evening-odds.js?v=20261014-savefix-2",base).href;
+ module.src=new URL("evening-odds.js?v=20261014-staticpng-3",base).href;
  document.head.appendChild(module);
 })();

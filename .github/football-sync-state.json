@@ -2,11 +2,11 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "8d855b7a7f96f5e8bc18b0523cb5185ad616760e",
-  "source_tree": "ced6ca29171898334840baf5442c6d46099c2ba1",
-  "target_tree": "ced6ca29171898334840baf5442c6d46099c2ba1",
+  "source_commit": "7cb4c240e21d84c1e1ea7f378da89783d7dd8903",
+  "source_tree": "1c72db43ddcfb35bde6bc5af39e0e4d8d0cd55ba",
+  "target_tree": "1c72db43ddcfb35bde6bc5af39e0e4d8d0cd55ba",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-14T14:49:36.325183+00:00"
+  "last_synced_utc": "2026-10-14T15:03:52.516908+00:00"
 }

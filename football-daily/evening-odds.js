@@ -141,46 +141,43 @@
       }
     });
   }
-  async function png(data,onlyLeague){
-    const groups=groupMatches(onlyLeague?data.matches.filter(m=>m.league===onlyLeague):data.matches);
-    const included=groups.flatMap(g=>g[1]);
-    if(!included.length)throw Error("No comparison data");
-    const kit=window.FutureCodeCanvasKit;
-    if(!kit)throw Error("PNG exporter unavailable");
-    const {create,fill,text,fit,fonts}=kit;
-    const M=24, widths=[145,330,180,132,132,230,132,132,230],W=widths.reduce((a,b)=>a+b,0)+2*M;
-    const H=230+groups.reduce((s,g)=>s+113+g[1].length*82,s)+65;
-    const xs=[M];for(const w of widths)xs.push(xs[xs.length-1]+w);
-    const {canvas,ctx}=create(W,H),p=brandPalette();
-    await fonts();
-    fill(ctx,0,0,W,H,"#ffffff");fill(ctx,0,0,W,205,p.deep);fill(ctx,0,0,W,12,p.accent);
-    text(ctx,document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",M+12,52,24,p.accent,true);
-    text(ctx,"ညနေခင်းကြေးပြောင်း",M+12,115,39,"#ffffff",true);
-    text(ctx,"မနက် (မူလ) · ညနေ (ယခု) · ကွာခြားချက် | "+data.reportDate,M+12,164,17,"#ffffff");
-    let y=220;
-    for(const [league,items] of groups){
-      fill(ctx,M,y,W-M*2,56,p.header);
-      text(ctx,leagueLabels[league]||league,M+16,y+30,24,"#ffffff",true);
-      y+=60;fill(ctx,M,y,W-M*2,46,p.deep);
-      const heads=["ပွဲချိန်","တွေ့ဆုံမည့်အသင်း","ကြေးပေးအသင်း","ဘော်ဒီ မူလ","ဘော်ဒီ ယခု","ဘော်ဒီ ကွာ","ဂိုး မူလ","ဂိုး ယခု","ဂိုး ကွာ"];
-      for(let j=0;j<heads.length;j++)
-        text(ctx,heads[j],xs[j]+widths[j]/2,y+24,fit(ctx,heads[j],widths[j]-10,17,11),"#ffffff",true,"center",widths[j]-10);
-      y+=46;
-      for(const [i,m] of items.entries()){
-        fill(ctx,M,y,W-M*2,82,i%2?"#f2f4f7":"#ffffff");
-        fill(ctx,xs[2],y,widths[2],82,"#e5e7eb");
-        for(const x of xs)fill(ctx,x,y,1,82,"#c9d0d8");
-        fill(ctx,M,y+81,W-M*2,1,"#c9d0d8");
-        const bodyDiff=difference(m.morningBodyOdds,m.eveningBodyOdds);
-        const goalsDiff=difference(m.morningGoalTotalOdds,m.eveningGoalTotalOdds);
-        const vals=[m.kickoffDisplay,m.home+" VS "+m.away,m.upperTeam,m.morningBodyOdds,m.eveningBodyOdds,bodyDiff.text,m.morningGoalTotalOdds,m.eveningGoalTotalOdds,goalsDiff.text];
-        vals.forEach((v,j)=>text(ctx,v,xs[j]+widths[j]/2,y+44,fit(ctx,v,widths[j]-18,j===1?16:19,j===1?10:11),"#1a2430",true,"center",widths[j]-18));
-        y+=82;
-      }
-      y+=7;
-    }
+  // The approved PNG is rendered once on GitHub and served as a real image file.
+  // A normal HTTPS file link works even when a mobile WebView cannot encode Canvas.
+  function png(data,onlyLeague){
     const brand=window.FutureCodeBrandConfig?.id||"future-code";
-    showPngPreview(canvas,brand+"-evening-odds-"+data.reportDate+(onlyLeague?"-"+onlyLeague.replace(/[^a-z0-9]+/ig,"-"):"")+".png");
+    const leagueSlug=onlyLeague?onlyLeague.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""):"all";
+    const fileName=brand+"-"+leagueSlug+".png";
+    const fileUrl=new URL("data/odds/evening/png/"+data.reportDate+"/"+fileName,rootUrl).href;
+    document.getElementById("eveningPngPreview")?.remove();
+    const backdrop=el("div","evening-preview-backdrop");
+    backdrop.id="eveningPngPreview";
+    backdrop.setAttribute("role","dialog");
+    backdrop.setAttribute("aria-modal","true");
+    backdrop.setAttribute("aria-label","ညနေခင်းကြေးပြောင်း PNG");
+    const panel=el("div","evening-preview-panel");
+    const bar=el("div","evening-preview-top");
+    bar.appendChild(el("h3","","ညနေခင်းကြေးပြောင်း — PNG"));
+    const close=el("button","evening-preview-close","✕ ပိတ်ရန်");
+    close.type="button";close.addEventListener("click",()=>backdrop.remove());
+    backdrop.addEventListener("click",e=>{if(e.target===backdrop)backdrop.remove();});
+    bar.appendChild(close);panel.appendChild(bar);
+    const actions=el("div","evening-preview-actions");
+    const save=el("a","evening-preview-save","⬇ PNG Download / Save");
+    save.href=fileUrl;save.download=fileName;
+    const open=el("a","evening-preview-open","ပုံကို သီးသန့်ဖွင့်ရန်");
+    open.href=fileUrl;open.target="_blank";open.rel="noopener";
+    actions.appendChild(save);actions.appendChild(open);panel.appendChild(actions);
+    panel.appendChild(el("p","evening-preview-help","Download မရပါက Save ကို ထပ်နှိပ်ပါ။ ဖုန်းမှာ အောက်ကပုံကို ဖိထားပြီး Save Image လုပ်နိုင်ပါတယ်။"));
+    const preview=el("img","evening-preview-image");
+    preview.alt="ညနေခင်းကြေးပြောင်း PNG";
+    preview.src=fileUrl;
+    preview.addEventListener("error",()=>{
+      const warning=el("p","evening-preview-error","ပုံဖိုင်ကို Server မှ မရရှိသေးပါ။");
+      panel.appendChild(warning);
+    });
+    panel.appendChild(preview);backdrop.appendChild(panel);document.body.appendChild(backdrop);
+    // This is a direct HTTPS PNG download, not an asynchronous Canvas blob/data URL.
+    try{save.click();}catch(err){console.info("Manual PNG link remains available",err);}
   }
   function boot(){
     const main=document.querySelector(".odds-content");
@@ -220,5 +217,5 @@
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);
   else boot();
-  window.FutureCodeEveningOdds={parseQuote,difference,showPngPreview};
+  window.FutureCodeEveningOdds={parseQuote,difference,showPngPreview,png};
 })();

@@ -124,3 +124,54 @@ test("evening PNG save always gives the user a clickable image preview and secon
  assert.ok(read("evening-odds.js").includes("bindDownload(allButton,data,null)"));
  assert.ok(read("evening-odds.js").includes("PNG ထုတ်မရပါ — ပြန်နှိပ်ပါ"));
 });
+
+test("12 permanent PNGs exist, have valid PNG signatures, and match the four brands",()=>{
+ const brands=["future-code","ykz-family","bw-sport","ko-thet-family"];
+ const slugs=["all","uefa-champions-league","championship"];
+ for(const brand of brands)for(const slug of slugs){
+  const file=path.join(root,"data/odds/evening/png/2026-10-14",brand+"-"+slug+".png");
+  assert.ok(fs.existsSync(file),file);
+  const bytes=fs.readFileSync(file);
+  assert.ok(bytes.length>10000,file);
+  assert.equal(bytes.subarray(0,8).toString("hex"),"89504e470d0a1a0a",file);
+ }
+});
+test("Evening save button uses permanent same-origin PNG links instead of Canvas encoding",()=>{
+ const clicked=[],created=[];
+ function node(tag){
+  return {tag,children:[],attrs:{},isConnected:true,
+   appendChild(child){this.children.push(child);child.parentNode=this;},
+   setAttribute(k,v){this.attrs[k]=v;},
+   addEventListener(type,fn){this["on"+type]=fn;},
+   remove(){this.removed=true;},
+   click(){clicked.push(this);}
+  };
+ }
+ const body=node("body"),head={appendChild:e=>created.push(e)};
+ const document={
+  currentScript:{src:"https://example.test/football-daily/evening-odds.js"},
+  documentElement:{dataset:{}},
+  readyState:"loading",createElement:node,head,body,
+  getElementById:()=>null,addEventListener:()=>{}
+ };
+ const window={FutureCodeBrandConfig:{id:"ykz-family"}};
+ vm.runInNewContext(read("evening-odds.js"),{document,window,URL,console});
+ const data={reportDate:"2026-10-14",matches:evening.matches};
+ window.FutureCodeEveningOdds.png(data,null);
+ assert.equal(body.children.length,1);
+ const panel=body.children[0].children[0];
+ const actions=panel.children.find(x=>x.className==="evening-preview-actions");
+ assert.ok(actions);
+ const save=actions.children[0],preview=panel.children.find(x=>x.tag==="img");
+ const all="https://example.test/football-daily/data/odds/evening/png/2026-10-14/ykz-family-all.png";
+ assert.equal(save.href,all);
+ assert.equal(save.download,"ykz-family-all.png");
+ assert.equal(preview.src,all);
+ assert.equal(clicked[0],save);
+ window.FutureCodeEveningOdds.png(data,"UEFA Champions League");
+ const leaguePanel=body.children[1].children[0];
+ const leagueActions=leaguePanel.children.find(x=>x.className==="evening-preview-actions");
+ assert.ok(leagueActions.children[0].href.endsWith("/ykz-family-uefa-champions-league.png"));
+ assert.ok(read("evening-odds.js").includes("bindDownload(button,data,league)"));
+ assert.ok(read("evening-odds.js").includes("bindDownload(allButton,data,null)"));
+});
