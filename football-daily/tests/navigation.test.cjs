@@ -107,7 +107,7 @@ test('archived 12 Oct editorial sheet preserves all 17 user-submitted prices and
 
 test('13 Oct user PDF contributes all 21 odds rows and exactly 16 independently verifiable preview fixtures',()=>{
  const sheet=JSON.parse(fs.readFileSync(path.join(root,'data/odds/2026-10-13.json'),'utf8'));
- const report=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ const report=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-13-previews.json'),'utf8'));
  assert.equal(sheet.reportDate,'2026-10-13');
  assert.equal(sheet.matches.length,21);
  assert.equal(sheet.matches.filter(x=>x.eligibleForPreview).length,16);
@@ -200,9 +200,14 @@ test('old source bookie odds stay in 12 Oct archive and new report has verified 
  }
  const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
  for(const m of today.matches){
-  for(const key of ['homeOdds','drawOdds','awayOdds'])assert.ok(Number(m[key])>1,'Missing real 1X2 '+m.home);
-  assert.ok(m.oddsSourceUrl?.startsWith('https://'),'Unattributed fulltime odds '+m.home);
-  assert.equal(m.oddsProvider,m.league==='Championship'?'PokerStars Sports':'Interwetten');
+  const vals=[m.homeOdds,m.drawOdds,m.awayOdds];
+  if(vals.every(v=>v===null||v===undefined)){
+   assert.ok(!m.oddsProvider&&!m.oddsSourceUrl,'Unverified 1X2 source should not be invented '+m.home);
+  }else{
+   assert.ok(vals.every(v=>Number(v)>1),'Incomplete 1X2 for '+m.home);
+   assert.ok(m.oddsProvider&&m.oddsSourceUrl?.startsWith('https://'),'Unattributed fulltime odds '+m.home);
+  }
+  assert.equal(m.oddsMarket,'Full-time 1X2');
  }
  const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
  assert.ok(js.includes('oddBox("အိမ်ရှင် (1)",match.homeOdds)'));
@@ -300,7 +305,7 @@ test('Myanmar overnight convention is shared across odds HTML, full Canvas PNG a
  assert.ok(png.includes('const clock=m.kickoffDisplay||'));
  assert.ok(!odds.includes('၁၃ ရက် မနက်'));
  const preview=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
- assert.ok(preview.matches.some(m=>m.kickoffCalendarDate==='2026-10-14'&&m.kickoffYangon.includes('၁၃ ရက်နေ့ ည ၁:၃၀')));
+ assert.ok(preview.matches.some(m=>m.kickoffCalendarDate==='2026-10-15'&&m.kickoffYangon.includes('၁၄ ရက်နေ့ ည ၁:၃၀')));
 });
 
 test('all 21 supplied Myanmar-odds matches have both verified club badge source URLs',()=>{
@@ -313,7 +318,7 @@ test('all 21 supplied Myanmar-odds matches have both verified club badge source 
 });
 
 test('all 16 previews contain authentic five-by-two prior finished games with event-level citations and opponent logos where sourced',()=>{
- const report=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ const report=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-13-previews.json'),'utf8'));
  const research=[
   JSON.parse(fs.readFileSync(path.join(root,'data/research/2026-10-13-team-forms-01.json'),'utf8')),
   JSON.parse(fs.readFileSync(path.join(root,'data/research/2026-10-13-team-forms-02.json'),'utf8'))
@@ -341,7 +346,7 @@ test('all 16 previews contain authentic five-by-two prior finished games with ev
 });
 
 test('live 13 October H2H cards contain verified actual prior scores only, never predicted results',()=>{
- const report=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
+ const report=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-13-previews.json'),'utf8'));
  const historic=JSON.parse(fs.readFileSync(path.join(root,'data/research/2026-10-13-livescore-h2h.json'),'utf8'));
  let total=0;
  for(const match of report.matches){

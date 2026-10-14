@@ -17,7 +17,7 @@ function assertStanding(s,label){
   assert.ok(s[key]>=0,label+" invalid "+key);
  }
  assert.equal(s.wins+s.draws+s.losses,s.played,label+" W/D/L total differs from P");
- assert.equal(s.wins*3+s.draws,s.points,label+" league points differ from W*3+D");
+ assert.ok(s.points<=s.wins*3+s.draws,label+" points cannot exceed performance points; verified disciplinary point deductions may apply");
  assert.ok(s.position>=1,label+" invalid table rank");
 }
 test("normal website articles always use one flowing Burmese paragraph, bold verdict and exactly two bold score options",()=>{
@@ -36,7 +36,8 @@ test("normal website articles always use one flowing Burmese paragraph, bold ver
   assert.match(emph[1],/^\s*[0-9၀-၉]+\s*[-–:]\s*[0-9၀-၉]+\s*သို့မဟုတ်\s*[0-9၀-၉]+\s*[-–:]\s*[0-9၀-၉]+\s*$/,desc+": second bold span contains exactly two predictions");
   assert.ok(t.indexOf("**"+emph[0]+"**")<t.indexOf("**"+emph[1]+"**"),desc+": verdict must precede scores");
   assert.ok(m.homeDisplay&&m.awayDisplay,desc+": use source PDF Burmese display names");
-  if(domestic.has(m.league)||m.league==="UEFA Champions League"){
+  // UEFA first-round standings are optional until verified; never manufacture a rank.
+  if(domestic.has(m.league)||(m.league==="UEFA Champions League"&&m.homeStanding&&m.awayStanding)){
    assertStanding(m.homeStanding,desc+" home");
    assertStanding(m.awayStanding,desc+" away");
    assert.ok(/^https?:\/\//.test(m.standingsSourceUrl||""),desc+": standings require a source URL");

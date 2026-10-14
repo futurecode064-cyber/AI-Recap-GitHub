@@ -31,9 +31,14 @@ test("13 Oct results are 17 independently sourced genuine final scores, no proje
  const pairs=new Map([["Lens|Sporting CP","0-2"],["Sabah|Slavia Praha","2-0"],["Arsenal|Lille","3-0"],["Atlético de Madrid|Manchester United","2-0"],["Inter|Club Brugge","3-4"],["Galatasaray|Barcelona","1-4"],["Leipzig|PSV Eindhoven","1-0"],["Viking|Bayern München","3-3"],["Villarreal|Napoli","3-1"],["Bristol City|Blackburn Rovers","0-1"],["Burnley|Charlton Athletic","2-2"],["Cardiff City|Watford","5-1"],["Millwall|Swansea City","0-1"],["Wolverhampton Wanderers|Bolton Wanderers","1-3"],["Wrexham|West Bromwich Albion","1-2"],["Birmingham City|Preston North End","4-0"],["Stoke City|Middlesbrough","2-3"]]);
  for(const m of previous.matches)assert.equal(m.finalScore,pairs.get(m.home+"|"+m.away));
 });
-test("14 Oct match articles were not accidentally inserted into public data",()=>{
- assert.equal(legacy.reportDate,"2026-10-13");
- assert.ok(legacy.matches.every(m=>m.nightEditorialDate==="2026-10-13"));
- // The UI rejects a stale report for Oct 14; fresh previews are deliberately withheld.
- assert.ok(!legacy.matches.some(m=>m.nightEditorialDate==="2026-10-14"));
+test("14 Oct preview release is separately verified and preserves 17 previous-night final results",()=>{
+ assert.equal(legacy.reportDate,"2026-10-14");
+ assert.equal(legacy.published,true);
+ assert.equal(legacy.matches.length,13);
+ assert.equal(legacy.matches.filter(m=>m.league==="UEFA Champions League").length,9);
+ assert.equal(legacy.matches.filter(m=>m.league==="Championship").length,4);
+ assert.equal(legacy.matches.filter(m=>m.specialChoice).length,2);
+ assert.ok(legacy.matches.every(m=>m.nightEditorialDate==="2026-10-14"&&m.status==="scheduled"&&!m.finalScore));
+ assert.equal(previous.matches.length,17);
+ assert.ok(previous.matches.every(m=>m.finalScoreIsVerified===true));
 });
