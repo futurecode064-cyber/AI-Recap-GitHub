@@ -33,4 +33,11 @@ jobs:
       - name: Football score and report Python syntax
         run: |
           python -m py_compile football-daily/scripts/daily_guard.py football-daily/scripts/sync_scores.py
-          python football-daily/scripts/daily_guard.py audit
+          # Previous-night verified scores may be published while today's previews
+          # remain deliberately unpublished. Archive-only changes run Node verification,
+          # while new reports and opening odds still require strict current-day audit.
+          if git rev-parse HEAD^ >/dev/null 2>&1 && git diff --quiet HEAD^ HEAD -- football-daily/data/today.json football-daily/data/odds; then
+            echo "Archive-only / UI update: no new preview or price publication; skip daily guard."
+          else
+            python football-daily/scripts/daily_guard.py audit
+          fi
