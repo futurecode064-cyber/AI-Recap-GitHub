@@ -1,0 +1,120 @@
+/* Screenshot-inspired 14 Oct 2026 odds sheet.
+ * Only league/title/column headers use the site's own brand color.
+ * Every body cell is light, black print; PNG mirrors the same layout.
+ * Isolated to odds pages and loaded after old inline and per-brand CSS. */
+html{--sheet-brand:#215c55;--sheet-deep:#163e3b;--sheet-accent:#f5b16b;--sheet-title:#fff;--sheet-ink:#161b21;}
+html.ykz-theme{--sheet-brand:#ad101b;--sheet-deep:#72060d;--sheet-accent:#f9cb58;--sheet-title:#fff;}
+html.bw-theme{--sheet-brand:#0756cc;--sheet-deep:#062b76;--sheet-accent:#d9efff;--sheet-title:#fff;}
+html.ktf-theme{--sheet-brand:#820711;--sheet-deep:#4c050b;--sheet-accent:#ffd765;--sheet-title:#fff6e0;}
+/* Group heading is the same single-color accent zone as the sample. */
+body .odds-content .odds-group{
+  background:#fff!important;
+  border:1px solid #b9c1c9!important;
+  border-radius:10px!important;
+  overflow:hidden!important;
+  box-shadow:0 5px 16px #00000020;
+}
+body .odds-content .odds-group h2.odds-league-heading{
+  display:flex!important;align-items:center!important;gap:13px!important;
+  padding:12px 17px!important;margin:0!important;
+  background:linear-gradient(103deg,var(--sheet-deep),var(--sheet-brand) 58%,var(--sheet-deep))!important;
+  color:var(--sheet-title)!important;border:0!important;
+  border-bottom:1px solid #ffffff60!important;font-size:17px!important;
+  font-weight:800!important;line-height:1.75!important;letter-spacing:.015em;
+}
+body .odds-content .odds-group .league-crest,
+body .odds-content .odds-group .league-mark{
+  background:#fff!important;border-radius:9px!important;
+  width:42px!important;height:42px!important;flex-shrink:0!important;
+  color:#20242b!important;padding:5px!important;
+}
+body .odds-content .odds-table-wrap{overflow-x:auto!important;width:100%!important;overscroll-behavior-inline:contain;}
+body .odds-content .odds-table{
+  display:table!important;min-width:925px!important;width:100%!important;
+  background:#fff!important;border-collapse:collapse!important;table-layout:fixed!important;
+  color:var(--sheet-ink)!important;font-size:12px!important;
+  text-align:center!important;
+}
+body .odds-content .odds-table thead{display:table-header-group!important;}
+body .odds-content .odds-table tbody{display:table-row-group!important;}
+body .odds-content .odds-table tr{
+  display:table-row!important;background:transparent!important;
+  border:0!important;margin:0!important;padding:0!important;
+}
+body .odds-content .odds-table th{
+  background:var(--sheet-brand)!important;color:#fff!important;
+  padding:12px 7px!important;font:800 12px "Noto Sans Myanmar",sans-serif!important;
+  line-height:1.8!important;text-align:center!important;
+  white-space:normal!important;border:1px solid #ffffff45!important;
+  vertical-align:middle!important;
+}
+html.ktf-theme body .odds-content .odds-table th{color:#fff4ce!important;}
+body .odds-content .odds-table td{
+  display:table-cell!important;background:#fff!important;
+  padding:10px 7px!important;
+  min-height:0!important;border:1px solid #cfd3d8!important;
+  white-space:normal!important;overflow-wrap:anywhere!important;
+  vertical-align:middle!important;text-align:center!important;
+  color:#161a21!important;font:700 12px "Noto Sans Myanmar",sans-serif!important;
+  line-height:1.85!important;
+}
+body .odds-content .odds-table tr:nth-child(even) td{background:#f7f8fa!important;}
+body .odds-content .odds-table tr:hover td{background:#edf3f8!important;}
+body .odds-content .odds-table td.upper{
+  background:#e8eaed!important;font-weight:800!important;color:#131820!important;
+}
+body .odds-content .odds-table tr:nth-child(even) td.upper{background:#dfe3e7!important;}
+body .odds-content .odds-table td.time{
+  color:#20252b!important;font:800 12px "Barlow Condensed","Noto Sans Myanmar",sans-serif!important;
+  white-space:normal!important;line-height:1.7!important;
+}
+body .odds-content .odds-table td.price,
+body .odds-content .odds-table td.prediction{
+  font:800 17px "Barlow Condensed","Noto Sans Myanmar",sans-serif!important;
+  color:#111820!important;line-height:1.5!important;
+}
+body .odds-content .odds-table td.team-pair{
+  min-width:0!important;text-align:center!important;
+  padding:9px 8px!important;
+}
+body .odds-content .odds-matchup{
+  min-width:0!important;display:flex!important;align-items:center!important;
+  justify-content:center!important;gap:7px!important;flex-wrap:nowrap!important;
+}
+body .odds-content .odds-matchup .club-label{
+  color:#141923!important;font-weight:800!important;
+  font-size:12px!important;line-height:1.7!important;
+}
+body .odds-content .odds-matchup .mini-vs{
+  color:#aa2831!important;font:900 11px "Barlow Condensed",sans-serif!important;
+}
+body .odds-content .odds-matchup .team-badge{
+  width:31px!important;height:31px!important;background:#fff!important;
+  border:1px solid #d7dce3!important;
+}
+body .odds-content .odds-matchup .logo-fallback{color:#111820!important;}
+body .odds-content .odds-table td:nth-child(n+3)::before{content:none!important;display:none!important;}
+body .odds-content .odds-table th:nth-child(1){width:13%;}
+body .odds-content .odds-table th:nth-child(2){width:36%;}
+body .odds-content .odds-table th:nth-child(3){width:15%;}
+body .odds-content .odds-table th:nth-child(4){width:11%;}
+body .odds-content .odds-table th:nth-child(5){width:11%;}
+body .odds-content .odds-table th:nth-child(6){width:14%;}
+/* Screen width never turns table cells into cards: match source's ledger style. */
+@media(max-width:700px){
+ body .odds-content .odds-group{margin:18px 0!important;}
+ body .odds-content .odds-group h2.odds-league-heading{font-size:15px!important;padding:9px 12px!important;}
+ body .odds-content .odds-table{min-width:910px!important;}
+ body .odds-content .odds-table th{display:table-cell!important;font-size:11px!important;}
+ body .odds-content .odds-table td{display:table-cell!important;padding:9px 6px!important;}
+ body .odds-content .odds-matchup .club-label{font-size:11px!important;}
+}
+/* PNG's DOM fallback (if available in future) uses identical body/header colors. */
+body .odds-export-sheet .odds-group,
+body .odds-export-sheet .odds-table td{background:#fff!important;color:#161b21!important;}
+body .odds-export-sheet .odds-table th{background:var(--sheet-brand)!important;color:#fff!important;}
+body .odds-export-sheet .odds-table td.upper{background:#e8eaed!important;}
+body .odds-export-sheet .odds-table .club-label,
+body .odds-export-sheet .odds-table .price,
+body .odds-export-sheet .odds-table .time,
+body .odds-export-sheet .odds-table .prediction{color:#161b21!important;}
