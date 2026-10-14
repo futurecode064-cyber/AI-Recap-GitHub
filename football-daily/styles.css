@@ -310,3 +310,15 @@ html.football-copy-guard [role="textbox"] *{
   user-select:text !important;
   -webkit-touch-callout:default !important;
 }
+
+/* Preview batch PNGs: all match images are downloaded together in a ZIP. */
+.preview-bulk-bar{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin:2px 0 20px;padding:14px 17px;border:1px solid #6b817c;border-radius:13px;background:#233436}
+.preview-bulk-bar[hidden]{display:none!important}
+.preview-bulk-btn{border:1px solid var(--orange);border-radius:10px;padding:12px 18px;background:var(--orange);color:#172421;font:800 13px "Noto Sans Myanmar",sans-serif;cursor:pointer}
+.preview-bulk-btn:disabled{opacity:.62;cursor:wait}
+.preview-bulk-status{color:#d4dfda;font-size:12px;line-height:1.7}
+.odds-league-header{display:flex;align-items:center;justify-content:space-between;gap:13px;flex-wrap:wrap}
+.odds-league-header .odds-league-heading{margin:0}
+.odds-league-download{border:1px solid #fab978;background:#f3b781;color:#162723;border-radius:9px;font:800 12px "Noto Sans Myanmar",sans-serif;padding:10px 14px;cursor:pointer}
+.odds-league-download:disabled{opacity:.58;cursor:wait}
+@media(max-width:620px){.preview-bulk-btn{width:100%}.odds-league-download{width:100%;margin-bottom:10px}}

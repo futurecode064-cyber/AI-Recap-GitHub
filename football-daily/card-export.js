@@ -166,7 +166,71 @@
   }
   line(ctx,M,H-55,fullWidth);
   text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+10,H-31,20,C.orange,true);
-  await download(canvas,filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png");
+  const filename=filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png";
+  if(opts.asBlob===true){
+   if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
+   const blob=await Promise.race([
+    new Promise((resolve,reject)=>{try{canvas.toBlob(b=>b&&b.size?resolve(b):reject(Error("PNG encoding failed")),"image/png")}catch(e){reject(e)}}),
+    new Promise((_,reject)=>setTimeout(()=>reject(Error("PNG encoding timed out")),12000))
+   ]);
+   return {filename,blob};
+  }
+  await download(canvas,filename);
  }
- window.FutureCodeCardExport={save};
+ // Standards-compliant store-only ZIP: one browser download contains ALL full PNGs.
+ // No multi-download permission prompts, CDN, external dependency, or PNG resizing.
+ function crc32(bytes){
+  let c=0xffffffff;
+  for(const b of bytes){c^=b;for(let i=0;i<8;i++)c=(c>>>1)^((c&1)?0xedb88320:0);}
+  return (c^0xffffffff)>>>0;
+ }
+ async function bundleZip(files){
+  if(!files.length||files.length>65535)throw Error("Invalid PNG count");
+  const encoder=new TextEncoder(),parts=[],directory=[];
+  let offset=0;
+  const w16=(view,at,n)=>view.setUint16(at,n,true);
+  const w32=(view,at,n)=>view.setUint32(at,n>>>0,true);
+  for(const file of files){
+   const name=encoder.encode(file.filename),bytes=new Uint8Array(await file.blob.arrayBuffer());
+   if(!name.length||name.length>65535||bytes.length>0xffffffff)throw Error("ZIP entry too large");
+   const crc=crc32(bytes),local=new Uint8Array(30),v=new DataView(local.buffer);
+   w32(v,0,0x04034b50);w16(v,4,20);w16(v,6,0x0800);w16(v,8,0);
+   w16(v,10,0);w16(v,12,0x0021);w32(v,14,crc);w32(v,18,bytes.length);
+   w32(v,22,bytes.length);w16(v,26,name.length);w16(v,28,0);
+   parts.push(local,name,bytes);
+   const central=new Uint8Array(46),cv=new DataView(central.buffer);
+   w32(cv,0,0x02014b50);w16(cv,4,20);w16(cv,6,20);w16(cv,8,0x0800);
+   w16(cv,10,0);w16(cv,12,0);w16(cv,14,0x0021);
+   w32(cv,16,crc);w32(cv,20,bytes.length);w32(cv,24,bytes.length);
+   w16(cv,28,name.length);w16(cv,30,0);w16(cv,32,0);w16(cv,34,0);
+   w16(cv,36,0);w32(cv,38,0);w32(cv,42,offset);
+   directory.push(central,name);
+   offset+=local.length+name.length+bytes.length;
+   if(offset>0xffffffff)throw Error("ZIP exceeds browser limit");
+  }
+  const centralSize=directory.reduce((n,p)=>n+p.length,0);
+  const end=new Uint8Array(22),ev=new DataView(end.buffer);
+  w32(ev,0,0x06054b50);w16(ev,4,0);w16(ev,6,0);
+  w16(ev,8,files.length);w16(ev,10,files.length);
+  w32(ev,12,centralSize);w32(ev,16,offset);w16(ev,20,0);
+  return new Blob([...parts,...directory,end],{type:"application/zip"});
+ }
+ async function saveAll(matches,opts={},onProgress){
+  if(!Array.isArray(matches)||!matches.length)throw Error("No previews to download");
+  const files=[];
+  for(const [index,match] of matches.entries()){
+   const {blob}=await save({...match,home:match.homeDisplay||match.home,away:match.awayDisplay||match.away},{
+    ...opts,special:false,asBlob:true,
+    leagueLabel:typeof opts.leagueName==="function"?opts.leagueName(match.league):match.league
+   });
+   files.push({filename:String(index+1).padStart(2,"0")+"-"+filePart(match.home)+"-vs-"+filePart(match.away)+".png",blob});
+   if(typeof onProgress==="function")onProgress(index+1,matches.length);
+  }
+  const zip=await bundleZip(files),url=URL.createObjectURL(zip),link=document.createElement("a");
+  link.href=url;link.download=filePart(opts.brandName||"future-code")+"-all-previews-"+String(opts.date||"today")+".zip";
+  document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),30000);
+  return files.length;
+ }
+ window.FutureCodeCardExport={save,saveAll};
 })();

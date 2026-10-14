@@ -368,9 +368,51 @@ function renderLeagueFilters(all){
  for(const league of ordered)add(league,leagueName(league));
  if(picks)add("special","★ Special Choice",true);
 }
+function bulkPreviewBar(){
+ let bar=$("allPreviewsDownloadBar");
+ if(bar)return bar;
+ const resultsBar=$("resultsDownloadBar");
+ if(!resultsBar)return null;
+ bar=node("div","preview-bulk-bar");bar.id="allPreviewsDownloadBar";
+ const button=node("button","preview-bulk-btn");button.id="allPreviewsDownloadBtn";button.type="button";
+ const status=node("span","preview-bulk-status");status.id="allPreviewsDownloadStatus";status.setAttribute("role","status");
+ append(bar,button,status);resultsBar.parentNode.insertBefore(bar,resultsBar);
+ button.addEventListener("click",async()=>{
+  if(button.disabled||selectedDay!==0||loading||!report.published||report.fixtureSnapshot)return;
+  // Export ALL previewed fixtures, regardless of league filter or Special Choice tab.
+  const matches=report.matches.filter(m=>textOrEmpty(m.dailyPreviewText));
+  if(!matches.length)return;
+  const old=button.textContent;
+  button.disabled=true;button.textContent="PNG များ ပြင်ဆင်နေသည်…";
+  try{
+   if(!window.FutureCodeCardExport?.saveAll)throw Error("PNG bundle module missing");
+   const count=await window.FutureCodeCardExport.saveAll(matches,{
+    brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
+    brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
+    date:report.reportDate||selectedDateKey(0),leagueName
+   },(done,total)=>{status.textContent=done+" / "+total+" ပုံ ပြင်ဆင်ပြီး…";});
+   status.textContent="✓ PNG "+count+" ပုံပါ ZIP ဖိုင် Download စတင်ပြီး";
+  }catch(err){
+   console.error("Bulk preview ZIP error",err);
+   status.textContent="Download မအောင်မြင်ပါ — ပြန်နှိပ်ပါ။";
+  }finally{button.disabled=false;button.textContent=old;}
+ });
+ return bar;
+}
 function render(){
  const bar=$("resultsDownloadBar");
  if(bar)bar.hidden=selectedDay!==-1||loading||!Array.isArray(report.matches)||!report.matches.some(validFinal);
+ const bulk=bulkPreviewBar();
+ if(bulk){
+  const eligible=selectedDay===0&&!loading&&report.published&&!report.fixtureSnapshot
+   ?report.matches.filter(m=>textOrEmpty(m.dailyPreviewText)):[];
+  bulk.hidden=!eligible.length;
+  const button=$("allPreviewsDownloadBtn"),status=$("allPreviewsDownloadStatus");
+  if(!button.disabled){
+   button.textContent="⬇ ပွဲအားလုံး Download ("+eligible.length+" PNG · ZIP)";
+   status.textContent=eligible.length+" ပွဲ — တစ်ပွဲကို PNG တစ်ပုံနှုန်း";
+  }
+ }
  const list=$("matchList");list.replaceChildren();
  if(loading){
   $("matchCount").textContent="—";$("specialCount").textContent="—";

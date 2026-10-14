@@ -42,7 +42,26 @@ function render(data){
  const grouped=new Map();
  for(const match of data.matches){if(!grouped.has(match.league))grouped.set(match.league,[]);grouped.get(match.league).push(match);}
  for(const [league,matches] of grouped){
-  const section=element("section","odds-group");section.appendChild(leagueHeading(league));
+  const section=element("section","odds-group"),header=element("div","odds-league-header");
+  header.appendChild(leagueHeading(league));
+  const button=element("button","odds-league-download","⬇ ဒီလိဂ် PNG Download");
+  button.type="button";
+  button.setAttribute("aria-label",(groups[league]||league)+" ပေါက်ကြေး "+matches.length+" ပွဲကို PNG Download");
+  button.addEventListener("click",async()=>{
+   if(button.disabled||!window.FutureCodeDailyExport?.saveOdds)return;
+   button.disabled=true;const original=button.textContent;button.textContent="PNG ပြင်ဆင်နေသည်…";
+   try{
+    await window.FutureCodeDailyExport.saveOdds({...data,matches},{league});
+    button.textContent="✓ PNG Download စတင်ပြီး";
+   }catch(err){
+    console.error("League odds PNG error",err);
+    button.textContent="Download မအောင်မြင် — ပြန်နှိပ်ပါ";
+   }finally{
+    button.disabled=false;
+    setTimeout(()=>{if(button.isConnected)button.textContent=original;},2500);
+   }
+  });
+  header.appendChild(button);section.appendChild(header);
   const wrap=element("div","odds-table-wrap"),table=element("table","odds-table");
   const thead=element("thead"),tr=element("tr");
   for(const name of ["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း","ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး","အင်တာနက်ခန့်မှန်းချက်"])

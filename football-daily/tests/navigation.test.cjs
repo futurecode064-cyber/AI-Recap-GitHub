@@ -278,7 +278,7 @@ test('new screenshot-inspired team hero and WDL–1X2–WDL layout is responsive
 });
 test('Canvas exporter includes all odds entries and only confirmed results',()=>{
  const js=fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8');
- assert.ok(js.includes('async function saveOdds(data)'));
+ assert.ok(js.includes('async function saveOdds(data,options={})'), 'Odds exporter supports league-specific option');
  assert.ok(js.includes('async function saveResults({matches,date})'));
  assert.ok(js.includes('matches.filter(verified)'));
  assert.ok(js.includes('m.status==="finished"'));
@@ -286,6 +286,8 @@ test('Canvas exporter includes all odds entries and only confirmed results',()=>
  const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
  const odds=fs.readFileSync(path.join(root,'odds.js'),'utf8');
  assert.ok(app.includes('window.FutureCodeDailyExport.saveResults'));
+  assert.ok(odds.includes('odds-league-download'), 'Each odds league has its own PNG download action');
+  assert.ok(app.includes('allPreviewsDownloadBtn'), 'Published preview page has all-match batch export');
  assert.ok(odds.includes('window.FutureCodeDailyExport.saveOdds'));
 });
 
