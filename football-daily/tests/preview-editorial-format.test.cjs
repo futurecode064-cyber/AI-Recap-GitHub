@@ -30,6 +30,11 @@ test("normal website articles always use one flowing Burmese paragraph, bold ver
   assert.ok(!/\n\s*\n/.test(t),desc+": one narrative paragraph only");
   assert.ok(!/^\s*(?:\d+[.)]|[-*])\s/m.test(t),desc+": no enumerated checklist");
   assert.ok(!/အချက်အလက် မရှိလို့|Source မရသေး|Data မရသေး|မအတည်ပြုရသေးတဲ့ Data|AI ပွဲကြိုသုံးသပ်ချက်ကို မထုတ်ဝေ/.test(t),desc+": no reader-facing research disclaimer");
+  // Native, single-paragraph columnist style: market/source explanations go in the
+  // dedicated market or Special Choice UI, not in normal match-preview commentary.
+  assert.ok(!/14\\.pdf|\\bPDF\\b|1X2|bookmaker|ပွဲမတိုင်ခင် နောက်ဆုံးရလဒ်တွေမှာ|\\b5 ပွဲအတွင်း\\b|ဘော်ဒီကြေး|ဂိုးပေါင်း|အပေါ်အသင်း|မြန်မာမနက်ပိုင်း/.test(t),desc+": no boilerplate match form or PDF/handicap provenance embedded in preview");
+  assert.ok(!/အနိုင်၊\\s*ရှုံး၊\\s*သရေ၊|ရှုံး၊\\s*နိုင်၊\\s*သရေ၊/.test(t),desc+": W/D/L badges belong in the form strip instead of serial recital");
+
   const emph=[...t.matchAll(/\*\*([^*\n]+)\*\*/g)].map(x=>x[1]);
   assert.equal(emph.length,2,desc+": use exactly two bold spans (verdict and scores)");
   assert.match(emph[0],/ရွေး|ပိုမြင်|နှစ်သက်|ယုံကြည်|အားသာ|အနိုင်|မရှုံး/,desc+": first bold span is the reasoned match verdict");
