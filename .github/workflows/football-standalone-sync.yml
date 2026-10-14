@@ -1,4 +1,5 @@
 # The new standalone repository is the approved source of truth.
+# 2026-10-14: Trigger approved UI-only sync (all-preview PNG ZIP and league-specific odds PNG).
 # Production delivery requested 2026-10-13: mirror verified 12 Oct results and 13 Oct previews.
 # No scraping of sports results occurs in this workflow.
 # 2026-10-13: publish verified 32 team badges, 160 recent finished-game rows and 47 H2H history results to existing Pages URL.
