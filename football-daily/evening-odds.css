@@ -1,0 +1,68 @@
+/* Evening odds: appended to the single shared odds page on all four branded sites.
+ * Preserve the existing branded spreadsheet style and all morning prices.
+ */
+.evening-odds-section{
+  margin:40px 0 30px;
+  scroll-margin-top:24px;
+  border-top:3px solid var(--sheet-accent,#ffb784);
+  padding-top:24px;
+  font-family:"Noto Sans Myanmar",sans-serif;
+}
+.evening-odds-section[hidden]{display:none!important}
+.evening-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px}
+.evening-head h2{font-size:clamp(22px,3vw,30px);color:var(--sheet-accent,#ffb784);margin:0;line-height:1.9}
+.evening-summary{font-size:13px;line-height:1.85;color:#dcebe8;margin:10px 0 18px}
+.evening-actions,.evening-league-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:12px 0 16px}
+.evening-actions button,.evening-league-actions button{
+  font:700 12px/1.9 "Noto Sans Myanmar",sans-serif;
+  border:1px solid var(--sheet-accent,#ffc28a);
+  background:var(--sheet-brand,#215c55);
+  color:var(--sheet-title,#ffffff);border-radius:9px;
+  padding:8px 17px;cursor:pointer
+}
+.evening-actions button:disabled,.evening-league-actions button:disabled{opacity:.45;cursor:not-allowed}
+.evening-competition{margin:22px 0 28px}
+.evening-league-actions{justify-content:flex-end;margin:0 0 7px}
+.evening-league{
+  border:1px solid #b9c1c9;border-radius:10px;overflow:hidden;
+  background:#fff;color:#171e27;box-shadow:0 5px 16px #00000020
+}
+.evening-league-title{
+  background:linear-gradient(103deg,var(--sheet-deep,#163e3b),var(--sheet-brand,#215c55));
+  color:var(--sheet-title,#fff);padding:13px 17px;margin:0!important;
+  font-size:16px!important;line-height:1.8;font-weight:800
+}
+.evening-table-scroll{overflow-x:auto;overscroll-behavior-inline:contain;width:100%}
+.evening-table{border-collapse:collapse;min-width:1220px;width:100%;background:white;color:#161b21;table-layout:fixed}
+.evening-table th{
+  background:var(--sheet-brand,#215c55);color:#fff;
+  border:1px solid #ffffff40;padding:10px 7px;
+  font:800 12px/1.75 "Noto Sans Myanmar",sans-serif;text-align:center
+}
+.evening-table thead tr:first-child th{background:var(--sheet-deep,#163e3b)}
+.evening-table td{
+  border:1px solid #cdd2d9;padding:13px 7px;
+  font:700 12px/1.75 "Noto Sans Myanmar",sans-serif;
+  text-align:center;vertical-align:middle;color:#151b24;overflow-wrap:anywhere
+}
+.evening-table tbody tr:nth-child(even) td{background:#f7f8fa}
+.evening-table tbody tr:hover td{background:#ebf3f9}
+.evening-table td.evening-upper{background:#e7eaed!important;font-weight:800}
+.evening-table td.evening-quote{font:800 17px/1.5 "Barlow Condensed","Noto Sans Myanmar",sans-serif;white-space:nowrap}
+.evening-table td.latest{background:#e8f2ef!important}
+.evening-table td.evening-difference{font:800 12px/1.85 "Noto Sans Myanmar",sans-serif}
+.evening-table .is-same{color:#5a6773}
+.evening-table .is-up{color:#116b50}
+.evening-table .is-down{color:#a32e3d}
+.evening-table .is-line{color:#935b15}
+.evening-pair{min-width:200px;font-weight:800}
+.evening-vs{margin:0 7px;color:#b9333f;font:900 11px "Barlow Condensed",sans-serif}
+.evening-time{min-width:120px;white-space:normal}
+.evening-nav-link{font-size:12px}
+@media(max-width:700px){
+ .evening-odds-section{margin:30px 0 18px}
+ .evening-table{min-width:1170px}
+ .evening-table th{font-size:11px;padding:8px 5px}
+ .evening-table td{padding:10px 5px;font-size:11px}
+ .evening-head h2{font-size:21px}
+}

@@ -113,3 +113,14 @@ document.addEventListener("DOMContentLoaded",()=>{
  document.getElementById("oddsPngBtn").addEventListener("click",downloadOdds);
  load();
 });
+
+
+// The evening comparison is optional per date and uses the same shared script
+// in all four branded odds pages. Morning data and its downloads stay untouched.
+(function(){
+ const script=document.currentScript;
+ const base=new URL("./",script&&script.src?script.src:document.baseURI);
+ const module=document.createElement("script");
+ module.src=new URL("evening-odds.js?v=20261014-1",base).href;
+ document.head.appendChild(module);
+})();
