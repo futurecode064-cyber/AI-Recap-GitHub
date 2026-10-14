@@ -22,6 +22,15 @@ test("every published day with preview fixtures includes one to three responsibl
   assert.ok(m.specialResearchSources.every(u=>/^https:\/\//.test(u)),key+" has invalid source URL");
   assert.ok(Array.isArray(m.specialAnalysisParagraphs)&&m.specialAnalysisParagraphs.length>=4,key+" must have in-depth original Burmese review");
   assert.ok(m.specialAnalysisParagraphs.every(p=>typeof p==="string"&&p.length>=320),key+" analysis is too shallow");
+  // User's 14 Oct screenshot correction: journalistic special analysis contains
+  // real football insight, never the already visible Myanmar-odds / 1X2 ledger,
+  // bookmaker quotations, provenance, or explaining why those odds differ.
+  const prose=m.specialAnalysisParagraphs.join(" ");
+  const unwanted=/14\\.pdf|\\bPDF\\b|\\b1X2\\b|\\b1xBet\\b|\\bBet365\\b|full[- ]time|ဘော်ဒီ|ဂိုးပေါင်း|အကျောကြေး|အပေါ်အသင်း|ကြေးကွာခြား|ပေါက်ကြေး|မြန်မာကြေး|ဈေးကွက်/iu;
+  assert.ok(!unwanted.test(prose),key+" has user-rejected odds/source boilerplate in Special Choice text");
+  assert.equal(m.specialAnalysisParagraphs.length,4,key+" requires four well-edited special paragraphs");
+  assert.ok(m.specialAnalysisParagraphs[3].includes("**"),key+" last paragraph needs bold verdict");
+
   assert.ok(m.specialAnalysisParagraphs.join(" ").includes("သို့မဟုတ်"),key+" needs two scenario score predictions");
   assert.ok(m.specialPreparedDate===data.reportDate,key+" is a stale pick");
  }
