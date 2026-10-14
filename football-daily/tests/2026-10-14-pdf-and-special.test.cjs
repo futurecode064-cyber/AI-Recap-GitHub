@@ -7,21 +7,24 @@ const root=path.resolve(__dirname,"..");
 const odds=JSON.parse(fs.readFileSync(path.join(root,"data/odds/2026-10-14.json"),"utf8"));
 const report=JSON.parse(fs.readFileSync(path.join(root,"data/today.json"),"utf8"));
 const form=JSON.parse(fs.readFileSync(path.join(root,"data/research/2026-10-14-team-forms.json"),"utf8"));
-test("Oct 14 original 14.pdf has all seventeen handwritten Myanmar opening odds with originals retained",()=>{
+test("Oct 14 corrected PDF display preserves exactly fifteen opening odds rows",()=>{
  assert.equal(odds.reportDate,"2026-10-14");
- assert.equal(odds.matches.length,17);
- assert.deepEqual(odds.matches.map(m=>m.league).reduce((v,k)=>(v[k]=(v[k]||0)+1,v),{}),{"UEFA Champions League":9,Championship:5,"Italian Serie C":3});
+ assert.ok(odds.matches.every(m=>!["Livorno","Pro Vercelli"].includes(m.canonicalHome)));
+ assert.ok(!odds.matches.some(m=>m.canonicalAway==="Grosseto"||m.canonicalAway==="Lecco"));
+ assert.deepEqual(odds.matches.map(m=>m.number),Array.from({length:15},(_,i)=>i+1));
+ assert.equal(odds.matches.length,15);
+ assert.deepEqual(odds.matches.map(m=>m.league).reduce((v,k)=>(v[k]=(v[k]||0)+1,v),{}),{"UEFA Champions League":9,Championship:5,"Italian Serie C":1});
  assert.equal(odds.matches.filter(m=>m.eligibleForPreview).length,13);
- assert.deepEqual(odds.matches.map(m=>m.bodyOdds),["2+60","-100","-50","1-10","-80","-85","-100","-5","2+50","-15","-50","1+30","1+30","-30","-70","-50","-5"]);
- assert.deepEqual(odds.matches.map(m=>m.goalTotalOdds),["3-100","3-10","3-50","3=","3-100","3+50","3-50","3+80","4+90","3-30","2-90","3+30","3+40","3+80","2-100","2-100","2-50"]);
- assert.deepEqual(odds.matches.map(m=>m.pdfLastColumn),["1-4","1-2","2-1","2-0","1-2","2-1","1-2","1-1","0-4","2-2","1-0","2-0","1-2","1-2","1-0","1-0","0-0"]);
+ assert.deepEqual(odds.matches.map(m=>m.bodyOdds),["2+60","-100","-50","1-10","-80","-85","-100","-5","2+50","-15","-50","1+30","1+30","-30","-70"]);
+ assert.deepEqual(odds.matches.map(m=>m.goalTotalOdds),["3-100","3-10","3-50","3=","3-100","3+50","3-50","3+80","4+90","3-30","2-90","3+30","3+40","3+80","2-100"]);
+ assert.deepEqual(odds.matches.map(m=>m.pdfLastColumn),["1-4","1-2","2-1","2-0","1-2","2-1","1-2","1-1","0-4","2-2","1-0","2-0","1-2","1-2","1-0"]);
  for(const m of odds.matches){
   assert.ok(m.home&&m.away&&m.upperTeam&&m.pdfOriginalLegacy?.home&&m.pdfOriginalLegacy?.away);
   assert.match(m.kickoffDisplay,/၁၄ ရက်နေ့ ည/);
   assert.match(m.pdfLastColumn,/^\d-\d$/);
  }
  const disputed=odds.matches.filter(m=>m.kickOffUntrustedFromPdf);
- assert.deepEqual(disputed.map(m=>m.number),[14,16,17]);
+ assert.deepEqual(disputed.map(m=>m.number),[14]);
  assert.ok(disputed.every(m=>!m.eligibleForPreview&&m.kickoffDisplay.includes("⚠")));
 });
 test("Oct 14 13 original Burmese preview articles, authentic club crests and two ranked exclusive choices",()=>{
