@@ -71,7 +71,7 @@ jobs:
             echo "::group::Parity diagnosis: staging vs canonical source"
             echo "Source tree: $SRC_TREE"
             echo "Staged tree: $STAGED_TREE"
-            git ls-tree -r "$SRC_TREE" > "$RUNNER_TEMP/source-tree-list.txt"
+            git -C "$RUNNER_TEMP/standalone-football" ls-tree -r "$SRC_TREE" > "$RUNNER_TEMP/source-tree-list.txt"
             git ls-tree -r "$STAGED_TREE" > "$RUNNER_TEMP/staged-tree-list.txt"
             diff -u "$RUNNER_TEMP/source-tree-list.txt" "$RUNNER_TEMP/staged-tree-list.txt" || true
             git status --short --ignored -- football-daily/ | head -80 || true
