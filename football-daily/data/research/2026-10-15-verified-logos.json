@@ -1,0 +1,578 @@
+[
+  {
+    "name": "AZ Alkmaar",
+    "matchName": "AZ Alkmaar",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "140"
+  },
+  {
+    "name": "Aarhus",
+    "matchName": "AGF",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7853.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "7853"
+  },
+  {
+    "name": "Ajax",
+    "matchName": "Ajax Amsterdam",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "139"
+  },
+  {
+    "name": "Anderlecht",
+    "matchName": "Anderlecht",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "441"
+  },
+  {
+    "name": "Ararat-Armenia",
+    "matchName": "Ararat-Armenia",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20024.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "20024"
+  },
+  {
+    "name": "Atalanta",
+    "matchName": "Atalanta",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "105"
+  },
+  {
+    "name": "Bayer Leverkusen",
+    "matchName": "Bayer Leverkusen",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "131"
+  },
+  {
+    "name": "Benfica",
+    "matchName": "Benfica",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "1929"
+  },
+  {
+    "name": "Beşiktaş",
+    "matchName": "Besiktas",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "1895"
+  },
+  {
+    "name": "Borac Banja Luka",
+    "matchName": "Borac Banja Luka",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20710.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "20710"
+  },
+  {
+    "name": "Bournemouth",
+    "matchName": "AFC Bournemouth",
+    "confidence": 0.85,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "349"
+  },
+  {
+    "name": "Braga",
+    "matchName": "Braga",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "2994"
+  },
+  {
+    "name": "Brann",
+    "matchName": "SK Brann",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "620"
+  },
+  {
+    "name": "Brighton",
+    "matchName": "Brighton & Hove Albion",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "331"
+  },
+  {
+    "name": "CSKA Sofia",
+    "matchName": "CSKA Sofia",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10834.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "10834"
+  },
+  {
+    "name": "Celje",
+    "matchName": "NK Celje",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3362.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "3362"
+  },
+  {
+    "name": "Celta Vigo",
+    "matchName": "Celta Vigo",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "85"
+  },
+  {
+    "name": "Celtic",
+    "matchName": "Celtic",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/256.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "256"
+  },
+  {
+    "name": "Copenhagen",
+    "matchName": "F.C. København",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/909.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "909"
+  },
+  {
+    "name": "Crvena Zvezda",
+    "matchName": "Red Star Belgrade",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2290.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "2290"
+  },
+  {
+    "name": "Crystal Palace",
+    "matchName": "Crystal Palace",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "384"
+  },
+  {
+    "name": "Egnatia",
+    "matchName": "Egnatia",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21943.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "21943"
+  },
+  {
+    "name": "Ferencváros",
+    "matchName": "Ferencvaros",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/622.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "622"
+  },
+  {
+    "name": "Freiburg",
+    "matchName": "SC Freiburg",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "126"
+  },
+  {
+    "name": "GNK Dinamo Zagreb",
+    "matchName": "Dinamo Zagreb",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/597.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "597"
+  },
+  {
+    "name": "Gent",
+    "matchName": "KAA Gent",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3611.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "3611"
+  },
+  {
+    "name": "Getafe",
+    "matchName": "Getafe",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "2922"
+  },
+  {
+    "name": "Hajduk Split",
+    "matchName": "Hajduk Split",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/489.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "489"
+  },
+  {
+    "name": "Hapoel Beer-Sheva",
+    "matchName": "Hapoel Be'er",
+    "confidence": 0.85,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/13083.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "13083"
+  },
+  {
+    "name": "Hearts",
+    "matchName": "Heart of Midlothian",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/262.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "262"
+  },
+  {
+    "name": "Hoffenheim",
+    "matchName": "TSG Hoffenheim",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "7911"
+  },
+  {
+    "name": "Iberia Tbilisi",
+    "matchName": "Iberia 1999",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20025.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "20025"
+  },
+  {
+    "name": "Inter Escaldes",
+    "matchName": "Inter D'Escaldes",
+    "confidence": 0.929,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20703.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "20703"
+  },
+  {
+    "name": "Jablonec",
+    "matchName": "Jablonec",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7922.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "7922"
+  },
+  {
+    "name": "Jagiellonia",
+    "matchName": "Jagiellonia Bialystok",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11505.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "11505"
+  },
+  {
+    "name": "Juventus",
+    "matchName": "Juventus",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "111"
+  },
+  {
+    "name": "Kairat Almaty",
+    "matchName": "Kairat Almaty",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2528.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "2528"
+  },
+  {
+    "name": "Kauno Žalgiris",
+    "matchName": "Kauno Zalgiris",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20028.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "20028"
+  },
+  {
+    "name": "KuPS Kuopio",
+    "matchName": "KuPS Kuopio",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8169.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "8169"
+  },
+  {
+    "name": "Lech Poznań",
+    "matchName": "Lech Poznan",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2990.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "2990"
+  },
+  {
+    "name": "Levski Sofia",
+    "matchName": "Levski Sofia",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/490.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "490"
+  },
+  {
+    "name": "Lillestrøm",
+    "matchName": "Lillestrom",
+    "confidence": 0.9,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/987.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "987"
+  },
+  {
+    "name": "Lincoln Red Imps",
+    "matchName": "Lincoln Red Imps",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17856.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "17856"
+  },
+  {
+    "name": "Lugano",
+    "matchName": "FC Lugano",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7672.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "7672"
+  },
+  {
+    "name": "Lyon",
+    "matchName": "Lyon",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "167"
+  },
+  {
+    "name": "Marseille",
+    "matchName": "Marseille",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "176"
+  },
+  {
+    "name": "Midtjylland",
+    "matchName": "FC Midtjylland",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/572.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "572"
+  },
+  {
+    "name": "Milan",
+    "matchName": "AC Milan",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "103"
+  },
+  {
+    "name": "Mjällby",
+    "matchName": "Mjällby AIF",
+    "confidence": 0.85,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20301.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "20301"
+  },
+  {
+    "name": "Monaco",
+    "matchName": "AS Monaco",
+    "confidence": 0.75,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "174"
+  },
+  {
+    "name": "N.E.C. Nijmegen",
+    "matchName": "NEC Nijmegen",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "147"
+  },
+  {
+    "name": "Nordsjælland",
+    "matchName": "FC Nordsjælland",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3101.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "3101"
+  },
+  {
+    "name": "OFI Crete",
+    "matchName": "OFI Crete",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "1010"
+  },
+  {
+    "name": "Olympiacos",
+    "matchName": "Olympiacos",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "435"
+  },
+  {
+    "name": "Omonia",
+    "matchName": "Omonia Nicosia",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/617.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "617"
+  },
+  {
+    "name": "Pafos",
+    "matchName": "Pafos",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22281.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "22281"
+  },
+  {
+    "name": "Panathinaikos",
+    "matchName": "Panathinaikos",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "443"
+  },
+  {
+    "name": "Real Sociedad",
+    "matchName": "Real Sociedad",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "89"
+  },
+  {
+    "name": "Rennes",
+    "matchName": "Stade Rennais",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "169"
+  },
+  {
+    "name": "Riga",
+    "matchName": "Riga FC",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19246.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "19246"
+  },
+  {
+    "name": "Salzburg",
+    "matchName": "RB Salzburg",
+    "confidence": 0.85,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2790.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "2790"
+  },
+  {
+    "name": "Sint-Truidense",
+    "matchName": "Sint-Truidense",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/936.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "936"
+  },
+  {
+    "name": "Sparta Praha",
+    "matchName": "Sparta Prague",
+    "confidence": 0.75,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/433.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "433"
+  },
+  {
+    "name": "Sturm Graz",
+    "matchName": "SK Sturm Graz",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3746.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "3746"
+  },
+  {
+    "name": "Sunderland",
+    "matchName": "Sunderland",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "366"
+  },
+  {
+    "name": "Thun",
+    "matchName": "FC Thun",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3024.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "3024"
+  },
+  {
+    "name": "Torreense",
+    "matchName": "Torreense",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21615.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "21615"
+  },
+  {
+    "name": "Trabzonspor",
+    "matchName": "Trabzonspor",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "997"
+  },
+  {
+    "name": "Twente",
+    "matchName": "FC Twente",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "152"
+  },
+  {
+    "name": "Union Saint-Gilloise",
+    "matchName": "Union St.-Gilloise",
+    "confidence": 0.833,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5807.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "5807"
+  },
+  {
+    "name": "Universitatea Craiova",
+    "matchName": "CSU Craiova",
+    "confidence": 1.0,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8089.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261015&limit=500",
+    "id": "8089"
+  },
+  {
+    "name": "Viktoria Plzeň",
+    "matchName": "Viktoria Plzen",
+    "confidence": 1,
+    "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11706.png",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261015&limit=500",
+    "id": "11706"
+  }
+]

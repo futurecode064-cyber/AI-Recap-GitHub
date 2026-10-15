@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,"..");
 const odds=JSON.parse(fs.readFileSync(path.join(root,"data/odds/2026-10-15.json"),"utf8"));
 const today=JSON.parse(fs.readFileSync(path.join(root,"data/today.json"),"utf8"));
 const archive=JSON.parse(fs.readFileSync(path.join(root,"data/archive/2026-10-14.json"),"utf8"));
-test("15 Oct input prices: all 36 PDF rows preserved as provided, no fabricated 1X2",()=>{
+test("15 Oct all 36 PDF opening prices are unchanged while independent 1X2 data is fully sourced",()=>{
  assert.equal(odds.reportDate,"2026-10-15");
  assert.equal(odds.matches.length,36);
  assert.equal(odds.matches.filter(x=>x.league==="UEFA Europa League").length,18);
@@ -15,7 +15,13 @@ test("15 Oct input prices: all 36 PDF rows preserved as provided, no fabricated 
  assert.deepEqual(odds.matches.map(x=>x.bodyOdds),body);
  assert.deepEqual(odds.matches.map(x=>x.goalTotalOdds),goals);
  assert.deepEqual(odds.matches.map(x=>x.pdfLastColumn),predicted);
- for(let i=0;i<36;i++){const a=odds.matches[i],m=today.matches[i];assert.equal(a.canonicalHome,m.home);assert.equal(a.canonicalAway,m.away);assert.equal(a.home,m.homeDisplay);assert.equal(a.away,m.awayDisplay);assert.equal(a.bodyOdds,m.myanmarOdds.bodyOdds);assert.equal(a.goalTotalOdds,m.myanmarOdds.goalTotalOdds);assert.equal(m.homeOdds,null);assert.equal(m.drawOdds,null);assert.equal(m.awayOdds,null);}
+ for(let i=0;i<36;i++){const a=odds.matches[i],m=today.matches[i];assert.equal(a.canonicalHome,m.home);assert.equal(a.canonicalAway,m.away);assert.equal(a.home,m.homeDisplay);assert.equal(a.away,m.awayDisplay);assert.equal(a.bodyOdds,m.myanmarOdds.bodyOdds);assert.equal(a.goalTotalOdds,m.myanmarOdds.goalTotalOdds);assert.ok([m.homeOdds,m.drawOdds,m.awayOdds].every(v=>Number(v)>1));
+  assert.equal(m.oddsProvider,"Bet365");
+  assert.ok(m.oddsSourceUrl?.includes("oddsrun.com/match/football/"));
+  assert.equal(m.homeLastFive?.length,5);
+  assert.equal(m.awayLastFive?.length,5);
+  assert.ok(m.homeCrestUrl?.startsWith("https://")&&m.awayCrestUrl?.startsWith("https://"));
+  assert.ok(a.homeCrestUrl?.startsWith("https://")&&a.awayCrestUrl?.startsWith("https://"));}
 });
 test("15 Oct shows 36 coherent one-paragraph previews and 5 separated Special Choices",()=>{
  assert.equal(today.reportDate,"2026-10-15");assert.equal(today.published,true);assert.equal(today.matches.length,36);
@@ -25,7 +31,8 @@ test("15 Oct shows 36 coherent one-paragraph previews and 5 separated Special Ch
   assert.ok(m.dailyPreviewText.length>=250,m.home);
   assert.equal([...m.dailyPreviewText.matchAll(/\*\*[^*]+\*\*/g)].length,2,m.home);
   assert.ok(m.kickoffUtc.startsWith("2026-10-15T"),m.home);
-  if(m.specialChoice)assert.ok(m.specialAnalysisParagraphs?.[0]?.length>300);
+  assert.ok(!m.dailyPreviewText.includes("မရှုံးတဲ့ရွေးချယ်မှု"),m.home);
+  if(m.specialChoice){assert.equal(m.specialAnalysisParagraphs?.length,4);assert.ok(m.specialAnalysisParagraphs.every(p=>p.length>320));assert.ok(m.specialAnalysisParagraphs.at(-1).includes("ကို ရွေးချယ်ပါတယ်"));assert.ok(!/ခန့်မှန်းဂိုးရလဒ်|ဖြစ်နိုင်တဲ့ ဂိုးရလဒ်/.test(m.specialAnalysisParagraphs.join(" ")));}
   for(const field of ["homeLastFive","awayLastFive"])for(const x of m[field]||[]){assert.match(x.sourceUrl,/^https:/);assert.match(x.date,/^2026-/);}
  }
 });

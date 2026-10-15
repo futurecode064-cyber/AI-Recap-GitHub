@@ -15,8 +15,11 @@ test("every published day with preview fixtures includes up to five current user
   const key=m.home+" vs "+m.away;
   assert.ok(m.homeDisplay&&m.awayDisplay,key+" must retain original Burmese team spellings");
   assert.ok(m.dailyPreviewText?.length>200,key+" normal daily analysis is not optional");
-  assert.ok(Array.isArray(m.homeLastFive)&&Array.isArray(m.awayLastFive),key+" must keep separate verified form panels");
-  assert.ok([m.homeOdds,m.drawOdds,m.awayOdds].every(v=>v==null)||[m.homeOdds,m.drawOdds,m.awayOdds].every(v=>Number(v)>1),key+" cannot fabricate incomplete 1X2");
+  assert.equal(m.homeLastFive.length,5,key+" must show five verified home-team games");
+  assert.equal(m.awayLastFive.length,5,key+" must show five verified away-team games");
+  assert.ok([m.homeOdds,m.drawOdds,m.awayOdds].every(v=>Number(v)>1),key+" needs a verified 1X2 triplet");
+  assert.equal(m.oddsProvider,"Bet365",key+" provider must be disclosed in odds field only");
+  assert.ok(/^https:/.test(m.oddsSourceUrl),key+" prices must have a credible URL");
   assert.ok(typeof m.specialRiskNote==="string"&&m.specialRiskNote.length>=20,key+" needs explicit risk");
   assert.ok(Array.isArray(m.specialResearchSources)&&m.specialResearchSources.length>=2,key+" needs independent primary/reliable source urls");
   assert.ok(m.specialResearchSources.every(u=>/^https:\/\//.test(u)),key+" has invalid source URL");
@@ -28,10 +31,12 @@ test("every published day with preview fixtures includes up to five current user
   const prose=m.specialAnalysisParagraphs.join(" ");
   const unwanted=/14\\.pdf|\\bPDF\\b|\\b1X2\\b|\\b1xBet\\b|\\bBet365\\b|full[- ]time|ဘော်ဒီ|ဂိုးပေါင်း|အကျောကြေး|အပေါ်အသင်း|ကြေးကွာခြား|ပေါက်ကြေး|မြန်မာကြေး|ဈေးကွက်/iu;
   assert.ok(!unwanted.test(prose),key+" has user-rejected odds/source boilerplate in Special Choice text");
-  assert.ok(m.specialAnalysisParagraphs.length<=4,key+" keeps an editorial review distinct from standard analysis");
+  assert.equal(m.specialAnalysisParagraphs.length,4,key+" requires complete four-part independent analysis");
   assert.ok(m.specialAnalysisParagraphs.at(-1).includes("**"),key+" needs bold verdict in concluding assessment");
 
-  assert.ok(m.specialAnalysisParagraphs.join(" ").includes("သို့မဟုတ်"),key+" needs two scenario score predictions");
+  assert.ok(!/ဖြစ်နိုင်တဲ့ ဂိုးရလဒ်|ခန့်မှန်းဂိုးရလဒ်|မရှုံးတဲ့ရွေးချယ်မှု|မရှုံး \(အသင်းဘက်\)/.test(prose),key+" must not include predicted scores or double-chance language");
+  assert.ok(/ကို ရွေးချယ်ပါတယ်/.test(prose),key+" must end with a direct team or total selection");
+  assert.ok(!/မရှုံး/.test(m.specialPickLabel||""),key+" must be a direct team/total selection");
   assert.ok(m.specialPreparedDate===data.reportDate,key+" is a stale pick");
  }
 });
