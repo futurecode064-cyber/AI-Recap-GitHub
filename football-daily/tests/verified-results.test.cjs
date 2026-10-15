@@ -5,7 +5,7 @@ const fs=require("node:fs");
 const path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const previous=JSON.parse(fs.readFileSync(path.join(root,"data/archive/2026-10-13.json"),"utf8"));
-const legacy=JSON.parse(fs.readFileSync(path.join(root,"data/today.json"),"utf8"));
+const legacy=JSON.parse(fs.readFileSync(path.join(root,"data/archive/2026-10-14.json"),"utf8"));
 test("13 Oct results are 17 independently sourced genuine final scores, no projected scores",()=>{
  assert.equal(previous.reportDate,"2026-10-13");
  assert.equal(previous.published,true);
@@ -38,7 +38,7 @@ test("14 Oct preview release is separately verified and preserves 17 previous-ni
  assert.equal(legacy.matches.filter(m=>m.league==="UEFA Champions League").length,9);
  assert.equal(legacy.matches.filter(m=>m.league==="Championship").length,4);
  assert.equal(legacy.matches.filter(m=>m.specialChoice).length,2);
- assert.ok(legacy.matches.every(m=>m.nightEditorialDate==="2026-10-14"&&m.status==="scheduled"&&!m.finalScore));
+ assert.ok(legacy.matches.every(m=>m.nightEditorialDate==="2026-10-14"&&m.status==="finished"&&m.finalScoreIsVerified===true&&/^\d+-\d+$/.test(m.finalScore)));
  assert.equal(previous.matches.length,17);
  assert.ok(previous.matches.every(m=>m.finalScoreIsVerified===true));
 });

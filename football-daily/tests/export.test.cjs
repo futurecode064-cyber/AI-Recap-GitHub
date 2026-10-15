@@ -135,7 +135,7 @@ test('native Canvas export contains no DOM snapshot / external export dependency
 });
 
 test('today preview PNG accepts bookmaker odds and verified form with no H2H panel',async()=>{
- const x=harness(),match=current.matches[0];
+ const x=harness(),match=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-14.json'),'utf8')).matches[0];
  assert.ok(match.homeLastFive?.length===5&&match.awayLastFive?.length===5);
  assert.equal(match.headToHead.length,0);
  assert.ok(Number(match.homeOdds)>1);

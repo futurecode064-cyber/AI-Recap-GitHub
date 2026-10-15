@@ -5,7 +5,7 @@ const fs=require("node:fs");
 const path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const odds=JSON.parse(fs.readFileSync(path.join(root,"data/odds/2026-10-14.json"),"utf8"));
-const report=JSON.parse(fs.readFileSync(path.join(root,"data/today.json"),"utf8"));
+const report=JSON.parse(fs.readFileSync(path.join(root,"data/archive/2026-10-14.json"),"utf8"));
 const form=JSON.parse(fs.readFileSync(path.join(root,"data/research/2026-10-14-team-forms.json"),"utf8"));
 test("Oct 14 corrected PDF display preserves exactly fifteen opening odds rows",()=>{
  assert.equal(odds.reportDate,"2026-10-14");
@@ -49,7 +49,8 @@ test("Oct 14 13 original Burmese preview articles, authentic club crests and two
   assert.ok(m.dailyPreviewText.length>=500&&m.dailyPreviewText.match(/\*\*/g)?.length===4);
   assert.ok(m.homeCrestUrl?.startsWith("https://")&&m.awayCrestUrl?.startsWith("https://"));
   assert.ok(m.researchSources.length>=2&&m.homeLastFive.length>=2&&m.awayLastFive.length>=5);
-  assert.ok(!m.finalScore);
+  assert.match(m.finalScore,/^\d+-\d+$/);
+  assert.equal(m.finalScoreIsVerified,true);
   for(const side of ["homeLastFive","awayLastFive"]){
    for(const item of m[side]){
     assert.ok(item.sourceUrl.startsWith("https://"));

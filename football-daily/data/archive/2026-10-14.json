@@ -1,0 +1,2148 @@
+{
+  "reportDate": "2026-10-14",
+  "published": true,
+  "matches": [
+    {
+      "league": "UEFA Champions League",
+      "home": "LASK",
+      "away": "Liverpool",
+      "homeDisplay": "လက်စ်ခ်",
+      "awayDisplay": "လီဗာပူးလ်",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁၁:၁၅",
+      "kickoffCalendarDate": "2026-10-14",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T16:45:00.000Z",
+      "venue": "Raiffeisen Arena",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+      "homeOdds": "11.00",
+      "drawOdds": "5.50",
+      "awayOdds": "1.27",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://oddsfilter.com/event/1001635674-lask-linz-liverpool",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Rapid Vienna",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/519.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401881779"
+        },
+        {
+          "date": "2026-10-02",
+          "opponent": "First Vienna FC 1894",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401923770"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "TSV Hartberg",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6907.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401881783"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "SK Sturm Graz",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3746.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401881791"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "AEK Athens",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915452"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Manchester City",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879264"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879276"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914257"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Fulham",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879279"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Atlético Madrid",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915446"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "လီဗာပူးလ်",
+        "bodyOdds": "2+60",
+        "goalTotalOdds": "3-100",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "1-4",
+      "dailyPreviewText": "လက်စ်ခ်ဟာ အင်္ဂလန်အသင်းတွေနဲ့ ယှဉ်ပြိုင်ခဲ့တဲ့ ဥရောပပွဲ ခြောက်ပွဲမှာ တစ်ပွဲမှ မနိုင်သေးဘဲ လီဗာပူးက အော်စတြီးယားကလပ်တွေနဲ့ တွေ့တဲ့ နောက်ဆုံးမှတ်တမ်းမှာ ပိုအားသာပါတယ်။ အိမ်ရှင်ဟာ နောက်ဆုံး ရက်ပစ်ဗီယင်နာကို ၀-၂ နဲ့ ရှုံးခဲ့ပြီး တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်မှုကို ပြန်တည်ဆောက်ရမယ့်အနေအထားပါ။ လီဗာပူးက မန်စီးတီးကို ၀-၃ နဲ့ ရှုံးထားပေမယ့် ချန်ပီယံလိဂ်အဖွင့် အက်သလက်တီကိုပွဲကို ၂-၁ နဲ့ အနိုင်ရထားတာကြောင့် ဥရောပပွဲအတွေ့အကြုံ အသာစီးရနေပါတယ်။ Isak၊ Gakpo၊ Szoboszlai တို့က ကြံ့ခိုင်မှု မသေချာသလို Ekitiké က မပါဝင်နိုင်တာကြောင့် တိုက်စစ်လူစာရင်းရွေးချယ်မှုက အဆုံးအဖြတ်ဖြစ်နိုင်ပါတယ်။ Wirtz နဲ့ Mac Allister တို့က ကွင်းလယ်ထိန်းချုပ်ပြီး လက်စ်ခ်ရဲ့ နောက်ကျောကို တောင်ပံကနေ ဖောက်နိုင်ရင် ဂိုးအခွင့်အရေးပိုရနိုင်ပါတယ်။ လက်စ်ခ်က အစောပိုင်းမှာ ဂိုးမပေးဘဲ တောင့်ခံနိုင်ရင် ပွဲကို ခက်ခဲစေနိုင်ပေမယ့် လီဗာပူးလ်က ကွင်းလယ်ကို အသာစီးယူနိုင်တဲ့အချိန်မှာတော့ အခွင့်အရေးပိုရနိုင်ပါတယ်။ **အရည်အသွေးနဲ့ ဥရောပအတွေ့အကြုံအရ လီဗာပူးအနိုင်ကို ပိုရွေးချယ်ပေမယ့် ဒဏ်ရာအခြေအနေကြောင့် ဂိုးပြတ်မည်ဟု မယူဆသင့်ပါ။** ခန့်မှန်းရလဒ် **၀-၂ သို့မဟုတ် ၁-၂**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://liverpooloffside.sbnation.com/liverpool-match-previews/84302/lask-vs-liverpool-champions-league-2026-27-preview-team-news",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/4411/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/364/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": true,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/4411/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/364/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "specialChoiceRank": 2,
+      "specialPreparedDate": "2026-10-14",
+      "specialRiskNote": "အလယ်အလတ် — လီဗာပူးဒဏ်ရာနဲ့ LASK အိမ်ကွင်းခံစစ်",
+      "specialResearchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/4411/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/364/schedule?dates=2026",
+        "https://liverpooloffside.sbnation.com/liverpool-match-previews/84302/lask-vs-liverpool-champions-league-2026-27-preview-team-news"
+      ],
+      "oddsVerifiedDate": "2026-10-11",
+      "specialAnalysisParagraphs": [
+        "အော်စတြီးယား LASK နဲ့ လီဗာပူးတို့ရဲ့ ဒီပွဲမှာ အဓိကကွာခြားချက်က ချန်ပီယံလိဂ်အတွေ့အကြုံနဲ့ အဝေးကွင်းဖိအားထိန်းနိုင်မှုဖြစ်ပါတယ်။ UEFA မှတ်တမ်းအရ LASK ဟာ အင်္ဂလန်အသင်းတွေနဲ့ ယှဉ်တဲ့ခြောက်ပွဲမှာ အနိုင်မရသေးဘဲ ယူရိုပွဲအုပ်စု/လိဂ်အဆင့် ကိုးပွဲဆက် အနိုင်မရထားပါဘူး။ လီဗာပူးကတော့ ချန်ပီယံလိဂ် လိဂ်အဆင့်နောက်ဆုံး ၂၂ ပွဲမှာ ၁၉ ပွဲအနိုင်ရပြီး အော်စတြီးယားအသင်းတွေကို ရင်ဆိုင်တဲ့ သမိုင်းမှာလည်း အားသာပါတယ်။ နောက်ဆုံး မန်စီးတီးကို ၀-၃ ရှုံးထားတာကြောင့် လီဗာပူးက အလျင်အမြန် ပုံမှန်ရလဒ်ပြန်ရှာဖို့ လိုနေပါတယ်။ အိမ်ရှင် LASK ကလည်း ရက်ပစ်ဗီယင်နာကို ၀-၂ ရှုံးထားတာကြောင့် နှစ်သင်းစလုံးအတွက် ယုံကြည်မှုစမ်းသပ်မယ့်ပွဲပါ။",
+        "လီဗာပူးရဲ့ အခက်အခဲက တိုက်စစ်ကစားသမား Isak၊ Gakpo၊ Szoboszlai တို့ရဲ့ ကြံ့ခိုင်မှု မသေချာသေးသလို Ekitiké မပါဝင်နိုင်တာပါ။ ဒါကြောင့် Wirtz နဲ့ Mac Allister တို့ရဲ့ ကွင်းလယ်ထိန်းချုပ်မှုအပေါ် ပိုမူတည်လာနိုင်ပြီး ဘေးလမ်းတောင်ပံတွေမှာ အသင်းလူငယ်တွေကို အခွင့်အရေးပေးရနိုင်ပါတယ်။ LASK အနေနဲ့ Kalajdzic နဲ့ Lang တို့ကို ရည်မှန်းပြီး တန်ပြန်ကစားမယ်ဆိုရင် လီဗာပူးခံစစ်နောက်ကျောက လွတ်ကွက်တွေကို ဖမ်းယူနိုင်ပါတယ်။ LASK ဘက်မှာ Usor နဲ့ Bello ဒဏ်ရာအခြေအနေရှိလို့ အိမ်ရှင်လူစာရင်းလည်း ပြည့်စုံလှတယ်လို့ မပြောနိုင်ပါဘူး။ ချန်ပီယံလိဂ်မှာ အရည်အသွေးပြည့်မီတဲ့ လီဗာပူးက အလယ်ကွင်းအပေါ်စီးရမှ ပွဲကို ကိုင်တွယ်နိုင်မှာပါ။",
+        "ပွဲစဉ်ရဲ့ နည်းဗျူဟာအဓိကက LASK အနေနဲ့ အလယ်ကွင်းမှာ နေရာကျဉ်းကျဉ်းထားပြီး လီဗာပူးရဲ့ ဘောလုံးပို့လမ်းကြောင်းတွေကို ဖြတ်တောက်နိုင်မလားဆိုတာပါ။ အိမ်ရှင်က ပထမပိုင်းမှာ ခံစစ်နှစ်ဆင့်စုဖွဲ့ပြီး အရှိန်မြင့်တောင်ပံတိုက်စစ်ကို တစ်ကြိမ်တည်း ပြန်ထွက်နိုင်ရင် အခွင့်အရေးရှိပါတယ်။ တစ်ဖက်မှာ လီဗာပူးက ကွင်းလယ်မှာ ဘောလုံးကို စိတ်ရှည်ရှည်လှည့်ပတ်ပြီး နောက်ခံကစားသမားတွေကို နေရာရွှေ့ခိုင်းနိုင်ရင် နောက်တန်းကြား အကွာအဝေးတွေ ပေါ်လာပါမယ်။ LASK ရဲ့ နောက်ဆုံးအိမ်ကွင်းရလဒ် မတည်ငြိမ်မှုနဲ့ ဧည့်သည်ရဲ့ လူစာရင်းပျက်ကွက်နိုင်ခြေတို့ကြောင့် ဘယ်အသင်းက အစောပိုင်းအခွင့်အရေးကို ပိုတိတိကျကျ အသုံးချမလဲဆိုတာက အရေးပါနေပါတယ်။",
+        "အိမ်ရှင်ပရိသတ်ဖိအားနဲ့ လီဗာပူးရဲ့ တိုက်စစ်ကစားသမားအချို့ မပြည့်စုံနိုင်ခြင်းက ဒီရွေးချယ်မှုရဲ့ အန္တရာယ်ဖြစ်ပါတယ်။ LASK က ပထမပိုင်းကို ဂိုးမပေးဘဲ ထိန်းထားနိုင်ရင် ဧည့်သည်ဘက်က တိုက်စစ်ဖွင့်မှု ပိုများလာပြီး တန်ပြန်ခံရနိုင်ပါတယ်။ သို့သော် နှစ်သင်းရဲ့ ကစားသမားအရည်အသွေး၊ ကွင်းလယ်ထိန်းချုပ်နိုင်မှုနဲ့ ဥရောပပွဲအတွေ့အကြုံကို နှိုင်းယှဉ်ရင် လီဗာပူးဘက်က ပိုအားသာပါတယ်။ အဆုံးအဖြတ်ချိန်မှာ အခွင့်အရေးအသုံးချနိုင်မှုကို ယုံကြည်ပြီး **Special Choice #2 အဖြစ် လီဗာပူးအနိုင်ဘက်ကို ရွေးချယ်ပါတယ်**။ ဖြစ်နိုင်တဲ့ အပြီးသတ်ရလဒ်က **၀-၂ သို့မဟုတ် ၁-၂** ဖြစ်ပါတယ်။"
+      ],
+      "finalScore": "3-6",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Feyenoord",
+      "away": "Como",
+      "homeDisplay": "ဖေယင်နု",
+      "awayDisplay": "ကိုမို",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁၁:၁၅",
+      "kickoffCalendarDate": "2026-10-14",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T16:45:00.000Z",
+      "venue": "De Kuip",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "oddsProvider": null,
+      "oddsSourceUrl": null,
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "AZ Alkmaar",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875591"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "FC Utrecht",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875596"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "PEC Zwolle",
+          "teamGoals": 7,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875603"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Barcelona",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915424"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "NEC Nijmegen",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875620"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "AS Roma",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874940"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Frosinone",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874752"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Parma",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874933"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "RB Leipzig",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915441"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Genoa",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874744"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "ကိုမို",
+        "bodyOdds": "-100",
+        "goalTotalOdds": "3-10",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "1-2",
+      "dailyPreviewText": "ဖေယင်နုက နောက်ဆုံး အယ်လ်ခမာကို ၂-၀ နဲ့ နိုင်ပြီး နယ်သာလန်လိဂ်မှာ ထိပ်ဆုံးရပ်တည်နေသလို ချန်ပီယံလိဂ် အိမ်ကွင်းနောက်ဆုံးငါးပွဲမှာ လေးပွဲအနိုင်ရထားပါတယ်။ ဒါပေမဲ့ ဥရောပအဖွင့် ဘာစီလိုနာပွဲမှာ ၁-၅ နဲ့ ရှုံးထားတာက တိုက်စစ်ဖွင့်ချိန် နောက်တန်းလွတ်ကွက်ကို သတိထားစရာဖြစ်ပါတယ်။ ကိုမိုက ပွဲဦးထွက် လိုက်ပ်ဇစ်ကို ၄-၁ နဲ့ နိုင်ပြီး Nico Paz၊ Baturina တို့ရဲ့ ကွင်းလယ်ထိုးဖောက်မှုက အိမ်ရှင်ခံစစ်အတွက် ပြဿနာဖြစ်နိုင်ပါတယ်။ ဖေယင်နုဘက်မှာ Bos နဲ့ Moder အပါအဝင် လူစာရင်းပျက်ကွက်မှုတွေရှိပြီး ကိုမိုဘက်မှာ အသင်းအင်အားပိုပြည့်စုံနေတဲ့အခြေအနေပါ။ ဖေယင်နုက အိမ်ကွင်းအလျင်မြန်ဖိအားကို စတင်အသုံးချပြီး ကိုမိုရဲ့ ဘောလုံးလှည့်ပတ်မှုကို ချိုးဖျက်နိုင်မလားဆိုတာ ပွဲရဲ့အဓိကအချက်ဖြစ်ပါတယ်။ ဖေယင်နုအတွက် အိမ်ကွင်းပရိသတ်နဲ့ အဖွင့်ဖိအားက အရေးပါပေမယ့် ကိုမိုက ကွင်းလယ်ဘောလုံးကို များများထိန်းနိုင်ရင် အိမ်ရှင်ခံစစ်ရဲ့ လွတ်ကွက်တွေ ထပ်ပေါ်လာနိုင်ပါတယ်။ **ဖေယင်နုအိမ်ကွင်းအားနဲ့ ကိုမိုရဲ့ အခွင့်အရေးဖန်တီးမှု တန်းတူနီးပါးဖြစ်လို့ အပြန်အလှန်ဂိုးသွင်းနိုင်တဲ့ သရေဘက်ကို ပိုမြင်ပါတယ်။** ခန့်မှန်းရလဒ် **၁-၁ သို့မဟုတ် ၂-၂**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/142/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/2572/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/142/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/2572/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "finalScore": "3-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Manchester City",
+      "away": "Paris Saint-Germain",
+      "homeDisplay": "မန်စီးတီး",
+      "awayDisplay": "ပီအက်စ်ဂျီ",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T19:00:00.000Z",
+      "venue": "Etihad Stadium",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+      "homeOdds": "2.26",
+      "drawOdds": "3.90",
+      "awayOdds": "2.75",
+      "oddsProvider": "Stake",
+      "oddsSourceUrl": "https://stake.bet/sports/soccer/international-clubs/uefa-champions-league/46853684-manchester-city-paris-saint-germain",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Liverpool",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879264"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Sunderland",
+          "teamGoals": 5,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879272"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Norwich City",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914260"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Manchester United",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879278"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "FC Porto",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915425"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Le Mans",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876442"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Marseille",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876449"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Brest",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876465"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Slovan Bratislava",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915445"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "AS Monaco",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876469"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "မန်စီးတီး",
+        "bodyOdds": "-50",
+        "goalTotalOdds": "3-50",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "2-1",
+      "dailyPreviewText": "မန်စီးတီးဟာ နောက်ဆုံး လီဗာပူးကို ၃-၀ နဲ့နိုင်ထားသလို ဥရောပအဖွင့်မှာလည်း ပေါ်တိုကို အဝေးကွင်း ၂-၀ နဲ့ အနိုင်ယူထားပါတယ်။ ချန်ပီယံလိဂ် အိမ်ကွင်းလိဂ်အဆင့် နောက်ဆုံး ၂၅ ပွဲမှာ တစ်ပွဲသာ ရှုံးထားတဲ့ မှတ်တမ်းက အလွန်အရေးပါပါတယ်။ PSG က Slovan ကို ၆-၁ နဲ့နိုင်ပြီး Dembélé၊ Doué နဲ့ Kvaratskhelia တို့ရဲ့ လျင်မြန်တဲ့ ကွင်းလယ်ကူးပြောင်းမှုက City ရဲ့ အမြင့်ဖိအားခံစစ်ကို စမ်းသပ်နိုင်ပါတယ်။ Haaland နဲ့ Cherki တို့ကို အခွင့်အရေးမရအောင် မထိန်းနိုင်ရင် PSG ခံစစ်ကြားမှာ နေရာလွတ်ဖြစ်နိုင်သလို PSG က အင်္ဂလန်အသင်းတွေနဲ့ ဥရောပနောက်ဆုံး ၁၁ ပွဲ ရှုံးပွဲမရှိတဲ့ မှတ်တမ်းလည်းရှိပါတယ်။ ဒီပွဲဟာ ဂိုးရလဒ်ပြတ်သားမှုထက် ကွင်းလယ်ဖိအားကို ဘယ်အသင်း ထိန်းချုပ်မလဲဆိုတာ အရေးကြီးပါတယ်။ စီးတီးက ချက်ချင်းပြန်ဖိအားပေးနိုင်ခြင်းနဲ့ PSG က အဲဒီဖိအားကို ကျော်ပြီး ရှေ့တန်းကို အမြန်ပို့နိုင်ခြင်းတို့က ပွဲရဲ့လမ်းကြောင်းကို ဆုံးဖြတ်နိုင်ပါတယ်။ **အိမ်ကွင်းအသာစီးကြောင့် မန်စီးတီးမရှုံးဘက်ကို ပိုမြင်ပေမယ့် PSG ရဲ့ အပြန်အလှန်ဂိုးသွင်းနိုင်မှုကြောင့် သရေဖြစ်နိုင်ခြေလည်း မြင့်ပါတယ်။** ခန့်မှန်းရလဒ် **၂-၂ သို့မဟုတ် ၂-၁**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://stake.bet/sports/soccer/international-clubs/uefa-champions-league/46853684-manchester-city-paris-saint-germain",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/382/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/160/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/382/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/160/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "oddsVerifiedDate": "2026-10-14 snapshot",
+      "finalScore": "2-4",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Aston Villa",
+      "away": "Fenerbahce",
+      "homeDisplay": "အက်စတွန်ဗီလာ",
+      "awayDisplay": "ဖီနာဘာချီ",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T19:00:00.000Z",
+      "venue": "Villa Park",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+      "homeOdds": "1.76",
+      "drawOdds": "4.17",
+      "awayOdds": "4.83",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://www.oddstorm.com/odds/match/13556772-aston-villa-vs-fenerbahce",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Brentford",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878776"
+        },
+        {
+          "date": "2026-10-02",
+          "opponent": "Sevilla",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927429"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879269"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Coventry City",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914258"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Nottingham Forest",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879284"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Caykur Rizespor",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7656.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888282"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "PFC Turan Tovuz",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401925174"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Eyupspor",
+          "teamGoals": 8,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20729.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888287"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Gaziantep FK",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20070.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888298"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "AS Roma",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915444"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "အက်စတွန်ဗီလာ",
+        "bodyOdds": "1-10",
+        "goalTotalOdds": "3=",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "2-0",
+      "dailyPreviewText": "အက်စတွန်ဗီလာဟာ ဥရောပအိမ်ကွင်းနောက်ဆုံး ၁၃ ပွဲ ရှုံးပွဲမရှိသလို နောက်ဆုံး ၁၀ ပွဲဆက် အနိုင်ရထားတာက ဒီပွဲမှာ အထောက်အကူဖြစ်ပါတယ်။ ချန်ပီယံလိဂ်အဖွင့် ကလပ်ဘရုဂျက်ကို ၃-၂ နဲ့နိုင်ထားပေမယ့် ဘရန့်ဖို့ဒ်နဲ့ ၂-၂ သရေကျထားတာက ခံစစ်မှာ လွတ်ကွက်ရှိနိုင်ကြောင်း ပြနေပါတယ်။ ဖီနာဘာချီက နောက်ဆုံး ရိုက်ဇ်စပေါကို ၃-၀ နဲ့နိုင်ထားပြီး ကွင်းလယ်မှာ Guendouzi၊ Kanté တို့ရဲ့ ဘောလုံးဖြတ်ယူနိုင်မှုနဲ့ Asensio တို့ရဲ့ တန်ပြန်တိုက်စစ်ဖန်တီးမှုကို မလျှော့တွက်သင့်ပါဘူး။ ဗီလာဘက်မှာ Maatsen နဲ့ Ruggeri မပါဝင်နိုင်သလို ဧည့်သည်ဘက်မှာ Mert Müldür ဒဏ်ရာကြောင့် မပါနိုင်တာက တောင်ပံခံစစ်ရွေးချယ်မှုကို ပြောင်းလဲနိုင်ပါတယ်။ ဗီလာက အိမ်ကွင်းဖိအားကို အစောပိုင်းကတည်းက သုံးနိုင်ရင် အခွင့်အရေးတွေ ပိုရနိုင်ပါတယ်။ ဗီလာက စောစောဂိုးရခဲ့ရင် အိမ်ကွင်းဖိအားကို ပိုမြှင့်တင်နိုင်ပေမယ့် ဧည့်သည်ရဲ့ ကွင်းလယ်ဘောလုံးဖြတ်ယူမှုကို လျှော့တွက်လို့မရတာကြောင့် အနိုင်ရဖို့ တစ်ပွဲလုံးအာရုံစိုက်ရပါမယ်။ **ဥရောပအိမ်ကွင်းတည်ငြိမ်မှုနဲ့ တိုက်စစ်အသာစီးကြောင့် အက်စတွန်ဗီလာအနိုင်ဘက်ကို ပိုရွေးချယ်ပါတယ်။** ခန့်မှန်းရလဒ် **၂-၁ သို့မဟုတ် ၃-၁**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://www.oddstorm.com/odds/match/13556772-aston-villa-vs-fenerbahce",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/362/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/436/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": true,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/362/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/436/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "specialChoiceRank": 1,
+      "specialPreparedDate": "2026-10-14",
+      "specialRiskNote": "အလယ်အလတ် — ဖီနာဘာချီတန်ပြန်တိုက်စစ်နဲ့ ဗီလာခံစစ်အမှား",
+      "specialResearchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/362/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/436/schedule?dates=2026",
+        "https://www.oddstorm.com/odds/match/13556772-aston-villa-vs-fenerbahce"
+      ],
+      "oddsVerifiedDate": "2026-10-14 snapshot",
+      "specialAnalysisParagraphs": [
+        "ချန်ပီယံလိဂ် ဒုတိယပွဲမှာ ဗီလာနဲ့ ဖီနာဘာချီတို့ရဲ့ အခြေခံကွာခြားချက်က ပြည်တွင်းလိဂ်တစ်ခုတည်း မဟုတ်ပါဘူး။ ဗီလာဟာ ဥရောပအိမ်ကွင်းနောက်ဆုံး ၁၃ ပွဲ ရှုံးပွဲမရှိဘဲ နောက်ဆုံး ၁၀ ပွဲဆက် အနိုင်ရထားပါတယ်။ ဥရောပအဖွင့် ကလပ်ဘရုဂျက်ကို ၃-၂ နဲ့ နိုင်ထားပြီး ဖီနာဘာချီနဲ့ ယခင်ထိပ်တိုက်တွေ့ဆုံမှု သုံးပွဲစလုံးလည်း ဂိုးမပေးဘဲ အနိုင်ရခဲ့ပါတယ်။ ဒါပေမဲ့ လက်ရှိပြည်တွင်းလိဂ်မှာ ဗီလာက ခြောက်ပွဲကစား ၁ နိုင် ၂ သရေ ၃ ရှုံးသာရှိနေတဲ့အချက်ကို မျက်ကွယ်မပြုသင့်ပါ။ ဖီနာဘာချီက တူရကီလိဂ်မှာ ၄ နိုင် ၁ သရေ ၂ ရှုံးဖြစ်ပြီး နောက်ဆုံး ရိုက်ဇ်စပေါကို ၃-၀ နဲ့ နိုင်ထားတာက တန်ပြန်တိုက်စစ်ပြင်းအား ရှိနေတာကို ပြသပါတယ်။",
+        "ဗီလာက Villa Park မှာ စတင်ဖိအားပေးပြီး ကွင်းလယ်ကနေ ချက်ချင်းတောင်ပံကို လွှဲနိုင်ချိန် Jackson နဲ့ Buendía တို့ရဲ့ ဂိုးပေါက်အနီးလှုပ်ရှားမှုတွေ အရေးပါလာပါမယ်။ ဒါပေမဲ့ Brentford နဲ့ နောက်ဆုံး ၂-၂ သရေကျခဲ့တဲ့ပွဲမှာ ဦးဆောင်ချက်ကို မထိန်းနိုင်ခဲ့သလို Maatsen နဲ့ Ruggeri မပါဝင်နိုင်တာကြောင့် ခံစစ်ဘေးအကွက် လွတ်နိုင်ပါတယ်။ ဖီနာဘာချီက Guendouzi၊ Kanté တို့နဲ့ အလယ်ကွင်းဘောလုံးဖြတ်ပြီး Asensio နဲ့ Muriqi တို့ဆီ အလျင်အမြန်ပို့မယ်ဆိုရင် အိမ်ရှင်အတွက် လွယ်လွယ်ကူကူ အနိုင်ယူလို့ရတဲ့ပွဲ မဟုတ်တော့ပါဘူး။ UEFA ပွဲကြိုလူစာရင်းက ခန့်မှန်းချက်သာဖြစ်လို့ ပွဲစမယ့် အတည်ပြုလူစာရင်းကို မတိုင်မီ ထပ်စစ်သင့်ပါတယ်။",
+        "ဒီပွဲရဲ့ အရေးကြီးဆုံးတိုက်ပွဲက Villa Park မှာ အိမ်ရှင်ရဲ့ အစောပိုင်းဖိအားနဲ့ ဧည့်သည်ရဲ့ ကွင်းလယ်ဖြတ်တောက်နိုင်မှုတို့ကြားမှာ ဖြစ်လာပါလိမ့်မယ်။ ဗီလာက ဘောလုံးကို အမြန်တောင်ပံပြောင်းပြီး ပင်နယ်တီဧရိယာထဲ ထိုးဖောက်လာမယ်ဆိုရင် ဖီနာဘာချီခံစစ်ကို နောက်ဆုတ်စေနိုင်ပါတယ်။ တစ်ဖက်မှာ ဖီနာဘာချီက ကွင်းလယ်ကစားသမားတွေနဲ့ ဗီလာရဲ့ ဖြတ်တင်ပေးပို့မှုတွေကို ပိတ်ဆို့ပြီး Asensio နဲ့ Muriqi တို့ဆီ အမြန်ပြန်ပို့နိုင်ရင် အိမ်ရှင်ခံစစ်နောက်ကျောမှာ လွတ်နေရာတွေ ဖြစ်လာနိုင်ပါတယ်။ ဗီလာရဲ့ နောက်ဆုံး ဘရန့်ဖို့ဒ်ပွဲမှာ ဦးဆောင်ချက်ကို မထိန်းနိုင်ခဲ့တာက ဒီလိုတန်ပြန်တိုက်စစ်ကို သတိထားဖို့လိုကြောင်း ပြသထားပါတယ်။ ဒါကြောင့် ဗီလာအတွက် ဂိုးရဖို့တင်မဟုတ်ဘဲ ဦးဆောင်ပြီးနောက် ခံစစ်အကွာအဝေးကို ဆက်ထိန်းထားနိုင်ဖို့လည်း လိုပါတယ်။",
+        "ဗီလာရဲ့ ဥရောပအိမ်ကွင်း အနိုင်ရမှတ်တမ်းက အားသာချက်ဖြစ်ပေမယ့် ဖီနာဘာချီကို အလွယ်တကူကျော်ဖြတ်နိုင်မယ်လို့ မဆိုလိုပါဘူး။ ဧည့်သည်က ပထမပိုင်းမှာ ခံစစ်ကျစ်လျစ်ပြီး ဂိုးမပေးဘဲ ဖြတ်သန်းနိုင်ရင် ပွဲအရှိန်ကို လျှော့ချကာ သရေရလဒ်အတွက် အခွင့်အရေးရှာလာနိုင်ပါတယ်။ ဗီလာကတော့ ကွင်းလယ်ဖိအားကို ဆက်ထိန်းနိုင်ပြီး အစောပိုင်းအခွင့်အရေးတွေကို အဆုံးသတ်နိုင်ဖို့ လိုပါတယ်။ အိမ်ကွင်းအားသာချက်၊ တိုက်စစ်ဖန်တီးနိုင်မှုနဲ့ အရေးပါတဲ့ ဥရောပပွဲတွေမှာ ပွဲထိန်းနိုင်မှုကို စုစုပေါင်းချိန်ဆပြီး **Special Choice #1 အဖြစ် အက်စတွန်ဗီလာအနိုင်ဘက်ကို ရွေးချယ်ပါတယ်**။ ဖြစ်နိုင်တဲ့ အပြီးသတ်ရလဒ်က **၂-၁ သို့မဟုတ် ၃-၁** ဖြစ်ပါတယ်။"
+      ],
+      "finalScore": "6-0",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Bodo/Glimt",
+      "away": "Borussia Dortmund",
+      "homeDisplay": "ဘိုဒိုဂလင့်",
+      "awayDisplay": "ဒေါ့မွန်",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T19:00:00.000Z",
+      "venue": "Aspmyra Stadion",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "oddsProvider": null,
+      "oddsSourceUrl": null,
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Kristiansund BK",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6672.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843456"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "SK Brann",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843443"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Sandefjord",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3279.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843435"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "Bayern Munich",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915443"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Fredrikstad",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3039.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873921"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Werder Bremen",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884781"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "VfB Stuttgart",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884789"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "SC Paderborn 07",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884799"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Villarreal",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915449"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884807"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "ဒေါ့မွန်",
+        "bodyOdds": "-80",
+        "goalTotalOdds": "3-100",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "1-2",
+      "dailyPreviewText": "ဘိုဒို/ဂလင့်ဟာ ဥရောပအိမ်ကွင်းနောက်ဆုံးငါးပွဲစလုံး နိုင်ပြီး ပွဲတိုင်း သုံးဂိုးစီ သွင်းထားတဲ့ မှတ်တမ်းက ဒေါ့မွန်အတွက် သတိထားစရာပါ။ ဒါပေမဲ့ ဘိုင်ယန်မြူးနစ်နဲ့ ချန်ပီယံလိဂ်အဖွင့်ပွဲမှာ ၀-၅ နဲ့ ရှုံးထားခဲ့တာကြောင့် ခံစစ်ကို ပိုခိုင်မာဖို့ လိုပါတယ်။ ဒေါ့မွန်က ဗီလာရီးရဲလ်ကို ၃-၂ နဲ့ နိုင်ထားပြီး Guirassy၊ Beier တို့ရဲ့ အဆုံးသတ်နိုင်မှုက ဂိုးအခွင့်အရေးဖန်တီးပေးနိုင်ပါတယ်။ အိမ်ရှင်ဘက်မှာ Bjørtuft ပွဲပယ်ခံထားရပြီး ဒေါ့မွန်ဘက်မှာ Schlotterbeck မပါနိုင်တာက နှစ်ဖက်ခံစစ်ကို ပြောင်းလဲစေနိုင်ပါတယ်။ နောက်ဆုံးဥရောပတွေ့ဆုံပွဲမှာ ၂-၂ သရေကျခဲ့တာကြောင့် ဒီနေ့ပွဲမှာလည်း တန်ပြန်တိုက်စစ်နဲ့ ဂိုးအပြန်အလှန် ဖြစ်နိုင်ခြေကို ထည့်တွက်သင့်ပါတယ်။ အိမ်ရှင်ရဲ့ လျင်မြန်တဲ့တောင်ပံတိုက်စစ်နဲ့ ဒေါ့မွန်ရဲ့ ဂိုးပေါက်အဆုံးသတ်ပိုင်း အားသာချက်တို့ကြောင့် ဦးဆောင်ဂိုးတစ်ဂိုးရပြီးနောက်မှာလည်း ပွဲအရှိန် လျော့သွားဖို့ ခက်နိုင်ပါတယ်။ **ဒေါ့မွန်ရဲ့ အရည်အသွေးအသာစီးကို ပိုမြင်ပေမယ့် ဘိုဒိုရဲ့ အိမ်ကွင်းအားကြောင့် သရေဖြစ်နိုင်ခြေကို မပယ်သင့်ပါ။** ခန့်မှန်းရလဒ် **၂-၂ သို့မဟုတ် ၂-၃**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/2980/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/124/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/2980/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/124/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "finalScore": "1-0",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Real Betis",
+      "away": "FC Porto",
+      "homeDisplay": "ဘက်တစ်",
+      "awayDisplay": "ပေါ်တို",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T19:00:00.000Z",
+      "venue": "Estadio de la Cartuja",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+      "homeOdds": "2.27",
+      "drawOdds": "3.72",
+      "awayOdds": "3.26",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://oddsfilter.com/event/1001635635-real-betis-fc-porto",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Osasuna",
+          "teamGoals": 5,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882855"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Deportivo",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/90.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882863"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Getafe",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882874"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Villarreal",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882877"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Lille",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915450"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Maritimo",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/552.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885424"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Benfica",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885433"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Casa Pia",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21581.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885444"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Manchester City",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915425"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Moreirense",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3696.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885451"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "ဘက်တစ်",
+        "bodyOdds": "-85",
+        "goalTotalOdds": "3+50",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "2-1",
+      "dailyPreviewText": "ရီးရဲလ်ဘက်တစ်ဟာ လာလီဂါမှာ နောက်ဆုံး အိုဆာဆူနာကို ၅-၂ နဲ့ အနိုင်ရထားပြီး ဥရောပအိမ်ကွင်းနောက်ဆုံး ကိုးပွဲဆက် အနည်းဆုံးနှစ်ဂိုးသွင်းထားပါတယ်။ ပေါ်တိုကလည်း ပြည်တွင်းလိဂ်မှာ ရှစ်ပွဲဆက် အနိုင်ရထားတဲ့ မှတ်တမ်းနဲ့ လာရောက်မှာဖြစ်လို့ အိမ်ရှင်ကို လွယ်ကူစွာ အနိုင်ပေးထားလို့ မရပါဘူး။ ပေါ်တိုဟာ ဥရောပအဖွင့် မန်စီးတီးကို ၀-၂ ရှုံးထားပြီး ဒီနေ့ရလဒ်ပြန်ရှာဖို့လိုသလို Bednarek ပွဲပယ်နဲ့ William Gomes မပါနိုင်မှုတွေကြောင့် နောက်တန်းဖွဲ့စည်းပုံ ပြောင်းလဲရနိုင်ပါတယ်။ ဘက်တစ်ဘက်က Isco နဲ့ Abde တို့ရဲ့ ကွင်းလယ်ဖန်တီးမှုနဲ့ တောင်ပံထိုးဖောက်မှုကို အားပြုနိုင်ပြီး ပေါ်တိုက ခံစစ်နောက်ကျောကွက်ထဲ တန်ပြန်ဝင်လာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ ဥရောပမကြာသေးမီပွဲတွေမှာ ဂိုးသွင်းအခွင့်အရေးတွေ ရှိနိုင်တာကြောင့် ဂိုးအခွင့်အရေးကို ထည့်တွက်ရပါမယ်။ ပေါ်တိုရဲ့ ခံစစ်ပြန်ဆုတ်ချိန်မှာ ဘက်တစ်က အလယ်ကနေ ဘောလုံးထိုးပေးနိုင်ရင် အခွင့်အရေးရှိပြီး ဧည့်သည်ရဲ့ တန်ပြန်ထိုးဖောက်မှုကိုတော့ အိမ်ရှင် သတိထားရပါမယ်။ **ဘက်တစ်ရဲ့ အိမ်ကွင်းတိုက်စစ်အလားအလာကြောင့် ဘက်တစ်မရှုံးဘက်ကို ပိုမြင်ပါတယ်။** ခန့်မှန်းရလဒ် **၂-၁ သို့မဟုတ် ၂-၂**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/244/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/437/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/244/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/437/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "oddsVerifiedDate": "2026-10-11",
+      "finalScore": "3-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "AS Roma",
+      "away": "Real Madrid",
+      "homeDisplay": "ရိုးမား",
+      "awayDisplay": "ရီးရဲလ်မက်ဒရစ်",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T19:00:00.000Z",
+      "venue": "Stadio Olimpico",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "oddsProvider": null,
+      "oddsSourceUrl": null,
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Como",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874940"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Internazionale",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874753"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Torino",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874950"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "Fenerbahce",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915444"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Atalanta",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874781"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Villarreal",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882848"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Atlético Madrid",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882865"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Elche",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3751.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882872"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Rayo Vallecano",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/101.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882880"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Internazionale",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915451"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "ရီးရဲလ်မက်ဒရစ်",
+        "bodyOdds": "-100",
+        "goalTotalOdds": "3-50",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "1-2",
+      "dailyPreviewText": "ရိုးမားဟာ နောက်ဆုံး ကိုမိုနဲ့ ၀-၀ သရေကျထားပြီး အီတလီလိဂ် ခံစစ်စုဖွဲ့မှုကောင်းနေပါတယ်။ ဥရောပအိမ်ကွင်း နောက်ဆုံးကိုးပွဲမှာ ရှစ်ပွဲနိုင်ထားပေမယ့် ရီးရဲလ်မက်ဒရစ်ကို ချန်ပီယံလိဂ်ကစားခဲ့တဲ့ ယခင်နောက်ဆုံးလေးပွဲစလုံး ဂိုးမသွင်းနိုင်ဘဲ ရှုံးနိမ့်ထားတာက သတိထားရမယ့်သမိုင်းမှတ်တမ်းပါ။ ရီးရဲလ်က Villarreal ကို နောက်ဆုံး ၁-၀ နဲ့နိုင်ပြီး Mbappé၊ Vinícius၊ Bellingham၊ Arda Güler တို့ရဲ့ ပေါင်းစပ်တိုက်စစ်က ရိုးမားခံစစ်ရဲ့ ဘေးအကွက်တွေကို ဖိအားပေးနိုင်ပါတယ်။ ရိုးမားဘက်မှာ Cristante နဲ့ ဂိုးသမား Svilar ဒဏ်ရာကြောင့် မပါနိုင်တာက ရှေ့တန်းနဲ့ နောက်တန်းအချိတ်အဆက်ကို စမ်းသပ်စေနိုင်ပါတယ်။ ရိုးမားကို အိမ်ကွင်းမှာ အလွန်လျှော့တွက်ဖို့ မသင့်ပေမယ့် ရီးရဲလ်ရဲ့ အဆုံးသတ်အားကို အာရုံစိုက်ရပါမယ်။ ရိုးမားက ကွင်းလယ်အကွာအဝေးကို ကျစ်လျစ်စွာထားပြီး ပွဲအရှိန်ကို ထိန်းနိုင်ရင် အမှတ်ရဖို့ မျှော်လင့်နိုင်ပေမယ့် ရီးရဲလ်ရဲ့ အမြန်တောင်ပံဖောက်ထွင်းမှုကို မထိန်းနိုင်ရင် ဂိုးပေးရနိုင်ပါတယ်။ **ရီးရဲလ်မက်ဒရစ်အနိုင်ဘက်ကို အနည်းငယ်ပိုမြင်ပေမယ့် အိမ်ရှင်ရိုးမားကြောင့် သရေကိုပါ ထည့်တွက်သင့်ပါတယ်။** ခန့်မှန်းရလဒ် **၁-၂ သို့မဟုတ် ၁-၁**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/104/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/86/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/104/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/86/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "finalScore": "3-4",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Shakhtar Donetsk",
+      "away": "AEK Athens",
+      "homeDisplay": "ရှက်တာဒိုးနက်",
+      "awayDisplay": "အေအီးကေ",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T19:00:00.000Z",
+      "venue": "UEFA-approved neutral venue",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "oddsProvider": null,
+      "oddsSourceUrl": null,
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-02",
+          "opponent": "Kryvbas KR",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927908"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "PSV Eindhoven",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915422"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "OFI Crete",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401896754"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Volos NFC",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401896758"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Asteras Tripoli",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401896764"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "LASK Linz",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915452"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Aris",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401896769"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "ရှက်တာဒိုးနက်",
+        "bodyOdds": "-5",
+        "goalTotalOdds": "3+80",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "1-1",
+      "dailyPreviewText": "ရှက်တာဒိုးနက်ဟာ ဥရောပနောက်ဆုံး ၂၁ ပွဲမှာ လေးပွဲသာ ရှုံးထားပြီး ဂရိအသင်းတွေနဲ့ ယှဉ်ပြိုင်တဲ့ ဥရောပပွဲငါးပွဲလုံး ရှုံးပွဲမရှိခဲ့တဲ့ အချက်က သူတို့ရဲ့ တည်ငြိမ်မှုကို ပြသပါတယ်။ တစ်ဖက်မှာ AEK အေသင်က ဥရောပနောက်ဆုံး ၂၀ ပွဲမှာ သုံးပွဲသာ ရှုံးထားသလို LASK ကို ချန်ပီယံလိဂ်အဖွင့် ၁-၀ နဲ့ အနိုင်ရထားပါတယ်။ ရှက်တာက PSV နဲ့ ၁-၁ သရေကစားထားပြီး ကွင်းလယ်ကနေ တောင်ပံကို အလျင်အမြန်ချိတ်ဆက်နိုင်ရင် အခွင့်အရေးရှိပါတယ်။ ရှက်တာဘက်မှာ Eguinaldo၊ Azarov မပါနိုင်သလို AEK ဘက်မှာ Strakosha ဒဏ်ရာကြောင့် မပါနိုင်တာက နှစ်ဖက်ကစားပုံကို ပြောင်းစေနိုင်ပါတယ်။ ခံစစ်တည်ငြိမ်တဲ့ အသင်းနှစ်သင်းဖြစ်တာကြောင့် အနိုင်အရှုံးကွာခြားမှု မများဘဲ ကွင်းလယ်တိုက်ပွဲက ပိုအရေးပါလာနိုင်ပါတယ်။ ရှက်တာက ဘောလုံးပိုင်ဆိုင်မှု ပိုရယူနိုင်ပေမယ့် AEK ရဲ့ ခံစစ်စုဖွဲ့မှုကြောင့် အပိုင်အခွင့်အရေး ရှားပါးနိုင်ပြီး ဘယ်အသင်းက ကွင်းလယ်ဒုတိယဘောလုံးကို ပိုထိန်းနိုင်မလဲဆိုတာ အရေးကြီးလာပါမယ်။ **ရလဒ်တည်ငြိမ်မှုနှစ်ဖက်လုံးကောင်းနေတဲ့အတွက် သရေဖြစ်နိုင်ခြေကို ပိုမြင်ပါတယ်။** ခန့်မှန်းရလဒ် **၁-၁ သို့မဟုတ် ၂-၁**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/493/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/887/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "Source ESPN contains fewer than 5 confirmed finished fixtures; no WDL invented.",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/493/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/887/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "finalScore": "3-1",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Slovan Bratislava",
+      "away": "VfB Stuttgart",
+      "homeDisplay": "စလိုဗန်",
+      "awayDisplay": "စတုဂတ်",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T19:00:00.000Z",
+      "venue": "National Football Stadium",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+      "homeOdds": null,
+      "drawOdds": null,
+      "awayOdds": null,
+      "oddsProvider": null,
+      "oddsSourceUrl": null,
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-09-09",
+          "opponent": "Paris Saint-Germain",
+          "teamGoals": 1,
+          "opponentGoals": 6,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915445"
+        },
+        {
+          "date": "2026-08-26",
+          "opponent": "NK Celje",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3362.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401909194"
+        },
+        {
+          "date": "2026-08-19",
+          "opponent": "NK Celje",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3362.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401909195"
+        },
+        {
+          "date": "2026-08-11",
+          "opponent": "Mjällby AIF",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20301.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401902677"
+        },
+        {
+          "date": "2026-08-04",
+          "opponent": "Mjällby AIF",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20301.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401902705"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "SC Paderborn 07",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884773"
+        },
+        {
+          "date": "2026-10-01",
+          "opponent": "SpVgg Greuther Fürth",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3070.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927903"
+        },
+        {
+          "date": "2026-09-25",
+          "opponent": "1. FC Heidenheim 1846",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6418.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401920460"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Borussia Dortmund",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884789"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884797"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "စတုဂတ်",
+        "bodyOdds": "2+50",
+        "goalTotalOdds": "4+90",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "0-4",
+      "dailyPreviewText": "စလိုဗန်ဘရာတစ္စလာဗာဟာ ချန်ပီယံလိဂ်ပွဲစဉ် နောက်ဆုံးကိုးပွဲ ရှုံးထားပြီး ဒီနှစ်အဖွင့်မှာ PSG ကို ၁-၆ နဲ့ ရှုံးခဲ့တာကြောင့် ခံစစ်တည်ငြိမ်မှုက အဓိကပြဿနာဖြစ်နေပါတယ်။ စတုဂတ်က နောက်ဆုံး ပဒါဘွန်းကို ၂-၀ နဲ့နိုင်ထားပြီး ပွဲနောက်ဆုံးသုံးပွဲမှာ ခံစစ်ကို ပိုမိုတင်းကျပ်စွာကစားလာတာ တွေ့ရပါတယ်။ ချန်ပီယံလိဂ် အဖွင့်မှာလည်း စတုဂတ်က ပွဲအနိုင်ရထားတဲ့အတွက် ရလဒ်အရ အားသာပါတယ်။ Slovan ရဲ့ အိမ်ကွင်းတိုက်စစ်ကို အဝေးကွင်းခံစစ်ပိတ်နိုင်ရင် Undav နဲ့ Demirović တို့ရဲ့ ဂိုးအဆုံးသတ်ကို မျှော်လင့်နိုင်ပါတယ်။ စတုဂတ်ဘက်မှာ Nartey၊ Tiago Tomás တို့မပါဝင်နိုင်သလို Chabot နဲ့ Mittelstädt ကြံ့ခိုင်မှုမသေချာတာက ဧည့်သည်ဘက်အတွက် အန္တရာယ်တစ်ခုဖြစ်ပေမယ့် လက်ရှိခြေစွမ်းနဲ့ ဥရောပကစားပုံကွာခြားမှုက ထင်ရှားနေပါတယ်။ စလိုဗန်အနေနဲ့ အိမ်ကွင်းမှာ စောစောဂိုးမပေးဖို့ နောက်တန်းကို စုဖွဲ့ရမယ့်အခြေအနေဖြစ်ပြီး စတုဂတ်က အဲဒီခံစစ်ကို ချိုးဖောက်နိုင်ရင် ပွဲကို ထိန်းချုပ်နိုင်ဖို့ အလားအလာကောင်းပါတယ်။ **စတုဂတ်အနိုင်ဘက်ကို ပိုယုံကြည်ပါတယ်။** ခန့်မှန်းရလဒ် **၀-၂ သို့မဟုတ် ၁-၃**။",
+      "researchSources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/521/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/134/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/521/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/134/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "finalScore": "0-3",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/",
+      "finalScoreCorroboratingUrl": "https://www.rte.ie/sport/results/soccer/champions-league/47760/results/",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "Championship",
+      "home": "Norwich City",
+      "away": "Southampton",
+      "homeDisplay": "နောဝစ်ချ်",
+      "awayDisplay": "ဆောက်သမ်တန်",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၁၅",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T18:45:00.000Z",
+      "venue": "Carrow Road",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+      "homeOdds": "2.40",
+      "drawOdds": "3.60",
+      "awayOdds": "2.57",
+      "oddsProvider": "PrimaTips 1X2 comparison",
+      "oddsSourceUrl": "https://primatips.com/tables/england/championship",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Swansea City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880236"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880250"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Manchester City",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914260"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Middlesbrough",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880264"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Birmingham City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880270"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Portsmouth",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880237"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Wrexham",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880245"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Bristol City",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880261"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Swansea City",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880279"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Lincoln City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880290"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "နောဝစ်ချ်",
+        "bodyOdds": "-15",
+        "goalTotalOdds": "3-30",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "2-2",
+      "dailyPreviewText": "နောဝစ်ချ်ဟာ ချန်ပီယံရှစ် ၉ ပွဲမှာ ၃ နိုင် ၀ သရေ ၆ ရှုံး၊ ၉ မှတ်နဲ့ အဆင့် ၁၈ မှာ ရှိနေပြီး ဆောက်သမ်တန်က ၉ ပွဲမှာ ၅ နိုင် ၂ သရေ ၂ ရှုံး၊ အမှတ်လျှော့ပြစ်ဒဏ်ပြီး ၁၃ မှတ်နဲ့ အဆင့် ၁၁ မှာ ရပ်တည်နေပါတယ်။ နောဝစ်ချ်က နောက်ဆုံး ဆွမ်ဆီးကို ၁-၂ ရှုံးထားပြီး နောက်ဆုံးငါးပွဲမှာလည်း ခံစစ်ဂိုးပေးရမှုများနေပါတယ်။ ဆောက်သမ်တန်က ပြိုင်ဘက် ပေါ့စ်မောက်ကို ၁-၀ နဲ့ အနိုင်ရထားပြီး ဆယ်ယောက်တည်း ကျန်တဲ့အခြေအနေမှာ ဦးဆောင်ဂိုးကို ထိန်းနိုင်ခဲ့တာက ခံစစ်စည်းကမ်းကောင်းမှုပါ။ Cameron Bragg ပွဲပယ်ခံထားရတာကြောင့် အဝေးကွင်းကွင်းလယ်အင်အားကို ပြန်ညှိဖို့ လိုပါတယ်။ နောဝစ်ချ်က အိမ်ကွင်းဖိအားကို အသုံးချနိုင်ပေမယ့် ဆောက်သမ်တန်ရဲ့ ပွဲထိန်းစွမ်းရည်ကို မလျှော့တွက်သင့်ပါဘူး။ နောဝစ်ချ်က အိမ်ကွင်းမှာ အစောပိုင်းဖိအားပေးနိုင်ပေမယ့် ဆောက်သမ်တန်က ဦးဆောင်ချက်ရခဲ့ရင် ခံစစ်စုဖွဲ့ပြီး ပွဲအရှိန်ကို လျှော့ချကစားနိုင်တာကြောင့် ပွဲရဲ့ပထမဂိုးက အရေးကြီးပါမယ်။ **လက်ရှိတည်ငြိမ်မှုကြောင့် ဆောက်သမ်တန်မရှုံးဘက်ကို ပိုမြင်ပါတယ်။** ခန့်မှန်းရလဒ် **၁-၁ သို့မဟုတ် ၁-၂**။",
+      "researchSources": [
+        "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+        "https://www.footballwebpages.co.uk/championship/fixtures-results/october",
+        "https://www.theguardian.com/football/2026/oct/11/southampton-portsmouth-championship-match-report",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/381/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/376/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/381/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/376/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "homeStanding": {
+        "played": 9,
+        "wins": 3,
+        "draws": 0,
+        "losses": 6,
+        "points": 9,
+        "position": 18
+      },
+      "awayStanding": {
+        "played": 9,
+        "wins": 5,
+        "draws": 2,
+        "losses": 2,
+        "points": 13,
+        "position": 11
+      },
+      "standingsSourceUrl": "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+      "standingsAsOf": "2026-10-11 18:20 BST (prior to these clubs' 14 Oct kickoffs)",
+      "oddsVerifiedDate": "2026-10-14",
+      "finalScore": "0-1",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.efl.com/news/2026/october/14/sky-bet-championship-midweek-round-up/",
+      "finalScoreCorroboratingUrl": "https://theanalyst.com/competition/english-championship/fixtures",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "Championship",
+      "home": "Portsmouth",
+      "away": "Sheffield United",
+      "homeDisplay": "ပေါ့စ်မောက်",
+      "awayDisplay": "ရှက်ဖီးယူနိုက်တက်",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၁၅",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T18:45:00.000Z",
+      "venue": "Fratton Park",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+      "homeOdds": "2.20",
+      "drawOdds": "3.25",
+      "awayOdds": "3.20",
+      "oddsProvider": "PrimaTips 1X2 comparison",
+      "oddsSourceUrl": "https://primatips.com/tables/england/championship",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Southampton",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880237"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880249"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880266"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Cardiff City",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880288"
+        },
+        {
+          "date": "2026-09-01",
+          "opponent": "Derby County",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880302"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Lincoln City",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880238"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Stoke City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880247"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Fleetwood Town",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3891.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914266"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880262"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880276"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "ပေါ့စ်မောက်",
+        "bodyOdds": "-50",
+        "goalTotalOdds": "2-90",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "1-0",
+      "dailyPreviewText": "ပေါ့စ်မောက်က အမှတ်ပေး ၈ ပွဲမှာ ၂ နိုင် ၂ သရေ ၄ ရှုံး၊ ၈ မှတ်နဲ့ အဆင့် ၁၉ မှာရှိပြီး ရှက်ဖီးယူနိုက်တက်က ၉ ပွဲမှာ ၃ နိုင် ၃ သရေ ၃ ရှုံး၊ ၁၂ မှတ်နဲ့ အဆင့် ၁၄ မှာ ရပ်တည်ပါတယ်။ ပေါ့စ်မောက်က ဆောက်သမ်တန်ကို နောက်ဆုံး ၀-၁ ရှုံးထားချိန် ရှက်ဖီးက လင်ကွန်းကို ၃-၀ နဲ့ အနိုင်ရထားတာကြောင့် ဧည့်သည်ရဲ့ နောက်ဆုံးပွဲယုံကြည်မှုက ပိုကောင်းနေပါတယ်။ အိမ်ရှင်က တောင်ပံကနေ ဖိအားတင်ပြီး အခွင့်အရေးယူနိုင်ပေမယ့် ဂိုးအဆုံးသတ်တည်ငြိမ်မှု မရှိရင် ရှက်ဖီးရဲ့ တန်ပြန်တိုက်စစ်ကို ပြန်ခံရနိုင်ပါတယ်။ အိမ်ကွင်းအားသာချက်ရှိပေမယ့် ခံစစ်အမှားကို လျှော့ချပြီး ကွင်းလယ်ဒုတိယဘောလုံးကို ပြန်သိမ်းနိုင်မှသာ ရလဒ်ကောင်းရပါမယ်။ ပေါ့စ်မောက်အတွက် ကွင်းလယ်ဒုတိယဘောလုံးတွေကို ပြန်သိမ်းနိုင်မှုနဲ့ တောင်ပံတိုက်စစ်က အရေးကြီးမှာဖြစ်ပြီး ဧည့်သည်ကတော့ အိမ်ရှင်ရှေ့တက်လာချိန် နောက်ကျောလွတ်ကွက်ကို အခွင့်ကောင်းယူနိုင်ပါတယ်။ **ဧည့်သည်ရှက်ဖီးယူနိုက်တက်မရှုံးဘက်ကို ပိုမြင်ပါတယ်။** ခန့်မှန်းရလဒ် **၁-၁ သို့မဟုတ် ၁-၂**။",
+      "researchSources": [
+        "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+        "https://www.footballwebpages.co.uk/championship/fixtures-results/october",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/385/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/398/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/385/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/398/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "homeStanding": {
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "points": 8,
+        "position": 19
+      },
+      "awayStanding": {
+        "played": 9,
+        "wins": 3,
+        "draws": 3,
+        "losses": 3,
+        "points": 12,
+        "position": 14
+      },
+      "standingsSourceUrl": "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+      "standingsAsOf": "2026-10-11 18:20 BST (prior to these clubs' 14 Oct kickoffs)",
+      "oddsVerifiedDate": "2026-10-14",
+      "finalScore": "3-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.efl.com/news/2026/october/14/sky-bet-championship-midweek-round-up/",
+      "finalScoreCorroboratingUrl": "https://theanalyst.com/competition/english-championship/fixtures",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "Championship",
+      "home": "Queens Park Rangers",
+      "away": "Derby County",
+      "homeDisplay": "ကျူပီအာ",
+      "awayDisplay": "ဒါဘီ",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၁၅",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T18:45:00.000Z",
+      "venue": "Loftus Road",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+      "homeOdds": "1.66",
+      "drawOdds": "3.80",
+      "awayOdds": "4.50",
+      "oddsProvider": "PrimaTips 1X2 comparison",
+      "oddsSourceUrl": "https://primatips.com/tables/england/championship",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "West Ham United",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880233"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Preston North End",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880248"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "West Bromwich Albion",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880258"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880272"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Middlesbrough",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880286"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Wrexham",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880241"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Burnley",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880254"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Birmingham City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880265"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "West Bromwich Albion",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880271"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "West Ham United",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880281"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "ကျူပီအာ",
+        "bodyOdds": "1+30",
+        "goalTotalOdds": "3+30",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "2-0",
+      "dailyPreviewText": "ကျူပီအာက ၉ ပွဲ ၃ နိုင် ၅ သရေ ၁ ရှုံး၊ ၁၄ မှတ်နဲ့ အဆင့် ၆ မှာ ရှိနေသလို ဒါဘီကောင်တီက ၉ ပွဲ ၁ နိုင် ၃ သရေ ၅ ရှုံး၊ ၆ မှတ်နဲ့ အဆင့် ၂၃ မှာ ရပ်တည်နေပါတယ်။ ကျူပီအာရဲ့ နောက်ဆုံး ဝက်စ်ဟမ်းနဲ့ ၁-၁ သရေဟာ အဝေးကွင်းဖိအားကို ခံနိုင်ရည်ရှိတာ ပြခဲ့ပေမယ့် အနိုင်ပွဲကို ပြောင်းလဲနိုင်မှုက အလွန်တည်ငြိမ်တာ မဟုတ်ပါဘူး။ ဒါဘီက ရက်ဇ်ဟမ်နဲ့ ၁-၁ သရေကျထားပြီး နောက်ဆုံးငါးပွဲမှာ အနိုင်မရသေးတာကြောင့် အဝေးကွင်းမှာ ခံစစ်ချိုးဖောက်မှုကို ဦးစားပေးနိုင်ပါတယ်။ အိမ်ရှင်က ကွင်းလယ်ဘောလုံးပိုင်ဆိုင်မှုနဲ့ အဆုံးသတ်ရာမှာ စိတ်ရှည်နိုင်ရင် အခွင့်အရေးပိုရမှာဖြစ်ပြီး ဒါဘီက ခံစစ်စုဖွဲ့ပြီး တန်ပြန်ကစားလာနိုင်ပါတယ်။ ကျူပီအာက ဘောလုံးပိုင်ဆိုင်မှုရပေမယ့် အလျင်စလိုဂိုးရှာနေမယ်ဆိုရင် ဒါဘီရဲ့ တန်ပြန်တိုက်စစ်ကို ခံရနိုင်တာကြောင့် ခံစစ်အကွာအဝေးကို ထိန်းသိမ်းရင်း အခွင့်အရေးစောင့်ဖို့ လိုပါတယ်။ **ကျူပီအာအိမ်ကွင်းအသာစီးနဲ့ အမှတ်ပေးတည်ငြိမ်မှုကြောင့် အိမ်ရှင်အနိုင်ဘက်ကို ပိုရွေးချယ်ပါတယ်။** ခန့်မှန်းရလဒ် **၁-၀ သို့မဟုတ် ၂-၀**။",
+      "researchSources": [
+        "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+        "https://www.footballwebpages.co.uk/championship/fixtures-results/october",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/334/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/374/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/334/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/374/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "homeStanding": {
+        "played": 9,
+        "wins": 3,
+        "draws": 5,
+        "losses": 1,
+        "points": 14,
+        "position": 6
+      },
+      "awayStanding": {
+        "played": 9,
+        "wins": 1,
+        "draws": 3,
+        "losses": 5,
+        "points": 6,
+        "position": 23
+      },
+      "standingsSourceUrl": "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+      "standingsAsOf": "2026-10-11 18:20 BST (prior to these clubs' 14 Oct kickoffs)",
+      "oddsVerifiedDate": "2026-10-14",
+      "finalScore": "4-1",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.efl.com/news/2026/october/14/sky-bet-championship-midweek-round-up/",
+      "finalScoreCorroboratingUrl": "https://theanalyst.com/competition/english-championship/fixtures",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    },
+    {
+      "league": "Championship",
+      "home": "Lincoln City",
+      "away": "West Ham United",
+      "homeDisplay": "လင်ကွန်း",
+      "awayDisplay": "ဝက်စ်ဟမ်း",
+      "kickoffYangon": "၁၄ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-15",
+      "nightEditorialDate": "2026-10-14",
+      "kickoffUtc": "2026-10-14T19:00:00.000Z",
+      "venue": "LNER Stadium",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+      "homeOdds": "5.00",
+      "drawOdds": "3.80",
+      "awayOdds": "1.62",
+      "oddsProvider": "PrimaTips 1X2 comparison",
+      "oddsSourceUrl": "https://primatips.com/tables/england/championship",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Sheffield United",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880238"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Swansea City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880252"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Bristol City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880274"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Preston North End",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880263"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914267"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880233"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Millwall",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880251"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Fulham",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401914283"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Wrexham",
+          "teamGoals": 6,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880257"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880275"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "User-supplied 14.pdf",
+        "market": "Myanmar opening prices",
+        "upperTeam": "ဝက်စ်ဟမ်း",
+        "bodyOdds": "1+30",
+        "goalTotalOdds": "3+40",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-14",
+        "handicap": {
+          "line": null,
+          "home": null,
+          "away": null
+        },
+        "goals": {
+          "line": null,
+          "over": null,
+          "under": null
+        }
+      },
+      "myanmarOddsSource": "14.pdf / original MyanmarAngoun source; PDF forecast is not FT",
+      "pdfLastColumn": "1-2",
+      "dailyPreviewText": "လင်ကွန်းစီးတီးက ချန်ပီယံရှစ် ၉ ပွဲမှာ ၃ နိုင် ၂ သရေ ၄ ရှုံး၊ ၁၁ မှတ်နဲ့ အဆင့် ၁၆ ရှိနေပြီး ဝက်စ်ဟမ်းက ၉ ပွဲမှာ ၄ နိုင် ၄ သရေ ၁ ရှုံး၊ ၁၆ မှတ်နဲ့ အဆင့် ၃ ရပ်တည်နေပါတယ်။ လင်ကွန်းဟာ ရှက်ဖီးယူနိုက်တက်ကို နောက်ဆုံး ၀-၃ ရှုံးထားသလို တိုက်စစ်က ဂိုးအခွင့်အရေး ဖန်တီးမှုကို ပြန်ရှာဖို့လိုပါတယ်။ ဝက်စ်ဟမ်းက ကျူပီအာနဲ့ ၁-၁ သရေကျထားပြီး Jarrod Bowen နဲ့ တောင်ပံတိုက်စစ်တွေက အိမ်ရှင်နောက်တန်းကို ဖိအားပေးနိုင်ပါတယ်။ သို့သော် အဝေးကွင်းပွဲဖြစ်တဲ့အတွက် ဝက်စ်ဟမ်းဟာ ဘောလုံးပိုင်ဆိုင်မှုကို အလွန်မြင့်မားစွာ ဖွင့်ကစားရင် လင်ကွန်းရဲ့ တန်ပြန်တိုက်စစ်ကို သတိထားရပါမယ်။ လက်ရှိဇယားအခြေအနေ၊ ရမှတ်နဲ့ ဂိုးသွင်းအားကို ချိန်ကြည့်ရင် ဝက်စ်ဟမ်းဘက် အသာစီးရှိပါတယ်။ ဝက်စ်ဟမ်းက ဘောလုံးကို ကိုင်ထားပြီး တောင်ပံတွေဆီ လျင်လျင်မြန်မြန် ဖြန့်ပေးနိုင်ရင် အခွင့်အရေးပိုရမယ်ဆိုပေမယ့် လင်ကွန်းက အိမ်ကွင်းမှာ နောက်တန်းကို စုဖွဲ့ပြီး တန်ပြန်တက်နိုင်ပါတယ်။ **ဝက်စ်ဟမ်းအနိုင်ဘက်ကို ပိုရွေးချယ်ပါတယ်။** ခန့်မှန်းရလဒ် **၀-၂ သို့မဟုတ် ၁-၂**။",
+      "researchSources": [
+        "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+        "https://www.footballwebpages.co.uk/championship/fixtures-results/october",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/314/schedule?dates=2026",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/371/schedule?dates=2026"
+      ],
+      "editorialFramework": "DATA → FORM → TEAM NEWS → TACTICS → KEY FACTOR → COMPARISON → FINAL VERDICT",
+      "specialChoice": false,
+      "status": "finished",
+      "previewQualityNotes": "",
+      "lastFiveSourceHome": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/314/schedule?dates=2026",
+      "lastFiveSourceAway": "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/371/schedule?dates=2026",
+      "headToHeadSourceUrl": "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+      "headToHeadVerificationStatus": "H2H excluded from public page. Historical H2H not guessed.",
+      "homeStanding": {
+        "played": 9,
+        "wins": 3,
+        "draws": 2,
+        "losses": 4,
+        "points": 11,
+        "position": 16
+      },
+      "awayStanding": {
+        "played": 9,
+        "wins": 4,
+        "draws": 4,
+        "losses": 1,
+        "points": 16,
+        "position": 3
+      },
+      "standingsSourceUrl": "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+      "standingsAsOf": "2026-10-11 18:20 BST (prior to these clubs' 14 Oct kickoffs)",
+      "oddsVerifiedDate": "2026-10-14",
+      "finalScore": "0-6",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.efl.com/news/2026/october/14/sky-bet-championship-midweek-round-up/",
+      "finalScoreCorroboratingUrl": "https://theanalyst.com/competition/english-championship/fixtures",
+      "finalScoreCheckedAt": "2026-10-15T07:35:00+06:30"
+    }
+  ],
+  "noFixturesLeagues": [],
+  "oddsSheetPath": "./odds/2026-10-14.json",
+  "sourceList": [
+    "https://www.uefa.com/uefachampionsleague/news/02aa-21c5297d7408-32d70b5a4443-1000--champions-league-matchday-2-key-stats-and-what-to-look-o/",
+    "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-starting-and-predicted-line-ups-matchday-2-/",
+    "https://www.skysports.com/football/portsmouth-vs-millwall/table/560635",
+    "https://primatips.com/tables/england/championship",
+    "https://site.api.espn.com/apis/site/v2/sports/soccer/all/teams/364/schedule?dates=2026"
+  ],
+  "previewEligibility": "Only verified 9 UCL and 4 Championship Oct 14 fixtures from user 14.pdf; 3 odds-sheet rows found date-disputed on Oct 16 and Latina-Atalanta U23 remains odds-only.",
+  "nightTimeConvention": "15 Oct 01:15/01:30 is written as ၁၄ ရက်နေ့ ည per user; machine kickoffUtc and kickoffCalendarDate reflect true instant.",
+  "reportNote": "Professional 14 Oct Burmese match previews and 2 independently researched Special Choice picks; 14.pdf Myanmar morning prices exact; 17 original source rows on odds page; 3 mismatched dates annotated, no invented results. 1X2 fields omitted where coherent external market price cannot be verified. This report is distributed to 4 branded sites using shared JSON."
+}
