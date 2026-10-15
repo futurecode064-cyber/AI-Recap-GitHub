@@ -29,7 +29,9 @@ test("15 Oct shows 36 coherent one-paragraph previews and 5 separated Special Ch
  assert.deepEqual(today.matches.filter(m=>m.specialChoice).map(m=>m.specialChoiceRank),[1,2,3,4,5]);
  for(const m of today.matches){
   assert.ok(m.dailyPreviewText.length>=250,m.home);
-  assert.equal([...m.dailyPreviewText.matchAll(/\*\*[^*]+\*\*/g)].length,1,m.home);
+  const verbatimConference=m.league==="UEFA Conference League";
+  assert.equal([...m.dailyPreviewText.matchAll(/\*\*[^*]+\*\*/g)].length,verbatimConference?2:1,m.home);
+  if(verbatimConference)assert.match(m.dailyPreviewText,/ခန့်မှန်းရလဒ်ကတော့ \*\*[^*]+\*\* ဖြစ်ပါတယ်။$/u,m.home);
   assert.ok(m.kickoffUtc.startsWith("2026-10-15T"),m.home);
   assert.ok(!m.dailyPreviewText.includes("မရှုံးတဲ့ရွေးချယ်မှု"),m.home);
   assert.ok(!/ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်/u.test(m.dailyPreviewText),m.home);

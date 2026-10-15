@@ -8,12 +8,14 @@ const txt=p=>fs.readFileSync(path.join(root,p),"utf8");
 const today=JSON.parse(txt("data/today.json"));
 const sheet=JSON.parse(txt("data/odds/2026-10-15.json"));
 const archive=JSON.parse(txt("data/archive/2026-10-14.json"));
-test("36 previews only give a bold team/goal selection, never a forecasted score",()=>{
+test("Europa follows selection-only rule while user-supplied Conference paragraphs remain verbatim",()=>{
  assert.equal(today.matches.length,36);
  for(const m of today.matches){
    assert.ok(!/ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်/u.test(m.dailyPreviewText),m.home);
-   assert.equal([...m.dailyPreviewText.matchAll(/\*\*[^*]+\*\*/g)].length,1,m.home);
-   assert.match(m.dailyPreviewText,/\*\*[^*]+ကို ရွေးချယ်ပါတယ်။\*\*$/u,m.home);
+   const uploadedConference=m.league==="UEFA Conference League";
+   assert.equal([...m.dailyPreviewText.matchAll(/\*\*[^*]+\*\*/g)].length,uploadedConference?2:1,m.home);
+   if(uploadedConference)assert.match(m.dailyPreviewText,/ခန့်မှန်းရလဒ်ကတော့ \*\*[^*]+\*\* ဖြစ်ပါတယ်။$/u,m.home);
+   else assert.match(m.dailyPreviewText,/\*\*[^*]+ကို ရွေးချယ်ပါတယ်။\*\*$/u,m.home);
    assert.ok(!Object.hasOwn(m,"pdfLastColumn"),m.home);
  }
 });

@@ -101,6 +101,12 @@ def main():
                 preview = match.get("dailyPreviewText")
                 if not isinstance(preview, str) or len(preview.strip()) < 150:
                     missing.append(idx)
+                elif today == "2026-10-15" and match.get("league") == "UEFA Conference League":
+                    # User-provided 18 Conference articles are verbatim, including
+                    # their independently bold predicted score pairs and closing text.
+                    if ("\n" in preview or preview.count("**") != 4 or
+                        not re.search(r"ခန့်မှန်းရလဒ်ကတော့\s*\*\*[^*]+\*\* ဖြစ်ပါတယ်။$", preview)):
+                        wrong_format.append(idx)
                 elif ("\n\n" in preview or preview.count("**") != 2 or
                       not re.search(r"\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$", preview) or
                       re.search(r"ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်", preview)):
@@ -137,7 +143,7 @@ def main():
             if missing:
                 errors.append(f"Matches lacking teams or full Burmese daily preview text: {missing}")
             if wrong_format:
-                errors.append(f"Normal preview must be one paragraph with a single bold pick and no predicted goal score: {wrong_format}")
+                errors.append(f"Preview format incorrect: preserve user-uploaded 15 Oct Conference prose; elsewhere use a single bold pick: {wrong_format}")
             if wrong_special_endings:
                 errors.append(f"Special Choice articles must end on the direct pick, with no trailing notes: {wrong_special_endings}")
             if invalid_standings:

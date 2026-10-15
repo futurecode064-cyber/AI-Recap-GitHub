@@ -36,9 +36,11 @@ test("normal website articles show one flowing Burmese paragraph with bold selec
   assert.ok(!/အနိုင်၊\\s*ရှုံး၊\\s*သရေ၊|ရှုံး၊\\s*နိုင်၊\\s*သရေ၊/.test(t),desc+": W/D/L badges belong in the form strip instead of serial recital");
 
   const emph=[...t.matchAll(/\*\*([^*\n]+)\*\*/g)].map(x=>x[1]);
-  assert.equal(emph.length,1,desc+": use only one bold span for the chosen team or goal total");
-  assert.match(emph[0],/ရွေး|ပိုမြင်|နှစ်သက်|ယုံကြည်|အားသာ|အနိုင်|မရှုံး/,desc+": first bold span is the reasoned match verdict");
-  assert.ok(!/ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်|\*\*\s*\d+\s*[-–:]\s*\d+\s*သို့မဟုတ်/u.test(t),desc+": preview must not predict final score");
+  const uploadedConference=(data.reportDate==="2026-10-15"&&m.league==="UEFA Conference League");
+  assert.equal(emph.length,uploadedConference?2:1,desc+": respect owner-uploaded editorial formatting");
+  assert.match(emph[0],/ရွေး|ပိုမြင်|နှစ်သက်|ယုံကြည်|အားသာ|အနိုင်|မရှုံး|မျှော်လင့်ထား/,desc+": first bold span must keep the exact user-written opinion, including draw predictions");
+  if(uploadedConference) assert.match(t,/ခန့်မှန်းရလဒ်ကတော့\s*\*\*[^*]+\*\* ဖြစ်ပါတယ်။$/u,desc+": preserve user's predicted scores verbatim");
+  else assert.ok(!/ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်|\*\*\s*\d+\s*[-–:]\s*\d+\s*သို့မဟုတ်/u.test(t),desc+": standard previews must not predict final score");
   assert.ok(m.homeDisplay&&m.awayDisplay,desc+": use source PDF Burmese display names");
   // UEFA first-round standings are optional until verified; never manufacture a rank.
   if(domestic.has(m.league)||(m.league==="UEFA Champions League"&&m.homeStanding&&m.awayStanding)){
