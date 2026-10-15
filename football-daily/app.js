@@ -1,4 +1,5 @@
 "use strict";
+ function stripScorePrediction(value){return String(value||"").replace(/\s*(?:ဖြစ်နိုင်တဲ့|ဖြစ်နိုင်သည့်|ခန့်မှန်း)\s*ဂိုးရလဒ်[^။\n]*[။]?/gu,"").trim();}
 const LEAGUE_NAMES={
  "Premier League":"ပရီးမီးယားလိဂ်","Championship":"ချန်ပီယံရှစ်",
  "League One":"အင်္ဂလန် လိဂ်ဝမ်း","La Liga":"လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂",
@@ -304,15 +305,16 @@ function renderMatch(match,i){
    const paragraphs=Array.isArray(match.specialAnalysisParagraphs)
     ?match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()):[];
    if(paragraphs.length){
-    paragraphs.forEach(p=>special.appendChild(appendBoldText(node("p","special-preview-paragraph"),p)));
+    paragraphs.forEach(p=>special.appendChild(appendBoldText(node("p","special-preview-paragraph"),stripScorePrediction(p))));
    }else special.appendChild(node("p","",NO_PREVIEW_TEXT));
    body.appendChild(special);
  }else{
    // All matches and league views retain ONE normal commentator-style preview.
    body.appendChild(node("h4","","ပွဲကြိုသုံးသပ်ချက်"));
    const original=textOrEmpty(match.dailyPreviewText);
-   body.appendChild(original
-    ?appendBoldText(node("p","daily-preview-verbatim"),original)
+   const noPredictions=stripScorePrediction(original);
+   body.appendChild(noPredictions
+    ?appendBoldText(node("p","daily-preview-verbatim"),noPredictions)
     :node("p","",NO_PREVIEW_TEXT));
  }
 

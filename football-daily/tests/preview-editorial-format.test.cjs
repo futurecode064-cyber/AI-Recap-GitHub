@@ -20,7 +20,7 @@ function assertStanding(s,label){
  assert.ok(s.points<=s.wins*3+s.draws,label+" points cannot exceed performance points; verified disciplinary point deductions may apply");
  assert.ok(s.position>=1,label+" invalid table rank");
 }
-test("normal website articles always use one flowing Burmese paragraph, bold verdict and exactly two bold score options",()=>{
+test("normal website articles show one flowing Burmese paragraph with bold selection only",()=>{
  assert.ok(Array.isArray(data.matches),"daily matches array required (empty dates are valid)");
  for(const [i,m] of data.matches.entries()){
   const desc="#"+(i+1)+" "+(m.homeDisplay||m.home)+" vs "+(m.awayDisplay||m.away);
@@ -36,10 +36,9 @@ test("normal website articles always use one flowing Burmese paragraph, bold ver
   assert.ok(!/အနိုင်၊\\s*ရှုံး၊\\s*သရေ၊|ရှုံး၊\\s*နိုင်၊\\s*သရေ၊/.test(t),desc+": W/D/L badges belong in the form strip instead of serial recital");
 
   const emph=[...t.matchAll(/\*\*([^*\n]+)\*\*/g)].map(x=>x[1]);
-  assert.equal(emph.length,2,desc+": use exactly two bold spans (verdict and scores)");
+  assert.equal(emph.length,1,desc+": use only one bold span for the chosen team or goal total");
   assert.match(emph[0],/ရွေး|ပိုမြင်|နှစ်သက်|ယုံကြည်|အားသာ|အနိုင်|မရှုံး/,desc+": first bold span is the reasoned match verdict");
-  assert.match(emph[1],/^\s*[0-9၀-၉]+\s*[-–:]\s*[0-9၀-၉]+\s*သို့မဟုတ်\s*[0-9၀-၉]+\s*[-–:]\s*[0-9၀-၉]+\s*$/,desc+": second bold span contains exactly two predictions");
-  assert.ok(t.indexOf("**"+emph[0]+"**")<t.indexOf("**"+emph[1]+"**"),desc+": verdict must precede scores");
+  assert.ok(!/ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်|\*\*\s*\d+\s*[-–:]\s*\d+\s*သို့မဟုတ်/u.test(t),desc+": preview must not predict final score");
   assert.ok(m.homeDisplay&&m.awayDisplay,desc+": use source PDF Burmese display names");
   // UEFA first-round standings are optional until verified; never manufacture a rank.
   if(domestic.has(m.league)||(m.league==="UEFA Champions League"&&m.homeStanding&&m.awayStanding)){

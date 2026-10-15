@@ -32,7 +32,7 @@ test("every published day with preview fixtures includes up to five current user
   const unwanted=/14\\.pdf|\\bPDF\\b|\\b1X2\\b|\\b1xBet\\b|\\bBet365\\b|full[- ]time|ဘော်ဒီ|ဂိုးပေါင်း|အကျောကြေး|အပေါ်အသင်း|ကြေးကွာခြား|ပေါက်ကြေး|မြန်မာကြေး|ဈေးကွက်/iu;
   assert.ok(!unwanted.test(prose),key+" has user-rejected odds/source boilerplate in Special Choice text");
   assert.equal(m.specialAnalysisParagraphs.length,4,key+" requires complete four-part independent analysis");
-  assert.ok(m.specialAnalysisParagraphs.at(-1).includes("**"),key+" needs bold verdict in concluding assessment");
+  assert.match(m.specialAnalysisParagraphs.at(-1),/\*\*[^*]+?\s*ကို ရွေးချယ်ပါတယ်။\*\*$/u,key+" must end exactly on a bold direct selection, with zero trailing caveats");
 
   assert.ok(!/ဖြစ်နိုင်တဲ့ ဂိုးရလဒ်|ခန့်မှန်းဂိုးရလဒ်|မရှုံးတဲ့ရွေးချယ်မှု|မရှုံး \(အသင်းဘက်\)/.test(prose),key+" must not include predicted scores or double-chance language");
   assert.ok(/ကို ရွေးချယ်ပါတယ်/.test(prose),key+" must end with a direct team or total selection");

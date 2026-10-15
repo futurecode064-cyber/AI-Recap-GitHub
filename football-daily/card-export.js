@@ -1,5 +1,6 @@
 "use strict";
 (function(){
+ function stripScorePrediction(value){return String(value||"").replace(/\s*(?:ဖြစ်နိုင်တဲ့|ဖြစ်နိုင်သည့်|ခန့်မှန်း)\s*ဂိုးရလဒ်[^။\n]*[။]?/gu,"").trim();}
  // A complete, responsive-height Canvas PNG that mirrors the user-approved on-screen
  // hero → Myanmar prices → Home WDL | 1X2 | Away WDL → full Burmese preview.
  const MM={"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Championship":"ချန်ပီယံရှစ်","La Liga":"လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂","Serie A":"အီတလီ စီးရီးအေ","Serie B":"အီတလီ စီးရီးဘီ","Bundesliga":"ဘွန်ဒက်စ်လီဂါ","Ligue 1":"လီဂူးဝမ်း","Ligue 2":"ပြင်သစ် လိဂ် ၂","UEFA Champions League":"ချန်ပီယံလိဂ်"};
@@ -63,9 +64,9 @@
   const home=String(match.home||""),away=String(match.away||"");
   // Special Choice exports contain ONLY specialAnalysisParagraphs; no duplicate normal preview.
   const specialOnly=opts.special===true;
-  const preview=String(match.dailyPreviewText||"ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ");
+  const preview=stripScorePrediction(match.dailyPreviewText||"ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ");
   const extra=specialOnly&&Array.isArray(match.specialAnalysisParagraphs)
-   ?match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()):[];
+   ?match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()).map(stripScorePrediction):[];
   const measure=create(1200,120).ctx;
   const lines=specialOnly?[]:paragraphLines(measure,preview,fullWidth-54,25);
   const extraBlocks=specialOnly

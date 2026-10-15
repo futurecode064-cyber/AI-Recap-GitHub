@@ -7,6 +7,7 @@ The professional report is created by the scheduled ChatGPT/GitHub publisher.
 import argparse
 import datetime as dt
 import json
+import re
 import sys
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -91,6 +92,7 @@ def main():
             missing = []
             invalid_standings = []
             wrong_format = []
+            wrong_special_endings = []
             unsupported_odds = []
             for idx, match in enumerate(matches, start=1):
                 if not isinstance(match, dict) or not match.get("home") or not match.get("away"):
@@ -99,8 +101,16 @@ def main():
                 preview = match.get("dailyPreviewText")
                 if not isinstance(preview, str) or len(preview.strip()) < 150:
                     missing.append(idx)
-                elif "\\n\\n" in preview or preview.count("**") != 4:
+                elif ("\n\n" in preview or preview.count("**") != 2 or
+                      not re.search(r"\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$", preview) or
+                      re.search(r"ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်", preview)):
                     wrong_format.append(idx)
+                if match.get("specialChoice") is True:
+                    paragraphs = match.get("specialAnalysisParagraphs")
+                    if (not isinstance(paragraphs, list) or not paragraphs or
+                        not isinstance(paragraphs[-1], str) or
+                        not re.search(r"\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$", paragraphs[-1])):
+                        wrong_special_endings.append(idx)
                 if require_structured_standings and match.get("league") in LEAGUE_STANDINGS:
                     for side in ("home", "away"):
                         record = match.get(f"{side}Standing")
@@ -127,7 +137,9 @@ def main():
             if missing:
                 errors.append(f"Matches lacking teams or full Burmese daily preview text: {missing}")
             if wrong_format:
-                errors.append(f"Normal preview must be one paragraph with two bold spans: {wrong_format}")
+                errors.append(f"Normal preview must be one paragraph with a single bold pick and no predicted goal score: {wrong_format}")
+            if wrong_special_endings:
+                errors.append(f"Special Choice articles must end on the direct pick, with no trailing notes: {wrong_special_endings}")
             if invalid_standings:
                 errors.append(f"Missing/invalid verified standings for BOTH sides (played, W-D-L, pts, pos, source): {invalid_standings}")
             if unsupported_odds:

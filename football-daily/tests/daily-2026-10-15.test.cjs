@@ -29,10 +29,12 @@ test("15 Oct shows 36 coherent one-paragraph previews and 5 separated Special Ch
  assert.deepEqual(today.matches.filter(m=>m.specialChoice).map(m=>m.specialChoiceRank),[1,2,3,4,5]);
  for(const m of today.matches){
   assert.ok(m.dailyPreviewText.length>=250,m.home);
-  assert.equal([...m.dailyPreviewText.matchAll(/\*\*[^*]+\*\*/g)].length,2,m.home);
+  assert.equal([...m.dailyPreviewText.matchAll(/\*\*[^*]+\*\*/g)].length,1,m.home);
   assert.ok(m.kickoffUtc.startsWith("2026-10-15T"),m.home);
   assert.ok(!m.dailyPreviewText.includes("မရှုံးတဲ့ရွေးချယ်မှု"),m.home);
-  if(m.specialChoice){assert.equal(m.specialAnalysisParagraphs?.length,4);assert.ok(m.specialAnalysisParagraphs.every(p=>p.length>320));assert.ok(m.specialAnalysisParagraphs.at(-1).includes("ကို ရွေးချယ်ပါတယ်"));assert.ok(!/ခန့်မှန်းဂိုးရလဒ်|ဖြစ်နိုင်တဲ့ ဂိုးရလဒ်/.test(m.specialAnalysisParagraphs.join(" ")));}
+  assert.ok(!/ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်/u.test(m.dailyPreviewText),m.home);
+  assert.ok(!Object.hasOwn(m,"pdfLastColumn"),m.home);
+  if(m.specialChoice){assert.equal(m.specialAnalysisParagraphs?.length,4);assert.ok(m.specialAnalysisParagraphs.every(p=>p.length>320));assert.match(m.specialAnalysisParagraphs.at(-1),/\*\*[^*]+?\s*ကို ရွေးချယ်ပါတယ်။\*\*$/u);assert.ok(!/ခန့်မှန်းဂိုးရလဒ်|ဖြစ်နိုင်တဲ့ ဂိုးရလဒ်/.test(m.specialAnalysisParagraphs.join(" ")));}
   for(const field of ["homeLastFive","awayLastFive"])for(const x of m[field]||[]){assert.match(x.sourceUrl,/^https:/);assert.match(x.date,/^2026-/);}
  }
 });
