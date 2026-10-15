@@ -9,7 +9,9 @@
 
   const leagueLabels={
     "UEFA Champions League":"ချန်ပီယံလိဂ်",
-    "Championship":"အင်္ဂလန် ချန်ပီယံရှစ်"
+    "Championship":"အင်္ဂလန် ချန်ပီယံရှစ်",
+    "UEFA Europa League":"ယူရိုပါလိဂ်",
+    "UEFA Conference League":"ယူရိုပါကွန်ဖရန့်လိဂ်"
   };
   function el(tag,cls,value){
     const e=document.createElement(tag);if(cls)e.className=cls;

@@ -13,7 +13,7 @@ BRANDS = {
     "bw-sport": ("BW SPORT ဘောလုံးဂျာနယ်", "#0856c4", "#072d77", "#d9eefe"),
     "ko-thet-family": ("Ko Thet Family ဘောလုံးဂျာနယ်", "#830b15", "#45060c", "#ffdc78")
 }
-LEAGUES = {"UEFA Champions League":"ချန်ပီယံလိဂ်","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်"}
+LEAGUES = {"UEFA Champions League":"ချန်ပီယံလိဂ်","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","UEFA Europa League":"ယူရိုပါလိဂ်","UEFA Conference League":"ယူရိုပါကွန်ဖရန့်လိဂ်"}
 COLS = [150,310,180,125,125,195,125,125,195]
 HEADERS = ["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","ကြေးပေးအသင်း","ဘော်ဒီ မူလ","ဘော်ဒီ ယခု","ဘော်ဒီ ကွာ","ဂိုး မူလ","ဂိုး ယခု","ဂိုး ကွာ"]
 MARGIN, ROW_HEIGHT, LEAGUE_HEIGHT, HEAD_HEIGHT = 25,80,60,53
