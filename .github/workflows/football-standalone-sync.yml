@@ -9,10 +9,6 @@ name: Mirror Verified Football Site to Cloudflare Production
 # Manual publishing only: no cron schedule and no automatic push trigger.
 on:
   workflow_dispatch:
-  # Temporary one-shot push trigger for requested 15 Oct mirror repair diagnostics; remove after run.
-  push:
-    branches: [main]
-    paths: ['.github/workflows/football-standalone-sync.yml']
 
 permissions:
   contents: write
@@ -72,14 +68,6 @@ jobs:
           STAGED_ROOT="$(git write-tree)"
           STAGED_TREE="$(git rev-parse "$STAGED_ROOT:football-daily")"
           if [[ "$STAGED_TREE" != "$SRC_TREE" ]]; then
-            echo "::group::Parity diagnosis: staging vs canonical source"
-            echo "Source tree: $SRC_TREE"
-            echo "Staged tree: $STAGED_TREE"
-            git -C "$RUNNER_TEMP/standalone-football" ls-tree -r "$SRC_TREE" > "$RUNNER_TEMP/source-tree-list.txt"
-            git ls-tree -r "$STAGED_TREE" > "$RUNNER_TEMP/staged-tree-list.txt"
-            diff -u "$RUNNER_TEMP/source-tree-list.txt" "$RUNNER_TEMP/staged-tree-list.txt" || true
-            git status --short --ignored -- football-daily/ | head -80 || true
-            echo "::endgroup::"
             echo "::error::File parity verification failed, production unchanged."
             exit 1
           fi
