@@ -67,7 +67,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          rsync -a --delete "$RUNNER_TEMP/standalone-football/football-daily/" football-daily/
+          rsync -a --checksum --delete "$RUNNER_TEMP/standalone-football/football-daily/" football-daily/
           git add -A -- football-daily
           STAGED_ROOT="$(git write-tree)"
           STAGED_TREE="$(git rev-parse "$STAGED_ROOT:football-daily")"
