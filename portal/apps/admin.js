@@ -136,7 +136,7 @@
     if(!email){setStatus("authStatus","Email အရင်ဖြည့်ပါ။","error");return;}
     setBusy(true);
     try{
-      await jsonRequest("/auth/v1/otp",{method:"POST",headers,body:JSON.stringify({email,create_user:false})});
+      await jsonRequest("/auth/v1/otp?redirect_to="+encodeURIComponent(new URL("admin.html",location.href).href),{method:"POST",headers,body:JSON.stringify({email,create_user:true})});
       $("otpFields").hidden=false;
       setStatus("authStatus","Email ထဲက Login Code ကို ဖြည့်ပါ။ Email Provider အလိုက် Magic Link လည်း ရောက်နိုင်ပါသည်။","ok");
     }catch(err){setStatus("authStatus",err.message,"error");}
@@ -166,5 +166,18 @@
     const saved=JSON.parse(sessionStorage.getItem(SESSION_KEY)||"null");
     if(saved?.access_token&&saved?.refresh_token)session=saved;
   }catch(_){}
+  // Supabase may send a verification magic link instead of a numeric OTP.
+  // If the mail redirects back here with a hash token, finish sign-in.
+  if (!session && location.hash && location.hash.includes("access_token=")) {
+    try {
+      const fields = new URLSearchParams(location.hash.slice(1));
+      const token = fields.get("access_token");
+      const refresh = fields.get("refresh_token");
+      if (token && refresh) {
+        saveSession({access_token:token,refresh_token:refresh,expires_in:Number(fields.get("expires_in") || 3600)});
+        history.replaceState(null,"",location.pathname+location.search);
+      }
+    } catch (_) {}
+  }
   if(session)loadDashboard();
 })();
