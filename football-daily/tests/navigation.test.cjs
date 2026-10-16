@@ -232,8 +232,8 @@ test('mobile odds keeps screenshot-style table grid with horizontal scrolling in
  const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
  const css=fs.readFileSync(path.join(root,'odds-sheet-theme.css'),'utf8');
  assert.ok(html.includes('id="oddsPngBtn"'));
- assert.ok(html.includes('daily-image-export.js?v=odds-compact-20261016'));
- assert.ok(html.includes('odds-sheet-theme.css?v=odds-compact-20261016'));
+ assert.ok(html.includes('daily-image-export.js?v=odds-png-only-20261016'));
+ assert.ok(html.includes('odds-sheet-theme.css?v=odds-png-only-20261016'));
  assert.ok(html.indexOf('odds-sheet-theme.css')>html.indexOf('</style>'),'New stylesheet must override old inline card CSS');
  assert.ok(css.includes('overflow-x:auto!important'));
  assert.ok(css.includes('display:table-row!important'));
@@ -282,12 +282,12 @@ test('Canvas exporter includes all odds entries and only confirmed results',()=>
  assert.ok(js.includes('async function saveResults({matches,date})'));
  assert.ok(js.includes('matches.filter(verified)'));
  assert.ok(js.includes('m.status==="finished"'));
- assert.ok(js.includes('window.FutureCodeDailyExport={saveOdds,saveOddsSmart,saveResults}'));
+ assert.ok(js.includes('window.FutureCodeDailyExport={saveOdds,saveResults}'));
  const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
  const odds=fs.readFileSync(path.join(root,'odds.js'),'utf8');
  assert.ok(app.includes('window.FutureCodeDailyExport.saveResults'));
   assert.ok(odds.includes('odds-league-download'), 'Each odds league has its own PNG download action');
-  assert.ok(app.includes('allPreviewsDownloadBtn'), 'Published preview page has all-match batch export');
+  assert.ok(!app.includes('allPreviewsDownloadBtn'), 'No all-previews ZIP download should remain');
  assert.ok(odds.includes('window.FutureCodeDailyExport.saveOdds'));
 });
 
