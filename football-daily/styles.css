@@ -30,7 +30,7 @@ footer{border-top:1px solid #38484a;background:#10181a}.footer-inner{padding:28p
 @media(max-width:620px){.special-analysis{padding:16px 14px}}
 
 /* Conversational Burmese match-preview: only the recommended side and score stand out. */
-.daily-preview-verbatim{white-space:normal;line-height:2.45;text-align:left}
+.daily-preview-verbatim{white-space:pre-line;line-height:2.45;text-align:left}
 .editorial-highlight{font-weight:800;color:#ffe0b4}
 @media(max-width:620px){.daily-preview-verbatim{line-height:2.3}}
 
