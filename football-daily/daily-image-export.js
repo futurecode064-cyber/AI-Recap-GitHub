@@ -4,6 +4,19 @@
  function grouped(matches){const g=new Map();for(const m of matches){const name=m.league||"အခြားပြိုင်ပွဲ";if(!g.has(name))g.set(name,[]);g.get(name).push(m)}return [...g.entries()]}
  const leagues={"UEFA Champions League":"ချန်ပီယံလိဂ်","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","Swedish Superettan":"ဆွီဒင် စူပါတန် လိဂ်","German 3. Liga":"ဂျာမန် ဘွန်ဒစ်လီဂါ ၃","Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Veikkausliiga":"ဖင်လန် လိဂ်","Eliteserien":"နော်ဝေး လိဂ်","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","Turkish Super Lig":"တူရကီ စူပါလိဂ်"};
  const crests={"Premier League":"https://crests.football-data.org/PL.png","Serie A":"https://crests.football-data.org/SA.png","La Liga":"https://crests.football-data.org/PD.png","La Liga 2":"https://crests.football-data.org/SD.png"};
+
+ async function encodePng(canvas){
+  return new Promise((resolve,reject)=>{
+   let done=false;
+   const timer=setTimeout(()=>{if(!done){done=true;reject(Error("PNG export timed out"));}},30000);
+   try{canvas.toBlob(blob=>{
+    if(done)return;
+    done=true;clearTimeout(timer);
+    if(blob&&blob.size)resolve(blob);else reject(Error("PNG export failed"));
+   },"image/png");}
+   catch(err){if(!done){done=true;clearTimeout(timer);reject(err);}}
+  });
+ }
  function verified(m){return m&&m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(String(m.finalScore||""))}
  async function saveOdds(data,options={}){
   if(!data||!Array.isArray(data.matches)||!data.matches.length)throw Error("No odds ready to export");
@@ -81,7 +94,70 @@
   }
   text(ctx,"ပေါက်ကြေးများသည် အိုင်ဘတ် ခွန်ရှစ်ကိုး ဆိုဒ်မှာ မနက်ပိုင်း ဖွင့် ထားသော မြန်မာကြေး များဖြစ်ပါသည်။",W/2,H-37,18,palette.bodyText,false,"center",W-75);
   const leagueSuffix=options.league?"-"+String(options.league).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60):"";
-  await download(canvas,brand+"-odds-"+kit.day(data.reportDate)+leagueSuffix+".png");
+  const filename=brand+"-odds-"+kit.day(data.reportDate)+leagueSuffix+".png";
+  if(options.asBlob===true)return {filename,blob:await encodePng(canvas)};
+  await download(canvas,filename);
+  return {filename,fileCount:1,matchCount:data.matches.length,format:"png"};
+ }
+
+ // Store-only ZIP with CRC-32: exactly two separate PNG pages in one download.
+ // Entire original league rows remain present, in the original order.
+ function crc32(bytes){
+  let n=0xffffffff;
+  for(const b of bytes){n^=b;for(let k=0;k<8;k++)n=(n>>>1)^((n&1)?0xedb88320:0);}
+  return (n^0xffffffff)>>>0;
+ }
+ async function zipPngs(files){
+  if(files.length!==2)throw Error("Expected two PNG pages");
+  const encoder=new TextEncoder(),chunks=[],directory=[];
+  const w16=(v,p,n)=>v.setUint16(p,n,true),w32=(v,p,n)=>v.setUint32(p,n>>>0,true);
+  let offset=0;
+  for(const file of files){
+   const name=encoder.encode(file.filename),bytes=new Uint8Array(await file.blob.arrayBuffer());
+   if(!name.length||name.length>65535||bytes.length>0xffffffff)throw Error("ZIP entry size invalid");
+   const crc=crc32(bytes),local=new Uint8Array(30),lv=new DataView(local.buffer);
+   w32(lv,0,0x04034b50);w16(lv,4,20);w16(lv,6,0x0800);w16(lv,8,0);
+   w16(lv,10,0);w16(lv,12,0x0021);w32(lv,14,crc);w32(lv,18,bytes.length);
+   w32(lv,22,bytes.length);w16(lv,26,name.length);w16(lv,28,0);
+   chunks.push(local,name,bytes);
+   const central=new Uint8Array(46),cv=new DataView(central.buffer);
+   w32(cv,0,0x02014b50);w16(cv,4,20);w16(cv,6,20);w16(cv,8,0x0800);
+   w16(cv,10,0);w16(cv,12,0);w16(cv,14,0x0021);w32(cv,16,crc);
+   w32(cv,20,bytes.length);w32(cv,24,bytes.length);w16(cv,28,name.length);
+   w16(cv,30,0);w16(cv,32,0);w16(cv,34,0);w16(cv,36,0);
+   w32(cv,38,0);w32(cv,42,offset);
+   directory.push(central,name);
+   offset+=local.length+name.length+bytes.length;
+   if(offset>0xffffffff)throw Error("ZIP exceeds size limit");
+  }
+  const centralSize=directory.reduce((n,b)=>n+b.length,0),end=new Uint8Array(22);
+  const ev=new DataView(end.buffer);
+  w32(ev,0,0x06054b50);w16(ev,4,0);w16(ev,6,0);
+  w16(ev,8,2);w16(ev,10,2);w32(ev,12,centralSize);w32(ev,16,offset);w16(ev,20,0);
+  return new Blob([...chunks,...directory,end],{type:"application/zip"});
+ }
+ function downloadZip(blob,filename){
+  const url=URL.createObjectURL(blob),link=document.createElement("a");
+  link.href=url;link.download=filename;
+  document.body.appendChild(link);link.click();link.remove();
+  const revokeTimer=setTimeout(()=>URL.revokeObjectURL(url),60000);
+  if(typeof revokeTimer?.unref==="function")revokeTimer.unref();
+ }
+ async function saveOddsSmart(data,options={}){
+  if(!data||!Array.isArray(data.matches)||!data.matches.length)throw Error("No selected matches");
+  if(data.matches.length<=20)return saveOdds(data,options);
+  const midpoint=Math.ceil(data.matches.length/2);
+  const brand=window.FutureCodeBrandConfig?.id||"future-code";
+  const date=K().day(data.reportDate);
+  const parts=[data.matches.slice(0,midpoint),data.matches.slice(midpoint)];
+  const files=[];
+  for(let i=0;i<2;i++){
+   const png=await saveOdds({...data,matches:parts[i]},{...options,asBlob:true});
+   files.push({filename:brand+"-odds-"+date+"-part-"+String(i+1).padStart(2,"0")+".png",blob:png.blob});
+  }
+  const zip=await zipPngs(files);
+  downloadZip(zip,brand+"-odds-"+date+"-two-pages.zip");
+  return {filename:brand+"-odds-"+date+"-two-pages.zip",fileCount:2,matchCount:data.matches.length,format:"zip"};
  }
  async function saveResults({matches,date}){
   const finals=Array.isArray(matches)?matches.filter(verified):[];
@@ -115,5 +191,5 @@
   const brand=window.FutureCodeBrandConfig?.id;
   await download(canvas,(brand?brand+"-":"football-")+"goal-results-"+kit.day(date)+".png");
  }
- window.FutureCodeDailyExport={saveOdds,saveResults};
+ window.FutureCodeDailyExport={saveOdds,saveOddsSmart,saveResults};
 })();
