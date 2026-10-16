@@ -2,7 +2,7 @@
 const {test}=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const txt=p=>fs.readFileSync(path.join(root,p),"utf8");
-const day=JSON.parse(txt("data/today.json"));
+const day=JSON.parse(txt("data/archive/2026-10-15.json"));
 const ledger=JSON.parse(txt("data/odds/2026-10-15.json"));
 const europa=txt("data/editorial/2026-10-15-europa-user-verbatim.md");
 const conference=txt("data/editorial/2026-10-15-conference-user-verbatim.md");
