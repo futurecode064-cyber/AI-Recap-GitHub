@@ -24,8 +24,8 @@
   const {create,fill,line,text,fit,fonts,preloadImages,crest,download}=kit;
   const groups=grouped(data.matches);
   // Preserve full single-image capture: every league, original Myanmar label and row.
-  // Height formula covers every 62px league bar, 44px header and 73px body row.
-  const W=1360,M=24,H=222+groups.reduce((n,g)=>n+131+g[1].length*73,0)+80;
+  // Height includes each 62px league bar, 62px original/current header and every 73px fixture row.
+  const W=1360,M=24,H=222+groups.reduce((n,g)=>n+149+g[1].length*73,0)+80;
   const {canvas,ctx}=create(W,H);
   await Promise.all([fonts(),preloadImages(data.matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).concat(groups.map(g=>crests[g[0]])))]);
   const brandName=document.documentElement?.dataset?.footballBrandName||"FUTURE CODE FOOTBALL DAILY";
@@ -63,15 +63,29 @@
    crest(ctx,crests[league],M+13,y+9,44,"⚽");
    text(ctx,leagues[league]||league,M+73,y+33,26,white,true,"left",W-M*2-95);
    y+=69;
-   fill(ctx,M,y,W-M*2,44,palette.deep);
+   fill(ctx,M,y,W-M*2,62,palette.deep);
    const titles=["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း","ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး","အင်တာနက်ခန့်မှန်းချက်"];
    for(let i=0;i<titles.length;i++){
-    text(ctx,titles[i],xs[i]+widths[i]/2,y+23,fit(ctx,titles[i],widths[i]-12,17,12),white,true,"center",widths[i]-12);
+    const x=xs[i],w=widths[i];
+    const split=i===3||i===4;
+    text(ctx,titles[i],x+w/2,y+(split?19:32),fit(ctx,titles[i],w-12,17,12),white,true,"center",w-12);
+    if(split){
+     fill(ctx,x+2,y+30,w/2-4,27,palette.header,5);
+     fill(ctx,x+w/2+2,y+30,w/2-4,27,"#f0f5f3",5);
+     text(ctx,"မူလ",x+w/4,y+44,15,white,true,"center",w/2-10);
+     text(ctx,"ယခု",x+3*w/4,y+44,15,palette.bodyText,true,"center",w/2-10);
+     fill(ctx,x+w/2,y+30,1,27,"#ffffffa0");
+    }
    }
-   y+=44;
+   y+=62;
    for(const [index,m] of matches.entries()){
     fill(ctx,M,y,W-M*2,73,index%2===0?white:light);
     fill(ctx,xs[2],y,widths[2],73,index%2===0?upper:upperAlt);
+    // Latest quotes are pale-green cells, left empty until the update arrives.
+    for(const i of [3,4]){
+     fill(ctx,xs[i]+widths[i]/2,y,widths[i]/2,73,index%2===0?"#eef7f2":"#e3f0e9");
+     fill(ctx,xs[i]+widths[i]/2,y,1,73,rule);
+    }
     // Spreadsheet-style vertical and horizontal rules stay in the exported PNG.
     for(let i=0;i<xs.length;i++)fill(ctx,xs[i],y,1,73,rule);
     line(ctx,M,y+72,W-M*2,rule);
@@ -85,8 +99,18 @@
     text(ctx,"VS",mid,y+37,14,"#9d2636",true,"center");
     text(ctx,away,mid+83,y+37,fit(ctx,away,115,18,11),palette.bodyText,true,"left",115);
     text(ctx,m.upperTeam||"—",xs[2]+widths[2]/2,y+37,fit(ctx,m.upperTeam||"—",widths[2]-16,19,12),palette.bodyText,true,"center",widths[2]-16);
-    text(ctx,m.bodyOdds??"—",xs[3]+widths[3]/2,y+37,20,palette.bodyText,true,"center",widths[3]-12);
-    text(ctx,m.goalTotalOdds??"—",xs[4]+widths[4]/2,y+37,20,palette.bodyText,true,"center",widths[4]-12);
+    for(const [i,oldValue,latestValue] of [
+     [3,m.bodyOdds,m.currentBodyOdds],
+     [4,m.goalTotalOdds,m.currentGoalTotalOdds]
+    ]){
+     const x=xs[i],w=widths[i],half=w/2;
+     const original=String(oldValue??"");
+     text(ctx,original,x+half/2,y+37,fit(ctx,original,half-10,20,12),palette.bodyText,true,"center",half-10);
+     if(latestValue!==null&&latestValue!==undefined&&String(latestValue).trim()!==""){
+      const updated=String(latestValue);
+      text(ctx,updated,x+half*1.5,y+37,fit(ctx,updated,half-10,20,12),"#164c3d",true,"center",half-10);
+     }
+    }
     text(ctx,m.pdfLastColumn??"—",xs[5]+widths[5]/2,y+37,20,palette.bodyText,true,"center",widths[5]-12);
     y+=73;
    }
