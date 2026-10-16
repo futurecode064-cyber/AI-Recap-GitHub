@@ -232,8 +232,8 @@ test('mobile odds keeps screenshot-style table grid with horizontal scrolling in
  const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
  const css=fs.readFileSync(path.join(root,'odds-sheet-theme.css'),'utf8');
  assert.ok(html.includes('id="oddsPngBtn"'));
- assert.ok(html.includes('daily-image-export.js?v=odds-filter-20261016'));
- assert.ok(html.includes('odds-sheet-theme.css?v=odds-filter-20261016'));
+ assert.ok(html.includes('daily-image-export.js?v=odds-compare-20261016'));
+ assert.ok(html.includes('odds-sheet-theme.css?v=odds-compare-20261016'));
  assert.ok(html.indexOf('odds-sheet-theme.css')>html.indexOf('</style>'),'New stylesheet must override old inline card CSS');
  assert.ok(css.includes('overflow-x:auto!important'));
  assert.ok(css.includes('display:table-row!important'));
