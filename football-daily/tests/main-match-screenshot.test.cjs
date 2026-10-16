@@ -8,7 +8,7 @@ const root=path.resolve(__dirname,"..");
 
 test("main site only loads the fast native PNG wrapper (no blocking DOM screenshot library)",()=>{
  const html=fs.readFileSync(path.join(root,"index.html"),"utf8");
- assert.ok(html.includes("main-match-screenshot.js?v=20261016-fast-main-png"));
+ assert.ok(html.includes("main-match-screenshot.js?v=20261016-transparent-all"));
  for(const forbidden of ["vendor/dom-to-image.min.js","dom-capture.js"])
   assert.ok(!html.includes(forbidden),"Slow DOM capture must not load: "+forbidden);
  const scripts=["card-export.js","canvas-image-kit.js","main-match-screenshot.js","app.js"];
@@ -43,7 +43,9 @@ test("single-match main PNG immediately uses native Canvas with full text and tr
  assert.match(opts.downloadFilename,/ဘားမင်ဂမ်/);
  assert.match(opts.downloadFilename,/\.png$/);
  const canvas=fs.readFileSync(path.join(root,"card-export.js"),"utf8");
- assert.ok(canvas.includes('if(opts.mainScreenshot!==true)fill(ctx,0,0,W,H,C.bg)'));
+ assert.ok(canvas.includes('if(!transparent)fill(ctx,0,0,W,H,C.bg)'));
+ assert.ok(canvas.includes('const fill=transparent?()=>{}:paintFill'),"Panel backgrounds must be skipped in main PNGs");
+ assert.ok(canvas.includes('const textKit=transparent?{...k,text}:k'),"Burmese article must retain readable outlined letters");
  assert.ok(canvas.includes('opts.downloadFilename'));
  assert.ok(!canvas.includes('analysis-toggle'),"PNG never prints read/collapse toggle");
 });

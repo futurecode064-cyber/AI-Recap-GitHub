@@ -60,8 +60,9 @@
  async function preload(urls){
   await Promise.all([...new Set(urls.filter(Boolean))].map(loadImage));
  }
- function crest(ctx,url,x,y,size,label=""){
-  fill(ctx,x,y,size,size,"#eef2f0",size/2);
+ function crest(ctx,url,x,y,size,label="",noBackground=false){
+  // Transparent standalone match PNGs keep crests without white logo tiles.
+  if(!noBackground)fill(ctx,x,y,size,size,"#eef2f0",size/2);
   const img=imageCache.get(url);
   if(img){ // data is loaded asynchronously. drawLogo() receives resolved images via resolved cache
    const found=resolved.get(url);
@@ -71,7 +72,7 @@
     try{ctx.drawImage(found,x+(size-w)/2,y+(size-h)/2,w,h);return}catch(_){}
    }
   }
-  text(ctx,String(label||"?").slice(0,2),x+size/2,y+size/2,Math.max(10,Math.floor(size*.27)),"#263e3f",true,"center",size-6);
+  text(ctx,String(label||"?").slice(0,2),x+size/2,y+size/2,Math.max(10,Math.floor(size*.27)),noBackground?"#ffffff":"#263e3f",true,"center",size-6);
  }
  const resolved=new Map();
  async function preloadImages(urls){

@@ -58,7 +58,34 @@
   if(!match||!match.home||!match.away)throw Error("Missing team identities");
   const k=window.FutureCodeCanvasKit;
   if(!k)throw Error("Canvas exporter is unavailable");
-  const {C,create,fill,line,text,fit,fonts,preloadImages,crest,download}=k;
+  const {C,create,fill:paintFill,line:paintLine,text:paintText,fit,fonts,preloadImages,crest:paintCrest,download}=k;
+  // Main-page single-match PNG: ALL card/page backdrops are transparent.
+  // The original branded-site and batch Canvas rendering is unchanged.
+  const transparent=opts.mainScreenshot===true;
+  const fill=transparent?()=>{}:paintFill;
+  const line=transparent?()=>{}:paintLine;
+  const crest=transparent
+    ?(ctx,url,x,y,size,label)=>paintCrest(ctx,url,x,y,size,label,true)
+    :paintCrest;
+  const text=transparent
+    ?(ctx,value,x,y,px=21,color=C.pale,bold=false,align="left",max)=>{
+      // A glyph outline (not a rectangular panel) keeps text visible on
+      // both light and dark photos behind a transparent PNG.
+      if(typeof ctx.strokeText==="function"){
+        ctx.save();
+        ctx.font=(bold?800:500)+" "+px+'px "Noto Sans Myanmar",sans-serif';
+        ctx.textAlign=align;ctx.textBaseline="middle";
+        ctx.strokeStyle="rgba(0,0,0,0.95)";
+        ctx.lineWidth=Math.max(2.3,px*.14);
+        ctx.lineJoin="round";
+        if(max)ctx.strokeText(String(value??""),x,y,max);
+        else ctx.strokeText(String(value??""),x,y);
+        ctx.restore();
+      }
+      return paintText(ctx,value,x,y,px,color,bold,align,max);
+    }
+    :paintText;
+  const textKit=transparent?{...k,text}:k;
   await fonts();
   const W=1200,M=24,fullWidth=W-2*M;
   const home=String(match.home||""),away=String(match.away||"");
@@ -83,9 +110,8 @@
   const isKTF=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
   const my=match.myanmarOdds||{};
   await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl].filter(Boolean));
-  // Main-site standalone match images have transparent OUTER page/background.
-  // The article panels themselves remain opaque and readable.
-  if(opts.mainScreenshot!==true)fill(ctx,0,0,W,H,C.bg);
+  // A blank Canvas is transparent by default; omit ALL card/background fills.
+  if(!transparent)fill(ctx,0,0,W,H,C.bg);
   fill(ctx,M,14,fullWidth,H-34,C.head,12);
   fill(ctx,M,14,fullWidth,66,C.bg,10);
   text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+16,46,22,C.orange,true);
@@ -161,11 +187,11 @@
   if(specialOnly){
    // Do not print the standard dailyPreviewText or a second article heading.
    for(const block of extraBlocks){
-    y=drawParagraph(ctx,k,block,M+25,y,23,43);
+    y=drawParagraph(ctx,textKit,block,M+25,y,23,43);
     y+=18;
    }
   }else{
-   y=drawParagraph(ctx,k,lines,M+25,y,25,49);
+   y=drawParagraph(ctx,textKit,lines,M+25,y,25,49);
   }
   line(ctx,M,H-55,fullWidth);
   text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+10,H-31,20,C.orange,true);
