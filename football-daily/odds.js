@@ -38,7 +38,7 @@ function leagueHeading(league){
 function render(data){
  const root=document.getElementById("oddsList");root.replaceChildren();
  document.getElementById("oddsCount").textContent=String(data.matches.length);
- document.getElementById("oddsDate").textContent=data.reportDate.split("-").reverse().join("/")+" · အာရှစျေးကွက် မနက်ပိုင်းကြေး";
+ document.getElementById("oddsDate").textContent=data.reportDate.split("-").reverse().join("/")+" · မူလ (မနက်) / ယခု (နေ့ခင်း၊ ညနေ)";
  const grouped=new Map();
  for(const match of data.matches){if(!grouped.has(match.league))grouped.set(match.league,[]);grouped.get(match.league).push(match);}
  for(const [league,matches] of grouped){
@@ -63,21 +63,70 @@ function render(data){
   });
   header.appendChild(button);section.appendChild(header);
   const wrap=element("div","odds-table-wrap"),table=element("table","odds-table");
-  const thead=element("thead"),tr=element("tr");
-  for(const name of ["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း","ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး","အင်တာနက်ခန့်မှန်းချက်"])
-   tr.appendChild(element("th","",name));
-  thead.appendChild(tr);table.appendChild(thead);const tbody=element("tbody");
+  const columns=element("colgroup");
+  for(const width of ["12%","32%","16%","8%","8%","8%","8%","8%"]){
+   const col=element("col");col.style.width=width;columns.appendChild(col);
+  }
+  table.appendChild(columns);
+  const thead=element("thead"),tr=element("tr","odds-heading-row"),sub=element("tr","odds-subheading-row");
+  for(const name of ["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း"]){
+   const th=element("th","odds-heading-fixed",name);th.rowSpan=2;tr.appendChild(th);
+  }
+  for(const name of ["ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး"]){
+   const th=element("th","odds-heading-pair",name);th.colSpan=2;tr.appendChild(th);
+   sub.appendChild(element("th","odds-sub-original","မူလ"));
+   sub.appendChild(element("th","odds-sub-current","ယခု"));
+  }
+  const last=element("th","odds-heading-fixed","အင်တာနက်ခန့်မှန်းချက်");last.rowSpan=2;tr.appendChild(last);
+  thead.appendChild(tr);thead.appendChild(sub);table.appendChild(thead);const tbody=element("tbody");
   for(const m of matches){
    const row=element("tr");
    const time=m.kickoffDisplay||m.kickoff||"";
    const t=element("td","time",time),pair=element("td","team-pair");
    pair.appendChild(matchCell(m));
-   append(row,t,pair,element("td","upper",m.upperTeam),element("td","price",m.bodyOdds),element("td","price",m.goalTotalOdds),element("td","prediction",m.pdfLastColumn));
+   const bodyLatest=element("td","price odds-current",m.currentBodyOdds??"");
+   const goalLatest=element("td","price odds-current",m.currentGoalTotalOdds??"");
+   if(!m.currentBodyOdds)bodyLatest.setAttribute("aria-label","ယခု ဘော်ဒီကြေး မတင်ရသေးပါ");
+   if(!m.currentGoalTotalOdds)goalLatest.setAttribute("aria-label","ယခု ဂိုးပေါင်းကြေး မတင်ရသေးပါ");
+   append(row,t,pair,element("td","upper",m.upperTeam),
+    element("td","price odds-original",m.bodyOdds??""),bodyLatest,
+    element("td","price odds-original",m.goalTotalOdds??""),goalLatest,
+    element("td","prediction",m.pdfLastColumn));
    tbody.appendChild(row);
   }
   table.appendChild(tbody);wrap.appendChild(table);section.appendChild(wrap);root.appendChild(section);
  }
 }
+
+/* Keep source morning prices immutable; only add verified afternoon quotes
+ * from the same-day supplemental report to precisely corresponding PDF rows.
+ * Unknown, outdated or mismatched rows remain blank rather than guessed. */
+function mergeLatestOdds(morning,update){
+ if(!morning||!Array.isArray(morning.matches))throw Error("Missing original odds");
+ const blank=morning.matches.map(m=>({...m,currentBodyOdds:"",currentGoalTotalOdds:""}));
+ if(!update||update.reportDate!==morning.reportDate||!Array.isArray(update.matches))
+  return {...morning,matches:blank};
+ const byRow=new Map();
+ for(const item of update.matches){
+  const row=Number(item.row);
+  if(!Number.isSafeInteger(row)||row<1||byRow.has(row))continue;
+  byRow.set(row,item);
+ }
+ const merged=blank.map((m,index)=>{
+  const row=Number(m.pdfRow||m.number||index+1),x=byRow.get(row);
+  if(!x)return m;
+  if(["league","home","away","upperTeam","kickoffDisplay"].some(k=>String(x[k]??"")!==String(m[k]??"")))return m;
+  if(String(x.morningBodyOdds)!==String(m.bodyOdds)||String(x.morningGoalTotalOdds)!==String(m.goalTotalOdds))return m;
+  const currentBodyOdds=typeof x.eveningBodyOdds==="string"?x.eveningBodyOdds.trim():"";
+  const currentGoalTotalOdds=typeof x.eveningGoalTotalOdds==="string"?x.eveningGoalTotalOdds.trim():"";
+  return {...m,
+   currentBodyOdds:/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(currentBodyOdds)?currentBodyOdds:"",
+   currentGoalTotalOdds:/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(currentGoalTotalOdds)?currentGoalTotalOdds:""
+  };
+ });
+ return {...morning,matches:merged};
+}
+
 let loadedSheet=null;
 
 let selectedLeagues=new Set();
@@ -146,8 +195,21 @@ async function load(){
   if(!response.ok)throw Error("HTTP "+response.status);
   const data=await response.json();
   if(data.reportDate!==day||!Array.isArray(data.matches))throw Error("invalid sheet");
-  loadedSheet=data;render(data);
-  setupLeagueFilter(data);
+  loadedSheet=mergeLatestOdds(data,null);render(loadedSheet);
+  setupLeagueFilter(loadedSheet);
+  // Supplemental afternoon sheet is optional; it NEVER creates a new section.
+  // The same export dataset is shared by every branded site and its PNG/ZIP.
+  try{
+   const latestUrl=new URL("evening/"+day+".json",base);
+   const updated=await fetch(latestUrl.href,{cache:"no-store"});
+   if(updated.ok){
+    const supplement=await updated.json();
+    if(loadedSheet?.reportDate===day){
+     loadedSheet=mergeLatestOdds(data,supplement);
+     render(loadedSheet);
+    }
+   }
+  }catch(err){console.info("ယခုကြေး မရသေးပါ — မူလကြေးကိုသာ ပြသထားသည်",err);}
  }catch(err){
   console.error("Daily odds loading error",err);
   loadedSheet=null;
@@ -164,13 +226,3 @@ document.addEventListener("DOMContentLoaded",()=>{
  load();
 });
 
-
-// The evening comparison is optional per date and uses the same shared script
-// in all four branded odds pages. Morning data and its downloads stay untouched.
-(function(){
- const script=document.currentScript;
- const base=new URL("./",script&&script.src?script.src:document.baseURI);
- const module=document.createElement("script");
- module.src=new URL("evening-odds.js?v=20261014-staticpng-3",base).href;
- document.head.appendChild(module);
-})();
