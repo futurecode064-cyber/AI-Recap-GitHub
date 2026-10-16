@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-16",
   "apps": [
     {
       "id": "ai-studio",
@@ -39,6 +39,58 @@
       "sha256": "c6c3270ae41e82f4b40f7da5fca9231a5b007c78b1ee5cef090ccc297b5483b4",
       "certificateSha256": "f92280389bda918d496d604172baf2b3febd8dcd2b9a48f84e540a8acb6e1e5d",
       "releasedAt": "2026-10-10"
+    },
+    {
+      "id": "daily-money",
+      "name": "Future Code Daily Money",
+      "packageName": "com.futurecode.dailymoney",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://futurecodeaistudio.floot.app/_cdn/static/b7d29076-b342-4941-add5-f755dcd8cb9d-FutureCode_DailyMoney_v1.0.1.apk",
+      "sizeBytes": 13395794,
+      "sha256": "1ff7c2968c662feb2b3052e331a1970c7a8f85e13f987f37342050b9ac017f74",
+      "certificateSha256": "d6d20d67f2a43acf88c7c98c302f026f7659ab49801b8b11e0feaafa318cbc40",
+      "releasedAt": "2026-10-16"
+    },
+    {
+      "id": "medicine-reminder",
+      "name": "Future Code Medicine Reminder",
+      "packageName": "com.futurecode.medicinereminder",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://futurecodeaistudio.floot.app/_cdn/static/d93fb14d-411d-4b95-b19e-c2110e25287b-FutureCode_MedicineReminder_v1.0.1.apk",
+      "sizeBytes": 11936079,
+      "sha256": "79915a083b58d9290fdce2b3ed02b8a4c4a7079732fba654ece535667339f947",
+      "certificateSha256": "d6d20d67f2a43acf88c7c98c302f026f7659ab49801b8b11e0feaafa318cbc40",
+      "releasedAt": "2026-10-16"
+    },
+    {
+      "id": "kids-learning",
+      "name": "Future Code Kids Learning",
+      "packageName": "com.futurecode.kidslearning",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://futurecodeaistudio.floot.app/_cdn/static/0015631a-c92a-42b8-ab9a-4699db99a31b-FutureCode_KidsLearning_v1.0.1.apk",
+      "sizeBytes": 7894848,
+      "sha256": "08b5b9f92a00a2e48769f2a96179047fb9ec359468c8a1272e5731465fac32de",
+      "certificateSha256": "d6d20d67f2a43acf88c7c98c302f026f7659ab49801b8b11e0feaafa318cbc40",
+      "releasedAt": "2026-10-16"
+    },
+    {
+      "id": "safety-guide",
+      "name": "Future Code Safety Guide",
+      "packageName": "com.futurecode.safetyguide",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://futurecodeaistudio.floot.app/_cdn/static/2b9b785c-89c7-4336-aea7-854ccd445632-FutureCode_SafetyGuide_v1.0.1.apk",
+      "sizeBytes": 11903998,
+      "sha256": "519e2f8bf7e0162a158e416be0d844c0c57b817dac1c5facbc45ab7941837ae4",
+      "certificateSha256": "d6d20d67f2a43acf88c7c98c302f026f7659ab49801b8b11e0feaafa318cbc40",
+      "releasedAt": "2026-10-16"
     }
   ]
 }

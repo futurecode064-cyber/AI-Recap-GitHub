@@ -9,7 +9,11 @@
     "Myanmar-Kyar-Kwet.apk": "myanmar-kyar",
     "Future_Code_Auto_Video_Editor_v2.0.1_FIXED.apk": "video-cutter",
     "Future_Code_AI_Astrology_v1.1.apk": "ai-astrology",
-    "El_Nino_Protection_v1.2_Official.apk": "el-nino"
+    "El_Nino_Protection_v1.2_Official.apk": "el-nino",
+    "FutureCode_DailyMoney_v1.0.1.apk": "daily-money",
+    "FutureCode_MedicineReminder_v1.0.1.apk": "medicine-reminder",
+    "FutureCode_KidsLearning_v1.0.1.apk": "kids-learning",
+    "FutureCode_SafetyGuide_v1.0.1.apk": "safety-guide"
   });
   function uuid() {
     if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
@@ -47,7 +51,8 @@
     let filename;
     try { filename = decodeURIComponent(new URL(anchor.href, location.href).pathname.split('/').pop()); }
     catch (_) { return; }
-    const app = knownApps[filename];
+    const app = anchor.dataset.appKey || knownApps[filename] ||
+      Object.entries(knownApps).find(([name]) => filename.endsWith('-' + name))?.[1];
     if (!app) return;
     anchor.dataset.analyticsApp = app;
     anchor.addEventListener("click", () => record("download_click", app), {passive: true});
