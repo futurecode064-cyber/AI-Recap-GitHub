@@ -232,8 +232,8 @@ test('mobile odds keeps screenshot-style table grid with horizontal scrolling in
  const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
  const css=fs.readFileSync(path.join(root,'odds-sheet-theme.css'),'utf8');
  assert.ok(html.includes('id="oddsPngBtn"'));
- assert.ok(html.includes('daily-image-export.js?v=odds-compare-20261016'));
- assert.ok(html.includes('odds-sheet-theme.css?v=odds-compare-20261016'));
+ assert.ok(html.includes('daily-image-export.js?v=odds-compact-20261016'));
+ assert.ok(html.includes('odds-sheet-theme.css?v=odds-compact-20261016'));
  assert.ok(html.indexOf('odds-sheet-theme.css')>html.indexOf('</style>'),'New stylesheet must override old inline card CSS');
  assert.ok(css.includes('overflow-x:auto!important'));
  assert.ok(css.includes('display:table-row!important'));
@@ -309,7 +309,7 @@ test('Native Canvas renderer is loaded ahead of download exporters',()=>{
 test('Myanmar overnight convention is shared across odds HTML, full Canvas PNG and every published preview',()=>{
  const odds=fs.readFileSync(path.join(root,'odds.js'),'utf8');
  const png=fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8');
- assert.ok(odds.includes('const time=m.kickoffDisplay||m.kickoff||"";'));
+ assert.ok(odds.includes('const time=String(m.kickoffDisplay||m.kickoff||"");'));
  assert.ok(png.includes('const clock=String(m.kickoffDisplay||m.kickoff||"")'),'PNG preserves exact Myanmar overnight label');
  assert.ok(!odds.includes('၁၃ ရက် မနက်'));
  const preview=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-15.json'),'utf8'));
