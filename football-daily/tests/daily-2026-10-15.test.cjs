@@ -2,7 +2,7 @@
 const test=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const odds=JSON.parse(fs.readFileSync(path.join(root,"data/odds/2026-10-15.json"),"utf8"));
-const today=JSON.parse(fs.readFileSync(path.join(root,"data/today.json"),"utf8"));
+const today=JSON.parse(fs.readFileSync(path.join(root,"data/archive/2026-10-15.json"),"utf8"));
 const archive=JSON.parse(fs.readFileSync(path.join(root,"data/archive/2026-10-14.json"),"utf8"));
 test("15 Oct all 36 PDF opening prices are unchanged while independent 1X2 data is fully sourced",()=>{
  assert.equal(odds.reportDate,"2026-10-15");
