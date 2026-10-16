@@ -118,3 +118,17 @@ body .odds-export-sheet .odds-table .club-label,
 body .odds-export-sheet .odds-table .price,
 body .odds-export-sheet .odds-table .time,
 body .odds-export-sheet .odds-table .prediction{color:#161b21!important;}
+
+
+/* Odds PNG export selector shared by Main, YKZ, BW Sport and Ko Thet. */
+body .odds-league-filter{background:#192e30;border:1px solid #647a79;border-radius:15px;padding:17px 18px;margin:0 0 14px;box-shadow:0 8px 20px #00000018}
+body .odds-league-filter .odds-filter-title{font:800 16px "Noto Sans Myanmar",sans-serif;line-height:2;color:#ffce95;margin:0 0 4px}
+body .odds-league-filter .odds-filter-description{font-size:11px;line-height:1.8;color:#d1e2df;margin:0 0 12px}
+body .odds-league-filter .odds-filter-controls{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:12px}
+body .odds-league-filter button.odds-filter-control{border-radius:9px;border:1px solid #82a4a2;background:#2f4b4c;color:#fff;font:700 12px "Noto Sans Myanmar",sans-serif;line-height:1.6;padding:9px 12px;cursor:pointer}
+body .odds-league-filter .odds-league-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:9px;max-height:240px;overflow:auto;padding:4px 3px}
+body .odds-league-filter label.odds-league-choice{display:flex;align-items:center;gap:9px;color:#f2f8f5;border:1px solid #506c6d;border-radius:9px;padding:9px 11px;background:#243d3f;font:600 12px "Noto Sans Myanmar",sans-serif;line-height:1.7;cursor:pointer;overflow-wrap:anywhere}
+body .odds-league-filter label.odds-league-choice:has(input:checked){border-color:#dfb380;background:#39504a}
+body .odds-league-filter input[type=checkbox]{accent-color:#ffae75;width:17px;height:17px;flex:none;cursor:pointer}
+body .odds-league-filter :focus-visible{outline:2px solid #ffd494;outline-offset:2px}
+@media(max-width:600px){body .odds-league-filter{padding:13px}body .odds-league-filter .odds-league-choices{grid-template-columns:1fr 1fr;gap:6px}body .odds-league-filter label.odds-league-choice{padding:8px;font-size:10px}body .odds-league-filter .odds-filter-title{font-size:14px}}
