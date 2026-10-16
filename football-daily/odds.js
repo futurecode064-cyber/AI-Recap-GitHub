@@ -64,7 +64,7 @@ function render(data){
   header.appendChild(button);section.appendChild(header);
   const wrap=element("div","odds-table-wrap"),table=element("table","odds-table");
   const columns=element("colgroup");
-  for(const width of ["12%","32%","16%","8%","8%","8%","8%","8%"]){
+  for(const width of ["9%","34%","14%","8%","8%","8%","8%","11%"]){
    const col=element("col");col.style.width=width;columns.appendChild(col);
   }
   table.appendChild(columns);
@@ -81,8 +81,12 @@ function render(data){
   thead.appendChild(tr);thead.appendChild(sub);table.appendChild(thead);const tbody=element("tbody");
   for(const m of matches){
    const row=element("tr");
-   const time=m.kickoffDisplay||m.kickoff||"";
-   const t=element("td","time",time),pair=element("td","team-pair");
+   const time=String(m.kickoffDisplay||m.kickoff||"");
+   // The full editorial date remains available on hover; short evening
+   // notation lets team names and original/latest prices stay readable.
+   const shortTime=time.replace(/^.*? ည /,"ည ");
+   const t=element("td","time",shortTime),pair=element("td","team-pair");
+   t.title=time;
    pair.appendChild(matchCell(m));
    const bodyLatest=element("td","price odds-current",m.currentBodyOdds??"");
    const goalLatest=element("td","price odds-current",m.currentGoalTotalOdds??"");
