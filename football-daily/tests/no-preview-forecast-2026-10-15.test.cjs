@@ -5,7 +5,7 @@ const fs=require("node:fs");
 const path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const txt=p=>fs.readFileSync(path.join(root,p),"utf8");
-const today=JSON.parse(txt("data/today.json"));
+const today=JSON.parse(txt("data/archive/2026-10-15.json"));
 const sheet=JSON.parse(txt("data/odds/2026-10-15.json"));
 const archive=JSON.parse(txt("data/archive/2026-10-14.json"));
 test("Europa follows selection-only rule while user-supplied Conference paragraphs remain verbatim",()=>{
