@@ -17,8 +17,8 @@ test("all four odds pages load the shared light ledger CSS after each branded st
  for(const item of versions){
   const html=read(item.file);
   const nested=item.file.includes("/");
-  const style=(nested?"../":"./")+"odds-sheet-theme.css?v=odds-filter-20261016";
-  const exporter=(nested?"../":"./")+"daily-image-export.js?v=odds-filter-20261016";
+  const style=(nested?"../":"./")+"odds-sheet-theme.css?v=odds-compare-20261016";
+  const exporter=(nested?"../":"./")+"daily-image-export.js?v=odds-compare-20261016";
   assert.equal(html.split(style).length-1,1,item.file+" must reference ledger theme exactly once");
   assert.equal(html.split(exporter).length-1,1,item.file+" must refresh Canvas exporter exactly once");
   assert.ok(html.indexOf(style)>html.indexOf("</style>"),item.file+" ledger override after inline CSS");
@@ -75,7 +75,7 @@ test("all four downloadable odds PNGs render a white gridded ledger with brand-s
   const h=harness(v);
   await h.window.FutureCodeDailyExport.saveOdds(sheet);
   assert.equal(harness.lastCanvas.width,1360);
-  assert.equal(harness.lastCanvas.height,222+groups*131+15*73+80);
+  assert.equal(harness.lastCanvas.height,222+groups*149+15*73+80);
   assert.equal(h.clicked[0],v.id+"-odds-2026-10-14.png");
   const colors=h.fills.map(x=>x.color);
   assert.ok(colors.includes("#ffffff"),v.id+" white cells");
