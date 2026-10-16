@@ -17,6 +17,32 @@
    catch(err){if(!done){done=true;clearTimeout(timer);reject(err);}}
   });
  }
+
+ // One or two readable Burmese lines. Prefer line wrapping over squeezing
+ // a long team name into an illegibly thin one-line PNG.
+ function drawTeamName(ctx,name,x,cy,maxWidth,align,color,text,fit){
+  const value=String(name||"");
+  if(!value)return;
+  const oneLineSize=fit(ctx,value,maxWidth,18,15);
+  ctx.font="800 "+oneLineSize+'px "Noto Sans Myanmar",sans-serif';
+  if(ctx.measureText(value).width<=maxWidth){
+   text(ctx,value,x,cy,oneLineSize,color,true,align,maxWidth);
+   return;
+  }
+  const units=typeof Intl!=="undefined"&&typeof Intl.Segmenter==="function"?
+   Array.from(new Intl.Segmenter("my",{granularity:"grapheme"}).segment(value),item=>item.segment):
+   Array.from(value);
+  if(units.length<2){text(ctx,value,x,cy,15,color,true,align,maxWidth);return;}
+  ctx.font='800 17px "Noto Sans Myanmar",sans-serif';
+  let cut=1,best=Infinity;
+  for(let i=1;i<units.length;i++){
+   const left=units.slice(0,i).join(""),right=units.slice(i).join("");
+   const measure=Math.max(ctx.measureText(left).width,ctx.measureText(right).width);
+   if(measure<best){best=measure;cut=i;}
+  }
+  const lines=[units.slice(0,cut).join(""),units.slice(cut).join("")];
+  lines.forEach((line,i)=>text(ctx,line,x,cy+(i===0?-12:12),fit(ctx,line,maxWidth,17,14),color,true,align,maxWidth));
+ }
  function verified(m){return m&&m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(String(m.finalScore||""))}
  async function saveOdds(data,options={}){
   if(!data||!Array.isArray(data.matches)||!data.matches.length)throw Error("No odds ready to export");
@@ -24,8 +50,9 @@
   const {create,fill,line,text,fit,fonts,preloadImages,crest,download}=kit;
   const groups=grouped(data.matches);
   // Preserve full single-image capture: every league, original Myanmar label and row.
-  // Height includes each 62px league bar, 62px original/current header and every 73px fixture row.
-  const W=1360,M=24,H=222+groups.reduce((n,g)=>n+149+g[1].length*73,0)+80;
+  // Compact 1200px branded sheet; keep all Myanmar names and price columns.
+  // Each group consumes 58px league bar, 56px headings, 68px per row and 12px gap.
+  const W=1200,M=24,H=222+groups.reduce((n,g)=>n+126+g[1].length*68,0)+80;
   const {canvas,ctx}=create(W,H);
   await Promise.all([fonts(),preloadImages(data.matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).concat(groups.map(g=>crests[g[0]])))]);
   const brandName=document.documentElement?.dataset?.footballBrandName||"FUTURE CODE FOOTBALL DAILY";
@@ -39,7 +66,7 @@
    {header:"#830b15",deep:"#45060c",accent:"#ffdc78",bodyText:"#131720"}:
    {header:"#215c55",deep:"#163e3b",accent:"#ffcb92",bodyText:"#131720"};
   const white="#ffffff",light="#f7f8fa",rule="#cbd2da",upper="#e7e9ed",upperAlt="#dfe2e7";
-  const widths=[155,402,195,166,164,230],xs=[M];
+  const widths=[110,396,166,152,152,176],xs=[M];
   for(const w of widths)xs.push(xs[xs.length-1]+w);
 
   // Header color is the brand's own theme. Everything underneath the heading
@@ -59,62 +86,62 @@
   let y=222;
   for(const [league,matches] of groups){
    // League banner and column titles are the ONLY colored table areas.
-   fill(ctx,M,y,W-M*2,62,palette.header,10);
-   crest(ctx,crests[league],M+13,y+9,44,"⚽");
-   text(ctx,leagues[league]||league,M+73,y+33,26,white,true,"left",W-M*2-95);
-   y+=69;
-   fill(ctx,M,y,W-M*2,62,palette.deep);
+   fill(ctx,M,y,W-M*2,52,palette.header,9);
+   crest(ctx,crests[league],M+12,y+9,34,"⚽");
+   text(ctx,leagues[league]||league,M+58,y+27,23,white,true,"left",W-M*2-72);
+   y+=58;
+   fill(ctx,M,y,W-M*2,56,palette.deep);
    const titles=["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း","ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး","အင်တာနက်ခန့်မှန်းချက်"];
    for(let i=0;i<titles.length;i++){
     const x=xs[i],w=widths[i];
     const split=i===3||i===4;
-    text(ctx,titles[i],x+w/2,y+(split?19:32),fit(ctx,titles[i],w-12,17,12),white,true,"center",w-12);
+    text(ctx,titles[i],x+w/2,y+(split?16:29),fit(ctx,titles[i],w-10,17,13),white,true,"center",w-10);
     if(split){
-     fill(ctx,x+2,y+30,w/2-4,27,palette.header,5);
-     fill(ctx,x+w/2+2,y+30,w/2-4,27,"#f0f5f3",5);
-     text(ctx,"မူလ",x+w/4,y+44,15,white,true,"center",w/2-10);
-     text(ctx,"ယခု",x+3*w/4,y+44,15,palette.bodyText,true,"center",w/2-10);
-     fill(ctx,x+w/2,y+30,1,27,"#ffffffa0");
+     fill(ctx,x+2,y+27,w/2-4,25,palette.header,5);
+     fill(ctx,x+w/2+2,y+27,w/2-4,25,"#f0f5f3",5);
+     text(ctx,"မူလ",x+w/4,y+40,15,white,true,"center",w/2-10);
+     text(ctx,"ယခု",x+3*w/4,y+40,15,palette.bodyText,true,"center",w/2-10);
+     fill(ctx,x+w/2,y+27,1,25,"#ffffffa0");
     }
    }
-   y+=62;
+   y+=56;
    for(const [index,m] of matches.entries()){
-    fill(ctx,M,y,W-M*2,73,index%2===0?white:light);
-    fill(ctx,xs[2],y,widths[2],73,index%2===0?upper:upperAlt);
+    fill(ctx,M,y,W-M*2,68,index%2===0?white:light);
+    fill(ctx,xs[2],y,widths[2],68,index%2===0?upper:upperAlt);
     // Latest quotes are pale-green cells, left empty until the update arrives.
     for(const i of [3,4]){
-     fill(ctx,xs[i]+widths[i]/2,y,widths[i]/2,73,index%2===0?"#eef7f2":"#e3f0e9");
-     fill(ctx,xs[i]+widths[i]/2,y,1,73,rule);
+     fill(ctx,xs[i]+widths[i]/2,y,widths[i]/2,68,index%2===0?"#eef7f2":"#e3f0e9");
+     fill(ctx,xs[i]+widths[i]/2,y,1,68,rule);
     }
     // Spreadsheet-style vertical and horizontal rules stay in the exported PNG.
-    for(let i=0;i<xs.length;i++)fill(ctx,xs[i],y,1,73,rule);
-    line(ctx,M,y+72,W-M*2,rule);
-    const clock=String(m.kickoffDisplay||m.kickoff||"");
-    text(ctx,clock,xs[0]+widths[0]/2,y+37,fit(ctx,clock,widths[0]-14,16,10),palette.bodyText,true,"center",widths[0]-14);
+    for(let i=0;i<xs.length;i++)fill(ctx,xs[i],y,1,68,rule);
+    line(ctx,M,y+67,W-M*2,rule);
+    const clock=String(m.kickoffDisplay||m.kickoff||"").replace(/^.*? ည /,"ည ");
+    text(ctx,clock,xs[0]+widths[0]/2,y+34,fit(ctx,clock,widths[0]-10,16,14),palette.bodyText,true,"center",widths[0]-10);
     const mid=xs[1]+widths[1]/2;
-    crest(ctx,m.homeCrestUrl,mid-74,y+19,35,m.home);
-    crest(ctx,m.awayCrestUrl,mid+38,y+19,35,m.away);
-    const home=String(m.home||""),away=String(m.away||"");
-    text(ctx,home,mid-84,y+37,fit(ctx,home,112,18,11),palette.bodyText,true,"right",112);
-    text(ctx,"VS",mid,y+37,14,"#9d2636",true,"center");
-    text(ctx,away,mid+83,y+37,fit(ctx,away,115,18,11),palette.bodyText,true,"left",115);
-    text(ctx,m.upperTeam||"—",xs[2]+widths[2]/2,y+37,fit(ctx,m.upperTeam||"—",widths[2]-16,19,12),palette.bodyText,true,"center",widths[2]-16);
+    crest(ctx,m.homeCrestUrl,mid-50,y+20,29,m.home);
+    crest(ctx,m.awayCrestUrl,mid+21,y+20,29,m.away);
+    drawTeamName(ctx,m.home,mid-59,y+34,136,"right",palette.bodyText,text,fit);
+    text(ctx,"VS",mid,y+34,14,"#9d2636",true,"center");
+    drawTeamName(ctx,m.away,mid+59,y+34,136,"left",palette.bodyText,text,fit);
+    const up=String(m.upperTeam||"—");
+    text(ctx,up,xs[2]+widths[2]/2,y+34,fit(ctx,up,widths[2]-10,18,14),palette.bodyText,true,"center",widths[2]-10);
     for(const [i,oldValue,latestValue] of [
      [3,m.bodyOdds,m.currentBodyOdds],
      [4,m.goalTotalOdds,m.currentGoalTotalOdds]
     ]){
      const x=xs[i],w=widths[i],half=w/2;
      const original=String(oldValue??"");
-     text(ctx,original,x+half/2,y+37,fit(ctx,original,half-10,20,12),palette.bodyText,true,"center",half-10);
+     text(ctx,original,x+half/2,y+34,fit(ctx,original,half-8,19,15),palette.bodyText,true,"center",half-8);
      if(latestValue!==null&&latestValue!==undefined&&String(latestValue).trim()!==""){
       const updated=String(latestValue);
-      text(ctx,updated,x+half*1.5,y+37,fit(ctx,updated,half-10,20,12),"#164c3d",true,"center",half-10);
+      text(ctx,updated,x+half*1.5,y+34,fit(ctx,updated,half-8,19,15),"#164c3d",true,"center",half-8);
      }
     }
-    text(ctx,m.pdfLastColumn??"—",xs[5]+widths[5]/2,y+37,20,palette.bodyText,true,"center",widths[5]-12);
-    y+=73;
+    text(ctx,m.pdfLastColumn??"—",xs[5]+widths[5]/2,y+34,19,palette.bodyText,true,"center",widths[5]-10);
+    y+=68;
    }
-   y+=18;
+   y+=12;
   }
   text(ctx,"ပေါက်ကြေးများသည် အိုင်ဘတ် ခွန်ရှစ်ကိုး ဆိုဒ်မှာ မနက်ပိုင်း ဖွင့် ထားသော မြန်မာကြေး များဖြစ်ပါသည်။",W/2,H-37,18,palette.bodyText,false,"center",W-75);
   const leagueSuffix=options.league?"-"+String(options.league).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60):"";
