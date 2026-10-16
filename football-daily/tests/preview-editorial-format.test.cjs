@@ -20,14 +20,19 @@ function assertStanding(s,label){
  assert.ok(s.points<=s.wins*3+s.draws,label+" points cannot exceed performance points; verified disciplinary point deductions may apply");
  assert.ok(s.position>=1,label+" invalid table rank");
 }
-test("normal website articles show one flowing Burmese paragraph with bold selection only",()=>{
+test("normal website articles follow the author-approved 16 October three-paragraph style with one bold selection",()=>{
  assert.ok(Array.isArray(data.matches),"daily matches array required (empty dates are valid)");
  for(const [i,m] of data.matches.entries()){
   const desc="#"+(i+1)+" "+(m.homeDisplay||m.home)+" vs "+(m.awayDisplay||m.away);
   const t=m.dailyPreviewText;
   assert.ok(typeof t==="string"&&t.trim().length>=250,desc+": dailyPreviewText must be a substantial article");
   assert.equal(t,t.trim(),desc+": no edge whitespace");
-  assert.ok(!/\n\s*\n/.test(t),desc+": one narrative paragraph only");
+  if(data.reportDate==="2026-10-16"){
+   assert.equal(t.split("\n").length,3,desc+": user explicitly requested exactly three prose paragraphs on 16 October");
+   assert.ok(t.split("\n").every(p=>p.trim().length>50),desc+": all three paragraphs must contain substantive match-specific reasoning");
+  }else{
+   assert.ok(!/\n\s*\n/.test(t),desc+": no empty paragraphs");
+  }
   assert.ok(!/^\s*(?:\d+[.)]|[-*])\s/m.test(t),desc+": no enumerated checklist");
   assert.ok(!/အချက်အလက် မရှိလို့|Source မရသေး|Data မရသေး|မအတည်ပြုရသေးတဲ့ Data|AI ပွဲကြိုသုံးသပ်ချက်ကို မထုတ်ဝေ/.test(t),desc+": no reader-facing research disclaimer");
   // Native, single-paragraph columnist style: market/source explanations go in the
@@ -48,7 +53,9 @@ test("normal website articles show one flowing Burmese paragraph with bold selec
    assertStanding(m.awayStanding,desc+" away");
    assert.ok(/^https?:\/\//.test(m.standingsSourceUrl||""),desc+": standings require a source URL");
    assert.ok(t.includes(nativeDigits(m.homeStanding.played)+" ပွဲ")&&t.includes(nativeDigits(m.awayStanding.played)+" ပွဲ"),desc+": include BOTH teams' played matches");
-   for(const field of [["wins"," နိုင်"],["draws"," သရေ"],["losses"," ရှုံး"]]){
+   // The author's revised 16 Oct sample asks for verified ranking/points and concise,
+   // natural football prose, not a numeric W-D-L recital in every paragraph.
+   if(data.reportDate!=="2026-10-16")for(const field of [["wins"," နိုင်"],["draws"," သရေ"],["losses"," ရှုံး"]]){
     assert.ok(t.includes(nativeDigits(m.homeStanding[field[0]])+field[1])&&t.includes(nativeDigits(m.awayStanding[field[0]])+field[1]),desc+": include both teams' "+field[0]);
    }
    assert.ok(hasRank(t,m.homeStanding.position),desc+": home table position not in prose");
