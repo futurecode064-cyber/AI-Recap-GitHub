@@ -132,3 +132,54 @@ body .odds-league-filter label.odds-league-choice:has(input:checked){border-colo
 body .odds-league-filter input[type=checkbox]{accent-color:#ffae75;width:17px;height:17px;flex:none;cursor:pointer}
 body .odds-league-filter :focus-visible{outline:2px solid #ffd494;outline-offset:2px}
 @media(max-width:600px){body .odds-league-filter{padding:13px}body .odds-league-filter .odds-league-choices{grid-template-columns:1fr 1fr;gap:6px}body .odds-league-filter label.odds-league-choice{padding:8px;font-size:10px}body .odds-league-filter .odds-filter-title{font-size:14px}}
+
+/* One integrated morning/latest market sheet (all brands). Header follows
+ * the supplied grouped-column example; current cells remain empty until
+ * same-fixture prices are actually provided by the owner. */
+body .odds-content .odds-group .odds-table{min-width:970px!important;table-layout:fixed!important}
+body .odds-content .odds-table thead .odds-heading-row th{
+ background:linear-gradient(105deg,var(--sheet-deep),var(--sheet-brand) 65%,var(--sheet-deep))!important;
+ color:var(--sheet-title)!important;border:1px solid #ffffff70!important;
+ padding:12px 5px 5px!important;vertical-align:middle!important;
+ font:800 12px/1.85 "Noto Sans Myanmar",sans-serif!important;
+}
+body .odds-content .odds-table thead .odds-subheading-row th{
+ background:var(--sheet-brand)!important;color:#fff!important;
+ border:1px solid #ffffff65!important;
+ padding:3px 5px 8px!important;
+ font:800 11px/1.5 "Noto Sans Myanmar",sans-serif!important;
+}
+body .odds-content .odds-table thead .odds-subheading-row .odds-sub-current{
+ background:var(--sheet-deep)!important;color:#ffebc1!important;
+}
+body .odds-content .odds-table th:nth-child(n){width:auto!important}
+body .odds-content .odds-table td.odds-original{
+ color:#171d26!important;font-weight:800!important
+}
+body .odds-content .odds-table td.odds-current{
+ background:#edf7f3!important;color:#0d463b!important;
+ font-weight:900!important;border-left:2px solid var(--sheet-brand)!important;
+}
+body .odds-content .odds-table tr:nth-child(even) td.odds-current{background:#e4f1ec!important}
+body .odds-content .odds-table td.odds-current:empty::after{
+ content:"";display:inline-block;min-height:1em;min-width:1px
+}
+body .odds-content .odds-table td.price{font-size:16px!important;white-space:nowrap!important}
+body .odds-content .odds-league-header{
+ display:flex!important;flex-wrap:wrap!important;
+ justify-content:space-between!important;align-items:stretch!important;
+ background:linear-gradient(110deg,var(--sheet-deep),var(--sheet-brand))!important
+}
+body .odds-content .odds-league-header h2.odds-league-heading{
+ background:transparent!important;border:0!important;flex:1!important
+}
+body .odds-content .odds-league-header .odds-league-download{
+ margin:8px!important;border-radius:10px!important;
+ border:1px solid #ffffff70!important;color:#fff!important;
+ background:#ffffff20!important;font:700 11px/1.6 "Noto Sans Myanmar",sans-serif!important;
+ padding:9px 13px!important;cursor:pointer
+}
+@media(max-width:700px){
+ body .odds-content .odds-group .odds-table{min-width:970px!important}
+ body .odds-content .odds-table td.price{font-size:15px!important}
+}
