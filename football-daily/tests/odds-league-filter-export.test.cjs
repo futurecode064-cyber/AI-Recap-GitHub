@@ -44,7 +44,7 @@ function harness(brand){
 test('up to twenty selected matches download one PNG with every original row',async()=>{
  for(const n of [1,20]){
   const h=harness(),data=fixture(n);
-  const result=await h.api.saveOddsSmart(data);
+  const result=await h.api.saveOdds(data);
   assert.equal(result.fileCount,1);
   assert.equal(h.canvases.length,1);
   assert.equal(h.clicked.length,1);
@@ -52,46 +52,44 @@ test('up to twenty selected matches download one PNG with every original row',as
   assert.equal(h.drawn.filter(x=>/^HOME-/.test(x)).length,n);
  }
 });
-test('twenty-one matches become two balanced PNG pages in one valid two-entry ZIP',async()=>{
+test('twenty-one matches still export exactly one PNG containing every match',async()=>{
  const h=harness(),data=fixture(21);
- const result=await h.api.saveOddsSmart(data);
- assert.equal(result.fileCount,2);assert.equal(result.matchCount,21);
- assert.equal(result.format,'zip');assert.equal(h.canvases.length,2);
- assert.equal(h.clicked.length,1);assert.match(h.clicked[0],/two-pages\.zip$/);
+ const result=await h.api.saveOdds(data);
+ assert.equal(result.fileCount,1);assert.equal(result.matchCount,21);
+ assert.equal(result.format,'png');assert.equal(h.canvases.length,1);
+ assert.equal(h.clicked.length,1);assert.match(h.clicked[0],/\.png$/);
  assert.equal(h.drawn.filter(x=>/^HOME-/.test(x)).length,21);
- assert.equal(h.blobs.length,1);assert.equal(h.blobs[0].type,'application/zip');
- const bytes=new Uint8Array(await h.blobs[0].arrayBuffer()),raw=Buffer.from(bytes);
- const names=[...raw.toString('utf8').matchAll(/future-code-odds-2026-10-16-part-0[12]\.png/g)].map(x=>x[0]);
- assert.equal(names.length,4,'Each of two PNG filenames appears in local and central ZIP headers');
- assert.equal(raw.readUInt32LE(0),0x04034b50);
- assert.equal(raw.readUInt32LE(raw.length-22),0x06054b50);
- assert.equal(raw.readUInt16LE(raw.length-22+10),2);
+ assert.ok(h.blobs.every(blob=>blob.type==='image/png'));
 });
 test('selected-league subset exports only chosen matches and never rewrites the source data',async()=>{
  const h=harness(),data=fixture(38);
  const subset=data.matches.filter(x=>x.league==='Premier League');
- const result=await h.api.saveOddsSmart({...data,matches:subset});
+ const result=await h.api.saveOdds({...data,matches:subset});
  assert.equal(result.fileCount,1);assert.equal(subset.length,19);
  assert.equal(data.matches.length,38);
  assert.equal(h.drawn.filter(x=>/^HOME-/.test(x)).length,19);
  assert.equal(h.clicked.length,1);
 });
-test('large filtered exports include every record across exactly two pages',async()=>{
+test('56 matches and all leagues export in one PNG without dropping rows',async()=>{
  const h=harness(),data=fixture(56);
- const result=await h.api.saveOddsSmart(data);
- assert.equal(result.fileCount,2);
- assert.equal(h.canvases.length,2);
+ const result=await h.api.saveOdds(data);
+ assert.equal(result.fileCount,1);
+ assert.equal(h.canvases.length,1);
+ assert.equal(result.matchCount,56);
  assert.equal(h.drawn.filter(x=>/^HOME-/.test(x)).length,56);
- const heights=h.canvases.map(x=>x.height);
- assert.ok(Math.abs(heights[0]-heights[1])<=131,'Pages should have similar heights');
+ assert.equal(h.clicked.length,1);
+ assert.match(h.clicked[0],/\.png$/);
+ assert.ok(h.canvases[0].height>4000);
 });
 test('four branded odds pages load the shared new filter and exporter assets',()=>{
  for(const page of ['odds.html','ykz-family/odds.html','bw-sport/odds.html','ko-thet-family/odds.html']){
   const html=fs.readFileSync(path.join(root,page),'utf8');
-  for(const asset of ['daily-image-export.js?v=odds-compact-20261016','odds.js?v=odds-compact-20261016','odds-sheet-theme.css?v=odds-compact-20261016'])
+  for(const asset of ['daily-image-export.js?v=odds-png-only-20261016','odds.js?v=odds-png-only-20261016','odds-sheet-theme.css?v=odds-png-only-20261016'])
    assert.ok(html.includes(asset),page+' needs '+asset);
  }
  const js=fs.readFileSync(path.join(root,'odds.js'),'utf8');
  assert.ok(js.includes('setupLeagueFilter(data)'));
- assert.ok(js.includes('saveOddsSmart({...loadedSheet,matches})'));
+ assert.ok(js.includes('saveOdds({...loadedSheet,matches})'));
+ assert.ok(!js.includes('saveOddsSmart'));
+ assert.ok(!fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8').includes('zipPngs'));
 });
