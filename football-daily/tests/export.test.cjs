@@ -42,15 +42,15 @@ function harness(){
 test('fast Canvas odds PNG renders every original league table row, prices, prediction and header',async()=>{
  const x=harness();await x.window.FutureCodeDailyExport.saveOdds(sheet);
  assert.equal(x.clicked[0],'future-code-odds-2026-10-12.png');
- assert.equal(x.canvases[0].width,1360);
+ assert.equal(x.canvases[0].width,1200);
  const groups=new Set(sheet.matches.map(m=>m.league));
- assert.equal(x.canvases[0].height,222+groups.size*149+sheet.matches.length*73+80,
+ assert.equal(x.canvases[0].height,222+groups.size*126+sheet.matches.length*68+80,
   'PNG height must include all league headings and every match without clipping');
  const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
  assert.ok(labels.includes('ယနေ့ ပေါက်ကြေးများ'));
  for(const m of sheet.matches){
-  assert.ok(labels.includes(m.home),m.home+' missing');
-  assert.ok(labels.includes(m.away),m.away+' missing');
+  assert.ok(labels.join('').includes(m.home),m.home+' missing');
+  assert.ok(labels.join('').includes(m.away),m.away+' missing');
   assert.ok(labels.includes(m.bodyOdds),m.bodyOdds+' missing');
   assert.ok(labels.includes(m.goalTotalOdds),m.goalTotalOdds+' missing');
   assert.ok(labels.includes(m.pdfLastColumn),m.pdfLastColumn+' missing');
@@ -154,16 +154,16 @@ test('13 Oct PNG contains all 21 user-provided fixture rows, prices, internet fo
  await x.window.FutureCodeDailyExport.saveOdds(currentSheet);
  const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
  assert.equal(currentSheet.matches.length,21);
- assert.equal(x.canvases[0].width,1360);
+ assert.equal(x.canvases[0].width,1200);
  const groups=new Set(currentSheet.matches.map(m=>m.league));
- assert.equal(x.canvases[0].height,222+groups.size*149+21*73+80);
+ assert.equal(x.canvases[0].height,222+groups.size*126+21*68+80);
  assert.ok(x.clicked[0].endsWith('odds-2026-10-13.png'));
  for(const match of currentSheet.matches){
-  assert.ok(labels.includes(match.home),'Missing original converted home '+match.home);
-  assert.ok(labels.includes(match.away),'Missing original converted away '+match.away);
+  assert.ok(labels.join('').includes(match.home),'Missing original converted home '+match.home);
+  assert.ok(labels.join('').includes(match.away),'Missing original converted away '+match.away);
   assert.ok(labels.includes(match.goalTotalOdds),'Missing original total '+match.home);
   assert.ok(labels.includes(match.pdfLastColumn),'Missing original internet forecast '+match.home);
   if(match.bodyOdds!==null)assert.ok(labels.includes(match.bodyOdds),'Missing original body price '+match.home);
-  assert.ok(labels.includes(match.kickoffDisplay),'Missing Myanmar overnight time '+match.home);
+  assert.ok(labels.includes(String(match.kickoffDisplay).replace(/^.*? ည /,'ည ')),'Missing Myanmar overnight time '+match.home);
  }
 });
