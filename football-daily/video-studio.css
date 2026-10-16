@@ -21,3 +21,15 @@
 .fc-video-legend{font:700 11px "Noto Sans Myanmar",sans-serif;color:#aac7b6;text-align:center;padding:11px}
 @media(max-width:780px){.fc-video-studio{padding:18px 14px;margin:20px auto 40px}.fc-video-grid{grid-template-columns:1fr}.fc-video-screen{max-width:230px}}
 @media(max-width:460px){.fc-video-controls{grid-template-columns:1fr}.fc-video-actions{flex-direction:column}.fc-video-actions button{width:100%}}
+
+.fc-video-selection{margin:20px 0 0;border:1px solid #48645f;border-radius:14px;padding:16px;min-width:0}
+.fc-video-selection legend{color:#ffd0a4;font-size:13px;padding:0 8px}
+.fc-video-selection-actions{display:flex;gap:9px;margin-bottom:14px}
+.fc-video-selection-actions button{background:#233f3d;color:#eff8ef;border:1px solid #627d70;border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit;font-size:12px}
+.fc-video-leagues{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:14px}
+.fc-video-selection label{display:flex;align-items:center;gap:9px;font-size:12px;line-height:1.9;cursor:pointer;color:#e5eee6}
+.fc-video-leagues label{padding:8px 12px;background:#102725;border:1px solid #527267;border-radius:9px}
+.fc-video-selection input{accent-color:#ffc08a;width:18px;height:18px;flex-shrink:0}
+.fc-video-selection summary{cursor:pointer;font-size:12px;color:#ffce9d;padding:8px 0}
+.fc-video-matches{display:grid;gap:8px;max-height:270px;overflow:auto;margin-top:8px}
+.fc-video-matches label{padding:8px;background:#152e2e;border-radius:8px}

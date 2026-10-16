@@ -10,14 +10,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css?v=copy-guard-20261013">
-<link rel="stylesheet" href="./video-studio.css?v=20261016-video1">
+<link rel="stylesheet" href="./video-studio.css?v=20261016-video2">
 <script defer src="./card-export.js?v=20261016-pair-hd2x"></script>
 <script defer src="./social-export.js"></script>
 <script defer src="./canvas-image-kit.js?v=20261016-transparent-all"></script>
 <script defer src="./daily-image-export.js"></script>
 <script defer src="./main-match-screenshot.js?v=20261016-transparent-all"></script>
 <script defer src="./app.js?v=20261016-pair2"></script>
-<script defer src="./video-studio.js?v=20261016-video1"></script>
+<script defer src="./video-studio.js?v=20261016-video2"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
 </head>
 <body>
@@ -57,8 +57,8 @@
      <label for="fcVideoMode">Video အမျိုးအစား
       <select id="fcVideoMode"><option value="results">ဂိုးရလဒ်များ (မနေ့က)</option><option value="previews">ပွဲကြိုသုံးသပ်ချက်များ</option><option value="odds">ပေါက်ကြေးများ</option></select>
      </label>
-     <label for="fcVideoLeague" id="fcVideoLeagueWrap" hidden>ပေါက်ကြေး League
-      <select id="fcVideoLeague"><option value="all">လိဂ်အားလုံး</option></select>
+     <label for="fcVideoTransition">Transition Effect
+      <select id="fcVideoTransition"><option value="fade">01 · Crossfade</option><option value="left">02 · Slide Left</option><option value="right">03 · Slide Right</option><option value="up">04 · Slide Up</option><option value="down">05 · Slide Down</option><option value="zoom">06 · Zoom Through</option><option value="wipe">07 · Wipe</option><option value="iris">08 · Spotlight</option><option value="diagonal">09 · Diagonal Reveal</option><option value="split">10 · Split Reveal</option></select>
      </label>
      <label for="fcVideoQuality">Video Quality
       <select id="fcVideoQuality"><option value="hd">Full HD · 1080 × 1920 (9:16)</option><option value="lite">Mobile · 720 × 1280 (9:16)</option></select>
@@ -67,8 +67,14 @@
       <select id="fcVideoPace"><option value="normal">ပုံမှန်</option><option value="slow">ဖတ်ချိန်ပိုပေးမယ်</option><option value="fast">မြန်မြန်ဆန်ဆန်</option></select>
      </label>
     </div>
+    <fieldset id="fcVideoLeagueWrap" class="fc-video-selection">
+     <legend>လိဂ်နှင့် ပွဲများ ရွေးချယ်ရန်</legend>
+     <div class="fc-video-selection-actions"><button type="button" id="fcVideoSelectAll">အားလုံးရွေး</button><button type="button" id="fcVideoSelectNone">အားလုံးဖြုတ်</button></div>
+     <div id="fcVideoLeague" class="fc-video-leagues" aria-label="League filter"></div>
+     <details open><summary>ဗီဒီယိုတွင် ပါဝင်မည့်ပွဲများ</summary><div id="fcVideoMatches" class="fc-video-matches"></div></details>
+    </fieldset>
     <div class="fc-video-actions">
-     <button type="button" id="fcVideoPreview">နမူနာ Slide ကြည့်မယ်</button>
+     <button type="button" id="fcVideoPreview">▶ Video နမူနာကြည့်မယ်</button>
      <button type="button" id="fcVideoDownload">⬇ Video ဖန်တီးပြီး Download</button>
      <button type="button" id="fcVideoStop" hidden>■ Recording ရပ်မယ်</button>
     </div>
