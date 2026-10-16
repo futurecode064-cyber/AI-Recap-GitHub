@@ -44,7 +44,7 @@ test('fast Canvas odds PNG renders every original league table row, prices, pred
  assert.equal(x.clicked[0],'future-code-odds-2026-10-12.png');
  assert.equal(x.canvases[0].width,1360);
  const groups=new Set(sheet.matches.map(m=>m.league));
- assert.equal(x.canvases[0].height,222+groups.size*131+sheet.matches.length*73+80,
+ assert.equal(x.canvases[0].height,222+groups.size*149+sheet.matches.length*73+80,
   'PNG height must include all league headings and every match without clipping');
  const labels=x.drawn.filter(n=>n.type==='text').map(n=>n.value);
  assert.ok(labels.includes('ယနေ့ ပေါက်ကြေးများ'));
@@ -156,7 +156,7 @@ test('13 Oct PNG contains all 21 user-provided fixture rows, prices, internet fo
  assert.equal(currentSheet.matches.length,21);
  assert.equal(x.canvases[0].width,1360);
  const groups=new Set(currentSheet.matches.map(m=>m.league));
- assert.equal(x.canvases[0].height,222+groups.size*131+21*73+80);
+ assert.equal(x.canvases[0].height,222+groups.size*149+21*73+80);
  assert.ok(x.clicked[0].endsWith('odds-2026-10-13.png'));
  for(const match of currentSheet.matches){
   assert.ok(labels.includes(match.home),'Missing original converted home '+match.home);
