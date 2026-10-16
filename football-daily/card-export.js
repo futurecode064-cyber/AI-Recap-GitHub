@@ -83,7 +83,9 @@
   const isKTF=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
   const my=match.myanmarOdds||{};
   await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl].filter(Boolean));
-  fill(ctx,0,0,W,H,C.bg);
+  // Main-site standalone match images have transparent OUTER page/background.
+  // The article panels themselves remain opaque and readable.
+  if(opts.mainScreenshot!==true)fill(ctx,0,0,W,H,C.bg);
   fill(ctx,M,14,fullWidth,H-34,C.head,12);
   fill(ctx,M,14,fullWidth,66,C.bg,10);
   text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+16,46,22,C.orange,true);
@@ -167,7 +169,9 @@
   }
   line(ctx,M,H-55,fullWidth);
   text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+10,H-31,20,C.orange,true);
-  const filename=filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png";
+  const filename=opts.mainScreenshot===true&&typeof opts.downloadFilename==="string"
+   ?opts.downloadFilename
+   :filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png";
   if(opts.asBlob===true){
    if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
    const blob=await Promise.race([

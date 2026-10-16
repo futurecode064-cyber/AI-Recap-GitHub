@@ -301,9 +301,8 @@ test('Native Canvas renderer is loaded ahead of download exporters',()=>{
   const a=html.indexOf('canvas-image-kit.js');
   const b=html.indexOf('daily-image-export.js');
   assert.ok(a>0&&b>a,'Canvas script must load before export scripts in '+file);
-  // User-approved exception: exact article screenshots are enabled only on the
-  // original Future Code main page. All other entrypoints retain native Canvas.
-  assert.equal(html.includes('dom-capture.js'),file==='index.html');
+  // All live entrypoints use bounded native Canvas (no DOM serializer).
+  assert.equal(html.includes('dom-capture.js'),false);
  }
 });
 

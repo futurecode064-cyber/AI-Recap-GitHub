@@ -6,60 +6,54 @@ const path=require("node:path");
 const vm=require("node:vm");
 const root=path.resolve(__dirname,"..");
 
-test("only the original Future Code homepage loads the match DOM screenshot exporter",()=>{
+test("main site only loads the fast native PNG wrapper (no blocking DOM screenshot library)",()=>{
  const html=fs.readFileSync(path.join(root,"index.html"),"utf8");
- for(const name of ["vendor/dom-to-image.min.js","dom-capture.js","main-match-screenshot.js"])
-  assert.ok(html.includes('src="./'+name),name+" should be loaded on the main website");
- const scripts=["card-export.js","vendor/dom-to-image.min.js","dom-capture.js","main-match-screenshot.js","app.js"];
- const indexes=scripts.map(s=>html.indexOf('src="./'+s));
- assert.ok(indexes.every(n=>n>=0));
- assert.ok(indexes.every((n,i)=>i===0||n>indexes[i-1]),"scripts must run in dependency order");
+ assert.ok(html.includes("main-match-screenshot.js?v=20261016-fast-main-png"));
+ for(const forbidden of ["vendor/dom-to-image.min.js","dom-capture.js"])
+  assert.ok(!html.includes(forbidden),"Slow DOM capture must not load: "+forbidden);
+ const scripts=["card-export.js","canvas-image-kit.js","main-match-screenshot.js","app.js"];
+ const positions=scripts.map(name=>html.indexOf('src="./'+name));
+ assert.ok(positions.every(n=>n>=0));
+ assert.ok(positions.every((n,i)=>i===0||n>positions[i-1]));
  for(const brand of ["ykz-family","bw-sport","ko-thet-family","myanmar-football"]){
   const brandHtml=fs.readFileSync(path.join(root,brand,"index.html"),"utf8");
-  assert.ok(!brandHtml.includes("main-match-screenshot.js"),brand+" should retain its Canvas PNG export");
-  assert.ok(!brandHtml.includes("dom-capture.js"),brand+" should not load screenshot support");
+  assert.ok(!brandHtml.includes("main-match-screenshot.js"),brand+" keeps original export");
  }
 });
-
 function run(brand=false){
- let canvasCount=0;
- const snapshotCalls=[];
- const canvasSave=async()=>{canvasCount++;return "canvas"};
+ let calls=[];
+ const canvasSave=async(...args)=>{calls.push(args);return "canvas"};
  const exporter={save:canvasSave,saveAll:async()=>42};
- const window={FutureCodeCardExport:exporter,domtoimage:{toBlob(){}},
-  FutureCodeDomCapture:{save:async(...args)=>{snapshotCalls.push(args);return true}}};
+ const window={FutureCodeCardExport:exporter};
  const document={documentElement:{hasAttribute(name){return brand&&name==="data-football-brand-name"}}};
  vm.runInNewContext(fs.readFileSync(path.join(root,"main-match-screenshot.js"),"utf8"),{window,document});
- return {exporter,canvasSave,snapshotCalls,get canvasCount(){return canvasCount}};
+ return {exporter,canvasSave,calls};
 }
-
-test("each main-site match PNG is the actual full card without page background or controls",async()=>{
+test("single-match main PNG immediately uses native Canvas with full text and transparent outer page",async()=>{
  const x=run();
- const card={isConnected:true,classList:{contains:c=>c==="match-card"}};
- const result=await x.exporter.save({home:"အိမ်ရှင်",away:"ဧည့်သည်"},{cardNode:card});
- assert.equal(result,true);
- assert.equal(x.canvasCount,0);
- assert.equal(x.snapshotCalls.length,1);
- const [actualCard,name,opts]=x.snapshotCalls[0];
- assert.equal(actualCard,card);
- assert.match(name,/ပွဲကြိုသုံးသပ်ချက်/);
- assert.match(name,/\.png$/);
- assert.equal(opts.background,"transparent");
- assert.equal(opts.excludeControls,true);
- const dom=fs.readFileSync(path.join(root,"dom-capture.js"),"utf8");
- assert.match(dom,/\.analysis-toggle/);
- assert.match(dom,/\.match-actions/);
- assert.match(dom,/clone\.querySelectorAll\("\.analysis-body/);
- assert.match(dom,/e\.hidden=false/);
+ const match={home:"ဘားမင်ဂမ်",away:"လိဗာပူး",dailyPreviewText:"စာသားအားလုံး"};
+ const card={};
+ assert.equal(await x.exporter.save(match,{cardNode:card,special:false}),"canvas");
+ assert.equal(x.calls.length,1);
+ const [actual,opts]=x.calls[0];
+ assert.equal(actual,match);
+ assert.equal(opts.mainScreenshot,true);
+ assert.equal(opts.special,false);
+ assert.match(opts.downloadFilename,/^ပွဲကြိုသုံးသပ်ချက်/);
+ assert.match(opts.downloadFilename,/ဘားမင်ဂမ်/);
+ assert.match(opts.downloadFilename,/\.png$/);
+ const canvas=fs.readFileSync(path.join(root,"card-export.js"),"utf8");
+ assert.ok(canvas.includes('if(opts.mainScreenshot!==true)fill(ctx,0,0,W,H,C.bg)'));
+ assert.ok(canvas.includes('opts.downloadFilename'));
+ assert.ok(!canvas.includes('analysis-toggle'),"PNG never prints read/collapse toggle");
 });
-
-test("regular Canvas calls, bulk PNG exports and branded sites stay unchanged",async()=>{
- const main=run();
- assert.equal(await main.exporter.save({home:"A",away:"B"},{}),"canvas");
- assert.equal(main.canvasCount,1);
- assert.equal(await main.exporter.saveAll([]),42);
+test("bulk ZIP, programmatic PNGs and branded exporter stay unchanged",async()=>{
+ const x=run();
+ assert.equal(await x.exporter.save({home:"A",away:"B"},{}),"canvas");
+ assert.equal(x.calls[0][1].mainScreenshot,undefined);
+ assert.equal(await x.exporter.saveAll([]),42);
  const brand=run(true);
  assert.equal(brand.exporter.save,brand.canvasSave);
  assert.equal(await brand.exporter.save({home:"A",away:"B"},{}),"canvas");
- assert.equal(brand.canvasCount,1);
+ assert.equal(brand.calls.length,1);
 });

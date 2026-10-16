@@ -1,42 +1,40 @@
 "use strict";
 /*
- * Main Future Code Football only:
- * Save the actual on-screen match article (not a repainted poster).
- * The shared app.js supplies opts.cardNode for a single-match download.
- * Branded site entrypoints do not load this module; their Canvas exports remain unchanged.
+ * Fast, main-site-only article PNG download.
+ * The first DOM screenshot prototype re-serialized the whole CSS and remote
+ * fonts, and could stay on "Preparing PNG" for an unbounded period.
+ * Use the existing bounded native Canvas renderer instead.
+ *
+ * Other branded pages never load this override. They keep their original
+ * export function, poster styling and brand palettes.
  */
 (function(){
   if(document.documentElement.hasAttribute("data-football-brand-name"))return;
   const exporter=window.FutureCodeCardExport;
   if(!exporter||typeof exporter.save!=="function")return;
-  const canvasSave=exporter.save;
+  const nativeSave=exporter.save;
 
-  function safeFilenamePart(value){
-    // Keep Burmese club names readable while excluding forbidden filename characters.
+  function safeName(value){
     return String(value||"match").normalize("NFC")
       .replace(/[\\/:*?"<>|\u0000-\u001f\u007f]/g,"-")
-      .replace(/\s+/g," ").trim().slice(0,75)||"match";
+      .replace(/\s+/g," ").trim().slice(0,64)||"match";
   }
 
   exporter.save=async function(match,opts={}){
-    // Preserve other call sites (including any programmatic Canvas exports).
-    const card=opts.cardNode;
-    if(!card||!card.isConnected)return canvasSave.call(exporter,match,opts);
-    if(!card.classList||!card.classList.contains("match-card"))
-      throw Error("A match preview card is required for a screenshot.");
-    if(!window.FutureCodeDomCapture||!window.domtoimage)
-      throw Error("The local match screenshot exporter did not load.");
+    // Batch ZIP and other consumers keep the unchanged native renderer.
+    if(!opts.cardNode)return nativeSave.call(exporter,match,opts);
+    const fileName="ပွဲကြိုသုံးသပ်ချက် - "+
+      safeName(match?.home||"အိမ်ရှင်")+" vs "+
+      safeName(match?.away||"ဧည့်သည်")+".png";
 
-    const filename="ပွဲကြိုသုံးသပ်ချက် - "+
-      safeFilenamePart(match?.home||"အိမ်ရှင်")+" vs "+
-      safeFilenamePart(match?.away||"ဧည့်သည်")+".png";
-
-    // Clone only this match card.  The snapshot helper removes all buttons,
-    // expands the entire commentary, and uses a transparent outer background.
-    // The teal/orange card panels keep their native styles for readability.
-    return window.FutureCodeDomCapture.save(card,filename,{
-      background:"transparent",
-      excludeControls:true
+    // Native Canvas draws ONLY the isolated match card:
+    // club crests, fixtures, WDL, bookmaker odds, Myanmar prices,
+    // and unabridged commentary. No website wallpaper, button or
+    // read/collapse toggle. Never invoke the slow DOM serializer.
+    return nativeSave.call(exporter,match,{
+      ...opts,
+      mainScreenshot:true,
+      downloadFilename:fileName
     });
   };
 })();
