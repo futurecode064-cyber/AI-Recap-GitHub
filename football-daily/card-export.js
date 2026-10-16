@@ -104,7 +104,12 @@
    ?extraBlocks.reduce((n,block)=>n+block.length*43+18,0)
    :lines.length*49;
   const H=Math.ceil(anaY+Math.max(210,paragraphHeight+116)+80);
-  const {canvas,ctx}=create(W,H);
+  // Paired preview HD: render fonts, badges and crests at native 2x pixel density.
+  // CSS/layout measurements remain at W/H so nothing shifts or gets cropped.
+  // Ordinary one-match, branded and historic exports remain 1x.
+  const renderScale=opts.pairHighResolution===true&&transparent?2:1;
+  const {canvas,ctx}=create(W*renderScale,H*renderScale);
+  if(renderScale!==1)ctx.scale(renderScale,renderScale);
   const isYKZ=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
   const isBW=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
   const isKTF=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
@@ -204,7 +209,7 @@
    if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
    const blob=await Promise.race([
     new Promise((resolve,reject)=>{try{canvas.toBlob(b=>b&&b.size?resolve(b):reject(Error("PNG encoding failed")),"image/png")}catch(e){reject(e)}}),
-    new Promise((_,reject)=>setTimeout(()=>reject(Error("PNG encoding timed out")),12000))
+    new Promise((_,reject)=>setTimeout(()=>reject(Error("PNG encoding timed out")),opts.pairHighResolution===true?30000:12000))
    ]);
    return {filename,blob};
   }
@@ -266,7 +271,8 @@
  async function composePair(left,right){
   const images=await Promise.all([decodePng(left.blob),...(right?[decodePng(right.blob)]:[])]);
   try{
-   const gap=right?36:0;
+   // Keep the inter-card spacing proportional to the native render resolution.
+   const gap=right?36*2:0;
    const width=images.reduce((sum,img)=>sum+img.width,0)+gap;
    const height=Math.max(...images.map(img=>img.height));
    if(width>8000||height>30000)throw Error("Paired image dimensions exceed browser limits");
@@ -277,7 +283,7 @@
    if(images[1])ctx.drawImage(images[1],images[0].width+gap,0);
    const blob=await Promise.race([
     new Promise((resolve,reject)=>canvas.toBlob(b=>b&&b.size?resolve(b):reject(Error("PNG encoding failed")),"image/png")),
-    new Promise((_,reject)=>setTimeout(()=>reject(Error("Paired PNG encoding timed out")),15000))
+    new Promise((_,reject)=>setTimeout(()=>reject(Error("Paired PNG encoding timed out")),30000))
    ]);
    return blob;
   }finally{for(const image of images)if(typeof image.close==="function")image.close()}
@@ -290,7 +296,7 @@
     const first=matches[i],second=matches[i+1]||null;
     const render=match=>save({...match,home:match.homeDisplay||match.home,away:match.awayDisplay||match.away},{
      ...opts,special:false,asBlob:true,mainScreenshot:true,
-     hideLeagueLabel:true,hideFooterBrand:true
+     pairHighResolution:true,hideLeagueLabel:true,hideFooterBrand:true
     });
     const left=await render(first);
     const right=second?await render(second):null;

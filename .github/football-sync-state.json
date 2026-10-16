@@ -2,13 +2,13 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "71cea3eaf0ee4eddf9519c4b65f2cc6c5c2b4bbf",
-  "source_tree": "12ed3ee356375c210665a002c3b1690244b26e26",
-  "target_tree": "12ed3ee356375c210665a002c3b1690244b26e26",
+  "source_commit": "086fb656ca7888fa29712a865652fecbdcad08da",
+  "source_tree": "f019f78954ba2f9f2eff79cc8c5590bf5ff79e25",
+  "target_tree": "f019f78954ba2f9f2eff79cc8c5590bf5ff79e25",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-16T04:32:03.775373+00:00",
+  "last_synced_utc": "2026-10-16T04:47:26.136149+00:00",
   "reconciled_on": "2026-10-16",
   "reconciliation_note": "After independently checking 2026-10-16 Production and standalone source HEAD football-daily tree hashes are identical, the stale sync guard marker was reconciled without modifying football-daily content. Original last_synced_utc retained as historical workflow timestamp."
 }
