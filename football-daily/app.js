@@ -391,8 +391,9 @@ function bulkPreviewBar(){
    const count=await window.FutureCodeCardExport.saveAll(matches,{
     brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
     brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
-    date:report.reportDate||selectedDateKey(0),leagueName
-   },(done,total)=>{status.textContent=done+" / "+total+" ပုံ ပြင်ဆင်ပြီး…";});
+    date:report.reportDate||selectedDateKey(0),leagueName,
+    pairMode:!document.documentElement.dataset.footballBrandName
+   },(done,total)=>{status.textContent=done+" / "+total+" ပွဲ ပြင်ဆင်ပြီး…";});
    status.textContent="✓ PNG "+count+" ပုံပါ ZIP ဖိုင် Download စတင်ပြီး";
   }catch(err){
    console.error("Bulk preview ZIP error",err);
@@ -411,8 +412,10 @@ function render(){
   bulk.hidden=!eligible.length;
   const button=$("allPreviewsDownloadBtn"),status=$("allPreviewsDownloadStatus");
   if(!button.disabled){
-   button.textContent="⬇ ပွဲအားလုံး Download ("+eligible.length+" PNG · ZIP)";
-   status.textContent=eligible.length+" ပွဲ — တစ်ပွဲကို PNG တစ်ပုံနှုန်း";
+   const paired=!document.documentElement.dataset.footballBrandName;
+   const imageCount=paired?Math.ceil(eligible.length/2):eligible.length;
+   button.textContent="⬇ ပွဲအားလုံး Download ("+imageCount+" PNG · ZIP)";
+   status.textContent=paired?eligible.length+" ပွဲ — ၂ ပွဲကို PNG တစ်ပုံနှုန်း":eligible.length+" ပွဲ — တစ်ပွဲကို PNG တစ်ပုံနှုန်း";
   }
  }
  const list=$("matchList");list.replaceChildren();

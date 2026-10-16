@@ -114,7 +114,7 @@
   if(!transparent)fill(ctx,0,0,W,H,C.bg);
   fill(ctx,M,14,fullWidth,H-34,C.head,12);
   fill(ctx,M,14,fullWidth,66,C.bg,10);
-  text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+16,46,22,C.orange,true);
+  if(!opts.hideLeagueLabel)text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+16,46,22,C.orange,true);
   if(isYKZ){
    text(ctx,"YKZ FAMILY GROUP · အတူရှေ့ဆက် YKZ",W/2,44,17,C.orange,true,"center");
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"YKZ");
@@ -140,7 +140,7 @@
   crest(ctx,match.homeCrestUrl,lx+(sideW-badgeSize)/2,crestY,badgeSize,home);
   crest(ctx,match.awayCrestUrl,rx+(sideW-badgeSize)/2,crestY,badgeSize,away);
   text(ctx,"◈",W/2,heroY+75,62,C.white,true,"center");
-  text(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
+  if(!opts.hideLeagueLabel)text(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
   text(ctx,"VS",W/2,heroY+244,90,C.white,true,"center");
   const infoY=473,infoH=83,infoMiddle=460,outer=(fullWidth-infoMiddle)/2;
   fill(ctx,M,infoY,outer,infoH,isYKZ?"#250707":isBW?"#082347":isKTF?"#3b1017":"#14090d");
@@ -193,8 +193,10 @@
   }else{
    y=drawParagraph(ctx,textKit,lines,M+25,y,25,49);
   }
-  line(ctx,M,H-55,fullWidth);
-  text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+10,H-31,20,C.orange,true);
+  if(!opts.hideFooterBrand){
+   line(ctx,M,H-55,fullWidth);
+   text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+10,H-31,20,C.orange,true);
+  }
   const filename=opts.mainScreenshot===true&&typeof opts.downloadFilename==="string"
    ?opts.downloadFilename
    :filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png";
@@ -246,16 +248,65 @@
   w32(ev,12,centralSize);w32(ev,16,offset);w16(ev,20,0);
   return new Blob([...parts,...directory,end],{type:"application/zip"});
  }
+ // Pair two complete transparent cards without shortening text or scaling it.
+ // Decode native PNG blobs locally; no CDN, JSZip or DOM screenshot dependency.
+ async function decodePng(blob){
+  if(typeof createImageBitmap==="function")return createImageBitmap(blob);
+  const url=URL.createObjectURL(blob);
+  try{
+   return await new Promise((resolve,reject)=>{
+    const img=new Image();let finished=false;
+    const timer=setTimeout(()=>{if(!finished){finished=true;reject(Error("PNG decode timed out"))}},12000);
+    img.onload=()=>{if(!finished){finished=true;clearTimeout(timer);resolve(img)}};
+    img.onerror=()=>{if(!finished){finished=true;clearTimeout(timer);reject(Error("PNG decode failed"))}};
+    img.src=url;
+   });
+  }finally{setTimeout(()=>URL.revokeObjectURL(url),2000)}
+ }
+ async function composePair(left,right){
+  const images=await Promise.all([decodePng(left.blob),...(right?[decodePng(right.blob)]:[])]);
+  try{
+   const gap=right?36:0;
+   const width=images.reduce((sum,img)=>sum+img.width,0)+gap;
+   const height=Math.max(...images.map(img=>img.height));
+   if(width>8000||height>30000)throw Error("Paired image dimensions exceed browser limits");
+   const canvas=document.createElement("canvas");canvas.width=width;canvas.height=height;
+   const ctx=canvas.getContext("2d");if(!ctx)throw Error("Canvas unavailable");
+   // No background painting: preserve alpha in the gap and beside shorter card.
+   ctx.drawImage(images[0],0,0);
+   if(images[1])ctx.drawImage(images[1],images[0].width+gap,0);
+   const blob=await Promise.race([
+    new Promise((resolve,reject)=>canvas.toBlob(b=>b&&b.size?resolve(b):reject(Error("PNG encoding failed")),"image/png")),
+    new Promise((_,reject)=>setTimeout(()=>reject(Error("Paired PNG encoding timed out")),15000))
+   ]);
+   return blob;
+  }finally{for(const image of images)if(typeof image.close==="function")image.close()}
+ }
  async function saveAll(matches,opts={},onProgress){
   if(!Array.isArray(matches)||!matches.length)throw Error("No previews to download");
   const files=[];
-  for(const [index,match] of matches.entries()){
-   const {blob}=await save({...match,home:match.homeDisplay||match.home,away:match.awayDisplay||match.away},{
-    ...opts,special:false,asBlob:true,
-    leagueLabel:typeof opts.leagueName==="function"?opts.leagueName(match.league):match.league
-   });
-   files.push({filename:String(index+1).padStart(2,"0")+"-"+filePart(match.home)+"-vs-"+filePart(match.away)+".png",blob});
-   if(typeof onProgress==="function")onProgress(index+1,matches.length);
+  if(opts.pairMode===true){
+   for(let i=0;i<matches.length;i+=2){
+    const first=matches[i],second=matches[i+1]||null;
+    const render=match=>save({...match,home:match.homeDisplay||match.home,away:match.awayDisplay||match.away},{
+     ...opts,special:false,asBlob:true,mainScreenshot:true,
+     hideLeagueLabel:true,hideFooterBrand:true
+    });
+    const left=await render(first);
+    const right=second?await render(second):null;
+    const blob=await composePair(left,right);
+    files.push({filename:"preview-pair-"+String(i/2+1).padStart(2,"0")+".png",blob});
+    if(typeof onProgress==="function")onProgress(Math.min(i+2,matches.length),matches.length);
+   }
+  }else{
+   for(const [index,match] of matches.entries()){
+    const {blob}=await save({...match,home:match.homeDisplay||match.home,away:match.awayDisplay||match.away},{
+     ...opts,special:false,asBlob:true,
+     leagueLabel:typeof opts.leagueName==="function"?opts.leagueName(match.league):match.league
+    });
+    files.push({filename:String(index+1).padStart(2,"0")+"-"+filePart(match.home)+"-vs-"+filePart(match.away)+".png",blob});
+    if(typeof onProgress==="function")onProgress(index+1,matches.length);
+   }
   }
   const zip=await bundleZip(files),url=URL.createObjectURL(zip),link=document.createElement("a");
   link.href=url;link.download=filePart(opts.brandName||"future-code")+"-all-previews-"+String(opts.date||"today")+".zip";
