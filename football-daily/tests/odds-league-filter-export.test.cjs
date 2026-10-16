@@ -88,7 +88,7 @@ test('large filtered exports include every record across exactly two pages',asyn
 test('four branded odds pages load the shared new filter and exporter assets',()=>{
  for(const page of ['odds.html','ykz-family/odds.html','bw-sport/odds.html','ko-thet-family/odds.html']){
   const html=fs.readFileSync(path.join(root,page),'utf8');
-  for(const asset of ['daily-image-export.js?v=odds-filter-20261016','odds.js?v=odds-filter-20261016','odds-sheet-theme.css?v=odds-filter-20261016'])
+  for(const asset of ['daily-image-export.js?v=odds-compare-20261016','odds.js?v=odds-compare-20261016','odds-sheet-theme.css?v=odds-compare-20261016'])
    assert.ok(html.includes(asset),page+' needs '+asset);
  }
  const js=fs.readFileSync(path.join(root,'odds.js'),'utf8');
