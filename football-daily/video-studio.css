@@ -1,0 +1,23 @@
+/* Future Code Main Website only — video studio never loaded by branded pages. */
+.fc-video-studio{margin:26px auto 55px;padding:28px;background:linear-gradient(135deg,#182e30,#101e24);border:1px solid #627363;border-radius:19px;box-shadow:0 15px 42px #0003;color:#edf5ed}
+.fc-video-eyebrow{font:800 12px "Barlow Condensed",sans-serif;letter-spacing:.16em;color:#ffbd83}
+.fc-video-studio h2{font:850 clamp(21px,2.8vw,32px)/1.65 "Noto Sans Myanmar",sans-serif;color:#ffd0a4;margin:8px 0}
+.fc-video-studio .fc-video-lead{font-size:13px;line-height:2.1;color:#ceddd4;max-width:850px}
+.fc-video-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(230px,.7fr);gap:25px;align-items:start;margin-top:22px}
+.fc-video-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.fc-video-controls label{display:flex;flex-direction:column;gap:8px;color:#ffca99;font:700 12px "Noto Sans Myanmar",sans-serif;line-height:1.8;min-width:0}
+.fc-video-controls select{display:block;width:100%;border-radius:10px;border:1px solid #58716a;background:#12292a;padding:13px 11px;color:#f3f8f3;font:600 12px "Noto Sans Myanmar",sans-serif;min-height:52px}
+.fc-video-controls label[hidden]{display:none}
+.fc-video-actions{display:flex;flex-wrap:wrap;gap:10px;margin:23px 0 15px}
+.fc-video-actions button{cursor:pointer;border:1px solid #b98962;border-radius:12px;padding:13px 17px;font:800 12px "Noto Sans Myanmar",sans-serif;line-height:1.8}
+.fc-video-actions button:disabled{cursor:wait;opacity:.6}
+#fcVideoDownload{background:#ffc08a;border-color:#ffc08a;color:#182724}
+#fcVideoPreview{background:#203b3b;color:#ebf5ef}
+#fcVideoStop{background:#53262a;border-color:#bd5558;color:#fff1f1}
+.fc-video-status{padding:12px 14px;border:1px solid #496762;border-radius:10px;background:#112626;color:#ffe1b7;min-height:45px;font:600 12px "Noto Sans Myanmar",sans-serif;line-height:1.9}
+.fc-video-info{font-size:11px;line-height:1.9;color:#b8d1c7;margin-top:13px}
+.fc-video-screen{max-width:320px;width:100%;margin:0 auto;background:#0d1e1e;border:2px solid #54716d;border-radius:14px;overflow:hidden;box-shadow:0 15px 35px #0005}
+.fc-video-screen canvas{display:block;width:100%;height:auto;aspect-ratio:9/16}
+.fc-video-legend{font:700 11px "Noto Sans Myanmar",sans-serif;color:#aac7b6;text-align:center;padding:11px}
+@media(max-width:780px){.fc-video-studio{padding:18px 14px;margin:20px auto 40px}.fc-video-grid{grid-template-columns:1fr}.fc-video-screen{max-width:230px}}
+@media(max-width:460px){.fc-video-controls{grid-template-columns:1fr}.fc-video-actions{flex-direction:column}.fc-video-actions button{width:100%}}

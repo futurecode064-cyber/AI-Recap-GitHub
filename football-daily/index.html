@@ -10,12 +10,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css?v=copy-guard-20261013">
+<link rel="stylesheet" href="./video-studio.css?v=20261016-video1">
 <script defer src="./card-export.js?v=20261016-pair-hd2x"></script>
 <script defer src="./social-export.js"></script>
 <script defer src="./canvas-image-kit.js?v=20261016-transparent-all"></script>
 <script defer src="./daily-image-export.js"></script>
 <script defer src="./main-match-screenshot.js?v=20261016-transparent-all"></script>
 <script defer src="./app.js?v=20261016-pair2"></script>
+<script defer src="./video-studio.js?v=20261016-video1"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
 </head>
 <body>
@@ -43,6 +45,41 @@
    <div class="section-note" id="sectionNote"></div>
    <div id="resultsDownloadBar" class="results-download-bar" hidden><button id="resultsPngBtn" type="button" class="results-png-btn">⬇ ဂိုးရလဒ်များ PNG Download</button><span>ပွဲပြီးအတည်ပြုထားသော ရလဒ်အားလုံး</span></div>
    <div id="matchList" class="matches" aria-live="polite"><div class="empty-card"><span class="empty-icon">↻</span><h3>သုံးသပ်ချက်များ ရယူနေပါတယ်…</h3></div></div>
+ </section>
+
+ <section class="container fc-video-studio" id="fcVideoStudio" aria-labelledby="fcVideoTitle">
+  <span class="fc-video-eyebrow">FUTURE CODE · FOOTBALL CONTENT STUDIO</span>
+  <h2 id="fcVideoTitle">ဘောလုံး Video Download Studio</h2>
+  <p class="fc-video-lead">Website မှာ တင်ထားပြီးသား အတည်ပြုဒေတာတွေကနေ ဂိုးရလဒ်၊ ပွဲကြိုသုံးသပ်ချက်နဲ့ ပေါက်ကြေး Video တွေကို အသင်းလိုဂို၊ မြန်မာစာ၊ Slide Transition တွေနဲ့ ဖန်တီး Download လုပ်နိုင်ပါတယ်။</p>
+  <div class="fc-video-grid">
+   <div>
+    <div class="fc-video-controls">
+     <label for="fcVideoMode">Video အမျိုးအစား
+      <select id="fcVideoMode"><option value="results">ဂိုးရလဒ်များ (မနေ့က)</option><option value="previews">ပွဲကြိုသုံးသပ်ချက်များ</option><option value="odds">ပေါက်ကြေးများ</option></select>
+     </label>
+     <label for="fcVideoLeague" id="fcVideoLeagueWrap" hidden>ပေါက်ကြေး League
+      <select id="fcVideoLeague"><option value="all">လိဂ်အားလုံး</option></select>
+     </label>
+     <label for="fcVideoQuality">Video Quality
+      <select id="fcVideoQuality"><option value="hd">Full HD · 1080 × 1920 (9:16)</option><option value="lite">Mobile · 720 × 1280 (9:16)</option></select>
+     </label>
+     <label for="fcVideoPace">Slide အရှိန်
+      <select id="fcVideoPace"><option value="normal">ပုံမှန်</option><option value="slow">ဖတ်ချိန်ပိုပေးမယ်</option><option value="fast">မြန်မြန်ဆန်ဆန်</option></select>
+     </label>
+    </div>
+    <div class="fc-video-actions">
+     <button type="button" id="fcVideoPreview">နမူနာ Slide ကြည့်မယ်</button>
+     <button type="button" id="fcVideoDownload">⬇ Video ဖန်တီးပြီး Download</button>
+     <button type="button" id="fcVideoStop" hidden>■ Recording ရပ်မယ်</button>
+    </div>
+    <div id="fcVideoStatus" class="fc-video-status" role="status" aria-live="polite">Video ဖန်တီးဖို့ အမျိုးအစားရွေးပါ။</div>
+    <p id="fcVideoInfo" class="fc-video-info">Browser ထဲမှာပဲ ဖန်တီးမှာဖြစ်ပြီး Video အတွက် API Key မလိုပါ။ အသံမပါသော MP4 သို့မဟုတ် WebM ကို Browser ပံ့ပိုးမှုအလိုက် ရရှိမယ်။</p>
+   </div>
+   <div>
+    <div class="fc-video-screen"><canvas id="fcVideoCanvas" width="1080" height="1920" aria-label="Video Slide Preview"></canvas></div>
+    <p class="fc-video-legend">9:16 • Reels / TikTok • Animated Slideshow</p>
+   </div>
+  </div>
  </section>
 </main>
 <footer><div class="container footer-inner"><div><strong>FUTURE CODE <span>FOOTBALL</span></strong><p>Independent Myanmar Football Analysis</p></div><p>နေ့စဉ် အကြောင်းအရာအသစ်တင်သည့် စာမျက်နှာ</p></div></footer>
