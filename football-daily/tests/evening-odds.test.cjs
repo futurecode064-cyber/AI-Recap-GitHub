@@ -35,23 +35,19 @@ test("morning original quotes and evening updates remain separate from existing 
   assert.equal(m.morningGoalTotalOdds,match.goalTotalOdds);
  }
 });
-test("all four branded odds pages load the one shared optional evening module",()=>{
- assert.match(read("odds.js"),/evening-odds\.js/);
- const module=read("evening-odds.js");
- assert.match(module,/data\/odds\/evening\//);
- assert.match(module,/ညနေခင်းကြေးပြောင်း/);
- assert.ok(!module.includes("PDF"));
- assert.ok(!module.includes("evening-review-note"));
- assert.ok(!module.includes("evening-note"));
- assert.ok(!evening.matches.some(m=>m.league==="German 3. Liga"));
+test("all four brands use only one integrated morning/latest price table",()=>{
+ const odds=read("odds.js");
+ assert.ok(odds.includes('new URL("evening/"+day+".json",base)'));
+ assert.ok(odds.includes('function mergeLatestOdds(morning,update)'));
+ assert.ok(odds.includes('မူလ')&&odds.includes('ယခု'));
+ assert.ok(!odds.includes('evening-odds.js'),"Do not load separate evening section anymore");
+ assert.ok(!odds.includes('eveningOddsSection'));
  for(const html of ["odds.html","ykz-family/odds.html","bw-sport/odds.html","ko-thet-family/odds.html"]){
   assert.match(read(html),/odds\.js/);
   assert.match(read(html),/oddsList/);
  }
- const css=read("evening-odds.css");
- for(const s of ["--sheet-brand","--sheet-deep","background:#fff","overflow-x:auto"]){
-  assert.ok(css.includes(s),s);
- }
+ // Historical afternoon reports and PNGs remain archived, not discarded.
+ assert.equal(evening.matches.length,13);
 });
 function loader(){
  const listeners=[],styles=[];
