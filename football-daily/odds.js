@@ -51,7 +51,7 @@ function render(data){
    if(button.disabled||!window.FutureCodeDailyExport?.saveOdds)return;
    button.disabled=true;const original=button.textContent;button.textContent="PNG ပြင်ဆင်နေသည်…";
    try{
-    await window.FutureCodeDailyExport.saveOdds({...data,matches},{league});
+    await (window.FutureCodeDailyExport.saveOddsSmart||window.FutureCodeDailyExport.saveOdds)({...data,matches},{league});
     button.textContent="✓ PNG Download စတင်ပြီး";
    }catch(err){
     console.error("League odds PNG error",err);
@@ -79,13 +79,62 @@ function render(data){
  }
 }
 let loadedSheet=null;
+
+let selectedLeagues=new Set();
+function setupLeagueFilter(data){
+ const previous=document.getElementById("oddsLeagueFilter");
+ if(previous)previous.remove();
+ const actions=document.querySelector(".odds-export-actions");
+ if(!actions)return;
+ const panel=element("section","odds-league-filter");
+ panel.id="oddsLeagueFilter";
+ const title=element("h2","odds-filter-title","ဘယ်လိဂ်တွေ ပါစေချင်လဲ ဆိုတာ ရွေးနိုင်ပါသည်");
+ const description=element("p","odds-filter-description","Download ပုံထဲ ပါဝင်စေချင်သည့် လိဂ်များကို အမှန်ခြစ် ရွေးပါ။ Website ပေါ်က ပွဲစာရင်းကို မပြောင်းပါ။");
+ const controls=element("div","odds-filter-controls");
+ const all=element("button","odds-filter-control","အားလုံးရွေး");
+ const none=element("button","odds-filter-control","အားလုံးဖြုတ်");
+ all.type="button";none.type="button";
+ const choices=element("div","odds-league-choices");
+ const unique=[...new Set(data.matches.map(m=>m.league||"အခြားပြိုင်ပွဲ"))];
+ selectedLeagues=new Set(unique);
+ const checkboxes=[];
+ function update(){
+  const included=data.matches.filter(m=>selectedLeagues.has(m.league||"အခြားပြိုင်ပွဲ"));
+  const button=document.getElementById("oddsPngBtn");
+  button.disabled=!included.length;
+  button.textContent=included.length>20?"⬇ ရွေးထားသော ပေါက်ကြေး ၂ ပုံ ZIP Download":"⬇ ရွေးထားသော ပေါက်ကြေး PNG Download";
+  document.getElementById("oddsExportStatus").textContent=
+   included.length+" ပွဲ · "+selectedLeagues.size+" လိဂ် ရွေးထားသည်။ "+
+   (!included.length?"Download လုပ်ရန် အနည်းဆုံး လိဂ်တစ်ခု ရွေးပါ။":
+    included.length>20?"ပေါက်ကြေးပုံ ၂ ပုံကို ZIP ဖိုင် ၁ ခုဖြင့် Download ရပါမည်။":"PNG ပုံ ၁ ပုံ Download ရပါမည်။");
+ }
+ for(const league of unique){
+  const label=element("label","odds-league-choice");
+  const input=element("input");input.type="checkbox";input.checked=true;input.value=league;
+  input.addEventListener("change",()=>{if(input.checked)selectedLeagues.add(league);else selectedLeagues.delete(league);update();});
+  label.appendChild(input);
+  label.appendChild(element("span","",groups[league]||league));
+  choices.appendChild(label);checkboxes.push({league,input});
+ }
+ all.addEventListener("click",()=>{selectedLeagues=new Set(unique);for(const c of checkboxes)c.input.checked=true;update();});
+ none.addEventListener("click",()=>{selectedLeagues.clear();for(const c of checkboxes)c.input.checked=false;update();});
+ controls.appendChild(all);controls.appendChild(none);
+ panel.appendChild(title);panel.appendChild(description);panel.appendChild(controls);panel.appendChild(choices);
+ actions.parentNode.insertBefore(panel,actions);
+ update();
+}
+
 async function downloadOdds(){
  const button=document.getElementById("oddsPngBtn"),status=document.getElementById("oddsExportStatus");
- if(!loadedSheet||!window.FutureCodeDailyExport?.saveOdds)return;
- button.disabled=true;status.textContent="ပွဲအားလုံးပါ PNG ပုံထုတ်နေပါတယ်…";
- try{await window.FutureCodeDailyExport.saveOdds(loadedSheet);status.textContent="ပွဲအားလုံးပါ PNG ဖိုင်ထုတ်ပြီးပါပြီ။";}
- catch(err){console.error(err);status.textContent="PNG ထုတ်မရသေးပါ — ပြန်စမ်းပါ။";}
- finally{button.disabled=false;}
+ if(!loadedSheet||!window.FutureCodeDailyExport?.saveOddsSmart)return;
+ const matches=loadedSheet.matches.filter(m=>selectedLeagues.has(m.league||"အခြားပြိုင်ပွဲ"));
+ if(!matches.length){status.textContent="Download အတွက် အနည်းဆုံး လိဂ်တစ်ခု ရွေးပါ။";return;}
+ button.disabled=true;status.textContent=matches.length>20?"PNG ပုံ ၂ ပုံပါ ZIP ဖိုင် ပြင်ဆင်နေသည်…":"ရွေးထားသော လိဂ်များ၏ PNG ပုံ ပြင်ဆင်နေသည်…";
+ try{
+  const result=await window.FutureCodeDailyExport.saveOddsSmart({...loadedSheet,matches});
+  status.textContent=result.format==="zip"?"PNG ပုံ ၂ ပုံပါ ZIP ဖိုင် Download စတင်ပြီးပါပြီ။":"ရွေးထားသော ပေါက်ကြေး PNG Download စတင်ပြီးပါပြီ။";
+ }catch(err){console.error(err);status.textContent="Download မအောင်မြင်ပါ — ပြန်နှိပ်ပါ။";}
+ finally{button.disabled=!loadedSheet.matches.some(m=>selectedLeagues.has(m.league||"အခြားပြိုင်ပွဲ"));}
 }
 async function load(){
  const query=new URLSearchParams(location.search).get("date");
@@ -98,11 +147,12 @@ async function load(){
   const data=await response.json();
   if(data.reportDate!==day||!Array.isArray(data.matches))throw Error("invalid sheet");
   loadedSheet=data;render(data);
-  document.getElementById("oddsPngBtn").disabled=!data.matches.length;
-  document.getElementById("oddsExportStatus").textContent=data.matches.length+" ပွဲလုံးကို ပုံတစ်ပုံတည်း Download လုပ်နိုင်ပါပြီ။";
+  setupLeagueFilter(data);
  }catch(err){
   console.error("Daily odds loading error",err);
   loadedSheet=null;
+  selectedLeagues.clear();
+  const oldFilter=document.getElementById("oddsLeagueFilter");if(oldFilter)oldFilter.remove();
   document.getElementById("oddsPngBtn").disabled=true;
   document.getElementById("oddsExportStatus").textContent="ကြေးဒေတာမရှိသေးပါ။";
   document.getElementById("oddsCount").textContent="0";
