@@ -19,7 +19,7 @@ test("all four sites use one compact, large-text original/current market table",
  for(const page of ["odds.html","ykz-family/odds.html","bw-sport/odds.html","ko-thet-family/odds.html"]){
   const html=read(page);
   for(const name of ["odds.js","odds-sheet-theme.css","daily-image-export.js"])
-   assert.ok(html.includes(name+"?v=odds-compact-20261016"),page+" cache invalidation for "+name);
+   assert.ok(html.includes(name+"?v=odds-png-only-20261016"),page+" cache invalidation for "+name);
  }
 });
 test("compact PNG draws all 21 matches, including current prices, without losing names",async()=>{
