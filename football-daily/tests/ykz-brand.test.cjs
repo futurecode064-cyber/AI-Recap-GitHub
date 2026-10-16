@@ -79,7 +79,7 @@ test('YKZ full PNG gets brand colors, slogan, logo and brand-specific filenames;
  assert.ok(odds.includes('const brand=brandConfig.id||"future-code"'));
  assert.ok(odds.includes('brand==="ykz-family"'));
  assert.ok(odds.includes('header:"#aa111b"'));
- assert.ok(odds.includes('fill(ctx,M,y,W-M*2,73,index%2===0?white:light)'));
+ assert.ok(odds.includes('fill(ctx,M,y,W-M*2,68,index%2===0?white:light)'));
  assert.ok(odds.includes('brand+"-odds-"'));
  assert.ok(preview.includes('opts.brandLogoUrl'));
  assert.ok(preview.includes('isYKZ'));
