@@ -7,12 +7,17 @@ const path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const pages=["index.html","odds.html","ykz-family/index.html","ykz-family/odds.html","bw-sport/index.html","bw-sport/odds.html","ko-thet-family/index.html","ko-thet-family/odds.html"];
 const text=f=>fs.readFileSync(path.join(root,f),"utf8");
-test("every public page of all four brands has content guard and retains the share/download scripts",()=>{
+test("main website allows copying; branded publications retain original content guard and all downloads",()=>{
  for(const p of pages){
    const html=text(p),nested=p.includes("/");
    const script=(nested?"../":"./")+"content-protection.js?v=copy-guard-20261013";
    const css=(nested?"../":"./")+"styles.css?v=copy-guard-20261013";
-   assert.equal(html.split(script).length-1,1,p+": protection must load once");
+   if(nested){
+     assert.equal(html.split(script).length-1,1,p+": branded content protection must stay enabled");
+   }else{
+     assert.ok(!html.includes("content-protection.js"),p+": main site must permit selection, Ctrl+C and mobile long press");
+     assert.ok(!html.includes('class="football-copy-guard"'),p+": main site must not be copy-guarded");
+   }
    assert.ok(html.includes(css),p+": refreshed shared stylesheet");
    assert.ok(html.includes("daily-image-export.js"),p+": PNG exporter preserved");
    assert.ok(html.includes("odds.js")||html.includes("app.js"),p+": functioning match page");
