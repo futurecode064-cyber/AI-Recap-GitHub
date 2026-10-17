@@ -18,23 +18,26 @@
    if(!groupMap.has(league))groupMap.set(league,[]);
    groupMap.get(league).push(match);
   });
-  const pages=[];
-  let blocks=[],rows=0;
-  const flush=()=>{if(rows){pages.push({groups:blocks,matchCount:rows});blocks=[];rows=0;}};
-  for(const [league,matches] of groupMap){
-   let offset=0;
-   while(offset<matches.length){
-    if(rows===MAX_ROWS)flush();
-    // Prefer to keep a whole league on a page when it fits in a fresh page.
-    if(rows&&matches.length-offset<=MAX_ROWS&&rows+matches.length-offset>MAX_ROWS)flush();
-    const part=matches.slice(offset,offset+MAX_ROWS-rows);
-    blocks.push({league,matches:part});
-    rows+=part.length;offset+=part.length;
-    if(offset<matches.length)flush();
+  const ordered=[...groupMap].flatMap(([league,items])=>items.map(match=>({league,match})));
+  if(!ordered.length)return [];
+  const n=ordered.length;
+  const pageCount=n<=10?1:Math.max(2,Math.ceil(n/MAX_ROWS));
+  const size=Math.floor(n/pageCount),extras=n%pageCount;
+  let position=0;
+  return Array.from({length:pageCount},(_,i)=>{
+   const length=size+(i<extras?1:0);
+   const groupRows=ordered.slice(position,position+length);
+   position+=length;
+   const pageGroups=[];
+   for(const {league,match} of groupRows){
+    let previous=pageGroups[pageGroups.length-1];
+    if(!previous||previous.league!==league){
+     previous={league,matches:[]};pageGroups.push(previous);
+    }
+    previous.matches.push(match);
    }
-  }
-  flush();
-  return pages;
+   return {groups:pageGroups,matchCount:length};
+  });
  }
  function dim(page){
   if(!page||!Array.isArray(page.groups)||!page.groups.length)throw Error("No selected fixtures");
