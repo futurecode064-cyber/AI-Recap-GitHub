@@ -73,6 +73,53 @@
 @media(prefers-reduced-motion:reduce){.fc-ai-download{transition:none}}
 
 
+
+/* Main AI Download Studio: all matches and multiple user-selected leagues.
+   No ZIP; one real browser-triggered PNG per page. */
+.fc-ai-export-panel{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:13px;padding:15px;margin:10px 0 21px;
+ border:1px solid #3557a1;border-radius:13px;background:#111f54;
+ color:#eaf1ff;
+}
+.fc-ai-export-panel h3{grid-column:1/-1;margin:0 0 2px;font-size:17px;line-height:1.6;color:#ffd7a6}
+.fc-ai-export-all,.fc-ai-export-selected{
+ display:flex;flex-direction:column;align-items:stretch;gap:12px;
+ min-width:0;padding:15px;border:1px solid #3c518b;border-radius:11px;background:#16265a;
+}
+.fc-ai-export-all>strong,.fc-ai-export-selected>strong{font-size:14px;color:#fff7dd;line-height:1.7}
+.fc-ai-page-buttons{display:flex;gap:9px;flex-wrap:wrap;align-items:center;min-height:40px}
+.fc-ai-bulk-btn{
+ display:inline-flex;align-items:center;justify-content:center;min-height:43px;
+ max-width:100%;padding:10px 15px;border:1px solid #ffd7a9;border-radius:8px;
+ background:#f5af6e;color:#12264a;cursor:pointer;
+ font:800 12px/1.5 'Noto Sans Myanmar',sans-serif;overflow-wrap:anywhere;
+}
+.fc-ai-bulk-btn:hover,.fc-ai-bulk-btn:focus-visible{background:#ffd6a0;outline:2px solid white;outline-offset:2px}
+.fc-ai-bulk-btn:disabled{cursor:wait;opacity:.68}
+.fc-ai-export-select-actions{display:flex;flex-wrap:wrap;gap:7px}
+.fc-ai-export-select-actions button{
+ min-height:35px;padding:7px 12px;border-radius:7px;border:1px solid #7586b7;
+ background:#254478;color:#fff;font:700 11px 'Noto Sans Myanmar',sans-serif;cursor:pointer;
+}
+.fc-ai-export-select-actions button:disabled{opacity:.45;cursor:default}
+.fc-ai-export-select-actions button:not(:disabled):hover{border-color:#fff4bc}
+.fc-ai-export-leagues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:stretch}
+.fc-ai-export-choice{display:flex;align-items:center;gap:8px;min-width:0;min-height:36px;padding:7px 9px;border:1px solid #5065a0;border-radius:8px;background:#172f65;cursor:pointer;font:700 11px/1.6 'Noto Sans Myanmar',sans-serif}
+.fc-ai-export-choice input{flex:none;width:16px;height:16px;accent-color:#ffb476;cursor:pointer}
+.fc-ai-export-choice span{overflow-wrap:anywhere}
+.fc-ai-export-status{grid-column:1/-1;margin:0;color:#ccdafa;font:600 11px/1.8 'Noto Sans Myanmar',sans-serif}
+.fc-ai-export-empty{color:#b8c9e8;font-size:12px}
+@media(max-width:840px){
+ .fc-ai-export-panel{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+ .fc-ai-export-panel{padding:10px;gap:9px}
+ .fc-ai-export-all,.fc-ai-export-selected{padding:11px}
+ .fc-ai-export-leagues{grid-template-columns:1fr}
+ .fc-ai-bulk-btn{flex:1 1 125px}
+}
+
 /* MAIN WEBSITE ONLY: five equal navigation cards, no changes to brand mirrors. */
 .date-tabs.fc-main-five-nav{
  display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
