@@ -2,14 +2,14 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "dc91a64d99fc0ab9be317381940fef50367bc8e0",
-  "source_tree": "17790959b1e5ed97ce3a2b34f7519ec98c308618",
-  "target_tree": "17790959b1e5ed97ce3a2b34f7519ec98c308618",
+  "source_commit": "cd2eded541cd4b4e3903736071ba4d2aa628e3b5",
+  "source_tree": "340b44e0a0b7b125d898d65e125bbe5c7c152bf3",
+  "target_tree": "340b44e0a0b7b125d898d65e125bbe5c7c152bf3",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-17T01:01:11Z",
+  "last_synced_utc": "2026-10-17T07:26:57.020Z",
   "reconciled_on": "2026-10-17",
-  "reconciliation_note": "Verified 2026-10-17 standalone source parent dc91a64d99fc0ab9be317381940fef50367bc8e0 and production football-daily subtrees match exactly; reconcile stale guard marker before approved 17 Oct afternoon odds sync. No football-daily production files changed.",
-  "last_synced_method": "Manual 17 Oct approved full form update with hash parity"
+  "reconciliation_note": "2026-10-17 approved current Myanmar odds: copied only evening/2026-10-17.json from source to production; verified production and standalone football-daily SHA tree both 340b44e0a0b7b125d898d65e125bbe5c7c152bf3. Guard remains intact.",
+  "last_synced_method": "Approved targeted data-only production branch copy; verified complete football-daily subtree hash parity"
 }
