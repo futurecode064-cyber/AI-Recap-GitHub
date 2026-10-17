@@ -42,3 +42,26 @@ test("Missing team data, extreme outliers and unverified fixture data cannot cra
  ];
  fixtures.forEach(f=>assert.equal(new Set(model.predict(f)).size,3));
 });
+
+
+test("MAIN homepage shows exactly five navigation tiles and section shortcuts",()=>{
+ const main=read("index.html");
+ const style=read("main-ai-score.css");
+ const nav=main.match(/<nav class="date-tabs fc-main-five-nav"[^>]*>([\s\S]*?)<\/nav>/);
+ assert.ok(nav,"main five-section menu must exist");
+ const itemTags=[...nav[1].matchAll(/<(button|a)\b[^>]*>/g)].map(x=>x[0]);
+ assert.equal(itemTags.length,5,"five visible main navigation tiles, no duplicates");
+ assert.equal(itemTags.filter(x=>x.startsWith("<button")).length,2,"yesterday/today keep original button behavior");
+ assert.equal(itemTags.filter(x=>x.startsWith("<a")).length,3,"odds, video, AI links");
+ assert.match(nav[1],/href="\.\/odds\.html"/);
+ assert.match(nav[1],/href="#fcVideoStudio"/);
+ assert.match(nav[1],/href="#fcAiScoreSection"/);
+ assert.ok(main.indexOf('id="fcVideoStudio"')>main.indexOf('id="dateTabs"'),"Video target exists");
+ assert.ok(main.indexOf('id="fcAiScoreSection"')>main.indexOf('id="dateTabs"'),"AI target exists");
+ assert.match(style,/\.date-tabs\.fc-main-five-nav\s*\{/,"main-only five column layout");
+ assert.match(style,/grid-template-columns:repeat\(5,minmax\(0,1fr\)\)/,"desktop five columns");
+ for(const name of ["ykz-family","bw-sport","ko-thet-family"]){
+  const brand=read(name+"/index.html");
+  assert.doesNotMatch(brand,/fc-main-five-nav|fc-main-studio-tab|fc-main-ai-tab/,"brand mirror remains three tiles: "+name);
+ }
+});
