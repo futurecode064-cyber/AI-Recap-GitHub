@@ -103,3 +103,33 @@
  .date-tabs.fc-main-five-nav > button small{font-size:9px}
  .date-tabs.fc-main-five-nav > .fc-main-ai-tab{grid-column:1/-1}
 }
+
+
+/* Five-menu content isolation: only selected MAIN section may be shown. */
+body[data-fc-main-view="today"] #fcAiScoreSection,
+body[data-fc-main-view="today"] #fcVideoStudio,
+body[data-fc-main-view="yesterday"] #fcAiScoreSection,
+body[data-fc-main-view="yesterday"] #fcVideoStudio,
+body[data-fc-main-view="ai"] #fcVideoStudio,
+body[data-fc-main-view="video"] #fcAiScoreSection{
+ display:none !important;
+}
+body[data-fc-main-view="ai"] #filters,
+body[data-fc-main-view="ai"] #sectionNote,
+body[data-fc-main-view="ai"] #resultsDownloadBar,
+body[data-fc-main-view="ai"] #matchList,
+body[data-fc-main-view="video"] #filters,
+body[data-fc-main-view="video"] #sectionNote,
+body[data-fc-main-view="video"] #resultsDownloadBar,
+body[data-fc-main-view="video"] #matchList,
+body[data-fc-main-view="ai"] .content > .section-heading,
+body[data-fc-main-view="video"] .content > .section-heading{
+ display:none !important;
+}
+body[data-fc-main-view="video"] .content{padding-bottom:6px}
+body[data-fc-main-view="video"] #fcVideoStudio{margin-top:5px}
+body[data-fc-main-view="ai"] #fcAiScoreSection{margin-top:15px}
+.date-tabs.fc-main-five-nav > a.active{
+ color:#172321;background:#eaa36f;border-color:#ffcf9c;
+}
+.date-tabs.fc-main-five-nav > a.active small{color:#344239}
