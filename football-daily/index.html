@@ -11,12 +11,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css?v=copy-guard-20261013">
 <link rel="stylesheet" href="./video-studio.css?v=20261016-video2">
+<link rel="stylesheet" href="./main-ai-score.css?v=20261017-main1">
 <script defer src="./card-export.js?v=20261016-png-only"></script>
 <script defer src="./social-export.js"></script>
 <script defer src="./canvas-image-kit.js?v=20261016-transparent-all"></script>
 <script defer src="./daily-image-export.js?v=20261016-png-only"></script>
 <script defer src="./main-match-screenshot.js?v=20261016-transparent-all"></script>
 <script defer src="./app.js?v=20261016-png-only"></script>
+<script defer src="./main-ai-score-model.js?v=20261017-main1"></script>
+<script defer src="./main-ai-score.js?v=20261017-main1"></script>
 <script defer src="./video-studio.js?v=20261016-video2"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
 </head>
@@ -45,6 +48,22 @@
    <div class="section-note" id="sectionNote"></div>
    <div id="resultsDownloadBar" class="results-download-bar" hidden><button id="resultsPngBtn" type="button" class="results-png-btn">⬇ ဂိုးရလဒ်များ PNG Download</button><span>ပွဲပြီးအတည်ပြုထားသော ရလဒ်အားလုံး</span></div>
    <div id="matchList" class="matches" aria-live="polite"><div class="empty-card"><span class="empty-icon">↻</span><h3>သုံးသပ်ချက်များ ရယူနေပါတယ်…</h3></div></div>
+ </section>
+
+
+ <!-- Main Future Code Website ONLY. Other brand pages do not load these scripts/styles. -->
+ <section class="container fc-ai-predictions" id="fcAiScoreSection" aria-labelledby="fcAiScoreTitle">
+   <span class="fc-ai-eyebrow">FUTURE CODE · MATCH SCORE STUDIO</span>
+   <h2 id="fcAiScoreTitle">AI ဂိုးရလဒ် ခန့်မှန်းချက်များ</h2>
+   <div class="fc-ai-controls">
+     <label for="fcAiScoreLeague">လိဂ်အလိုက် ပွဲစဉ်ရွေးရန်</label>
+     <select id="fcAiScoreLeague" aria-label="လိဂ်ရွေးရန်"><option value="all">လိဂ်အားလုံး</option></select>
+     <span class="fc-ai-count" id="fcAiScoreCount" aria-live="polite">—</span>
+     <span class="fc-ai-status" id="fcAiScoreStatus" role="status"></span>
+   </div>
+   <div id="fcAiScoreGroups" aria-live="polite">
+     <p class="fc-ai-empty">ယနေ့ပွဲစဉ်များ ရယူနေသည်…</p>
+   </div>
  </section>
 
  <section class="container fc-video-studio" id="fcVideoStudio" aria-labelledby="fcVideoTitle">
