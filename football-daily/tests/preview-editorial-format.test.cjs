@@ -25,6 +25,15 @@ test("normal website articles follow the author-approved 16 October three-paragr
  for(const [i,m] of data.matches.entries()){
   const desc="#"+(i+1)+" "+(m.homeDisplay||m.home)+" vs "+(m.awayDisplay||m.away);
   const t=m.dailyPreviewText;
+  // New author-uploaded journalist prompt is authoritative after owner's 17 Oct approval.
+  // The separate preview-v2-quality.test.cjs now enforces its natural single-paragraph quality.
+  if(data.reportDate>="2026-10-17"&&m.previewJournalist?.status==="owner_approved_published"){
+   assert.ok(typeof t==="string"&&t.trim().length>=300,desc+": substantial journal article required");
+   assert.ok(!t.includes("\\n"),desc+": one flowing paragraph");
+   assert.ok(t.includes(m.homeDisplay)&&t.includes(m.awayDisplay),desc+": verified Burmese team spellings");
+   assert.ok(!/ဘော်ဒီကြေး|ဂိုးပေါင်းကြေး|ခန့်မှန်းဂိုးရလဒ်|\\bPDF\\b/.test(t),desc+": markets and source details are elsewhere");
+   continue;
+  }
   assert.ok(typeof t==="string"&&t.trim().length>=250,desc+": dailyPreviewText must be a substantial article");
   assert.equal(t,t.trim(),desc+": no edge whitespace");
   if(data.reportDate==="2026-10-16"){
