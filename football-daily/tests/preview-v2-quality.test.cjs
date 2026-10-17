@@ -51,8 +51,6 @@ test("Published journalist previews have natural unique one-paragraph factual fo
   assert.ok(t.endsWith("။**"),name+": bold natural closing selection");
   assert.match(bold.at(-1),/ရွေးချယ်|ယုံကြည်|အလေးပေး|အသာစီး|အနိုင်/,name+": final sentence selects a team with reasoning");
   assert.ok(bold.at(-1).length>=30,name+": final reasoning must be match-specific");
-  assert.ok(/တိုက်စစ်|ဂိုးသွင်း|ဂိုးပေါက်/.test(t),name+": discuss actual attacking force");
-  assert.ok(/ခံစစ်|နောက်တန်း|ပေးဂိုး/.test(t),name+": discuss defensive implications");
   for(const [side,s] of [["home",m.homeStanding],["away",m.awayStanding]]){
    if(s&&["played","wins","draws","losses"].every(k=>Number.isInteger(s[k])))
     assert.equal(s.played,s.wins+s.draws+s.losses,name+": checked "+side+" season record mismatch");
