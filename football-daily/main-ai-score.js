@@ -210,37 +210,56 @@
   if(document.fonts?.load){
    await Promise.race([document.fonts.load('700 32px "Noto Sans Myanmar"').catch(()=>{}),new Promise(r=>setTimeout(r,2600))]);
   }
-  const canvas=document.createElement("canvas");canvas.width=1080;canvas.height=650;
+  // PNG uses the same aligned league-banner / three-score-column format as the site.
+  const canvas=document.createElement("canvas");canvas.width=1080;canvas.height=430;
   const ctx=canvas.getContext("2d");if(!ctx)throw new Error("Canvas not supported");
-  const bg=ctx.createLinearGradient(0,0,1080,650);bg.addColorStop(0,"#08146b");bg.addColorStop(.55,"#061ecd");bg.addColorStop(1,"#091053");
-  ctx.fillStyle=bg;ctx.fillRect(0,0,1080,650);
-  rounded(ctx,28,30,1024,97,18,"#111f95");
-  ctx.fillStyle="#fff";ctx.textAlign="left";
-  ctx.font="800 38px 'Noto Sans Myanmar',sans-serif";
-  ctx.fillText("FUTURE CODE  |  AI ခန့်မှန်းချက်များ",55,93);
-  rounded(ctx,28,145,1024,76,16,"#1329ac");
-  ctx.fillStyle="#fff";ctx.textAlign="left";fit(ctx,labelLeague(match.league),790,30,20);
-  ctx.fillText(labelLeague(match.league),57,195);
-  ctx.fillStyle="#efe6c6";ctx.textAlign="right";ctx.font="700 25px 'Noto Sans Myanmar',sans-serif";
-  ctx.fillText(displayTime(match),1023,194);
-  const [homeImg,awayImg]=await Promise.all([picture(match.homeCrestUrl),picture(match.awayCrestUrl)]);
-  iconOrLabel(ctx,homeImg,135,240,95,team(match,"home"));
-  iconOrLabel(ctx,awayImg,850,240,95,team(match,"away"));
-  ctx.textAlign="center";ctx.fillStyle="#ffd665";
-  ctx.font="800 48px 'Barlow Condensed',sans-serif";ctx.fillText("VS",540,304);
-  ctx.fillStyle="#fff";
-  const home=team(match,"home"),away=team(match,"away");
-  fit(ctx,home,410,34,23);ctx.fillText(home,286,398);
-  fit(ctx,away,410,34,23);ctx.fillText(away,792,398);
+  ctx.fillStyle="#070f4a";ctx.fillRect(0,0,1080,430);
+  ctx.fillStyle="#fff";ctx.textAlign="left";ctx.font="800 25px 'Barlow Condensed',sans-serif";
+  ctx.fillText("FUTURE CODE  •  AI ခန့်မှန်းချက်များ",22,43);
+  const blue=ctx.createLinearGradient(0,60,1080,215);
+  blue.addColorStop(0,"#020a8c");blue.addColorStop(.52,"#1d44f7");blue.addColorStop(1,"#07077d");
+  ctx.fillStyle=blue;ctx.fillRect(0,60,1080,152);
+  rounded(ctx,10,69,116,132,10,"#ffffff");
+  const [leagueImg,homeImg,awayImg]=await Promise.all([
+   picture(leagueIcons[match.league]),picture(match.homeCrestUrl),picture(match.awayCrestUrl)
+  ]);
+  if(leagueImg)ctx.drawImage(leagueImg,20,81,96,108);
+  else{ctx.fillStyle="#1325a7";ctx.font="900 60px sans-serif";ctx.textAlign="center";ctx.fillText("⚽",68,152);}
+  ctx.textAlign="center";ctx.fillStyle="#fff";
+  const leagueText=labelLeague(match.league);
+  fit(ctx,leagueText,445,35,20);ctx.fillText(leagueText,356,151);
+  const columns=[596,758,920];
   for(let i=0;i<3;i++){
-   const x=45+i*341,w=308;
-   rounded(ctx,x,438,w,166,18,i===0?"#f1f4fb":"#eee1ba");
-   ctx.textAlign="center";ctx.fillStyle="#222968";
-   ctx.font="700 27px 'Noto Sans Myanmar',sans-serif";
-   ctx.fillText("AI ခန့်မှန်း "+["၁","၂","၃"][i],x+w/2,489);
-   ctx.fillStyle="#101b44";ctx.font="900 72px 'Barlow Condensed',sans-serif";
-   ctx.fillText(scores[i],x+w/2,575);
+   const x=columns[i];
+   rounded(ctx,x+4,74,154,124,10,i===0?"#e6edf9":"#f8e89a");
+   ctx.fillStyle="#14204b";ctx.textAlign="center";
+   const heading="AI ခန့်မှန်း "+["၁","၂","၃"][i];
+   fit(ctx,heading,145,22,15);ctx.fillText(heading,x+81,146);
   }
+  ctx.fillStyle="#ffffff";ctx.fillRect(0,220,596,190);
+  ctx.fillStyle="#f1f4f9";ctx.fillRect(0,220,145,190);
+  ctx.strokeStyle="#cdd6e8";ctx.lineWidth=2;
+  ctx.beginPath();ctx.moveTo(145,220);ctx.lineTo(145,410);ctx.stroke();
+  ctx.fillStyle="#172752";ctx.textAlign="center";
+  const kickoff=displayTime(match);
+  fit(ctx,kickoff,136,22,14);ctx.fillText(kickoff,72,321);
+  iconOrLabel(ctx,homeImg,228,235,69,team(match,"home"));
+  iconOrLabel(ctx,awayImg,446,235,69,team(match,"away"));
+  ctx.fillStyle="#243aa4";ctx.font="900 33px 'Barlow Condensed',sans-serif";
+  ctx.fillText("VS",371,291);
+  ctx.fillStyle="#10224f";
+  const homeName=team(match,"home"),awayName=team(match,"away");
+  fit(ctx,homeName,182,22,14);ctx.fillText(homeName,261,358);
+  fit(ctx,awayName,182,22,14);ctx.fillText(awayName,479,358);
+  for(let i=0;i<3;i++){
+   const x=columns[i];
+   ctx.fillStyle=i===0?"#f1f3f8":"#fff3b9";
+   ctx.fillRect(x,220,162,190);
+   ctx.strokeStyle="#d9dfee";ctx.strokeRect(x,220,162,190);
+   ctx.fillStyle="#0d1834";ctx.font="900 58px 'Barlow Condensed',sans-serif";
+   ctx.textAlign="center";ctx.fillText(scores[i],x+81,332);
+  }
+  ctx.fillStyle="#132fdf";ctx.fillRect(0,412,1080,6);
   const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
   if(!blob)throw new Error("PNG encode failed");
   const slug=s=>String(s||"fixture").normalize("NFKD").replace(/[^a-zA-Z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,35);
