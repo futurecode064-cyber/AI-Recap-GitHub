@@ -1,5 +1,8 @@
 # FUTURE CODE FOOTBALL DAILY — APPROVED DAILY FORMAT (LOCKED)
 
+> **2026-10-17 — FINAL OWNER APPROVAL, HIGHEST EDITORIAL PRIORITY:** [PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md](./PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md) is the permanent, authoritative rule for ALL new daily match previews and today's rewritten 32 fixtures. It supersedes the October 17 "Professional Preview V2" where rules conflict: natural one-paragraph Burmese football-journalism reasoning, accurate contemporaneous football facts, no numbers/stats recited merely to satisfy a template, one evidence-grounded named team selection, no source URLs, odds or score predictions in the published article. Other pre-existing odds, image, site branding, match and video sections stay unchanged. Research source URL and editorial audit live in metadata, never prose. Publishing stays manual: owner's explicit "GitHub မှာ တင်ပေးပါ" is required, and today's authorization has been received.
+
+
 ## 2026-10-17 — PROFESSIONAL PREVIEW V2 — PERMANENT OWNER-APPROVED LOCK (HIGHEST EDITORIAL PRIORITY)
 
 **Effective:** all new and corrected ordinary previews from 2026-10-17 onward. This block supersedes every earlier writing-style/bold/paragraph rule if inconsistent. It does **not** alter the existing card visuals, PDF opening prices, exported PNG layout, verified historical outcomes, October 15 author-verbatim exceptions, or manual publication permissions.
