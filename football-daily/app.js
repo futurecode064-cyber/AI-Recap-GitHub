@@ -34,6 +34,14 @@ const LEAGUE_ALIASES={
 };
 function canonicalLeague(value){return LEAGUE_ALIASES[value]||value;}
 function leagueName(value){const key=canonicalLeague(value);return LEAGUE_NAMES[key]||value||"ပွဲကြိုသုံးသပ်ချက်";}
+const LEAGUE_BADGE_URLS={"Premier League":"https://crests.football-data.org/PL.png","Championship":"https://crests.football-data.org/ELC.png","Serie A":"https://crests.football-data.org/SA.png","La Liga":"https://crests.football-data.org/PD.png","Bundesliga":"https://crests.football-data.org/BL1.png","Ligue 1":"https://crests.football-data.org/FL1.png"};
+function leagueBadge(league,klass="league-name"){
+ const wrap=node("span",klass);
+ const url=LEAGUE_BADGE_URLS[canonicalLeague(league)];
+ if(url){const icon=node("img","inline-league-crest");icon.src=url;icon.alt="";icon.loading="lazy";icon.decoding="async";icon.style.width="23px";icon.style.height="23px";icon.style.objectFit="contain";icon.style.verticalAlign="middle";icon.style.marginRight="7px";icon.onerror=()=>icon.remove();wrap.appendChild(icon);}
+ wrap.appendChild(document.createTextNode(leagueName(league)));
+ return wrap;
+}
 const TEAM_NAMES_MM={
  "Coventry City":"ကိုဗင်ထရီ","Newcastle United":"နယူးကာဆယ်","Atalanta":"အတ္တလန်တာ","Venezia":"ဗင်နီဇီယာ",
  "Torino":"တိုရီနို","Udinese":"အူဒီးနီးစ်","Levante":"လီဗန်တေး","Sevilla":"ဆီဗီလာ",
@@ -230,7 +238,7 @@ function renderMatchHero(match){
  const hero=node("section","match-hero");
  const artwork=node("div","match-hero-art");
  const middle=node("div","match-hero-versus");
- middle.appendChild(node("strong","hero-competition",leagueName(match.league)));
+ middle.appendChild(leagueBadge(match.league,"hero-competition"));
  middle.appendChild(node("span","hero-big-vs","VS"));
  append(artwork,heroSide(match,"home"),middle,heroSide(match,"away"));
  hero.appendChild(artwork);
@@ -259,7 +267,7 @@ function renderQuoteAndForm(match){
 }
 function renderFinished(match){
  const card=node("article","match-card result-card");
- card.appendChild(node("div","match-topline","◈ "+leagueName(match.league)));
+ const resultLeague=node("div","match-topline");resultLeague.appendChild(leagueBadge(match.league));card.appendChild(resultLeague);
  const banner=node("div","vs-banner");
  const centre=node("div","result-score",match.finalScore);
  append(banner,teamSide(match,"home"),centre,teamSide(match,"away"));
@@ -271,7 +279,7 @@ function renderFixtureOnly(match){
  const card=node("article","match-card fixture-only");
  const headline=node("div","match-topline");
  append(headline,
-  node("span","league-name","◈ "+leagueName(match.league)),
+  leagueBadge(match.league),
   node("span","match-time",(match.status==="live"?"🔴 LIVE "+(match.liveScore||"")+" · ":"")+(match.kickoffYangon||"")));
  card.appendChild(headline);
  const banner=node("div","vs-banner");
@@ -288,7 +296,7 @@ function renderFixtureOnly(match){
 function renderMatch(match,i){
  const card=node("article","match-card"+(match.specialChoice?" is-special":""));
  const headline=node("div","match-topline");
- const league=node("span","league-name","◈ "+leagueName(match.league));
+ const league=leagueBadge(match.league);
  if(match.specialChoice)league.appendChild(node("span","special-mark","★ SPECIAL CHOICE"+(Number.isInteger(match.specialChoiceRank)?" #"+match.specialChoiceRank:"")));
  headline.appendChild(league);
  card.appendChild(headline);

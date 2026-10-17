@@ -1,0 +1,2362 @@
+{
+  "reportDate": "2026-10-16",
+  "published": true,
+  "matches": [
+    {
+      "league": "Serie A",
+      "home": "Frosinone",
+      "away": "Sassuolo",
+      "homeDisplay": "ဖရိုစင်ဝမ်း",
+      "awayDisplay": "ဆက်စူအိုလို",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁:၁၅",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:45:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+      "homeOdds": "2.50",
+      "drawOdds": "3.60",
+      "awayOdds": "2.60",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://oddsfilter.com/event/1001550151-frosinone-sassuolo",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Napoli",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Como",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Genoa",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-06",
+          "opponent": "Venezia",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-02",
+          "opponent": "Sassuolo",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Milan",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Monza",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Juventus",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-06",
+          "opponent": "Bologna",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-02",
+          "opponent": "Frosinone",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 6,
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "points": 10,
+        "position": 9,
+        "goalsFor": 9,
+        "goalsAgainst": 7
+      },
+      "awayStanding": {
+        "played": 6,
+        "wins": 2,
+        "draws": 2,
+        "losses": 2,
+        "points": 8,
+        "position": 11,
+        "goalsFor": 10,
+        "goalsAgainst": 10
+      },
+      "standingsSourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-table.shtml",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ဖရိုစင်ဝမ်း",
+        "bodyOdds": "-5",
+        "goalTotalOdds": "3-60",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ဖရိုစင်ဝမ်းက အီတလီစီးရီးအေမှာ ၆ ပွဲကစားပြီး ၁၀ မှတ်နဲ့ အဆင့် ၉ မှာ ရပ်တည်နေပါတယ်။ ဂိုး ၉ ဂိုးသွင်း၊ ၇ ဂိုးပေးထားပြီး နောက်ဆုံး နာပိုလီကို ၀-၃ ရှုံးခဲ့ပေမယ့် အိမ်ကွင်းမှာ ကိုမိုကို ၂-၀ နဲ့ အနိုင်ယူထားတာက အားတက်စရာပါ။\nဆက်စူအိုလိုကတော့ ၆ ပွဲမှာ ၈ မှတ်နဲ့ အဆင့် ၁၁ ရောက်နေပြီး သွင်းဂိုးနဲ့ ပေးဂိုး ၁၀ ဂိုးစီရှိပါတယ်။ အေစီမီလန်နဲ့ ၁-၁ သရေကျထားတာ၊ ဂျူဗင်တပ်ကို ၃-၂ နိုင်ထားတာတွေကြောင့် တိုက်စစ်စွမ်းဆောင်ရည် လျှော့တွက်လို့ မရပေမယ့် အဝေးကွင်း မွန်ဇာပွဲမှာ ၁-၂ ရှုံးခဲ့ပါတယ်။\nနှစ်သင်းလုံး အပြန်အလှန်ဂိုးရနိုင်ပေမယ့် ဖရိုစင်ဝမ်းရဲ့ အိမ်ကွင်းအခွင့်အရေးနဲ့ အမှတ်ပေးဇယားမှာ အနည်းငယ်သာနေမှုကို အခြေခံပြီး **ဖရိုစင်ဝမ်းကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml",
+        "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-table.shtml"
+      ],
+      "status": "finished",
+      "specialChoice": true,
+      "pdfLastColumn": "3-0",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-stats.shtml",
+        "standingsSource": "https://www.tntsports.co.uk/football/serie-a/2026-2027/frosinone-sassuolo_mtc21874106/live-table.shtml"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "specialChoiceRank": 1,
+      "specialPreparedDate": "2026-10-16",
+      "specialPickType": "team",
+      "specialPickLabel": "ဖရိုစင်ဝမ်း",
+      "specialRiskNote": "ဆက်စူအိုလို၏ တန်ပြန်တိုက်စစ်နှင့် ဖရိုစင်ဝမ်း နောက်ဆုံးပွဲဂိုးပြတ်ရှုံးနိမ့်မှုကြောင့် အနိုင်သေချာပေါက်မဟုတ်ပါ။",
+      "specialResearchSources": [
+        "https://www.sportsmole.co.uk/football/frosinone/preview/frosinone-vs-sassuolo-prediction-team-news-lineups_606881.html",
+        "https://www.soccerway.com/match/frosinone-pfo9H1Wp/sassuolo-QDdvI0zl/",
+        "https://oddsfilter.com/event/1001550151-frosinone-sassuolo"
+      ],
+      "specialAnalysisParagraphs": [
+        "အီတလီစီးရီးအေ ဒီနေ့ပွဲမှာ ဖရိုစင်ဝမ်းကို အထူးရွေးချယ်ချက်အဖြစ် စဉ်းစားရတဲ့အကြောင်းက အိမ်ကွင်းခြေစွမ်းနဲ့ ရာသီအစတည်ငြိမ်မှုပါ။ အဖွင့် ၆ ပွဲမှာ ၃ နိုင်၊ ၁ သရေ၊ ၂ ရှုံးနဲ့ ၁၀ မှတ်ရထားပြီး ဆက်စူအိုလိုထက် နှစ်မှတ်အသာရနေပါတယ်။ နောက်ဆုံး နာပိုလီကို ၀-၃ နဲ့ ရှုံးခဲ့တာက ခံစစ်ကို ပြန်ပြင်ဖို့လိုကြောင်း ပြသပေမယ့် အိမ်ကွင်းမှာ ကိုမိုကို ၂-၀ နဲ့ အနိုင်ရထားတဲ့ပွဲက ပြိုင်ဘက်တိုက်စစ်ကို ထိန်းချုပ်ရင်း အခွင့်အရေးအသုံးချနိုင်တဲ့ အခြေအနေကို ပြသထားပါတယ်။",
+        "ဆက်စူအိုလိုဘက်ကတော့ ၆ ပွဲမှာ ၈ မှတ်နဲ့ ဖရိုစင်ဝမ်းအောက်မှာ ရပ်တည်နေပါတယ်။ အေစီမီလန်နဲ့ ၁-၁ သရေကျခဲ့သလို ဂျူဗင်တပ်ကို ၃-၂ နဲ့ အနိုင်ရခဲ့တဲ့ ရလဒ်က တိုက်စစ်ရဲ့ အန္တရာယ်ကို ပြနေပါတယ်။ ဒါပေမယ့် မွန်ဇာအဝေးကွင်းမှာ ၁-၂ နဲ့ ရှုံးခဲ့ရပြီး ရာသီအစ ၆ ပွဲမှာ သွင်းဂိုး ၁၀ ဂိုး၊ ပေးဂိုး ၁၀ ဂိုး ဖြစ်နေတာက ခံစစ်နောက်တန်းမှာ ပြိုင်ဘက်တွေ ထိုးဖောက်ဖို့နေရာ ရနိုင်တယ်ဆိုတဲ့ သတိပေးချက်တစ်ခု ဖြစ်ပါတယ်။ အိမ်ရှင်ကို ဂိုးပြတ်ကျော်ဖြတ်ဖို့တော့ လွယ်ကူမယ့်အနေအထား မဟုတ်ပါဘူး။",
+        "ဒီနှစ်သင်းရဲ့ တိုက်စစ်က ဘောလုံးကိုင်ပြီး စတင်တဲ့ပုံစံမတူနိုင်လို့ ပွဲအစဖိအားကို ဘယ်သူထိန်းချုပ်နိုင်မလဲဆိုတာ အရေးကြီးလာပါမယ်။ ဖရိုစင်ဝမ်းက အိမ်ကွင်းမှာ ရှေ့တန်းကို လျင်မြန်စွာပံ့ပိုးပြီး ပြိုင်ဘက်ခံစစ်ကြားနေရာကို အသုံးချနိုင်ရင် အခွင့်အရေးပိုရနိုင်ပါတယ်။ ဆက်စူအိုလိုကလည်း မီလန်နဲ့ ဂျူဗင်တပ်တို့ကို ရင်ဆိုင်ခဲ့တဲ့အတွေ့အကြုံကြောင့် အိမ်ရှင်ဖိအားကို ခံပြီး ပြန်လည်တိုက်စစ်ဆင်နိုင်ပါတယ်။ နှစ်သင်းစလုံး ဂိုးပေးထားရတဲ့မှတ်တမ်းရှိတဲ့အတွက် တစ်သင်းတည်းက ပွဲကို အပြည့်အဝထိန်းချုပ်မယ်လို့တော့ ကြိုတင်သတ်မှတ်လို့ မရပါဘူး။",
+        "ဖရိုစင်ဝမ်းအတွက် အကြီးဆုံးစိုးရိမ်စရာက နာပိုလီကို ဂိုးပြတ်ရှုံးခဲ့တဲ့နောက် အသင်းယုံကြည်မှု ပြန်တည်ဆောက်ဖို့လိုနေတာပါ။ ဆက်စူအိုလိုကလည်း ခံစစ်ဖိအားကြားက တိုက်စစ်လမ်းကြောင်းဖွင့်နိုင်တဲ့အသင်းဖြစ်လို့ ဒီရွေးချယ်ချက်မှာ အန္တရာယ်ရှိနေတုန်းပါပဲ။ သို့သော် အမှတ်ပေးဇယားမှာ နှစ်မှတ်အသာ၊ အိမ်ကွင်းမှာ ကိုမိုကို ဂိုးမပေးဘဲ အနိုင်ရဖူးတဲ့သက်သေ၊ ဆက်စူအိုလိုအဝေးကွင်းခံစစ်ရလဒ်တို့ကို ပေါင်းစပ်ချိန်ဆကြည့်မယ်ဆိုရင် **ဖရိုစင်ဝမ်းကို ရွေးချယ်ပါတယ်။**"
+      ],
+      "finalScore": "4-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-16",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "La Liga",
+      "home": "Deportivo La Coruña",
+      "away": "Levante",
+      "homeDisplay": "ကော်ရူနာ",
+      "awayDisplay": "လီဗန်တေး",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T19:00:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://raw.githubusercontent.com/luukhopman/football-logos/master/logos/Spain%20-%20LaLiga/Deportivo%20A%20Coru%C3%B1a.png",
+      "awayCrestUrl": "https://raw.githubusercontent.com/luukhopman/football-logos/master/logos/Spain%20-%20LaLiga/Levante%20UD.png",
+      "homeOdds": "2.05",
+      "drawOdds": "3.40",
+      "awayOdds": "3.60",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Real Sociedad",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Real Betis",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Sevilla",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Getafe",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Villarreal",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-12",
+          "opponent": "Sevilla",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Villarreal",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Barcelona",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-06",
+          "opponent": "Málaga",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Real Betis",
+          "teamGoals": 5,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 8,
+        "wins": 2,
+        "draws": 4,
+        "losses": 2,
+        "points": 10,
+        "position": 8,
+        "goalsFor": 12,
+        "goalsAgainst": 11
+      },
+      "awayStanding": {
+        "played": 7,
+        "wins": 1,
+        "draws": 3,
+        "losses": 3,
+        "points": 6,
+        "position": 17,
+        "goalsFor": 11,
+        "goalsAgainst": 15
+      },
+      "standingsSourceUrl": "https://www.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-rc-deportivo-levante-ud-9",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ကော်ရူနာ",
+        "bodyOdds": "-75",
+        "goalTotalOdds": "3+95",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ကော်ရူနာက လာလီဂါ ၈ ပွဲမှာ ၁၀ မှတ်နဲ့ အဆင့် ၈ ရောက်နေပြီး ၁၂ ဂိုးသွင်း၊ ၁၁ ဂိုးပေးထားပါတယ်။ ရီးရဲလ်ဆိုစီဒက်ကို ၂-၃ ရှုံးခဲ့ပေမယ့် ဗီလာရီးရဲလ်အဝေးကွင်းမှာ ၃-၂ အနိုင်ရခဲ့တဲ့ ရလဒ်လည်း ရှိပါတယ်။ အိမ်ကွင်းမှာ တိုက်စစ်ကို ပြန်ဖွင့်လာရင် အခွင့်အရေးဖန်တီးနိုင်တဲ့အသင်းပါ။\nလီဗန်တေးက ၇ ပွဲမှာ ၆ မှတ်နဲ့ အဆင့် ၁၇ မှာရှိပြီး ၁၁ ဂိုးသွင်းထားသလို ၁၅ ဂိုးအထိ ပေးထားရပါတယ်။ နောက်ဆုံး ဆီဗီလာနဲ့ ၃-၃ သရေကျပြီး ဘာစီလိုနာကို ၂-၄ ရှုံးထားတာက ဂိုးသွင်းနိုင်သော်လည်း နောက်တန်းနေရာယူမှု အားနည်းကြောင်း ပြသပါတယ်။\nလီဗန်တေးတိုက်စစ်ကို ထိန်းနိုင်မယ်ဆိုရင် အိမ်ရှင်က ခံစစ်နေရာလွတ်တွေကို အသုံးချဖို့ ပိုအခွင့်သာပါတယ်။ လက်ရှိရမှတ်နဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် **ကော်ရူနာကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml",
+        "https://www.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-rc-deportivo-levante-ud-9"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "1-1",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.tntsports.co.uk/football/la-liga/2026-2027/rc-deportivo-levante-ud_mtc21891399/live-stats.shtml",
+        "standingsSource": "https://www.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-rc-deportivo-levante-ud-9"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://github.com/luukhopman/football-logos",
+      "awayCrestSourceUrl": "https://github.com/luukhopman/football-logos",
+      "finalScore": "1-1",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-16",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Bundesliga",
+      "home": "Eintracht Frankfurt",
+      "away": "1. FC Köln",
+      "homeDisplay": "ဖရန့်ဖတ်",
+      "awayDisplay": "ကိုလုံး",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁:၀၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:30:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
+      "homeOdds": "1.91",
+      "drawOdds": "4.00",
+      "awayOdds": "3.60",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "RB Leipzig",
+          "teamGoals": 0,
+          "opponentGoals": 6,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/eintracht-frankfurt?datacenter_name=datencenter%3Fhistorize_title%3DBundesliga+2026%2F27%2C+28.+Spieltag&historize_url="
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Freiburg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/eintracht-frankfurt?datacenter_name=datencenter%3Fhistorize_title%3DBundesliga+2026%2F27%2C+28.+Spieltag&historize_url="
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Mainz",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/eintracht-frankfurt?datacenter_name=datencenter%3Fhistorize_title%3DBundesliga+2026%2F27%2C+28.+Spieltag&historize_url="
+        },
+        {
+          "date": "2026-09-06",
+          "opponent": "Augsburg",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/eintracht-frankfurt?datacenter_name=datencenter%3Fhistorize_title%3DBundesliga+2026%2F27%2C+28.+Spieltag&historize_url="
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Union Berlin",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/eintracht-frankfurt?datacenter_name=datencenter%3Fhistorize_title%3DBundesliga+2026%2F27%2C+28.+Spieltag&historize_url="
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Mönchengladbach",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fc-cologne?datacenter_name=data-center%3Fhistorize_title%3DEintracht+Frankfurt+Bundesliga+2026%2F27&historize_url="
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Hamburg",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fc-cologne?datacenter_name=data-center%3Fhistorize_title%3DEintracht+Frankfurt+Bundesliga+2026%2F27&historize_url="
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Werder Bremen",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fc-cologne?datacenter_name=data-center%3Fhistorize_title%3DEintracht+Frankfurt+Bundesliga+2026%2F27&historize_url="
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Stuttgart",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fc-cologne?datacenter_name=data-center%3Fhistorize_title%3DEintracht+Frankfurt+Bundesliga+2026%2F27&historize_url="
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Hoffenheim",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fc-cologne?datacenter_name=data-center%3Fhistorize_title%3DEintracht+Frankfurt+Bundesliga+2026%2F27&historize_url="
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 5,
+        "wins": 1,
+        "draws": 2,
+        "losses": 2,
+        "points": 5,
+        "position": 14,
+        "goalsFor": 9,
+        "goalsAgainst": 16
+      },
+      "awayStanding": {
+        "played": 5,
+        "wins": 2,
+        "draws": 1,
+        "losses": 2,
+        "points": 7,
+        "position": 10,
+        "goalsFor": 8,
+        "goalsAgainst": 10
+      },
+      "standingsSourceUrl": "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/5",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ဖရန့်ဖတ်",
+        "bodyOdds": "1+100",
+        "goalTotalOdds": "4+90",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ဖရန့်ဖတ်က ဘွန်ဒက်စ်လီဂါ ၅ ပွဲမှာ ၅ မှတ်နဲ့ အဆင့် ၁၄ ဖြစ်နေပြီး သွင်းဂိုး ၉ ဂိုးရှိပေမယ့် ပေးဂိုး ၁၆ ဂိုးအထိ ရှိပါတယ်။ လိုက်ပ်ဇစ်နဲ့ပွဲမှာ ၀-၆ အရှုံးရခဲ့တာက ခံစစ်တန်းကြား အကွာအဝေး ပြဿနာကို ထင်ထင်ရှားရှား ပြနေပါတယ်။\nကိုလုံးက ၅ ပွဲမှာ ၇ မှတ်နဲ့ အဆင့် ၁၀ မှာ ရပ်တည်နေပြီး ၈ ဂိုးသွင်း၊ ၁၀ ဂိုးပေးထားပါတယ်။ မိုချန်ဂလာဘတ်ကို ၂-၁ နိုင်ထားသော်လည်း အဝေးကွင်း ၂ ပွဲစလုံး ရှုံးထားတဲ့အတွက် ခံစစ်ကို စောစောစုဖွဲ့ပြီး တန်ပြန်တိုက်စစ်ကို အားကိုးရနိုင်ပါတယ်။\nဖရန့်ဖတ်က အိမ်ကွင်းဖြစ်ပေမယ့် ခံစစ်ပေးဂိုးများမှုဟာ စိုးရိမ်ရတဲ့အချက်ပါ။ ကိုလုံးဘက်က စနစ်တကျကစားနိုင်ရင် အသာစီးရဖို့ရှိတာကြောင့် **ကိုလုံးကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/5",
+        "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/eintracht-frankfurt?datacenter_name=datencenter%3Fhistorize_title%3DBundesliga+2026%2F27%2C+28.+Spieltag&historize_url=",
+        "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fc-cologne?datacenter_name=data-center%3Fhistorize_title%3DEintracht+Frankfurt+Bundesliga+2026%2F27&historize_url="
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "2-2",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/eintracht-frankfurt?datacenter_name=datencenter%3Fhistorize_title%3DBundesliga+2026%2F27%2C+28.+Spieltag&historize_url=",
+        "standingsSource": "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/5"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "1-0",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/6",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Ligue 1",
+      "home": "Le Mans",
+      "away": "Toulouse",
+      "homeDisplay": "လီမန်းစ်",
+      "awayDisplay": "တူးလော့စ်",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁:၁၅",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:45:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png",
+      "homeOdds": "3.00",
+      "drawOdds": "3.50",
+      "awayOdds": "2.30",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "PSG",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Lorient",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Lens",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Nice",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        },
+        {
+          "date": "2026-08-30",
+          "opponent": "Rennes",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Monaco",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Le Havre",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Lorient",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        },
+        {
+          "date": "2026-09-03",
+          "opponent": "Lille",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Brest",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 6,
+        "wins": 1,
+        "draws": 3,
+        "losses": 2,
+        "points": 6,
+        "position": 14,
+        "goalsFor": 10,
+        "goalsAgainst": 12
+      },
+      "awayStanding": {
+        "played": 6,
+        "wins": 1,
+        "draws": 3,
+        "losses": 2,
+        "points": 6,
+        "position": 15,
+        "goalsFor": 9,
+        "goalsAgainst": 11
+      },
+      "standingsSourceUrl": "https://ligue1.com/?type_classement=EXT",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "တူးလော့စ်",
+        "bodyOdds": "-25",
+        "goalTotalOdds": "3+40",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "လီမန်းစ်က ပြင်သစ်လီဂူး ၁ မှာ ၆ ပွဲကစားပြီး ၆ မှတ်နဲ့ အဆင့် ၁၄ ရောက်နေပါတယ်။ ၁၀ ဂိုးသွင်း ၁၂ ဂိုးပေးထားပြီး နောက်ဆုံး ပီအက်စ်ဂျီကို ၁-၃ ရှုံးခဲ့သော်လည်း Louis Mafouta က ချေပဂိုးသွင်းနိုင်ခဲ့ပါတယ်။ တိုက်စစ်အခွင့်အရေးရှိပေမယ့် ခံစစ်ခံနိုင်ရည်က အားနည်းချက် ဖြစ်နေပါတယ်။\nတူးလော့စ်ကလည်း ၆ ပွဲမှာ ၆ မှတ်နဲ့ အဆင့် ၁၅ မှာရှိပြီး ၉ ဂိုးသွင်း၊ ၁၁ ဂိုးပေးထားပါတယ်။ ထိပ်ဆုံးက မိုနာကိုကို ၂-၂ သရေကစားခဲ့ရာမှာ Casper Tengstedt နဲ့ Sion Oppong တို့က ဂိုးပြန်ယူပေးနိုင်ခဲ့တာကြောင့် ဖိအားအောက်မှာ ပြန်လည်တုံ့ပြန်နိုင်တဲ့ခြေစွမ်းကို မြင်ရပါတယ်။\nရမှတ်တူနေတဲ့ နှစ်သင်းမှာ ခံစစ်ပိုင်းနှစ်ဖက်စလုံး အပြစ်ရှိပေမယ့် နောက်ဆုံးပွဲရလဒ်နဲ့ ပြိုင်ဘက်အဆင့်အတန်းကို နှိုင်းယှဉ်ရင် **တူးလော့စ်ကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://ligue1.com/en/match-sheet/l1_championship_match_73877/summary",
+        "https://ligue1.com/?type_classement=EXT",
+        "https://www.reuters.com/sports/soccer/psg-beat-le-mans-3-1-monaco-stay-top-despite-draw-2026-10-10/",
+        "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "1-2",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.soccerstats.com/pmatch.asp?league=france&stats=61-11-7-2027",
+        "standingsSource": "https://ligue1.com/?type_classement=EXT"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "0-3",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-16",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Championship",
+      "home": "Burnley",
+      "away": "Wolves",
+      "homeDisplay": "ဘန်လေ",
+      "awayDisplay": "ဝုဗ်",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁:၃၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T19:00:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+      "homeOdds": "2.88",
+      "drawOdds": "3.40",
+      "awayOdds": "2.38",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-13",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Watford",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Derby County",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Swansea City",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-08",
+          "opponent": "Wrexham",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-13",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Middlesbrough",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "West Bromwich Albion",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Everton",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Sheffield United",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+          "sourceUrl": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 10,
+        "wins": 1,
+        "draws": 5,
+        "losses": 4,
+        "points": 8,
+        "position": 21,
+        "goalsFor": 15,
+        "goalsAgainst": 19
+      },
+      "awayStanding": {
+        "played": 9,
+        "wins": 4,
+        "draws": 2,
+        "losses": 3,
+        "points": 14,
+        "position": 10,
+        "goalsFor": 16,
+        "goalsAgainst": 14
+      },
+      "standingsSourceUrl": "https://www.skysports.com/football/burnley-vs-wolverhampton-wanderers/table/560620",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ဝုဗ်",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "3+90",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ဘန်လေက ချန်ပီယံရှစ် ၁၀ ပွဲမှာ ၈ မှတ်နဲ့ အဆင့် ၂၁ ရောက်နေပြီး ၁၅ ဂိုးသွင်း၊ ၁၉ ဂိုးပေးထားပါတယ်။ နောက်ဆုံး ချာလ်တန်နဲ့ ၂-၂ သရေကျခဲ့ပေမယ့် ဝက်ဖို့ဒ်ကို ၄-၀ အနိုင်ရထားတာက တိုက်စစ်အရှိန်ပြန်ရနိုင်ကြောင်း ပြသပါတယ်။ ခံစစ်ပေးဂိုးများနေမှုကိုတော့ သတိထားရပါမယ်။\nဝုဗ်က ၉ ပွဲမှာ ၁၄ မှတ်နဲ့ အဆင့် ၁၀ ရောက်နေပြီး ၁၆ ဂိုးသွင်း၊ ၁၄ ဂိုးပေးထားပါတယ်။ ဒါပေမယ့် နောက်ဆုံး ဘော်လ်တန်ကို ၁-၃၊ မစ်ဒယ်ဘရိုကို ၀-၁ ဆက်တိုက်ရှုံးထားလို့ အမှတ်ပေးဇယားမှာ ပိုမြင့်ပေမယ့် လက်ရှိခြေစွမ်းက လုံးဝယုံကြည်စရာ မဟုတ်သေးပါဘူး။\nဒီပွဲမှာ ဘန်လေရဲ့ အိမ်ကွင်းတိုက်စစ်က ဝုဗ်ရဲ့ မကြာသေးခင်က ခံစစ်ယိုစိမ့်မှုကို အသုံးချနိုင်ပါတယ်။ နောက်ဆုံးနှစ်ပွဲ တိုက်စစ်ပြန်ကောင်းလာမှုကြောင့် **ဘန်လေကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.skysports.com/football/burnley-vs-wolverhampton-wanderers/table/560620",
+        "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "1-2",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.tntsports.co.uk/football/championship/2026-2027/live-burnley-wolverhampton-wanderers_mtc21887267/live-stats.shtml",
+        "standingsSource": "https://www.skysports.com/football/burnley-vs-wolverhampton-wanderers/table/560620"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "1-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-16",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "2. Bundesliga",
+      "home": "Energie Cottbus",
+      "away": "1. FC Nürnberg",
+      "homeDisplay": "ကော့ဘတ်",
+      "awayDisplay": "နုရင်ဘတ်",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁၁:၀၀",
+      "kickoffCalendarDate": "2026-10-16",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T16:30:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/123.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/269.png",
+      "homeOdds": "3.10",
+      "drawOdds": "4.20",
+      "awayOdds": "2.00",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Darmstadt",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Lech Poznań",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2990.png",
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "St. Pauli",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Karlsruher SC",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Wolfsburg",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Wolfsburg",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        },
+        {
+          "date": "2026-10-02",
+          "opponent": "Ingolstadt",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Karlsruher SC",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Hannover 96",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Holstein Kiel",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 7,
+        "wins": 2,
+        "draws": 2,
+        "losses": 3,
+        "points": 8,
+        "position": 8,
+        "goalsFor": 15,
+        "goalsAgainst": 16
+      },
+      "awayStanding": {
+        "played": 7,
+        "wins": 5,
+        "draws": 2,
+        "losses": 0,
+        "points": 17,
+        "position": 2,
+        "goalsFor": 20,
+        "goalsAgainst": 10
+      },
+      "standingsSourceUrl": "https://www.bundesliga.com/en/2bundesliga/table/2026-2027",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "နုရင်ဘတ်",
+        "bodyOdds": "-65",
+        "goalTotalOdds": "4+90",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ကော့ဘတ်က ဂျာမန်ဒုတိယဘွန်ဒက်စ်လီဂါမှာ ၇ ပွဲကစားပြီး ၈ မှတ်နဲ့ အဆင့် ၈ မှာရှိပါတယ်။ ၁၅ ဂိုးသွင်း၊ ၁၆ ဂိုးပေးထားပြီး နောက်ဆုံး ဒါမ်စတက်ကို ၁-၃ ရှုံး၊ စိန့်ပေါ်လီနဲ့ ၁-၁ သရေကျခဲ့လို့ အပြန်အလှန် ဂိုးများတဲ့ကစားပုံက အားသာချက်ရော အားနည်းချက်ပါ ဖြစ်နေပါတယ်။\nနုရင်ဘတ်က ၇ ပွဲမှာ ၁၇ မှတ်နဲ့ အဆင့် ၂ မှာ ရပ်တည်နေပြီး ၂၀ ဂိုးသွင်း၊ ၁၀ ဂိုးပေးထားပါတယ်။ နောက်ဆုံး ဝုဖ်ဘတ်နဲ့ ၄-၄ သရေကျခဲ့သော်လည်း ကာလ်စရူးကို ၁-၀၊ ဟန်နိုဗာကို ၂-၁ အနိုင်ရထားတဲ့အတွက် တိုက်စစ်တိုးဝင်နိုင်မှုနဲ့ ရမှတ်စုဆောင်းနိုင်မှု နှစ်ခုစလုံး အားသာနေပါတယ်။\nကော့ဘတ်က အိမ်ကွင်းမှာ တန်ပြန်ထိုးဖောက်နိုင်ပေမယ့် ပေးဂိုးများတဲ့ခံစစ်ဟာ ပြိုင်ဘက်တိုက်စစ်ကို ထိန်းဖို့ခက်နိုင်ပါတယ်။ စုစုပေါင်းခြေစွမ်းကိုကြည့်ပြီး **နုရင်ဘတ်ကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M",
+        "https://www.bundesliga.com/en/2bundesliga/table/2026-2027"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "1-2",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://oleball.com/match/energie-cottbus-vs-nurnberg-MGAWP87M",
+        "standingsSource": "https://www.bundesliga.com/en/2bundesliga/table/2026-2027"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "1-1",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-16",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "2. Bundesliga",
+      "home": "Holstein Kiel",
+      "away": "Hertha BSC",
+      "homeDisplay": "ဟော့စတိန်းကီး",
+      "awayDisplay": "ဟာသာဘာလင်",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁၁:၀၀",
+      "kickoffCalendarDate": "2026-10-16",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T16:30:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7884.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/129.png",
+      "homeOdds": "2.70",
+      "drawOdds": "4.00",
+      "awayOdds": "2.20",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Braunschweig",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Viborg",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Osnabrück",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Heidenheim",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Nürnberg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Greuther Fürth",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        },
+        {
+          "date": "2026-10-02",
+          "opponent": "Augsburg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        },
+        {
+          "date": "2026-09-30",
+          "opponent": "Hertha Zehlendorf",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Dynamo Dresden",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Osnabrück",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 7,
+        "wins": 0,
+        "draws": 4,
+        "losses": 3,
+        "points": 4,
+        "position": 18,
+        "goalsFor": 7,
+        "goalsAgainst": 11
+      },
+      "awayStanding": {
+        "played": 7,
+        "wins": 7,
+        "draws": 0,
+        "losses": 0,
+        "points": 21,
+        "position": 1,
+        "goalsFor": 19,
+        "goalsAgainst": 8
+      },
+      "standingsSourceUrl": "https://www.bundesliga.com/en/2bundesliga/table/2026-2027",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ဟာသာဘာလင်",
+        "bodyOdds": "-35",
+        "goalTotalOdds": "3-60",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ဟော့စတိန်းကီးက ဒုတိယဘွန်ဒက်စ်လီဂါ ၇ ပွဲကစားပြီး အနိုင်မရှိသေးဘဲ ၄ မှတ်နဲ့ အဆင့် ၁၈ မှာ ရှိနေပါတယ်။ သွင်းဂိုး ၇ ဂိုး၊ ပေးဂိုး ၁၁ ဂိုးဖြစ်ပြီး နောက်ဆုံး ဘရွန်းရှ်ဗိုက်ကို ၀-၁ ရှုံးခဲ့ပါတယ်။ အိမ်ကွင်း အော့စ်နာဘရုနဲ့လည်း ၁-၁ သရေသာရခဲ့လို့ အနိုင်ရဖို့ အခွင့်အရေးအသုံးချမှုလိုနေပါတယ်။\nဟာသာဘာလင်ကတော့ ၇ ပွဲစလုံး အနိုင်ရပြီး ၂၁ မှတ်နဲ့ အဆင့် ၁ မှာ ဦးဆောင်နေပါတယ်။ ၁၉ ဂိုးသွင်း၊ ၈ ဂိုးပေးထားပြီး ဂရွယ်သာဖတ်ကို ၂-၁၊ ဒရက်စဒင်ကို ၂-၁ အနိုင်ရထားတာက တိုက်စစ်နဲ့ ပွဲအဆုံးသတ်စွမ်းရည် နှစ်မျိုးစလုံးကို ပြသထားပါတယ်။\nအိမ်ရှင်ရဲ့ ရမှတ်လိုအပ်ချက်ကြီးမားပေမယ့် နှစ်သင်းရဲ့ ယုံကြည်မှုနဲ့ တိုက်စစ်ထိရောက်မှုကွာခြားချက်က သိသာပါတယ်။ ခြေစွမ်းပိုမှန်နေတဲ့ **ဟာသာဘာလင်ကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B",
+        "https://www.bundesliga.com/en/2bundesliga/table/2026-2027"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "2-2",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://oleball.com/match/holstein-kiel-vs-hertha-berlin-BY5NVY4B",
+        "standingsSource": "https://www.bundesliga.com/en/2bundesliga/table/2026-2027"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "0-0",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-16",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Serie B",
+      "home": "Hellas Verona",
+      "away": "Catanzaro",
+      "homeDisplay": "ဗီရိုနာ",
+      "awayDisplay": "ကာတန်ဇာရို",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁:၀၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:30:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3257.png",
+      "homeOdds": "1.80",
+      "drawOdds": "3.75",
+      "awayOdds": "4.00",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Modena",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Vicenza",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Benevento",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-06",
+          "opponent": "Arezzo",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-03",
+          "opponent": "Cagliari",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Mantova",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Sampdoria",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Carrarese",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Südtirol",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        },
+        {
+          "date": "2026-08-30",
+          "opponent": "Pisa",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 6,
+        "wins": 2,
+        "draws": 1,
+        "losses": 3,
+        "points": 7,
+        "position": 9,
+        "goalsFor": 12,
+        "goalsAgainst": 10
+      },
+      "awayStanding": {
+        "played": 6,
+        "wins": 1,
+        "draws": 0,
+        "losses": 5,
+        "points": 3,
+        "position": 19,
+        "goalsFor": 6,
+        "goalsAgainst": 12
+      },
+      "standingsSourceUrl": "https://www.skynetcalcio.com/en/classifica.php?id=2",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ဗီရိုနာ",
+        "bodyOdds": "1+75",
+        "goalTotalOdds": "3+80",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ဗီရိုနာက အီတလီစီးရီးဘီ ၆ ပွဲမှာ ၇ မှတ်နဲ့ အဆင့် ၉ မှာရှိပြီး ၁၂ ဂိုးသွင်း၊ ၁၀ ဂိုးပေးထားပါတယ်။ နောက်ဆုံး မိုဒီနာကို ၂-၃ ရှုံးခဲ့ပေမယ့် အိမ်ကွင်းမှာ ဗီစင်ဇာကို ၂-၁၊ အာရက်ဇိုကို ၅-၀ အနိုင်ရထားတာကြောင့် တိုက်စစ်ကောင်းတဲ့နေ့မှာ ဂိုးအများကြီးရနိုင်ပါတယ်။\nကာတန်ဇာရိုက ၆ ပွဲမှာ ၃ မှတ်နဲ့ အဆင့် ၁၉ ရောက်နေပြီး ၆ ဂိုးသွင်း၊ ၁၂ ဂိုးပေးထားပါတယ်။ နောက်ဆုံး မန်တိုဗာကို ၁-၃၊ ဆမ်ဒိုးရီးယားကို ၁-၂ ရှုံးခဲ့လို့ ခံစစ်က ထိန်းမရတဲ့ အချိန်တွေများနေပြီး အဝေးကွင်းရလဒ်လည်း အားနည်းနေပါတယ်။\nဗီရိုနာအနေနဲ့ ဧည့်သည်ခံစစ်အပေါ် စောစောဖိအားပေးနိုင်ရင် အိမ်ကွင်းမှာ အသာစီးဖော်ဆောင်နိုင်ပါတယ်။ ပိုမိုတည်ငြိမ်တဲ့ ရမှတ်နဲ့ သွင်းဂိုးမှတ်တမ်းကြောင့် **ဗီရိုနာကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml",
+        "https://www.skynetcalcio.com/en/classifica.php?id=2"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "2-0",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.tntsports.co.uk/football/serie-b/2026-2027/live-hellas-verona-catanzaro_mtc21920525/live-stats.shtml",
+        "standingsSource": "https://www.skynetcalcio.com/en/classifica.php?id=2"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "2-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-16",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "La Liga 2",
+      "home": "Leganés",
+      "away": "Córdoba",
+      "homeDisplay": "လီဂန်းနက်စ်",
+      "awayDisplay": "ကော်ဒိုဘာ",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁:၀၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:30:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17534.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8447.png",
+      "homeOdds": "2.30",
+      "drawOdds": "3.40",
+      "awayOdds": "2.90",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-11",
+          "opponent": "Almería",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Cádiz",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-28",
+          "opponent": "Castellón",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Granada",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Tenerife",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Eldense",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-05",
+          "opponent": "Tenerife",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-27",
+          "opponent": "Real Valladolid",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Albacete",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Almería",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 9,
+        "wins": 3,
+        "draws": 2,
+        "losses": 4,
+        "points": 11,
+        "position": 16,
+        "goalsFor": 6,
+        "goalsAgainst": 14
+      },
+      "awayStanding": {
+        "played": 9,
+        "wins": 3,
+        "draws": 0,
+        "losses": 6,
+        "points": 9,
+        "position": 18,
+        "goalsFor": 14,
+        "goalsAgainst": 20
+      },
+      "standingsSourceUrl": "https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-hypermotion-cd-leganes-cordoba-cf-10",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "လီဂန်းနက်စ်",
+        "bodyOdds": "-35",
+        "goalTotalOdds": "3+45",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "လီဂန်းနက်စ်က စပိန်လာလီဂါ ၂ မှာ ၉ ပွဲကစားပြီး ၁၁ မှတ်နဲ့ အဆင့် ၁၆ မှာ ရပ်တည်နေပါတယ်။ ၆ ဂိုးသာသွင်းပြီး ၁၄ ဂိုးပေးထားတဲ့အပြင် နောက်ဆုံး အယ်မေရီးယားကို ၀-၃၊ ကာဒစ်ဇ်ကို ၀-၄၊ ကက်စတဲလွန်ကို ၀-၂ ဆက်တိုက်ရှုံးခဲ့ပါတယ်။ ဒီရလဒ်တွေက တိုက်စစ်အဆုံးသတ်နဲ့ ခံစစ်တည်ငြိမ်မှု နှစ်မျိုးစလုံး အားနည်းနေကြောင်း ပြနေပါတယ်။\nကော်ဒိုဘာက ၉ ပွဲမှာ ၉ မှတ်နဲ့ အဆင့် ၁၈ မှာရှိပြီး ၁၄ ဂိုးသွင်း၊ ၂၀ ဂိုးပေးထားပါတယ်။ နောက်ဆုံး အယ်လ်ဒန်စီကို ၁-၂ ရှုံးခဲ့ပေမယ့် တီနာရစ်ဖ်ကို ၃-၂၊ အယ်လ်ဘာစီတေးကို ၂-၁ အနိုင်ရထားတဲ့အတွက် ဂိုးရနိုင်စွမ်းမှာ ပြိုင်ဘက်ထက် ပိုအားကောင်းနေပါတယ်။ ပေးဂိုးများတဲ့ ခံစစ်ကတော့ စိတ်မချရသေးပါဘူး။\nနှစ်သင်းစလုံး ခံစစ်အားနည်းပေမယ့် လီဂန်းနက်စ်ရဲ့ သုံးပွဲဆက်ဂိုးမသွင်းနိုင်တဲ့ ပုံစံနဲ့ ယှဉ်ရင် ဧည့်သည်ဘက်က အနိုင်ရဖို့ ပိုအခွင့်အရေးရှိပါတယ်။ လက်ရှိတိုက်စစ်ခြေစွမ်းကို အခြေခံပြီး **ကော်ဒိုဘာကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-hypermotion-cd-leganes-cordoba-cf-10",
+        "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "2-1",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.tntsports.co.uk/football/laliga-hypermotion/2026-2027/cd-leganes-cordoba-cf_mtc21892066/live-stats.shtml",
+        "standingsSource": "https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-hypermotion-cd-leganes-cordoba-cf-10"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "0-1",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.cdleganes.com/cronica-leganes-cordoba-j10",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Ligue 2",
+      "home": "Annecy",
+      "away": "Nancy",
+      "homeDisplay": "အန်နန်စီ",
+      "awayDisplay": "နန်စီ",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁၂:၃၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:00:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/18066.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3267.png",
+      "homeOdds": "2.40",
+      "drawOdds": "3.30",
+      "awayOdds": "2.63",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Dunkerque",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Dijon",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Guingamp",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Grenoble",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Metz",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Guingamp",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Rodez",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Reims",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-07",
+          "opponent": "Nantes",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        },
+        {
+          "date": "2026-08-28",
+          "opponent": "Dunkerque",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 8,
+        "wins": 4,
+        "draws": 1,
+        "losses": 3,
+        "points": 13,
+        "position": 6,
+        "goalsFor": 10,
+        "goalsAgainst": 9
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 4,
+        "draws": 1,
+        "losses": 3,
+        "points": 13,
+        "position": 5,
+        "goalsFor": 9,
+        "goalsAgainst": 7
+      },
+      "standingsSourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "အန်နန်စီ",
+        "bodyOdds": "-5",
+        "goalTotalOdds": "2-75",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "အန်နန်စီက ပြင်သစ်လီဂူး ၂ မှာ ၈ ပွဲကစားပြီး ၁၃ မှတ်နဲ့ အဆင့် ၆ မှာရှိပါတယ်။ ၁၀ ဂိုးသွင်း၊ ၉ ဂိုးပေးထားပြီး နောက်ဆုံး ဒန်ကာက့်ကို ၁-၀ နိုင်ခဲ့ပါတယ်။ အိမ်ကွင်းမှာ ဒီဂျွန်းကို ၁-၂ ရှုံးခဲ့ဖူးတာကြောင့် ပြိုင်ဘက်က ပြန်တိုက်လာချိန် ခံစစ်ကို လျှော့မတွက်နိုင်ပါဘူး။\nနန်စီကလည်း ၈ ပွဲမှာ ၁၃ မှတ်နဲ့ အဆင့် ၅ ဖြစ်ပြီး သွင်းဂိုး ၉ ဂိုး၊ ပေးဂိုး ၇ ဂိုးဆိုတဲ့ ခံစစ်ကောင်းတဲ့မှတ်တမ်းရှိပါတယ်။ နောက်ဆုံး ဂူရင့်ဂမ့်ကို ၁-၀၊ ရိုဒက်ဇ်ကို ၄-၃ အနိုင်ရထားတာကြောင့် ဂိုးအခွင့်အရေးရရင် အသုံးချနိုင်ပေမယ့် ရိမ်းစ်ကို ၁-၂ ရှုံးခဲ့ဖူးပါတယ်။\nရမှတ်တူနေတဲ့ နှစ်သင်းမှာ နန်စီခံစစ်က အနည်းငယ်သာပေမယ့် အန်နန်စီရဲ့ အိမ်ကွင်းအားသာချက်နဲ့ နောက်ဆုံးနိုင်ပွဲအပေါ် ယုံကြည်ပြီး **အန်နန်စီကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml",
+        "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "1-0",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/live-fc-annecy-as-nancy-lorraine_mtc21875371/live-stats.shtml",
+        "standingsSource": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "1-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.matchendirect.fr/france/ligue-2_4w7x0s5gfs5abasphlha5de8k/calendrier/",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Ligue 2",
+      "home": "Grenoble",
+      "away": "Boulogne-sur-Mer",
+      "homeDisplay": "ဂရင်းနိုဘယ်",
+      "awayDisplay": "ဘိုလော့နီ",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁၂:၃၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:00:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6994.png",
+      "awayCrestUrl": "https://assets.footylogos.com/logos/boulogne/boulogne-logo-footylogos.svg",
+      "homeOdds": "2.63",
+      "drawOdds": "2.90",
+      "awayOdds": "2.63",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Montpellier",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Clermont",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Rodez",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Annecy",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        },
+        {
+          "date": "2026-08-28",
+          "opponent": "Laval",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Sochaux",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Nantes",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Clermont",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Dijon",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        },
+        {
+          "date": "2026-08-28",
+          "opponent": "Montpellier",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "points": 8,
+        "position": 14,
+        "goalsFor": 8,
+        "goalsAgainst": 13
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 0,
+        "draws": 6,
+        "losses": 2,
+        "points": 6,
+        "position": 16,
+        "goalsFor": 4,
+        "goalsAgainst": 6
+      },
+      "standingsSourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ဘိုလော့နီ",
+        "bodyOdds": "-5",
+        "goalTotalOdds": "2-30",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ဂရင်းနိုဘယ်က လီဂူး ၂ မှာ ၈ ပွဲကစားပြီး ၈ မှတ်နဲ့ အဆင့် ၁၄ ရှိပါတယ်။ ၈ ဂိုးသွင်း၊ ၁၃ ဂိုးပေးထားပြီး နောက်ဆုံး မွန်ပယ်လီယာကို ၀-၂ ရှုံးခဲ့သော်လည်း ရိုဒက်ဇ်ကို ၁-၀၊ လာဗယ်ကို ၃-၀ အနိုင်ရခဲ့တာကြောင့် ပြိုင်ဘက်ရဲ့ နေရာလွတ်ကို အသုံးချနိုင်တဲ့အချိန်တွေ ရှိပါတယ်။\nဘိုလော့နီကတော့ ၈ ပွဲမှာ ၆ မှတ်နဲ့ အဆင့် ၁၆ ဖြစ်ပြီး ၄ ဂိုးသာသွင်း၊ ၆ ဂိုးပေးထားပါတယ်။ ဆိုရှိုးနဲ့ ၁-၁၊ ကလာမောင့်နဲ့ ၀-၀ သရေကျထားပေမယ့် နန့်စ်ကို ၁-၂ ရှုံးထားတာကြောင့် ခံစစ်ကို ထိန်းနိုင်သော်လည်း အနိုင်ရအောင် ဂိုးဖန်တီးမှုက ပိုအားနည်းနေပါတယ်။\nဂိုးနည်းတဲ့ပွဲဖြစ်နိုင်သော်လည်း အိမ်ရှင်မှာ အနိုင်ရတဲ့အတွေ့အကြုံပိုရှိနေပြီး ဧည့်သည်တိုက်စစ်က အားပျော့နေတာကြောင့် **ဂရင်းနိုဘယ်ကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml",
+        "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "1-1",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.eurosport.fr/football/ligue-2/2026-2027/live-grenoble-foot-38-us-boulogne_mtc21875278/live-stats.shtml",
+        "standingsSource": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.footylogos.com/logos/boulogne",
+      "finalScore": "0-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.matchendirect.fr/france/ligue-2_4w7x0s5gfs5abasphlha5de8k/calendrier/",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Ligue 2",
+      "home": "Guingamp",
+      "away": "Pau",
+      "homeDisplay": "ဂူရင့်ဂမ့်",
+      "awayDisplay": "ပီရူး",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁၂:၃၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:00:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/171.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10678.png",
+      "homeOdds": "2.10",
+      "drawOdds": "3.40",
+      "awayOdds": "3.00",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Nancy",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Red Star",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Annecy",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Reims",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Nantes",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Laval",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Dunkerque",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Montpellier",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Sochaux",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        },
+        {
+          "date": "2026-08-28",
+          "opponent": "Rodez",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "points": 8,
+        "position": 11,
+        "goalsFor": 10,
+        "goalsAgainst": 13
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "points": 11,
+        "position": 8,
+        "goalsFor": 9,
+        "goalsAgainst": 8
+      },
+      "standingsSourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ဂူရင့်ဂမ့်",
+        "bodyOdds": "-40",
+        "goalTotalOdds": "3+90",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ဂူရင့်ဂမ့်က ပြင်သစ်လီဂူး ၂ မှာ ၈ ပွဲကစားပြီး ၈ မှတ်နဲ့ အဆင့် ၁၁ မှာ ရှိပါတယ်။ ၁၀ ဂိုးသွင်း၊ ၁၃ ဂိုးပေးထားပြီး နောက်ဆုံး နန်စီကို ၀-၁၊ ရက်စတားကို ၁-၃ ရှုံးထားတာကြောင့် ခံစစ်ရဲ့ ပြန်လည်စုဖွဲ့မှုဟာ ဒီပွဲအတွက် အရေးကြီးပါတယ်။ အိမ်ကွင်းမှာ အန်နန်စီကို ၂-၁ နိုင်ခဲ့ဖူးပါတယ်။\nပီရူးကတော့ ၈ ပွဲမှာ ၁၁ မှတ်နဲ့ အဆင့် ၈ ရောက်နေပြီး ၉ ဂိုးသွင်း၊ ၈ ဂိုးပေးထားပါတယ်။ နောက်ဆုံး လာဗယ်ကို ၃-၂၊ ဒန်ကာက့်ကို ၂-၀ အနိုင်ရထားတဲ့အတွက် လက်ရှိအရှိန်ပိုကောင်းနေပြီး တိုက်စစ်က အခွင့်အရေးရရင် ပိတ်သတ်နိုင်တဲ့အနေအထား ရှိပါတယ်။\nဂူရင့်ဂမ့်ရဲ့ အိမ်ကွင်းအထောက်အကူရှိပေမယ့် ဧည့်သည်ဘက်က နောက်ဆုံးနိုင်ပွဲနှစ်ပွဲနဲ့ ခံစစ်ပေးဂိုးပိုနည်းမှုက အသာစီးဖြစ်နေပါတယ်။ အဲဒီအချက်တွေကြောင့် **ပီရူးကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16",
+        "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "2-0",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://franceleague.net/match/guingamp-vs-pau-fc-2026-10-16",
+        "standingsSource": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "1-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.matchendirect.fr/france/ligue-2_4w7x0s5gfs5abasphlha5de8k/calendrier/",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Ligue 2",
+      "home": "Reims",
+      "away": "Dijon",
+      "homeDisplay": "ရိမ်းစ်",
+      "awayDisplay": "ဒီဂွျန်",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁၂:၃၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:00:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3243.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3170.png",
+      "homeOdds": "1.67",
+      "drawOdds": "3.80",
+      "awayOdds": "4.20",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Nantes",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Montpellier",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Nancy",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Guingamp",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Red Star",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-12",
+          "opponent": "Metz",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Annecy",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Laval",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Boulogne",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        },
+        {
+          "date": "2026-08-31",
+          "opponent": "Saint-Étienne",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 5,
+        "losses": 0,
+        "points": 14,
+        "position": 4,
+        "goalsFor": 15,
+        "goalsAgainst": 9
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 3,
+        "draws": 3,
+        "losses": 2,
+        "points": 12,
+        "position": 7,
+        "goalsFor": 14,
+        "goalsAgainst": 12
+      },
+      "standingsSourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ရိန်းစ်",
+        "bodyOdds": "1+60",
+        "goalTotalOdds": "3+45",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "ရိမ်းစ်က လီဂူး ၂ မှာ ၈ ပွဲကစားပြီး ၁၄ မှတ်နဲ့ အဆင့် ၄ မှာရှိပါတယ်။ ၁၅ ဂိုးသွင်း၊ ၉ ဂိုးပေးထားပြီး ၈ ပွဲစလုံး ရှုံးပွဲမရှိသေးပါဘူး။ နောက်ဆုံး နန့်စ်နဲ့ ၀-၀၊ မွန်ပယ်လီယာနဲ့ ၁-၁ သရေကျခဲ့သလို နန်စီကို ၂-၁ နိုင်ထားတာကြောင့် ပွဲကို ထိန်းကစားနိုင်တဲ့အသင်း ဖြစ်ပါတယ်။\nဒီဂွျန်ကတော့ ၈ ပွဲမှာ ၁၂ မှတ်နဲ့ အဆင့် ၇ ရောက်နေပြီး ၁၄ ဂိုးသွင်း၊ ၁၂ ဂိုးပေးထားပါတယ်။ နောက်ဆုံး မက်ဇ်ကို ၄-၂၊ အန်နန်စီကို ၂-၁၊ လာဗယ်ကို ၃-၂ ဆက်တိုက်အနိုင်ရထားပြီး တိုက်စစ်က အရှိန်တက်နေပါတယ်။ ဒါပေမယ့် ဂိုးပေးရတာလည်း မနည်းသေးပါဘူး။\nဧည့်သည်တိုက်စစ်က အန္တရာယ်ရှိပေမယ့် အိမ်ရှင်ရဲ့ ရှုံးပွဲမရှိသေးတဲ့ မှတ်တမ်းနဲ့ ခံစစ်ပိုမိုတည်ငြိမ်မှုကို အဓိကထားပြီး **ရိမ်းစ်ကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml",
+        "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "1-0",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.tntsports.co.uk/football/ligue-2-bkt/2026-2027/stade-de-reims-dijon-fco_mtc21875290/live-stats.shtml",
+        "standingsSource": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "4-2",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.matchendirect.fr/france/ligue-2_4w7x0s5gfs5abasphlha5de8k/calendrier/",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    },
+    {
+      "league": "Ligue 2",
+      "home": "Laval",
+      "away": "Clermont",
+      "homeDisplay": "လာဗယ်လွိုက်",
+      "awayDisplay": "ကလဲယားမောင့်",
+      "kickoffYangon": "၁၆ ရက်နေ့ ည ၁၂:၃၀",
+      "kickoffCalendarDate": "2026-10-17",
+      "nightEditorialDate": "2026-10-16",
+      "kickoffUtc": "2026-10-16T18:00:00.000Z",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3266.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3171.png",
+      "homeOdds": "2.05",
+      "drawOdds": "3.30",
+      "awayOdds": "3.30",
+      "oddsProvider": "PokerStars",
+      "oddsSourceUrl": "https://www.pokerstars.es/en/sports/soccer/1/matches/",
+      "oddsMarket": "Full-time 1X2",
+      "oddsIsLive": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-09",
+          "opponent": "Pau",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        },
+        {
+          "date": "2026-10-02",
+          "opponent": "Rennes",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Sochaux",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Dijon",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Red Star",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Red Star",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Grenoble",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Boulogne",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        },
+        {
+          "date": "2026-09-04",
+          "opponent": "Dunkerque",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        },
+        {
+          "date": "2026-08-28",
+          "opponent": "Sochaux",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 8,
+        "wins": 1,
+        "draws": 2,
+        "losses": 5,
+        "points": 5,
+        "position": 18,
+        "goalsFor": 10,
+        "goalsAgainst": 17
+      },
+      "awayStanding": {
+        "played": 8,
+        "wins": 0,
+        "draws": 6,
+        "losses": 2,
+        "points": 6,
+        "position": 17,
+        "goalsFor": 6,
+        "goalsAgainst": 9
+      },
+      "standingsSourceUrl": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general",
+      "myanmarOdds": {
+        "provider": "16.pdf user supplied morning opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "လာဗယ်လိွုက်",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "2-70",
+        "sourceUrl": null,
+        "checkedAt": "2026-10-16"
+      },
+      "dailyPreviewText": "လာဗယ်လွိုက်က လီဂူး ၂ မှာ ၈ ပွဲကစားပြီး ၅ မှတ်နဲ့ အဆင့် ၁၈ မှာရှိပါတယ်။ ၁၀ ဂိုးသွင်းထားသော်လည်း ၁၇ ဂိုးအထိ ပေးထားရတာကြောင့် ခံစစ်ပိုင်းက ပြိုင်ပွဲထဲမှာ စိုးရိမ်ရဆုံးအနေအထားတစ်ခုဖြစ်နေပါတယ်။ နောက်ဆုံး ပီရူးကို ၂-၃ ရှုံးခဲ့လို့ ဂိုးသွင်းနိုင်ရုံနဲ့ အမှတ်ယူဖို့ မလွယ်သေးပါဘူး။\nကလဲယားမောင့်ကတော့ ၈ ပွဲမှာ ၆ မှတ်နဲ့ အဆင့် ၁၇ မှာ ရှိပြီး အနိုင်မရသေးပေမယ့် သရေ ၆ ပွဲရထားပါတယ်။ ၆ ဂိုးသွင်း၊ ၉ ဂိုးပေးထားပြီး ရက်စတားကို ၂-၃ ရှုံးခဲ့တာက ထိန်းထားနိုင်တဲ့အချိန်အချို့ရှိသော်လည်း အဆုံးသတ်ပိုင်းမှာ အားနည်းနေတာကို ပြပါတယ်။\nနှစ်သင်းစလုံး ခြေမမှန်သေးပေမယ့် လာဗယ်ရဲ့ ခံစစ်ဂိုးပေးနှုန်းအလွန်မြင့်နေတာက အဓိကအားနည်းချက် ဖြစ်ပါတယ်။ ပြိုင်ဘက်နောက်တန်းကို အသုံးချနိုင်မှုအပေါ် အခြေခံပြီး **ကလဲယားမောင့်ကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://last5games.com/matches/clermont-vs-laval-19717581/",
+        "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general",
+        "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "pdfLastColumn": "1-1",
+      "myanmarOddsSource": "16.pdf; last-column score is internet prediction not actual FT",
+      "editorialFactBasis": {
+        "lastFiveSource": "https://www.telefootball.net/GB/Laval-Clermont-Foot-63-2026-10-16-675450.html",
+        "standingsSource": "https://www.lequipe.fr/Football/ligue-2/page-classement-equipes/general"
+      },
+      "oddsVerifiedDate": "2026-10-16",
+      "homeCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "awayCrestSourceUrl": "https://www.espn.com/soccer/team/",
+      "finalScore": "3-3",
+      "finalScoreIsVerified": true,
+      "finalScoreSourceUrl": "https://www.matchendirect.fr/france/ligue-2_4w7x0s5gfs5abasphlha5de8k/calendrier/",
+      "finalScoreCheckedAt": "2026-10-17T07:45:00+06:30"
+    }
+  ],
+  "noFixturesLeagues": [],
+  "oddsSheetPath": "data/odds/2026-10-16.json",
+  "sourceList": [
+    "16.pdf",
+    "Official LaLiga",
+    "DFB Datencenter",
+    "Ligue 1/Ligue 2",
+    "TNT Sports",
+    "Sky Sports",
+    "Reuters"
+  ],
+  "nightTimeConvention": "Early 17 October kickoffs displayed as 16 October Myanmar night; confirmed full-time scores only in yesterday archive."
+}

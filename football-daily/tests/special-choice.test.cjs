@@ -18,7 +18,7 @@ test("every published day with preview fixtures includes up to five current user
   assert.equal(m.homeLastFive.length,5,key+" must show five verified home-team games");
   assert.equal(m.awayLastFive.length,5,key+" must show five verified away-team games");
   assert.ok([m.homeOdds,m.drawOdds,m.awayOdds].every(v=>Number(v)>1),key+" needs a verified 1X2 triplet");
-  assert.equal(m.oddsProvider,"Bet365",key+" provider must be disclosed in odds field only");
+  assert.ok(["Bet365","PokerStars"].includes(m.oddsProvider),key+" provider must name the dated verified single-bookmaker market");
   assert.ok(/^https:/.test(m.oddsSourceUrl),key+" prices must have a credible URL");
   assert.ok(typeof m.specialRiskNote==="string"&&m.specialRiskNote.length>=20,key+" needs explicit risk");
   assert.ok(Array.isArray(m.specialResearchSources)&&m.specialResearchSources.length>=2,key+" needs independent primary/reliable source urls");

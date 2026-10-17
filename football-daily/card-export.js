@@ -3,6 +3,7 @@
  function stripScorePrediction(value){return String(value||"").replace(/\s*(?:ဖြစ်နိုင်တဲ့|ဖြစ်နိုင်သည့်|ခန့်မှန်း)\s*ဂိုးရလဒ်[^။\n]*[။]?/gu,"").trim();}
  // A complete, responsive-height Canvas PNG that mirrors the user-approved on-screen
  // hero → Myanmar prices → Home WDL | 1X2 | Away WDL → full Burmese preview.
+ const LEAGUE_CRESTS={"Premier League":"https://crests.football-data.org/PL.png","Championship":"https://crests.football-data.org/ELC.png","La Liga":"https://crests.football-data.org/PD.png","La Liga 2":"https://crests.football-data.org/SD.png","Serie A":"https://crests.football-data.org/SA.png","Bundesliga":"https://crests.football-data.org/BL1.png","Ligue 1":"https://crests.football-data.org/FL1.png"};
  const MM={"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Championship":"ချန်ပီယံရှစ်","La Liga":"လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂","Serie A":"အီတလီ စီးရီးအေ","Serie B":"အီတလီ စီးရီးဘီ","Bundesliga":"ဘွန်ဒက်စ်လီဂါ","Ligue 1":"လီဂူးဝမ်း","Ligue 2":"ပြင်သစ် လိဂ် ၂","UEFA Champions League":"ချန်ပီယံလိဂ်"};
  function present(v){return v!==undefined&&v!==null&&String(v).trim()?String(v):"—";}
  function filePart(v){return String(v||"football").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"").slice(0,60)||"football";}
@@ -114,12 +115,12 @@
   const isBW=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
   const isKTF=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
   const my=match.myanmarOdds||{};
-  await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl].filter(Boolean));
+  await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl,LEAGUE_CRESTS[match.league]].filter(Boolean));
   // A blank Canvas is transparent by default; omit ALL card/background fills.
   if(!transparent)fill(ctx,0,0,W,H,C.bg);
   fill(ctx,M,14,fullWidth,H-34,C.head,12);
   fill(ctx,M,14,fullWidth,66,C.bg,10);
-  if(!opts.hideLeagueLabel)text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+16,46,22,C.orange,true);
+  if(!opts.hideLeagueLabel){if(LEAGUE_CRESTS[match.league])crest(ctx,LEAGUE_CRESTS[match.league],M+14,25,32,"");text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+(LEAGUE_CRESTS[match.league]?54:16),46,22,C.orange,true);}
   if(isYKZ){
    text(ctx,"YKZ FAMILY GROUP · အတူရှေ့ဆက် YKZ",W/2,44,17,C.orange,true,"center");
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"YKZ");
