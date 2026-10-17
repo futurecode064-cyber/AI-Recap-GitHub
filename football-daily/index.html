@@ -19,7 +19,8 @@
 <script defer src="./main-match-screenshot.js?v=20261016-transparent-all"></script>
 <script defer src="./app.js?v=20261016-png-only"></script>
 <script defer src="./main-ai-score-model.js?v=20261017-main1"></script>
-<script defer src="./main-ai-score.js?v=20261017-blue-grid4"></script>
+<script defer src="./main-ai-bulk-export.js?v=20261017-bulk1"></script>
+<script defer src="./main-ai-score.js?v=20261017-bulk1"></script>
 <script defer src="./video-studio.js?v=20261016-video2"></script>
 <script defer src="./main-section-tabs.js?v=20261017-section-tabs1"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
@@ -58,6 +59,23 @@
         <select id="fcAiScoreLeague" aria-label="လိဂ်ရွေးရန်"><option value="all">လိဂ်အားလုံး</option></select>
         <span class="fc-ai-count" id="fcAiScoreCount" aria-live="polite">—</span>
         <span class="fc-ai-status" id="fcAiScoreStatus" role="status"></span>
+      </div>
+      <div class="fc-ai-export-panel" id="fcAiExportPanel" aria-label="AI ခန့်မှန်းချက်များ PNG Download">
+        <h3>AI ခန့်မှန်းချက် ပုံ Download</h3>
+        <div class="fc-ai-export-all">
+          <strong>ပွဲအားလုံး PNG Download</strong>
+          <div class="fc-ai-page-buttons" id="fcAiAllPngPages"><span>စာရင်း ရယူနေသည်…</span></div>
+        </div>
+        <div class="fc-ai-export-selected">
+          <strong>လိဂ်အလိုက်ရွေးပြီး PNG Download</strong>
+          <div class="fc-ai-export-select-actions">
+            <button type="button" id="fcAiSelectAll">လိဂ်အားလုံး ရွေးရန်</button>
+            <button type="button" id="fcAiSelectNone">ရွေးထားမှုဖြုတ်ရန်</button>
+          </div>
+          <div class="fc-ai-export-leagues" id="fcAiExportLeagueChoices"></div>
+          <div class="fc-ai-page-buttons" id="fcAiSelectedPngPages"></div>
+        </div>
+        <p class="fc-ai-export-status" id="fcAiExportStatus" role="status"></p>
       </div>
       <div id="fcAiScoreGroups" aria-live="polite">
         <p class="fc-ai-empty">ယနေ့ပွဲစဉ်များ ရယူနေသည်…</p>
