@@ -32,6 +32,14 @@
   "UEFA Champions League":"https://crests.football-data.org/CL.png"
  };
  let report=null,loading=false;
+ let exportLeagues=new Set();
+ const exportPanel=document.getElementById("fcAiExportPanel");
+ const allPages=document.getElementById("fcAiAllPngPages");
+ const chosenPages=document.getElementById("fcAiSelectedPngPages");
+ const exportChoices=document.getElementById("fcAiExportLeagueChoices");
+ const exportStatus=document.getElementById("fcAiExportStatus");
+ const exportAllBtn=document.getElementById("fcAiSelectAll");
+ const exportNoneBtn=document.getElementById("fcAiSelectNone");
  const labelLeague=s=>leagueNames[s]||s||"အခြားလိဂ်";
  const team=(m,s)=>String(m[s+"Display"]||m[s]||"").trim();
  const crestFallbackIds={
@@ -84,6 +92,93 @@
   cell.setAttribute("data-label","AI ခန့်မှန်း "+["၁","၂","၃"][i]);
   return cell;
  }
+
+ const publishedFixtures=()=>report?.matches?.filter(m=>m&&typeof m.home==="string"&&typeof m.away==="string")||[];
+ function pageButtons(container,fixtures,selected,scope){
+  if(!container)return 0;
+  container.replaceChildren();
+  const exporter=window.FutureCodeAiBulkExport;
+  if(!exporter){container.appendChild(make("span","fc-ai-export-empty","PNG Download မရသေးပါ"));return 0;}
+  const pages=exporter.planPages(fixtures,selected);
+  if(!pages.length){
+   container.appendChild(make("span","fc-ai-export-empty","PNG Download လုပ်ရန် လိဂ်ရွေးပါ"));
+   return 0;
+  }
+  for(const [i,page] of pages.entries()){
+   const btn=make("button","fc-ai-bulk-btn","⬇ PNG "+(i+1)+"/"+pages.length+" · "+page.matchCount+" ပွဲ");
+   btn.type="button";
+   btn.setAttribute("aria-label",scope+" AI ခန့်မှန်းချက် ပုံ "+(i+1)+"/"+pages.length+"၊ "+page.matchCount+" ပွဲ Download");
+   btn.addEventListener("click",async()=>{
+    if(btn.disabled||!report)return;
+    // Each PNG gets its own explicit click, so mobile browsers don't block a batch of downloads.
+    const original=btn.textContent;btn.disabled=true;btn.textContent="PNG ပြင်ဆင်နေသည်…";
+    try{
+     await exporter.savePage(page,{
+      date:report.reportDate,part:i+1,total:pages.length,scope,
+      predict:model.predict,leagueLabel:labelLeague,
+      leagueLogo:l=>leagueIcons[l],
+      teamName:team,teamLogo:teamCrest,displayTime
+     });
+     btn.textContent="✓ PNG Download စတင်ပြီး";
+     exportStatus.textContent="PNG "+(i+1)+"/"+pages.length+" Download စတင်ပြီးပါပြီ။";
+    }catch(err){
+     console.error("AI bulk PNG export",err);
+     btn.textContent="Download မအောင်မြင် — ပြန်နှိပ်ပါ";
+     exportStatus.textContent="PNG ထုတ်မရသေးပါ။ ထပ်မံနှိပ်ကြည့်ပါ။";
+    }finally{
+     setTimeout(()=>{if(btn.isConnected){btn.disabled=false;btn.textContent=original;}},1800);
+    }
+   });
+   container.appendChild(btn);
+  }
+  return pages.length;
+ }
+ function redrawDownloadChoices(){
+  const fixtures=publishedFixtures();
+  if(!fixtures.length){
+   allPages?.replaceChildren();chosenPages?.replaceChildren();
+   if(exportStatus)exportStatus.textContent="ယနေ့ပွဲစဉ်စာရင်း မရသေးပါ";
+   return;
+  }
+  const allCount=pageButtons(allPages,fixtures,null,"all");
+  const selected=[...exportLeagues];
+  const included=fixtures.filter(m=>exportLeagues.has(m.league||"Other"));
+  const scope=selected.length===1?selected[0]:"selected-"+selected.length+"-leagues";
+  const selectedCount=pageButtons(chosenPages,fixtures,selected,scope);
+  exportStatus.textContent="ပွဲအားလုံး "+fixtures.length+" ပွဲ / PNG "+allCount+" ပုံ · "+
+   "လိဂ်ရွေးထားသည် "+selected.length+" ခု / "+included.length+" ပွဲ / PNG "+selectedCount+" ပုံ။";
+  if(exportAllBtn)exportAllBtn.disabled=selected.length===new Set(fixtures.map(m=>m.league||"Other")).size;
+  if(exportNoneBtn)exportNoneBtn.disabled=selected.length===0;
+ }
+ function createDownloadLeagueChoices(fixtures){
+  if(!exportChoices)return;
+  exportChoices.replaceChildren();
+  const leagues=[...new Set(fixtures.map(m=>m.league||"Other"))];
+  exportLeagues=new Set(leagues);
+  for(const league of leagues){
+   const item=make("label","fc-ai-export-choice");
+   const input=make("input");
+   input.type="checkbox";input.value=league;input.checked=true;
+   input.addEventListener("change",()=>{
+    if(input.checked)exportLeagues.add(league);else exportLeagues.delete(league);
+    redrawDownloadChoices();
+   });
+   item.appendChild(input);
+   item.appendChild(make("span","",labelLeague(league)));
+   exportChoices.appendChild(item);
+  }
+  redrawDownloadChoices();
+ }
+ exportAllBtn?.addEventListener("click",()=>{
+  for(const input of exportChoices.querySelectorAll('input[type="checkbox"]'))input.checked=true;
+  exportLeagues=new Set([...exportChoices.querySelectorAll('input[type="checkbox"]')].map(x=>x.value));
+  redrawDownloadChoices();
+ });
+ exportNoneBtn?.addEventListener("click",()=>{
+  for(const input of exportChoices.querySelectorAll('input[type="checkbox"]'))input.checked=false;
+  exportLeagues.clear();redrawDownloadChoices();
+ });
+
  function render(){
   groups.replaceChildren();
   if(!report)return;
@@ -174,9 +269,13 @@
    if(data.reportDate!==todayKey()||data.published!==true||!Array.isArray(data.matches))throw new Error("Daily report not yet published");
    report=data;
    options(data.matches);
+   createDownloadLeagueChoices(publishedFixtures());
    status.textContent="";render();
   }catch(err){
    report=null;count.textContent="0 ပွဲ";
+   exportLeagues.clear();
+   exportChoices?.replaceChildren();
+   redrawDownloadChoices();
    groups.replaceChildren(make("p","fc-ai-empty","ယနေ့ ပွဲစဉ်စာရင်း မရသေးပါ"));
    status.textContent="";
   }finally{loading=false;}
