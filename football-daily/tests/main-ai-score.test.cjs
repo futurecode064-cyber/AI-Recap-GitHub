@@ -99,3 +99,14 @@ test("Eight verified fallback team crest IDs are provided only for the MAIN scor
  assert.match(js,/const teamCrest=\(match,side\)=>/);
  assert.match(js,/https:\/\/a\.espncdn\.com\/i\/teamlogos\/soccer\/500\//);
 });
+
+test("downloaded PNG uses the same aligned six-column layout and includes all crests",()=>{
+ const js=read("main-ai-score.js");
+ assert.match(js,/canvas\.width=1080;canvas\.height=430/);
+ assert.match(js,/const columns=\[596,758,920\]/);
+ assert.match(js,/picture\(leagueIcons\[match\.league\]\)/);
+ assert.match(js,/picture\(match\.homeCrestUrl\),picture\(match\.awayCrestUrl\)/);
+ assert.match(js,/const heading="AI ခန့်မှန်း "/);
+ assert.match(js,/ctx\.fillText\(scores\[i\],x\+81,332\)/);
+ assert.match(js,/const blob=await new Promise\(resolve=>canvas\.toBlob\(resolve,"image\/png"\)\)/);
+});
