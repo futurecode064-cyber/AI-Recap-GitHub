@@ -65,3 +65,25 @@ test("MAIN homepage shows exactly five navigation tiles and section shortcuts",(
   assert.doesNotMatch(brand,/fc-main-five-nav|fc-main-studio-tab|fc-main-ai-tab/,"brand mirror remains three tiles: "+name);
  }
 });
+
+
+test("Sample-style league heading and fixture cells stay in one six-column grid",()=>{
+ const js=read("main-ai-score.js"),css=read("main-ai-score.css");
+ assert.match(js,/const head=make\("div","fc-ai-league-head"\)/,"each league owns blue header");
+ assert.match(js,/head\.appendChild\(iconBox\)/,"logo tile sits left");
+ assert.match(js,/head\.appendChild\(make\("strong","fc-ai-league-title",labelLeague\(league\)\)\)/,"league name beside logo");
+ assert.match(js,/\["AI ခန့်မှန်း ၁","AI ခန့်မှန်း ၂","AI ခန့်မှန်း ၃"\]/,"prediction 1/2/3 above their columns");
+ assert.match(js,/head\.appendChild\(downloadHead\)/,"small PNG column remains");
+ assert.match(js,/table\.appendChild\(head\)/,"header and fixtures use one grid table");
+ assert.match(js,/const row=make\("div","fc-ai-match"\)/,"every match has a matching row");
+ assert.match(js,/home\.appendChild\(make\("span","fc-ai-team-name",team\(match,"home"\)\)\)/,"home name first");
+ assert.match(js,/addImage\(home,match\.homeCrestUrl,team\(match,"home"\),"fc-ai-crest"\)/,"home logo follows home name");
+ assert.match(js,/addImage\(away,match\.awayCrestUrl,team\(match,"away"\),"fc-ai-crest"\)/,"away logo precedes away name");
+ assert.match(js,/away\.appendChild\(make\("span","fc-ai-team-name",team\(match,"away"\)\)\)/,"away name last");
+ assert.match(css,/\.fc-ai-league-head,\.fc-ai-match\s*\{[\s\S]*?grid-template-columns:68px minmax\(0,1fr\) repeat\(3,minmax\(86px,112px\)\) 48px/,"desktop header/rows same columns");
+ assert.match(css,/\.fc-ai-score-list\{display:contents\}/,"three score cells occupy parent grid tracks");
+ assert.match(css,/\.fc-ai-head-pred-2,\.fc-ai-head-pred-3/,"score heading gold on #2/#3");
+ assert.doesNotMatch(js,/fc-ai-table-head/,"no conflicting second heading");
+ assert.match(js,/await saveMatch\(match,scores,report\.reportDate\)/,"single-match PNG remains");
+ assert.match(js,/const choose=filter\.value/,"league filter remains");
+});
