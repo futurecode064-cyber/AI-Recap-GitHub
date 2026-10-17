@@ -34,6 +34,23 @@
  let report=null,loading=false;
  const labelLeague=s=>leagueNames[s]||s||"အခြားလိဂ်";
  const team=(m,s)=>String(m[s+"Display"]||m[s]||"").trim();
+ const crestFallbackIds={
+  "Lincoln City":314,
+  "Charlton Athletic":372,
+  "Birmingham City":392,
+  "Queens Park Rangers":334,
+  "Bristol City":333,
+  "Norwich City":381,
+  "Bolton Wanderers":358,
+  "Swansea City":318
+ };
+ const teamCrest=(match,side)=>{
+  const provided=match[side+"CrestUrl"];
+  if(safeUrl(provided))return provided;
+  const id=crestFallbackIds[match[side]];
+  return id?"https://a.espncdn.com/i/teamlogos/soccer/500/"+id+".png":null;
+ };
+
  const make=(tag,cls,txt)=>{
   const n=document.createElement(tag);
   if(cls)n.className=cls;
@@ -109,9 +126,9 @@
     const teams=make("div","fc-ai-teams");
     const home=make("span","fc-ai-team fc-ai-team-home");
     home.appendChild(make("span","fc-ai-team-name",team(match,"home")));
-    addImage(home,match.homeCrestUrl,team(match,"home"),"fc-ai-crest");
+    addImage(home,teamCrest(match,"home"),team(match,"home"),"fc-ai-crest");
     const away=make("span","fc-ai-team fc-ai-team-away");
-    addImage(away,match.awayCrestUrl,team(match,"away"),"fc-ai-crest");
+    addImage(away,teamCrest(match,"away"),team(match,"away"),"fc-ai-crest");
     away.appendChild(make("span","fc-ai-team-name",team(match,"away")));
     teams.appendChild(home);
     teams.appendChild(make("span","fc-ai-versus","နှင့်"));
@@ -128,7 +145,7 @@
     btn.addEventListener("click",async()=>{
      if(btn.disabled)return;
      btn.disabled=true;const orig=btn.textContent;btn.textContent="…";
-     try{await saveMatch(match,scores,report.reportDate);btn.textContent="✓";}
+     try{await saveMatch({...match,homeCrestUrl:teamCrest(match,"home"),awayCrestUrl:teamCrest(match,"away")},scores,report.reportDate);btn.textContent="✓";}
      catch(err){console.error("AI score PNG export",err);btn.textContent="↻";}
      finally{setTimeout(()=>{btn.disabled=false;btn.textContent=orig;},1200);}
     });
