@@ -64,7 +64,7 @@
  };
  function scoreCell(score,i){
   const cell=make("span","fc-ai-score fc-ai-score-"+(i+1),score);
-  cell.setAttribute("data-label","AI "+(i+1));
+  cell.setAttribute("data-label","AI ခန့်မှန်း "+["၁","၂","၃"][i]);
   return cell;
  }
  function render(){
