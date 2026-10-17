@@ -44,6 +44,23 @@
   lines.forEach((line,i)=>text(ctx,line,x,cy+(i===0?-12:12),fit(ctx,line,maxWidth,17,14),color,true,align,maxWidth));
  }
  function verified(m){return m&&m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(String(m.finalScore||""))}
+ // Balanced contiguous PNG sections across every public brand, no ZIP files.
+ // 1-10 matches stay one image; 11-36 are two evenly-sized images.
+ // More than 36 use the fewest balanced pages capped at 18 rows (mobile-safe).
+ function partition(matches,{threshold=10,maxPerPage=18}={}){
+  if(!Array.isArray(matches)||matches.length===0)return [];
+  const n=matches.length;
+  const pages=n<=threshold?1:Math.max(2,Math.ceil(n/maxPerPage));
+  const size=Math.floor(n/pages),extras=n%pages;
+  let start=0;
+  return Array.from({length:pages},(_,i)=>{
+   const count=size+(i<extras?1:0);
+   const part=matches.slice(start,start+count);
+   start+=count;
+   return {matches:part,count,index:i+1,total:pages};
+  });
+ }
+
  async function saveOdds(data,options={}){
   if(!data||!Array.isArray(data.matches)||!data.matches.length)throw Error("No odds ready to export");
   const kit=K();if(!kit)throw Error("Canvas export module missing");
@@ -145,13 +162,14 @@
   }
   text(ctx,"ပေါက်ကြေးများသည် အိုင်ဘတ် ခွန်ရှစ်ကိုး ဆိုဒ်မှာ မနက်ပိုင်း ဖွင့် ထားသော မြန်မာကြေး များဖြစ်ပါသည်။",W/2,H-37,18,palette.bodyText,false,"center",W-75);
   const leagueSuffix=options.league?"-"+String(options.league).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60):"";
-  const filename=brand+"-odds-"+kit.day(data.reportDate)+leagueSuffix+".png";
+  const partSuffix=options.total>1?"-"+Number(options.part||1)+"-of-"+Number(options.total):"";
+  const filename=brand+"-odds-"+kit.day(data.reportDate)+leagueSuffix+partSuffix+".png";
   if(options.asBlob===true)return {filename,blob:await encodePng(canvas)};
   await download(canvas,filename);
   return {filename,fileCount:1,matchCount:data.matches.length,format:"png"};
  }
 
- async function saveResults({matches,date}){
+ async function saveResults({matches,date,part=1,total=1}){
   const finals=Array.isArray(matches)?matches.filter(verified):[];
   if(!finals.length)throw Error("ပွဲပြီးအတည်ပြုထားသော ရလဒ်များ မရှိသေးပါ");
   const kit=K(),{C,create,fill,line,text,fit,fonts,preloadImages,crest,download,top}=kit;
@@ -181,7 +199,8 @@
   }
   text(ctx,"ပွဲပြီးအတည်ပြုထားသော ဂိုးရလဒ်များ",W/2,H-32,20,C.muted,false,"center");
   const brand=window.FutureCodeBrandConfig?.id;
-  await download(canvas,(brand?brand+"-":"football-")+"goal-results-"+kit.day(date)+".png");
+  const partSuffix=total>1?"-"+part+"-of-"+total:"";
+  await download(canvas,(brand?brand+"-":"football-")+"goal-results-"+kit.day(date)+partSuffix+".png");
  }
- window.FutureCodeDailyExport={saveOdds,saveResults};
+ window.FutureCodeDailyExport={saveOdds,saveResults,partition};
 })();
