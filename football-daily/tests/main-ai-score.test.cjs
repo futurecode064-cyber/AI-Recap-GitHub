@@ -77,13 +77,25 @@ test("Sample-style league heading and fixture cells stay in one six-column grid"
  assert.match(js,/table\.appendChild\(head\)/,"header and fixtures use one grid table");
  assert.match(js,/const row=make\("div","fc-ai-match"\)/,"every match has a matching row");
  assert.match(js,/home\.appendChild\(make\("span","fc-ai-team-name",team\(match,"home"\)\)\)/,"home name first");
- assert.match(js,/addImage\(home,match\.homeCrestUrl,team\(match,"home"\),"fc-ai-crest"\)/,"home logo follows home name");
- assert.match(js,/addImage\(away,match\.awayCrestUrl,team\(match,"away"\),"fc-ai-crest"\)/,"away logo precedes away name");
+ assert.match(js,/addImage\(home,teamCrest\(match,"home"\),team\(match,"home"\),"fc-ai-crest"\)/,"home logo follows home name");
+ assert.match(js,/addImage\(away,teamCrest\(match,"away"\),team\(match,"away"\),"fc-ai-crest"\)/,"away logo precedes away name");
  assert.match(js,/away\.appendChild\(make\("span","fc-ai-team-name",team\(match,"away"\)\)\)/,"away name last");
  assert.match(css,/\.fc-ai-league-head,\.fc-ai-match\s*\{[\s\S]*?grid-template-columns:68px minmax\(0,1fr\) repeat\(3,minmax\(86px,112px\)\) 48px/,"desktop header/rows same columns");
  assert.match(css,/\.fc-ai-score-list\{display:contents\}/,"three score cells occupy parent grid tracks");
  assert.match(css,/\.fc-ai-head-pred-2,\.fc-ai-head-pred-3/,"score heading gold on #2/#3");
  assert.doesNotMatch(js,/fc-ai-table-head/,"no conflicting second heading");
- assert.match(js,/await saveMatch\(match,scores,report\.reportDate\)/,"single-match PNG remains");
+ assert.match(js,/await saveMatch\(\{\.\.\.match,homeCrestUrl:teamCrest\(match,"home"\),awayCrestUrl:teamCrest\(match,"away"\)\},scores,report\.reportDate\)/,"single-match PNG retains both club logos");
  assert.match(js,/const choose=filter\.value/,"league filter remains");
+});
+
+
+test("Eight verified fallback team crest IDs are provided only for the MAIN score table",()=>{
+ const js=read("main-ai-score.js");
+ const ids={"Lincoln City":314,"Charlton Athletic":372,"Birmingham City":392,"Queens Park Rangers":334,
+ "Bristol City":333,"Norwich City":381,"Bolton Wanderers":358,"Swansea City":318};
+ for(const [name,id] of Object.entries(ids)){
+  assert.ok(js.includes('"'+name+'":'+id),name+" must use the correct mens football crest ID");
+ }
+ assert.match(js,/const teamCrest=\(match,side\)=>/);
+ assert.match(js,/https:\/\/a\.espncdn\.com\/i\/teamlogos\/soccer\/500\//);
 });
