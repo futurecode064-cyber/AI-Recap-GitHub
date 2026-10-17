@@ -21,13 +21,13 @@ test("all published AI fixtures can be exported as PNG page(s), without omission
 test("32 fixtures yield two separate PNG buttons; user selects each picture, no zip",()=>{
  const mock=[...Array(32)].map((_,i)=>({home:"H"+i,away:"A"+i,league:i<20?"League 1":"League 2"}));
  const pages=exporter.planPages(mock);
- assert.deepEqual(pages.map(p=>p.matchCount),[18,14]);
+ assert.deepEqual(pages.map(p=>p.matchCount),[16,16]);
  const data=report.matches;
  const realPages=exporter.planPages(data);
  if(report.reportDate==="2026-10-17"){
   assert.equal(data.length,32);
   assert.equal(realPages.length,2);
-  assert.deepEqual(realPages.map(p=>p.matchCount),[18,14]);
+  assert.deepEqual(realPages.map(p=>p.matchCount),[16,16]);
  }
  const js=read("main-ai-score.js"),html=read("index.html");
  assert.match(html,/id="fcAiAllPngPages"/);
@@ -60,7 +60,7 @@ test("league selection filters only exact league matches, respects order, and pe
 test("large single leagues split correctly without breaking score-only model or huge canvases",()=>{
  const huge=Array.from({length:43},(_,i)=>({home:"H"+i,away:"A"+i,league:"ONE"}));
  const pages=exporter.planPages(huge);
- assert.deepEqual(pages.map(p=>p.matchCount),[18,18,7]);
+ assert.deepEqual(pages.map(p=>p.matchCount),[15,14,14]);
  assert.deepEqual(pages.flatMap(p=>p.groups.flatMap(g=>g.matches)),huge);
  for(const page of pages)assert.ok(exporter.dim(page).height<4096);
 });
@@ -78,5 +78,14 @@ test("bulk export retains league and both team logos, same three predicted score
  for(const site of ["ykz-family","bw-sport","ko-thet-family"]){
   const html=read(site+"/index.html");
   assert.doesNotMatch(html,/main-ai-bulk-export|fcAiExportPanel|fcAiAllPngPages/);
+ }
+});
+
+test("AI PNG uses balanced halves for odd and even source counts",()=>{
+ for(const [n,expected] of [[15,[8,7]],[16,[8,8]],[32,[16,16]],[37,[13,12,12]]]){
+  const games=Array.from({length:n},(_,i)=>({home:"H"+i,away:"A"+i,league:"Testing"}));
+  const split=exporter.planPages(games);
+  assert.deepEqual(split.map(x=>x.matchCount),expected);
+  assert.deepEqual(split.flatMap(x=>x.groups.flatMap(g=>g.matches)),games);
  }
 });
