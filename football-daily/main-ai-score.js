@@ -78,27 +78,44 @@
   const leagues=[...new Set(selected.map(m=>m.league||"Other"))];
   for(const league of leagues){
    const matches=selected.filter(m=>(m.league||"Other")===league);
-   const wrap=make("div","fc-ai-league");
-   const top=make("div","fc-ai-league-title");
-   addImage(top,leagueIcons[league],"","fc-ai-league-icon");
-   top.appendChild(make("strong","",labelLeague(league)));
-   top.appendChild(make("span","fc-ai-league-count",matches.length+" ပွဲ"));
-   wrap.appendChild(top);
+   const wrap=make("section","fc-ai-league");
+   wrap.setAttribute("aria-label",labelLeague(league));
    const table=make("div","fc-ai-table");
-   const th=make("div","fc-ai-table-head");
-   for(const t of ["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","AI ခန့်မှန်း ၁","AI ခန့်မှန်း ၂","AI ခန့်မှန်း ၃","PNG"]){
-    th.appendChild(make("span","",t));
+   const head=make("div","fc-ai-league-head");
+   const iconBox=make("span","fc-ai-league-icon-frame");
+   const fallback=make("span","fc-ai-league-icon-fallback","⚽");
+   iconBox.appendChild(fallback);
+   const logo=safeUrl(leagueIcons[league]);
+   if(logo){
+    const image=make("img","fc-ai-league-icon");
+    image.src=logo;image.alt=labelLeague(league)+" လိဂ်လိုဂို";
+    image.loading="lazy";image.decoding="async";
+    image.onload=()=>{fallback.hidden=true};
+    image.onerror=()=>{image.remove();fallback.hidden=false};
+    iconBox.appendChild(image);
    }
-   table.appendChild(th);
+   head.appendChild(iconBox);
+   head.appendChild(make("strong","fc-ai-league-title",labelLeague(league)));
+   ["AI ခန့်မှန်း ၁","AI ခန့်မှန်း ၂","AI ခန့်မှန်း ၃"].forEach((label,i)=>{
+    head.appendChild(make("span","fc-ai-head-pred fc-ai-head-pred-"+(i+1),label));
+   });
+   const downloadHead=make("span","fc-ai-head-download","PNG");
+   downloadHead.title="တစ်ပွဲချင်း PNG Download";
+   head.appendChild(downloadHead);
+   table.appendChild(head);
    for(const match of matches){
     const row=make("div","fc-ai-match");
     row.appendChild(make("span","fc-ai-time",displayTime(match)));
     const teams=make("div","fc-ai-teams");
-    addImage(teams,match.homeCrestUrl,team(match,"home"),"fc-ai-crest");
-    teams.appendChild(make("span","fc-ai-team-name",team(match,"home")));
+    const home=make("span","fc-ai-team fc-ai-team-home");
+    home.appendChild(make("span","fc-ai-team-name",team(match,"home")));
+    addImage(home,match.homeCrestUrl,team(match,"home"),"fc-ai-crest");
+    const away=make("span","fc-ai-team fc-ai-team-away");
+    addImage(away,match.awayCrestUrl,team(match,"away"),"fc-ai-crest");
+    away.appendChild(make("span","fc-ai-team-name",team(match,"away")));
+    teams.appendChild(home);
     teams.appendChild(make("span","fc-ai-versus","နှင့်"));
-    addImage(teams,match.awayCrestUrl,team(match,"away"),"fc-ai-crest");
-    teams.appendChild(make("span","fc-ai-team-name",team(match,"away")));
+    teams.appendChild(away);
     row.appendChild(teams);
     const scores=model.predict(match);
     const nums=make("div","fc-ai-score-list");
