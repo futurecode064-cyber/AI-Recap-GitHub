@@ -322,3 +322,28 @@ html.football-copy-guard [role="textbox"] *{
 .odds-league-download{border:1px solid #fab978;background:#f3b781;color:#162723;border-radius:9px;font:800 12px "Noto Sans Myanmar",sans-serif;padding:10px 14px;cursor:pointer}
 .odds-league-download:disabled{opacity:.58;cursor:wait}
 @media(max-width:620px){.preview-bulk-btn{width:100%}.odds-league-download{width:100%;margin-bottom:10px}}
+
+
+/* SHARED BALANCED PNG PART BUTTONS — all four brand websites.
+   Short images, one PNG per user click; maintain each brand's own export artwork. */
+.results-png-pages,.odds-png-parts,.odds-league-png-parts{
+ display:flex;flex-wrap:wrap;align-items:center;gap:8px;min-width:0;
+}
+.odds-png-parts{flex:1 1 100%;margin:1px 0 8px}
+.odds-parts-heading,.results-parts-heading{display:block;flex:1 1 100%;font:800 14px/1.65 "Noto Sans Myanmar",sans-serif;color:#f2b87b;margin:0 0 3px}
+.odds-league-png-parts{justify-content:flex-end}
+.odds-part-download,.results-part-download{
+ min-height:39px;padding:9px 13px;border:1px solid #ffce9a;border-radius:9px;
+ background:#f2ae73;color:#192329;cursor:pointer;white-space:normal;
+ font:800 12px/1.65 "Noto Sans Myanmar",sans-serif;box-shadow:none;
+}
+.odds-part-download:hover,.odds-part-download:focus-visible,
+.results-part-download:hover,.results-part-download:focus-visible{
+ background:#ffd09e;outline:2px solid #e9a36c;outline-offset:2px;
+}
+.odds-part-download:disabled,.results-part-download:disabled{opacity:.6;cursor:wait}
+@media(max-width:620px){
+ .odds-league-png-parts{justify-content:flex-start;width:100%}
+ .odds-png-parts,.results-png-pages{width:100%}
+ .odds-part-download,.results-part-download{flex:0 1 auto;width:auto;min-width:130px}
+}
