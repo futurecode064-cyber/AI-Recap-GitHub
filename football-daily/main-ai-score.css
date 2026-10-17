@@ -1,61 +1,74 @@
-/* Dedicated MAIN homepage predictions. This stylesheet is NEVER imported by brand mirrors. */
-.fc-ai-predictions{margin:34px auto 40px;padding:26px;border:1px solid #344e80;border-radius:22px;background:linear-gradient(155deg,#111d43,#08162c 75%);color:#fff;font-family:'Noto Sans Myanmar',sans-serif}
+/* Main Future Code ONLY: unified reference-style AI match score grid.
+   League banner AND fixture lines use the exact same 6 grid columns. */
+.fc-ai-predictions{margin:20px 0 34px;padding:clamp(13px,2vw,22px);border:1px solid #334c90;border-radius:18px;background:linear-gradient(155deg,#0e1b43,#08172f 80%);color:#fff;font-family:'Noto Sans Myanmar',sans-serif}
 .fc-ai-predictions .fc-ai-eyebrow{font:700 12px 'Barlow Condensed',sans-serif;letter-spacing:2px;color:#ffbb67}
-.fc-ai-predictions h2{margin:7px 0 18px;font-size:clamp(22px,3.1vw,31px);line-height:1.55;color:#fff}
-.fc-ai-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:0 0 20px}
+.fc-ai-predictions h2{margin:7px 0 18px;font-size:clamp(22px,3vw,31px);line-height:1.55;color:#fff}
+.fc-ai-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:0 0 19px}
 .fc-ai-controls label{font-size:14px;font-weight:700;color:#e5ecff}
 .fc-ai-controls select{min-height:43px;max-width:100%;min-width:195px;padding:8px 28px 8px 12px;background:#fff;color:#152457;border:1px solid #c0cee8;border-radius:9px;font:700 13px 'Noto Sans Myanmar',sans-serif}
 .fc-ai-count{border-radius:24px;background:#f8a865;padding:6px 14px;color:#182044;font-weight:800}
 .fc-ai-status{font-size:12px;color:#c8d5ee}
-.fc-ai-league{margin:18px 0;border:1px solid #3754a6;border-radius:14px;overflow:hidden;background:#12205d}
-.fc-ai-league-title{display:flex;align-items:center;gap:12px;padding:11px 16px;min-height:62px;color:#fff;background:linear-gradient(92deg,#040e74 0%,#1133d7 56%,#0d1172 100%);font-size:18px;font-weight:800}
-.fc-ai-league-icon{width:42px;height:42px;background:white;border-radius:8px;object-fit:contain;padding:4px;flex:none}
-.fc-ai-league-count{margin-left:auto;font-size:13px;font-weight:700;white-space:nowrap;color:#fbe4b3}
-.fc-ai-table{width:100%}
-.fc-ai-table-head,.fc-ai-match{display:grid;grid-template-columns:84px minmax(220px,1fr) repeat(3,minmax(80px,125px)) 61px;align-items:stretch}
-.fc-ai-table-head{background:#b7c7ff;color:#071753;font-size:12px;font-weight:800;line-height:1.45}
-.fc-ai-table-head>span{min-height:54px;display:flex;align-items:center;justify-content:center;padding:6px;text-align:center;border-right:1px solid #95a4d1}
-.fc-ai-match{min-height:70px;background:#f5f7fd;color:#101736;border-bottom:2px solid #344dcb}
-.fc-ai-match:nth-of-type(even){background:#e9edfa}
-.fc-ai-time{display:flex;align-items:center;justify-content:center;padding:4px;white-space:nowrap;font-family:'Noto Sans Myanmar',sans-serif;font-size:12px;font-weight:800;background:#f9fbff}
-.fc-ai-teams{display:flex;gap:5px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center;padding:7px 5px;line-height:1.6;font-size:14px;font-weight:800}
+.fc-ai-league{margin:14px 0 16px;border:2px solid #1a28d2;border-radius:10px;overflow:hidden;background:#eff1f8}
+.fc-ai-table{width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#5d79de #101a71}
+.fc-ai-league-head,.fc-ai-match{
+ display:grid;
+ grid-template-columns:68px minmax(0,1fr) repeat(3,minmax(86px,112px)) 48px;
+ align-items:stretch;width:100%;
+}
+.fc-ai-league-head{min-height:67px;background:linear-gradient(100deg,#040b8d 0%,#1033ed 49%,#0b0c8b 100%);color:#fff}
+.fc-ai-league-icon-frame{grid-column:1;display:flex;align-items:center;justify-content:center;margin:5px 4px;min-width:0;border-radius:9px;background:#fff}
+.fc-ai-league-icon{display:block;width:47px;height:48px;max-width:90%;object-fit:contain;padding:3px}
+.fc-ai-league-icon-fallback{display:grid;place-items:center;color:#1435a5;font-size:32px}
+.fc-ai-league-icon-fallback[hidden]{display:none}
+.fc-ai-league-title{grid-column:2;display:flex;justify-content:center;align-items:center;min-width:0;padding:8px 5px;font-size:clamp(13px,1.55vw,18px);font-weight:800;text-align:center;line-height:1.6;text-wrap:balance}
+.fc-ai-head-pred{display:flex;align-items:center;justify-content:center;text-align:center;align-self:center;margin:4px 3px;min-height:52px;padding:6px 4px;border-radius:7px;border:1px solid #d1d2df;background:linear-gradient(145deg,#f0f2f8,#d3dbea);box-shadow:0 2px 0 #020a574d;color:#10172b;font:800 12px/1.55 'Noto Sans Myanmar',sans-serif}
+.fc-ai-head-pred-2,.fc-ai-head-pred-3{background:linear-gradient(145deg,#fff7b9,#f2db76);border-color:#cdbf79}
+.fc-ai-head-download{display:flex;align-items:center;justify-content:center;align-self:center;color:#d9e9ff;font:700 10px 'Barlow Condensed',sans-serif}
+.fc-ai-match{background:#fff;color:#131a32;min-height:51px;border-top:3px solid #1831d7}
+.fc-ai-match:nth-child(odd){background:#f4f5fa}
+.fc-ai-time{display:flex;align-items:center;justify-content:center;padding:6px 3px;border-right:1px solid #d8dfe9;background:#fff;font:800 11px/1.7 'Noto Sans Myanmar',sans-serif;white-space:nowrap}
+.fc-ai-teams{display:flex;align-items:center;justify-content:center;min-width:0;gap:5px;padding:5px 6px;text-align:center;line-height:1.45;font-size:13px;font-weight:800}
+.fc-ai-team{display:inline-flex;align-items:center;justify-content:center;gap:4px;max-width:47%;min-width:0}
+.fc-ai-team-home{text-align:right}
+.fc-ai-team-away{text-align:left}
 .fc-ai-team-name{min-width:0;overflow-wrap:anywhere}
-.fc-ai-versus{font-size:11px;color:#576a9d;font-weight:600}
-.fc-ai-crest{height:27px;width:27px;object-fit:contain;flex:none}
+.fc-ai-versus{flex:none;font-size:10px;color:#475570}
+.fc-ai-crest{height:24px;width:24px;object-fit:contain;flex-shrink:0}
 .fc-ai-score-list{display:contents}
-.fc-ai-score{display:flex;align-items:center;justify-content:center;min-height:68px;font:900 22px 'Barlow Condensed',sans-serif;letter-spacing:.5px;white-space:nowrap;color:#1a1e31;background:#f4f6fc;border-left:1px solid #bac4dd}
-.fc-ai-score-2,.fc-ai-score-3{background:#f5ebc8}
-.fc-ai-download{margin:auto;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:0;border-radius:10px;background:#122cbd;color:#fff;font-size:20px;font-weight:900;cursor:pointer}
-.fc-ai-download:hover,.fc-ai-download:focus-visible{background:#ff9b54;color:#14172a;outline:2px solid white;outline-offset:1px}
+.fc-ai-score{display:flex;align-items:center;justify-content:center;min-height:51px;padding:4px 2px;border-left:1px solid #d3d9e8;background:#f3f5f9;color:#0d1831;font:900 20px/1 'Barlow Condensed',sans-serif;letter-spacing:.5px;white-space:nowrap}
+.fc-ai-score-2,.fc-ai-score-3{background:#fff6bd}
+.fc-ai-score-3{background:#f9eeb3}
+.fc-ai-score::before{display:none}
+.fc-ai-download{display:flex;align-items:center;justify-content:center;align-self:center;justify-self:center;width:32px;height:36px;border:0;border-radius:7px;background:#132ac3;color:#fff;font-size:19px;font-weight:900;cursor:pointer}
+.fc-ai-download:hover,.fc-ai-download:focus-visible{background:#ff9b54;color:#14172a;outline:2px solid #1125ab;outline-offset:1px}
 .fc-ai-download:disabled{opacity:.7;cursor:progress}
 .fc-ai-empty{padding:22px 14px;text-align:center;color:#e1e8ff;background:#17234c;border-radius:9px}
-@media(max-width:950px){
- .fc-ai-predictions{padding:15px}
- .fc-ai-table-head,.fc-ai-match{grid-template-columns:67px minmax(165px,1fr) repeat(3,75px) 52px}
- .fc-ai-table{overflow-x:auto}
- .fc-ai-table-head,.fc-ai-match{min-width:520px}
- .fc-ai-teams{font-size:12px}
- .fc-ai-score{font-size:20px}
+@media(max-width:860px){
+ .fc-ai-predictions{padding:13px}
+ .fc-ai-league-head,.fc-ai-match{grid-template-columns:58px minmax(195px,1fr) repeat(3,78px) 40px;min-width:527px}
+ .fc-ai-league-title{font-size:14px}
+ .fc-ai-head-pred{font-size:11px;margin:4px 2px;min-height:48px}
+ .fc-ai-teams{font-size:12px;gap:3px}
+ .fc-ai-crest{height:22px;width:22px}
+ .fc-ai-league-icon{height:42px;width:42px}
+ .fc-ai-score{font-size:19px}
 }
-@media(max-width:650px){
- .fc-ai-score{padding:12px;border-radius:15px}
- .fc-ai-predictions h2{font-size:23px}
+@media(max-width:620px){
+ .fc-ai-predictions{padding:9px;border-radius:12px}
+ .fc-ai-predictions h2{font-size:22px}
  .fc-ai-controls{align-items:stretch;gap:8px}
  .fc-ai-controls label{width:100%}
  .fc-ai-controls select{width:100%;min-width:0}
- .fc-ai-league{border-radius:10px;margin:13px 0}
- .fc-ai-league-title{min-height:56px;padding:8px 10px;font-size:15px}
- .fc-ai-league-icon{width:38px;height:38px}
- .fc-ai-table-head{display:none}
- .fc-ai-match{min-width:0;display:grid;grid-template-columns:62px minmax(0,1fr) 49px;grid-template-rows:auto auto;min-height:0;gap:0;padding:0}
- .fc-ai-time{grid-row:1;grid-column:1;padding:8px 3px;font-size:11px;background:#eef1fa}
- .fc-ai-teams{grid-row:1;grid-column:2;min-height:58px;padding:8px 2px;gap:3px;font-size:12px}
- .fc-ai-crest{width:24px;height:24px}
- .fc-ai-versus{font-size:9px}
- .fc-ai-download{grid-row:1;grid-column:3;width:34px;height:34px;font-size:18px}
- .fc-ai-score-list{display:grid;grid-row:2;grid-column:1 / 4;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:#2234bd;padding:3px}
- .fc-ai-score{min-height:65px;display:flex;flex-direction:column;gap:2px;font-size:25px;border:none;border-radius:4px}
- .fc-ai-score::before{content:attr(data-label);font:800 12px 'Noto Sans Myanmar',sans-serif;color:#223269}
+ .fc-ai-league{border-radius:7px;margin:10px 0}
+ .fc-ai-league-head{min-height:57px}
+ .fc-ai-league-head,.fc-ai-match{grid-template-columns:53px minmax(185px,1fr) repeat(3,76px) 38px;min-width:504px}
+ .fc-ai-league-title{font-size:13px}
+ .fc-ai-head-pred{font-size:10px;min-height:43px;padding:4px 2px}
+ .fc-ai-teams{font-size:11px}
+ .fc-ai-crest{width:20px;height:20px}
+ .fc-ai-score{font-size:19px;min-height:45px}
+ .fc-ai-time{font-size:10px}
+ .fc-ai-download{width:30px;height:32px;font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.fc-ai-download{transition:none}}
 
