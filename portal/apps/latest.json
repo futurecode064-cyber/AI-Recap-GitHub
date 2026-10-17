@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-17",
   "apps": [
     {
       "id": "ai-studio",
@@ -70,14 +70,14 @@
       "id": "kids-learning",
       "name": "Future Code Kids Learning",
       "packageName": "com.futurecode.kidslearning",
-      "versionName": "1.0.1",
-      "versionCode": 2,
+      "versionName": "1.0.3",
+      "versionCode": 4,
       "minSdk": 26,
-      "file": "https://futurecodeaistudio.floot.app/_cdn/static/0015631a-c92a-42b8-ab9a-4699db99a31b-FutureCode_KidsLearning_v1.0.1.apk",
-      "sizeBytes": 7894848,
-      "sha256": "08b5b9f92a00a2e48769f2a96179047fb9ec359468c8a1272e5731465fac32de",
+      "file": "https://futurecodeaistudio.floot.app/_cdn/static/3406f2bf-23d1-4945-acd9-2b4a45c79064-FutureCode_KidsLearning_v1.0.3.apk",
+      "sizeBytes": 12001297,
+      "sha256": "4f460f7ebe7a5da5bd577100eecfec8d17e995226c97b1830e294b46771b9e4c",
       "certificateSha256": "d6d20d67f2a43acf88c7c98c302f026f7659ab49801b8b11e0feaafa318cbc40",
-      "releasedAt": "2026-10-16"
+      "releasedAt": "2026-10-17"
     },
     {
       "id": "safety-guide",
