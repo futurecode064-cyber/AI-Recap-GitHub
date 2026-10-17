@@ -378,9 +378,53 @@ function renderLeagueFilters(all){
  for(const league of ordered)add(league,leagueName(league));
  if(picks)add("special","★ Special Choice",true);
 }
+
+/* One PNG button per balanced results page. All finished games only, never
+   predicted scores or incomplete/live fixtures. Shared by every brand. */
+function renderResultsPngButtons(){
+ const bar=$("resultsDownloadBar");
+ if(!bar)return;
+ let host=$("resultsPngPages");
+ if(!host){
+  host=node("div","results-png-pages");host.id="resultsPngPages";
+  const heading=node("strong","results-parts-heading","ဂိုးရလဒ် PNG Download");bar.insertBefore(heading,bar.firstChild);
+  const old=$("resultsPngBtn");
+  if(old){old.style.display="none";old.insertAdjacentElement("afterend",host);}
+  else bar.insertBefore(host,bar.firstChild);
+ }
+ host.replaceChildren();
+ if(selectedDay!==-1)return;
+ const kit=window.FutureCodeDailyExport;
+ const finals=(Array.isArray(report.matches)?report.matches:[]).filter(validFinal);
+ if(!kit?.partition||!kit?.saveResults||!finals.length)return;
+ for(const page of kit.partition(finals)){
+  const button=node("button","results-png-btn results-part-download","⬇ PNG "+page.index+"/"+page.total+" · "+page.count+" ပွဲ");
+  button.type="button";
+  button.setAttribute("aria-label","ဂိုးရလဒ် PNG "+page.index+"/"+page.total+" · "+page.count+" ပွဲ Download");
+  button.addEventListener("click",async()=>{
+   if(button.disabled)return;
+   const previous=button.textContent;
+   button.disabled=true;button.textContent="PNG ပြင်ဆင်နေသည်…";
+   try{
+    await kit.saveResults({
+     date:selectedDateKey(),matches:page.matches,part:page.index,total:page.total
+    });
+    button.textContent="✓ PNG Download စတင်ပြီး";
+   }catch(err){
+    console.error("Verified results PNG part error",err);
+    button.textContent="PNG မအောင်မြင် — ပြန်နှိပ်ပါ";
+   }finally{
+    setTimeout(()=>{if(button.isConnected){button.disabled=false;button.textContent=previous;}},1800);
+   }
+  });
+  host.appendChild(button);
+ }
+}
+
 function render(){
  const bar=$("resultsDownloadBar");
  if(bar)bar.hidden=selectedDay!==-1||loading||!Array.isArray(report.matches)||!report.matches.some(validFinal);
+ if(bar&&!bar.hidden)renderResultsPngButtons();
  const list=$("matchList");list.replaceChildren();
  if(loading){
   $("matchCount").textContent="—";$("specialCount").textContent="—";
@@ -493,25 +537,7 @@ function init(){
    });
  }
  $("reloadBtn").addEventListener("click",load);
- $("resultsPngBtn").addEventListener("click",async()=>{
-   const button=$("resultsPngBtn");
-   const finals=(Array.isArray(report.matches)?report.matches:[]).filter(validFinal);
-   if(selectedDay!==-1||!finals.length||!window.FutureCodeDailyExport?.saveResults)return;
-   button.disabled=true;const previous=button.textContent;button.textContent="ဂိုးရလဒ်ပုံ ထုတ်နေပါတယ်…";
-   try{
-     await window.FutureCodeDailyExport.saveResults({
-       date:selectedDateKey(),matches:finals,renderResult:renderFinished,
-       brand:document.documentElement.dataset.footballBrandName||"Future Code Football"
-     });
-     button.textContent="✓ ဂိုးရလဒ်များ PNG ထုတ်ပြီး";
-   }catch(err){
-     console.error("Verified results PNG error",err);
-     button.textContent="PNG မအောင်မြင်ပါ — ပြန်နှိပ်ပါ";
-   }finally{
-     button.disabled=false;
-     setTimeout(()=>{if(button.isConnected)button.textContent=previous;},2500);
-   }
- });
+
  load();
 }
 document.addEventListener("DOMContentLoaded",init);
