@@ -804,7 +804,7 @@
       "nightEditorialDate": "2026-10-17",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
       "homeOdds": "4.75",
       "drawOdds": "3.90",
@@ -1276,7 +1276,7 @@
       "kickoffUtc": null,
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
-      "awayCrestUrl": null,
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3751.png",
       "homeOdds": "1.44",
       "drawOdds": "4.75",
       "awayOdds": "6.50",
@@ -1934,7 +1934,53 @@
           "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-08-30"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fsv-mainz-05"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Borussia Mönchengladbach",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fsv-mainz-05"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Eintracht Frankfurt",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fsv-mainz-05"
+        },
+        {
+          "date": "2026-09-06",
+          "opponent": "Hamburger SV",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fsv-mainz-05"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Paderborn",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/1-fsv-mainz-05"
+        }
+      ],
       "headToHead": [],
       "homeStanding": {
         "played": 5,
@@ -1991,7 +2037,7 @@
       "nightEditorialDate": "2026-10-17",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
       "homeOdds": "2.45",
       "drawOdds": "3.75",
@@ -2021,7 +2067,53 @@
           "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-09-13"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Bayern Munich",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/fc-augsburg"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Werder Bremen",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/fc-augsburg"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/fc-augsburg"
+        },
+        {
+          "date": "2026-09-06",
+          "opponent": "Eintracht Frankfurt",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/fc-augsburg"
+        },
+        {
+          "date": "2026-08-30",
+          "opponent": "Schalke 04",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+          "sourceUrl": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/teams/fc-augsburg"
+        }
+      ],
       "headToHead": [],
       "homeStanding": {
         "played": 5,
@@ -2088,7 +2180,53 @@
       "oddsMarket": "Full-time 1X2",
       "oddsIsLive": false,
       "oddsVerifiedDate": "2026-10-17",
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-10",
+          "opponent": "Elversberg",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/1-fc-union-berlin"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Bayern Munich",
+          "teamGoals": 0,
+          "opponentGoals": 7,
+          "venueSide": "away",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/1-fc-union-berlin"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Schalke 04",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/1-fc-union-berlin"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/1-fc-union-berlin"
+        },
+        {
+          "date": "2026-08-29",
+          "opponent": "Eintracht Frankfurt",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://datencenter.dfb.de/competitions/bundesliga/seasons/2026-2027/teams/1-fc-union-berlin"
+        }
+      ],
       "awayLastFive": [
         {
           "date": "2026-10-14",
@@ -2184,7 +2322,7 @@
       "kickoffUtc": null,
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
-      "awayCrestUrl": null,
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
       "homeOdds": "1.75",
       "drawOdds": "4.00",
       "awayOdds": "4.10",
@@ -2733,7 +2871,7 @@
       "nightEditorialDate": "2026-10-17",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
       "homeOdds": "3.90",
       "drawOdds": "4.00",
@@ -2781,7 +2919,53 @@
           "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-09-06"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-13",
+          "opponent": "Sporting CP",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.rclens.fr/fr/equipe-premiere/resultats"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "Lyon",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.rclens.fr/fr/equipe-premiere/resultats"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Monaco",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.rclens.fr/fr/equipe-premiere/resultats"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Le Mans",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.rclens.fr/fr/equipe-premiere/resultats"
+        },
+        {
+          "date": "2026-09-10",
+          "opponent": "Slavia Praha",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "opponentCrestUrl": null,
+          "sourceUrl": "https://www.rclens.fr/fr/equipe-premiere/resultats"
+        }
+      ],
       "headToHead": [],
       "homeStanding": {
         "played": 6,
