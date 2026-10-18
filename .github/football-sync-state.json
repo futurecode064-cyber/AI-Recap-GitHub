@@ -4,24 +4,12 @@
   "source_branch": "main",
   "source_commit": "b21dece119a3a594e8481e663a55c05f91b626cc",
   "source_tree": "93e9f2a5e587cf2b06d1b3052fc9e2dd06057ee0",
-  "target_tree": "b1b116af0e64ac4d16bd98057adf5d7e23949338",
+  "target_tree": "93e9f2a5e587cf2b06d1b3052fc9e2dd06057ee0",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-18T06:08:06.589Z",
+  "last_synced_utc": "2026-10-18T06:10:01.216Z",
   "reconciled_on": "2026-10-18",
   "reconciliation_note": "Owner-approved October 18 verbatim update. Compared complete 143-file source subtree and 140-file production subtree: only 3 changed source blobs and 3 new editorial files. Six destination blobs matched canonical source SHA; newly assembled subtree matched source tree 9fdd25ba01f12af8af937f54187bdc9f10e5e775 exactly. Previous marker target_tree was stale at 340b44e0 despite production tree e4790577. Non-football site root entries preserved.",
-  "last_synced_method": "Selective main odds export-only sync: three tested frame ZIP files; source and production trees differ only by three unpublished login project files. Nine focused tests passed; no brand-site edits.",
-  "partial_sync": {
-    "synced_paths": [
-      "football-daily/odds.html",
-      "football-daily/main-table-odds-frames.js",
-      "football-daily/tests/main-table-odds-frames.test.cjs"
-    ],
-    "unpublished_paths": [
-      "football-daily/_worker.js",
-      "football-daily/MAIN_LOGIN_SETUP.md",
-      "football-daily/tests/main-login.test.cjs"
-    ]
-  }
+  "last_synced_method": "Verified main-only login worker deployment: new 3 files; exact full football subtree parity with canonical source b21dece; focused main-only security test PASS; brand files unchanged."
 }
