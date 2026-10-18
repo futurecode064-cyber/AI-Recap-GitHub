@@ -8,7 +8,7 @@
   const make=(tag,cls,text)=>{const el=document.createElement(tag);if(cls)el.className=cls;
     if(text!==undefined)el.textContent=String(text);return el;};
   const text=(m,side)=>m[side+"Display"]||m[side]||"";
-  let current=[];
+  let current=[],reportDate="";
   function render(){
     cards.replaceChildren();
     const matchList=current.filter(m=>filter.value==="all"||m.league===filter.value);
@@ -39,6 +39,25 @@
       }else{
         card.append(make("p","fcj-ai-unavailable","အတည်ပြုနိုင်သော စာရင်းအချက်အလက် မလုံလောက်သေးပါ။"));
       }
+      const button=make("button","gz-ai-download","⬇ AI ခန့်မှန်းချက် PNG Download");
+      button.type="button";
+      button.addEventListener("click",async()=>{
+        if(button.disabled)return;
+        button.disabled=true;
+        const before=button.textContent;
+        button.textContent="PNG ပြင်ဆင်နေသည်…";
+        try{
+          if(!window.GoalZoneDownloads?.downloadAI)throw Error("AI PNG exporter missing");
+          await window.GoalZoneDownloads.downloadAI(m,reportDate);
+          button.textContent="✓ PNG Download စတင်ပြီး";
+        }catch(err){
+          console.error("Goal Zone AI PNG",err);
+          button.textContent="Download မအောင်မြင်ပါ — ပြန်စမ်းပါ";
+        }finally{
+          setTimeout(()=>{button.disabled=false;button.textContent=before;},2000);
+        }
+      });
+      card.append(button);
       cards.append(card);
     }
     status.textContent="ပြသထားသော ပွဲ "+matchList.length+" ပွဲ • မော်ဒယ်တွက်ချက်နိုင်သော ပွဲ "+ready+" ပွဲ";
@@ -47,7 +66,8 @@
     .then(r=>{if(!r.ok)throw Error("Data unavailable");return r.json();})
     .then(data=>{
       if(data.published!==true||!Array.isArray(data.matches))throw Error("Unpublished or invalid data");
-      date.textContent=(data.reportDate||"")+" · မြန်မာစံတော်ချိန်";
+      reportDate=data.reportDate||"";
+      date.textContent=reportDate+" · မြန်မာစံတော်ချိန်";
       current=data.matches.filter(m=>m.status!=="finished"&&m.home&&m.away);
       const names=[...new Set(current.map(m=>m.league).filter(Boolean))].sort();
       for(const name of names){const opt=document.createElement("option");opt.value=name;opt.textContent=name;filter.append(opt)}
