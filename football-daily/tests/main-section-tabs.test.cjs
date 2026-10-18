@@ -2,11 +2,11 @@
 const test=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("node:vm"),path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const read=name=>fs.readFileSync(path.join(root,name),"utf8");
-test("MAIN page alone has five menu tiles, names today correctly, loads independent views",()=>{
+test("MAIN page alone has seven menu tiles, names today correctly, loads independent views",()=>{
  const home=read("index.html");
  const nav=home.match(/<nav class="date-tabs fc-main-five-nav"[^>]*>([\s\S]*?)<\/nav>/);
  assert.ok(nav,"main five-tile navigation exists");
- assert.equal([...nav[1].matchAll(/<(button|a)\b/g)].length,5);
+ assert.equal([...nav[1].matchAll(/<(button|a)\b/g)].length,7);
  assert.match(nav[1],/ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ/);
  assert.match(nav[1],/href="#fcVideoStudio"/);
  assert.match(nav[1],/href="#fcAiScoreSection"/);
@@ -46,12 +46,15 @@ test("Actual tab interactions select only the requested view and keep deep links
     return q==='button[data-day="-1"]'?nodes.yesterday:
       q==='button[data-day="0"]'?nodes.today:
       q===".fc-main-studio-tab"?nodes.video:
-      q===".fc-main-ai-tab"?nodes.ai:null;
+      q===".fc-main-ai-tab"?nodes.ai:
+      q===".fc-main-preview-frame-tab"?nodes.previewFrame:
+      q===".fc-main-odds-frame-tab"?nodes.oddsFrame:null;
    }
   };
  }
- for(const id of ["nav","aiSection","videoSection","title","yesterday","today","video","ai"])nodes[id]=node(id);
- const targets={dateTabs:nodes.nav,fcAiScoreSection:nodes.aiSection,fcVideoStudio:nodes.videoSection,reportHeading:nodes.title};
+ for(const id of ["nav","aiSection","videoSection","title","yesterday","today","video","ai","previewFrame","oddsFrame","previewPanel","oddsPanel"])nodes[id]=node(id);
+ const targets={dateTabs:nodes.nav,fcAiScoreSection:nodes.aiSection,fcVideoStudio:nodes.videoSection,reportHeading:nodes.title,brandPreviewStudio:nodes.previewPanel,brandOddsStudio:nodes.oddsPanel};
+ nodes.nav.parentNode={append(){}};
  const location={pathname:"/",hash:"",href:"https://example.test/"};
  const history={
   pushState(_a,_b,url){location.href=url;location.hash=new URL(url).hash},
@@ -74,6 +77,14 @@ test("Actual tab interactions select only the requested view and keep deep links
  nodes.video.actions.click({preventDefault(){}});
  assert.equal(document.body.dataset.fcMainView,"video");
  assert.equal(location.hash,"#fcVideoStudio");
+ nodes.previewFrame.actions.click({preventDefault(){}});
+ assert.equal(document.body.dataset.fcMainView,"previewFrame");
+ assert.equal(location.hash,"#brandPreviewStudio");
+ assert.equal(nodes.ai.attributes["aria-current"],undefined);
+ nodes.oddsFrame.actions.click({preventDefault(){}});
+ assert.equal(document.body.dataset.fcMainView,"oddsFrame");
+ assert.equal(location.hash,"#brandOddsStudio");
+ assert.equal(nodes.previewFrame.attributes["aria-current"],undefined);
  nodes.today.actions.click({});
  assert.equal(document.body.dataset.fcMainView,"today");
  assert.equal(location.hash,"");
