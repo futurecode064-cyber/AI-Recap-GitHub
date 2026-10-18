@@ -316,7 +316,9 @@ function renderMatch(match,i){
    // Special Choice: show ONLY the research-grade extended assessment.
    // The standard article must not appear here a second time.
    const special=node("section","special-analysis");
-   special.appendChild(node("h4","","★ Special Choice"+(Number.isInteger(match.specialChoiceRank)?" #"+match.specialChoiceRank:"")+" — အထူးပွဲကြိုသုံးသပ်ချက်"));
+   const userHeading=typeof match.specialChoiceSourceHeading==="string"&&match.specialChoiceSourceHeading.trim()?match.specialChoiceSourceHeading:null;
+   special.appendChild(node("h4","",userHeading||"★ Special Choice"+(Number.isInteger(match.specialChoiceRank)?" #"+match.specialChoiceRank:"")+" — အထူးပွဲကြိုသုံးသပ်ချက်"));
+   if(match.specialChoiceSourceSubtitle)special.appendChild(node("p","special-source-subtitle",match.specialChoiceSourceSubtitle));
    const paragraphs=Array.isArray(match.specialAnalysisParagraphs)
     ?match.specialAnalysisParagraphs.filter(p=>typeof p==="string"&&p.trim()):[];
    if(paragraphs.length){

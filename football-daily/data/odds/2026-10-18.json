@@ -196,7 +196,7 @@
       "away": "လာဇီယို",
       "upperTeam": "ဂျူဗင်တပ်",
       "kickoff": "01:15",
-      "kickoffDisplay": "၁၉ ရက်နေ့ နံနက် 1:15",
+      "kickoffDisplay": "၁၈ ရက်နေ့ မြန်မာ ည 1:15",
       "kickoffDate": "2026-10-19",
       "nightEditorialDate": "2026-10-18",
       "bodyOdds": "1+45",
@@ -300,7 +300,7 @@
       "away": "ဆီဗီလာ",
       "upperTeam": "ရီးရဲလ်မက်ဒရစ်",
       "kickoff": "01:30",
-      "kickoffDisplay": "၁၉ ရက်နေ့ နံနက် 1:30",
+      "kickoffDisplay": "၁၈ ရက်နေ့ မြန်မာ ည 1:30",
       "kickoffDate": "2026-10-19",
       "nightEditorialDate": "2026-10-18",
       "bodyOdds": "2+25",
@@ -482,7 +482,7 @@
       "away": "နိစ်",
       "upperTeam": "လိုင်ယွန်",
       "kickoff": "01:15",
-      "kickoffDisplay": "၁၉ ရက်နေ့ နံနက် 1:15",
+      "kickoffDisplay": "၁၈ ရက်နေ့ မြန်မာ ည 1:15",
       "kickoffDate": "2026-10-19",
       "nightEditorialDate": "2026-10-18",
       "bodyOdds": "1+80",
@@ -500,5 +500,17 @@
       "scheduleVerificationStatus": "pending-detailed-audit",
       "scheduleVerificationSource": "https://ligue1.com/"
     }
-  ]
+  ],
+  "pdfOddsVerification": {
+    "source": "18.pdf",
+    "sheetDate": "2026-10-18",
+    "verifiedRows": 19,
+    "verifiedNumericFields": 57,
+    "checkedFields": [
+      "bodyOdds",
+      "goalTotalOdds",
+      "pdfLastColumn"
+    ],
+    "verification": "character_exact_from_user_supplied_pdf; last column is a prediction, not FT result; current odds are intentionally empty"
+  }
 }
