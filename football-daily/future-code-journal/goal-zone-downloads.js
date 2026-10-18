@@ -275,7 +275,7 @@
   }
   function addWebBanner(){
     const header=document.querySelector(".site-header");
-    if(!header)return;
+    if(!header||document.querySelector(".gz-journal-banner"))return;
     const bar=document.createElement("div");
     bar.className="gz-journal-banner";
     bar.setAttribute("role","img");
