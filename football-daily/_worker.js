@@ -18,6 +18,122 @@ const LOGIN_PATHS = new Set(["/login", "/login/", "/login.html"]);
 const LOGOUT_PATHS = new Set(["/logout", "/logout/"]);
 const encoder = new TextEncoder();
 
+/* GOAL ZONE APK analytics. Only /future-code-journal/android/ is tracked.
+ * Cloudflare D1 binding (optional until enabled): GOALZONE_ANALYTICS_DB
+ * Visitor IDs are random first-party cookies, never names, email or raw IP.
+ */
+const GZ_PREFIX = "/future-code-journal/android/";
+const GZ_STATS_PATHS = new Set([GZ_PREFIX + "stats.html", GZ_PREFIX + "stats/"]);
+const GZ_VISIT_PATH = GZ_PREFIX + "api/visit";
+const GZ_REPORT_PATH = GZ_PREFIX + "api/stats";
+const GZ_VISITOR_COOKIE = "__Host-gz_anon";
+const GZ_APK = /^\/future-code-journal\/android\/([A-Za-z0-9_.-]+\.apk)$/;
+const GZ_BOT = /bot|crawler|spider|headless|preview|facebookexternalhit|whatsapp/i;
+const GZ_SCHEMA = "CREATE TABLE IF NOT EXISTS gz_analytics (id INTEGER PRIMARY KEY AUTOINCREMENT, day TEXT NOT NULL, event_type TEXT NOT NULL, app TEXT NOT NULL, visitor_hash TEXT NOT NULL, country TEXT NOT NULL, created_at INTEGER NOT NULL)";
+function gzDate(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Yangon", year: "numeric", month: "2-digit", day: "2-digit"
+  }).formatToParts(date);
+  const val = part => parts.find(p => p.type === part).value;
+  return val("year") + "-" + val("month") + "-" + val("day");
+}
+function gzCookie(request) {
+  const present = cookieValue(request, GZ_VISITOR_COOKIE);
+  if (/^[a-f0-9]{32}$/.test(present)) return { token: present, fresh: false };
+  return { token: [...crypto.getRandomValues(new Uint8Array(16))]
+    .map(n => n.toString(16).padStart(2, "0")).join(""), fresh: true };
+}
+function gzCookieHeader(token) {
+  return GZ_VISITOR_COOKIE + "=" + token +
+    "; Max-Age=31536000; Path=/; HttpOnly; Secure; SameSite=Lax";
+}
+async function gzHash(token, env) {
+  const secret = env.FCD_SESSION_SECRET;
+  if (!secret || secret.length < 32) return null;
+  const sig = new Uint8Array(await crypto.subtle.sign("HMAC", await hmacKey(secret), encoder.encode("goalzone-visitor:" + token)));
+  return enc64(sig);
+}
+function gzDb(env) {
+  return env.GOALZONE_ANALYTICS_DB?.prepare ? env.GOALZONE_ANALYTICS_DB : null;
+}
+function gzIsBot(request) {
+  return GZ_BOT.test(request.headers.get("user-agent") || "");
+}
+async function gzStore(request, env, eventType, app) {
+  const db = gzDb(env);
+  if (!db || gzIsBot(request)) return null;
+  const cookie = gzCookie(request);
+  const hash = await gzHash(cookie.token, env);
+  if (!hash) return null;
+  const countryCode = String(request.cf?.country || "Unknown").toUpperCase();
+  const country = /^[A-Z]{2}$/.test(countryCode) ? countryCode : "Unknown";
+  await db.prepare(GZ_SCHEMA).run();
+  await db.prepare("INSERT INTO gz_analytics (day, event_type, app, visitor_hash, country, created_at) VALUES (?, ?, ?, ?, ?, ?)")
+    .bind(gzDate(), eventType, app, hash, country, Math.floor(Date.now() / 1000)).run();
+  return cookie.fresh ? gzCookieHeader(cookie.token) : null;
+}
+async function gzVisit(request, env) {
+  if (request.method !== "POST") return respond("Method Not Allowed", 405, { Allow: "POST" });
+  if (request.headers.get("Origin") !== new URL(request.url).origin ||
+      request.headers.get("Sec-Fetch-Site") === "cross-site") return respond("Forbidden", 403);
+  try {
+    const cookie = await gzStore(request, env, "visit", "Goal Zone Android page");
+    return respond(null, 204, cookie ? { "Set-Cookie": cookie } : {});
+  } catch {
+    return respond(null, 204);
+  }
+}
+function gzJson(value, status = 200) {
+  return respond(JSON.stringify(value), status, {
+    "Content-Type": "application/json; charset=utf-8",
+    "Access-Control-Allow-Origin": "none"
+  });
+}
+async function gzStats(request, env) {
+  if (request.method !== "GET") return respond("Method Not Allowed", 405, { Allow: "GET" });
+  if (!ready(env) || !(await hasSession(request, env))) return gzJson({error:"Owner login required"}, 401);
+  const db = gzDb(env);
+  if (!db) return gzJson({error:"D1 binding GOALZONE_ANALYTICS_DB is not configured"}, 503);
+  const range = Number(new URL(request.url).searchParams.get("days") || 7);
+  const days = [1, 7, 30, 90].includes(range) ? range : 7;
+  const since = gzDate(new Date(Date.now() - (days - 1) * 86400000));
+  try {
+    await db.prepare(GZ_SCHEMA).run();
+    const [totals, daily, apps, countries, recent] = await Promise.all([
+      db.prepare("SELECT COUNT(CASE WHEN event_type='visit' THEN 1 END) AS views, COUNT(DISTINCT CASE WHEN event_type='visit' THEN visitor_hash END) AS visitors, COUNT(CASE WHEN event_type='download' THEN 1 END) AS downloads FROM gz_analytics WHERE day >= ?").bind(since).first(),
+      db.prepare("SELECT day, COUNT(CASE WHEN event_type='visit' THEN 1 END) AS views, COUNT(DISTINCT CASE WHEN event_type='visit' THEN visitor_hash END) AS visitors, COUNT(CASE WHEN event_type='download' THEN 1 END) AS downloads FROM gz_analytics WHERE day >= ? GROUP BY day ORDER BY day DESC").bind(since).all(),
+      db.prepare("SELECT app, COUNT(*) AS downloads FROM gz_analytics WHERE day >= ? AND event_type='download' GROUP BY app ORDER BY downloads DESC").bind(since).all(),
+      db.prepare("SELECT country, COUNT(DISTINCT visitor_hash) AS visitors, COUNT(*) AS views FROM gz_analytics WHERE day >= ? AND event_type='visit' GROUP BY country ORDER BY views DESC LIMIT 15").bind(since).all(),
+      db.prepare("SELECT created_at, app, country FROM gz_analytics WHERE day >= ? AND event_type='download' ORDER BY id DESC LIMIT 20").bind(since).all()
+    ]);
+    return gzJson({
+      asOf: new Date().toISOString(), timezone: "Asia/Yangon", days,
+      totals: totals || {views:0, visitors:0, downloads:0},
+      daily: daily.results || [], apps: apps.results || [],
+      countries: countries.results || [], recent: recent.results || []
+    });
+  } catch {
+    return gzJson({error:"Analytics database is unavailable. Verify the Cloudflare D1 binding."}, 503);
+  }
+}
+async function gzDownload(request, env) {
+  // Count only complete APK GET requests. HEAD and Range probes are excluded.
+  const result = await env.ASSETS.fetch(request);
+  if (request.method !== "GET" || request.headers.has("Range") || !result.ok || gzIsBot(request)) return result;
+  let cookie = null;
+  try {
+    cookie = await gzStore(request, env, "download", decodeURIComponent(new URL(request.url).pathname.split("/").pop()));
+  } catch {
+    // Analytics must never prevent a customer from downloading the APK.
+  }
+  if (!cookie) return result;
+  const headers = new Headers(result.headers);
+  headers.set("Set-Cookie", cookie);
+  headers.set("Cache-Control", "private, no-store");
+  return new Response(result.body, {status: result.status, statusText: result.statusText, headers});
+}
+
+
 function ready(env) {
   return typeof env?.FCD_MAIN_PASSWORD === "string" &&
     env.FCD_MAIN_PASSWORD.length >= 1 &&
@@ -47,7 +163,7 @@ function nextPage(raw) {
       raw.includes("\\") || raw.includes("\r") || raw.includes("\n")) return "/";
   try {
     const parsed = new URL(raw, "https://future-code-login.invalid");
-    if (parsed.origin !== "https://future-code-login.invalid" || !MAIN_PATHS.has(parsed.pathname)) return "/";
+    if (parsed.origin !== "https://future-code-login.invalid" || !(MAIN_PATHS.has(parsed.pathname) || GZ_STATS_PATHS.has(parsed.pathname))) return "/";
     return parsed.pathname + parsed.search;
   } catch { return "/"; }
 }
@@ -228,6 +344,15 @@ export default {
       }
       return serveMain(request, env);
     }
+    // Independent Goal Zone APK analytics routes; other brands keep existing behavior.
+    if (path === GZ_VISIT_PATH) return gzVisit(request, env);
+    if (path === GZ_REPORT_PATH) return gzStats(request, env);
+    if (GZ_STATS_PATHS.has(path)) {
+      if (!ready(env)) return unavailable();
+      if (!(await hasSession(request, env))) return redirect("/login?next=" + encodeURIComponent(GZ_PREFIX + "stats.html"), 302);
+      return serveMain(request, env);
+    }
+    if (GZ_APK.test(path)) return gzDownload(request, env);
     // Shared data, scripts, brand routes and assets are publicly accessible.
     return env.ASSETS.fetch(request);
   }
