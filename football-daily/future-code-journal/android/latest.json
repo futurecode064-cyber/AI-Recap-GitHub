@@ -1,10 +1,10 @@
 {
   "packageName": "mm.futurecode.sportsjournal",
-  "versionCode": 1,
-  "versionName": "1.0.0",
-  "apkUrl": "https://future-code-football-daily.pages.dev/future-code-journal/android/FutureCode_Sports_Journal_v1.0.0.apk",
-  "sha256": "6ce3b54aef4c73bb3868b12940f4898d4a04f2f4ed47604348fedd464a6d717b",
+  "versionCode": 2,
+  "versionName": "1.0.1",
+  "apkUrl": "https://future-code-football-daily.pages.dev/future-code-journal/android/GoalZone_Sports_Journal_v1.0.1.apk",
+  "sha256": "a94a4c96512424794062f1b292d77a8458154d48fc21021fd05c659d83c94e4f",
   "certificateSha256": "98407044295dba61390bf38c452aa2d8dc8bcfc7390261680bbccbf30d6a66a4",
-  "releaseNotes": "ပွဲကြိုနှင့် ပေါက်ကြေးအသိပေးချက်၊ Gallery PNG Download နှင့် App Update စနစ်ပါဝင်သော ပထမဗားရှင်း။",
+  "releaseNotes": "ဂိုးဇုံ အားကစား ဂျာနယ် နာမည်နှင့် လိုဂိုအသစ်၊ ပွဲကြိုနှင့် ပေါက်ကြေး Noti၊ Gallery ပုံ Download။",
   "publishedAt": "2026-10-18"
 }
