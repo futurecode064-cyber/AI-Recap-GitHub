@@ -63,11 +63,14 @@
   // Main-page single-match PNG: ALL card/page backdrops are transparent.
   // The original branded-site and batch Canvas rendering is unchanged.
   const transparent=opts.mainScreenshot===true;
-  const fill=transparent?()=>{}:paintFill;
+  const fill=transparent?()=>{}:opts.frameTheme
+    ?(ctx,x,y,w,h,color,r)=>paintFill(ctx,x,y,w,h,typeof color==="string"&&!['#eef2f0','#1f9c5d','#2588d3','#d94950','#536363'].includes(color)?(color===k.C.bg?opts.frameTheme.bg:color===k.C.panel?opts.frameTheme.panel:color===k.C.panelAlt?opts.frameTheme.alt:opts.frameTheme.head):color,r)
+    :paintFill;
   const line=transparent?()=>{}:paintLine;
   const crest=transparent
     ?(ctx,url,x,y,size,label)=>paintCrest(ctx,url,x,y,size,label,true)
     :paintCrest;
+  const themedText=opts.frameTheme?(ctx,value,x,y,px,color,bold,align,max)=>paintText(ctx,value,x,y,px,color===k.C.orange?opts.frameTheme.accent:color,bold,align,max):paintText;
   const text=transparent
     ?(ctx,value,x,y,px=21,color=C.pale,bold=false,align="left",max)=>{
       // A glyph outline (not a rectangular panel) keeps text visible on
@@ -85,7 +88,7 @@
       }
       return paintText(ctx,value,x,y,px,color,bold,align,max);
     }
-    :paintText;
+    :themedText;
   const textKit=transparent?{...k,text}:k;
   await fonts();
   const W=1200,M=24,fullWidth=W-2*M;
@@ -206,6 +209,7 @@
   const filename=opts.mainScreenshot===true&&typeof opts.downloadFilename==="string"
    ?opts.downloadFilename
    :filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png";
+  if(opts.asCanvas===true)return canvas;
   if(opts.asBlob===true){
    if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
    const blob=await Promise.race([
