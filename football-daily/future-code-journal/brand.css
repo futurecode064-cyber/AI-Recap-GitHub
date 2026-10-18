@@ -119,3 +119,9 @@
 @media(max-width:650px){.fcj-theme .hero{background-position:65% center}.fcj-theme .hero-main{min-height:590px;display:flex;flex-direction:column;align-items:stretch;justify-content:end;gap:20px}.fcj-theme .hero-main h1{font-size:37px}.fcj-theme .hero-update-notice{max-width:none}.fcj-theme .hero-desc{font-size:13px}.fcj-theme .odds-table tr{background:#181610}}
 
 .fcj-theme .orange-dot,.fcj-theme .green-dot{background:#edc66b;box-shadow:0 0 10px #e8b64f66}
+.fcj-theme body .odds-content table.odds-table td,.fcj-theme body .odds-content table.odds-table td[class],.fcj-theme body .odds-content table.odds-table td span,.fcj-theme body .odds-content table.odds-table td strong{color:#f3ebd9!important}
+.fcj-theme body .odds-content .odds-matchup .club-label{color:#fff1d0!important}
+.fcj-theme body .odds-league-filter label.odds-league-choice{background:linear-gradient(110deg,#211d14,#15130f);border-color:#69502c;color:#f5e5bf}
+.fcj-theme body .odds-league-filter label.odds-league-choice:has(input:checked){background:linear-gradient(110deg,#5a4420,#332817);border-color:#d1a654}
+.fcj-theme body .odds-league-filter button.odds-filter-control{background:linear-gradient(110deg,#745420,#bf9345);border-color:#e6c477;color:#100e08}
+.fcj-theme body .odds-league-filter input[type=checkbox]{accent-color:#d8ad55}

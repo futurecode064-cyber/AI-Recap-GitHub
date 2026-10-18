@@ -60,6 +60,8 @@ test("Sports journal gold photography and export identity stay isolated to its b
   assert.ok(html.includes("sports-gold-20261018"));
  }
  assert.ok(read("card-export.js").includes("if(isFCJ&&!transparent)k.brandArtwork?.("));
+ assert.ok(read("card-export.js").includes('isFCJ?"#785c28"'));
+ assert.ok(read("card-export.js").includes("wdl(games[i],isFCJ||"));
  assert.ok(read("daily-image-export.js").includes('header:"#5d4822",deep:"#12110e",accent:"#edc66b"'));
  for(const name of ["ykz-family","bw-sport","ko-thet-family"]){
   assert.ok(!read(name+"/index.html").includes("sports-gold-20261018"));
