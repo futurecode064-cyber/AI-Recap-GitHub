@@ -7,7 +7,11 @@
  const MM={"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Championship":"ချန်ပီယံရှစ်","La Liga":"လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂","Serie A":"အီတလီ စီးရီးအေ","Serie B":"အီတလီ စီးရီးဘီ","Bundesliga":"ဘွန်ဒက်စ်လီဂါ","Ligue 1":"လီဂူးဝမ်း","Ligue 2":"ပြင်သစ် လိဂ် ၂","UEFA Champions League":"ချန်ပီယံလိဂ်"};
  function present(v){return v!==undefined&&v!==null&&String(v).trim()?String(v):"—";}
  function filePart(v){return String(v||"football").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"").slice(0,60)||"football";}
- function wdl(g){if(!g||!Number.isInteger(g.teamGoals)||!Number.isInteger(g.opponentGoals))return "–";return g.teamGoals>g.opponentGoals?"W":g.teamGoals<g.opponentGoals?"L":"D";}
+ function wdl(g,allowVerifiedResult=false){
+  if(!g)return "–";
+  if(Number.isInteger(g.teamGoals)&&Number.isInteger(g.opponentGoals))return g.teamGoals>g.opponentGoals?"W":g.teamGoals<g.opponentGoals?"L":"D";
+  return allowVerifiedResult&&/^[WDL]$/.test(g.result||"")?g.result:"–";
+ }
  function paragraphLines(ctx,paragraph,maxWidth,size){
   const chunks=String(paragraph||"ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ").split(/(\*\*[^*\n]+\*\*)/g);
   const lines=[[]];let width=0;
@@ -174,7 +178,7 @@
    text(ctx,club,x+16,rowY+94,fit(ctx,club,side-30,21,14),C.white,true,"left",side-30);
    const games=Array.isArray(items)?items.slice(0,5):[];
    for(let i=0;i<5;i++){
-    const letter=games[i]?wdl(games[i]):"–";
+    const letter=games[i]?wdl(games[i],!!opts.frameTheme||opts.mainScreenshot===true):"–";
     centerBadge(ctx,k,x+14+i*70,rowY+130,letter,45);
    }
    text(ctx,"W = နိုင်  •  D = သရေ  •  L = ရှုံး",x+14,rowY+205,14,C.muted,false,"left",side-24);

@@ -77,3 +77,18 @@ test("Existing regular/branded Canvas export still draws original opaque poster 
  assert.equal(x.outlined.length,0,"Branded and regular export must keep original typography");
  assert.equal(x.clicked.length,1);
 });
+
+
+test("Main frame PNG retains verified result-only form without inventing scorelines",async()=>{
+ const x=fakeBrowser();
+ const m={...match,homeLastFive:[{result:"D"},{result:"W"},{result:"D"},{result:"D"},{result:"W"}],awayLastFive:[{result:"W"},{result:"L"},{result:"L"},{result:"L"},{result:"W"}]};
+ await x.win.FutureCodeCardExport.save(m,{asCanvas:true,hideFooterBrand:true,frameTheme:{bg:"#000",head:"#123",panel:"#234",alt:"#345",accent:"#abc"}});
+ assert.deepEqual(x.words.filter(w=>/^[WDL–]$/.test(w)),["D","W","D","D","W","W","L","L","L","W"]);
+ assert.equal(m.homeLastFive[0].teamGoals,undefined);
+});
+
+test("Main PNG prefers real scorelines and leaves unknown form blank",async()=>{
+ const x=fakeBrowser();
+ await x.win.FutureCodeCardExport.save({...match,homeLastFive:[{teamGoals:2,opponentGoals:0,result:"L"},{result:"unknown"}]},{mainScreenshot:true,asCanvas:true});
+ assert.deepEqual(x.words.filter(w=>/^[WDL–]$/.test(w)).slice(0,5),["W","–","–","–","–"]);
+});
