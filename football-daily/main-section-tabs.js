@@ -1,12 +1,12 @@
 "use strict";
-/* Future Code MAIN WEBSITE ONLY. Five independent sections.
+/* Future Code MAIN WEBSITE ONLY. Seven independent sections.
  * Branded mirror sites do not load this module; shared app.js is unchanged.
  */
 (function(){
   if(!["/","/index.html"].includes(location.pathname))return;
   const TODAY_TITLE="ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ";
-  const MODE_TO_HASH={ai:"#fcAiScoreSection",video:"#fcVideoStudio"};
-  const HASH_TO_MODE={"#fcAiScoreSection":"ai","#fcVideoStudio":"video"};
+  const MODE_TO_HASH={ai:"#fcAiScoreSection",video:"#fcVideoStudio",previewFrame:"#brandPreviewStudio",oddsFrame:"#brandOddsStudio"};
+  const HASH_TO_MODE=Object.fromEntries(Object.entries(MODE_TO_HASH).map(([mode,hash])=>[hash,mode]));
 
   function init(){
     const nav=document.getElementById("dateTabs");
@@ -20,6 +20,9 @@
     const aiTab=nav.querySelector(".fc-main-ai-tab");
     if(!previous||!today||!videoTab||!aiTab)return;
 
+    const frameTabs=[[nav.querySelector(".fc-main-preview-frame-tab"),"previewFrame","brandPreviewStudio"],[nav.querySelector(".fc-main-odds-frame-tab"),"oddsFrame","brandOddsStudio"]];
+    // Both frame studios finish their synchronous setup before DOMContentLoaded.
+    for(const [, ,id] of frameTabs){const panel=document.getElementById(id);if(panel)nav.parentNode.append(panel);}
     let view="today";
     const updateTodayTitle=()=>{
       if(view==="today" && title.textContent!==TODAY_TITLE)title.textContent=TODAY_TITLE;
@@ -30,9 +33,9 @@
     headingObserver.observe(title,{childList:true});
 
     function show(mode){
-      view=["yesterday","today","ai","video"].includes(mode)?mode:"today";
+      view=["yesterday","today","ai","video","previewFrame","oddsFrame"].includes(mode)?mode:"today";
       document.body.dataset.fcMainView=view;
-      const selection=[[previous,view==="yesterday"],[today,view==="today"],[videoTab,view==="video"],[aiTab,view==="ai"]];
+      const selection=[[previous,view==="yesterday"],[today,view==="today"],[videoTab,view==="video"],[aiTab,view==="ai"],...frameTabs.filter(([tab])=>tab).map(([tab,mode])=>[tab,view===mode])];
       for(const [control,on] of selection){
         control.classList.toggle("active",on);
         if(on)control.setAttribute("aria-current",control.tagName==="BUTTON"?"date":"page");
@@ -70,6 +73,7 @@
     aiTab.addEventListener("click",event=>{
       event.preventDefault();navigate("ai",true);
     });
+    for(const [tab,mode] of frameTabs){if(tab)tab.addEventListener("click",event=>{event.preventDefault();navigate(mode,true);});}
     function route(){
       const mode=HASH_TO_MODE[location.hash]||"today";
       show(mode);

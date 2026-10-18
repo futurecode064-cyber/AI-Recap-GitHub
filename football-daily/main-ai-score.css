@@ -193,3 +193,15 @@ body[data-fc-main-view="ai"] #fcAiScoreSection{margin-top:15px}
  color:#172321;background:#eaa36f;border-color:#ffcf9c;
 }
 .date-tabs.fc-main-five-nav > a.active small{color:#344239}
+
+/* Main-only frame navigation follows the AI card. */
+@media(min-width:1101px){.date-tabs.fc-main-five-nav{grid-template-columns:repeat(7,minmax(0,1fr))}}
+@media(min-width:921px) and (max-width:1100px){.date-tabs.fc-main-five-nav{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:590px){.date-tabs.fc-main-five-nav > .fc-main-ai-tab{grid-column:auto}}
+.date-tabs.fc-main-five-nav .fc-main-preview-frame-tab{border-color:#477da3}
+.date-tabs.fc-main-five-nav .fc-main-odds-frame-tab{border-color:#9a7643}
+body[data-fc-main-view]:not([data-fc-main-view="previewFrame"]) #brandPreviewStudio,
+body[data-fc-main-view]:not([data-fc-main-view="oddsFrame"]) #brandOddsStudio{display:none!important}
+body:is([data-fc-main-view="previewFrame"],[data-fc-main-view="oddsFrame"]) :is(#filters,#sectionNote,#resultsDownloadBar,#matchList,#fcAiScoreSection,#fcVideoStudio){display:none!important}
+body:is([data-fc-main-view="previewFrame"],[data-fc-main-view="oddsFrame"]) .content > .section-heading{display:none!important}
+.content > :is(#brandPreviewStudio,#brandOddsStudio){width:100%;max-width:none;margin:20px 0;scroll-margin-top:24px}

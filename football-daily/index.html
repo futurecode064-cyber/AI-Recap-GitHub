@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css?v=png-balanced-20261017">
 <link rel="stylesheet" href="./video-studio.css?v=20261016-video2">
-<link rel="stylesheet" href="./main-ai-score.css?v=20261017-ai-bulk2">
+<link rel="stylesheet" href="./main-ai-score.css?v=20261018-seven-tabs">
 <script defer src="./card-export.js?v=20261018-wdl-fix"></script>
 <script defer src="./social-export.js"></script>
 <script defer src="./canvas-image-kit.js?v=20261016-transparent-all"></script>
@@ -22,7 +22,7 @@
 <script defer src="./main-ai-bulk-export.js?v=png-balanced-ai-20261017"></script>
 <script defer src="./main-ai-score.js?v=20261017-ai-bulk2"></script>
 <script defer src="./video-studio.js?v=20261016-video2"></script>
-<script defer src="./main-section-tabs.js?v=20261017-section-tabs1"></script>
+<script defer src="./main-section-tabs.js?v=20261018-seven-tabs"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
 <script defer src="./brand-preview-studio.js?v=20261018-1"></script>
 <script defer src="./brand-odds-studio.js?v=20261018-2"></script>
@@ -41,12 +41,14 @@
  <section class="content container">
    <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">SELECTED DATE MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
    <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2 id="reportHeading">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill" id="reportPill">● TODAY</span></div>
-   <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football အဓိက အပိုင်း ၅ ခု">
+   <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football အဓိက အပိုင်း ၇ ခု">
      <button type="button" data-day="-1">မနေ့ကရလဒ် <small id="dateYesterday"></small></button>
      <button type="button" data-day="0" class="active">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ <small id="dateToday"></small></button>
      <a class="date-tab-odds" href="./odds.html">ယနေ့ ပေါက်ကြေးများ<small>ပွဲအားလုံး၏ ကြေးစာရင်း ↗</small></a>
      <a class="fc-main-studio-tab" href="#fcVideoStudio">Video Download Studio<small>Video ဖန်တီး / Download</small></a>
      <a class="fc-main-ai-tab" href="#fcAiScoreSection">AI ခန့်မှန်းချက်များ<small>AI ခန့်မှန်း ၁ · ၂ · ၃</small></a>
+     <a class="fc-main-preview-frame-tab" href="#brandPreviewStudio">ပွဲကြို Frame PNG<small>Frame ရွေး / PNG Download</small></a>
+     <a class="fc-main-odds-frame-tab" href="#brandOddsStudio">ပေါက်ကြေး Frame PNG<small>Frame ရွေး / ပုံခွဲ Download</small></a>
    </nav>
    <nav class="filters" id="filters" aria-label="ဒီနေ့ပွဲရှိသည့် ပြိုင်ပွဲများ">
     <button data-league="all" class="selected" type="button">ပွဲအားလုံး</button>
