@@ -67,3 +67,12 @@ test("Sports journal gold photography and export identity stay isolated to its b
   assert.ok(!read(name+"/index.html").includes("sports-gold-20261018"));
  }
 });
+
+test("Journal current odds retain explicit dark text on gold across both row stripes",()=>{
+ const html=read("future-code-journal/odds.html"),css=read("future-code-journal/odds-readable.css");
+ assert.ok(html.indexOf("odds-readable.css")>html.indexOf("brand.css"));
+ assert.ok(css.includes("tr:nth-child(even) td.odds-current"));
+ assert.ok(css.includes("background:#ead49a!important;color:#17130b!important"));
+ assert.ok(css.includes("td.upper")&&css.includes("color:#fff2cc!important"));
+ assert.ok(read("daily-image-export.js").includes('isFCJ?"#ead49a"'));
+});

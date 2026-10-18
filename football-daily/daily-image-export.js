@@ -119,9 +119,9 @@
     text(ctx,titles[i],x+w/2,y+(split?16:29),fit(ctx,titles[i],w-10,17,13),headerText,true,"center",w-10);
     if(split){
      fill(ctx,x+2,y+27,w/2-4,25,palette.header,5);
-     fill(ctx,x+w/2+2,y+27,w/2-4,25,isFCJ?"#42341b":"#f0f5f3",5);
+     fill(ctx,x+w/2+2,y+27,w/2-4,25,isFCJ?"#ead49a":"#f0f5f3",5);
      text(ctx,"မူလ",x+w/4,y+40,15,headerText,true,"center",w/2-10);
-     text(ctx,"ယခု",x+3*w/4,y+40,15,palette.bodyText,true,"center",w/2-10);
+     text(ctx,"ယခု",x+3*w/4,y+40,15,isFCJ?"#17130b":palette.bodyText,true,"center",w/2-10);
      fill(ctx,x+w/2,y+27,1,25,"#ffffffa0");
     }
    }
@@ -131,7 +131,7 @@
     fill(ctx,xs[2],y,widths[2],68,index%2===0?upper:upperAlt);
     // Latest quotes are pale-green cells, left empty until the update arrives.
     for(const i of [3,4]){
-     fill(ctx,xs[i]+widths[i]/2,y,widths[i]/2,68,isFCJ?(index%2===0?"#302818":"#392e19"):(index%2===0?"#eef7f2":"#e3f0e9"));
+     fill(ctx,xs[i]+widths[i]/2,y,widths[i]/2,68,isFCJ?"#ead49a":(index%2===0?"#eef7f2":"#e3f0e9"));
      fill(ctx,xs[i]+widths[i]/2,y,1,68,rule);
     }
     // Spreadsheet-style vertical and horizontal rules stay in the exported PNG.
@@ -156,7 +156,7 @@
      text(ctx,original,x+half/2,y+34,fit(ctx,original,half-8,19,15),palette.bodyText,true,"center",half-8);
      if(latestValue!==null&&latestValue!==undefined&&String(latestValue).trim()!==""){
       const updated=String(latestValue);
-      text(ctx,updated,x+half*1.5,y+34,fit(ctx,updated,half-8,19,15),isFCJ?palette.accent:"#164c3d",true,"center",half-8);
+      text(ctx,updated,x+half*1.5,y+34,fit(ctx,updated,half-8,19,15),isFCJ?"#17130b":"#164c3d",true,"center",half-8);
      }
     }
     text(ctx,m.pdfLastColumn??"—",xs[5]+widths[5]/2,y+34,19,palette.bodyText,true,"center",widths[5]-10);
