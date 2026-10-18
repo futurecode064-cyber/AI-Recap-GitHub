@@ -1,3 +1,4 @@
+const assetReference=require("./asset-reference.cjs");
 "use strict";
 const {test}=require("node:test"),assert=require("node:assert/strict");
 const fs=require("node:fs"),path=require("node:path");
@@ -16,7 +17,7 @@ test("all four football homepages have no bulk/ZIP download section",()=>{
  assert.ok(exporter.includes("window.FutureCodeCardExport={save}"));
  for(const page of ["index.html","ykz-family/index.html","bw-sport/index.html","ko-thet-family/index.html"]){
   const html=read(page);
-  assert.ok(html.includes("card-export.js?v=20261016-png-only"),page);
-  assert.ok(html.includes("app.js?v=20261016-png-only"),page);
+  assetReference(html,page,"card-export.js");
+  assetReference(html,page,"app.js");
  }
 });

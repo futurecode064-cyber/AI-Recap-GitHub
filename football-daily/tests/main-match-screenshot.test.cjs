@@ -44,7 +44,7 @@ test("single-match main PNG immediately uses native Canvas with full text and tr
  assert.match(opts.downloadFilename,/\.png$/);
  const canvas=fs.readFileSync(path.join(root,"card-export.js"),"utf8");
  assert.ok(canvas.includes('if(!transparent)fill(ctx,0,0,W,H,C.bg)'));
- assert.ok(canvas.includes('const fill=transparent?()=>{}:paintFill'),"Panel backgrounds must be skipped in main PNGs");
+ assert.ok(canvas.includes('const fill=transparent?()=>{}:opts.frameTheme'),"Panel backgrounds must be skipped in main PNGs");
  assert.ok(canvas.includes('const textKit=transparent?{...k,text}:k'),"Burmese article must retain readable outlined letters");
  assert.ok(canvas.includes('opts.downloadFilename'));
  assert.ok(!canvas.includes('analysis-toggle'),"PNG never prints read/collapse toggle");

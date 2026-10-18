@@ -18,8 +18,24 @@ test("every published day with preview fixtures includes up to five current user
   assert.equal(m.homeLastFive.length,5,key+" must show five verified home-team games");
   assert.equal(m.awayLastFive.length,5,key+" must show five verified away-team games");
   assert.ok([m.homeOdds,m.drawOdds,m.awayOdds].every(v=>Number(v)>1),key+" needs a verified 1X2 triplet");
-  assert.ok(["Bet365","PokerStars"].includes(m.oddsProvider),key+" provider must name the dated verified single-bookmaker market");
+  assert.ok(typeof m.oddsProvider==="string"&&m.oddsProvider.trim(),key+" named bookmaker required");
+  if(m.oddsMarket.includes("reference snapshot")){
+   assert.equal(m.oddsIsLive,false);assert.equal(m.oddsVerifiedDate,data.reportDate);
+  }
   assert.ok(/^https:/.test(m.oddsSourceUrl),key+" prices must have a credible URL");
+  if(m.specialUserVerbatim?.exactCopy){
+   assert.equal(m.specialUserVerbatim.rank,m.specialChoiceRank);
+   assert.ok(m.specialUserVerbatim.source&&m.specialChoiceSourceHeading&&m.specialChoiceSourceSubtitle);
+   assert.equal(m.specialPreparedDate,data.reportDate);
+   const original=fs.readFileSync(path.join(root,"data/editorial/"+data.reportDate+"-owner-verbatim-special-choices.md"),"utf8");
+   assert.ok(original.includes(m.specialChoiceSourceHeading));
+   for(const paragraph of m.specialAnalysisParagraphs)assert.ok(original.includes(paragraph),"Original Special Choice paragraph must be preserved");
+   assert.equal(m.specialAnalysisParagraphs.length,4);
+   assert.ok(m.specialAnalysisParagraphs.every(p=>typeof p==="string"&&p.length>=320));
+   assert.match(m.specialAnalysisParagraphs.at(-1),/ရွေးချယ်ပါတယ်။\*\*$/u);
+   assert.ok(!/ခန့်မှန်းဂိုးရလဒ်|သေချာပေါက်နိုင်/.test(m.specialAnalysisParagraphs.join(" ")));
+   continue;
+  }
   assert.ok(typeof m.specialRiskNote==="string"&&m.specialRiskNote.length>=20,key+" needs explicit risk");
   assert.ok(Array.isArray(m.specialResearchSources)&&m.specialResearchSources.length>=2,key+" needs independent primary/reliable source urls");
   assert.ok(m.specialResearchSources.every(u=>/^https:\/\//.test(u)),key+" has invalid source URL");

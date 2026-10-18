@@ -81,6 +81,7 @@
    {header:"#0856c4",deep:"#072d77",accent:"#d9eefe",bodyText:"#131720"}:
    brand==="ko-thet-family"||brandName==="Ko Thet Family ဘောလုံးဂျာနယ်"?
    {header:"#830b15",deep:"#45060c",accent:"#ffdc78",bodyText:"#131720"}:
+   brand==="future-code-journal"||brandName==="FUTURE CODE နေ့စဉ် ဘောလုံးဂျာနယ်"?{header:"#783891",deep:"#241433",accent:"#aaf9dc",bodyText:"#131720"}:
    {header:"#215c55",deep:"#163e3b",accent:"#ffcb92",bodyText:"#131720"};
   const white="#ffffff",light="#f7f8fa",rule="#cbd2da",upper="#e7e9ed",upperAlt="#dfe2e7";
   const widths=[110,396,166,152,152,176],xs=[M];
@@ -94,7 +95,7 @@
   fill(ctx,18,31,W-36,153,palette.header,12);
   const logoUrl=document.documentElement?.dataset?.footballBrandLogoUrl;
   if(logoUrl)crest(ctx,logoUrl,W-122,50,78,"⚽");
-  text(ctx,brandName,40,64,24,palette.accent,true,"left",W-230);
+  text(ctx,brandName,40,64,brand==="future-code-journal"?31:24,palette.accent,true,"left",W-230);
   text(ctx,"ယနေ့ ပေါက်ကြေးများ",40,119,36,white,true);
   text(ctx,"မြန်မာစံတော်ချိန် · "+String(data.reportDate||""),40,168,17,white,false);
   text(ctx,data.matches.length+" ပွဲ",W-(logoUrl?150:44),165,19,palette.accent,true,"right");

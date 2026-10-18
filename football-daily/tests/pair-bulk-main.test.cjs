@@ -1,3 +1,4 @@
+const assetReference=require("./asset-reference.cjs");
 "use strict";
 const {test}=require("node:test"),assert=require("node:assert/strict");
 const fs=require("node:fs"),path=require("node:path"),vm=require("node:vm");
@@ -39,5 +40,6 @@ test("no paired or all-preview bulk export remains; current single-match choices
  assert.ok(app.includes('window.FutureCodeCardExport.save('));
  assert.ok(!app.includes("pairMode:"));
  const main=fs.readFileSync(path.join(root,"index.html"),"utf8");
- assert.ok(main.includes("20261016-png-only"));
+ assetReference(main,"index.html","card-export.js");
+ assetReference(main,"index.html","app.js");
 });

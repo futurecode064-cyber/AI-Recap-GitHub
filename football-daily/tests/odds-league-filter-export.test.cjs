@@ -1,3 +1,4 @@
+const assetReference=require("./asset-reference.cjs");
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -84,12 +85,13 @@ test('56 matches and all leagues export in one PNG without dropping rows',async(
 test('four branded odds pages load the shared new filter and exporter assets',()=>{
  for(const page of ['odds.html','ykz-family/odds.html','bw-sport/odds.html','ko-thet-family/odds.html']){
   const html=fs.readFileSync(path.join(root,page),'utf8');
-  for(const asset of ['daily-image-export.js?v=odds-png-only-20261016','odds.js?v=odds-png-only-20261016','odds-sheet-theme.css?v=odds-png-only-20261016'])
-   assert.ok(html.includes(asset),page+' needs '+asset);
+  for(const asset of ['daily-image-export.js','odds.js','odds-sheet-theme.css'])
+   assetReference(html,page,asset);
  }
  const js=fs.readFileSync(path.join(root,'odds.js'),'utf8');
  assert.ok(js.includes('setupLeagueFilter(data)'));
- assert.ok(js.includes('saveOdds({...loadedSheet,matches})'));
+ assert.ok(js.includes('kit.saveOdds({...data,matches:page.matches},options)'));
+ assert.ok(js.includes('kit.partition(matches)'));
  assert.ok(!js.includes('saveOddsSmart'));
  assert.ok(!fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8').includes('zipPngs'));
 });

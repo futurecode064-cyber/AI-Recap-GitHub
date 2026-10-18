@@ -39,12 +39,14 @@ test("only Future Code Main routes require valid signed login", async () => {
   for (const route of [
     "/ykz-family/", "/ykz-family/odds.html", "/bw-sport/", "/bw-sport/odds.html",
     "/ko-thet-family/", "/ko-thet-family/odds.html",
+    "/future-code-journal/", "/future-code-journal/index.html", "/future-code-journal/odds.html",
+    "/future-code-journal/brand.js", "/future-code-journal/assets/logo.webp",
     "/styles.css", "/app.js", "/data/today.json", "/data/odds/2026-10-17.json"
   ]) {
     const result = await worker.fetch(getRequest(route), env);
     assert.equal(result.status, 200, route);
   }
-  assert.equal(calls.length, 10, "public brand routes and shared assets remain public");
+  assert.equal(calls.length, 15, "public brand routes and shared assets remain public");
 
   const login = await worker.fetch(getRequest("/login?next=%2Fodds%3Fdate%3D2026-10-17"), env);
   assert.equal(login.status, 200);

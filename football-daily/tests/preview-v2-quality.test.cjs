@@ -41,16 +41,25 @@ test("Published journalist previews have natural unique one-paragraph factual fo
   assert.ok(t.length>=300&&t.length<=2400,name+": reasoned but not bloated narrative");
   assert.equal(t,t.trim(),name+": whitespace around paragraph");
   assert.ok(!t.includes("\n"),name+": only one flowing paragraph");
-  assert.ok(t.includes(m.homeDisplay)&&t.includes(m.awayDisplay),name+": source-approved Burmese names for both sides");
+  if(!m.userPreviewVerbatim?.exactCopy)assert.ok(t.includes(m.homeDisplay)&&t.includes(m.awayDisplay),name+": source-approved Burmese names for both sides");
   assert.ok(!/^(\s*(\d+[.)]|[-*]))\s/m.test(t),name+": no listicle style");
   assert.ok(!/https?:\/\/|www\.|source:|\.pdf|\bPDF\b|1X2|ဘော်ဒီကြေး|အင်တာနက်ခန့်မှန်းချက်/.test(t),name+": remove URLs, source and betting prices from prose");
   assert.ok(!/ခန့်မှန်း(?:ဂိုး|ရလဒ်)|သေချာပေါက်နိုင်/.test(t),name+": no score predictions or certainty promise");
   for(const expression of forbidden)assert.ok(!t.includes(expression),name+": repeated generic wording "+expression);
+  if(m.userPreviewVerbatim?.exactCopy){
+   assert.equal(m.userPreviewVerbatim.receivedDate,data.reportDate);
+   assert.ok(m.userPreviewVerbatim.source&&m.userPreviewVerbatim.sourceHeading);
+   assert.ok(Number.isInteger(m.userPreviewVerbatim.sourceOrder)&&m.userPreviewVerbatim.sourceOrder>=1&&m.userPreviewVerbatim.sourceOrder<=data.matches.length);
+   const original=fs.readFileSync(path.join(root,"data/editorial/"+data.reportDate+"-owner-verbatim-previews.txt"),"utf8");
+   assert.ok(original.includes(m.userPreviewVerbatim.sourceHeading+"\n"+t),"Imported article must exactly match its original heading and text");
+   assert.match(t,/ရွေးချယ်|ယုံကြည်|အလေးပေး|အသာစီး|အနိုင်/,name+": original closing opinion");
+  }else{
   const bold=[...t.matchAll(/\*\*([^*\n]+)\*\*/g)].map(x=>x[1]);
   assert.ok(bold.length>=2,name+": clear highlighted actors and final recommendation");
   assert.ok(t.endsWith("။**"),name+": bold natural closing selection");
   assert.match(bold.at(-1),/ရွေးချယ်|ယုံကြည်|အလေးပေး|အသာစီး|အနိုင်/,name+": final sentence selects a team with reasoning");
   assert.ok(bold.at(-1).length>=30,name+": final reasoning must be match-specific");
+  }
   for(const [side,s] of [["home",m.homeStanding],["away",m.awayStanding]]){
    if(s&&["played","wins","draws","losses"].every(k=>Number.isInteger(s[k])))
     assert.equal(s.played,s.wins+s.draws+s.losses,name+": checked "+side+" season record mismatch");

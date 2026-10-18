@@ -1,3 +1,4 @@
+const assetReference=require("./asset-reference.cjs");
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -196,7 +197,8 @@ test('old source bookie odds stay in 12 Oct archive and new report has verified 
  for(const m of archive.matches){
   for(const key of ['homeOdds','drawOdds','awayOdds'])assert.ok(Number(m[key])>1);
   assert.ok(m.oddsSourceUrl?.startsWith('https://'));
-  assert.equal(m.oddsMarket,'Full-time 1X2');
+  assert.match(m.oddsMarket,/^Full-time 1X2(?: \(pre-match reference snapshot\))?$/);
+  if(m.oddsMarket.includes('reference snapshot')){assert.equal(m.oddsIsLive,false);assert.match(m.oddsSourceUrl,/^https:\/\//);}
  }
  const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
  for(const m of today.matches){
@@ -207,7 +209,8 @@ test('old source bookie odds stay in 12 Oct archive and new report has verified 
    assert.ok(vals.every(v=>Number(v)>1),'Incomplete 1X2 for '+m.home);
    assert.ok(m.oddsProvider&&m.oddsSourceUrl?.startsWith('https://'),'Unattributed fulltime odds '+m.home);
   }
-  assert.equal(m.oddsMarket,'Full-time 1X2');
+  assert.match(m.oddsMarket,/^Full-time 1X2(?: \(pre-match reference snapshot\))?$/);
+  if(m.oddsMarket.includes('reference snapshot')){assert.equal(m.oddsIsLive,false);assert.match(m.oddsSourceUrl,/^https:\/\//);}
  }
  const js=fs.readFileSync(path.join(root,'app.js'),'utf8');
  assert.ok(js.includes('oddBox("အိမ်ရှင် (1)",match.homeOdds)'));
@@ -217,7 +220,7 @@ test('old source bookie odds stay in 12 Oct archive and new report has verified 
 test('navigation has three equally grouped Yesterday/Today/Odds boxes in both entry pages',()=>{
  for(const filename of ['index.html','myanmar-football/index.html']){
   const html=fs.readFileSync(path.join(root,filename),'utf8');
-  const from=html.indexOf('<nav class="date-tabs"');
+  const from=html.search(/<nav class="date-tabs(?: |")/);
   const to=html.indexOf('</nav>',from);
   const nav=html.slice(from,to);
   assert.equal((nav.match(/data-day=/g)||[]).length,2);
@@ -232,7 +235,7 @@ test('mobile odds keeps screenshot-style table grid with horizontal scrolling in
  const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
  const css=fs.readFileSync(path.join(root,'odds-sheet-theme.css'),'utf8');
  assert.ok(html.includes('id="oddsPngBtn"'));
- assert.ok(html.includes('daily-image-export.js?v=odds-png-only-20261016'));
+ assetReference(html,'odds.html','daily-image-export.js');
  assert.ok(html.includes('odds-sheet-theme.css?v=odds-png-only-20261016'));
  assert.ok(html.indexOf('odds-sheet-theme.css')>html.indexOf('</style>'),'New stylesheet must override old inline card CSS');
  assert.ok(css.includes('overflow-x:auto!important'));
@@ -279,16 +282,18 @@ test('new screenshot-inspired team hero and WDL–1X2–WDL layout is responsive
 test('Canvas exporter includes all odds entries and only confirmed results',()=>{
  const js=fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8');
  assert.ok(js.includes('async function saveOdds(data,options={})'), 'Odds exporter supports league-specific option');
- assert.ok(js.includes('async function saveResults({matches,date})'));
+ assert.match(js,/async function saveResults\(\{matches,date,part=1,total=1\}\)/);
  assert.ok(js.includes('matches.filter(verified)'));
  assert.ok(js.includes('m.status==="finished"'));
- assert.ok(js.includes('window.FutureCodeDailyExport={saveOdds,saveResults}'));
+ assert.ok(js.includes('window.FutureCodeDailyExport={saveOdds,saveResults,partition}'));
  const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
  const odds=fs.readFileSync(path.join(root,'odds.js'),'utf8');
- assert.ok(app.includes('window.FutureCodeDailyExport.saveResults'));
-  assert.ok(odds.includes('odds-league-download'), 'Each odds league has its own PNG download action');
+ assert.ok(app.includes('kit.saveResults('));
+ assert.ok(app.includes('window.FutureCodeDailyExport'));
+  assert.ok(odds.includes('makeOddsPngButtons(leagueButtons,data,matches,league)'), 'Each league has balanced PNG download actions');
   assert.ok(!app.includes('allPreviewsDownloadBtn'), 'No all-previews ZIP download should remain');
- assert.ok(odds.includes('window.FutureCodeDailyExport.saveOdds'));
+ assert.ok(odds.includes('kit.saveOdds('));
+ assert.ok(odds.includes('window.FutureCodeDailyExport'));
 });
 
 test('Native Canvas renderer is loaded ahead of download exporters',()=>{

@@ -1,3 +1,4 @@
+const assetReference=require("./asset-reference.cjs");
 "use strict";
 const {test}=require("node:test");
 const assert=require("node:assert/strict");
@@ -16,7 +17,7 @@ test("all four football brands show the exact requested 7–8 AM Myanmar notice 
   assert.ok(!src.includes("class=\"hero-number\""),page+" must not show old 06:00 clock");
   assert.ok(!src.includes("DAILY FOOTBALL · MMT"),page+" must remove old slogan");
   assert.ok(!src.includes("EVERY MORNING · MMT"),page+" must remove old slogan");
-  assert.ok(src.includes("styles.css?v=copy-guard-20261013"),page+" should load latest shared styling");
+  assetReference(src,page,"styles.css");
  }
 });
 test("new notice stays legible and responsive in all existing site palettes",()=>{

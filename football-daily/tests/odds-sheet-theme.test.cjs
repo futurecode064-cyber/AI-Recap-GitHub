@@ -1,3 +1,4 @@
+const assetReference=require("./asset-reference.cjs");
 "use strict";
 const {test}=require("node:test");
 const assert=require("node:assert/strict");
@@ -17,8 +18,8 @@ test("all four odds pages load the shared light ledger CSS after each branded st
  for(const item of versions){
   const html=read(item.file);
   const nested=item.file.includes("/");
-  const style=(nested?"../":"./")+"odds-sheet-theme.css?v=odds-png-only-20261016";
-  const exporter=(nested?"../":"./")+"daily-image-export.js?v=odds-png-only-20261016";
+  const style=assetReference(html,item.file,"odds-sheet-theme.css");
+  const exporter=assetReference(html,item.file,"daily-image-export.js");
   assert.equal(html.split(style).length-1,1,item.file+" must reference ledger theme exactly once");
   assert.equal(html.split(exporter).length-1,1,item.file+" must refresh Canvas exporter exactly once");
   assert.ok(html.indexOf(style)>html.indexOf("</style>"),item.file+" ledger override after inline CSS");

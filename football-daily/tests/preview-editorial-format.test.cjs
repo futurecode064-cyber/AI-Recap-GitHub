@@ -25,6 +25,17 @@ test("normal website articles follow the author-approved 16 October three-paragr
  for(const [i,m] of data.matches.entries()){
   const desc="#"+(i+1)+" "+(m.homeDisplay||m.home)+" vs "+(m.awayDisplay||m.away);
   const t=m.dailyPreviewText;
+  if(m.userPreviewVerbatim?.exactCopy===true){
+   assert.equal(m.userPreviewVerbatim.receivedDate,data.reportDate);
+   assert.ok(m.userPreviewVerbatim.source&&m.userPreviewVerbatim.sourceHeading);
+   assert.ok(Number.isInteger(m.userPreviewVerbatim.sourceOrder)&&m.userPreviewVerbatim.sourceOrder>=1&&m.userPreviewVerbatim.sourceOrder<=data.matches.length);
+   const original=fs.readFileSync(path.join(root,"data/editorial/"+data.reportDate+"-owner-verbatim-previews.txt"),"utf8");
+   assert.ok(original.includes(m.userPreviewVerbatim.sourceHeading+"\n"+t),"Imported article must exactly match its original heading and text");
+   assert.ok(typeof t==="string"&&t.trim().length>=300,desc+": full owner article");
+   assert.equal(t,t.trim());
+   assert.ok(!t.includes("\\n"));
+   continue;
+  }
   // New author-uploaded journalist prompt is authoritative after owner's 17 Oct approval.
   // The separate preview-v2-quality.test.cjs now enforces its natural single-paragraph quality.
   if(data.reportDate>="2026-10-17"&&m.previewJournalist?.status==="owner_approved_published"){

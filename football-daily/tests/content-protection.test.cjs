@@ -1,3 +1,4 @@
+const assetReference=require("./asset-reference.cjs");
 "use strict";
 const {test}=require("node:test");
 const assert=require("node:assert/strict");
@@ -18,7 +19,7 @@ test("main website allows copying; branded publications retain original content 
      assert.ok(!html.includes("content-protection.js"),p+": main site must permit selection, Ctrl+C and mobile long press");
      assert.ok(!html.includes('class="football-copy-guard"'),p+": main site must not be copy-guarded");
    }
-   assert.ok(html.includes(css),p+": refreshed shared stylesheet");
+   assetReference(html,p,"styles.css");
    assert.ok(html.includes("daily-image-export.js"),p+": PNG exporter preserved");
    assert.ok(html.includes("odds.js")||html.includes("app.js"),p+": functioning match page");
    assert.ok(!html.includes("Copyright Notice"),p+": user requested no notice");

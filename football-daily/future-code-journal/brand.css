@@ -1,0 +1,84 @@
+/* Original FUTURE CODE Football Journal editorial identity; no club/player portraits. */
+:root.fcj-theme{color-scheme:dark;--ink:#120e20;--panel:#261b34;--panel2:#30203e;--border:#6f4b82;--cream:#f9f6ff;--muted:#d4c6dd;--orange:#79f3d6;--green:#83edd2}
+.fcj-theme body{background:#120e20;color:#f6f2fa;isolation:isolate}
+.fcj-theme body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#120e20d9,#170e26dc),url("./assets/original-football-art.svg") center 46%/cover no-repeat;opacity:.6;filter:blur(3px)}
+.fcj-theme .site-header{background:linear-gradient(92deg,#140d23,#362043 58%,#181321);border-bottom:2px solid #bd93ca;box-shadow:0 10px 40px #0501086b}
+.fcj-theme .header-inner{min-height:93px;height:auto;gap:16px}
+.fcj-theme .fcj-site-logo{display:block;width:77px;height:77px;object-fit:contain;flex:none;border:1px solid #bb8ad1;border-radius:16px;background:#181521;box-shadow:0 0 22px #9f58b955}
+.fcj-theme .logo-lines b{font-size:clamp(17px,2.3vw,25px);color:#f9f2ff;line-height:1.6}
+.fcj-theme .top-edition{font-size:11px;color:#bfeee1}
+.fcj-theme .hero{position:relative;overflow:hidden;background:linear-gradient(105deg,#1a0f2cef,#29183cdb,#0c282ad6),url("./assets/original-football-art.svg") center 44%/cover no-repeat;border-bottom:1px solid #75557a}
+.fcj-theme .hero:after{border-color:#78e9bf33;box-shadow:0 0 0 73px #69d4ac10,0 0 0 165px #8b67a209}
+.fcj-theme .hero-topline,.fcj-theme .hero-foot{border-color:#826a8b;color:#d9ccde}
+.fcj-theme .eyebrow,.fcj-theme .hero-number small,.fcj-theme .section-eyebrow{color:#79f3d6}
+.fcj-theme .hero-main h1{font-weight:900;letter-spacing:-.015em;text-shadow:0 9px 28px #03020888}
+.fcj-theme .hero-main h1 span{color:#a8f6d9}
+.fcj-theme .hero-desc{color:#f2e9f4;font-size:clamp(14px,1.8vw,17px);max-width:760px;line-height:2.1}
+.fcj-theme .hero-update-notice{background:#291c3ac9;border:1px solid #8f71a2;color:#eee3f2}
+.fcj-theme .dashboard-bar,.fcj-theme .match-card{background:#24192ff5;border-color:#705080;box-shadow:0 12px 35px #08031255}
+.fcj-theme .dashboard-stat{border-color:#65486f}
+.fcj-theme .stat-label{color:#c6b3d1}
+.fcj-theme .dashboard-stat .status-label,.fcj-theme .section-heading h2{color:#a6f1d6}
+.fcj-theme .reload-btn:hover{background:#463052}
+.fcj-theme .today-pill{background:#332246;border-color:#9370af;color:#fff}
+.fcj-theme .date-tabs button,.fcj-theme .date-tab-odds,.fcj-theme .filters button{background:#291e36;border:1px solid #694c7b;color:#f4eaf7}
+.fcj-theme .date-tabs button.active,.fcj-theme .filters button.selected{background:linear-gradient(125deg,#8735a0,#4f896f);border-color:#adf3d4;color:white}
+.fcj-theme .filters .filter-special{background:#44351e;border-color:#d5ad64;color:#ffeab6}
+.fcj-theme .match-card.is-special{border-color:#d7b16b}
+.fcj-theme .special-mark{background:#775735;color:#fff0bb}
+.fcj-theme .match-topline,.fcj-theme .match-card:has(.match-hero)>.match-topline{background:#332044;border-color:#745989}
+.fcj-theme .hero-team-home{background:radial-gradient(circle at 18% 18%,#9138a147,transparent 75%),#20152d}
+.fcj-theme .hero-team-away{background:radial-gradient(circle at 76% 18%,#57cfa837,transparent 75%),#221b2c}
+.fcj-theme .match-hero-art,.fcj-theme .hero-info-bar,.fcj-theme .market-form-row{background:#241b32}
+.fcj-theme .match-hero-versus{background:linear-gradient(90deg,#241527df,#3c2849ee,#241527df)}
+.fcj-theme .hero-big-vs{color:#dffef3}
+.fcj-theme .hero-competition,.fcj-theme .market-center-heading,.fcj-theme .odd small{color:#a4efce}
+.fcj-theme .hero-info-bar>.hero-info-fixture{background:linear-gradient(110deg,#70328f,#326e65)}
+.fcj-theme .match-market-layout,.fcj-theme .match-market-strip.myanmar-market{background:#2a1c38}
+.fcj-theme .match-market-strip .myanmar-market-title,.fcj-theme .match-market-strip .myanmar-market-pair{color:#b9f6dc}
+.fcj-theme .quick-form,.fcj-theme .market-center,.fcj-theme .odd{background:#362642;border-color:#79538b}
+.fcj-theme .match-card:has(.match-hero) .analysis-body,.fcj-theme .match-card:has(.match-hero) .match-actions{background:#24192f}
+.fcj-theme .match-card:has(.match-hero) .analysis-body h4,.fcj-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#aaf5d8}
+.fcj-theme .match-card:has(.match-hero) .analysis-body p,.fcj-theme .special-analysis p{color:#fff8ff}
+.fcj-theme .match-card:has(.match-hero) .analysis-toggle,.fcj-theme .special-analysis{background:#30203f;color:#f2e2ff;border-color:#785a85}
+.fcj-theme .special-analysis h4{color:#edcf9f}
+.fcj-theme .match-download,.fcj-theme .results-png-btn,.fcj-theme .odds-export-actions button{background:linear-gradient(115deg,#9156b2,#379d83);color:#fff;border:1px solid #9af1d5}
+.fcj-theme .results-download-bar{background:#332343;border-color:#8d74a1}
+.fcj-theme footer{background:#110b1d;border-top:1px solid #785f8a}
+.fcj-theme .footer-inner p{color:#c5b1ca}
+.fcj-quick-nav{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0 21px}
+.fcj-quick-nav a{padding:11px 17px;border-radius:11px;border:1px solid #835d98;background:#2e203e;color:#cdf9e7;text-decoration:none;font-weight:700;font-size:12px}
+.fcj-quick-nav a:hover{border-color:#a6f4d7;background:#422c54}
+.fcj-ai{margin:15px auto 55px;padding:clamp(16px,3vw,28px);border:1px solid #806094;border-radius:22px;background:linear-gradient(140deg,#21132def,#162929ef);box-shadow:0 16px 45px #05080a5c}
+.fcj-ai-intro h2{font-size:clamp(23px,4vw,37px);color:#baf9dd;margin:7px 0 15px}
+.fcj-ai-intro p{font-size:13px;line-height:2.1;color:#e7ddec;max-width:950px}
+.fcj-kicker{color:#e3c28d;letter-spacing:.17em;font:800 13px 'Barlow Condensed',sans-serif}
+.fcj-ai-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:13px;margin:22px 0}
+.fcj-ai-toolbar label{font-weight:700;font-size:13px}
+.fcj-ai-toolbar select{font:700 13px 'Noto Sans Myanmar',sans-serif;padding:10px 15px;border-radius:8px;background:#f9f5ff;color:#35213d}
+.fcj-ai-toolbar span,#fcjAiStatus{font-size:12px;color:#d4bfdf}
+.fcj-ai-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:15px}
+.fcj-ai-card{padding:18px;border:1px solid #795d8a;border-radius:14px;background:#2d1c3d}
+.fcj-ai-league{color:#aaf2d8;font-size:11px;font-weight:800;padding-bottom:12px;border-bottom:1px solid #5e4670}
+.fcj-ai-teams{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);align-items:center;gap:7px;padding:16px 0}
+.fcj-ai-team{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px;font-size:12px;font-weight:700}
+.fcj-ai-team img{height:42px;width:42px;object-fit:contain}
+.fcj-ai-vs{font:800 15px 'Barlow Condensed',sans-serif;color:#f5dba7;text-align:center}
+.fcj-ai-key{font-size:11px;color:#d8c3e0}
+.fcj-ai-scores{display:flex;justify-content:center;gap:10px;margin-top:12px}
+.fcj-ai-score{padding:11px 16px;border:1px solid #997bac;border-radius:8px;font:800 20px 'Barlow Condensed',sans-serif;color:#f9f2fb}
+.fcj-ai-score.lead{background:linear-gradient(115deg,#6d3f93,#3f866d);border-color:#9ff1d3}
+.fcj-ai-unavailable{font-size:12px;line-height:2;color:#efcfa8}
+.fcj-theme .odds-hero{background:linear-gradient(100deg,#26152fdd,#183a3bed),url("./assets/original-football-art.svg") center/cover;border-color:#826594}
+.fcj-theme .odds-hero h1 span,.fcj-theme .odds-count,.fcj-theme .odds-kicker{color:#aaf9d9}
+.fcj-theme .odds-nav a{background:#332443;color:#f2e7fb;border-color:#835c9b}
+.fcj-theme .odds-nav a.active{background:#5e997b;color:#101d18;border-color:#9beed1}
+.fcj-theme .odds-overview,.fcj-theme .odds-group,.fcj-theme .odds-status{background:#251932;border-color:#785587}
+.fcj-theme .odds-group h2{background:#382344;color:#d2faea;border-color:#855e98}
+.fcj-theme .odds-table th{background:#492f58;color:#f4e6fa}
+.fcj-theme .odds-table td{border-color:#5f476e}
+.fcj-theme .odds-table tr:hover td{background:#41304b}
+.fcj-theme .odds-table .time,.fcj-theme .odds-table .prediction{color:#d0f9e4}
+.fcj-theme .odds-table .price,.fcj-theme .odds-table .upper{color:#f6e3fc}
+.fcj-theme .odds-note{background:#372443;color:#e9d2ec;border-left-color:#8aebc8}
+@media(max-width:650px){.fcj-theme .fcj-site-logo{width:58px;height:58px}.fcj-theme .header-inner{min-height:77px}.fcj-theme .logo-lines b{font-size:16px}.fcj-theme .top-edition{display:none}.fcj-theme .odds-table tr{background:#322540;border-color:#7e5c92}}
