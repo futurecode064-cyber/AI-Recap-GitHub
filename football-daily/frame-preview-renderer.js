@@ -5,12 +5,15 @@
  const safe=v=>v===undefined||v===null||String(v).trim()===''?'—':String(v);
  function result(g){if(!g)return '–';if(Number.isInteger(g.teamGoals)&&Number.isInteger(g.opponentGoals))return g.teamGoals>g.opponentGoals?'W':g.teamGoals<g.opponentGoals?'L':'D';return /^[WDL]$/.test(g.result||'')?g.result:'–';}
  function wrap(ctx,value,width,size){
-  const seg=typeof Intl.Segmenter==='function'?new Intl.Segmenter('my',{granularity:'grapheme'}):null;
+  const words=typeof Intl.Segmenter==='function'?new Intl.Segmenter('my',{granularity:'word'}):null;
+  const graphemes=typeof Intl.Segmenter==='function'?new Intl.Segmenter('my',{granularity:'grapheme'}):null;
   const rows=[[]];let used=0;
   for(const chunk of String(value||'').split(/(\*\*[^*\n]+\*\*)/g)){
    const bold=chunk.startsWith('**')&&chunk.endsWith('**'),str=bold?chunk.slice(2,-2):chunk;
-   const chars=seg?[...seg.segment(str)].map(s=>s.segment):Array.from(str);
-   for(const char of chars){if(char==='\n'){rows.push([]);used=0;continue;}ctx.font=(bold?'800 ':'500 ')+size+'px "Noto Sans Myanmar",sans-serif';const w=ctx.measureText(char).width;if(used+w>width&&used){rows.push([]);used=0;}const row=rows[rows.length-1];if(row.length&&row[row.length-1].bold===bold)row[row.length-1].str+=char;else row.push({str:char,bold});used+=w;}
+   const tokens=words?[...words.segment(str)].map(s=>s.segment):str.split(/(\s+)/u);
+   ctx.font=(bold?'800 ':'500 ')+size+'px "Noto Sans Myanmar",sans-serif';
+   const push=token=>{if(token.includes('\n')){const parts=token.split('\n');for(let i=0;i<parts.length;i++){if(i){rows.push([]);used=0;}if(parts[i])push(parts[i]);}return;}const w=ctx.measureText(token).width;if(used+w>width&&used){rows.push([]);used=0;}const row=rows[rows.length-1];if(row.length&&row[row.length-1].bold===bold)row[row.length-1].str+=token;else row.push({str:token,bold});used+=w;};
+   for(const token of tokens){if(ctx.measureText(token).width>width){for(const g of graphemes?[...graphemes.segment(token)].map(x=>x.segment):Array.from(token))push(g);}else push(token);}
   }return rows;
  }
  async function render(m,theme){
