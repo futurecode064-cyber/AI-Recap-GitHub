@@ -81,7 +81,7 @@
    {header:"#0856c4",deep:"#072d77",accent:"#d9eefe",bodyText:"#131720"}:
    brand==="ko-thet-family"||brandName==="Ko Thet Family ဘောလုံးဂျာနယ်"?
    {header:"#830b15",deep:"#45060c",accent:"#ffdc78",bodyText:"#131720"}:
-   brand==="future-code-journal"||brandName==="FUTURE CODE အားကစား ဂျာနယ်"?{header:"#5d4822",deep:"#12110e",accent:"#edc66b",bodyText:"#fff0d2"}:
+   brand==="future-code-journal"||brandName==="ဂိုးဇုံ အားကစား ဂျာနယ်"?{header:"#5d4822",deep:"#12110e",accent:"#edc66b",bodyText:"#fff0d2"}:
    {header:"#215c55",deep:"#163e3b",accent:"#ffcb92",bodyText:"#131720"};
   const isFCJ=brand==="future-code-journal";
   const white=isFCJ?"#151410":"#ffffff",light=isFCJ?"#211e17":"#f7f8fa",rule=isFCJ?"#66502d":"#cbd2da",upper=isFCJ?"#3b301b":"#e7e9ed",upperAlt=isFCJ?"#302818":"#dfe2e7";

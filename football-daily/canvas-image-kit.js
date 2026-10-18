@@ -2,7 +2,7 @@
 (function(){
  const branded=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
  const bwBranded=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
- const fcjBranded=document.documentElement?.dataset?.footballBrandName==="FUTURE CODE အားကစား ဂျာနယ်";
+ const fcjBranded=document.documentElement?.dataset?.footballBrandName==="ဂိုးဇုံ အားကစား ဂျာနယ်";
  const ktfBranded=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
  const C=branded?
   {bg:"#111111",head:"#960000",panel:"#242424",panelAlt:"#353030",divider:"#812f2f",orange:"#ffcf58",pale:"#fff8e9",muted:"#e0cbc0",white:"#fff9ee"}:
@@ -114,7 +114,7 @@
  function day(v){return /^\d{4}-\d{2}-\d{2}$/.test(v||"")?v:"unknown"}
  function top(ctx,W,title,date,detail){
   fill(ctx,0,0,W,13,C.orange);fill(ctx,0,13,W,195,C.head);
-  text(ctx,branded?"YKZ FAMILY GROUP":bwBranded?"BW SPORT ဘောလုံးဂျာနယ်":ktfBranded?"KO THET FAMILY ဘောလုံးဂျာနယ်":fcjBranded?"FUTURE CODE အားကစား ဂျာနယ်":"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
+  text(ctx,branded?"YKZ FAMILY GROUP":bwBranded?"BW SPORT ဘောလုံးဂျာနယ်":ktfBranded?"KO THET FAMILY ဘောလုံးဂျာနယ်":fcjBranded?"ဂိုးဇုံ အားကစား ဂျာနယ်":"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
   if(branded){
    text(ctx,"အတူရှေ့ဆက် YKZ",Math.min(W-260,340),48,19,C.pale,true);
    crest(ctx,document.documentElement?.dataset?.footballBrandLogoUrl,W-113,22,78,"YKZ");

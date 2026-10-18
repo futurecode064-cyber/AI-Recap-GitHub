@@ -5,7 +5,7 @@ const fs=require("node:fs");
 const path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
-const brand="FUTURE CODE အားကစား ဂျာနယ်";
+const brand="ဂိုးဇုံ အားကစား ဂျာနယ်";
 test("Future Code Journal is a new original branded path with unchanged central source data",()=>{
  const home=read("future-code-journal/index.html");
  const odds=read("future-code-journal/odds.html");
@@ -21,7 +21,7 @@ test("Future Code Journal is a new original branded path with unchanged central 
  assert.ok(home.includes('data-football-data-url="../data/today.json"'));
  assert.ok(odds.includes('data-football-odds-data-url="../data/odds/"'));
  assert.ok(home.includes('id="fcj-ai"')&&home.includes('id="fcjAiCards"'));
- assert.ok(home.includes("FUTURE CODE <span>အားကစား</span>"));
+ assert.ok(home.includes("ဂိုးဇုံ <span>အားကစား</span>"));
  assert.ok(home.includes("../main-ai-score-model.js"));
  assert.ok(home.includes("./ai-predictions.js"));
  assert.ok(!fs.existsSync(path.join(root,"future-code-journal/data")));

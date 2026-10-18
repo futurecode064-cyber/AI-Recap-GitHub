@@ -120,7 +120,7 @@
   if(renderScale!==1)ctx.scale(renderScale,renderScale);
   const isYKZ=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
   const isBW=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
-  const isFCJ=document.documentElement?.dataset?.footballBrandName==="FUTURE CODE အားကစား ဂျာနယ်";
+  const isFCJ=document.documentElement?.dataset?.footballBrandName==="ဂိုးဇုံ အားကစား ဂျာနယ်";
   const isKTF=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
   const my=match.myanmarOdds||{};
   await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl,LEAGUE_CRESTS[match.league]].filter(Boolean));
@@ -140,7 +140,7 @@
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"KTF");
   }
   if(isFCJ){
-   text(ctx,"FUTURE CODE အားကစား ဂျာနယ်",W/2,44,25,C.orange,true,"center",W-320);
+   text(ctx,"ဂိုးဇုံ အားကစား ဂျာနယ်",W/2,44,25,C.orange,true,"center",W-320);
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"FC");
   }
   const heroY=86,heroH=387,sideW=450,middleW=252;
