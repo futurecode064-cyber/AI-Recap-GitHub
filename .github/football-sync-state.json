@@ -2,14 +2,14 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "00d43ed08f92d037408213da5e5382207fab2aba",
-  "source_tree": "0744d4b52608d29a1c3c84a348e4c3e49264bc62",
-  "target_tree": "0744d4b52608d29a1c3c84a348e4c3e49264bc62",
+  "source_commit": "d117bd94bd7c35fc453a69ec7a4f30509398c845",
+  "source_tree": "b5ea9e8b2e9d77428b49872cb9b3d2e55aad1fc0",
+  "target_tree": "b5ea9e8b2e9d77428b49872cb9b3d2e55aad1fc0",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-18T09:03:35.841Z",
+  "last_synced_utc": "2026-10-18T09:28:04.991Z",
   "reconciled_on": "2026-10-18",
   "reconciliation_note": "Verified production tree fad49c74855579d93a3c93bce2bd73c89f11534c against canonical source. Only new journal assets, brand-specific exporter branches and corrected tests differ; retained all independent root files.",
-  "last_synced_method": "Owner-requested odds readability correction: explicit dark-on-gold current prices, white-on-charcoal original prices, consistent upper-team cells. 149 passing tests."
+  "last_synced_method": "Android WebView compatibility for journal only, preserving all football data and other sites."
 }
