@@ -4,12 +4,25 @@
   "source_branch": "main",
   "source_commit": "cd1bec6381389f898295add62ac620e27c869bd6",
   "source_tree": "03e77cf3ad2d8039c7ffa74b1bfb50d337ac2a91",
-  "target_tree": "03e77cf3ad2d8039c7ffa74b1bfb50d337ac2a91",
+  "target_tree": "46f91135a5b44c1c611bd3a16cf74c49a043c415",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
   "last_synced_utc": "2026-10-18T09:54:34.248Z",
   "reconciled_on": "2026-10-18",
-  "reconciliation_note": "Verified production tree fad49c74855579d93a3c93bce2bd73c89f11534c against canonical source. Only new journal assets, brand-specific exporter branches and corrected tests differ; retained all independent root files.",
-  "last_synced_method": "goal-zone-android-release"
+  "reconciliation_note": "After failed manual sync #113: verified all six production files changed since last completed sync have matching blob hashes in canonical source. Only updated guard baseline; no production site content altered.",
+  "last_synced_method": "goal-zone-android-release",
+  "guard_reconciliation": {
+    "previous_target_tree": "03e77cf3ad2d8039c7ffa74b1bfb50d337ac2a91",
+    "verified_production_tree": "46f91135a5b44c1c611bd3a16cf74c49a043c415",
+    "verified_canonical_source_tree": "50687f206d834bd23847d8a45f8dfa899255dce0",
+    "verified_existing_production_changes": 6,
+    "source_only_changes": [
+      "_worker.js",
+      "future-code-journal/android/ANALYTICS_SETUP.md",
+      "future-code-journal/android/index.html",
+      "future-code-journal/android/stats.html",
+      "tests/goal-zone-analytics.test.cjs"
+    ]
+  }
 }
