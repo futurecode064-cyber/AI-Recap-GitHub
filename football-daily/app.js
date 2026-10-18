@@ -194,8 +194,13 @@ function recentGames(match,side){
 }
 // Compact W/D/L form: finished games only, ordered as supplied (newest first).
 function formLetter(game){
- if(!game||!Number.isInteger(game.teamGoals)||!Number.isInteger(game.opponentGoals))return "";
- return game.teamGoals>game.opponentGoals?"W":game.teamGoals<game.opponentGoals?"L":"D";
+ if(!game)return "";
+ if(Number.isInteger(game.teamGoals)&&Number.isInteger(game.opponentGoals)){
+  return game.teamGoals>game.opponentGoals?"W":game.teamGoals<game.opponentGoals?"L":"D";
+ }
+ // Verified league-only W/D/L may be provided without verified scorelines.
+ // Never fabricate an opponent, date or final score to display form.
+ return /^[WDL]$/.test(game.result||"")?game.result:"";
 }
 function renderWdlStrip(match,side){
  const section=node("section","quick-form quick-form-"+side);
@@ -210,7 +215,9 @@ function renderWdlStrip(match,side){
   const letter=formLetter(game);
   const badge=node("span","wdl-badge "+(letter?"wdl-"+letter.toLowerCase():"wdl-pending"),letter||"–");
   const score=Number.isInteger(game.teamGoals)&&Number.isInteger(game.opponentGoals)?game.teamGoals+"-"+game.opponentGoals:"—";
-  const hint=String(game.date||"")+" · "+localizedTeam(game.opponent||"")+" · "+score;
+  const hint=game.date && game.opponent
+   ?String(game.date)+" · "+localizedTeam(game.opponent)+" · "+score
+   :"နောက်ဆုံး လိဂ်ပွဲရလဒ် "+letter+" (ဂိုးအတိအကျ မရရှိသေး)";
   badge.title=hint;badge.setAttribute("aria-label",letter+" · "+hint);
   strip.appendChild(badge);
  }
