@@ -51,25 +51,37 @@ test("only Future Code Main routes require valid signed login", async () => {
   const page = await login.text();
   assert.match(page, /name="email"/);
   assert.match(page, /name="password"/);
+  const token = page.match(/name="csrf" value="([a-f0-9]{48})"/)?.[1];
+  assert.ok(token, "login GET must provide a CSRF token");
+  const csrfCookie = login.headers.get("Set-Cookie")?.split(";")[0];
+  assert.ok(csrfCookie?.startsWith("__Host-fc_main_login_csrf="));
+  assert.match(login.headers.get("Set-Cookie"), /SameSite=Strict/);
   assert.doesNotMatch(page, new RegExp(SECRET));
   assert.equal(login.headers.get("Cache-Control"), "private, no-store, max-age=0");
 
   const failed = await worker.fetch(getRequest("/login", {
-    method: "POST", headers: {"Origin": "https://future-code-football-daily.pages.dev"},
-    body: new URLSearchParams({email: "futurecode064@gmail.com", password: "bad-password", next: "/odds"})
+    method: "POST", headers: {"Origin": "https://future-code-football-daily.pages.dev", "Cookie": csrfCookie},
+    body: new URLSearchParams({email: "futurecode064@gmail.com", password: "bad-password", next: "/odds", csrf: token})
   }), env);
   assert.equal(failed.status, 401);
-  assert.equal(failed.headers.get("Set-Cookie"), null);
+  assert.doesNotMatch(failed.headers.get("Set-Cookie") || "", /__Host-fc_main_session/);
 
   const crossSite = await worker.fetch(getRequest("/login", {
-    method: "POST", headers: {"Origin": "https://evil.example"},
-    body: new URLSearchParams({email: "futurecode064@gmail.com", password: SECRET})
+    method: "POST", headers: {"Origin": "https://evil.example", "Cookie": csrfCookie, "Sec-Fetch-Site": "cross-site"},
+    body: new URLSearchParams({email: "futurecode064@gmail.com", password: SECRET, csrf: token})
   }), env);
   assert.equal(crossSite.status, 403);
 
-  const success = await worker.fetch(getRequest("/login", {
+  const missingCsrf = await worker.fetch(getRequest("/login", {
     method: "POST", headers: {"Origin": "https://future-code-football-daily.pages.dev"},
-    body: new URLSearchParams({email: "futurecode064@gmail.com", password: SECRET, next: "//evil.example"})
+    body: new URLSearchParams({email: "futurecode064@gmail.com", password: SECRET})
+  }), env);
+  assert.equal(missingCsrf.status, 403);
+  assert.match(await missingCsrf.text(), /name="csrf"/, "expired form must show a retryable login page");
+
+  const success = await worker.fetch(getRequest("/login", {
+    method: "POST", headers: {"Origin": "null", "Sec-Fetch-Site": "same-origin", "Cookie": csrfCookie},
+    body: new URLSearchParams({email: "futurecode064@gmail.com", password: SECRET, next: "//evil.example", csrf: token})
   }), env);
   assert.equal(success.status, 303);
   assert.equal(success.headers.get("Location"), "/");

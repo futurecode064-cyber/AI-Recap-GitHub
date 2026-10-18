@@ -11,6 +11,7 @@
  */
 const MAIN_EMAIL = "futurecode064@gmail.com";
 const COOKIE_NAME = "__Host-fc_main_session";
+const CSRF_COOKIE_NAME = "__Host-fc_main_login_csrf";
 const MAX_AGE_SECONDS = 8 * 60 * 60;
 const MAIN_PATHS = new Set(["/", "/index", "/index.html", "/odds", "/odds/", "/odds.html"]);
 const LOGIN_PATHS = new Set(["/login", "/login/", "/login.html"]);
@@ -65,10 +66,26 @@ function dec64(s) {
 async function hmacKey(secret) {
   return crypto.subtle.importKey("raw", encoder.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign", "verify"]);
 }
-function cookieValue(request) {
+function cookieValue(request, name = COOKIE_NAME) {
   const raw = request.headers.get("Cookie") || "";
-  const segment = raw.split(";").map(v => v.trim()).find(v => v.startsWith(COOKIE_NAME + "="));
-  return segment ? segment.slice(COOKIE_NAME.length + 1) : "";
+  const segment = raw.split(";").map(v => v.trim()).find(v => v.startsWith(name + "="));
+  return segment ? segment.slice(name.length + 1) : "";
+}
+function newCsrfToken() {
+  return [...crypto.getRandomValues(new Uint8Array(24))]
+    .map(b => b.toString(16).padStart(2, "0")).join("");
+}
+function csrfCookie(token) {
+  return CSRF_COOKIE_NAME + "=" + token +
+    "; Max-Age=1200; Path=/; HttpOnly; Secure; SameSite=Strict";
+}
+function validCsrf(request, input) {
+  const cookie = cookieValue(request, CSRF_COOKIE_NAME);
+  if (typeof input !== "string" || !/^[a-f0-9]{48}$/.test(input) ||
+      !/^[a-f0-9]{48}$/.test(cookie)) return false;
+  let diff = 0;
+  for (let i = 0; i < 48; i++) diff |= input.charCodeAt(i) ^ cookie.charCodeAt(i);
+  return diff === 0;
 }
 async function hasSession(request, env) {
   if (!ready(env)) return false;
@@ -106,15 +123,18 @@ async function samePassword(a, b) {
   return diff === 0;
 }
 function originAllowed(request) {
-  const origin = request.headers.get("Origin");
-  if (origin && origin !== new URL(request.url).origin) return false;
   const fetchSite = request.headers.get("Sec-Fetch-Site");
-  return fetchSite !== "cross-site";
+  if (fetchSite === "cross-site") return false;
+  const origin = request.headers.get("Origin");
+  // Referrer/privacy policies can make a legitimate same-origin form POST
+  // carry Origin: null. Require browser Fetch Metadata in that case.
+  if (origin === "null") return fetchSite === "same-origin";
+  return !origin || origin === new URL(request.url).origin;
 }
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
-function loginPage(next, error = false) {
+function loginPage(next, error = false, csrf = "") {
   const alert = error ? '<p class="error" role="alert">Email သို့မဟုတ် Password မမှန်ပါ။ ပြန်စမ်းကြည့်ပါ။</p>' : "";
   return '<!doctype html><html lang="my"><head><meta charset="UTF-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +
@@ -131,14 +151,17 @@ function loginPage(next, error = false) {
     '<h1>အကောင့်ဖြင့် ဝင်ရောက်ရန်</h1><p>Future Code Main အတွက်သာ Login လိုအပ်ပါသည်။</p>' +
     alert + '<form method="POST" action="/login" autocomplete="on">' +
     '<input type="hidden" name="next" value="' + escapeHtml(next) + '">' +
+    '<input type="hidden" name="csrf" value="' + escapeHtml(csrf) + '">' +
     '<label for="email">Email</label><input id="email" name="email" type="email" autocomplete="username" required maxlength="254">' +
     '<label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required maxlength="256">' +
     '<button type="submit">Login ဝင်ရန်</button></form><footer>Future Code AI Studio · Main Website Only</footer>' +
     '</main></body></html>';
 }
 function loginResponse(next, error = false, status = 200) {
-  return respond(loginPage(next, error), status, {
+  const csrf = newCsrfToken();
+  return respond(loginPage(next, error, csrf), status, {
     "Content-Type": "text/html; charset=utf-8",
+    "Set-Cookie": csrfCookie(csrf),
     "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'"
   });
 }
@@ -146,13 +169,17 @@ function unavailable() {
   return respond("Future Code Main login setup is pending. Main site is not available until its Cloudflare secrets are configured.", 503, { "Content-Type": "text/plain; charset=utf-8" });
 }
 async function loginPost(request, env) {
-  if (!originAllowed(request)) return respond("Forbidden", 403);
+  // Browsers can send Origin: null or omit Origin for privacy reasons.
+  // The same-site CSRF cookie + hidden token is the login POST's primary
+  // protection, instead of rejecting legitimate users based on Origin.
+  if (request.headers.get("Sec-Fetch-Site") === "cross-site") return respond("Forbidden", 403);
   const length = Number(request.headers.get("Content-Length") || 0);
   if (length > 4096) return respond("Form too large", 413);
   let form;
   try { form = await request.formData(); } catch { return respond("Invalid form", 400); }
   const email = form.get("email"), password = form.get("password");
   const next = nextPage(form.get("next"));
+  if (!validCsrf(request, form.get("csrf"))) return loginResponse(next, true, 403);
   if (typeof email !== "string" || typeof password !== "string" ||
       email.length > 254 || password.length > 256) return loginResponse(next, true, 401);
   if (email.trim().toLowerCase() !== MAIN_EMAIL ||
