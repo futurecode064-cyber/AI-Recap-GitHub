@@ -7,22 +7,25 @@
 :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 100% 0,#2b2415,#0e0d0b 46%);font-family:system-ui,"Noto Sans Myanmar",sans-serif;color:#f3ecd9;line-height:1.6}main{max-width:1050px;margin:auto;padding:32px 17px 70px}a{color:#edc578}header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:32px}.brand{display:flex;align-items:center;gap:13px}.brand img{height:62px;width:62px;object-fit:cover;border-radius:13px}.kicker{font-size:11px;letter-spacing:.18em;color:#bda46c}h1{font-size:clamp(21px,4vw,30px);margin:2px 0;line-height:1.35;color:#f4d88f}.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}button,select{border-radius:10px;padding:10px 14px;border:1px solid #92733d;background:#241e15;color:#f4d88f;cursor:pointer;font:inherit}button:hover,select:hover{border-color:#e5c577}button:focus-visible,select:focus-visible{outline:3px solid #ecd08f}small,.muted{color:#bbab8a}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:20px 0 31px}.card,.panel{border:1px solid #574727;background:linear-gradient(135deg,#242018,#14120f);border-radius:16px}.card{padding:24px 20px}.card small{display:block;font-size:13px}.value{display:block;font-size:clamp(27px,4vw,41px);font-weight:800;color:#f2cf78;font-variant-numeric:tabular-nums}.panels{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}.panel{padding:20px;margin-bottom:15px;overflow:auto}h2{font-size:18px;color:#efd18b;margin:0 0 15px}table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;color:#bba67e;font-weight:600}th,td{padding:10px 8px;border-bottom:1px solid #393022}td:last-child,th:last-child{text-align:right}td{font-variant-numeric:tabular-nums}tr:last-child td{border-bottom:0}.graph{display:flex;gap:7px;align-items:end;min-height:174px;overflow:auto;padding:5px 0 0}.bar-wrap{flex:1;min-width:33px;display:flex;flex-direction:column;justify-content:end;gap:4px;text-align:center;font-size:10px;color:#bca97f}.bar{min-height:3px;border-radius:5px 5px 0 0;background:linear-gradient(0deg,#b28736,#f2d08a)}.hint{border-left:3px solid #ba923c;padding:9px 15px;font-size:12px;color:#cbbd9f;margin:21px 0}.status{font-size:13px;margin:11px 0;color:#d4c09c}.error{color:#ffb6aa}@media(max-width:680px){.cards{grid-template-columns:1fr;gap:9px}.card{padding:15px 18px}.panels{display:block}main{padding-top:20px}.value{font-size:31px}}
 </style></head>
 <body><main>
-<header><div class="brand"><img src="./goal-zone-logo.png" alt="GOAL ZONE logo"><div><span class="kicker">OWNER ONLY · APP INSIGHTS</span><h1>GOAL ZONE — Statistics</h1><small>ဂိုးဇုံ APK Download Website</small></div></div>
+<header><div class="brand"><img src="./goal-zone-logo.png" alt="GOAL ZONE logo"><div><span class="kicker">OWNER ONLY · APP INSIGHTS</span><h1>GOAL ZONE — Statistics</h1><small>ဂိုးဇုံ အားကစားဂျာနယ် Website + APK Downloads</small></div></div>
 <div class="actions"><label for="period">ကာလ</label><select id="period"><option value="1">Today</option><option value="7" selected>Last 7 days</option><option value="30">Last 30 days</option><option value="90">Last 90 days</option></select><button type="button" id="refresh">↻ Refresh</button><a href="./">Download Website ↗</a></div></header>
 <p class="status" id="status" role="status">Loading statistics…</p>
 <section class="cards" aria-label="Summary">
-<div class="card"><small>Page Views — ဝင်ကြည့်သည့်အကြိမ်</small><strong class="value" id="views">—</strong></div>
-<div class="card"><small>Unique Visitors — ခန့်မှန်းလူဦးရေ</small><strong class="value" id="visitors">—</strong></div>
+<div class="card"><small>Total Unique Visitors — Website + APK</small><strong class="value" id="visitors">—</strong></div>
+<div class="card"><small>Website Page Views — ဂျာနယ်ကြည့်ရှုမှု</small><strong class="value" id="websiteViews">—</strong></div>
+<div class="card"><small>Website Visitors — ဝင်ကြည့်သူဦးရေ</small><strong class="value" id="websiteVisitors">—</strong></div>
+<div class="card"><small>APK Page Views — APK စာမျက်နှာကြည့်ရှုမှု</small><strong class="value" id="apkViews">—</strong></div>
+<div class="card"><small>APK Page Visitors — ဝင်ကြည့်သူဦးရေ</small><strong class="value" id="apkVisitors">—</strong></div>
 <div class="card"><small>APK Downloads — ဆွဲယူသည့်အကြိမ်</small><strong class="value" id="downloads">—</strong></div>
 </section>
 <div class="panels">
-<section class="panel"><h2>နေ့စဉ် ဝင်ကြည့်မှု</h2><div class="graph" id="chart" aria-label="Daily views chart"></div></section>
-<section class="panel"><h2>Daily Statistics</h2><table><thead><tr><th>ရက်စွဲ (MMT)</th><th>Visitors</th><th>Views</th><th>Downloads</th></tr></thead><tbody id="daily"></tbody></table></section>
+<section class="panel"><h2>နေ့စဉ် Website ကြည့်ရှုမှု</h2><div class="graph" id="chart" aria-label="Daily views chart"></div></section>
+<section class="panel"><h2>Daily Website &amp; APK Statistics</h2><table><thead><tr><th>ရက်စွဲ (MMT)</th><th>Web Visitors</th><th>Web Views</th><th>APK Visitors</th><th>APK Views</th><th>Downloads</th></tr></thead><tbody id="daily"></tbody></table></section>
 <section class="panel"><h2>APK Download Breakdown</h2><table><thead><tr><th>APK File</th><th>Downloads</th></tr></thead><tbody id="apps"></tbody></table></section>
 <section class="panel"><h2>ဝင်ကြည့်သူများ၏ နိုင်ငံများ</h2><table><thead><tr><th>Country</th><th>Visitors</th><th>Views</th></tr></thead><tbody id="countries"></tbody></table></section>
 <section class="panel"><h2>Recent Download Requests</h2><table><thead><tr><th>Myanmar time</th><th>APK</th><th>Country</th></tr></thead><tbody id="recent"></tbody></table></section>
 </div>
-<p class="hint">စတင်ဖွင့်ထားသည့်နေ့မှစပြီးသာ ရေတွက်ပါသည်။ Unique Visitors သည် Browser အလိုက် ခန့်မှန်းရေတွက်ထားခြင်းဖြစ်၍ လူတစ်ဦးချင်း၏ နာမည်၊ ဖုန်းနံပါတ် သို့မဟုတ် Email ကို မသိနိုင်ပါ။ Download request အရေအတွက်သည် Install လုပ်ပြီးသည့်အရေအတွက် မဟုတ်ပါ။ APK တိုက်ရိုက်ဖွင့်ခြင်းနှင့် Browser ကနေ Download ခလုတ်နှိပ်ခြင်းများကို ရေတွက်ပါသည်။</p>
+<p class="hint">Website ကြည့်ရှုမှုတွင် ဂိုးဇုံဂျာနယ်၏ ပွဲကြိုစာမျက်နှာနှင့် ပေါက်ကြေးစာမျက်နှာတို့ ပါဝင်ပြီး APK Download စာမျက်နှာကို သီးခြားရေတွက်ပါသည်။ စတင်ဖွင့်ထားသည့်နေ့မှစပြီးသာ ရေတွက်ပါသည်။ Unique Visitors သည် Browser အလိုက် ခန့်မှန်းရေတွက်ထားခြင်းဖြစ်၍ လူတစ်ဦးချင်း၏ နာမည်၊ ဖုန်းနံပါတ် သို့မဟုတ် Email ကို မသိနိုင်ပါ။ Download request အရေအတွက်သည် Install လုပ်ပြီးသည့်အရေအတွက် မဟုတ်ပါ။ APK တိုက်ရိုက်ဖွင့်ခြင်းနှင့် Browser ကနေ Download ခလုတ်နှိပ်ခြင်းများကို ရေတွက်ပါသည်။</p>
 </main>
 <script>
 "use strict";
@@ -37,20 +40,23 @@ function tableRows(id, rows, fields) {
   for (const item of rows) {const tr=document.createElement("tr");for(const fn of fields)cell(tr,fn(item));host.append(tr);}
 }
 function render(data) {
-  $("views").textContent=num(data.totals.views);
   $("visitors").textContent=num(data.totals.visitors);
+  $("websiteViews").textContent=num(data.totals.websiteViews);
+  $("websiteVisitors").textContent=num(data.totals.websiteVisitors);
+  $("apkViews").textContent=num(data.totals.apkViews);
+  $("apkVisitors").textContent=num(data.totals.apkVisitors);
   $("downloads").textContent=num(data.totals.downloads);
-  tableRows("daily",data.daily,[x=>x.day,x=>num(x.visitors),x=>num(x.views),x=>num(x.downloads)]);
+  tableRows("daily",data.daily,[x=>x.day,x=>num(x.websiteVisitors),x=>num(x.websiteViews),x=>num(x.apkVisitors),x=>num(x.apkViews),x=>num(x.downloads)]);
   tableRows("apps",data.apps,[x=>x.app,x=>num(x.downloads)]);
   tableRows("countries",data.countries,[x=>x.country,x=>num(x.visitors),x=>num(x.views)]);
   tableRows("recent",data.recent,[x=>new Date(x.created_at*1000).toLocaleString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"short",timeStyle:"short"}),x=>x.app,x=>x.country]);
   const host=$("chart");host.replaceChildren();
-  const series=[...data.daily].reverse(); const max=Math.max(1,...series.map(x=>Number(x.views)||0));
+  const series=[...data.daily].reverse(); const max=Math.max(1,...series.map(x=>Number(x.websiteViews)||0));
   if (!series.length) {host.textContent="No data yet";return;}
   for (const item of series) {
-    const wrap=document.createElement("div");wrap.className="bar-wrap";wrap.title=item.day+": "+num(item.views)+" views";
-    const count=document.createElement("span");count.textContent=num(item.views);
-    const bar=document.createElement("div");bar.className="bar";bar.style.height=Math.max(3,Math.round(Number(item.views)/max*125))+"px";
+    const wrap=document.createElement("div");wrap.className="bar-wrap";wrap.title=item.day+": "+num(item.websiteViews)+" website views";
+    const count=document.createElement("span");count.textContent=num(item.websiteViews);
+    const bar=document.createElement("div");bar.className="bar";bar.style.height=Math.max(3,Math.round(Number(item.websiteViews)/max*125))+"px";
     const date=document.createElement("span");date.textContent=item.day.slice(5);
     wrap.append(count,bar,date);host.append(wrap);
   }
