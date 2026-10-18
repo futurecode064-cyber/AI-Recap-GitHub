@@ -19,14 +19,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "2.010",
+      "drawOdds": "3.580",
+      "awayOdds": "3.640",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/england-premier-league/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -162,7 +162,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "ပရီးမီးယားလိဂ်မှာ နိုင်ပွဲမရသေးတဲ့ ဘုန်းမောက်အတွက် ဆန်းဒါးလန်းနဲ့ အိမ်ကွင်းပွဲက ရာသီအစဖိအားကို လျှော့ချဖို့ အရေးပါတဲ့အခွင့်အရေးပါ။ နည်းပြ မာကိုရို့စ်ရဲ့အသင်းဟာ ချဲလ်ဆီးကို ငါးဂိုးတစ်ဂိုးနဲ့ ရှုံးခဲ့ပေမယ့် ကြားရက် ယူရိုပါလိဂ်မှာ စတမ်းဂရက်ဇ်ကို သုံးဂိုးပြတ် အနိုင်ယူခဲ့ပြီး အဲဗာနီလ်ဆင် ဂိုးပြန်ရလာတာက တိုက်စစ်အတွက် အားတက်စရာဖြစ်ပါတယ်။ ဆန်းဒါးလန်းဘက်မှာ နည်းပြ ရက်ဂစ်လီဘရစ် လက်အောက်က အသင်းဟာ လိဂ်မှာ သုံးပွဲဆက်ရှုံးနေသော်လည်း နိုအာဆာဒီကီရဲ့ နောက်ကျဂိုးနဲ့ ဥရောပပွဲအနိုင်ရထားလို့ အားသစ်ရနေပါတယ်။ ဒါပေမယ့် ခံစစ်က လိဂ်သုံးပွဲဆက် အနည်းဆုံးနှစ်ဂိုးပေးခဲ့ပြီး ဘောလုံးဆုံးရှုံးချိန်ကာကွယ်မှု မပြည့်စုံသေးတာကြောင့် ဘုန်းမောက်ရဲ့ အိမ်ကွင်းဖိအားကို ခံရခက်နိုင်ပါတယ်။ နှစ်သင်းစလုံးအတွက် သတိထားကစားရမယ့်ပွဲဖြစ်ပေမယ့် အဲဗာနီလ်ဆင်တို့ရဲ့ ကြားရက်ယုံကြည်မှုနဲ့ အိမ်ကွင်းအင်အားကြောင့် **ဘုန်းမောက် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "ပရီးမီးယားလိဂ်မှာ နိုင်ပွဲမရသေးတဲ့ **ဘုန်းမောက်**အတွက် **ဆန်းဒါးလန်း**နဲ့ အိမ်ကွင်းပွဲက ရာသီအစဖိအားကို လျှော့ချဖို့ အရေးပါတဲ့အခွင့်အရေးပါ။ နည်းပြ မာကိုရို့စ်ရဲ့အသင်းဟာ ချဲလ်ဆီးကို ငါးဂိုးတစ်ဂိုးနဲ့ ရှုံးခဲ့ပေမယ့် ကြားရက် ယူရိုပါလိဂ်မှာ စတမ်းဂရက်ဇ်ကို သုံးဂိုးပြတ် အနိုင်ယူခဲ့ပြီး အဲဗာနီလ်ဆင် ဂိုးပြန်ရလာတာက တိုက်စစ်အတွက် အားတက်စရာဖြစ်ပါတယ်။ ဆန်းဒါးလန်းဘက်မှာ နည်းပြ ရက်ဂစ်လီဘရစ် လက်အောက်က အသင်းဟာ လိဂ်မှာ သုံးပွဲဆက်ရှုံးနေသော်လည်း နိုအာဆာဒီကီရဲ့ နောက်ကျဂိုးနဲ့ ဥရောပပွဲအနိုင်ရထားလို့ အားသစ်ရနေပါတယ်။ ဒါပေမယ့် ခံစစ်က လိဂ်သုံးပွဲဆက် အနည်းဆုံးနှစ်ဂိုးပေးခဲ့ပြီး ဘောလုံးဆုံးရှုံးချိန်ကာကွယ်မှု မပြည့်စုံသေးတာကြောင့် ဘုန်းမောက်ရဲ့ အိမ်ကွင်းဖိအားကို ခံရခက်နိုင်ပါတယ်။ နှစ်သင်းစလုံးအတွက် သတိထားကစားရမယ့်ပွဲဖြစ်ပေမယ့် အဲဗာနီလ်ဆင်တို့ရဲ့ ကြားရက်ယုံကြည်မှုနဲ့ အိမ်ကွင်းအင်အားကြောင့် **ဘုန်းမောက် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/bournemouth/preview/bournemouth-vs-sunderland-prediction-team-news-lineups_607069.html",
         "https://www.sportsmole.co.uk/football/premier-league/table.html"
@@ -186,7 +186,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/bournemouth/preview/bournemouth-vs-sunderland-prediction-team-news-lineups_607069.html",
@@ -206,14 +206,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "1.552",
+      "drawOdds": "4.500",
+      "awayOdds": "5.270",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/england-premier-league/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "W",
@@ -349,7 +349,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "ဘရိုက်တန်ဟာ ပရီးမီးယားလိဂ် ခြောက်ပွဲကနေ ၁၃ မှတ်စုဆောင်းထားပြီး ဆန်းဒါးလန်းကို နှစ်ဂိုးပြတ်အနိုင်ရထားတဲ့ အရှိန်ကို အိမ်ကွင်းဆက်ထိန်းဖို့ ရှိနေပါတယ်။ နည်းပြ ဟာဇလာရဲ့အသင်းမှာ ကွင်းလယ်က ပက်စကယ်ဂရို့စ်က လိဂ်ခြောက်ပွဲအတွင်း ဂိုးနဲ့ဖန်တီးမှု စုစုပေါင်း ခုနစ်ကြိမ် ပါဝင်ထားတဲ့အတွက် ဘောလုံးတည်ဆောက်မှုမှာ သက်ရောက်မှုကြီးမားသလို ဂျော်ဂျီနီယိုရူတာလည်း ကြားရက်ဥရောပပွဲမှာ နှစ်ဂိုးသွင်းခဲ့တာပါ။ ပဲလေ့စ်က နော်တင်ဟမ်ကို အနိုင်ယူထားပေမယ့် လိုင်ယွန်ကို ဥရောပပွဲရှုံးလာပြီး ယေရမီပီနိုရဲ့ တိုက်စစ်ပုံစံကောင်းတစ်ခုတည်းအပေါ် မှီခိုရနိုင်ပါတယ်။ ဘရိုက်တန်မှာ မီတိုမာ၊ မင်တေးတို့ မပါနိုင်တာက တောင်ပံအပြည့်အသုံးချရာမှာ စိန်ခေါ်မှုရှိပေမယ့် အိမ်ကွင်းမှာ အခွင့်အရေးဖန်တီးပုံက ပိုကျယ်ပြန့်ပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ ကွင်းလယ်ဖန်တီးမှုကို ချိန်ဆရင် **ဘရိုက်တန် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**ဘရိုက်တန်**ဟာ ပရီးမီးယားလိဂ် ခြောက်ပွဲကနေ ၁၃ မှတ်စုဆောင်းထားပြီး ဆန်းဒါးလန်းကို နှစ်ဂိုးပြတ်အနိုင်ရထားတဲ့ အရှိန်ကို အိမ်ကွင်းဆက်ထိန်းဖို့ ရှိနေပါတယ်။ နည်းပြ ဟာဇလာရဲ့အသင်းမှာ ကွင်းလယ်က ပက်စကယ်ဂရို့စ်က လိဂ်ခြောက်ပွဲအတွင်း ဂိုးနဲ့ဖန်တီးမှု စုစုပေါင်း ခုနစ်ကြိမ် ပါဝင်ထားတဲ့အတွက် ဘောလုံးတည်ဆောက်မှုမှာ သက်ရောက်မှုကြီးမားသလို ဂျော်ဂျီနီယိုရူတာလည်း ကြားရက်ဥရောပပွဲမှာ နှစ်ဂိုးသွင်းခဲ့တာပါ။ **ပဲလေ့စ်**က နော်တင်ဟမ်ကို အနိုင်ယူထားပေမယ့် လိုင်ယွန်ကို ဥရောပပွဲရှုံးလာပြီး ယေရမီပီနိုရဲ့ တိုက်စစ်ပုံစံကောင်းတစ်ခုတည်းအပေါ် မှီခိုရနိုင်ပါတယ်။ ဘရိုက်တန်မှာ မီတိုမာ၊ မင်တေးတို့ မပါနိုင်တာက တောင်ပံအပြည့်အသုံးချရာမှာ စိန်ခေါ်မှုရှိပေမယ့် အိမ်ကွင်းမှာ အခွင့်အရေးဖန်တီးပုံက ပိုကျယ်ပြန့်ပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ ကွင်းလယ်ဖန်တီးမှုကို ချိန်ဆရင် **ဘရိုက်တန် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/brighton-and-hove-albion/preview/brighton-vs-crystal-palace-prediction-team-news-lineups_607062.html",
         "https://www.sportsmole.co.uk/football/premier-league/table.html"
@@ -373,7 +373,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/brighton-and-hove-albion/preview/brighton-vs-crystal-palace-prediction-team-news-lineups_607062.html",
@@ -385,7 +385,15 @@
         "ပက်စကယ်ဂရို့စ်ရဲ့ ဖန်တီးနိုင်မှုက ဘရိုက်တန်ကစားပုံရဲ့ ဗဟိုချက်ဖြစ်နေပြီး အိမ်ကွင်းကြားရက်ပွဲမှာ ရူတာ ဂိုးနှစ်ဂိုးရထားတာကလည်း တိုက်စစ်ရွေးချယ်စရာ တိုးစေပါတယ်။ မီတိုမာနဲ့ မင်တေးတို့ မပါနိုင်တာကိုတော့ လျှော့တွက်လို့ မရပါဘူး။",
         "ပဲလေ့စ်မှာ ယေရမီပီနိုက တိုက်စစ်မှာ ဆက်တိုက်ဂိုးရနေသော်လည်း ဥရောပပွဲရှုံးပြီး ခံစစ်က အဆင်မပြေမှုတွေ ရှိနေပါတယ်။ အဓိကတိုက်စစ်မှူး မာတေတာ ဒဏ်ရာကြောင့် စထရန်းလားဆင်ကို ပိုအားကိုးရနိုင်ခြင်းကလည်း ဖိအားထပ်တိုးစေပါတယ်။",
         "အိမ်ကွင်းပွဲဖော်ဆောင်ပုံ၊ ဖန်တီးနိုင်တဲ့ကွင်းလယ်နဲ့ နောက်ဆုံးအနိုင်ရပွဲဆက်ကို ပေါင်းကြည့်ရင် ပဲလေ့စ်ထက် ပိုယုံကြည်ရတဲ့ **ဘရိုက်တန် ကို ရွေးချယ်ပါတယ်။**"
-      ]
+      ],
+      "specialRiskNote": "ဘရိုက်တန်မှာ မီတိုမာနဲ့ မင်တေး မပါနိုင်မှု၊ ပဲလေ့စ်ရဲ့ တန်ပြန်တိုက်စစ်အန္တရာယ်ကြောင့် သရေဖြစ်နိုင်ခြေကို ထည့်သွင်းစဉ်းစားရပါမယ်။",
+      "specialResearchSources": [
+        "https://www.sportsmole.co.uk/football/brighton-and-hove-albion/preview/brighton-vs-crystal-palace-prediction-team-news-lineups_607062.html",
+        "https://www.sportsmole.co.uk/football/premier-league/table.html",
+        "https://www.pinnacle.com/en/soccer/england-premier-league/matchups/"
+      ],
+      "specialPreparedDate": "2026-10-18",
+      "specialPickLabel": "ဘရိုက်တန်"
     },
     {
       "league": "Premier League",
@@ -400,14 +408,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "2.830",
+      "drawOdds": "3.610",
+      "awayOdds": "2.380",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/england-premier-league/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -543,7 +551,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "လိဒ်ယူနိုက်တက်ဟာ လိဂ်ခြောက်ပွဲမှာ ကိုးမှတ်ရပြီး အဆင့်ခုနစ်မှာ ရပ်တည်နေတာကြောင့် မန်ယူထက် ရာသီအစပိုတည်ငြိမ်ပါတယ်။ နည်းပြ ဒန်နီယယ်ဖာကေးရဲ့အသင်းက အာဆင်နယ်ကို နှစ်ဂိုးတစ်ဂိုး ရှုံးခဲ့ပေမယ့် ဂျိမ်းစ်ဂျက်စတင်ရဲ့ သွင်းဂိုးနဲ့ အရင်ဆုံးဦးဆောင်နိုင်ခဲ့သလို အယ်လန်ရုဒ်မှာ လတ်တလော ရှစ်ပွဲဆက် မရှုံးထားတဲ့ မှတ်တမ်းရှိပါတယ်။ မန်ယူကတော့ နည်းပြ မိုက်ကယ်ကာရစ် လက်အောက်မှာ လိဂ်ခြောက်ပွဲအနက် တစ်ပွဲသာ အနိုင်ရပြီး ကြားရက် အက်သလက်တီကိုမက်ဒရစ်ကို နှစ်ဂိုးပြတ်ရှုံးလာပါတယ်။ ဘရူနိုဖာနန်ဒက်စ်ရဲ့ ဖန်တီးနိုင်စွမ်းနဲ့ အမ်ဘူမိုရဲ့ မြန်နှုန်းက လိဒ်ခံစစ်ကို စမ်းသပ်နိုင်ပေမယ့် တိုက်စစ်မှူး ဆက်စကို မပါနိုင်ခြင်းက အဆုံးသတ်ပိုင်းအတွက် အခက်အခဲဖြစ်စေပါတယ်။ နှစ်သင်းရဲ့ ယုံကြည်မှုနဲ့ အိမ်ကွင်းစွမ်းဆောင်ရည်ကို နှိုင်းယှဉ်ရင် **လိဒ် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**လိဒ်**ယူနိုက်တက်ဟာ လိဂ်ခြောက်ပွဲမှာ ကိုးမှတ်ရပြီး အဆင့်ခုနစ်မှာ ရပ်တည်နေတာကြောင့် **မန်ယူ**ထက် ရာသီအစပိုတည်ငြိမ်ပါတယ်။ နည်းပြ ဒန်နီယယ်ဖာကေးရဲ့အသင်းက အာဆင်နယ်ကို နှစ်ဂိုးတစ်ဂိုး ရှုံးခဲ့ပေမယ့် ဂျိမ်းစ်ဂျက်စတင်ရဲ့ သွင်းဂိုးနဲ့ အရင်ဆုံးဦးဆောင်နိုင်ခဲ့သလို အယ်လန်ရုဒ်မှာ လတ်တလော ရှစ်ပွဲဆက် မရှုံးထားတဲ့ မှတ်တမ်းရှိပါတယ်။ မန်ယူကတော့ နည်းပြ မိုက်ကယ်ကာရစ် လက်အောက်မှာ လိဂ်ခြောက်ပွဲအနက် တစ်ပွဲသာ အနိုင်ရပြီး ကြားရက် အက်သလက်တီကိုမက်ဒရစ်ကို နှစ်ဂိုးပြတ်ရှုံးလာပါတယ်။ ဘရူနိုဖာနန်ဒက်စ်ရဲ့ ဖန်တီးနိုင်စွမ်းနဲ့ အမ်ဘူမိုရဲ့ မြန်နှုန်းက လိဒ်ခံစစ်ကို စမ်းသပ်နိုင်ပေမယ့် တိုက်စစ်မှူး ဆက်စကို မပါနိုင်ခြင်းက အဆုံးသတ်ပိုင်းအတွက် အခက်အခဲဖြစ်စေပါတယ်။ နှစ်သင်းရဲ့ ယုံကြည်မှုနဲ့ အိမ်ကွင်းစွမ်းဆောင်ရည်ကို နှိုင်းယှဉ်ရင် **လိဒ် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/leeds-united/preview/leeds-vs-man-utd-prediction-team-news-lineups_607083.html",
         "https://www.sportsmole.co.uk/football/premier-league/table.html"
@@ -567,7 +575,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/leeds-united/preview/leeds-vs-man-utd-prediction-team-news-lineups_607083.html",
@@ -587,14 +595,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "6.030",
+      "drawOdds": "3.740",
+      "awayOdds": "1.606",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/england-premier-league/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -730,7 +738,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "နော်တင်ဟမ်ဖောရက်စ်ဟာ ပရီးမီးယားလိဂ်မှာ ခြောက်ပွဲကစားပြီး ငါးမှတ်သာ ရထားသလို ပဲလေ့စ်ကို သုံးဂိုးတစ်ဂိုးရှုံးခဲ့တဲ့ပွဲမှာ ဂိုးရခွင့်ကောင်းတွေ ဖန်တီးနိုင်ပါလျက် အဆုံးသတ်အားနည်းခဲ့ပါတယ်။ အဓိက ဖန်တီးသူ မော်ဂန်ဂစ်ဘ်စ်ဝှိုက်က ကြံ့ခိုင်မှုမသေချာတာကြောင့် နည်းပြ ဂလပ်စ်နာအတွက် နောက်တစ်ကြိမ် အခွင့်အရေးထုတ်လုပ်ရာမှာ စိုးရိမ်စရာရှိနေပါတယ်။ အာဆင်နယ်ကတော့ လိဒ်ကို နှစ်ဂိုးတစ်ဂိုး အနိုင်ရပြီး လိုင်လီကိုလည်း ချန်ပီယံလိဂ်မှာ သုံးဂိုးပြတ်ကျော်ဖြတ်ခဲ့တဲ့အတွက် တိုက်စစ်က အရှိန်ကောင်းနေသလို ဘူကာယိုဆာကာနဲ့ အီဘရီချီအီးဇ်တို့က နောက်တန်းကြားနေရာတွေကို ဖွင့်ပေးနိုင်ပါတယ်။ အာဆင်နယ်မှာ ခံစစ်ဒဏ်ရာသတင်းတွေရှိပေမယ့် နော်တင်ဟမ်ရဲ့ ဂိုးသွင်းအဆုံးသတ်မပြတ်သားမှုက ထိုအားနည်းချက်ကို အသုံးချနိုင်မလားဆိုတာ သံသယရှိစရာပါ။ လတ်တလော ကစားပုံနှစ်ဖက်ကို အလေးချိန်ချကြည့်ရင် **အာဆင်နယ် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**နော်တင်ဟမ်**ဖောရက်စ်ဟာ ပရီးမီးယားလိဂ်မှာ ခြောက်ပွဲကစားပြီး ငါးမှတ်သာ ရထားသလို ပဲလေ့စ်ကို သုံးဂိုးတစ်ဂိုးရှုံးခဲ့တဲ့ပွဲမှာ ဂိုးရခွင့်ကောင်းတွေ ဖန်တီးနိုင်ပါလျက် အဆုံးသတ်အားနည်းခဲ့ပါတယ်။ အဓိက ဖန်တီးသူ မော်ဂန်ဂစ်ဘ်စ်ဝှိုက်က ကြံ့ခိုင်မှုမသေချာတာကြောင့် နည်းပြ ဂလပ်စ်နာအတွက် နောက်တစ်ကြိမ် အခွင့်အရေးထုတ်လုပ်ရာမှာ စိုးရိမ်စရာရှိနေပါတယ်။ **အာဆင်နယ်**ကတော့ လိဒ်ကို နှစ်ဂိုးတစ်ဂိုး အနိုင်ရပြီး လိုင်လီကိုလည်း ချန်ပီယံလိဂ်မှာ သုံးဂိုးပြတ်ကျော်ဖြတ်ခဲ့တဲ့အတွက် တိုက်စစ်က အရှိန်ကောင်းနေသလို ဘူကာယိုဆာကာနဲ့ အီဘရီချီအီးဇ်တို့က နောက်တန်းကြားနေရာတွေကို ဖွင့်ပေးနိုင်ပါတယ်။ အာဆင်နယ်မှာ ခံစစ်ဒဏ်ရာသတင်းတွေရှိပေမယ့် နော်တင်ဟမ်ရဲ့ ဂိုးသွင်းအဆုံးသတ်မပြတ်သားမှုက ထိုအားနည်းချက်ကို အသုံးချနိုင်မလားဆိုတာ သံသယရှိစရာပါ။ လတ်တလော ကစားပုံနှစ်ဖက်ကို အလေးချိန်ချကြည့်ရင် **အာဆင်နယ် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/arsenal/preview/nottm-forest-vs-arsenal-prediction-team-news-lineups_607033.html",
         "https://www.sportsmole.co.uk/football/premier-league/table.html"
@@ -754,7 +762,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/arsenal/preview/nottm-forest-vs-arsenal-prediction-team-news-lineups_607033.html",
@@ -766,7 +774,15 @@
         "အာဆင်နယ်က အာတီတာရဲ့ လက်အောက်မှာ လိဒ်ကို အနိုင်ရခဲ့ပြီး လိုင်လီကို ဥရောပပွဲ သုံးဂိုးပြတ်ကျော်ဖြတ်ခဲ့ပါတယ်။ ဆာကာ၊ အီးဇ်တို့က အခွင့်အရေးတွေဖန်တီးပြီး ဂိုးရှေ့ထိရောက်မှု မြင့်တက်လာတာကို တွေ့ရပါတယ်။",
         "နော်တင်ဟမ်မှာ ဂစ်ဘ်စ်ဝှိုက် မပါနိုင်မယ့်အခြေအနေက ကွင်းလယ်ကနေ တိုက်စစ်စတင်မယ့် လမ်းကြောင်းကို ထိခိုက်စေနိုင်ပြီး အာဆင်နယ်ကလည်း ဒဏ်ရာရှိတဲ့ ခံစစ်လူစာရင်းကို ဂရုစိုက်ရပါလိမ့်မယ်။ ဒါပေမယ့် အာဆင်နယ်ရဲ့ ပွဲအရှိန်ထိန်းနိုင်စွမ်းက ပိုမြင့်ပါတယ်။",
         "နောက်ဆုံးပွဲတွေမှာ အခွင့်အရေးပြောင်းလဲနိုင်မှုကွာခြားချက်ကြီးမားပြီး တိုက်စစ်ရွေးချယ်စရာလည်း ပိုစုံတာကြောင့် **အာဆင်နယ် ကို ရွေးချယ်ပါတယ်။**"
-      ]
+      ],
+      "specialRiskNote": "အာဆင်နယ်ရဲ့ ခံစစ်ကစားသမားအချို့ မပါနိုင်ခြင်းနဲ့ နော်တင်ဟမ်ရဲ့ အိမ်ကွင်းဖိအားက မမျှော်လင့်ထားတဲ့ ပွဲအပြောင်းအလဲဖြစ်စေနိုင်ပါတယ်။",
+      "specialResearchSources": [
+        "https://www.sportsmole.co.uk/football/arsenal/preview/nottm-forest-vs-arsenal-prediction-team-news-lineups_607033.html",
+        "https://www.sportsmole.co.uk/football/premier-league/table.html",
+        "https://www.pinnacle.com/en/soccer/england-premier-league/matchups/"
+      ],
+      "specialPreparedDate": "2026-10-18",
+      "specialPickLabel": "အာဆင်နယ်"
     },
     {
       "league": "Serie A",
@@ -781,14 +797,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "1.854",
+      "drawOdds": "3.640",
+      "awayOdds": "4.200",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/italy-serie-a/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -924,7 +940,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "အူဒီးနီးစ်က စီးရီးအေမှာ အစောပိုင်းရမှတ်လေးမှတ်ရခဲ့ပြီးနောက် လေးပွဲဆက်ရှုံးထားတာကြောင့် လက်ချီနဲ့ တွေ့ဆုံမှုက ရလဒ်ပြန်တည့်ဖို့ အရေးကြီးပါတယ်။ တိုရီနိုကို နှစ်ဂိုးတစ်ဂိုးရှုံးခဲ့တဲ့ပွဲမှာလည်း ခံစစ်ပေးဂိုးပြဿနာမပြေလည်သေးဘဲ နောက်ဆုံးခြောက်ပွဲမှာ ၁၃ ဂိုးပေးထားတာ တွေ့ရပါတယ်။ ဒါပေမယ့် ကွင်းလယ်တိုက်စစ်သမား အက်ကယ်လန်ကမ်ပ်က တိုက်စစ်ထဲကို ဂိုးသွင်းနိုင်စွမ်းပါယူလာသလို ကီနန်ဒေးဗစ်နဲ့ တွဲဖက်ကစားနိုင်ခြင်းက အူဒီးနီးစ်အတွက် အဓိကလမ်းကြောင်းပါ။ လက်ချီကလည်း မီလန်နဲ့ ဘိုလော့နာတို့ကို ဆက်တိုက်ရှုံးထားသလို ရှေ့တန်းက ဂွက်ဘယ်စ်နဲ့ စတူလစ်တို့ ဂိုးပေါက်ရှာမတွေ့သေးတာက ပွဲကို စိတ်ကြိုက်မထိန်းနိုင်တဲ့ အကြောင်းရင်းဖြစ်နေပါတယ်။ နှစ်ဖက်ခံစစ်က မတည်ငြိမ်သော်လည်း တိုက်စစ်မှာ အဆုံးသတ်အတွေ့အကြုံပိုရတဲ့ **အူဒီးနီးစ် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**အူဒီးနီးစ်**က စီးရီးအေမှာ အစောပိုင်းရမှတ်လေးမှတ်ရခဲ့ပြီးနောက် လေးပွဲဆက်ရှုံးထားတာကြောင့် **လက်ချီ**နဲ့ တွေ့ဆုံမှုက ရလဒ်ပြန်တည့်ဖို့ အရေးကြီးပါတယ်။ တိုရီနိုကို နှစ်ဂိုးတစ်ဂိုးရှုံးခဲ့တဲ့ပွဲမှာလည်း ခံစစ်ပေးဂိုးပြဿနာမပြေလည်သေးဘဲ နောက်ဆုံးခြောက်ပွဲမှာ ၁၃ ဂိုးပေးထားတာ တွေ့ရပါတယ်။ ဒါပေမယ့် ကွင်းလယ်တိုက်စစ်သမား အက်ကယ်လန်ကမ်ပ်က တိုက်စစ်ထဲကို ဂိုးသွင်းနိုင်စွမ်းပါယူလာသလို ကီနန်ဒေးဗစ်နဲ့ တွဲဖက်ကစားနိုင်ခြင်းက အူဒီးနီးစ်အတွက် အဓိကလမ်းကြောင်းပါ။ လက်ချီကလည်း မီလန်နဲ့ ဘိုလော့နာတို့ကို ဆက်တိုက်ရှုံးထားသလို ရှေ့တန်းက ဂွက်ဘယ်စ်နဲ့ စတူလစ်တို့ ဂိုးပေါက်ရှာမတွေ့သေးတာက ပွဲကို စိတ်ကြိုက်မထိန်းနိုင်တဲ့ အကြောင်းရင်းဖြစ်နေပါတယ်။ နှစ်ဖက်ခံစစ်က မတည်ငြိမ်သော်လည်း တိုက်စစ်မှာ အဆုံးသတ်အတွေ့အကြုံပိုရတဲ့ **အူဒီးနီးစ် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/udinese/preview/udinese-vs-lecce-prediction-team-news-lineups_607022.html",
         "https://www.sportsmole.co.uk/football/serie-a/table.html"
@@ -948,7 +964,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/udinese/preview/udinese-vs-lecce-prediction-team-news-lineups_607022.html",
@@ -968,14 +984,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "3.360",
+      "drawOdds": "3.700",
+      "awayOdds": "2.070",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/italy-serie-a/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -1111,7 +1127,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "ဖီအိုရင်တီးနားက ရာသီအစအလွန်မကောင်းခဲ့ဘဲ နည်းပြ ပြောင်းလဲပြီးမှ ဗင်းနီးဇီးယားကို လေးဂိုးနှစ်ဂိုး အနိုင်ရခဲ့ပေမယ့် နောက်ဆုံး ဂျီနိုအာကို ထပ်ရှုံးထားပါတယ်။ နည်းပြ ဗာနိုလီအနေနဲ့ တိုက်စစ်မှူး မာတီယိုပယ်လီဂရီနိုကို အားကိုးရသော်လည်း ဂိုးပေးရလွယ်တဲ့ နောက်တန်းကို ဆက်ပြင်ဖို့ လိုနေပါတယ်။ ကိုမိုက စီးရီးအေခြောက်ပွဲကနေ ၁၁ မှတ်ရထားပြီး နည်းပြ ဖာဘရီဂတ်စ်ရဲ့ လက်အောက်မှာ နီကိုပါ့ဇ်က အခွင့်အရေးစမ်းသပ်မှုများပြုလုပ်နေသလို ဒူဗီကပ်စ်ရဲ့ အဝေးကွင်းဂိုးသွင်းနိုင်စွမ်းက ဖီအိုရင်တီးနားနောက်တန်းကို စမ်းသပ်နိုင်ပါတယ်။ ကိုမိုဟာ ဥရောပပွဲမှာ ဖေးနုကို ရှုံးထားပြီး ပွဲပန်းနိုင်သော်လည်း ဖီအိုရင်တီးနားရဲ့ အိမ်ကွင်းတည်ငြိမ်မှု နည်းပါးနေချိန်မှာ တိုက်စစ်စုဖွဲ့နိုင်မှုက ပိုမိုအားသာနေပါတယ်။ ခြေစွမ်းနဲ့ အဆုံးသတ်အရည်အသွေးကို ကြည့်ရင် **ကိုမို ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**ဖီအိုရင်တီးနား**က ရာသီအစအလွန်မကောင်းခဲ့ဘဲ နည်းပြ ပြောင်းလဲပြီးမှ ဗင်းနီးဇီးယားကို လေးဂိုးနှစ်ဂိုး အနိုင်ရခဲ့ပေမယ့် နောက်ဆုံး ဂျီနိုအာကို ထပ်ရှုံးထားပါတယ်။ နည်းပြ ဗာနိုလီအနေနဲ့ တိုက်စစ်မှူး မာတီယိုပယ်လီဂရီနိုကို အားကိုးရသော်လည်း ဂိုးပေးရလွယ်တဲ့ နောက်တန်းကို ဆက်ပြင်ဖို့ လိုနေပါတယ်။ **ကိုမို**က စီးရီးအေခြောက်ပွဲကနေ ၁၁ မှတ်ရထားပြီး နည်းပြ ဖာဘရီဂတ်စ်ရဲ့ လက်အောက်မှာ နီကိုပါ့ဇ်က အခွင့်အရေးစမ်းသပ်မှုများပြုလုပ်နေသလို ဒူဗီကပ်စ်ရဲ့ အဝေးကွင်းဂိုးသွင်းနိုင်စွမ်းက ဖီအိုရင်တီးနားနောက်တန်းကို စမ်းသပ်နိုင်ပါတယ်။ ကိုမိုဟာ ဥရောပပွဲမှာ ဖေးနုကို ရှုံးထားပြီး ပွဲပန်းနိုင်သော်လည်း ဖီအိုရင်တီးနားရဲ့ အိမ်ကွင်းတည်ငြိမ်မှု နည်းပါးနေချိန်မှာ တိုက်စစ်စုဖွဲ့နိုင်မှုက ပိုမိုအားသာနေပါတယ်။ ခြေစွမ်းနဲ့ အဆုံးသတ်အရည်အသွေးကို ကြည့်ရင် **ကိုမို ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/fiorentina/preview/fiorentina-vs-como-prediction-team-news-lineups_607028.html",
         "https://www.sportsmole.co.uk/football/serie-a/table.html"
@@ -1135,7 +1151,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/fiorentina/preview/fiorentina-vs-como-prediction-team-news-lineups_607028.html",
@@ -1155,14 +1171,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "1.847",
+      "drawOdds": "3.690",
+      "awayOdds": "4.160",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/italy-serie-a/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "D",
@@ -1298,7 +1314,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "အေစီမီလန်ဟာ နည်းပြ ရူဘင်အာမိုရင် လက်အောက်မှာ စီးရီးအေခြောက်ပွဲမှာ မရှုံးသေးဘဲ ၁၂ မှတ်ရရှိထားသလို ယူရိုပါလိဂ်မှာ ဆာလ်ဇ်ဘတ်ကို လေးဂိုးပြတ်အနိုင်ရလာပါတယ်။ အဲဒီပွဲမှာ လူငယ် အယ်လ်ဖာဂျိုဆစ်ဆေး ဟက်ထရစ်သွင်းခဲ့တာကြောင့် ဂွန်ကာလိုရာမို့စ်အပြင် တိုက်စစ်ရွေးချယ်စရာတစ်ခု ထပ်ပေါ်လာပါတယ်။ အတ္တလန်တာကလည်း ဗင်းနီးဇီးယားကို သုံးဂိုးတစ်ဂိုး အနိုင်ယူရာမှာ ခရစ်စတိုဗစ်က နှစ်ဂိုးသွင်း တစ်ဂိုးဖန်တီးထားလို့ ဧည့်သည်တိုက်စစ်ကို လျှော့တွက်မရပါဘူး။ သို့သော် အတ္တလန်တာဟာ အဝေးကွင်းရလဒ်အားနည်းထားပြီး အဓိကလူအချို့ ဒဏ်ရာနဲ့ ပွဲပယ်ကြောင့် လွဲချော်ရနိုင်ပါတယ်။ မီလန်ရဲ့ အိမ်ကွင်းဂိုးသွင်းပုံနဲ့ ရွေးချယ်စရာတိုးလာတဲ့ တိုက်စစ်ကို သဘောကျရတာကြောင့် **အေစီမီလန် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**အေစီမီလန်**ဟာ နည်းပြ ရူဘင်အာမိုရင် လက်အောက်မှာ စီးရီးအေခြောက်ပွဲမှာ မရှုံးသေးဘဲ ၁၂ မှတ်ရရှိထားသလို ယူရိုပါလိဂ်မှာ ဆာလ်ဇ်ဘတ်ကို လေးဂိုးပြတ်အနိုင်ရလာပါတယ်။ အဲဒီပွဲမှာ လူငယ် အယ်လ်ဖာဂျိုဆစ်ဆေး ဟက်ထရစ်သွင်းခဲ့တာကြောင့် ဂွန်ကာလိုရာမို့စ်အပြင် တိုက်စစ်ရွေးချယ်စရာတစ်ခု ထပ်ပေါ်လာပါတယ်။ **အတ္တလန်တာ**ကလည်း ဗင်းနီးဇီးယားကို သုံးဂိုးတစ်ဂိုး အနိုင်ယူရာမှာ ခရစ်စတိုဗစ်က နှစ်ဂိုးသွင်း တစ်ဂိုးဖန်တီးထားလို့ ဧည့်သည်တိုက်စစ်ကို လျှော့တွက်မရပါဘူး။ သို့သော် အတ္တလန်တာဟာ အဝေးကွင်းရလဒ်အားနည်းထားပြီး အဓိကလူအချို့ ဒဏ်ရာနဲ့ ပွဲပယ်ကြောင့် လွဲချော်ရနိုင်ပါတယ်။ မီလန်ရဲ့ အိမ်ကွင်းဂိုးသွင်းပုံနဲ့ ရွေးချယ်စရာတိုးလာတဲ့ တိုက်စစ်ကို သဘောကျရတာကြောင့် **အေစီမီလန် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/ac-milan/preview/ac-milan-vs-atalanta-prediction-team-news-lineups_607046.html",
         "https://www.sportsmole.co.uk/football/serie-a/table.html"
@@ -1322,7 +1338,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/ac-milan/preview/ac-milan-vs-atalanta-prediction-team-news-lineups_607046.html",
@@ -1342,14 +1358,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "1.641",
+      "drawOdds": "3.870",
+      "awayOdds": "5.340",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/italy-serie-a/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "D",
@@ -1485,7 +1501,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "ဂျူဗင်တပ်စ်က ကြားရက် ယူရိုပါလိဂ်မှာ ဆဲလ်တာဗီဂိုကို နှစ်ဂိုးတစ်ဂိုး အနိုင်ယူခဲ့ပေမယ့် စီးရီးအေ နောက်ဆုံးလေးပွဲမှာ နိုင်ပွဲတစ်ပွဲသာ ရလို့ နည်းပြ စပယ်လက်တီရဲ့အသင်းအတွက် ဖိအားရှိနေပါတယ်။ ကိုလိုမူအာနီက ဥရောပပွဲမှာ ဂိုးသွင်းအရှိန်ကောင်းနေသော်လည်း ယီလ်ဒစ်ဇ်နဲ့ လိုကာတယ်လီတို့ မပါနိုင်တဲ့ လူစာရင်းအခက်အခဲက တိုက်စစ်အထောက်အပံ့ကို လျော့စေနိုင်ပါတယ်။ လာဇီယိုဘက်မှာတော့ နည်းပြ ဂတ်တူဆို လက်အောက်က ခြောက်ပွဲမှာ ငါးပွဲနိုင် တစ်ပွဲသရေဖြစ်ပြီး ၁၆ မှတ်နဲ့ ရှုံးပွဲမရှိသေးပါဘူး။ နောက်ဆုံး မွန်ဇာကို နိုင်ရာမှာ ပီနာမွန်တီပါ ဂိုးစာရင်းဝင်ခဲ့သလို အဝေးကွင်းသုံးပွဲစလုံး အနိုင်ရထားပြီး ပေးဂိုးနည်းတာက ဂျူဗင်တပ်စ်ရဲ့ အိမ်ကွင်းအားသာချက်ကို ယှဉ်နိုင်တဲ့ အချက်ပါ။ ပြတ်သားတဲ့ ခံစစ်နဲ့ အဝေးကွင်းခြေစွမ်းအတွက် **လာဇီယို ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**ဂျူဗင်တပ်**စ်က ကြားရက် ယူရိုပါလိဂ်မှာ ဆဲလ်တာဗီဂိုကို နှစ်ဂိုးတစ်ဂိုး အနိုင်ယူခဲ့ပေမယ့် စီးရီးအေ နောက်ဆုံးလေးပွဲမှာ နိုင်ပွဲတစ်ပွဲသာ ရလို့ နည်းပြ စပယ်လက်တီရဲ့အသင်းအတွက် ဖိအားရှိနေပါတယ်။ ကိုလိုမူအာနီက ဥရောပပွဲမှာ ဂိုးသွင်းအရှိန်ကောင်းနေသော်လည်း ယီလ်ဒစ်ဇ်နဲ့ လိုကာတယ်လီတို့ မပါနိုင်တဲ့ လူစာရင်းအခက်အခဲက တိုက်စစ်အထောက်အပံ့ကို လျော့စေနိုင်ပါတယ်။ **လာဇီယို**ဘက်မှာတော့ နည်းပြ ဂတ်တူဆို လက်အောက်က ခြောက်ပွဲမှာ ငါးပွဲနိုင် တစ်ပွဲသရေဖြစ်ပြီး ၁၆ မှတ်နဲ့ ရှုံးပွဲမရှိသေးပါဘူး။ နောက်ဆုံး မွန်ဇာကို နိုင်ရာမှာ ပီနာမွန်တီပါ ဂိုးစာရင်းဝင်ခဲ့သလို အဝေးကွင်းသုံးပွဲစလုံး အနိုင်ရထားပြီး ပေးဂိုးနည်းတာက ဂျူဗင်တပ်စ်ရဲ့ အိမ်ကွင်းအားသာချက်ကို ယှဉ်နိုင်တဲ့ အချက်ပါ။ ပြတ်သားတဲ့ ခံစစ်နဲ့ အဝေးကွင်းခြေစွမ်းအတွက် **လာဇီယို ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/preview/juventus-vs-lazio-prediction-team-news-lineups_607051.html",
         "https://www.sportsmole.co.uk/football/serie-a/table.html"
@@ -1509,7 +1525,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/preview/juventus-vs-lazio-prediction-team-news-lineups_607051.html",
@@ -1529,14 +1545,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/87.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "1.909",
+      "drawOdds": "3.400",
+      "awayOdds": "4.260",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/spain-la-liga/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -1672,7 +1688,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "အိုဆာဆူနာက လာလီဂါ ရှစ်ပွဲမှာ ရှစ်မှတ်ရထားပေမယ့် နောက်ဆုံးငါးပွဲမှာ ရမှတ်တစ်မှတ်ပဲရပြီး ဘက်တစ်ကို ငါးဂိုးနှစ်ဂိုး ရှုံးခဲ့တာက နောက်တန်းပေါက်ကွဲမှုကြီးတဲ့ အခြေအနေကို ပြသနေပါတယ်။ ဒါပေမယ့် ရှေ့တန်းက ဘူဒီမီယာက ရှစ်ပွဲမှာ ခြောက်ဂိုးသွင်းထားပြီး အိမ်ကွင်းမှာ ဂိုးရဖို့ အဓိကအားကိုးချက်ရှိပါတယ်။ ရေးဆင်းကလည်း ရမှတ်ရှစ်မှတ်နဲ့ လိဂ်အဆင့် ၁၅ မှာ ရပ်တည်နေပြီး ဗလင်စီယာနဲ့ နောက်ဆုံးပွဲ နှစ်ဂိုးစီသရေကျခဲ့ပါတယ်။ ရေးဆင်းဘက်မှာ ဇာဘီရီက ရှစ်ပွဲမှာ ခုနစ်ဂိုးအထိ သွင်းထားတာကြောင့် အိုဆာဆူနာရဲ့ နောက်တန်းအတွက် အလေးထားကာကွယ်ရမယ့်အချက်ဖြစ်ပါတယ်။ နှစ်သင်းတိုက်စစ်မှူးတွေ ဂိုးရနိုင်ပေမယ့် ရေးဆင်းရဲ့ အဝေးကွင်းရလဒ်အားနည်းမှုကို အိမ်ရှင်က အသုံးချနိုင်လို့ **အိုဆာဆူနာ ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**အိုဆာဆူနာ**က လာလီဂါ ရှစ်ပွဲမှာ ရှစ်မှတ်ရထားပေမယ့် နောက်ဆုံးငါးပွဲမှာ ရမှတ်တစ်မှတ်ပဲရပြီး ဘက်တစ်ကို ငါးဂိုးနှစ်ဂိုး ရှုံးခဲ့တာက နောက်တန်းပေါက်ကွဲမှုကြီးတဲ့ အခြေအနေကို ပြသနေပါတယ်။ ဒါပေမယ့် ရှေ့တန်းက ဘူဒီမီယာက ရှစ်ပွဲမှာ ခြောက်ဂိုးသွင်းထားပြီး အိမ်ကွင်းမှာ ဂိုးရဖို့ အဓိကအားကိုးချက်ရှိပါတယ်။ **ရေးဆင်း**ကလည်း ရမှတ်ရှစ်မှတ်နဲ့ လိဂ်အဆင့် ၁၅ မှာ ရပ်တည်နေပြီး ဗလင်စီယာနဲ့ နောက်ဆုံးပွဲ နှစ်ဂိုးစီသရေကျခဲ့ပါတယ်။ ရေးဆင်းဘက်မှာ ဇာဘီရီက ရှစ်ပွဲမှာ ခုနစ်ဂိုးအထိ သွင်းထားတာကြောင့် အိုဆာဆူနာရဲ့ နောက်တန်းအတွက် အလေးထားကာကွယ်ရမယ့်အချက်ဖြစ်ပါတယ်။ နှစ်သင်းတိုက်စစ်မှူးတွေ ဂိုးရနိုင်ပေမယ့် ရေးဆင်းရဲ့ အဝေးကွင်းရလဒ်အားနည်းမှုကို အိမ်ရှင်က အသုံးချနိုင်လို့ **အိုဆာဆူနာ ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/osasuna/preview/osasuna-vs-racing-prediction-team-news-lineups_607021.html",
         "https://www.sportsmole.co.uk/football/la-liga/table.html"
@@ -1696,7 +1712,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/osasuna/preview/osasuna-vs-racing-prediction-team-news-lineups_607021.html",
@@ -1716,14 +1732,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "2.000",
+      "drawOdds": "3.400",
+      "awayOdds": "3.870",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/spain-la-liga/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "D",
@@ -1859,7 +1875,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "ဆဲလ်တာဗီဂိုဟာ လာလီဂါ ရှစ်ပွဲကနေ ရှစ်မှတ်ရပြီး သရေငါးပွဲအထိ များထားတာက ကစားပွဲကို ထိန်းနိုင်ပေမယ့် အဆုံးသတ်ဂိုးအပေါ် အားနည်းနေခြင်းကို ပြသနေပါတယ်။ နည်းပြ ဂီရယ်ဒက်ဇ်ရဲ့အသင်းက ရေးဆင်းကို ငါးဂိုးပြတ်နိုင်ခဲ့သော်လည်း အဲလ်ချီနဲ့ ဂိုးမရှိသရေ၊ ကြားရက် ဂျူဗင်တပ်စ်ကို ရှုံးခဲ့တာကြောင့် ပွဲပန်းခြင်းကို စဉ်းစားရမှာပါ။ ဘော်ဟာအီဂလေစီယက်စ် မပါနိုင်တဲ့အခါ ဂျုဂလာရဲ့ တိုက်စစ်ထိပ်မှာ တာဝန်ယူရမှု ပိုများလာနိုင်ပါတယ်။ အလာဗက်စ်က အဆင့်ခုနစ်နဲ့ ၁၁ မှတ်ရှိပြီး လူးကပ်စ်ဘွိုင်းရဲ့ ခုနစ်ပွဲ ငါးဂိုးသွင်းထားမှုက ခံစစ်ကို ခြိမ်းခြောက်နိုင်သော်လည်း နောက်ဆုံးလေးပွဲမှာ သုံးပွဲရှုံးထားတာကို မေ့ထားလို့မရပါဘူး။ ဆဲလ်တာအိမ်ကွင်းမှာ ခံစစ်သေချာကာကွယ်ရင် မျှတနိုင်ပေမယ့် အနိုင်ရဂိုးရှာနိုင်တဲ့ **အလာဗက်စ် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**ဆဲလ်တာဗီဂို**ဟာ လာလီဂါ ရှစ်ပွဲကနေ ရှစ်မှတ်ရပြီး သရေငါးပွဲအထိ များထားတာက ကစားပွဲကို ထိန်းနိုင်ပေမယ့် အဆုံးသတ်ဂိုးအပေါ် အားနည်းနေခြင်းကို ပြသနေပါတယ်။ နည်းပြ ဂီရယ်ဒက်ဇ်ရဲ့အသင်းက ရေးဆင်းကို ငါးဂိုးပြတ်နိုင်ခဲ့သော်လည်း အဲလ်ချီနဲ့ ဂိုးမရှိသရေ၊ ကြားရက် ဂျူဗင်တပ်စ်ကို ရှုံးခဲ့တာကြောင့် ပွဲပန်းခြင်းကို စဉ်းစားရမှာပါ။ ဘော်ဟာအီဂလေစီယက်စ် မပါနိုင်တဲ့အခါ ဂျုဂလာရဲ့ တိုက်စစ်ထိပ်မှာ တာဝန်ယူရမှု ပိုများလာနိုင်ပါတယ်။ **အလာဗက်စ်**က အဆင့်ခုနစ်နဲ့ ၁၁ မှတ်ရှိပြီး လူးကပ်စ်ဘွိုင်းရဲ့ ခုနစ်ပွဲ ငါးဂိုးသွင်းထားမှုက ခံစစ်ကို ခြိမ်းခြောက်နိုင်သော်လည်း နောက်ဆုံးလေးပွဲမှာ သုံးပွဲရှုံးထားတာကို မေ့ထားလို့မရပါဘူး။ ဆဲလ်တာအိမ်ကွင်းမှာ ခံစစ်သေချာကာကွယ်ရင် မျှတနိုင်ပေမယ့် အနိုင်ရဂိုးရှာနိုင်တဲ့ **အလာဗက်စ် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/celta-vigo/preview/celta-vigo-vs-alaves-prediction-team-news-lineups_607025.html",
         "https://www.sportsmole.co.uk/football/la-liga/table.html"
@@ -1883,7 +1899,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/celta-vigo/preview/celta-vigo-vs-alaves-prediction-team-news-lineups_607025.html",
@@ -1903,14 +1919,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "3.230",
+      "drawOdds": "3.490",
+      "awayOdds": "2.200",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/spain-la-liga/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "D",
@@ -2046,7 +2062,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "မာလာဂါဟာ ရာသီအစ လာလီဂါ ရှစ်ပွဲမှာ နိုင်ပွဲမရှိဘဲ လေးပွဲသရေ လေးပွဲရှုံးနဲ့ ဇယားအောက်ဆုံးမှာ ရောက်နေပါတယ်။ နောက်ဆုံး အက်စ်ပန်ညိုနဲ့ တစ်ဂိုးစီသရေကျခဲ့တာက ရမှတ်တစ်မှတ်ရစေသော်လည်း ရှေ့တန်းက ရှစ်ပွဲမှာ လေးဂိုးသာသွင်းနိုင်ပြီး ချူပေကိုပဲ မကြာခဏ အားကိုးနေရတဲ့ အဆုံးသတ်ပြဿနာကို မဖုံးကွယ်နိုင်ပါဘူး။ ရီးရဲလ်ဆိုစီဒက်ကတော့ လိဂ်ရှစ်ပွဲမှာ လေးနိုင် တစ်သရေ သုံးရှုံးနဲ့ ၁၃ မှတ်ရကာ အဆင့်ခြောက်မှာရှိပြီး အဝေးကွင်းမှာတောင် နှစ်ပွဲနိုင်ထားပါတယ်။ အိုယာဇာဘယ်က ဒီရာသီ ဂိုးဖွင့်ရဖို့ ကြိုးစားနေရသော်လည်း အသင်းရဲ့ တိုက်စစ်တည်ဆောက်ပုံက မာလာဂါထက် အခွင့်အရေးပိုဖန်တီးနိုင်ပါတယ်။ အိမ်ရှင်အသင်းရဲ့ နောက်တန်းပေးဂိုးများခြင်းနဲ့ ဧည့်သည်အသင်းရဲ့ ရမှတ်စုဆောင်းနိုင်မှုကွာခြားချက်ကြောင့် **ဆိုစီဒက် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**မာလာဂါ**ဟာ ရာသီအစ လာလီဂါ ရှစ်ပွဲမှာ နိုင်ပွဲမရှိဘဲ လေးပွဲသရေ လေးပွဲရှုံးနဲ့ ဇယားအောက်ဆုံးမှာ ရောက်နေပါတယ်။ နောက်ဆုံး အက်စ်ပန်ညိုနဲ့ တစ်ဂိုးစီသရေကျခဲ့တာက ရမှတ်တစ်မှတ်ရစေသော်လည်း ရှေ့တန်းက ရှစ်ပွဲမှာ လေးဂိုးသာသွင်းနိုင်ပြီး ချူပေကိုပဲ မကြာခဏ အားကိုးနေရတဲ့ အဆုံးသတ်ပြဿနာကို မဖုံးကွယ်နိုင်ပါဘူး။ ရီးရဲလ်**ဆိုစီဒက်**ကတော့ လိဂ်ရှစ်ပွဲမှာ လေးနိုင် တစ်သရေ သုံးရှုံးနဲ့ ၁၃ မှတ်ရကာ အဆင့်ခြောက်မှာရှိပြီး အဝေးကွင်းမှာတောင် နှစ်ပွဲနိုင်ထားပါတယ်။ အိုယာဇာဘယ်က ဒီရာသီ ဂိုးဖွင့်ရဖို့ ကြိုးစားနေရသော်လည်း အသင်းရဲ့ တိုက်စစ်တည်ဆောက်ပုံက မာလာဂါထက် အခွင့်အရေးပိုဖန်တီးနိုင်ပါတယ်။ အိမ်ရှင်အသင်းရဲ့ နောက်တန်းပေးဂိုးများခြင်းနဲ့ ဧည့်သည်အသင်းရဲ့ ရမှတ်စုဆောင်းနိုင်မှုကွာခြားချက်ကြောင့် **ဆိုစီဒက် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/real-sociedad/preview/malaga-vs-real-sociedad-prediction-team-news-lineups_607026.html",
         "https://www.sportsmole.co.uk/football/la-liga/table.html"
@@ -2070,7 +2086,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/real-sociedad/preview/malaga-vs-real-sociedad-prediction-team-news-lineups_607026.html",
@@ -2090,14 +2106,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "1.23",
+      "drawOdds": "6.80",
+      "awayOdds": "11.00",
+      "oddsProvider": "Stake",
+      "oddsSourceUrl": "https://stake.bet/sports/soccer/spain/la-liga",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "W",
@@ -2233,7 +2249,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "ရီးရဲလ်မက်ဒရစ်က လာလီဂါ ရှစ်ပွဲမှာ ၁၈ မှတ်နဲ့ အဆင့်လေးမှာ ရပ်တည်နေပြီး ဘာစီလိုနာကို လိုက်မီဖို့ အိမ်ကွင်းပွဲတိုင်း အရေးပါနေပါတယ်။ နည်းပြ မော်ရင်ဟိုရဲ့အသင်းဟာ ဗီလာရီးရဲလ်ကို အနိုင်ရပြီးနောက် ရိုးမားကို ချန်ပီယံလိဂ်မှာ သုံးဂိုးတစ်ဂိုး နောက်ကျနေရာကနေ လေးဂိုးသုံးဂိုးနဲ့ ပြန်နိုင်ခဲ့တာကြောင့် ယုံကြည်မှုမြင့်တက်နေပါတယ်။ ဗီနီစီယပ်စ် ပွဲပယ်ကြောင့် မပါနိုင်ပေမယ့် အမ်ဘာပေ၊ ဘယ်လင်ဟမ်နဲ့ အာဒါဂူလာတို့က နည်းလမ်းမျိုးစုံနဲ့ အခွင့်အရေးဖန်တီးပေးနိုင်ပါတယ်။ ဆီဗီလာကလည်း ၁၄ မှတ်နဲ့ အဆင့်ငါးမှာရှိပြီး လီဗန်တေးနဲ့ သုံးဂိုးစီ သရေကစားခဲ့တဲ့ တိုက်စစ်မလွယ်ကူတဲ့အသင်းပါ။ ဖိုဖာနာရဲ့ ကွင်းလယ်အကူအညီနဲ့ ရော်ဘီယူရီကို အားကိုးနိုင်သော်လည်း နောက်တန်းက အမ်ဘာပေကို ဘောလုံးပေးပို့ခွင့်ပိတ်ဖို့ လိုပါတယ်။ နောက်ဆုံးမိနစ်ထိ အရှိန်ပြန်တင်နိုင်မှုနဲ့ အိမ်ကွင်းဂိုးသွင်းစွမ်းရည်ကြောင့် **ရီးရဲလ်မက်ဒရစ် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**ရီးရဲလ်မက်ဒရစ်**က လာလီဂါ ရှစ်ပွဲမှာ ၁၈ မှတ်နဲ့ အဆင့်လေးမှာ ရပ်တည်နေပြီး ဘာစီလိုနာကို လိုက်မီဖို့ အိမ်ကွင်းပွဲတိုင်း အရေးပါနေပါတယ်။ နည်းပြ မော်ရင်ဟိုရဲ့အသင်းဟာ ဗီလာရီးရဲလ်ကို အနိုင်ရပြီးနောက် ရိုးမားကို ချန်ပီယံလိဂ်မှာ သုံးဂိုးတစ်ဂိုး နောက်ကျနေရာကနေ လေးဂိုးသုံးဂိုးနဲ့ ပြန်နိုင်ခဲ့တာကြောင့် ယုံကြည်မှုမြင့်တက်နေပါတယ်။ ဗီနီစီယပ်စ် ပွဲပယ်ကြောင့် မပါနိုင်ပေမယ့် အမ်ဘာပေ၊ ဘယ်လင်ဟမ်နဲ့ အာဒါဂူလာတို့က နည်းလမ်းမျိုးစုံနဲ့ အခွင့်အရေးဖန်တီးပေးနိုင်ပါတယ်။ **ဆီဗီလာ**ကလည်း ၁၄ မှတ်နဲ့ အဆင့်ငါးမှာရှိပြီး လီဗန်တေးနဲ့ သုံးဂိုးစီ သရေကစားခဲ့တဲ့ တိုက်စစ်မလွယ်ကူတဲ့အသင်းပါ။ ဖိုဖာနာရဲ့ ကွင်းလယ်အကူအညီနဲ့ ရော်ဘီယူရီကို အားကိုးနိုင်သော်လည်း နောက်တန်းက အမ်ဘာပေကို ဘောလုံးပေးပို့ခွင့်ပိတ်ဖို့ လိုပါတယ်။ နောက်ဆုံးမိနစ်ထိ အရှိန်ပြန်တင်နိုင်မှုနဲ့ အိမ်ကွင်းဂိုးသွင်းစွမ်းရည်ကြောင့် **ရီးရဲလ်မက်ဒရစ် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/real-madrid/race-for-the-la-liga-title/preview/real-madrid-vs-sevilla-prediction-team-news-lineups_607030.html",
         "https://www.sportsmole.co.uk/football/la-liga/table.html"
@@ -2257,7 +2273,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/real-madrid/race-for-the-la-liga-title/preview/real-madrid-vs-sevilla-prediction-team-news-lineups_607030.html",
@@ -2269,7 +2285,15 @@
         "ဗီနီစီယပ်စ် ပွဲပယ်ကြောင့် မပါဝင်ပေမယ့် အမ်ဘာပေ၊ ဘယ်လင်ဟမ်၊ အာဒါဂူလာတို့က တိုက်စစ်လမ်းကြောင်းကို အမျိုးမျိုးဖွင့်ပေးနိုင်သလို ရိုးမားပွဲက အရန်ကစားသမားတွေရဲ့ သွင်းဂိုးတွေလည်း လူစာရင်းအနက်ကို ထောက်ပြနေပါတယ်။",
         "ဆီဗီလာဟာ အဆင့်ငါးမှာ ၁၄ မှတ်နဲ့ ရပ်တည်နေပြီး ရော်ဘီယူရီနဲ့ ဖိုဖာနာတို့က ပြိုင်ပွဲကို မလွယ်ကူစေနိုင်ပါတယ်။ ဒါပေမယ့် လီဗန်တေးနဲ့ သုံးဂိုးစီသရေကျတဲ့ပွဲအတိုင်း နောက်တန်းဂိုးပေးလွယ်နေရင် မက်ဒရစ်ရဲ့ အိမ်ကွင်းဖိအားကို လုံလုံလောက်လောက် ကာကွယ်နိုင်ဖို့ခက်ပါမယ်။",
         "အနိုင်ရဖို့ နည်းလမ်းပိုစုံခြင်း၊ အိမ်ကွင်းထိရောက်မှုနဲ့ အရေးကြီးချိန် ပွဲအရှိန်ပြောင်းနိုင်စွမ်းတို့ကြောင့် **ရီးရဲလ်မက်ဒရစ် ကို ရွေးချယ်ပါတယ်။**"
-      ]
+      ],
+      "specialRiskNote": "ဗီနီစီယပ်စ် ပွဲပယ်ခံရမှုနဲ့ ဆီဗီလာကွင်းလယ်ရဲ့ မြန်ဆန်တဲ့တန်ပြန်တိုက်စစ်က မက်ဒရစ်အတွက် သတိထားရမယ့် အန္တရာယ်ပါ။",
+      "specialResearchSources": [
+        "https://www.sportsmole.co.uk/football/real-madrid/race-for-the-la-liga-title/preview/real-madrid-vs-sevilla-prediction-team-news-lineups_607030.html",
+        "https://www.sportsmole.co.uk/football/la-liga/table.html",
+        "https://stake.bet/sports/soccer/spain/la-liga"
+      ],
+      "specialPreparedDate": "2026-10-18",
+      "specialPickLabel": "ရီးရဲလ်မက်ဒရစ်"
     },
     {
       "league": "Bundesliga",
@@ -2284,14 +2308,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "1.653",
+      "drawOdds": "4.430",
+      "awayOdds": "4.460",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/germany-bundesliga/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "W",
@@ -2427,7 +2451,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "လေဗာကူဆင်ဟာ ဘွန်ဒက်စ်လီဂါ ပထမပွဲရှုံးခဲ့ပေမယ့် နောက်ပိုင်းမှာ ရလဒ်ပြန်ကောင်းလာပြီး မိန့်ဇ်ကို လေးဂိုးသုံးဂိုး၊ ကြားရက် လက်ချ်ပိုဇ်နန်ကို လေးဂိုးပြတ် အနိုင်ရခဲ့ပါတယ်။ နည်းပြ ကားလက်စ်မာတီနက်ဇ်ရဲ့အသင်းမှာ ပက်ထရစ်ရှစ်ခ်ကို ရှေ့တန်းမှာထားပြီး မူဆာဒီယာဘီတို့ရဲ့ တောင်ပံအမြန်နှုန်းနဲ့ အခွင့်အရေးဖန်တီးနိုင်ပါတယ်။ ဖရိုင်းဘတ်ကတော့ လိဂ်ငါးပွဲမှာ လေးနိုင် တစ်သရေနဲ့ ၁၃ မှတ်ရပြီး အမှတ်ပေးဇယားထိပ်ဆုံးအတွက် ယှဉ်ပြိုင်နေသလို သွင်းဂိုး ၁၄ ဂိုးရထားတဲ့ တိုက်စစ်က ထက်မြက်ပါတယ်။ ဖရိုင်းဘတ်မှာ ဆူဇူကီ ပွဲပယ်ကြောင့် မပါနိုင်ပေမယ့် မာတာနိုဗစ်နဲ့ ဘက်စ်တေးတို့က အန္တရာယ်ဖန်တီးနိုင်ပါတယ်။ နှစ်သင်းစလုံးအရှိန်ကောင်းနေသော်လည်း လေဗာကူဆင်ရဲ့ နောက်ဆုံးလေးပွဲအတွင်း ခံစစ်ပိုတည်ငြိမ်လာခြင်းနဲ့ အိမ်ကွင်းအားသာချက်ကို ပေါင်းကြည့်ရင် **လေဗာကူဆင် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**လေဗာကူဆင်**ဟာ ဘွန်ဒက်စ်လီဂါ ပထမပွဲရှုံးခဲ့ပေမယ့် နောက်ပိုင်းမှာ ရလဒ်ပြန်ကောင်းလာပြီး မိန့်ဇ်ကို လေးဂိုးသုံးဂိုး၊ ကြားရက် လက်ချ်ပိုဇ်နန်ကို လေးဂိုးပြတ် အနိုင်ရခဲ့ပါတယ်။ နည်းပြ ကားလက်စ်မာတီနက်ဇ်ရဲ့အသင်းမှာ ပက်ထရစ်ရှစ်ခ်ကို ရှေ့တန်းမှာထားပြီး မူဆာဒီယာဘီတို့ရဲ့ တောင်ပံအမြန်နှုန်းနဲ့ အခွင့်အရေးဖန်တီးနိုင်ပါတယ်။ **ဖရိုင်းဘတ်**ကတော့ လိဂ်ငါးပွဲမှာ လေးနိုင် တစ်သရေနဲ့ ၁၃ မှတ်ရပြီး အမှတ်ပေးဇယားထိပ်ဆုံးအတွက် ယှဉ်ပြိုင်နေသလို သွင်းဂိုး ၁၄ ဂိုးရထားတဲ့ တိုက်စစ်က ထက်မြက်ပါတယ်။ ဖရိုင်းဘတ်မှာ ဆူဇူကီ ပွဲပယ်ကြောင့် မပါနိုင်ပေမယ့် မာတာနိုဗစ်နဲ့ ဘက်စ်တေးတို့က အန္တရာယ်ဖန်တီးနိုင်ပါတယ်။ နှစ်သင်းစလုံးအရှိန်ကောင်းနေသော်လည်း လေဗာကူဆင်ရဲ့ နောက်ဆုံးလေးပွဲအတွင်း ခံစစ်ပိုတည်ငြိမ်လာခြင်းနဲ့ အိမ်ကွင်းအားသာချက်ကို ပေါင်းကြည့်ရင် **လေဗာကူဆင် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/bayer-leverkusen/bundesliga-title-race/preview/b-leverkusen-vs-freiburg-prediction-team-news-lineups_607094.html",
         "https://www.sportsmole.co.uk/football/bundesliga/table.html"
@@ -2451,7 +2475,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/bayer-leverkusen/bundesliga-title-race/preview/b-leverkusen-vs-freiburg-prediction-team-news-lineups_607094.html",
@@ -2471,14 +2495,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "3.240",
+      "drawOdds": "4.200",
+      "awayOdds": "1.980",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/germany-bundesliga/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -2614,7 +2638,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "မိုချန်ဂလာဘတ်က ဘွန်ဒက်စ်လီဂါ ငါးပွဲစလုံးရှုံးထားပြီး ရမှတ်မရှိသေးတာကြောင့် အိမ်ကွင်းပွဲဖြစ်သော်လည်း စိတ်ပိုင်းဆိုင်ရာဖိအား အလွန်ကြီးပါတယ်။ နည်းပြ ဘလက်ဆင်လက်ထက်မှာ ကိုလုံးကို နှစ်ဂိုးတစ်ဂိုးရှုံးခဲ့တဲ့ပွဲမှာ ခံစစ်အနည်းငယ်တိုးတက်ပေမယ့် တိုက်စစ်က အီဆက်လစ်ဒ်ဘတ်တို့ရဲ့ အခွင့်အရေးအသုံးချနိုင်မှုအပေါ် အားကိုးရဆဲပါ။ ဟော့ဖန်ဟိမ်းကလည်း ငါးပွဲမှာ သုံးမှတ်သာ ရပြီး နောက်ဆုံးပွဲတွေမှာ ဂိုးများများပေးထားတာကြောင့် ဒီပွဲကို ခံစစ်အားပြိုင်ပွဲတစ်ခုအဖြစ် မြင်ရပါတယ်။ ဖစ္စနစ်အာဆလ်လာနီနဲ့ လမ်ပယ်လေတို့က ဧည့်သည်အတွက် တန်ပြန်တိုက်စစ်ဖန်တီးနိုင်သော်လည်း နောက်တန်းလူ ဘာနာဒို ပွဲပယ်တာက အခွင့်အရေးပေးနိုင်ပါတယ်။ နှစ်သင်းစလုံး အားနည်းချက်များပေမယ့် ရမှတ်ရထားမှုနဲ့ တန်ပြန်တိုက်စစ်အရည်အသွေးကို ဦးစားပေးကြည့်ရင် **ဟော့ဖန်ဟိမ်း ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**မိုချန်ဂလာဘတ်**က ဘွန်ဒက်စ်လီဂါ ငါးပွဲစလုံးရှုံးထားပြီး ရမှတ်မရှိသေးတာကြောင့် အိမ်ကွင်းပွဲဖြစ်သော်လည်း စိတ်ပိုင်းဆိုင်ရာဖိအား အလွန်ကြီးပါတယ်။ နည်းပြ ဘလက်ဆင်လက်ထက်မှာ ကိုလုံးကို နှစ်ဂိုးတစ်ဂိုးရှုံးခဲ့တဲ့ပွဲမှာ ခံစစ်အနည်းငယ်တိုးတက်ပေမယ့် တိုက်စစ်က အီဆက်လစ်ဒ်ဘတ်တို့ရဲ့ အခွင့်အရေးအသုံးချနိုင်မှုအပေါ် အားကိုးရဆဲပါ။ **ဟော့ဖန်ဟိမ်း**ကလည်း ငါးပွဲမှာ သုံးမှတ်သာ ရပြီး နောက်ဆုံးပွဲတွေမှာ ဂိုးများများပေးထားတာကြောင့် ဒီပွဲကို ခံစစ်အားပြိုင်ပွဲတစ်ခုအဖြစ် မြင်ရပါတယ်။ ဖစ္စနစ်အာဆလ်လာနီနဲ့ လမ်ပယ်လေတို့က ဧည့်သည်အတွက် တန်ပြန်တိုက်စစ်ဖန်တီးနိုင်သော်လည်း နောက်တန်းလူ ဘာနာဒို ပွဲပယ်တာက အခွင့်အရေးပေးနိုင်ပါတယ်။ နှစ်သင်းစလုံး အားနည်းချက်များပေမယ့် ရမှတ်ရထားမှုနဲ့ တန်ပြန်တိုက်စစ်အရည်အသွေးကို ဦးစားပေးကြည့်ရင် **ဟော့ဖန်ဟိမ်း ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/borussia-monchengladbach/preview/borussia-mbach-vs-hoffenheim-prediction-team-news-lineups_607011.html",
         "https://www.sportsmole.co.uk/football/bundesliga/table.html"
@@ -2638,7 +2662,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/borussia-monchengladbach/preview/borussia-mbach-vs-hoffenheim-prediction-team-news-lineups_607011.html",
@@ -2658,14 +2682,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "3.210",
+      "drawOdds": "3.740",
+      "awayOdds": "2.120",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/france-ligue-1/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -2801,7 +2825,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "အန်းဂါးက ဒီရာသီ လိဂ်ခြောက်ပွဲမှာ ခုနစ်မှတ်ရထားသော်လည်း နောက်ဆုံး ဘရက်စ်ကို ငါးဂိုးတစ်ဂိုးရှုံးခဲ့တာက ခံစစ်နေရာချထားမှုကို ပြန်လည်စစ်ဆေးရမယ့် အကြောင်းရင်းဖြစ်ပါတယ်။ ရှေ့တန်းက ပရော့စပါပီတာ နောက်ဆုံးလိဂ်နှစ်ပွဲဆက် ဂိုးသွင်းထားတာကြောင့် မာဆေးလ်ရဲ့ နောက်တန်းကို ခြိမ်းခြောက်နိုင်သော်လည်း ဂျော်ဒန်လီဖော့ ပွဲပယ်ခံရမှုက အန်းဂါးခံစစ်အတွက် အားနည်းချက်အသစ်ပါ။ မာဆေးလ်ကလည်း ပွဲစဉ်ခြောက်ပွဲမှာ ခြောက်မှတ်သာရလို့ မတည်ငြိမ်သေးပေမယ့် ထရိုင်းကို နှစ်ဂိုးပြတ်နိုင်ခဲ့ပြီး တိုက်စစ်မှူး အမင်းဂူရီက လိဂ်မှာ လေးဂိုးသွင်းထားတဲ့အတွက် ဂိုးရှာပုံ ပိုရှင်းပါတယ်။ ကြားရက်ဥရောပပွဲရှုံးနိမ့်မှုကြောင့် ဧည့်သည် ပင်ပန်းနိုင်သော်လည်း အန်းဂါးရဲ့ ခံစစ်လူစာရင်းလျော့နေချိန် ဂူရီရဲ့ အဆုံးသတ်စွမ်းရည်က အသာစီးရစေနိုင်ပါတယ်။ တိုက်စစ်မှာ ပိုယုံကြည်ရတဲ့ **မာဆေးလ် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**အန်းဂါး**က ဒီရာသီ လိဂ်ခြောက်ပွဲမှာ ခုနစ်မှတ်ရထားသော်လည်း နောက်ဆုံး ဘရက်စ်ကို ငါးဂိုးတစ်ဂိုးရှုံးခဲ့တာက ခံစစ်နေရာချထားမှုကို ပြန်လည်စစ်ဆေးရမယ့် အကြောင်းရင်းဖြစ်ပါတယ်။ ရှေ့တန်းက ပရော့စပါပီတာ နောက်ဆုံးလိဂ်နှစ်ပွဲဆက် ဂိုးသွင်းထားတာကြောင့် **မာဆေးလ်**ရဲ့ နောက်တန်းကို ခြိမ်းခြောက်နိုင်သော်လည်း ဂျော်ဒန်လီဖော့ ပွဲပယ်ခံရမှုက အန်းဂါးခံစစ်အတွက် အားနည်းချက်အသစ်ပါ။ မာဆေးလ်ကလည်း ပွဲစဉ်ခြောက်ပွဲမှာ ခြောက်မှတ်သာရလို့ မတည်ငြိမ်သေးပေမယ့် ထရိုင်းကို နှစ်ဂိုးပြတ်နိုင်ခဲ့ပြီး တိုက်စစ်မှူး အမင်းဂူရီက လိဂ်မှာ လေးဂိုးသွင်းထားတဲ့အတွက် ဂိုးရှာပုံ ပိုရှင်းပါတယ်။ ကြားရက်ဥရောပပွဲရှုံးနိမ့်မှုကြောင့် ဧည့်သည် ပင်ပန်းနိုင်သော်လည်း အန်းဂါးရဲ့ ခံစစ်လူစာရင်းလျော့နေချိန် ဂူရီရဲ့ အဆုံးသတ်စွမ်းရည်က အသာစီးရစေနိုင်ပါတယ်။ တိုက်စစ်မှာ ပိုယုံကြည်ရတဲ့ **မာဆေးလ် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/angers/preview/angers-vs-marseille-prediction-team-news-lineups_607039.html",
         "https://www.sportsmole.co.uk/football/ligue-1/table.html"
@@ -2825,7 +2849,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/angers/preview/angers-vs-marseille-prediction-team-news-lineups_607039.html",
@@ -2845,14 +2869,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "2.430",
+      "drawOdds": "3.400",
+      "awayOdds": "2.900",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/france-ligue-1/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -2988,7 +3012,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "လီဟာဗေးဟာ လိဂူးဝမ်း ခြောက်ပွဲမှာ နှစ်မှတ်သာ ရပြီး လက်ရှိရာသီ နိုင်ပွဲမရှိသေးတဲ့အသင်းဖြစ်ပါတယ်။ နောက်ဆုံး လိုင်လီကို တစ်ဂိုးပြတ်ရှုံးခဲ့တဲ့ပွဲမှာ တိုက်စစ်က အခွင့်အရေးသိပ်မရသလို ရာသီအစခြောက်ပွဲအတွင်း လေးဂိုးသာသွင်းနိုင်တာက နည်းပြ ဒီဂါ့ရဲ့ အဓိကပြဿနာပါ။ အခု နောက်တန်းလူ ဆေကို ပွဲပယ်ခံရပြီး ဒဏ်ရာလူစာရင်းပါရှည်လျားနေတာက ဂိုးသမား ဂေါ်လွန်အပေါ် အလုပ်ပိုတိုးစေနိုင်ပါတယ်။ အော်ဇေးကလည်း ရင်းနက်စ်ကို လေးဂိုးတစ်ဂိုး ရှုံးလာပြီး ခြောက်ပွဲမှာ ၁၆ ဂိုးပေးထားတာကြောင့် နောက်တန်းတည်ငြိမ်မှု မရှိသေးပါဘူး။ နည်းပြ ဝီလ်စတီးအနေနဲ့ လူစာရင်းဒဏ်ရာရှိသော်လည်း ရှေ့တန်းမှာ နာမာဆိုနဲ့ အာချာတို့ကိုသုံးပြီး လီဟာဗေးရဲ့ လျော့ပါးနေတဲ့ ခံစစ်ကို ဖိအားပေးနိုင်ပါတယ်။ လတ်တလော ပေးဂိုးများမှုက နှစ်ဖက်တူပေမယ့် အိမ်ရှင်ရဲ့ ဂိုးသွင်းအားအလွန်နည်းတာကြောင့် **အော်ဇေး ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**လီဟာဗေး**ဟာ လိဂူးဝမ်း ခြောက်ပွဲမှာ နှစ်မှတ်သာ ရပြီး လက်ရှိရာသီ နိုင်ပွဲမရှိသေးတဲ့အသင်းဖြစ်ပါတယ်။ နောက်ဆုံး လိုင်လီကို တစ်ဂိုးပြတ်ရှုံးခဲ့တဲ့ပွဲမှာ တိုက်စစ်က အခွင့်အရေးသိပ်မရသလို ရာသီအစခြောက်ပွဲအတွင်း လေးဂိုးသာသွင်းနိုင်တာက နည်းပြ ဒီဂါ့ရဲ့ အဓိကပြဿနာပါ။ အခု နောက်တန်းလူ ဆေကို ပွဲပယ်ခံရပြီး ဒဏ်ရာလူစာရင်းပါရှည်လျားနေတာက ဂိုးသမား ဂေါ်လွန်အပေါ် အလုပ်ပိုတိုးစေနိုင်ပါတယ်။ **အော်ဇေး**ကလည်း ရင်းနက်စ်ကို လေးဂိုးတစ်ဂိုး ရှုံးလာပြီး ခြောက်ပွဲမှာ ၁၆ ဂိုးပေးထားတာကြောင့် နောက်တန်းတည်ငြိမ်မှု မရှိသေးပါဘူး။ နည်းပြ ဝီလ်စတီးအနေနဲ့ လူစာရင်းဒဏ်ရာရှိသော်လည်း ရှေ့တန်းမှာ နာမာဆိုနဲ့ အာချာတို့ကိုသုံးပြီး လီဟာဗေးရဲ့ လျော့ပါးနေတဲ့ ခံစစ်ကို ဖိအားပေးနိုင်ပါတယ်။ လတ်တလော ပေးဂိုးများမှုက နှစ်ဖက်တူပေမယ့် အိမ်ရှင်ရဲ့ ဂိုးသွင်းအားအလွန်နည်းတာကြောင့် **အော်ဇေး ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/le-havre/preview/le-havre-vs-auxerre-prediction-team-news-lineups_607041.html",
         "https://www.sportsmole.co.uk/football/ligue-1/table.html"
@@ -3012,7 +3036,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/le-havre/preview/le-havre-vs-auxerre-prediction-team-news-lineups_607041.html",
@@ -3032,14 +3056,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "3.400",
+      "drawOdds": "3.430",
+      "awayOdds": "2.150",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/france-ligue-1/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "W",
@@ -3175,7 +3199,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "လော်ရီယန်က လိဂူးဝမ်းမှာ ရာသီအစနှေးကွေးခဲ့ပေမယ့် နောက်ဆုံး ပဲရစ်အက်ဖ်စီကို တစ်ဂိုးပြတ်အနိုင်ရပြီး အဆင့်ကိုးအထိ တက်လာပါတယ်။ ဂါဘင်ဘာနာဒိုက အနိုင်ဂိုးရှာပေးခဲ့သလို ဂိုးသမား မဗိုဂိုရဲ့ ကာကွယ်မှုတွေကြောင့် နောက်တန်းခံစစ်က မိုနာကိုရဲ့ အမြန်တိုက်စစ်ကို ရင်ဆိုင်ဖို့ ယုံကြည်မှုရနေပါတယ်။ မိုနာကိုကတော့ လိဂ်ခြောက်ပွဲမှာ ရှုံးပွဲမရှိဘဲ ၁၄ မှတ်နဲ့ ထိပ်ဆုံးမှာ ရပ်တည်နေပြီး တူးလူးစ်နဲ့ နှစ်ဂိုးစီသရေကျတာက အသာစီးရပြီးမှ ပွဲကိုမထိန်းနိုင်ခဲ့တဲ့ သတိပေးချက်ပါ။ အန်ဆူဖာတီက ကြားရက်ဥရောပပွဲအနိုင်ဂိုး သွင်းပေးခဲ့သလို မက်သစ်အဘလင်းနဲ့ အီဒန်ဒီယော့ပ်တို့ကလည်း ဂိုးရှာနိုင်တာကြောင့် တိုက်စစ်လမ်းကြောင်း ပိုစုံပါတယ်။ လော်ရီယန်ရဲ့ အိမ်ကွင်းခံစစ်ကို အလွယ်မဖောက်နိုင်သော်လည်း အခွင့်အရေးပေါ်လာချိန် ထိရောက်စွာအသုံးချနိုင်တဲ့ **မိုနာကို ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**လော်ရီယန်**က လိဂူးဝမ်းမှာ ရာသီအစနှေးကွေးခဲ့ပေမယ့် နောက်ဆုံး ပဲရစ်အက်ဖ်စီကို တစ်ဂိုးပြတ်အနိုင်ရပြီး အဆင့်ကိုးအထိ တက်လာပါတယ်။ ဂါဘင်ဘာနာဒိုက အနိုင်ဂိုးရှာပေးခဲ့သလို ဂိုးသမား မဗိုဂိုရဲ့ ကာကွယ်မှုတွေကြောင့် နောက်တန်းခံစစ်က **မိုနာကို**ရဲ့ အမြန်တိုက်စစ်ကို ရင်ဆိုင်ဖို့ ယုံကြည်မှုရနေပါတယ်။ မိုနာကိုကတော့ လိဂ်ခြောက်ပွဲမှာ ရှုံးပွဲမရှိဘဲ ၁၄ မှတ်နဲ့ ထိပ်ဆုံးမှာ ရပ်တည်နေပြီး တူးလူးစ်နဲ့ နှစ်ဂိုးစီသရေကျတာက အသာစီးရပြီးမှ ပွဲကိုမထိန်းနိုင်ခဲ့တဲ့ သတိပေးချက်ပါ။ အန်ဆူဖာတီက ကြားရက်ဥရောပပွဲအနိုင်ဂိုး သွင်းပေးခဲ့သလို မက်သစ်အဘလင်းနဲ့ အီဒန်ဒီယော့ပ်တို့ကလည်း ဂိုးရှာနိုင်တာကြောင့် တိုက်စစ်လမ်းကြောင်း ပိုစုံပါတယ်။ လော်ရီယန်ရဲ့ အိမ်ကွင်းခံစစ်ကို အလွယ်မဖောက်နိုင်သော်လည်း အခွင့်အရေးပေါ်လာချိန် ထိရောက်စွာအသုံးချနိုင်တဲ့ **မိုနာကို ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/lorient/preview/lorient-vs-monaco-prediction-team-news-lineups_607009.html",
         "https://www.sportsmole.co.uk/football/ligue-1/table.html"
@@ -3199,7 +3223,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/lorient/preview/lorient-vs-monaco-prediction-team-news-lineups_607009.html",
@@ -3211,7 +3235,15 @@
         "မိုနာကိုက ခြောက်ပွဲမှာ ရှုံးပွဲမရှိဘဲ ၁၄ မှတ်နဲ့ ထိပ်ဆုံးနေရာကို ရယူထားပါတယ်။ တူးလူးစ်နဲ့ပွဲ နှစ်ဂိုးစီသရေဖြစ်ခဲ့သော်လည်း ကြားရက်ဥရောပပွဲမှာ နိုင်ထားတာကြောင့် ပွဲစဉ်ရှည်လျားမှုကို ခံနိုင်တဲ့ လူစာရင်းရှိပါတယ်။",
         "လော်ရီယန်ရဲ့ ခံစစ်အထိုင်ကို ဖောက်ဖို့ မိုနာကိုမှာ ဖာတီ၊ အဘလင်း၊ ဒီယော့ပ်တို့လို တိုက်စစ်နည်းလမ်း မတူတဲ့ ကစားသမားတွေ ရှိနေပါတယ်။ အဝေးကွင်းအရှိန်နဲ့ ခံစစ်ကို သတိထားရပေမယ့် အခွင့်အရေးထွက်လာရင် မိုနာကို ပိုမိုအသုံးချနိုင်ပါတယ်။",
         "လော်ရီယန်ရဲ့ တိုးတက်မှုကို အသိအမှတ်ပြုပေမယ့် တိုက်စစ်အမျိုးမျိုးဖန်တီးနိုင်ပြီး ရာသီအစတစ်လျှောက် မရှုံးသေးတဲ့ **မိုနာကို ကို ရွေးချယ်ပါတယ်။**"
-      ]
+      ],
+      "specialRiskNote": "လော်ရီယန်ရဲ့ နောက်ဆုံးခံစစ်တိုးတက်မှုနဲ့ အိမ်ကွင်းပွဲတည်ငြိမ်မှုကြောင့် မိုနာကိုအတွက် ဂိုးရဖို့ ခက်ခဲပြီး သရေရနိုင်ပါတယ်။",
+      "specialResearchSources": [
+        "https://www.sportsmole.co.uk/football/lorient/preview/lorient-vs-monaco-prediction-team-news-lineups_607009.html",
+        "https://www.sportsmole.co.uk/football/ligue-1/table.html",
+        "https://www.pinnacle.com/en/soccer/france-ligue-1/matchups/"
+      ],
+      "specialPreparedDate": "2026-10-18",
+      "specialPickLabel": "မိုနာကို"
     },
     {
       "league": "Ligue 1",
@@ -3226,14 +3258,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "2.350",
+      "drawOdds": "3.230",
+      "awayOdds": "3.190",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/france-ligue-1/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -3369,7 +3401,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "ပဲရစ်အက်ဖ်စီဟာ ဒီရာသီ လိဂူးဝမ်းမှာ အိမ်ကွင်းရလဒ်ကောင်းနေပြီး ခြောက်ပွဲမှာ ၁၁ မှတ်စုဆောင်းထားသော်လည်း နောက်ဆုံး လော်ရီယန်ကို တစ်ဂိုးပြတ်ရှုံးခဲ့တာကြောင့် ဂိုးရှေ့ထိရောက်မှု ပြန်လည်လိုအပ်လာပါတယ်။ နည်းပြ လီယမ်ရိုဆီနီယာရဲ့အသင်းက ခံစစ်တည်ဆောက်ပုံကောင်းပြီး အိမ်ကွင်းသုံးပွဲမှာ တစ်ဂိုးသာပေးထားသလို မက်ဆင်လိုပက်ဇ်နဲ့ ကီဘယ်တို့ရဲ့ ကွင်းလယ်ဘောလုံးထိန်းချုပ်မှုကို အဓိကအားထားမှာပါ။ ရင်းနက်စ်က အဆင့်သုံးမှာ ၁၃ မှတ်နဲ့ ရပ်တည်နေပြီး အော်ဇေးကို လေးဂိုးတစ်ဂိုးနိုင်ပြီးနောက် ဥရောပပွဲမှာလည်း နောက်ကလိုက်ကစားပြီး အနိုင်ရထားပါတယ်။ တိုက်စစ်က ဘူလေယာဒီယာရဲ့ နှစ်ဂိုးသွင်းနိုင်မှုနဲ့ လီပေါလ်ရဲ့ ဂိုးရနိုင်မှုအပေါ် ယုံကြည်ရသော်လည်း အဝေးကွင်းနှစ်ပွဲဆက် ဂိုးမသွင်းနိုင်ခဲ့တာကို သတိထားရပါမယ်။ ပဲရစ်အိမ်ကွင်းအင်အားကြောင့် ပွဲခက်နိုင်ပေမယ့် တိုက်စစ်အရည်အသွေးနဲ့ မကြာသေးမီက ပွဲပြန်လည်ပြင်နိုင်မှုအရ **ရင်းနက်စ် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**ပဲရစ်**အက်ဖ်စီဟာ ဒီရာသီ လိဂူးဝမ်းမှာ အိမ်ကွင်းရလဒ်ကောင်းနေပြီး ခြောက်ပွဲမှာ ၁၁ မှတ်စုဆောင်းထားသော်လည်း နောက်ဆုံး လော်ရီယန်ကို တစ်ဂိုးပြတ်ရှုံးခဲ့တာကြောင့် ဂိုးရှေ့ထိရောက်မှု ပြန်လည်လိုအပ်လာပါတယ်။ နည်းပြ လီယမ်ရိုဆီနီယာရဲ့အသင်းက ခံစစ်တည်ဆောက်ပုံကောင်းပြီး အိမ်ကွင်းသုံးပွဲမှာ တစ်ဂိုးသာပေးထားသလို မက်ဆင်လိုပက်ဇ်နဲ့ ကီဘယ်တို့ရဲ့ ကွင်းလယ်ဘောလုံးထိန်းချုပ်မှုကို အဓိကအားထားမှာပါ။ **ရင်းနက်စ်**က အဆင့်သုံးမှာ ၁၃ မှတ်နဲ့ ရပ်တည်နေပြီး အော်ဇေးကို လေးဂိုးတစ်ဂိုးနိုင်ပြီးနောက် ဥရောပပွဲမှာလည်း နောက်ကလိုက်ကစားပြီး အနိုင်ရထားပါတယ်။ တိုက်စစ်က ဘူလေယာဒီယာရဲ့ နှစ်ဂိုးသွင်းနိုင်မှုနဲ့ လီပေါလ်ရဲ့ ဂိုးရနိုင်မှုအပေါ် ယုံကြည်ရသော်လည်း အဝေးကွင်းနှစ်ပွဲဆက် ဂိုးမသွင်းနိုင်ခဲ့တာကို သတိထားရပါမယ်။ ပဲရစ်အိမ်ကွင်းအင်အားကြောင့် ပွဲခက်နိုင်ပေမယ့် တိုက်စစ်အရည်အသွေးနဲ့ မကြာသေးမီက ပွဲပြန်လည်ပြင်နိုင်မှုအရ **ရင်းနက်စ် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/paris-fc/preview/paris-fc-vs-rennes-prediction-team-news-lineups_607008.html",
         "https://www.sportsmole.co.uk/football/ligue-1/table.html"
@@ -3393,7 +3425,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/paris-fc/preview/paris-fc-vs-rennes-prediction-team-news-lineups_607008.html",
@@ -3413,14 +3445,14 @@
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null,
-      "oddsSourceUrl": null,
-      "oddsMarket": "Full-time 1X2",
+      "homeOdds": "1.641",
+      "drawOdds": "4.140",
+      "awayOdds": "4.880",
+      "oddsProvider": "Pinnacle",
+      "oddsSourceUrl": "https://www.pinnacle.com/en/soccer/france-ligue-1/matchups/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": null,
+      "oddsVerifiedDate": "2026-10-18",
       "homeLastFive": [
         {
           "result": "L",
@@ -3556,7 +3588,7 @@
         "sourceUrl": null,
         "checkedAt": "2026-10-18"
       },
-      "dailyPreviewText": "လိုင်ယွန်ဟာ လိဂူးဝမ်း ပထမခြောက်ပွဲမှာ ၁၁ မှတ်ရပြီး အဆင့်လေးမှာ ရပ်တည်နေပေမယ့် နောက်ဆုံး လန်းစ်ကို နှစ်ဂိုးတစ်ဂိုးရှုံးခဲ့တာက ဒီရာသီ ပထမဆုံးလိဂ်ရှုံးပွဲပါ။ ဒါပေမယ့် ကြားရက် ယူရိုပါလိဂ်မှာ ပဲလေ့စ်ကို သုံးဂိုးနှစ်ဂိုး အနိုင်ရထားတဲ့အတွက် နည်းပြ ပေါ်လိုဖွန်ဆီကာရဲ့အသင်း ပြန်လည်အရှိန်ရနေပါတယ်။ အဲဒီပွဲမှာ ကိုရန်တင်တိုလစ်ဆို၊ နူမာနဲ့ ဆူလ်ခ်တို့က ဂိုးရခဲ့ပြီး အိမ်ကွင်းမှာ အခွင့်အရေးပြန်ပြောင်းနိုင်မှု မြင့်ပါတယ်။ နိစ်ကလည်း စထရာဘော့ကို နှစ်ဂိုးတစ်ဂိုး အနိုင်ယူပြီး ကလော့စ်က နောက်ကျအနိုင်ဂိုး သွင်းပေးခဲ့သလို နောက်ဆုံးနှစ်ပွဲဆက် နိုင်ထားတာကြောင့် လျှော့တွက်မရပါဘူး။ သို့ပေမယ့် နိစ်ဟာ ဒီရာသီ အဝေးကွင်းလိဂ်ပွဲတွေမှာ ဂိုးမသွင်းနိုင်သေးတာကြောင့် လိုင်ယွန်ရဲ့ အိမ်ကွင်းခံစစ်ကို ဖောက်ဖျက်ဖို့ ခက်နိုင်ပါတယ်။ အိမ်ကွင်းဖိအားနဲ့ ရှေ့တန်းဂိုးသွင်းရွေးချယ်စရာ ပိုကျယ်ပြန့်တဲ့ **လိုင်ယွန် ကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "**လိုင်ယွန်**ဟာ လိဂူးဝမ်း ပထမခြောက်ပွဲမှာ ၁၁ မှတ်ရပြီး အဆင့်လေးမှာ ရပ်တည်နေပေမယ့် နောက်ဆုံး လန်းစ်ကို နှစ်ဂိုးတစ်ဂိုးရှုံးခဲ့တာက ဒီရာသီ ပထမဆုံးလိဂ်ရှုံးပွဲပါ။ ဒါပေမယ့် ကြားရက် ယူရိုပါလိဂ်မှာ ပဲလေ့စ်ကို သုံးဂိုးနှစ်ဂိုး အနိုင်ရထားတဲ့အတွက် နည်းပြ ပေါ်လိုဖွန်ဆီကာရဲ့အသင်း ပြန်လည်အရှိန်ရနေပါတယ်။ အဲဒီပွဲမှာ ကိုရန်တင်တိုလစ်ဆို၊ နူမာနဲ့ ဆူလ်ခ်တို့က ဂိုးရခဲ့ပြီး အိမ်ကွင်းမှာ အခွင့်အရေးပြန်ပြောင်းနိုင်မှု မြင့်ပါတယ်။ **နိစ်**ကလည်း စထရာဘော့ကို နှစ်ဂိုးတစ်ဂိုး အနိုင်ယူပြီး ကလော့စ်က နောက်ကျအနိုင်ဂိုး သွင်းပေးခဲ့သလို နောက်ဆုံးနှစ်ပွဲဆက် နိုင်ထားတာကြောင့် လျှော့တွက်မရပါဘူး။ သို့ပေမယ့် နိစ်ဟာ ဒီရာသီ အဝေးကွင်းလိဂ်ပွဲတွေမှာ ဂိုးမသွင်းနိုင်သေးတာကြောင့် လိုင်ယွန်ရဲ့ အိမ်ကွင်းခံစစ်ကို ဖောက်ဖျက်ဖို့ ခက်နိုင်ပါတယ်။ အိမ်ကွင်းဖိအားနဲ့ ရှေ့တန်းဂိုးသွင်းရွေးချယ်စရာ ပိုကျယ်ပြန့်တဲ့ **လိုင်ယွန် ကို ရွေးချယ်ပါတယ်။**",
       "researchSources": [
         "https://www.sportsmole.co.uk/football/lyon/preview/lyon-vs-nice-prediction-team-news-lineups_607007.html",
         "https://www.sportsmole.co.uk/football/ligue-1/table.html"
@@ -3580,7 +3612,7 @@
       },
       "previewJournalist": {
         "version": "2026-10-18",
-        "status": "user_requested_publish",
+        "status": "owner_approved_published",
         "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
         "reportDate": "2026-10-18",
         "sourceUrl": "https://www.sportsmole.co.uk/football/lyon/preview/lyon-vs-nice-prediction-team-news-lineups_607007.html",
@@ -3592,7 +3624,15 @@
         "တိုလစ်ဆို၊ နူမာနဲ့ ဆူလ်ခ်တို့က ဂိုးသွင်းပြီး အခွင့်အရေးရလာတဲ့ နည်းလမ်းမျိုးစုံကို ပြသနိုင်ခဲ့ကြပါတယ်။ နည်းပြ ဖွန်ဆီကာအနေနဲ့ ဒဏ်ရာရှိတဲ့ ခံစစ်နေရာတွေကို သတိထားရပေမယ့် ကွင်းလယ်က တိုက်စစ်ထိ ထောက်ပံ့မှုက အားကောင်းနေပါတယ်။",
         "နိစ်က နှစ်ပွဲဆက်အနိုင်ရထားပြီး ကလော့စ်ရဲ့ နောက်ကျဂိုးက တိုက်စစ်က လွယ်လွယ်မလျှော့တတ်တာကို ပြသပါတယ်။ ဒါပေမယ့် ဒီရာသီ အဝေးကွင်းလိဂ်ပွဲတွေမှာ ဂိုးမသွင်းနိုင်သေးတာကြောင့် လိုင်ယွန်အိမ်ကွင်းကာကွယ်မှုကို ကျော်နိုင်ဖို့ ခက်ခဲတဲ့အခြေအနေပါ။",
         "နှစ်ဖက်လက်ရှိခြေစွမ်းကို နှိုင်းယှဉ်ကြည့်ရင် နိစ်ထက် အိမ်ကွင်းတည်ငြိမ်မှုနဲ့ တိုက်စစ်ဖန်တီးနိုင်မှု ပိုအားကောင်းနေတဲ့ **လိုင်ယွန် ကို ရွေးချယ်ပါတယ်။**"
-      ]
+      ],
+      "specialRiskNote": "နိစ်ရဲ့ နောက်ဆုံးနှစ်ပွဲဆက်နိုင်မှုနဲ့ လိုင်ယွန်ရဲ့ ခံစစ်ဒဏ်ရာအခြေအနေက ဧည့်သည်တန်ပြန်တိုက်စစ်အတွက် အခွင့်အရေးဖန်တီးနိုင်ပါတယ်။",
+      "specialResearchSources": [
+        "https://www.sportsmole.co.uk/football/lyon/preview/lyon-vs-nice-prediction-team-news-lineups_607007.html",
+        "https://www.sportsmole.co.uk/football/ligue-1/table.html",
+        "https://www.pinnacle.com/en/soccer/france-ligue-1/matchups/"
+      ],
+      "specialPreparedDate": "2026-10-18",
+      "specialPickLabel": "လိုင်ယွန်"
     }
   ],
   "noFixturesLeagues": []
