@@ -18,11 +18,16 @@ const LOGIN_PATHS = new Set(["/login", "/login/", "/login.html"]);
 const LOGOUT_PATHS = new Set(["/logout", "/logout/"]);
 const encoder = new TextEncoder();
 
-/* GOAL ZONE APK analytics. Only /future-code-journal/android/ is tracked.
+/* GOAL ZONE analytics. Only the journal home, journal odds and APK page are tracked.
  * Cloudflare D1 binding (optional until enabled): GOALZONE_ANALYTICS_DB
  * Visitor IDs are random first-party cookies, never names, email or raw IP.
  */
 const GZ_PREFIX = "/future-code-journal/android/";
+const GZ_JOURNAL_PAGES = new Map([
+  ["/future-code-journal/", "Goal Zone Journal"],
+  ["/future-code-journal/index.html", "Goal Zone Journal"],
+  ["/future-code-journal/odds.html", "Goal Zone Odds"]
+]);
 const GZ_STATS_PATHS = new Set([GZ_PREFIX + "stats.html", GZ_PREFIX + "stats/"]);
 const GZ_VISIT_PATH = GZ_PREFIX + "api/visit";
 const GZ_REPORT_PATH = GZ_PREFIX + "api/stats";
@@ -100,10 +105,10 @@ async function gzStats(request, env) {
   try {
     await db.prepare(GZ_SCHEMA).run();
     const [totals, daily, apps, countries, recent] = await Promise.all([
-      db.prepare("SELECT COUNT(CASE WHEN event_type='visit' THEN 1 END) AS views, COUNT(DISTINCT CASE WHEN event_type='visit' THEN visitor_hash END) AS visitors, COUNT(CASE WHEN event_type='download' THEN 1 END) AS downloads FROM gz_analytics WHERE day >= ?").bind(since).first(),
-      db.prepare("SELECT day, COUNT(CASE WHEN event_type='visit' THEN 1 END) AS views, COUNT(DISTINCT CASE WHEN event_type='visit' THEN visitor_hash END) AS visitors, COUNT(CASE WHEN event_type='download' THEN 1 END) AS downloads FROM gz_analytics WHERE day >= ? GROUP BY day ORDER BY day DESC").bind(since).all(),
+      db.prepare("SELECT COUNT(CASE WHEN event_type IN ('visit', 'website_visit') THEN 1 END) AS views, COUNT(DISTINCT CASE WHEN event_type IN ('visit', 'website_visit') THEN visitor_hash END) AS visitors, COUNT(CASE WHEN event_type='website_visit' THEN 1 END) AS websiteViews, COUNT(DISTINCT CASE WHEN event_type='website_visit' THEN visitor_hash END) AS websiteVisitors, COUNT(CASE WHEN event_type='visit' THEN 1 END) AS apkViews, COUNT(DISTINCT CASE WHEN event_type='visit' THEN visitor_hash END) AS apkVisitors, COUNT(CASE WHEN event_type='download' THEN 1 END) AS downloads FROM gz_analytics WHERE day >= ?").bind(since).first(),
+      db.prepare("SELECT day, COUNT(CASE WHEN event_type IN ('visit', 'website_visit') THEN 1 END) AS views, COUNT(DISTINCT CASE WHEN event_type IN ('visit', 'website_visit') THEN visitor_hash END) AS visitors, COUNT(CASE WHEN event_type='website_visit' THEN 1 END) AS websiteViews, COUNT(DISTINCT CASE WHEN event_type='website_visit' THEN visitor_hash END) AS websiteVisitors, COUNT(CASE WHEN event_type='visit' THEN 1 END) AS apkViews, COUNT(DISTINCT CASE WHEN event_type='visit' THEN visitor_hash END) AS apkVisitors, COUNT(CASE WHEN event_type='download' THEN 1 END) AS downloads FROM gz_analytics WHERE day >= ? GROUP BY day ORDER BY day DESC").bind(since).all(),
       db.prepare("SELECT app, COUNT(*) AS downloads FROM gz_analytics WHERE day >= ? AND event_type='download' GROUP BY app ORDER BY downloads DESC").bind(since).all(),
-      db.prepare("SELECT country, COUNT(DISTINCT visitor_hash) AS visitors, COUNT(*) AS views FROM gz_analytics WHERE day >= ? AND event_type='visit' GROUP BY country ORDER BY views DESC LIMIT 15").bind(since).all(),
+      db.prepare("SELECT country, COUNT(DISTINCT visitor_hash) AS visitors, COUNT(*) AS views FROM gz_analytics WHERE day >= ? AND event_type IN ('visit', 'website_visit') GROUP BY country ORDER BY views DESC LIMIT 15").bind(since).all(),
       db.prepare("SELECT created_at, app, country FROM gz_analytics WHERE day >= ? AND event_type='download' ORDER BY id DESC LIMIT 20").bind(since).all()
     ]);
     return gzJson({
@@ -115,6 +120,24 @@ async function gzStats(request, env) {
   } catch {
     return gzJson({error:"Analytics database is unavailable. Verify the Cloudflare D1 binding."}, 503);
   }
+}
+async function gzJournalPage(request, env, label) {
+  // Server-side count works even when JavaScript is disabled. Count only actual
+  // successful HTML GET responses from the two Goal Zone journal routes.
+  const asset = await env.ASSETS.fetch(request);
+  if (request.method !== "GET" || !asset.ok || gzIsBot(request) ||
+      !(asset.headers.get("Content-Type") || "").includes("text/html")) return asset;
+  let cookie = null;
+  try {
+    cookie = await gzStore(request, env, "website_visit", label);
+  } catch {
+    // Site availability must never depend on the analytics database.
+  }
+  if (!cookie) return asset;
+  const headers = new Headers(asset.headers);
+  headers.set("Set-Cookie", cookie);
+  headers.set("Cache-Control", "private, no-store");
+  return new Response(asset.body, {status: asset.status, statusText: asset.statusText, headers});
 }
 async function gzDownload(request, env) {
   // Count only complete APK GET requests. HEAD and Range probes are excluded.
@@ -353,6 +376,7 @@ export default {
       return serveMain(request, env);
     }
     if (GZ_APK.test(path)) return gzDownload(request, env);
+    if (GZ_JOURNAL_PAGES.has(path)) return gzJournalPage(request, env, GZ_JOURNAL_PAGES.get(path));
     // Shared data, scripts, brand routes and assets are publicly accessible.
     return env.ASSETS.fetch(request);
   }
