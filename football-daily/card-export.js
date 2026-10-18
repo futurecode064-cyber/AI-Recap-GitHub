@@ -120,7 +120,7 @@
   if(renderScale!==1)ctx.scale(renderScale,renderScale);
   const isYKZ=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
   const isBW=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
-  const isFCJ=document.documentElement?.dataset?.footballBrandName==="FUTURE CODE နေ့စဉ် ဘောလုံးဂျာနယ်";
+  const isFCJ=document.documentElement?.dataset?.footballBrandName==="FUTURE CODE အားကစား ဂျာနယ်";
   const isKTF=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
   const my=match.myanmarOdds||{};
   await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl,LEAGUE_CRESTS[match.league]].filter(Boolean));
@@ -140,19 +140,20 @@
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"KTF");
   }
   if(isFCJ){
-   text(ctx,"FUTURE CODE နေ့စဉ် ဘောလုံးဂျာနယ်",W/2,44,25,C.orange,true,"center",W-320);
+   text(ctx,"FUTURE CODE အားကစား ဂျာနယ်",W/2,44,25,C.orange,true,"center",W-320);
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"FC");
   }
   const heroY=86,heroH=387,sideW=450,middleW=252;
   const lx=M,rx=W-M-sideW;
   // Only genuine football club logos, centered in each team's half.
-  fill(ctx,lx,heroY,sideW,heroH,isYKZ?"#321317":isBW?"#12386d":isKTF?"#4e121b":isFCJ?"#3a224e":"#26343b");
-  fill(ctx,rx,heroY,sideW,heroH,isYKZ?"#2b2118":isBW?"#082744":isKTF?"#422125":isFCJ?"#224338":"#193c37");
+  fill(ctx,lx,heroY,sideW,heroH,isYKZ?"#321317":isBW?"#12386d":isKTF?"#4e121b":isFCJ?"#292114":"#26343b");
+  fill(ctx,rx,heroY,sideW,heroH,isYKZ?"#2b2118":isBW?"#082744":isKTF?"#422125":isFCJ?"#17150f":"#193c37");
   const light=ctx.createLinearGradient(W/2-145,heroY,W/2+145,heroY+heroH);
-  light.addColorStop(0,isYKZ?"#21080c":isBW?"#062041":isKTF?"#270609":isFCJ?"#24122f":"#092333");
-  light.addColorStop(.5,isYKZ?"#401616":isBW?"#146ab3":isKTF?"#89212a":isFCJ?"#72558b":"#1b344f");
-  light.addColorStop(1,isYKZ?"#1a0b0b":isBW?"#09172f":isKTF?"#240a0e":isFCJ?"#173b36":"#051521");
+  light.addColorStop(0,isYKZ?"#21080c":isBW?"#062041":isKTF?"#270609":isFCJ?"#100f0c":"#092333");
+  light.addColorStop(.5,isYKZ?"#401616":isBW?"#146ab3":isKTF?"#89212a":isFCJ?"#88672d":"#1b344f");
+  light.addColorStop(1,isYKZ?"#1a0b0b":isBW?"#09172f":isKTF?"#240a0e":isFCJ?"#15120c":"#051521");
   fill(ctx,lx+sideW,heroY,middleW,heroH,light);
+  if(isFCJ&&!transparent)k.brandArtwork?.(ctx,lx,heroY,W-M*2,heroH,.55);
   const badgeSize=178;
   const crestY=heroY+(heroH-badgeSize)/2;
   crest(ctx,match.homeCrestUrl,lx+(sideW-badgeSize)/2,crestY,badgeSize,home);

@@ -81,9 +81,11 @@
    {header:"#0856c4",deep:"#072d77",accent:"#d9eefe",bodyText:"#131720"}:
    brand==="ko-thet-family"||brandName==="Ko Thet Family ဘောလုံးဂျာနယ်"?
    {header:"#830b15",deep:"#45060c",accent:"#ffdc78",bodyText:"#131720"}:
-   brand==="future-code-journal"||brandName==="FUTURE CODE နေ့စဉ် ဘောလုံးဂျာနယ်"?{header:"#783891",deep:"#241433",accent:"#aaf9dc",bodyText:"#131720"}:
+   brand==="future-code-journal"||brandName==="FUTURE CODE အားကစား ဂျာနယ်"?{header:"#5d4822",deep:"#12110e",accent:"#edc66b",bodyText:"#fff0d2"}:
    {header:"#215c55",deep:"#163e3b",accent:"#ffcb92",bodyText:"#131720"};
-  const white="#ffffff",light="#f7f8fa",rule="#cbd2da",upper="#e7e9ed",upperAlt="#dfe2e7";
+  const isFCJ=brand==="future-code-journal";
+  const white=isFCJ?"#151410":"#ffffff",light=isFCJ?"#211e17":"#f7f8fa",rule=isFCJ?"#66502d":"#cbd2da",upper=isFCJ?"#3b301b":"#e7e9ed",upperAlt=isFCJ?"#302818":"#dfe2e7";
+  const headerText=isFCJ?"#fff2cf":white;
   const widths=[110,396,166,152,152,176],xs=[M];
   for(const w of widths)xs.push(xs[xs.length-1]+w);
 
@@ -93,11 +95,12 @@
   fill(ctx,0,0,W,13,palette.accent);
   fill(ctx,0,13,W,193,palette.deep);
   fill(ctx,18,31,W-36,153,palette.header,12);
+  if(isFCJ)kit.brandArtwork?.(ctx,W-440,32,420,153,.65);
   const logoUrl=document.documentElement?.dataset?.footballBrandLogoUrl;
   if(logoUrl)crest(ctx,logoUrl,W-122,50,78,"⚽");
   text(ctx,brandName,40,64,brand==="future-code-journal"?31:24,palette.accent,true,"left",W-230);
-  text(ctx,"ယနေ့ ပေါက်ကြေးများ",40,119,36,white,true);
-  text(ctx,"မြန်မာစံတော်ချိန် · "+String(data.reportDate||""),40,168,17,white,false);
+  text(ctx,"ယနေ့ ပေါက်ကြေးများ",40,119,36,headerText,true);
+  text(ctx,"မြန်မာစံတော်ချိန် · "+String(data.reportDate||""),40,168,17,headerText,false);
   text(ctx,data.matches.length+" ပွဲ",W-(logoUrl?150:44),165,19,palette.accent,true,"right");
   fill(ctx,0,206,W,5,palette.accent);
 
@@ -106,18 +109,18 @@
    // League banner and column titles are the ONLY colored table areas.
    fill(ctx,M,y,W-M*2,52,palette.header,9);
    crest(ctx,crests[league],M+12,y+9,34,"⚽");
-   text(ctx,leagues[league]||league,M+58,y+27,23,white,true,"left",W-M*2-72);
+   text(ctx,leagues[league]||league,M+58,y+27,23,headerText,true,"left",W-M*2-72);
    y+=58;
    fill(ctx,M,y,W-M*2,56,palette.deep);
    const titles=["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း","ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး","အင်တာနက်ခန့်မှန်းချက်"];
    for(let i=0;i<titles.length;i++){
     const x=xs[i],w=widths[i];
     const split=i===3||i===4;
-    text(ctx,titles[i],x+w/2,y+(split?16:29),fit(ctx,titles[i],w-10,17,13),white,true,"center",w-10);
+    text(ctx,titles[i],x+w/2,y+(split?16:29),fit(ctx,titles[i],w-10,17,13),headerText,true,"center",w-10);
     if(split){
      fill(ctx,x+2,y+27,w/2-4,25,palette.header,5);
-     fill(ctx,x+w/2+2,y+27,w/2-4,25,"#f0f5f3",5);
-     text(ctx,"မူလ",x+w/4,y+40,15,white,true,"center",w/2-10);
+     fill(ctx,x+w/2+2,y+27,w/2-4,25,isFCJ?"#42341b":"#f0f5f3",5);
+     text(ctx,"မူလ",x+w/4,y+40,15,headerText,true,"center",w/2-10);
      text(ctx,"ယခု",x+3*w/4,y+40,15,palette.bodyText,true,"center",w/2-10);
      fill(ctx,x+w/2,y+27,1,25,"#ffffffa0");
     }
@@ -128,7 +131,7 @@
     fill(ctx,xs[2],y,widths[2],68,index%2===0?upper:upperAlt);
     // Latest quotes are pale-green cells, left empty until the update arrives.
     for(const i of [3,4]){
-     fill(ctx,xs[i]+widths[i]/2,y,widths[i]/2,68,index%2===0?"#eef7f2":"#e3f0e9");
+     fill(ctx,xs[i]+widths[i]/2,y,widths[i]/2,68,isFCJ?(index%2===0?"#302818":"#392e19"):(index%2===0?"#eef7f2":"#e3f0e9"));
      fill(ctx,xs[i]+widths[i]/2,y,1,68,rule);
     }
     // Spreadsheet-style vertical and horizontal rules stay in the exported PNG.
@@ -140,7 +143,7 @@
     crest(ctx,m.homeCrestUrl,mid-50,y+20,29,m.home);
     crest(ctx,m.awayCrestUrl,mid+21,y+20,29,m.away);
     drawTeamName(ctx,m.home,mid-59,y+34,136,"right",palette.bodyText,text,fit);
-    text(ctx,"VS",mid,y+34,14,"#9d2636",true,"center");
+    text(ctx,"VS",mid,y+34,14,isFCJ?palette.accent:"#9d2636",true,"center");
     drawTeamName(ctx,m.away,mid+59,y+34,136,"left",palette.bodyText,text,fit);
     const up=String(m.upperTeam||"—");
     text(ctx,up,xs[2]+widths[2]/2,y+34,fit(ctx,up,widths[2]-10,18,14),palette.bodyText,true,"center",widths[2]-10);
@@ -153,7 +156,7 @@
      text(ctx,original,x+half/2,y+34,fit(ctx,original,half-8,19,15),palette.bodyText,true,"center",half-8);
      if(latestValue!==null&&latestValue!==undefined&&String(latestValue).trim()!==""){
       const updated=String(latestValue);
-      text(ctx,updated,x+half*1.5,y+34,fit(ctx,updated,half-8,19,15),"#164c3d",true,"center",half-8);
+      text(ctx,updated,x+half*1.5,y+34,fit(ctx,updated,half-8,19,15),isFCJ?palette.accent:"#164c3d",true,"center",half-8);
      }
     }
     text(ctx,m.pdfLastColumn??"—",xs[5]+widths[5]/2,y+34,19,palette.bodyText,true,"center",widths[5]-10);

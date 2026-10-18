@@ -2,7 +2,7 @@
 (function(){
  const branded=document.documentElement?.dataset?.footballBrandName==="YKZ FAMILY GROUP";
  const bwBranded=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
- const fcjBranded=document.documentElement?.dataset?.footballBrandName==="FUTURE CODE နေ့စဉ် ဘောလုံးဂျာနယ်";
+ const fcjBranded=document.documentElement?.dataset?.footballBrandName==="FUTURE CODE အားကစား ဂျာနယ်";
  const ktfBranded=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
  const C=branded?
   {bg:"#111111",head:"#960000",panel:"#242424",panelAlt:"#353030",divider:"#812f2f",orange:"#ffcf58",pale:"#fff8e9",muted:"#e0cbc0",white:"#fff9ee"}:
@@ -10,7 +10,7 @@
   {bg:"#061122",head:"#103869",panel:"#0e2a4c",panelAlt:"#16395d",divider:"#326ea5",orange:"#59c3ff",pale:"#e3f5ff",muted:"#b6d8f7",white:"#f3f9ff"}:
  ktfBranded?
   {bg:"#15090d",head:"#671019",panel:"#34181d",panelAlt:"#45242a",divider:"#9d7133",orange:"#ffd269",pale:"#fff0d4",muted:"#e1c4a6",white:"#fff5e6"}:
- fcjBranded?{bg:"#160e24",head:"#49285d",panel:"#2b1c3b",panelAlt:"#3a274b",divider:"#816096",orange:"#9cf1d8",pale:"#fff6ff",muted:"#e0caeb",white:"#f9f4ff"}:
+ fcjBranded?{bg:"#090909",head:"#322714",panel:"#191713",panelAlt:"#282217",divider:"#7d6032",orange:"#edc66b",pale:"#fff4d9",muted:"#c9bda3",white:"#fff8e8"}:
   {bg:"#101b20",head:"#1d3135",panel:"#203436",panelAlt:"#263d3d",divider:"#425855",orange:"#ffac75",pale:"#f7f5eb",muted:"#bcd0c9",white:"#f5f7f3"};
  const FONT='"Noto Sans Myanmar",sans-serif';
  const imageCache=new Map();
@@ -79,7 +79,8 @@
  const resolved=new Map();
  async function preloadImages(urls){
   const brandUrl=document.documentElement?.dataset?.footballBrandLogoUrl;
-  await Promise.all([...new Set([...urls,brandUrl].filter(Boolean))].map(async url=>{const im=await loadImage(url);resolved.set(url,im)}));
+  const artworkUrl=fcjBranded?document.documentElement?.dataset?.footballBrandArtworkUrl:null;
+  await Promise.all([...new Set([...urls,brandUrl,artworkUrl].filter(Boolean))].map(async url=>{const im=await loadImage(url);resolved.set(url,im)}));
  }
 
  // Optional sourced photos are cropped to the visual hero area. Returns false when unavailable.
@@ -94,6 +95,12 @@
   try{ctx.drawImage(img,sx,sy,cropW,cropH,x,y,w,h)}catch(_){ctx.restore();return false}
   ctx.restore();return true;
  }
+ function brandArtwork(ctx,x,y,w,h,opacity=.5){
+  if(!fcjBranded)return false;
+  const url=document.documentElement?.dataset?.footballBrandArtworkUrl;
+  ctx.save();ctx.globalAlpha=opacity;
+  const drawn=photoCover(ctx,url,x,y,w,h);ctx.restore();return drawn;
+ }
  async function download(canvas,filename){
   if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
   const blob=await Promise.race([
@@ -107,7 +114,7 @@
  function day(v){return /^\d{4}-\d{2}-\d{2}$/.test(v||"")?v:"unknown"}
  function top(ctx,W,title,date,detail){
   fill(ctx,0,0,W,13,C.orange);fill(ctx,0,13,W,195,C.head);
-  text(ctx,branded?"YKZ FAMILY GROUP":bwBranded?"BW SPORT ဘောလုံးဂျာနယ်":ktfBranded?"KO THET FAMILY ဘောလုံးဂျာနယ်":fcjBranded?"FUTURE CODE နေ့စဉ် ဘောလုံးဂျာနယ်":"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
+  text(ctx,branded?"YKZ FAMILY GROUP":bwBranded?"BW SPORT ဘောလုံးဂျာနယ်":ktfBranded?"KO THET FAMILY ဘောလုံးဂျာနယ်":fcjBranded?"FUTURE CODE အားကစား ဂျာနယ်":"FUTURE CODE FOOTBALL DAILY",28,48,22,C.orange,true);
   if(branded){
    text(ctx,"အတူရှေ့ဆက် YKZ",Math.min(W-260,340),48,19,C.pale,true);
    crest(ctx,document.documentElement?.dataset?.footballBrandLogoUrl,W-113,22,78,"YKZ");
@@ -117,9 +124,10 @@
    crest(ctx,document.documentElement?.dataset?.footballBrandLogoUrl,W-113,22,78,"KTF");
   }
   if(fcjBranded)crest(ctx,document.documentElement?.dataset?.footballBrandLogoUrl,W-113,22,78,"FC");
+  if(fcjBranded)brandArtwork(ctx,W-430,64,420,135,.55);
   text(ctx,title,28,110,38,C.white,true);
   text(ctx,"မြန်မာစံတော်ချိန်  ·  "+day(date),28,164,18,C.muted);
   text(ctx,detail,W-28,164,19,C.orange,true,"right");
  }
- window.FutureCodeCanvasKit={C,create,fill,line,text,fit,wrap,fonts,preloadImages,crest,photoCover,download,day,top};
+ window.FutureCodeCanvasKit={C,create,fill,line,text,fit,wrap,fonts,preloadImages,crest,photoCover,brandArtwork,download,day,top};
 })();

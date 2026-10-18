@@ -2,14 +2,14 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "fbc7b3e1ccad6ed525d490e8f96a5f652568191d",
-  "source_tree": "92a2ff9eca9721e200556bef5430384763e97c62",
-  "target_tree": "92a2ff9eca9721e200556bef5430384763e97c62",
+  "source_commit": "575774afd09c8b3aa5586fc7ef4dd7b20ef32056",
+  "source_tree": "5e56508eaede28aa39fa88cc9b176424b0cfdda8",
+  "target_tree": "5e56508eaede28aa39fa88cc9b176424b0cfdda8",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-18T08:37:50.607Z",
+  "last_synced_utc": "2026-10-18T08:54:51.277Z",
   "reconciled_on": "2026-10-18",
   "reconciliation_note": "Verified production tree fad49c74855579d93a3c93bce2bd73c89f11534c against canonical source. Only new journal assets, brand-specific exporter branches and corrected tests differ; retained all independent root files.",
-  "last_synced_method": "Owner-requested journal publication after 147/147 tests; compared entire production football subtree; data, login worker and existing branded pages unchanged."
+  "last_synced_method": "Owner-approved black/gold Sports Journal branding and football photography. 148 passing tests. Other site files and daily data preserved."
 }
