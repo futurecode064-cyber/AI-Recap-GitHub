@@ -7,12 +7,13 @@
  const designs=[['best','Best Your Choice','#1300a8'],['htet','Htet Ko','#145800'],['colour','Colour Background Change','#a41625']];
  const names={'Premier League':'အင်္ဂလန် ပရီးမီးယားလိဂ်','Serie A':'အီတလီ စီးရီးအေ','La Liga':'စပိန် လာလီဂါ','Bundesliga':'ဂျာမနီ ဘွန်ဒက်စ်လီဂါ','Ligue 1':'ပြင်သစ် လီဂူးဝမ်း'};
  const logos={'Premier League':'https://crests.football-data.org/PL.png','Serie A':'https://crests.football-data.org/SA.png','La Liga':'https://crests.football-data.org/PD.png','Bundesliga':'https://crests.football-data.org/BL1.png','Ligue 1':'https://crests.football-data.org/FL1.png'};
+ const localLeagues={'Premier League':'pl','Serie A':'sa','La Liga':'pd','Bundesliga':'bl','Ligue 1':'fl'};
  const split=(rows,mode)=>rows.length>1&&(mode==='two'||mode==='auto'&&rows.length>12)?[rows.slice(0,Math.ceil(rows.length/2)),rows.slice(Math.ceil(rows.length/2))]:[rows];
  const assetCache=new Map();function asset(src){if(!assetCache.has(src))assetCache.set(src,new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>reject(Error('Frame banner ပုံ ရယူမရပါ'));im.src=src;}));return assetCache.get(src);}
  function dark(hex,f){return '#'+hex.slice(1).match(/../g).map(s=>Math.round(parseInt(s,16)*f).toString(16).padStart(2,'0')).join('');}
  function grouped(rows){const map=new Map();for(const row of rows){if(!map.has(row.league))map.set(row.league,[]);map.get(row.league).push(row);}return [...map];}
  async function draw(rows,settings,part,total){
-  const kit=window.FutureCodeCanvasKit;if(!kit)throw Error('PNG module မရသေးပါ');await kit.fonts();await kit.preloadImages(rows.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl,logos[m.league]]).filter(Boolean));
+  const kit=window.FutureCodeCanvasKit;if(!kit)throw Error('PNG module မရသေးပါ');await kit.fonts();await kit.preloadImages(rows.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl,localLeagues[m.league]?null:logos[m.league]]).filter(Boolean));const leagueImages=new Map();await Promise.all([...new Set(rows.map(m=>m.league))].filter(l=>localLeagues[l]).map(async l=>leagueImages.set(l,await asset('./assets/table-odds-frames/league-'+localLeagues[l]+'.png'))));
   const {design,colour,date}=settings,custom=design[0]==='colour',theme=custom?colour:design[2];
   const top=custom?null:await asset('./assets/table-odds-frames/'+design[0]+'-top.jpg'),bottom=custom?null:await asset('./assets/table-odds-frames/'+design[0]+'-bottom.jpg');
   const th=top?Math.round(top.height*W/top.width):0,bh=bottom?Math.round(bottom.height*W/bottom.width):0;const leagues=grouped(rows);const H=th+76+leagues.length*(HEADER+16)+rows.length*ROW+bh+24;
@@ -22,7 +23,7 @@
   let y=th+38;text(date+' · '+rows.length+' ပွဲ'+(total>1?' · ပုံ '+part+'/'+total:''),W/2,y,27);y=th+76;
   for(const [league,items] of leagues){
    const grad=ctx.createLinearGradient(M,y,W-M,y+HEADER);grad.addColorStop(0,theme);grad.addColorStop(1,dark(theme,.65));kit.fill(ctx,M,y,W-2*M,HEADER,grad,14);
-   kit.fill(ctx,M,y,125,HEADER,'#fff',14);kit.crest(ctx,logos[league],M+27,y+16,72,league,true);
+   kit.fill(ctx,M,y,125,HEADER,'#fff',14);if(leagueImages.has(league))ctx.drawImage(leagueImages.get(league),M+12,y+12,100,76);else kit.crest(ctx,logos[league],M+27,y+16,72,league);
    text(names[league]||league,edges[1]+widths[1]/2,y+HEADER/2,29,'#fff',true,'center',widths[1]-20);text('ကြေးပေးအသင်း',edges[2]+widths[2]/2,y+HEADER/2,26,'#fff',true,'center',widths[2]-12);
    for(const [col,label] of [[3,'ဘော်ဒီကြေး'],[5,'ဂိုးပေါင်းကြေး']]){text(label,edges[col]+125,y+33,28);for(let j=0;j<2;j++){if(j===0)kit.fill(ctx,edges[col+j]+5,y+65,widths[col+j]-10,32,'#eeeeed',16);text(j===0?'မူလ':'ယခု',edges[col+j]+widths[col+j]/2,y+81,23,j===0?'#151515':'#fff');}}
    text('အင်တာနက်',edges[7]+widths[7]/2,y+HEADER/2,23,'#fff',true,'center',widths[7]-8);y+=HEADER;
