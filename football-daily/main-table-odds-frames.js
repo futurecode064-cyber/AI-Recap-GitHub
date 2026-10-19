@@ -13,31 +13,8 @@
  function dark(hex,f){return '#'+hex.slice(1).match(/../g).map(s=>Math.round(parseInt(s,16)*f).toString(16).padStart(2,'0')).join('');}
  function grouped(rows){const map=new Map();for(const row of rows){if(!map.has(row.league))map.set(row.league,[]);map.get(row.league).push(row);}return [...map];}
  async function draw(rows,settings,part,total){
-  const kit=window.FutureCodeCanvasKit;if(!kit)throw Error('PNG module မရသေးပါ');await kit.fonts();await kit.preloadImages(rows.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl,localLeagues[m.league]?null:logos[m.league]]).filter(Boolean));const leagueImages=new Map();await Promise.all([...new Set(rows.map(m=>m.league))].filter(l=>localLeagues[l]).map(async l=>leagueImages.set(l,await asset('./assets/table-odds-frames/league-'+localLeagues[l]+'.png'))));
-  const {design,colour,date}=settings,custom=design[0]==='colour',theme=custom?colour:design[2];
-  const artwork=design[3]?await asset('./assets/table-odds-frames/'+design[0]+'-frame.jpg'):null;
-  const top=custom||artwork?null:await asset('./assets/table-odds-frames/'+design[0]+'-top.jpg'),bottom=custom||artwork?null:await asset('./assets/table-odds-frames/'+design[0]+'-bottom.jpg');
-  const th=artwork?Math.round(artwork.height*design[3].top*W/artwork.width):top?Math.round(top.height*W/top.width):0,bh=artwork?Math.round(artwork.height*design[3].bottom*W/artwork.width):bottom?Math.round(bottom.height*W/bottom.width):0;const leagues=grouped(rows);const H=th+76+leagues.length*(HEADER+16)+rows.length*ROW+bh+24;
-  const {canvas,ctx}=kit.create(W,H);const bg=ctx.createLinearGradient(0,0,W,H);bg.addColorStop(0,dark(theme,.48));bg.addColorStop(.5,theme);bg.addColorStop(1,dark(theme,.7));kit.fill(ctx,0,0,W,H,bg);
-  if(artwork){const st=artwork.height*design[3].top,sb=artwork.height*design[3].bottom;ctx.drawImage(artwork,0,st,artwork.width,artwork.height-st-sb,0,th,W,H-th-bh);if(th)ctx.drawImage(artwork,0,0,artwork.width,st,0,0,W,th);if(bh)ctx.drawImage(artwork,0,artwork.height-sb,artwork.width,sb,0,H-bh,W,bh);}
-  const text=(s,x,y,size=26,c='#fff',bold=true,align='center',max)=>kit.text(ctx,s??'',x,y,size,c,bold,align,max);
-  if(top){ctx.drawImage(top,0,0,W,th);if(design[0]==='best'){kit.fill(ctx,680/1200*W,207/1200*W,165/1200*W,41/1200*W,'#fff',24);text(date,762.5/1200*W,228/1200*W,25,'#061347');}}
-  let y=th+38;if(artwork)kit.fill(ctx,W/2-320,th+8,640,60,dark(theme,.7),12);text(date,W/2,y,27,'#ffffff');y=th+76;
-  for(const [league,items] of leagues){
-   const grad=ctx.createLinearGradient(M,y,W-M,y+HEADER);grad.addColorStop(0,theme);grad.addColorStop(1,dark(theme,.65));kit.fill(ctx,M,y,W-2*M,HEADER,grad,14);
-   kit.fill(ctx,M,y,125,HEADER,'#fff',14);if(leagueImages.has(league))ctx.drawImage(leagueImages.get(league),M+12,y+12,100,76);else kit.crest(ctx,logos[league],M+27,y+16,72,league);
-   text(names[league]||league,edges[1]+widths[1]/2,y+HEADER/2,29,'#fff',true,'center',widths[1]-20);text('ကြေးပေးအသင်း',edges[2]+widths[2]/2,y+HEADER/2,26,'#fff',true,'center',widths[2]-12);
-   for(const [col,label] of [[3,'ဘော်ဒီကြေး'],[5,'ဂိုးပေါင်းကြေး']]){text(label,edges[col]+125,y+33,28);for(let j=0;j<2;j++){if(j===0)kit.fill(ctx,edges[col+j]+5,y+65,widths[col+j]-10,32,'#eeeeed',16);text(j===0?'မူလ':'ယခု',edges[col+j]+widths[col+j]/2,y+81,23,j===0?'#151515':'#fff');}}
-   text('အင်တာနက်',edges[7]+widths[7]/2,y+HEADER/2,23,'#fff',true,'center',widths[7]-8);y+=HEADER;
-   for(const m of items){
-    kit.fill(ctx,M,y,W-2*M,ROW,'#fff');kit.fill(ctx,edges[2],y,widths[2],ROW,'#e4e4e4');ctx.strokeStyle='#c8c8c8';ctx.lineWidth=1;ctx.strokeRect(M,y,W-2*M,ROW);for(const x of edges.slice(1,-1)){ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y+ROW);ctx.stroke();}
-    text(m.kickoff||m.kickoffDisplay||'',edges[0]+widths[0]/2,y+ROW/2,23,'#111',true,'center',widths[0]-10);
-    const x=edges[1];text(m.home,x+217,y+ROW/2,26,'#111',true,'right',200);kit.crest(ctx,m.homeCrestUrl,x+228,y+13,42,m.home);text('နှင့်',x+291,y+ROW/2,22,'#111');kit.crest(ctx,m.awayCrestUrl,x+311,y+13,42,m.away);text(m.away,x+364,y+ROW/2,26,'#111',true,'left',195);
-    text(m.upperTeam||'',edges[2]+widths[2]/2,y+ROW/2,25,'#111',true,'center',widths[2]-14);
-    const quotes=[m.bodyOdds,m.currentBodyOdds,m.goalTotalOdds,m.currentGoalTotalOdds,m.pdfLastColumn];for(let i=0;i<quotes.length;i++)text(quotes[i]??'',edges[i+3]+widths[i+3]/2,y+ROW/2,i===4?28:31,'#111',true,'center',widths[i+3]-12);y+=ROW;
-   }y+=16;
-  }
-  if(bottom)ctx.drawImage(bottom,0,H-bh,W,bh);return canvas;
+  if(!window.FutureCodeOddsDomFrame?.draw)throw Error('Website PNG renderer မရသေးပါ။ Refresh လုပ်ပါ။');
+  return window.FutureCodeOddsDomFrame.draw(rows,settings,part,total);
  }
 
  // Frame ZIP is main-only and intentionally contains PNGs, not an extra merged image.
