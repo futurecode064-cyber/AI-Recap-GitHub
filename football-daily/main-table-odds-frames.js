@@ -91,7 +91,7 @@
     if(!download)el('tofOutput').scrollIntoView({behavior:'smooth',block:'start'});
   }catch(e){
     console.error('Main odds frame PNG failed',e);
-    el('tofStatus').textContent='PNG မထွက်ပါ — '+(e?.message||'မသိရှိသော error');
+    el('tofStatus').textContent='PNG မထွက်ပါ — '+(e?.message||e?.reason||e?.type||e?.name||String(e)||'Screenshot Error');
   }finally{
     busy=false;
     section.querySelectorAll('button,input,select').forEach(x=>x.disabled=false);

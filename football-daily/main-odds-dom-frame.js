@@ -102,7 +102,7 @@
     const width=getTableWidth();
     const stage=document.createElement("div");
     stage.setAttribute("aria-hidden","true");
-    stage.style.cssText="position:fixed;left:-30000px;top:0;width:"+width+
+    stage.style.cssText="position:fixed;left:0;top:0;width:"+width+
       "px;pointer-events:none;overflow:visible;z-index:-1000;";
     const root=document.createElement("div");
     root.className="odds-content fc-odds-direct-export";
@@ -138,47 +138,108 @@
     document.body.appendChild(stage);
     return {stage,root,width};
   }
+
+  function captureFailure(error) {
+    if (error instanceof Error && error.message) return error.message;
+    if (typeof error === "string" && error.trim()) return error.trim();
+    if (error && typeof error === "object") {
+      const message=String(error.message||error.reason||error.type||error.name||"");
+      if(message.trim())return message.slice(0,180);
+    }
+    return "Browser Screenshot Error";
+  }
+  async function limited(promise,ms,label) {
+    let timeout;
+    try {
+      return await Promise.race([
+        promise,
+        new Promise((_,reject)=>{
+          timeout=setTimeout(()=>reject(Error(label+" အချိန်ကြာလွန်းပါသည်")),ms);
+        })
+      ]);
+    } finally {clearTimeout(timeout);}
+  }
   async function captureWebsite(rows,theme,date) {
-    if(!window.domtoimage?.toBlob)
-      throw Error("Website Screenshot Library မရသေးပါ။ Refresh လုပ်ပါ။");
     const {stage,root,width}=cloneWebsiteOdds(rows,theme,date);
     try {
       await waitFonts();
       prepareOneLine(root);
       const images=[...root.querySelectorAll("img")];
-      images.forEach(i=>{i.loading="eager";i.decoding="sync";});
-      // Image requests use the same URLs as the visible website, not a new
-      // drawing system. Wait briefly for browser-cached logos.
+      images.forEach(img=>{img.loading="eager";img.decoding="sync";});
+      // Keep every website logo in the actual cloned DOM.
       await Promise.race([
-        Promise.allSettled(images.map(i=>i.decode?i.decode():Promise.resolve())),
-        new Promise(resolve=>setTimeout(resolve,5000))
+        Promise.allSettled(images.map(img=>img.decode?img.decode():Promise.resolve())),
+        new Promise(resolve=>setTimeout(resolve,4000))
       ]);
       await waitFrame();
       const height=Math.ceil(root.scrollHeight);
       if(height<70||height>13000)
         throw Error("PNG ပုံအမြင့်များလွန်းပါသည်။ ပုံခွဲ၍ Download လုပ်ပါ။");
+      const errors=[];
 
-      let timer;
-      try {
-        const blob=await Promise.race([
-          window.domtoimage.toBlob(root,{
-            bgcolor:"#10191d",width:width*SCALE,height:height*SCALE,
+      // Primary: locally vendored html2canvas captures the already-styled
+      // WEBSITE DOM (headers, logos, layout, text) without rebuilding a table.
+      // Unlike the 2017 SVG serializer it tolerates blocked cross-origin
+      // crests and CSS font-face rules without rejecting the whole image.
+      if(typeof window.html2canvas==="function") {
+        try {
+          const canvas=await limited(window.html2canvas(root,{
+            backgroundColor:"#10191d",
+            scale:SCALE,
+            useCORS:true,
+            allowTaint:false,
+            imageTimeout:6500,
+            logging:false,
+            removeContainer:true,
+            width:width,
+            height:height,
+            windowWidth:Math.max(1250,width),
+            windowHeight:Math.max(800,Math.min(17000,height)),
+            scrollX:0,
+            scrollY:0,
+            foreignObjectRendering:false
+          }),25000,"Website HTML Screenshot");
+          if(!canvas||!canvas.width||!canvas.height)
+            throw Error("HTML Screenshot canvas အလွတ်ဖြစ်နေပါသည်");
+          window.FutureCodeOddsDomFrame.lastCapture="html2canvas-website-dom";
+          return {picture:canvas,height:canvas.height,width:canvas.width};
+        }catch(error){
+          errors.push("HTML: "+captureFailure(error));
+          console.warn("Main odds HTML screenshot failed",error);
+        }
+      }else errors.push("HTML: Screenshot Library မရပါ");
+
+      // Secondary: original SVG DOM capture. Still no synthetic/redrawn table.
+      if(window.domtoimage?.toBlob) {
+        try {
+          const blob=await limited(window.domtoimage.toBlob(root,{
+            bgcolor:"#10191d",
+            width:width*SCALE,
+            height:height*SCALE,
             style:{
-              width:width+"px",height:height+"px",
-              transform:"scale("+SCALE+")",transformOrigin:"top left"
+              width:width+"px",
+              height:height+"px",
+              transform:"scale("+SCALE+")",
+              transformOrigin:"top left"
             },
             imagePlaceholder:"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-          }),
-          new Promise((_,reject)=>{timer=setTimeout(
-            ()=>reject(Error("Website Screenshot အချိန်ကုန်သွားပါပြီ")),28000);})
-        ]);
-        if(!blob?.size)throw Error("Website Screenshot ဖိုင်အလွတ် ဖြစ်နေပါသည်။");
-        const picture=await blobImage(blob);
-        window.FutureCodeOddsDomFrame.lastCapture="exact-website-dom";
-        return {picture,height:height*SCALE,width:width*SCALE};
-      }finally{clearTimeout(timer);}
-    } finally {stage.remove();}
+          }),20000,"Website SVG Screenshot");
+          if(!blob?.size)throw Error("SVG Screenshot ဖိုင်အလွတ်ဖြစ်နေပါသည်");
+          const picture=await blobImage(blob);
+          window.FutureCodeOddsDomFrame.lastCapture="svg-website-dom";
+          return {picture,height:height*SCALE,width:width*SCALE};
+        }catch(error){
+          errors.push("SVG: "+captureFailure(error));
+          console.warn("Main odds SVG screenshot failed",error);
+        }
+      }else errors.push("SVG: Screenshot Library မရပါ");
+
+      throw Error("Website PNG Screenshot မအောင်မြင်ပါ — "+errors.join(" / "));
+    }finally{
+      stage.remove();
+    }
   }
+
   async function draw(rows,settings){
     const kit=window.FutureCodeCanvasKit;
     if(!kit)throw Error("PNG Canvas module မရသေးပါ။");
