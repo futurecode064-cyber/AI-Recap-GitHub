@@ -286,5 +286,5 @@
     header.insertAdjacentElement("afterend",bar);
   }
   window.GoalZoneDownloads=Object.freeze({downloadAI});
-  document.addEventListener("DOMContentLoaded",()=>{addWebBanner();makePanel();});
+  document.addEventListener("DOMContentLoaded",()=>{addWebBanner();});
 })();
