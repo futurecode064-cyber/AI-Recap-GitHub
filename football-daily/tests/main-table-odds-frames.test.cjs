@@ -122,6 +122,17 @@ test('One-click selected frame download supports both single PNG and two-page ZI
   assert.match(source,/ပွဲအားလုံး · ၂ ပုံခွဲ Download/);
   assert.doesNotMatch(source,/1:1 Square|တစ်ပုံ ၃ ပွဲ|တစ်ပုံ ၂ ပွဲ|တစ်ပုံ ၁ ပွဲ/);
 });
+test('League download mode shows selectable leagues and filters PNG and ZIP rows',()=>{
+  assert.match(source,/<option value=\"league\">လိဂ်ရွေးပြီး Download<\/option>/);
+  assert.match(source,/<section id=\"tofLeaguePicker\" class=\"tof-league-picker\" hidden>/);
+  assert.match(source,/input\.type='checkbox';input\.value=league;input\.checked=true/);
+  assert.match(source,/el\('tofSplit'\)\.onchange=\(\)=>\{el\('tofLeaguePicker'\)\.hidden=el\('tofSplit'\)\.value!=='league'/);
+  assert.match(source,/sheet\.matches\.filter\(m=>leagues\.has\(m\.league\)\)/);
+  assert.match(source,/const list=rowsForMode\(sheet,mode\)/);
+  assert.match(source,/const rows=rowsForMode\(sheet,mode\)/);
+  assert.match(source,/tofLeagueAll/);
+  assert.match(source,/tofLeagueNone/);
+});
 test('ZIP contains each frame twice for the two-image split',async()=>{
   const {api,calls}=setup();
   const rows=Array.from({length:19},(_,i)=>({league:'Premier League',home:'H'+i,away:'A'+i}));
@@ -161,8 +172,8 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
 
 test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-aligned-team-columns-v6/);
-  assert.match(html,/main-table-odds-frames\.js\?v=20261019-aligned-team-columns-v6/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-league-picker-v7/);
+  assert.match(html,/main-table-odds-frames\.js\?v=20261019-league-picker-v7/);
   assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
 });
 
@@ -176,7 +187,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-aligned-team-columns-v6/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-league-picker-v7/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);
