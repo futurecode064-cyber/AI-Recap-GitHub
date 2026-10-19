@@ -15,7 +15,14 @@
  const FONT='"Noto Sans Myanmar",sans-serif';
  const imageCache=new Map();
  function sleep(ms){return new Promise(done=>setTimeout(done,ms))}
- async function fonts(){if(document.fonts?.ready)await Promise.race([document.fonts.ready.catch(()=>{}),sleep(900)])}
+ async function fonts(){
+  if(!document.fonts?.ready)return;
+  const brandedExport=Boolean(document.documentElement?.dataset?.footballBrandName);
+  const ready=brandedExport&&document.fonts.load
+   ?Promise.all([document.fonts.ready,document.fonts.load('800 24px "Noto Sans Myanmar"','မြန်မာ'),document.fonts.load('500 24px "Noto Sans Myanmar"','မြန်မာ')]).catch(()=>{})
+   :document.fonts.ready.catch(()=>{});
+  await Promise.race([ready,sleep(brandedExport?6500:900)]);
+ }
  function create(width,height){
   const canvas=document.createElement("canvas");canvas.width=width;canvas.height=Math.ceil(height);
   const ctx=canvas.getContext("2d");if(!ctx)throw Error("Canvas 2D is not supported");
@@ -53,9 +60,10 @@
   if(imageCache.has(src))return imageCache.get(src);
   const task=new Promise(resolve=>{
    const img=new Image();let done=false;
-   const finish=v=>{if(done)return;done=true;clearTimeout(timer);resolve(v)};
-   const timer=setTimeout(()=>finish(null),950);
-   img.crossOrigin="anonymous";img.onload=()=>finish(img);img.onerror=()=>finish(null);img.src=src;
+   const finish=v=>{if(done)return;done=true;clearTimeout(timer);if(!v)imageCache.delete(src);resolve(v)};
+   const brandedExport=Boolean(document.documentElement?.dataset?.footballBrandName);
+   const timer=setTimeout(()=>finish(null),brandedExport?6500:950);
+   img.crossOrigin="anonymous";img.onload=()=>finish(img);img.onerror=()=>finish(null);img.src=window.FutureCodeBrandExportData?.imageUrl(src)||src;
   });
   imageCache.set(src,task);return task;
  }
