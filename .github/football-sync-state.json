@@ -2,31 +2,20 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "df9f912909a3997909a7a7c7339fe627d3a64f9a",
-  "source_tree": "50687f206d834bd23847d8a45f8dfa899255dce0",
-  "target_tree": "50687f206d834bd23847d8a45f8dfa899255dce0",
+  "source_commit": "40221c1e53210772b9ca3a2f5a9252de1a3ec447",
+  "source_tree": "2d2f0bdd039fc7f5245144d983efc30f44edfaf4",
+  "target_tree": "2d2f0bdd039fc7f5245144d983efc30f44edfaf4",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-18T10:34:09.385081+00:00",
-  "reconciled_on": "2026-10-18",
-  "reconciliation_note": "Reconciled concurrent, already incorporated Goal Zone production owner-analytics change after workflow run #113 attempt 2 push race. Verified all newer production blobs match canonical source; no source files overwritten.",
-  "last_synced_method": "goal-zone-android-release",
+  "last_synced_utc": "2026-10-19T01:40:03.711Z",
+  "reconciled_on": "2026-10-19",
+  "reconciliation_note": "Verified existing production differences: preserved analytics activation note into canonical source and updated production analytics tests to canonical superset. All existing football runtime and daily data blobs matched before adding the editor. Full resulting football-daily trees are identical. Drift guard remains enabled.",
+  "last_synced_method": "owner-editor-bootstrap",
   "guard_reconciliation": {
-    "previous_target_tree": "46f91135a5b44c1c611bd3a16cf74c49a043c415",
-    "verified_production_tree": "da27edd747eba3d94d626c1211881e3809b6712d",
-    "verified_canonical_source_tree": "50687f206d834bd23847d8a45f8dfa899255dce0",
-    "verified_existing_production_changes": 6,
-    "source_only_changes": [
-      "_worker.js",
-      "future-code-journal/android/ANALYTICS_SETUP.md",
-      "future-code-journal/android/index.html",
-      "future-code-journal/android/stats.html",
-      "tests/goal-zone-analytics.test.cjs"
-    ],
-    "pending_source_changes": [
-      "future-code-journal/android/ANALYTICS_SETUP.md",
-      "tests/goal-zone-analytics.test.cjs"
-    ]
+    "previous_target_tree": "50687f206d834bd23847d8a45f8dfa899255dce0",
+    "verified_production_head": "40ed51fddc18db671ed2d65d0508e39f54090c15",
+    "verified_canonical_commit": "40221c1e53210772b9ca3a2f5a9252de1a3ec447",
+    "identical_result_tree": "2d2f0bdd039fc7f5245144d983efc30f44edfaf4"
   }
 }

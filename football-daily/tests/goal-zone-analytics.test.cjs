@@ -24,3 +24,18 @@ test("Goal Zone download page is tracked and dashboard supports daily filters", 
   assert.match(stats, /Last 30 days/);
   assert.match(stats, /robots.*noindex,nofollow/);
 });
+
+test("Goal Zone football journal and odds pages count as website views separately from APK visits", () => {
+  assert.match(worker, /const GZ_JOURNAL_PAGES = new Map/);
+  assert.match(worker, /"\/future-code-journal\/", "Goal Zone Journal"/);
+  assert.match(worker, /"\/future-code-journal\/odds\.html", "Goal Zone Odds"/);
+  assert.match(worker, /gzStore\(request, env, "website_visit", label\)/);
+  assert.match(worker, /event_type='website_visit'/);
+  assert.match(worker, /ASSETS\.fetch\(request\)/);
+  assert.match(stats, /id="websiteViews"/);
+  assert.match(stats, /id="websiteVisitors"/);
+  assert.match(stats, /id="apkViews"/);
+  assert.match(stats, /id="apkVisitors"/);
+  assert.match(stats, /Web Visitors/);
+  assert.match(stats, /Web Views/);
+});

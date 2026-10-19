@@ -186,7 +186,7 @@ function nextPage(raw) {
       raw.includes("\\") || raw.includes("\r") || raw.includes("\n")) return "/";
   try {
     const parsed = new URL(raw, "https://future-code-login.invalid");
-    if (parsed.origin !== "https://future-code-login.invalid" || !(MAIN_PATHS.has(parsed.pathname) || GZ_STATS_PATHS.has(parsed.pathname))) return "/";
+    if (parsed.origin !== "https://future-code-login.invalid" || !(MAIN_PATHS.has(parsed.pathname) || GZ_STATS_PATHS.has(parsed.pathname) || parsed.pathname === "/editor/" || parsed.pathname === "/editor/setup.html")) return "/";
     return parsed.pathname + parsed.search;
   } catch { return "/"; }
 }
@@ -344,6 +344,16 @@ async function serveMain(request, env) {
 export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
+    if (path.startsWith("/api/editor/")) return editorApi(request, env, path);
+    if (path === "/editor" || path.startsWith("/editor/")) {
+      if (!ready(env)) return unavailable();
+      if (!(await hasSession(request, env))) return redirect("/login?next=/editor/", 302);
+      if (path === "/editor") return redirect("/editor/", 302);
+      const asset = await env.ASSETS.fetch(request);
+      const headers = new Headers(asset.headers);
+      for (const [key, value] of Object.entries(httpHeaders())) headers.set(key, value);
+      return new Response(asset.body, { status: asset.status, headers });
+    }
     if (LOGIN_PATHS.has(path)) {
       if (!ready(env)) return unavailable();
       if (request.method === "GET" || request.method === "HEAD") {
@@ -381,3 +391,144 @@ export default {
     return env.ASSETS.fetch(request);
   }
 };
+
+// Owner content editor. GitHub credentials stay in encrypted Cloudflare secrets.
+const EDITOR_SOURCE = 'futurecode064-cyber/future-code-football-daily';
+const EDITOR_DELIVERY = 'futurecode064-cyber/AI-Recap-GitHub';
+const EDITOR_WORKFLOW = 'football-standalone-sync.yml';
+const EDITOR_LEAGUE_SIZES = {'Premier League':20,Championship:24,'League One':24,'La Liga':20,'La Liga 2':22,'Serie A':20,'Serie B':20,Bundesliga:18,'2. Bundesliga':18,'Ligue 1':18,'Ligue 2':18};
+function editorDay(offset=0){return gzDate(new Date(Date.now()+offset*86400000));}
+function editorDate(value){return typeof value==='string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value)) && new Date(value+'T00:00:00Z').toISOString().slice(0,10)===value;}
+function editorUrl(value){try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password;}catch{return false;}}
+function editorErrors(bundle){
+ const errors=[], report=bundle?.report, sheet=bundle?.odds;
+ if(!report||!sheet||!Array.isArray(report.matches)||!Array.isArray(sheet.matches))return ['ပွဲနှင့် ပေါက်ကြေးဖိုင် ပုံစံမမှန်ပါ'];
+ if(report.reportDate!==editorDay()||sheet.reportDate!==report.reportDate)errors.push('ယနေ့ မြန်မာရက်စွဲနှင့် report/odds ရက်စွဲတို့ ကိုက်ညီရမည်');
+ if(report.published!==true||report.matchDateTimezone!=='Asia/Yangon')errors.push('Published နှင့် Asia/Yangon သတ်မှတ်ချက်လိုအပ်သည်');
+ if(!report.matches.length||report.matches.length>120)errors.push('ပွဲအရေအတွက် ၁ မှ ၁၂၀ အတွင်း ဖြစ်ရမည်');
+ if(!Array.isArray(report.noFixturesLeagues))errors.push('noFixturesLeagues စာရင်းလိုအပ်သည်');
+ if(sheet.matches.length!==report.matches.length)errors.push('ပွဲနှင့် ကြေး အရေအတွက် မတူပါ');
+ const seen=new Set(),ranks=new Set();
+ report.matches.forEach((m,i)=>{
+  const prefix='ပွဲ '+(i+1)+' · ',e=text=>errors.push(prefix+text);
+  if(!m||typeof m!=='object'){e('ပုံစံမမှန်ပါ');return;}
+  for(const k of ['home','away','homeDisplay','awayDisplay','league','kickoffYangon'])if(typeof m[k]!=='string'||!m[k].trim()||m[k].length>200)e(k+' ဖြည့်ပါ');
+  if(m.home===m.away)e('အိမ်ရှင်နှင့် ဧည့်သည် တူနေသည်');
+  const identity=[m.league,m.home,m.away].join('|');if(seen.has(identity))e('ပွဲထပ်နေသည်');seen.add(identity);
+  if(!editorDate(m.kickoffCalendarDate)||![report.reportDate,editorDay(1)].includes(m.kickoffCalendarDate)||m.nightEditorialDate!==report.reportDate)e('ကန်မည့်ရက် / ညစာရင်းရက် စစ်ပါ');
+  const preview=m.dailyPreviewText;
+  if(typeof preview!=='string'||preview.trim().length<300||preview.length>20000||/\n/.test(preview)||!preview.endsWith('။**'))e('ပွဲကြိုစာမူ စာလုံး ၃၀၀ အထက်၊ စာပိုဒ်တစ်ခုနှင့် bold ရွေးချယ်စာသားအဆုံးသတ် လိုအပ်သည်');
+  if(/ခန့်မှန်း\s*ဂိုးရလဒ်/.test(preview||''))e('ပုံမှန်ပွဲကြိုတွင် ခန့်မှန်းဂိုး မထည့်ပါနှင့်');
+  if(m.previewJournalist?.status!=='owner_approved_published')e('ပိုင်ရှင်အတည်ပြုစာမူ metadata လိုအပ်သည်');
+  if(!editorUrl(m.fixtureSourceUrl||m.previewV2?.fixtureSourceUrl||m.researchSources?.[0]))e('ပွဲအချက်အလက်ရင်းမြစ် HTTPS URL ဖြည့်ပါ');
+  for(const side of ['home','away']){
+   if(m[side+'CrestUrl']&&!editorUrl(m[side+'CrestUrl']))e(side+' Logo HTTPS URL မမှန်ပါ');
+   const form=m[side+'LastFive'];
+   if(!Array.isArray(form)||form.length!==5||form.some(x=>!x||(!/^[WDL]$/.test(x.result||'')&&!(Number.isInteger(x.teamGoals)&&x.teamGoals>=0&&Number.isInteger(x.opponentGoals)&&x.opponentGoals>=0))||!editorUrl(x.sourceUrl)))e(side+' နောက်ဆုံး ၅ ပွဲနှင့် ရင်းမြစ် စစ်ပါ');
+   if(EDITOR_LEAGUE_SIZES[m.league]){
+    const r=m[side+'Standing'];if(!r||['played','wins','draws','losses','points','position'].some(k=>!Number.isInteger(r[k])||r[k]<0)||r.played!==r.wins+r.draws+r.losses||r.position<1||r.position>EDITOR_LEAGUE_SIZES[m.league])e(side+' standings (ကစားပြီး = နိုင်+သရေ+ရှုံး၊ အဆင့်၊ ရမှတ်) စစ်ပါ');
+   }
+  }
+  if(EDITOR_LEAGUE_SIZES[m.league]&&!editorUrl(m.standingsSourceUrl))e('Standings ရင်းမြစ် HTTPS URL ဖြည့်ပါ');
+  const prices=[m.homeOdds,m.drawOdds,m.awayOdds];if(prices.some(x=>x!==null&&x!==undefined&&x!=='')){
+   if(prices.some(x=>!Number.isFinite(Number(x))||Number(x)<=1)||!m.oddsProvider||!editorUrl(m.oddsSourceUrl))e('1X2 သုံးခုလုံး ၁ ထက်ကြီးသောကြေးနှင့် bookmaker/source ဖြည့်ပါ');
+  }
+  if(m.specialChoice===true){if(!Number.isInteger(m.specialChoiceRank)||m.specialChoiceRank<1||ranks.has(m.specialChoiceRank))e('Special နံပါတ် မထပ်စေရ');ranks.add(m.specialChoiceRank);
+   const p=m.specialAnalysisParagraphs;if(!Array.isArray(p)||!p.length||p.some(x=>typeof x!=='string'||x.length>20000)||!/^.*\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$/.test(p[p.length-1]||''))e('Special စာမူကို bold ရွေးချယ်စာသားဖြင့် အဆုံးသတ်ပါ');
+  }
+  const o=sheet.matches[i];if(!o||o.league!==m.league||o.canonicalHome!==m.home||o.canonicalAway!==m.away||o.home!==m.homeDisplay||o.away!==m.awayDisplay){e('ပွဲနှင့် ကြေး အသင်းအစဉ်မကိုက်ပါ');return;}
+  for(const k of ['bodyOdds','goalTotalOdds'])if(typeof o[k]!=='string'||!o[k].trim()||o[k].length>40)e('မူလ '+k+' ဖြည့်ပါ');
+  for(const k of ['currentBodyOdds','currentGoalTotalOdds','pdfLastColumn'])if(o[k]!==undefined&&(typeof o[k]!=='string'||o[k].length>40))e(k+' ပုံစံမမှန်ပါ');
+  for(const k of ['currentBodyOdds','currentGoalTotalOdds'])if(o[k]&&!/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(o[k]))e(k+' ကို -70၊ 1-30၊ 3+95၊ 1= ပုံစံဖြည့်ပါ');
+  if(![m.homeDisplay,m.awayDisplay].includes(o.upperTeam))e('ကြေးပေးအသင်းသည် ပွဲထဲကအသင်း ဖြစ်ရမည်');
+  if(!m.myanmarOdds||['upperTeam','bodyOdds','goalTotalOdds'].some(k=>m.myanmarOdds[k]!==o[k]))e('ကတ်နှင့် table မြန်မာကြေးမကိုက်ပါ');
+ });
+ if(bundle.results){const r=bundle.results;if(r.reportDate!==editorDay(-1)||!Array.isArray(r.matches)||r.matches.length>200)errors.push('မနေ့ကရလဒ် report မမှန်ပါ');else r.matches.forEach((m,i)=>{if(m.status==='finished'&&(!/^\d{1,2}-\d{1,2}$/.test(m.finalScore||'')||!editorUrl(m.resultSourceUrl)||!editorDate(m.resultVerifiedDate)))errors.push('မနေ့က ပွဲ '+(i+1)+' · FT ဂိုးနှင့် ရင်းမြစ် စစ်ပါ');});}
+ return errors.slice(0,150);
+}
+async function editorGithub(env,repo,path,method='GET',body){
+ const headers={'Accept':'application/vnd.github+json','User-Agent':'FutureCode-Owner-Editor','X-GitHub-Api-Version':'2022-11-28'};
+ if(env.FCD_EDITOR_GITHUB_TOKEN)headers.Authorization='Bearer '+env.FCD_EDITOR_GITHUB_TOKEN;
+ if(body!==undefined)headers['Content-Type']='application/json';
+ const r=await fetch('https://api.github.com/repos/'+repo+'/'+path,{method,headers,body:body===undefined?undefined:JSON.stringify(body),redirect:'error',signal:AbortSignal.timeout(15000)});
+ if(!r.ok){const error=new Error(r.status===404?'GitHub ဖိုင်/ခွင့်ပြုချက် မတွေ့ပါ':r.status===401||r.status===403?'GitHub credential သက်တမ်း/permission စစ်ပါ':r.status===409||r.status===422?'GitHub ပြိုင်ပြင်ထားနိုင်သည်။ Server data အသစ်ပြန်ယူပြီး ပြောင်းလဲမှုနှိုင်းယှဉ်ပါ':'GitHub ဝန်ဆောင်မှု အမှား '+r.status);error.status=r.status;throw error;}
+ return r.status===204?null:await r.json();
+}
+function editorDecode(content){const bytes=Uint8Array.from(atob(content.replace(/\s/g,'')),c=>c.charCodeAt(0));return JSON.parse(new TextDecoder().decode(bytes));}
+async function editorFile(env,repo,path,ref,optional=false){try{const d=await editorGithub(env,repo,'contents/'+path+'?ref='+encodeURIComponent(ref));return editorDecode(d.content);}catch(e){if(optional&&e.status===404)return null;throw e;}}
+async function editorBody(request){
+ if(request.headers.get('Content-Type')?.split(';')[0]!=='application/json')throw new Error('JSON request လိုအပ်သည်');
+ const reader=request.body?.getReader();if(!reader)throw new Error('Data မပါပါ');let n=0;const chunks=[];
+ while(true){const {done,value}=await reader.read();if(done)break;n+=value.byteLength;if(n>1500000){await reader.cancel();throw new Error('Data 1.5 MB ထက်ကြီးနေသည်');}chunks.push(value);}
+ const all=new Uint8Array(n);let pos=0;for(const c of chunks){all.set(c,pos);pos+=c.length;}return JSON.parse(new TextDecoder().decode(all));
+}
+async function editorDispatch(env){await editorGithub(env,EDITOR_DELIVERY,'actions/workflows/'+EDITOR_WORKFLOW+'/dispatches','POST',{ref:'main'});}
+async function editorApi(request,env,path){
+ if(!ready(env)||!await hasSession(request,env))return gzJson({error:'Owner login လိုအပ်သည်'},401);
+ const url=new URL(request.url);
+ if(request.method==='POST'&&(request.headers.get('Origin')!==url.origin||request.headers.get('X-Football-Editor')!=='1'||request.headers.get('Sec-Fetch-Site')==='cross-site'))return gzJson({error:'ဤ website editor မှသာ တင်နိုင်ပါသည်'},403);
+ try{
+  if(path==='/api/editor/state'&&request.method==='GET'){
+   const date=url.searchParams.get('date')||editorDay();if(!editorDate(date)||date>editorDay(1))return gzJson({error:'ရက်စွဲမမှန်ပါ'},400);
+   const ref=await editorGithub(env,EDITOR_SOURCE,'git/ref/heads/main'),head=ref.object.sha,previous=new Date(Date.parse(date+'T12:00:00Z')-86400000).toISOString().slice(0,10);
+   const [current,dated,odds,results,evening]=await Promise.all([editorFile(env,EDITOR_SOURCE,'football-daily/data/today.json',head),editorFile(env,EDITOR_SOURCE,'football-daily/data/archive/'+date+'.json',head,true),editorFile(env,EDITOR_SOURCE,'football-daily/data/odds/'+date+'.json',head,true),editorFile(env,EDITOR_SOURCE,'football-daily/data/archive/'+previous+'.json',head,true),editorFile(env,EDITOR_SOURCE,'football-daily/data/odds/evening/'+date+'.json',head,true)]);
+   if(odds&&evening?.reportDate===date)for(const [i,m] of odds.matches.entries()){const x=evening.matches?.find(x=>Number(x.row)===Number(m.pdfRow||m.number||i+1));if(x&&['league','home','away','upperTeam','kickoffDisplay'].every(k=>String(x[k]??'')===String(m[k]??''))&&x.morningBodyOdds===m.bodyOdds&&x.morningGoalTotalOdds===m.goalTotalOdds){m.currentBodyOdds=x.eveningBodyOdds||'';m.currentGoalTotalOdds=x.eveningGoalTotalOdds||'';}}
+   return gzJson({head,configured:Boolean(env.FCD_EDITOR_GITHUB_TOKEN),report:current.reportDate===date?current:dated||{reportDate:date,matches:[],noFixturesLeagues:[]},odds:odds||{reportDate:date,matches:[]},results:results||(current.reportDate===previous?current:null)});
+  }
+  if(path==='/api/editor/status'&&request.method==='GET'){
+   const sha=url.searchParams.get('commit');if(!/^[a-f0-9]{40}$/.test(sha||''))return gzJson({error:'Commit မမှန်ပါ'},400);
+   const expected=await editorFile(env,EDITOR_SOURCE,'football-daily/data/editor-publication.json',sha);
+   const canonical=await editorFile(env,EDITOR_SOURCE,'football-daily/data/editor-publication.json','main',true);
+   const workflowUrl='https://github.com/'+EDITOR_DELIVERY+'/actions/workflows/'+EDITOR_WORKFLOW;
+   if(canonical?.id!==expected.id)return gzJson({phase:'superseded',message:'နောက်ထပ် report အသစ်တင်ထားပါသည်။ နောက်ဆုံး data ကို ပြန်ဖွင့်ပါ။',workflowUrl});
+   const live=await env.ASSETS.fetch(new Request(url.origin+'/data/editor-publication.json?editor-check='+Date.now()));
+   if(live.ok){try{if((await live.json()).id===expected.id)return gzJson({phase:'live',message:'✓ ဤထုတ်ဝေမှု၏ marker ကို live deployment တွင် တွေ့ရှိပါပြီ။ Brand စာမျက်နှာနှင့် PNG ကို ဖွင့်စစ်ပါ။',workflowUrl});}catch{}}
+   const marker=await editorFile(env,EDITOR_DELIVERY,'football-daily/data/editor-publication.json','football-daily-render',true);
+   const runs=await editorGithub(env,EDITOR_DELIVERY,'actions/workflows/'+EDITOR_WORKFLOW+'/runs?per_page=5');
+   const run=runs.workflow_runs?.find(r=>Date.parse(r.created_at)>=Date.parse(expected.createdAt)-5000);
+   const mirrored=marker?.id===expected.id,failed=!mirrored&&run?.conclusion==='failure';
+   return gzJson({phase:failed?'failed':mirrored?'deploying':'queued',message:failed?'Production sync မအောင်မြင်ပါ။ GitHub error ကိုကြည့်ပါ။ Data ကို GitHub တွင် သိမ်းထားပြီးဖြစ်သည်။':mirrored?'GitHub production ဆီ ပို့ပြီးပါပြီ။ Cloudflare live deployment ကို စောင့်နေသည်။':'GitHub တွင် သိမ်းထားပြီး production sync ကို စောင့်နေသည်။',workflowUrl:run?.html_url||workflowUrl});
+  }
+  if(!['/api/editor/validate','/api/editor/publish','/api/editor/deliver'].includes(path)||request.method!=='POST')return gzJson({error:'Method/endpoint မမှန်ပါ'},405);
+  const body=await editorBody(request);
+  if(path==='/api/editor/deliver'){
+   if(!env.FCD_EDITOR_GITHUB_TOKEN)return gzJson({error:'Publish credential မချိတ်ရသေးပါ'},503);
+   if(!/^[a-f0-9]{40}$/.test(body.commit||''))return gzJson({error:'Commit မမှန်ပါ'},400);
+   const head=await editorGithub(env,EDITOR_SOURCE,'git/ref/heads/main');if(head.object.sha!==body.commit)return gzJson({error:'Report အသစ်ရှိနေသည်။ Server data ပြန်ဖွင့်ပါ။'},409);
+   await editorFile(env,EDITOR_SOURCE,'football-daily/data/editor-publication.json',body.commit);await editorDispatch(env);return gzJson({message:'သိမ်းပြီးသား report ကို production sync ပြန်ခေါ်ပြီးပါပြီ'});
+  }
+  const errors=editorErrors(body);if(errors.length)return gzJson({error:'အချက်အလက် ပြန်ပြင်ရန်လိုသည်',errors},422);
+  if(path==='/api/editor/validate')return gzJson({message:'✓ Data format စစ်ဆေးမှုအောင်မြင်သည်။ ဘောလုံးအချက်အလက်အမှန်ကို ပိုင်ရှင်က အတည်ပြုရန်လိုသည်။'});
+  if(!env.FCD_EDITOR_GITHUB_TOKEN)return gzJson({error:'FCD_EDITOR_GITHUB_TOKEN ကို Cloudflare Secret တွင် တစ်ကြိမ်ချိတ်ရန်လိုသည်'},503);
+  if(body.confirmed!==true)return gzJson({error:'ပိုင်ရှင် အတည်ပြုရန်လိုသည်'},400);
+  const ref=await editorGithub(env,EDITOR_SOURCE,'git/ref/heads/main'),head=ref.object.sha;
+  if(head!==body.expectedHead)return gzJson({error:'GitHub data ပြောင်းထားပါသည်။ Draft ဖိုင်သိမ်းပြီး Server data အသစ်နှင့် နှိုင်းယှဉ်ပါ။'},409);
+  const commit=await editorGithub(env,EDITOR_SOURCE,'git/commits/'+head),day=body.report.reportDate;
+  const old=await editorFile(env,EDITOR_SOURCE,'football-daily/data/today.json',head);
+  if(old.reportDate>day)return gzJson({error:'Report အသစ်ကို အဟောင်းဖြင့် အစားမထိုးနိုင်ပါ'},409);
+  const writes=new Map(),put=(p,d)=>writes.set('football-daily/'+p,JSON.stringify(d,null,2)+'\n');
+  if(old.reportDate<day&&editorDate(old.reportDate)){
+   const existing=await editorFile(env,EDITOR_SOURCE,'football-daily/data/archive/'+old.reportDate+'.json',head,true);
+   if(!existing)put('data/archive/'+old.reportDate+'.json',old);
+  }
+  if(body.results){
+   const date=body.results.reportDate,original=await editorFile(env,EDITOR_SOURCE,'football-daily/data/archive/'+date+'.json',head,true)||(old.reportDate===date?old:null);
+   if(!original||original.matches.length!==body.results.matches.length)return gzJson({error:'မနေ့ကပွဲစာရင်း ပြောင်းထားသည်။ ပြန်ဖွင့်ပါ။'},409);
+   const resultFields=['status','finalScore','resultSourceUrl','resultVerifiedDate'];
+   for(let i=0;i<original.matches.length;i++){
+    const before=original.matches[i],after=body.results.matches[i];if(before.home!==after.home||before.away!==after.away||before.league!==after.league)return gzJson({error:'မနေ့ကပွဲ အသင်းအစဉ်မကိုက်ပါ'},422);
+    for(const k of resultFields){if(after[k]===undefined)delete before[k];else before[k]=after[k];}
+   }
+   delete original.resultReview;put('data/archive/'+date+'.json',original);
+  }
+  put('data/today.json',body.report);put('data/archive/'+day+'.json',body.report);put('data/odds/'+day+'.json',body.odds);
+  put('data/odds/evening/'+day+'.json',{reportDate:day,title:day+' owner editor ယခုကြေး',matches:body.odds.matches.map((m,i)=>({row:Number(m.pdfRow||m.number||i+1),league:m.league,home:m.home,away:m.away,upperTeam:m.upperTeam,kickoffDisplay:m.kickoffDisplay,homeCrestUrl:m.homeCrestUrl,awayCrestUrl:m.awayCrestUrl,morningBodyOdds:m.bodyOdds,morningGoalTotalOdds:m.goalTotalOdds,eveningBodyOdds:m.currentBodyOdds||'',eveningGoalTotalOdds:m.currentGoalTotalOdds||''}))});
+  const publication={id:crypto.randomUUID(),createdAt:new Date().toISOString(),reportDate:day,source:'owner-content-editor'};put('data/editor-publication.json',publication);
+  const tree=await editorGithub(env,EDITOR_SOURCE,'git/trees','POST',{base_tree:commit.tree.sha,tree:[...writes].map(([path,content])=>({path,mode:'100644',type:'blob',content}))});
+  const saved=await editorGithub(env,EDITOR_SOURCE,'git/commits','POST',{message:'Publish owner football report '+day,tree:tree.sha,parents:[head]});
+  // Non-force fast-forward refuses concurrent writers. No partial data commits.
+  await editorGithub(env,EDITOR_SOURCE,'git/refs/heads/main','PATCH',{sha:saved.sha,force:false});
+  let dispatched=true;try{await editorDispatch(env);}catch{dispatched=false;}
+  return gzJson({commit:saved.sha,dispatched,message:dispatched?'Data ကို GitHub တွင် သိမ်းပြီး production sync ခေါ်ထားပါပြီ။ Live deployment ကို စောင့်ပါ။':'Data ကို GitHub တွင် သိမ်းပြီးပါပြီ။ Production ခေါ်မှု မအောင်မြင်သေးပါ။ အောက်က ပြန်ပို့ရန်ကို နှိပ်ပါ။'},202);
+ }catch(e){return gzJson({error:e instanceof SyntaxError?'JSON data မမှန်ပါ':e.message||'Editor ဝန်ဆောင်မှုအမှား'},e.status===409||e.status===422?409:502);}
+}
