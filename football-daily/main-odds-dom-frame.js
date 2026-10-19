@@ -64,7 +64,11 @@
         title.style.setProperty("overflow-wrap","normal","important");
       }
       for (const pair of group.querySelectorAll(".odds-matchup")) {
-        pair.style.setProperty("flex-wrap","nowrap","important");
+        // Each fixture uses the same five tracks. Team-name lengths can no
+        // longer push the crests or VS mark sideways from row to row.
+        pair.style.setProperty("display","grid","important");
+        pair.style.setProperty("grid-template-columns","minmax(0,1fr) 47px 26px 47px minmax(0,1fr)","important");
+        pair.style.setProperty("column-gap","3px","important");
         pair.style.setProperty("align-items","center","important");
         pair.style.setProperty("width","100%","important");
         const labels=[...pair.querySelectorAll(".club-label")];
@@ -189,13 +193,15 @@
         white-space:nowrap!important;
       }
       body .fc-odds-direct-export .odds-matchup {
-        display:flex!important;gap:8px!important;align-items:center!important;
-        flex-wrap:nowrap!important;
+        display:grid!important;
+        grid-template-columns:minmax(0,1fr) 47px 26px 47px minmax(0,1fr)!important;
+        column-gap:3px!important;align-items:center!important;
       }
       body .fc-odds-direct-export .odds-matchup .club-label {
         font:900 25px/1.6 "Noto Sans Myanmar",sans-serif!important;
         min-width:0!important;letter-spacing:0!important;white-space:nowrap!important;
         overflow:hidden!important;overflow-wrap:normal!important;word-break:normal!important;
+        width:100%!important;max-width:100%!important;flex:none!important;
       }
       body .fc-odds-direct-export .odds-matchup .team-badge {
         width:43px!important;height:43px!important;flex:0 0 43px!important;
@@ -262,7 +268,7 @@
       body .fc-odds-direct-export .odds-group .odds-table tbody td.odds-current {
         color:var(--sheet-deep)!important;
       }
-      body .fc-odds-direct-export .odds-matchup {gap:5px!important}
+      body .fc-odds-direct-export .odds-matchup {column-gap:3px!important}
       body .fc-odds-direct-export .odds-matchup .club-label {
         font:900 31px/1.65 "Noto Sans Myanmar",sans-serif!important;
       }
