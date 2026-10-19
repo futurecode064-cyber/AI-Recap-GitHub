@@ -94,7 +94,7 @@ function render(data){
  for(const match of data.matches){if(!grouped.has(match.league))grouped.set(match.league,[]);grouped.get(match.league).push(match);}
  for(const [league,matches] of grouped){
   const section=element("section","odds-group"),header=element("div","odds-league-header");
-  header.appendChild(leagueHeading(league));
+  if(!isMainOdds)header.appendChild(leagueHeading(league));
   const leagueButtons=element("div","odds-league-png-parts");
   makeOddsPngButtons(leagueButtons,data,matches,league);
   header.appendChild(leagueButtons);section.appendChild(header);
@@ -105,8 +105,18 @@ function render(data){
   }
   table.appendChild(columns);
   const thead=element("thead"),tr=element("tr","odds-heading-row"),sub=element("tr","odds-subheading-row");
-  for(const name of ["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း"]){
-   const th=element("th","odds-heading-fixed",name);th.rowSpan=2;tr.appendChild(th);
+  if(isMainOdds){
+   section.classList.add("main-compact-odds");
+   const logoCell=element("th","main-league-logo");logoCell.rowSpan=2;
+   const heading=leagueHeading(league);
+   logoCell.appendChild(heading.firstElementChild);
+   const nameCell=element("th","main-league-name",groups[league]||league);nameCell.rowSpan=2;
+   const upperCell=element("th","odds-heading-fixed","ကြေးပေးအသင်း");upperCell.rowSpan=2;
+   append(tr,logoCell,nameCell,upperCell);
+  }else{
+   for(const name of ["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း"]){
+    const th=element("th","odds-heading-fixed",name);th.rowSpan=2;tr.appendChild(th);
+   }
   }
   for(const name of ["ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး"]){
    const th=element("th","odds-heading-pair",name);th.colSpan=2;tr.appendChild(th);

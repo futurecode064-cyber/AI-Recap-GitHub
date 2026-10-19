@@ -316,3 +316,10 @@ body .odds-content .odds-league-header .odds-league-download{
  body .odds-content .odds-group .odds-table td.upper{font-size:15px!important}
  body .odds-content .odds-league-header h2.odds-league-heading{font-size:15px!important}
 }
+
+/* Main site's reference layout: league identity occupies the first two headers. */
+body .odds-content .main-compact-odds th.main-league-logo{text-align:center!important;padding:4px!important}
+body .odds-content .main-compact-odds th.main-league-logo .league-crest,
+body .odds-content .main-compact-odds th.main-league-logo .league-mark{display:inline-block!important;vertical-align:middle;width:40px!important;height:40px!important}
+body .odds-content .main-compact-odds th.main-league-name{white-space:nowrap!important;text-align:center!important}
+body .odds-content .main-compact-odds .odds-league-header:has(.odds-league-png-parts:empty){display:none!important}

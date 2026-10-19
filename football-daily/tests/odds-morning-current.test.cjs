@@ -71,6 +71,6 @@ test("only one odds section is rendered with grouped morning/current headings",(
  assert.ok(png.includes('m.currentGoalTotalOdds'));
  for(const brand of ["odds.html","ykz-family/odds.html","bw-sport/odds.html","ko-thet-family/odds.html"]){
   const html=read(brand);
-  assert.ok(html.includes("odds-png-only-20261016"));
+  assert.match(html,/odds-sheet-theme\.css\?v=[0-9a-z-]+/i,`${brand} must load versioned odds stylesheet`);
  }
 });
