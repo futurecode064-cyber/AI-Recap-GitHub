@@ -65,6 +65,8 @@
       }
       for (const pair of group.querySelectorAll(".odds-matchup")) {
         pair.style.setProperty("flex-wrap","nowrap","important");
+        pair.style.setProperty("align-items","center","important");
+        pair.style.setProperty("width","100%","important");
         const labels=[...pair.querySelectorAll(".club-label")];
         for (const name of labels) {
           name.style.setProperty("white-space","nowrap","important");
@@ -73,17 +75,12 @@
           name.style.setProperty("flex","1 1 auto","important");
           name.style.setProperty("min-width","0","important");
           name.style.setProperty("overflow","hidden","important");
-          // Preserve a bold readable minimum. Never hide a long Burmese
-          // team name: wrap that one label rather than shrinking to tiny type.
+          // Keep the crest, VS and both names on one baseline. Reduce the
+          // label font only as needed to fit the actual name in this cell.
           let px=parseFloat(getComputedStyle(name).fontSize)||25;
-          while (name.scrollWidth>name.clientWidth+1 && px>27) {
+          while (name.scrollWidth>name.clientWidth+1 && px>18) {
             px-=0.5;
             name.style.setProperty("font-size",px+"px","important");
-          }
-          if(name.scrollWidth>name.clientWidth+1) {
-            name.style.setProperty("white-space","normal","important");
-            name.style.setProperty("overflow","visible","important");
-            name.style.setProperty("overflow-wrap","anywhere","important");
           }
         }
       }
@@ -154,6 +151,14 @@
         width:100%!important;min-width:0!important;max-width:none!important;
         table-layout:fixed!important;font-size:23px!important;
       }
+      body .fc-odds-direct-export .main-compact-odds .odds-table colgroup col:nth-child(1){width:9%!important}
+      body .fc-odds-direct-export .main-compact-odds .odds-table colgroup col:nth-child(2){width:31%!important}
+      body .fc-odds-direct-export .main-compact-odds .odds-table colgroup col:nth-child(3){width:13%!important}
+      body .fc-odds-direct-export .main-compact-odds .odds-table colgroup col:nth-child(4),
+      body .fc-odds-direct-export .main-compact-odds .odds-table colgroup col:nth-child(5),
+      body .fc-odds-direct-export .main-compact-odds .odds-table colgroup col:nth-child(6),
+      body .fc-odds-direct-export .main-compact-odds .odds-table colgroup col:nth-child(7){width:9%!important}
+      body .fc-odds-direct-export .main-compact-odds .odds-table colgroup col:nth-child(8){width:11%!important}
       body .fc-odds-direct-export .odds-group .odds-table th {
         font:800 21px/1.55 "Noto Sans Myanmar",sans-serif!important;
         padding:15px 7px!important;letter-spacing:0!important;
@@ -189,10 +194,12 @@
       }
       body .fc-odds-direct-export .odds-matchup .club-label {
         font:900 25px/1.6 "Noto Sans Myanmar",sans-serif!important;
-        min-width:0!important;letter-spacing:0!important;
+        min-width:0!important;letter-spacing:0!important;white-space:nowrap!important;
+        overflow:hidden!important;overflow-wrap:normal!important;word-break:normal!important;
       }
       body .fc-odds-direct-export .odds-matchup .team-badge {
-        width:47px!important;height:47px!important;flex:0 0 47px!important;
+        width:43px!important;height:43px!important;flex:0 0 43px!important;
+        align-self:center!important;object-fit:contain!important;
       }
       body .fc-odds-direct-export .odds-matchup .mini-vs {
         font:900 21px/1.2 "Barlow Condensed",sans-serif!important;
