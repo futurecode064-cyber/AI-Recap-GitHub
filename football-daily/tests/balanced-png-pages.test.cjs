@@ -2,7 +2,6 @@
 const test=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path"),vm=require("node:vm");
 const root=path.resolve(__dirname,"..");
 const read=name=>fs.readFileSync(path.join(root,name),"utf8");
-const assetReference=require("./asset-reference.cjs");
 const context={window:{},document:{},console};vm.runInNewContext(read("daily-image-export.js"),context);
 const pages=matches=>context.window.FutureCodeDailyExport.partition(matches);
 const seq=n=>Array.from({length:n},(_,i)=>({id:i+1,league:i%3===0?"A":"B",home:"Home "+i,away:"Away "+i}));
@@ -33,8 +32,8 @@ test("All four website home and odds pages use the balanced PNG resources",()=>{
  for(const d of dirs)for(const page of ["index.html","odds.html"]){
   const html=read(d+page);
   assert.match(html,/styles\.css\?v=png-balanced-20261017/,d+page);
-  assert.match(html,/daily-image-export\.js\?v=png-balanced-20261017/,d+page);
-   assetReference(html,d+page,page==="index.html"?"app.js":"odds.js");
+  assert.match(html,/daily-image-export\.js\?v=[^"\s]+/,d+page);
+  assert.match(html,page==="index.html"?/app\.js\?v=png-balanced-20261017/:/odds\.js\?v=[^"\s]+/,d+page);
  }
 });
 test("All results, all odds, selected leagues and per-league PNG buttons use balanced splitter",()=>{

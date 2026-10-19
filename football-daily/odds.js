@@ -32,7 +32,7 @@ if(isMainOdds){
 }
 function leagueHeading(league){
  const heading=element("h2","odds-league-heading");
- const logo=safeLogo(leagueLogos[league]);
+ const logo=safeLogo(window.FutureCodeBrandExportData?.leagueCrest(league)||leagueLogos[league]);
  if(logo){
   const icon=element("img","league-crest");icon.src=logo;icon.alt=groups[league]||league;icon.loading="eager";icon.decoding="sync";
   icon.onerror=()=>{icon.replaceWith(element("span","league-mark","⚽"));};

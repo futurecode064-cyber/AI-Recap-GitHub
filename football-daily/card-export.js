@@ -122,13 +122,17 @@
   const isBW=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
   const isFCJ=document.documentElement?.dataset?.footballBrandName==="ဂိုးဇုံ အားကစား ဂျာနယ်";
   const isKTF=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
+  const brandData=window.FutureCodeBrandExportData;
+  const brandSite=Boolean(document.documentElement?.dataset?.footballBrandName);
+  const leagueCrest=brandData?.leagueCrest(match.league)||LEAGUE_CRESTS[match.league];
+  const leagueLabel=brandData?(opts.leagueLabel&&opts.leagueLabel!==match.league?opts.leagueLabel:brandData.leagueName(match.league)):null;
   const my=match.myanmarOdds||{};
-  await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl,LEAGUE_CRESTS[match.league]].filter(Boolean));
+  await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl,leagueCrest].filter(Boolean));
   // A blank Canvas is transparent by default; omit ALL card/background fills.
   if(!transparent)fill(ctx,0,0,W,H,C.bg);
   fill(ctx,M,14,fullWidth,H-34,C.head,12);
   fill(ctx,M,14,fullWidth,66,C.bg,10);
-  if(!opts.hideLeagueLabel){if(LEAGUE_CRESTS[match.league])crest(ctx,LEAGUE_CRESTS[match.league],M+14,25,32,"");text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+(LEAGUE_CRESTS[match.league]?54:16),46,22,C.orange,true);}
+  if(!opts.hideLeagueLabel&&!brandSite){if(leagueCrest)crest(ctx,leagueCrest,M+14,25,32,"");text(ctx,opts.leagueLabel||MM[match.league]||match.league||"FOOTBALL",M+(leagueCrest?54:16),46,22,C.orange,true);}
   if(isYKZ){
    text(ctx,"YKZ FAMILY GROUP · အတူရှေ့ဆက် YKZ",W/2,44,17,C.orange,true,"center");
    crest(ctx,opts.brandLogoUrl||document.documentElement?.dataset?.footballBrandLogoUrl,W-107,20,48,"YKZ");
@@ -158,8 +162,9 @@
   const crestY=heroY+(heroH-badgeSize)/2;
   crest(ctx,match.homeCrestUrl,lx+(sideW-badgeSize)/2,crestY,badgeSize,home);
   crest(ctx,match.awayCrestUrl,rx+(sideW-badgeSize)/2,crestY,badgeSize,away);
-  text(ctx,"◈",W/2,heroY+75,62,C.white,true,"center");
-  if(!opts.hideLeagueLabel)text(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
+  if(brandSite&&leagueCrest&&!opts.hideLeagueLabel)crest(ctx,leagueCrest,W/2-34,heroY+40,68,"");
+  else text(ctx,"◈",W/2,heroY+75,62,C.white,true,"center");
+  if(!opts.hideLeagueLabel)text(ctx,leagueLabel||opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,leagueLabel||opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
   text(ctx,"VS",W/2,heroY+244,90,C.white,true,"center");
   const infoY=473,infoH=83,infoMiddle=460,outer=(fullWidth-infoMiddle)/2;
   fill(ctx,M,infoY,outer,infoH,isYKZ?"#250707":isBW?"#082347":isKTF?"#3b1017":isFCJ?"#17140e":"#14090d");
@@ -184,7 +189,7 @@
    text(ctx,club,x+16,rowY+94,fit(ctx,club,side-30,21,14),C.white,true,"left",side-30);
    const games=Array.isArray(items)?items.slice(0,5):[];
    for(let i=0;i<5;i++){
-    const letter=games[i]?wdl(games[i],isFCJ||!!opts.frameTheme||opts.mainScreenshot===true):"–";
+    const letter=games[i]?(brandData?brandData.formResult(games[i]):wdl(games[i],brandSite||isFCJ||!!opts.frameTheme||opts.mainScreenshot===true)):"–";
     centerBadge(ctx,k,x+14+i*70,rowY+130,letter,45);
    }
    text(ctx,"W = နိုင်  •  D = သရေ  •  L = ရှုံး",x+14,rowY+205,14,C.muted,false,"left",side-24);

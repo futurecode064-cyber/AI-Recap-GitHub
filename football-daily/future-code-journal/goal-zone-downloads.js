@@ -115,11 +115,13 @@
     if(!kit)throw Error("Canvas kit missing");
     const {canvas,ctx}=kit.create(1080,470);
     const C=kit.C;
-    await Promise.all([kit.fonts(),kit.preloadImages([m.homeCrestUrl,m.awayCrestUrl])]);
+    const leagueLogo=window.FutureCodeBrandExportData?.leagueCrest(m.league);
+    await Promise.all([kit.fonts(),kit.preloadImages([m.homeCrestUrl,m.awayCrestUrl,leagueLogo].filter(Boolean))]);
     kit.fill(ctx,0,0,1080,470,C.bg);
     kit.fill(ctx,32,24,1016,415,C.panel,16);
     kit.fill(ctx,32,24,1016,74,C.head,12);
-    kit.text(ctx,String(m.league||"FOOTBALL"),55,60,23,C.orange,true,"left",950);
+    if(leagueLogo)kit.crest(ctx,leagueLogo,49,35,50,"");
+    kit.text(ctx,window.FutureCodeBrandExportData?.leagueName(m.league)||String(m.league||"FOOTBALL"),leagueLogo?115:55,60,23,C.orange,true,"left",leagueLogo?885:950);
     const hn=String(m.homeDisplay||m.home||""),an=String(m.awayDisplay||m.away||"");
     kit.crest(ctx,m.homeCrestUrl,180,131,94,hn);
     kit.crest(ctx,m.awayCrestUrl,805,131,94,an);

@@ -66,12 +66,13 @@
   const kit=K();if(!kit)throw Error("Canvas export module missing");
   const {create,fill,line,text,fit,fonts,preloadImages,crest,download}=kit;
   const groups=grouped(data.matches);
+  const leagueCrest=league=>window.FutureCodeBrandExportData?.leagueCrest(league)||crests[league];
   // Preserve full single-image capture: every league, original Myanmar label and row.
   // Compact 1200px branded sheet; keep all Myanmar names and price columns.
   // Each group consumes 58px league bar, 56px headings, 68px per row and 12px gap.
   const W=1200,M=24,H=222+groups.reduce((n,g)=>n+126+g[1].length*68,0)+80;
   const {canvas,ctx}=create(W,H);
-  await Promise.all([fonts(),preloadImages(data.matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).concat(groups.map(g=>crests[g[0]])))]);
+  await Promise.all([fonts(),preloadImages(data.matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).concat(groups.map(g=>leagueCrest(g[0]))))]);
   const brandName=document.documentElement?.dataset?.footballBrandName||"FUTURE CODE FOOTBALL DAILY";
   const brandConfig=window.FutureCodeBrandConfig||{};
   const brand=brandConfig.id||"future-code";
@@ -108,8 +109,8 @@
   for(const [league,matches] of groups){
    // League banner and column titles are the ONLY colored table areas.
    fill(ctx,M,y,W-M*2,52,palette.header,9);
-   crest(ctx,crests[league],M+12,y+9,34,"⚽");
-   text(ctx,leagues[league]||league,M+58,y+27,23,headerText,true,"left",W-M*2-72);
+   crest(ctx,leagueCrest(league),M+12,y+9,34,"⚽");
+   text(ctx,window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league,M+58,y+27,23,headerText,true,"left",W-M*2-72);
    y+=58;
    fill(ctx,M,y,W-M*2,56,palette.deep);
    const titles=["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း","ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး","အင်တာနက်ခန့်မှန်းချက်"];
@@ -179,15 +180,19 @@
   const kit=K(),{C,create,fill,line,text,fit,fonts,preloadImages,crest,download,top}=kit;
   const groups=grouped(finals),W=1200,M=30,H=218+groups.reduce((n,g)=>n+67+g[1].length*215+18,0)+70;
   const {canvas,ctx}=create(W,H);
-  await Promise.all([fonts(),preloadImages(finals.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]))]);
+  const brandData=window.FutureCodeBrandExportData;
+  await Promise.all([fonts(),preloadImages(finals.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).concat(brandData?groups.map(g=>brandData.leagueCrest(g[0])):[]))]);
   fill(ctx,0,0,W,H,C.bg);top(ctx,W,"ဂိုးရလဒ်များ",date,finals.length+" ပွဲပြီး");
   let y=223;
   for(const [league,items] of groups){
-   fill(ctx,M,y,W-M*2,54,C.head,10);text(ctx,leagues[league]||league,M+19,y+27,23,C.orange,true);y+=66;
+   fill(ctx,M,y,W-M*2,54,C.head,10);
+   const leagueLogo=brandData?.leagueCrest(league);
+   if(leagueLogo)crest(ctx,leagueLogo,M+10,y+8,38,"");
+   text(ctx,window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league,M+(leagueLogo?60:19),y+27,23,C.orange,true);y+=66;
    for(const m of items){
     fill(ctx,M,y,W-M*2,200,C.panel,12);
     fill(ctx,M,y,W-M*2,44,C.head,10);
-    text(ctx,"◈ "+(leagues[league]||league),M+18,y+23,17,C.orange,true);
+    text(ctx,"◈ "+(window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league),M+18,y+23,17,C.orange,true);
     text(ctx,m.kickoffYangon||"",W-M-19,y+23,15,C.muted,false,"right");
     crest(ctx,m.homeCrestUrl,M+62,y+59,78,m.homeDisplay||m.home);
     crest(ctx,m.awayCrestUrl,W-M-140,y+59,78,m.awayDisplay||m.away);
