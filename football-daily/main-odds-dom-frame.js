@@ -6,7 +6,10 @@
   if (document.documentElement.dataset.footballBrandName ||
       !/^\/odds(?:\.html)?\/?$/.test(location.pathname)) return;
 
+  // Main-site exports use a genuinely larger table, not only a higher-DPI
+  // screenshot of 12–16px type. All other brand pages remain untouched.
   const SCALE = 2;
+  const EXPORT_WIDTH = 1680;
 
   function shade(hex, f) {
     if (!/^#[0-9a-f]{6}$/i.test(hex)) return "#153d38";
@@ -54,7 +57,7 @@
       t.scrollWidth,Math.ceil(t.getBoundingClientRect().width))));
     const overview=document.querySelector("#oddsList");
     const viewport=overview?Math.ceil(overview.getBoundingClientRect().width):0;
-    return Math.min(1140,Math.max(970,natural,viewport));
+    return Math.max(EXPORT_WIDTH,Math.min(1800,Math.max(natural,viewport)));
   }
   function prepareOneLine(root) {
     for (const group of root.querySelectorAll(".odds-group")) {
@@ -74,12 +77,17 @@
           name.style.setProperty("flex","1 1 0","important");
           name.style.setProperty("min-width","0","important");
           name.style.setProperty("overflow","hidden","important");
-          // Keep the real website font unless a particularly long name cannot
-          // fit in its EXISTING column; then only shrink that specific label.
-          let px=parseFloat(getComputedStyle(name).fontSize)||15;
-          while (name.scrollWidth>name.clientWidth+1 && px>11) {
+          // Preserve a bold readable minimum. Never hide a long Burmese
+          // team name: wrap that one label rather than shrinking to tiny type.
+          let px=parseFloat(getComputedStyle(name).fontSize)||25;
+          while (name.scrollWidth>name.clientWidth+1 && px>18) {
             px-=0.5;
             name.style.setProperty("font-size",px+"px","important");
+          }
+          if(name.scrollWidth>name.clientWidth+1) {
+            name.style.setProperty("white-space","normal","important");
+            name.style.setProperty("overflow","visible","important");
+            name.style.setProperty("overflow-wrap","anywhere","important");
           }
         }
       }
@@ -117,7 +125,7 @@
     dateBar.className="fc-odds-date-heading";
     dateBar.style.cssText="margin:0 0 12px;text-align:center;padding:8px 0;"+
       "background:"+shade(theme,.7)+";color:#fff;border-radius:7px;"+
-      "font:800 17px/1.7 'Noto Sans Myanmar',sans-serif;";
+      "font:800 24px/1.7 'Noto Sans Myanmar',sans-serif;";
     root.appendChild(dateBar);
     for(const [league,included] of selected) {
       const source=live.get(league);
@@ -130,10 +138,78 @@
       const trs=[...group.querySelectorAll("tbody tr")];
       if(trs.length!==originals.length)throw Error("Website ပွဲအရေအတွက် မကိုက်ညီပါ။");
       trs.forEach((tr,i)=>{if(!wanted.has(i))tr.remove();});
-      // No forced font sizes, no new columns, no replacement logos/header.
+      // Retain every original website cell, logo, caption and odds value.
+      // Export-only typography is applied on this cloned table below.
       group.style.setProperty("margin","0 0 12px","important");
       root.appendChild(group);
     }
+    const readable=document.createElement("style");
+    // Scoped to the temporary clone, so website display and brand mirrors do
+    // not change. Enlarge the CONTENT relative to its width (DPI alone does not).
+    readable.textContent=`
+      body .fc-odds-direct-export .odds-group {
+        max-width:none!important;width:100%!important;margin:0 0 16px!important;
+      }
+      body .fc-odds-direct-export .odds-table-wrap {
+        width:100%!important;overflow:visible!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table {
+        width:100%!important;min-width:0!important;max-width:none!important;
+        table-layout:fixed!important;font-size:23px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table th {
+        font:800 21px/1.55 "Noto Sans Myanmar",sans-serif!important;
+        padding:15px 7px!important;letter-spacing:0!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table thead .odds-heading-row th {
+        font-size:21px!important;padding:13px 6px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table thead .odds-subheading-row th {
+        font-size:20px!important;padding:9px 5px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td {
+        font:800 22px/1.6 "Noto Sans Myanmar",sans-serif!important;
+        padding:17px 7px!important;vertical-align:middle!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.time {
+        font:900 22px/1.55 "Noto Sans Myanmar",sans-serif!important;
+        white-space:normal!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.upper {
+        font:900 22px/1.6 "Noto Sans Myanmar",sans-serif!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.price {
+        font:900 26px/1.4 "Barlow Condensed","Noto Sans Myanmar",sans-serif!important;
+        white-space:nowrap!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.prediction {
+        font:900 24px/1.4 "Barlow Condensed","Noto Sans Myanmar",sans-serif!important;
+        white-space:nowrap!important;
+      }
+      body .fc-odds-direct-export .odds-matchup {
+        display:flex!important;gap:8px!important;align-items:center!important;
+        flex-wrap:nowrap!important;
+      }
+      body .fc-odds-direct-export .odds-matchup .club-label {
+        font:900 25px/1.6 "Noto Sans Myanmar",sans-serif!important;
+        min-width:0!important;letter-spacing:0!important;
+      }
+      body .fc-odds-direct-export .odds-matchup .team-badge {
+        width:47px!important;height:47px!important;flex:0 0 47px!important;
+      }
+      body .fc-odds-direct-export .odds-matchup .mini-vs {
+        font:900 21px/1.2 "Barlow Condensed",sans-serif!important;
+      }
+      body .fc-odds-direct-export .main-compact-odds th.main-league-logo .league-crest,
+      body .fc-odds-direct-export .main-compact-odds th.main-league-logo .league-mark {
+        width:56px!important;height:56px!important;
+      }
+      body .fc-odds-direct-export .main-compact-odds th.main-league-name {
+        font:900 23px/1.6 "Noto Sans Myanmar",sans-serif!important;
+        white-space:normal!important;
+      }
+    `;
+    stage.appendChild(readable);
     stage.appendChild(root);
     document.body.appendChild(stage);
     return {stage,root,width};

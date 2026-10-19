@@ -64,6 +64,27 @@
  async function saveOdds(data,options={}){
   if(!data||!Array.isArray(data.matches)||!data.matches.length)throw Error("No odds ready to export");
   const kit=K();if(!kit)throw Error("Canvas export module missing");
+
+  // MAIN WEBSITE ONLY: download the actual, large-type, fully populated
+  // website odds table. Branded mirrors keep their current poster exporter.
+  const mainOdds=Boolean(document?.documentElement?.dataset)&&
+    !document.documentElement.dataset.footballBrandName&&
+    typeof location!=="undefined"&&/^\/odds(?:\.html)?\/?$/.test(location.pathname);
+  if(mainOdds&&window.FutureCodeOddsDomFrame?.draw){
+   const colour="#a41625";
+   const canvas=await window.FutureCodeOddsDomFrame.draw(data.matches,{
+    design:["colour","Colour Background Change",colour],
+    colour,date:data.reportDate
+   });
+   const leagueSuffix=options.league?"-"+String(options.league).toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60):"";
+   const partSuffix=options.total>1?"-"+Number(options.part||1)+"-of-"+Number(options.total):"";
+   const filename="future-code-odds-"+kit.day(data.reportDate)+leagueSuffix+partSuffix+".png";
+   if(options.asBlob===true)return {filename,blob:await encodePng(canvas)};
+   await kit.download(canvas,filename);
+   return {filename,fileCount:1,matchCount:data.matches.length,format:"png"};
+  }
+
   const {create,fill,line,text,fit,fonts,preloadImages,crest,download}=kit;
   const groups=grouped(data.matches);
   const leagueCrest=league=>window.FutureCodeBrandExportData?.leagueCrest(league)||crests[league];

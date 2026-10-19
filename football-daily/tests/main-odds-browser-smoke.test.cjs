@@ -135,6 +135,6 @@ test("Chromium exports the actual website odds table through local html2canvas",
     if(cdp?.ws)cdp.ws.close();
     if(chrome)chrome.kill("SIGKILL");
     await new Promise(resolve=>server.close(resolve));
-    fs.rmSync(dir,{recursive:true,force:true});
+    fs.rmSync(dir,{recursive:true,force:true,maxRetries:12,retryDelay:200});
   }
 });
