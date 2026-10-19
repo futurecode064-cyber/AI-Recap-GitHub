@@ -25,9 +25,10 @@ test('Odd/even frame exports preserve every selected row and balanced halves',()
     assert.deepEqual(Array.from(halves.flat(),r=>r.number),rows.map(r=>r.number));
     assert.ok(halves.length===1||halves[0].length-halves[1].length<=1);
   }
-  assert.equal(api.split(Array(19).fill({}),'auto').length,7);
-  assert.ok(api.split(Array(19).fill({}),'auto').every(part=>part.length<=3));
-  assert.equal(api.split(Array(19).fill({}),'one').length,19);
+  assert.equal(api.split(Array(19).fill({}),'all').length,1);
+  assert.equal(api.split(Array(19).fill({}),'league').length,1);
+  assert.equal(api.split(Array(19).fill({}),'two').length,2);
+  assert.deepEqual(Array.from(api.split(Array(5).fill({}),'two'),part=>part.length),[3,2]);
 });
 test('Selected frame routes to website table capture instead of a redesigned canvas table',async()=>{
   const {api,calls}=setup();
@@ -85,7 +86,9 @@ test('Named frames preserve their top/bottom banners around the website table',(
   assert.equal(new Set(api.designs.map(d=>d[0])).size,16);
   assert.match(domSource,/const theme=colourOnly\?settings\.colour:design\[2\]/);
   assert.match(domSource,/const shot=await captureWebsite\(rows,theme,settings\.date\)/);
-  assert.match(domSource,/const W=2160,H=2160/);
+  assert.match(domSource,/const W=2160/);
+  assert.match(domSource,/const H=Math.max\(320,topH\+bottomH\+2\*pad\+tableH\)/);
+  assert.doesNotMatch(domSource,/const W=2160,H=2160/);
   assert.match(domSource,/ctx\.drawImage\(shot\.picture,x,y,cw,ch\)/);
   assert.match(domSource,/ctx\.drawImage\(shot\.picture,x,y,cw,ch\)/);
   for(const d of api.designs.filter(d=>d[0]!=='colour')){
@@ -103,15 +106,19 @@ test('One-click selected frame download supports both single PNG and two-page ZI
   assert.match(source,/a\.download=settings\.design\[0\]\+'-odds-table-'\+sheet\.reportDate\+'\.zip'/);
   assert.match(source,/document\.body\.appendChild\(a\);a\.click\(\)/);
   assert.match(source,/PNG Download လင့်ခ်ကို နှိပ်ပါ/);
+  assert.match(source,/ပွဲအားလုံး Download · ပုံတစ်ပုံ/);
+  assert.match(source,/လိဂ်ရွေးပြီး Download/);
+  assert.match(source,/ပွဲအားလုံး · ၂ ပုံခွဲ Download/);
+  assert.doesNotMatch(source,/1:1 Square|တစ်ပုံ ၃ ပွဲ|တစ်ပုံ ၂ ပွဲ|တစ်ပုံ ၁ ပွဲ/);
 });
-test('ZIP still contains one PNG per frame and balanced half',async()=>{
+test('ZIP contains each frame twice for the two-image split',async()=>{
   const {api,calls}=setup();
   const rows=Array.from({length:19},(_,i)=>({league:'Premier League',home:'H'+i,away:'A'+i}));
   const statuses=[];
-  const result=await api.zipFrames(rows,{date:'2026-10-19',colour:'#a41625',mode:'auto'},p=>statuses.push(p));
-  assert.equal(result.partCount,7);
-  assert.equal(result.fileCount,112);
-  assert.equal(calls.length,112);
+  const result=await api.zipFrames(rows,{date:'2026-10-19',colour:'#a41625',mode:'two'},p=>statuses.push(p));
+  assert.equal(result.partCount,2);
+  assert.equal(result.fileCount,32);
+  assert.equal(calls.length,32);
   assert.equal(result.blob.type,'application/zip');
   const bytes=Buffer.from(await result.blob.arrayBuffer());let pos=0;const names=[];
   while(pos+30<bytes.length && bytes.readUInt32LE(pos)===0x04034b50){
@@ -119,11 +126,11 @@ test('ZIP still contains one PNG per frame and balanced half',async()=>{
     names.push(bytes.subarray(pos+30,pos+30+len).toString('utf8'));
     pos+=30+len+extra+size;
   }
-  assert.equal(names.length,112);
+  assert.equal(names.length,32);
   assert.equal(new Set(names.map(n=>n.split('/')[0])).size,1,'all frames share one folder');
   assert.ok(names.every(n=>n.split('/').length===2));
   assert.ok(names.includes('all-odds-frames-2026-10-19/bcf-odds-2026-10-19-01.png'));
-  assert.equal(new Set(names).size,112);
+  assert.equal(new Set(names).size,32);
   assert.equal(bytes.readUInt32LE(bytes.length-22),0x06054b50);
   assert.equal(statuses.at(-1).finished,true);
 });
@@ -143,8 +150,8 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
 
 test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-readable-theme-v3/);
-  assert.match(html,/main-table-odds-frames\.js\?v=20261019-readable-theme-v3/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-closefit-download-v4/);
+  assert.match(html,/main-table-odds-frames\.js\?v=20261019-closefit-download-v4/);
   assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
 });
 
@@ -158,7 +165,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-readable-theme-v3/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-closefit-download-v4/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);
@@ -222,17 +229,21 @@ test('Actual HTML capture returns a PNG canvas without redrawing a new table',as
   assert.equal(svgCaptured,0);
   assert.equal(window.FutureCodeOddsDomFrame.lastCapture,'html2canvas-website-dom');
   assert.equal(result.width,2160);
-  assert.equal(result.height,2160);
-  assert.equal(calls.length,1,'square poster contains the original capture');
+  assert.ok(result.height>900&&result.height<1200,'single PNG follows the table height');
+  assert.equal(calls.length,1,'poster contains the original capture');
+  assert.equal(calls[0][2],12,'top gap stays compact');
+  assert.equal(result.height-(calls[0][2]+calls[0][4]),12,'bottom gap stays compact');
   assert.ok(removed.length>0,'temporary export DOM was cleaned up');
   const framed=await window.FutureCodeOddsDomFrame.draw([match],{
     design:['bcf','BCF','#073682',{top:0.0927734375,bottom:0.072265625}],date:'2026-10-19'});
   assert.equal(framed.width,2160);
-  assert.equal(framed.height,2160);
+  assert.ok(framed.height>1400&&framed.height<1700,'frame poster fits banners and table without a square canvas');
   assert.equal(calls.length,4,'square poster retains frame banners and the real table capture');
   assert.equal(calls[1][0].url,'./assets/table-odds-frames/bcf-frame.jpg');
   assert.equal(calls[2][0].url,'./assets/table-odds-frames/bcf-frame.jpg');
   assert.equal(calls[3][0],previewCanvas);
+  assert.equal(calls[3][2],Math.round(0.0927734375*1024*2160/800)+12,'table sits just below its top frame');
+  assert.equal(framed.height-(calls[3][2]+calls[3][4]),Math.round(0.072265625*1024*2160/800)+12,'table sits just above its bottom frame');
 
 });
 

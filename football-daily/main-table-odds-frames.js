@@ -8,14 +8,10 @@
  const names={'Premier League':'အင်္ဂလန် ပရီးမီးယားလိဂ်','Serie A':'အီတလီ စီးရီးအေ','La Liga':'စပိန် လာလီဂါ','Bundesliga':'ဂျာမနီ ဘွန်ဒက်စ်လီဂါ','Ligue 1':'ပြင်သစ် လီဂူးဝမ်း'};
  const logos={'Premier League':'https://crests.football-data.org/PL.png','Serie A':'https://crests.football-data.org/SA.png','La Liga':'https://crests.football-data.org/PD.png','Bundesliga':'https://crests.football-data.org/BL1.png','Ligue 1':'https://crests.football-data.org/FL1.png'};
  const localLeagues={'Premier League':'pl','Serie A':'sa','La Liga':'pd','Bundesliga':'bl','Ligue 1':'fl'};
- // Main-only: the default readable format keeps at most five fixtures
- // per PNG, so mobile viewers can zoom without a giant 19-row sheet.
- // Square PNG poster: at most 3 fixtures per 1:1 image for large type.
- // Two/one controls mean fixtures PER IMAGE, never squeeze the whole day.
- const split=(rows,mode='auto')=>{
+ // Three simple choices: all matches in one PNG, filtered league matches in one PNG, or all matches in two PNGs.
+ const split=(rows,mode='all')=>{
   if(!Array.isArray(rows)||!rows.length)return [];
-  const limit=mode==='one'?1:mode==='two'?2:3;
-  const pages=Math.ceil(rows.length/limit);
+  const pages=mode==='two'?Math.min(2,rows.length):1;
   const base=Math.floor(rows.length/pages),extra=rows.length%pages;
   let pos=0;
   return Array.from({length:pages},(_,i)=>{
@@ -33,7 +29,7 @@
 
  // Frame ZIP is main-only and intentionally contains PNGs, not an extra merged image.
  // Encode and append each canvas before drawing the next to limit peak memory.
- async function zipFrames(rows,{date,colour,mode='auto'},onProgress){
+ async function zipFrames(rows,{date,colour,mode='all'},onProgress){
   if(!Array.isArray(rows)||!rows.length)throw Error('ZIP အတွက် ပေါက်ကြေးပွဲစာရင်း မရှိပါ။');
   if(!window.FutureCodeFrameZip?.Archive)throw Error('ZIP module မရသေးပါ။ စာမျက်နှာကို Refresh လုပ်ပါ။');
   const parts=split(rows,mode),archive=new window.FutureCodeFrameZip.Archive();
@@ -53,7 +49,7 @@
 
  window.FutureCodeTableOddsFrames={split,draw,designs,zipFrames};
  function init(){const actions=document.querySelector('.odds-export-actions');if(!actions)return;
- const section=document.createElement('section');section.id='mainTableOddsFrames';section.innerHTML=`<h2>Frame အလိုက် ပေါက်ကြေးဇယား PNG Download</h2><p>အပေါ်က လိဂ်ရွေးချယ်မှုအတိုင်း ထုတ်ပေးပါမည်။ ရွေးထားသော Frame နှင့်လိုက်ဖက်သည့် Colour Theme ဖြင့်၊ 1:1 Square PNG အဖြစ် ထုတ်ပါမည်။ မူလ/ယခုကြေး၊ အသင်း/လိဂ်လိုဂို၊ ခန့်မှန်းချက် အပြည့်အစုံပါဝင်ပါသည်။</p><div class="tof-controls"><label>Frame <select id="tofDesign"></select></label><label id="tofColourWrap" hidden>Colour Theme <select id="tofColour"><option value="#a41625">အနီ</option><option value="#132ab0">အပြာ</option><option value="#196514">အစိမ်း</option><option value="#8b6415">ရွှေရောင်</option><option value="#6a2b97">ခရမ်း</option><option value="custom">စိတ်ကြိုက်</option></select><input type="color" id="tofCustom" value="#a41625" aria-label="စိတ်ကြိုက်အရောင်" hidden></label><label>ပုံခွဲရန် <select id="tofSplit"><option value="auto">1:1 Square · တစ်ပုံ ၃ ပွဲ (အကြံပြု)</option><option value="two">1:1 Square · တစ်ပုံ ၂ ပွဲ</option><option value="one">1:1 Square · တစ်ပုံ ၁ ပွဲ</option></select></label></div><div class="tof-controls"><button id="tofPreview" type="button">နမူနာကြည့်မယ်</button><button id="tofSave" type="button">Frame PNG Download</button><button id="tofZip" type="button" class="tof-zip">⬇ Frame အားလုံး PNG ZIP Download</button></div><p>ZIP ထဲမှာ Frame ၁၆ မျိုးလုံး၏ 1:1 Square PNG များကို ရွေးထားသည့် လိဂ်နှင့် ပုံခွဲပုံအတိုင်း ZIP ထဲတွင် စုထည့်ပေးပါမည်။</p><p id="tofStatus" role="status" aria-live="polite">လိဂ်ရွေးပြီး Frame ကို ရွေးပါ။</p><div id="tofOutput"></div>`;actions.after(section);
+ const section=document.createElement('section');section.id='mainTableOddsFrames';section.innerHTML=`<h2>Frame အလိုက် ပေါက်ကြေးဇယား PNG Download</h2><p>ပွဲအားလုံးကို ပုံတစ်ပုံတည်း၊ ရွေးထားသောလိဂ်များကို ပုံတစ်ပုံတည်း၊ သို့မဟုတ် ပွဲအားလုံးကို ပုံ ၂ ပုံခွဲ၍ Download လုပ်နိုင်ပါသည်။ ရွေးထားသော Frame နှင့်လိုက်ဖက်သည့် အရောင်၊ မူလ/ယခုကြေး၊ အသင်း/လိဂ်လိုဂိုနှင့် ခန့်မှန်းချက်များ ပါဝင်ပါသည်။</p><div class="tof-controls"><label>Frame <select id="tofDesign"></select></label><label id="tofColourWrap" hidden>Colour Theme <select id="tofColour"><option value="#a41625">အနီ</option><option value="#132ab0">အပြာ</option><option value="#196514">အစိမ်း</option><option value="#8b6415">ရွှေရောင်</option><option value="#6a2b97">ခရမ်း</option><option value="custom">စိတ်ကြိုက်</option></select><input type="color" id="tofCustom" value="#a41625" aria-label="စိတ်ကြိုက်အရောင်" hidden></label><label>Download ပုံစံ <select id="tofSplit"><option value="all">ပွဲအားလုံး Download · ပုံတစ်ပုံ</option><option value="league">လိဂ်ရွေးပြီး Download</option><option value="two">ပွဲအားလုံး · ၂ ပုံခွဲ Download</option></select></label></div><div class="tof-controls"><button id="tofPreview" type="button">နမူနာကြည့်မယ်</button><button id="tofSave" type="button">Frame PNG Download</button><button id="tofZip" type="button" class="tof-zip">⬇ Frame အားလုံး PNG ZIP Download</button></div><p>ZIP ထဲမှာ Frame ၁၆ မျိုးလုံး၏ PNG များကို Download ပုံစံအတိုင်း ထည့်ပေးပါမည်။</p><p id="tofStatus" role="status" aria-live="polite">လိဂ်ရွေးပြီး Frame ကို ရွေးပါ။</p><div id="tofOutput"></div>`;actions.after(section);
  const style=document.createElement('style');style.textContent='#mainTableOddsFrames{margin:22px 0;padding:24px;background:#f2f4f8;border:1px solid #aebac8;border-radius:14px;color:#142338}#mainTableOddsFrames h2{font-size:20px}#mainTableOddsFrames .tof-controls{display:flex;gap:15px;flex-wrap:wrap;margin:16px 0}#mainTableOddsFrames label{display:flex;gap:10px;align-items:center;flex-wrap:wrap}#mainTableOddsFrames select,#mainTableOddsFrames button{font:inherit;padding:10px;border-radius:8px}#mainTableOddsFrames button{background:#173f79;color:white;border:0;cursor:pointer}#mainTableOddsFrames button.tof-zip{background:#245d42}#mainTableOddsFrames button:disabled{opacity:.55;cursor:wait}#mainTableOddsFrames [hidden]{display:none!important}#mainTableOddsFrames img{display:block;width:100%;max-width:1140px;margin:16px auto}#mainTableOddsFrames a{display:block;padding:12px;color:#17438c}';document.head.append(style);
  const el=id=>section.querySelector('#'+id);designs.forEach((d,i)=>el('tofDesign').add(new Option(d[1],String(i))));let busy=false;const urls=[];
  el('tofDesign').onchange=()=>{el('tofColourWrap').hidden=designs[Number(el('tofDesign').value)][0]!=='colour';};el('tofColour').onchange=()=>{el('tofCustom').hidden=el('tofColour').value!=='custom';};
@@ -61,13 +57,14 @@
   if(busy)return;
   const sheet=typeof loadedSheet!=='undefined'?loadedSheet:null;
   if(!sheet?.matches?.length){el('tofStatus').textContent='ပေါက်ကြေးစာရင်း မရသေးပါ။';return;}
+  const mode=el('tofSplit').value;
   const leagues=new Set([...document.querySelectorAll('#oddsLeagueFilter input:checked')].map(c=>c.value));
-  const list=sheet.matches.filter(m=>leagues.has(m.league));
+  const list=mode==='all'||mode==='two'?sheet.matches:sheet.matches.filter(m=>leagues.has(m.league));
   if(!list.length){el('tofStatus').textContent='အနည်းဆုံး လိဂ်တစ်ခု ရွေးပါ။';return;}
   const settings={design:designs[Number(el('tofDesign').value)],
     colour:el('tofColour').value==='custom'?el('tofCustom').value:el('tofColour').value,
     date:sheet.reportDate};
-  const parts=split(list,el('tofSplit').value);
+  const parts=split(list,mode);
   busy=true;
   section.querySelectorAll('button,input,select').forEach(x=>x.disabled=true);
   urls.forEach(URL.revokeObjectURL);urls.length=0;
@@ -116,13 +113,14 @@
   if(busy)return;
   const sheet=typeof loadedSheet!=='undefined'?loadedSheet:null;
   if(!sheet?.matches?.length){el('tofStatus').textContent='ပေါက်ကြေးစာရင်း မရသေးပါ။';return;}
+  const mode=el('tofSplit').value;
   const leagues=new Set([...document.querySelectorAll('#oddsLeagueFilter input:checked')].map(c=>c.value));
-  const rows=sheet.matches.filter(m=>leagues.has(m.league));
+  const rows=mode==='all'||mode==='two'?sheet.matches:sheet.matches.filter(m=>leagues.has(m.league));
   if(!rows.length){el('tofStatus').textContent='အနည်းဆုံး လိဂ်တစ်ခု ရွေးပါ။';return;}
   const colour=el('tofColour').value==='custom'?el('tofCustom').value:el('tofColour').value;
   busy=true;section.querySelectorAll('button,input,select').forEach(x=>x.disabled=true);
   try{
-   const result=await zipFrames(rows,{date:sheet.reportDate,colour,mode:el('tofSplit').value},p=>{
+   const result=await zipFrames(rows,{date:sheet.reportDate,colour,mode},p=>{
     el('tofStatus').textContent=p.finished?'ZIP ဖိုင် အပြီးသတ်နေပါပြီ…':`Frame ${p.frame} · ပုံ ${p.part}/${p.parts} · ${p.done+1}/${p.total} PNG ဖန်တီးနေသည်…`;
    });
    const url=URL.createObjectURL(result.blob),link=document.createElement('a');

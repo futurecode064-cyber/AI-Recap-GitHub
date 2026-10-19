@@ -380,7 +380,7 @@
     }
   }
 
-  // A 1:1 poster screenshot of the REAL website rows, not invented odds data.
+  // A close-fit poster screenshot of the REAL website rows, not invented odds data.
   async function draw(rows,settings) {
     if(!Array.isArray(rows)||!rows.length)throw Error("ပေါက်ကြေး ပွဲစာရင်းမရှိပါ။");
     const design=settings.design;
@@ -391,20 +391,20 @@
     const top=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-top.jpg"):null;
     const bottom=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-bottom.jpg"):null;
     const shot=await captureWebsite(rows,theme,settings.date);
-    const W=2160,H=2160;
-    const {canvas,ctx}=window.FutureCodeCanvasKit.create(W,H);
-    if(canvas.width!==W||canvas.height!==H)throw Error("Square PNG အရွယ်အစား မမှန်ပါ။");
+    const W=2160;
+    const {canvas,ctx}=window.FutureCodeCanvasKit.create(W,1);
     const topRatio=design[3]?.top||0,bottomRatio=design[3]?.bottom||0;
-    const naturalTop=banner?banner.height*topRatio*W/banner.width:
-      top?top.height*W/top.width:W*.15;
-    const naturalBottom=banner?banner.height*bottomRatio*W/banner.width:
-      bottom?bottom.height*W/bottom.width:W*.12;
-    const topH=colourOnly?0:Math.min(470,Math.round(naturalTop));
-    const bottomH=colourOnly?0:Math.min(310,Math.round(naturalBottom));
-    const pad=18,usable=H-topH-bottomH-2*pad;
-    if(usable<350)throw Error("Frame အတွက် နေရာမလုံလောက်ပါ။");
+    const topH=colourOnly?0:Math.round(banner&&topRatio?banner.height*topRatio*W/banner.width:
+      top?top.height*W/top.width:0);
+    const bottomH=colourOnly?0:Math.round(banner&&bottomRatio?banner.height*bottomRatio*W/banner.width:
+      bottom?bottom.height*W/bottom.width:0);
+    const pad=12,ratio=(W-2*pad)/shot.width;
+    const tableH=Math.round(shot.height*ratio);
+    const H=Math.max(320,topH+bottomH+2*pad+tableH);
+    canvas.height=H;
+    if(canvas.width!==W||canvas.height!==H)throw Error("PNG ပုံအရွယ်အစား မမှန်ပါ။");
     ctx.fillStyle="#100608";ctx.fillRect(0,0,W,H);
-    ctx.fillStyle=shade(theme,.4);ctx.fillRect(0,topH,W,H-topH);
+    ctx.fillStyle=shade(theme,.4);ctx.fillRect(0,0,W,H);
     ctx.fillStyle=theme;ctx.fillRect(0,topH-10,W,10);ctx.fillRect(0,H-bottomH,W,10);
     function artwork(fn){
       ctx.save();
@@ -415,10 +415,10 @@
     else if(top)artwork(()=>ctx.drawImage(top,0,0,W,topH));
     if(banner&&bottomH&&bottomRatio)artwork(()=>ctx.drawImage(banner,0,banner.height*(1-bottomRatio),banner.width,banner.height*bottomRatio,0,H-bottomH,W,bottomH));
     else if(bottom)artwork(()=>ctx.drawImage(bottom,0,H-bottomH,W,bottomH));
-    // Never cut off a market column, team logo, original price or latest price.
-    const ratio=Math.min((W-2*pad)/shot.width,usable/shot.height);
+    // Fill the poster width with the actual website table and put the frame
+    // banners directly beside it, without square-canvas letterboxing.
     const cw=Math.round(shot.width*ratio),ch=Math.round(shot.height*ratio);
-    const x=Math.round((W-cw)/2),y=topH+pad+Math.round((usable-ch)/2);
+    const x=Math.round((W-cw)/2),y=topH+pad;
     ctx.fillStyle="#080608";ctx.fillRect(x-5,y-5,cw+10,ch+10);
     ctx.drawImage(shot.picture,x,y,cw,ch);
     ctx.strokeStyle=theme;ctx.lineWidth=6;ctx.strokeRect(x-3,y-3,cw+6,ch+6);
