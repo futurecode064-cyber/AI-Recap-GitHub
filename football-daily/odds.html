@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css?v=png-balanced-20261017"><script defer src="./canvas-image-kit.js"></script>
-<script defer src="./daily-image-export.js?v=png-balanced-20261017"></script><script defer src="./odds.js?v=png-balanced-20261017"></script>
+<script defer src="./daily-image-export.js?v=png-balanced-20261017"></script><script defer src="./odds.js?v=20261019-banners-logos-v8"></script>
 <style>
 .odds-hero{padding:34px 0 28px;border-bottom:1px solid #3f5352;background:linear-gradient(115deg,#16282b,#273b34)}
 .odds-hero h1{font-size:clamp(23px,4vw,38px);line-height:1.8;margin:8px 0 12px}.odds-hero h1 span{color:#ffab6f}
@@ -96,14 +96,18 @@
 .odds-export-sheet .odds-matchup .team-badge{width:27px!important;height:27px!important}
 .odds-export-sheet .odds-table .prediction{font-size:16px!important}
 
+/* Keep Myanmar combining marks together in browser and canvas export. */
+body .odds-content .odds-group h2.odds-league-heading,
+body .odds-content .odds-group h2.odds-league-heading span,
+body .odds-content .odds-table th{letter-spacing:0!important;font-family:"Noto Sans Myanmar",sans-serif!important;}
 </style>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
 <link rel="stylesheet" href="./odds-sheet-theme.css?v=odds-png-only-20261016">
 <script defer src="./frame-zip.js?v=main-odds-zip-20261018"></script>
 <script defer src="./vendor/html2canvas.min.js?v=1.4.1"></script>
 <script defer src="./vendor/dom-to-image.min.js"></script>
-<script defer src="./main-odds-dom-frame.js?v=20261019-website-theme-v7"></script>
-<script defer src="./main-table-odds-frames.js?v=20261019-website-theme-v7"></script>
+<script defer src="./main-odds-dom-frame.js?v=20261019-banners-logos-v8"></script>
+<script defer src="./main-table-odds-frames.js?v=20261019-banners-logos-v8"></script>
 </head><body>
 <header class="site-header"><div class="container header-inner"><a class="logo" href="./" aria-label="Future Code Football"><span class="logo-icon">FC<span>+</span></span><span class="logo-lines"><b>FUTURE CODE</b><small>FOOTBALL ANALYSIS</small></span></a><span class="top-edition">MYANMAR DAILY EDITION</span></div></header>
 <section class="odds-hero"><div class="container"><span class="odds-kicker">MYANMAR FOOTBALL MARKET · DAILY SHEET</span><h1>ယနေ့ ကန်မည့် <span>ပွဲကောင်းများ၏ ပေါက်ကြေးများ</span></h1><p class="odds-subtitle">အာရှ စျေးကွက် မြန်မာကြေး မနက်ပိုင်း ဖွင့်လှစ်မှုများ</p><nav class="odds-nav" aria-label="Football pages"><a href="./">ပွဲကြိုသုံးသပ်ချက်များ</a><a class="active" href="./odds.html" aria-current="page">ယနေ့ ပေါက်ကြေးများ</a></nav></div></section>

@@ -76,14 +76,19 @@ test('Capture errors never silently replace website table with a different layou
   assert.match(domSource,/timeout=setTimeout\(\(\)=>reject\(Error\(label\+" အချိန်ကြာလွန်းပါသည်"\)\),ms\)/);
   assert.doesNotMatch(domSource,/measured-website|table-fallback/);
 });
-test('Every frame exports the website table directly and changes only its color palette',()=>{
+test('Named frames preserve their top/bottom banners around the website table',()=>{
   const {api}=setup();
   assert.equal(api.designs.length,16);
   assert.equal(new Set(api.designs.map(d=>d[0])).size,16);
   assert.match(domSource,/const theme=design\[0\]==="colour"\?settings\.colour:design\[2\]/);
   assert.match(domSource,/const shot=await captureWebsite\(rows,theme,settings\.date\)/);
   assert.match(domSource,/return shot\.picture/);
-  assert.doesNotMatch(domSource,/localArtwork|ctx\.drawImage|createElement\("canvas"\)/);
+  assert.match(domSource,/if\(colourOnly\)return shot\.picture/);
+  assert.match(domSource,/ctx\.drawImage\(shot\.picture,0,topH,W,shot\.height\)/);
+  for(const d of api.designs.filter(d=>d[0]!=='colour')){
+    const suffixes=d[3]?['-frame.jpg']:['-top.jpg','-bottom.jpg'];
+    for(const suffix of suffixes)assert.ok(fs.statSync(path.join(root,'assets/table-odds-frames',d[0]+suffix)).size>1000);
+  }
 });
 test('Preview image can use the full website table width for legibility',()=>{
   const source=fs.readFileSync(path.join(root,'main-table-odds-frames.js'),'utf8');
@@ -112,6 +117,9 @@ test('ZIP still contains one PNG per frame and balanced half',async()=>{
     pos+=30+len+extra+size;
   }
   assert.equal(names.length,32);
+  assert.equal(new Set(names.map(n=>n.split('/')[0])).size,1,'all frames share one folder');
+  assert.ok(names.every(n=>n.split('/').length===2));
+  assert.ok(names.includes('all-odds-frames-2026-10-19/bcf-odds-2026-10-19-01.png'));
   assert.equal(new Set(names).size,32);
   assert.equal(bytes.readUInt32LE(bytes.length-22),0x06054b50);
   assert.equal(statuses.at(-1).finished,true);
@@ -132,8 +140,8 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
 
 test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-website-theme-v7/);
-  assert.match(html,/main-table-odds-frames\.js\?v=20261019-website-theme-v7/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-banners-logos-v8/);
+  assert.match(html,/main-table-odds-frames\.js\?v=20261019-banners-logos-v8/);
   assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
 });
 
@@ -147,7 +155,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-website-theme-v7/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-banners-logos-v8/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);
@@ -188,7 +196,7 @@ test('Actual HTML capture returns a PNG canvas without redrawing a new table',as
     querySelector:selector=>selector==='#oddsList'?element('list'):null
   };
   const previewCanvas={width:1940,height:1000};
-  const kit={create:(width,height)=>{calls.push({width,height});return {canvas:{width,height},ctx:{}};}};
+  const kit={create:(width,height)=>({canvas:{width,height},ctx:{fillRect(){},drawImage(...args){calls.push(args);}}})};
   let browserCaptured=0,svgCaptured=0;
   const window={
     FutureCodeCanvasKit:kit,
@@ -203,7 +211,7 @@ test('Actual HTML capture returns a PNG canvas without redrawing a new table',as
   };
   const context={window,document,location:{pathname:'/odds.html'},loadedSheet:{matches:[match]},
     requestAnimationFrame:fn=>fn(),setTimeout,clearTimeout,
-    getComputedStyle:()=>({fontSize:'12px'}),Map,Set,Promise,URL,Image:class {},Error,console};
+    getComputedStyle:()=>({fontSize:'12px'}),Map,Set,Promise,URL,Image:class {constructor(){this.width=800;this.height=1024;}set src(value){this.url=value;this.onload();}},Error,console};
   vm.runInNewContext(domSource,context);
   const result=await window.FutureCodeOddsDomFrame.draw([match],{
     design:['colour','Colour Background Change','#a41625'],colour:'#196514',date:'2026-10-19'});
@@ -213,4 +221,27 @@ test('Actual HTML capture returns a PNG canvas without redrawing a new table',as
   assert.equal(result,previewCanvas);
   assert.equal(calls.length,0,'renderer must not add a separate frame canvas');
   assert.ok(removed.length>0,'temporary export DOM was cleaned up');
+  const framed=await window.FutureCodeOddsDomFrame.draw([match],{
+    design:['bcf','BCF','#073682',{top:0.0927734375,bottom:0.072265625}],date:'2026-10-19'});
+  assert.equal(framed.width,1940);
+  const topH=Math.round(95*1940/800),bottomH=Math.round(74*1940/800);
+  assert.equal(framed.height,1000+topH+bottomH);
+  assert.equal(calls.length,3,'top banner, unchanged website canvas, bottom banner');
+  assert.equal(calls[0][0].url,'./assets/table-odds-frames/bcf-frame.jpg');
+  assert.equal(calls[1][0],previewCanvas);
+  assert.equal(calls[1][2],topH);
+  assert.equal(calls[2][6],topH+1000);
+
+});
+
+test('Main website uses bundled league logos and zero letter spacing for Myanmar shaping',()=>{
+ const odds=fs.readFileSync(path.join(root,'odds.js'),'utf8');
+ assert.match(odds,/if\(isMainOdds\)/);
+ assert.match(odds,/assets\/league-logos\//);
+ for(const id of ['eng.1','ita.1','esp.1','swe.1','den.1','por.1','esp.2','fra.2','tur.1','swe.2']){
+   const bytes=fs.readFileSync(path.join(root,'assets/league-logos',id+'.png'));
+   assert.equal(bytes.subarray(1,4).toString(),'PNG');
+ }
+ const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
+ assert.match(html,/letter-spacing:0!important/);
 });

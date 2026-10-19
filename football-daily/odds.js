@@ -6,7 +6,7 @@ function dateKey(){
 }
 function element(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=String(txt);return e;}
 function append(parent,...items){items.forEach(n=>parent.appendChild(n));return parent;}
-function safeLogo(src){if(typeof src!=="string")return "";try{const u=new URL(src);return u.protocol==="https:"?u.href:"";}catch{return "";}}
+function safeLogo(src){if(typeof src!=="string")return "";try{const u=new URL(src,document.baseURI);return u.protocol==="https:"?u.href:"";}catch{return "";}}
 function badge(name,url,cls="team-badge"){
  const frame=element("span",cls);frame.title=name;
  const src=safeLogo(url);
@@ -24,11 +24,17 @@ function matchCell(m){
  append(div,element("span","club-label",m.home),badge(m.home,m.homeCrestUrl),element("span","mini-vs","VS"),badge(m.away,m.awayCrestUrl),element("span","club-label",m.away));
  return div;
 }
+const mainLeagueFiles={"Premier League":"eng.1","Serie A":"ita.1","La Liga":"esp.1","Allsvenskan":"swe.1","Danish Superliga":"den.1","Primeira Liga":"por.1","La Liga 2":"esp.2","Ligue 2":"fra.2","Turkish Super Lig":"tur.1","Swedish Superettan":"swe.2"};
+const isMainOdds=!document.documentElement.dataset.footballBrandName&&/^\/odds(?:\.html)?\/?$/.test(location.pathname);
+if(isMainOdds){
+ Object.assign(groups,{"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Turkish Super Lig":"တူရကီ စူပါလိဂ်","Swedish Superettan":"ဆွီဒင် စူပါအက်တန်လိဂ်"});
+ for(const [league,file] of Object.entries(mainLeagueFiles))leagueLogos[league]="./assets/league-logos/"+file+".png";
+}
 function leagueHeading(league){
  const heading=element("h2","odds-league-heading");
  const logo=safeLogo(leagueLogos[league]);
  if(logo){
-  const icon=element("img","league-crest");icon.src=logo;icon.alt="";icon.loading="lazy";
+  const icon=element("img","league-crest");icon.src=logo;icon.alt=groups[league]||league;icon.loading="eager";icon.decoding="sync";
   icon.onerror=()=>{icon.replaceWith(element("span","league-mark","⚽"));};
   heading.appendChild(icon);
  }else heading.appendChild(element("span","league-mark","⚽"));

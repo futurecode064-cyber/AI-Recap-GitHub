@@ -1,6 +1,6 @@
 "use strict";
 /* FUTURE CODE MAIN ONLY — a PNG is a screenshot of the ACTUAL website
- * odds HTML table. Frame selection changes its palette ONLY.
+ * odds HTML table. Frame selection changes its palette and surrounds it with the selected banners.
  * Never redraw or rebuild league headers, team names or table columns. */
 (function () {
   if (document.documentElement.dataset.footballBrandName ||
@@ -13,6 +13,17 @@
     return "#" + hex.slice(1).match(/../g).map(x =>
       Math.max(0,Math.min(255,Math.round(parseInt(x,16)*f)))
         .toString(16).padStart(2,"0")).join("");
+  }
+  const artworkCache=new Map();
+  function localArtwork(url) {
+    if(!artworkCache.has(url))artworkCache.set(url,new Promise((resolve,reject)=>{
+      const img=new Image();
+      const timer=setTimeout(()=>reject(Error("Frame Banner တင်ချိန်ကြာနေပါသည်")),15000);
+      img.onload=()=>{clearTimeout(timer);resolve(img);};
+      img.onerror=()=>{clearTimeout(timer);artworkCache.delete(url);reject(Error("Frame Banner မရပါ — "+url));};
+      img.src=url;
+    }));
+    return artworkCache.get(url);
   }
   async function blobImage(blob) {
     const url=URL.createObjectURL(blob);
@@ -232,9 +243,24 @@
   async function draw(rows,settings) {
     const design=settings.design;
     const theme=design[0]==="colour"?settings.colour:design[2];
-    // Export the real website table directly. No brand artwork or new layout.
+    const colourOnly=design[0]==="colour",framed=Boolean(design[3]);
+    const dir="./assets/table-odds-frames/";
+    const banner=framed?await localArtwork(dir+design[0]+"-frame.jpg"):null;
+    const top=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-top.jpg"):null;
+    const bottom=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-bottom.jpg"):null;
     const shot=await captureWebsite(rows,theme,settings.date);
-    return shot.picture;
+    if(colourOnly)return shot.picture;
+    const W=shot.width,topPart=design[3]?.top||0,bottomPart=design[3]?.bottom||0;
+    const topH=banner?Math.round(banner.height*topPart*W/banner.width):Math.round(top.height*W/top.width);
+    const bottomH=banner?Math.round(banner.height*bottomPart*W/banner.width):Math.round(bottom.height*W/bottom.width);
+    const {canvas,ctx}=window.FutureCodeCanvasKit.create(W,shot.height+topH+bottomH);
+    ctx.fillStyle=shade(theme,.55);ctx.fillRect(0,0,W,canvas.height);
+    if(banner&&topH)ctx.drawImage(banner,0,0,banner.width,banner.height*topPart,0,0,W,topH);
+    else if(top)ctx.drawImage(top,0,0,W,topH);
+    ctx.drawImage(shot.picture,0,topH,W,shot.height);
+    if(banner&&bottomH)ctx.drawImage(banner,0,banner.height*(1-bottomPart),banner.width,banner.height*bottomPart,0,topH+shot.height,W,bottomH);
+    else if(bottom)ctx.drawImage(bottom,0,topH+shot.height,W,bottomH);
+    return canvas;
   }
   window.FutureCodeOddsDomFrame={draw};
 })();
