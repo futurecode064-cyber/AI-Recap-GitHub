@@ -1,29 +1,18 @@
 "use strict";
 /* FUTURE CODE MAIN ONLY — a PNG is a screenshot of the ACTUAL website
- * odds HTML table. Frame selection changes its palette and artwork ONLY.
+ * odds HTML table. Frame selection changes its palette ONLY.
  * Never redraw or rebuild league headers, team names or table columns. */
 (function () {
   if (document.documentElement.dataset.footballBrandName ||
       !/^\/odds(?:\.html)?\/?$/.test(location.pathname)) return;
 
   const SCALE = 2;
-  const artworkCache = new Map();
 
   function shade(hex, f) {
     if (!/^#[0-9a-f]{6}$/i.test(hex)) return "#153d38";
     return "#" + hex.slice(1).match(/../g).map(x =>
       Math.max(0,Math.min(255,Math.round(parseInt(x,16)*f)))
         .toString(16).padStart(2,"0")).join("");
-  }
-  function localArtwork(url) {
-    if (!artworkCache.has(url)) artworkCache.set(url,new Promise((resolve,reject)=>{
-      const img = new Image();
-      const timer = setTimeout(()=>reject(Error("Frame Banner တင်ချိန်ကြာနေပါသည်")),15000);
-      img.onload=()=>{clearTimeout(timer);resolve(img);};
-      img.onerror=()=>{clearTimeout(timer);reject(Error("Frame Banner မရပါ — "+url));};
-      img.src=url;
-    }));
-    return artworkCache.get(url);
   }
   async function blobImage(blob) {
     const url=URL.createObjectURL(blob);
@@ -240,36 +229,12 @@
     }
   }
 
-  async function draw(rows,settings){
-    const kit=window.FutureCodeCanvasKit;
-    if(!kit)throw Error("PNG Canvas module မရသေးပါ။");
+  async function draw(rows,settings) {
     const design=settings.design;
     const theme=design[0]==="colour"?settings.colour:design[2];
-    // Keep each selected frame's EXISTING top/bottom banner, if provided.
-    const framed=Boolean(design[3]),colourOnly=design[0]==="colour";
-    const dir="./assets/table-odds-frames/";
-    const banner=framed?await localArtwork(dir+design[0]+"-frame.jpg"):null;
-    const top=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-top.jpg"):null;
-    const bottom=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-bottom.jpg"):null;
+    // Export the real website table directly. No brand artwork or new layout.
     const shot=await captureWebsite(rows,theme,settings.date);
-    const W=shot.width,topPart=framed?design[3].top:0;
-    const bottomPart=framed?design[3].bottom:0;
-    const topH=banner?Math.round(banner.height*topPart*W/banner.width):
-      top?Math.round(top.height*W/top.width):0;
-    const bottomH=banner?Math.round(banner.height*bottomPart*W/banner.width):
-      bottom?Math.round(bottom.height*W/bottom.width):0;
-    const {canvas,ctx}=kit.create(W,shot.height+topH+bottomH);
-    ctx.fillStyle=shade(theme,.55);
-    ctx.fillRect(0,0,W,canvas.height);
-    if(banner&&topH)
-      ctx.drawImage(banner,0,0,banner.width,banner.height*topPart,0,0,W,topH);
-    else if(top)ctx.drawImage(top,0,0,W,topH);
-    ctx.drawImage(shot.picture,0,topH,W,shot.height);
-    if(banner&&bottomH)
-      ctx.drawImage(banner,0,banner.height*(1-bottomPart),banner.width,
-        banner.height*bottomPart,0,topH+shot.height,W,bottomH);
-    else if(bottom)ctx.drawImage(bottom,0,topH+shot.height,W,bottomH);
-    return canvas;
+    return shot.picture;
   }
   window.FutureCodeOddsDomFrame={draw};
 })();
