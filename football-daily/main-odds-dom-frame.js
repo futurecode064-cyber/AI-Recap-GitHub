@@ -1,246 +1,322 @@
 "use strict";
-/* Main odds PNG: capture the actual HTML odds groups.  The selected frame
-   changes branding (banner and header palette), not the table layout. */
-(function () {
-  if (document.documentElement.dataset.footballBrandName ||
-      !/^\/odds(?:\.html)?\/?$/.test(location.pathname)) return;
-
-  const WIDTH = 1140, SCALE = 2;
-  const imageCache = new Map();
-  function loadImage(src) {
-    if (!imageCache.has(src)) imageCache.set(src, new Promise((resolve, reject) => {
-      const im = new Image();
-      const timer = setTimeout(() => resolve(null), 5000);
-      im.onload = () => { clearTimeout(timer); resolve(im); };
-      im.onerror = () => { clearTimeout(timer); resolve(null); };
-      im.src = src;
-    }));
-    return imageCache.get(src);
-  }
-  function shade(hex, factor) {
-    return "#" + hex.slice(1).match(/../g).map(c =>
-      Math.max(0, Math.min(255, Math.round(parseInt(c, 16) * factor))).toString(16).padStart(2, "0")
+/* Main-only odds PNG. Preserve the actual website's league/table DOM geometry;
+   a measured-DOM canvas backup prevents "new layout" PNGs on restricted phones. */
+(function(){
+  if(document.documentElement.dataset.footballBrandName ||
+     !/^\/odds(?:\.html)?\/?$/.test(location.pathname))return;
+  const WIDTH=1040,SCALE=2;
+  const cache=new Map();
+  const localLeagueLogos={
+    "Premier League":"pl","Serie A":"sa","La Liga":"pd",
+    "Bundesliga":"bl","Ligue 1":"fl"
+  };
+  let browserCaptureFailed=false;
+  const rect=(el,base)=>{
+    const r=el.getBoundingClientRect(),b=base.getBoundingClientRect();
+    return {x:r.left-b.left,y:r.top-b.top,w:r.width,h:r.height};
+  };
+  function colour(hex,f){
+    return "#"+hex.slice(1).match(/../g).map(v=>
+      Math.max(0,Math.min(255,Math.round(parseInt(v,16)*f))).toString(16).padStart(2,"0")
     ).join("");
   }
-  function asImage(blob) {
-    return new Promise((resolve, reject) => {
-      const url = URL.createObjectURL(blob);
-      const image = new Image();
-      image.onload = () => { URL.revokeObjectURL(url); resolve(image); };
-      image.onerror = () => { URL.revokeObjectURL(url); reject(new Error("PNG Preview ဖွင့်မရပါ")); };
-      image.src = url;
-    });
+  function image(url){
+    if(!url)return Promise.resolve(null);
+    if(!cache.has(url))cache.set(url,new Promise(resolve=>{
+      const img=new Image();
+      let settled=false;
+      const finish=val=>{if(settled)return;settled=true;clearTimeout(timer);resolve(val);};
+      const timer=setTimeout(()=>finish(null),5500);
+      img.crossOrigin="anonymous";
+      img.onload=()=>finish(img);
+      img.onerror=()=>finish(null);
+      img.src=url;
+    }));
+    return cache.get(url);
   }
-  async function captureWebsiteGroups(rows, theme, date) {
-    if (!window.domtoimage || typeof window.domtoimage.toBlob !== "function")
-      throw new Error("Website PNG capture library မရပါ။ Refresh လုပ်ကြည့်ပါ။");
-    const sheet = typeof loadedSheet !== "undefined" ? loadedSheet : null;
-    const original = document.querySelectorAll("#oddsList .odds-group");
-    if (!sheet || !Array.isArray(sheet.matches) || !original.length)
-      throw new Error("Website ပေါက်ကြေးဇယား မရသေးပါ။");
-
-    const leagueNames = [...new Set(sheet.matches.map(m => m.league))];
-    const sources = new Map(leagueNames.map((l, i) => [l, original[i]]));
-    const byLeague = new Map();
-    for (const m of rows) {
-      if (!byLeague.has(m.league)) byLeague.set(m.league, []);
-      byLeague.get(m.league).push(m);
-    }
-
-    const offscreen = document.createElement("div");
-    offscreen.style.cssText = "position:fixed;left:-30000px;top:0;z-index:-1;pointer-events:none;width:1140px;overflow:visible";
-    const snapshot = document.createElement("div");
-    snapshot.className = "odds-content";
-    snapshot.style.cssText = "box-sizing:border-box;width:1140px;max-width:none;margin:0;padding:12px 0;background:#10191d";
-    snapshot.style.setProperty("--sheet-brand", theme);
-    snapshot.style.setProperty("--sheet-deep", shade(theme, .70));
-    snapshot.style.setProperty("--sheet-title", "#ffffff");
-    snapshot.style.setProperty("padding", "12px 0", "important");
-    // Keep the previously approved date-only label (never add match totals).
-    const dateBar = document.createElement("div");
-    dateBar.textContent = String(date || "");
-    dateBar.style.cssText = "box-sizing:border-box;margin:0 0 13px;padding:12px 10px;text-align:center;border-radius:10px;background:" + shade(theme, .70) + ";color:#fff;font:800 23px/1.7 'Noto Sans Myanmar',sans-serif";
-    snapshot.appendChild(dateBar);
-
-    for (const [league, included] of byLeague) {
-      const originalGroup = sources.get(league);
-      if (!originalGroup) throw new Error("League ဇယား မတွေ့ပါ — " + league);
-      const allRows = sheet.matches.filter(m => m.league === league);
-      const wanted = new Set(included.map(m => allRows.indexOf(m)));
-      if (wanted.has(-1)) throw new Error("Download ပွဲစာရင်းနှင့် Website မကိုက်ပါ။");
-      const group = originalGroup.cloneNode(true);
-      group.querySelectorAll(".odds-league-png-parts,button").forEach(el => el.remove());
-      const trs = [...group.querySelectorAll("tbody tr")];
-      if (trs.length !== allRows.length)
-        throw new Error("Website ပွဲအရေအတွက် မကိုက်ညီပါ။ Refresh လုပ်ကြည့်ပါ။");
-      trs.forEach((tr, i) => { if (!wanted.has(i)) tr.remove(); });
-      group.style.setProperty("margin", "0 auto 14px", "important");
-      snapshot.appendChild(group);
-    }
-    offscreen.appendChild(snapshot);
-    document.body.appendChild(offscreen);
-    try {
-      if (document.fonts && document.fonts.ready) await document.fonts.ready;
-      const imgs = [...snapshot.querySelectorAll("img")];
-      imgs.forEach(im => { im.loading = "eager"; im.decoding = "sync"; });
-      await Promise.allSettled(imgs.map(im => im.decode ? im.decode() : Promise.resolve()));
-      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-      const height = Math.ceil(snapshot.scrollHeight);
-      if (height < 40 || height > 13000) throw new Error("PNG ဇယားအမြင့် များလွန်းပါသည်။ ပုံခွဲပြီး Download လုပ်ပါ။");
-      const png = await window.domtoimage.toBlob(snapshot, {
-        bgcolor: "#10191d",
-        width: WIDTH * SCALE,
-        height: height * SCALE,
-        style: {
-          width: WIDTH + "px",
-          height: height + "px",
-          transform: "scale(" + SCALE + ")",
-          transformOrigin: "top left"
-        },
-        imagePlaceholder: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+  async function asImage(blob){
+    const src=URL.createObjectURL(blob);
+    try{
+      return await new Promise((resolve,reject)=>{
+        const img=new Image();img.onload=()=>resolve(img);
+        img.onerror=()=>reject(Error("PNG ဖွင့်မရပါ"));img.src=src;
       });
-      if (!png || !png.size) throw new Error("Website ဇယား PNG မဖန်တီးနိုင်ပါ။");
-      return { image: await asImage(png), height: height * SCALE };
-    } finally {
-      offscreen.remove();
+    }finally{URL.revokeObjectURL(src);}
+  }
+  function fill(ctx,r,color){
+    if(!r||r.w<=0||r.h<=0)return;
+    ctx.fillStyle=color;ctx.fillRect(r.x,r.y,r.w,r.h);
+  }
+  function bg(ctx,el,root,fallback){
+    const style=getComputedStyle(el),color=style.backgroundColor;
+    fill(ctx,rect(el,root),color&&color!=="rgba(0, 0, 0, 0)"&&color!=="transparent"?color:fallback);
+  }
+  function print(ctx,el,root,{min=16,max=25,color,align="center",value}={}){
+    if(!el)return;
+    const r=rect(el,root),cs=getComputedStyle(el);
+    if(r.w<3||r.h<3)return;
+    const str=String(value===undefined?el.textContent:value).trim().replace(/\s+/gu," ");
+    if(!str)return;
+    const size=Math.max(min,Math.min(max,parseFloat(cs.fontSize)||min));
+    const weight=(parseInt(cs.fontWeight,10)||800)>=700?800:700;
+    const ink=color||cs.color||"#172126";
+    const family='"Noto Sans Myanmar",sans-serif';
+    ctx.font=weight+" "+size+"px "+family;
+    ctx.fillStyle=ink;ctx.textAlign=align;ctx.textBaseline="middle";
+    const limit=Math.max(10,r.w-6);
+    const segmenter=typeof Intl.Segmenter==="function"?
+      new Intl.Segmenter("my",{granularity:"word"}):null;
+    const parts=segmenter?[...segmenter.segment(str)].map(v=>v.segment):
+      str.split(/(\s+)/u);
+    const lines=[];let line="";
+    for(const token of parts){
+      const next=line+token;
+      if(line&&ctx.measureText(next).width>limit){lines.push(line.trim());line=token.trimStart();}
+      else line=next;
+    }
+    if(line.trim())lines.push(line.trim());
+    const output=[];
+    for(const entry of lines.length?lines:[str]){
+      if(ctx.measureText(entry).width<=limit){output.push(entry);continue;}
+      let chunk="";
+      for(const letter of Array.from(entry)){
+        if(chunk&&ctx.measureText(chunk+letter).width>limit){
+          output.push(chunk);chunk=letter;
+        }else chunk+=letter;
+      }
+      if(chunk)output.push(chunk);
+    }
+    const count=Math.min(output.length,3),lineHeight=Math.min(size*1.42,r.h/Math.max(1,count));
+    const start=r.y+r.h/2-(count-1)*lineHeight/2;
+    for(let i=0;i<count;i++){
+      const x=align==="right"?r.x+r.w-3:align==="left"?r.x+3:r.x+r.w/2;
+      ctx.fillText(output[i],x,start+i*lineHeight,limit);
     }
   }
-
-  // If browser SVG/foreignObject capture fails (commonly due to blocked remote
-  // fonts or crests), keep PNG downloads functional with a matching table grid.
-  // This is NOT a redesigned match poster.
-  let captureDisabled = false;
-  async function fallbackTable(rows, theme, date) {
-    const kit = window.FutureCodeCanvasKit;
-    if (!kit) throw new Error("PNG Canvas module မရသေးပါ။");
-    await kit.fonts();
-    await kit.preloadImages(rows.flatMap(m => [m.homeCrestUrl, m.awayCrestUrl]).filter(Boolean));
-    const byLeague = new Map();
-    for (const m of rows) {
-      if (!byLeague.has(m.league)) byLeague.set(m.league, []);
-      byLeague.get(m.league).push(m);
+  async function drawCrest(ctx,imgEl,root,label,local){
+    if(!imgEl&&!local)return;
+    const r=imgEl?rect(imgEl,root):local.r;
+    const url=local?.src||imgEl?.currentSrc||imgEl?.src;
+    const img=await image(url);
+    ctx.fillStyle="#fff";ctx.fillRect(r.x,r.y,r.w,r.h);
+    if(img&&img.naturalWidth){
+      const k=Math.min((r.w-4)/img.naturalWidth,(r.h-4)/img.naturalHeight);
+      const w=img.naturalWidth*k,h=img.naturalHeight*k;
+      ctx.drawImage(img,r.x+(r.w-w)/2,r.y+(r.h-h)/2,w,h);
+    }else{
+      ctx.fillStyle="#24363d";ctx.font='800 '+Math.max(13,Math.min(18,r.h/2))+'px sans-serif';
+      ctx.textAlign="center";ctx.textBaseline="middle";
+      ctx.fillText(String(label||"⚽").slice(0,2),r.x+r.w/2,r.y+r.h/2,r.w-3);
     }
-    const topPad=70, leagueH=57, columnH=78, rowH=75, gap=14, pad=10;
-    const width=1140, height=topPad+24+[...byLeague.values()].reduce(
-      (sum, matches) => sum+leagueH+columnH+matches.length*rowH+gap, 0);
-    if(height>13000)throw new Error("ပုံအမြင့်များလွန်းပါသည်။ ပုံခွဲ၍ Download လုပ်ပါ။");
-    const {canvas,ctx}=kit.create(width*2,height*2);
-    ctx.scale(2,2);
-    const bg=shade(theme,.52), deep=shade(theme,.70);
-    const fill=(x,y,w,h,color)=>{ctx.fillStyle=color;ctx.fillRect(x,y,w,h);};
-    const write=(value,x,y,px,color="#111820",align="center",max)=>{
-      ctx.font="800 "+px+"px 'Noto Sans Myanmar',sans-serif";
-      ctx.textAlign=align;ctx.textBaseline="middle";ctx.fillStyle=color;
-      ctx.fillText(String(value??""),x,y,max);
-    };
-    fill(0,0,width,height,bg);
-    fill(pad,10,width-pad*2,53,deep);
-    write(date,width/2,38,23,"#fff");
-    const widths=[96,384,158,90,90,90,90,142],xs=[0];
-    widths.forEach(w=>xs.push(xs.at(-1)+w));
-    const tableLeft=pad, tableRight=width-pad, innerWidth=tableRight-tableLeft;
-    let y=topPad;
-    for(const [league,matches] of byLeague){
-      fill(pad,y,innerWidth,leagueH,deep);
-      const display=(typeof groups!=="undefined" && groups[league]) || league;
-      write(display,width/2,y+leagueH/2,21,"#fff","center",innerWidth-45);
-      y+=leagueH;
-      const xAt=i=>pad+xs[i]*(innerWidth/width);
-      const wAt=i=>widths[i]*(innerWidth/width);
-      fill(pad,y,innerWidth,columnH,theme);
-      const headings=[["ပွဲချိန်",0],["ယှဉ်ပြိုင်မည့်အသင်း",1],["အပေါ်အသင်း",2],["အင်တာနက်ခန့်မှန်းချက်",7]];
-      for(const [title,i] of headings)write(title,xAt(i)+wAt(i)/2,y+columnH/2,15,"#fff","center",wAt(i)-7);
-      write("ဘော်ဒီကြေး",(xAt(3)+xAt(5))/2,y+22,19,"#fff");
-      write("ဂိုးပေါင်းကြေး",(xAt(5)+xAt(7))/2,y+22,19,"#fff");
-      for(let i=3;i<7;i++)write(i%2?"မူလ":"ယခု",xAt(i)+wAt(i)/2,y+58,15,"#fff");
-      ctx.strokeStyle="#ffffff44";ctx.lineWidth=1;
-      for(let i=1;i<8;i++){ctx.beginPath();ctx.moveTo(xAt(i),y);ctx.lineTo(xAt(i),y+columnH);ctx.stroke();}
-      y+=columnH;
-      for(let n=0;n<matches.length;n++){
-        const m=matches[n];
-        fill(pad,y,innerWidth,rowH,n%2?"#f7f8fa":"#fff");
-        fill(xAt(2),y,wAt(2),rowH,n%2?"#dfe3e7":"#e8eaed");
-        fill(xAt(4),y,wAt(4),rowH,"#edf7f3");
-        fill(xAt(6),y,wAt(6),rowH,"#edf7f3");
-        ctx.strokeStyle="#cfd3d8";ctx.lineWidth=1;
-        ctx.strokeRect(pad+.5,y+.5,innerWidth-1,rowH-1);
-        for(let i=1;i<8;i++){ctx.beginPath();ctx.moveTo(xAt(i),y);ctx.lineTo(xAt(i),y+rowH);ctx.stroke();}
-        const middle=y+rowH/2;
-        write((m.kickoffDisplay||m.kickoff||"").replace(/^.*? ည /,"ည "),xAt(0)+wAt(0)/2,middle,15,"#172126","center",wAt(0)-5);
-        const mx=xAt(1),mw=wAt(1),sx=mw/384;
-        write(m.home,mx+126*sx,middle,17,"#141923","right",122*sx);
-        kit.crest(ctx,m.homeCrestUrl,mx+135*sx,y+21,33*sx,m.home);
-        write("VS",mx+196*sx,middle,13,"#ad2831");
-        kit.crest(ctx,m.awayCrestUrl,mx+220*sx,y+21,33*sx,m.away);
-        write(m.away,mx+263*sx,middle,17,"#141923","left",120*sx);
-        write(m.upperTeam||"",xAt(2)+wAt(2)/2,middle,16,"#141923","center",wAt(2)-7);
-        const quote=[m.bodyOdds,m.currentBodyOdds,m.goalTotalOdds,m.currentGoalTotalOdds,m.pdfLastColumn];
-        for(let i=0;i<quote.length;i++)write(quote[i]??"",xAt(i+3)+wAt(i+3)/2,middle,19,"#111820","center",wAt(i+3)-5);
-        y+=rowH;
+  }
+  async function measuredCapture(root,theme){
+    // Unlike the obsolete generic fallback, all positions and row heights
+    // are measured from the cloned, CSS-styled WEBSITE DOM itself.
+    const width=Math.ceil(root.getBoundingClientRect().width);
+    const height=Math.ceil(root.scrollHeight);
+    const canvas=document.createElement("canvas");
+    canvas.width=width*SCALE;canvas.height=height*SCALE;
+    const ctx=canvas.getContext("2d");
+    if(!ctx)throw Error("PNG Canvas ဖန်တီးမရပါ");
+    ctx.scale(SCALE,SCALE);
+    fill(ctx,{x:0,y:0,w:width,h:height},"#10191d");
+    const date=root.querySelector(".fc-odds-export-date");
+    if(date){bg(ctx,date,root,colour(theme,.7));print(ctx,date,root,{min:24,color:"#fff"});}
+    for(const group of root.querySelectorAll(".odds-group")){
+      bg(ctx,group,root,"#fff");
+      const header=group.querySelector(".odds-league-header");
+      if(header){
+        bg(ctx,header,root,theme);
+        const h=header.querySelector("h2.odds-league-heading");
+        if(h){
+          const hr=rect(h,root);
+          const badge=h.querySelector(".league-crest,.league-mark");
+          const label=h.querySelector("span:last-child");
+          if(badge){
+            const b=rect(badge,root);
+            if(badge.tagName==="IMG"){
+              const lg=h.textContent.trim();
+              const localKey=group.dataset.oddsLeague;
+              const local=localKey?{src:"./assets/table-odds-frames/league-"+localLeagueLogos[localKey]+".png",r:b}:null;
+              await drawCrest(ctx,badge,root,lg,local);
+            }else{
+              fill(ctx,b,"#fff");print(ctx,badge,root,{min:19,color:"#172a37"});
+            }
+          }
+          if(label)print(ctx,label,root,{min:24,max:27,color:"#fff",align:"left"});
+          else print(ctx,h,root,{min:23,color:"#fff",align:"left"});
+          ctx.strokeStyle="#ffffff55";
+          ctx.strokeRect(hr.x,hr.y,hr.w,hr.h);
+        }
       }
-      y+=gap;
+      const table=group.querySelector("table.odds-table");
+      if(!table)continue;
+      for(const th of table.querySelectorAll("thead th")){
+        bg(ctx,th,root,theme);
+        const r=rect(th,root);
+        ctx.strokeStyle="#ffffff66";ctx.lineWidth=1;ctx.strokeRect(r.x,r.y,r.w,r.h);
+        print(ctx,th,root,{min:17,max:20,color:"#fff"});
+      }
+      for(const tr of table.querySelectorAll("tbody tr")){
+        for(const td of tr.querySelectorAll("td")){
+          const r=rect(td,root);
+          const css=getComputedStyle(td);
+          const fallback=td.classList.contains("upper")?"#e8eaed":
+            td.classList.contains("odds-current")?"#edf7f3":"#fff";
+          const ink=css.backgroundColor;
+          fill(ctx,r,ink&&ink!=="rgba(0, 0, 0, 0)"?ink:fallback);
+          ctx.strokeStyle="#cfd3d8";ctx.lineWidth=.85;
+          ctx.strokeRect(r.x+.3,r.y+.3,r.w-.6,r.h-.6);
+          if(td.classList.contains("team-pair")){
+            const labels=td.querySelectorAll(".club-label");
+            for(const label of labels)print(ctx,label,root,{min:19,max:22,color:"#111820",align:
+              label===labels[0]?"right":"left"});
+            const versus=td.querySelector(".mini-vs");
+            print(ctx,versus,root,{min:15,max:17,color:"#a42b35"});
+            for(const badge of td.querySelectorAll(".team-badge")){
+              const img=badge.querySelector("img");
+              if(img)await drawCrest(ctx,img,root,img.alt||badge.title);
+              else {fill(ctx,rect(badge,root),"#fff");print(ctx,badge,root,{min:14,color:"#14242a"});}
+            }
+          }else{
+            print(ctx,td,root,{min:td.classList.contains("price")?23:td.classList.contains("prediction")?22:18,
+              max:td.classList.contains("price")?25:22,color:"#111820"});
+          }
+        }
+      }
     }
     return {image:canvas,height:canvas.height};
   }
-
-  async function draw(rows, settings) {
-    const kit = window.FutureCodeCanvasKit;
-    if (!kit) throw new Error("PNG canvas module မရသေးပါ။");
-    const design = settings.design, colourOnly = design[0] === "colour";
-    const theme = colourOnly ? settings.colour : design[2];
-    const artwork = design[3] ?
-      await loadImage("./assets/table-odds-frames/" + design[0] + "-frame.jpg") : null;
-    const top = artwork || colourOnly ? null :
-      await loadImage("./assets/table-odds-frames/" + design[0] + "-top.jpg");
-    const bottom = artwork || colourOnly ? null :
-      await loadImage("./assets/table-odds-frames/" + design[0] + "-bottom.jpg");
-
-    // Screenshot is the same HTML, headers, columns, Myanmar spellings and
-    // original/current prices that users see on the main website.
-    let shot;
-    if (!captureDisabled) {
-      try {
-        // A blocked font/image request must not leave the Download button spinning.
-        const attempt = captureWebsiteGroups(rows, theme, settings.date);
-        let deadline;
-        try {
-          shot = await Promise.race([
-            attempt,
-            new Promise((_,reject)=>{deadline=setTimeout(
-              ()=>reject(new Error("DOM image capture timed out")),9000);})
-          ]);
-        } finally { clearTimeout(deadline); }
-        window.FutureCodeOddsDomFrame.lastCapture = "website";
-      } catch (error) {
-        console.warn("Website screenshot capture unavailable; rendering the same table natively.", error);
-        captureDisabled = true;
+  async function capture(rows,theme,date){
+    if(typeof loadedSheet==="undefined"||!loadedSheet?.matches?.length)
+      throw Error("ပေါက်ကြေးဒေတာ မရသေးပါ။");
+    const original=[...document.querySelectorAll("#oddsList .odds-group")];
+    const leagueOrder=[...new Set(loadedSheet.matches.map(m=>m.league))];
+    if(original.length!==leagueOrder.length)throw Error("Website လိဂ်ဇယား မပြည့်စုံပါ။ Refresh လုပ်ပါ။");
+    const source=new Map(leagueOrder.map((l,i)=>[l,original[i]]));
+    const sections=new Map();
+    for(const m of rows){if(!sections.has(m.league))sections.set(m.league,[]);sections.get(m.league).push(m);}
+    const stage=document.createElement("div");
+    stage.style.cssText="position:fixed;top:0;left:-24000px;width:"+WIDTH+"px;pointer-events:none;z-index:-1000;overflow:visible;";
+    const root=document.createElement("div");
+    root.className="odds-content fc-odds-export-capture";
+    root.style.cssText="box-sizing:border-box;width:"+WIDTH+"px;max-width:none;margin:0;padding:10px;background:#10191d;";
+    root.style.setProperty("--sheet-brand",theme);
+    root.style.setProperty("--sheet-deep",colour(theme,.70));
+    root.style.setProperty("--sheet-title","#fff");
+    const dateEl=document.createElement("div");
+    dateEl.className="fc-odds-export-date";
+    dateEl.textContent=date||"";
+    dateEl.style.cssText="margin:0 0 12px;text-align:center;border-radius:7px;background:"+
+      colour(theme,.7)+";color:#fff;font:800 24px/1.6 'Noto Sans Myanmar',sans-serif;padding:7px 0;";
+    root.append(dateEl);
+    for(const [league,matches] of sections){
+      const live=source.get(league);
+      if(!live)throw Error("လိဂ်ဇယား ရှာမတွေ့ပါ — "+league);
+      const all=loadedSheet.matches.filter(x=>x.league===league);
+      const selected=new Set(matches.map(x=>all.indexOf(x)));
+      if(selected.has(-1))throw Error("Website ပွဲဒေတာ မကိုက်ညီပါ");
+      const group=live.cloneNode(true);
+      group.dataset.oddsLeague=league;
+      group.querySelectorAll("button,.odds-league-png-parts").forEach(el=>el.remove());
+      [...group.querySelectorAll("tbody tr")].forEach((tr,i)=>{if(!selected.has(i))tr.remove();});
+      group.style.setProperty("width","100%","important");
+      group.style.setProperty("max-width","none","important");
+      group.style.setProperty("margin","0 0 13px","important");
+      const head=group.querySelector("h2.odds-league-heading");
+      if(head){head.style.setProperty("font-size","23px","important");
+        const logo=head.querySelector("img,.league-mark");
+        if(logo){logo.style.setProperty("width","43px","important");
+          logo.style.setProperty("height","43px","important");}}
+      for(const th of group.querySelectorAll("th")){
+        th.style.setProperty("font-size",th.classList.contains("odds-sub-current")||
+          th.classList.contains("odds-sub-original")?"17px":"18px","important");
+        th.style.setProperty("line-height","1.65","important");
+        th.style.setProperty("padding","8px 3px","important");
       }
+      for(const td of group.querySelectorAll("td")){
+        const size=td.classList.contains("price")?"23px":
+          td.classList.contains("prediction")?"22px":
+          td.classList.contains("team-pair")?"20px":"19px";
+        td.style.setProperty("font-size",size,"important");
+        td.style.setProperty("padding","11px 3px","important");
+        td.style.setProperty("line-height","1.65","important");
+      }
+      for(const label of group.querySelectorAll(".odds-matchup .club-label")){
+        label.style.setProperty("font-size","20px","important");
+        label.style.setProperty("line-height","1.5","important");
+      }
+      for(const logo of group.querySelectorAll(".odds-matchup .team-badge")){
+        logo.style.setProperty("width","34px","important");
+        logo.style.setProperty("height","34px","important");
+        logo.style.setProperty("flex","0 0 34px","important");
+      }
+      for(const mark of group.querySelectorAll(".odds-matchup .mini-vs"))
+        mark.style.setProperty("font-size","15px","important");
+      const table=group.querySelector("table");
+      if(table){table.style.setProperty("width","100%","important");
+        table.style.setProperty("min-width","0","important");
+        table.style.setProperty("max-width","none","important");
+      }
+      root.append(group);
     }
-    if (!shot) {
-      shot = await fallbackTable(rows,theme,settings.date);
-      window.FutureCodeOddsDomFrame.lastCapture = "table-fallback";
-    }
-    const outWidth = WIDTH * SCALE;
-    const topFraction = artwork ? design[3].top : 0;
-    const bottomFraction = artwork ? design[3].bottom : 0;
-    const topH = artwork ? Math.round(artwork.height * topFraction * outWidth / artwork.width) :
-      top ? Math.round(top.height * outWidth / top.width) : 0;
-    const bottomH = artwork ? Math.round(artwork.height * bottomFraction * outWidth / artwork.width) :
-      bottom ? Math.round(bottom.height * outWidth / bottom.width) : 0;
-    const { canvas, ctx } = kit.create(outWidth, topH + shot.height + bottomH);
-    ctx.fillStyle = shade(theme, .52);
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    if (artwork && topH) {
-      const slice = artwork.height * topFraction;
-      ctx.drawImage(artwork, 0, 0, artwork.width, slice, 0, 0, outWidth, topH);
-    } else if (top) ctx.drawImage(top, 0, 0, outWidth, topH);
-    ctx.drawImage(shot.image, 0, topH, outWidth, shot.height);
-    if (artwork && bottomH) {
-      const slice = artwork.height * bottomFraction;
-      ctx.drawImage(artwork, 0, artwork.height - slice, artwork.width, slice,
-        0, canvas.height - bottomH, outWidth, bottomH);
-    } else if (bottom) ctx.drawImage(bottom, 0, canvas.height - bottomH, outWidth, bottomH);
+    stage.append(root);document.body.append(stage);
+    try{
+      if(document.fonts?.ready)await Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,1300))]);
+      await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+      const height=Math.ceil(root.scrollHeight);
+      if(height<70||height>13000)throw Error("ပုံအရွယ်အစား ကြီးလွန်းပါသည်။ ပုံခွဲပါ။");
+      if(!browserCaptureFailed&&window.domtoimage?.toBlob){
+        let timer;
+        try{
+          const blob=await Promise.race([
+            window.domtoimage.toBlob(root,{
+              bgcolor:"#10191d",width:WIDTH*SCALE,height:height*SCALE,
+              style:{transform:"scale("+SCALE+")",transformOrigin:"top left",
+                width:WIDTH+"px",height:height+"px"},
+              imagePlaceholder:"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            }),
+            new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error("Screenshot timeout")),5500);})
+          ]);
+          if(!blob?.size)throw Error("Empty screenshot PNG");
+          const result={image:await asImage(blob),height:height*SCALE};
+          window.FutureCodeOddsDomFrame.lastCapture="website";
+          return result;
+        }catch(error){
+          console.warn("Odds DOM screenshot unavailable; using measured website geometry.",error);
+          browserCaptureFailed=true;
+        }finally{clearTimeout(timer);}
+      }
+      const result=await measuredCapture(root,theme);
+      window.FutureCodeOddsDomFrame.lastCapture="measured-website";
+      return result;
+    }finally{stage.remove();}
+  }
+  async function draw(rows,settings){
+    const kit=window.FutureCodeCanvasKit;
+    if(!kit)throw Error("PNG module မရပါ");
+    const design=settings.design,theme=design[0]==="colour"?settings.colour:design[2];
+    const frame=design[3]?await image("./assets/table-odds-frames/"+design[0]+"-frame.jpg"):null;
+    const top=design[0]==="colour"||frame?null:
+      await image("./assets/table-odds-frames/"+design[0]+"-top.jpg");
+    const bottom=design[0]==="colour"||frame?null:
+      await image("./assets/table-odds-frames/"+design[0]+"-bottom.jpg");
+    const shot=await capture(rows,theme,settings.date);
+    const W=WIDTH*SCALE;
+    const fractionTop=frame?design[3].top:0,fractionBottom=frame?design[3].bottom:0;
+    const topH=frame?Math.round(frame.height*fractionTop*W/frame.width):
+      top?Math.round(top.height*W/top.width):0;
+    const bottomH=frame?Math.round(frame.height*fractionBottom*W/frame.width):
+      bottom?Math.round(bottom.height*W/bottom.width):0;
+    const {canvas,ctx}=kit.create(W,topH+shot.height+bottomH);
+    ctx.fillStyle=colour(theme,.55);ctx.fillRect(0,0,canvas.width,canvas.height);
+    if(frame&&topH)ctx.drawImage(frame,0,0,frame.width,frame.height*fractionTop,0,0,W,topH);
+    else if(top)ctx.drawImage(top,0,0,W,topH);
+    ctx.drawImage(shot.image,0,topH,W,shot.height);
+    if(frame&&bottomH)ctx.drawImage(frame,0,frame.height*(1-fractionBottom),frame.width,
+      frame.height*fractionBottom,0,canvas.height-bottomH,W,bottomH);
+    else if(bottom)ctx.drawImage(bottom,0,canvas.height-bottomH,W,bottomH);
     return canvas;
   }
-  window.FutureCodeOddsDomFrame = { draw };
+  window.FutureCodeOddsDomFrame={draw};
 })();

@@ -39,27 +39,46 @@ test('Selected frame routes to website table capture instead of a redesigned can
   assert.equal(calls[0][0][0],match);
   assert.equal(calls[0][1],opts);
 });
-test('PNG clones the actual on-screen league groups and their HTML rows',()=>{
-  assert.match(domSource,/querySelectorAll\("#oddsList \.odds-group"\)/);
-  assert.match(domSource,/originalGroup\.cloneNode\(true\)/);
-  assert.match(domSource,/querySelectorAll\("tbody tr"\)/);
-  assert.match(domSource,/querySelectorAll\("\.odds-league-png-parts,button"\)/);
-  assert.match(domSource,/snapshot\.style\.setProperty\("--sheet-brand", theme\)/);
-  assert.match(domSource,/snapshot\.style\.setProperty\("--sheet-deep", shade\(theme, \.70\)\)/);
-  assert.match(domSource,/dateBar\.textContent = String\(date \|\| ""\)/);
-  assert.doesNotMatch(domSource,/dateBar\.textContent\s*=\s*[^;]*(?:ပွဲ|part|total)/);
-  assert.match(domSource,/SCALE = 2/);
+test('PNG is based on real website league and table DOM, never a generic fallback sheet',()=>{
+  assert.match(domSource,/document\.querySelectorAll\("#oddsList \.odds-group"\)/);
+  assert.match(domSource,/live\.cloneNode\(true\)/);
+  assert.match(domSource,/group\.dataset\.oddsLeague=league/);
+  assert.match(domSource,/group\.querySelectorAll\("button,\.odds-league-png-parts"\)/);
+  assert.match(domSource,/group\.querySelectorAll\("tbody tr"\)/);
+  assert.match(domSource,/root\.style\.setProperty\("--sheet-brand",theme\)/);
+  assert.match(domSource,/root\.style\.setProperty\("--sheet-deep",colour\(theme,\.70\)\)/);
+  assert.match(domSource,/dateEl\.textContent=date\|\|""/);
+  assert.match(domSource,/const WIDTH=1040,SCALE=2/);
+  assert.doesNotMatch(domSource,/fallbackTable/);
 });
-test('Every uploaded frame is retained with its palette and original top/bottom artwork',()=>{
+test('Blocked DOM screenshot does not change the website table layout',()=>{
+  assert.match(domSource,/async function measuredCapture\(root,theme\)/);
+  assert.match(domSource,/const rect=\(el,base\)=>/);
+  assert.match(domSource,/querySelectorAll\("thead th"\)/);
+  assert.match(domSource,/querySelectorAll\("tbody tr"\)/);
+  assert.match(domSource,/querySelectorAll\("td"\)/);
+  assert.match(domSource,/window\.FutureCodeOddsDomFrame\.lastCapture="measured-website"/);
+  assert.match(domSource,/ctx\.drawImage\(shot\.image/);
+});
+test('League logos stay next to league titles; team logos stay between team names',()=>{
+  assert.match(domSource,/header\.querySelector\("h2\.odds-league-heading"\)/);
+  assert.match(domSource,/h\.querySelector\("\.league-crest,\.league-mark"\)/);
+  assert.match(domSource,/group\.dataset\.oddsLeague/);
+  assert.match(domSource,/assets\/table-odds-frames\/league-/);
+  assert.match(domSource,/td\.querySelectorAll\("\.team-badge"\)/);
+  assert.match(domSource,/await drawCrest\(ctx,img,root/);
+  assert.match(domSource,/label\.style\.setProperty\("font-size","20px","important"\)/);
+});
+test('All frame banners stay at the top/bottom while the table is unchanged',()=>{
   const {api}=setup();
   assert.equal(api.designs.length,16);
-  assert.equal(new Set(api.designs.map(x=>x[0])).size,16);
+  assert.equal(new Set(api.designs.map(d=>d[0])).size,16);
   for(const d of api.designs.filter(d=>d[3])){
     assert.ok(fs.statSync(path.join(root,'assets/table-odds-frames',d[0]+'-frame.jpg')).size>1000);
     assert.ok(d[3].top+d[3].bottom<1);
   }
-  assert.match(domSource,/ctx\.drawImage\(shot\.image/);
-  assert.match(domSource,/ctx\.drawImage\(artwork/);
+  assert.match(domSource,/ctx\.drawImage\(frame,0,0/);
+  assert.match(domSource,/ctx\.drawImage\(frame,0,frame\.height\*\(1-fractionBottom\)/);
 });
 test('One-click selected frame download supports both single PNG and two-page ZIP',()=>{
   assert.match(source,/archive=download&&parts\.length>1/);
@@ -101,28 +120,10 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
   }
 });
 
-test('DOM image failure always falls back to native website-shaped odds table',async()=>{
-  const draws=[];
-  const ctx={
-    scale(){},fillRect(){},fillText(){},strokeRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},
-    drawImage(){draws.push('image');}
-  };
-  const kit={
-    fonts:async()=>{},preloadImages:async()=>{},
-    create:(w,h)=>({canvas:{width:w,height:h},ctx}),
-    crest:()=>{}
-  };
-  const window={FutureCodeCanvasKit:kit};
-  const document={documentElement:{dataset:{}}};
-  const context={window,document,location:{pathname:'/odds.html'},
-    Map,Set,Error,Promise,console,Date,Intl,Image:class {},setTimeout,clearTimeout};
-  vm.runInNewContext(domSource,context);
-  const canvas=await window.FutureCodeOddsDomFrame.draw([
-    {league:'Premier League',home:'အိမ်ရှင်',away:'ဧည့်သည်',homeCrestUrl:null,awayCrestUrl:null,
-     kickoff:'19:30',upperTeam:'အိမ်ရှင်',bodyOdds:'-30',goalTotalOdds:'3-20',pdfLastColumn:'1-0'}
-  ],{design:['colour','Colour Background Change','#124467'],colour:'#124467',date:'2026-10-19'});
-  assert.equal(canvas.width,2280);
-  assert.ok(canvas.height>120);
-  assert.deepEqual(Array.from(draws),['image']);
-  assert.equal(window.FutureCodeOddsDomFrame.lastCapture,'table-fallback');
+
+test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
+  const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-layout-v4/);
+  assert.match(html,/main-table-odds-frames\.js\?v=20261019-layout-v4/);
+  assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
 });
