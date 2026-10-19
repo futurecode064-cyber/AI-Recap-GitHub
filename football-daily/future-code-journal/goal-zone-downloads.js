@@ -107,10 +107,8 @@
     return mergeOdds(data,latest);
   }
   function predictionFor(m){
-    const evidence=["homeStanding","awayStanding"].every(k=>m[k]&&Number(m[k].played)>=3 &&
-      Number.isFinite(Number(m[k].goalsFor))&&Number.isFinite(Number(m[k].goalsAgainst)));
     const model=window.FutureCodeAiScoreModel;
-    return evidence&&model&&typeof model.predict==="function"?model.predict(m):null;
+    return model&&typeof model.predict==="function"?model.predict(m):null;
   }
   async function aiCard(m,reportDate){
     const kit=window.FutureCodeCanvasKit;

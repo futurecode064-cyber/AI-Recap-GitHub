@@ -28,9 +28,7 @@
         if(side==="home")teams.append(make("b","fcj-ai-vs","VS"));
       }
       card.append(teams);
-      const hs=m.homeStanding,as=m.awayStanding;
-      const evidence=[hs,as].every(s=>s&&Number(s.played)>=3&&Number.isFinite(Number(s.goalsFor))&&Number.isFinite(Number(s.goalsAgainst)));
-      if(evidence&&model&&typeof model.predict==="function"){
+      if(model&&typeof model.predict==="function"){
         const scores=model.predict(m);
         const row=make("div","fcj-ai-scores");
         scores.forEach((score,index)=>row.append(make("span",index===0?"fcj-ai-score lead":"fcj-ai-score",score)));
