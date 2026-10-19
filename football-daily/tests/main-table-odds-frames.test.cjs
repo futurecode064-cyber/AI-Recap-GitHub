@@ -39,37 +39,44 @@ test('Selected frame routes to website table capture instead of a redesigned can
   assert.equal(calls[0][0][0],match);
   assert.equal(calls[0][1],opts);
 });
-test('PNG is based on real website league and table DOM, never a generic fallback sheet',()=>{
+test('Main PNG captures the existing live website odds DOM only',()=>{
+  assert.match(domSource,/source\.cloneNode\(true\)/);
   assert.match(domSource,/document\.querySelectorAll\("#oddsList \.odds-group"\)/);
-  assert.match(domSource,/live\.cloneNode\(true\)/);
-  assert.match(domSource,/group\.dataset\.oddsLeague=league/);
-  assert.match(domSource,/group\.querySelectorAll\("button,\.odds-league-png-parts"\)/);
-  assert.match(domSource,/group\.querySelectorAll\("tbody tr"\)/);
-  assert.match(domSource,/root\.style\.setProperty\("--sheet-brand",theme\)/);
-  assert.match(domSource,/root\.style\.setProperty\("--sheet-deep",colour\(theme,\.70\)\)/);
-  assert.match(domSource,/dateEl\.textContent=date\|\|""/);
-  assert.match(domSource,/const WIDTH=1040,SCALE=2/);
-  assert.doesNotMatch(domSource,/fallbackTable/);
-});
-test('Blocked DOM screenshot does not change the website table layout',()=>{
-  assert.match(domSource,/async function measuredCapture\(root,theme\)/);
-  assert.match(domSource,/const rect=\(el,base\)=>/);
-  assert.match(domSource,/querySelectorAll\("thead th"\)/);
+  assert.match(domSource,/root\.appendChild\(group\)/);
+  assert.match(domSource,/querySelectorAll\("\.odds-league-png-parts,button"\)/);
   assert.match(domSource,/querySelectorAll\("tbody tr"\)/);
-  assert.match(domSource,/querySelectorAll\("td"\)/);
-  assert.match(domSource,/window\.FutureCodeOddsDomFrame\.lastCapture="measured-website"/);
-  assert.match(domSource,/ctx\.drawImage\(shot\.image/);
+  assert.match(domSource,/window\.domtoimage\.toBlob\(root/);
+  assert.match(domSource,/window\.FutureCodeOddsDomFrame\.lastCapture="exact-website-dom"/);
+  assert.doesNotMatch(domSource,/measuredCapture|fallbackTable|drawCrest|ctx\.fillText|ctx\.strokeRect/);
 });
-test('League logos stay next to league titles; team logos stay between team names',()=>{
-  assert.match(domSource,/header\.querySelector\("h2\.odds-league-heading"\)/);
-  assert.match(domSource,/h\.querySelector\("\.league-crest,\.league-mark"\)/);
-  assert.match(domSource,/group\.dataset\.oddsLeague/);
-  assert.match(domSource,/assets\/table-odds-frames\/league-/);
-  assert.match(domSource,/td\.querySelectorAll\("\.team-badge"\)/);
-  assert.match(domSource,/await drawCrest\(ctx,img,root/);
-  assert.match(domSource,/label\.style\.setProperty\("font-size","20px","important"\)/);
+test('Theme alters only the cloned website palette and preserves its real headers, crests and columns',()=>{
+  assert.match(domSource,/root\.style\.setProperty\("--sheet-brand",theme\)/);
+  assert.match(domSource,/root\.style\.setProperty\("--sheet-deep",shade\(theme,\.7\)\)/);
+  assert.match(domSource,/const group=source\.cloneNode\(true\)/);
+  assert.match(domSource,/No forced font sizes, no new columns, no replacement logos/);
+  assert.doesNotMatch(domSource,/createElement\("table"\)|createElement\("thead"\)|createElement\("tbody"\)/);
+  assert.doesNotMatch(domSource,/group\.querySelector\("h2\.odds-league-heading"\)\.replaceWith/);
+  assert.match(domSource,/dateBar\.textContent=String\(date\|\|""\)/);
 });
-test('All frame banners stay at the top/bottom while the table is unchanged',()=>{
+test('Team and league names stay on one line without rewriting the original text',()=>{
+  assert.match(domSource,/title\.style\.setProperty\("white-space","nowrap","important"\)/);
+  assert.match(domSource,/name\.style\.setProperty\("white-space","nowrap","important"\)/);
+  assert.match(domSource,/const labels=\[\.\.\.pair\.querySelectorAll\("\.club-label"\)\]/);
+  assert.match(domSource,/name\.scrollWidth>name\.clientWidth\+1/);
+  assert.doesNotMatch(domSource,/innerHTML\s*=\s*['"]<table/);
+});
+test('PNG fits full visible table width without stretching/making a new table',()=>{
+  assert.match(domSource,/const natural=Math\.max\(0,\.\.\.tables\.map/);
+  assert.match(domSource,/return Math\.min\(1140,Math\.max\(970,natural,viewport\)\)/);
+  assert.match(domSource,/const width=getTableWidth\(\)/);
+  assert.match(domSource,/SCALE = 2/);
+});
+test('Capture errors never silently replace website table with a different layout',()=>{
+  assert.match(domSource,/throw Error\("Website Screenshot Library မရသေးပါ/);
+  assert.match(domSource,/reject\(Error\("Website Screenshot အချိန်ကုန်သွားပါပြီ"\)\)/);
+  assert.doesNotMatch(domSource,/measured-website|table-fallback/);
+});
+test('All original frame banners remain unchanged and only surround the captured table',()=>{
   const {api}=setup();
   assert.equal(api.designs.length,16);
   assert.equal(new Set(api.designs.map(d=>d[0])).size,16);
@@ -77,8 +84,9 @@ test('All frame banners stay at the top/bottom while the table is unchanged',()=
     assert.ok(fs.statSync(path.join(root,'assets/table-odds-frames',d[0]+'-frame.jpg')).size>1000);
     assert.ok(d[3].top+d[3].bottom<1);
   }
-  assert.match(domSource,/ctx\.drawImage\(frame,0,0/);
-  assert.match(domSource,/ctx\.drawImage\(frame,0,frame\.height\*\(1-fractionBottom\)/);
+  assert.match(domSource,/ctx\.drawImage\(banner,0,0/);
+  assert.match(domSource,/ctx\.drawImage\(banner,0,banner\.height\*\(1-bottomPart\)/);
+  assert.match(domSource,/ctx\.drawImage\(shot\.picture,0,topH,W,shot\.height\)/);
 });
 test('One-click selected frame download supports both single PNG and two-page ZIP',()=>{
   assert.match(source,/archive=download&&parts\.length>1/);
@@ -123,7 +131,7 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
 
 test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-layout-v4/);
-  assert.match(html,/main-table-odds-frames\.js\?v=20261019-layout-v4/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-direct-dom-v5/);
+  assert.match(html,/main-table-odds-frames\.js\?v=20261019-direct-dom-v5/);
   assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
 });
