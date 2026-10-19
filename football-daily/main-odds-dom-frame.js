@@ -10,8 +10,9 @@
   function loadImage(src) {
     if (!imageCache.has(src)) imageCache.set(src, new Promise((resolve, reject) => {
       const im = new Image();
-      im.onload = () => resolve(im);
-      im.onerror = () => reject(new Error("Frame ပုံ ရယူမရပါ"));
+      const timer = setTimeout(() => resolve(null), 5000);
+      im.onload = () => { clearTimeout(timer); resolve(im); };
+      im.onerror = () => { clearTimeout(timer); resolve(null); };
       im.src = src;
     }));
     return imageCache.get(src);
@@ -104,6 +105,84 @@
       offscreen.remove();
     }
   }
+
+  // If browser SVG/foreignObject capture fails (commonly due to blocked remote
+  // fonts or crests), keep PNG downloads functional with a matching table grid.
+  // This is NOT a redesigned match poster.
+  let captureDisabled = false;
+  async function fallbackTable(rows, theme, date) {
+    const kit = window.FutureCodeCanvasKit;
+    if (!kit) throw new Error("PNG Canvas module မရသေးပါ။");
+    await kit.fonts();
+    await kit.preloadImages(rows.flatMap(m => [m.homeCrestUrl, m.awayCrestUrl]).filter(Boolean));
+    const byLeague = new Map();
+    for (const m of rows) {
+      if (!byLeague.has(m.league)) byLeague.set(m.league, []);
+      byLeague.get(m.league).push(m);
+    }
+    const topPad=70, leagueH=57, columnH=78, rowH=75, gap=14, pad=10;
+    const width=1140, height=topPad+24+[...byLeague.values()].reduce(
+      (sum, matches) => sum+leagueH+columnH+matches.length*rowH+gap, 0);
+    if(height>13000)throw new Error("ပုံအမြင့်များလွန်းပါသည်။ ပုံခွဲ၍ Download လုပ်ပါ။");
+    const {canvas,ctx}=kit.create(width*2,height*2);
+    ctx.scale(2,2);
+    const bg=shade(theme,.52), deep=shade(theme,.70);
+    const fill=(x,y,w,h,color)=>{ctx.fillStyle=color;ctx.fillRect(x,y,w,h);};
+    const write=(value,x,y,px,color="#111820",align="center",max)=>{
+      ctx.font="800 "+px+"px 'Noto Sans Myanmar',sans-serif";
+      ctx.textAlign=align;ctx.textBaseline="middle";ctx.fillStyle=color;
+      ctx.fillText(String(value??""),x,y,max);
+    };
+    fill(0,0,width,height,bg);
+    fill(pad,10,width-pad*2,53,deep);
+    write(date,width/2,38,23,"#fff");
+    const widths=[96,384,158,90,90,90,90,142],xs=[0];
+    widths.forEach(w=>xs.push(xs.at(-1)+w));
+    const tableLeft=pad, tableRight=width-pad, innerWidth=tableRight-tableLeft;
+    let y=topPad;
+    for(const [league,matches] of byLeague){
+      fill(pad,y,innerWidth,leagueH,deep);
+      const display=(typeof groups!=="undefined" && groups[league]) || league;
+      write(display,width/2,y+leagueH/2,21,"#fff","center",innerWidth-45);
+      y+=leagueH;
+      const xAt=i=>pad+xs[i]*(innerWidth/width);
+      const wAt=i=>widths[i]*(innerWidth/width);
+      fill(pad,y,innerWidth,columnH,theme);
+      const headings=[["ပွဲချိန်",0],["ယှဉ်ပြိုင်မည့်အသင်း",1],["အပေါ်အသင်း",2],["အင်တာနက်ခန့်မှန်းချက်",7]];
+      for(const [title,i] of headings)write(title,xAt(i)+wAt(i)/2,y+columnH/2,15,"#fff","center",wAt(i)-7);
+      write("ဘော်ဒီကြေး",(xAt(3)+xAt(5))/2,y+22,19,"#fff");
+      write("ဂိုးပေါင်းကြေး",(xAt(5)+xAt(7))/2,y+22,19,"#fff");
+      for(let i=3;i<7;i++)write(i%2?"မူလ":"ယခု",xAt(i)+wAt(i)/2,y+58,15,"#fff");
+      ctx.strokeStyle="#ffffff44";ctx.lineWidth=1;
+      for(let i=1;i<8;i++){ctx.beginPath();ctx.moveTo(xAt(i),y);ctx.lineTo(xAt(i),y+columnH);ctx.stroke();}
+      y+=columnH;
+      for(let n=0;n<matches.length;n++){
+        const m=matches[n];
+        fill(pad,y,innerWidth,rowH,n%2?"#f7f8fa":"#fff");
+        fill(xAt(2),y,wAt(2),rowH,n%2?"#dfe3e7":"#e8eaed");
+        fill(xAt(4),y,wAt(4),rowH,"#edf7f3");
+        fill(xAt(6),y,wAt(6),rowH,"#edf7f3");
+        ctx.strokeStyle="#cfd3d8";ctx.lineWidth=1;
+        ctx.strokeRect(pad+.5,y+.5,innerWidth-1,rowH-1);
+        for(let i=1;i<8;i++){ctx.beginPath();ctx.moveTo(xAt(i),y);ctx.lineTo(xAt(i),y+rowH);ctx.stroke();}
+        const middle=y+rowH/2;
+        write((m.kickoffDisplay||m.kickoff||"").replace(/^.*? ည /,"ည "),xAt(0)+wAt(0)/2,middle,15,"#172126","center",wAt(0)-5);
+        const mx=xAt(1),mw=wAt(1),sx=mw/384;
+        write(m.home,mx+126*sx,middle,17,"#141923","right",122*sx);
+        kit.crest(ctx,m.homeCrestUrl,mx+135*sx,y+21,33*sx,m.home);
+        write("VS",mx+196*sx,middle,13,"#ad2831");
+        kit.crest(ctx,m.awayCrestUrl,mx+220*sx,y+21,33*sx,m.away);
+        write(m.away,mx+263*sx,middle,17,"#141923","left",120*sx);
+        write(m.upperTeam||"",xAt(2)+wAt(2)/2,middle,16,"#141923","center",wAt(2)-7);
+        const quote=[m.bodyOdds,m.currentBodyOdds,m.goalTotalOdds,m.currentGoalTotalOdds,m.pdfLastColumn];
+        for(let i=0;i<quote.length;i++)write(quote[i]??"",xAt(i+3)+wAt(i+3)/2,middle,19,"#111820","center",wAt(i+3)-5);
+        y+=rowH;
+      }
+      y+=gap;
+    }
+    return {image:canvas,height:canvas.height};
+  }
+
   async function draw(rows, settings) {
     const kit = window.FutureCodeCanvasKit;
     if (!kit) throw new Error("PNG canvas module မရသေးပါ။");
@@ -118,7 +197,29 @@
 
     // Screenshot is the same HTML, headers, columns, Myanmar spellings and
     // original/current prices that users see on the main website.
-    const shot = await captureWebsiteGroups(rows, theme, settings.date);
+    let shot;
+    if (!captureDisabled) {
+      try {
+        // A blocked font/image request must not leave the Download button spinning.
+        const attempt = captureWebsiteGroups(rows, theme, settings.date);
+        let deadline;
+        try {
+          shot = await Promise.race([
+            attempt,
+            new Promise((_,reject)=>{deadline=setTimeout(
+              ()=>reject(new Error("DOM image capture timed out")),9000);})
+          ]);
+        } finally { clearTimeout(deadline); }
+        window.FutureCodeOddsDomFrame.lastCapture = "website";
+      } catch (error) {
+        console.warn("Website screenshot capture unavailable; rendering the same table natively.", error);
+        captureDisabled = true;
+      }
+    }
+    if (!shot) {
+      shot = await fallbackTable(rows,theme,settings.date);
+      window.FutureCodeOddsDomFrame.lastCapture = "table-fallback";
+    }
     const outWidth = WIDTH * SCALE;
     const topFraction = artwork ? design[3].top : 0;
     const bottomFraction = artwork ? design[3].bottom : 0;

@@ -61,9 +61,12 @@ test('Every uploaded frame is retained with its palette and original top/bottom 
   assert.match(domSource,/ctx\.drawImage\(shot\.image/);
   assert.match(domSource,/ctx\.drawImage\(artwork/);
 });
-test('Two page frame download never automatically clicks multiple files',()=>{
-  assert.match(source,/if\(parts\.length===1\)a\.click\(\)/);
-  assert.match(source,/PNG Download ကို တစ်ပုံချင်း နှိပ်ယူပါ/);
+test('One-click selected frame download supports both single PNG and two-page ZIP',()=>{
+  assert.match(source,/archive=download&&parts\.length>1/);
+  assert.match(source,/await archive\.add\(filename,blob\)/);
+  assert.match(source,/a\.download=settings\.design\[0\]\+'-odds-table-'\+sheet\.reportDate\+'\.zip'/);
+  assert.match(source,/document\.body\.appendChild\(a\);a\.click\(\)/);
+  assert.match(source,/PNG Download လင့်ခ်ကို နှိပ်ပါ/);
 });
 test('ZIP still contains one PNG per frame and balanced half',async()=>{
   const {api,calls}=setup();
@@ -96,4 +99,30 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
     for(const filename of ['main-odds-dom-frame.js','main-table-odds-frames.js'])
       assert.ok(!sub.includes(filename),brand+': '+filename);
   }
+});
+
+test('DOM image failure always falls back to native website-shaped odds table',async()=>{
+  const draws=[];
+  const ctx={
+    scale(){},fillRect(){},fillText(){},strokeRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},
+    drawImage(){draws.push('image');}
+  };
+  const kit={
+    fonts:async()=>{},preloadImages:async()=>{},
+    create:(w,h)=>({canvas:{width:w,height:h},ctx}),
+    crest:()=>{}
+  };
+  const window={FutureCodeCanvasKit:kit};
+  const document={documentElement:{dataset:{}}};
+  const context={window,document,location:{pathname:'/odds.html'},
+    Map,Set,Error,Promise,console,Date,Intl,Image:class {},setTimeout,clearTimeout};
+  vm.runInNewContext(domSource,context);
+  const canvas=await window.FutureCodeOddsDomFrame.draw([
+    {league:'Premier League',home:'အိမ်ရှင်',away:'ဧည့်သည်',homeCrestUrl:null,awayCrestUrl:null,
+     kickoff:'19:30',upperTeam:'အိမ်ရှင်',bodyOdds:'-30',goalTotalOdds:'3-20',pdfLastColumn:'1-0'}
+  ],{design:['colour','Colour Background Change','#124467'],colour:'#124467',date:'2026-10-19'});
+  assert.equal(canvas.width,2280);
+  assert.ok(canvas.height>120);
+  assert.deepEqual(Array.from(draws),['image']);
+  assert.equal(window.FutureCodeOddsDomFrame.lastCapture,'table-fallback');
 });
