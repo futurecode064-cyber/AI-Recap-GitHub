@@ -2,20 +2,20 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "c9cc6a8d9dcdd5ef2468c32de0c411005a790972",
-  "source_tree": "78070e51784f5c3e717003813f33d66556c0ec54",
-  "target_tree": "78070e51784f5c3e717003813f33d66556c0ec54",
+  "source_commit": "65946e4001c1caae7f09f273224a695dfac5ea25",
+  "source_tree": "3a7c4ee08288812fa73a789ef79a2f913240bc0e",
+  "target_tree": "3a7c4ee08288812fa73a789ef79a2f913240bc0e",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-19T06:56:40.648Z",
+  "last_synced_utc": "2026-10-19T07:06:08.090Z",
   "reconciled_on": "2026-10-19",
-  "reconciliation_note": "Verified canonical and production football-daily result trees identical, including canonical odds label regression test previously absent in production. Added Telegram link and aligned Goal Zone UI and PNG predictions with existing Main model; no match facts changed.",
-  "last_synced_method": "manual-single-file-delivery-after-exact-tree-parity-check",
+  "reconciliation_note": "Verified canonical and production football-daily trees identical after restoring frame banners, bundling main league logos and collecting PNGs into one ZIP folder; 16 targeted tests passed.",
+  "last_synced_method": "odds-banners-logos-single-folder-zip-parity",
   "guard_reconciliation": {
-    "previous_target_tree": "50687f206d834bd23847d8a45f8dfa899255dce0",
-    "verified_production_head": "40ed51fddc18db671ed2d65d0508e39f54090c15",
-    "verified_canonical_commit": "40221c1e53210772b9ca3a2f5a9252de1a3ec447",
-    "identical_result_tree": "2d2f0bdd039fc7f5245144d983efc30f44edfaf4"
+    "previous_target_tree": "78070e51784f5c3e717003813f33d66556c0ec54",
+    "verified_production_head": "3a9d663ac2d6d4fd13c1945ffcc92917b74cd041",
+    "verified_canonical_commit": "65946e4001c1caae7f09f273224a695dfac5ea25",
+    "identical_result_tree": "3a7c4ee08288812fa73a789ef79a2f913240bc0e"
   }
 }
