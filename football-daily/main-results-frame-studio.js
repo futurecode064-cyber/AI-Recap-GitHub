@@ -11,7 +11,8 @@
     {id:"htet",title:"HTET KO",color:"#126c21",dark:"#07370d",accent:"#f4edaa",
      top:ROOT+"htet-top.jpg",bottom:ROOT+"htet-bottom.jpg"},
     {id:"kotwat",title:"ကိုတွတ်ပီ",color:"#ba1114",dark:"#520608",accent:"#ffca9a",
-     artwork:ROOT+"ko-tut-pi-frame.jpg",topFraction:0.29,bottomFraction:0.21}
+     artwork:ROOT+"ko-tut-pi-frame.jpg",topFraction:0.29,bottomFraction:0.21},
+    {id:"plain",title:"Frame မပါ — စိတ်ကြိုက်အရောင်",color:"#1560a0",dark:"#0a304c",plain:true}
   ];
   const LEAGUES={
     "Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်",
@@ -35,6 +36,15 @@
     "La Liga":"league-pd.png","Bundesliga":"league-bl.png",
     "Ligue 1":"league-fl.png"
   };
+  // The plain design has no frame artwork, brand name or sponsor banner.
+  // An unrestricted HTML color picker controls its background, league bars and score badges.
+  function withColor(frame,value){
+    if(!frame.plain)return frame;
+    const color=/^#[0-9a-fA-F]{6}$/.test(String(value||""))?String(value):"#1560a0";
+    const dark="#"+color.slice(1).match(/../g).map(hex=>
+      Math.round(parseInt(hex,16)*0.45).toString(16).padStart(2,"0")).join("");
+    return {...frame,color,dark};
+  }
   const imgCache=new Map();
   const isFinal=m=>m&&m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(String(m.finalScore||""));
   const team=(m,side)=>String(m[side+"Display"]||m[side]||"—").trim();
@@ -85,7 +95,9 @@
     await kit.preloadImages(allUrls);
     const groups=sections(rows),W=1200,M=22,ROW=92,LEAGUE=62;
     let top=null,bottom=null,artwork=null,th=0,bh=0,sourceTop=0,sourceBottom=0;
-    if(frame.artwork){
+    if(frame.plain){
+      // No source image loads, logos or frame/bottom banners on a plain export.
+    }else if(frame.artwork){
       artwork=await loadAsset(frame.artwork);
       sourceTop=Math.round(artwork.height*frame.topFraction);
       sourceBottom=Math.round(artwork.height*frame.bottomFraction);
@@ -152,8 +164,9 @@
     studio.setAttribute("aria-label","ဂိုးရလဒ် Frame PNG Download");
     studio.innerHTML=
       '<h3>ဂိုးရလဒ် Frame PNG Download</h3>'+
-      '<p>Frame ရွေးပြီး အသင်းလိုဂို၊ မြန်မာအသင်းအမည်၊ အတည်ပြုဂိုးရလဒ်များကို တစ်ပုံတည်း သို့မဟုတ် ၂ ပုံခွဲပြီး သိမ်းနိုင်ပါသည်။</p>'+
+      '<p>Frame ၃ မျိုး သို့မဟုတ် Frame မပါသော စိတ်ကြိုက်အရောင်ကို ရွေးပြီး အသင်းလိုဂို၊ မြန်မာအသင်းအမည်နှင့် အတည်ပြုဂိုးရလဒ်များကို PNG ထုတ်နိုင်ပါသည်။</p>'+
       '<div class="rfs-controls"><label>Frame ရွေးရန် <select id="rfsFrame"></select></label>'+
+      '<label id="rfsColourWrap" hidden>စိတ်ကြိုက်အရောင် <input type="color" id="rfsColour" value="#1560a0" aria-label="ဂိုးရလဒ် PNG နောက်ခံအရောင်"></label>'+
       '<label>ပုံခွဲရန် <select id="rfsSplit"><option value="auto">ပွဲများလျှင် တစ်ဝက်စီ ၂ ပုံ</option><option value="two">တစ်ဝက်စီ ၂ ပုံ</option><option value="one">ပုံတစ်ပုံတည်း</option></select></label></div>'+
       '<fieldset class="rfs-fieldset"><legend>ပါဝင်စေချင်သော လိဂ်များ ရွေးပါ</legend>'+
       '<div class="rfs-choices" id="rfsLeagues"></div>'+
@@ -179,6 +192,8 @@
       '.results-frame-studio .rfs-choices{display:flex;flex-wrap:wrap;gap:8px 15px;}',
       '.results-frame-studio .rfs-choices label{font-size:12px;line-height:1.7;}',
       '.results-frame-studio .rfs-choices input{accent-color:#ffbb8b;}',
+      '.results-frame-studio [hidden]{display:none!important;}',
+      '.results-frame-studio input[type=color]{width:64px;height:43px;background:transparent;border:1px solid #78958e;border-radius:8px;padding:3px;cursor:pointer;}',
       '.results-frame-studio .rfs-output{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;}',
       '.results-frame-studio .rfs-page{min-width:0;border:1px solid #52736e;background:#1a3034;border-radius:10px;padding:11px;}',
       '.results-frame-studio .rfs-page a{display:block;border-radius:8px;padding:11px 12px;background:#ffc490;text-align:center;color:#16262a;font-weight:800;text-decoration:none;}',
@@ -188,6 +203,9 @@
     document.head.appendChild(style);
     const el=id=>studio.querySelector("#"+id);
     for(const f of FRAMES)el("rfsFrame").add(new Option(f.title,f.id));
+    const showColour=()=>{el("rfsColourWrap").hidden=el("rfsFrame").value!=="plain";};
+    el("rfsFrame").addEventListener("change",showColour);
+    showColour();
     let matches=[],date="",busy=false,sequence=0,urls=[];
     const status=message=>{el("rfsStatus").textContent=message;};
     function cleanup(){
@@ -233,7 +251,8 @@
       const selected=new Set([...el("rfsLeagues").querySelectorAll("input:checked")].map(x=>x.value));
       const list=matches.filter(m=>selected.has(String(m.league||"အခြားပြိုင်ပွဲ")));
       if(!list.length){status("အတည်ပြုပြီးသား ပွဲနှင့် လိဂ်တစ်ခု အနည်းဆုံး ရွေးပါ။");return;}
-      const frame=FRAMES.find(f=>f.id===el("rfsFrame").value)||FRAMES[0];
+      const chosen=FRAMES.find(f=>f.id===el("rfsFrame").value)||FRAMES[0];
+      const frame=withColor(chosen,el("rfsColour").value);
       const pages=split(list,el("rfsSplit").value);
       cleanup();disable(true);
       try{
@@ -246,7 +265,8 @@
           const url=URL.createObjectURL(blob);urls.push(url);
           const page=document.createElement("div");page.className="rfs-page";
           const link=document.createElement("a");link.href=url;
-          link.download=frame.id+"-results-"+date+(pages.length>1?"-"+(i+1)+"-of-"+pages.length:"")+".png";
+          link.download=(frame.plain?"goal-results-color":frame.id+"-results")+"-"+date+
+            (pages.length>1?"-"+(i+1)+"-of-"+pages.length:"")+".png";
           link.textContent="⬇ ပုံ "+(i+1)+"/"+pages.length+" PNG Download · "+pages[i].length+" ပွဲ";
           const img=document.createElement("img");img.src=url;img.alt=frame.title+" ဂိုးရလဒ် PNG "+(i+1);
           img.loading="lazy";
@@ -269,6 +289,6 @@
     });
     refresh();
   }
-  window.FutureCodeResultsFrames={frames:FRAMES,split,isFinal,yesterdayYangon,makePng};
+  window.FutureCodeResultsFrames={frames:FRAMES,split,isFinal,yesterdayYangon,makePng,withColor};
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
 })();
