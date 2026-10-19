@@ -7,7 +7,7 @@ const vm=require("node:vm");
 const root=path.join(__dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const data=p=>JSON.parse(read(p));
-const context={window:{},document:{addEventListener(){}},URL,console};
+const context={window:{},document:{documentElement:{dataset:{footballBrandName:"TEST"}},addEventListener(){}},location:{pathname:"/ykz-family/odds.html"},URL,console};
 vm.createContext(context);vm.runInContext(read("odds.js"),context);
 const merge=(original,latest)=>context.mergeLatestOdds(original,latest);
 function morning(date){return data("data/odds/"+date+".json");}

@@ -40,7 +40,7 @@ test("compact PNG draws all 21 matches, including current prices, without losing
  const context={window:{},document:doc,Image:ImageStub,URL:{createObjectURL(){return"blob:ok"},revokeObjectURL(){}},setTimeout,clearTimeout,console,Promise,Intl};
  vm.createContext(context);
  for(const js of ["canvas-image-kit.js","daily-image-export.js"])vm.runInContext(read(js),context);
- const mergeCtx={window:{},document:{addEventListener(){}},URL,console};
+ const mergeCtx={window:{},document:{documentElement:{dataset:{footballBrandName:"TEST"}},addEventListener(){}},location:{pathname:"/ykz-family/odds.html"},URL,console};
  vm.createContext(mergeCtx);vm.runInContext(read("odds.js"),mergeCtx);
  const merged=mergeCtx.mergeLatestOdds(sheet,latest);
  await context.window.FutureCodeDailyExport.saveOdds(merged);
