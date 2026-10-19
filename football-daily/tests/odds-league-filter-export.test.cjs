@@ -91,7 +91,7 @@ test('four branded odds pages load the shared new filter and exporter assets',()
  const js=fs.readFileSync(path.join(root,'odds.js'),'utf8');
  assert.ok(js.includes('setupLeagueFilter(data)'));
  assert.ok(js.includes('kit.saveOdds({...data,matches:page.matches},options)'));
- assert.ok(js.includes('kit.partition(matches,isMainOdds?{threshold:5,maxPerPage:5}:{})'));
+ assert.ok(js.includes('kit.partition(matches,isMainOdds?{threshold:3,maxPerPage:3}:{})'));
  assert.ok(!js.includes('saveOddsSmart'));
  assert.ok(!fs.readFileSync(path.join(root,'daily-image-export.js'),'utf8').includes('zipPngs'));
 });

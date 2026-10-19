@@ -47,7 +47,7 @@ function makeOddsPngButtons(host,data,matches,scope){
  host.replaceChildren();
  const kit=window.FutureCodeDailyExport;
  if(!kit?.partition||!kit?.saveOdds||!matches.length)return 0;
- const pages=kit.partition(matches,isMainOdds?{threshold:5,maxPerPage:5}:{});
+ const pages=kit.partition(matches,isMainOdds?{threshold:3,maxPerPage:3}:{});
  for(const page of pages){
   const button=element("button","odds-part-download","⬇ PNG "+page.index+"/"+page.total+" · "+page.count+" ပွဲ");
   button.type="button";

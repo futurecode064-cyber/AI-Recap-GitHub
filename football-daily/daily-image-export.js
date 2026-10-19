@@ -71,9 +71,9 @@
     !document.documentElement.dataset.footballBrandName&&
     typeof location!=="undefined"&&/^\/odds(?:\.html)?\/?$/.test(location.pathname);
   if(mainOdds&&window.FutureCodeOddsDomFrame?.draw){
-   const colour="#a41625";
+   const colour="#c41017";
    const canvas=await window.FutureCodeOddsDomFrame.draw(data.matches,{
-    design:["colour","Colour Background Change",colour],
+    design:["best","Best Your Choice",colour],
     colour,date:data.reportDate
    });
    const leagueSuffix=options.league?"-"+String(options.league).toLowerCase()

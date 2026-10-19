@@ -44,7 +44,7 @@ test("All results, all odds, selected leagues and per-league PNG buttons use bal
  assert.match(app,/for\(const page of kit\.partition\(finals\)\)/);
  assert.match(app,/date:selectedDateKey\(\),matches:page\.matches,part:page\.index,total:page\.total/);
  assert.match(odds,/function renderSelectedOddsButtons\(\)/);
- assert.match(odds,/const pages=kit\.partition\(matches,isMainOdds\?\{threshold:5,maxPerPage:5\}:\{\}\)/);
+ assert.match(odds,/const pages=kit\.partition\(matches,isMainOdds\?\{threshold:3,maxPerPage:3\}:\{\}\)/);
  assert.match(odds,/makeOddsPngButtons\(leagueButtons,data,matches,league\)/);
  assert.match(odds,/makeOddsPngButtons\(host,loadedSheet,matches,all\?"all":"selected"\)/);
  assert.match(css,/\.results-png-pages,\.odds-png-parts,\.odds-league-png-parts/);

@@ -80,7 +80,7 @@
           // Preserve a bold readable minimum. Never hide a long Burmese
           // team name: wrap that one label rather than shrinking to tiny type.
           let px=parseFloat(getComputedStyle(name).fontSize)||25;
-          while (name.scrollWidth>name.clientWidth+1 && px>18) {
+          while (name.scrollWidth>name.clientWidth+1 && px>27) {
             px-=0.5;
             name.style.setProperty("font-size",px+"px","important");
           }
@@ -125,7 +125,7 @@
     dateBar.className="fc-odds-date-heading";
     dateBar.style.cssText="margin:0 0 12px;text-align:center;padding:8px 0;"+
       "background:"+shade(theme,.7)+";color:#fff;border-radius:7px;"+
-      "font:800 24px/1.7 'Noto Sans Myanmar',sans-serif;";
+      "font:900 34px/1.7 'Noto Sans Myanmar',sans-serif;";
     root.appendChild(dateBar);
     for(const [league,included] of selected) {
       const source=live.get(league);
@@ -209,6 +209,8 @@
         white-space:normal!important;
       }
     `;
+    // Red/black sample-inspired styling is isolated to the invisible export clone.
+    readable.textContent += "\nbody .fc-odds-direct-export {background:#100608!important;font-family:\"Noto Sans Myanmar\",sans-serif!important}\nbody .fc-odds-direct-export .fc-odds-date-heading {background:linear-gradient(110deg,#210306,#d5121c,#220408)!important;border:3px solid #ea2935!important;border-radius:12px!important;font-size:34px!important;margin-bottom:22px!important}\nbody .fc-odds-direct-export .odds-group {border:3px solid #e12c35!important;border-radius:14px!important;overflow:hidden!important;margin-bottom:25px!important}\nbody .fc-odds-direct-export .odds-group .odds-table {width:100%!important;min-width:0!important;max-width:none!important;border-collapse:collapse!important}\nbody .fc-odds-direct-export .odds-group .odds-table thead tr th {background:linear-gradient(110deg,#0b0b0e,#ba0712,#240408)!important;border:2px solid #dc464b!important;color:#fff!important;font:900 30px/1.55 \"Noto Sans Myanmar\",sans-serif!important;padding:17px 7px!important;text-align:center!important;white-space:normal!important}\nbody .fc-odds-direct-export .odds-group .odds-table thead .odds-subheading-row th {background:linear-gradient(#27282d,#09090a)!important;font-size:27px!important;padding:10px 5px!important}\nbody .fc-odds-direct-export .odds-group .odds-table th.main-league-name {font:900 37px/1.55 \"Noto Sans Myanmar\",sans-serif!important}\nbody .fc-odds-direct-export .main-compact-odds th.main-league-logo .league-crest,body .fc-odds-direct-export .main-compact-odds th.main-league-logo .league-mark {width:75px!important;height:75px!important;border-radius:10px!important;padding:4px!important;background:#fff!important;object-fit:contain!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td {background:#fff!important;color:#111!important;border:2px solid #d8dade!important;font:900 32px/1.6 \"Noto Sans Myanmar\",sans-serif!important;padding:24px 8px!important;white-space:normal!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td.time {background:linear-gradient(#f3212e,#99050d)!important;color:#fff!important;font-size:30px!important;white-space:normal!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td.upper {background:#ffe4e6!important;color:#180b0c!important;font-size:32px!important;overflow-wrap:anywhere!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td.price,body .fc-odds-direct-export .odds-group .odds-table tbody td.prediction {background:#fff!important;color:#09090d!important;font:900 42px/1.35 \"Barlow Condensed\",\"Noto Sans Myanmar\",sans-serif!important;padding:24px 3px!important;white-space:nowrap!important;text-align:center!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td.odds-current {background:#fff5f5!important;color:#d10c19!important;border-left:2px solid #ff9da3!important}\nbody .fc-odds-direct-export .odds-matchup .club-label {font:900 35px/1.55 \"Noto Sans Myanmar\",sans-serif!important;color:#08090d!important}\nbody .fc-odds-direct-export .odds-matchup .team-badge {width:59px!important;height:59px!important;flex:0 0 59px!important}\nbody .fc-odds-direct-export .odds-matchup .mini-vs {font:900 30px/1.2 \"Barlow Condensed\",sans-serif!important;color:#e00c1b!important}";
     stage.appendChild(readable);
     stage.appendChild(root);
     document.body.appendChild(stage);
@@ -316,26 +318,60 @@
     }
   }
 
+  // A 1:1 poster screenshot of the REAL website rows, not invented odds data.
   async function draw(rows,settings) {
+    if(!Array.isArray(rows)||!rows.length)throw Error("ပေါက်ကြေး ပွဲစာရင်းမရှိပါ။");
     const design=settings.design;
-    const theme=design[0]==="colour"?settings.colour:design[2];
-    const colourOnly=design[0]==="colour",framed=Boolean(design[3]);
-    const dir="./assets/table-odds-frames/";
+    const best=design[0]==="best",colourOnly=design[0]==="colour";
+    const theme=best?"#c41017":colourOnly?settings.colour:design[2];
+    const framed=Boolean(design[3]),dir="./assets/table-odds-frames/";
     const banner=framed?await localArtwork(dir+design[0]+"-frame.jpg"):null;
     const top=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-top.jpg"):null;
     const bottom=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-bottom.jpg"):null;
     const shot=await captureWebsite(rows,theme,settings.date);
-    if(colourOnly)return shot.picture;
-    const W=shot.width,topPart=design[3]?.top||0,bottomPart=design[3]?.bottom||0;
-    const topH=banner?Math.round(banner.height*topPart*W/banner.width):Math.round(top.height*W/top.width);
-    const bottomH=banner?Math.round(banner.height*bottomPart*W/banner.width):Math.round(bottom.height*W/bottom.width);
-    const {canvas,ctx}=window.FutureCodeCanvasKit.create(W,shot.height+topH+bottomH);
-    ctx.fillStyle=shade(theme,.55);ctx.fillRect(0,0,W,canvas.height);
-    if(banner&&topH)ctx.drawImage(banner,0,0,banner.width,banner.height*topPart,0,0,W,topH);
-    else if(top)ctx.drawImage(top,0,0,W,topH);
-    ctx.drawImage(shot.picture,0,topH,W,shot.height);
-    if(banner&&bottomH)ctx.drawImage(banner,0,banner.height*(1-bottomPart),banner.width,banner.height*bottomPart,0,topH+shot.height,W,bottomH);
-    else if(bottom)ctx.drawImage(bottom,0,topH+shot.height,W,bottomH);
+    const W=2160,H=2160;
+    const {canvas,ctx}=window.FutureCodeCanvasKit.create(W,H);
+    if(canvas.width!==W||canvas.height!==H)throw Error("Square PNG အရွယ်အစား မမှန်ပါ။");
+    const topRatio=design[3]?.top||0,bottomRatio=design[3]?.bottom||0;
+    const naturalTop=banner?banner.height*topRatio*W/banner.width:
+      top?top.height*W/top.width:W*.15;
+    const naturalBottom=banner?banner.height*bottomRatio*W/banner.width:
+      bottom?bottom.height*W/bottom.width:W*.12;
+    const topH=colourOnly?320:Math.min(470,Math.round(naturalTop));
+    const bottomH=colourOnly?250:Math.min(310,Math.round(naturalBottom));
+    const pad=18,usable=H-topH-bottomH-2*pad;
+    if(usable<350)throw Error("Frame အတွက် နေရာမလုံလောက်ပါ။");
+    ctx.fillStyle="#100608";ctx.fillRect(0,0,W,H);
+    ctx.fillStyle=shade(theme,.4);ctx.fillRect(0,topH,W,H-topH);
+    ctx.fillStyle=theme;ctx.fillRect(0,topH-10,W,10);ctx.fillRect(0,H-bottomH,W,10);
+    function artwork(fn){
+      ctx.save();
+      if(best)ctx.filter="hue-rotate(120deg) saturate(1.3)";
+      fn();ctx.restore();
+    }
+    if(banner&&topH&&topRatio)artwork(()=>ctx.drawImage(banner,0,0,banner.width,banner.height*topRatio,0,0,W,topH));
+    else if(top)artwork(()=>ctx.drawImage(top,0,0,W,topH));
+    if(banner&&bottomH&&bottomRatio)artwork(()=>ctx.drawImage(banner,0,banner.height*(1-bottomRatio),banner.width,banner.height*bottomRatio,0,H-bottomH,W,bottomH));
+    else if(bottom)artwork(()=>ctx.drawImage(bottom,0,H-bottomH,W,bottomH));
+    if(colourOnly){
+      ctx.fillStyle=shade(theme,.65);ctx.fillRect(0,0,W,topH);ctx.fillRect(0,H-bottomH,W,bottomH);
+      ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillStyle="#fff";
+      ctx.font='900 94px "Barlow Condensed",sans-serif';
+      ctx.fillText("FUTURE CODE FOOTBALL DAILY",W/2,105,W-80);
+      ctx.font='900 72px "Noto Sans Myanmar",sans-serif';
+      ctx.fillText("ယနေ့ ပေါက်ကြေးများ",W/2,225,W-80);
+      ctx.font='800 50px "Noto Sans Myanmar",sans-serif';
+      ctx.fillText("မြန်မာကြေး · မူလ / ယခု",W/2,H-bottomH+95,W-120);
+      ctx.font='900 49px "Barlow Condensed",sans-serif';
+      ctx.fillText("FUTURE CODE FOOTBALL",W/2,H-68,W-100);
+    }
+    // Never cut off a market column, team logo, original price or latest price.
+    const ratio=Math.min((W-2*pad)/shot.width,usable/shot.height);
+    const cw=Math.round(shot.width*ratio),ch=Math.round(shot.height*ratio);
+    const x=Math.round((W-cw)/2),y=topH+pad+Math.round((usable-ch)/2);
+    ctx.fillStyle="#080608";ctx.fillRect(x-5,y-5,cw+10,ch+10);
+    ctx.drawImage(shot.picture,x,y,cw,ch);
+    ctx.strokeStyle=theme;ctx.lineWidth=6;ctx.strokeRect(x-3,y-3,cw+6,ch+6);
     return canvas;
   }
   window.FutureCodeOddsDomFrame={draw};
