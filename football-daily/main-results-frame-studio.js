@@ -41,9 +41,10 @@
   function withColor(frame,value){
     if(!frame.plain)return frame;
     const color=/^#[0-9a-fA-F]{6}$/.test(String(value||""))?String(value):"#1560a0";
-    const dark="#"+color.slice(1).match(/../g).map(hex=>
-      Math.round(parseInt(hex,16)*0.45).toString(16).padStart(2,"0")).join("");
-    return {...frame,color,dark};
+    const rgb=color.slice(1).match(/../g).map(hex=>parseInt(hex,16));
+    const dark="#"+rgb.map(n=>Math.round(n*0.45).toString(16).padStart(2,"0")).join("");
+    const light=(rgb[0]*0.2126+rgb[1]*0.7152+rgb[2]*0.0722)/255;
+    return {...frame,color,dark,scoreInk:light>0.60?"#17252c":"#ffffff"};
   }
   const imgCache=new Map();
   const isFinal=m=>m&&m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(String(m.finalScore||""));
@@ -143,7 +144,7 @@
         drawText(kit,ctx,team(match,"home"),M+100,y+45,326,28,"#15232d","left");
         drawText(kit,ctx,team(match,"away"),W-M-100,y+45,326,28,"#15232d","right");
         kit.fill(ctx,W/2-81,y+12,162,65,frame.color,9);
-        kit.text(ctx,String(match.finalScore).replace(":"," - "),W/2,y+43,32,"#ffffff",true,"center",152);
+        kit.text(ctx,String(match.finalScore).replace(":"," - "),W/2,y+43,32,frame.scoreInk||"#ffffff",true,"center",152);
         kit.fill(ctx,M+92,y+79,W-M*2-184,1,"#dde2e6");
         y+=ROW;
       }
