@@ -76,17 +76,18 @@ test('Capture errors never silently replace website table with a different layou
   assert.match(domSource,/timeout=setTimeout\(\(\)=>reject\(Error\(label\+" အချိန်ကြာလွန်းပါသည်"\)\),ms\)/);
   assert.doesNotMatch(domSource,/measured-website|table-fallback/);
 });
-test('All original frame banners remain unchanged and only surround the captured table',()=>{
+test('Every frame exports the website table directly and changes only its color palette',()=>{
   const {api}=setup();
   assert.equal(api.designs.length,16);
   assert.equal(new Set(api.designs.map(d=>d[0])).size,16);
-  for(const d of api.designs.filter(d=>d[3])){
-    assert.ok(fs.statSync(path.join(root,'assets/table-odds-frames',d[0]+'-frame.jpg')).size>1000);
-    assert.ok(d[3].top+d[3].bottom<1);
-  }
-  assert.match(domSource,/ctx\.drawImage\(banner,0,0/);
-  assert.match(domSource,/ctx\.drawImage\(banner,0,banner\.height\*\(1-bottomPart\)/);
-  assert.match(domSource,/ctx\.drawImage\(shot\.picture,0,topH,W,shot\.height\)/);
+  assert.match(domSource,/const theme=design\[0\]==="colour"\?settings\.colour:design\[2\]/);
+  assert.match(domSource,/const shot=await captureWebsite\(rows,theme,settings\.date\)/);
+  assert.match(domSource,/return shot\.picture/);
+  assert.doesNotMatch(domSource,/localArtwork|ctx\.drawImage|createElement\("canvas"\)/);
+});
+test('Preview image can use the full website table width for legibility',()=>{
+  const source=fs.readFileSync(path.join(root,'main-table-odds-frames.js'),'utf8');
+  assert.match(source,/max-width:1140px/);
 });
 test('One-click selected frame download supports both single PNG and two-page ZIP',()=>{
   assert.match(source,/archive=download&&parts\.length>1/);
@@ -131,8 +132,8 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
 
 test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-dom-capture-v6/);
-  assert.match(html,/main-table-odds-frames\.js\?v=20261019-dom-capture-v6/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-website-theme-v7/);
+  assert.match(html,/main-table-odds-frames\.js\?v=20261019-website-theme-v7/);
   assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
 });
 
@@ -146,7 +147,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-dom-capture-v6/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-website-theme-v7/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);
@@ -187,8 +188,7 @@ test('Actual HTML capture returns a PNG canvas without redrawing a new table',as
     querySelector:selector=>selector==='#oddsList'?element('list'):null
   };
   const previewCanvas={width:1940,height:1000};
-  const ctx={fillRect(){},drawImage(...args){calls.push(args);}};
-  const kit={create:(width,height)=>({canvas:{width,height},ctx})};
+  const kit={create:(width,height)=>{calls.push({width,height});return {canvas:{width,height},ctx:{}};}};
   let browserCaptured=0,svgCaptured=0;
   const window={
     FutureCodeCanvasKit:kit,
@@ -210,9 +210,7 @@ test('Actual HTML capture returns a PNG canvas without redrawing a new table',as
   assert.equal(browserCaptured,1);
   assert.equal(svgCaptured,0);
   assert.equal(window.FutureCodeOddsDomFrame.lastCapture,'html2canvas-website-dom');
-  assert.equal(result.width,1940);
-  assert.equal(result.height,1000);
-  assert.equal(calls.length,1);
-  assert.equal(calls[0][0],previewCanvas);
+  assert.equal(result,previewCanvas);
+  assert.equal(calls.length,0,'renderer must not add a separate frame canvas');
   assert.ok(removed.length>0,'temporary export DOM was cleaned up');
 });
