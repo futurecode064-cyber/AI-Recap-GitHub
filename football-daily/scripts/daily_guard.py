@@ -107,9 +107,22 @@ def main():
                     if ("\n" in preview or preview.count("**") != 4 or
                         not re.search(r"ခန့်မှန်းရလဒ်ကတော့\s*\*\*[^*]+\*\* ဖြစ်ပါတယ်။$", preview)):
                         wrong_format.append(idx)
+                elif (match.get("userPreviewVerbatim") or {}).get("exactCopy") is True:
+                    # User-authorized journal copy takes precedence over older single-bold templates.
+                    # Keep formatting/content intact while guarding against missing or cut articles.
+                    if ("\n" in preview or not preview.endswith("။**") or
+                        len(preview.strip()) < 300 or
+                        re.search(r"ခန့်မှန်း\\s*ဂိုးရလဒ်", preview)):
+                        wrong_format.append(idx)
+                elif today >= "2026-10-17" and (match.get("previewJournalist") or {}).get("status") == "owner_approved_published":
+                    if ("\n" in preview or len(preview.strip()) < 300 or
+                        not preview.endswith("။**") or
+                        re.search(r"ခန့်မှန်း\\s*ဂိုးရလဒ်", preview)):
+                        wrong_format.append(idx)
                 elif ("\n\n" in preview or preview.count("**") != 2 or
-                      not re.search(r"\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$", preview) or
-                      re.search(r"ဖြစ်နိုင်တဲ့\s*ဂိုးရလဒ်|ခန့်မှန်း\s*ဂိုးရလဒ်", preview)):
+                      not re.search(r"\\*\\*[^*]+\\s*ကို ရွေးချယ်ပါတယ်။\\*\\*$", preview) or
+                      re.search(r"ဖြစ်နိုင်တဲ့\\s*ဂိုးရလဒ်|ခန့်မှန်း\\s*ဂိုးရလဒ်", preview)):
+                    wrong_format.append(idx)
                     wrong_format.append(idx)
                 if match.get("specialChoice") is True:
                     paragraphs = match.get("specialAnalysisParagraphs")

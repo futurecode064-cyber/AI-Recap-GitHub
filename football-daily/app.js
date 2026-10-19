@@ -34,7 +34,7 @@ const LEAGUE_ALIASES={
 };
 function canonicalLeague(value){return LEAGUE_ALIASES[value]||value;}
 function leagueName(value){const key=canonicalLeague(value);return LEAGUE_NAMES[key]||value||"ပွဲကြိုသုံးသပ်ချက်";}
-const LEAGUE_BADGE_URLS={"Premier League":"https://crests.football-data.org/PL.png","Championship":"https://crests.football-data.org/ELC.png","Serie A":"https://crests.football-data.org/SA.png","La Liga":"https://crests.football-data.org/PD.png","Bundesliga":"https://crests.football-data.org/BL1.png","Ligue 1":"https://crests.football-data.org/FL1.png"};
+const LEAGUE_BADGE_URLS={"Premier League":"https://crests.football-data.org/PL.png","Championship":"https://crests.football-data.org/ELC.png","Serie A":"https://crests.football-data.org/SA.png","La Liga":"https://crests.football-data.org/PD.png","Bundesliga":"https://crests.football-data.org/BL1.png","Ligue 1":"https://crests.football-data.org/FL1.png","Ligue 2":"https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20Ligue%202%20BKT%202024.svg","La Liga 2":"https://commons.wikimedia.org/wiki/Special:FilePath/LaLiga%20Hypermotion%202023%20Vertical%20Logo.svg"};
 function leagueBadge(league,klass="league-name"){
  const wrap=node("span",klass);
  const url=LEAGUE_BADGE_URLS[canonicalLeague(league)];
