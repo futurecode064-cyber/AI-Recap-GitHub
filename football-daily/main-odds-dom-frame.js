@@ -9,7 +9,7 @@
   // Main-site exports use a genuinely larger table, not only a higher-DPI
   // screenshot of 12–16px type. All other brand pages remain untouched.
   const SCALE = 2;
-  const EXPORT_WIDTH = 1680;
+  const EXPORT_WIDTH = 1280;
 
   function shade(hex, f) {
     if (!/^#[0-9a-f]{6}$/i.test(hex)) return "#153d38";
@@ -50,15 +50,11 @@
     return new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
   }
   function getTableWidth() {
-    const tables=[...document.querySelectorAll("#oddsList .odds-group .odds-table")];
-    // On a phone, the real website table is horizontally scrollable. Capture
-    // its FULL natural width instead of clipping it to the mobile viewport.
-    const natural=Math.max(0,...tables.map(t=>Math.max(
-      t.scrollWidth,Math.ceil(t.getBoundingClientRect().width))));
-    const overview=document.querySelector("#oddsList");
-    const viewport=overview?Math.ceil(overview.getBoundingClientRect().width):0;
-    return Math.max(EXPORT_WIDTH,Math.min(1800,Math.max(natural,viewport)));
+    // Export typography is measured against a fixed editorial width, independent
+    // of a phone's scroll width or a desktop monitor's viewport.
+    return EXPORT_WIDTH;
   }
+
   function prepareOneLine(root) {
     for (const group of root.querySelectorAll(".odds-group")) {
       // No new league heading: keep the cloned on-screen logo and title.
@@ -74,7 +70,7 @@
           name.style.setProperty("white-space","nowrap","important");
           name.style.setProperty("overflow-wrap","normal","important");
           name.style.setProperty("word-break","normal","important");
-          name.style.setProperty("flex","1 1 0","important");
+          name.style.setProperty("flex","1 1 auto","important");
           name.style.setProperty("min-width","0","important");
           name.style.setProperty("overflow","hidden","important");
           // Preserve a bold readable minimum. Never hide a long Burmese
@@ -119,6 +115,7 @@
     root.style.setProperty("--sheet-brand",theme);
     root.style.setProperty("--sheet-deep",shade(theme,.7));
     root.style.setProperty("--sheet-title","#fff");
+    root.style.setProperty("--export-tint",theme+"22");
     // Date-only title, as approved for the existing frame export.
     const dateBar=document.createElement("div");
     dateBar.textContent=String(date||"");
@@ -209,8 +206,72 @@
         white-space:normal!important;
       }
     `;
-    // Red/black sample-inspired styling is isolated to the invisible export clone.
-    readable.textContent += "\nbody .fc-odds-direct-export {background:#100608!important;font-family:\"Noto Sans Myanmar\",sans-serif!important}\nbody .fc-odds-direct-export .fc-odds-date-heading {background:linear-gradient(110deg,#210306,#d5121c,#220408)!important;border:3px solid #ea2935!important;border-radius:12px!important;font-size:34px!important;margin-bottom:22px!important}\nbody .fc-odds-direct-export .odds-group {border:3px solid #e12c35!important;border-radius:14px!important;overflow:hidden!important;margin-bottom:25px!important}\nbody .fc-odds-direct-export .odds-group .odds-table {width:100%!important;min-width:0!important;max-width:none!important;border-collapse:collapse!important}\nbody .fc-odds-direct-export .odds-group .odds-table thead tr th {background:linear-gradient(110deg,#0b0b0e,#ba0712,#240408)!important;border:2px solid #dc464b!important;color:#fff!important;font:900 30px/1.55 \"Noto Sans Myanmar\",sans-serif!important;padding:17px 7px!important;text-align:center!important;white-space:normal!important}\nbody .fc-odds-direct-export .odds-group .odds-table thead .odds-subheading-row th {background:linear-gradient(#27282d,#09090a)!important;font-size:27px!important;padding:10px 5px!important}\nbody .fc-odds-direct-export .odds-group .odds-table th.main-league-name {font:900 37px/1.55 \"Noto Sans Myanmar\",sans-serif!important}\nbody .fc-odds-direct-export .main-compact-odds th.main-league-logo .league-crest,body .fc-odds-direct-export .main-compact-odds th.main-league-logo .league-mark {width:75px!important;height:75px!important;border-radius:10px!important;padding:4px!important;background:#fff!important;object-fit:contain!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td {background:#fff!important;color:#111!important;border:2px solid #d8dade!important;font:900 32px/1.6 \"Noto Sans Myanmar\",sans-serif!important;padding:24px 8px!important;white-space:normal!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td.time {background:linear-gradient(#f3212e,#99050d)!important;color:#fff!important;font-size:30px!important;white-space:normal!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td.upper {background:#ffe4e6!important;color:#180b0c!important;font-size:32px!important;overflow-wrap:anywhere!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td.price,body .fc-odds-direct-export .odds-group .odds-table tbody td.prediction {background:#fff!important;color:#09090d!important;font:900 42px/1.35 \"Barlow Condensed\",\"Noto Sans Myanmar\",sans-serif!important;padding:24px 3px!important;white-space:nowrap!important;text-align:center!important}\nbody .fc-odds-direct-export .odds-group .odds-table tbody td.odds-current {background:#fff5f5!important;color:#d10c19!important;border-left:2px solid #ff9da3!important}\nbody .fc-odds-direct-export .odds-matchup .club-label {font:900 35px/1.55 \"Noto Sans Myanmar\",sans-serif!important;color:#08090d!important}\nbody .fc-odds-direct-export .odds-matchup .team-badge {width:59px!important;height:59px!important;flex:0 0 59px!important}\nbody .fc-odds-direct-export .odds-matchup .mini-vs {font:900 30px/1.2 \"Barlow Condensed\",sans-serif!important;color:#e00c1b!important}";
+    // Every coloured surface follows the selected frame; artwork keeps its
+    // original colours. White cells and dark type preserve market contrast.
+    readable.textContent += `
+      body .fc-odds-direct-export {background:#101014!important}
+      body .fc-odds-direct-export .odds-league-header {display:none!important}
+      body .fc-odds-direct-export .fc-odds-date-heading {
+        background:linear-gradient(110deg,#111,var(--sheet-brand),#111)!important;
+        border:2px solid var(--sheet-brand)!important;font-size:32px!important;margin-bottom:10px!important;
+      }
+      body .fc-odds-direct-export .odds-group {
+        border:2px solid var(--sheet-brand)!important;border-radius:10px!important;
+        overflow:hidden!important;margin-bottom:12px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table {
+        border-collapse:collapse!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table thead tr th {
+        background:linear-gradient(120deg,#111,var(--sheet-deep))!important;
+        color:#fff!important;border:1px solid var(--sheet-brand)!important;
+        font:900 24px/1.6 "Noto Sans Myanmar",sans-serif!important;padding:9px 4px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table thead .odds-subheading-row th {
+        background:#19191d!important;font-size:22px!important;padding:4px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table th.main-league-name {
+        font-size:32px!important;text-align:left!important;padding-left:12px!important;
+      }
+      body .fc-odds-direct-export .main-compact-odds th.main-league-logo .league-crest,
+      body .fc-odds-direct-export .main-compact-odds th.main-league-logo .league-mark {
+        width:75px!important;height:75px!important;background:#fff!important;border-radius:8px!important;padding:4px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td {
+        background:#fff!important;color:#101014!important;border:1px solid #c8c8cc!important;
+        font:900 29px/1.65 "Noto Sans Myanmar",sans-serif!important;padding:14px 4px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.time {
+        background:var(--sheet-deep)!important;color:#fff!important;font-size:25px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.upper {
+        background:linear-gradient(var(--export-tint),var(--export-tint)),#fff!important;font-size:28px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.price,
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.prediction {
+        font:900 36px/1.4 "Barlow Condensed","Noto Sans Myanmar",sans-serif!important;
+        white-space:nowrap!important;text-align:center!important;padding:14px 2px!important;
+      }
+      body .fc-odds-direct-export .odds-group .odds-table tbody td.odds-current {
+        color:var(--sheet-deep)!important;
+      }
+      body .fc-odds-direct-export .odds-matchup {gap:5px!important}
+      body .fc-odds-direct-export .odds-matchup .club-label {
+        font:900 31px/1.65 "Noto Sans Myanmar",sans-serif!important;
+      }
+      body .fc-odds-direct-export .odds-matchup .team-badge {
+        width:47px!important;height:47px!important;flex:0 0 47px!important;
+      }
+      body .fc-odds-direct-export .odds-matchup .mini-vs {
+        color:var(--sheet-deep)!important;font-size:26px!important;
+      }
+      body .fc-odds-direct-export .club-label,
+      body .fc-odds-direct-export .odds-table th,
+      body .fc-odds-direct-export .odds-table td.upper {
+        font-variation-settings:"wdth" 75!important;
+      }
+      body .fc-odds-direct-export td::before {display:none!important}
+    `;
     stage.appendChild(readable);
     stage.appendChild(root);
     document.body.appendChild(stage);
@@ -240,6 +301,7 @@
   async function captureWebsite(rows,theme,date) {
     const {stage,root,width}=cloneWebsiteOdds(rows,theme,date);
     try {
+      if(document.fonts?.load)await limited(document.fonts.load('900 31px "Noto Sans Myanmar"', "မြန်မာ ပေါက်ကြေး"),15000,"မြန်မာဖောင့်");
       await waitFonts();
       prepareOneLine(root);
       const images=[...root.querySelectorAll("img")];
@@ -322,8 +384,8 @@
   async function draw(rows,settings) {
     if(!Array.isArray(rows)||!rows.length)throw Error("ပေါက်ကြေး ပွဲစာရင်းမရှိပါ။");
     const design=settings.design;
-    const best=design[0]==="best",colourOnly=design[0]==="colour";
-    const theme=best?"#c41017":colourOnly?settings.colour:design[2];
+    const colourOnly=design[0]==="colour";
+    const theme=colourOnly?settings.colour:design[2];
     const framed=Boolean(design[3]),dir="./assets/table-odds-frames/";
     const banner=framed?await localArtwork(dir+design[0]+"-frame.jpg"):null;
     const top=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-top.jpg"):null;
@@ -337,8 +399,8 @@
       top?top.height*W/top.width:W*.15;
     const naturalBottom=banner?banner.height*bottomRatio*W/banner.width:
       bottom?bottom.height*W/bottom.width:W*.12;
-    const topH=colourOnly?320:Math.min(470,Math.round(naturalTop));
-    const bottomH=colourOnly?250:Math.min(310,Math.round(naturalBottom));
+    const topH=colourOnly?0:Math.min(470,Math.round(naturalTop));
+    const bottomH=colourOnly?0:Math.min(310,Math.round(naturalBottom));
     const pad=18,usable=H-topH-bottomH-2*pad;
     if(usable<350)throw Error("Frame အတွက် နေရာမလုံလောက်ပါ။");
     ctx.fillStyle="#100608";ctx.fillRect(0,0,W,H);
@@ -346,25 +408,13 @@
     ctx.fillStyle=theme;ctx.fillRect(0,topH-10,W,10);ctx.fillRect(0,H-bottomH,W,10);
     function artwork(fn){
       ctx.save();
-      if(best)ctx.filter="hue-rotate(120deg) saturate(1.3)";
+      // Preserve the supplied frame artwork without hue rotation.
       fn();ctx.restore();
     }
     if(banner&&topH&&topRatio)artwork(()=>ctx.drawImage(banner,0,0,banner.width,banner.height*topRatio,0,0,W,topH));
     else if(top)artwork(()=>ctx.drawImage(top,0,0,W,topH));
     if(banner&&bottomH&&bottomRatio)artwork(()=>ctx.drawImage(banner,0,banner.height*(1-bottomRatio),banner.width,banner.height*bottomRatio,0,H-bottomH,W,bottomH));
     else if(bottom)artwork(()=>ctx.drawImage(bottom,0,H-bottomH,W,bottomH));
-    if(colourOnly){
-      ctx.fillStyle=shade(theme,.65);ctx.fillRect(0,0,W,topH);ctx.fillRect(0,H-bottomH,W,bottomH);
-      ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillStyle="#fff";
-      ctx.font='900 94px "Barlow Condensed",sans-serif';
-      ctx.fillText("FUTURE CODE FOOTBALL DAILY",W/2,105,W-80);
-      ctx.font='900 72px "Noto Sans Myanmar",sans-serif';
-      ctx.fillText("ယနေ့ ပေါက်ကြေးများ",W/2,225,W-80);
-      ctx.font='800 50px "Noto Sans Myanmar",sans-serif';
-      ctx.fillText("မြန်မာကြေး · မူလ / ယခု",W/2,H-bottomH+95,W-120);
-      ctx.font='900 49px "Barlow Condensed",sans-serif';
-      ctx.fillText("FUTURE CODE FOOTBALL",W/2,H-68,W-100);
-    }
     // Never cut off a market column, team logo, original price or latest price.
     const ratio=Math.min((W-2*pad)/shot.width,usable/shot.height);
     const cw=Math.round(shot.width*ratio),ch=Math.round(shot.height*ratio);

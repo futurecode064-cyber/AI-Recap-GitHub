@@ -69,8 +69,8 @@ test('Team and league names stay on one line without rewriting the original text
   assert.doesNotMatch(domSource,/innerHTML\s*=\s*['"]<table/);
 });
 test('PNG fits full visible table width without stretching/making a new table',()=>{
-  assert.match(domSource,/const natural=Math\.max\(0,\.\.\.tables\.map/);
-  assert.match(domSource,/return Math\.max\(EXPORT_WIDTH,Math\.min\(1800,Math\.max\(natural,viewport\)\)\)/);
+  assert.match(domSource,/const EXPORT_WIDTH = 1280/);
+  assert.match(domSource,/return EXPORT_WIDTH/);
   assert.match(domSource,/const width=getTableWidth\(\)/);
   assert.match(domSource,/SCALE = 2/);
 });
@@ -83,7 +83,7 @@ test('Named frames preserve their top/bottom banners around the website table',(
   const {api}=setup();
   assert.equal(api.designs.length,16);
   assert.equal(new Set(api.designs.map(d=>d[0])).size,16);
-  assert.match(domSource,/const theme=best\?"#c41017":colourOnly\?settings\.colour:design\[2\]/);
+  assert.match(domSource,/const theme=colourOnly\?settings\.colour:design\[2\]/);
   assert.match(domSource,/const shot=await captureWebsite\(rows,theme,settings\.date\)/);
   assert.match(domSource,/const W=2160,H=2160/);
   assert.match(domSource,/ctx\.drawImage\(shot\.picture,x,y,cw,ch\)/);
@@ -143,8 +143,8 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
 
 test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-square-v2/);
-  assert.match(html,/main-table-odds-frames\.js\?v=20261019-square-v2/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-readable-theme-v3/);
+  assert.match(html,/main-table-odds-frames\.js\?v=20261019-readable-theme-v3/);
   assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
 });
 
@@ -158,7 +158,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-square-v2/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-readable-theme-v3/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);

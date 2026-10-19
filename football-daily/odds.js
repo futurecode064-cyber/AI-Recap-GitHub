@@ -9,7 +9,7 @@ function append(parent,...items){items.forEach(n=>parent.appendChild(n));return 
 function safeLogo(src){if(typeof src!=="string")return "";try{const u=new URL(src,document.baseURI);return u.protocol==="https:"?u.href:"";}catch{return "";}}
 function badge(name,url,cls="team-badge"){
  const frame=element("span",cls);frame.title=name;
- const src=safeLogo(url);
+ const src=safeLogo(isMainOdds?window.FutureCodeBrandExportData?.imageUrl(url)||url:url);
  if(src){
   const img=element("img","team-logo");img.src=src;img.alt=name+" အသင်းလိုဂို";img.loading="lazy";img.decoding="async";
   img.onerror=()=>{img.remove();frame.appendChild(element("span","logo-fallback",name.slice(0,2)));};
