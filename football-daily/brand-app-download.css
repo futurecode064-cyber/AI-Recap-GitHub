@@ -1,0 +1,26 @@
+/* Mobile access landing pages for BW SPORT, YKZ and KO THET FAMILY.
+   Inherit per-brand colors from inline custom properties. */
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;min-height:100vh;color:var(--text,#f8f9ff);background:radial-gradient(ellipse at 12% 0%,var(--glow, #233149),transparent 54%),linear-gradient(150deg,var(--bg,#101522),#080a10);font-family:system-ui,-apple-system,"Noto Sans Myanmar",sans-serif;font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.shell{max-width:920px;margin:0 auto;padding:clamp(20px,5vw,55px) 18px 50px}
+.brand{display:flex;align-items:center;gap:17px}
+.brand img{width:88px;height:88px;object-fit:contain;filter:drop-shadow(0 6px 15px #0007)}
+.brand .overline{font-size:11px;letter-spacing:.15em;color:var(--accent);font-weight:800}
+.brand h1{margin:0;font-size:clamp(21px,4vw,34px);line-height:1.6;font-weight:900}
+.intro{margin:16px 0 30px;color:var(--muted,#b3bbcd);font-size:14px}
+.platforms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.platform{min-width:0;padding:24px;border-radius:19px;border:1px solid var(--border,#64758c);background:linear-gradient(154deg,var(--card,#151a2b),#10111b);box-shadow:0 16px 45px #0005}
+.platform .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.12em;font-weight:850;color:var(--accent)}
+.platform h2{margin:8px 0 10px;font-size:24px;line-height:1.5;color:var(--text)}
+.platform .summary{margin:0 0 15px;color:var(--muted);min-height:48px}
+.status{background:#0004;border:1px dashed var(--border);color:var(--muted);padding:12px 14px;border-radius:11px;font-weight:750;text-align:center;margin:0 0 12px}
+.button{display:block;width:100%;padding:13px 16px;text-align:center;text-decoration:none;border-radius:10px;background:linear-gradient(120deg,var(--accent),var(--accent-light));color:var(--button-text,#10141a);font-weight:900;border:1px solid var(--accent-light);transition:filter .18s,transform .18s}
+.button:hover,.button:focus-visible{filter:brightness(1.12);transform:translateY(-1px);outline:2px solid var(--accent-light);outline-offset:3px}
+.instructions{padding-top:17px;margin-top:18px;border-top:1px solid var(--border);font-size:13px;color:var(--muted)}
+.instructions strong{display:block;color:var(--text);font-size:14px;margin-bottom:4px}
+.instructions p{margin:0}
+.note{margin-top:23px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+@media(max-width:690px){.platforms{grid-template-columns:1fr}.brand img{width:72px;height:72px}.platform{padding:20px}.platform .summary{min-height:0}.shell{padding-top:22px}}
+@media(prefers-reduced-motion:reduce){.button{transition:none}}
