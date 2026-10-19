@@ -4,7 +4,7 @@
   "source_branch": "main",
   "source_commit": "b11c8c48bb1b5317397d169483b8780aab74aacd",
   "source_tree": "f96050171d7b278791b2a84da40a932d809d7401",
-  "target_tree": "f96050171d7b278791b2a84da40a932d809d7401",
+  "target_tree": "61b34e85c1f18fc63246fd1fa0bf69a2d931873e",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
@@ -17,5 +17,21 @@
     "verified_production_head": "3a9d663ac2d6d4fd13c1945ffcc92917b74cd041",
     "verified_canonical_commit": "65946e4001c1caae7f09f273224a695dfac5ea25",
     "identical_result_tree": "3a7c4ee08288812fa73a789ef79a2f913240bc0e"
+  },
+  "guard_reconciliation_20261019": {
+    "reason": "Preserve independently merged sub-brand completeness changes already mirrored byte-for-byte in standalone source main.",
+    "previous_target_tree": "f96050171d7b278791b2a84da40a932d809d7401",
+    "verified_production_tree": "61b34e85c1f18fc63246fd1fa0bf69a2d931873e",
+    "verified_standalone_main_tree": "79f5597f8a74cd694fc3f562c10c57e078fb0842",
+    "blob_paths_in_each_tree": 315,
+    "identical_blob_paths": 310,
+    "source_only_updated_paths": [
+      "odds.html",
+      "odds.js",
+      "odds-sheet-theme.css",
+      "tests/navigation.test.cjs",
+      "tests/odds-morning-current.test.cjs"
+    ],
+    "production_only_paths": []
   }
 }
