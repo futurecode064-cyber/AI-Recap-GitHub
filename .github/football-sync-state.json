@@ -2,16 +2,16 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "fd5f670b579d4ba609d3a4b030ef5facfba010f5",
-  "source_tree": "13d6c96ee1ccff7f2b521511691ac4bea5e0cd30",
-  "target_tree": "13d6c96ee1ccff7f2b521511691ac4bea5e0cd30",
+  "source_commit": "6aff518ce9a78a8d64a37a9bcd3a1b6ff7c8fe10",
+  "source_tree": "d3da5c3fdeec671dcd4a29f4ae2d0b3e2681dd82",
+  "target_tree": "d3da5c3fdeec671dcd4a29f4ae2d0b3e2681dd82",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-20T01:38:30.087Z",
+  "last_synced_utc": "2026-10-20T01:57:25.379Z",
   "reconciled_on": "2026-10-20",
   "reconciliation_note": "Verified identical football-daily trees after sub-brand PNG completeness and bundled UCL/EFL logo fixes; existing branded layouts retained. Live preview and odds download controls tested on all four brands. Source recent-form entries remain a separate publication data issue.",
-  "last_synced_method": "verified-only-oct20-all-competition-form-and-badges",
+  "last_synced_method": "verified-main-export-local-logo-parity",
   "guard_reconciliation": {
     "previous_target_tree": "ddf9afd38b385f967d28b6346559156dd6322aab",
     "verified_production_head": "ed735b465caa89281d76dc60efbe890ee8d089bd",
@@ -51,5 +51,11 @@
     "all_else_preserved": true,
     "form_clubs": 42,
     "form_records": 210
+  },
+  "guard_reconciliation_main_logos_20261020": {
+    "verified_production_head": "fce7bdc5580de2ffeba9ff103db8e51537cd013b",
+    "verified_canonical_commit": "6aff518ce9a78a8d64a37a9bcd3a1b6ff7c8fe10",
+    "identical_result_tree": "d3da5c3fdeec671dcd4a29f4ae2d0b3e2681dd82",
+    "note": "Both football-daily subtrees match exactly after main export bundled logo fixes; existing content and frames preserved."
   }
 }
