@@ -31,3 +31,18 @@ html:not([data-football-brand-name]) .hero-competition{background:#dcebf6;color:
 html:not([data-football-brand-name]) .hero-info-bar{display:grid;grid-template-columns:minmax(0,1fr) 18% minmax(0,1fr);padding:0 14px;gap:8px}
 html:not([data-football-brand-name]) .hero-info-side{background:linear-gradient(#0c3765,#030d19);border:1px solid #edc45b;border-radius:12px;padding:16px 9px;text-align:center;color:#fff;font-size:clamp(15px,2.2vw,27px);height:auto;min-width:0;clip-path:none;overflow-wrap:anywhere}
 html:not([data-football-brand-name]) .hero-info-fixture{color:#edc45b;font-size:30px;text-align:center;min-width:0}
+
+/* Stadium refinement: real artwork behind crests, compact aligned blocks. */
+html:not([data-football-brand-name]) .match-hero-art{min-height:254px;background:linear-gradient(#030d1933,#030d1955),url('./assets/preview-stadium-night.jpg') center 46%/cover no-repeat}
+html:not([data-football-brand-name]) .hero-team{background:transparent}
+html:not([data-football-brand-name]) .match-hero-art:after{background:linear-gradient(0deg,#030d1966,transparent 60%)}
+html:not([data-football-brand-name]) .hero-team-crest{filter:drop-shadow(0 5px 13px #0009)}
+html:not([data-football-brand-name]) .hero-info-bar{min-height:62px;border:0;background:#030d19;padding:0 12px 5px}
+html:not([data-football-brand-name]) .hero-info-side{padding:8px 9px;border-radius:8px;box-shadow:inset 0 2px 5px #43b9f077,0 0 8px #43b9f033;transform:skew(-7deg)}
+html:not([data-football-brand-name]) .hero-big-vs{font-family:Georgia,serif;font-style:italic;line-height:1}
+html:not([data-football-brand-name]) .market-form-row{padding:5px 12px;gap:7px}
+html:not([data-football-brand-name]) .match-market-strip{padding-block:6px}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-toggle{padding:9px 18px;margin:0}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body{padding:16px 20px;margin:0 12px}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body p{line-height:1.9;margin-bottom:8px}
+@media(max-width:620px){html:not([data-football-brand-name]) .match-hero-art{min-height:212px}html:not([data-football-brand-name]) .market-form-row{padding:4px;gap:4px}html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body{padding:12px;margin:0 4px}}
