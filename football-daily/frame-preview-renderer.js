@@ -16,31 +16,56 @@
    for(const token of tokens){if(ctx.measureText(token).width>width){for(const g of graphemes?[...graphemes.segment(token)].map(x=>x.segment):Array.from(token))push(g);}else push(token);}
   }return rows;
  }
- async function render(m,theme){
-  const k=window.FutureCodeCanvasKit;if(!k)throw Error('Canvas module မရသေးပါ');await k.fonts();const leagueLogo=window.FutureCodeMainLogoAssets?.leagueCrest(m.league);await k.preloadImages([m.homeCrestUrl,m.awayCrestUrl,leagueLogo].filter(Boolean));
-  const W=1200,M=24,px=25,gap=43,anaY=746;const measure=k.create(W,10).ctx;
-  const article=String(m.dailyPreviewText||'ပွဲကြိုသုံးသပ်ချက် မရသေးပါ').replace(/\s*(?:ဖြစ်နိုင်တဲ့|ဖြစ်နိုင်သည့်|ခန့်မှန်း)\s*ဂိုးရလဒ်[^။\n]*[။]?/gu,'').trim();
-  const rows=wrap(measure,article,W-2*M-48,px),H=anaY+104+Math.max(130,rows.length*gap)+32;
-  const {canvas,ctx}=k.create(W,H);const t={...theme};
-  const text=(s,x,y,size=22,color='#f5f8fa',bold=false,align='left',max)=>k.text(ctx,s,x,y,size,color,bold,align,max);
+ function highlight(value,m){
+  const names=[m.homeDisplay,m.awayDisplay,m.home,m.away].filter(Boolean).sort((a,b)=>b.length-a.length);
+  return String(value||'').split(/(\*\*[^*]+\*\*)/g).map(part=>{if(part.startsWith('**'))return part;for(const name of new Set(names))part=part.split(/(\*\*[^*]+\*\*)/g).map(run=>run.startsWith('**')?run:run.split(name).join('**'+name+'**')).join('');return part;}).join('');
+ }
+ const defaultTheme={bg:'#030d19',head:'#082c54',panel:'#061726',alt:'#12518a',accent:'#43b9f0'};
+ async function render(m,theme=defaultTheme,options={}){
+  const k=window.FutureCodeCanvasKit;if(!k)throw Error('Canvas module မရသေးပါ');await k.fonts();
+  const leagueLogo=window.FutureCodeMainLogoAssets?.leagueCrest(m.league);await k.preloadImages([m.homeCrestUrl,m.awayCrestUrl,leagueLogo].filter(Boolean));
+  const W=1200,M=26,px=28,gap=49,t={...defaultTheme,...theme},gold='#edc45b';
+  const special=options.special===true;
+  const source=special?(m.specialAnalysisParagraphs||[]).filter(Boolean).join('\n\n'):m.dailyPreviewText;
+  const article=String(source||'ပွဲကြိုသုံးသပ်ချက် မရသေးပါ').replace(/\s*(?:ဖြစ်နိုင်တဲ့|ဖြစ်နိုင်သည့်|ခန့်မှန်း)\s*ဂိုးရလဒ်[^။\n]*[။]?/gu,'').trim();
+  const measure=k.create(W,10).ctx,rows=wrap(measure,highlight(article,m),W-2*M-48,px);
+  const articleY=650,H=articleY+50+Math.max(1,rows.length)*gap+26;
+  const {canvas,ctx}=k.create(W,H);
+  const text=(s,x,y,size=24,color='#fff',bold=false,align='left',max)=>k.text(ctx,s,x,y,size,color,bold,align,max);
   const fill=(x,y,w,h,c,r=0)=>k.fill(ctx,x,y,w,h,c,r);
-  const box=(x,y,w,h,c,r=10)=>{fill(x,y,w,h,c,r);ctx.strokeStyle=t.accent+'88';ctx.lineWidth=1.2;ctx.beginPath();ctx.roundRect(x+.6,y+.6,w-1.2,h-1.2,r);ctx.stroke();};
   const gradient=(x,y,w,h,a,b)=>{const g=ctx.createLinearGradient(x,y,x+w,y+h);g.addColorStop(0,a);g.addColorStop(1,b);fill(x,y,w,h,g);};
-  fill(0,0,W,H,t.bg);fill(0,0,W,46,t.bg);if(leagueLogo)k.crest(ctx,leagueLogo,M,7,32,'',true);text(leagues[m.league]||m.league||'FOOTBALL',M+(leagueLogo?42:0),25,19,t.accent,true);
-  gradient(0,46,455,300,t.head,t.bg);gradient(455,46,290,300,t.bg,t.panel);gradient(745,46,455,300,t.alt,t.bg);
-  ctx.save();ctx.strokeStyle='#ffffff09';ctx.lineWidth=1;for(let y=65;y<350;y+=47){ctx.beginPath();ctx.moveTo(0,y+70);ctx.lineTo(W,y-150);ctx.stroke();}ctx.restore();
-  k.crest(ctx,m.homeCrestUrl,128,103,186,m.homeDisplay||m.home,true);k.crest(ctx,m.awayCrestUrl,886,103,186,m.awayDisplay||m.away,true);
-  text(leagues[m.league]||m.league||'',600,133,22,t.accent,true,'center',250);text('VS',600,235,88,'#fff',true,'center');
-  fill(0,346,W,70,t.bg);fill(330,346,540,70,t.head);const fixture=(m.homeDisplay||m.home)+' နှင့် '+(m.awayDisplay||m.away);text(fixture,600,383,k.fit(ctx,fixture,510,30,17),t.accent,true,'center',510);
-  fill(0,416,W,62,t.panel);const odds=m.myanmarOdds||{};text('မြန်မာကြေး',290,448,22,t.accent,true);text('ဘော်ဒီကြေး = '+safe(odds.upperTeam)+' '+safe(odds.bodyOdds),478,448,20,t.accent,true,'left',390);text('ဂိုးပေါင်းကြေး = '+safe(odds.goalTotalOdds),890,448,20,t.accent,true,'left',285);
-  const Y=490,h=170,w=374,xs=[M,413,802];for(const x of xs)box(x,Y,w,h,t.panel);
-  const form=(x,label,logo,games)=>{k.crest(ctx,logo,x+68,Y+16,30,label,true);text(label+' နောက်ဆုံး ၅ ပွဲ',x+110,Y+32,18,t.accent,true,'left',245);for(let i=0;i<5;i++){const letter=result(games?.[i]),cx=x+82+i*53,cy=Y+100;const c=letter==='W'?'#1f9c5d':letter==='D'?'#2588d3':letter==='L'?'#d94950':'#536363';const shine=ctx.createLinearGradient(cx-18,cy-18,cx+18,cy+18);shine.addColorStop(0,c);shine.addColorStop(1,c+'bb');fill(cx-18,cy-18,36,36,shine,18);text(letter,cx,cy+1,17,'#fff',true,'center');}};
-  form(xs[0],m.homeDisplay||m.home,m.homeCrestUrl,m.homeLastFive);form(xs[2],m.awayDisplay||m.away,m.awayCrestUrl,m.awayLastFive);
-  text('ပွဲပြီး 1X2 ကြေး',600,Y+32,22,t.accent,true,'center');box(xs[1]+12,Y+60,w-24,94,t.bg,5);
-  const markets=[['အိမ်ရှင် (1)',m.homeOdds],['သရေ (X)',m.drawOdds],['ဧည့်သည် (2)',m.awayOdds]];for(let i=0;i<3;i++){const x=xs[1]+12+(w-24)*(i+.5)/3; if(i){ctx.strokeStyle=t.accent+'55';ctx.beginPath();ctx.moveTo(xs[1]+12+(w-24)*i/3,Y+66);ctx.lineTo(xs[1]+12+(w-24)*i/3,Y+147);ctx.stroke();}text(markets[i][0],x,Y+86,17,t.accent,true,'center',110);text(safe(markets[i][1]),x,Y+126,23,'#fff',true,'center',110);}
-  fill(0,676,W,56,t.panel);text('ပွဲကြိုသုံးသပ်ချက်',M,704,24,t.accent,true);
-  fill(0,732,W,H-732,t.bg);let y=anaY+40;for(const row of rows){let x=M;for(const run of row){text(run.str,x,y,px,run.bold?t.accent:'#f2f5f7',run.bold);ctx.font=(run.bold?'800 ':'500 ')+px+'px "Noto Sans Myanmar",sans-serif';x+=ctx.measureText(run.str).width;}y+=gap;}
+  const box=(x,y,w,h,c=t.panel,r=16)=>{fill(x,y,w,h,c,r);ctx.strokeStyle=gold;ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(x+1,y+1,w-2,h-2,r);ctx.stroke();};
+  gradient(0,0,W,H,t.head,t.bg);
+  // Stadium-like light beams remain vector sharp at PNG resolution.
+  ctx.save();ctx.strokeStyle=t.accent+'24';ctx.lineWidth=2;
+  for(let i=0;i<11;i++){ctx.beginPath();ctx.moveTo(i*120,0);ctx.lineTo(W-i*95,380);ctx.stroke();}
+  ctx.restore();
+  for(const x of [35,110,1090,1165]){fill(x-28,28,56,4,t.accent,2);fill(x-13,19,26,22,'#effaff',10);}
+  k.crest(ctx,m.homeCrestUrl,125,36,210,m.homeDisplay||m.home,true);
+  k.crest(ctx,m.awayCrestUrl,865,36,210,m.awayDisplay||m.away,true);
+  box(498,0,204,128,'#dcebf6',15);if(leagueLogo)k.crest(ctx,leagueLogo,556,8,88,'',true);
+  text(leagues[m.league]||m.league||'FOOTBALL',600,113,17,'#061726',true,'center',190);
+  box(426,138,348,83,t.bg,14);
+  text(m.kickoffYangon||m.kickoff||'ပွဲချိန် မရသေးပါ',600,169,23,'#fff',true,'center',325);
+  text('မြန်မာစံတော်ချိန် (MMT)',600,201,16,'#dce9f5',false,'center');
+  box(M,256,476,90,t.head);box(698,256,476,90,t.head);
+  const home=m.homeDisplay||m.home,away=m.awayDisplay||m.away;
+  text(home,264,302,k.fit(ctx,home,435,37,21),'#fff',true,'center',435);
+  text(away,936,302,k.fit(ctx,away,435,37,21),'#fff',true,'center',435);
+  text('VS',600,297,83,gold,true,'center');
+  const Y=373,w=366,h=153,xs=[M,417,808];
+  for(const x of xs)box(x,Y,w,h);
+  const form=(x,games)=>{text('နောက်ဆုံး ၅ ပွဲရလဒ်',x+w/2,Y+29,25,'#fff',true,'center');for(let i=0;i<5;i++){const letter=result(games?.[i]),cx=x+55+i*64,cy=Y+98;fill(cx-24,cy-24,48,48,letter==='W'?'#00ad62':letter==='D'?'#467caf':letter==='L'?'#e82c47':'#536363',24);text(letter,cx,cy+1,27,'#fff',true,'center');}};
+  form(xs[0],m.homeLastFive);form(xs[2],m.awayLastFive);
+  text('ပွဲပြီး 1X2 ကြေး',600,Y+29,25,'#fff',true,'center');
+  const markets=[['အိမ်ရှင် (1)',m.homeOdds],['သရေ (X)',m.drawOdds],['ဧည့်သည် (2)',m.awayOdds]];
+  for(let i=0;i<3;i++){const x=xs[1]+w*(i+.5)/3;text(markets[i][0],x,Y+77,18,'#fff',true,'center',115);text(safe(markets[i][1]),x,Y+119,32,'#fff2b3',true,'center',115);}
+  const odds=m.myanmarOdds||{};box(M,548,W-2*M,81,t.panel,14);
+  text(special?'★ အထူးသုံးသပ်ချက်':'ပွဲကြိုသုံးသပ်ချက်',M+18,579,28,gold,true,'left',365);
+  text('အပေါ်အသင်း: '+safe(odds.upperTeam)+' · ဘော်ဒီ: '+safe(odds.bodyOdds)+' · ဂိုးပေါင်း: '+safe(odds.goalTotalOdds),M+18,610,20,'#fff',false,'left',W-2*M-36);
+  box(M,articleY,W-2*M,H-articleY,t.panel,20);
+  let y=articleY+43;for(const row of rows){let x=M+24;for(const run of row){text(run.str,x,y,px,run.bold?t.accent:'#f7faff',run.bold);ctx.font=(run.bold?'800 ':'500 ')+px+'px "Noto Sans Myanmar",sans-serif';x+=ctx.measureText(run.str).width;}y+=gap;}
   return canvas;
  }
- window.FutureCodeFramePreview={render,result,wrap};
+ window.FutureCodeFramePreview={render,result,wrap,defaultTheme,highlight};
 })();

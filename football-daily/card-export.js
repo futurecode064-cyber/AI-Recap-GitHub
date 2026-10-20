@@ -64,6 +64,13 @@
   const k=window.FutureCodeCanvasKit;
   if(!k)throw Error("Canvas exporter is unavailable");
   const {C,create,fill:paintFill,line:paintLine,text:paintText,fit,fonts,preloadImages,crest:paintCrest,download}=k;
+  if(window.FutureCodeFramePreview&&!document.documentElement?.dataset?.footballBrandName){
+   const canvas=await window.FutureCodeFramePreview.render(match,opts.frameTheme,opts);
+   const filename=opts.downloadFilename||filePart(match.home)+'-vs-'+filePart(match.away)+'.png';
+   if(opts.asCanvas)return canvas;
+   if(opts.asBlob){const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));return {filename,blob};}
+   return k.download(canvas,filename);
+  }
   // Main-page single-match PNG: ALL card/page backdrops are transparent.
   // The original branded-site and batch Canvas rendering is unchanged.
   const transparent=opts.mainScreenshot===true;
