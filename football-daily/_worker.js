@@ -344,6 +344,7 @@ async function serveMain(request, env) {
 export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
+    if (path === "/api/editor/news" || path.startsWith("/api/editor/news/")) return newsApi(request, env, path);
     if (path.startsWith("/api/editor/")) return editorApi(request, env, path);
     if (path === "/editor" || path.startsWith("/editor/")) {
       if (!ready(env)) return unavailable();
@@ -531,4 +532,133 @@ async function editorApi(request,env,path){
   let dispatched=true;try{await editorDispatch(env);}catch{dispatched=false;}
   return gzJson({commit:saved.sha,dispatched,message:dispatched?'Data ကို GitHub တွင် သိမ်းပြီး production sync ခေါ်ထားပါပြီ။ Live deployment ကို စောင့်ပါ။':'Data ကို GitHub တွင် သိမ်းပြီးပါပြီ။ Production ခေါ်မှု မအောင်မြင်သေးပါ။ အောက်က ပြန်ပို့ရန်ကို နှိပ်ပါ။'},202);
  }catch(e){return gzJson({error:e instanceof SyntaxError?'JSON data မမှန်ပါ':e.message||'Editor ဝန်ဆောင်မှုအမှား'},e.status===409||e.status===422?409:502);}
+}
+
+
+/* Football news publisher. Reuses the main owner session and editor-only GitHub
+ * secret; publishes ONE shared feed consumed by Main and Goal Zone.
+ * Media uploads are saved to the source repository, but are not delivered until
+ * the news feed itself is published. No GitHub token goes to the browser.
+ */
+const NEWS_FILE = 'football-daily/data/news/latest.json';
+const NEWS_CATEGORIES = Object.freeze({
+  international:'နိုင်ငံတကာ ဘောလုံးသတင်း',
+  'team-player':'အသင်းနှင့် ကစားသမားသတင်း',
+  transfer:'အပြောင်းအရွှေ့ သတင်း',
+  match:'ဘောလုံးပွဲ သတင်းနှင့် ရလဒ်',
+  other:'အခြား ဘောလုံးသတင်း'
+});
+function newsValidate(raw){
+  const errors=[], entries=[], seen=new Set();
+  if(!Array.isArray(raw)||raw.length>60)return {errors:['သတင်းအရေအတွက် ၆၀ ပုဒ်အောက်သာ ထည့်ပါ'],items:[]};
+  for(const [i,story] of raw.entries()){
+    const tag='သတင်း '+(i+1)+' · ';
+    if(!story||typeof story!=='object'){errors.push(tag+'ဖိုင်ပုံစံမမှန်ပါ');continue;}
+    const title=String(story.title||'').trim(),id=String(story.id||'').trim();
+    const category=String(story.category||'other'),image=String(story.image||'').trim();
+    const imageAlt=String(story.imageAlt||'').trim(),sourceName=String(story.sourceName||'').trim();
+    const sourceUrl=String(story.sourceUrl||'').trim(),date=String(story.sourceDateISO||'');
+    const paragraphs=Array.isArray(story.paragraphs)?story.paragraphs.map(p=>String(p).trim()).filter(Boolean):[];
+    if(!/^[a-z0-9-]{6,100}$/.test(id)||seen.has(id))errors.push(tag+'ID မှားနေသည် / ထပ်နေသည်');
+    seen.add(id);
+    if(title.length<4||title.length>220)errors.push(tag+'ခေါင်းစဉ် စာလုံး ၄–၂၂၀ အတွင်း ဖြည့်ပါ');
+    if(!(category in NEWS_CATEGORIES))errors.push(tag+'သတင်းအမျိုးအစားမှားနေသည်');
+    if(paragraphs.length<1||paragraphs.length>25||paragraphs.some(p=>p.length>10000)||paragraphs.join('').length>30000)errors.push(tag+'သတင်းစာသား/စာပိုဒ် ပြန်စစ်ပါ');
+    if(image.length>1200||(image&&!((image.startsWith('/data/news/images/')&&/^\/data\/news\/images\/[a-zA-Z0-9/_\-.]+$/.test(image)&&!image.includes('..'))||editorUrl(image))))errors.push(tag+'ပုံလင့်ခ် မမှန်ပါ');
+    if(imageAlt.length>250||sourceName.length>150)errors.push(tag+'ပုံနှင့် ရင်းမြစ်စာသားရှည်လွန်းသည်');
+    if(sourceUrl&&!editorUrl(sourceUrl))errors.push(tag+'ရင်းမြစ် HTTPS လင့်ခ်မမှန်ပါ');
+    if(!editorDate(date))errors.push(tag+'သတင်းရက်စွဲ မမှန်ပါ');
+    entries.push({
+      id,category,categoryLabel:NEWS_CATEGORIES[category],title,paragraphs,image,
+      imageAlt:imageAlt||title,sourceName:sourceName||'Future Code',
+      sourceUrl,sourceDateISO:date,
+      sourceDateLabel:editorDate(date)?new Intl.DateTimeFormat('my-MM',{year:'numeric',month:'long',day:'numeric',timeZone:'Asia/Yangon'}).format(new Date(date+'T12:00:00Z')):'',
+      publishedAt:typeof story.publishedAt==='string'&&story.publishedAt.length<40?story.publishedAt:new Date().toISOString()
+    });
+  }
+  return {errors:errors.slice(0,60),items:entries};
+}
+async function newsApi(request,env,path){
+  if(!ready(env)||!(await hasSession(request,env)))return gzJson({error:'Owner login လိုအပ်သည်'},401);
+  const url=new URL(request.url);
+  if(request.method==='POST'&&(request.headers.get('Origin')!==url.origin||
+    request.headers.get('X-Football-Editor')!=='1'||request.headers.get('Sec-Fetch-Site')==='cross-site'))
+    return gzJson({error:'Website အတွင်းမှသာ သတင်းတင်နိုင်ပါသည်'},403);
+  try{
+    if(path==='/api/editor/news'&&request.method==='GET'){
+      const file=await editorGithub(env,EDITOR_SOURCE,'contents/'+NEWS_FILE+'?ref=main');
+      return gzJson({feed:editorDecode(file.content),sha:file.sha,configured:Boolean(env.FCD_EDITOR_GITHUB_TOKEN)});
+    }
+    if(path==='/api/editor/news/status'&&request.method==='GET'){
+      const revision=url.searchParams.get('revision');
+      if(!/^[a-f0-9-]{36}$/.test(revision||''))return gzJson({error:'ထုတ်ဝေမှု ID မမှန်ပါ'},400);
+      const current=await editorFile(env,EDITOR_SOURCE,NEWS_FILE,'main');
+      if(current.revision!==revision)return gzJson({phase:'superseded',message:'နောက်ထပ် သတင်းအသစ်တင်ထားပြီးဖြစ်သည်။'});
+      const live=await env.ASSETS.fetch(new Request(url.origin+'/data/news/latest.json?news-check='+Date.now(),{cache:'no-store'}));
+      if(live.ok){try{if((await live.json()).revision===revision)return gzJson({phase:'live',message:'✓ Main နှင့် ဂိုးဇုံအတွက် Live feed ပြောင်းလဲပြီးပါပြီ။'});}catch{}}
+      return gzJson({phase:'queued',message:'GitHub တွင် သိမ်းပြီးဖြစ်သည်။ Production Sync / Cloudflare Deployment ပြီးစီးရန် စောင့်နေသည်။'});
+    }
+    if(request.method!=='POST'||!['/api/editor/news/image','/api/editor/news/publish','/api/editor/news/deliver'].includes(path))
+      return gzJson({error:'Method/endpoint မမှန်ပါ'},405);
+    if(!env.FCD_EDITOR_GITHUB_TOKEN)return gzJson({error:'Cloudflare Secret FCD_EDITOR_GITHUB_TOKEN မချိတ်ဆက်ရသေးပါ။ /editor/setup.html တွင် ကြည့်ပါ။'},503);
+    const body=await editorBody(request);
+    if(path==='/api/editor/news/image'){
+      const match=typeof body.dataUrl==='string'&&/^data:image\/(webp|jpeg);base64,([A-Za-z0-9+/=]+)$/.exec(body.dataUrl);
+      if(!match)return gzJson({error:'JPEG / WebP ပုံသာ Upload လုပ်နိုင်ပါသည်'},422);
+      const bytes=atob(match[2]);
+      const webp=match[1]==='webp';
+      if(bytes.length<100||bytes.length>900000||
+        (webp?bytes.slice(0,4)!=='RIFF'||bytes.slice(8,12)!=='WEBP':
+          bytes.charCodeAt(0)!==255||bytes.charCodeAt(1)!==216||bytes.charCodeAt(2)!==255))
+        return gzJson({error:'ပုံအမျိုးအစား သို့မဟုတ် ပုံအရွယ်အစား မမှန်ပါ'},422);
+      const file='football-daily/data/news/images/uploads/'+editorDay()+'/'+crypto.randomUUID()+(webp?'.webp':'.jpg');
+      const blob=await editorGithub(env,EDITOR_SOURCE,'git/blobs','POST',{content:match[2],encoding:'base64'});
+      const ref=await editorGithub(env,EDITOR_SOURCE,'git/ref/heads/main');
+      const commit=await editorGithub(env,EDITOR_SOURCE,'git/commits/'+ref.object.sha);
+      const tree=await editorGithub(env,EDITOR_SOURCE,'git/trees','POST',{
+        base_tree:commit.tree.sha,tree:[{path:file,mode:'100644',type:'blob',sha:blob.sha}]
+      });
+      const saved=await editorGithub(env,EDITOR_SOURCE,'git/commits','POST',{
+        message:'Upload owner football news image',tree:tree.sha,parents:[ref.object.sha]
+      });
+      await editorGithub(env,EDITOR_SOURCE,'git/refs/heads/main','PATCH',{sha:saved.sha,force:false});
+      return gzJson({image:'/'+file.replace(/^football-daily\//,'')},201);
+    }
+    if(path==='/api/editor/news/deliver'){
+      const revision=String(body.revision||'');
+      if(!/^[a-f0-9-]{36}$/.test(revision))return gzJson({error:'ID မမှန်ပါ'},422);
+      const feed=await editorFile(env,EDITOR_SOURCE,NEWS_FILE,'main');
+      if(feed.revision!==revision)return gzJson({error:'သတင်းအသစ်ရှိနေသည်။ အသစ်ပြန်ဖွင့်ပါ'},409);
+      await editorDispatch(env);
+      return gzJson({message:'Production Sync ပြန်ခေါ်ပြီးပါပြီ'});
+    }
+    const checked=newsValidate(body.items);
+    if(checked.errors.length)return gzJson({error:'သတင်းအချက်အလက် ပြင်ဆင်ရန်လိုသည်',errors:checked.errors},422);
+    if(!/^[a-f0-9]{40}$/.test(body.expectedSha||''))return gzJson({error:'News feed ကို အရင်ဖွင့်ပါ'},409);
+    const ref=await editorGithub(env,EDITOR_SOURCE,'git/ref/heads/main');
+    const current=await editorGithub(env,EDITOR_SOURCE,'contents/'+NEWS_FILE+'?ref='+ref.object.sha);
+    if(current.sha!==body.expectedSha)return gzJson({error:'အခြားတစ်နေရာမှ သတင်းပြင်ထားသည်။ မိမိ Draft ကိုသိမ်းပြီး Data အသစ်ပြန်ဖွင့်ပါ။'},409);
+    const feed={
+      date:editorDay(),timezone:'Asia/Yangon',
+      windowLabel:'နောက်ဆုံး ထုတ်ဝေထားသော ဘောလုံးသတင်းများ · မြန်မာစံတော်ချိန်',
+      revision:crypto.randomUUID(),updatedAt:new Date().toISOString(),
+      items:checked.items
+    };
+    const head=await editorGithub(env,EDITOR_SOURCE,'git/commits/'+ref.object.sha);
+    const tree=await editorGithub(env,EDITOR_SOURCE,'git/trees','POST',{
+      base_tree:head.tree.sha,tree:[{path:NEWS_FILE,mode:'100644',type:'blob',content:JSON.stringify(feed,null,2)+'\n'}]
+    });
+    const saved=await editorGithub(env,EDITOR_SOURCE,'git/commits','POST',{
+      message:'Publish owner football news ('+feed.items.length+' articles)',tree:tree.sha,parents:[ref.object.sha]
+    });
+    await editorGithub(env,EDITOR_SOURCE,'git/refs/heads/main','PATCH',{sha:saved.sha,force:false});
+    let dispatched=true;try{await editorDispatch(env);}catch{dispatched=false;}
+    return gzJson({
+      sha:(await editorGithub(env,EDITOR_SOURCE,'contents/'+NEWS_FILE+'?ref='+saved.sha)).sha,
+      commit:saved.sha,revision:feed.revision,dispatched,
+      message:dispatched?'သတင်းများကို GitHub တွင် သိမ်းပြီး Production Sync အလိုအလျောက်ခေါ်ထားပါပြီ။':'သတင်းများကို GitHub တွင် သိမ်းပြီးပါပြီ။ Production Sync ခေါ်မရသေးပါ။ ပြန်ပို့ရန် နှိပ်ပါ။'
+    },202);
+  }catch(e){
+    return gzJson({error:e instanceof SyntaxError?'JSON data မမှန်ပါ':e.message||'News editor အမှား'},e.status===409||e.status===422?409:502);
+  }
 }

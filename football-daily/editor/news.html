@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ဘောလုံးသတင်း ထည့်ရန် · Future Code Owner</title>
+<link rel="stylesheet" href="/editor/news.css?v=2">
+<script defer src="/editor/news.js?v=2"></script>
+</head>
+<body>
+<header class="top"><div><small>FUTURE CODE · OWNER NEWS STUDIO</small><h1>ဘောလုံးသတင်း တင်ရန် Form</h1><p>ဤနေရာတွင် တစ်ကြိမ်ထည့်/ပြင်လိုက်သောသတင်းကို Main Website နှင့် ဂိုးဇုံတွင် မျှဝေဖော်ပြပါမည်။</p></div>
+<div class="top-links"><a href="/">Main Website ↗</a><a href="/future-code-journal/">ဂိုးဇုံ ↗</a><a href="/editor/">ပွဲကြို/ကြေး Editor ↗</a></div></header>
+<main>
+<section class="card intro"><div><h2>သတင်းများ စီမံရန်</h2><p>ခေါင်းစဉ်အသစ်များကို ထပ်ထည့်နိုင်ပြီး သတင်းစာသား၊ ရက်စွဲ၊ ပုံ၊ ရင်းမြစ်တို့ကို ပြင်ဆင်နိုင်ပါသည်။ Publish နှိပ်ပြီးသည်နှင့် GitHub တွင် သိမ်းကာ Production Sync ကို အလိုအလျောက် ခေါ်ပေးပါမည်။</p></div><button id="reload" type="button" class="secondary">↻ Website Data ပြန်ဖွင့်ရန်</button></section>
+<div id="setup" class="warning" hidden>ထုတ်ဝေရန် GitHub secret မချိတ်ထားသေးပါ။ <a href="/editor/setup.html">ချိတ်ဆက်နည်း ဖွင့်ရန် ↗</a></div>
+<div id="message" role="status" aria-live="polite" class="message">သတင်းစာရင်း ဖွင့်နေသည်…</div>
+<section class="toolbar"><span id="count"></span><button type="button" id="add" class="secondary">＋ သတင်းခေါင်းစဉ်အသစ် ထပ်ထည့်ရန်</button></section>
+<form id="newsForm" novalidate>
+<div id="stories"></div>
+<div class="bottom card">
+ <div><strong>သတင်းများ ထုတ်ဝေရန်</strong><p>လိုအပ်သည့် သတင်းအားလုံးကို ဖြည့်ပြီး “သတင်းအားလုံး ထုတ်ဝေရန်” ကို နှိပ်ပါ။ ပုံအသစ်များကို အရင် Upload လုပ်ပြီး ပြောင်းလဲမှုအားလုံးကို တစ်ကြိမ်တည်း ထုတ်ဝေမည်။</p></div>
+ <button id="publish" type="submit" class="primary">သတင်းအားလုံး ထုတ်ဝေရန်</button>
+</div>
+</form>
+<section id="delivery" class="card delivery" hidden>
+<h2>Production ထုတ်ဝေမှု အခြေအနေ</h2>
+<p id="deliveryStatus" aria-live="polite"></p>
+<div class="buttons"><button id="check" type="button" class="secondary">Live Website စစ်ရန်</button><button id="retry" type="button" class="secondary">Production Sync ပြန်ပို့ရန်</button></div>
+</section>
+</main>
+<footer>Owner Account ဖြင့်သာ ဝင်နိုင်သည်။ GitHub Password / Token ကို ဤ Form တွင် မဖြည့်ပါနှင့်။ သတင်းရင်းမြစ်နှင့် ပုံအသုံးပြုခွင့်ကို မိမိကိုယ်တိုင် စစ်ဆေးပါ။</footer>
+</body></html>
