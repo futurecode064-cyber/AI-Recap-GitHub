@@ -1,0 +1,33 @@
+name: Verify Football Live Publication
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - 'football-daily/**'
+      - '.github/workflows/football-live-verify.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: football-live-verification
+  cancel-in-progress: true
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'push' && github.sha || 'football-daily-render' }}
+          persist-credentials: false
+      - name: Test stale-data and route detection
+        run: python3 -m unittest discover -s football-daily/tests -p test_verify_live.py
+      - name: Wait for and verify live JSON, brands, static assets and owner access
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_SHA=$(git rev-parse HEAD)
+          python3 football-daily/scripts/verify_live.py \
+            --source-commit "$SOURCE_SHA" \
+            --attempts 12 --interval 10 \
+            --summary "$GITHUB_STEP_SUMMARY"
