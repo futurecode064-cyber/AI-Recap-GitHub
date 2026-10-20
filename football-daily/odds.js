@@ -9,7 +9,7 @@ function append(parent,...items){items.forEach(n=>parent.appendChild(n));return 
 function safeLogo(src){if(typeof src!=="string")return "";try{const u=new URL(src,document.baseURI);return u.protocol==="https:"?u.href:"";}catch{return "";}}
 function badge(name,url,cls="team-badge"){
  const frame=element("span",cls);frame.title=name;
- const src=safeLogo(isMainOdds?window.FutureCodeBrandExportData?.imageUrl(url)||url:url);
+ const src=safeLogo(window.FutureCodeMainLogoAssets?.imageUrl(url)||(isMainOdds?window.FutureCodeBrandExportData?.imageUrl(url)||url:url));
  if(src){
   const img=element("img","team-logo");img.src=src;img.alt=name+" အသင်းလိုဂို";img.loading="lazy";img.decoding="async";
   img.onerror=()=>{img.remove();frame.appendChild(element("span","logo-fallback",name.slice(0,2)));};
@@ -34,7 +34,7 @@ if(isMainOdds){
 }
 function leagueHeading(league){
  const heading=element("h2","odds-league-heading");
- const logo=safeLogo(window.FutureCodeBrandExportData?.leagueCrest(league)||leagueLogos[league]);
+ const logo=safeLogo(window.FutureCodeMainLogoAssets?.leagueCrest(league)||window.FutureCodeBrandExportData?.leagueCrest(league)||leagueLogos[league]);
  if(logo){
   const icon=element("img","league-crest");icon.src=logo;icon.alt=groups[league]||league;icon.loading="eager";icon.decoding="sync";
   icon.onerror=()=>{icon.replaceWith(element("span","league-mark","⚽"));};

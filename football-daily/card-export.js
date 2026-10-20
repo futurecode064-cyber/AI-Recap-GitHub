@@ -124,7 +124,7 @@
   const isKTF=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
   const brandData=window.FutureCodeBrandExportData;
   const brandSite=Boolean(document.documentElement?.dataset?.footballBrandName);
-  const leagueCrest=brandData?.leagueCrest(match.league)||LEAGUE_CRESTS[match.league];
+  const leagueCrest=window.FutureCodeMainLogoAssets?.leagueCrest(match.league)||brandData?.leagueCrest(match.league)||LEAGUE_CRESTS[match.league];
   const leagueLabel=brandData?(opts.leagueLabel&&opts.leagueLabel!==match.league?opts.leagueLabel:brandData.leagueName(match.league)):null;
   const my=match.myanmarOdds||{};
   await preloadImages([match.homeCrestUrl,match.awayCrestUrl,opts.brandLogoUrl,leagueCrest].filter(Boolean));

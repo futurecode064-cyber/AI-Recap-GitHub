@@ -72,7 +72,7 @@ test("bulk export retains league and both team logos, same three predicted score
  assert.match(js,/const scores=predict\(m\)/);
  assert.match(js,/const blob=await new Promise\(resolve=>canvas\.toBlob\(resolve,"image\/png"\)\)/);
  assert.match(main,/teamLogo:teamCrest,displayTime/);
- assert.match(main,/leagueLogo:l=>leagueIcons\[l\]/);
+ assert.match(main,/leagueLogo:l=>window\.FutureCodeMainLogoAssets\?\.leagueCrest\(l\)\|\|leagueIcons\[l\]/);
  assert.match(main,/btn\.addEventListener\("click",async\(\)=>\{/);
  assert.match(read("index.html"),/main-ai-bulk-export\.js/);
  for(const site of ["ykz-family","bw-sport","ko-thet-family"]){

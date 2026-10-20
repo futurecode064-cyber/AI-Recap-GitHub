@@ -17,7 +17,7 @@
  function sleep(ms){return new Promise(done=>setTimeout(done,ms))}
  async function fonts(){
   if(!document.fonts?.ready)return;
-  const brandedExport=Boolean(document.documentElement?.dataset?.footballBrandName);
+  const brandedExport=Boolean(document.documentElement?.dataset?.footballBrandName||window.FutureCodeMainLogoAssets);
   const ready=brandedExport&&document.fonts.load
    ?Promise.all([document.fonts.ready,document.fonts.load('800 24px "Noto Sans Myanmar"','မြန်မာ'),document.fonts.load('500 24px "Noto Sans Myanmar"','မြန်မာ')]).catch(()=>{})
    :document.fonts.ready.catch(()=>{});
@@ -61,9 +61,9 @@
   const task=new Promise(resolve=>{
    const img=new Image();let done=false;
    const finish=v=>{if(done)return;done=true;clearTimeout(timer);if(!v)imageCache.delete(src);resolve(v)};
-   const brandedExport=Boolean(document.documentElement?.dataset?.footballBrandName);
+   const brandedExport=Boolean(document.documentElement?.dataset?.footballBrandName||window.FutureCodeMainLogoAssets);
    const timer=setTimeout(()=>finish(null),brandedExport?6500:950);
-   img.crossOrigin="anonymous";img.onload=()=>finish(img);img.onerror=()=>finish(null);img.src=window.FutureCodeBrandExportData?.imageUrl(src)||src;
+   img.crossOrigin="anonymous";img.onload=()=>finish(img);img.onerror=()=>finish(null);img.src=window.FutureCodeMainLogoAssets?.imageUrl(src)||window.FutureCodeBrandExportData?.imageUrl(src)||src;
   });
   imageCache.set(src,task);return task;
  }

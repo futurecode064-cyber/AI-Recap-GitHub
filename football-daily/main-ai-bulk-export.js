@@ -47,7 +47,7 @@
   try{const a=new URL(url);return a.protocol==="https:"?a.href:null;}catch{return null;}
  }
  function loadImage(url,cache){
-  const src=safeHttps(url);
+  const src=safeHttps(window.FutureCodeMainLogoAssets?.imageUrl(url)||url);
   if(!src)return Promise.resolve(null);
   if(cache.has(src))return cache.get(src);
   const request=new Promise(resolve=>{

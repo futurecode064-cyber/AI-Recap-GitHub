@@ -172,7 +172,7 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
 
 test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-league-picker-v7/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=main-logo-assets-20261020/);
   assert.match(html,/main-table-odds-frames\.js\?v=20261019-league-picker-v7/);
   assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
 });
@@ -187,7 +187,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261019-league-picker-v7/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=main-logo-assets-20261020/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);

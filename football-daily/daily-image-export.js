@@ -87,7 +87,7 @@
 
   const {create,fill,line,text,fit,fonts,preloadImages,crest,download}=kit;
   const groups=grouped(data.matches);
-  const leagueCrest=league=>window.FutureCodeBrandExportData?.leagueCrest(league)||crests[league];
+  const leagueCrest=league=>window.FutureCodeMainLogoAssets?.leagueCrest(league)||window.FutureCodeBrandExportData?.leagueCrest(league)||crests[league];
   // Preserve full single-image capture: every league, original Myanmar label and row.
   // Compact 1200px branded sheet; keep all Myanmar names and price columns.
   // Each group consumes 58px league bar, 56px headings, 68px per row and 12px gap.
@@ -201,7 +201,7 @@
   const kit=K(),{C,create,fill,line,text,fit,fonts,preloadImages,crest,download,top}=kit;
   const groups=grouped(finals),W=1200,M=30,H=218+groups.reduce((n,g)=>n+67+g[1].length*215+18,0)+70;
   const {canvas,ctx}=create(W,H);
-  const brandData=window.FutureCodeBrandExportData;
+  const brandData=window.FutureCodeBrandExportData||window.FutureCodeMainLogoAssets;
   await Promise.all([fonts(),preloadImages(finals.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).concat(brandData?groups.map(g=>brandData.leagueCrest(g[0])):[]))]);
   fill(ctx,0,0,W,H,C.bg);top(ctx,W,"ဂိုးရလဒ်များ",date,finals.length+" ပွဲပြီး");
   let y=223;
