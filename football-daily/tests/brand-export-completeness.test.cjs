@@ -1,7 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..');
-const report=JSON.parse(fs.readFileSync(path.join(root,'data/today.json')));
+const report=JSON.parse(fs.readFileSync(path.join(root,'data/archive/2026-10-19.json')));
 const odds=JSON.parse(fs.readFileSync(path.join(root,'data/odds/2026-10-19.json')));
 const brands={'bw-sport':'BW SPORT ဘောလုံးဂျာနယ်','ykz-family':'YKZ FAMILY GROUP','ko-thet-family':'Ko Thet Family ဘောလုံးဂျာနယ်','future-code-journal':'ဂိုးဇုံ အားကစား ဂျာနယ်'};
 function harness(id,failOnce=false){
@@ -55,7 +55,7 @@ for(const [id,name] of Object.entries(brands)){
 test('Every brand page loads shared metadata and refreshed exporters',()=>{
  for(const id of Object.keys(brands))for(const page of ['index.html','odds.html']){
   const html=fs.readFileSync(path.join(root,id,page),'utf8');
-  assert.ok(html.includes('../brand-export-data.js?v=brand-data-complete-20261019'));
+  assert.ok(html.includes('../brand-export-data.js?v=brand-leagues-20261020'));
   assert.ok(html.indexOf('./brand.js')<html.indexOf('../canvas-image-kit.js'),'brand palette set before canvas module');
  }
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
@@ -89,4 +89,16 @@ test('Goal Zone AI PNG retains the league crest, Myanmar name and model predicti
  assert.ok(x.logos.includes(x.window.FutureCodeBrandExportData.leagueCrest(m.league)));
  assert.ok(x.labels.includes('ပြင်သစ် လိဂ် ၂'));
  for(const score of ['1-0','1-1','2-0'])assert.ok(x.labels.includes(score));
+});
+
+test('Current-day leagues resolve to bundled logos on all sub-brands',()=>{
+ const current=JSON.parse(fs.readFileSync(path.join(root,'data/today.json')));
+ for(const id of Object.keys(brands)){
+  const x=harness(id);
+  for(const league of new Set(current.matches.map(m=>m.league))){
+   const u=x.window.FutureCodeBrandExportData.leagueCrest(league);
+   assert.ok(u.startsWith('https://test.example/assets/league-logos/'),league);
+   assert.ok(fs.statSync(path.join(root,new URL(u).pathname)).size>100);
+  }
+ }
 });
