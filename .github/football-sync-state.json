@@ -2,16 +2,16 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "e47ea3f4867cf6635cd3140a831114821a12e88b",
-  "source_tree": "960fd94bd3d239fe6fb00f82e40c3a4a2c7f42f6",
-  "target_tree": "9ef8156c746b2a08074a13fc86105704261622d2",
+  "source_commit": "2d969ded70b9220d657d3ab45a21d78baa28f6c1",
+  "source_tree": "cd24bb6e43729a6433b6de8606da87b0213e1637",
+  "target_tree": "cd24bb6e43729a6433b6de8606da87b0213e1637",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-20T08:23:47.470Z",
+  "last_synced_utc": "2026-10-20T12:07:20.245Z",
   "reconciled_on": "2026-10-20",
   "reconciliation_note": "Published full article body text in poster and changed asset version to v3 so Main and Goal Zone reload the updated PNG generator.",
-  "last_synced_method": "scoped routing maintenance; previous full-source marker retained; no content changes",
+  "last_synced_method": "verified-desktop-layout-parity",
   "guard_reconciliation": {
     "previous_target_tree": "ddf9afd38b385f967d28b6346559156dd6322aab",
     "verified_production_head": "ed735b465caa89281d76dc60efbe890ee8d089bd",
@@ -148,5 +148,12 @@
       "assets/preview-frames/htet-bottom.jpg",
       "assets/preview-frames/htet-top.jpg"
     ]
+  },
+  "guard_reconciliation_desktop_20261020": {
+    "previous_target_tree": "9ef8156c746b2a08074a13fc86105704261622d2",
+    "verified_production_head": "95567e5d99ba88000242506fd55f1e69d375c0f7",
+    "verified_canonical_commit": "2d969ded70b9220d657d3ab45a21d78baa28f6c1",
+    "identical_result_tree": "cd24bb6e43729a6433b6de8606da87b0213e1637",
+    "note": "Both complete football-daily subtrees are byte-for-byte identical after the scoped 1200px viewport update. Public content, APK links and download logic were preserved. Normal guarded future synchronization remains enabled."
   }
 }
