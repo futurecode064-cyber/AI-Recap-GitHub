@@ -4,7 +4,7 @@
   "source_branch": "main",
   "source_commit": "9bae2c11ffbada60557218c22be7c1d245feec3b",
   "source_tree": "fe4ee0623d1342bef2f544f7f8897eb214998d66",
-  "target_tree": "fe4ee0623d1342bef2f544f7f8897eb214998d66",
+  "target_tree": "297b4372d45b4aaa88110dc2dad5fc1ec9aa8cc6",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
@@ -74,5 +74,20 @@
     "verified_production_tree": "bc7fba98db4ef8d2695b4272ff20baa52daf3c1f",
     "verified_canonical_commit": "9bae2c11ffbada60557218c22be7c1d245feec3b",
     "note": "Reconciled independently merged shared-brand download changes. All 13 production-changed paths were compared against canonical source; download designs, cache keys and odds subpath support are preserved. Canonical-only news sections, source-copy metadata and validated publication tests remain pending official guarded sync. No application file or guard logic changed by this reconciliation."
+  },
+  "guard_reconciliation_news_editor_20261020": {
+    "prior_marker_tree": "fe4ee0623d1342bef2f544f7f8897eb214998d66",
+    "independently_updated_production_tree": "297b4372d45b4aaa88110dc2dad5fc1ec9aa8cc6",
+    "verified_source_tree_at_reconciliation": "3b39bdca661c90c732769421d414771015482699",
+    "comparison": "Verified complete recursive git trees; all production blob paths exist in source, no production-only blobs, and source has owner news form additions. New source changes are intentionally pending guarded sync.",
+    "production_only_files": 0,
+    "previous_marker_to_production_modified_paths": [
+      "brand-odds-studio.js",
+      "index.html",
+      "main-table-odds-frames.js",
+      "odds.html",
+      "tests/main-home-odds-frames.test.cjs",
+      "tests/main-table-odds-frames.test.cjs"
+    ]
   }
 }
