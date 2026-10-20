@@ -235,7 +235,7 @@ function heroSide(match,side){
  const crest=textOrEmpty(match[side+"CrestUrl"]);
  if(crest&&goodUrl(crest)){
   const badge=node("img","hero-team-crest");
-  badge.src=crest;badge.alt=name+" အသင်းလိုဂို";
+  badge.src=window.FutureCodeMainLogoAssets?.imageUrl(crest)||crest;badge.alt=name+" အသင်းလိုဂို";
   badge.loading="lazy";badge.decoding="async";
   badge.onerror=()=>{badge.remove();wrap.appendChild(node("span","hero-crest-fallback",name.slice(0,2)))};
   wrap.appendChild(badge);
@@ -247,13 +247,15 @@ function renderMatchHero(match){
  const artwork=node("div","match-hero-art");
  const middle=node("div","match-hero-versus");
  middle.appendChild(leagueBadge(match.league,"hero-competition"));
+ middle.appendChild(node("span","hero-kickoff",match.kickoffYangon||""));
+ middle.appendChild(node("small","hero-timezone","မြန်မာစံတော်ချိန် (MMT)"));
  middle.appendChild(node("span","hero-big-vs","VS"));
  append(artwork,heroSide(match,"home"),middle,heroSide(match,"away"));
  hero.appendChild(artwork);
  const info=node("div","hero-info-bar");
- append(info,node("span","hero-info-side hero-info-left"),
-  node("strong","hero-info-fixture",teamLabel(match,"home")+" နှင့် "+teamLabel(match,"away")),
-  node("span","hero-info-side hero-info-right"));
+ append(info,node("strong","hero-info-side hero-info-left",teamLabel(match,"home")),
+  node("span","hero-info-fixture","VS"),
+  node("strong","hero-info-side hero-info-right",teamLabel(match,"away")));
  hero.appendChild(info);
  return hero;
 }
@@ -332,7 +334,7 @@ function renderMatch(match,i){
    const original=textOrEmpty(match.dailyPreviewText);
    const noPredictions=stripScorePrediction(original);
    body.appendChild(noPredictions
-    ?appendBoldText(node("p","daily-preview-verbatim"),noPredictions)
+    ?appendBoldText(node("p","daily-preview-verbatim"),window.FutureCodeFramePreview?.highlight(noPredictions,match)||noPredictions)
     :node("p","",NO_PREVIEW_TEXT));
  }
 

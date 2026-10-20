@@ -1,0 +1,33 @@
+/* Main previews: reference-inspired navy, gold borders and clear article typography. */
+html:not([data-football-brand-name]) .match-card:has(.match-hero){--poster-bg:#030d19;--poster-panel:#061726;--poster-accent:#43b9f0;--poster-gold:#edc45b;background:var(--poster-bg);border:1px solid var(--poster-gold);box-shadow:0 12px 36px #0005;overflow:hidden}
+html:not([data-football-brand-name]) .match-card:has(.match-hero)>.match-topline{background:#061726;color:#fff;border-bottom:1px solid #edc45b55}
+html:not([data-football-brand-name]) .match-hero-art{min-height:300px;background:radial-gradient(ellipse at 50% 10%,#14669c77,transparent 62%),repeating-linear-gradient(160deg,#43b9f014 0 2px,transparent 2px 48px),#030d19}
+html:not([data-football-brand-name]) .hero-team{background:radial-gradient(ellipse at 50% 20%,#167cc54a,transparent 75%)}
+html:not([data-football-brand-name]) .hero-team-crest{width:clamp(110px,19vw,210px);height:clamp(110px,19vw,210px);max-height:230px;filter:drop-shadow(0 0 18px #41bdff66)}
+html:not([data-football-brand-name]) .match-hero-versus{background:transparent;gap:8px}
+html:not([data-football-brand-name]) .hero-competition{border:1px solid #edc45b;border-radius:0 0 16px 16px;background:#082c54;padding:10px;color:#fff}
+html:not([data-football-brand-name]) .hero-competition img{width:65px;height:65px;object-fit:contain}
+html:not([data-football-brand-name]) .hero-kickoff{font-size:16px;font-weight:800;color:#fff;line-height:1.8}
+html:not([data-football-brand-name]) .hero-timezone{font-size:10px;color:#e3eff8}
+html:not([data-football-brand-name]) .hero-big-vs{color:#edc45b;font-size:66px;text-shadow:0 3px 0 #85550d,0 0 25px #edc45b55}
+html:not([data-football-brand-name]) .hero-info-bar{background:#082c54;border-block:1px solid #edc45b;min-height:74px}
+html:not([data-football-brand-name]) .hero-info-fixture{background:transparent;color:#fff;font-size:25px;line-height:1.8}
+html:not([data-football-brand-name]) .match-market-strip{background:#061726;color:#fff;border-bottom:1px solid #edc45b55}
+html:not([data-football-brand-name]) .market-form-row{background:#030d19;gap:9px;padding:14px}
+html:not([data-football-brand-name]) .market-form-row>section{background:#061726;border:1px solid #edc45b;border-radius:12px;overflow:hidden}
+html:not([data-football-brand-name]) .market-center-heading,html:not([data-football-brand-name]) .wdl-heading{color:#fff}
+html:not([data-football-brand-name]) .market-center .odd{background:#061726}
+html:not([data-football-brand-name]) .market-center .odd strong{color:#fff2b3;font-size:25px}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-toggle{background:linear-gradient(110deg,#f9d96b,#c48d26);color:#071525;font-weight:800;font-size:17px;border-block:1px solid #edc45b}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body{background:#061726;margin:0 14px;border:1px solid #edc45b;border-radius:0 0 18px 18px;padding:22px 24px}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body h4{color:#edc45b}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body p{color:#f7faff;font-size:19px;line-height:2.05}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#43b9f0;font-weight:800}
+html:not([data-football-brand-name]) .match-card:has(.match-hero) .match-actions{background:#030d19}
+@media(max-width:620px){html:not([data-football-brand-name]) .match-hero-art{min-height:225px}html:not([data-football-brand-name]) .hero-info-fixture{font-size:18px}html:not([data-football-brand-name]) .hero-kickoff{font-size:11px}html:not([data-football-brand-name]) .hero-competition img{width:44px;height:44px}html:not([data-football-brand-name]) .hero-big-vs{font-size:43px}html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body{margin:0 7px;padding:16px}html:not([data-football-brand-name]) .match-card:has(.match-hero) .analysis-body p{font-size:16px}html:not([data-football-brand-name]) .market-center .odd strong{font-size:17px}}
+
+html:not([data-football-brand-name]) .hero-competition{background:#dcebf6;color:#061726}
+
+html:not([data-football-brand-name]) .hero-info-bar{display:grid;grid-template-columns:minmax(0,1fr) 18% minmax(0,1fr);padding:0 14px;gap:8px}
+html:not([data-football-brand-name]) .hero-info-side{background:linear-gradient(#0c3765,#030d19);border:1px solid #edc45b;border-radius:12px;padding:16px 9px;text-align:center;color:#fff;font-size:clamp(15px,2.2vw,27px);height:auto;min-width:0;clip-path:none;overflow-wrap:anywhere}
+html:not([data-football-brand-name]) .hero-info-fixture{color:#edc45b;font-size:30px;text-align:center;min-width:0}

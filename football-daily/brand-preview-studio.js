@@ -26,7 +26,7 @@
  try{if(mode==='show'){const blob=await render(matches[Number(el('brandMatch').value)],selected,theme);if(previewURL)URL.revokeObjectURL(previewURL);previewURL=URL.createObjectURL(blob);el('brandSample').src=previewURL;el('brandSample').hidden=false;status.textContent='နမူနာ အဆင်သင့်ဖြစ်ပါပြီ';}else{urls.forEach(URL.revokeObjectURL);urls.length=0;el('brandDownloads').replaceChildren();
  if(mode==='all'&&el('brandBatchScope').value==='all'){
   const zip=new window.FutureCodeFrameZip.Archive(),total=frames.length*matches.length;let count=0;
-  for(const f of frames){const theme=colour(f);for(let i=0;i<matches.length;i++){if(cancel)break;status.textContent=`ZIP ဖန်တီးနေသည် · ${f[1]} · ${++count}/${total} ပုံ`;const blob=await render(matches[i],f,theme);await zip.add(f[0]+'/'+filename(matches[i],f,i),blob);await new Promise(r=>setTimeout(r,0));}if(cancel)break;}
+  for(const f of frames){const theme=colour(f);for(let i=0;i<matches.length;i++){if(cancel)break;status.textContent=`ZIP ဖန်တီးနေသည် · ${f[1]} · ${++count}/${total} ပုံ`;const blob=await render(matches[i],f,theme);await zip.add('previews/'+filename(matches[i],f,i),blob);await new Promise(r=>setTimeout(r,0));}if(cancel)break;}
   if(cancel){status.textContent='ZIP ဖန်တီးမှု ရပ်လိုက်ပါပြီ။';return;}
   const blob=zip.finish();link(blob,'all-frames-previews-'+reportDate+'.zip',`⬇ Frame အားလုံး ZIP Download · ${total} ပုံ`).click();status.textContent=`Frame ${frames.length} မျိုး × ${matches.length} ပွဲ = ${total} ပုံ · ZIP အဆင်သင့်ဖြစ်ပါပြီ။`;
  }else{
