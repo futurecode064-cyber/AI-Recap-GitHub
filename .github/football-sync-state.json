@@ -2,16 +2,16 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "74c07d8546d17c5a68d5a5beaf227581c6dea172",
-  "source_tree": "8e8e8ee4452a2b413a5a395fbdf9af09bc6d01f6",
-  "target_tree": "8e8e8ee4452a2b413a5a395fbdf9af09bc6d01f6",
+  "source_commit": "dddd94cc0757e7ef6282948740966c4f7b0b3e5d",
+  "source_tree": "600cd90bf786e35da8019941f13a6af8a06ee42f",
+  "target_tree": "600cd90bf786e35da8019941f13a6af8a06ee42f",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-20T02:11:55.784Z",
+  "last_synced_utc": "2026-10-20T02:23:24.398Z",
   "reconciled_on": "2026-10-20",
   "reconciliation_note": "Verified identical football-daily trees after sub-brand PNG completeness and bundled UCL/EFL logo fixes; existing branded layouts retained. Live preview and odds download controls tested on all four brands. Source recent-form entries remain a separate publication data issue.",
-  "last_synced_method": "verified-reference-preview-design-parity",
+  "last_synced_method": "verified-compact-stadium-preview-parity",
   "guard_reconciliation": {
     "previous_target_tree": "ddf9afd38b385f967d28b6346559156dd6322aab",
     "verified_production_head": "ed735b465caa89281d76dc60efbe890ee8d089bd",
@@ -62,5 +62,10 @@
     "verified_production_head": "a2d5a12b69739f384b4c150da4a3c7e02577896e",
     "verified_canonical_commit": "74c07d8546d17c5a68d5a5beaf227581c6dea172",
     "identical_result_tree": "8e8e8ee4452a2b413a5a395fbdf9af09bc6d01f6"
+  },
+  "guard_reconciliation_stadium_20261020": {
+    "verified_production_head": "06eb5e65526c59ec477acaeef8769aba1e543686",
+    "verified_canonical_commit": "dddd94cc0757e7ef6282948740966c4f7b0b3e5d",
+    "identical_result_tree": "600cd90bf786e35da8019941f13a6af8a06ee42f"
   }
 }
