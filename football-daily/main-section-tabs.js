@@ -5,20 +5,22 @@
 (function(){
   if(!["/","/index.html"].includes(location.pathname))return;
   const TODAY_TITLE="ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ";
-  const MODE_TO_HASH={ai:"#fcAiScoreSection",video:"#fcVideoStudio",previewFrame:"#brandPreviewStudio",oddsFrame:"#brandOddsStudio"};
+  const MODE_TO_HASH={ai:"#fcAiScoreSection",video:"#fcVideoStudio",previewFrame:"#brandPreviewStudio",oddsFrame:"#brandOddsStudio",news:"#fcNewsSection"};
   const HASH_TO_MODE=Object.fromEntries(Object.entries(MODE_TO_HASH).map(([mode,hash])=>[hash,mode]));
 
   function init(){
     const nav=document.getElementById("dateTabs");
     const ai=document.getElementById("fcAiScoreSection");
     const video=document.getElementById("fcVideoStudio");
+    const news=document.getElementById("fcNewsSection");
     const title=document.getElementById("reportHeading");
     if(!nav||!ai||!video||!title||!nav.classList.contains("fc-main-five-nav"))return;
     const previous=nav.querySelector('button[data-day="-1"]');
     const today=nav.querySelector('button[data-day="0"]');
     const videoTab=nav.querySelector(".fc-main-studio-tab");
     const aiTab=nav.querySelector(".fc-main-ai-tab");
-    if(!previous||!today||!videoTab||!aiTab)return;
+    const newsTab=nav.querySelector(".fc-main-news-tab");
+    if(!previous||!today||!videoTab||!aiTab||!news||!newsTab)return;
 
     const frameTabs=[[nav.querySelector(".fc-main-preview-frame-tab"),"previewFrame","brandPreviewStudio"],[nav.querySelector(".fc-main-odds-frame-tab"),"oddsFrame","brandOddsStudio"]];
     // Both frame studios finish their synchronous setup before DOMContentLoaded.
@@ -33,9 +35,9 @@
     headingObserver.observe(title,{childList:true});
 
     function show(mode){
-      view=["yesterday","today","ai","video","previewFrame","oddsFrame"].includes(mode)?mode:"today";
+      view=["yesterday","today","ai","video","previewFrame","oddsFrame","news"].includes(mode)?mode:"today";
       document.body.dataset.fcMainView=view;
-      const selection=[[previous,view==="yesterday"],[today,view==="today"],[videoTab,view==="video"],[aiTab,view==="ai"],...frameTabs.filter(([tab])=>tab).map(([tab,mode])=>[tab,view===mode])];
+      const selection=[[previous,view==="yesterday"],[today,view==="today"],[videoTab,view==="video"],[aiTab,view==="ai"],[newsTab,view==="news"],...frameTabs.filter(([tab])=>tab).map(([tab,mode])=>[tab,view===mode])];
       for(const [control,on] of selection){
         control.classList.toggle("active",on);
         if(on)control.setAttribute("aria-current",control.tagName==="BUTTON"?"date":"page");
@@ -44,7 +46,7 @@
       updateTodayTitle();
     }
     function scrollToNav(){
-      // New content appears immediately below the five navigation cards.
+      // The selected news section appears immediately below the main navigation.
       // Focus stays on the clicked item; never scroll into hidden panels.
       nav.scrollIntoView({block:"start",behavior:"auto"});
     }
@@ -72,6 +74,9 @@
     });
     aiTab.addEventListener("click",event=>{
       event.preventDefault();navigate("ai",true);
+    });
+    newsTab.addEventListener("click",event=>{
+      event.preventDefault();navigate("news",true);
     });
     for(const [tab,mode] of frameTabs){if(tab)tab.addEventListener("click",event=>{event.preventDefault();navigate(mode,true);});}
     function route(){

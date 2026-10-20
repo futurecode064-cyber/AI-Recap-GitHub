@@ -160,7 +160,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "1။ ဖီနာဘာချီ နဲ့ ဆလာဗီးယားပရာဟာ",
+        "sourceHeading": "၁။ ဖီနာဘာချီ နဲ့ ဆလာဗီးယားပရာဟာ",
         "sourceOrder": 1,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -336,7 +336,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "2။ ဆာဘား နဲ့ ဒေါ့မွန်",
+        "sourceHeading": "၂။ ဆာဘား နဲ့ ဒေါ့မွန်",
         "sourceOrder": 2,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -512,7 +512,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "3။ ရိုးမား နဲ့ ဆလိုဗန်ဘရာတစ္စလာဗာ",
+        "sourceHeading": "၃။ ရိုးမား နဲ့ ဆလိုဗန်ဘရာတစ္စလာဗာ",
         "sourceOrder": 3,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -688,7 +688,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "4။ ပေါ်တို နဲ့ ပီအက်စ်ဗွီ",
+        "sourceHeading": "၄။ ပေါ်တို နဲ့ ပီအက်စ်ဗွီ",
         "sourceOrder": 4,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -864,7 +864,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "5။ လီဗာပူးလ် နဲ့ ဗီလာရီးရဲလ်",
+        "sourceHeading": "၅။ လီဗာပူးလ် နဲ့ ဗီလာရီးရဲလ်",
         "sourceOrder": 5,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -893,7 +893,14 @@
       "specialChoiceSource": "User-provided verbatim special choice October 20 2026",
       "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
       "formCheckedAt": "2026-10-20",
-      "formAllCompetitions": true
+      "formAllCompetitions": true,
+      "specialUserVerbatim": {
+        "exactCopy": true,
+        "rank": 1,
+        "source": "User-provided verbatim special choice October 20 2026",
+        "sourceFile": "2026-10-20-owner-verbatim-special-choice.md"
+      },
+      "specialPreparedDate": "2026-10-20"
     },
     {
       "league": "UEFA Champions League",
@@ -1049,7 +1056,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "6။ မန်စီးတီး နဲ့ အေတီနက်စ်",
+        "sourceHeading": "၆။ မန်စီးတီး နဲ့ အေတီနက်စ်",
         "sourceOrder": 6,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -1225,7 +1232,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "7။ ပီအက်စ်ဂျီ နဲ့ ဘာစီလိုနာ",
+        "sourceHeading": "၇။ ပီအက်စ်ဂျီ နဲ့ ဘာစီလိုနာ",
         "sourceOrder": 7,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -1401,7 +1408,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "8။ နာပိုလီ နဲ့ ဘိုဒိုဂလင့်",
+        "sourceHeading": "၈။ နာပိုလီ နဲ့ ဘိုဒိုဂလင့်",
         "sourceOrder": 8,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -1577,7 +1584,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "9။ စတုဂတ် နဲ့ အက်သလက်တီကိုမက်ဒရစ်",
+        "sourceHeading": "၉။ စတုဂတ် နဲ့ အက်သလက်တီကိုမက်ဒရစ်",
         "sourceOrder": 9,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -1753,7 +1760,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "10။ ဝုလ်ဗ် နဲ့ ပေါ့စ်မောက်",
+        "sourceHeading": "၁၀။ ဝုလ်ဗ် နဲ့ ပေါ့စ်မောက်",
         "sourceOrder": 10,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -1929,7 +1936,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "21။ အေဖက်စ်ဝင်ဘယ်လ်ဒန် နဲ့ မန်စ်ဖီးလ်",
+        "sourceHeading": "၂၁။ အေဖက်စ်ဝင်ဘယ်လ်ဒန် နဲ့ မန်စ်ဖီးလ်",
         "sourceOrder": 21,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -2105,7 +2112,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "11။ ဘလက်ပူးလ် နဲ့ အမ်ကေဒွန်စ်",
+        "sourceHeading": "၁၁။ ဘလက်ပူးလ် နဲ့ အမ်ကေဒွန်စ်",
         "sourceOrder": 11,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -2281,7 +2288,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "12။ ဘရုမ်းလေ နဲ့ လက်စတာစီးတီး",
+        "sourceHeading": "၁၂။ ဘရုမ်းလေ နဲ့ လက်စတာစီးတီး",
         "sourceOrder": 12,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -2457,7 +2464,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "13။ ဘာတန်အယ်လ်ဘီယွန် နဲ့ ဘရက်ဖို့ဒ်စီးတီး",
+        "sourceHeading": "၁၃။ ဘာတန်အယ်လ်ဘီယွန် နဲ့ ဘရက်ဖို့ဒ်စီးတီး",
         "sourceOrder": 13,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -2633,7 +2640,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "14။ ကိမ်းဘရစ်ချ်ယူနိုက်တက် နဲ့ ဝိုင်ကွန်း",
+        "sourceHeading": "၁၄။ ကိမ်းဘရစ်ချ်ယူနိုက်တက် နဲ့ ဝိုင်ကွန်း",
         "sourceOrder": 14,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -2809,7 +2816,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "15။ ဒွန်ကက်စတာ နဲ့ စတော့ပို့တ်ကောင်တီ",
+        "sourceHeading": "၁၅။ ဒွန်ကက်စတာ နဲ့ စတော့ပို့တ်ကောင်တီ",
         "sourceOrder": 15,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -2985,7 +2992,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "16။ ဟတ်ဒါဖီးလ် နဲ့ ပီတာဘရော့",
+        "sourceHeading": "၁၆။ ဟတ်ဒါဖီးလ် နဲ့ ပီတာဘရော့",
         "sourceOrder": 16,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -3161,7 +3168,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "17။ လူတန်တောင်း နဲ့ ဘန်စလေ",
+        "sourceHeading": "၁၇။ လူတန်တောင်း နဲ့ ဘန်စလေ",
         "sourceOrder": 17,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -3337,7 +3344,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "18။ နော့စ်ကောင်တီ နဲ့ ရှက်ဖီးဝင်းစ်ဒေး",
+        "sourceHeading": "၁၈။ နော့စ်ကောင်တီ နဲ့ ရှက်ဖီးဝင်းစ်ဒေး",
         "sourceOrder": 18,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -3513,7 +3520,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "19။ အောက်စ်ဖို့ဒ်ယူနိုက်တက် နဲ့ ဝီဂန်",
+        "sourceHeading": "၁၉။ အောက်စ်ဖို့ဒ်ယူနိုက်တက် နဲ့ ဝီဂန်",
         "sourceOrder": 19,
         "exactCopy": true,
         "receivedDate": "2026-10-20"
@@ -3689,7 +3696,7 @@
       "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
         "source": "User-provided Pasted text(9).txt on 2026-10-20",
-        "sourceHeading": "20။ စတီဗင်နိတ်ချ် နဲ့ ပလိုင်းမောက်",
+        "sourceHeading": "၂၀။ စတီဗင်နိတ်ချ် နဲ့ ပလိုင်းမောက်",
         "sourceOrder": 20,
         "exactCopy": true,
         "receivedDate": "2026-10-20"

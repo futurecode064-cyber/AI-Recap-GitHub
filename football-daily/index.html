@@ -25,6 +25,8 @@
 <script defer src="./main-ai-score.js?v=stadium-compact-20261020"></script>
 <script defer src="./video-studio.js?v=20261016-video2"></script>
 <script defer src="./main-section-tabs.js?v=20261018-seven-tabs"></script>
+<link rel="stylesheet" href="./news-section.css?v=news-20261020-v1">
+<script defer src="./news-section.js?v=news-20261020-v1"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
 <script defer src="./frame-preview-renderer.js?v=stadium-compact-20261020"></script>
 <script defer src="./frame-zip.js?v=20261018-1"></script>
@@ -46,7 +48,7 @@
  <section class="content container">
    <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">SELECTED DATE MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
    <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2 id="reportHeading">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill" id="reportPill">● TODAY</span></div>
-   <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football အဓိက အပိုင်း ၇ ခု">
+   <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football အဓိက အပိုင်း ၈ ခု">
      <button type="button" data-day="-1">မနေ့ကရလဒ် <small id="dateYesterday"></small></button>
      <button type="button" data-day="0" class="active">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ <small id="dateToday"></small></button>
      <a class="date-tab-odds" href="./odds.html">ယနေ့ ပေါက်ကြေးများ<small>ပွဲအားလုံး၏ ကြေးစာရင်း ↗</small></a>
@@ -54,7 +56,15 @@
      <a class="fc-main-ai-tab" href="#fcAiScoreSection">AI ခန့်မှန်းချက်များ<small>AI ခန့်မှန်း ၁ · ၂ · ၃</small></a>
      <a class="fc-main-preview-frame-tab" href="#brandPreviewStudio">ပွဲကြို Frame PNG<small>Frame ရွေး / PNG Download</small></a>
      <a class="fc-main-odds-frame-tab" href="#brandOddsStudio">ပေါက်ကြေး Frame PNG<small>Frame ရွေး / ပုံခွဲ Download</small></a>
+     <a class="fc-main-news-tab" href="#fcNewsSection">ယနေ့ ဘောလုံးသတင်း<small>သတင်းအမျိုးအစားအလိုက် ဖတ်ရန်</small></a>
    </nav>
+
+<section class="fc-news-section" id="fcNewsSection" aria-labelledby="fcNewsTitle" data-news-url="./data/news/latest.json">
+  <div class="fc-news-header"><div><span class="fc-news-eyebrow">FUTURE CODE · FOOTBALL NEWS</span><h2 id="fcNewsTitle">ယနေ့ ဘောလုံးသတင်း သီးသန့်</h2><p class="fc-news-window" id="fcNewsWindow">သတင်းများ ရယူနေသည်…</p></div><span class="fc-news-count" id="fcNewsCount" aria-live="polite"></span></div>
+  <nav class="fc-news-filters" id="fcNewsFilters" aria-label="သတင်းအမျိုးအစားရွေးရန်"></nav>
+  <div class="fc-news-grid" id="fcNewsGrid" aria-live="polite"><p class="fc-news-status">သတင်းများ ရယူနေသည်…</p></div>
+  <p class="fc-news-illustration-note">ပုံများသည် သတင်းအကြောင်းအရာကို ကိုယ်စားပြုသည့် သရုပ်ဖော်ပုံများဖြစ်သည်။ အရင်းအမြစ်လင့်ခ်ကို သတင်းတစ်ပုဒ်ချင်းစီတွင် ဖော်ပြထားသည်။</p>
+ </section>
    <nav class="filters" id="filters" aria-label="ဒီနေ့ပွဲရှိသည့် ပြိုင်ပွဲများ">
     <button data-league="all" class="selected" type="button">ပွဲအားလုံး</button>
    </nav>
@@ -94,6 +104,8 @@
    <div id="matchList" class="matches" aria-live="polite"><div class="empty-card"><span class="empty-icon">↻</span><h3>သုံးသပ်ချက်များ ရယူနေပါတယ်…</h3></div></div>
  </section>
 
+
+ 
 
  <section class="container fc-video-studio" id="fcVideoStudio" aria-labelledby="fcVideoTitle">
   <span class="fc-video-eyebrow">FUTURE CODE · FOOTBALL CONTENT STUDIO</span>

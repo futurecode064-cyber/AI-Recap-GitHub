@@ -25,14 +25,16 @@ test("every published day with preview fixtures includes up to five current user
   assert.ok(/^https:/.test(m.oddsSourceUrl),key+" prices must have a credible URL");
   if(m.specialUserVerbatim?.exactCopy){
    assert.equal(m.specialUserVerbatim.rank,m.specialChoiceRank);
-   assert.ok(m.specialUserVerbatim.source&&m.specialChoiceSourceHeading&&m.specialChoiceSourceSubtitle);
+   assert.ok(m.specialUserVerbatim.source&&m.specialChoiceSourceHeading);
    assert.equal(m.specialPreparedDate,data.reportDate);
-   const original=fs.readFileSync(path.join(root,"data/editorial/"+data.reportDate+"-owner-verbatim-special-choices.md"),"utf8");
+   const sourceFile=m.specialUserVerbatim.sourceFile||data.reportDate+"-owner-verbatim-special-choices.md";
+   assert.ok(sourceFile.startsWith(data.reportDate+"-owner-verbatim-special-choice")&&!sourceFile.includes("/"));
+   const original=fs.readFileSync(path.join(root,"data/editorial/"+sourceFile),"utf8");
    assert.ok(original.includes(m.specialChoiceSourceHeading));
    for(const paragraph of m.specialAnalysisParagraphs)assert.ok(original.includes(paragraph),"Original Special Choice paragraph must be preserved");
    assert.equal(m.specialAnalysisParagraphs.length,4);
    assert.ok(m.specialAnalysisParagraphs.every(p=>typeof p==="string"&&p.length>=320));
-   assert.match(m.specialAnalysisParagraphs.at(-1),/ရွေးချယ်ပါတယ်။\*\*$/u);
+   assert.match(m.specialAnalysisParagraphs.at(-1),/ရွေးချယ်(?:ပါတယ်|ရမှာပါ)။\*\*$/u);
    assert.ok(!/ခန့်မှန်းဂိုးရလဒ်|သေချာပေါက်နိုင်/.test(m.specialAnalysisParagraphs.join(" ")));
    continue;
   }

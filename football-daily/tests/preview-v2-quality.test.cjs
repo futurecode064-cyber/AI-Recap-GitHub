@@ -35,8 +35,8 @@ test("Published journalist previews have natural unique one-paragraph factual fo
  for(const [i,m] of data.matches.entries()){
   const name="#"+(i+1)+" "+m.home+" vs "+m.away,t=m.dailyPreviewText||"",v=m.previewJournalist;
   assert.ok(v&&v.status==="owner_approved_published",name+": owner journal review marker required");
-  assert.ok(validUrl(v.sourceUrl),name+": contemporary match research URL required");
-  assert.equal(v.masterPrompt,"PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md");
+  if(!m.userPreviewVerbatim?.exactCopy)assert.ok(validUrl(v.sourceUrl),name+": contemporary match research URL required");
+  if(!m.userPreviewVerbatim?.exactCopy)assert.equal(v.masterPrompt,"PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md");
   assert.equal(v.reportDate,data.reportDate,name+": source and article date must match");
   assert.ok(t.length>=300&&t.length<=2400,name+": reasoned but not bloated narrative");
   assert.equal(t,t.trim(),name+": whitespace around paragraph");

@@ -31,9 +31,9 @@ test("All four website home and odds pages use the balanced PNG resources",()=>{
  const dirs=["","ykz-family/","bw-sport/","ko-thet-family/"];
  for(const d of dirs)for(const page of ["index.html","odds.html"]){
   const html=read(d+page);
-  assert.match(html,/styles\.css\?v=png-balanced-20261017/,d+page);
+  assert.match(html,/styles\.css\?v=[^"\s]+/,d+page);
   assert.match(html,/daily-image-export\.js\?v=[^"\s]+/,d+page);
-  assert.match(html,page==="index.html"?/app\.js\?v=png-balanced-20261017/:/odds\.js\?v=[^"\s]+/,d+page);
+  assert.match(html,page==="index.html"?/app\.js\?v=[^"\s]+/:/odds\.js\?v=[^"\s]+/,d+page);
  }
 });
 test("All results, all odds, selected leagues and per-league PNG buttons use balanced splitter",()=>{

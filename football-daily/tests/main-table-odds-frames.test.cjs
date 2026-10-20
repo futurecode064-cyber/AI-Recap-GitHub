@@ -156,7 +156,7 @@ test('ZIP contains each frame twice for the two-image split',async()=>{
   assert.equal(bytes.readUInt32LE(bytes.length-22),0x06054b50);
   assert.equal(statuses.at(-1).finished,true);
 });
-test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=>{
+test('Main odds page alone loads frame controls; sub-brands may share the DOM renderer',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
   for(const filename of ['frame-zip.js','vendor/dom-to-image.min.js','main-odds-dom-frame.js','main-table-odds-frames.js'])
     assert.ok(html.includes(filename),filename);
@@ -164,17 +164,17 @@ test('Main odds page alone loads DOM renderer and frame ZIP, not sub-brands',()=
   assert.ok(html.indexOf('main-odds-dom-frame.js')<html.indexOf('main-table-odds-frames.js'));
   for(const brand of ['ykz-family','bw-sport','ko-thet-family']){
     const sub=fs.readFileSync(path.join(root,brand,'odds.html'),'utf8');
-    for(const filename of ['main-odds-dom-frame.js','main-table-odds-frames.js'])
-      assert.ok(!sub.includes(filename),brand+': '+filename);
+    assert.ok(sub.includes('main-odds-dom-frame.js'),brand+': shared renderer asset');
+    assert.ok(!sub.includes('main-table-odds-frames.js'),brand+': no frame selector');
   }
 });
 
 
-test('Source scripts are only served on the main odds page and cache version is refreshed',()=>{
+test('Shared renderer accepts odds routes and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
   assert.match(html,/main-odds-dom-frame\.js\?v=main-logo-assets-20261020/);
   assert.match(html,/main-table-odds-frames\.js\?v=20261019-league-picker-v7/);
-  assert.match(domSource,/document\.documentElement\.dataset\.footballBrandName/);
+  assert.ok(domSource.includes('if (!/\\/odds(?:\\.html)?\\/?$/.test(location.pathname)) return;'));
 });
 
 

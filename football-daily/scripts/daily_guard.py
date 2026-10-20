@@ -41,6 +41,35 @@ def read_report():
     return report
 
 
+def owner_preview_matches_source(match, report_date):
+    """Accept owner formatting only when the complete text matches its dated source."""
+    meta = match.get("userPreviewVerbatim") or {}
+    if meta.get("exactCopy") is not True or meta.get("receivedDate") != report_date:
+        return False
+    try:
+        original = (REPORT.parent / "editorial" / f"{report_date}-owner-verbatim-previews.txt").read_text(encoding="utf-8")
+        return meta["sourceHeading"] + "\n" + match["dailyPreviewText"] in original
+    except (OSError, KeyError, TypeError):
+        return False
+
+
+def owner_special_matches_source(match, report_date):
+    meta = match.get("specialUserVerbatim") or {}
+    filename = meta.get("sourceFile", f"{report_date}-owner-verbatim-special-choices.md")
+    if (meta.get("exactCopy") is not True or meta.get("rank") != match.get("specialChoiceRank")
+            or match.get("specialPreparedDate") != report_date
+            or not re.fullmatch(re.escape(report_date) + r"-owner-verbatim-special-choices?\.md", filename)):
+        return False
+    try:
+        original = (REPORT.parent / "editorial" / filename).read_text(encoding="utf-8")
+        paragraphs = match.get("specialAnalysisParagraphs")
+        return (bool(match.get("specialChoiceSourceHeading")) and match["specialChoiceSourceHeading"] in original
+                and isinstance(paragraphs, list) and len(paragraphs) == 4
+                and all(isinstance(p, str) and len(p) >= 320 and p in original for p in paragraphs))
+    except (OSError, TypeError):
+        return False
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("mode", choices=["rollover", "audit"])
@@ -110,7 +139,7 @@ def main():
                 elif (match.get("userPreviewVerbatim") or {}).get("exactCopy") is True:
                     # User-authorized journal copy takes precedence over older single-bold templates.
                     # Keep formatting/content intact while guarding against missing or cut articles.
-                    if ("\n" in preview or not preview.endswith("။**") or
+                    if (not owner_preview_matches_source(match, today) or "\n" in preview or
                         len(preview.strip()) < 300 or
                         re.search(r"ခန့်မှန်း\\s*ဂိုးရလဒ်", preview)):
                         wrong_format.append(idx)
@@ -128,9 +157,11 @@ def main():
                     paragraphs = match.get("specialAnalysisParagraphs")
                     if (not isinstance(paragraphs, list) or not paragraphs or
                         not isinstance(paragraphs[-1], str) or
-                        not re.search(r"\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$", paragraphs[-1])):
+                        not (owner_special_matches_source(match, today) if (match.get("specialUserVerbatim") or {}).get("exactCopy") else re.search(r"\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$", paragraphs[-1]))):
                         wrong_special_endings.append(idx)
-                if require_structured_standings and match.get("league") in LEAGUE_STANDINGS:
+                if (require_structured_standings and match.get("league") in LEAGUE_STANDINGS
+                        and (not owner_preview_matches_source(match, today)
+                             or match.get("homeStanding") or match.get("awayStanding"))):
                     for side in ("home", "away"):
                         record = match.get(f"{side}Standing")
                         if not isinstance(record, dict) or not all(

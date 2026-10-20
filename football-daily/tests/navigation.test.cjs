@@ -17,7 +17,7 @@ function setup(branded=false){
   };
  }
  const document={baseURI:'https://example.com/'+(branded?'myanmar-football/':''),documentElement:{dataset:branded?{footballDataUrl:'../data/today.json'}:{}},getElementById(id){if(!elements.has(id))elements.set(id,element());return elements.get(id)},createElement:element,addEventListener(){}};
- const context=vm.createContext({document,Intl,Date,URL,AbortController,setTimeout,clearTimeout,console,fetch(url){return new Promise((resolve,reject)=>requests.push({url,resolve,reject}))}});
+ const context=vm.createContext({document,location:new URL(document.baseURI),window:{},Intl,Date,URL,AbortController,setTimeout,clearTimeout,console,fetch(url){return new Promise((resolve,reject)=>requests.push({url,resolve,reject}))}});
  vm.runInContext(fs.readFileSync(path.join(root,'app.js'),'utf8'),context);
  return {run:code=>vm.runInContext(code,context),requests,elements};
 }
@@ -254,11 +254,11 @@ test('new screenshot-inspired team hero and WDL–1X2–WDL layout is responsive
  assert.ok(!js.includes('hero-player-silhouette'));
  assert.ok(!js.includes('match[side+"HeroImageUrl"]'));
  assert.ok(js.includes('renderQuoteAndForm(match)'));
- assert.ok(js.includes('node("span","hero-info-side hero-info-left")'));
+ assert.ok(js.includes('node("strong","hero-info-side hero-info-left",teamLabel(match,"home"))'));
  assert.ok(!js.includes('node("strong","hero-info-home"'));
- assert.ok(js.includes('node("span","hero-info-side hero-info-right")'));
+ assert.ok(js.includes('node("strong","hero-info-side hero-info-right",teamLabel(match,"away"))'));
  assert.ok(!js.includes('node("strong","hero-info-away"'));
- assert.ok(js.includes('node("strong","hero-info-fixture",teamLabel(match,"home")+" နှင့် "+teamLabel(match,"away"))'));
+ assert.ok(js.includes('node("span","hero-info-fixture","VS")'));
  assert.ok(!js.includes('hero-info-kickoff'));
  assert.ok(css.includes('.hero-team{display:grid;place-items:center'));
  assert.ok(css.includes('.hero-team-crest{position:static'));

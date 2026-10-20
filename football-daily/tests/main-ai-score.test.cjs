@@ -44,24 +44,26 @@ test("Missing team data, extreme outliers and unverified fixture data cannot cra
 });
 
 
-test("MAIN homepage shows exactly seven navigation tiles and section shortcuts",()=>{
+test("MAIN homepage shows eight navigation tiles and section shortcuts",()=>{
  const main=read("index.html");
  const style=read("main-ai-score.css");
  const nav=main.match(/<nav class="date-tabs fc-main-five-nav"[^>]*>([\s\S]*?)<\/nav>/);
- assert.ok(nav,"main five-section menu must exist");
+ assert.ok(nav,"main section menu must exist");
  const itemTags=[...nav[1].matchAll(/<(button|a)\b[^>]*>/g)].map(x=>x[0]);
- assert.equal(itemTags.length,7,"seven visible main navigation tiles, no duplicates");
+ assert.equal(itemTags.length,8,"eight visible main navigation tiles, no duplicates");
  assert.equal(itemTags.filter(x=>x.startsWith("<button")).length,2,"yesterday/today keep original button behavior");
- assert.equal(itemTags.filter(x=>x.startsWith("<a")).length,5,"odds, video, AI and two frame studio links");
+ assert.equal(itemTags.filter(x=>x.startsWith("<a")).length,6,"odds, video, AI, two frame studio and news links");
  assert.match(nav[1],/href="\.\/odds\.html"/);
  assert.match(nav[1],/href="#fcVideoStudio"/);
  assert.match(nav[1],/href="#fcAiScoreSection"/);
  assert.match(nav[1],/href="#brandPreviewStudio"/);
  assert.match(nav[1],/href="#brandOddsStudio"/);
+ assert.match(nav[1],/href="#fcNewsSection"/);
  assert.ok(main.indexOf('id="fcVideoStudio"')>main.indexOf('id="dateTabs"'),"Video target exists");
  assert.ok(main.indexOf('id="fcAiScoreSection"')>main.indexOf('id="dateTabs"'),"AI target exists");
- assert.match(style,/\.date-tabs\.fc-main-five-nav\s*\{/,"main-only five column layout");
- assert.match(style,/grid-template-columns:repeat\(5,minmax\(0,1fr\)\)/,"desktop five columns");
+ assert.ok(main.indexOf('id="fcNewsSection"')>main.indexOf('id="dateTabs"'),"news target exists");
+ assert.match(style,/\.date-tabs\.fc-main-five-nav\s*\{/,"main-only four column layout");
+ assert.match(style,/grid-template-columns:repeat\(4,minmax\(0,1fr\)\)/,"desktop four columns");
  for(const name of ["ykz-family","bw-sport","ko-thet-family"]){
   const brand=read(name+"/index.html");
   assert.doesNotMatch(brand,/fc-main-five-nav|fc-main-studio-tab|fc-main-ai-tab/,"brand mirror remains three tiles: "+name);
@@ -106,7 +108,7 @@ test("downloaded PNG uses the same aligned six-column layout and includes all cr
  const js=read("main-ai-score.js");
  assert.match(js,/canvas\.width=1080;canvas\.height=430/);
  assert.match(js,/const columns=\[596,758,920\]/);
- assert.match(js,/picture\(leagueIcons\[match\.league\]\)/);
+ assert.match(js,/picture\(window\.FutureCodeMainLogoAssets\?\.leagueCrest\(match\.league\)\|\|leagueIcons\[match\.league\]\)/);
  assert.match(js,/picture\(match\.homeCrestUrl\),picture\(match\.awayCrestUrl\)/);
  assert.match(js,/const heading="AI ခန့်မှန်း "/);
  assert.match(js,/ctx\.fillText\(scores\[i\],x\+81,332\)/);
