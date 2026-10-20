@@ -29,6 +29,21 @@
  const shade=(hex,f)=>'#'+hex.slice(1).match(/../g).map(x=>Math.min(255,Math.round(parseInt(x,16)*f)).toString(16).padStart(2,'0')).join('');
  const imageCache=new Map();const load=src=>{if(!imageCache.has(src))imageCache.set(src,new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>{imageCache.delete(src);reject(Error('Frame Banner ပုံ ရယူမရပါ — '+src));};im.src=src;}));return imageCache.get(src);};
  function write(ctx,text,x,y,size=25,color='#fff',align='left',max=1000){ctx.font='700 '+size+'px "Noto Sans Myanmar",sans-serif';ctx.textAlign=align;ctx.textBaseline='middle';ctx.fillStyle=color;ctx.fillText(String(text??'—'),x,y,max);}
+ // Team labels are deliberately heavier than other odds text. Fit font size
+ // instead of squeezing full-size Burmese glyphs with canvas maxWidth.
+ function writeTeam(ctx,value,x,y){
+  const name=String(value??'—'),limit=278;
+  ctx.save();ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#12202a';
+  let px=30;
+  while(px>22){
+   ctx.font='800 '+px+'px "Noto Sans Myanmar",sans-serif';
+   if(ctx.measureText(name).width<=limit)break;
+   px--;
+  }
+  ctx.font='800 '+px+'px "Noto Sans Myanmar",sans-serif';
+  ctx.fillText(name,x,y,limit);
+  ctx.restore();
+ }
  function badge(ctx,kit,src,x,y,label){kit.crest(ctx,src,x,y,64,label);}
  async function draw(list,part,total,chosen=frame()){const kit=window.FutureCodeCanvasKit;if(!kit)throw Error('PNG module မရသေးပါ');await kit.fonts();await kit.preloadImages(list.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).filter(Boolean));
  const f=chosen,custom=f[0]==='colour',base=custom?(el('boColour').value==='custom'?el('boCustom').value:el('boColour').value):f[2],accent=custom?'#fff':f[3];
@@ -44,7 +59,7 @@
  ctx.fillStyle='#f6f4ea';ctx.beginPath();ctx.moveTo(24,y);ctx.lineTo(1176,y);ctx.lineTo(1158,y+86);ctx.lineTo(42,y+86);ctx.closePath();ctx.fill();
  const normalize=s=>String(s||'').normalize('NFC').replace(/\s/g,'');const awayUpper=normalize(m.upperTeam)===normalize(m.away)||normalize(m.upperTeam)===normalize(m.canonicalAway);const known=awayUpper||normalize(m.upperTeam)===normalize(m.home)||normalize(m.upperTeam)===normalize(m.canonicalHome);const current=el('boMarket').value==='current',bodyOdds=current?m.currentBodyOdds:m.bodyOdds,goals=current?m.currentGoalTotalOdds:m.goalTotalOdds;
  badge(ctx,kit,m.homeCrestUrl,42,y+10,m.home);badge(ctx,kit,m.awayCrestUrl,1094,y+10,m.away);
- write(ctx,m.home,252,y+42,25,'#12202a','center',280);write(ctx,m.away,948,y+42,25,'#12202a','center',280);
+ writeTeam(ctx,m.home,252,y+42);writeTeam(ctx,m.away,948,y+42);
  // Every quote carries its own Myanmar market name, including when the upper team is away.
  const quote=(kind,value,x)=>{ctx.fillStyle=base;ctx.fillRect(x-83,y+8,166,70);
   write(ctx,kind==='body'?'ဘော်ဒီကြေး':'ဂိုးပေါင်းကြေး',x,y+24,20,accent,'center',162);
