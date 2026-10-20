@@ -10,7 +10,7 @@ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 test('Main homepage owns odds frame selector and ZIP, not another brand',()=>{
  assert.match(source,/section\.id='brandOddsStudio'/);
  assert.match(html,/#brandOddsStudio/);
- assert.match(html,/brand-odds-studio\.js\?v=20261020-home-frame-zip-v1/);
+ assert.match(html,/brand-odds-studio\.js\?v=20261020-bold-team-names-v2/);
  assert.match(source,/document\.documentElement\.dataset\.footballBrandName/);
  assert.ok(source.includes("dataset.footballBrandName||!/^"));
  assert.match(source,/id="boAllZip"/);
@@ -55,4 +55,13 @@ test('ZIP includes every frame, all chosen leagues, respects split choice and ha
  assert.match(source,/link\.download='main-all-odds-frames-'/);
  assert.match(source,/el\('boOutput'\)\.append\(link\);link\.click\(\)/);
  assert.match(source,/Download မစခဲ့လျှင်/);
+});
+
+test('Homepage odds PNG team names use 800-weight Myanmar font with measured fit',()=>{
+ assert.match(source,/function writeTeam\(ctx,value,x,y\)/);
+ assert.match(source,/ctx\.font='800 '\+px\+'px "Noto Sans Myanmar"/);
+ assert.match(source,/ctx\.measureText\(name\)\.width<=limit/);
+ assert.match(source,/writeTeam\(ctx,m\.home,252,y\+42\)/);
+ assert.match(source,/writeTeam\(ctx,m\.away,948,y\+42\)/);
+ assert.doesNotMatch(source,/write\(ctx,m\.home,252,y\+42,25,/);
 });
