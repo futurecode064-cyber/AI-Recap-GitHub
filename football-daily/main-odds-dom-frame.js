@@ -113,6 +113,11 @@
       for(const name of allTeamLabels){
         name.style.setProperty("font-size",px+"px","important");
       }
+      // Match only the "ကြေးပေးအသင်း" cells to the same team-name size.
+      // Keep every other column, odds value, frame and mirror unchanged.
+      for(const upper of root.querySelectorAll(".odds-group .odds-table tbody td.upper")){
+        upper.style.setProperty("font-size",px+"px","important");
+      }
     }
   }
   function cloneWebsiteOdds(rows,theme,date) {
