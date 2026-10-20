@@ -65,13 +65,13 @@
   if(!data||!Array.isArray(data.matches)||!data.matches.length)throw Error("No odds ready to export");
   const kit=K();if(!kit)throw Error("Canvas export module missing");
 
-  // MAIN WEBSITE ONLY: download the actual, large-type, fully populated
-  // website odds table. Branded mirrors keep their current poster exporter.
-  const mainOdds=Boolean(document?.documentElement?.dataset)&&
-    !document.documentElement.dataset.footballBrandName&&
-    typeof location!=="undefined"&&/^\/odds(?:\.html)?\/?$/.test(location.pathname);
-  if(mainOdds&&window.FutureCodeOddsDomFrame?.draw){
-   const colour="#c41017";
+  // Export the live website odds table for the main site and each brand.
+  // Mirror pages use only their own palette; they do not expose frame selection.
+  const oddsPage=Boolean(document?.documentElement?.dataset)&&
+    typeof location!=="undefined"&&/\/odds(?:\.html)?\/?$/.test(location.pathname);
+  if(oddsPage&&window.FutureCodeOddsDomFrame?.draw){
+   const config=window.FutureCodeBrandConfig||{};
+   const colour=config.colors?.primary||config.colors?.gold||"#c41017";
    const canvas=await window.FutureCodeOddsDomFrame.draw(data.matches,{
     design:["colour","Colour Background Change",colour],
     colour,date:data.reportDate
@@ -79,7 +79,8 @@
    const leagueSuffix=options.league?"-"+String(options.league).toLowerCase()
     .replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60):"";
    const partSuffix=options.total>1?"-"+Number(options.part||1)+"-of-"+Number(options.total):"";
-   const filename="future-code-odds-"+kit.day(data.reportDate)+leagueSuffix+partSuffix+".png";
+   const prefix=config.id?config.id+"-odds-":"future-code-odds-";
+   const filename=prefix+kit.day(data.reportDate)+leagueSuffix+partSuffix+".png";
    if(options.asBlob===true)return {filename,blob:await encodePng(canvas)};
    await kit.download(canvas,filename);
    return {filename,fileCount:1,matchCount:data.matches.length,format:"png"};
