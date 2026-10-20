@@ -4,7 +4,7 @@
   "source_branch": "main",
   "source_commit": "dddd94cc0757e7ef6282948740966c4f7b0b3e5d",
   "source_tree": "600cd90bf786e35da8019941f13a6af8a06ee42f",
-  "target_tree": "600cd90bf786e35da8019941f13a6af8a06ee42f",
+  "target_tree": "bc7fba98db4ef8d2695b4272ff20baa52daf3c1f",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
@@ -67,5 +67,12 @@
     "verified_production_head": "06eb5e65526c59ec477acaeef8769aba1e543686",
     "verified_canonical_commit": "dddd94cc0757e7ef6282948740966c4f7b0b3e5d",
     "identical_result_tree": "600cd90bf786e35da8019941f13a6af8a06ee42f"
+  },
+  "guard_reconciliation_news_20261020": {
+    "previous_target_tree": "600cd90bf786e35da8019941f13a6af8a06ee42f",
+    "verified_production_head": "1c7b654b593f46dd16164a6f59ae6002a04a19f9",
+    "verified_production_tree": "bc7fba98db4ef8d2695b4272ff20baa52daf3c1f",
+    "verified_canonical_commit": "9bae2c11ffbada60557218c22be7c1d245feec3b",
+    "note": "Reconciled independently merged shared-brand download changes. All 13 production-changed paths were compared against canonical source; download designs, cache keys and odds subpath support are preserved. Canonical-only news sections, source-copy metadata and validated publication tests remain pending official guarded sync. No application file or guard logic changed by this reconciliation."
   }
 }
