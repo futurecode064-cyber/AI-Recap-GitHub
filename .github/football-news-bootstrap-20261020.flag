@@ -3,3 +3,5 @@ Trigger: source repository football-daily shared news editor, Main and Goal Zone
 No automatic daily match/odds publishing is enabled by this bootstrap.
 
 Re-run guarded sync after verifying and reconciling production-only tree marker drift.
+
+Reconciled latest production tree e4c138fc to preserve parallel main odds updates; retry news form mirror.
