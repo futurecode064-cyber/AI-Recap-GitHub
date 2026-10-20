@@ -29,9 +29,10 @@ test("only Future Code Main routes require valid signed login", async () => {
   const worker = await loadWorker();
   const {env,calls} = fakeEnv();
 
-  for (const route of ["/", "/index", "/index.html", "/odds", "/odds/", "/odds.html"]) {
+  for (const route of ["/", "/index", "/index/", "/index.html", "/odds", "/odds/", "/odds.html"]) {
     const result = await worker.fetch(getRequest(route), env);
     assert.equal(result.status, 302, route);
+    assert.equal(result.headers.get("X-Football-Worker"), "selective-routes-v1");
     assert.ok(result.headers.get("Location").startsWith("/login?next="), route);
   }
   assert.equal(calls.length, 0, "blocked pages must not be served");

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "include": [
+    "/",
+    "/index",
+    "/index/",
+    "/index.html",
+    "/odds",
+    "/odds/",
+    "/odds.html",
+    "/login",
+    "/login/",
+    "/login.html",
+    "/logout",
+    "/logout/",
+    "/editor",
+    "/editor/*",
+    "/api/editor/*",
+    "/future-code-journal/",
+    "/future-code-journal/index.html",
+    "/future-code-journal/odds.html",
+    "/future-code-journal/android/api/visit",
+    "/future-code-journal/android/api/stats",
+    "/future-code-journal/android/stats",
+    "/future-code-journal/android/stats/",
+    "/future-code-journal/android/stats.html",
+    "/future-code-journal/android/*.apk",
+    "/future-code-journal/index",
+    "/future-code-journal/odds",
+    "/future-code-journal/odds/"
+  ],
+  "exclude": []
+}

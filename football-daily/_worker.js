@@ -13,7 +13,7 @@ const MAIN_EMAIL = "futurecode064@gmail.com";
 const COOKIE_NAME = "__Host-fc_main_session";
 const CSRF_COOKIE_NAME = "__Host-fc_main_login_csrf";
 const MAX_AGE_SECONDS = 8 * 60 * 60;
-const MAIN_PATHS = new Set(["/", "/index", "/index.html", "/odds", "/odds/", "/odds.html"]);
+const MAIN_PATHS = new Set(["/", "/index", "/index/", "/index.html", "/odds", "/odds/", "/odds.html"]);
 const LOGIN_PATHS = new Set(["/login", "/login/", "/login.html"]);
 const LOGOUT_PATHS = new Set(["/logout", "/logout/"]);
 const encoder = new TextEncoder();
@@ -25,10 +25,13 @@ const encoder = new TextEncoder();
 const GZ_PREFIX = "/future-code-journal/android/";
 const GZ_JOURNAL_PAGES = new Map([
   ["/future-code-journal/", "Goal Zone Journal"],
+  ["/future-code-journal/index", "Goal Zone Journal"],
   ["/future-code-journal/index.html", "Goal Zone Journal"],
+  ["/future-code-journal/odds", "Goal Zone Odds"],
+  ["/future-code-journal/odds/", "Goal Zone Odds"],
   ["/future-code-journal/odds.html", "Goal Zone Odds"]
 ]);
-const GZ_STATS_PATHS = new Set([GZ_PREFIX + "stats.html", GZ_PREFIX + "stats/"]);
+const GZ_STATS_PATHS = new Set([GZ_PREFIX + "stats", GZ_PREFIX + "stats.html", GZ_PREFIX + "stats/"]);
 const GZ_VISIT_PATH = GZ_PREFIX + "api/visit";
 const GZ_REPORT_PATH = GZ_PREFIX + "api/stats";
 const GZ_VISITOR_COOKIE = "__Host-gz_anon";
@@ -343,6 +346,14 @@ async function serveMain(request, env) {
 }
 export default {
   async fetch(request, env) {
+    const response = await handleRequest(request, env);
+    const headers = new Headers(response.headers);
+    // A live positive/negative probe distinguishes Worker responses from static assets.
+    headers.set("X-Football-Worker", "selective-routes-v1");
+    return new Response(response.body, {status: response.status, statusText: response.statusText, headers});
+  }
+};
+async function handleRequest(request, env) {
     const path = new URL(request.url).pathname;
     if (path === "/api/editor/news" || path.startsWith("/api/editor/news/")) return newsApi(request, env, path);
     if (path.startsWith("/api/editor/")) return editorApi(request, env, path);
@@ -390,8 +401,7 @@ export default {
     if (GZ_JOURNAL_PAGES.has(path)) return gzJournalPage(request, env, GZ_JOURNAL_PAGES.get(path));
     // Shared data, scripts, brand routes and assets are publicly accessible.
     return env.ASSETS.fetch(request);
-  }
-};
+}
 
 // Owner content editor. GitHub credentials stay in encrypted Cloudflare secrets.
 const EDITOR_SOURCE = 'futurecode064-cyber/future-code-football-daily';
