@@ -17,7 +17,7 @@
   }return rows;
  }
  async function render(m,theme){
-  const k=window.FutureCodeCanvasKit;if(!k)throw Error('Canvas module မရသေးပါ');await k.fonts();await k.preloadImages([m.homeCrestUrl,m.awayCrestUrl]);
+  const k=window.FutureCodeCanvasKit;if(!k)throw Error('Canvas module မရသေးပါ');await k.fonts();const leagueLogo=window.FutureCodeMainLogoAssets?.leagueCrest(m.league);await k.preloadImages([m.homeCrestUrl,m.awayCrestUrl,leagueLogo].filter(Boolean));
   const W=1200,M=24,px=25,gap=43,anaY=746;const measure=k.create(W,10).ctx;
   const article=String(m.dailyPreviewText||'ပွဲကြိုသုံးသပ်ချက် မရသေးပါ').replace(/\s*(?:ဖြစ်နိုင်တဲ့|ဖြစ်နိုင်သည့်|ခန့်မှန်း)\s*ဂိုးရလဒ်[^။\n]*[။]?/gu,'').trim();
   const rows=wrap(measure,article,W-2*M-48,px),H=anaY+104+Math.max(130,rows.length*gap)+32;
@@ -26,7 +26,7 @@
   const fill=(x,y,w,h,c,r=0)=>k.fill(ctx,x,y,w,h,c,r);
   const box=(x,y,w,h,c,r=10)=>{fill(x,y,w,h,c,r);ctx.strokeStyle=t.accent+'88';ctx.lineWidth=1.2;ctx.beginPath();ctx.roundRect(x+.6,y+.6,w-1.2,h-1.2,r);ctx.stroke();};
   const gradient=(x,y,w,h,a,b)=>{const g=ctx.createLinearGradient(x,y,x+w,y+h);g.addColorStop(0,a);g.addColorStop(1,b);fill(x,y,w,h,g);};
-  fill(0,0,W,H,t.bg);fill(0,0,W,46,t.bg);text(leagues[m.league]||m.league||'FOOTBALL',M,25,19,t.accent,true);
+  fill(0,0,W,H,t.bg);fill(0,0,W,46,t.bg);if(leagueLogo)k.crest(ctx,leagueLogo,M,7,32,'',true);text(leagues[m.league]||m.league||'FOOTBALL',M+(leagueLogo?42:0),25,19,t.accent,true);
   gradient(0,46,455,300,t.head,t.bg);gradient(455,46,290,300,t.bg,t.panel);gradient(745,46,455,300,t.alt,t.bg);
   ctx.save();ctx.strokeStyle='#ffffff09';ctx.lineWidth=1;for(let y=65;y<350;y+=47){ctx.beginPath();ctx.moveTo(0,y+70);ctx.lineTo(W,y-150);ctx.stroke();}ctx.restore();
   k.crest(ctx,m.homeCrestUrl,128,103,186,m.homeDisplay||m.home,true);k.crest(ctx,m.awayCrestUrl,886,103,186,m.awayDisplay||m.away,true);

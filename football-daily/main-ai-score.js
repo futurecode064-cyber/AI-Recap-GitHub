@@ -116,7 +116,7 @@
      await exporter.savePage(page,{
       date:report.reportDate,part:i+1,total:pages.length,scope,
       predict:model.predict,leagueLabel:labelLeague,
-      leagueLogo:l=>leagueIcons[l],
+      leagueLogo:l=>window.FutureCodeMainLogoAssets?.leagueCrest(l)||leagueIcons[l],
       teamName:team,teamLogo:teamCrest,displayTime
      });
      btn.textContent="✓ PNG Download စတင်ပြီး";
@@ -197,7 +197,7 @@
    const iconBox=make("span","fc-ai-league-icon-frame");
    const fallback=make("span","fc-ai-league-icon-fallback","⚽");
    iconBox.appendChild(fallback);
-   const logo=safeUrl(leagueIcons[league]);
+   const logo=safeUrl(window.FutureCodeMainLogoAssets?.leagueCrest(league)||leagueIcons[league]);
    if(logo){
     const image=make("img","fc-ai-league-icon");
     image.src=logo;image.alt=labelLeague(league)+" လိဂ်လိုဂို";
@@ -291,7 +291,7 @@
   return px;
  }
  async function picture(url){
-  const uri=safeUrl(url);if(!uri)return null;
+  const uri=safeUrl(window.FutureCodeMainLogoAssets?.imageUrl(url)||url);if(!uri)return null;
   return new Promise(resolve=>{
    const img=new Image();let finished=false;
    const finish=v=>{if(finished)return;finished=true;clearTimeout(timer);resolve(v);};
@@ -320,7 +320,7 @@
   ctx.fillStyle=blue;ctx.fillRect(0,60,1080,152);
   rounded(ctx,10,69,116,132,10,"#ffffff");
   const [leagueImg,homeImg,awayImg]=await Promise.all([
-   picture(leagueIcons[match.league]),picture(match.homeCrestUrl),picture(match.awayCrestUrl)
+   picture(window.FutureCodeMainLogoAssets?.leagueCrest(match.league)||leagueIcons[match.league]),picture(match.homeCrestUrl),picture(match.awayCrestUrl)
   ]);
   if(leagueImg)ctx.drawImage(leagueImg,20,81,96,108);
   else{ctx.fillStyle="#1325a7";ctx.font="900 60px sans-serif";ctx.textAlign="center";ctx.fillText("⚽",68,152);}

@@ -127,9 +127,9 @@
     for(const [league,items] of groups){
       kit.fill(ctx,M,y,W-M*2,LEAGUE,frame.dark,7);
       let start=76;
-      const badge=LEAGUE_BADGES[league];
-      if(badge){
-        const logo=await loadAsset(ROOT+badge);
+      const badge=LEAGUE_BADGES[league],leagueUrl=window.FutureCodeMainLogoAssets?.leagueCrest(league);
+      if(leagueUrl||badge){
+        const logo=await loadAsset(leagueUrl||ROOT+badge);
         kit.fill(ctx,M+10,y+7,48,48,"#ffffff",7);
         ctx.drawImage(logo,M+13,y+11,42,39);
         start=86;

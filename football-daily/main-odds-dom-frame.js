@@ -318,7 +318,11 @@
       await waitFonts();
       prepareOneLine(root);
       const images=[...root.querySelectorAll("img")];
-      images.forEach(img=>{img.loading="eager";img.decoding="sync";});
+      images.forEach(img=>{
+        const local=window.FutureCodeMainLogoAssets?.imageUrl(img.src);
+        if(local&&local!==img.src){img.removeAttribute("srcset");img.src=local;}
+        img.loading="eager";img.decoding="sync";
+      });
       // Keep every website logo in the actual cloned DOM.
       await Promise.race([
         Promise.allSettled(images.map(img=>img.decode?img.decode():Promise.resolve())),
