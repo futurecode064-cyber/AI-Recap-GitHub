@@ -2,16 +2,16 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "6aff518ce9a78a8d64a37a9bcd3a1b6ff7c8fe10",
-  "source_tree": "d3da5c3fdeec671dcd4a29f4ae2d0b3e2681dd82",
-  "target_tree": "d3da5c3fdeec671dcd4a29f4ae2d0b3e2681dd82",
+  "source_commit": "74c07d8546d17c5a68d5a5beaf227581c6dea172",
+  "source_tree": "8e8e8ee4452a2b413a5a395fbdf9af09bc6d01f6",
+  "target_tree": "8e8e8ee4452a2b413a5a395fbdf9af09bc6d01f6",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-20T01:57:25.379Z",
+  "last_synced_utc": "2026-10-20T02:11:55.784Z",
   "reconciled_on": "2026-10-20",
   "reconciliation_note": "Verified identical football-daily trees after sub-brand PNG completeness and bundled UCL/EFL logo fixes; existing branded layouts retained. Live preview and odds download controls tested on all four brands. Source recent-form entries remain a separate publication data issue.",
-  "last_synced_method": "verified-main-export-local-logo-parity",
+  "last_synced_method": "verified-reference-preview-design-parity",
   "guard_reconciliation": {
     "previous_target_tree": "ddf9afd38b385f967d28b6346559156dd6322aab",
     "verified_production_head": "ed735b465caa89281d76dc60efbe890ee8d089bd",
@@ -57,5 +57,10 @@
     "verified_canonical_commit": "6aff518ce9a78a8d64a37a9bcd3a1b6ff7c8fe10",
     "identical_result_tree": "d3da5c3fdeec671dcd4a29f4ae2d0b3e2681dd82",
     "note": "Both football-daily subtrees match exactly after main export bundled logo fixes; existing content and frames preserved."
+  },
+  "guard_reconciliation_preview_design_20261020": {
+    "verified_production_head": "a2d5a12b69739f384b4c150da4a3c7e02577896e",
+    "verified_canonical_commit": "74c07d8546d17c5a68d5a5beaf227581c6dea172",
+    "identical_result_tree": "8e8e8ee4452a2b413a5a395fbdf9af09bc6d01f6"
   }
 }
