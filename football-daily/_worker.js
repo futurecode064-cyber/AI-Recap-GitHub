@@ -279,7 +279,7 @@ function escapeHtml(s) {
 function loginPage(next, error = false, csrf = "") {
   const alert = error ? '<p class="error" role="alert">Email သို့မဟုတ် Password မမှန်ပါ။ ပြန်စမ်းကြည့်ပါ။</p>' : "";
   return '<!doctype html><html lang="my"><head><meta charset="UTF-8">' +
-    '<meta name="viewport" content="width=device-width,initial-scale=1">' +
+    '<meta name="viewport" content="width=1200">' +
     '<meta name="robots" content="noindex,nofollow">' +
     '<meta name="theme-color" content="#0d151a"><title>Login | Future Code Main</title>' +
     '<style>*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 15% 0%,#20534d 0%,#101c21 50%,#0b1319 100%);display:grid;place-items:center;color:#f7f8f6;font-family:system-ui,"Noto Sans Myanmar",sans-serif;padding:20px}' +
