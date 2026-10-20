@@ -24,8 +24,8 @@
  async function render(m,theme=defaultTheme,options={}){
   const k=window.FutureCodeCanvasKit;if(!k)throw Error('Canvas module မရသေးပါ');await k.fonts();
   const stadium=new URL('./assets/preview-stadium-night.jpg',document.baseURI).href;
-  const leagueLogo=window.FutureCodeMainLogoAssets?.leagueCrest(m.league);await k.preloadImages([m.homeCrestUrl,m.awayCrestUrl,leagueLogo,stadium].filter(Boolean));
-  const W=1200,M=24,px=28,gap=46,t={...defaultTheme,...theme},gold='#edc45b';
+  const leagueLogo=window.FutureCodeMainLogoAssets?.leagueCrest(m.league)||window.FutureCodeBrandExportData?.leagueCrest(m.league);await k.preloadImages([m.homeCrestUrl,m.awayCrestUrl,leagueLogo,stadium].filter(Boolean));
+  const W=1200,M=24,px=28,gap=46,t={...defaultTheme,...theme},gold=t.gold||t.accent||'#edc45b';
   const special=options.special===true;
   const source=special?(m.specialAnalysisParagraphs||[]).filter(Boolean).join('\n\n'):m.dailyPreviewText;
   const article=String(source||'ပွဲကြိုသုံးသပ်ချက် မရသေးပါ').replace(/\s*(?:ဖြစ်နိုင်တဲ့|ဖြစ်နိုင်သည့်|ခန့်မှန်း)\s*ဂိုးရလဒ်[^။\n]*[။]?/gu,'').trim();

@@ -64,8 +64,11 @@
   const k=window.FutureCodeCanvasKit;
   if(!k)throw Error("Canvas exporter is unavailable");
   const {C,create,fill:paintFill,line:paintLine,text:paintText,fit,fonts,preloadImages,crest:paintCrest,download}=k;
-  if(window.FutureCodeFramePreview&&!document.documentElement?.dataset?.footballBrandName){
-   const canvas=await window.FutureCodeFramePreview.render(match,opts.frameTheme,opts);
+  if(window.FutureCodeFramePreview){
+   const brand=window.FutureCodeBrandConfig;
+   const c=brand?.colors||{};
+   const brandTheme=brand?{bg:c.background||c.black||'#080b10',head:c.darkRed||c.navy||c.primary||'#082c54',panel:c.panel||'#061726',alt:c.primary||c.gold||'#12518a',accent:c.electric||c.gold||c.silver||c.primary||'#43b9f0',gold:c.gold||c.electric||c.silver||c.primary||'#edc45b'}:undefined;
+   const canvas=await window.FutureCodeFramePreview.render(match,brandTheme||opts.frameTheme,opts);
    const filename=opts.downloadFilename||filePart(match.home)+'-vs-'+filePart(match.away)+'.png';
    if(opts.asCanvas)return canvas;
    if(opts.asBlob){const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));return {filename,blob};}

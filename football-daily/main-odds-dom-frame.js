@@ -1,10 +1,7 @@
 "use strict";
-/* FUTURE CODE MAIN ONLY — a PNG is a screenshot of the ACTUAL website
- * odds HTML table. Frame selection changes its palette and surrounds it with the selected banners.
- * Never redraw or rebuild league headers, team names or table columns. */
+/* Shared website odds PNG renderer: capture the ACTUAL odds table and preserve its logos, rows, and columns. */
 (function () {
-  if (document.documentElement.dataset.footballBrandName ||
-      !/^\/odds(?:\.html)?\/?$/.test(location.pathname)) return;
+  if (!/\/odds(?:\.html)?\/?$/.test(location.pathname)) return;
 
   // Main-site exports use a genuinely larger table, not only a higher-DPI
   // screenshot of 12–16px type. All other brand pages remain untouched.
@@ -110,9 +107,9 @@
     stage.style.cssText="position:fixed;left:0;top:0;width:"+width+
       "px;pointer-events:none;overflow:visible;z-index:-1000;";
     const root=document.createElement("div");
-    root.className="odds-content fc-odds-direct-export";
+    root.className="odds-content fc-odds-direct-export"+(window.FutureCodeBrandConfig?" brand-odds-export":"");
     root.style.cssText="box-sizing:border-box;width:"+width+
-      "px;max-width:none;margin:0;padding:8px;background:#10191d;";
+      "px;max-width:none;margin:0;padding:8px;background:"+(window.FutureCodeBrandConfig?.colors?.background||"#10191d")+";";
     root.style.setProperty("--sheet-brand",theme);
     root.style.setProperty("--sheet-deep",shade(theme,.7));
     root.style.setProperty("--sheet-title","#fff");
@@ -222,8 +219,23 @@
     // Every coloured surface follows the selected frame; artwork keeps its
     // original colours. White cells and dark type preserve market contrast.
     readable.textContent += `
-      body .fc-odds-direct-export {background:#101014!important}
+      body .fc-odds-direct-export {background:var(--sheet-deep)!important}
       body .fc-odds-direct-export .odds-league-header {display:none!important}
+      body .fc-odds-direct-export.brand-odds-export .odds-league-header {
+        display:flex!important;align-items:center!important;justify-content:space-between!important;
+        box-sizing:border-box!important;margin:0!important;padding:9px 14px!important;
+        background:linear-gradient(120deg,#111,var(--sheet-deep))!important;
+        color:#fff!important;border-bottom:1px solid var(--sheet-brand)!important;
+      }
+      body .fc-odds-direct-export.brand-odds-export .odds-league-heading {
+        display:flex!important;align-items:center!important;gap:12px!important;
+        color:#fff!important;font:900 26px/1.5 "Noto Sans Myanmar",sans-serif!important;
+      }
+      body .fc-odds-direct-export.brand-odds-export .odds-league-heading .league-crest,
+      body .fc-odds-direct-export.brand-odds-export .odds-league-heading .league-mark {
+        width:54px!important;height:54px!important;box-sizing:border-box!important;
+        background:#fff!important;border-radius:8px!important;padding:4px!important;
+      }
       body .fc-odds-direct-export .fc-odds-date-heading {
         background:linear-gradient(110deg,#111,var(--sheet-brand),#111)!important;
         border:2px solid var(--sheet-brand)!important;font-size:32px!important;margin-bottom:10px!important;
@@ -420,8 +432,7 @@
     const H=Math.max(320,topH+bottomH+2*pad+tableH);
     canvas.height=H;
     if(canvas.width!==W||canvas.height!==H)throw Error("PNG ပုံအရွယ်အစား မမှန်ပါ။");
-    ctx.fillStyle="#100608";ctx.fillRect(0,0,W,H);
-    ctx.fillStyle=shade(theme,.4);ctx.fillRect(0,0,W,H);
+    ctx.fillStyle=shade(theme,.28);ctx.fillRect(0,0,W,H);
     ctx.fillStyle=theme;ctx.fillRect(0,topH-10,W,10);ctx.fillRect(0,H-bottomH,W,10);
     function artwork(fn){
       ctx.save();
