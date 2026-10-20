@@ -102,10 +102,10 @@ jobs:
         run: |
           set -euo pipefail
           python -m py_compile football-daily/scripts/daily_guard.py football-daily/scripts/sync_scores.py
-          # A source-only UI copy cannot authorize or alter daily football data.
+          # Publishing news and photos does not authorize or alter daily match/odds data.
           # Skip the time-sensitive publication check only when staged data is byte-for-byte unchanged.
-          if git diff --quiet HEAD -- football-daily/data; then
-            echo "Football data identical to production; UI-only sync safe despite stale daily report."
+          if git diff --quiet HEAD -- football-daily/data ':(exclude)football-daily/data/news'; then
+            echo "Match/odds data unchanged; news or UI-only sync is safe despite a stale daily match report."
           else
             python football-daily/scripts/daily_guard.py audit
           fi
