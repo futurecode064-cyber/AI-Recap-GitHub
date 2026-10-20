@@ -52,7 +52,25 @@
     return EXPORT_WIDTH;
   }
 
+  // The main odds table uses ONE uniform team-name font size for the whole
+  // daily sheet, including split pages, preview, PNG and frame ZIP exports.
+  // Never shrink individual team labels: that created inconsistent rows.
+  function mainTeamNameSize(labels) {
+    const available=Math.min(...labels.map(label=>label.clientWidth).filter(width=>width>0));
+    const original=[...document.querySelectorAll("#oddsList .odds-matchup .club-label")];
+    const names=(original.length?original:labels).map(label=>String(label.textContent||"").trim()).filter(Boolean);
+    const canvas=document.createElement("canvas");
+    const ctx=canvas.getContext?.("2d");
+    if (!ctx||!Number.isFinite(available)||!names.length) return 22;
+    for(let px=25;px>=19;px--){
+      ctx.font='900 '+px+'px "Noto Sans Myanmar"';
+      if(names.every(name=>ctx.measureText(name).width<=available-2))return px;
+    }
+    return 19;
+  }
   function prepareOneLine(root) {
+    const mainOnly=!document.documentElement?.dataset?.footballBrandName;
+    const allTeamLabels=[];
     for (const group of root.querySelectorAll(".odds-group")) {
       // No new league heading: keep the cloned on-screen logo and title.
       const title=group.querySelector(".odds-league-heading span:last-child");
@@ -76,14 +94,24 @@
           name.style.setProperty("flex","1 1 auto","important");
           name.style.setProperty("min-width","0","important");
           name.style.setProperty("overflow","hidden","important");
-          // Keep the crest, VS and both names on one baseline. Reduce the
-          // label font only as needed to fit the actual name in this cell.
-          let px=parseFloat(getComputedStyle(name).fontSize)||25;
-          while (name.scrollWidth>name.clientWidth+1 && px>18) {
-            px-=0.5;
-            name.style.setProperty("font-size",px+"px","important");
+          if(mainOnly){
+            // Compute one shared size after all rows have been laid out.
+            allTeamLabels.push(name);
+          }else{
+            // Preserve the existing exported typography of brand sub-sites.
+            let px=parseFloat(getComputedStyle(name).fontSize)||25;
+            while (name.scrollWidth>name.clientWidth+1 && px>18) {
+              px-=0.5;
+              name.style.setProperty("font-size",px+"px","important");
+            }
           }
         }
+      }
+    }
+    if(mainOnly&&allTeamLabels.length){
+      const px=mainTeamNameSize(allTeamLabels);
+      for(const name of allTeamLabels){
+        name.style.setProperty("font-size",px+"px","important");
       }
     }
   }
