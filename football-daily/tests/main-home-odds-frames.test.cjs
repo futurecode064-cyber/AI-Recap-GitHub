@@ -12,7 +12,7 @@ test('Main homepage owns odds frame selector and ZIP, not another brand',()=>{
  assert.match(html,/#brandOddsStudio/);
  assert.match(html,/brand-odds-studio\.js\?v=20261020-home-frame-zip-v1/);
  assert.match(source,/document\.documentElement\.dataset\.footballBrandName/);
- assert.match(source,/\^\\\/(?:index\\\.html)?\$/);
+ assert.ok(source.includes("dataset.footballBrandName||!/^"));
  assert.match(source,/id="boAllZip"/);
  assert.match(source,/el\('boAllZip'\)\.onclick=runAllZip/);
  for(const brand of ['bw-sport','ykz-family','ko-thet-family','future-code-journal']){
