@@ -173,7 +173,7 @@ test('Main odds page alone loads frame controls; sub-brands may share the DOM re
 test('Shared renderer accepts odds routes and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
   assert.match(html,/main-odds-dom-frame\.js\?v=main-logo-assets-20261020/);
-  assert.match(html,/main-table-odds-frames\.js\?v=20261019-league-picker-v7/);
+  assert.match(html,/main-table-odds-frames\.js\?v=20261020-all-frames-zip-v8/);
   assert.ok(domSource.includes('if (!/\\/odds(?:\\.html)?\\/?$/.test(location.pathname)) return;'));
 });
 
