@@ -17,7 +17,7 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/fenerbahce/fenerbahce-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
       "homeOdds": "1.62",
       "drawOdds": "4.00",
@@ -29,50 +29,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Alanyaspor",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/fenerbahce/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "Aston Villa",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+          "opponentCrestUrl": "",
           "teamGoals": 0,
           "opponentGoals": 6,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://sokascore.com/team/fenerbahce/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "D",
-          "date": "2026-09-10",
-          "opponent": "Roma",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
-          "teamGoals": 1,
-          "opponentGoals": 1,
+          "date": "2026-10-10",
+          "opponent": "Rizespor",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/fenerbahce/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Eyüpspor",
+          "opponentCrestUrl": "",
+          "teamGoals": 8,
+          "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/fenerbahce/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Gaziantep FK",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://sokascore.com/team/fenerbahce/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Hradec Kralove",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://czechleague.com/club/slavia-prague",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-13",
           "opponent": "Sabah",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21922.png",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://czechleague.com/club/slavia-prague",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
-          "date": "2026-09-10",
-          "opponent": "Lens",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
+          "date": "2026-10-09",
+          "opponent": "Zlín",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://czechleague.com/club/slavia-prague",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Viktoria Plzeň",
+          "opponentCrestUrl": "",
           "teamGoals": 2,
-          "opponentGoals": 3,
+          "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://czechleague.com/club/slavia-prague",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Varnsdorf",
+          "opponentCrestUrl": "",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://czechleague.com/club/slavia-prague",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -111,7 +177,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "UEFA Champions League",
@@ -136,50 +205,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
+          "date": "2026-10-17",
+          "opponent": "Qabala",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
           "result": "W",
+          "sourceUrl": "https://champsheep.com/teams/sabah/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-13",
           "opponent": "Slavia Praha",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://champsheep.com/teams/sabah/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
-          "date": "2026-09-10",
-          "opponent": "Manchester United",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "date": "2026-10-09",
+          "opponent": "Neftçi Baku",
+          "opponentCrestUrl": "",
           "teamGoals": 0,
-          "opponentGoals": 4,
+          "opponentGoals": 0,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://champsheep.com/teams/sabah/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "İmişli FK",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://champsheep.com/teams/sabah/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Safa Baku",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://champsheep.com/teams/sabah/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Union Berlin",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://fbref.com/en/squads/add600ae/2026-2027/matchlogs/all_comps/schedule/Dortmund-Scores-and-Fixtures-All-Competitions",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "Bodø/Glimt",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21402.png",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://fbref.com/en/squads/add600ae/2026-2027/matchlogs/all_comps/schedule/Dortmund-Scores-and-Fixtures-All-Competitions",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
-          "date": "2026-09-08",
-          "opponent": "Villarreal",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
-          "teamGoals": 3,
+          "date": "2026-10-09",
+          "opponent": "Werder Bremen",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://fbref.com/en/squads/add600ae/2026-2027/matchlogs/all_comps/schedule/Dortmund-Scores-and-Fixtures-All-Competitions",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Stuttgart",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://fbref.com/en/squads/add600ae/2026-2027/matchlogs/all_comps/schedule/Dortmund-Scores-and-Fixtures-All-Competitions",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "SC Paderborn",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://fbref.com/en/squads/add600ae/2026-2027/matchlogs/all_comps/schedule/Dortmund-Scores-and-Fixtures-All-Competitions",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -218,7 +353,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "UEFA Champions League",
@@ -243,50 +381,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Genoa",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.betexplorer.com/football/team/as-roma/zVqqL0ma/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "Real Madrid",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+          "opponentCrestUrl": "",
           "teamGoals": 3,
           "opponentGoals": 4,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.betexplorer.com/football/team/as-roma/zVqqL0ma/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "D",
-          "date": "2026-09-10",
-          "opponent": "Fenerbahçe",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/fenerbahce/fenerbahce-logo-footylogos.svg",
-          "teamGoals": 1,
-          "opponentGoals": 1,
+          "date": "2026-10-11",
+          "opponent": "Como",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.betexplorer.com/football/team/as-roma/zVqqL0ma/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Inter Milan",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.betexplorer.com/football/team/as-roma/zVqqL0ma/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Torino",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.betexplorer.com/football/team/as-roma/zVqqL0ma/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Spartak Trnava",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://en.skslovan.com/zapasy/index.php?season=202627",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "Stuttgart",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
           "teamGoals": 0,
           "opponentGoals": 3,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://en.skslovan.com/zapasy/index.php?season=202627",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
-          "date": "2026-09-09",
-          "opponent": "Paris Saint-Germain",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+          "date": "2026-10-10",
+          "opponent": "Skalica",
+          "opponentCrestUrl": "",
           "teamGoals": 1,
-          "opponentGoals": 6,
+          "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://en.skslovan.com/zapasy/index.php?season=202627",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Komárno",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://en.skslovan.com/zapasy/index.php?season=202627",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Nitra",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://en.skslovan.com/zapasy/index.php?season=202627",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -325,7 +529,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "UEFA Champions League",
@@ -350,50 +557,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
           "date": "2026-10-14",
           "opponent": "Real Betis",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+          "opponentCrestUrl": "",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.uefa.com/news-media/mediaservices/informationkits/competitions/uefachampionsleague/2027/match/2049583/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Marítimo",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.uefa.com/news-media/mediaservices/informationkits/competitions/uefachampionsleague/2027/match/2049583/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Benfica",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.uefa.com/news-media/mediaservices/informationkits/competitions/uefachampionsleague/2027/match/2049583/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Casa Pia",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.uefa.com/news-media/mediaservices/informationkits/competitions/uefachampionsleague/2027/match/2049583/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-09-08",
           "opponent": "Manchester City",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.uefa.com/news-media/mediaservices/informationkits/competitions/uefachampionsleague/2027/match/2049583/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
+          "date": "2026-10-17",
+          "opponent": "ADO Den Haag",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
           "result": "L",
+          "sourceUrl": "https://sokascore.com/team/psv-eindhoven/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-13",
-          "opponent": "Leipzig",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+          "opponent": "RB Leipzig",
+          "opponentCrestUrl": "",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://sokascore.com/team/psv-eindhoven/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "D",
-          "date": "2026-09-10",
-          "opponent": "Shakhtar Donetsk",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
-          "teamGoals": 1,
+          "date": "2026-10-09",
+          "opponent": "Heerenveen",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/psv-eindhoven/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "FC Twente",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://sokascore.com/team/psv-eindhoven/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Sparta Rotterdam",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/psv-eindhoven/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -432,7 +705,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "UEFA Champions League",
@@ -457,50 +733,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
+          "date": "2026-10-17",
+          "opponent": "Brentford",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
           "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/liverpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "LASK",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+          "opponentCrestUrl": "",
           "teamGoals": 6,
           "opponentGoals": 3,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/liverpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
+          "date": "2026-10-11",
+          "opponent": "Manchester City",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/liverpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "AFC Bournemouth",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
           "result": "W",
-          "date": "2026-09-09",
-          "opponent": "Atlético de Madrid",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
-          "teamGoals": 2,
+          "sourceUrl": "https://www.11v11.com/teams/liverpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Tottenham Hotspur",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/liverpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Elche",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://sokascore.com/team/villarreal/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-13",
           "opponent": "Napoli",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/villarreal/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
-          "date": "2026-09-08",
-          "opponent": "Borussia Dortmund",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
-          "teamGoals": 2,
-          "opponentGoals": 3,
+          "date": "2026-10-10",
+          "opponent": "Real Madrid",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://sokascore.com/team/villarreal/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Levante",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/villarreal/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Málaga",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/villarreal/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -548,7 +890,10 @@
         "ဒီပွဲမှာ ပိုပြီးစိတ်ဝင်စားစရာကောင်းတာက နှစ်သင်းနည်းပြတွေရဲ့ ဆက်ဆံရေးနဲ့ ကစားပုံနည်းစနစ်ပါပဲ။ လီဗာပူးလ်နည်းပြ **အီရာအိုလာ** နဲ့ ဗီလာရီးရဲလ်နည်းပြ **အီနီဂိုပီရက်ဇ်** တို့ဟာ အရင်က အသင်းဖော်တွေအဖြစ် ကစားခဲ့ဖူးသလို ရာယိုဗယ်လီကာနိုမှာလည်း နည်းပြနဲ့ လက်ထောက်နည်းပြအဖြစ် လက်တွဲခဲ့ဖူးတာကြောင့် တစ်ယောက်ရဲ့ ကစားပုံကို တစ်ယောက် ကောင်းကောင်းသိနေကြသူတွေပါ။ ဒီလိုအခြေအနေကြောင့် ဗီလာရီးရဲလ်အနေနဲ့ လီဗာပူးလ်ရဲ့ အစောပိုင်းဖိအားပေးကစားဟန်ကို ကြိုတင်ပြင်ဆင်လာနိုင်ပါတယ်။ လီဗာပူးလ်ဘက်မှာလည်း **Jeremie Frimpong နဲ့ Dominik Szoboszlai** တို့ ဒဏ်ရာကြောင့် ဒီပွဲကို လွဲချော်မှာဖြစ်ပြီး **Conor Bradley၊ Hugo Ekitike နဲ့ Giovanni Leoni** တို့လည်း မပါနိုင်သေးတာကြောင့် အထူးသဖြင့် ညာတောင်ပံနဲ့ ကွင်းလယ်မှာ လူစာရင်းအပြောင်းအလဲတွေ ပြုလုပ်ရဖို့ရှိပါတယ်။ ဒီအခြေအနေမှာ **Florian Wirtz** ရဲ့ ကွင်းလယ်ဖန်တီးမှုက ပိုပြီးအရေးပါလာနိုင်ပြီး နောက်ဆုံးဘရန့်ဖို့ဒ်နဲ့ပွဲမှာလည်း ဂိုးအခွင့်အရေးတွေ ဖန်တီးပေးနိုင်ခဲ့တာကြောင့် ဗီလာရီးရဲလ်အနေနဲ့ ဝစ်ဇ်ကို ဘောလုံးအလွယ်တကူလက်ခံခွင့်မပေးဖို့ လိုပါလိမ့်မယ်။ လီဗာပူးလ်က ဘာကိုလာရဲ့ တောင်ပံထိုးဖောက်မှုနဲ့ အစ္စက်ရဲ့ ဂိုးအဆုံးသတ်နိုင်စွမ်းကို ကောင်းကောင်းချိတ်ဆက်နိုင်မယ်ဆိုရင် ဗီလာရီးရဲလ်နောက်တန်းအတွက် အတော်လေးခက်ခဲလာနိုင်သလို ဧည့်သည်ကလည်း အိမ်ရှင်ရှေ့တက်လာချိန် နောက်တန်းနေရာလွတ်တွေကို အသုံးချဖို့ ကြိုးစားလာနိုင်ပါတယ်။",
         "ဒီပွဲမှာ **ဗီလာရီးရဲလ်ကို လျှော့တွက်လို့မရတဲ့ အဓိကအကြောင်းရင်းက နာပိုလီကို သုံးဂိုးသွင်းပြီး အနိုင်ရခဲ့တဲ့ တိုက်စစ်ခြေစွမ်း** ဖြစ်ပါတယ်။ လီဗာပူးလ်ဟာ ဥရောပနှစ်ပွဲမှာ လေးဂိုးအထိ ပေးထားရတာကြောင့် ဗီလာရီးရဲလ်အနေနဲ့ ဂိုးရနိုင်ခြေရှိပြီး အထူးသဖြင့် ပွဲအစောပိုင်းမှာ လီဗာပူးလ်ရဲ့ ဖိအားကို ကျော်ဖြတ်နိုင်ရင် အကြိတ်အနယ်ရှိလာနိုင်ပါတယ်။ ဒါပေမဲ့ ဗီလာရီးရဲလ်ရဲ့ လက်ရှိလာလီဂါခြေစွမ်းနဲ့ ခံစစ်တည်ငြိမ်မှုကို ပြန်ကြည့်ရင် အန်ဖီးလ်မှာ လီဗာပူးလ်ရဲ့ ဆက်တိုက်တိုက်စစ်ဆင်မှုကို မိနစ် ၉၀ လုံး ထိန်းချုပ်နိုင်ဖို့ မလွယ်ပါဘူး။ လီဗာပူးလ်ဘက်မှာ အဓိကကစားသမားအချို့ မပါနိုင်ပေမယ့် **ဘာကိုလာ၊ ဝစ်ဇ်နဲ့ အစ္စက်** တို့ရဲ့ လတ်တလောခြေစွမ်းကောင်းမှုကြောင့် ရှေ့တန်းမှာ ဂိုးရဖို့ အခွင့်အရေးဖန်တီးနိုင်စွမ်းရှိနေသလို အီရာအိုလာရဲ့ ပွဲအတွင်း နည်းစနစ်ပြောင်းလဲနိုင်မှုကလည်း အားသာချက်ဖြစ်လာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ ဥရောပပွဲအတွေ့အကြုံ၊ လက်ရှိတိုက်စစ်အင်အား၊ နောက်တန်းအားနည်းချက်နဲ့ နည်းပြတွေရဲ့ ကစားပုံကို နှိုင်းယှဉ်ကြည့်ရင် ဗီလာရီးရဲလ်ရဲ့ တန်ပြန်တိုက်စစ်ကို သတိထားရပေမယ့် **အန်ဖီးလ်အိမ်ကွင်းအားသာချက်နဲ့ အခွင့်အရေးဖန်တီးနိုင်စွမ်း ပိုကောင်းနေတဲ့ လီဗာပူးလ်ကို ရွေးချယ်ရမှာပါ။**"
       ],
-      "specialChoiceSource": "User-provided verbatim special choice October 20 2026"
+      "specialChoiceSource": "User-provided verbatim special choice October 20 2026",
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "UEFA Champions League",
@@ -573,50 +918,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Ipswich Town",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/manchester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "Paris Saint-Germain",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
           "teamGoals": 2,
           "opponentGoals": 4,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/manchester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
-          "date": "2026-09-08",
-          "opponent": "Porto",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
-          "teamGoals": 2,
+          "date": "2026-10-11",
+          "opponent": "Liverpool",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+          "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/manchester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Sunderland",
+          "opponentCrestUrl": "",
+          "teamGoals": 5,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/manchester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Norwich City",
+          "opponentCrestUrl": "",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/manchester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "L",
           "date": "2026-10-14",
           "opponent": "Shakhtar Donetsk",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
+          "opponentCrestUrl": "",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://last5games.com/head-to-head/aek-athens-vs-atromitos/781-9849/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
-          "date": "2026-09-08",
-          "opponent": "LASK",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
-          "teamGoals": 1,
+          "date": "2026-10-10",
+          "opponent": "OFI Crete",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/aek-athens-vs-atromitos/781-9849/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Volos NFC",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/aek-athens-vs-atromitos/781-9849/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Panserraikos",
+          "opponentCrestUrl": "",
+          "teamGoals": 8,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/aek-athens-vs-atromitos/781-9849/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Asteras Tripolis",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://last5games.com/head-to-head/aek-athens-vs-atromitos/781-9849/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -655,7 +1066,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "UEFA Champions League",
@@ -680,50 +1094,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
+          "date": "2026-10-17",
+          "opponent": "Strasbourg",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
           "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/paris-saint-germain-vs-strasbourg/591-686/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "Manchester City",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
           "teamGoals": 4,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/paris-saint-germain-vs-strasbourg/591-686/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
-          "date": "2026-09-09",
-          "opponent": "Slovan Bratislava",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
-          "teamGoals": 6,
+          "date": "2026-10-10",
+          "opponent": "Le Mans",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/paris-saint-germain-vs-strasbourg/591-686/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Marseille",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/paris-saint-germain-vs-strasbourg/591-686/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Brest",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/paris-saint-germain-vs-strasbourg/591-686/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
+          "date": "2026-10-17",
+          "opponent": "Real Betis",
+          "opponentCrestUrl": "",
+          "teamGoals": 5,
+          "opponentGoals": 2,
+          "venueSide": "away",
           "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/fc-barcelona-vs-olympiacos-fc/83-602/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-13",
           "opponent": "Galatasaray",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+          "opponentCrestUrl": "",
           "teamGoals": 4,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/fc-barcelona-vs-olympiacos-fc/83-602/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
-          "date": "2026-09-09",
-          "opponent": "Feyenoord",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
-          "teamGoals": 5,
-          "opponentGoals": 1,
+          "date": "2026-10-10",
+          "opponent": "Getafe",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/fc-barcelona-vs-olympiacos-fc/83-602/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Sevilla",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/fc-barcelona-vs-olympiacos-fc/83-602/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Racing Santander",
+          "opponentCrestUrl": "",
+          "teamGoals": 7,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/fc-barcelona-vs-olympiacos-fc/83-602/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -762,7 +1242,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "UEFA Champions League",
@@ -787,50 +1270,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
+          "date": "2026-10-17",
+          "opponent": "Venezia",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
           "result": "L",
+          "sourceUrl": "https://sokascore.com/team/napoli/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-13",
           "opponent": "Villarreal",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://sokascore.com/team/napoli/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
-          "date": "2026-09-09",
-          "opponent": "Arsenal",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
-          "teamGoals": 0,
-          "opponentGoals": 1,
+          "date": "2026-10-10",
+          "opponent": "Frosinone",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/napoli/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Fiorentina",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://sokascore.com/team/napoli/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Bologna",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/napoli/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
+          "date": "2026-10-17",
+          "opponent": "HamKam",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
           "result": "W",
+          "sourceUrl": "https://sokascore.com/team/bodo-glimt/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "Borussia Dortmund",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/bodo-glimt/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
-          "date": "2026-09-10",
-          "opponent": "Bayern München",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-          "teamGoals": 0,
-          "opponentGoals": 5,
+          "date": "2026-10-10",
+          "opponent": "Kristiansund",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/bodo-glimt/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-01",
+          "opponent": "Rana FK",
+          "opponentCrestUrl": "",
+          "teamGoals": 6,
+          "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/bodo-glimt/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Brann",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://sokascore.com/team/bodo-glimt/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -869,7 +1418,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "UEFA Champions League",
@@ -894,50 +1446,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Hamburger SV",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-14",
           "opponent": "Slovan Bratislava",
           "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
           "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
+          "date": "2026-10-10",
+          "opponent": "SC Paderborn",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
           "result": "W",
-          "date": "2026-09-09",
-          "opponent": "Viking",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
-          "teamGoals": 3,
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Borussia Dortmund",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+          "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Hoffenheim",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
+          "date": "2026-10-17",
+          "opponent": "Espanyol",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
           "result": "W",
+          "sourceUrl": "https://sokascore.com/team/atletico-madrid/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-13",
           "opponent": "Manchester United",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "opponentCrestUrl": "",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/atletico-madrid/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
-          "date": "2026-09-09",
-          "opponent": "Liverpool",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
-          "teamGoals": 1,
-          "opponentGoals": 2,
+          "date": "2026-10-10",
+          "opponent": "Alavés",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/atletico-madrid/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Real Madrid",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/atletico-madrid/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Osasuna",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://sokascore.com/team/atletico-madrid/results/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -976,7 +1594,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "Championship",
@@ -990,7 +1611,7 @@
       "kickoffUtc": null,
       "venue": null,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
       "homeOdds": "1.57",
       "drawOdds": "4.00",
       "awayOdds": "5.25",
@@ -1001,116 +1622,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "W",
           "date": "2026-10-16",
           "opponent": "Burnley",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "opponentCrestUrl": "",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/wolverhampton-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-13",
           "opponent": "Bolton Wanderers",
           "opponentCrestUrl": "",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "home",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/wolverhampton-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Middlesbrough",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "opponentCrestUrl": "",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/wolverhampton-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-09-20",
           "opponent": "West Bromwich Albion",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "opponentCrestUrl": "",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/wolverhampton-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-09-16",
           "opponent": "Everton",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+          "opponentCrestUrl": "",
           "teamGoals": 0,
           "opponentGoals": 1,
-          "venueSide": "home",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/wolverhampton-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Norwich City",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+          "opponentCrestUrl": "",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/portsmouth/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-14",
           "opponent": "Sheffield United",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+          "opponentCrestUrl": "",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/portsmouth/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-11",
           "opponent": "Southampton",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+          "opponentCrestUrl": "",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/portsmouth/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "D",
           "date": "2026-09-19",
           "opponent": "Blackburn Rovers",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "opponentCrestUrl": "",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/portsmouth/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "D",
           "date": "2026-09-12",
           "opponent": "Charlton Athletic",
-          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "opponentCrestUrl": "",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "away",
-          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/portsmouth/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -1149,7 +1770,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -1162,8 +1786,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/afc-wimbledon/afc-wimbledon-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/mansfield-town/mansfield-town-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/304.png",
       "homeOdds": "3.10",
       "drawOdds": "3.70",
       "awayOdds": "2.10",
@@ -1174,50 +1798,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Sheffield Wednesday",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/sheffield-wednesday/sheffield-wednesday-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
           "teamGoals": 0,
           "opponentGoals": 5,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/afc-wimbledon/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Plymouth Argyle",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/plymouth-argyle/plymouth-argyle-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/afc-wimbledon/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Barnet",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/afc-wimbledon/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "Cambridge United",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/afc-wimbledon/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Milton Keynes Dons",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/390.png",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/afc-wimbledon/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "D",
           "date": "2026-10-15",
           "opponent": "Oxford United",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/oxford-united/oxford-united-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/mansfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "Bromley",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/bromley/bromley-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/mansfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Port Vale",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/mansfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Burton Albion",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/mansfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Huddersfield Town",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/mansfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -1256,7 +1946,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -1269,8 +1962,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/blackpool/blackpool-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/milton-keynes-dons/milton-keynes-dons-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/346.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/390.png",
       "homeOdds": "2.25",
       "drawOdds": "3.80",
       "awayOdds": "2.63",
@@ -1281,50 +1974,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Leyton Orient",
           "opponentCrestUrl": "",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/blackpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Cambridge United",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/cambridge-united/cambridge-united-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/blackpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Crewe Alexandra",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/blackpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Wigan Athletic",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/blackpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Plymouth Argyle",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/blackpool/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Luton Town",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/luton-town/luton-town-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/301.png",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/milton-keynes-dons/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Reading",
           "opponentCrestUrl": "",
           "teamGoals": 1,
           "opponentGoals": 5,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/milton-keynes-dons/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Brentford Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 7,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/milton-keynes-dons/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Crawley Town",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/milton-keynes-dons/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "AFC Wimbledon",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/milton-keynes-dons/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -1363,7 +2122,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -1376,8 +2138,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/bromley/bromley-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/leicester/leicester-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
       "homeOdds": "4.00",
       "drawOdds": "4.33",
       "awayOdds": "1.67",
@@ -1388,50 +2150,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Stockport County",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/stockport-county/stockport-county-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/bromley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Mansfield Town",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/mansfield-town/mansfield-town-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/304.png",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/bromley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Crawley Town",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/bromley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Brentford Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/bromley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Huddersfield Town",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/bromley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Doncaster Rovers",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/doncaster-rovers/doncaster-rovers-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/279.png",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/leicester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Peterborough United",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/peterborough-united/peterborough-united-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/leicester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Stevenage",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/285.png",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/leicester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Fulham Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/leicester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Barnsley",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/397.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/leicester-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -1470,7 +2298,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -1483,8 +2314,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/burton-albion/burton-albion-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/bradford-city/bradford-city-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
       "homeOdds": "3.40",
       "drawOdds": "3.60",
       "awayOdds": "2.00",
@@ -1495,50 +2326,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "D",
           "date": "2026-10-17",
           "opponent": "Peterborough United",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/peterborough-united/peterborough-united-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/burton-albion/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Doncaster Rovers",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/doncaster-rovers/doncaster-rovers-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/279.png",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/burton-albion/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Grimsby Town",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/burton-albion/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Huddersfield Town",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/burton-albion/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "Plymouth Argyle",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/burton-albion/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Stevenage",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/stevenage/stevenage-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/285.png",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/bradford-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "D",
           "date": "2026-10-10",
           "opponent": "Leyton Orient",
           "opponentCrestUrl": "",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/bradford-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Rotherham United",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/bradford-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Reading",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/bradford-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Newcastle United Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/bradford-city/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -1577,7 +2474,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -1590,8 +2490,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/cambridge-united/cambridge-united-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/wycombe-wanderers/wycombe-wanderers-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/344.png",
       "homeOdds": "2.20",
       "drawOdds": "3.80",
       "awayOdds": "2.88",
@@ -1602,50 +2502,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Barnsley",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/barnsley/barnsley-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/397.png",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/cambridge-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "Blackpool",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/blackpool/blackpool-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/346.png",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/cambridge-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Northampton Town",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/cambridge-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "AFC Wimbledon",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/cambridge-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Gillingham",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/cambridge-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Notts County",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/notts-county/notts-county-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/340.png",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/wycombe-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Luton Town",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/luton-town/luton-town-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/301.png",
           "teamGoals": 1,
           "opponentGoals": 4,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/wycombe-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Bristol Rovers",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/wycombe-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "Reading",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/wycombe-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Wigan Athletic",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/wycombe-wanderers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -1684,7 +2650,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -1697,8 +2666,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/doncaster-rovers/doncaster-rovers-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/stockport-county/stockport-county-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/279.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
       "homeOdds": "3.40",
       "drawOdds": "4.00",
       "awayOdds": "1.87",
@@ -1709,50 +2678,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Leicester City",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/leicester/leicester-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/doncaster-rovers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "Burton Albion",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/burton-albion/burton-albion-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/doncaster-rovers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Liverpool Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/doncaster-rovers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Peterborough United",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/doncaster-rovers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "AFC Wimbledon",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/doncaster-rovers/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Bromley",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/bromley/bromley-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/stockport-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "Barnsley",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/barnsley/barnsley-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/397.png",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/stockport-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Shrewsbury Town",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/stockport-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "Peterborough United",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/stockport-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Sheffield Wednesday",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/stockport-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -1791,7 +2826,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -1804,8 +2842,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/huddersfield-town/huddersfield-town-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/peterborough-united/peterborough-united-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
       "homeOdds": "1.50",
       "drawOdds": "4.75",
       "awayOdds": "5.00",
@@ -1816,50 +2854,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Plymouth Argyle",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/plymouth-argyle/plymouth-argyle-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/huddersfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "D",
           "date": "2026-10-10",
           "opponent": "Sheffield Wednesday",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/sheffield-wednesday/sheffield-wednesday-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/huddersfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Rochdale",
+          "opponentCrestUrl": "",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/huddersfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Burton Albion",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/huddersfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Bromley",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/huddersfield-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "D",
           "date": "2026-10-17",
           "opponent": "Burton Albion",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/burton-albion/burton-albion-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/peterborough-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "Leicester City",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/leicester/leicester-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/peterborough-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Ipswich Town Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/peterborough-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "Stockport County",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/peterborough-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Colchester United",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/peterborough-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -1898,7 +3002,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -1911,8 +3018,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/luton-town/luton-town-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/barnsley/barnsley-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/301.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/397.png",
       "homeOdds": "1.44",
       "drawOdds": "5.00",
       "awayOdds": "5.00",
@@ -1923,50 +3030,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Milton Keynes Dons",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/milton-keynes-dons/milton-keynes-dons-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/390.png",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/luton-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "Wycombe Wanderers",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/wycombe-wanderers/wycombe-wanderers-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/344.png",
           "teamGoals": 4,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/luton-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Colchester United",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/luton-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Ipswich Town Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 6,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/luton-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Bradford City",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/luton-town/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Cambridge United",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/cambridge-united/cambridge-united-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/barnsley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Stockport County",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/stockport-county/stockport-county-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/barnsley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Fleetwood Town",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/barnsley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Leeds United Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/barnsley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Leicester City",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/barnsley/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -2005,7 +3178,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -2018,8 +3194,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/notts-county/notts-county-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/sheffield-wednesday/sheffield-wednesday-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/340.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
       "homeOdds": "3.10",
       "drawOdds": "3.70",
       "awayOdds": "2.10",
@@ -2030,50 +3206,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Wycombe Wanderers",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/wycombe-wanderers/wycombe-wanderers-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/344.png",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/notts-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
+          "date": "2026-10-13",
+          "opponent": "Nottingham Forest Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/notts-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
           "date": "2026-10-10",
           "opponent": "Oxford United",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/oxford-united/oxford-united-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/notts-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Grimsby Town",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/notts-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Reading",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/notts-county/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "AFC Wimbledon",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/afc-wimbledon/afc-wimbledon-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
           "teamGoals": 5,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/sheffield-wednesday/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "D",
           "date": "2026-10-10",
           "opponent": "Huddersfield Town",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/huddersfield-town/huddersfield-town-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/sheffield-wednesday/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Sunderland Academy",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/sheffield-wednesday/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Salford City",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/sheffield-wednesday/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Stockport County",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/sheffield-wednesday/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -2112,7 +3354,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -2125,8 +3370,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/oxford-united/oxford-united-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/wigan-athletic/wigan-athletic-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
       "homeOdds": "1.87",
       "drawOdds": "3.80",
       "awayOdds": "3.70",
@@ -2137,50 +3382,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "D",
           "date": "2026-10-15",
           "opponent": "Mansfield Town",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/mansfield-town/mansfield-town-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/304.png",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/oxford-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "Notts County",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/notts-county/notts-county-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/340.png",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/oxford-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Exeter City",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/oxford-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Cambridge United",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/oxford-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Burton Albion",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/oxford-united/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "W",
           "date": "2026-10-17",
           "opponent": "Reading",
           "opponentCrestUrl": "",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/wigan-athletic/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "L",
           "date": "2026-10-10",
           "opponent": "Stevenage",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/stevenage/stevenage-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/285.png",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/wigan-athletic/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Blackpool",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/346.png",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/wigan-athletic/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Wycombe Wanderers",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/344.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/wigan-athletic/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Sheffield Wednesday",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/wigan-athletic/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -2219,7 +3530,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     },
     {
       "league": "League One",
@@ -2232,8 +3546,8 @@
       "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
       "venue": null,
-      "homeCrestUrl": "https://assets.footylogos.com/logos/stevenage/stevenage-logo-footylogos.svg",
-      "awayCrestUrl": "https://assets.footylogos.com/logos/plymouth-argyle/plymouth-argyle-logo-footylogos.svg",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/285.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png",
       "homeOdds": "2.50",
       "drawOdds": "3.60",
       "awayOdds": "2.50",
@@ -2244,50 +3558,116 @@
       "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Bradford City",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/bradford-city/bradford-city-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/stevenage/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "Wigan Athletic",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/wigan-athletic/wigan-athletic-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/stevenage/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Leicester City",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/stevenage/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-22",
+          "opponent": "Walsall",
+          "opponentCrestUrl": "",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/stevenage/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Leyton Orient",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/stevenage/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "awayLastFive": [
         {
-          "result": "L",
           "date": "2026-10-17",
           "opponent": "Huddersfield Town",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/huddersfield-town/huddersfield-town-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/plymouth-argyle/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         },
         {
-          "result": "W",
           "date": "2026-10-10",
           "opponent": "AFC Wimbledon",
-          "opponentCrestUrl": "https://assets.footylogos.com/logos/afc-wimbledon/afc-wimbledon-logo-footylogos.svg",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
-          "sourceType": "verified_match_result"
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/plymouth-argyle/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "Newport County",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://www.11v11.com/teams/plymouth-argyle/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Leyton Orient",
+          "opponentCrestUrl": "",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://www.11v11.com/teams/plymouth-argyle/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "Burton Albion",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://www.11v11.com/teams/plymouth-argyle/tab/matches/",
+          "sourceType": "multi_competition_2026_27_results_verified"
         }
       ],
       "headToHead": [],
@@ -2326,7 +3706,10 @@
         "reportDate": "2026-10-20",
         "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      }
+      },
+      "formDefinition": "Five latest completed fixtures across all competitive competitions (league, domestic cups, UEFA, EFL Trophy), newest first; excludes friendlies and scheduled matches; form scored from this team's viewpoint.",
+      "formCheckedAt": "2026-10-20",
+      "formAllCompetitions": true
     }
   ],
   "noFixturesLeagues": [],
@@ -2336,5 +3719,14 @@
     "yesterdayFinishedMatches": 6
   },
   "ownerProofreadStatus": "2026-10-20 owner-verbatim previews and special archived separately; names match 20.pdf",
-  "dailyDataValidationRequested": true
+  "dailyDataValidationRequested": true,
+  "formVerification": {
+    "date": "2026-10-20",
+    "teamCount": 42,
+    "allCompetitions": true,
+    "finishedFiveRowsPerTeam": true,
+    "clubCrestProvider": "ESPN official team IDs",
+    "sourceCount": 42,
+    "ownerProseUnchanged": true
+  }
 }

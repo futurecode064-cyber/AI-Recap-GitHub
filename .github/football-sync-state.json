@@ -2,16 +2,16 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "15a3b1f279b3a86a84aa0604899e846d84ebe606",
-  "source_tree": "e61fd8995250a826e27b2d5bf89989ca0717ede9",
-  "target_tree": "e61fd8995250a826e27b2d5bf89989ca0717ede9",
+  "source_commit": "fd5f670b579d4ba609d3a4b030ef5facfba010f5",
+  "source_tree": "13d6c96ee1ccff7f2b521511691ac4bea5e0cd30",
+  "target_tree": "13d6c96ee1ccff7f2b521511691ac4bea5e0cd30",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-20T01:37:16.153Z",
+  "last_synced_utc": "2026-10-20T01:38:30.087Z",
   "reconciled_on": "2026-10-20",
   "reconciliation_note": "Verified identical football-daily trees after sub-brand PNG completeness and bundled UCL/EFL logo fixes; existing branded layouts retained. Live preview and odds download controls tested on all four brands. Source recent-form entries remain a separate publication data issue.",
-  "last_synced_method": "verified-brand-download-export-parity",
+  "last_synced_method": "verified-only-oct20-all-competition-form-and-badges",
   "guard_reconciliation": {
     "previous_target_tree": "ddf9afd38b385f967d28b6346559156dd6322aab",
     "verified_production_head": "ed735b465caa89281d76dc60efbe890ee8d089bd",
@@ -40,5 +40,16 @@
     "verified_staged_production_tree": "5857df2457544793c5ea89e7da59c38f22d66534",
     "verified_current_source_tree": "5857df2457544793c5ea89e7da59c38f22d66534",
     "note": "Source and staged production football directories byte-for-byte identical before publishing; main-only league badges, 21 odds, 21 previews, 1 Special Choice, and six yesterday finals."
+  },
+  "guard_reconciliation_20261020_forms": {
+    "old_tree": "e61fd8995250a826e27b2d5bf89989ca0717ede9",
+    "new_tree": "13d6c96ee1ccff7f2b521511691ac4bea5e0cd30",
+    "files_modified": [
+      "football-daily/data/today.json",
+      "football-daily/data/odds/2026-10-20.json"
+    ],
+    "all_else_preserved": true,
+    "form_clubs": 42,
+    "form_records": 210
   }
 }
