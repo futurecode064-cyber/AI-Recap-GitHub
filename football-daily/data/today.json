@@ -1,898 +1,2340 @@
 {
-  "reportDate": "2026-10-19",
+  "reportDate": "2026-10-20",
   "published": true,
   "matchDateTimezone": "Asia/Yangon",
   "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
-  "sourcePDF": "19.pdf",
-  "sourceVerificationDate": "2026-10-19",
+  "sourcePDF": "20.pdf",
+  "sourceVerificationDate": "2026-10-20",
   "matches": [
     {
-      "league": "Premier League",
-      "home": "Tottenham Hotspur",
-      "away": "Coventry City",
-      "homeDisplay": "စပါး",
-      "awayDisplay": "ကိုဗင်ထရီ",
-      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:30",
+      "league": "UEFA Champions League",
+      "home": "Fenerbahçe",
+      "away": "Slavia Praha",
+      "homeDisplay": "ဖီနာဘာချီ",
+      "awayDisplay": "ဆလာဗီးယားပရာဟာ",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 11:15",
       "kickoffCalendarDate": "2026-10-20",
-      "nightEditorialDate": "2026-10-19",
+      "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
-      "venue": "Tottenham Hotspur Stadium",
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Tottenham%20Hotspur.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Coventry%20City.png",
-      "homeOdds": "1.50",
-      "drawOdds": "4.50",
-      "awayOdds": "6.25",
-      "oddsProvider": "Bet365",
-      "oddsSourceUrl": "https://www.bet365.com/hub/en-gb/football/football-competitions/premier-league",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
+      "homeOdds": "1.62",
+      "drawOdds": "4.00",
+      "awayOdds": "4.75",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
       "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": "2026-10-19",
+      "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
           "result": "L",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-14",
+          "opponent": "Aston Villa",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+          "teamGoals": 0,
+          "opponentGoals": 6,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "D",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "D",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "D",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-09-10",
+          "opponent": "Roma",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
         }
       ],
       "awayLastFive": [
         {
           "result": "L",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-13",
+          "opponent": "Sabah",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21922.png",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "L",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "W",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "W",
-          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-09-10",
+          "opponent": "Lens",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
         }
       ],
       "headToHead": [],
-      "homeStanding": {
-        "position": 20,
-        "played": 6,
-        "wins": 0,
-        "draws": 3,
-        "losses": 3,
-        "points": 3
-      },
-      "awayStanding": {
-        "position": 16,
-        "played": 6,
-        "wins": 2,
-        "draws": 0,
-        "losses": 4,
-        "points": 6
-      },
-      "standingsSourceUrl": "https://sportspundit.com/soccer/matches/coventry-vs-tottenham/",
       "myanmarOdds": {
-        "provider": "19.pdf user-supplied opening quote",
-        "market": "Myanmar body/total",
-        "upperTeam": "စပါး",
-        "bodyOdds": "1-30",
-        "goalTotalOdds": "3=",
-        "checkedAt": "2026-10-19"
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ဖီနာဘာချီ",
+        "bodyOdds": "1+10",
+        "goalTotalOdds": "3-5",
+        "checkedAt": "2026-10-20"
       },
-      "dailyPreviewText": "နည်းပြ **Roberto De Zerbi** ရဲ့ **တော့တင်ဟမ်** အသင်းဟာ ဒီရာသီ ပရီးမီးယားလိဂ်မှာ ခြောက်ပွဲကစားပြီးချိန်အထိ နိုင်ပွဲမရသေးဘဲ ၃ သရေ၊ ၃ ရှုံး၊ **ရမှတ် ၃ မှတ်နဲ့ ဇယားအောက်ဆုံး အဆင့် ၂၀** မှာ ရပ်တည်နေတာကြောင့် ဒီနေ့အိမ်ကွင်းပွဲမှာ အနိုင်ရလဒ်တစ်ခု မဖြစ်မနေလိုအပ်နေspပါတယ်။ စပါးရဲ့ ပြဿနာက ခြောက်ပွဲမှာ သုံးဂိုးသာသွင်းနိုင်ခဲ့တဲ့ တိုက်စစ်အဆုံးသတ်ပိုင်းဖြစ်ပြီး မန်ယူနဲ့ နောက်ဆုံးပွဲမှာလည်း ကစားသမားတစ်ယောက်လျော့နေတဲ့အခြေအနေကနေ **Dominic Solanke** ရဲ့ နောက်ကျချေပဂိုးနဲ့ သရေတစ်မှတ်ရယူနိုင်ခဲ့တာပါ။ အဲဒီပွဲက စိတ်ဓာတ်ပိုင်းမှာ အားတက်စရာဖြစ်ခဲ့ပေမယ့် စပါးအတွက် ပိုစိုးရိမ်ရတာက **Savio နဲ့ Lucas Bergvall** တို့ ဒဏ်ရာကြောင့် မပါနိုင်သလို **Rodrigo Bentancur** ကလည်း ပွဲပယ်ခံထားရတာကြောင့် ကွင်းလယ်နဲ့ တိုက်စစ်မှာ လူစာရင်းရွေးချယ်မှု ပိုမိုခက်ခဲလာနိုင်ခြင်းပါ။ ဒါပေမဲ့ ကာလရှည်ဒဏ်ရာကြောင့် အနားယူနေခဲ့ရတဲ့ **Dejan Kulusevski** ပြန်လည်ပါဝင်နိုင်တဲ့ အခြေအနေရှိလာတာက စပါးအတွက် သတင်းကောင်းဖြစ်နေပါတယ်။ တစ်ဖက်မှာ နည်းပြ **Frank Lampard** ရဲ့ **ကိုဗင်ထရီ** ကတော့ ခြောက်ပွဲမှာ ၂ နိုင်၊ ၄ ရှုံး၊ **ရမှတ် ၆ မှတ်နဲ့ အဆင့် ၁၆** မှာရှိပြီး နော်တင်ဟမ်ဖောရက်စ်ကို ၁-၀၊ နယူးကာဆယ်ကို ၄-၁ နဲ့ ဆက်တိုက်အနိုင်ရခဲ့တာကြောင့် တန်းတက်အသင်းတစ်သင်းဆိုပေမယ့် လတ်တလောမှာ စပါးထက် ယုံကြည်မှုပိုကောင်းနေပါတယ်။ အထူးသဖြင့် နယူးကာဆယ်နဲ့ပွဲမှာ **Jack Rudoni၊ Sidiki Cherif၊ Ellis Simms နဲ့ Stephen Mfuni** တို့ ဂိုးသွင်းခဲ့ကြတာကြောင့် ကိုဗင်ထရီရဲ့ တိုက်စစ်ဟာ ကစားသမားတစ်ယောက်တည်းကို မှီခိုနေရတာမျိုး မဟုတ်ပါဘူး။ စပါးက ကိုယ့်ကွင်းမှာ ဘောလုံးကို ပိုမိုကိုင်တွယ်ပြီး ဖိအားပေးနိုင်ပေမယ့် ကိုဗင်ထရီက ခံစစ်ကို ကျစ်လျစ်စွာထားကာ အိမ်ရှင်ရှေ့တက်လာချိန် နောက်တန်းနေရာလွတ်တွေကို အသုံးချနိုင်ပါတယ်။ **အသင်းအင်အားနဲ့ အိမ်ကွင်းအားမှာ စပါးက သာပေမယ့် လတ်တလောနိုင်ပွဲဆက်နေမှု၊ စပါးရဲ့ တိုက်စစ်အဆုံးသတ်အားနည်းချက်နဲ့ လူစာရင်းအခက်အခဲတွေကို ချိန်ဆကြည့်ရင် ဒီပွဲမှာ ကိုဗင်ထရီကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "ချန်ပီယံလိဂ်မှာ နှစ်ပွဲကစားပြီးတဲ့အချိန်အထိ နိုင်ပွဲမရသေးတဲ့ ဖီနာဘာချီ အတွက် ဒီပွဲဟာ အိမ်ကွင်းမှာ မဖြစ်မနေတုံ့ပြန်ပြရမယ့် အခြေအနေဖြစ်နေပါတယ်။ ပထမပွဲမှာ ရိုးမားနဲ့ ၁-၁ သရေကျခဲ့ပေမယ့် နောက်ဆုံး အက်စတွန်ဗီလာကို ၆-၀ နဲ့ ဂိုးပြတ်ရှုံးခဲ့တာကြောင့် ဥရောပပြိုင်ပွဲအဆင့်မှာ အသင်းရဲ့ခံစစ် ဘယ်လောက်ထိလိုအပ်ချက်ရှိနေသလဲဆိုတာ ထင်ရှားခဲ့ပါတယ်။ ဒါပေမဲ့ ဒီနေ့ အိမ်ကွင်းမှာရင်ဆိုင်ရမယ့် ဆလာဗီးယားပရာဟာ ကလည်း လန်းစ်ကို ၃-၂၊ ဆာဘားကို ၂-၀ နဲ့ ဆက်တိုက်ရှုံးထားတာကြောင့် နှစ်သင်းစလုံးအတွက် ရလဒ်ပြန်ကောင်းဖို့ အရေးကြီးနေတာပါ။ ဖီနာဘာချီဘက်မှာတော့ ဂရင်းဝုဒ်၊ ဂွမ်ဒူဇီနဲ့ ကန်တေး တို့လို တိုက်စစ်အခွင့်အရေးဖန်တီးပေးနိုင်တဲ့ ကစားသမားတွေရှိသလို ရှေ့တန်းမှာလည်း မူရီချီ ကို အားကိုးနိုင်တာကြောင့် ဆလာဗီးယားရဲ့ နောက်တန်းကို ဖိအားပေးနိုင်ဖို့ရှိပါတယ်။ ဆလာဗီးယားဘက်မှာတော့ ဒဏ်ရာကြောင့် ကစားသမားအချို့ မပါနိုင်တဲ့အခြေအနေရှိပြီး ရှရန့်ဇ်နဲ့ ချာလူပက်ခ် တို့လို ကစားသမားတွေ လွဲချော်နိုင်တာက အသင်းရဲ့လူစာရင်းအတွက် ထိခိုက်စရာပါ။ ဖီနာဘာချီဟာ ဗီလာကို ဂိုးပြတ်ရှုံးခဲ့လို့ အိမ်ကွင်းမှာ ခံစစ်ကို အလွန်ဖွင့်ကစားလို့မရပေမယ့် ဆလာဗီးယားရဲ့ လတ်တလောအားနည်းနေတဲ့နောက်တန်းကို ကွင်းလယ်ကနေ ဆက်တိုက်ဖိအားပေးနိုင်ရင် ဂိုးအခွင့်အရေးပိုရနိုင်ပါတယ်။ နှစ်သင်းစလုံးရဲ့ ဥရောပရလဒ်မကောင်းသေးပေမယ့် အိမ်ကွင်းအားသာချက်၊ တစ်ဦးချင်းကစားသမားအရည်အသွေးနဲ့ ဆလာဗီးယားရဲ့ လူစာရင်းအခက်အခဲတွေကို ချိန်ဆကြည့်ရင် ဖီနာဘာချီကို ရွေးချယ်ရမှာပါ။",
       "researchSources": [
-        "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "https://www.bet365.com/hub/en-gb/football/football-competitions/premier-league",
-        "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19"
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
       ],
       "status": "scheduled",
       "specialChoice": false,
-      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
-        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
-        "sourceHeading": "1။ စပါး နဲ့ ကိုဗင်ထရီ",
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "1။ ဖီနာဘာချီ နဲ့ ဆလာဗီးယားပရာဟာ",
         "sourceOrder": 1,
         "exactCopy": true,
-        "receivedDate": "2026-10-19"
+        "receivedDate": "2026-10-20"
       },
       "previewV2": {
         "version": "2",
         "status": "owner-verbatim",
-        "fixtureSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "standingsSourceUrl": "https://sportspundit.com/soccer/matches/coventry-vs-tottenham/",
-        "reviewedAt": "2026-10-19",
-        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
       },
-      "oddsVerificationStatus": "reference market as cited",
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
       "previewJournalist": {
         "status": "owner_approved_published",
-        "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
-        "reportDate": "2026-10-19",
-        "reviewedAt": "2026-10-19",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
       }
     },
     {
-      "league": "Serie A",
-      "home": "Monza",
-      "away": "Cagliari",
-      "homeDisplay": "မွန်ဇာ",
-      "awayDisplay": "ကာဂလီယာရီ",
-      "kickoffYangon": "၁၉ ရက်နေ့ ည 11:00",
-      "kickoffCalendarDate": "2026-10-19",
-      "nightEditorialDate": "2026-10-19",
+      "league": "UEFA Champions League",
+      "home": "Sabah",
+      "away": "Borussia Dortmund",
+      "homeDisplay": "ဆာဘား",
+      "awayDisplay": "ဒေါ့မွန်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 11:15",
+      "kickoffCalendarDate": "2026-10-20",
+      "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
-      "venue": "U-Power Stadium",
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/AC%20Monza.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Cagliari%20Calcio.png",
-      "homeOdds": "2.20",
-      "drawOdds": "3.10",
-      "awayOdds": "3.30",
-      "oddsProvider": "Bet365",
-      "oddsSourceUrl": "https://oddsrun.com/match/football/it/199/11997978/italy-serie-a/monza-vs-cagliari/",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21922.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+      "homeOdds": "9.00",
+      "drawOdds": "5.75",
+      "awayOdds": "1.25",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
       "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": "2026-10-19",
+      "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "L",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "D",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "D",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
           "result": "W",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-13",
+          "opponent": "Slavia Praha",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "L",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-09-10",
+          "opponent": "Manchester United",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
         }
       ],
       "awayLastFive": [
         {
-          "result": "D",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "W",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "W",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "W",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
           "result": "L",
-          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-14",
+          "opponent": "Bodø/Glimt",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21402.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-08",
+          "opponent": "Villarreal",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
         }
       ],
       "headToHead": [],
-      "homeStanding": {
-        "position": 16,
-        "played": 6,
-        "wins": 1,
-        "draws": 1,
-        "losses": 4,
-        "points": 4
-      },
-      "awayStanding": {
-        "position": 4,
-        "played": 6,
-        "wins": 4,
-        "draws": 1,
-        "losses": 1,
-        "points": 13
-      },
-      "standingsSourceUrl": "https://prematchdata.com/en/seriea/2026-10-19/monza-vs-cagliari/",
       "myanmarOdds": {
-        "provider": "19.pdf user-supplied opening quote",
-        "market": "Myanmar body/total",
-        "upperTeam": "မွန်ဇာ",
-        "bodyOdds": "-40",
-        "goalTotalOdds": "2-65",
-        "checkedAt": "2026-10-19"
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ဒေါ့မွန်",
+        "bodyOdds": "2+70",
+        "goalTotalOdds": "3-80",
+        "checkedAt": "2026-10-20"
       },
-      "dailyPreviewText": "နည်းပြ **Ivan Jurić** ရဲ့ **မွန်ဇာ** အသင်းဟာ တန်းပြန်တက်လာပြီးနောက် စီးရီးအေမှာ အတော်လေးရုန်းကန်နေရပြီး ခြောက်ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၄ မှတ်နဲ့ ဇယားအောက်ပိုင်း** မှာ ရပ်တည်နေပါတယ်။ နောက်ဆုံး လာဇီယိုကို အဝေးကွင်းမှာ ၃-၁ နဲ့ ရှုံးနိမ့်ခဲ့တဲ့ပွဲမှာ ခံစစ်ကစားသမား **Lorenzo Lucchesi** အနီကတ်ပြခံခဲ့ရတာကြောင့် ဒီပွဲမှာ မပါနိုင်တော့သလို ခြောက်ပွဲမှာ ၁၅ ဂိုးအထိ ပေးထားရတဲ့ နောက်တန်းကိုလည်း ပြန်လည်ပြင်ဆင်ဖို့ လိုနေပါတယ်။ ဒါပေမဲ့ မွန်ဇာဘက်မှာတော့ တိုက်စစ်မှူး **Gustavo Varela** က ဒီရာသီ လေးဂိုးအထိ သွင်းယူထားပြီး ရှေ့တန်းမှာ အဓိကအားကိုးနေရတာကြောင့် ကာဂလီယာရီနောက်တန်းအနေနဲ့ သူ့ကို လွယ်လွယ်ကူကူ ဂိုးအခွင့်အရေးမပေးဖို့ လိုပါတယ်။ တစ်ဖက်မှာ နည်းပြ **Fabio Pisacane** ရဲ့ **ကာဂလီယာရီ** ကတော့ ခြောက်ပွဲမှာ ၄ နိုင်၊ ၁ သရေ၊ ၁ ရှုံး၊ **ရမှတ် ၁၃ မှတ်နဲ့ ဇယားအပေါ်ပိုင်း** မှာ ရှိနေပြီး သုံးဂိုးသာပေးထားတဲ့ ခံစစ်ကြောင့် မွန်ဇာထက် အများကြီးပိုတည်ငြိမ်နေတာပါ။ ကာဂလီယာရီဘက်မှာလည်း **Daniel Maldini** က လက်ရှိဂိုးသွင်းခြေတွေ့နေပြီး လေးဂိုးအထိ သွင်းယူထားသလို နောက်ဆုံး ဂျူဗင်တပ်စ်နဲ့ ၁-၁ သရေကျခဲ့တဲ့ပွဲမှာလည်း ဦးဆောင်ဂိုးသွင်းပေးခဲ့တာကြောင့် မွန်ဇာနောက်တန်းအတွက် ထိန်းချုပ်ရခက်မယ့် ကစားသမားဖြစ်နေပါတယ်။ ပိုပြီးသတိထားရမယ့်အချက်က ကာဂလီယာရီဟာ စီးရီးအေအဝေးကွင်းလေးပွဲဆက် အနိုင်ရထားတာကြောင့် ဒီပွဲမှာလည်း အဝေးကွင်းဖြစ်လို့ အားနည်းမယ်လို့ ယူဆလို့မရပါဘူး။ မွန်ဇာက ကိုယ့်ကွင်းမှာ ဗာရဲလာရဲ့ ဂိုးသွင်းအားကို အားကိုးပြီး တုံ့ပြန်နိုင်ပေမယ့် ကာဂလီယာရီရဲ့ ခံစစ်ကျစ်လျစ်မှုကို ဖြတ်ကျော်ဖို့ မလွယ်ပါဘူး။ **မွန်ဇာရဲ့ အိမ်ကွင်းအားကို ထည့်တွက်ရပေမယ့် လက်ရှိရလဒ်တည်ငြိမ်မှု၊ မာလ်ဒီနီရဲ့ ဂိုးသွင်းခြေစွမ်းနဲ့ ကာဂလီယာရီရဲ့ အဝေးကွင်းနိုင်ပွဲမှတ်တမ်းတွေကြောင့် ကာဂလီယာရီကို ရွေးချယ်ရမှာပါ။**",
+      "dailyPreviewText": "အဇာဘိုင်ဂျန်ကလပ် ဆာဘား ဟာ ဒီရာသီ ချန်ပီယံလိဂ်မှာ စတင်ကစားခွင့်ရခဲ့တဲ့နောက် ပထမပွဲမှာ မန်ချက်စတာယူနိုက်တက်ကို ၄-၀ နဲ့ ရှုံးခဲ့ပေမယ့် နောက်တစ်ပွဲမှာ ဆလာဗီးယားပရာဟာကို ၂-၀ နဲ့ ပြန်လည်အနိုင်ယူခဲ့တာကြောင့် ဒီပြိုင်ပွဲမှာ သူတို့ကို လုံးဝလျှော့တွက်လို့မရကြောင်း ပြသထားပါတယ်။ အထူးသဖြင့် ဂိုးမပေးရဘဲ နိုင်ပွဲရခဲ့တာက ဆာဘားအတွက် ခံစစ်ပိုင်းယုံကြည်မှုတိုးလာစေပြီး ဒီနေ့ ဒေါ့မွန် ကိုလည်း အိမ်ကွင်းမှာ ခံစစ်ကျစ်လျစ်စွာထားကာ တန်ပြန်တိုက်စစ်နဲ့ ရင်ဆိုင်နိုင်ပါတယ်။ ဒါပေမဲ့ ဒေါ့မွန်ကတော့ ပထမပွဲမှာ ဗီလာရီးရဲလ်ကို ၃-၂ နဲ့ အနိုင်ရထားပြီး နောက်ဆုံး ဘိုဒိုဂလင့်ကို ၁-၀ နဲ့ ရှုံးခဲ့တာကြောင့် နိုင်ပွဲပြန်ယူဖို့ ရည်ရွယ်ချက်ရှိနေမှာပါ။ ဒေါ့မွန်ဘက်မှာ တိုက်စစ်မှူး ဂီရာစီ ကို အဓိကအားကိုးနိုင်သလို ဘိုင်ယာ၊ နွမ်နရီနဲ့ ဘယ်လင်ဟမ် တို့ရဲ့ လှုပ်ရှားမှုတွေကလည်း ဆာဘားရဲ့ ခံစစ်ကို ဆက်တိုက်အလုပ်များစေနိုင်ပါတယ်။ ဆာဘားဟာ ဆလာဗီးယားကို အနိုင်ရခဲ့တဲ့ပွဲလို တည်ငြိမ်စွာကစားပြီး ဂိုးမပေးရအောင် ထိန်းနိုင်ဖို့ ကြိုးစားမှာဖြစ်ပေမယ့် ဒေါ့မွန်မှာ တိုက်စစ်လမ်းကြောင်းမျိုးစုံကနေ အခွင့်အရေးဖန်တီးနိုင်တဲ့ ကစားသမားအင်အားရှိနေတာကြောင့် ပွဲကြာလာတာနဲ့အမျှ အိမ်ရှင်အတွက် ဖိအားပိုများလာနိုင်ပါတယ်။ ဆာဘားရဲ့ အိမ်ကွင်းစိတ်ဓာတ်ကို လေးစားရပေမယ့် ဥရောပပြိုင်ပွဲအတွေ့အကြုံ၊ တိုက်စစ်ကစားသမားအင်အားနဲ့ အခွင့်အရေးအဆုံးသတ်နိုင်မှုမှာ ပိုမိုအားသာတဲ့ ဒေါ့မွန်ကို ရွေးချယ်ပါတယ်။",
       "researchSources": [
-        "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "https://oddsrun.com/match/football/it/199/11997978/italy-serie-a/monza-vs-cagliari/",
-        "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/"
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
       ],
       "status": "scheduled",
-      "specialChoice": true,
-      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
-        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
-        "sourceHeading": "2။ မွန်ဇာ နဲ့ ကာဂလီယာရီ",
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "2။ ဆာဘား နဲ့ ဒေါ့မွန်",
         "sourceOrder": 2,
         "exactCopy": true,
-        "receivedDate": "2026-10-19"
+        "receivedDate": "2026-10-20"
       },
       "previewV2": {
         "version": "2",
         "status": "owner-verbatim",
-        "fixtureSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "standingsSourceUrl": "https://prematchdata.com/en/seriea/2026-10-19/monza-vs-cagliari/",
-        "reviewedAt": "2026-10-19",
-        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
       },
-      "oddsVerificationStatus": "reference market as cited",
-      "specialChoiceRank": 1,
-      "specialChoiceSourceHeading": "Special Choice #1 — မွန်ဇာ နဲ့ ကာဂလီယာရီ",
-      "specialChoiceSourceSubtitle": "အီတလီ စီးရီးအေ · မြန်မာစံတော်ချိန် ၁၉ ရက်နေ့ ည 11:00",
-      "specialAnalysisParagraphs": [
-        "နည်းပြ **Ivan Jurić** ရဲ့ **မွန်ဇာ** အသင်းဟာ ဒီရာသီ စီးရီးအေ ၆ ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၄ ရှုံးနဲ့ ရမှတ် ၄ မှတ်သာရထားတာကြောင့် အိမ်ကွင်းမှာ အမှတ်လိုအပ်ချက်ကြီးမားနေပါတယ်။ ၁၅ ဂိုးအထိ ပေးထားရတဲ့ ခံစစ်ဟာ အဓိကစိုးရိမ်စရာဖြစ်ပြီး လာဇီယိုကို နောက်ဆုံး ၃-၁ နဲ့ ရှုံးနိမ့်ခဲ့တဲ့ပွဲမှာလည်း ခံစစ်တည်ငြိမ်မှု မလုံလောက်ခဲ့ပါဘူး။ မွန်ဇာဟာ လက်ရှိရာသီမှာ ဂိုးပေးနှုန်းမြင့်မားတာကြောင့် အိမ်ကွင်းမှာ တိုက်စစ်မြှင့်တင်ရင်း နောက်တန်းအကွာအဝေးကို ထိန်းညှိနိုင်ဖို့ လိုအပ်ပါတယ်။",
-        "တစ်ဖက်မှာ နည်းပြ **Fabio Pisacane** ရဲ့ **ကာဂလီယာရီ** က ၆ ပွဲမှာ ၄ နိုင်၊ ၁ သရေ၊ ၁ ရှုံးနဲ့ ၁၃ မှတ်ရထားပြီး သုံးဂိုးသာပေးထားတဲ့ ခံစစ်ကြောင့် ခြေစွမ်းပိုမိုတည်ငြိမ်ပါတယ်။ **Daniel Maldini** ကလည်း ဂိုးသွင်းခြေတွေ့နေပြီး ဂျူဗင်တပ်စ်နဲ့ နောက်ဆုံး ၁-၁ သရေကျခဲ့တဲ့ပွဲမှာ အဓိကအခန်းကဏ္ဍက ပါဝင်ခဲ့ပါတယ်။ ကာဂလီယာရီက ခံစစ်ကို စနစ်တကျစုစည်းပြီး ဂိုးအခွင့်အရေးရတဲ့အချိန်မှာ ထိရောက်အောင် အသုံးချဖို့ အရေးကြီးပါတယ်။",
-        "မွန်ဇာဘက်က **Gustavo Varela** ရဲ့ တိုက်စစ်စွမ်းရည်နဲ့ အိမ်ကွင်းဖိအားပေးကစားမှုဟာ ကာဂလီယာရီအတွက် ခက်ခဲစေနိုင်ပေမယ့် ဧည့်သည်အသင်းရဲ့ အဝေးကွင်းရလဒ်ကောင်းတွေက စိတ်ချရပါတယ်။ ကာဂလီယာရီက အိမ်ရှင်ရဲ့ နောက်တန်းနေရာလွတ်တွေကို တန်ပြန်တိုက်စစ်နဲ့ အသုံးချနိုင်ပြီး ခံစစ်ကျစ်လျစ်မှုကြောင့် မွန်ဇာရဲ့ ဂိုးရှာဖွေမှုကို ထိန်းချုပ်နိုင်မယ့် အနေအထားရှိပါတယ်။",
-        "မွန်ဇာဟာ ပွဲကို အိမ်ကွင်းဖိအားနဲ့ စတင်နိုင်ပေမယ့် ကာဂလီယာရီရဲ့ ပိုမိုတည်ငြိမ်တဲ့ ခံစစ်နဲ့ စည်းစနစ်ကျတဲ့ ပြန်လည်ထိုးဖောက်မှုက အရေးပါပါတယ်။ လတ်တလော ရလဒ်ပိုင်းမှာလည်း ကာဂလီယာရီက အသာရနေပြီး ပြိုင်ဘက်အားနည်းနေတဲ့ နောက်တန်းကို အသုံးချနိုင်မယ့် အလားအလာရှိပါတယ်။ **အသင်းနှစ်သင်းရဲ့ ခံစစ်တည်ငြိမ်မှုနဲ့ လတ်တလောခြေစွမ်းကို နှိုင်းယှဉ်ပြီး ကာဂလီယာရီကို ရွေးချယ်ပါတယ်။**"
-      ],
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
       "previewJournalist": {
         "status": "owner_approved_published",
-        "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
-        "reportDate": "2026-10-19",
-        "reviewedAt": "2026-10-19",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
-      },
-      "specialRiskNote": "အိမ်ရှင်မွန်ဇာက အိမ်ကွင်းမှာ ဖိအားပေးကစားနိုင်ပြီး ဧည့်သည်အသင်းအနေနဲ့ ပွဲရလဒ်ကို အာမမခံနိုင်ပါ။",
-      "specialResearchSources": [
-        "https://prematchdata.com/en/seriea/2026-10-19/monza-vs-cagliari/",
-        "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/"
-      ],
-      "specialPreparedDate": "2026-10-19",
-      "specialPickLabel": "ကာဂလီယာရီ"
+      }
     },
     {
-      "league": "Serie A",
-      "home": "Parma",
-      "away": "Torino",
-      "homeDisplay": "ပါးမား",
-      "awayDisplay": "တိုရီနို",
-      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:15",
-      "kickoffCalendarDate": "2026-10-20",
-      "nightEditorialDate": "2026-10-19",
+      "league": "UEFA Champions League",
+      "home": "Roma",
+      "away": "Slovan Bratislava",
+      "homeDisplay": "ရိုးမား",
+      "awayDisplay": "ဆလိုဗန်ဘရာတစ္စလာဗာ",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
-      "venue": "Stadio Ennio Tardini",
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Parma%20Calcio%201913.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Torino%20FC.png",
-      "homeOdds": "2.93",
-      "drawOdds": "3.19",
-      "awayOdds": "2.78",
-      "oddsProvider": "SportyTrader reference",
-      "oddsSourceUrl": "https://www.sportytrader.com/en/odds/parma-turin-8522159/",
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
+      "homeOdds": "1.14",
+      "drawOdds": "7.50",
+      "awayOdds": "13.00",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
       "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": "2026-10-19",
+      "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
           "result": "L",
-          "date": "2026-10-10",
-          "opponent": "Inter",
+          "date": "2026-10-14",
+          "opponent": "Real Madrid",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-10",
+          "opponent": "Fenerbahçe",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-14",
+          "opponent": "Stuttgart",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
           "teamGoals": 0,
           "opponentGoals": 3,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-09",
+          "opponent": "Paris Saint-Germain",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+          "teamGoals": 1,
+          "opponentGoals": 6,
           "venueSide": "away",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ရိုးမား",
+        "bodyOdds": "2-80",
+        "goalTotalOdds": "4+35",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "နည်းပြ ဂတ်စပါရီနီ ရဲ့ ရိုးမား အသင်းဟာ ချန်ပီယံလိဂ်အဖွင့်ပွဲမှာ ဖီနာဘာချီနဲ့ ၁-၁ သရေကျခဲ့ပြီး နောက်ဆုံး ရီးရဲလ်မက်ဒရစ်ကို ၄-၃ နဲ့ ရှုံးခဲ့တာကြောင့် နှစ်ပွဲကစားပြီးချိန်မှာ တစ်မှတ်သာရထားပါတယ်။ ရီးရဲလ်ကို သုံးဂိုးအထိသွင်းနိုင်ခဲ့တာက ရိုးမားရဲ့ တိုက်စစ်မှာ အခွင့်အရေးဖန်တီးနိုင်စွမ်းရှိနေတယ်ဆိုတာ ပြသခဲ့ပေမယ့် လေးဂိုးပြန်ပေးခဲ့ရတဲ့ နောက်တန်းကတော့ ပြင်ဆင်ဖို့လိုနေသေးတာပါ။ ဒါပေမဲ့ ဒီနေ့ရင်ဆိုင်ရမယ့် ဆလိုဗန်ဘရာတစ္စလာဗာ ရဲ့ အခြေအနေကလည်း မကောင်းသေးပါဘူး။ ဆလိုဗန်ဟာ ပီအက်စ်ဂျီကို ၆-၁၊ စတုဂတ်ကို ၃-၀ နဲ့ ရှုံးခဲ့တာကြောင့် ဥရောပနှစ်ပွဲမှာ ကိုးဂိုးအထိ ပေးထားရပြီး ရိုးမားရဲ့ တိုက်စစ်ကို ရင်ဆိုင်ဖို့ ခံစစ်ပိုင်းမှာ အတော်လေးစိုးရိမ်စရာရှိနေပါတယ်။ ရိုးမားဘက်မှာတော့ ဒီဘားလား၊ ခရစ္စတန်တေးနဲ့ ကိုနေး တို့ မပါနိုင်တဲ့အတွက် ကွင်းလယ်နဲ့ တိုက်စစ်ဖန်တီးမှုမှာ အပြောင်းအလဲလုပ်ရနိုင်ပေမယ့် ဆိုလေး၊ ပယ်လီဂရီနီနဲ့ မာလန် တို့ကို အသုံးပြုပြီး ဆလိုဗန်ရဲ့ နောက်တန်းနေရာလွတ်တွေကို ဖောက်နိုင်ဖို့ရှိပါတယ်။ ဆလိုဗန်က ခံစစ်ပိတ်ကစားပြီး ရိုးမားကို အချိန်ကြာကြာထိန်းထားနိုင်ရင် ပွဲကို ခက်ခဲစေနိုင်ပေမယ့် သူတို့ရဲ့ လက်ရှိဂိုးပေးရမှုကိုကြည့်ရင် ရိုးမားရဲ့ ဆက်တိုက်တိုက်စစ်ဆင်မှုကို မိနစ် ၉၀ လုံး တောင့်ခံနိုင်ဖို့ မလွယ်ပါဘူး။ ရိုးမားမှာ နောက်တန်းအားနည်းချက်ရှိနေပေမယ့် ဆလိုဗန်ရဲ့ ခံစစ်ပြဿနာက ပိုကြီးမားနေသလို အိမ်ကွင်းတိုက်စစ်အင်အားနဲ့ ဂတ်စပါရီနီရဲ့ ပွဲအတွေ့အကြုံကြောင့် ရိုးမားကို ရွေးချယ်ရမှာပါ။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "3။ ရိုးမား နဲ့ ဆလိုဗန်ဘရာတစ္စလာဗာ",
+        "sourceOrder": 3,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Porto",
+      "away": "PSV Eindhoven",
+      "homeDisplay": "ပေါ်တို",
+      "awayDisplay": "ပီအက်စ်ဗွီ",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+      "homeOdds": "1.73",
+      "drawOdds": "4.00",
+      "awayOdds": "4.00",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-14",
+          "opponent": "Real Betis",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-08",
+          "opponent": "Manchester City",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-13",
+          "opponent": "Leipzig",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-10",
+          "opponent": "Shakhtar Donetsk",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ပေါ်တို",
+        "bodyOdds": "1-15",
+        "goalTotalOdds": "3-50",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ချန်ပီယံလိဂ်နှစ်ပွဲလုံး ရှုံးနိမ့်ထားတဲ့ ပေါ်တို အတွက် ဒီနေ့ပီအက်စ်ဗွီနဲ့ အိမ်ကွင်းတွေ့ဆုံမှုဟာ သူတို့ရဲ့ ပြည်တွင်းလိဂ်ခြေစွမ်းကို ဥရောပပြိုင်ပွဲမှာ ပြန်လည်ပြသနိုင်မလားဆိုတာ စမ်းသပ်ခံရမယ့်ပွဲဖြစ်နေပါတယ်။ နည်းပြ ဖာရီယိုလီ ရဲ့ ပေါ်တိုဟာ ပထမပွဲမှာ မန်စီးတီးကို ၂-၀ နဲ့ ရှုံးခဲ့ပြီး နောက်ဆုံး ဘက်တစ်ကိုလည်း ၃-၂ နဲ့ ရှုံးနိမ့်ထားပေမယ့် ပေါ်တူဂီပြည်တွင်းလိဂ်မှာတော့ အဖွင့်ရှစ်ပွဲဆက် အနိုင်ရထားတာကြောင့် အသင်းရဲ့ ခြေစွမ်းကို လုံးဝလျှော့တွက်လို့မရပါဘူး။ ပေါ်တိုဘက်မှာ ပီပီ၊ ဂါဘရီဗီဂါနဲ့ ဆာမူ တို့က တိုက်စစ်ကို အဓိကဖော်ဆောင်နိုင်တဲ့ ကစားသမားတွေဖြစ်ပြီး အိမ်ကွင်းမှာ ဘောလုံးကို ပိုမိုထိန်းချုပ်နိုင်မယ်ဆိုရင် ပီအက်စ်ဗွီရဲ့ နောက်တန်းကို ဖိအားပေးနိုင်ဖို့ရှိပါတယ်။ တစ်ဖက်မှာ ပီအက်စ်ဗွီ ကလည်း ရှက်တာဒိုးနက်စ်နဲ့ ၁-၁ သရေကျခဲ့ပြီး လိုက်ပ်ဇစ်ကို ၁-၀ နဲ့ ရှုံးထားတာကြောင့် ဥရောပနိုင်ပွဲမရသေးပါဘူး။ ပီအက်စ်ဗွီရဲ့ ကစားပုံက တောင်ပံတိုက်စစ်နဲ့ အမြန်ဘောလုံးပြောင်းရွှေ့မှုကို အသုံးချနိုင်ပေမယ့် ဒီပွဲမှာ ပက်ပီ၊ လမ်းမားစ်နဲ့ ဝန်နာ တို့လို ကစားသမားတွေ မပါနိုင်တဲ့အခြေအနေကြောင့် တိုက်စစ်လူစာရင်းမှာ ရွေးချယ်စရာလျော့နည်းနေပါတယ်။ ပေါ်တိုကလည်း ယူရိုပွဲနှစ်ပွဲမှာ ဂိုးပေးထားရတာကြောင့် ပီအက်စ်ဗွီရဲ့ အမြန်တိုက်စစ်ကို သတိထားဖို့လိုပေမယ့် အိမ်ကွင်းမှာ ဆက်တိုက်ဖိအားပေးကစားနိုင်ရင် ပီအက်စ်ဗွီကို နောက်ဆုတ်ကစားစေနိုင်ပါတယ်။ နှစ်သင်းစလုံး ဥရောပရလဒ်မကောင်းသေးပေမယ့် ပေါ်တိုရဲ့ ပြည်တွင်းလိဂ်နိုင်ပွဲဆက်နေမှု၊ တိုက်စစ်ကစားသမားအင်အားနဲ့ ပီအက်စ်ဗွီရဲ့ လူစာရင်းအခက်အခဲတွေကြောင့် ပေါ်တိုကို ရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "4။ ပေါ်တို နဲ့ ပီအက်စ်ဗွီ",
+        "sourceOrder": 4,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Liverpool",
+      "away": "Villarreal",
+      "homeDisplay": "လီဗာပူးလ်",
+      "awayDisplay": "ဗီလာရီးရဲလ်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+      "homeOdds": "1.50",
+      "drawOdds": "4.50",
+      "awayOdds": "5.75",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-14",
+          "opponent": "LASK",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+          "teamGoals": 6,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-09",
+          "opponent": "Atlético de Madrid",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-13",
+          "opponent": "Napoli",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-08",
+          "opponent": "Borussia Dortmund",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "လီဗာပူးလ်",
+        "bodyOdds": "3+90",
+        "goalTotalOdds": "4+40",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ချန်ပီယံလိဂ်အဖွင့်နှစ်ပွဲလုံး အနိုင်ရထားတဲ့ လီဗာပူးလ် ဟာ ဒီနေ့ အန်ဖီးလ်ကွင်းမှာ ဗီလာရီးရဲလ် ကို လက်ခံကစားရမှာဖြစ်ပြီး ဥရောပနိုင်ပွဲဆက်နိုင်ဖို့ အခွင့်အရေးကောင်းရှိနေပါတယ်။ နည်းပြ အီရာအိုလာ ရဲ့ လီဗာပူးလ်ဟာ အက်သလက်တီကိုကို ၂-၁ နဲ့ အနိုင်ရခဲ့သလို နောက်ဆုံး LASK ကို ၆-၃ နဲ့ ဂိုးပြတ်အနိုင်ယူထားတာကြောင့် ဥရောပနှစ်ပွဲမှာ ရှစ်ဂိုးအထိ သွင်းယူထားပါတယ်။ အဲဒီ LASK နဲ့ပွဲမှာ ဘာကိုလာ က သုံးဂိုးအထိ သွင်းယူခဲ့တာကြောင့် လီဗာပူးလ်ရဲ့ ရှေ့တန်းမှာ လတ်တလောအားကိုးရတဲ့ ကစားသမားဖြစ်နေသလို နောက်ဆုံး ဘရန့်ဖို့ဒ်နဲ့ပွဲမှာလည်း အစ္စက် က အနိုင်ဂိုးသွင်းပေးခဲ့တာကြောင့် ဂိုးသွင်းဖို့ တိုက်စစ်မှူးတစ်ဦးတည်းကို မှီခိုနေရတာမျိုး မဟုတ်ပါဘူး။ ဒါပေမဲ့ လီဗာပူးလ်ဟာ ဥရောပနှစ်ပွဲမှာ လေးဂိုးပြန်ပေးထားရသလို ဆိုဘော့စလိုင်း၊ ဖရင်ပေါင်နဲ့ အီကီတီကေး တို့ မပါနိုင်တာကြောင့် ကွင်းလယ်နဲ့ ရှေ့တန်းလူစာရင်းမှာ အပြောင်းအလဲလုပ်ရဖို့ရှိပါတယ်။ ဗီလာရီးရဲလ် ကတော့ ပထမပွဲမှာ ဒေါ့မွန်ကို ၃-၂ နဲ့ ရှုံးခဲ့ပေမယ့် နောက်ဆုံး နာပိုလီကို ၃-၁ နဲ့ အနိုင်ရခဲ့တာကြောင့် ဥရောပအတွေ့အကြုံနဲ့ တိုက်စစ်အဆုံးသတ်နိုင်စွမ်းရှိနေကြောင်း ပြသထားပါတယ်။ ဗီလာရီးရဲလ်ဘက်မှာ ဂျရတ်မိုရီနို၊ မီကောတာဇီနဲ့ ပါပေဂေး တို့ရဲ့ လှုပ်ရှားမှုက လီဗာပူးလ်နောက်တန်းကို စမ်းသပ်နိုင်ပေမယ့် အန်ဖီးလ်မှာ ကွင်းလယ်ဖိအားကို ခံရတဲ့အချိန် ဘောလုံးဆုံးရှုံးမှုများလာရင် အခက်တွေ့နိုင်ပါတယ်။ လီဗာပူးလ်အနေနဲ့လည်း အလွန်တိုက်စစ်ဖွင့်ကစားပြီး နောက်တန်းလွတ်သွားရင် နာပိုလီကို သုံးဂိုးသွင်းထားတဲ့ ဗီလာရီးရဲလ်က အခွင့်အရေးယူနိုင်ပါတယ်။ ဗီလာရီးရဲလ်ရဲ့ တိုက်စစ်ကို သတိထားရပေမယ့် လီဗာပူးလ်ရဲ့ ဥရောပနိုင်ပွဲဆက်နေမှု၊ လတ်တလောခြေစွမ်းပြနေတဲ့ ရှေ့တန်းကစားသမားတွေနဲ့ အန်ဖီးလ်အိမ်ကွင်းအားကို နှိုင်းယှဉ်ကြည့်ရင် လီဗာပူးလ်ကို ရွေးချယ်ရမှာပါ။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
+      ],
+      "status": "scheduled",
+      "specialChoice": true,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "5။ လီဗာပူးလ် နဲ့ ဗီလာရီးရဲလ်",
+        "sourceOrder": 5,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      },
+      "specialChoiceRank": 1,
+      "specialChoiceSourceHeading": "လီဗာပူးလ် နဲ့ ဗီလာရီးရဲလ်",
+      "specialAnalysisParagraphs": [
+        "နည်းပြ **Andoni Iraola** ရဲ့ **လီဗာပူးလ်** အသင်းဟာ ဒီရာသီ ချန်ပီယံလိဂ်မှာ နှစ်ပွဲကစားပြီး နှစ်ပွဲစလုံး အနိုင်ရထားသလို အက်သလက်တီကိုမက်ဒရစ်ကို ၂-၁၊ ကြားရက် LASK ကို ၆-၃ နဲ့ အနိုင်ယူခဲ့တာကြောင့် ဥရောပပြိုင်ပွဲမှာ တိုက်စစ်ခြေစွမ်းအတော်လေးကောင်းနေပါတယ်။ အထူးသဖြင့် LASK နဲ့ပွဲမှာ **Bradley Barcola** က တစ်ဦးတည်း သုံးဂိုးအထိ သွင်းယူခဲ့ပြီး လက်ရှိ လီဗာပူးလ်ရဲ့ တောင်ပံတိုက်စစ်မှာ အဓိကအားကိုးနေရသလို နောက်ဆုံးပရီးမီးယားလိဂ်မှာ ဘရန့်ဖို့ဒ်ကို ၂-၁ နဲ့ အနိုင်ရခဲ့တဲ့ပွဲမှာလည်း **Alexander Isak** က အနိုင်ဂိုးသွင်းပေးခဲ့တာကြောင့် ရှေ့တန်းကစားသမားတွေရဲ့ ဂိုးသွင်းယုံကြည်မှု ပြန်လည်မြင့်တက်နေပါတယ်။ ဒါပေမဲ့ လီဗာပူးလ်ရဲ့ ခြေစွမ်းကို တိုက်စစ်ဂိုးအရေအတွက်တစ်ခုတည်းနဲ့ အကဲဖြတ်လို့တော့ မရပါဘူး။ LASK ကို ခြောက်ဂိုးသွင်းနိုင်ခဲ့ပေမယ့် သုံးဂိုးပြန်ပေးခဲ့ရသလို ဘရန့်ဖို့ဒ်နဲ့ပွဲမှာလည်း ဦးဆောင်ဂိုးအရင်ပေးခဲ့ရပြီး တစ်ဖက်အသင်း ကစားသမားလျော့သွားပြီးမှ ပြန်လည်အနိုင်ယူနိုင်ခဲ့တာပါ။ ဒီလိုအခြေအနေတွေကိုကြည့်ရင် လီဗာပူးလ်ရဲ့ တိုက်စစ်က အင်အားကောင်းနေသော်လည်း ခံစစ်ပိုင်းမှာ ပြင်ဆင်စရာရှိနေသေးပြီး ဗီလာရီးရဲလ်လို အခွင့်အရေးရရင် တန်ပြန်ထိုးဖောက်နိုင်တဲ့အသင်းကို ရင်ဆိုင်ရာမှာ အလွန်အမင်းဖွင့်ကစားလို့ မရပါဘူး။",
+        "တစ်ဖက်မှာ နည်းပြ **Iñigo Pérez** ရဲ့ **ဗီလာရီးရဲလ်** အသင်းကတော့ စပိန်လာလီဂါ ၉ ပွဲမှာ ၂ နိုင်၊ ၃ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၉ မှတ်နဲ့ ဇယားအဆင့် ၁၂** မှာ ရပ်တည်နေပြီး ပြည်တွင်းလိဂ်မှာ မျှော်လင့်ထားသလောက် ရလဒ်ကောင်းတွေ မရရှိသေးပါဘူး။ နောက်ဆုံး အယ်လ်ချီနဲ့ ဂိုးမရှိသရေကျခဲ့သလို အဲဒီမတိုင်ခင် ရီးရဲလ်မက်ဒရစ်ကိုလည်း ၁-၀ နဲ့ ရှုံးထားတာကြောင့် ဂိုးအဆုံးသတ်ပိုင်းမှာ လိုအပ်ချက်ရှိနေပေမယ့် ချန်ပီယံလိဂ်မှာတော့ နာပိုလီကို ၃-၁ နဲ့ အနိုင်ယူထားပြီး အသင်းရဲ့ တိုက်စစ်အရည်အသွေးကို ပြန်လည်ပြသနိုင်ခဲ့ပါတယ်။ ဗီလာရီးရဲလ်ဘက်မှာ **Pape Gueye နဲ့ Georges Mikautadze** တို့က ဒီရာသီ သုံးဂိုးစီ သွင်းယူထားပြီး တိုက်စစ်မှာ အဓိကအားကိုးနေရသလို နောက်ခံကစားသမား **Santiago Mouriño** ကလည်း ချန်ပီယံလိဂ်နှစ်ပွဲစလုံးမှာ ဂိုးသွင်းထားတာကြောင့် အသင်းရဲ့ ဂိုးသွင်းအားဟာ တိုက်စစ်မှူးတွေဆီကပဲ လာနေတာမျိုး မဟုတ်ပါဘူး။ ဒီအချက်က လီဗာပူးလ်အတွက် သတိထားရမယ့် အခြေအနေဖြစ်နေပြီး ဗီလာရီးရဲလ်ရဲ့ အခွင့်အရေးဖန်တီးမှုတွေကို တိုက်စစ်မှူးတစ်ဦးတည်းကို ပိတ်ဆို့ရုံနဲ့ ထိန်းချုပ်နိုင်မှာ မဟုတ်ပါဘူး။ ဒါပေမဲ့ ဗီလာရီးရဲလ်ဟာ နောက်ဆုံး အယ်လ်ချီနဲ့ပွဲမှသာ အချိန်အတော်ကြာအတွင်း ပထမဆုံးဂိုးမပေးရတဲ့ပွဲ ရရှိခဲ့တာကြောင့် ခံစစ်တည်ငြိမ်မှုကို အပြည့်အဝယုံကြည်ဖို့ ခက်ခဲနေဆဲဖြစ်ပြီး လီဗာပူးလ်ရဲ့ လျင်မြန်တဲ့တောင်ပံတိုက်စစ်ကို အန်ဖီးလ်ကွင်းမှာ ထိန်းချုပ်နိုင်ဖို့ အတော်လေးကြိုးစားရမှာပါ။",
+        "ဒီပွဲမှာ ပိုပြီးစိတ်ဝင်စားစရာကောင်းတာက နှစ်သင်းနည်းပြတွေရဲ့ ဆက်ဆံရေးနဲ့ ကစားပုံနည်းစနစ်ပါပဲ။ လီဗာပူးလ်နည်းပြ **အီရာအိုလာ** နဲ့ ဗီလာရီးရဲလ်နည်းပြ **အီနီဂိုပီရက်ဇ်** တို့ဟာ အရင်က အသင်းဖော်တွေအဖြစ် ကစားခဲ့ဖူးသလို ရာယိုဗယ်လီကာနိုမှာလည်း နည်းပြနဲ့ လက်ထောက်နည်းပြအဖြစ် လက်တွဲခဲ့ဖူးတာကြောင့် တစ်ယောက်ရဲ့ ကစားပုံကို တစ်ယောက် ကောင်းကောင်းသိနေကြသူတွေပါ။ ဒီလိုအခြေအနေကြောင့် ဗီလာရီးရဲလ်အနေနဲ့ လီဗာပူးလ်ရဲ့ အစောပိုင်းဖိအားပေးကစားဟန်ကို ကြိုတင်ပြင်ဆင်လာနိုင်ပါတယ်။ လီဗာပူးလ်ဘက်မှာလည်း **Jeremie Frimpong နဲ့ Dominik Szoboszlai** တို့ ဒဏ်ရာကြောင့် ဒီပွဲကို လွဲချော်မှာဖြစ်ပြီး **Conor Bradley၊ Hugo Ekitike နဲ့ Giovanni Leoni** တို့လည်း မပါနိုင်သေးတာကြောင့် အထူးသဖြင့် ညာတောင်ပံနဲ့ ကွင်းလယ်မှာ လူစာရင်းအပြောင်းအလဲတွေ ပြုလုပ်ရဖို့ရှိပါတယ်။ ဒီအခြေအနေမှာ **Florian Wirtz** ရဲ့ ကွင်းလယ်ဖန်တီးမှုက ပိုပြီးအရေးပါလာနိုင်ပြီး နောက်ဆုံးဘရန့်ဖို့ဒ်နဲ့ပွဲမှာလည်း ဂိုးအခွင့်အရေးတွေ ဖန်တီးပေးနိုင်ခဲ့တာကြောင့် ဗီလာရီးရဲလ်အနေနဲ့ ဝစ်ဇ်ကို ဘောလုံးအလွယ်တကူလက်ခံခွင့်မပေးဖို့ လိုပါလိမ့်မယ်။ လီဗာပူးလ်က ဘာကိုလာရဲ့ တောင်ပံထိုးဖောက်မှုနဲ့ အစ္စက်ရဲ့ ဂိုးအဆုံးသတ်နိုင်စွမ်းကို ကောင်းကောင်းချိတ်ဆက်နိုင်မယ်ဆိုရင် ဗီလာရီးရဲလ်နောက်တန်းအတွက် အတော်လေးခက်ခဲလာနိုင်သလို ဧည့်သည်ကလည်း အိမ်ရှင်ရှေ့တက်လာချိန် နောက်တန်းနေရာလွတ်တွေကို အသုံးချဖို့ ကြိုးစားလာနိုင်ပါတယ်။",
+        "ဒီပွဲမှာ **ဗီလာရီးရဲလ်ကို လျှော့တွက်လို့မရတဲ့ အဓိကအကြောင်းရင်းက နာပိုလီကို သုံးဂိုးသွင်းပြီး အနိုင်ရခဲ့တဲ့ တိုက်စစ်ခြေစွမ်း** ဖြစ်ပါတယ်။ လီဗာပူးလ်ဟာ ဥရောပနှစ်ပွဲမှာ လေးဂိုးအထိ ပေးထားရတာကြောင့် ဗီလာရီးရဲလ်အနေနဲ့ ဂိုးရနိုင်ခြေရှိပြီး အထူးသဖြင့် ပွဲအစောပိုင်းမှာ လီဗာပူးလ်ရဲ့ ဖိအားကို ကျော်ဖြတ်နိုင်ရင် အကြိတ်အနယ်ရှိလာနိုင်ပါတယ်။ ဒါပေမဲ့ ဗီလာရီးရဲလ်ရဲ့ လက်ရှိလာလီဂါခြေစွမ်းနဲ့ ခံစစ်တည်ငြိမ်မှုကို ပြန်ကြည့်ရင် အန်ဖီးလ်မှာ လီဗာပူးလ်ရဲ့ ဆက်တိုက်တိုက်စစ်ဆင်မှုကို မိနစ် ၉၀ လုံး ထိန်းချုပ်နိုင်ဖို့ မလွယ်ပါဘူး။ လီဗာပူးလ်ဘက်မှာ အဓိကကစားသမားအချို့ မပါနိုင်ပေမယ့် **ဘာကိုလာ၊ ဝစ်ဇ်နဲ့ အစ္စက်** တို့ရဲ့ လတ်တလောခြေစွမ်းကောင်းမှုကြောင့် ရှေ့တန်းမှာ ဂိုးရဖို့ အခွင့်အရေးဖန်တီးနိုင်စွမ်းရှိနေသလို အီရာအိုလာရဲ့ ပွဲအတွင်း နည်းစနစ်ပြောင်းလဲနိုင်မှုကလည်း အားသာချက်ဖြစ်လာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ ဥရောပပွဲအတွေ့အကြုံ၊ လက်ရှိတိုက်စစ်အင်အား၊ နောက်တန်းအားနည်းချက်နဲ့ နည်းပြတွေရဲ့ ကစားပုံကို နှိုင်းယှဉ်ကြည့်ရင် ဗီလာရီးရဲလ်ရဲ့ တန်ပြန်တိုက်စစ်ကို သတိထားရပေမယ့် **အန်ဖီးလ်အိမ်ကွင်းအားသာချက်နဲ့ အခွင့်အရေးဖန်တီးနိုင်စွမ်း ပိုကောင်းနေတဲ့ လီဗာပူးလ်ကို ရွေးချယ်ရမှာပါ။**"
+      ],
+      "specialChoiceSource": "User-provided verbatim special choice October 20 2026"
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Manchester City",
+      "away": "AEK Athens",
+      "homeDisplay": "မန်စီးတီး",
+      "awayDisplay": "အေတီနက်စ်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+      "homeOdds": "1.05",
+      "drawOdds": "12.00",
+      "awayOdds": "26.00",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-14",
+          "opponent": "Paris Saint-Germain",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-08",
+          "opponent": "Porto",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-14",
+          "opponent": "Shakhtar Donetsk",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-08",
+          "opponent": "LASK",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "မန်စီးတီး",
+        "bodyOdds": "1+10",
+        "goalTotalOdds": "3-50",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ပရီးမီးယားလိဂ်မှာ ရာသီအစနိုင်ပွဲဆက်နေတဲ့ မန်စီးတီး ဟာ ချန်ပီယံလိဂ်မှာတော့ ပထမပွဲ ပေါ်တိုကို ၂-၀ နဲ့ အနိုင်ရခဲ့ပြီးနောက် ပီအက်စ်ဂျီကို အိမ်ကွင်းမှာ ၄-၂ နဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် ဥရောပပြိုင်ပွဲမှာ ခံစစ်ပိုင်းပြန်လည်ပြင်ဆင်ဖို့ လိုနေပါတယ်။ နည်းပြ အန်ဇိုမာရက်စ်ကာ ရဲ့ မန်စီးတီးဟာ ပြီးခဲ့တဲ့ ပရီးမီးယားလိဂ်ပွဲမှာ အစ်ပ်ဆွစ်ချ်ကို ၃-၂ နဲ့ အနိုင်ရခဲ့ပြီး ဟာလန်း ကလည်း နှစ်ဂိုးသွင်းပေးခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ သူ့ကို ဆက်လက်အားကိုးနေရတာပါ။ ဒါပေမဲ့ အဲဒီပွဲမှာ ဟာလန်း ခြေထောက်ထိခိုက်ခဲ့ပြီး ဒီနေ့ပါဝင်နိုင်မှု မသေချာသေးသလို ဆီမန်ညို ကလည်း ဒူးဒဏ်ရာကြောင့် ကာလတစ်ခုအထိ အနားယူရမှာဖြစ်တာကြောင့် မန်စီးတီးရဲ့ ရှေ့တန်းလူစာရင်းက ပုံမှန်ထက် အားနည်းနိုင်ပါတယ်။ တစ်ဖက်မှာ အေတီနက်စ် ကတော့ ပထမပွဲ LASK ကို ၁-၀ နဲ့ အနိုင်ရခဲ့ပေမယ့် နောက်ဆုံး ရှက်တာဒိုးနက်စ်ကို ၃-၁ နဲ့ ရှုံးခဲ့တာကြောင့် အဝေးကွင်းမှာ မန်စီးတီးကို ရင်ဆိုင်ရာမှာ ခံစစ်ပိုင်းကို ပိုမိုကျစ်လျစ်စွာ ထိန်းထားဖို့လိုနေပါတယ်။ အေတီဘက်မှာ လူကာယိုဗစ်နဲ့ ဇီနီ တို့ရဲ့ တိုက်စစ်အတွဲကို အသုံးချနိုင်ပေမယ့် အစ်ပ်ဆွစ်ချ်ကို အနိုင်ရခဲ့တဲ့ မန်စီးတီးရဲ့ ကွင်းလယ်ဖိအားကို ဖြတ်ကျော်နိုင်ဖို့တော့ မလွယ်ပါဘူး။ မန်စီးတီးက ဟာလန်းမပါနိုင်ခဲ့ရင်တောင် ဖိုဒန်၊ ရှာကီနဲ့ ဒိုကူ တို့လို ကစားသမားတွေကို အသုံးပြုပြီး အေတီနောက်တန်းကို အလုပ်များစေနိုင်ပါတယ်။ ဒါပေမဲ့ အေတီရဲ့ တန်ပြန်တိုက်စစ်ကို မန်စီးတီးက အလွန်လျှော့တွက်မိရင် ပီအက်စ်ဂျီနဲ့ပွဲမှာ တွေ့ခဲ့ရသလို နောက်တန်းပြဿနာ ပြန်ပေါ်လာနိုင်ပါတယ်။ ဟာလန်းရဲ့ ကြံ့ခိုင်မှုကို စောင့်ကြည့်ရမှာဖြစ်ပေမယ့် လက်ရှိအသင်းအင်အား၊ ကွင်းလယ်ထိန်းချုပ်နိုင်မှုနဲ့ အီတီဟတ်အိမ်ကွင်းအားသာချက်ကြောင့် မန်စီးတီးကို ရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "6။ မန်စီးတီး နဲ့ အေတီနက်စ်",
+        "sourceOrder": 6,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Paris Saint-Germain",
+      "away": "Barcelona",
+      "homeDisplay": "ပီအက်စ်ဂျီ",
+      "awayDisplay": "ဘာစီလိုနာ",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+      "homeOdds": "2.38",
+      "drawOdds": "4.20",
+      "awayOdds": "2.40",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-14",
+          "opponent": "Manchester City",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-09",
+          "opponent": "Slovan Bratislava",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-13",
+          "opponent": "Galatasaray",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-09",
+          "opponent": "Feyenoord",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ပီအက်စ်ဂျီ",
+        "bodyOdds": "-5",
+        "goalTotalOdds": "4-55",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ဒီနေ့ချန်ပီယံလိဂ်မှာ အကြိတ်အနယ်အရှိဆုံးပွဲကို ရွေးရမယ်ဆိုရင် ပီအက်စ်ဂျီနဲ့ ဘာစီလိုနာ တို့ရဲ့ တွေ့ဆုံမှုကို ချန်ထားလို့မရပါဘူး။ နည်းပြ လူးဝစ်အင်းနရစ် ရဲ့ ပီအက်စ်ဂျီဟာ ပထမပွဲမှာ ဆလိုဗန်ဘရာတစ္စလာဗာကို ၆-၁ နဲ့ အနိုင်ရခဲ့ပြီးနောက် မန်စီးတီးကို အဝေးကွင်းမှာ ၄-၂ နဲ့ ထပ်မံအနိုင်ယူထားတာကြောင့် ချန်ပီယံလိဂ်နှစ်ပွဲမှာ ၁၀ ဂိုးအထိ သွင်းယူထားပါတယ်။ အထူးသဖြင့် မန်စီးတီးအိမ်ကွင်းမှာ လေးဂိုးသွင်းနိုင်ခဲ့တာက ပီအက်စ်ဂျီရဲ့ တိုက်စစ်ဟာ တစ်ဦးချင်းခြေစွမ်းသာမက အသင်းလိုက်ဖိအားပေးမှုနဲ့ ဘောလုံးဖြန့်ဝေမှုပါ အားကောင်းနေတယ်ဆိုတာ ပြသထားပါတယ်။ ပီအက်စ်ဂျီဘက်မှာ ဒမ်ဘီလီ၊ ကွာရာစခေးလီယာနဲ့ ဒူအေ တို့ကို ရှေ့တန်းမှာ အားကိုးနိုင်သလို ကွင်းလယ်မှာ ဗီတင်ညာနဲ့ ဂျိုအာအိုနီဗက်စ် တို့ရဲ့ ဘောလုံးထိန်းချုပ်မှုကလည်း အသင်းရဲ့ တိုက်စစ်ကို အဓိကပံ့ပိုးပေးနေတာပါ။ တစ်ဖက်မှာ နည်းပြ ဟန်ဆီဖလစ် ရဲ့ ဘာစီလိုနာ ကလည်း ဖီယင်နုကို ၅-၁၊ ဂါလာတာစာရေးကို ၄-၁ နဲ့ အနိုင်ရထားတာကြောင့် ဥရောပနှစ်ပွဲမှာ ကိုးဂိုးအထိ သွင်းယူထားပြီး တိုက်စစ်အင်အားမှာ ပီအက်စ်ဂျီနဲ့ အပြိုင်ဖြစ်နေပါတယ်။ ဘာစီလိုနာဘက်မှာ ယာမယ်၊ ရာဖင်ညာနဲ့ ဖာမင်လိုပက်ဇ် တို့က ရှေ့တန်းမှာ အခွင့်အရေးဖန်တီးနိုင်ပေမယ့် ကွန်ဒေးနဲ့ အဲရစ်ဂါစီယာ တို့ ဒဏ်ရာကြောင့် မပါနိုင်တာက ပီအက်စ်ဂျီရဲ့ မြန်ဆန်တဲ့တိုက်စစ်ကို ရင်ဆိုင်ရာမှာ အဓိကစိုးရိမ်စရာဖြစ်လာပါတယ်။ ပီအက်စ်ဂျီမှာလည်း နူနိုမန်ဒက်စ် မပါနိုင်တာကြောင့် ဘာစီလိုနာရဲ့ ယာမယ်ကို ထိန်းချုပ်ရာမှာ အခက်အခဲရှိနိုင်ပေမယ့် အိမ်ရှင်ဟာ ကွင်းလယ်ကနေ ဖိအားပေးပြီး ဘာစီလိုနာနောက်တန်းကို မကြာခဏနေရာရွှေ့စေနိုင်ရင် ဂိုးအခွင့်အရေးတွေ ဖန်တီးနိုင်ပါတယ်။ နှစ်သင်းစလုံး တိုက်စစ်အားကောင်းနေပြီး ဘာစီလိုနာရဲ့ ရှေ့တန်းကို လျှော့တွက်လို့မရပေမယ့် ပီအက်စ်ဂျီရဲ့ ဥရောပနိုင်ပွဲနှစ်ပွဲက ခြေစွမ်း၊ ကွင်းလယ်တည်ငြိမ်မှုနဲ့ ဘာစီလိုနာရဲ့ နောက်တန်းဒဏ်ရာပြဿနာတွေကြောင့် ဒီပွဲမှာ ပီအက်စ်ဂျီကို အနည်းငယ်ပိုရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "7။ ပီအက်စ်ဂျီ နဲ့ ဘာစီလိုနာ",
+        "sourceOrder": 7,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Napoli",
+      "away": "Bodø/Glimt",
+      "homeDisplay": "နာပိုလီ",
+      "awayDisplay": "ဘိုဒိုဂလင့်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21402.png",
+      "homeOdds": "1.57",
+      "drawOdds": "4.33",
+      "awayOdds": "5.00",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-13",
+          "opponent": "Villarreal",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-09",
+          "opponent": "Arsenal",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-14",
+          "opponent": "Borussia Dortmund",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-10",
+          "opponent": "Bayern München",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "နာပိုလီ",
+        "bodyOdds": "1-10",
+        "goalTotalOdds": "3-45",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "နည်းပြ အယ်လီဂရီ ရဲ့ နာပိုလီ အသင်းဟာ ဒီရာသီ ချန်ပီယံလိဂ်မှာ အာဆင်နယ်ကို ၁-၀၊ ဗီလာရီးရဲလ်ကို ၃-၁ နဲ့ ဆက်တိုက်ရှုံးနိမ့်ထားတာကြောင့် ဒီနေ့ဘိုဒိုဂလင့်ကို အိမ်ကွင်းမှာရင်ဆိုင်ရမယ့်ပွဲက ရမှတ်ပြန်ရှာဖို့ အရေးကြီးတဲ့အခွင့်အရေးဖြစ်နေပါတယ်။ ဒါပေမဲ့ နာပိုလီရဲ့ ပြဿနာက ဥရောပပွဲတွေမှာတင် မဟုတ်ပါဘူး။ နောက်ဆုံး စီးရီးအေပွဲမှာ ဗင်နီဇီးယားကို ၁-၀ နဲ့ ရှုံးခဲ့ပြီး ဒီဘရိုင်း က ပင်နယ်တီအခွင့်အရေးကို အသုံးမချနိုင်ခဲ့တာကြောင့် အသင်းရဲ့ ယုံကြည်မှုပိုင်းမှာလည်း ဖိအားရှိနေတာပါ။ နာပိုလီဘက်မှာ ဒီဘရိုင်းရဲ့ ကွင်းလယ်ဖန်တီးမှုနဲ့ ဟွိုင်လွန် ရဲ့ ရှေ့တန်းလှုပ်ရှားမှုကို အသုံးချနိုင်ပေမယ့် အဓိကလိုအပ်နေတာက ဖန်တီးရရှိတဲ့အခွင့်အရေးတွေကို ဂိုးအဖြစ် ပြောင်းလဲနိုင်ဖို့ပါပဲ။ တစ်ဖက်မှာ ဘိုဒိုဂလင့် ကတော့ ပထမပွဲ ဘိုင်ယန်မြူးနစ်ကို ၅-၀ နဲ့ ရှုံးခဲ့ပေမယ့် နောက်ဆုံး ဒေါ့မွန်ကို ၁-၀ နဲ့ အနိုင်ရခဲ့တာကြောင့် ဥရောပပြိုင်ပွဲမှာ အခြေအနေပြန်ကောင်းလာနေပါတယ်။ အထူးသဖြင့် ဒေါ့မွန်လို တိုက်စစ်အင်အားကောင်းတဲ့အသင်းကို ဂိုးမပေးရအောင် ထိန်းနိုင်ခဲ့တာက ဘိုဒိုရဲ့ ခံစစ်တည်ငြိမ်မှုနဲ့ အသင်းလိုက်စည်းကမ်းကို ပြသထားတာပါ။ ဘိုဒိုဘက်မှာ ဟောင်ဂေးနဲ့ ဟယ်လ်မာဆန် တို့ကို အသုံးချပြီး နာပိုလီရဲ့ နောက်တန်းကို တန်ပြန်ထိုးဖောက်နိုင်ပေမယ့် ဒီနေ့နာပိုလီအိမ်ကွင်းမှာတော့ ဘိုင်ယန်နဲ့ပွဲလို ဆက်တိုက်ဖိအားခံရနိုင်ပါတယ်။ နာပိုလီဟာ ဂိုးရဖို့ အလျင်စလိုကစားရင် ဘိုဒိုက နောက်ကျောနေရာလွတ်တွေကို အသုံးချနိုင်တာကြောင့် အိမ်ရှင်အနေနဲ့ စိတ်ရှည်ရှည်တိုက်စစ်ဆင်ဖို့ လိုပါလိမ့်မယ်။ ဘိုဒိုဂလင့်ရဲ့ ဒေါ့မွန်ကိုအနိုင်ရခဲ့တဲ့ခြေစွမ်းကို လေးစားရပေမယ့် နာပိုလီရဲ့ အိမ်ကွင်းအား၊ ကစားသမားအင်အားနဲ့ ကွင်းလယ်ကနေ တိုက်စစ်ကို ဖန်တီးပေးနိုင်တဲ့ အရည်အသွေးတွေကြောင့် ဒီပွဲမှာ နာပိုလီကို အနည်းငယ်ပိုရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "8။ နာပိုလီ နဲ့ ဘိုဒိုဂလင့်",
+        "sourceOrder": 8,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "UEFA Champions League",
+      "home": "Stuttgart",
+      "away": "Atlético de Madrid",
+      "homeDisplay": "စတုဂတ်",
+      "awayDisplay": "အက်သလက်တီကိုမက်ဒရစ်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+      "homeOdds": "2.75",
+      "drawOdds": "3.75",
+      "awayOdds": "2.25",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-14",
+          "opponent": "Slovan Bratislava",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-09",
+          "opponent": "Viking",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-13",
+          "opponent": "Manchester United",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-09",
+          "opponent": "Liverpool",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "အက်သလက်တီကိုမက်ဒရစ်",
+        "bodyOdds": "-70",
+        "goalTotalOdds": "3-50",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ဒီနေ့ စတုဂတ် နဲ့ အက်သလက်တီကို တို့ရဲ့ တွေ့ဆုံမှုက ချန်ပီယံလိဂ်နဲ့ ပြည်တွင်းလိဂ်ခြေစွမ်း မတူညီတဲ့အသင်းတစ်သင်းကို လက်ရှိနိုင်ပွဲဆက်နေတဲ့အသင်းတစ်သင်းက သွားရောက်စိန်ခေါ်မယ့်ပွဲဖြစ်ပါတယ်။ နည်းပြ ဆက်ဘက်စတီယန်ဟိုးနက်စ် ရဲ့ စတုဂတ်ဟာ ဥရောပပထမပွဲမှာ ဗိုက်ကင်းကို ၃-၁၊ နောက်ဆုံး ဆလိုဗန်ဘရာတစ္စလာဗာကို ၃-၀ နဲ့ အနိုင်ရထားတာကြောင့် ချန်ပီယံလိဂ်နှစ်ပွဲမှာ ခြောက်ဂိုးသွင်းပြီး တစ်ဂိုးသာပေးထားတဲ့ မှတ်တမ်းကောင်းရှိနေပါတယ်။ ဒါပေမဲ့ ပြည်တွင်းဘွန်ဒက်စ်လီဂါမှာတော့ နောက်ဆုံး ဟမ်းဘတ်ကို ၁-၀ နဲ့ ရှုံးနိမ့်ထားသလို ရာသီအစရလဒ်တွေ မတည်ငြိမ်သေးတာကြောင့် စတုဂတ်ရဲ့ ခြေစွမ်းကို ဥရောပနှစ်ပွဲအနိုင်ရထားတာတစ်ခုတည်းနဲ့ အကဲဖြတ်လို့ မရပါဘူး။ စတုဂတ်ဘက်မှာ အွန်ဒါဗ်၊ ဒယ်မီရိုဗစ်နဲ့ လီဝယ်လင်း တို့ကို အားကိုးနိုင်ပေမယ့် ဒီနေ့ရင်ဆိုင်ရမယ့် အက်သလက်တီကိုကတော့ လတ်တလောမှာ အသင်းလိုက်ခြေစွမ်း အတော်လေးတည်ငြိမ်နေပါတယ်။ နည်းပြ ဆီမြွန်နီ ရဲ့ အက်သလက်တီကိုဟာ ဥရောပပထမပွဲ လီဗာပူးလ်ကို ၂-၁ နဲ့ ရှုံးခဲ့ပေမယ့် နောက်ဆုံး မန်ချက်စတာယူနိုက်တက်ကို ၂-၀ နဲ့ အနိုင်ရခဲ့ပြီး ပြိုင်ပွဲစုံမှာလည်း ခြောက်ပွဲဆက်အနိုင်ရထားပါတယ်။ အက်သလက်တီကိုဘက်မှာ ဟူလီယန်အယ်လ်ဗာရက်ဇ်နဲ့ လူခ်မန်း တို့လို တိုက်စစ်ကစားသမားတွေရှိသလို ကွင်းလယ်မှာလည်း ဘောလုံးပြန်လည်ရယူပြီး အမြန်ထိုးဖောက်နိုင်တဲ့ အင်အားရှိနေတာကြောင့် စတုဂတ်ရဲ့ နောက်တန်းအတွက် အခက်တွေ့စေနိုင်ပါတယ်။ ဒါပေမဲ့ ကိုကေးနဲ့ ရိုမဲရိုး တို့ မပါနိုင်တာက အက်သလက်တီကိုအတွက် လူစာရင်းပိုင်း အားနည်းချက်ဖြစ်နေသလို စတုဂတ်ရဲ့ အိမ်ကွင်းဖိအားကိုလည်း သတိထားဖို့လိုပါတယ်။ စတုဂတ်က ပထမပိုင်းမှာ ကွင်းလယ်ကို အသာစီးယူနိုင်ရင် အက်သလက်တီကိုကို အခက်တွေ့စေနိုင်ပေမယ့် ဆီမြွန်နီရဲ့ အသင်းဟာ ပွဲအရှိန်ကို ထိန်းချုပ်ပြီး ရရှိလာတဲ့အခွင့်အရေးတွေကို အသုံးချနိုင်တဲ့အနေအထားရှိပါတယ်။ စတုဂတ်ရဲ့ ဥရောပနိုင်ပွဲနှစ်ပွဲကို ထည့်တွက်ရပေမယ့် အက်သလက်တီကိုရဲ့ ပြိုင်ပွဲစုံနိုင်ပွဲဆက်နေမှု၊ နည်းပြအတွေ့အကြုံနဲ့ လတ်တလောတိုက်စစ်အဆုံးသတ်နိုင်စွမ်းတွေကြောင့် အက်သလက်တီကိုမက်ဒရစ်ကို ရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/uefa-champions-league/63/scores-and-fixtures/2026-10",
+        "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixture/"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "9။ စတုဂတ် နဲ့ အက်သလက်တီကိုမက်ဒရစ်",
+        "sourceOrder": 9,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "Championship",
+      "home": "Wolverhampton Wanderers",
+      "away": "Portsmouth",
+      "homeDisplay": "ဝုလ်ဗ်",
+      "awayDisplay": "ပေါ့စ်မောက်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
+      "homeOdds": "1.57",
+      "drawOdds": "4.00",
+      "awayOdds": "5.25",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/sky-bet-championship/10/scores-and-fixtures/2026-10",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-16",
+          "opponent": "Burnley",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-13",
+          "opponent": "Bolton Wanderers",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Middlesbrough",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "W",
           "date": "2026-09-20",
-          "opponent": "Genoa",
-          "teamGoals": 2,
-          "opponentGoals": 1,
+          "opponent": "West Bromwich Albion",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
           "venueSide": "home",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "L",
-          "date": "2026-09-14",
-          "opponent": "Como",
-          "teamGoals": 1,
-          "opponentGoals": 2,
-          "venueSide": "away",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
-        },
-        {
-          "result": "D",
-          "date": "2026-09-06",
-          "opponent": "Monza",
-          "teamGoals": 1,
-          "opponentGoals": 1,
-          "venueSide": "home",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
-        },
-        {
-          "result": "L",
-          "date": "2026-09-01",
-          "opponent": "Cremonese",
+          "date": "2026-09-16",
+          "opponent": "Everton",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
           "teamGoals": 0,
-          "opponentGoals": 2,
+          "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
         }
       ],
       "awayLastFive": [
         {
           "result": "W",
-          "date": "2026-10-12",
-          "opponent": "Udinese",
-          "teamGoals": 2,
-          "opponentGoals": 1,
+          "date": "2026-10-17",
+          "opponent": "Norwich City",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-14",
+          "opponent": "Sheffield United",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+          "teamGoals": 3,
+          "opponentGoals": 2,
           "venueSide": "home",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-11",
+          "opponent": "Southampton",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "D",
           "date": "2026-09-19",
-          "opponent": "Bologna",
-          "teamGoals": 1,
-          "opponentGoals": 1,
+          "opponent": "Blackburn Rovers",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-12",
+          "opponent": "Charlton Athletic",
+          "opponentCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+          "teamGoals": 0,
+          "opponentGoals": 0,
           "venueSide": "away",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
+          "sourceUrl": "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ဝုလ်ဗ်",
+        "bodyOdds": "1+20",
+        "goalTotalOdds": "3+60",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ပရီးမီးယားလိဂ်ကနေ တန်းဆင်းလာတဲ့ ဝုလ်ဗ် ဟာ ချန်ပီယံရှစ် ၁၀ ပွဲမှာ ၅ နိုင်၊ ၂ သရေ၊ ၃ ရှုံး၊ ရမှတ် ၁၇ မှတ်နဲ့ ဇယားအဆင့် ၈ မှာ ရပ်တည်နေပြီး ရာသီအစမှာ မျှော်လင့်ထားသလောက် တည်ငြိမ်မှုမရှိသေးပေမယ့် ထိပ်ဆုံးအသင်းတွေနောက်ကို ဆက်လက်လိုက်နိုင်တဲ့ အခြေအနေရှိနေပါတယ်။ နည်းပြ ဆီဇာပေရှော့တို ရဲ့ ဝုလ်ဗ်ဟာ နောက်ဆုံး ဘန်လေကို အဝေးကွင်းမှာ ၂-၁ နဲ့ အနိုင်ရခဲ့တာကြောင့် အဲဒီမတိုင်ခင် မစ်ဒယ်ဘရော့နဲ့ ဘော်လ်တန်တို့ကို ဆက်တိုက်ရှုံးခဲ့တဲ့အခြေအနေကနေ ယုံကြည်မှု ပြန်လည်ရရှိလာတာပါ။ ဝုလ်ဗ်အတွက် စိုးရိမ်စရာက တိုက်စစ်မှူး ရာအူးလ်ဟီမီနက်ဇ် မပါနိုင်သေးတာဖြစ်ပြီး ရှေ့တန်းမှာ ဂိုးအခွင့်အရေးတွေကို အဆုံးသတ်ပေးမယ့် ကစားသမားရွေးချယ်မှုကို ပြန်လည်ချိန်ညှိရမှာဖြစ်ပါတယ်။ တစ်ဖက်မှာ နည်းပြ ဂျွန်မူဆင်ညို ရဲ့ ပေါ့စ်မောက် ကတော့ ၁၀ ပွဲမှာ ၄ နိုင်၊ ၂ သရေ၊ ၄ ရှုံး၊ ရမှတ် ၁၄ မှတ်နဲ့ အဆင့် ၁၃ မှာရှိပြီး ဝုလ်ဗ်နောက် သုံးမှတ်အကွာမှာ ရှိနေတာကြောင့် ဒီပွဲအနိုင်ရမယ်ဆိုရင် ရမှတ်တူနိုင်ပါတယ်။ ဒါပေမဲ့ ပေါ့စ်မောက်အတွက် အကြီးမားဆုံးပြဿနာက ဒဏ်ရာရကစားသမားတွေ များပြားနေတာဖြစ်ပြီး နောက်ဆုံးသတင်းအရ ကွင်းထဲကစားနိုင်တဲ့ ကစားသမား ၁၈ ဦးသာရှိသလို ကိုလ်ဘီဘစ်ရှော့ပ် လည်း ဒူးဒဏ်ရာကြောင့် မပါနိုင်တဲ့အခြေအနေရှိနေပါတယ်။ ဒီလိုလူစာရင်းအခက်အခဲရှိတဲ့ ပေါ့စ်မောက်အနေနဲ့ မိုလီနျူးကွင်းမှာ ဝုလ်ဗ်ရဲ့ ဆက်တိုက်ဖိအားကို ခံနိုင်ဖို့ ခက်ခဲနိုင်ပါတယ်။ ဒါပေမဲ့ ဝုလ်ဗ်ဟာ ကိုယ့်ကွင်းမှာ တိုက်စစ်အခွင့်အရေးတွေကို အချိန်မီအသုံးမချနိုင်ရင် ပေါ့စ်မောက်က ခံစစ်ပိတ်ပြီး သရေရလဒ်အတွက် တောင့်ခံနိုင်ပါတယ်။ ဝုလ်ဗ်ရဲ့ လတ်တလောနိုင်ပွဲကနေ ရရှိထားတဲ့ယုံကြည်မှု၊ အိမ်ကွင်းအားသာချက်နဲ့ ပေါ့စ်မောက်ရဲ့ လူစာရင်းပြဿနာတွေကြောင့် ဝုလ်ဗ်ကို ရွေးချယ်ရမှာပါ။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/sky-bet-championship/10/scores-and-fixtures/2026-10",
+        "https://www.skysports.com/football/wolverhampton-wanderers-vs-portsmouth/560565"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "10။ ဝုလ်ဗ် နဲ့ ပေါ့စ်မောက်",
+        "sourceOrder": 10,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "League One",
+      "home": "AFC Wimbledon",
+      "away": "Mansfield Town",
+      "homeDisplay": "အေဖက်စ်ဝင်ဘယ်လ်ဒန်",
+      "awayDisplay": "မန်စ်ဖီးလ်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/afc-wimbledon-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/mansfield-town-logo-footylogos.png",
+      "homeOdds": "3.10",
+      "drawOdds": "3.70",
+      "awayOdds": "2.10",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Sheffield Wednesday",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/sheffield-wednesday-logo-footylogos.png",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "L",
-          "date": "2026-09-14",
-          "opponent": "Roma",
-          "teamGoals": 0,
+          "date": "2026-10-10",
+          "opponent": "Plymouth Argyle",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/plymouth-argyle-logo-footylogos.png",
+          "teamGoals": 1,
           "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "date": "2026-10-15",
+          "opponent": "Oxford United",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/oxford-united-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "W",
-          "date": "2026-09-05",
-          "opponent": "Fiorentina",
+          "date": "2026-10-10",
+          "opponent": "Bromley",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/bromley-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "မန်စ်ဖီးလ်",
+        "bodyOdds": "-65",
+        "goalTotalOdds": "3+75",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ဒီပွဲမှာ အေဖက်စ်ဝင်ဘယ်လ်ဒန် နဲ့ မန်စ်ဖီးလ် တို့ဟာ လက်ရှိရမှတ်တူညီနေတာကြောင့် တစ်ဖက်သတ်အသာစီးရှိတဲ့အသင်းကို ရွေးဖို့ မလွယ်ပါဘူး။ ဝင်ဘယ်လ်ဒန်ဟာ ၁၀ ပွဲမှာ ၃ နိုင်၊ ၃ သရေ၊ ၄ ရှုံး၊ ရမှတ် ၁၂ မှတ်နဲ့ ဇယားအဆင့် ၁၅ မှာရှိပြီး ဂိုးကွာခြားချက် အနုတ်ရှစ်ဖြစ်နေတာကြောင့် ရလဒ်ကောင်းရဖို့ ခံစစ်ပိုင်းမှာ ပြင်ဆင်စရာရှိနေပါတယ်။ တစ်ဖက်မှာ မန်စ်ဖီးလ် ကတော့ ကိုးပွဲမှာ ၃ နိုင်၊ ၃ သရေ၊ ၃ ရှုံး၊ ရမှတ် ၁၂ မှတ်နဲ့ အဆင့် ၁၃ မှာရှိပြီး ဝင်ဘယ်လ်ဒန်ထက် တစ်ပွဲလျော့ကစားထားသလို ဂိုးကွာခြားချက်လည်း အနုတ်နှစ်သာရှိတာကြောင့် အသင်းလိုက်ဟန်ချက်ညီမှုမှာ အနည်းငယ်ပိုကောင်းနေပါတယ်။ ဝင်ဘယ်လ်ဒန်က ကိုယ့်ကွင်းမှာ အနိုင်ရဖို့ ဖိအားပေးနိုင်ပေမယ့် မန်စ်ဖီးလ်ရဲ့ ခံစစ်ကို အလျင်စလိုဖောက်ဖို့ကြိုးစားပြီး ဘောလုံးဆုံးရှုံးရင် ဧည့်သည်အတွက် အခွင့်အရေးဖြစ်လာနိုင်ပါတယ်။ မန်စ်ဖီးလ်အနေနဲ့လည်း အိမ်ရှင်ရဲ့ တိုက်စစ်ဖိအားကို ခံနိုင်ရင် ဝင်ဘယ်လ်ဒန်နောက်တန်းမှာ ပေါ်လာနိုင်တဲ့ နေရာလွတ်တွေကို အသုံးချနိုင်ပါတယ်။ အိမ်ကွင်းအားသာချက်က ဝင်ဘယ်လ်ဒန်ဘက်မှာရှိပေမယ့် ပွဲလျော့ကစားထားချိန် ရမှတ်တူနေမှုနဲ့ ဂိုးကွာခြားချက်ပိုကောင်းနေခြင်းကြောင့် မန်စ်ဖီးလ်ကို အနည်းငယ်ပိုရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "21။ အေဖက်စ်ဝင်ဘယ်လ်ဒန် နဲ့ မန်စ်ဖီးလ်",
+        "sourceOrder": 21,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "League One",
+      "home": "Blackpool",
+      "away": "Milton Keynes Dons",
+      "homeDisplay": "ဘလက်ပူးလ်",
+      "awayDisplay": "အမ်ကေဒွန်စ်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/blackpool-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/mk-dons-logo-footylogos.png",
+      "homeOdds": "2.25",
+      "drawOdds": "3.80",
+      "awayOdds": "2.63",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Leyton Orient",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Cambridge United",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/cambridge-united-logo-footylogos.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Luton Town",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/luton-town-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Reading",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ဘလက်ပူးလ်",
+        "bodyOdds": "-20",
+        "goalTotalOdds": "3+15",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "လိဂ်ဝမ်းအမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရုန်းကန်နေရတဲ့ ဘလက်ပူးလ် အတွက် ဒီပွဲဟာ ကိုယ့်ကွင်းမှာ အနိုင်ရလဒ်တစ်ခု ပြန်လည်ရှာဖွေဖို့ အရေးကြီးနေပါတယ်။ ဘလက်ပူးလ်ဟာ ၉ ပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၅ ရှုံးနဲ့ ရမှတ် ၈ မှတ်၊ ဇယားအဆင့် ၂၀ မှာ ရပ်တည်နေပြီး ရှုံးပွဲအရေအတွက်များနေတာကြောင့် ခြေစွမ်းမတည်ငြိမ်သေးတာပါ။ တစ်ဖက်မှာ အမ်ကေဒွန်စ် ကတော့ ၉ ပွဲမှာ ၁ နိုင်၊ ၆ သရေ၊ ၂ ရှုံး၊ ရမှတ် ၉ မှတ်နဲ့ အဆင့် ၁၈ မှာရှိပြီး ဘလက်ပူးလ်ထက် တစ်မှတ်ပိုနေပေမယ့် အနိုင်ပွဲတစ်ပွဲသာရထားတာကြောင့် သရေရလဒ်တွေကို အနိုင်အဖြစ်ပြောင်းလဲနိုင်ဖို့ လိုနေပါတယ်။ အမ်ကေဒွန်စ်ရဲ့ ထူးခြားချက်က ရှုံးပွဲနည်းပေမယ့် ပွဲကို အဆုံးသတ်နိုင်မှုအားနည်းနေတာဖြစ်ပြီး ဘလက်ပူးလ်အနေနဲ့ ဒီအချက်ကို အသုံးချနိုင်ဖို့ အိမ်ကွင်းမှာ ပိုမိုရဲရဲဝံ့ဝံ့ တိုက်စစ်ဆင်ဖို့လိုပါတယ်။ ဒါပေမဲ့ ဘလက်ပူးလ်က အစောပိုင်းဂိုးမရလို့ အလျင်စလိုရှေ့တက်ကစားမယ်ဆိုရင် အမ်ကေဒွန်စ်အတွက်လည်း နောက်တန်းနေရာလွတ်တွေ ပေါ်လာနိုင်ပါတယ်။ နှစ်သင်းစလုံး အခြေအနေမကောင်းသေးပေမယ့် ဘလက်ပူးလ်မှာ အနိုင်ပွဲပိုရထားသလို ကိုယ့်ကွင်းမှာ ပွဲအရှိန်ကို ပိုမိုထိန်းချုပ်နိုင်မယ့် အခွင့်အရေးရှိနေတာကြောင့် ဘလက်ပူးလ်ကို အနည်းငယ်ပိုရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "11။ ဘလက်ပူးလ် နဲ့ အမ်ကေဒွန်စ်",
+        "sourceOrder": 11,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "League One",
+      "home": "Bromley",
+      "away": "Leicester City",
+      "homeDisplay": "ဘရုမ်းလေ",
+      "awayDisplay": "လက်စတာစီးတီး",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/bromley-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/leicester-logo-footylogos.png",
+      "homeOdds": "4.00",
+      "drawOdds": "4.33",
+      "awayOdds": "1.67",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Stockport County",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/stockport-county-logo-footylogos.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Mansfield Town",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/mansfield-town-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Doncaster Rovers",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/doncaster-rovers-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Peterborough United",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/peterborough-united-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "လက်စတာစီးတီး",
+        "bodyOdds": "1+45",
+        "goalTotalOdds": "3-15",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ပရီးမီးယားလိဂ်ချန်ပီယံဖြစ်ဖူးတဲ့ လက်စတာစီးတီး ဟာ လိဂ်ဝမ်းကို ရောက်နေပြီဆိုပေမယ့် အသင်းနာမည်ကြောင့်ပဲ ဒီပွဲမှာ အနိုင်ပေးလို့မရပါဘူး။ လက်စတာဟာ ၉ ပွဲမှာ ၃ နိုင်၊ ၃ သရေ၊ ၃ ရှုံး၊ ရမှတ် ၁၂ မှတ်နဲ့ ဇယားအဆင့် ၁၄ မှာ ရပ်တည်နေပြီး အနိုင်ပွဲနဲ့ ရှုံးပွဲအရေအတွက် တူညီနေတာကြောင့် ရာသီအစမှာ မျှော်လင့်ထားသလောက် အသာစီးမရသေးတာပါ။ ဒါပေမဲ့ ဒီနေ့ရင်ဆိုင်ရမယ့် ဘရုမ်းလေ ရဲ့ အခြေအနေကတော့ ပိုပြီးဆိုးရွားနေပါတယ်။ ဘရုမ်းလေဟာ ၉ ပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၅ ရှုံး၊ ရမှတ် ၈ မှတ်နဲ့ အဆင့် ၂၂ မှာရှိပြီး ဂိုးကွာခြားချက် အနုတ် ၁၂ အထိရှိနေတာကြောင့် ခံစစ်ပိုင်းမှာ အတော်လေးအားနည်းနေတာပါ။ ဒီလိုအခြေအနေကြောင့် လက်စတာအနေနဲ့ ဘရုမ်းလေရဲ့ နောက်တန်းကို အစောပိုင်းကတည်းက ဖိအားပေးနိုင်မယ်ဆိုရင် ဂိုးအခွင့်အရေးတွေ ဖန်တီးလာနိုင်ပါတယ်။ ဘရုမ်းလေကတော့ ကိုယ့်ကွင်းမှာ ခံစစ်ကို တတ်နိုင်သမျှကျစ်လျစ်စွာထားပြီး လက်စတာရဲ့ ဘောလုံးပို့လမ်းကြောင်းတွေကို ဖြတ်တောက်နိုင်ဖို့ ကြိုးစားမှာပါ။ ဒါပေမဲ့ လက်စတာကို ဘောလုံးပိုကိုင်ခွင့်ပေးမိရင် ဘရုမ်းလေရဲ့ လက်ရှိခံစစ်အခြေအနေကြောင့် ပွဲကြာလာတာနဲ့အမျှ ဖိအားပိုခံရနိုင်ပါတယ်။ လက်စတာရဲ့ ရာသီအစရလဒ်က အပြည့်အဝယုံကြည်စရာမကောင်းသေးပေမယ့် ဘရုမ်းလေရဲ့ ခံစစ်အားနည်းချက်နဲ့ နှစ်သင်းရဲ့ လက်ရှိရမှတ်ကွာခြားချက်ကြောင့် လက်စတာစီးတီးကို ရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "12။ ဘရုမ်းလေ နဲ့ လက်စတာစီးတီး",
+        "sourceOrder": 12,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "League One",
+      "home": "Burton Albion",
+      "away": "Bradford City",
+      "homeDisplay": "ဘာတန်အယ်လ်ဘီယွန်",
+      "awayDisplay": "ဘရက်ဖို့ဒ်စီးတီး",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/burton-albion-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/bradford-city-logo-footylogos.png",
+      "homeOdds": "3.40",
+      "drawOdds": "3.60",
+      "awayOdds": "2.00",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "D",
+          "date": "2026-10-17",
+          "opponent": "Peterborough United",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/peterborough-united-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Doncaster Rovers",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/doncaster-rovers-logo-footylogos.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Stevenage",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/stevenage-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "D",
+          "date": "2026-10-10",
+          "opponent": "Leyton Orient",
+          "opponentCrestUrl": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ဘရက်ဖို့ဒ်စီးတီး",
+        "bodyOdds": "-90",
+        "goalTotalOdds": "2-90",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ဒီပွဲမှာ အဝေးကွင်းသွားကစားရမယ့် ဘရက်ဖို့ဒ်စီးတီး က လတ်တလောခြေစွမ်းပိုကောင်းနေတဲ့အသင်းဖြစ်ပါတယ်။ ဘရက်ဖို့ဒ်ဟာ လိဂ် ၁၀ ပွဲမှာ ၆ နိုင်၊ ၂ သရေ၊ ၂ ရှုံး၊ ရမှတ် ၂၀ မှတ်နဲ့ ဇယားထိပ်ဆုံး မှာ ရပ်တည်နေပြီး ခြောက်ပွဲအထိ အနိုင်ရထားတာကြောင့် အခွင့်အရေးရတဲ့အချိန် အနိုင်ရလဒ်အဖြစ် ပြောင်းလဲနိုင်မှုကောင်းနေပါတယ်။ တစ်ဖက်မှာ ဘာတန်အယ်လ်ဘီယွန် ကတော့ ၁၁ ပွဲမှာ ၃ နိုင်၊ ၄ သရေ၊ ၄ ရှုံး၊ ရမှတ် ၁၃ မှတ်နဲ့ အဆင့် ၁၀ မှာရှိပြီး ဘရက်ဖို့ဒ်ထက် တစ်ပွဲပိုကစားထားပေမယ့် ခုနစ်မှတ်နည်းနေတာကြောင့် နှစ်သင်းရဲ့ လက်ရှိအခြေအနေမှာ ကွာခြားချက်ရှိပါတယ်။ ဘာတန်အနေနဲ့ ကိုယ့်ကွင်းမှာ ဇယားထိပ်ဆုံးအသင်းကို အနိုင်ယူနိုင်ဖို့ ကွင်းလယ်မှာ ဘောလုံးကို ပိုမိုထိန်းချုပ်ရမှာဖြစ်ပေမယ့် ဘရက်ဖို့ဒ်က အခွင့်အရေးဖန်တီးနိုင်မှုနဲ့ ပွဲအဆုံးသတ်နိုင်မှုမှာ ပိုပြီးထိရောက်နေတာကြောင့် အိမ်ရှင်အတွက် အခက်အခဲဖြစ်လာနိုင်ပါတယ်။ ဘရက်ဖို့ဒ်အနေနဲ့လည်း အဝေးကွင်းမှာ ဘာတန်ရဲ့ အစောပိုင်းဖိအားကို သတိထားဖို့လိုပေမယ့် ပွဲအရှိန်ကို တည်ငြိမ်စွာထိန်းချုပ်နိုင်ရင် ကိုယ့်ရဲ့ လက်ရှိယုံကြည်မှုအသာစီးကို အသုံးချနိုင်ပါတယ်။ ဘာတန်ရဲ့ အိမ်ကွင်းအားရှိပေမယ့် လက်ရှိနိုင်ပွဲအရေအတွက်၊ ရမှတ်အသာစီးနဲ့ ပွဲကို အနိုင်ရလဒ်အဖြစ် ပြောင်းလဲနိုင်စွမ်းကြောင့် ဘရက်ဖို့ဒ်စီးတီးကို ရွေးချယ်ရမှာပါ။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "13။ ဘာတန်အယ်လ်ဘီယွန် နဲ့ ဘရက်ဖို့ဒ်စီးတီး",
+        "sourceOrder": 13,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "League One",
+      "home": "Cambridge United",
+      "away": "Wycombe Wanderers",
+      "homeDisplay": "ကိမ်းဘရစ်ချ်ယူနိုက်တက်",
+      "awayDisplay": "ဝိုင်ကွန်း",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/cambridge-united-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/wycombe-wanderers-logo-footylogos.png",
+      "homeOdds": "2.20",
+      "drawOdds": "3.80",
+      "awayOdds": "2.88",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Barnsley",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/barnsley-logo-footylogos.png",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "Blackpool",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/blackpool-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Notts County",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/notts-county-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "L",
-          "date": "2026-09-01",
-          "opponent": "Monza",
-          "teamGoals": 0,
+          "date": "2026-10-10",
+          "opponent": "Luton Town",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/luton-town-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ကိမ်းဘရစ်ချ်ယူနိုက်တက်",
+        "bodyOdds": "-45",
+        "goalTotalOdds": "3+40",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ကိမ်းဘရစ်ချ် ဟာ ဒီရာသီလိဂ်ဝမ်းမှာ အမှတ်ပေးဇယားအပေါ်ပိုင်းကို ရောက်ရှိနေတဲ့အသင်းဖြစ်ပြီး ၁၀ ပွဲမှာ ၅ နိုင်၊ ၄ သရေ၊ ၁ ရှုံး၊ ရမှတ် ၁၉ မှတ်နဲ့ ဇယားအဆင့် ၅ မှာ ရပ်တည်နေပါတယ်။ အထူးသဖြင့် ၁၀ ပွဲမှာ တစ်ပွဲသာရှုံးထားတာက ကိမ်းဘရစ်ချ်ရဲ့ အသင်းလိုက်ကစားပုံ ဘယ်လောက်တည်ငြိမ်နေသလဲဆိုတာ ပြသထားပြီး ဒီနေ့အိမ်ကွင်းမှာလည်း ယုံကြည်မှုကောင်းနေမှာပါ။ တစ်ဖက်မှာ ဝိုင်ကွန်း ကတော့ ၁၀ ပွဲမှာ ၃ နိုင်၊ ၄ သရေ၊ ၃ ရှုံး၊ ရမှတ် ၁၃ မှတ်နဲ့ အဆင့် ၁၁ မှာရှိပြီး ကိမ်းဘရစ်ချ်နဲ့ ကစားပွဲတူပေမယ့် ခြောက်မှတ်နည်းနေတာကြောင့် အနိုင်ပွဲအဆုံးသတ်နိုင်မှုမှာ အိမ်ရှင်ထက် အားနည်းနေပါတယ်။ ဝိုင်ကွန်းဟာ ပွဲကို အလွယ်တကူအရှုံးမပေးဘဲ သရေတစ်မှတ်အတွက် တောင့်ခံနိုင်တဲ့အသင်းဖြစ်ပေမယ့် ကိမ်းဘရစ်ချ်ကို ကွင်းလယ်မှာ ဘောလုံးပိုကိုင်ခွင့်ပေးလိုက်မယ်ဆိုရင် အိမ်ရှင်ရဲ့ ဆက်တိုက်တိုက်စစ်ကို ခံရနိုင်ပါတယ်။ ကိမ်းဘရစ်ချ်အနေနဲ့လည်း ဝိုင်ကွန်းရဲ့ ခံစစ်ကို အလျင်စလိုဖောက်ဖို့ကြိုးစားရင် ဘောလုံးဆုံးရှုံးနိုင်တာကြောင့် ပွဲအရှိန်ကို စိတ်ရှည်ရှည်ထိန်းဖို့ လိုပါတယ်။ နှစ်သင်းရဲ့ ရလဒ်တည်ငြိမ်မှု၊ ကစားပွဲတူချိန်မှာရှိတဲ့ ရမှတ်ကွာခြားချက်နဲ့ အိမ်ကွင်းအားသာချက်ကို နှိုင်းယှဉ်ကြည့်ရင် ကိမ်းဘရစ်ချ်ယူနိုက်တက်ကို ရွေးချယ်ရမှာပါ။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "14။ ကိမ်းဘရစ်ချ်ယူနိုက်တက် နဲ့ ဝိုင်ကွန်း",
+        "sourceOrder": 14,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "League One",
+      "home": "Doncaster Rovers",
+      "away": "Stockport County",
+      "homeDisplay": "ဒွန်ကက်စတာ",
+      "awayDisplay": "စတော့ပို့တ်ကောင်တီ",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/doncaster-rovers-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/stockport-county-logo-footylogos.png",
+      "homeOdds": "3.40",
+      "drawOdds": "4.00",
+      "awayOdds": "1.87",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Leicester City",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/leicester-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "Burton Albion",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/burton-albion-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Bromley",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/bromley-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "Barnsley",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/barnsley-logo-footylogos.png",
+          "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "home",
-          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
-          "sourceType": "verified_final"
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         }
       ],
       "headToHead": [],
-      "homeStanding": {
-        "played": 6,
-        "wins": 1,
-        "draws": 1,
-        "losses": 4,
-        "points": 4,
-        "position": 18
-      },
-      "awayStanding": {
-        "played": 6,
-        "wins": 2,
-        "draws": 1,
-        "losses": 3,
-        "points": 7,
-        "position": 12
-      },
-      "standingsSourceUrl": "https://prematchdata.com/en/seriea/2026-10-19/parma-vs-torino/",
       "myanmarOdds": {
-        "provider": "19.pdf user-supplied opening quote",
-        "market": "Myanmar body/total",
-        "upperTeam": "တိုရီနို",
-        "bodyOdds": "-30",
-        "goalTotalOdds": "2-35",
-        "checkedAt": "2026-10-19"
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "စတော့ပို့တ်ကောင်တီ",
+        "bodyOdds": "1+85",
+        "goalTotalOdds": "3+40",
+        "checkedAt": "2026-10-20"
       },
-      "dailyPreviewText": "နည်းပြသစ် **Alberto Gilardino** ရဲ့ **ပါးမား** အသင်းဟာ စီးရီးအေ ခြောက်ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၄ မှတ်နဲ့ ဇယားအောက်ပိုင်း** မှာ ရပ်တည်နေပြီး လေးဂိုးသာသွင်းနိုင်ထားတာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းက အဓိကပြဿနာဖြစ်နေပါတယ်။ နောက်ဆုံး အင်တာမီလန်ကို အဝေးကွင်းမှာ ၃-၀ နဲ့ ရှုံးနိမ့်ခဲ့တဲ့ပွဲကလည်း ဂီလာဒီနိုရဲ့ နည်းပြသစ်ဘဝကို ခက်ခဲစေခဲ့ပြီး ပါးမားအနေနဲ့ ကိုယ့်ကွင်းမှာ ရမှတ်ပြန်ရှာဖို့ လိုနေပါတယ်။ ပါးမားဟာ ခြောက်ပွဲမှာ ၁၀ ဂိုးအထိ ပေးထားရပြီး ခံစစ်မှာလည်း အမှားနည်းအောင် ပြင်ဆင်ဖို့လိုနေသလို **Pontus Almqvist** နဲ့ **Hans Nicolussi Caviglia** တို့ ဒဏ်ရာရှိနေခြင်းက အသင်းရဲ့ ကစားသမားရွေးချယ်မှုကို ထိခိုက်စေနိုင်ပါတယ်။ တိုက်စစ်မှာတော့ လူငယ်ကစားသမား **Simone Lontani** နဲ့ **David Romero** တို့ကို အားကိုးလာနိုင်ပေမယ့် ဂိုးသွင်းအခွင့်အရေးနည်းနေတဲ့ ပြဿနာကို အရင်ဖြေရှင်းဖို့လိုပါတယ်။ တစ်ဖက်မှာ နည်းပြ **Ignazio Abate** ရဲ့ **တိုရီနို** ကတော့ ခြောက်ပွဲမှာ ၂ နိုင်၊ ၁ သရေ၊ ၃ ရှုံး၊ **ရမှတ် ၇ မှတ်နဲ့ ပါးမားထက် သုံးမှတ်အသာ** ရထားပြီး နောက်ဆုံး အူဒီးနီးစ်ကို ၂-၁ နဲ့ အနိုင်ရခဲ့တာကြောင့် ရလဒ်ပိုင်းမှာ ပြန်လည်တိုးတက်လာနေပါတယ်။ အဲဒီပွဲမှာ လူစားဝင်လာတဲ့ **Sandro Kulenović** က အနိုင်ဂိုးသွင်းပေးခဲ့တာကြောင့် တိုရီနိုရဲ့ တိုက်စစ်မှာ အခွင့်အရေးတစ်ကြိမ်ရရင်တောင် ပွဲကိုပြောင်းလဲပေးနိုင်တဲ့ ကစားသမားရှိနေတာ တွေ့ရပါတယ်။ တိုရီနိုဘက်မှာ **Giovanni Simeone** နဲ့ **Che Adams** တို့လည်း ရှေ့တန်းမှာ ရွေးချယ်စရာရှိနေပြီး ပါးမားရဲ့ အားနည်းနေတဲ့နောက်တန်းကို ဖိအားပေးနိုင်ပါတယ်။ ပါးမားက Ennio Tardini ကွင်းမှာ နည်းပြသစ်အတွက် အနိုင်ရဖို့ အားထုတ်လာနိုင်ပေမယ့် တိုက်စစ်မှာ အခွင့်အရေးနည်းနေတာကြောင့် တိုရီနိုကို ဂိုးရအောင်ဖိအားပေးနိုင်ဖို့တော့ ခက်ခဲနိုင်ပါတယ်။ **နည်းပြသစ်ရဲ့ အိမ်ကွင်းပွဲဖြစ်တာကို ထည့်တွက်ရပေမယ့် တိုရီနိုရဲ့ လတ်တလောခြေစွမ်းတိုးတက်မှု၊ ရမှတ်အသာစီးနဲ့ တိုက်စစ်ရွေးချယ်စရာပိုများနေခြင်းကြောင့် ဒီပွဲမှာ တိုရီနိုကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "စတော့ပို့တ်ကောင်တီ ဟာ ဒီရာသီ လိဂ်ဝမ်းမှာ ၁၀ ပွဲကစားပြီး ၆ နိုင်၊ ၁ သရေ၊ ၃ ရှုံး၊ ရမှတ် ၁၉ မှတ်နဲ့ ဇယားအဆင့် ၂ မှာ ရပ်တည်နေပြီး ၂၁ ဂိုးအထိ သွင်းယူထားတာကြောင့် တိုက်စစ်ပိုင်းမှာ အားကောင်းနေပါတယ်။ ဒါပေမဲ့ နိုင်ပွဲခြောက်ပွဲရထားပေမယ့် ရှုံးပွဲသုံးပွဲလည်းရှိနေတာကြောင့် ပွဲတိုင်းကို တည်ငြိမ်စွာထိန်းချုပ်နိုင်တဲ့အသင်းလို့တော့ မဆိုနိုင်ပါဘူး။ တစ်ဖက်မှာ ဒွန်ကက်စတာ ကတော့ ကိုးပွဲမှာ ၂ နိုင်၊ ၃ သရေ၊ ၄ ရှုံး၊ ရမှတ် ၉ မှတ်နဲ့ အဆင့် ၁၇ မှာရှိပြီး စတော့ပို့တ်ထက် တစ်ပွဲလျော့ကစားထားပေမယ့် ၁၀ မှတ်အထိ နည်းနေတာကြောင့် လက်ရှိအနိုင်ရနိုင်စွမ်းမှာ ကွာခြားချက်ကြီးမားနေပါတယ်။ ဒွန်ကက်စတာအနေနဲ့ ကိုယ့်ကွင်းမှာ စတော့ပို့တ်ရဲ့ တိုက်စစ်ကို ထိန်းချုပ်ဖို့ ခံစစ်ကို ပိုမိုကျစ်လျစ်စွာထားရမှာဖြစ်ပြီး အစောပိုင်းဂိုးပေးလိုက်ရင် အခက်တွေ့နိုင်ပါတယ်။ စတော့ပို့တ်ကလည်း အလွန်ဖွင့်ကစားရင် ဒွန်ကက်စတာရဲ့ တန်ပြန်တိုက်စစ်ကို သတိထားရမှာဖြစ်ပေမယ့် လက်ရှိဂိုးသွင်းအားမှာ အိမ်ရှင်ထက် အသာစီးရနေပါတယ်။ ဒွန်ကက်စတာရဲ့ အိမ်ကွင်းအားကို ထည့်တွက်ရပေမယ့် စတော့ပို့တ်ရဲ့ တိုက်စစ်အင်အား၊ ရမှတ်အသာစီးနဲ့ လက်ရှိနိုင်ပွဲပိုမိုရရှိထားမှုကြောင့် စတော့ပို့တ်ကောင်တီကို ရွေးချယ်ပါတယ်။",
       "researchSources": [
-        "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "https://www.sportytrader.com/en/odds/parma-turin-8522159/",
-        "https://last5games.com/matches/parma-vs-torino-19713551/"
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
       ],
       "status": "scheduled",
       "specialChoice": false,
-      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
-        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
-        "sourceHeading": "3။ ပါးမား နဲ့ တိုရီနို",
-        "sourceOrder": 3,
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "15။ ဒွန်ကက်စတာ နဲ့ စတော့ပို့တ်ကောင်တီ",
+        "sourceOrder": 15,
         "exactCopy": true,
-        "receivedDate": "2026-10-19"
+        "receivedDate": "2026-10-20"
       },
       "previewV2": {
         "version": "2",
         "status": "owner-verbatim",
-        "fixtureSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "standingsSourceUrl": "https://last5games.com/matches/parma-vs-torino-19713551/",
-        "reviewedAt": "2026-10-19",
-        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
       },
-      "oddsVerificationStatus": "reference market as cited",
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
       "previewJournalist": {
         "status": "owner_approved_published",
-        "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
-        "reportDate": "2026-10-19",
-        "reviewedAt": "2026-10-19",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
       }
     },
     {
-      "league": "La Liga",
-      "home": "Getafe",
-      "away": "Rayo Vallecano",
-      "homeDisplay": "ဂီတာဖေး",
-      "awayDisplay": "ဗယ်လီကာနို",
-      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:30",
-      "kickoffCalendarDate": "2026-10-20",
-      "nightEditorialDate": "2026-10-19",
+      "league": "League One",
+      "home": "Huddersfield Town",
+      "away": "Peterborough United",
+      "homeDisplay": "ဟတ်ဒါဖီးလ်",
+      "awayDisplay": "ပီတာဘရော့",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
-      "venue": "Coliseum",
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Getafe%20CF.png",
-      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Rayo%20Vallecano.png",
-      "homeOdds": "3.00",
-      "drawOdds": "3.00",
-      "awayOdds": "2.62",
-      "oddsProvider": "Bet365",
-      "oddsSourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/huddersfield-town-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/peterborough-united-logo-footylogos.png",
+      "homeOdds": "1.50",
+      "drawOdds": "4.75",
+      "awayOdds": "5.00",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
       "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": "2026-10-19",
+      "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
-          "result": "D",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
           "result": "W",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-17",
+          "opponent": "Plymouth Argyle",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/plymouth-argyle-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "D",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-10",
+          "opponent": "Sheffield Wednesday",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/sheffield-wednesday-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         }
       ],
       "awayLastFive": [
         {
           "result": "D",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-17",
+          "opponent": "Burton Albion",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/burton-albion-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "W",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "W",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-10",
+          "opponent": "Leicester City",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/leicester-logo-footylogos.png",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         }
       ],
       "headToHead": [],
-      "homeStanding": {
-        "position": 15,
-        "played": 8,
-        "wins": 2,
-        "draws": 2,
-        "losses": 4,
-        "points": 8
-      },
-      "awayStanding": {
-        "position": 14,
-        "played": 7,
-        "wins": 2,
-        "draws": 2,
-        "losses": 3,
-        "points": 8
-      },
-      "standingsSourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
       "myanmarOdds": {
-        "provider": "19.pdf user-supplied opening quote",
-        "market": "Myanmar body/total",
-        "upperTeam": "ဗယ်လီကာနို",
-        "bodyOdds": "-15",
-        "goalTotalOdds": "2-5",
-        "checkedAt": "2026-10-19"
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ဟတ်ဒါဖီးလ်",
+        "bodyOdds": "1-10",
+        "goalTotalOdds": "3-55",
+        "checkedAt": "2026-10-20"
       },
-      "dailyPreviewText": "နည်းပြ **José Bordalás** ရဲ့ **ဂီတာဖေး** အသင်းဟာ ဒီရာသီ လာလီဂါ ၈ ပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၈ မှတ်နဲ့ ဇယားအဆင့် ၁၅** မှာ ရပ်တည်နေပြီး လေးဂိုးသာသွင်းထားတာကြောင့် တိုက်စစ်ပိုင်းမှာ အတော်လေးရုန်းကန်နေရပါတယ်။ နောက်ဆုံးလိဂ်ပွဲမှာ ဘာစီလိုနာကို ၃-၀ နဲ့ ရှုံးနိမ့်ခဲ့သလို ကြားရက်ကွန်ဖရင့်လိဂ်မှာ ရိုမေးနီးယားကလပ် ကရာယိုဗာနဲ့ ၁-၁ သရေကျခဲ့တာကြောင့် လတ်တလောရလဒ်ပိုင်းမှာလည်း ယုံကြည်မှုမကောင်းသေးပါဘူး။ အဲဒီဥရောပပွဲမှာ **Nemanja Gudelj** က နောက်ကျချေပဂိုးသွင်းပေးခဲ့လို့ သရေတစ်မှတ်ရယူနိုင်ခဲ့ပေမယ့် တိုက်စစ်မှူးတွေဆီက ဂိုးသွင်းအားပိုမိုလိုအပ်နေတာပါ။ အထူးသဖြင့် **Christantus Uche နဲ့ Juanmi** တို့ ဒဏ်ရာကြောင့် မပါနိုင်သလို **Enes Ünal နဲ့ Iván Azón** တို့ရဲ့ ကြံ့ခိုင်မှုလည်း မသေချာသေးတာကြောင့် ဂီတာဖေးရဲ့ အားနည်းနေတဲ့တိုက်စစ်အတွက် ပိုပြီးစိုးရိမ်စရာဖြစ်နေပါတယ်။ တစ်ဖက်မှာ နည်းပြ **Beñat San José** ရဲ့ **ရာယိုဗယ်လီကာနို** ကတော့ လိဂ် ၇ ပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၃ ရှုံး၊ **ရမှတ် ၈ မှတ်နဲ့ အဆင့် ၁၄** မှာရှိပြီး ဂီတာဖေးနဲ့ ရမှတ်တူပေမယ့် တစ်ပွဲလျော့ကစားထားတာကြောင့် အခြေအနေပိုကောင်းနေပါတယ်။ ရာယိုဘက်မှာတော့ တိုက်စစ်မှူး **Sergio Camello** က ဂိုးသွင်းခြေတွေ့နေပြီး ခုနစ်ဂိုးအထိ သွင်းယူထားတာကြောင့် ဂီတာဖေးနောက်တန်းက သူ့ကို ထိန်းချုပ်နိုင်ဖို့ မလွယ်ပါဘူး။ ဒါပေမဲ့ ရာယိုဟာ ၁၆ ဂိုးအထိ ပေးထားရပြီး ခံစစ်ပိုင်းမှာ ဂီတာဖေးလောက် မတည်ငြိမ်သလို အဓိကနောက်ခံကစားသမားအချို့ ဒဏ်ရာရှိနေတာကြောင့် ဂီတာဖေးအတွက်လည်း ဂိုးရှာနိုင်မယ့်အခွင့်အရေးရှိပါတယ်။ ဒီပွဲမှာ အိမ်ရှင်ရဲ့ ခံစစ်ကျစ်လျစ်မှုက ရာယိုရဲ့ တိုက်စစ်ကို အခက်တွေ့စေနိုင်ပေမယ့် ဂီတာဖေးကိုယ်တိုင် ဂိုးသွင်းဖို့ ရုန်းကန်နေရတာကို ထည့်တွက်ရမှာပါ။ **ဂီတာဖေးရဲ့ အိမ်ကွင်းအားသာချက်ရှိပေမယ့် ကာမယ်လိုရဲ့ ဂိုးသွင်းခြေစွမ်း၊ တိုက်စစ်အဆုံးသတ်အားပိုကောင်းနေမှုနဲ့ ဂီတာဖေးရဲ့ လူစာရင်းအခက်အခဲတွေကြောင့် ဗယ်လီကာနိုကို ရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "ဒီပွဲမှာ အမှတ်ပေးဇယားအပေါ်ပိုင်းက ဟတ်ဒါဖီးလ် နဲ့ အောက်ပိုင်းမှာ ရုန်းကန်နေရတဲ့ ပီတာဘရော့ တို့ရဲ့ ခြေစွမ်းကွာခြားချက်က ထင်ရှားနေပါတယ်။ ဟတ်ဒါဖီးလ်ဟာ ၁၀ ပွဲမှာ ၅ နိုင်၊ ၄ သရေ၊ ၁ ရှုံး၊ ရမှတ် ၁၉ မှတ်နဲ့ ဇယားအဆင့် ၃ မှာ ရပ်တည်နေပြီး ၁၈ ဂိုးသွင်း၊ ကိုးဂိုးသာပေးထားတာကြောင့် တိုက်စစ်နဲ့ ခံစစ်နှစ်ပိုင်းစလုံးမှာ မျှတနေပါတယ်။ ဒီလိုခြေစွမ်းကြောင့် ဟတ်ဒါဖီးလ်အနေနဲ့ အိမ်ကွင်းမှာ ပွဲကိုထိန်းချုပ်နိုင်ရင် ပီတာဘရော့နောက်တန်းကို အခွင့်အရေးများများ ဖန်တီးနိုင်ဖို့ရှိပါတယ်။ ပီတာဘရော့ကတော့ ၁၀ ပွဲမှာ ၂ နိုင်၊ ၃ သရေ၊ ၅ ရှုံး၊ ရမှတ် ၉ မှတ်နဲ့ အဆင့် ၁၉ မှာရှိပြီး ဂိုးကွာခြားချက် အနုတ်ခုနစ်ဖြစ်နေတာကြောင့် ခံစစ်ပိုင်းမှာ အတော်လေးအားနည်းနေပါတယ်။ ပီတာဘရော့က ဟတ်ဒါဖီးလ်ကို တန်ပြန်တိုက်စစ်နဲ့ စမ်းသပ်နိုင်ပေမယ့် အိမ်ရှင်ဟာ ၁၀ ပွဲမှာ တစ်ပွဲသာရှုံးထားတဲ့အသင်းဖြစ်တာကြောင့် ပွဲအရှိန်ကို အလွယ်တကူလက်လွှတ်ပေးမယ့် အနေအထားမဟုတ်ပါဘူး။ လတ်တလောရလဒ်တည်ငြိမ်မှု၊ ခံစစ်အားနဲ့ အိမ်ကွင်းအားသာချက်တွေမှာ ပိုမိုကောင်းမွန်နေတဲ့ ဟတ်ဒါဖီးလ်ကို ရွေးချယ်ရမှာပါ။",
       "researchSources": [
-        "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "https://footballnation.eu/match/la-liga/2026/797782/",
-        "https://footballnation.eu/match/la-liga/2026/797782/"
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
       ],
       "status": "scheduled",
       "specialChoice": false,
-      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
-        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
-        "sourceHeading": "4။ ဂီတာဖေး နဲ့ ဗယ်လီကာနို",
-        "sourceOrder": 4,
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "16။ ဟတ်ဒါဖီးလ် နဲ့ ပီတာဘရော့",
+        "sourceOrder": 16,
         "exactCopy": true,
-        "receivedDate": "2026-10-19"
+        "receivedDate": "2026-10-20"
       },
       "previewV2": {
         "version": "2",
         "status": "owner-verbatim",
-        "fixtureSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "standingsSourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
-        "reviewedAt": "2026-10-19",
-        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
       },
-      "oddsVerificationStatus": "reference market as cited",
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
       "previewJournalist": {
         "status": "owner_approved_published",
-        "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
-        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
-        "reportDate": "2026-10-19",
-        "reviewedAt": "2026-10-19",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
       }
     },
     {
-      "league": "La Liga 2",
-      "home": "Celta Fortuna",
-      "away": "Tenerife",
-      "homeDisplay": "ဆဲလ်တာဖော်တူနာ",
-      "awayDisplay": "တီနာရီဖေး",
-      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:00",
-      "kickoffCalendarDate": "2026-10-20",
-      "nightEditorialDate": "2026-10-19",
+      "league": "League One",
+      "home": "Luton Town",
+      "away": "Barnsley",
+      "homeDisplay": "လူတန်တောင်း",
+      "awayDisplay": "ဘန်စလေ",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
-      "venue": "Estadio ABANCA Balaídos",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/245.png",
-      "homeOdds": "2.63",
-      "drawOdds": "3.28",
-      "awayOdds": "2.712",
-      "oddsProvider": "1xBet",
-      "oddsSourceUrl": "https://1xbet.es/es/line/football/27687-spain-segunda-division/760988575-celta-fortuna-tenerife",
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/luton-town-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/barnsley-logo-footylogos.png",
+      "homeOdds": "1.44",
+      "drawOdds": "5.00",
+      "awayOdds": "5.00",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
       "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": "2026-10-19",
+      "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
+          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Milton Keynes Dons",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/mk-dons-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
           "result": "W",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "D",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-10",
+          "opponent": "Wycombe Wanderers",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/wycombe-wanderers-logo-footylogos.png",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         }
       ],
       "awayLastFive": [
         {
-          "result": "D",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
+          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Cambridge United",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/cambridge-united-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "L",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "D",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "W",
-          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-10",
+          "opponent": "Stockport County",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/stockport-county-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         }
       ],
       "headToHead": [],
-      "homeStanding": {
-        "position": 13,
-        "played": 9,
-        "wins": 3,
-        "draws": 2,
-        "losses": 4,
-        "points": 11,
-        "goalsFor": 14,
-        "goalsAgainst": 15
-      },
-      "awayStanding": {
-        "position": 12,
-        "played": 9,
-        "wins": 3,
-        "draws": 3,
-        "losses": 3,
-        "points": 12,
-        "goalsFor": 11,
-        "goalsAgainst": 13
-      },
-      "standingsSourceUrl": "https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-hypermotion-rc-celta-fortuna-cd-tenerife-10",
       "myanmarOdds": {
-        "provider": "19.pdf user-supplied opening quote",
-        "market": "Myanmar body/total",
-        "upperTeam": "တီနာရီဖေး",
-        "bodyOdds": "-5",
-        "goalTotalOdds": "2-70",
-        "checkedAt": "2026-10-19"
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "လူတန်တောင်း",
+        "bodyOdds": "1-20",
+        "goalTotalOdds": "3-75",
+        "checkedAt": "2026-10-20"
       },
-      "dailyPreviewText": "စပိန်ဒုတိယတန်းမှာ တွေ့ဆုံကြမယ့် **ဆဲလ်တာဖော်တူနာ** နဲ့ **တီနာရီဖေး** တို့ဟာ ရမှတ်ကွာခြားချက် တစ်မှတ်သာရှိတဲ့ အသင်းနှစ်သင်းဖြစ်တာကြောင့် ဒီပွဲက အကြိတ်အနယ်ရှိလာနိုင်ပါတယ်။ ဆဲလ်တာဖော်တူနာဟာ လိဂ် ၉ ပွဲမှာ ၃ နိုင်၊ ၂ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၁၁ မှတ်** ရထားပြီး ၁၄ ဂိုးသွင်းထားတာကြောင့် တိုက်စစ်ပိုင်းမှာ ဂိုးရနိုင်စွမ်းရှိပေမယ့် ၁၅ ဂိုးအထိ ပြန်ပေးထားရတဲ့ ခံစစ်က အဓိကအားနည်းချက်ဖြစ်နေပါတယ်။ ဒါပေမဲ့ နောက်ဆုံး ရီးရဲလ်ဆိုစီဒက် ဘီအသင်းကို ၄-၁ နဲ့ အနိုင်ရခဲ့တဲ့ပွဲမှာ ဆဲလ်တာဖော်တူနာရဲ့ တိုက်စစ်အရည်အသွေးကို တွေ့ခဲ့ရပြီး **Álvaro Marín** ကလည်း အဲဒီပွဲမှာ နှစ်ဂိုးသွင်းယူခဲ့သလို ဒီရာသီ လိဂ်ငါးဂိုးအထိ ရထားတာကြောင့် ရှေ့တန်းမှာ အဓိကအားကိုးနေရတာပါ။ တစ်ဖက်မှာ **တီနာရီဖေး** ကတော့ ၉ ပွဲမှာ ၃ နိုင်၊ ၃ သရေ၊ ၃ ရှုံး၊ **ရမှတ် ၁၂ မှတ်** ရထားပြီး ၁၁ ဂိုးသွင်း၊ ၁၃ ဂိုးပေးထားတာကြောင့် ဆဲလ်တာဖော်တူနာထက် ဂိုးသွင်းအားနည်းပေမယ့် ခံစစ်ပိုင်းမှာ အနည်းငယ်ပိုတည်ငြိမ်နေပါတယ်။ တီနာရီဖေးအတွက် အရေးကြီးတာက ဆဲလ်တာဖော်တူနာရဲ့ အယ်လ်ဗာရိုမာရင်ကို ဂိုးဧရိယာထဲမှာ နေရာလွတ်မပေးဖို့ဖြစ်ပြီး အိမ်ရှင်ရဲ့ တိုက်စစ်ကို ထိန်းထားနိုင်ရင် ၁၅ ဂိုးအထိ ပေးထားရတဲ့ ဆဲလ်တာဖော်တူနာနောက်တန်းကို တန်ပြန်ထိုးဖောက်ဖို့ အခွင့်အရေးရှိလာနိုင်ပါတယ်။ ဆဲလ်တာဖော်တူနာက ဘာလိုက်ဒို့စ်ကွင်းမှာ နောက်ဆုံးပွဲက ဂိုးပြတ်နိုင်ပွဲအရှိန်ကို ဆက်ထိန်းနိုင်ဖို့ ကြိုးစားလာမှာဖြစ်ပေမယ့် တီနာရီဖေးရဲ့ ကွင်းလယ်နဲ့ ခံစစ်ကို လွယ်လွယ်ကူကူ ကျော်ဖြတ်နိုင်မယ်လို့ မဆိုနိုင်ပါဘူး။ **ဆဲလ်တာဖော်တူနာရဲ့ အိမ်ကွင်းတိုက်စစ်အားကောင်းပေမယ့် နှစ်သင်းရဲ့ လက်ရှိရမှတ်၊ ခံစစ်တည်ငြိမ်မှုနဲ့ အနိုင်မရခဲ့တဲ့ပွဲတွေကို နှိုင်းယှဉ်ကြည့်ရင် ဒီပွဲမှာ တီနာရီဖေးကို အနည်းငယ်ပိုရွေးချယ်ပါတယ်။**",
+      "dailyPreviewText": "လူတန်တောင်း ဟာ ဒီရာသီလိဂ်ဝမ်းမှာ ၉ ပွဲကစားပြီး ၃ နိုင်၊ ၂ သရေ၊ ၄ ရှုံး၊ ရမှတ် ၁၁ မှတ်နဲ့ ဇယားအဆင့် ၁၆ မှာရှိပြီး ရာသီအစကတည်းက ခြေစွမ်းတည်ငြိမ်အောင် မထိန်းနိုင်သေးပါဘူး။ ဒါပေမဲ့ ဒီနေ့ရင်ဆိုင်ရမယ့် ဘန်စလေ ကတော့ ကိုးပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၅ ရှုံး၊ ရမှတ် ၈ မှတ်နဲ့ အဆင့် ၂၁ မှာ ရပ်တည်နေတာကြောင့် အခြေအနေ ပိုပြီးခက်ခဲနေပါတယ်။ ဘန်စလေရဲ့ ဂိုးကွာခြားချက် အနုတ်ရှစ်ဖြစ်နေခြင်းက ခံစစ်ပိုင်းအားနည်းချက်ကို ပြသနေပြီး လူတန်အနေနဲ့ ဒီအချက်ကို အသုံးချနိုင်ဖို့ ကိုယ့်ကွင်းမှာ တိုက်စစ်အရှိန်မြှင့်ဖို့လိုပါတယ်။ လူတန်ရဲ့ ရလဒ်ကိုလည်း အပြည့်အဝယုံကြည်လို့မရသေးပေမယ့် ခံစစ်နဲ့ တိုက်စစ်ကြား ဟန်ချက်ညီမှုမှာ ဘန်စလေထက် အနည်းငယ်ပိုကောင်းတဲ့အနေအထားရှိနေပါတယ်။ ဘန်စလေကတော့ အိမ်ရှင်ရဲ့ အစောပိုင်းဖိအားကို ကျော်ဖြတ်နိုင်ရင် သရေအတွက် ရုန်းကန်နိုင်ပေမယ့် နောက်တန်းမှာ ဂိုးအခွင့်အရေးတွေ ဆက်တိုက်ပေးရမယ်ဆိုရင် အခက်တွေ့နိုင်ပါတယ်။ နှစ်သင်းစလုံး ရာသီအစခြေစွမ်းမတည်ငြိမ်သေးပေမယ့် လူတန်ရဲ့ အိမ်ကွင်းအားသာချက်နဲ့ ဘန်စလေရဲ့ ခံစစ်အားနည်းချက်ကြောင့် လူတန်တောင်းကို ရွေးချယ်ပါတယ်။",
       "researchSources": [
-        "https://www.sofascore.com/es/football/2026-10-19",
-        "https://1xbet.es/es/line/football/27687-spain-segunda-division/760988575-celta-fortuna-tenerife",
-        "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19"
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
       ],
       "status": "scheduled",
       "specialChoice": false,
-      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
-        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
-        "sourceHeading": "5။ ဆဲလ်တာဖော်တူနာ နဲ့ တီနာရီဖေး",
-        "sourceOrder": 5,
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "17။ လူတန်တောင်း နဲ့ ဘန်စလေ",
+        "sourceOrder": 17,
         "exactCopy": true,
-        "receivedDate": "2026-10-19"
+        "receivedDate": "2026-10-20"
       },
       "previewV2": {
         "version": "2",
         "status": "owner-verbatim",
-        "fixtureSourceUrl": "https://www.sofascore.com/es/football/2026-10-19",
-        "standingsSourceUrl": "https://www.laliga.com/en-ES/match/temporada-2026-2027-laliga-hypermotion-rc-celta-fortuna-cd-tenerife-10",
-        "reviewedAt": "2026-10-19",
-        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
       },
-      "oddsVerificationStatus": "reference market as cited",
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
       "previewJournalist": {
         "status": "owner_approved_published",
-        "sourceUrl": "https://www.sofascore.com/es/football/2026-10-19",
-        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
-        "reportDate": "2026-10-19",
-        "reviewedAt": "2026-10-19",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
       }
     },
     {
-      "league": "Ligue 2",
-      "home": "Rodez",
-      "away": "Montpellier",
-      "homeDisplay": "ရိုဒက်ဇ်",
-      "awayDisplay": "မွန်ပယ်လီယာ",
-      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:15",
-      "kickoffCalendarDate": "2026-10-20",
-      "nightEditorialDate": "2026-10-19",
+      "league": "League One",
+      "home": "Notts County",
+      "away": "Sheffield Wednesday",
+      "homeDisplay": "နော့စ်ကောင်တီ",
+      "awayDisplay": "ရှက်ဖီးဝင်းစ်ဒေး",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
       "kickoffUtc": null,
-      "venue": "Stade Paul-Lignon",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7719.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/274.png",
-      "homeOdds": "2.84",
-      "drawOdds": "3.35",
-      "awayOdds": "2.31",
-      "oddsProvider": "FranceLeague reference",
-      "oddsSourceUrl": "https://franceleague.net/match/rodez-vs-montpellier-2026-10-19",
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/notts-county-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/sheffield-wednesday-logo-footylogos.png",
+      "homeOdds": "3.10",
+      "drawOdds": "3.70",
+      "awayOdds": "2.10",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
       "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
       "oddsIsLive": false,
-      "oddsVerifiedDate": "2026-10-19",
+      "oddsVerifiedDate": "2026-10-20",
       "homeLastFive": [
         {
           "result": "L",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-17",
+          "opponent": "Wycombe Wanderers",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/wycombe-wanderers-logo-footylogos.png",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "L",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "D",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-10",
+          "opponent": "Oxford United",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/oxford-united-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         }
       ],
       "awayLastFive": [
         {
           "result": "W",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-17",
+          "opponent": "AFC Wimbledon",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/afc-wimbledon-logo-footylogos.png",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         },
         {
           "result": "D",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "W",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "L",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
-        },
-        {
-          "result": "D",
-          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-          "sourceType": "third_party_recent_form"
+          "date": "2026-10-10",
+          "opponent": "Huddersfield Town",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/huddersfield-town-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
         }
       ],
       "headToHead": [],
-      "homeStanding": {
-        "position": 17,
-        "played": 8,
-        "points": 7,
-        "wins": 2,
-        "draws": 1,
-        "losses": 5
-      },
-      "awayStanding": {
-        "position": 5,
-        "played": 8,
-        "points": 15,
-        "wins": 4,
-        "draws": 3,
-        "losses": 1
-      },
-      "standingsSourceUrl": "https://franceleague.net/match/rodez-vs-montpellier-2026-10-19",
       "myanmarOdds": {
-        "provider": "19.pdf user-supplied opening quote",
-        "market": "Myanmar body/total",
-        "upperTeam": "မွန်ပယ်လီယာ",
-        "bodyOdds": "-30",
-        "goalTotalOdds": "3+30",
-        "checkedAt": "2026-10-19"
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ရှက်ဖီးဝင်းစ်ဒေး",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "3+70",
+        "checkedAt": "2026-10-20"
       },
-      "dailyPreviewText": "**ရိုဒက်ဇ်** အသင်းဟာ ဒီရာသီ ပြင်သစ်လီဂူး ၂ မှာ ၈ ပွဲကစားပြီး **ရမှတ် ၇ မှတ်နဲ့ ဇယားအဆင့် ၁၇** မှာ ရပ်တည်နေတာကြောင့် တန်းဆင်းဇုန်အန္တရာယ်နဲ့ ရင်ဆိုင်နေရပါတယ်။ အထူးသဖြင့် နောက်ဆုံးငါးပွဲမှာ နိုင်ပွဲမရှိဘဲ လေးပွဲရှုံး၊ တစ်ပွဲသရေကျထားသလို ၁၃ ဂိုးအထိ ပေးထားရတာကြောင့် ရိုဒက်ဇ်ရဲ့ နောက်တန်းအခြေအနေက အတော်လေးစိုးရိမ်စရာပါ။ နောက်ဆုံး စိန့်အက်တီယန်ကို အဝေးကွင်းမှာ ၂-၀ နဲ့ ရှုံးခဲ့သလို အိမ်ကွင်းမှာလည်း နန်စီကို ၄-၃၊ ဂရီနိုဘယ်ကို ၁-၀ နဲ့ ဆက်တိုက်ရှုံးနိမ့်ထားတာကြောင့် ကိုယ့်ကွင်းမှာ ကစားရရုံနဲ့ အားသာချက်ရှိမယ်လို့ မပြောနိုင်ပါဘူး။ ဒါပေမဲ့ ရိုဒက်ဇ်ဘက်မှာတော့ တိုက်စစ်ကစားသမား **Nicolas Pays** က ဂိုးသွင်းပေးနိုင်တဲ့ ကစားသမားတစ်ယောက်ဖြစ်ပြီး မွန်ပယ်လီယာရဲ့ ခံစစ်ကို အခွင့်အရေးရတဲ့အခါ စမ်းသပ်နိုင်ဖို့ မျှော်လင့်ရပါတယ်။ တစ်ဖက်မှာ **မွန်ပယ်လီယာ** ကတော့ ၈ ပွဲမှာ **ရမှတ် ၁၅ မှတ်နဲ့ ဇယားအဆင့် ၅** မှာ ရပ်တည်နေပြီး ရိုဒက်ဇ်ထက် ရှစ်မှတ်အထိ အသာရထားပါတယ်။ မွန်ပယ်လီယာဟာ နောက်ဆုံးငါးပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၁ ရှုံးသာရှိပြီး နောက်ဆုံး ဂရီနိုဘယ်ကို ၂-၀ နဲ့ အနိုင်ရခဲ့တာကြောင့် လတ်တလောခြေစွမ်းပိုတည်ငြိမ်နေသလို အဲဒီငါးပွဲမှာ လေးဂိုးသာပေးထားတဲ့ ခံစစ်ကလည်း အားကိုးရပါတယ်။ ပိုပြီးထူးခြားတာက မွန်ပယ်လီယာဟာ အဝေးကွင်းမှာလည်း ရလဒ်ကောင်းတွေ ရရှိထားတာကြောင့် ရိုဒက်ဇ်ရဲ့ Stade Paul-Lignon ကွင်းကို သွားကစားရပေမယ့် အလွန်စိုးရိမ်စရာမရှိတဲ့ အနေအထားဖြစ်နေပါတယ်။ ရိုဒက်ဇ်က ကိုယ့်ကွင်းမှာ နိုင်ပွဲပြန်ရှာဖို့ တိုက်စစ်ဖွင့်ကစားလာနိုင်ပေမယ့် နောက်တန်းကို အလွန်ဖွင့်မိရင် မွန်ပယ်လီယာအတွက် ဂိုးအခွင့်အရေးတွေ ပေါ်လာနိုင်ပါတယ်။ **ရိုဒက်ဇ်ရဲ့ လတ်တလောရှုံးပွဲဆက်နေမှု၊ ပေးဂိုးများပြားတဲ့ ခံစစ်နဲ့ မွန်ပယ်လီယာရဲ့ ပိုမိုတည်ငြိမ်တဲ့ အဝေးကွင်းခြေစွမ်းကို နှိုင်းယှဉ်ကြည့်ရင် ဒီပွဲမှာ မွန်ပယ်လီယာကို ရွေးချယ်ရမှာပါ။**",
+      "dailyPreviewText": "လိဂ်ဝမ်းအောက်ပိုင်းမှာ ရုန်းကန်နေရတဲ့ နော့စ်ကောင်တီ အတွက် ဒီပွဲဟာ လက်ရှိအခြေအနေထက် ပိုမိုခက်ခဲတဲ့ စမ်းသပ်မှုဖြစ်လာနိုင်ပါတယ်။ နော့စ်ကောင်တီဟာ ၉ ပွဲမှာ ၁ နိုင်၊ ၄ သရေ၊ ၄ ရှုံး၊ ရမှတ် ၇ မှတ်နဲ့ ဇယားအဆင့် ၂၃ မှာ ရပ်တည်နေပြီး ကိုးပွဲကစားထားရာမှာ တစ်ပွဲသာအနိုင်ရထားတာကြောင့် ရရှိလာတဲ့ အခွင့်အရေးတွေကို အနိုင်ရလဒ်အဖြစ် ပြောင်းလဲနိုင်ဖို့ လိုနေပါတယ်။ တစ်ဖက်မှာ ရှက်ဖီးဝင်းစ်ဒေး ကတော့ ကိုးပွဲမှာ ၅ နိုင်၊ ၃ သရေ၊ ၁ ရှုံး၊ ရမှတ် ၁၈ မှတ်နဲ့ အဆင့် ၆ မှာ ရှိနေပြီး ဂိုးကွာခြားချက် အပေါင်း ၁၂ အထိရှိတာကြောင့် နော့စ်ကောင်တီထက် အသင်းလိုက်ဟန်ချက်ညီမှုက ပိုမိုကောင်းမွန်နေပါတယ်။ နော့စ်ကောင်တီအနေနဲ့ အိမ်ကွင်းမှာ ရှက်ဖီးဝင်းစ်ဒေးကို အလွန်ရှေ့တက်ဖိအားပေးမယ်ဆိုရင် နောက်တန်းနေရာလွတ်တွေကို အသုံးချခံရနိုင်ပါတယ်။ ဝင်းစ်ဒေးကလည်း အဝေးကွင်းမှာ အစောပိုင်းဖိအားကို သတိထားဖို့လိုပေမယ့် လက်ရှိရှုံးပွဲတစ်ပွဲသာရှိတဲ့ ခြေစွမ်းက ဒီပွဲမှာ အသာစီးရဖို့ အားပေးနေပါတယ်။ ကစားပွဲတူချိန်မှာ ၁၁ မှတ်အထိကွာခြားနေမှု၊ တိုက်စစ်နဲ့ ခံစစ်ပိုင်းမျှတမှုကြောင့် ရှက်ဖီးဝင်းစ်ဒေးကို ရွေးချယ်ရမှာပါ။",
       "researchSources": [
-        "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-        "https://franceleague.net/match/rodez-vs-montpellier-2026-10-19",
-        "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd"
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
       ],
       "status": "scheduled",
       "specialChoice": false,
-      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
       "userPreviewVerbatim": {
-        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
-        "sourceHeading": "6။ ရိုဒက်ဇ် နဲ့ မွန်ပယ်လီယာ",
-        "sourceOrder": 6,
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "18။ နော့စ်ကောင်တီ နဲ့ ရှက်ဖီးဝင်းစ်ဒေး",
+        "sourceOrder": 18,
         "exactCopy": true,
-        "receivedDate": "2026-10-19"
+        "receivedDate": "2026-10-20"
       },
       "previewV2": {
         "version": "2",
         "status": "owner-verbatim",
-        "fixtureSourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-        "standingsSourceUrl": "https://franceleague.net/match/rodez-vs-montpellier-2026-10-19",
-        "reviewedAt": "2026-10-19",
-        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
       },
-      "oddsVerificationStatus": "reference market as cited",
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
       "previewJournalist": {
         "status": "owner_approved_published",
-        "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
-        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
-        "reportDate": "2026-10-19",
-        "reviewedAt": "2026-10-19",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "League One",
+      "home": "Oxford United",
+      "away": "Wigan Athletic",
+      "homeDisplay": "အောက်စ်ဖို့ဒ်ယူနိုက်တက်",
+      "awayDisplay": "ဝီဂန်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/oxford-united-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/wigan-athletic-logo-footylogos.png",
+      "homeOdds": "1.87",
+      "drawOdds": "3.80",
+      "awayOdds": "3.70",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "D",
+          "date": "2026-10-15",
+          "opponent": "Mansfield Town",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/mansfield-town-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "Notts County",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/notts-county-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Reading",
+          "opponentCrestUrl": "",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Stevenage",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/stevenage-logo-footylogos.png",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "အောက်စ်ဖို့ဒ်ယူနိုက်တက်",
+        "bodyOdds": "1+95",
+        "goalTotalOdds": "3+80",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "အောက်စ်ဖို့ဒ်ယူနိုက်တက် ဟာ လိဂ်ဝမ်းမှာ ရာသီအစကတည်းက ရလဒ်ကောင်းတွေ ရရှိထားပြီး ရှစ်ပွဲမှာ ၄ နိုင်၊ ၃ သရေ၊ ၁ ရှုံး၊ ရမှတ် ၁၅ မှတ်နဲ့ ဇယားအဆင့် ၈ မှာ ရပ်တည်နေပါတယ်။ အောက်စ်ဖို့ဒ်ရဲ့ ထူးခြားချက်က ဇယားအပေါ်ပိုင်းအသင်းအချို့ထက် ပွဲလျော့ကစားထားပေမယ့် ရမှတ်မကွာတာဖြစ်ပြီး ဒီနေ့အိမ်ကွင်းမှာ အနိုင်ရခဲ့ရင် အပေါ်ပိုင်းကို ဆက်လက်ဖိအားပေးနိုင်မှာပါ။ တစ်ဖက်မှာ ဝီဂန် ကတော့ ကိုးပွဲမှာ ၂ နိုင်၊ ၁ သရေ၊ ၆ ရှုံး၊ ရမှတ် ၇ မှတ်နဲ့ ဇယားအောက်ဆုံး မှာရှိနေပြီး ဂိုးကွာခြားချက် အနုတ်ခုနစ်ဖြစ်နေတာကြောင့် ခံစစ်ပိုင်းမှာ ပြန်လည်ပြင်ဆင်ဖို့ လိုနေပါတယ်။ အောက်စ်ဖို့ဒ်က ကိုယ့်ကွင်းမှာ ဘောလုံးကို ပိုမိုထိန်းချုပ်နိုင်ရင် ဝီဂန်ရဲ့ နောက်တန်းကို ဖိအားပေးနိုင်ဖို့ရှိသလို ဝီဂန်အနေနဲ့ အစောပိုင်းဂိုးပေးလိုက်ရင် ပွဲကို ပြန်လည်ထိန်းချုပ်ဖို့ ခက်ခဲနိုင်ပါတယ်။ ဒါပေမဲ့ အောက်စ်ဖို့ဒ်အနေနဲ့လည်း အခွင့်အရေးတွေကို အသုံးမချနိုင်ခဲ့ရင် ဝီဂန်က ခံစစ်ပိတ်ပြီး သရေတစ်မှတ်အတွက် တောင့်ခံနိုင်ပါတယ်။ လက်ရှိရှုံးပွဲနည်းပါးမှု၊ ရမှတ်အသာစီးနဲ့ အိမ်ကွင်းမှာ ပွဲကိုထိန်းချုပ်နိုင်ခြေကြောင့် အောက်စ်ဖို့ဒ်ယူနိုက်တက်ကို ရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "19။ အောက်စ်ဖို့ဒ်ယူနိုက်တက် နဲ့ ဝီဂန်",
+        "sourceOrder": 19,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      }
+    },
+    {
+      "league": "League One",
+      "home": "Stevenage",
+      "away": "Plymouth Argyle",
+      "homeDisplay": "စတီဗင်နိတ်ချ်",
+      "awayDisplay": "ပလိုင်းမောက်",
+      "kickoffYangon": "၂၀ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-21",
+      "nightEditorialDate": "2026-10-20",
+      "kickoffUtc": null,
+      "venue": null,
+      "homeCrestUrl": "https://www.footylogos.com/downloads/logo/stevenage-logo-footylogos.png",
+      "awayCrestUrl": "https://www.footylogos.com/downloads/logo/plymouth-argyle-logo-footylogos.png",
+      "homeOdds": "2.50",
+      "drawOdds": "3.60",
+      "awayOdds": "2.50",
+      "oddsProvider": "Sky Bet via Sporting Life",
+      "oddsSourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-20",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Bradford City",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/bradford-city-logo-footylogos.png",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "Wigan Athletic",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/wigan-athletic-logo-footylogos.png",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-17",
+          "opponent": "Huddersfield Town",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/huddersfield-town-logo-footylogos.png",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "AFC Wimbledon",
+          "opponentCrestUrl": "https://www.footylogos.com/downloads/logo/afc-wimbledon-logo-footylogos.png",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+          "sourceType": "verified_match_result"
+        }
+      ],
+      "headToHead": [],
+      "myanmarOdds": {
+        "provider": "20.pdf user-supplied original morning price",
+        "market": "Myanmar body/goal-total",
+        "upperTeam": "ပလိုင်းမောက်",
+        "bodyOdds": "-10",
+        "goalTotalOdds": "3+90",
+        "checkedAt": "2026-10-20"
+      },
+      "dailyPreviewText": "ဒီပွဲမှာ ပလိုင်းမောက် က အမှတ်ပေးဇယားအပေါ်ပိုင်းကို ရောက်ရှိနေတဲ့အသင်းဖြစ်ပြီး ၁၁ ပွဲမှာ ၆ နိုင်၊ ၁ သရေ၊ ၄ ရှုံး၊ ရမှတ် ၁၉ မှတ်နဲ့ အဆင့် ၄ မှာ ရပ်တည်နေပါတယ်။ ပလိုင်းမောက်အနေနဲ့ အနိုင်ပွဲခြောက်ပွဲရထားတာကြောင့် ရရှိတဲ့အခွင့်အရေးတွေကို အဆုံးသတ်နိုင်မှုကောင်းနေပေမယ့် ရှုံးပွဲလေးပွဲရှိထားတာကြောင့် တည်ငြိမ်မှုမှာ အားနည်းချက်အချို့ရှိနေပါတယ်။ တစ်ဖက်မှာ စတီဗင်နိတ်ချ် ကတော့ ကိုးပွဲမှာ ၃ နိုင်၊ ၃ သရေ၊ ၃ ရှုံး၊ ရမှတ် ၁၂ မှတ်နဲ့ အဆင့် ၁၂ မှာရှိပြီး ပလိုင်းမောက်ထက် နှစ်ပွဲလျော့ကစားထားတာကြောင့် အမှတ်ပေးဇယားအဆင့်ကိုပဲ ကြည့်ပြီး စတီဗင်နိတ်ချ်ကို လျှော့တွက်လို့မရပါဘူး။ စတီဗင်နိတ်ချ်က ကိုယ့်ကွင်းမှာ ပလိုင်းမောက်ကို ဖိအားပေးနိုင်ပေမယ့် ဧည့်သည်ရဲ့ လက်ရှိအနိုင်ရနိုင်စွမ်းကို သတိထားဖို့လိုပါတယ်။ ပလိုင်းမောက်အနေနဲ့လည်း အိမ်ရှင်ကို အလွန်တိုက်စစ်ဖွင့်ကစားမယ်ဆိုရင် စတီဗင်နိတ်ချ်ရဲ့ တန်ပြန်တိုက်စစ်ကို ခံရနိုင်တာကြောင့် ပွဲအရှိန်ကို ထိန်းချုပ်ဖို့လိုပါတယ်။ စတီဗင်နိတ်ချ်ရဲ့ အိမ်ကွင်းအားနဲ့ ပွဲလျော့ကစားထားမှုကို ထည့်တွက်ရပေမယ့် လတ်တလောအနိုင်ပွဲပိုများနေတဲ့ ပလိုင်းမောက်ကို အနည်းငယ်ပိုရွေးချယ်ပါတယ်။",
+      "researchSources": [
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures",
+        "https://www.sportinglife.com/football/league-tables/league-one/16/scores-and-fixtures"
+      ],
+      "status": "scheduled",
+      "specialChoice": false,
+      "myanmarOddsSource": "20.pdf — မူလ (morning opening quote); internet prediction is not actual final score",
+      "userPreviewVerbatim": {
+        "source": "User-provided Pasted text(9).txt on 2026-10-20",
+        "sourceHeading": "20။ စတီဗင်နိတ်ချ် နဲ့ ပလိုင်းမောက်",
+        "sourceOrder": 20,
+        "exactCopy": true,
+        "receivedDate": "2026-10-20"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "reviewedAt": "2026-10-20",
+        "factCheckStatus": "User-provided article preserved without silent factual correction"
+      },
+      "oddsVerificationStatus": "Sky Bet full-time 1X2 market as cited, not live",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-20",
+        "reviewedAt": "2026-10-20",
         "copyPolicy": "owner verbatim; do not rewrite"
       }
     }
   ],
   "noFixturesLeagues": [],
-  "oddsSheetPath": "data/odds/2026-10-19.json",
+  "oddsSheetPath": "data/odds/2026-10-20.json",
   "resultReview": {
-    "yesterdayArchive": "data/archive/2026-10-18.json",
-    "yesterdayFinishedMatches": 19
+    "yesterdayArchive": "data/archive/2026-10-19.json",
+    "yesterdayFinishedMatches": 6
   },
-  "ownerProofreadStatus": "2026-10-19 editorial saved verbatim in data/editorial/2026-10-19-owner-verbatim-previews.txt",
+  "ownerProofreadStatus": "2026-10-20 owner-verbatim previews and special archived separately; names match 20.pdf",
   "dailyDataValidationRequested": true
 }

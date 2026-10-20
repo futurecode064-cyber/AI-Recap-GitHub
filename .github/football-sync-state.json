@@ -2,16 +2,16 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "beb702e7f22f295d57cf0c4bcdfbc78648f22f30",
-  "source_tree": "b583b6c2042bd8fb9596301c02d3b85b22e01869",
-  "target_tree": "b583b6c2042bd8fb9596301c02d3b85b22e01869",
+  "source_commit": "1e7a01f664acf21670a7755367a8a5556cfde30a",
+  "source_tree": "5857df2457544793c5ea89e7da59c38f22d66534",
+  "target_tree": "5857df2457544793c5ea89e7da59c38f22d66534",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-19T12:02:00+00:00",
+  "last_synced_utc": "2026-10-20T01:17:00.995Z",
   "reconciled_on": "2026-10-19",
   "reconciliation_note": "Verified canonical and production football-daily trees identical after restoring frame banners, bundling main league logos and collecting PNGs into one ZIP folder; 16 targeted tests passed.",
-  "last_synced_method": "guarded-ui-only-mirror-download-modes-closefit-frames",
+  "last_synced_method": "verified-owner-2026-10-20-matching-source-and-production-trees",
   "guard_reconciliation": {
     "previous_target_tree": "78070e51784f5c3e717003813f33d66556c0ec54",
     "verified_production_head": "3a9d663ac2d6d4fd13c1945ffcc92917b74cd041",
@@ -33,5 +33,12 @@
       "tests/odds-morning-current.test.cjs"
     ],
     "production_only_paths": []
+  },
+  "guard_reconciliation_20261020": {
+    "previous_target_tree": "b583b6c2042bd8fb9596301c02d3b85b22e01869",
+    "actual_previous_production_tree": "27a6a8286a25f01770ed6e9168b898860e60e250",
+    "verified_staged_production_tree": "5857df2457544793c5ea89e7da59c38f22d66534",
+    "verified_current_source_tree": "5857df2457544793c5ea89e7da59c38f22d66534",
+    "note": "Source and staged production football directories byte-for-byte identical before publishing; main-only league badges, 21 odds, 21 previews, 1 Special Choice, and six yesterday finals."
   }
 }

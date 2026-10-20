@@ -1,0 +1,916 @@
+{
+  "reportDate": "2026-10-19",
+  "published": true,
+  "matchDateTimezone": "Asia/Yangon",
+  "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
+  "sourcePDF": "19.pdf",
+  "sourceVerificationDate": "2026-10-19",
+  "matches": [
+    {
+      "league": "Premier League",
+      "home": "Tottenham Hotspur",
+      "away": "Coventry City",
+      "homeDisplay": "စပါး",
+      "awayDisplay": "ကိုဗင်ထရီ",
+      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-20",
+      "nightEditorialDate": "2026-10-19",
+      "kickoffUtc": null,
+      "venue": "Tottenham Hotspur Stadium",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Tottenham%20Hotspur.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Coventry%20City.png",
+      "homeOdds": "1.50",
+      "drawOdds": "4.50",
+      "awayOdds": "6.25",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://www.bet365.com/hub/en-gb/football/football-competitions/premier-league",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-19",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "position": 20,
+        "played": 6,
+        "wins": 0,
+        "draws": 3,
+        "losses": 3,
+        "points": 3
+      },
+      "awayStanding": {
+        "position": 16,
+        "played": 6,
+        "wins": 2,
+        "draws": 0,
+        "losses": 4,
+        "points": 6
+      },
+      "standingsSourceUrl": "https://sportspundit.com/soccer/matches/coventry-vs-tottenham/",
+      "myanmarOdds": {
+        "provider": "19.pdf user-supplied opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "စပါး",
+        "bodyOdds": "1-30",
+        "goalTotalOdds": "3=",
+        "checkedAt": "2026-10-19"
+      },
+      "dailyPreviewText": "နည်းပြ **Roberto De Zerbi** ရဲ့ **တော့တင်ဟမ်** အသင်းဟာ ဒီရာသီ ပရီးမီးယားလိဂ်မှာ ခြောက်ပွဲကစားပြီးချိန်အထိ နိုင်ပွဲမရသေးဘဲ ၃ သရေ၊ ၃ ရှုံး၊ **ရမှတ် ၃ မှတ်နဲ့ ဇယားအောက်ဆုံး အဆင့် ၂၀** မှာ ရပ်တည်နေတာကြောင့် ဒီနေ့အိမ်ကွင်းပွဲမှာ အနိုင်ရလဒ်တစ်ခု မဖြစ်မနေလိုအပ်နေspပါတယ်။ စပါးရဲ့ ပြဿနာက ခြောက်ပွဲမှာ သုံးဂိုးသာသွင်းနိုင်ခဲ့တဲ့ တိုက်စစ်အဆုံးသတ်ပိုင်းဖြစ်ပြီး မန်ယူနဲ့ နောက်ဆုံးပွဲမှာလည်း ကစားသမားတစ်ယောက်လျော့နေတဲ့အခြေအနေကနေ **Dominic Solanke** ရဲ့ နောက်ကျချေပဂိုးနဲ့ သရေတစ်မှတ်ရယူနိုင်ခဲ့တာပါ။ အဲဒီပွဲက စိတ်ဓာတ်ပိုင်းမှာ အားတက်စရာဖြစ်ခဲ့ပေမယ့် စပါးအတွက် ပိုစိုးရိမ်ရတာက **Savio နဲ့ Lucas Bergvall** တို့ ဒဏ်ရာကြောင့် မပါနိုင်သလို **Rodrigo Bentancur** ကလည်း ပွဲပယ်ခံထားရတာကြောင့် ကွင်းလယ်နဲ့ တိုက်စစ်မှာ လူစာရင်းရွေးချယ်မှု ပိုမိုခက်ခဲလာနိုင်ခြင်းပါ။ ဒါပေမဲ့ ကာလရှည်ဒဏ်ရာကြောင့် အနားယူနေခဲ့ရတဲ့ **Dejan Kulusevski** ပြန်လည်ပါဝင်နိုင်တဲ့ အခြေအနေရှိလာတာက စပါးအတွက် သတင်းကောင်းဖြစ်နေပါတယ်။ တစ်ဖက်မှာ နည်းပြ **Frank Lampard** ရဲ့ **ကိုဗင်ထရီ** ကတော့ ခြောက်ပွဲမှာ ၂ နိုင်၊ ၄ ရှုံး၊ **ရမှတ် ၆ မှတ်နဲ့ အဆင့် ၁၆** မှာရှိပြီး နော်တင်ဟမ်ဖောရက်စ်ကို ၁-၀၊ နယူးကာဆယ်ကို ၄-၁ နဲ့ ဆက်တိုက်အနိုင်ရခဲ့တာကြောင့် တန်းတက်အသင်းတစ်သင်းဆိုပေမယ့် လတ်တလောမှာ စပါးထက် ယုံကြည်မှုပိုကောင်းနေပါတယ်။ အထူးသဖြင့် နယူးကာဆယ်နဲ့ပွဲမှာ **Jack Rudoni၊ Sidiki Cherif၊ Ellis Simms နဲ့ Stephen Mfuni** တို့ ဂိုးသွင်းခဲ့ကြတာကြောင့် ကိုဗင်ထရီရဲ့ တိုက်စစ်ဟာ ကစားသမားတစ်ယောက်တည်းကို မှီခိုနေရတာမျိုး မဟုတ်ပါဘူး။ စပါးက ကိုယ့်ကွင်းမှာ ဘောလုံးကို ပိုမိုကိုင်တွယ်ပြီး ဖိအားပေးနိုင်ပေမယ့် ကိုဗင်ထရီက ခံစစ်ကို ကျစ်လျစ်စွာထားကာ အိမ်ရှင်ရှေ့တက်လာချိန် နောက်တန်းနေရာလွတ်တွေကို အသုံးချနိုင်ပါတယ်။ **အသင်းအင်အားနဲ့ အိမ်ကွင်းအားမှာ စပါးက သာပေမယ့် လတ်တလောနိုင်ပွဲဆက်နေမှု၊ စပါးရဲ့ တိုက်စစ်အဆုံးသတ်အားနည်းချက်နဲ့ လူစာရင်းအခက်အခဲတွေကို ချိန်ဆကြည့်ရင် ဒီပွဲမှာ ကိုဗင်ထရီကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "https://www.bet365.com/hub/en-gb/football/football-competitions/premier-league",
+        "https://www.soccerstats.ie/kamp/tottenham-coventry-2026-10-19"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "userPreviewVerbatim": {
+        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
+        "sourceHeading": "1။ စပါး နဲ့ ကိုဗင်ထရီ",
+        "sourceOrder": 1,
+        "exactCopy": true,
+        "receivedDate": "2026-10-19"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "fixtureSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "standingsSourceUrl": "https://sportspundit.com/soccer/matches/coventry-vs-tottenham/",
+        "reviewedAt": "2026-10-19",
+        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+      },
+      "oddsVerificationStatus": "reference market as cited",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
+        "reportDate": "2026-10-19",
+        "reviewedAt": "2026-10-19",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      },
+      "finalScore": "3-1",
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+      "resultVerifiedDate": "2026-10-20"
+    },
+    {
+      "league": "Serie A",
+      "home": "Monza",
+      "away": "Cagliari",
+      "homeDisplay": "မွန်ဇာ",
+      "awayDisplay": "ကာဂလီယာရီ",
+      "kickoffYangon": "၁၉ ရက်နေ့ ည 11:00",
+      "kickoffCalendarDate": "2026-10-19",
+      "nightEditorialDate": "2026-10-19",
+      "kickoffUtc": null,
+      "venue": "U-Power Stadium",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/AC%20Monza.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Cagliari%20Calcio.png",
+      "homeOdds": "2.20",
+      "drawOdds": "3.10",
+      "awayOdds": "3.30",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://oddsrun.com/match/football/it/199/11997978/italy-serie-a/monza-vs-cagliari/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-19",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "position": 16,
+        "played": 6,
+        "wins": 1,
+        "draws": 1,
+        "losses": 4,
+        "points": 4
+      },
+      "awayStanding": {
+        "position": 4,
+        "played": 6,
+        "wins": 4,
+        "draws": 1,
+        "losses": 1,
+        "points": 13
+      },
+      "standingsSourceUrl": "https://prematchdata.com/en/seriea/2026-10-19/monza-vs-cagliari/",
+      "myanmarOdds": {
+        "provider": "19.pdf user-supplied opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "မွန်ဇာ",
+        "bodyOdds": "-40",
+        "goalTotalOdds": "2-65",
+        "checkedAt": "2026-10-19"
+      },
+      "dailyPreviewText": "နည်းပြ **Ivan Jurić** ရဲ့ **မွန်ဇာ** အသင်းဟာ တန်းပြန်တက်လာပြီးနောက် စီးရီးအေမှာ အတော်လေးရုန်းကန်နေရပြီး ခြောက်ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၄ မှတ်နဲ့ ဇယားအောက်ပိုင်း** မှာ ရပ်တည်နေပါတယ်။ နောက်ဆုံး လာဇီယိုကို အဝေးကွင်းမှာ ၃-၁ နဲ့ ရှုံးနိမ့်ခဲ့တဲ့ပွဲမှာ ခံစစ်ကစားသမား **Lorenzo Lucchesi** အနီကတ်ပြခံခဲ့ရတာကြောင့် ဒီပွဲမှာ မပါနိုင်တော့သလို ခြောက်ပွဲမှာ ၁၅ ဂိုးအထိ ပေးထားရတဲ့ နောက်တန်းကိုလည်း ပြန်လည်ပြင်ဆင်ဖို့ လိုနေပါတယ်။ ဒါပေမဲ့ မွန်ဇာဘက်မှာတော့ တိုက်စစ်မှူး **Gustavo Varela** က ဒီရာသီ လေးဂိုးအထိ သွင်းယူထားပြီး ရှေ့တန်းမှာ အဓိကအားကိုးနေရတာကြောင့် ကာဂလီယာရီနောက်တန်းအနေနဲ့ သူ့ကို လွယ်လွယ်ကူကူ ဂိုးအခွင့်အရေးမပေးဖို့ လိုပါတယ်။ တစ်ဖက်မှာ နည်းပြ **Fabio Pisacane** ရဲ့ **ကာဂလီယာရီ** ကတော့ ခြောက်ပွဲမှာ ၄ နိုင်၊ ၁ သရေ၊ ၁ ရှုံး၊ **ရမှတ် ၁၃ မှတ်နဲ့ ဇယားအပေါ်ပိုင်း** မှာ ရှိနေပြီး သုံးဂိုးသာပေးထားတဲ့ ခံစစ်ကြောင့် မွန်ဇာထက် အများကြီးပိုတည်ငြိမ်နေတာပါ။ ကာဂလီယာရီဘက်မှာလည်း **Daniel Maldini** က လက်ရှိဂိုးသွင်းခြေတွေ့နေပြီး လေးဂိုးအထိ သွင်းယူထားသလို နောက်ဆုံး ဂျူဗင်တပ်စ်နဲ့ ၁-၁ သရေကျခဲ့တဲ့ပွဲမှာလည်း ဦးဆောင်ဂိုးသွင်းပေးခဲ့တာကြောင့် မွန်ဇာနောက်တန်းအတွက် ထိန်းချုပ်ရခက်မယ့် ကစားသမားဖြစ်နေပါတယ်။ ပိုပြီးသတိထားရမယ့်အချက်က ကာဂလီယာရီဟာ စီးရီးအေအဝေးကွင်းလေးပွဲဆက် အနိုင်ရထားတာကြောင့် ဒီပွဲမှာလည်း အဝေးကွင်းဖြစ်လို့ အားနည်းမယ်လို့ ယူဆလို့မရပါဘူး။ မွန်ဇာက ကိုယ့်ကွင်းမှာ ဗာရဲလာရဲ့ ဂိုးသွင်းအားကို အားကိုးပြီး တုံ့ပြန်နိုင်ပေမယ့် ကာဂလီယာရီရဲ့ ခံစစ်ကျစ်လျစ်မှုကို ဖြတ်ကျော်ဖို့ မလွယ်ပါဘူး။ **မွန်ဇာရဲ့ အိမ်ကွင်းအားကို ထည့်တွက်ရပေမယ့် လက်ရှိရလဒ်တည်ငြိမ်မှု၊ မာလ်ဒီနီရဲ့ ဂိုးသွင်းခြေစွမ်းနဲ့ ကာဂလီယာရီရဲ့ အဝေးကွင်းနိုင်ပွဲမှတ်တမ်းတွေကြောင့် ကာဂလီယာရီကို ရွေးချယ်ရမှာပါ။**",
+      "researchSources": [
+        "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "https://oddsrun.com/match/football/it/199/11997978/italy-serie-a/monza-vs-cagliari/",
+        "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/"
+      ],
+      "status": "finished",
+      "specialChoice": true,
+      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "userPreviewVerbatim": {
+        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
+        "sourceHeading": "2။ မွန်ဇာ နဲ့ ကာဂလီယာရီ",
+        "sourceOrder": 2,
+        "exactCopy": true,
+        "receivedDate": "2026-10-19"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "fixtureSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "standingsSourceUrl": "https://prematchdata.com/en/seriea/2026-10-19/monza-vs-cagliari/",
+        "reviewedAt": "2026-10-19",
+        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+      },
+      "oddsVerificationStatus": "reference market as cited",
+      "specialChoiceRank": 1,
+      "specialChoiceSourceHeading": "Special Choice #1 — မွန်ဇာ နဲ့ ကာဂလီယာရီ",
+      "specialChoiceSourceSubtitle": "အီတလီ စီးရီးအေ · မြန်မာစံတော်ချိန် ၁၉ ရက်နေ့ ည 11:00",
+      "specialAnalysisParagraphs": [
+        "နည်းပြ **Ivan Jurić** ရဲ့ **မွန်ဇာ** အသင်းဟာ ဒီရာသီ စီးရီးအေ ၆ ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၄ ရှုံးနဲ့ ရမှတ် ၄ မှတ်သာရထားတာကြောင့် အိမ်ကွင်းမှာ အမှတ်လိုအပ်ချက်ကြီးမားနေပါတယ်။ ၁၅ ဂိုးအထိ ပေးထားရတဲ့ ခံစစ်ဟာ အဓိကစိုးရိမ်စရာဖြစ်ပြီး လာဇီယိုကို နောက်ဆုံး ၃-၁ နဲ့ ရှုံးနိမ့်ခဲ့တဲ့ပွဲမှာလည်း ခံစစ်တည်ငြိမ်မှု မလုံလောက်ခဲ့ပါဘူး။ မွန်ဇာဟာ လက်ရှိရာသီမှာ ဂိုးပေးနှုန်းမြင့်မားတာကြောင့် အိမ်ကွင်းမှာ တိုက်စစ်မြှင့်တင်ရင်း နောက်တန်းအကွာအဝေးကို ထိန်းညှိနိုင်ဖို့ လိုအပ်ပါတယ်။",
+        "တစ်ဖက်မှာ နည်းပြ **Fabio Pisacane** ရဲ့ **ကာဂလီယာရီ** က ၆ ပွဲမှာ ၄ နိုင်၊ ၁ သရေ၊ ၁ ရှုံးနဲ့ ၁၃ မှတ်ရထားပြီး သုံးဂိုးသာပေးထားတဲ့ ခံစစ်ကြောင့် ခြေစွမ်းပိုမိုတည်ငြိမ်ပါတယ်။ **Daniel Maldini** ကလည်း ဂိုးသွင်းခြေတွေ့နေပြီး ဂျူဗင်တပ်စ်နဲ့ နောက်ဆုံး ၁-၁ သရေကျခဲ့တဲ့ပွဲမှာ အဓိကအခန်းကဏ္ဍက ပါဝင်ခဲ့ပါတယ်။ ကာဂလီယာရီက ခံစစ်ကို စနစ်တကျစုစည်းပြီး ဂိုးအခွင့်အရေးရတဲ့အချိန်မှာ ထိရောက်အောင် အသုံးချဖို့ အရေးကြီးပါတယ်။",
+        "မွန်ဇာဘက်က **Gustavo Varela** ရဲ့ တိုက်စစ်စွမ်းရည်နဲ့ အိမ်ကွင်းဖိအားပေးကစားမှုဟာ ကာဂလီယာရီအတွက် ခက်ခဲစေနိုင်ပေမယ့် ဧည့်သည်အသင်းရဲ့ အဝေးကွင်းရလဒ်ကောင်းတွေက စိတ်ချရပါတယ်။ ကာဂလီယာရီက အိမ်ရှင်ရဲ့ နောက်တန်းနေရာလွတ်တွေကို တန်ပြန်တိုက်စစ်နဲ့ အသုံးချနိုင်ပြီး ခံစစ်ကျစ်လျစ်မှုကြောင့် မွန်ဇာရဲ့ ဂိုးရှာဖွေမှုကို ထိန်းချုပ်နိုင်မယ့် အနေအထားရှိပါတယ်။",
+        "မွန်ဇာဟာ ပွဲကို အိမ်ကွင်းဖိအားနဲ့ စတင်နိုင်ပေမယ့် ကာဂလီယာရီရဲ့ ပိုမိုတည်ငြိမ်တဲ့ ခံစစ်နဲ့ စည်းစနစ်ကျတဲ့ ပြန်လည်ထိုးဖောက်မှုက အရေးပါပါတယ်။ လတ်တလော ရလဒ်ပိုင်းမှာလည်း ကာဂလီယာရီက အသာရနေပြီး ပြိုင်ဘက်အားနည်းနေတဲ့ နောက်တန်းကို အသုံးချနိုင်မယ့် အလားအလာရှိပါတယ်။ **အသင်းနှစ်သင်းရဲ့ ခံစစ်တည်ငြိမ်မှုနဲ့ လတ်တလောခြေစွမ်းကို နှိုင်းယှဉ်ပြီး ကာဂလီယာရီကို ရွေးချယ်ပါတယ်။**"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
+        "reportDate": "2026-10-19",
+        "reviewedAt": "2026-10-19",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      },
+      "specialRiskNote": "အိမ်ရှင်မွန်ဇာက အိမ်ကွင်းမှာ ဖိအားပေးကစားနိုင်ပြီး ဧည့်သည်အသင်းအနေနဲ့ ပွဲရလဒ်ကို အာမမခံနိုင်ပါ။",
+      "specialResearchSources": [
+        "https://prematchdata.com/en/seriea/2026-10-19/monza-vs-cagliari/",
+        "https://last5games.com/head-to-head/cagliari-vs-monza/585-1628/"
+      ],
+      "specialPreparedDate": "2026-10-19",
+      "specialPickLabel": "ကာဂလီယာရီ",
+      "finalScore": "4-0",
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+      "resultVerifiedDate": "2026-10-20"
+    },
+    {
+      "league": "Serie A",
+      "home": "Parma",
+      "away": "Torino",
+      "homeDisplay": "ပါးမား",
+      "awayDisplay": "တိုရီနို",
+      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-20",
+      "nightEditorialDate": "2026-10-19",
+      "kickoffUtc": null,
+      "venue": "Stadio Ennio Tardini",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Parma%20Calcio%201913.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/Torino%20FC.png",
+      "homeOdds": "2.93",
+      "drawOdds": "3.19",
+      "awayOdds": "2.78",
+      "oddsProvider": "SportyTrader reference",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/odds/parma-turin-8522159/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-19",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Inter",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-20",
+          "opponent": "Genoa",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-14",
+          "opponent": "Como",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-06",
+          "opponent": "Monza",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-01",
+          "opponent": "Cremonese",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-12",
+          "opponent": "Udinese",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-19",
+          "opponent": "Bologna",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-14",
+          "opponent": "Roma",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-05",
+          "opponent": "Fiorentina",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-01",
+          "opponent": "Monza",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "sourceUrl": "https://www.tntsports.co.uk/football/serie-a/2026-2027/parma-torino_mtc21874064/live-stats.shtml",
+          "sourceType": "verified_final"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "played": 6,
+        "wins": 1,
+        "draws": 1,
+        "losses": 4,
+        "points": 4,
+        "position": 18
+      },
+      "awayStanding": {
+        "played": 6,
+        "wins": 2,
+        "draws": 1,
+        "losses": 3,
+        "points": 7,
+        "position": 12
+      },
+      "standingsSourceUrl": "https://prematchdata.com/en/seriea/2026-10-19/parma-vs-torino/",
+      "myanmarOdds": {
+        "provider": "19.pdf user-supplied opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "တိုရီနို",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "2-35",
+        "checkedAt": "2026-10-19"
+      },
+      "dailyPreviewText": "နည်းပြသစ် **Alberto Gilardino** ရဲ့ **ပါးမား** အသင်းဟာ စီးရီးအေ ခြောက်ပွဲမှာ ၁ နိုင်၊ ၁ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၄ မှတ်နဲ့ ဇယားအောက်ပိုင်း** မှာ ရပ်တည်နေပြီး လေးဂိုးသာသွင်းနိုင်ထားတာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းက အဓိကပြဿနာဖြစ်နေပါတယ်။ နောက်ဆုံး အင်တာမီလန်ကို အဝေးကွင်းမှာ ၃-၀ နဲ့ ရှုံးနိမ့်ခဲ့တဲ့ပွဲကလည်း ဂီလာဒီနိုရဲ့ နည်းပြသစ်ဘဝကို ခက်ခဲစေခဲ့ပြီး ပါးမားအနေနဲ့ ကိုယ့်ကွင်းမှာ ရမှတ်ပြန်ရှာဖို့ လိုနေပါတယ်။ ပါးမားဟာ ခြောက်ပွဲမှာ ၁၀ ဂိုးအထိ ပေးထားရပြီး ခံစစ်မှာလည်း အမှားနည်းအောင် ပြင်ဆင်ဖို့လိုနေသလို **Pontus Almqvist** နဲ့ **Hans Nicolussi Caviglia** တို့ ဒဏ်ရာရှိနေခြင်းက အသင်းရဲ့ ကစားသမားရွေးချယ်မှုကို ထိခိုက်စေနိုင်ပါတယ်။ တိုက်စစ်မှာတော့ လူငယ်ကစားသမား **Simone Lontani** နဲ့ **David Romero** တို့ကို အားကိုးလာနိုင်ပေမယ့် ဂိုးသွင်းအခွင့်အရေးနည်းနေတဲ့ ပြဿနာကို အရင်ဖြေရှင်းဖို့လိုပါတယ်။ တစ်ဖက်မှာ နည်းပြ **Ignazio Abate** ရဲ့ **တိုရီနို** ကတော့ ခြောက်ပွဲမှာ ၂ နိုင်၊ ၁ သရေ၊ ၃ ရှုံး၊ **ရမှတ် ၇ မှတ်နဲ့ ပါးမားထက် သုံးမှတ်အသာ** ရထားပြီး နောက်ဆုံး အူဒီးနီးစ်ကို ၂-၁ နဲ့ အနိုင်ရခဲ့တာကြောင့် ရလဒ်ပိုင်းမှာ ပြန်လည်တိုးတက်လာနေပါတယ်။ အဲဒီပွဲမှာ လူစားဝင်လာတဲ့ **Sandro Kulenović** က အနိုင်ဂိုးသွင်းပေးခဲ့တာကြောင့် တိုရီနိုရဲ့ တိုက်စစ်မှာ အခွင့်အရေးတစ်ကြိမ်ရရင်တောင် ပွဲကိုပြောင်းလဲပေးနိုင်တဲ့ ကစားသမားရှိနေတာ တွေ့ရပါတယ်။ တိုရီနိုဘက်မှာ **Giovanni Simeone** နဲ့ **Che Adams** တို့လည်း ရှေ့တန်းမှာ ရွေးချယ်စရာရှိနေပြီး ပါးမားရဲ့ အားနည်းနေတဲ့နောက်တန်းကို ဖိအားပေးနိုင်ပါတယ်။ ပါးမားက Ennio Tardini ကွင်းမှာ နည်းပြသစ်အတွက် အနိုင်ရဖို့ အားထုတ်လာနိုင်ပေမယ့် တိုက်စစ်မှာ အခွင့်အရေးနည်းနေတာကြောင့် တိုရီနိုကို ဂိုးရအောင်ဖိအားပေးနိုင်ဖို့တော့ ခက်ခဲနိုင်ပါတယ်။ **နည်းပြသစ်ရဲ့ အိမ်ကွင်းပွဲဖြစ်တာကို ထည့်တွက်ရပေမယ့် တိုရီနိုရဲ့ လတ်တလောခြေစွမ်းတိုးတက်မှု၊ ရမှတ်အသာစီးနဲ့ တိုက်စစ်ရွေးချယ်စရာပိုများနေခြင်းကြောင့် ဒီပွဲမှာ တိုရီနိုကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "https://www.sportytrader.com/en/odds/parma-turin-8522159/",
+        "https://last5games.com/matches/parma-vs-torino-19713551/"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "userPreviewVerbatim": {
+        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
+        "sourceHeading": "3။ ပါးမား နဲ့ တိုရီနို",
+        "sourceOrder": 3,
+        "exactCopy": true,
+        "receivedDate": "2026-10-19"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "fixtureSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "standingsSourceUrl": "https://last5games.com/matches/parma-vs-torino-19713551/",
+        "reviewedAt": "2026-10-19",
+        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+      },
+      "oddsVerificationStatus": "reference market as cited",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
+        "reportDate": "2026-10-19",
+        "reviewedAt": "2026-10-19",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      },
+      "finalScore": "0-3",
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+      "resultVerifiedDate": "2026-10-20"
+    },
+    {
+      "league": "La Liga",
+      "home": "Getafe",
+      "away": "Rayo Vallecano",
+      "homeDisplay": "ဂီတာဖေး",
+      "awayDisplay": "ဗယ်လီကာနို",
+      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:30",
+      "kickoffCalendarDate": "2026-10-20",
+      "nightEditorialDate": "2026-10-19",
+      "kickoffUtc": null,
+      "venue": "Coliseum",
+      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Getafe%20CF.png",
+      "awayCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Spain%20-%20LaLiga/Rayo%20Vallecano.png",
+      "homeOdds": "3.00",
+      "drawOdds": "3.00",
+      "awayOdds": "2.62",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-19",
+      "homeLastFive": [
+        {
+          "result": "D",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "position": 15,
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 14,
+        "played": 7,
+        "wins": 2,
+        "draws": 2,
+        "losses": 3,
+        "points": 8
+      },
+      "standingsSourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+      "myanmarOdds": {
+        "provider": "19.pdf user-supplied opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "ဗယ်လီကာနို",
+        "bodyOdds": "-15",
+        "goalTotalOdds": "2-5",
+        "checkedAt": "2026-10-19"
+      },
+      "dailyPreviewText": "နည်းပြ **José Bordalás** ရဲ့ **ဂီတာဖေး** အသင်းဟာ ဒီရာသီ လာလီဂါ ၈ ပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၈ မှတ်နဲ့ ဇယားအဆင့် ၁၅** မှာ ရပ်တည်နေပြီး လေးဂိုးသာသွင်းထားတာကြောင့် တိုက်စစ်ပိုင်းမှာ အတော်လေးရုန်းကန်နေရပါတယ်။ နောက်ဆုံးလိဂ်ပွဲမှာ ဘာစီလိုနာကို ၃-၀ နဲ့ ရှုံးနိမ့်ခဲ့သလို ကြားရက်ကွန်ဖရင့်လိဂ်မှာ ရိုမေးနီးယားကလပ် ကရာယိုဗာနဲ့ ၁-၁ သရေကျခဲ့တာကြောင့် လတ်တလောရလဒ်ပိုင်းမှာလည်း ယုံကြည်မှုမကောင်းသေးပါဘူး။ အဲဒီဥရောပပွဲမှာ **Nemanja Gudelj** က နောက်ကျချေပဂိုးသွင်းပေးခဲ့လို့ သရေတစ်မှတ်ရယူနိုင်ခဲ့ပေမယ့် တိုက်စစ်မှူးတွေဆီက ဂိုးသွင်းအားပိုမိုလိုအပ်နေတာပါ။ အထူးသဖြင့် **Christantus Uche နဲ့ Juanmi** တို့ ဒဏ်ရာကြောင့် မပါနိုင်သလို **Enes Ünal နဲ့ Iván Azón** တို့ရဲ့ ကြံ့ခိုင်မှုလည်း မသေချာသေးတာကြောင့် ဂီတာဖေးရဲ့ အားနည်းနေတဲ့တိုက်စစ်အတွက် ပိုပြီးစိုးရိမ်စရာဖြစ်နေပါတယ်။ တစ်ဖက်မှာ နည်းပြ **Beñat San José** ရဲ့ **ရာယိုဗယ်လီကာနို** ကတော့ လိဂ် ၇ ပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၃ ရှုံး၊ **ရမှတ် ၈ မှတ်နဲ့ အဆင့် ၁၄** မှာရှိပြီး ဂီတာဖေးနဲ့ ရမှတ်တူပေမယ့် တစ်ပွဲလျော့ကစားထားတာကြောင့် အခြေအနေပိုကောင်းနေပါတယ်။ ရာယိုဘက်မှာတော့ တိုက်စစ်မှူး **Sergio Camello** က ဂိုးသွင်းခြေတွေ့နေပြီး ခုနစ်ဂိုးအထိ သွင်းယူထားတာကြောင့် ဂီတာဖေးနောက်တန်းက သူ့ကို ထိန်းချုပ်နိုင်ဖို့ မလွယ်ပါဘူး။ ဒါပေမဲ့ ရာယိုဟာ ၁၆ ဂိုးအထိ ပေးထားရပြီး ခံစစ်ပိုင်းမှာ ဂီတာဖေးလောက် မတည်ငြိမ်သလို အဓိကနောက်ခံကစားသမားအချို့ ဒဏ်ရာရှိနေတာကြောင့် ဂီတာဖေးအတွက်လည်း ဂိုးရှာနိုင်မယ့်အခွင့်အရေးရှိပါတယ်။ ဒီပွဲမှာ အိမ်ရှင်ရဲ့ ခံစစ်ကျစ်လျစ်မှုက ရာယိုရဲ့ တိုက်စစ်ကို အခက်တွေ့စေနိုင်ပေမယ့် ဂီတာဖေးကိုယ်တိုင် ဂိုးသွင်းဖို့ ရုန်းကန်နေရတာကို ထည့်တွက်ရမှာပါ။ **ဂီတာဖေးရဲ့ အိမ်ကွင်းအားသာချက်ရှိပေမယ့် ကာမယ်လိုရဲ့ ဂိုးသွင်းခြေစွမ်း၊ တိုက်စစ်အဆုံးသတ်အားပိုကောင်းနေမှုနဲ့ ဂီတာဖေးရဲ့ လူစာရင်းအခက်အခဲတွေကြောင့် ဗယ်လီကာနိုကို ရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "https://footballnation.eu/match/la-liga/2026/797782/",
+        "https://footballnation.eu/match/la-liga/2026/797782/"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "userPreviewVerbatim": {
+        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
+        "sourceHeading": "4။ ဂီတာဖေး နဲ့ ဗယ်လီကာနို",
+        "sourceOrder": 4,
+        "exactCopy": true,
+        "receivedDate": "2026-10-19"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "fixtureSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "standingsSourceUrl": "https://footballnation.eu/match/la-liga/2026/797782/",
+        "reviewedAt": "2026-10-19",
+        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+      },
+      "oddsVerificationStatus": "reference market as cited",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
+        "reportDate": "2026-10-19",
+        "reviewedAt": "2026-10-19",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      },
+      "finalScore": "1-1",
+      "finalScoreSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-19",
+      "resultVerifiedDate": "2026-10-20"
+    },
+    {
+      "league": "La Liga 2",
+      "home": "Celta Fortuna",
+      "away": "Tenerife",
+      "homeDisplay": "ဆဲလ်တာဖော်တူနာ",
+      "awayDisplay": "တီနာရီဖေး",
+      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:00",
+      "kickoffCalendarDate": "2026-10-20",
+      "nightEditorialDate": "2026-10-19",
+      "kickoffUtc": null,
+      "venue": "Estadio ABANCA Balaídos",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/245.png",
+      "homeOdds": "2.63",
+      "drawOdds": "3.28",
+      "awayOdds": "2.712",
+      "oddsProvider": "1xBet",
+      "oddsSourceUrl": "https://1xbet.es/es/line/football/27687-spain-segunda-division/760988575-celta-fortuna-tenerife",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-19",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "position": 13,
+        "played": 9,
+        "wins": 3,
+        "draws": 2,
+        "losses": 4,
+        "points": 11,
+        "goalsFor": 14,
+        "goalsAgainst": 15
+      },
+      "awayStanding": {
+        "position": 12,
+        "played": 9,
+        "wins": 3,
+        "draws": 3,
+        "losses": 3,
+        "points": 12,
+        "goalsFor": 11,
+        "goalsAgainst": 13
+      },
+      "standingsSourceUrl": "https://www.laliga.com/es-GB/partido/temporada-2026-2027-laliga-hypermotion-rc-celta-fortuna-cd-tenerife-10",
+      "myanmarOdds": {
+        "provider": "19.pdf user-supplied opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "တီနာရီဖေး",
+        "bodyOdds": "-5",
+        "goalTotalOdds": "2-70",
+        "checkedAt": "2026-10-19"
+      },
+      "dailyPreviewText": "စပိန်ဒုတိယတန်းမှာ တွေ့ဆုံကြမယ့် **ဆဲလ်တာဖော်တူနာ** နဲ့ **တီနာရီဖေး** တို့ဟာ ရမှတ်ကွာခြားချက် တစ်မှတ်သာရှိတဲ့ အသင်းနှစ်သင်းဖြစ်တာကြောင့် ဒီပွဲက အကြိတ်အနယ်ရှိလာနိုင်ပါတယ်။ ဆဲလ်တာဖော်တူနာဟာ လိဂ် ၉ ပွဲမှာ ၃ နိုင်၊ ၂ သရေ၊ ၄ ရှုံး၊ **ရမှတ် ၁၁ မှတ်** ရထားပြီး ၁၄ ဂိုးသွင်းထားတာကြောင့် တိုက်စစ်ပိုင်းမှာ ဂိုးရနိုင်စွမ်းရှိပေမယ့် ၁၅ ဂိုးအထိ ပြန်ပေးထားရတဲ့ ခံစစ်က အဓိကအားနည်းချက်ဖြစ်နေပါတယ်။ ဒါပေမဲ့ နောက်ဆုံး ရီးရဲလ်ဆိုစီဒက် ဘီအသင်းကို ၄-၁ နဲ့ အနိုင်ရခဲ့တဲ့ပွဲမှာ ဆဲလ်တာဖော်တူနာရဲ့ တိုက်စစ်အရည်အသွေးကို တွေ့ခဲ့ရပြီး **Álvaro Marín** ကလည်း အဲဒီပွဲမှာ နှစ်ဂိုးသွင်းယူခဲ့သလို ဒီရာသီ လိဂ်ငါးဂိုးအထိ ရထားတာကြောင့် ရှေ့တန်းမှာ အဓိကအားကိုးနေရတာပါ။ တစ်ဖက်မှာ **တီနာရီဖေး** ကတော့ ၉ ပွဲမှာ ၃ နိုင်၊ ၃ သရေ၊ ၃ ရှုံး၊ **ရမှတ် ၁၂ မှတ်** ရထားပြီး ၁၁ ဂိုးသွင်း၊ ၁၃ ဂိုးပေးထားတာကြောင့် ဆဲလ်တာဖော်တူနာထက် ဂိုးသွင်းအားနည်းပေမယ့် ခံစစ်ပိုင်းမှာ အနည်းငယ်ပိုတည်ငြိမ်နေပါတယ်။ တီနာရီဖေးအတွက် အရေးကြီးတာက ဆဲလ်တာဖော်တူနာရဲ့ အယ်လ်ဗာရိုမာရင်ကို ဂိုးဧရိယာထဲမှာ နေရာလွတ်မပေးဖို့ဖြစ်ပြီး အိမ်ရှင်ရဲ့ တိုက်စစ်ကို ထိန်းထားနိုင်ရင် ၁၅ ဂိုးအထိ ပေးထားရတဲ့ ဆဲလ်တာဖော်တူနာနောက်တန်းကို တန်ပြန်ထိုးဖောက်ဖို့ အခွင့်အရေးရှိလာနိုင်ပါတယ်။ ဆဲလ်တာဖော်တူနာက ဘာလိုက်ဒို့စ်ကွင်းမှာ နောက်ဆုံးပွဲက ဂိုးပြတ်နိုင်ပွဲအရှိန်ကို ဆက်ထိန်းနိုင်ဖို့ ကြိုးစားလာမှာဖြစ်ပေမယ့် တီနာရီဖေးရဲ့ ကွင်းလယ်နဲ့ ခံစစ်ကို လွယ်လွယ်ကူကူ ကျော်ဖြတ်နိုင်မယ်လို့ မဆိုနိုင်ပါဘူး။ **ဆဲလ်တာဖော်တူနာရဲ့ အိမ်ကွင်းတိုက်စစ်အားကောင်းပေမယ့် နှစ်သင်းရဲ့ လက်ရှိရမှတ်၊ ခံစစ်တည်ငြိမ်မှုနဲ့ အနိုင်မရခဲ့တဲ့ပွဲတွေကို နှိုင်းယှဉ်ကြည့်ရင် ဒီပွဲမှာ တီနာရီဖေးကို အနည်းငယ်ပိုရွေးချယ်ပါတယ်။**",
+      "researchSources": [
+        "https://www.sofascore.com/es/football/2026-10-19",
+        "https://1xbet.es/es/line/football/27687-spain-segunda-division/760988575-celta-fortuna-tenerife",
+        "https://spanishleague.net/match/celta-vigo-b-vs-tenerife-2026-10-19"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "userPreviewVerbatim": {
+        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
+        "sourceHeading": "5။ ဆဲလ်တာဖော်တူနာ နဲ့ တီနာရီဖေး",
+        "sourceOrder": 5,
+        "exactCopy": true,
+        "receivedDate": "2026-10-19"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "fixtureSourceUrl": "https://www.sofascore.com/es/football/2026-10-19",
+        "standingsSourceUrl": "https://www.laliga.com/en-ES/match/temporada-2026-2027-laliga-hypermotion-rc-celta-fortuna-cd-tenerife-10",
+        "reviewedAt": "2026-10-19",
+        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+      },
+      "oddsVerificationStatus": "reference market as cited",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "sourceUrl": "https://www.sofascore.com/es/football/2026-10-19",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
+        "reportDate": "2026-10-19",
+        "reviewedAt": "2026-10-19",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      },
+      "finalScore": "1-1",
+      "finalScoreSourceUrl": "https://rfef.es/es/resultados?competition=33836086&group=33836087&journey=10",
+      "resultVerifiedDate": "2026-10-20"
+    },
+    {
+      "league": "Ligue 2",
+      "home": "Rodez",
+      "away": "Montpellier",
+      "homeDisplay": "ရိုဒက်ဇ်",
+      "awayDisplay": "မွန်ပယ်လီယာ",
+      "kickoffYangon": "၁၉ ရက်နေ့ ည 1:15",
+      "kickoffCalendarDate": "2026-10-20",
+      "nightEditorialDate": "2026-10-19",
+      "kickoffUtc": null,
+      "venue": "Stade Paul-Lignon",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7719.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/274.png",
+      "homeOdds": "2.84",
+      "drawOdds": "3.35",
+      "awayOdds": "2.31",
+      "oddsProvider": "FranceLeague reference",
+      "oddsSourceUrl": "https://franceleague.net/match/rodez-vs-montpellier-2026-10-19",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-19",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "W",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "L",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        },
+        {
+          "result": "D",
+          "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+          "sourceType": "third_party_recent_form"
+        }
+      ],
+      "headToHead": [],
+      "homeStanding": {
+        "position": 17,
+        "played": 8,
+        "points": 7,
+        "wins": 2,
+        "draws": 1,
+        "losses": 5
+      },
+      "awayStanding": {
+        "position": 5,
+        "played": 8,
+        "points": 15,
+        "wins": 4,
+        "draws": 3,
+        "losses": 1
+      },
+      "standingsSourceUrl": "https://franceleague.net/match/rodez-vs-montpellier-2026-10-19",
+      "myanmarOdds": {
+        "provider": "19.pdf user-supplied opening quote",
+        "market": "Myanmar body/total",
+        "upperTeam": "မွန်ပယ်လီယာ",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "3+30",
+        "checkedAt": "2026-10-19"
+      },
+      "dailyPreviewText": "**ရိုဒက်ဇ်** အသင်းဟာ ဒီရာသီ ပြင်သစ်လီဂူး ၂ မှာ ၈ ပွဲကစားပြီး **ရမှတ် ၇ မှတ်နဲ့ ဇယားအဆင့် ၁၇** မှာ ရပ်တည်နေတာကြောင့် တန်းဆင်းဇုန်အန္တရာယ်နဲ့ ရင်ဆိုင်နေရပါတယ်။ အထူးသဖြင့် နောက်ဆုံးငါးပွဲမှာ နိုင်ပွဲမရှိဘဲ လေးပွဲရှုံး၊ တစ်ပွဲသရေကျထားသလို ၁၃ ဂိုးအထိ ပေးထားရတာကြောင့် ရိုဒက်ဇ်ရဲ့ နောက်တန်းအခြေအနေက အတော်လေးစိုးရိမ်စရာပါ။ နောက်ဆုံး စိန့်အက်တီယန်ကို အဝေးကွင်းမှာ ၂-၀ နဲ့ ရှုံးခဲ့သလို အိမ်ကွင်းမှာလည်း နန်စီကို ၄-၃၊ ဂရီနိုဘယ်ကို ၁-၀ နဲ့ ဆက်တိုက်ရှုံးနိမ့်ထားတာကြောင့် ကိုယ့်ကွင်းမှာ ကစားရရုံနဲ့ အားသာချက်ရှိမယ်လို့ မပြောနိုင်ပါဘူး။ ဒါပေမဲ့ ရိုဒက်ဇ်ဘက်မှာတော့ တိုက်စစ်ကစားသမား **Nicolas Pays** က ဂိုးသွင်းပေးနိုင်တဲ့ ကစားသမားတစ်ယောက်ဖြစ်ပြီး မွန်ပယ်လီယာရဲ့ ခံစစ်ကို အခွင့်အရေးရတဲ့အခါ စမ်းသပ်နိုင်ဖို့ မျှော်လင့်ရပါတယ်။ တစ်ဖက်မှာ **မွန်ပယ်လီယာ** ကတော့ ၈ ပွဲမှာ **ရမှတ် ၁၅ မှတ်နဲ့ ဇယားအဆင့် ၅** မှာ ရပ်တည်နေပြီး ရိုဒက်ဇ်ထက် ရှစ်မှတ်အထိ အသာရထားပါတယ်။ မွန်ပယ်လီယာဟာ နောက်ဆုံးငါးပွဲမှာ ၂ နိုင်၊ ၂ သရေ၊ ၁ ရှုံးသာရှိပြီး နောက်ဆုံး ဂရီနိုဘယ်ကို ၂-၀ နဲ့ အနိုင်ရခဲ့တာကြောင့် လတ်တလောခြေစွမ်းပိုတည်ငြိမ်နေသလို အဲဒီငါးပွဲမှာ လေးဂိုးသာပေးထားတဲ့ ခံစစ်ကလည်း အားကိုးရပါတယ်။ ပိုပြီးထူးခြားတာက မွန်ပယ်လီယာဟာ အဝေးကွင်းမှာလည်း ရလဒ်ကောင်းတွေ ရရှိထားတာကြောင့် ရိုဒက်ဇ်ရဲ့ Stade Paul-Lignon ကွင်းကို သွားကစားရပေမယ့် အလွန်စိုးရိမ်စရာမရှိတဲ့ အနေအထားဖြစ်နေပါတယ်။ ရိုဒက်ဇ်က ကိုယ့်ကွင်းမှာ နိုင်ပွဲပြန်ရှာဖို့ တိုက်စစ်ဖွင့်ကစားလာနိုင်ပေမယ့် နောက်တန်းကို အလွန်ဖွင့်မိရင် မွန်ပယ်လီယာအတွက် ဂိုးအခွင့်အရေးတွေ ပေါ်လာနိုင်ပါတယ်။ **ရိုဒက်ဇ်ရဲ့ လတ်တလောရှုံးပွဲဆက်နေမှု၊ ပေးဂိုးများပြားတဲ့ ခံစစ်နဲ့ မွန်ပယ်လီယာရဲ့ ပိုမိုတည်ငြိမ်တဲ့ အဝေးကွင်းခြေစွမ်းကို နှိုင်းယှဉ်ကြည့်ရင် ဒီပွဲမှာ မွန်ပယ်လီယာကို ရွေးချယ်ရမှာပါ။**",
+      "researchSources": [
+        "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+        "https://franceleague.net/match/rodez-vs-montpellier-2026-10-19",
+        "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd"
+      ],
+      "status": "finished",
+      "specialChoice": false,
+      "myanmarOddsSource": "19.pdf, original morning quote; last column is prediction",
+      "userPreviewVerbatim": {
+        "source": "User supplied full prose in ChatGPT message on 2026-10-19",
+        "sourceHeading": "6။ ရိုဒက်ဇ် နဲ့ မွန်ပယ်လီယာ",
+        "sourceOrder": 6,
+        "exactCopy": true,
+        "receivedDate": "2026-10-19"
+      },
+      "previewV2": {
+        "version": "2",
+        "status": "owner-verbatim",
+        "fixtureSourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+        "standingsSourceUrl": "https://franceleague.net/match/rodez-vs-montpellier-2026-10-19",
+        "reviewedAt": "2026-10-19",
+        "factCheckStatus": "user text preserved without silent factual correction; source verification partial"
+      },
+      "oddsVerificationStatus": "reference market as cited",
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "sourceUrl": "https://www.fotmob.com/matches/rodez-vs-montpellier/1pgwnd",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md",
+        "reportDate": "2026-10-19",
+        "reviewedAt": "2026-10-19",
+        "copyPolicy": "owner verbatim; do not rewrite"
+      },
+      "finalScore": "0-3",
+      "finalScoreSourceUrl": "https://www.maxifoot.fr/match/rodez-montpellier-20261019.htm",
+      "resultVerifiedDate": "2026-10-20"
+    }
+  ],
+  "noFixturesLeagues": [],
+  "oddsSheetPath": "data/odds/2026-10-19.json",
+  "resultReview": {
+    "yesterdayArchive": "data/archive/2026-10-18.json",
+    "yesterdayFinishedMatches": 19
+  },
+  "ownerProofreadStatus": "2026-10-19 editorial saved verbatim in data/editorial/2026-10-19-owner-verbatim-previews.txt",
+  "dailyDataValidationRequested": true
+}

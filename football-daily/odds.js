@@ -27,6 +27,8 @@ function matchCell(m){
 const mainLeagueFiles={"Premier League":"eng.1","Serie A":"ita.1","La Liga":"esp.1","Allsvenskan":"swe.1","Danish Superliga":"den.1","Primeira Liga":"por.1","La Liga 2":"esp.2","Ligue 2":"fra.2","Turkish Super Lig":"tur.1","Swedish Superettan":"swe.2"};
 const isMainOdds=!document.documentElement.dataset.footballBrandName&&/^\/odds(?:\.html)?\/?$/.test(location.pathname);
 if(isMainOdds){
+ Object.assign(leagueLogos,{"UEFA Champions League":"https://commons.wikimedia.org/wiki/Special:FilePath/UEFA%20Champions%20League%20logo%20no%20text.svg","League One":"https://commons.wikimedia.org/wiki/Special:FilePath/EFL%20League%20One%20Wordmark.svg"});
+ Object.assign(groups,{"League One":"အင်္ဂလန် လိဂ်ဝမ်း","UEFA Champions League":"ချန်ပီယံလိဂ်"});
  Object.assign(groups,{"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Turkish Super Lig":"တူရကီ စူပါလိဂ်","Swedish Superettan":"ဆွီဒင် စူပါအက်တန်လိဂ်"});
  for(const [league,file] of Object.entries(mainLeagueFiles))leagueLogos[league]="./assets/league-logos/"+file+".png";
 }
