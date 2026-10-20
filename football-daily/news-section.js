@@ -65,7 +65,12 @@
   canvas.width=1080;
   ctx.font='800 48px "FCNewsMyanmar"';
   const lines=headlineLines(ctx,s.title,944),lineHeight=82;
-  canvas.height=Math.max(1350,1080+lines.length*lineHeight);
+  ctx.font='400 25px "FCNewsMyanmar"';
+  const paragraphs=(Array.isArray(s.paragraphs)?s.paragraphs:[]).map(text=>headlineLines(ctx,text,944));
+  const bodyLineHeight=48,paragraphGap=25;
+  const bodyStart=958+lines.length*lineHeight+25;
+  const bodyHeight=paragraphs.reduce((total,paragraph)=>total+paragraph.length*bodyLineHeight+paragraphGap,0);
+  canvas.height=Math.max(1350,bodyStart+bodyHeight+155);
   const h=canvas.height;
   ctx.fillStyle="#101b1c";ctx.fillRect(0,0,1080,h);
   ctx.fillStyle=exportAccent;ctx.fillRect(0,0,1080,12);
@@ -86,6 +91,12 @@
   ctx.fillStyle=isGoalZone?"#8a651f":"#745039";ctx.font='700 21px "FCNewsMyanmar"';ctx.fillText(s.categoryLabel||"ဘောလုံးသတင်း",68,872);
   ctx.fillStyle="#142120";ctx.font='800 48px "FCNewsMyanmar"';
   lines.forEach((line,i)=>ctx.fillText(line,68,958+i*lineHeight));
+  ctx.fillStyle="#26332f";ctx.font='400 25px "FCNewsMyanmar"';
+  let bodyY=bodyStart;
+  for(const paragraph of paragraphs){
+   for(const line of paragraph){ctx.fillText(line,68,bodyY);bodyY+=bodyLineHeight;}
+   bodyY+=paragraphGap;
+  }
   ctx.strokeStyle="#d1c5b3";ctx.beginPath();ctx.moveTo(68,h-124);ctx.lineTo(1012,h-124);ctx.stroke();
   ctx.fillStyle="#695f53";ctx.font="700 17px Arial, sans-serif";ctx.fillText(exportBrand+"  •  FOOTBALL NEWS",68,h-82);
 
