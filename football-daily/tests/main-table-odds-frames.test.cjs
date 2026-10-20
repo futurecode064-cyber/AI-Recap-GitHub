@@ -73,6 +73,18 @@ test('Team and league names stay on one line without rewriting the original text
   assert.match(domSource,/align-items","center","important"/);
   assert.doesNotMatch(domSource,/innerHTML\s*=\s*['"]<table/);
 });
+test('Main odds frames use a single shared team font size, never size each row separately',()=>{
+  assert.match(domSource,/function mainTeamNameSize\(labels\)/);
+  assert.match(domSource,/const original=\[\.\.\.document\.querySelectorAll\("#oddsList \.odds-matchup \.club-label"\)\]/);
+  assert.match(domSource,/const names=\(original\.length\?original:labels\)/);
+  assert.match(domSource,/const mainOnly=!document\.documentElement\?\.dataset\?\.footballBrandName/);
+  assert.match(domSource,/if\(mainOnly&&allTeamLabels\.length\)/);
+  assert.match(domSource,/const px=mainTeamNameSize\(allTeamLabels\)/);
+  assert.match(domSource,/for\(const name of allTeamLabels\)/);
+  assert.match(domSource,/name\.style\.setProperty\("font-size",px\+"px","important"\)/);
+  assert.match(domSource,/if\(mainOnly\)\{/);
+  assert.match(domSource,/else\{\s*\/\/ Preserve the existing exported typography of brand sub-sites/);
+});
 test('Export gives the match-up cell a tighter fixed width and keeps both badges compact',()=>{
   assert.match(domSource,/colgroup col:nth-child\(2\)\{width:31%!important\}/);
   assert.match(domSource,/colgroup col:nth-child\(1\)\{width:9%!important\}/);
@@ -172,7 +184,7 @@ test('Main odds page alone loads frame controls; sub-brands may share the DOM re
 
 test('Shared renderer accepts odds routes and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=main-logo-assets-20261020/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=uniform-team-names-20261020/);
   assert.match(html,/main-table-odds-frames\.js\?v=20261020-all-frames-zip-v8/);
   assert.ok(domSource.includes('if (!/\\/odds(?:\\.html)?\\/?$/.test(location.pathname)) return;'));
 });
@@ -187,7 +199,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=main-logo-assets-20261020/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=uniform-team-names-20261020/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);
