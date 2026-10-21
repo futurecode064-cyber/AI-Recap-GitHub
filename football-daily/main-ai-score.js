@@ -41,6 +41,62 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
  const exportStatus=document.getElementById("fcAiExportStatus");
  const exportAllBtn=document.getElementById("fcAiSelectAll");
  const exportNoneBtn=document.getElementById("fcAiSelectNone");
+ const onePngBtn=document.getElementById("fcAiSelectedOnePng");
+ const zipFramesBtn=document.getElementById("fcAiSelectedAllFramesZip");
+ let specialExportBusy=false;
+ const singleOptions=(frame,scope)=>({
+  date:report.reportDate,part:1,total:1,scope,frame,
+  predict:model.predict,leagueLabel:labelLeague,
+  leagueLogo:l=>window.FutureCodeMainLogoAssets?.leagueCrest(l)||leagueIcons[l],
+  teamName:team,teamLogo:teamCrest,displayTime
+ });
+ function selectedSinglePage(){
+  return window.FutureCodeAiBulkExport?.planSinglePage(publishedFixtures(),[...exportLeagues])||null;
+ }
+ async function specialDownload(button,mode){
+  if(specialExportBusy||!report||!button)return;
+  const exporter=window.FutureCodeAiBulkExport;
+  const page=selectedSinglePage();
+  if(!exporter||!page?.matchCount){
+   exportStatus.textContent="PNG Download အတွက် အနည်းဆုံး လိဂ်တစ်ခုရွေးပါ။";return;
+  }
+  if(mode==="zip"&&!window.FutureCodeFrameZip?.Archive){
+   exportStatus.textContent="ZIP Module မရသေးပါ။ Website ကို Refresh လုပ်ပါ။";return;
+  }
+  const oldText=button.textContent;
+  const selected=[...exportLeagues],scope="selected-"+selected.length+"-leagues";
+  specialExportBusy=true;onePngBtn.disabled=true;zipFramesBtn.disabled=true;
+  try{
+   if(mode==="one"){
+    const frame=document.getElementById("fcAiFrameStyle")?.value||"standard";
+    button.textContent="PNG တစ်ပုံတည်း ပြင်ဆင်နေသည်…";
+    await exporter.savePage(page,singleOptions(frame,scope));
+    exportStatus.textContent="ရွေးထားသည့် "+selected.length+" လိဂ်၊ "+page.matchCount+" ပွဲအားလုံးပါဝင်သော PNG တစ်ပုံ Download စတင်ပါပြီ။";
+   }else{
+    const archive=new window.FutureCodeFrameZip.Archive();
+    const date=report.reportDate;
+    for(const [index,frame] of exporter.FRAME_IDS.entries()){
+     button.textContent="ZIP ပြင်ဆင်နေသည်… "+(index+1)+"/"+exporter.FRAME_IDS.length;
+     exportStatus.textContent="Frame "+(index+1)+"/"+exporter.FRAME_IDS.length+" ကို PNG ဖန်တီးနေသည်…";
+     const png=await exporter.renderBlob(page,singleOptions(frame,scope));
+     await archive.add("ai-predictions-"+date+"/ai-"+frame+"-"+date+".png",png);
+    }
+    exporter.downloadBlob(archive.finish(),"future-code-ai-all-frames-"+date+"-"+selected.length+"-leagues.zip");
+    exportStatus.textContent="လိဂ် "+selected.length+" ခု၊ ပွဲ "+page.matchCount+" ပွဲစီပါသော Frame "+exporter.FRAME_IDS.length+" မျိုး ZIP Download စတင်ပါပြီ။";
+   }
+  }catch(err){
+   console.error("AI selected leagues single image/ZIP export",err);
+   exportStatus.textContent="Download မအောင်မြင်ပါ။ "+(err?.message||"ပြန်လည်ကြိုးစားပါ။");
+  }finally{
+   specialExportBusy=false;
+   button.textContent=oldText;
+   const available=Boolean(selectedSinglePage()?.matchCount);
+   onePngBtn.disabled=!available;
+   zipFramesBtn.disabled=!available;
+  }
+ }
+ onePngBtn?.addEventListener("click",()=>specialDownload(onePngBtn,"one"));
+ zipFramesBtn?.addEventListener("click",()=>specialDownload(zipFramesBtn,"zip"));
  const labelLeague=s=>leagueNames[s]||s||"အခြားလိဂ်";
  const team=(m,s)=>String(m[s+"Display"]||m[s]||"").trim();
  const crestFallbackIds={
@@ -140,6 +196,8 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
   if(!fixtures.length){
    allPages?.replaceChildren();chosenPages?.replaceChildren();
    if(exportStatus)exportStatus.textContent="ယနေ့ပွဲစဉ်စာရင်း မရသေးပါ";
+   if(onePngBtn)onePngBtn.disabled=true;
+   if(zipFramesBtn)zipFramesBtn.disabled=true;
    return;
   }
   const allCount=pageButtons(allPages,fixtures,null,"all");
@@ -149,6 +207,10 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
   const selectedCount=pageButtons(chosenPages,fixtures,selected,scope);
   exportStatus.textContent="ပွဲအားလုံး "+fixtures.length+" ပွဲ / PNG "+allCount+" ပုံ · "+
    "လိဂ်ရွေးထားသည် "+selected.length+" ခု / "+included.length+" ပွဲ / PNG "+selectedCount+" ပုံ။";
+  if(!specialExportBusy){
+   if(onePngBtn)onePngBtn.disabled=!included.length;
+   if(zipFramesBtn)zipFramesBtn.disabled=!included.length;
+  }
   if(exportAllBtn)exportAllBtn.disabled=selected.length===new Set(fixtures.map(m=>m.league||"Other")).size;
   if(exportNoneBtn)exportNoneBtn.disabled=selected.length===0;
  }

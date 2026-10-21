@@ -211,3 +211,12 @@ body:is([data-fc-main-view="previewFrame"],[data-fc-main-view="oddsFrame"]) .con
 .fc-ai-frame-controls label{font-size:14px;font-weight:800}
 .fc-ai-frame-controls select{min-width:260px;max-width:100%;padding:10px;border-radius:8px;border:1px solid #b5c6f0;background:#fff;color:#152457;font:700 13px "Noto Sans Myanmar",sans-serif}
 .fc-ai-frame-controls span{font-size:12px;line-height:1.8;color:#d9e4ff}
+
+/* MAIN AI STUDIO: single combined league PNG and all-frame ZIP actions. */
+.fc-ai-export-single-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:11px}
+.fc-ai-export-single-actions button{min-height:54px;padding:11px 12px;border:1px solid #ffd290;border-radius:9px;color:#11234f;background:#ffb571;cursor:pointer;font:800 12px/1.65 'Noto Sans Myanmar',sans-serif;text-align:center}
+.fc-ai-export-single-actions button:last-child{background:#c7e1ff;border-color:#90b4ed;color:#102657}
+.fc-ai-export-single-actions button:hover:not(:disabled),.fc-ai-export-single-actions button:focus-visible:not(:disabled){outline:2px solid #fff;outline-offset:2px}
+.fc-ai-export-single-actions button:disabled{cursor:not-allowed;opacity:.46}
+.fc-ai-export-help{margin:6px 0 0;color:#d6e2fd;font:600 11px/1.8 'Noto Sans Myanmar',sans-serif}
+@media(max-width:620px){.fc-ai-export-single-actions{grid-template-columns:1fr}}

@@ -39,6 +39,22 @@
    return {groups:pageGroups,matchCount:length};
   });
  }
+ // No pagination: every selected league and every published match stays on ONE PNG.
+ function planSinglePage(fixtures,selectedLeagues=null){
+  if(!Array.isArray(fixtures))return null;
+  const allow=selectedLeagues===null?null:new Set(selectedLeagues);
+  const groups=new Map();
+  for(const match of fixtures){
+   if(!match||typeof match.home!=="string"||typeof match.away!=="string")continue;
+   const league=match.league||"Other";
+   if(allow&&!allow.has(league))continue;
+   if(!groups.has(league))groups.set(league,[]);
+   groups.get(league).push(match);
+  }
+  if(!groups.size)return null;
+  return {groups:[...groups].map(([league,matches])=>({league,matches})),
+          matchCount:[...groups.values()].reduce((n,matches)=>n+matches.length,0)};
+ }
  function dim(page){
   if(!page||!Array.isArray(page.groups)||!page.groups.length)throw Error("No selected fixtures");
   return {width:WIDTH,height:HEADER+FOOTER+page.groups.length*LEAGUE_H+page.matchCount*ROW_H};
@@ -121,7 +137,8 @@
     special:{base:"#083955",header:"#0b567c",league:["#084766","#2b9aca","#074c73"],footer:"#0d5379"}
   };
   const AI_BRAND={best:"BEST YOUR CHOICE",final:"FINAL GOAL",special:"SPECIAL ONE GROUP"};
-  async function savePage(page,opts={}){
+  const FRAME_IDS=Object.freeze(["standard","best","final","special"]);
+  async function renderBlob(page,opts={}){
   if(!page?.matchCount)throw Error("No matches to export");
   const {date,part=1,total=1,scope="all",predict,leagueLabel,leagueLogo,teamName,teamLogo,displayTime}=opts;
    const theme=AI_COLOURS[opts.frame]||AI_COLOURS.standard;
@@ -186,13 +203,23 @@
   text(ctx,AI_BRAND[opts.frame]||"FUTURE CODE  •  MYANMAR FOOTBALL DAILY",20,size.height-23,670,19,"left","#e1ebff");
   text(ctx,scope==="all"?"ALL LEAGUES":String(scope),WIDTH-20,size.height-23,460,19,"right","#eedca6");
   canvas=await brandCanvas(canvas,opts.frame);
+   // Keep the complete long poster as one image. Never silently drop fixtures.
    const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
-  if(!blob)throw Error("PNG generation failed");
-  const url=URL.createObjectURL(blob),link=document.createElement("a");
-  link.href=url;link.download="future-code-ai-"+(date||"today")+"-"+slug(scope)+"-"+(opts.frame&&opts.frame!=="standard"?slug(opts.frame)+"-":"")+part+"-of-"+total+".png";
-  document.body.appendChild(link);link.click();link.remove();
-  setTimeout(()=>URL.revokeObjectURL(url),10000);
-  return link.download;
- }
- return Object.freeze({MAX_ROWS,planPages,dim,savePage});
+   if(!blob)throw Error("PNG generation failed");
+   return blob;
+  }
+  function downloadBlob(blob,filename){
+    const url=URL.createObjectURL(blob),link=document.createElement("a");
+    link.href=url;link.download=filename;
+    document.body.appendChild(link);link.click();link.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),30000);
+    return filename;
+  }
+  async function savePage(page,opts={}){
+    const blob=await renderBlob(page,opts);
+    const {date="today",scope="all",part=1,total=1,frame="standard"}=opts;
+    const suffix=frame!=="standard"?slug(frame)+"-":"";
+    return downloadBlob(blob,"future-code-ai-"+date+"-"+slug(scope)+"-"+suffix+part+"-of-"+total+".png");
+  }
+  return Object.freeze({MAX_ROWS,FRAME_IDS,planPages,planSinglePage,dim,renderBlob,downloadBlob,savePage});
 });
