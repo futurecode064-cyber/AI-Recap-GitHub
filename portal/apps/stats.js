@@ -3,6 +3,7 @@
 (() => {
   const backend = "https://mxwervqihaqlxybghdak.supabase.co";
   const publishableKey = "sb_publishable_JBcF0nEMbcFSSf7OlCCqmQ_lC1DEM0A";
+  // Backward compatibility for older pages; all current APK buttons declare a stable data-app-key.
   const knownApps = Object.freeze({
     "Future-Code-AI-Studio.apk": "ai-studio",
     "Future-Code-App-Creator.apk": "app-creator",
@@ -48,12 +49,12 @@
   }
   record("page_view", null);
   document.querySelectorAll("a.download").forEach(anchor => {
-    let filename;
+    let filename = "";
     try { filename = decodeURIComponent(new URL(anchor.href, location.href).pathname.split('/').pop()); }
-    catch (_) { return; }
+    catch (_) { /* Explicit data-app-key below is still usable. */ }
     const app = anchor.dataset.appKey || knownApps[filename] ||
       Object.entries(knownApps).find(([name]) => filename.endsWith('-' + name))?.[1];
-    if (!app) return;
+    if (!app || !Object.values(knownApps).includes(app)) return;
     anchor.dataset.analyticsApp = app;
     anchor.addEventListener("click", () => record("download_click", app), {passive: true});
   });
