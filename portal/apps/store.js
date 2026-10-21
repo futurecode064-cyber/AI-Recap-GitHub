@@ -1,0 +1,11 @@
+'use strict';
+(()=>{
+const cards=[...document.querySelectorAll('#app-grid .card')],search=document.getElementById('app-search');let category='all';
+const labels={all:'App များအားလုံး',premium:'သင်တန်း APK · Premium',game:'Game APK',daily:'လက်တွေ့ နေ့စဉ်သုံး APK'};
+const mm=n=>String(n).replace(/\d/g,d=>'၀၁၂၃၄၅၆၇၈၉'[Number(d)]);
+function filter(){let count=0;const q=search.value.trim().toLocaleLowerCase();cards.forEach(card=>{card.hidden=!((category==='all'||card.dataset.category===category)&&card.textContent.toLocaleLowerCase().includes(q));if(!card.hidden)count++;});document.getElementById('category-title').textContent=labels[category];document.getElementById('app-count').textContent='APK '+mm(count)+' ခု / စုစုပေါင်း '+mm(cards.length)+' ခု';document.getElementById('empty-apps').hidden=count>0;document.querySelectorAll('[data-category]:not(.card)').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===category)));}
+document.querySelectorAll('.store-categories button').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.category;filter();}));search.addEventListener('input',filter);
+cards.forEach(card=>{function open(e){if(e.target.closest('a,button'))return;card.querySelector('[data-details]').click();}card.addEventListener('click',open);card.addEventListener('keydown',e=>{if(e.target!==card)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();card.querySelector('[data-details]').click();}});});
+function page(name,update=true){if(!['apps','apk','website','video'].includes(name))name='apps';const isApps=name==='apps';document.querySelector('.hero').hidden=!isApps;document.getElementById('app-browser').hidden=!isApps;document.getElementById('services').hidden=isApps;document.querySelectorAll('.bottom-nav button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.page===name)));if(!isApps)document.querySelector('[data-service="'+name+'"]').click();if(update)history.replaceState(null,'','#'+name);window.scrollTo({top:0,behavior:'instant'});}
+document.querySelectorAll('.bottom-nav button').forEach(b=>b.addEventListener('click',()=>page(b.dataset.page)));window.addEventListener('hashchange',()=>page(location.hash.slice(1),false));page(location.hash.slice(1)||'apps',false);filter();
+})();
