@@ -1,0 +1,37 @@
+{
+  "asOf": "2026-10-21",
+  "source": "GitHub Releases API, download_count per release asset",
+  "repository": "futurecode064-cyber/AI-Recap-GitHub",
+  "releases": [
+    {
+      "tag": "ykz-soccer-tips-v1.1.0",
+      "siteKey": "ykz-family",
+      "asset": "YKZ-Soccer-Tips.apk",
+      "downloads": 0
+    },
+    {
+      "tag": "ykz-soccer-tips-v1.0.0",
+      "siteKey": "ykz-family",
+      "asset": "YKZ-Soccer-Tips.apk",
+      "downloads": 3
+    },
+    {
+      "tag": "ko-thet-family-journal-v1.0.1",
+      "siteKey": "ko-thet-family",
+      "asset": "Ko-Thet-Family-Journal.apk",
+      "downloads": 0
+    },
+    {
+      "tag": "ko-thet-family-journal-v1.0.0",
+      "siteKey": "ko-thet-family",
+      "asset": "Ko-Thet-Family-Journal.apk",
+      "downloads": 1
+    },
+    {
+      "tag": "bw-sport-journal-v1.0.0",
+      "siteKey": "bw-sport",
+      "asset": "BW-Sport-Journal.apk",
+      "downloads": 0
+    }
+  ]
+}
