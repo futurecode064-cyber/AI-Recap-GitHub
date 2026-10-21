@@ -42,6 +42,15 @@ th,td{padding:13px 9px;border-bottom:1px solid #ebeff5}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 tbody tr:last-child td{border-bottom:0}td:first-child{font-weight:650}
 .notice{background:#eef6f7;padding:15px;border-radius:12px;color:#385b66;font-size:12px;margin-top:19px}
+.site-group{margin-top:18px}.site-group h3{margin:0 0 11px;font-size:16px;color:#26425f}
+.site-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.site-card{border:1px solid #dce6ef;border-radius:14px;padding:18px;background:#fafcfe;min-width:0}
+.site-heading{display:flex;justify-content:space-between;align-items:start;gap:10px;flex-wrap:wrap;margin-bottom:13px}
+.site-heading strong{font-size:15px;line-height:1.6}.site-heading a{font-size:12px;color:#126b91;text-decoration:none}
+.site-card .metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.site-metric small{display:block;color:#657a8f;font-size:11px}.site-metric b{display:block;color:#17344e;font-size:21px;font-variant-numeric:tabular-nums;line-height:1.6}
+.site-note{font-size:11px;color:#6d8091;margin:10px 0 0}.table-group td{background:#edf4fa;color:#254b6a;font-weight:800}
+@media(max-width:700px){.site-grid{grid-template-columns:1fr}.site-card{padding:13px}.site-metric b{font-size:19px}}
 .actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
 footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
 @media(max-width:700px){header,main,footer{padding:15px}.panel{padding:17px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:14px}.stat strong{font-size:25px}table{font-size:12px}th,td{padding:10px 5px}.stat:last-child{grid-column:span 2}}
@@ -69,20 +78,26 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
 </section>
 <section id="dashboard" hidden>
   <div class="row">
-    <div><h2>Download Overview</h2><div class="hint" id="lastUpdated">နောက်ဆုံး Update —</div></div>
+    <div><h2>APK Website အားလုံး — Download Overview</h2><div class="hint" id="lastUpdated">နောက်ဆုံး Update —</div></div>
     <div class="actions"><button class="secondary" id="refresh" type="button">↻ Refresh</button><button class="secondary" id="logout" type="button">Logout</button></div>
   </div>
   <div class="stats">
-    <div class="stat"><small>Website Page Views</small><strong id="visits">—</strong></div>
+    <div class="stat"><small>APK Download Page Views (အားလုံး)</small><strong id="visits">—</strong></div>
     <div class="stat"><small>Download Clicks (စုစုပေါင်း)</small><strong id="downloads">—</strong></div>
-    <div class="stat"><small>Unique Browsers (ခန့်မှန်း)</small><strong id="browsers">—</strong></div>
+    <div class="stat"><small>Unique Browser IDs (ခန့်မှန်း)</small><strong id="browsers">—</strong></div>
     <div class="stat"><small>ဒီနေ့ Download</small><strong id="today">—</strong></div>
     <div class="stat"><small>ဒီအပတ် Download</small><strong id="week">—</strong></div>
     <div class="stat"><small>ဒီလ Download</small><strong id="month">—</strong></div>
   </div>
+  <section class="panel" aria-labelledby="sitesHeading">
+    <h2 id="sitesHeading">🌐 APK Download Websites — သီးခြား Statistics</h2>
+    <p class="hint">APK Download Website တစ်ခုချင်းစီအလိုက် ဝင်ကြည့်သူ (Browser ခန့်မှန်းချက်)၊ Page Views နှင့် Download ခလုတ်နှိပ်မှုများ</p>
+    <div id="siteSections"></div>
+    <p class="hint">ဂိုးဇုံ Website ၏ ယခင် Cloudflare D1 download request မှတ်တမ်းကို <a href="https://future-code-football-daily.pages.dev/future-code-journal/android/stats.html" target="_blank" rel="noopener noreferrer">ဂိုးဇုံ Owner Statistics ↗</a> မှ သီးခြားကြည့်နိုင်ပါသည်။ အောက်ပါ အချက်အလက်များမှာ Supabase မှ မှတ်တမ်းများ ဖြစ်ပါသည်။</p>
+  </section>
   <section class="panel" aria-labelledby="tableHeading">
-    <h2 id="tableHeading">APK တစ်ခုချင်းစီ Download စာရင်း</h2>
-    <div style="overflow-x:auto"><table><thead><tr><th>APK အမည်</th><th class="num">စုစုပေါင်း</th><th class="num">ဒီနေ့</th><th class="num">Browser</th></tr></thead><tbody id="appRows"></tbody></table></div>
+    <h2 id="tableHeading">APK တစ်ခုချင်းစီ — Category အလိုက် Download စာရင်း</h2>
+    <div style="overflow-x:auto"><table><thead><tr><th>APK အမည်</th><th class="num">စုစုပေါင်း</th><th class="num">ဒီနေ့</th><th class="num">ဒီအပတ်</th><th class="num">ဒီလ</th><th class="num">Browser</th></tr></thead><tbody id="appRows"></tbody></table></div>
   </section>
   <section class="panel" style="margin-top:18px" aria-labelledby="trendHeading">
     <h2 id="trendHeading">နောက်ဆုံး ၃၀ ရက် Download Clicks</h2>
@@ -116,7 +131,7 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
     </form>
     <div class="hint" id="notificationHistory"></div>
   </section>
-  <div class="notice">အရေအတွက်များသည် Download ခလုတ်နှိပ်မှုစာရင်းဖြစ်ပြီး Download ပြီးဆုံးမှု သို့မဟုတ် လူဦးရေအတိအကျ မဟုတ်ပါ။ စနစ်စတင်တပ်ဆင်သည့်အချိန်မှစ၍သာ မှတ်တမ်းရှိပါသည်။ IP လိပ်စာနှင့် ဖုန်းနံပါတ်များကို မသိမ်းပါ။</div>
+  <div class="notice">စာရင်းများသည် APK Download ခလုတ်နှိပ်မှု (Clicks) ဖြစ်ပြီး Download ပြီးဆုံးမှု သို့မဟုတ် Install လုပ်ပြီးသူအရေအတွက် မဟုတ်ပါ။ Goal Zone ၏ Cloudflare D1 Download Requests စာရင်းနှင့် တိုက်ရိုက်ပေါင်းမတွက်ထားပါ။ စနစ်စတင်တပ်ဆင်သည့်အချိန်မှစ၍သာ မှတ်တမ်းရှိပါသည်။ IP လိပ်စာနှင့် ဖုန်းနံပါတ်များကို မသိမ်းပါ။</div>
   <p id="dashStatus" role="status" class="status" aria-live="polite"></p>
 </section>
 </main><footer>Future Code AI Studio · Private Analytics Dashboard</footer>
