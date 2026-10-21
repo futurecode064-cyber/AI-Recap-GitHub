@@ -103,6 +103,7 @@
       });
       openDashboard();
       render(data);
+      refreshNotificationHistory();
       setStatus("dashStatus","Statistics Update အောင်မြင်ပါပြီ။","ok");
     } catch (e) {
       if (e.status === 401 || e.status === 403) {
@@ -155,6 +156,44 @@
       await loadDashboard();
     }catch(err){setStatus("authStatus",err.message,"error");}
     finally{setBusy(false);}
+  });
+  const NOTIFY_API=BASE+"/functions/v1/future-code-updates";
+  async function notificationApi(action, fields={}) {
+    const token=await accessToken();
+    return jsonRequest("/functions/v1/future-code-updates", {
+      method:"POST",
+      headers,
+      body:JSON.stringify({action,token,...fields})
+    });
+  }
+  async function refreshNotificationHistory(){
+    const el=$("notificationHistory");if(!el)return;
+    try {
+      const data=await notificationApi("list");
+      el.replaceChildren();
+      const heading=document.createElement("p");
+      heading.textContent="နောက်ဆုံး Notification များ ("+(data.notices||[]).length+")";
+      el.append(heading);
+      for(const notice of (data.notices||[]).slice(0,7)){
+        const p=document.createElement("p");
+        p.textContent="#"+notice.id+" · "+notice.app_id+" · "+notice.title;
+        el.append(p);
+      }
+    }catch(e){el.textContent="Notification history: "+e.message;}
+  }
+  $("notificationForm").addEventListener("submit",async e=>{
+    e.preventDefault();
+    const button=$("notificationSend"),app=$("notificationApp").value,
+      title=$("notificationTitle").value.trim(),message=$("notificationMessage").value.trim();
+    if(!title||!message)return;
+    if(!confirm("Notification ကို "+app+" ထံ Publish လုပ်မလား?"))return;
+    button.disabled=true;setStatus("notificationStatus","Publish လုပ်နေပါတယ်...");
+    try{
+      const result=await notificationApi("publish",{app,title,message});
+      setStatus("notificationStatus","✓ Notification ထုတ်ပြီးပါပြီ (ID "+result.notice.id+"). App စစ်ဆေးချိန်မှာ ရောက်ပါမည်။","ok");
+      $("notificationMessage").value="";await refreshNotificationHistory();
+    }catch(error){setStatus("notificationStatus",error.message,"error");}
+    finally{button.disabled=false;}
   });
   $("refresh").addEventListener("click",loadDashboard);
   $("logout").addEventListener("click",async()=>{
