@@ -79,7 +79,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
      button.textContent="ZIP ပြင်ဆင်နေသည်… "+(index+1)+"/"+exporter.FRAME_IDS.length;
      exportStatus.textContent="Frame "+(index+1)+"/"+exporter.FRAME_IDS.length+" ကို PNG ဖန်တီးနေသည်…";
      const png=await exporter.renderBlob(page,singleOptions(frame,scope));
-     await archive.add("ai-predictions-"+date+"/ai-"+frame+"-"+date+".png",png);
+     await archive.add("ai-predictions-"+date+"/"+exporter.frameFileName(frame,date),png);
     }
     exporter.downloadBlob(archive.finish(),"future-code-ai-all-frames-"+date+"-"+selected.length+"-leagues.zip");
     exportStatus.textContent="လိဂ် "+selected.length+" ခု၊ ပွဲ "+page.matchCount+" ပွဲစီပါသော Frame "+exporter.FRAME_IDS.length+" မျိုး ZIP Download စတင်ပါပြီ။";
@@ -309,7 +309,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
       if(frame!=="standard"&&window.FutureCodeAiBulkExport){
        const page=window.FutureCodeAiBulkExport.planPages([match])[0];
        await window.FutureCodeAiBulkExport.savePage(page,{
-        date:report.reportDate,scope:"single",frame,predict:model.predict,leagueLabel:labelLeague,
+        date:report.reportDate,scope:"single",frame,fileSuffix:match.fixtureId||match.home+"-"+match.away,predict:model.predict,leagueLabel:labelLeague,
         leagueLogo:l=>window.FutureCodeMainLogoAssets?.leagueCrest(l)||leagueIcons[l],
         teamName:team,teamLogo:teamCrest,displayTime
        });

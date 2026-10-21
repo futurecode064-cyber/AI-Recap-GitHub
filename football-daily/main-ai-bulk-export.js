@@ -238,11 +238,26 @@
     setTimeout(()=>URL.revokeObjectURL(url),30000);
     return filename;
   }
+  // Rename ONLY the three custom AI-branded frame exports; preserve the standard exporter.
+  const FRAME_DOWNLOAD_NAMES=Object.freeze({
+    final:"final-goal-internet",
+    special:"special-one-internet",
+    best:"best-your-choice-internet"
+  });
+  function frameFileName(frame,date="today",identifier=""){
+    const brand=FRAME_DOWNLOAD_NAMES[frame];
+    const safeDate=String(date||"today");
+    if(!brand)return "ai-"+slug(frame)+"-"+safeDate+".png";
+    return brand+"-"+safeDate+(identifier?"-"+slug(identifier):"")+".png";
+  }
   async function savePage(page,opts={}){
     const blob=await renderBlob(page,opts);
     const {date="today",scope="all",part=1,total=1,frame="standard"}=opts;
-    const suffix=frame!=="standard"?slug(frame)+"-":"";
-    return downloadBlob(blob,"future-code-ai-"+date+"-"+slug(scope)+"-"+suffix+part+"-of-"+total+".png");
+    if(FRAME_DOWNLOAD_NAMES[frame]){
+      const distinguishing=opts.fileSuffix||((total>1)?slug(scope)+"-"+part+"-of-"+total:"");
+      return downloadBlob(blob,frameFileName(frame,date,distinguishing));
+    }
+    return downloadBlob(blob,"future-code-ai-"+date+"-"+slug(scope)+"-"+part+"-of-"+total+".png");
   }
-  return Object.freeze({MAX_ROWS,FRAME_IDS,planPages,planSinglePage,dim,renderBlob,downloadBlob,savePage});
+  return Object.freeze({MAX_ROWS,FRAME_IDS,FRAME_DOWNLOAD_NAMES,frameFileName,planPages,planSinglePage,dim,renderBlob,downloadBlob,savePage});
 });
