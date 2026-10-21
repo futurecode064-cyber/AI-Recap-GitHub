@@ -19,6 +19,20 @@
     ],
     "yesterdayIdentityMismatchRow": 12
   },
-  "publicationStatus": "prepared, source and live verification pending",
-  "kickoffCorrectionRow": 11
+  "publicationStatus": "source and production saved; live shared JSON and all four public brand reports verified",
+  "kickoffCorrectionRow": 11,
+  "tests": {
+    "nodePassed": 230,
+    "nodeSkipped": 1,
+    "pythonPassed": 5
+  },
+  "downloads": {
+    "preview": "downloaded and visually checked",
+    "odds": "downloaded and visually checked",
+    "news": "downloaded and visually checked"
+  },
+  "liveJsonVerification": true,
+  "htmlByteHashVerification": "Known exact Cloudflare Pages Analytics injection normalized; all other HTML bytes compared; final check pending",
+  "sourceCommit": "576f888d2ba0a0107d666750bddda09ae5596549",
+  "productionCommit": "d68e4098da6d2db387b1caa80875616f2f959fcf"
 }

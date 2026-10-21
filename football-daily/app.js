@@ -15,6 +15,7 @@ const LEAGUE_NAMES={
  "FIFA World Cup":"ကမ္ဘာ့ဖလား","FIFA World Cup Qualifying":"ကမ္ဘာ့ဖလား ခြေစစ်ပွဲ",
  "UEFA Euro":"ဥရောပနိုင်ငံများဖလား","UEFA Euro Qualifying":"ယူရို ခြေစစ်ပွဲ"
 };
+Object.assign(LEAGUE_NAMES,{"Danish Cup":"ဒိန်းမတ် ဖလား","Norwegian 1. Division":"နော်ဝေးလိဂ် ၁","Veikkausliiga Playoffs":"ဖင်လန် လိဂ် ပလေးအော့"});
 const LEAGUE_ALIASES={
  "England League 1":"League One","EFL League One":"League One",
  "League 1":"League One","English League One":"League One",

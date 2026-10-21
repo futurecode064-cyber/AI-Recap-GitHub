@@ -7,6 +7,7 @@ import argparse
 import concurrent.futures
 import hashlib
 import json
+import re
 import time
 import urllib.error
 import urllib.parse
@@ -23,6 +24,15 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
+
+
+def content_digest(data, html=False):
+    # Pages inserts this exact first-party analytics tag into served HTML.
+    # No other markup, scripts, JSON or asset bytes are normalized.
+    if html:
+        pattern = rb"<!-- Cloudflare Pages Analytics --><script defer src='https://static\.cloudflareinsights\.com/beacon\.min\.js' data-cf-beacon='\{\"token\": \"[0-9a-f]{32}\"\}'></script><!-- Cloudflare Pages Analytics -->"
+        data = re.sub(pattern, b"", data)
+    return digest(data)
 
 
 def probes(root):
@@ -58,7 +68,7 @@ def probes(root):
         elif relative.endswith(".html"):
             url_path = url_path[:-5]
         checks.append({"path": url_path, "status": 200,
-                       "sha256": digest((root / relative).read_bytes()), "worker": worker(url_path)})
+                       "sha256": digest((root / relative).read_bytes()), "html": relative.endswith(".html"), "worker": worker(url_path)})
     for path in ["/", "/index", "/index/", "/odds", "/editor/", "/editor/news.html",
                  "/future-code-journal/android/stats"]:
         checks.append({"path": path, "status": 302, "login": True, "worker": True})
@@ -84,7 +94,7 @@ def check(base, spec):
             errors.append(f"HTTP {status}, expected {spec['status']}")
         if seen_worker != spec["worker"]:
             errors.append("Worker route mismatch")
-        if "sha256" in spec and digest(body) != spec["sha256"]:
+        if "sha256" in spec and content_digest(body, spec.get("html", False)) != spec["sha256"]:
             errors.append("live content differs from saved source")
         if spec.get("login") and not headers.get("Location", "").startswith("/login?"):
             errors.append("owner login redirect missing")

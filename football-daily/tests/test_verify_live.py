@@ -54,6 +54,15 @@ class PublicationTests(unittest.TestCase):
     def test_login_redirect_is_checked_without_following_it(self):
         self.assertTrue(verify.check(self.base, {"path": "/protected", "status": 302, "worker": True, "login": True})["ok"])
 
+    def test_only_known_pages_html_analytics_is_normalized(self):
+        original = b"<body>verified article</body>"
+        tag = b"<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"0123456789abcdef0123456789abcdef\"}'></script><!-- Cloudflare Pages Analytics -->"
+        served = original.replace(b"</body>", tag + b"</body>")
+        self.assertEqual(verify.content_digest(served, True), verify.digest(original))
+        self.assertNotEqual(verify.content_digest(served, False), verify.digest(original))
+        self.assertNotEqual(verify.content_digest(served.replace(b"verified article", b"stale article"), True), verify.digest(original))
+        self.assertNotEqual(verify.content_digest(served.replace(b"static.cloudflareinsights.com", b"evil.example"), True), verify.digest(original))
+
     def test_all_current_brands_and_shared_data_are_included(self):
         paths = {probe["path"] for probe in verify.probes(Path(__file__).resolve().parents[1])}
         for path in ["/data/today.json", "/data/news/latest.json", "/ykz-family/", "/bw-sport/", "/ko-thet-family/", "/future-code-journal/"]:

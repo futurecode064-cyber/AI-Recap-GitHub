@@ -22,6 +22,7 @@
   "FIFA World Cup":"ကမ္ဘာ့ဖလား","FIFA World Cup Qualifying":"ကမ္ဘာ့ဖလား ခြေစစ်ပွဲ",
   "UEFA Euro":"ယူရိုဖလား","UEFA Euro Qualifying":"ယူရိုခြေစစ်ပွဲ"
  };
+Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား","Norwegian 1. Division":"နော်ဝေးလိဂ် ၁","Veikkausliiga Playoffs":"ဖင်လန် လိဂ် ပလေးအော့"});
  const leagueIcons={
   "Premier League":"https://crests.football-data.org/PL.png",
   "Championship":"https://crests.football-data.org/ELC.png",
