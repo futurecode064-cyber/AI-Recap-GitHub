@@ -1,0 +1,43 @@
+name: Build Future Code Video Cutter v2.0.2
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/fc-video-cutter-updater.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - name: Install Android SDK
+        run: sdkmanager "platforms;android-36" "build-tools;35.0.0"
+      - name: Prepare revised v2.0.2 source
+        run: |
+          curl -fsSL "https://futurecodeaistudio.floot.app/_cdn/static/07c13d9e-d61f-4bc9-8cb1-d367e2df95d1-FC-auto-video-cutter-source.zip" -o /tmp/source.zip
+          mkdir -p android-source
+          unzip -q /tmp/source.zip -d android-source
+          sed -i 's/compileSdk 35/compileSdk 36/' android-source/app/build.gradle
+          grep -q 'compileSdk 36' android-source/app/build.gradle
+      - name: Compile release APK without signing
+        run: gradle -p android-source --no-daemon :app:assembleRelease
+      - name: Collect APK
+        run: |
+          mkdir -p apk-artifact
+          find android-source/app/build/outputs/apk/release -name '*.apk' -exec cp '{}' apk-artifact/FC-VideoCutter-v2.0.2-UNSIGNED.apk \;
+          test -s apk-artifact/FC-VideoCutter-v2.0.2-UNSIGNED.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fc-auto-video-cutter-v2.0.2-unsigned
+          path: apk-artifact/*.apk
+          if-no-files-found: error
+          retention-days: 7
