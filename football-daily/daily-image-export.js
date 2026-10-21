@@ -69,7 +69,7 @@
   // Mirror pages use only their own palette; they do not expose frame selection.
   const oddsPage=Boolean(document?.documentElement?.dataset)&&
     typeof location!=="undefined"&&/\/odds(?:\.html)?\/?$/.test(location.pathname);
-  if(oddsPage&&window.FutureCodeOddsDomFrame?.draw){
+  if(oddsPage&&window.FutureCodeOddsDomFrame?.draw&&!options.singleImage){
    const config=window.FutureCodeBrandConfig||{};
    const colour=config.colors?.primary||config.colors?.gold||"#c41017";
    const canvas=await window.FutureCodeOddsDomFrame.draw(data.matches,{

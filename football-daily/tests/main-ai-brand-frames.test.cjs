@@ -1,7 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
-test('AI frame dropdown is wired only to main homepage and to both PNG export paths',()=>{
+test('Main AI frame options route to frame-aware PNG and ZIP paths',()=>{
  const html=read('index.html'),js=read('main-ai-score.js'),exporter=read('main-ai-bulk-export.js');
  for(const [id,name] of [['standard','မူရင်း AI ဇယား'],['best','Best Your Choice'],['final','Final Goal'],['special','Special One Group']]){
   assert.match(html,new RegExp('value="'+id+'"'));
@@ -10,16 +10,26 @@ test('AI frame dropdown is wired only to main homepage and to both PNG export pa
  assert.match(js,/fcAiFrameStyle/);
  assert.match(js,/frame:document\.getElementById/);
  assert.match(js,/planPages\(\[match\]\)/);
- assert.match(exporter,/canvas=await brandCanvas\(canvas,opts\.frame\)/);
- for(const p of ['ykz-family/index.html','bw-sport/index.html','ko-thet-family/index.html'])assert.ok(!read(p).includes('fcAiFrameStyle'));
+ assert.match(exporter,/canvas=await brandCanvas\(canvas,opts\.frame,\{date,matchCount:page\.matchCount\}\)/);
+ for(const p of ['ykz-family/index.html','bw-sport/index.html','ko-thet-family/index.html'])
+  assert.ok(!read(p).includes('fcAiFrameStyle'));
 });
-test('Branded AI poster artwork and matching palette stay entirely local',()=>{
+test('All three user-supplied frame originals are intact local PNG assets, not odds frame substitutes',()=>{
  const js=read('main-ai-bulk-export.js');
- for(const file of ['best-top.jpg','best-bottom.jpg','final-goal-frame.jpg','special-one-frame.jpg']){
-  assert.match(js,new RegExp(file.replace('.','\\.')));
-  assert.ok(fs.statSync(path.join(root,'assets/table-odds-frames',file)).size>1000);
+ for(const [file,w,h] of [
+  ['best-your-choice-upload.png',1200,1947],
+  ['final-goal-upload.png',1200,1491],
+  ['special-one-upload.png',1200,1393]
+ ]){
+  const buf=fs.readFileSync(path.join(root,'assets/ai-frames',file));
+  assert.ok(buf.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])),file);
+  assert.equal(buf.readUInt32BE(16),w,file);
+  assert.equal(buf.readUInt32BE(20),h,file);
+  assert.ok(js.includes(file),file);
  }
- for(const color of ['#0715b5','#b88a17','#2b9aca'])assert.ok(js.includes(color));
+ assert.match(js,/new URL\("\.\/assets\/ai-frames\/"/);
+ assert.doesNotMatch(js,/table-odds-frames|final-goal-frame\.jpg|special-one-frame\.jpg/);
+ assert.match(js,/ctx\.drawImage\(source,0,tableTop,WIDTH,tableSourceH,/);
+ assert.match(js,/drawOriginalArtwork\(ctx,original,height,frame\)/);
  assert.match(js,/FutureCodeMainLogoAssets\?\.imageUrl\(url\)\|\|url/);
- assert.match(js,/const pic=url=>cache\.get\(safeHttps\(window\.FutureCodeMainLogoAssets\?\.imageUrl\(url\)\|\|url\)\)/);
 });

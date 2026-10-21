@@ -77,6 +77,33 @@ function makeOddsPngButtons(host,data,matches,scope){
  }
  return pages.length;
 }
+/* One unbroken PNG for a whole journal or the checked leagues.
+   This route is available only on branded odds pages, never the root. */
+async function downloadSingleBrandOdds(button,selection){
+ if(isMainOdds||button.disabled||!loadedSheet?.matches?.length)return;
+ const matches=selection==="all"?loadedSheet.matches:
+  loadedSheet.matches.filter(m=>selectedLeagues.has(m.league||"အခြားပြိုင်ပွဲ"));
+ const status=document.getElementById("oddsExportStatus");
+ if(!matches.length){if(status)status.textContent="လိဂ် အနည်းဆုံးတစ်ခု ရွေးပါ။";return;}
+ const controls=[...document.querySelectorAll(".brand-odds-single button")];
+ const label=button.textContent;
+ controls.forEach(b=>b.disabled=true);
+ button.textContent="တစ်ပုံတည်း PNG ဖန်တီးနေသည်…";
+ if(status)status.textContent=matches.length+" ပွဲကို တစ်ပုံတည်း ပြင်ဆင်နေသည်…";
+ try{
+  if(!window.FutureCodeDailyExport?.saveOdds)throw Error("PNG Module မရသေးပါ။");
+  const options={singleImage:true};
+  if(selection==="selected")options.league="selected";
+  await window.FutureCodeDailyExport.saveOdds({...loadedSheet,matches},options);
+  if(status)status.textContent=matches.length+" ပွဲ · တစ်ပုံတည်း PNG Download စတင်ပြီးပါပြီ။";
+ }catch(error){
+  console.error("Brand one-image odds export failed",error);
+  if(status)status.textContent="တစ်ပုံတည်း PNG မရပါ — "+(error?.message||String(error));
+ }finally{
+  button.textContent=label;
+  controls.forEach(b=>{b.disabled=b.id==="brandSingleSelected"&&!selectedLeagues.size;});
+ }
+}
 function renderSelectedOddsButtons(){
  const host=document.getElementById("oddsPngPages"),status=document.getElementById("oddsExportStatus");
  if(!host||!loadedSheet)return;
@@ -199,7 +226,11 @@ function setupLeagueFilter(data){
  const unique=[...new Set(data.matches.map(m=>m.league||"အခြားပြိုင်ပွဲ"))];
  selectedLeagues=new Set(unique);
  const checkboxes=[];
- function update(){renderSelectedOddsButtons();}
+ function update(){
+  renderSelectedOddsButtons();
+  const selected=document.getElementById("brandSingleSelected");
+  if(selected)selected.disabled=!selectedLeagues.size;
+ }
  for(const league of unique){
   const label=element("label","odds-league-choice");
   const input=element("input");input.type="checkbox";input.checked=true;input.value=league;
@@ -213,6 +244,21 @@ function setupLeagueFilter(data){
  controls.appendChild(all);controls.appendChild(none);
  panel.appendChild(title);panel.appendChild(description);panel.appendChild(controls);panel.appendChild(choices);
  actions.parentNode.insertBefore(panel,actions);
+ if(!isMainOdds&&document.documentElement.dataset.footballBrandName){
+  const one=element("section","brand-odds-single");
+  const heading=element("h2","","တစ်ပုံတည်း ပေါက်ကြေး PNG Download");
+  const hint=element("p","","ပွဲစဉ်များနှင့် လိဂ်ခေါင်းစဉ်များအားလုံးကို ပုံတစ်ပုံတည်းတွင် စုပေးပါမည်။");
+  const buttons=element("div","brand-odds-single-actions");
+  const allButton=element("button","","⬇ လိဂ်အားလုံး · တစ်ပုံတည်း PNG");
+  const selectedButton=element("button","","⬇ ရွေးထားသောလိဂ်များ · တစ်ပုံတည်း PNG");
+  allButton.type="button";selectedButton.type="button";
+  allButton.id="brandSingleAll";selectedButton.id="brandSingleSelected";
+  allButton.addEventListener("click",()=>downloadSingleBrandOdds(allButton,"all"));
+  selectedButton.addEventListener("click",()=>downloadSingleBrandOdds(selectedButton,"selected"));
+  buttons.append(allButton,selectedButton);
+  one.append(heading,hint,buttons);
+  actions.parentNode.insertBefore(one,actions);
+ }
  const legacy=document.getElementById("oddsPngBtn");
  if(legacy)legacy.style.display="none";
  let pages=document.getElementById("oddsPngPages");

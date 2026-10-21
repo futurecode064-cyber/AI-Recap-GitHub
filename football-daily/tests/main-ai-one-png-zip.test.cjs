@@ -1,0 +1,41 @@
+"use strict";
+const test=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path");
+const root=path.resolve(__dirname,".."),read=p=>fs.readFileSync(path.join(root,p),"utf8");
+const exporter=require("../main-ai-bulk-export.js"),report=JSON.parse(read("data/today.json"));
+test("single PNG includes every selected league and match exactly once",()=>{
+ const fixtures=report.matches,leagues=[...new Set(fixtures.map(m=>m.league||"Other"))];
+ const page=exporter.planSinglePage(fixtures,leagues);
+ assert.ok(page);assert.equal(page.matchCount,fixtures.length);
+ assert.equal(page.groups.length,leagues.length);
+ assert.deepEqual(page.groups.flatMap(g=>g.matches),fixtures);
+ assert.equal(exporter.planSinglePage(fixtures,[]) ,null);
+ assert.equal(exporter.planSinglePage(fixtures,["unknown"]),null);
+ const chosen=leagues.filter((_,i)=>i%2===0);
+ const page2=exporter.planSinglePage(fixtures,chosen);
+ assert.deepEqual(page2.groups.flatMap(g=>g.matches),fixtures.filter(m=>chosen.includes(m.league)));
+ assert.equal(exporter.dim(page2).width,1280);
+});
+test("single page keeps 43 matches without using the older balanced splitting",()=>{
+ const items=Array.from({length:43},(_,i)=>({home:"H"+i,away:"A"+i,league:i<21?"A":"B"}));
+ const one=exporter.planSinglePage(items,["A","B"]);
+ assert.equal(one.matchCount,43);
+ assert.equal(one.groups.length,2);
+ assert.deepEqual(one.groups.flatMap(g=>g.matches),items);
+ assert.ok(exporter.planPages(items).length>1);
+});
+test("all-four-frame ZIP preserves one PNG per frame and same full selection",()=>{
+ const html=read("index.html"),js=read("main-ai-score.js"),renderer=read("main-ai-bulk-export.js");
+ assert.deepEqual([...exporter.FRAME_IDS],["standard","best","final","special"]);
+ assert.match(html,/id="fcAiSelectedOnePng"/);
+ assert.match(html,/id="fcAiSelectedAllFramesZip"/);
+ assert.match(html,/frame-zip\.js/);
+ assert.match(js,/FutureCodeFrameZip\.Archive/);
+ assert.match(js,/FutureCodeAiBulkExport\?\.planSinglePage\(publishedFixtures\(\),\[\.\.\.exportLeagues\]\)/);
+ assert.match(js,/await exporter\.renderBlob\(page,singleOptions\(frame,scope\)\)/);
+ assert.match(js,/await archive\.add\("ai-predictions-"/);
+ assert.match(js,/archive\.finish\(\)/);
+ assert.match(renderer,/return blob;/);
+ assert.match(renderer,/canvas=await brandCanvas\(canvas,opts\.frame,\{date,matchCount:page\.matchCount\}\)/);
+ assert.match(renderer,/FutureCodeMainLogoAssets\?\.imageUrl\(url\)/);
+ for(const site of ["bw-sport","ykz-family","ko-thet-family"])assert.ok(!read(site+"/index.html").includes("fcAiSelectedAllFramesZip"));
+});
