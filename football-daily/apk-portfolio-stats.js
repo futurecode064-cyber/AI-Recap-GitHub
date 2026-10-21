@@ -24,7 +24,10 @@
       }).catch(()=>{});
     }catch(_){}
   }
-  record('page_view',null);
+  // Website reading and APK landing-page views are separate statistics.
+  const viewType=current?.dataset.viewType==='website' ? 'website' : 'apk';
+  record(viewType==='website' ? 'site_view' : 'page_view',null);
+  if(viewType==='website')return;
   const download=document.querySelector('a[data-fc-apk-download]');
   if(download)download.addEventListener('click',()=>record('download_click',app),{passive:true});
 })();
