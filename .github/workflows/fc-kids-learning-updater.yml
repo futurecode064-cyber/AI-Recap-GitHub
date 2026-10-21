@@ -1,0 +1,48 @@
+name: Future Code Kids Learning v1.0.5 Updater
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/fc-kids-learning-updater.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - name: Android 35 tools
+        run: |
+          test -f "$ANDROID_HOME/platforms/android-35/android.jar"
+          test -x "$ANDROID_HOME/build-tools/35.0.0/aapt2"
+      - name: Prepare complete Kids Learning updater project
+        run: |
+          curl -fsSL --retry 3 'https://futurecodeaistudio.floot.app/_cdn/static/a66db1e3-e3c5-4e92-b045-27271a0fd69d-FC-kids-learning-source.zip' -o /tmp/source.zip
+          mkdir -p android-source
+          unzip -q /tmp/source.zip -d android-source
+          sed -i '/import android.app.\*;/a import android.app.job.*;' android-source/app/src/main/java/com/futurecode/kidslearning/FutureCodeUpdateApp.java
+          grep -q 'import android.app.job.\*;' android-source/app/src/main/java/com/futurecode/kidslearning/FutureCodeUpdateApp.java
+      - name: Compile Kids Learning v1.0.5
+        run: |
+          cd android-source
+          chmod +x ./gradlew
+          ./gradlew --no-daemon :app:assembleRelease
+      - name: Stage unsigned build
+        run: |
+          mkdir -p apk-artifact
+          find android-source/app/build/outputs/apk/release -maxdepth 1 -type f -name '*.apk' -exec cp '{}' apk-artifact/FC-KidsLearning-v1.0.5-UNSIGNED.apk \;
+          test -s apk-artifact/FC-KidsLearning-v1.0.5-UNSIGNED.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fc-kids-learning-v1.0.5-unsigned
+          path: apk-artifact/*.apk
+          if-no-files-found: error
+          retention-days: 7
