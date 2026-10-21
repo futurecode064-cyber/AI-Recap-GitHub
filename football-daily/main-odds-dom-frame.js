@@ -113,10 +113,15 @@
       for(const name of allTeamLabels){
         name.style.setProperty("font-size",px+"px","important");
       }
-      // Match only the "ကြေးပေးအသင်း" cells to the same team-name size.
-      // Keep every other column, odds value, frame and mirror unchanged.
+      // Main-only: prices and prediction figures follow the exact shared
+      // team-name size, rather than the old oversized 36px/900 export type.
       for(const upper of root.querySelectorAll(".odds-group .odds-table tbody td.upper")){
         upper.style.setProperty("font-size",px+"px","important");
+      }
+      for(const number of root.querySelectorAll(".odds-group .odds-table tbody td.price, .odds-group .odds-table tbody td.prediction")){
+        number.style.setProperty("font-size",px+"px","important");
+        number.style.setProperty("font-weight","600","important");
+        number.style.setProperty("line-height","1.25","important");
       }
     }
   }
@@ -330,6 +335,24 @@
       }
       body .fc-odds-direct-export td::before {display:none!important}
     `;
+    // Main odds frame PNG only: remove empty space above/below each fixture.
+    // Keep the 47px team crests, all 8 columns, headers and brand sites intact.
+    if(!document.documentElement?.dataset?.footballBrandName){
+      root.classList.add("fc-main-compact-odds");
+      readable.textContent+=`
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-group .odds-table tbody td {
+          padding-top:3px!important;padding-bottom:3px!important;
+          line-height:1.3!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-group .odds-table tbody td.price,
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-group .odds-table tbody td.prediction {
+          padding-top:3px!important;padding-bottom:3px!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-matchup .club-label {
+          line-height:1.3!important;
+        }
+      `;
+    }
     stage.appendChild(readable);
     stage.appendChild(root);
     document.body.appendChild(stage);

@@ -2,16 +2,16 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "64e98d74b50a33b4c13c36fb878a570912e71f40",
-  "source_tree": "d8a9bd16e7cd0aa0d4b8ab48c1992f071849d156",
-  "target_tree": "d8a9bd16e7cd0aa0d4b8ab48c1992f071849d156",
+  "source_commit": "6796b65847a4409d469232197ef611f5b529fb11",
+  "source_tree": "649b0d34625306781dd1f638a0279ee100766a74",
+  "target_tree": "649b0d34625306781dd1f638a0279ee100766a74",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-21T05:50:36.980Z",
+  "last_synced_utc": "2026-10-21T06:16:51.010Z",
   "reconciled_on": "2026-10-20",
   "reconciliation_note": "Published full article body text in poster and changed asset version to v3 so Main and Goal Zone reload the updated PNG generator.",
-  "last_synced_method": "verified-user-approved-20261021-current-odds-guarded-direct-mirror",
+  "last_synced_method": "verified-main-only-compact-odds-frame-20261021",
   "guard_reconciliation": {
     "previous_target_tree": "ddf9afd38b385f967d28b6346559156dd6322aab",
     "verified_production_head": "ed735b465caa89281d76dc60efbe890ee8d089bd",
@@ -155,5 +155,16 @@
     "verified_canonical_commit": "2d969ded70b9220d657d3ab45a21d78baa28f6c1",
     "identical_result_tree": "cd24bb6e43729a6433b6de8606da87b0213e1637",
     "note": "Both complete football-daily subtrees are byte-for-byte identical after the scoped 1200px viewport update. Public content, APK links and download logic were preserved. Normal guarded future synchronization remains enabled."
+  },
+  "guard_reconciliation_main_only_compact_20261021": {
+    "previous_production_head": "12c7c0817a83005ea1924a8479f60ddcef6db542",
+    "previous_production_tree": "cc2fe9074dd9129fb9a4e430d6431376fb492e45",
+    "note": "Verified top-level and tests subtree differences: no production-only paths; previous production modifications already match standalone source. Updated main odds frame renderer, version reference and two source-side tests. All other files remain identical to source main.",
+    "changed_paths": [
+      "football-daily/main-odds-dom-frame.js",
+      "football-daily/odds.html",
+      "football-daily/tests/main-table-odds-frames.test.cjs",
+      "football-daily/tests/main-ai-brand-frames.test.cjs"
+    ]
   }
 }

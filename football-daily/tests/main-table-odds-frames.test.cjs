@@ -299,3 +299,16 @@ test('Main website uses bundled league logos and zero letter spacing for Myanmar
  const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
  assert.match(html,/letter-spacing:0!important/);
 });
+
+test('Only main odds frame PNG compresses row padding and matches numeric font size to team names',()=>{
+  assert.match(domSource,/if\(!document\.documentElement\?\.dataset\?\.footballBrandName\)\{/);
+  assert.match(domSource,/root\.classList\.add\("fc-main-compact-odds"\)/);
+  assert.match(domSource,/\.fc-main-compact-odds \.odds-group \.odds-table tbody td/);
+  assert.match(domSource,/padding-top:3px!important;padding-bottom:3px!important/);
+  assert.match(domSource,/line-height:1\.3!important/);
+  assert.match(domSource,/for\(const number of root\.querySelectorAll\("\.odds-group \.odds-table tbody td\.price, \.odds-group \.odds-table tbody td\.prediction"\)\)/);
+  assert.match(domSource,/number\.style\.setProperty\("font-size",px\+"px","important"\)/);
+  assert.match(domSource,/number\.style\.setProperty\("font-weight","600","important"\)/);
+  const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261021-main-frame-compact-v1/);
+});
