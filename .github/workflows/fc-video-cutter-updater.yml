@@ -20,7 +20,7 @@ jobs:
         with:
           gradle-version: '8.11.1'
       - name: Install Android SDK
-        run: sdkmanager "platforms;android-36" "build-tools;35.0.0"
+        run: |\n          test -f "$ANDROID_HOME/platforms/android-36/android.jar"\n          test -x "$ANDROID_HOME/build-tools/35.0.0/aapt2"
       - name: Prepare revised v2.0.2 source
         run: |
           curl -fsSL "https://futurecodeaistudio.floot.app/_cdn/static/07c13d9e-d61f-4bc9-8cb1-d367e2df95d1-FC-auto-video-cutter-source.zip" -o /tmp/source.zip
