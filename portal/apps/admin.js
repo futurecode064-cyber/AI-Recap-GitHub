@@ -86,7 +86,20 @@
           const value=document.createElement("b");value.textContent=format.format(count||0);
           cell.append(small,value);metrics.append(cell);
         }
+        if (["bw-sport","ykz-family","ko-thet-family"].includes(site.key)) {
+          const col=document.createElement("div");col.className="site-metric release-metric";
+          const small=document.createElement("small");small.textContent="GitHub Releases Downloads";
+          const val=document.createElement("b");val.textContent="…";
+          val.dataset.releaseCountSite=site.key;
+          col.append(small,val);metrics.append(col);
+        }
         card.append(metrics);
+        if (["bw-sport","ykz-family","ko-thet-family"].includes(site.key)) {
+          const info=document.createElement("div");info.className="release-info";
+          info.dataset.releaseInfoSite=site.key;
+          info.textContent="GitHub Releases Download စာရင်း ဖတ်နေပါသည်…";
+          card.append(info);
+        }
         const note=document.createElement("p");note.className="site-note";
         note.textContent=site.trackingSince ?
           "မှတ်တမ်းစတင်: "+new Date(site.trackingSince).toLocaleDateString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"medium"})+" · Myanmar Time" :
@@ -140,6 +153,70 @@
     $("chartRange").textContent = timeline[0].day + " — " + timeline[timeline.length-1].day + " · Myanmar Time";
     $("lastUpdated").textContent = "နောက်ဆုံး Refresh — " + new Date(data.generatedAt || Date.now()).toLocaleString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"medium",timeStyle:"short"}) + " MMT";
   }
+  const releaseSites=["bw-sport","ykz-family","ko-thet-family"];
+  function siteForRelease(tag) {
+    if(/^bw-sport-journal-v/i.test(tag))return "bw-sport";
+    if(/^ykz-soccer-tips-v/i.test(tag))return "ykz-family";
+    if(/^ko-thet-family-journal-v/i.test(tag))return "ko-thet-family";
+    return null;
+  }
+  function renderReleaseCounts(rows,source){
+    for(const site of releaseSites){
+      const count=document.querySelector('[data-release-count-site="'+site+'"]');
+      const info=document.querySelector('[data-release-info-site="'+site+'"]');
+      if(!count||!info)continue;
+      const parts=rows.filter(row=>row.siteKey===site);
+      count.textContent=format.format(parts.reduce((n,x)=>n+Math.max(0,Number(x.downloads)||0),0));
+      info.replaceChildren();
+      const label=document.createElement("div");
+      label.textContent=source+" · Version အားလုံး၏ Download";
+      const details=document.createElement("details");
+      const summary=document.createElement("summary");
+      summary.textContent="Version အလိုက် ("+parts.length+")";
+      const ul=document.createElement("ul");
+      parts.forEach(p=>{
+        const li=document.createElement("li");
+        li.textContent=p.tag+" — "+format.format(p.downloads)+" Downloads";
+        ul.append(li);
+      });
+      details.append(summary,ul);
+      info.append(label,details);
+    }
+  }
+  async function refreshReleaseCounts(){
+    let snapshot=null;
+    try {
+      const res=await fetch("./github-releases-snapshot.json",{cache:"no-store"});
+      if(res.ok)snapshot=await res.json();
+      if(Array.isArray(snapshot?.releases))renderReleaseCounts(snapshot.releases,"Snapshot "+snapshot.asOf);
+    }catch(_){}
+    try {
+      const res=await fetch("https://api.github.com/repos/futurecode064-cyber/AI-Recap-GitHub/releases?per_page=100",{cache:"no-store"});
+      if(!res.ok)throw Error("GitHub API "+res.status);
+      const releases=await res.json();
+      if(!Array.isArray(releases))throw Error("GitHub response unavailable");
+      const rows=[];
+      for(const release of releases){
+        if(release.draft||!release.published_at)continue;
+        const siteKey=siteForRelease(release.tag_name||"");
+        if(!siteKey)continue;
+        for(const asset of (release.assets||[])){
+          if(!/\\.apk$/i.test(asset.name||""))continue;
+          rows.push({siteKey,tag:release.tag_name,downloads:Math.max(0,Number(asset.download_count)||0)});
+        }
+      }
+      renderReleaseCounts(rows,"GitHub Live");
+    }catch(_){
+      if(!snapshot?.releases){
+        for(const site of releaseSites){
+          const count=document.querySelector('[data-release-count-site="'+site+'"]');
+          const info=document.querySelector('[data-release-info-site="'+site+'"]');
+          if(count)count.textContent="—";
+          if(info)info.textContent="GitHub Release စာရင်း ချိတ်ဆက်မရသေးပါ။";
+        }
+      }
+    }
+  }
   async function loadDashboard() {
     setBusy(true);
     try {
@@ -149,6 +226,7 @@
       });
       openDashboard();
       render(data);
+      refreshReleaseCounts();
       refreshNotificationHistory();
       setStatus("dashStatus","Statistics Update အောင်မြင်ပါပြီ။","ok");
     } catch (e) {
