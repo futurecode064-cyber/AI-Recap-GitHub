@@ -5,6 +5,7 @@
   const publishableKey = "sb_publishable_JBcF0nEMbcFSSf7OlCCqmQ_lC1DEM0A";
   // Backward compatibility for older pages; all current APK buttons declare a stable data-app-key.
   const knownApps = Object.freeze({
+    "GoalZone_Sports_Journal_v1.0.1.apk": "goal-zone",
     "Future-Code-AI-Studio.apk": "ai-studio",
     "Future-Code-App-Creator.apk": "app-creator",
     "Myanmar-Kyar-Kwet.apk": "myanmar-kyar",
@@ -52,6 +53,7 @@
     let filename = "";
     try { filename = decodeURIComponent(new URL(anchor.href, location.href).pathname.split('/').pop()); }
     catch (_) { /* Explicit data-app-key below is still usable. */ }
+    if (!/\.apk$/i.test(new URL(anchor.href, location.href).pathname)) return;
     const app = anchor.dataset.appKey || knownApps[filename] ||
       Object.entries(knownApps).find(([name]) => filename.endsWith('-' + name))?.[1];
     if (!app || !Object.values(knownApps).includes(app)) return;

@@ -130,6 +130,16 @@
       "sha256": "e69c8b909b82d3c439dc752b2625b3b9707dbedb8a69b9b2fdf6a0932a9b7ea3",
       "certificateSha256": "9ebe0edb100f575f5e86605953e64497a686a3b4a9abf40ec24b3416affc4822",
       "releasedAt": "2026-10-21"
+    },
+    {
+      "id": "goal-zone",
+      "name": "ဂိုးဇုံ အားကစားဂျာနယ်",
+      "packageName": "mm.futurecode.sportsjournal",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "file": "https://future-code-football-daily.pages.dev/future-code-journal/android/GoalZone_Sports_Journal_v1.0.1.apk",
+      "sha256": "a94a4c96512424794062f1b292d77a8458154d48fc21021fd05c659d83c94e4f",
+      "releasedAt": "2026-10-18"
     }
   ]
 }
