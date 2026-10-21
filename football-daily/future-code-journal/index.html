@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="my" data-football-brand-name="ဂိုးဇုံ အားကစား ဂျာနယ်" data-football-data-url="../data/today.json">
+<html lang="my" data-gz-section="previews" data-football-brand-name="ဂိုးဇုံ အားကစား ဂျာနယ်" data-football-data-url="../data/today.json">
 <head>
 <script src="./compat.js?v=android-webview-20261018"></script>
 <meta charset="utf-8">
@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./sections.css?v=gz-separated-20261021">
 <link rel="icon" type="image/webp" href="./assets/logo.webp?v=sports-gold-20261018-goal-zone"><link rel="stylesheet" href="../styles.css?v=png-balanced-20261017"><link rel="stylesheet" href="./brand.css?v=gz-banner-bulk-20261018b">
 <script defer src="./brand.js?v=sports-gold-20261018-goal-zone"></script>
 <script defer src="../card-export.js?v=brand-shared-design-20261020"></script>
@@ -23,6 +24,7 @@
 <script defer src="../frame-zip.js?v=gz-bulk-20261018"></script>
 <script defer src="./goal-zone-downloads.js?v=brand-data-complete-20261019"></script>
 <script defer src="./ai-predictions.js?v=gz-main-model-20261019"></script>
+<script defer src="./sections.js?v=gz-separated-20261021"></script>
 <script defer src="../content-protection.js?v=copy-guard-20261013"></script>
 <style data-desktop-layout="1200">html,body{min-width:1200px}</style></head>
 <body>
@@ -38,9 +40,18 @@
   <div class="hero-foot"><span><span class="green-dot"></span> ရက်စွဲအလိုက် ပွဲစဉ်များ</span><span>Asia/Yangon · UTC+06:30</span></div>
  </div></section>
  <section class="content container">
+   <nav class="fcj-quick-nav" id="gzSectionNav" aria-label="Goal Zone သီးသန့်ကဏ္ဍများ">
+     <a href="?section=previews" data-gz-section-link="previews">ပွဲကြိုသုံးသပ်ချက်</a>
+     <a href="?section=news" data-gz-section-link="news">အားကစားသတင်း</a>
+     <a href="?section=ai" data-gz-section-link="ai">AI ခန့်မှန်းချက်</a>
+     <a href="?section=special" data-gz-section-link="special">Special Choice</a>
+     <a href="?section=results" data-gz-section-link="results">ဂိုးရလဒ်</a>
+     <a href="./odds.html">ပေါက်ကြေးများ ↗</a>
+     <a href="./android/">Android App Download ↗</a>
+   </nav>
    <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">SELECTED DATE MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
    <div class="section-heading"><div><span class="section-eyebrow">ဂိုးဇုံ / SPORTS JOURNAL</span><h2 id="reportHeading">ဂိုးဇုံ အားကစား ဂျာနယ်</h2></div><span class="today-pill" id="reportPill">● TODAY</span></div>
-   <nav class="fcj-quick-nav" aria-label="ဂျာနယ်ကဏ္ဍများ"><a href="#matchList">ပွဲကြိုသုံးသပ်ချက်</a><a href="./odds.html">ပေါက်ကြေးများ</a><a href="#fcj-ai">AI ခန့်မှန်းချက်</a><a href="#fcNewsSection">ယနေ့ ဘောလုံးသတင်း</a><a href="./android/">Android App Download</a></nav>
+
 <section class="fc-news-section" id="fcNewsSection" aria-labelledby="fcNewsTitle" data-news-url="../data/news/latest.json">
  <div class="fc-news-header"><div><span class="fc-news-eyebrow">GOAL ZONE · FOOTBALL NEWS</span><h2 id="fcNewsTitle">ယနေ့ ဘောလုံးသတင်း သီးသန့်</h2><p class="fc-news-window" id="fcNewsWindow">သတင်းများ ရယူနေသည်…</p></div><span class="fc-news-count" id="fcNewsCount" aria-live="polite"></span></div>
  <nav class="fc-news-filters" id="fcNewsFilters" aria-label="သတင်းအမျိုးအစားရွေးရန်"></nav>
@@ -58,6 +69,7 @@
    </nav>
    <div class="section-note" id="sectionNote"></div>
    <div id="resultsDownloadBar" class="results-download-bar" hidden><button id="resultsPngBtn" type="button" class="results-png-btn">⬇ ဂိုးရလဒ်များ PNG Download</button><span>ပွဲပြီးအတည်ပြုထားသော ရလဒ်အားလုံး</span></div>
+   <div id="gzSpecialEmpty" hidden role="status">ယနေ့အတွက် အတည်ပြုရွေးချယ်ထားသော Special Choice ပွဲ မရှိသေးပါ။</div>
    <div id="matchList" class="matches" aria-live="polite"><div class="empty-card"><span class="empty-icon">↻</span><h3>သုံးသပ်ချက်များ ရယူနေပါတယ်…</h3></div></div>
  </section>
 <section class="container fcj-ai" id="fcj-ai">
