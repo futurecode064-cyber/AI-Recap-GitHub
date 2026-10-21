@@ -77,7 +77,7 @@
         top.append(name,link);card.append(top);
         const metrics=document.createElement("div");metrics.className="metrics";
         for (const [label,count] of [
-          ["Page Views",site.pageViews],["Unique Browsers",site.uniqueBrowsers],
+          ["APK Page Views",site.pageViews],["APK Page Browsers",site.uniqueBrowsers],
           ["Website Button Clicks",site.downloadClicks],["ဒီနေ့",site.today],
           ["ဒီအပတ်",site.week],["ဒီလ",site.month]
         ]){
@@ -85,6 +85,23 @@
           const small=document.createElement("small");small.textContent=label;
           const value=document.createElement("b");value.textContent=format.format(count||0);
           cell.append(small,value);metrics.append(cell);
+        }
+        if (["goal-zone","bw-sport","ykz-family","ko-thet-family"].includes(site.key)) {
+          for(const [label,field] of [
+            ["Website Views","websiteViews"],
+            ["Website Visitors","websiteVisitors"],
+            ["ဒီနေ့ Website Views","websiteToday"],
+            ["ဒီအပတ် Website Views","websiteWeek"],
+            ["ဒီလ Website Views","websiteMonth"]
+          ]){
+            const col=document.createElement("div");col.className="site-metric";
+            const title=document.createElement("small");title.textContent=label;
+            const number=document.createElement("b");
+            number.textContent="—";
+            number.dataset.siteViewSite=site.key;
+            number.dataset.siteViewField=field;
+            col.append(title,number);metrics.append(col);
+          }
         }
         if (["bw-sport","ykz-family","ko-thet-family"].includes(site.key)) {
           const col=document.createElement("div");col.className="site-metric release-metric";
@@ -217,6 +234,31 @@
       }
     }
   }
+  async function refreshJournalWebsiteViews(){
+    const siteKeys=["goal-zone","bw-sport","ykz-family","ko-thet-family"];
+    try {
+      const token=await accessToken();
+      const data=await jsonRequest("/rest/v1/rpc/fc_portfolio_site_views", {
+        method:"POST",headers:{...headers,"Authorization":"Bearer "+token},body:"{}"
+      });
+      const records=new Map((Array.isArray(data.bySite)?data.bySite:[]).map(row=>[row.siteKey,row]));
+      for(const siteKey of siteKeys) {
+        const values=records.get(siteKey)||{};
+        for(const field of ["websiteViews","websiteVisitors","websiteToday","websiteWeek","websiteMonth"]){
+          const el=document.querySelector('[data-site-view-site="'+siteKey+'"][data-site-view-field="'+field+'"]');
+          if(el)el.textContent=format.format(Number(values[field])||0);
+        }
+      }
+    } catch(_) {
+      // Do not present a failed analytics request as a verified zero.
+      for(const siteKey of siteKeys) {
+        for(const field of ["websiteViews","websiteVisitors","websiteToday","websiteWeek","websiteMonth"]){
+          const el=document.querySelector('[data-site-view-site="'+siteKey+'"][data-site-view-field="'+field+'"]');
+          if(el)el.textContent="မရရှိ";
+        }
+      }
+    }
+  }
   async function loadDashboard() {
     setBusy(true);
     try {
@@ -226,6 +268,7 @@
       });
       openDashboard();
       render(data);
+      refreshJournalWebsiteViews();
       refreshReleaseCounts();
       refreshNotificationHistory();
       setStatus("dashStatus","Statistics Update အောင်မြင်ပါပြီ။","ok");
