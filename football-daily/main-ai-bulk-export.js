@@ -98,38 +98,61 @@
   rect(ctx,x,y,w,h,"#fff");text(ctx,fallback,x+w/2,y+h*.68,w-5,24,"center","#1937a9");
  }
  function slug(s){return String(s||"all").normalize("NFKD").replace(/[^a-z0-9]+/gi,"-").replace(/^-|-$/g,"").slice(0,35)||"all";}
- // Verified MAIN-only brand frame artwork already used by the odds poster studio.
-  const AI_FRAMES={
-    best:{bg:"#0719b8",top:"best-top.jpg",bottom:"best-bottom.jpg",topH:278,bottomH:120},
-    final:{bg:"#754700",full:"final-goal-frame.jpg",topRatio:0.14857142857142858,bottomRatio:0.037142857142857144,topH:226,bottomH:92},
-    special:{bg:"#0b547a",full:"special-one-frame.jpg",topRatio:0.07331378299120235,bottomRatio:0.03714565004887586,topH:184,bottomH:94}
-  };
-  async function brandCanvas(source,id){
-    const frame=AI_FRAMES[id];if(!frame)return source;
-    const asset=name=>new URL("./assets/table-odds-frames/"+name,document.baseURI).href;
-    const images=new Map();
-    const [full,top,bottom]=await Promise.all([
-      frame.full?loadImage(asset(frame.full),images):null,
-      frame.top?loadImage(asset(frame.top),images):null,
-      frame.bottom?loadImage(asset(frame.bottom),images):null
-    ]);
-    if(!(full||(top&&bottom)))throw Error("Frame image not available");
-    const pad=32,innerW=WIDTH-pad*2,innerH=Math.round(source.height*innerW/WIDTH);
-    const height=frame.topH+26+innerH+26+frame.bottomH;
-    const out=document.createElement("canvas");out.width=WIDTH;out.height=height;
-    const ctx=out.getContext("2d");if(!ctx)throw Error("Frame canvas unavailable");
-    rect(ctx,0,0,WIDTH,height,frame.bg);
-    rect(ctx,pad-6,frame.topH+20,innerW+12,innerH+12,"#ffffff");
-    ctx.drawImage(source,pad,frame.topH+26,innerW,innerH);
-    if(full){
-      ctx.drawImage(full,0,0,full.width,full.height*frame.topRatio,0,0,WIDTH,frame.topH);
-      ctx.drawImage(full,0,full.height*(1-frame.bottomRatio),full.width,full.height*frame.bottomRatio,0,height-frame.bottomH,WIDTH,frame.bottomH);
-    }else{
-      ctx.drawImage(top,0,0,WIDTH,frame.topH);
-      ctx.drawImage(bottom,0,height-frame.bottomH,WIDTH,frame.bottomH);
-    }
-    return out;
+ // EXACT user-uploaded originals verified against SHA-256 at import time.
+ // NEVER substitute other odds frame assets for these three AI poster frames.
+ const AI_FRAMES=Object.freeze({
+  best:{asset:"best-your-choice-upload.png",top:220,bottom:240,stretchY:1480,
+        left:28,right:28,contentTop:238,contentBottom:185,panel:"#0b1871"},
+  final:{asset:"final-goal-upload.png",top:248,bottom:105,stretchY:710,
+         left:35,right:35,contentTop:262,contentBottom:105,panel:"#704703"},
+  special:{asset:"special-one-upload.png",top:217,bottom:195,stretchY:1040,
+           left:140,right:215,contentTop:237,contentBottom:214,panel:"#074970"}
+ });
+ function drawOriginalArtwork(ctx,img,height,frame){
+  const w=1200,originalHeight=img.naturalHeight||img.height;
+  if(height<=originalHeight){
+   ctx.drawImage(img,0,0,w,originalHeight);
+   return;
   }
+  // Lengthen ONLY a quiet middle strip when many fixtures need more space.
+  // The user's own header, watermark/logo and footer stay at original scale.
+  const y=frame.stretchY,extra=height-originalHeight;
+  ctx.drawImage(img,0,0,img.width,y,0,0,w,y);
+  ctx.drawImage(img,0,y,img.width,1,0,y,w,extra);
+  ctx.drawImage(img,0,y,img.width,originalHeight-y,0,y+extra,w,originalHeight-y);
+ }
+ async function brandCanvas(source,id,opts={}){
+  const frame=AI_FRAMES[id];
+  if(!frame)return source; // no frame means ordinary original table
+  const url=new URL("./assets/ai-frames/"+frame.asset,document.baseURI).href;
+  const original=await loadImage(url,new Map());
+  if(!original)throw Error("မူရင်း Frame ပုံမရပါ — "+frame.asset);
+  const targetW=1200,insideW=targetW-frame.left-frame.right;
+  // Brand header/footer in the uploaded poster replace our generic header/footer.
+  const tableTop=HEADER,tableSourceH=source.height-HEADER-FOOTER;
+  const tableH=Math.ceil(tableSourceH*insideW/WIDTH),stripH=62;
+  const panelH=tableH+stripH;
+  const height=Math.max(original.naturalHeight||original.height,
+                        frame.contentTop+panelH+frame.contentBottom);
+  const out=document.createElement("canvas");
+  out.width=targetW;out.height=height;
+  const ctx=out.getContext("2d");if(!ctx)throw Error("Frame canvas unavailable");
+  drawOriginalArtwork(ctx,original,height,frame);
+  const x=frame.left,y=frame.contentTop;
+  ctx.save();
+  ctx.fillStyle=frame.panel;ctx.globalAlpha=.92;
+  ctx.fillRect(x-5,y-5,insideW+10,panelH+10);
+  ctx.restore();
+  ctx.fillStyle=frame.panel;ctx.fillRect(x,y,insideW,stripH);
+  ctx.textAlign="left";ctx.fillStyle="#ffffff";
+  font(ctx,23,800);
+  ctx.fillText("AI ခန့်မှန်းချက်များ · "+(opts.matchCount||"")+" ပွဲ",x+14,y+42);
+  ctx.textAlign="right";font(ctx,19,700);
+  ctx.fillText(String(opts.date||""),x+insideW-14,y+42);
+  ctx.drawImage(source,0,tableTop,WIDTH,tableSourceH,
+                x,y+stripH,insideW,tableH);
+  return out;
+ }
   const AI_COLOURS={
     standard:{base:"#06114d",header:"#081a6d",league:["#030784","#183bfa","#090979"],footer:"#09166c"},
     best:{base:"#051597",header:"#0815b0",league:["#0715b5","#1f45ff","#0715b5"],footer:"#0615a5"},
@@ -202,7 +225,7 @@
   rect(ctx,0,size.height-FOOTER,WIDTH,FOOTER,theme.footer);
   text(ctx,AI_BRAND[opts.frame]||"FUTURE CODE  •  MYANMAR FOOTBALL DAILY",20,size.height-23,670,19,"left","#e1ebff");
   text(ctx,scope==="all"?"ALL LEAGUES":String(scope),WIDTH-20,size.height-23,460,19,"right","#eedca6");
-  canvas=await brandCanvas(canvas,opts.frame);
+  canvas=await brandCanvas(canvas,opts.frame,{date,matchCount:page.matchCount});
    // Keep the complete long poster as one image. Never silently drop fixtures.
    const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
    if(!blob)throw Error("PNG generation failed");
