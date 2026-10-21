@@ -1,0 +1,42 @@
+name: Import original user AI frames to existing Cloudflare production branch
+on:
+  push:
+    branches:
+      - football-daily-render
+    paths:
+      - ".github/workflows/import-user-ai-frames-production.yml"
+permissions:
+  contents: write
+jobs:
+  original-frames:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          persist-credentials: true
+      - name: Download exact user-uploaded frame artwork from verified source GitHub
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p football-daily/assets/ai-frames
+          BASE="https://raw.githubusercontent.com/futurecode064-cyber/future-code-football-daily/main/football-daily/assets/ai-frames"
+          for file in best-your-choice-upload.png final-goal-upload.png special-one-upload.png; do
+            curl -fLsS --retry 3 --connect-timeout 20 --max-time 120 "$BASE/$file" -o "football-daily/assets/ai-frames/$file"
+          done
+          printf '%s\n' \
+            "bda23c7b05f57a1b923240d79ed14c8193f702efee7c25c300c1db199129276c  football-daily/assets/ai-frames/best-your-choice-upload.png" \
+            "63441c0fbf436fc53fd57d44782ba3d7a3c04d6b5997531e34b6765b33f20155  football-daily/assets/ai-frames/final-goal-upload.png" \
+            "9bc5ed72f2345a1a4fbab74c815b52c483cd30d661a11854cc9e1dc8c46e5bf6  football-daily/assets/ai-frames/special-one-upload.png" | sha256sum -c -
+      - name: Commit only the verified uploaded images
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add football-daily/assets/ai-frames/*.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Use verified user's exact uploaded frame assets on main website"
+            git pull --rebase origin football-daily-render
+            git push origin HEAD:football-daily-render
+          fi
