@@ -78,7 +78,7 @@
         const metrics=document.createElement("div");metrics.className="metrics";
         for (const [label,count] of [
           ["Page Views",site.pageViews],["Unique Browsers",site.uniqueBrowsers],
-          ["Downloads",site.downloadClicks],["ဒီနေ့",site.today],
+          ["Website Button Clicks",site.downloadClicks],["ဒီနေ့",site.today],
           ["ဒီအပတ်",site.week],["ဒီလ",site.month]
         ]){
           const cell=document.createElement("div");cell.className="site-metric";
@@ -103,7 +103,7 @@
         const note=document.createElement("p");note.className="site-note";
         note.textContent=site.trackingSince ?
           "မှတ်တမ်းစတင်: "+new Date(site.trackingSince).toLocaleDateString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"medium"})+" · Myanmar Time" :
-          "ဒီ Website အတွက် စာရင်းမရောက်သေးပါ";
+          "Tracking တပ်ဆင်ပြီးနောက် View/Click မှတ်တမ်း မရောက်သေးပါ";
         card.append(note);grid.append(card);
       }
       section.append(heading,grid);siteHost.append(section);
