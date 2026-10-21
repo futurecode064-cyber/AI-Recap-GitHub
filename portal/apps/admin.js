@@ -55,19 +55,65 @@
       ["browsers",data.uniqueBrowsers],["today",data.todayDownloads],
       ["week",data.weekDownloads],["month",data.monthDownloads]
     ]) $(id).textContent = format.format(value || 0);
+    const sites = data.sites || [];
+    const groups = [
+      {key:"future-code",label:"📱 Future Code AI Studio — APK များ"},
+      {key:"football",label:"⚽ ဘောလုံးဂျာနယ် APK Website များ"}
+    ];
+    const siteHost = $("siteSections");
+    siteHost.replaceChildren();
+    for (const group of groups) {
+      const members = sites.filter(site => site.group === group.key);
+      if (!members.length) continue;
+      const section=document.createElement("section");
+      section.className="site-group";
+      const heading=document.createElement("h3");heading.textContent=group.label;
+      const grid=document.createElement("div");grid.className="site-grid";
+      for(const site of members){
+        const card=document.createElement("article");card.className="site-card";
+        const top=document.createElement("div");top.className="site-heading";
+        const name=document.createElement("strong");name.textContent=site.name;
+        const link=document.createElement("a");link.href=site.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Website ကြည့်ရန် ↗";
+        top.append(name,link);card.append(top);
+        const metrics=document.createElement("div");metrics.className="metrics";
+        for (const [label,count] of [
+          ["Page Views",site.pageViews],["Unique Browsers",site.uniqueBrowsers],
+          ["Downloads",site.downloadClicks],["ဒီနေ့",site.today],
+          ["ဒီအပတ်",site.week],["ဒီလ",site.month]
+        ]){
+          const cell=document.createElement("div");cell.className="site-metric";
+          const small=document.createElement("small");small.textContent=label;
+          const value=document.createElement("b");value.textContent=format.format(count||0);
+          cell.append(small,value);metrics.append(cell);
+        }
+        card.append(metrics);
+        const note=document.createElement("p");note.className="site-note";
+        note.textContent=site.trackingSince ?
+          "မှတ်တမ်းစတင်: "+new Date(site.trackingSince).toLocaleDateString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"medium"})+" · Myanmar Time" :
+          "ဒီ Website အတွက် စာရင်းမရောက်သေးပါ";
+        card.append(note);grid.append(card);
+      }
+      section.append(heading,grid);siteHost.append(section);
+    }
     const rows = $("appRows");
     rows.replaceChildren();
-    (data.apps || []).forEach(app => {
-      const tr = document.createElement("tr");
-      const texts = [app.name,app.clicks,app.today,app.uniqueBrowsers];
-      texts.forEach((v,i) => {
-        const td=document.createElement("td");
-        if(i)td.className="num";
-        td.textContent = i ? format.format(v || 0) : v;
-        tr.appendChild(td);
-      });
-      rows.appendChild(tr);
-    });
+    for (const site of sites) {
+      const apps=(data.apps||[]).filter(app=>app.siteKey===site.key);
+      if(!apps.length)continue;
+      const tr=document.createElement("tr");tr.className="table-group";
+      const td=document.createElement("td");td.colSpan=6;td.textContent=site.name;
+      tr.append(td);rows.append(tr);
+      for(const app of apps){
+        const line=document.createElement("tr");
+        const texts=[app.name,app.clicks,app.today,app.week,app.month,app.uniqueBrowsers];
+        texts.forEach((v,i)=>{
+          const cell=document.createElement("td");if(i)cell.className="num";
+          cell.textContent=i ? format.format(v||0) : v;
+          line.append(cell);
+        });
+        rows.append(line);
+      }
+    }
     const chart = $("chart");
     chart.replaceChildren();
     const days = new Map((data.daily || []).map(x => [x.date,x.count]));
@@ -98,7 +144,7 @@
     setBusy(true);
     try {
       const token=await accessToken();
-      const data=await jsonRequest("/rest/v1/rpc/fc_download_dashboard", {
+      const data=await jsonRequest("/rest/v1/rpc/fc_download_portfolio_dashboard", {
         method:"POST", headers:{...headers,"Authorization":"Bearer "+token},body:"{}"
       });
       openDashboard();
