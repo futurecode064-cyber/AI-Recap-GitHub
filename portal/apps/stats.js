@@ -34,7 +34,7 @@
     if (!id) return;
     // A failed analytics request must never interfere with an APK download.
     try {
-      fetch(backend + "/rest/v1/rpc/fc_record_download_event", {
+      fetch(backend + "/rest/v1/rpc/fc_record_portfolio_event", {
         method: "POST",
         mode: "cors",
         keepalive: true,
@@ -43,7 +43,8 @@
           p_event_id: id,
           p_event_kind: kind,
           p_app_key: key,
-          p_browser_id: browserId
+          p_browser_id: browserId,
+          p_site_key: 'future-code-apps'
         })
       }).catch(() => {});
     } catch (_) {}
