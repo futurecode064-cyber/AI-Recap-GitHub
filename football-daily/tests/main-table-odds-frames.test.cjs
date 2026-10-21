@@ -310,5 +310,25 @@ test('Only main odds frame PNG compresses row padding and matches numeric font s
   assert.match(domSource,/number\.style\.setProperty\("font-size",px\+"px","important"\)/);
   assert.match(domSource,/number\.style\.setProperty\("font-weight","600","important"\)/);
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261021-main-frame-compact-v1/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261021-myanmar-numerals-v2/);
+});
+
+test('Main PNG clone alone converts both odds columns, prediction and time into Myanmar digits',()=>{
+  const helper=domSource.match(/function toMyanmarDigits\(value\) \{[\s\S]*?\n  \}/)?.[0];
+  assert.ok(helper,'Myanmar numeral conversion helper exists');
+  const convert=vm.runInNewContext(helper+'; toMyanmarDigits');
+  assert.equal(convert('3-20'),'၃-၂၀');
+  assert.equal(convert('4+45'),'၄+၄၅');
+  assert.equal(convert('2='),'၂=');
+  assert.equal(convert('-55'),'-၅၅');
+  assert.equal(convert('2-1'),'၂-၁');
+  assert.equal(convert('ည 11:15'),'ည ၁၁:၁၅');
+  assert.match(domSource,/if\(!document\.documentElement\?\.dataset\?\.footballBrandName\)\{\s*\/\/ Prices/);
+  assert.match(domSource,/group\.querySelectorAll\("tbody td\.price, tbody td\.prediction, tbody td\.time"\)/);
+  assert.match(domSource,/cell\.textContent=toMyanmarDigits\(cell\.textContent\)/);
+  assert.match(domSource,/number\.style\.setProperty\("font-family",'"Noto Sans Myanmar",sans-serif',"important"\)/);
+  assert.doesNotMatch(fs.readFileSync(path.join(root,'odds.js'),'utf8'),/toMyanmarDigits/);
+  for(const brand of ['ykz-family','bw-sport','ko-thet-family','future-code-journal']){
+    assert.ok(domSource.includes('dataset?.footballBrandName'),'brand data guard for '+brand);
+  }
 });

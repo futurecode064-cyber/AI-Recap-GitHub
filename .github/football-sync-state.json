@@ -4,14 +4,14 @@
   "source_branch": "main",
   "source_commit": "6796b65847a4409d469232197ef611f5b529fb11",
   "source_tree": "649b0d34625306781dd1f638a0279ee100766a74",
-  "target_tree": "649b0d34625306781dd1f638a0279ee100766a74",
+  "target_tree": "6c9d2f49ae5c7625a3d140cfc7a05c2c250c8652",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-21T06:16:51.010Z",
+  "last_synced_utc": "2026-10-21T06:39:42.871Z",
   "reconciled_on": "2026-10-20",
   "reconciliation_note": "Published full article body text in poster and changed asset version to v3 so Main and Goal Zone reload the updated PNG generator.",
-  "last_synced_method": "verified-main-only-compact-odds-frame-20261021",
+  "last_synced_method": "scoped-owner-approved-myanmar-numerals-odds-frame-only",
   "guard_reconciliation": {
     "previous_target_tree": "ddf9afd38b385f967d28b6346559156dd6322aab",
     "verified_production_head": "ed735b465caa89281d76dc60efbe890ee8d089bd",
@@ -165,6 +165,19 @@
       "football-daily/odds.html",
       "football-daily/tests/main-table-odds-frames.test.cjs",
       "football-daily/tests/main-ai-brand-frames.test.cjs"
+    ]
+  },
+  "scoped_publication_20261021": {
+    "reason": "Publish owner-requested Myanmar digits in main odds frame PNG without deploying unrelated concurrent AI frame image changes.",
+    "previous_production_head": "d0b3aa42847dad61724defe74c25666d97d042a9",
+    "previous_production_football_tree": "4be3a45a0a916ac13738940606eb80f62500819b",
+    "new_production_football_tree": "6c9d2f49ae5c7625a3d140cfc7a05c2c250c8652",
+    "original_last_complete_source_commit": "6796b65847a4409d469232197ef611f5b529fb11",
+    "pending_full_mirror_from_source_commit": "4d4394532333cd7b25edbc8ea78284dbafd5d3ab",
+    "updated_paths": [
+      "football-daily/main-odds-dom-frame.js",
+      "football-daily/odds.html",
+      "football-daily/tests/main-table-odds-frames.test.cjs"
     ]
   }
 }

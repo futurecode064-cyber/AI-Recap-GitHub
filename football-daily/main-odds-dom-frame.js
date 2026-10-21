@@ -8,6 +8,11 @@
   const SCALE = 2;
   const EXPORT_WIDTH = 1280;
 
+  // Convert only the copied PNG table text; source odds JSON and page remain ASCII.
+  function toMyanmarDigits(value) {
+    return String(value??"").replace(/[0-9]/g, digit=>"၀၁၂၃၄၅၆၇၈၉"[Number(digit)]);
+  }
+
   function shade(hex, f) {
     if (!/^#[0-9a-f]{6}$/i.test(hex)) return "#153d38";
     return "#" + hex.slice(1).match(/../g).map(x =>
@@ -121,6 +126,7 @@
       for(const number of root.querySelectorAll(".odds-group .odds-table tbody td.price, .odds-group .odds-table tbody td.prediction")){
         number.style.setProperty("font-size",px+"px","important");
         number.style.setProperty("font-weight","600","important");
+        number.style.setProperty("font-family",'"Noto Sans Myanmar",sans-serif',"important");
         number.style.setProperty("line-height","1.25","important");
       }
     }
@@ -171,6 +177,13 @@
       const trs=[...group.querySelectorAll("tbody tr")];
       if(trs.length!==originals.length)throw Error("Website ပွဲအရေအတွက် မကိုက်ညီပါ။");
       trs.forEach((tr,i)=>{if(!wanted.has(i))tr.remove();});
+      if(!document.documentElement?.dataset?.footballBrandName){
+        // Prices (morning/current), predictions and kickoff time use Myanmar digits
+        // in frame PNGs only. This never changes the on-screen table or JSON.
+        for(const cell of group.querySelectorAll("tbody td.price, tbody td.prediction, tbody td.time")){
+          cell.textContent=toMyanmarDigits(cell.textContent);
+        }
+      }
       // Retain every original website cell, logo, caption and odds value.
       // Export-only typography is applied on this cloned table below.
       group.style.setProperty("margin","0 0 12px","important");
