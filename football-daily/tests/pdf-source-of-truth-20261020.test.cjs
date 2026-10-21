@@ -2,7 +2,7 @@
 const test=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path");
 const base=path.resolve(__dirname,"..");
 const odds=JSON.parse(fs.readFileSync(path.join(base,"data/odds/2026-10-20.json"),"utf8"));
-const daily=JSON.parse(fs.readFileSync(path.join(base,"data/today.json"),"utf8"));
+const daily=JSON.parse(fs.readFileSync(path.join(base,"data/archive/2026-10-20.json"),"utf8"));
 const exact=[
 ["ဖီနာဘာချီ","စလားဗီးယား","ဖီနာဘာချီ","1+10","3-5","2-1"],
 ["ဆားဘတ်","ဒေါ့မွန်","ဒေါ့မွန်","2+70","3-80","0-3"],

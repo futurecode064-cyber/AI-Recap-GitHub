@@ -70,7 +70,11 @@
   const bodyLineHeight=48,paragraphGap=25;
   const bodyStart=958+lines.length*lineHeight+25;
   const bodyHeight=paragraphs.reduce((total,paragraph)=>total+paragraph.length*bodyLineHeight+paragraphGap,0);
-  canvas.height=Math.max(1350,bodyStart+bodyHeight+155);
+  ctx.font='400 16px Arial, sans-serif';
+  const credit=[s.imageCredit&&('Photo: '+s.imageCredit),s.imageLicense,s.imageLicenseUrl,s.imageSourceUrl].filter(Boolean).join(' · ');
+  const creditLines=credit?headlineLines(ctx,credit,944):[];
+  const footerHeight=Math.max(155,140+creditLines.length*25);
+  canvas.height=Math.max(1350,bodyStart+bodyHeight+footerHeight);
   const h=canvas.height;
   ctx.fillStyle="#101b1c";ctx.fillRect(0,0,1080,h);
   ctx.fillStyle=exportAccent;ctx.fillRect(0,0,1080,12);
@@ -82,10 +86,15 @@
   ctx.font='600 19px "FCNewsMyanmar"';ctx.fillText(date,1012,92);ctx.textAlign="left";
   ctx.strokeStyle=exportAccent;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(68,150);ctx.lineTo(1012,150);ctx.stroke();
   const px=40,py=183,pw=1000,ph=625;
-  const scale=Math.max(pw/photo.naturalWidth,ph/photo.naturalHeight);
+  const contain=s.imageFit==='contain';
+  const scale=(contain?Math.min:Math.max)(pw/photo.naturalWidth,ph/photo.naturalHeight);
   const sw=pw/scale,sh=ph/scale;
   ctx.save();ctx.beginPath();ctx.rect(px,py,pw,ph);ctx.clip();
-  ctx.drawImage(photo,(photo.naturalWidth-sw)/2,Math.max(0,(photo.naturalHeight-sh)*0.3),sw,sh,px,py,pw,ph);ctx.restore();
+  if(contain){
+   const dw=photo.naturalWidth*scale,dh=photo.naturalHeight*scale;
+   ctx.drawImage(photo,px+(pw-dw)/2,py+(ph-dh)/2,dw,dh);
+  }else ctx.drawImage(photo,(photo.naturalWidth-sw)/2,Math.max(0,(photo.naturalHeight-sh)*0.3),sw,sh,px,py,pw,ph);
+  ctx.restore();
   ctx.fillStyle=exportAccent;ctx.fillRect(40,808,1000,8);
   ctx.fillStyle="#f5f1e8";ctx.fillRect(40,816,1000,h-856);
   ctx.fillStyle=isGoalZone?"#8a651f":"#745039";ctx.font='700 21px "FCNewsMyanmar"';ctx.fillText(s.categoryLabel||"ဘောလုံးသတင်း",68,872);
@@ -97,14 +106,17 @@
    for(const line of paragraph){ctx.fillText(line,68,bodyY);bodyY+=bodyLineHeight;}
    bodyY+=paragraphGap;
   }
-  ctx.strokeStyle="#d1c5b3";ctx.beginPath();ctx.moveTo(68,h-124);ctx.lineTo(1012,h-124);ctx.stroke();
-  ctx.fillStyle="#695f53";ctx.font="700 17px Arial, sans-serif";ctx.fillText(exportBrand+"  •  FOOTBALL NEWS",68,h-82);
+  const footerY=h-footerHeight+25;
+  ctx.strokeStyle="#d1c5b3";ctx.beginPath();ctx.moveTo(68,footerY);ctx.lineTo(1012,footerY);ctx.stroke();
+  ctx.fillStyle="#695f53";ctx.font="700 17px Arial, sans-serif";ctx.fillText(exportBrand+"  •  FOOTBALL NEWS",68,footerY+36);
+  ctx.font='400 16px Arial, sans-serif';
+  creditLines.forEach((line,i)=>ctx.fillText(line,68,footerY+68+i*25));
 
   const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error("PNG unavailable")),"image/png"));
   return {blob,width:canvas.width,height:canvas.height,filename:(isGoalZone?"Goal-Zone":"Future-Code")+"-News-"+s.id.replace(/[^a-z0-9_-]/gi,"-")+".png"};
  }
  function posterFor(s){
-  const key=JSON.stringify([s.id,s.title,s.image,s.categoryLabel,s.sourceDateLabel]);
+  const key=JSON.stringify([s.id,s.title,s.paragraphs,s.image,s.categoryLabel,s.sourceDateLabel,s.imageCredit,s.imageLicense,s.imageFit]);
   if(!exportCache.has(key))exportCache.set(key,createNewsPoster(s).catch(e=>{exportCache.delete(key);throw e;}));
   return exportCache.get(key);
  }
@@ -164,9 +176,16 @@
     const wrap=node("div",undefined,"fc-news-image-wrap");
     const img=node("img",undefined,"fc-news-image");
     img.src=s.image;img.alt=s.imageAlt||s.title;img.loading="lazy";img.decoding="async";
+    if(s.imageFit==='contain'){img.style.objectFit='contain';img.style.background='#101b1c';}
     img.onerror=()=>wrap.remove();
     wrap.append(img);card.append(wrap);
     if(s.imageCaption)card.append(node("div",s.imageCaption,"fc-news-image-caption"));
+    if(s.imageCredit){
+     const credit=node('div',undefined,'fc-news-image-caption');
+     const source=node('a',s.imageCredit);source.href=s.imageSourceUrl;source.target='_blank';source.rel='noopener noreferrer';credit.append(source);
+     if(s.imageLicense&&s.imageLicenseUrl){const license=node('a',s.imageLicense);license.href=s.imageLicenseUrl;license.target='_blank';license.rel='license noopener noreferrer';credit.append(document.createTextNode(' · '),license);}
+     card.append(credit);
+    }
    }
    const body=node("div",undefined,"fc-news-card-body");
    const meta=node("div",undefined,"fc-news-meta");

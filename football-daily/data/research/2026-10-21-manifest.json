@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-21",
+  "sourcePDF": "21.pdf",
+  "sourcePDFSha256": "802c1658958e87f85b0d1db8c94e785cfe67f255a31f73abb43d502e73430f3a",
+  "odds": 14,
+  "previews": 14,
+  "lastFiveTeams": 28,
+  "lastFiveRows": 140,
+  "specialChoice": 2,
+  "aiMatches": 14,
+  "news": 10,
+  "relatedPhotos": 10,
+  "yesterdayVerifiedFinals": 20,
+  "pending": {
+    "unverified1X2Rows": [
+      11,
+      13,
+      14
+    ],
+    "yesterdayIdentityMismatchRow": 12
+  },
+  "publicationStatus": "prepared, source and live verification pending",
+  "kickoffCorrectionRow": 11
+}

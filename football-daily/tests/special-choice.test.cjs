@@ -38,6 +38,15 @@ test("every published day with preview fixtures includes up to five current user
    assert.ok(!/ခန့်မှန်းဂိုးရလဒ်|သေချာပေါက်နိုင်/.test(m.specialAnalysisParagraphs.join(" ")));
    continue;
   }
+  if(data.dailyMasterPromptVersion==="V3"){
+   assert.equal(m.specialPreparedDate,data.reportDate);
+   assert.equal(m.specialAnalysisParagraphs.length,5,"four full analytical paragraphs and one exact closing line");
+   assert.ok(m.specialAnalysisParagraphs.slice(0,4).every(p=>p.length>=320));
+   assert.equal(m.specialAnalysisParagraphs.at(-1),"ဒီပွဲကို ရွေးချယ်ပါတယ်");
+   assert.ok(m.specialResearchSources.length>=2);
+   assert.ok(!/ခန့်မှန်းဂိုးရလဒ်|သေချာပေါက်နိုင်/.test(m.specialAnalysisParagraphs.join(" ")));
+   continue;
+  }
   assert.ok(typeof m.specialRiskNote==="string"&&m.specialRiskNote.length>=20,key+" needs explicit risk");
   assert.ok(Array.isArray(m.specialResearchSources)&&m.specialResearchSources.length>=2,key+" needs independent primary/reliable source urls");
   assert.ok(m.specialResearchSources.every(u=>/^https:\/\//.test(u)),key+" has invalid source URL");

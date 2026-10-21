@@ -157,7 +157,7 @@ def main():
                     paragraphs = match.get("specialAnalysisParagraphs")
                     if (not isinstance(paragraphs, list) or not paragraphs or
                         not isinstance(paragraphs[-1], str) or
-                        not (owner_special_matches_source(match, today) if (match.get("specialUserVerbatim") or {}).get("exactCopy") else re.search(r"\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$", paragraphs[-1]))):
+                        not ((paragraphs[-1] == "ဒီပွဲကို ရွေးချယ်ပါတယ်") if report.get("dailyMasterPromptVersion") == "V3" else owner_special_matches_source(match, today) if (match.get("specialUserVerbatim") or {}).get("exactCopy") else re.search(r"\*\*[^*]+\s*ကို ရွေးချယ်ပါတယ်။\*\*$", paragraphs[-1]))):
                         wrong_special_endings.append(idx)
                 if (require_structured_standings and match.get("league") in LEAGUE_STANDINGS
                         and (not owner_preview_matches_source(match, today)

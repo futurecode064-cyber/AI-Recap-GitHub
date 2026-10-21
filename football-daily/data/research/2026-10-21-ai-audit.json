@@ -1,0 +1,558 @@
+{
+  "date": "2026-10-21",
+  "model": "existing main-ai-score-model.js conservative Poisson",
+  "modelSha256": "1a5e0136e63915d6c288a26ffb12a600f61c5acde6c6d2538ed961067b81463e",
+  "generatedAt": "2026-10-21T02:13:25.500Z",
+  "current": [
+    {
+      "fixtureId": "401915395",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "1-1",
+        "1-0",
+        "2-1"
+      ]
+    },
+    {
+      "fixtureId": "401915396",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ]
+    },
+    {
+      "fixtureId": "401915394",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "1-2",
+        "1-1",
+        "1-3"
+      ]
+    },
+    {
+      "fixtureId": "401915312",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "2-1",
+        "3-1",
+        "1-1"
+      ]
+    },
+    {
+      "fixtureId": "401915388",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "2-1",
+        "2-0",
+        "1-1"
+      ]
+    },
+    {
+      "fixtureId": "401915390",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "2-1",
+        "2-2",
+        "1-1"
+      ]
+    },
+    {
+      "fixtureId": "401915389",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "1-2",
+        "1-3",
+        "2-2"
+      ]
+    },
+    {
+      "fixtureId": "401915313",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "2-1",
+        "2-2",
+        "1-1"
+      ]
+    },
+    {
+      "fixtureId": "401915391",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "2-1",
+        "1-1",
+        "2-2"
+      ]
+    },
+    {
+      "fixtureId": "401882870",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "1-1",
+        "0-1",
+        "1-2"
+      ]
+    },
+    {
+      "fixtureId": "den-cup-863721",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "1-1",
+        "0-1",
+        "1-0"
+      ]
+    },
+    {
+      "fixtureId": "401880779",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ]
+    },
+    {
+      "fixtureId": "nor-sogndal-raufoss-20261021",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "2-1",
+        "1-1",
+        "2-2"
+      ]
+    },
+    {
+      "fixtureId": "fin-pk35-jaro-20261021",
+      "inputCutoff": "2026-10-21T08:27:55.255637+06:30",
+      "generatedAt": "2026-10-21T02:13:25.500Z",
+      "scores": [
+        "1-0",
+        "2-0",
+        "1-1"
+      ]
+    }
+  ],
+  "previousDay": {
+    "date": "2026-10-20",
+    "denominator": 20,
+    "method": "deterministic existing client model replay on unchanged archived pre-match inputs; no claim of a separately saved pre-kickoff prediction timestamp",
+    "pendingRows": [
+      12
+    ],
+    "evaluated": [
+      {
+        "home": "Fenerbahçe",
+        "away": "Slavia Praha",
+        "scores": [
+          "1-1",
+          "2-1",
+          "1-0"
+        ],
+        "finalScore": "2-2",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "Sabah",
+        "away": "Borussia Dortmund",
+        "scores": [
+          "1-0",
+          "1-1",
+          "2-0"
+        ],
+        "finalScore": "1-2",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "Roma",
+        "away": "Slovan Bratislava",
+        "scores": [
+          "1-1",
+          "2-1",
+          "1-2"
+        ],
+        "finalScore": "4-0",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "home": "Liverpool",
+        "away": "Villarreal",
+        "scores": [
+          "1-1",
+          "2-1",
+          "1-2"
+        ],
+        "finalScore": "4-3",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "home": "Manchester City",
+        "away": "AEK Athens",
+        "scores": [
+          "2-2",
+          "2-1",
+          "1-2"
+        ],
+        "finalScore": "5-1",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "home": "Napoli",
+        "away": "Bodø/Glimt",
+        "scores": [
+          "1-1",
+          "1-2",
+          "0-1"
+        ],
+        "finalScore": "4-3",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "Paris Saint-Germain",
+        "away": "Barcelona",
+        "scores": [
+          "1-2",
+          "2-2",
+          "1-1"
+        ],
+        "finalScore": "4-2",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "Porto",
+        "away": "PSV Eindhoven",
+        "scores": [
+          "1-1",
+          "2-1",
+          "1-2"
+        ],
+        "finalScore": "0-1",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "home": "Stuttgart",
+        "away": "Atlético de Madrid",
+        "scores": [
+          "1-1",
+          "0-1",
+          "1-2"
+        ],
+        "finalScore": "1-1",
+        "exact": [
+          true,
+          false,
+          false
+        ],
+        "outcome": [
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "Wolverhampton Wanderers",
+        "away": "Portsmouth",
+        "scores": [
+          "1-1",
+          "0-1",
+          "1-0"
+        ],
+        "finalScore": "1-1",
+        "exact": [
+          true,
+          false,
+          false
+        ],
+        "outcome": [
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "AFC Wimbledon",
+        "away": "Mansfield Town",
+        "scores": [
+          "1-1",
+          "0-1",
+          "1-0"
+        ],
+        "finalScore": "0-3",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "home": "Bromley",
+        "away": "Leicester City",
+        "scores": [
+          "1-1",
+          "1-2",
+          "0-1"
+        ],
+        "finalScore": "0-4",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          true,
+          true
+        ]
+      },
+      {
+        "home": "Burton Albion",
+        "away": "Bradford City",
+        "scores": [
+          "1-1",
+          "0-1",
+          "1-2"
+        ],
+        "finalScore": "0-0",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "Cambridge United",
+        "away": "Wycombe Wanderers",
+        "scores": [
+          "1-1",
+          "2-1",
+          "1-0"
+        ],
+        "finalScore": "2-2",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "Doncaster Rovers",
+        "away": "Stockport County",
+        "scores": [
+          "1-1",
+          "0-1",
+          "1-0"
+        ],
+        "finalScore": "0-2",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "home": "Huddersfield Town",
+        "away": "Peterborough United",
+        "scores": [
+          "1-1",
+          "2-1",
+          "1-2"
+        ],
+        "finalScore": "4-1",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "home": "Luton Town",
+        "away": "Barnsley",
+        "scores": [
+          "2-1",
+          "1-1",
+          "2-0"
+        ],
+        "finalScore": "2-1",
+        "exact": [
+          true,
+          false,
+          false
+        ],
+        "outcome": [
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "home": "Notts County",
+        "away": "Sheffield Wednesday",
+        "scores": [
+          "1-1",
+          "1-2",
+          "0-1"
+        ],
+        "finalScore": "2-0",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "home": "Oxford United",
+        "away": "Wigan Athletic",
+        "scores": [
+          "1-1",
+          "1-0",
+          "2-1"
+        ],
+        "finalScore": "2-1",
+        "exact": [
+          false,
+          false,
+          true
+        ],
+        "outcome": [
+          false,
+          true,
+          true
+        ]
+      },
+      {
+        "home": "Stevenage",
+        "away": "Plymouth Argyle",
+        "scores": [
+          "1-1",
+          "1-0",
+          "2-1"
+        ],
+        "finalScore": "3-0",
+        "exact": [
+          false,
+          false,
+          false
+        ],
+        "outcome": [
+          false,
+          true,
+          true
+        ]
+      }
+    ]
+  }
+}
