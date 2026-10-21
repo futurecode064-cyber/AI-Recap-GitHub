@@ -47,3 +47,16 @@ for(const click of clicks){
   assert.ok(click.url.endsWith('/rest/v1/rpc/fc_record_portfolio_event'));
 }
 console.log('PASS: 10 direct APK links tracked; Kyar navigation does not double-count its landing-page download.');
+const adminHtml = fs.readFileSync(path.join(root, 'portal/apps/admin.html'), 'utf8');
+const adminJs = fs.readFileSync(path.join(root, 'portal/apps/admin.js'), 'utf8');
+const releaseSnapshot = JSON.parse(fs.readFileSync(path.join(root, 'portal/apps/github-releases-snapshot.json'), 'utf8'));
+assert.ok(adminHtml.includes('siteSections'), 'website category statistics must render');
+assert.ok(adminJs.includes('fc_download_portfolio_dashboard'), 'admin needs portfolio RPC');
+assert.ok(adminJs.includes('https://api.github.com/repos/futurecode064-cyber/AI-Recap-GitHub/releases?per_page=100'),
+  'public GitHub API must support up-to-date release counts');
+assert.ok(adminJs.includes('releaseSnapshot') === false);
+assert.ok(adminJs.includes('refreshReleaseCounts();'), 'dashboard must fetch release counts');
+assert.equal(releaseSnapshot.releases.filter(x => x.siteKey === 'ykz-family').reduce((n,x)=>n+x.downloads,0), 3);
+assert.equal(releaseSnapshot.releases.filter(x => x.siteKey === 'ko-thet-family').reduce((n,x)=>n+x.downloads,0), 1);
+assert.equal(releaseSnapshot.releases.filter(x => x.siteKey === 'bw-sport').reduce((n,x)=>n+x.downloads,0), 0);
+console.log('PASS: GitHub APK Release historical counts are displayed independently of tracked click events.');
