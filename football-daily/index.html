@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="./styles.css?v=png-balanced-20261017">
 <link rel="stylesheet" href="./video-studio.css?v=20261016-video2">
 <link rel="stylesheet" href="./main-preview-design.css?v=stadium-compact-20261020">
-<link rel="stylesheet" href="./main-ai-score.css?v=20261018-seven-tabs">
+<link rel="stylesheet" href="./main-ai-score.css?v=20261021-ai-frames-logos">
 <script defer src="./main-export-logos.js?v=daily-20261021"></script>
 <script defer src="./card-export.js?v=stadium-compact-20261020"></script>
 <script defer src="./social-export.js"></script>
@@ -21,8 +21,8 @@
 <script defer src="./main-match-screenshot.js?v=20261016-transparent-all"></script>
 <script defer src="./app.js?v=stadium-compact-20261020-daily-20261021"></script>
 <script defer src="./main-ai-score-model.js?v=20261017-main1"></script>
-<script defer src="./main-ai-bulk-export.js?v=stadium-compact-20261020"></script>
-<script defer src="./main-ai-score.js?v=stadium-compact-20261020-daily-20261021"></script>
+<script defer src="./main-ai-bulk-export.js?v=20261021-ai-frames-logo-fix"></script>
+<script defer src="./main-ai-score.js?v=20261021-ai-frames-logos"></script>
 <script defer src="./video-studio.js?v=20261016-video2"></script>
 <script defer src="./main-section-tabs.js?v=20261018-seven-tabs"></script>
 <link rel="stylesheet" href="./news-section.css?v=news-poster-20261020-v3">
@@ -82,6 +82,16 @@
       </div>
       <div class="fc-ai-export-panel" id="fcAiExportPanel" aria-label="AI ခန့်မှန်းချက်များ PNG Download">
         <h3>AI ခန့်မှန်းချက် ပုံ Download</h3>
+         <div class="fc-ai-frame-controls">
+           <label for="fcAiFrameStyle">PNG Frame ရွေးရန်</label>
+           <select id="fcAiFrameStyle" aria-label="AI PNG Download Frame ရွေးရန်">
+             <option value="standard">မူရင်း AI ဇယား</option>
+             <option value="best">Best Your Choice · အပြာ</option>
+             <option value="final">Final Goal · ရွှေရောင်</option>
+             <option value="special">Special One Group · အပြာနု</option>
+           </select>
+           <span>ရွေးထားသော Frame နှင့် လိဂ်အလိုက် အသင်းလိုဂိုများပါဝင်သည့် PNG Download</span>
+         </div>
         <div class="fc-ai-export-all">
           <strong>ပွဲအားလုံး PNG Download</strong>
           <div class="fc-ai-page-buttons" id="fcAiAllPngPages"><span>စာရင်း ရယူနေသည်…</span></div>

@@ -82,11 +82,51 @@
   rect(ctx,x,y,w,h,"#fff");text(ctx,fallback,x+w/2,y+h*.68,w-5,24,"center","#1937a9");
  }
  function slug(s){return String(s||"all").normalize("NFKD").replace(/[^a-z0-9]+/gi,"-").replace(/^-|-$/g,"").slice(0,35)||"all";}
- async function savePage(page,opts={}){
+ // Verified MAIN-only brand frame artwork already used by the odds poster studio.
+  const AI_FRAMES={
+    best:{bg:"#0719b8",top:"best-top.jpg",bottom:"best-bottom.jpg",topH:278,bottomH:120},
+    final:{bg:"#754700",full:"final-goal-frame.jpg",topRatio:0.14857142857142858,bottomRatio:0.037142857142857144,topH:226,bottomH:92},
+    special:{bg:"#0b547a",full:"special-one-frame.jpg",topRatio:0.07331378299120235,bottomRatio:0.03714565004887586,topH:184,bottomH:94}
+  };
+  async function brandCanvas(source,id){
+    const frame=AI_FRAMES[id];if(!frame)return source;
+    const asset=name=>new URL("./assets/table-odds-frames/"+name,document.baseURI).href;
+    const images=new Map();
+    const [full,top,bottom]=await Promise.all([
+      frame.full?loadImage(asset(frame.full),images):null,
+      frame.top?loadImage(asset(frame.top),images):null,
+      frame.bottom?loadImage(asset(frame.bottom),images):null
+    ]);
+    if(!(full||(top&&bottom)))throw Error("Frame image not available");
+    const pad=32,innerW=WIDTH-pad*2,innerH=Math.round(source.height*innerW/WIDTH);
+    const height=frame.topH+26+innerH+26+frame.bottomH;
+    const out=document.createElement("canvas");out.width=WIDTH;out.height=height;
+    const ctx=out.getContext("2d");if(!ctx)throw Error("Frame canvas unavailable");
+    rect(ctx,0,0,WIDTH,height,frame.bg);
+    rect(ctx,pad-6,frame.topH+20,innerW+12,innerH+12,"#ffffff");
+    ctx.drawImage(source,pad,frame.topH+26,innerW,innerH);
+    if(full){
+      ctx.drawImage(full,0,0,full.width,full.height*frame.topRatio,0,0,WIDTH,frame.topH);
+      ctx.drawImage(full,0,full.height*(1-frame.bottomRatio),full.width,full.height*frame.bottomRatio,0,height-frame.bottomH,WIDTH,frame.bottomH);
+    }else{
+      ctx.drawImage(top,0,0,WIDTH,frame.topH);
+      ctx.drawImage(bottom,0,height-frame.bottomH,WIDTH,frame.bottomH);
+    }
+    return out;
+  }
+  const AI_COLOURS={
+    standard:{base:"#06114d",header:"#081a6d",league:["#030784","#183bfa","#090979"],footer:"#09166c"},
+    best:{base:"#051597",header:"#0815b0",league:["#0715b5","#1f45ff","#0715b5"],footer:"#0615a5"},
+    final:{base:"#503000",header:"#755007",league:["#533200","#b88a17","#5e3600"],footer:"#644000"},
+    special:{base:"#083955",header:"#0b567c",league:["#084766","#2b9aca","#074c73"],footer:"#0d5379"}
+  };
+  const AI_BRAND={best:"BEST YOUR CHOICE",final:"FINAL GOAL",special:"SPECIAL ONE GROUP"};
+  async function savePage(page,opts={}){
   if(!page?.matchCount)throw Error("No matches to export");
   const {date,part=1,total=1,scope="all",predict,leagueLabel,leagueLogo,teamName,teamLogo,displayTime}=opts;
+   const theme=AI_COLOURS[opts.frame]||AI_COLOURS.standard;
   if(typeof predict!=="function")throw Error("Prediction model unavailable");
-  const canvas=document.createElement("canvas"),size=dim(page);
+  let canvas=document.createElement("canvas");const size=dim(page);
   canvas.width=size.width;canvas.height=size.height;
   const ctx=canvas.getContext("2d");if(!ctx)throw Error("Canvas unavailable");
   if(document.fonts?.load)await Promise.race([document.fonts.load('800 23px "Noto Sans Myanmar"').catch(()=>{}),new Promise(resolve=>setTimeout(resolve,2200))]);
@@ -99,18 +139,18 @@
    }
   }
   await Promise.all(images);
-  const pic=url=>cache.get(safeHttps(url));
+  const pic=url=>cache.get(safeHttps(window.FutureCodeMainLogoAssets?.imageUrl(url)||url));
   const loaded=async url=>pic(url)?await pic(url):null;
-  rect(ctx,0,0,WIDTH,size.height,"#06114d");
-  rect(ctx,0,0,WIDTH,HEADER,"#081a6d");
-  text(ctx,"FUTURE CODE FOOTBALL  ·  AI ခန့်မှန်းချက်များ",20,51,900,34,"left");
+  rect(ctx,0,0,WIDTH,size.height,theme.base);
+  rect(ctx,0,0,WIDTH,HEADER,theme.header);
+  text(ctx,(AI_BRAND[opts.frame]||"FUTURE CODE FOOTBALL")+"  ·  AI ခန့်မှန်းချက်များ",20,51,900,34,"left");
   text(ctx,date||"",WIDTH-22,46,215,23,"right","#f8d692");
   text(ctx,"ပွဲ "+page.matchCount+" ပွဲ    ·    PNG "+part+"/"+total,WIDTH-22,93,360,23,"right","#d9e4ff");
   let y=HEADER;
   const borders="#c7d1e4",scoreX=[782,948,1114],scoreW=166;
   for(const group of page.groups){
    const grad=ctx.createLinearGradient(0,y,WIDTH,y);
-   grad.addColorStop(0,"#030784");grad.addColorStop(.45,"#183bfa");grad.addColorStop(1,"#090979");
+   grad.addColorStop(0,theme.league[0]);grad.addColorStop(.45,theme.league[1]);grad.addColorStop(1,theme.league[2]);
    rect(ctx,0,y,WIDTH,LEAGUE_H,grad);
    rect(ctx,10,y+9,67,66,"#fff");
    imageOrFallback(ctx,await loaded(leagueLogo?.(group.league)),17,y+16,52,52);
@@ -142,13 +182,14 @@
     y+=ROW_H;
    }
   }
-  rect(ctx,0,size.height-FOOTER,WIDTH,FOOTER,"#09166c");
-  text(ctx,"FUTURE CODE  •  MYANMAR FOOTBALL DAILY",20,size.height-23,670,19,"left","#e1ebff");
+  rect(ctx,0,size.height-FOOTER,WIDTH,FOOTER,theme.footer);
+  text(ctx,AI_BRAND[opts.frame]||"FUTURE CODE  •  MYANMAR FOOTBALL DAILY",20,size.height-23,670,19,"left","#e1ebff");
   text(ctx,scope==="all"?"ALL LEAGUES":String(scope),WIDTH-20,size.height-23,460,19,"right","#eedca6");
-  const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
+  canvas=await brandCanvas(canvas,opts.frame);
+   const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
   if(!blob)throw Error("PNG generation failed");
   const url=URL.createObjectURL(blob),link=document.createElement("a");
-  link.href=url;link.download="future-code-ai-"+(date||"today")+"-"+slug(scope)+"-"+part+"-of-"+total+".png";
+  link.href=url;link.download="future-code-ai-"+(date||"today")+"-"+slug(scope)+"-"+(opts.frame&&opts.frame!=="standard"?slug(opts.frame)+"-":"")+part+"-of-"+total+".png";
   document.body.appendChild(link);link.click();link.remove();
   setTimeout(()=>URL.revokeObjectURL(url),10000);
   return link.download;

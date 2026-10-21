@@ -118,7 +118,8 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
       date:report.reportDate,part:i+1,total:pages.length,scope,
       predict:model.predict,leagueLabel:labelLeague,
       leagueLogo:l=>window.FutureCodeMainLogoAssets?.leagueCrest(l)||leagueIcons[l],
-      teamName:team,teamLogo:teamCrest,displayTime
+      teamName:team,teamLogo:teamCrest,displayTime,
+      frame:document.getElementById("fcAiFrameStyle")?.value||"standard"
      });
      btn.textContent="✓ PNG Download စတင်ပြီး";
      exportStatus.textContent="PNG "+(i+1)+"/"+pages.length+" Download စတင်ပြီးပါပြီ။";
@@ -241,7 +242,20 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
     btn.addEventListener("click",async()=>{
      if(btn.disabled)return;
      btn.disabled=true;const orig=btn.textContent;btn.textContent="…";
-     try{await saveMatch({...match,homeCrestUrl:teamCrest(match,"home"),awayCrestUrl:teamCrest(match,"away")},scores,report.reportDate);btn.textContent="✓";}
+     try{
+      const frame=document.getElementById("fcAiFrameStyle")?.value||"standard";
+      if(frame!=="standard"&&window.FutureCodeAiBulkExport){
+       const page=window.FutureCodeAiBulkExport.planPages([match])[0];
+       await window.FutureCodeAiBulkExport.savePage(page,{
+        date:report.reportDate,scope:"single",frame,predict:model.predict,leagueLabel:labelLeague,
+        leagueLogo:l=>window.FutureCodeMainLogoAssets?.leagueCrest(l)||leagueIcons[l],
+        teamName:team,teamLogo:teamCrest,displayTime
+       });
+      }else{
+       await saveMatch({...match,homeCrestUrl:teamCrest(match,"home"),awayCrestUrl:teamCrest(match,"away")},scores,report.reportDate);
+      }
+      btn.textContent="✓";
+     }
      catch(err){console.error("AI score PNG export",err);btn.textContent="↻";}
      finally{setTimeout(()=>{btn.disabled=false;btn.textContent=orig;},1200);}
     });

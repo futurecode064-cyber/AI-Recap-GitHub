@@ -205,3 +205,9 @@ body[data-fc-main-view]:not([data-fc-main-view="oddsFrame"]) #brandOddsStudio{di
 body:is([data-fc-main-view="previewFrame"],[data-fc-main-view="oddsFrame"]) :is(#filters,#sectionNote,#resultsDownloadBar,#matchList,#fcAiScoreSection,#fcVideoStudio){display:none!important}
 body:is([data-fc-main-view="previewFrame"],[data-fc-main-view="oddsFrame"]) .content > .section-heading{display:none!important}
 .content > :is(#brandPreviewStudio,#brandOddsStudio){width:100%;max-width:none;margin:20px 0;scroll-margin-top:24px}
+
+/* MAIN AI PNG-only frame selection: mirrors and odds editor unaffected. */
+.fc-ai-frame-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin:0 0 14px;padding:12px;border:1px solid #5772ba;border-radius:10px;background:#101f53;color:#f0f4ff}
+.fc-ai-frame-controls label{font-size:14px;font-weight:800}
+.fc-ai-frame-controls select{min-width:260px;max-width:100%;padding:10px;border-radius:8px;border:1px solid #b5c6f0;background:#fff;color:#152457;font:700 13px "Noto Sans Myanmar",sans-serif}
+.fc-ai-frame-controls span{font-size:12px;line-height:1.8;color:#d9e4ff}
