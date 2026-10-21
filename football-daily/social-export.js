@@ -56,6 +56,24 @@
   }
  }
  function brand(ctx,opts,img){
+
+  // Brand-owned social exports retain their fixed 1:1, 4:5 and 9:16 sizes.
+  const mirrorTitles={
+   "bw-sport":{main:"BW SPORT",sub:"ဘောလုံးဂျာနယ်",dark:"#08284d",accent:"#58cfff"},
+   "ykz-family":{main:"YKZ FAMILY GROUP",sub:"အတူရှေ့ဆက် YKZ",dark:"#650a13",accent:"#ffd56a"},
+   "ko-thet-family":{main:"KO THET FAMILY",sub:"ဘောလုံးဂျာနယ်",dark:"#59111d",accent:"#fbd274"}
+  };
+  const journal=mirrorTitles[window.FutureCodeBrandConfig?.id];
+  if(journal){
+   round(ctx,35,29,1010,113,15,journal.dark,journal.accent);
+   round(ctx,54,42,80,80,14,journal.accent);
+   if(!fit(ctx,img,61,49,66,66))text(ctx,journal.main.slice(0,3),94,67,27,journal.dark,true,"center");
+   text(ctx,journal.main,151,37,55,"#ffffff",true);
+   text(ctx,journal.sub,153,100,27,journal.accent,true);
+   ctx.fillStyle=journal.accent;ctx.fillRect(54,145,972,3);
+   return;
+  }
+
   round(ctx,54,42,80,80,14,"#f6b07b");
   const name=String(opts.brandName||"FUTURE CODE FOOTBALL");
   if(!fit(ctx,img,61,49,66,66)){

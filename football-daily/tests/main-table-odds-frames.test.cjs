@@ -191,7 +191,7 @@ test('Main odds page alone loads frame controls; sub-brands may share the DOM re
 
 test('Shared renderer accepts odds routes and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=upper-team-match-size-20261020/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261021-myanmar-numerals-v2/);
   assert.match(html,/main-table-odds-frames\.js\?v=20261020-all-frames-zip-v8/);
   assert.ok(domSource.includes('if (!/\\/odds(?:\\.html)?\\/?$/.test(location.pathname)) return;'));
 });
@@ -206,7 +206,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=upper-team-match-size-20261020/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261021-myanmar-numerals-v2/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);
@@ -220,7 +220,7 @@ test('Actual HTML capture returns a PNG canvas without redrawing a new table',as
   const removed=[],calls=[];
   function element(kind='div'){
     const node={
-      kind,style:{setProperty(){}},children:[],className:'',
+      kind,style:{setProperty(){}},children:[],className:'',classList:{add(){},remove(){},contains(){return false}},
       scrollHeight:500,scrollWidth:960,textContent:'',
       getBoundingClientRect:()=>({width:960,height:500}),
       setAttribute(){},remove(){removed.push(kind);},
