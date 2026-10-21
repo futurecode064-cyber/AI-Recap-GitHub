@@ -41,8 +41,9 @@ const clicks=events.filter(e=>e.body.p_event_kind==='download_click');
 assert.equal(clicks.length, appKeys.length-1);
 assert.deepEqual(clicks.map(e=>e.body.p_app_key).sort(),appKeys.filter(k=>k!=='myanmar-kyar').sort());
 for(const click of clicks){
+  assert.equal(click.body.p_site_key, 'future-code-apps');
   assert.equal(click.options.keepalive,true);
   assert.equal(click.options.method,'POST');
-  assert.ok(click.url.endsWith('/rest/v1/rpc/fc_record_download_event'));
+  assert.ok(click.url.endsWith('/rest/v1/rpc/fc_record_portfolio_event'));
 }
 console.log('PASS: 10 direct APK links tracked; Kyar navigation does not double-count its landing-page download.');
