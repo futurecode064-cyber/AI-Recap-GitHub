@@ -115,6 +115,45 @@ function renderSelectedOddsButtons(){
   :"Download လုပ်ရန် အနည်းဆုံး လိဂ်တစ်ခု ရွေးပါ။";
 }
 
+/* Render the same verified odds as compact mobile-only cards.
+   The original HTML table remains untouched for PNG export. */
+function brandMobileOdds(matches){
+ const list=element("div","brand-odds-mobile");
+ list.setAttribute("role","list");
+ list.setAttribute("aria-label","ဖုန်းအတွက် ပေါက်ကြေးဇယား");
+ const team=(name,crest)=>{
+  const e=element("div","bmo-team");
+  append(e,badge(String(name||"—"),crest,"team-badge bmo-team-logo"),element("span","bmo-team-name",name||"—"));
+  return e;
+ };
+ const quote=(label,value)=>{
+  const e=element("div","bmo-quote");
+  const text=String(value??"").trim(),amount=element("strong","",text||"—");
+  if(!text)amount.setAttribute("aria-label",label+" မတင်ရသေးပါ");
+  append(e,element("span","",label),amount);return e;
+ };
+ const market=(name,original,current)=>{
+  const e=element("section","bmo-market"),values=element("div","bmo-market-values");
+  append(values,quote("မူလ",original),quote("ယခု",current));
+  append(e,element("h3","",name),values);
+  return e;
+ };
+ for(const m of matches){
+  const card=element("article","bmo-card"),teams=element("div","bmo-teams");
+  card.setAttribute("role","listitem");
+  const time=String(m.kickoffDisplay||m.kickoff||"");
+  const timeNode=element("div","bmo-time",time.replace(/^.*? ည /,"ည ")||"ပွဲချိန် မဖော်ပြထားပါ");
+  timeNode.title=time;
+  append(teams,team(m.home,m.homeCrestUrl),element("span","bmo-vs","VS"),team(m.away,m.awayCrestUrl));
+  const markets=element("div","bmo-markets");
+  append(markets,market("ဘော်ဒီကြေး",m.bodyOdds,m.currentBodyOdds),market("ဂိုးပေါင်းကြေး",m.goalTotalOdds,m.currentGoalTotalOdds));
+  append(card,timeNode,teams,element("div","bmo-upper","ကြေးပေးအသင်း — "+String(m.upperTeam||"—")),markets);
+  if(String(m.pdfLastColumn??"").trim())card.appendChild(element("div","bmo-prediction","အင်တာနက်ခန့်မှန်းချက် — "+m.pdfLastColumn));
+  list.appendChild(card);
+ }
+ return list;
+}
+
 function render(data){
  const root=document.getElementById("oddsList");root.replaceChildren();
  document.getElementById("oddsCount").textContent=String(data.matches.length);
@@ -173,7 +212,9 @@ function render(data){
     element("td","prediction",m.pdfLastColumn));
    tbody.appendChild(row);
   }
-  table.appendChild(tbody);wrap.appendChild(table);section.appendChild(wrap);root.appendChild(section);
+  table.appendChild(tbody);wrap.appendChild(table);section.appendChild(wrap);
+  if(!isMainOdds&&document.documentElement.dataset.footballBrandName)section.appendChild(brandMobileOdds(matches));
+  root.appendChild(section);
  }
 }
 

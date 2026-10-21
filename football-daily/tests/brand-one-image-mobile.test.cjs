@@ -10,7 +10,7 @@ test("four mirror home and odds pages are mobile viewport sites; main remains un
   for(const page of ["index.html","odds.html"]){
    const html=read(brand+"/"+page);
    assert.match(html,/name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/);
-   assert.match(html,/\.\.\/brand-mobile\.css\?v=responsive-20261021-1/);
+   assert.match(html,page==="odds.html"?/\.\.\/brand-mobile\.css\?v=mobile-odds-cards-20261021-v2/:/\.\.\/brand-mobile\.css\?v=responsive-20261021-1/);
    assert.doesNotMatch(html,/data-desktop-layout|width=1200/);
   }
  }

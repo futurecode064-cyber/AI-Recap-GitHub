@@ -3,6 +3,8 @@
    The offscreen PNG screenshot is a DIV with .fc-odds-direct-export.
    All table-card rules target main.odds-content, so exports keep desktop rows. */
 html,body{max-width:100%;}
+.brand-odds-mobile{display:none!important;}
+.fc-odds-direct-export .brand-odds-mobile,.odds-export-sheet .brand-odds-mobile{display:none!important;}
 .brand-odds-single{margin:16px 0 22px;padding:17px;border:1px solid #6a766f;border-radius:15px;background:linear-gradient(125deg,#1c2f32,#182329);color:#fff;}
 .brand-odds-single h2{font-size:clamp(17px,2.5vw,23px);margin:0 0 7px;line-height:1.8;color:#ffdfaa;}
 .brand-odds-single p{font-size:13px;line-height:1.9;color:#d3e1dd;margin:0 0 14px;}
@@ -35,34 +37,92 @@ html,body{max-width:100%;}
  .odds-export-actions{display:block;}
  .odds-filter-controls,.odds-league-choices{max-width:100%;}
  .odds-league-choice{min-width:0;overflow-wrap:anywhere;}
- /* Real on-screen odds cards: two teams + four morning/current values. */
- body main.odds-content .odds-table-wrap{width:100%!important;max-width:100%!important;overflow:visible!important;}
- body main.odds-content .odds-table{display:block!important;min-width:0!important;width:100%!important;table-layout:auto!important;}
- body main.odds-content .odds-table colgroup,body main.odds-content .odds-table thead{display:none!important;}
- body main.odds-content .odds-table tbody{display:block!important;width:100%!important;}
- body main.odds-content .odds-table tbody tr{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:0!important;margin:8px!important;padding:6px!important;border:1px solid #8a998f!important;border-radius:12px!important;background:#f7f7f5!important;overflow:hidden;}
- body main.odds-content .odds-table tbody td{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;min-width:0!important;width:auto!important;padding:9px 4px!important;min-height:52px!important;background:transparent!important;color:#18252b!important;border:0!important;border-bottom:1px solid #d6dce0!important;text-align:center!important;white-space:normal!important;overflow-wrap:anywhere!important;font:700 13px/1.6 "Noto Sans Myanmar",sans-serif!important;}
- body main.odds-content .odds-table tbody td.time{grid-column:span 1!important;color:#624922!important;font-size:11px!important;}
- body main.odds-content .odds-table tbody td.team-pair{grid-column:span 3!important;padding:8px 2px!important;}
- body main.odds-content .odds-matchup{display:flex!important;align-items:center!important;width:100%!important;min-width:0!important;gap:4px!important;}
- body main.odds-content .odds-matchup .club-label{font-size:clamp(10px,2.8vw,13px)!important;line-height:1.6!important;min-width:0!important;flex:1 1 0!important;overflow-wrap:anywhere!important;}
- body main.odds-content .odds-matchup .team-badge{width:24px!important;height:24px!important;flex:0 0 24px!important;}
- body main.odds-content .odds-table tbody td.upper{grid-column:span 4!important;min-height:37px!important;font-size:12px!important;color:#6b3b1b!important;}
- body main.odds-content .odds-table tbody td.price{grid-column:span 1!important;min-height:75px!important;color:#131c21!important;font-size:13px!important;letter-spacing:0!important;}
- body main.odds-content .odds-table tbody td.prediction{grid-column:span 4!important;min-height:41px!important;font-size:12px!important;color:#2d3950!important;border-bottom:0!important;}
- body main.odds-content .odds-table tbody td:nth-child(n+3)::before{display:block!important;content:""!important;margin-bottom:4px!important;font:600 10px/1.6 "Noto Sans Myanmar",sans-serif!important;color:#667682!important;white-space:normal!important;}
- body main.odds-content .odds-table tbody td:nth-child(3)::before{content:"ကြေးပေးအသင်း"!important;}
- body main.odds-content .odds-table tbody td:nth-child(4)::before{content:"ဘော်ဒီ · မူလ"!important;}
- body main.odds-content .odds-table tbody td:nth-child(5)::before{content:"ဘော်ဒီ · ယခု"!important;}
- body main.odds-content .odds-table tbody td:nth-child(6)::before{content:"ဂိုးပေါင်း · မူလ"!important;}
- body main.odds-content .odds-table tbody td:nth-child(7)::before{content:"ဂိုးပေါင်း · ယခု"!important;}
- body main.odds-content .odds-table tbody td:nth-child(8)::before{content:"အင်တာနက်ခန့်မှန်းချက်"!important;}
- body main.odds-content .odds-group{max-width:100%;overflow:hidden;}
- .odds-export-sheet,.fc-odds-direct-export{max-width:none!important;}
+ /* On phones, hide only the visible ledger; preserve its PNG capture clone. */
+ body main.odds-content #oddsList .odds-group > .odds-table-wrap{display:none!important;}
+ body main.odds-content #oddsList .odds-group .brand-odds-mobile{
+  display:grid!important;grid-template-columns:minmax(0,1fr);gap:10px;
+  padding:10px!important;background:#e9edf0!important;
+ }
+ body main.odds-content #oddsList .odds-group .bmo-card{
+  min-width:0;overflow:hidden;background:white!important;color:#17232b!important;
+  border:1px solid #c7d0d7;border-radius:12px;margin:0;padding:0;
+  box-shadow:0 3px 8px #071a2312;
+ }
+ body main.odds-content .bmo-card .bmo-time{
+  padding:9px 12px;text-align:center;background:#f3f5f6;color:#513824!important;
+  font:800 13px/1.7 "Noto Sans Myanmar",sans-serif;
+ }
+ body main.odds-content .bmo-card .bmo-teams{
+  display:grid!important;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);
+  align-items:center;gap:5px;padding:13px 7px 11px;min-height:94px;
+ }
+ body main.odds-content .bmo-card .bmo-team{
+  min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:7px;text-align:center;
+ }
+ body main.odds-content .bmo-card .bmo-team-logo{
+  display:flex;align-items:center;justify-content:center;flex:0 0 35px;
+  width:35px;height:35px;background:#fff;border:1px solid #dae2e9;border-radius:50%;
+ }
+ body main.odds-content .bmo-card .bmo-team-logo img{
+  display:block;width:100%;height:100%;object-fit:contain;padding:2px;
+ }
+ body main.odds-content .bmo-card .bmo-team-logo .logo-fallback{
+  color:#263843!important;font-size:12px;
+ }
+ body main.odds-content .bmo-card .bmo-team-name{
+  display:block;width:100%;color:#16252f!important;
+  font:800 14px/1.65 "Noto Sans Myanmar",sans-serif;
+  overflow-wrap:anywhere;word-break:normal;
+ }
+ body main.odds-content .bmo-card .bmo-vs{
+  text-align:center;color:#9f2833!important;font:900 15px "Barlow Condensed",sans-serif;
+ }
+ body main.odds-content .bmo-card .bmo-upper{
+  text-align:center;padding:7px 9px;background:#fcf4e6;color:#6a351d!important;
+  border-top:1px solid #e7e0d7;font:700 12px/1.8 "Noto Sans Myanmar",sans-serif;
+  overflow-wrap:anywhere;
+ }
+ body main.odds-content .bmo-card .bmo-markets{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));
+  border-top:1px solid #d6dfe4;
+ }
+ body main.odds-content .bmo-card .bmo-market{
+  min-width:0;margin:0;padding:0;background:white!important;
+ }
+ body main.odds-content .bmo-card .bmo-market+.bmo-market{border-left:1px solid #d6dfe4;}
+ body main.odds-content .bmo-card .bmo-market h3{
+  margin:0!important;padding:7px 3px 6px;background:#ebf0f3;
+  text-align:center;color:#20333c!important;
+  font:800 12px/1.6 "Noto Sans Myanmar",sans-serif;
+ }
+ body main.odds-content .bmo-card .bmo-market-values{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));
+ }
+ body main.odds-content .bmo-card .bmo-quote{
+  min-width:0;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:3px;padding:8px 1px 10px;text-align:center;
+ }
+ body main.odds-content .bmo-card .bmo-quote+.bmo-quote{
+  background:#eef8f2;border-left:1px solid #e0e6e7;
+ }
+ body main.odds-content .bmo-card .bmo-quote span{
+  color:#627481!important;font:700 10px/1.5 "Noto Sans Myanmar",sans-serif;
+ }
+ body main.odds-content .bmo-card .bmo-quote strong{
+  display:block;color:#172630!important;font:900 17px/1.5 "Noto Sans Myanmar",sans-serif;
+  overflow-wrap:anywhere;
+ }
+ body main.odds-content .bmo-card .bmo-prediction{
+  border-top:1px solid #e3e7e9;padding:7px 10px;text-align:center;
+  color:#384b59!important;font:700 12px/1.7 "Noto Sans Myanmar",sans-serif;
+  overflow-wrap:anywhere;
+ }
  .match-actions button,.match-download{max-width:100%;}
 }
 @media(max-width:380px){
- body main.odds-content .odds-matchup .team-badge{width:20px!important;height:20px!important;flex-basis:20px!important;}
- body main.odds-content .odds-table tbody td.price{font-size:12px!important;padding:7px 2px!important;}
+ body main.odds-content .bmo-card .bmo-team-name{font-size:12px;}
+ body main.odds-content .bmo-card .bmo-team-logo{width:30px;height:30px;flex-basis:30px;}
+ body main.odds-content .bmo-card .bmo-quote strong{font-size:15px;}
  .odds-overview{padding:12px;}
 }
