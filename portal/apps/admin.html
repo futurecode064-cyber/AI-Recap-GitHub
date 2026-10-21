@@ -89,6 +89,33 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
     <div id="chart" class="chart" role="img" aria-label="Download clicks by date"></div>
     <p id="chartRange" class="chart-label"></p>
   </section>
+  <section class="panel" style="margin-top:18px" aria-labelledby="notiHeading">
+    <h2 id="notiHeading">📢 APK Notification ပို့ရန်</h2>
+    <p class="hint">ရွေးထားသော APK ၏ Notification စနစ်ပါသည့် Version များက App ဖွင့်ချိန် သို့မဟုတ် နောက်ခံစစ်ဆေးချိန်မှာ ဖတ်ယူပါမည်။ Real-time FCM Push မဟုတ်ပါ။</p>
+    <form id="notificationForm">
+      <label for="notificationApp">အသိပေးမည့် APK</label>
+      <select id="notificationApp" required style="width:100%;padding:13px;border:1px solid #cad8e7;border-radius:10px;background:#fff;font:inherit">
+        <option value="all">APK အားလုံး</option>
+        <option value="ai-studio">Future Code AI Studio</option>
+        <option value="auto-video-cutter">Future Code Auto Video Cutter</option>
+        <option value="app-creator">Future Code App Creator</option>
+        <option value="kids-learning">Future Code Kids Learning</option>
+        <option value="daily-money">Future Code Daily Money</option>
+        <option value="myanmar-kyar">မြန်မာ ကျားကွက်</option>
+        <option value="ai-astrology">Future Code AI Astrology</option>
+        <option value="el-nino">အယ်နီညို ကာကွယ်ရေး</option>
+        <option value="medicine-reminder">Future Code Medicine Reminder</option>
+        <option value="safety-guide">Future Code Safety Guide</option>
+      </select>
+      <label for="notificationTitle">Notification ခေါင်းစဉ်</label>
+      <input id="notificationTitle" maxlength="120" required placeholder="Future Code Update">
+      <label for="notificationMessage">Notification စာသား</label>
+      <textarea id="notificationMessage" maxlength="1500" rows="4" required style="width:100%;padding:12px;border:1px solid #cad8e7;border-radius:10px;font:inherit" placeholder="သင်တန်းသားများသို့ အသိပေးရန်..."></textarea>
+      <button type="submit" id="notificationSend" class="primary action">Notification Publish လုပ်ရန်</button>
+      <p id="notificationStatus" class="status" role="status" aria-live="polite"></p>
+    </form>
+    <div class="hint" id="notificationHistory"></div>
+  </section>
   <div class="notice">အရေအတွက်များသည် Download ခလုတ်နှိပ်မှုစာရင်းဖြစ်ပြီး Download ပြီးဆုံးမှု သို့မဟုတ် လူဦးရေအတိအကျ မဟုတ်ပါ။ စနစ်စတင်တပ်ဆင်သည့်အချိန်မှစ၍သာ မှတ်တမ်းရှိပါသည်။ IP လိပ်စာနှင့် ဖုန်းနံပါတ်များကို မသိမ်းပါ။</div>
   <p id="dashStatus" role="status" class="status" aria-live="polite"></p>
 </section>
