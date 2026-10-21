@@ -1,0 +1,63 @@
+name: Future Code AI Studio v1.4.2 Updater APK
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/ai-studio-updater.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unsigned:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Prepare Android SDK 35
+        run: |
+          set -e
+          if [ ! -f "$ANDROID_HOME/platforms/android-35/android.jar" ]; then
+            sdkmanager "platforms;android-35" "build-tools;35.0.0"
+          fi
+      - name: Prepare updater Java code
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 'https://futurecodeaistudio.floot.app/_cdn/static/70c0bfad-0816-4168-b4b7-74ddd8e6e014-FC-GenericUpdater-Template.zip' -o /tmp/uptemplate.zip
+          unzip -q /tmp/uptemplate.zip -d /tmp/updater
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('training-app/src/mm/futurecode/videostudio/FutureCodeUpdateApp.java')
+          p.parent.mkdir(parents=True,exist_ok=True)
+          s=Path('/tmp/updater/FutureCodeUpdateApp.java').read_text()
+          s=s.replace('@PACKAGE@','mm.futurecode.videostudio').replace('@APPID@','ai-studio')
+          p.write_text(s)
+          PY
+      - name: Compile Android 8+ updater APK
+        run: |
+          set -euo pipefail
+          BT="$ANDROID_HOME/build-tools/35.0.0"
+          AJ="$ANDROID_HOME/platforms/android-35/android.jar"
+          mkdir -p build/upgrade/classes build/upgrade/dex build/upgrade/generated
+          "$BT/aapt2" compile --dir training-app/res -o build/upgrade/resources.zip
+          "$BT/aapt2" link -I "$AJ" --manifest training-app/AndroidManifest.xml -A training-app/assets -o build/upgrade/unsigned.apk --java build/upgrade/generated build/upgrade/resources.zip
+          find training-app/src build/upgrade/generated -name '*.java' > build/upgrade/sources.txt
+          javac -encoding UTF-8 -source 8 -target 8 -classpath "$AJ" -d build/upgrade/classes @build/upgrade/sources.txt
+          find build/upgrade/classes -name '*.class' -print0 | xargs -0 "$BT/d8" --lib "$AJ" --min-api 26 --output build/upgrade/dex
+          python3 - <<'PY'
+          import pathlib, zipfile
+          base=pathlib.Path('build/upgrade')
+          with zipfile.ZipFile(base/'unsigned.apk','a',zipfile.ZIP_DEFLATED) as z:
+              for p in (base/'dex').glob('*.dex'):z.write(p,p.name)
+          PY
+          "$BT/zipalign" -f -p 4 build/upgrade/unsigned.apk build/FutureCodeAIStudio-v1.4.2-UNSIGNED.apk
+          test -s build/FutureCodeAIStudio-v1.4.2-UNSIGNED.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fc-ai-studio-v1.4.2-unsigned
+          path: build/FutureCodeAIStudio-v1.4.2-UNSIGNED.apk
+          if-no-files-found: error
+          retention-days: 7
