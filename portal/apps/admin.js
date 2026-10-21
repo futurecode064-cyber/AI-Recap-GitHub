@@ -201,7 +201,7 @@
         const siteKey=siteForRelease(release.tag_name||"");
         if(!siteKey)continue;
         for(const asset of (release.assets||[])){
-          if(!/\\.apk$/i.test(asset.name||""))continue;
+          if(!/[.]apk$/i.test(asset.name||""))continue;
           rows.push({siteKey,tag:release.tag_name,downloads:Math.max(0,Number(asset.download_count)||0)});
         }
       }
