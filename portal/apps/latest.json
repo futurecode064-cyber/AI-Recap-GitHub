@@ -31,14 +31,14 @@
       "id": "myanmar-kyar",
       "name": "မြန်မာ ကျားကွက်",
       "packageName": "mm.futurecode.myanmarkyar",
-      "versionName": "4.2.5",
-      "versionCode": 40205,
+      "versionName": "4.2.6",
+      "versionCode": 40206,
       "minSdk": 26,
-      "file": "https://myanmar-kyar.futurecode-dubai-86851bf2.workers.dev/updates/Myanmar-Kyar-v4.2.5.apk",
-      "sizeBytes": 1647198,
-      "sha256": "bcf3634b9a553c81007cca5f97e410350854a3c92b6a38ce16528001006483a1",
+      "file": "https://myanmar-kyar.futurecode-dubai-86851bf2.workers.dev/updates/Myanmar-Kyar-v4.2.6.apk",
+      "sizeBytes": 1651294,
+      "sha256": "ce007cea6e0799f966555f462f32357f4c32b5b0670cd2805e94e53637fd4cc3",
       "certificateSha256": "f92280389bda918d496d604172baf2b3febd8dcd2b9a48f84e540a8acb6e1e5d",
-      "releasedAt": "2026-10-10"
+      "releasedAt": "2026-10-21"
     },
     {
       "id": "daily-money",
