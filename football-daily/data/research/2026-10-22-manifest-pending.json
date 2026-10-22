@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-22",
+  "sourcePDF": "22.pdf",
+  "sourcePDFSha256": "d92b1b8b8ae5b86950790ad5721575ccf783f7f7b7f9799568f12b0748ed3abf",
+  "expectedPdfRows": 37,
+  "officialFixtureRows": 36,
+  "ledgerRowsSavedOnAuditBranch": 37,
+  "publishGate": "BLOCKED_MATERIAL_SOURCE_CONFLICT",
+  "blockerRows": [
+    19,
+    28,
+    29
+  ],
+  "pdfGlyphReviewRows": [
+    9,
+    20
+  ],
+  "lastFiveVerified": 0,
+  "fullPreviewsPrepared": 0,
+  "specialChoicesPrepared": 2,
+  "aiTodayGenerated": 0,
+  "newsPrepared": 0,
+  "relatedNewsPhotos": 0,
+  "resultsFromPreviousEditorialDate": 14,
+  "previousDayAIEvaluated": 14,
+  "downloadAndMobileQAChecked": false,
+  "productionCommitted": false,
+  "deployAttempted": false,
+  "mainBranchIntentionallyUnchanged": true,
+  "sourceLedgerPath": "data/research/2026-10-22-source-ledger-pending.json",
+  "previousAiReviewPath": "data/research/2026-10-21-ft-ai-review-pending.json",
+  "blockedReason": "Fresh 10 news with matching licensed photos missing, 1X2 unavailable, post-Oct15 domestic form unverified; do not claim complete",
+  "sourceRows": 37,
+  "activeRows": 36,
+  "removedRows": [
+    28
+  ],
+  "ownerCorrections": [
+    19,
+    29
+  ],
+  "oddsPrepared": 36,
+  "previewsPrepared": 36,
+  "logoPairs": 36,
+  "latestDomesticFormRefreshPending": true,
+  "unverifiedCurrent1X2Rows": 36,
+  "publicationStatus": "PARTIAL_DATA_PREPARED_NEWS_AND_FULL_QA_PENDING",
+  "publishedGate": "PARTIAL_NOT_COMPLETE"
+}

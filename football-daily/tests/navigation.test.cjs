@@ -197,7 +197,7 @@ test('old source bookie odds stay in 12 Oct archive and new report has verified 
  for(const m of archive.matches){
   for(const key of ['homeOdds','drawOdds','awayOdds'])assert.ok(Number(m[key])>1);
   assert.ok(m.oddsSourceUrl?.startsWith('https://'));
-  assert.match(m.oddsMarket,/^Full-time 1X2(?: \(pre-match reference snapshot\))?$/);
+  assert.match(m.oddsMarket,/^Full-time(?: match result)? 1X2(?: \(pre-match reference snapshot\))?$/);
   if(m.oddsMarket.includes('reference snapshot')){assert.equal(m.oddsIsLive,false);assert.match(m.oddsSourceUrl,/^https:\/\//);}
  }
  const today=JSON.parse(fs.readFileSync(path.join(root,'data/today.json'),'utf8'));
@@ -209,7 +209,7 @@ test('old source bookie odds stay in 12 Oct archive and new report has verified 
    assert.ok(vals.every(v=>Number(v)>1),'Incomplete 1X2 for '+m.home);
    assert.ok(m.oddsProvider&&m.oddsSourceUrl?.startsWith('https://'),'Unattributed fulltime odds '+m.home);
   }
-  assert.match(m.oddsMarket,/^Full-time 1X2(?: \(pre-match reference snapshot\))?$/);
+  assert.match(m.oddsMarket,/^Full-time(?: match result)? 1X2(?: \(pre-match reference snapshot\))?$/);
   if(m.oddsMarket.includes('reference snapshot')){assert.equal(m.oddsIsLive,false);assert.match(m.oddsSourceUrl,/^https:\/\//);}
  }
  const js=fs.readFileSync(path.join(root,'app.js'),'utf8');

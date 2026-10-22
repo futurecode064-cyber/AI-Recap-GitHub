@@ -1,0 +1,11 @@
+{
+  "uefa.europa.png": {
+    "assetUrl": "https://pub-3bd35431294c47068cbf31a95d572166.r2.dev/logos/europa-league/europa-league-logo-footylogos.png",
+    "sourcePage": "https://www.footylogos.com/logos/europa-league"
+  },
+  "uefa.conference.png": {
+    "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/UEFA_Conference_League_full_logo_%282024_version%29.svg/3840px-UEFA_Conference_League_full_logo_%282024_version%29.svg.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:UEFA_Conference_League_full_logo_(2024_version).svg",
+    "license": "CC BY-SA 4.0"
+  }
+}

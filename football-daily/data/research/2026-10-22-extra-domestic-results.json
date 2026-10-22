@@ -1,0 +1,2051 @@
+{
+  "reportDate": "2026-10-22",
+  "sourceLabel": "Supplemental public club result listings (checked for soccer, 2026/27)",
+  "results": [
+    {
+      "club": "Ararat-Armenia",
+      "slug": "ararat-armenia",
+      "url": "https://sokascore.com/team/ararat-armenia/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Premier League",
+          "opponent": "BKMA",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ararat-armenia/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Jagiellonia",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ararat-armenia/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Premier League",
+          "opponent": "Alashkert",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ararat-armenia/results/"
+        },
+        {
+          "date": "2026-10-03",
+          "competition": "Friendlies Clubs",
+          "opponent": "Ararat",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ararat-armenia/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Premier League",
+          "opponent": "Shirak",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ararat-armenia/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "UEFA Europa League",
+          "opponent": "Sparta Praha",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ararat-armenia/results/"
+        },
+        {
+          "date": "2026-09-11",
+          "competition": "Premier League",
+          "opponent": "Syunik",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ararat-armenia/results/"
+        }
+      ]
+    },
+    {
+      "club": "Ferencváros",
+      "slug": "ferencvarosi-tc",
+      "url": "https://sokascore.com/team/ferencvarosi-tc/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "NB I",
+          "opponent": "Kisvarda FC",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ferencvarosi-tc/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Plzen",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ferencvarosi-tc/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "NB I",
+          "opponent": "Debreceni VSC",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ferencvarosi-tc/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "NB I",
+          "opponent": "Nyiregyhaza",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ferencvarosi-tc/results/"
+        },
+        {
+          "date": "2026-09-17",
+          "competition": "UEFA Europa League",
+          "opponent": "Celtic",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ferencvarosi-tc/results/"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "Magyar Kupa",
+          "opponent": "DEAC",
+          "teamGoals": 7,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ferencvarosi-tc/results/"
+        },
+        {
+          "date": "2026-09-06",
+          "competition": "NB I",
+          "opponent": "Ujpest",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/ferencvarosi-tc/results/"
+        }
+      ]
+    },
+    {
+      "club": "Torreense",
+      "slug": "torreense",
+      "url": "https://sokascore.com/team/torreense/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Sunderland",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/torreense/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Segunda Liga",
+          "opponent": "Tondela",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/torreense/results/"
+        },
+        {
+          "date": "2026-09-17",
+          "competition": "UEFA Europa League",
+          "opponent": "Lillestrom",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/torreense/results/"
+        },
+        {
+          "date": "2026-09-11",
+          "competition": "Segunda Liga",
+          "opponent": "Leixoes",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/torreense/results/"
+        },
+        {
+          "date": "2026-09-05",
+          "competition": "Segunda Liga",
+          "opponent": "Benfica B",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/torreense/results/"
+        }
+      ]
+    },
+    {
+      "club": "Lech Poznań",
+      "slug": "lech-poznan",
+      "url": "https://sokascore.com/team/lech-poznan/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Ekstraklasa",
+          "opponent": "Korona Kielce",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lech-poznan/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lech-poznan/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Ekstraklasa",
+          "opponent": "Slask Wroclaw",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lech-poznan/results/"
+        },
+        {
+          "date": "2026-10-03",
+          "competition": "Friendlies Clubs",
+          "opponent": "Energie Cottbus",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lech-poznan/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Ekstraklasa",
+          "opponent": "Radomiak Radom",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lech-poznan/results/"
+        },
+        {
+          "date": "2026-09-17",
+          "competition": "UEFA Europa League",
+          "opponent": "Crystal Palace",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lech-poznan/results/"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "Ekstraklasa",
+          "opponent": "Gornik Zabrze",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lech-poznan/results/"
+        }
+      ]
+    },
+    {
+      "club": "GNK Dinamo Zagreb",
+      "slug": "dinamo-zagreb",
+      "url": "https://sokascore.com/team/dinamo-zagreb/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "HNL",
+          "opponent": "NK Slaven Belupo",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/dinamo-zagreb/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Anderlecht",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/dinamo-zagreb/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "HNL",
+          "opponent": "HNK Hajduk Split",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/dinamo-zagreb/results/"
+        },
+        {
+          "date": "2026-10-04",
+          "competition": "Cup",
+          "opponent": "Vukovar",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/dinamo-zagreb/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "HNL",
+          "opponent": "NK Lokomotiva Zagreb",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/dinamo-zagreb/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "UEFA Europa League",
+          "opponent": "Hapoel Beer Sheva",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/dinamo-zagreb/results/"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "HNL",
+          "opponent": "NK Osijek",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/dinamo-zagreb/results/"
+        }
+      ]
+    },
+    {
+      "club": "Union Saint-Gilloise",
+      "slug": "union-saint-gilloise",
+      "url": "https://sokascore.com/team/union-saint-gilloise/results/",
+      "valid": false,
+      "latest": []
+    },
+    {
+      "club": "Hapoel Beer-Sheva",
+      "slug": "hapoel-beer-sheva",
+      "url": "https://sokascore.com/team/hapoel-beer-sheva/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Ligat Ha'al",
+          "opponent": "Hapoel Katamon",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/hapoel-beer-sheva/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "AZ Alkmaar",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/hapoel-beer-sheva/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Ligat Ha'al",
+          "opponent": "Ironi Tiberias",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/hapoel-beer-sheva/results/"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Ligat Ha'al",
+          "opponent": "Ironi Kiryat Shmona",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/hapoel-beer-sheva/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "UEFA Europa League",
+          "opponent": "Dinamo Zagreb",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/hapoel-beer-sheva/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "Ligat Ha'al",
+          "opponent": "Hapoel Petah Tikva",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/hapoel-beer-sheva/results/"
+        },
+        {
+          "date": "2026-09-07",
+          "competition": "Ligat Ha'al",
+          "opponent": "Maccabi Tel Aviv",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/hapoel-beer-sheva/results/"
+        }
+      ]
+    },
+    {
+      "club": "Jagiellonia",
+      "slug": "jagiellonia",
+      "url": "https://sokascore.com/team/jagiellonia/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Ekstraklasa",
+          "opponent": "Zaglebie Lubin",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/jagiellonia/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Ararat-Armenia",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/jagiellonia/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Ekstraklasa",
+          "opponent": "Gornik Zabrze",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/jagiellonia/results/"
+        },
+        {
+          "date": "2026-10-03",
+          "competition": "Friendlies Clubs",
+          "opponent": "Polonia Warszawa",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/jagiellonia/results/"
+        },
+        {
+          "date": "2026-09-29",
+          "competition": "Friendlies Clubs",
+          "opponent": "Suduva Marijampole",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/jagiellonia/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Ekstraklasa",
+          "opponent": "Legia Warszawa",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/jagiellonia/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "UEFA Europa League",
+          "opponent": "Olympiakos Piraeus",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/jagiellonia/results/"
+        }
+      ]
+    },
+    {
+      "club": "Anderlecht",
+      "slug": "anderlecht",
+      "url": "https://sokascore.com/team/anderlecht/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Cup",
+          "opponent": "Beerschot VA",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/anderlecht/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Dinamo Zagreb",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/anderlecht/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Jupiler Pro League",
+          "opponent": "Cercle Brugge",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/anderlecht/results/"
+        },
+        {
+          "date": "2026-10-02",
+          "competition": "Friendlies Clubs",
+          "opponent": "Reims",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/anderlecht/results/"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Jupiler Pro League",
+          "opponent": "Zulte Waregem",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/anderlecht/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "UEFA Europa League",
+          "opponent": "Lyon",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/anderlecht/results/"
+        },
+        {
+          "date": "2026-09-11",
+          "competition": "Jupiler Pro League",
+          "opponent": "KV Mechelen",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/anderlecht/results/"
+        }
+      ]
+    },
+    {
+      "club": "Celje",
+      "slug": "celje",
+      "url": "https://sokascore.com/team/celje/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "1. SNL",
+          "opponent": "Maribor",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/celje/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Omonia Nicosia",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/celje/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "1. SNL",
+          "opponent": "Aluminij",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/celje/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "1. SNL",
+          "opponent": "Mura",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/celje/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "UEFA Europa League",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/celje/results/"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "1. SNL",
+          "opponent": "Bravo",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/celje/results/"
+        },
+        {
+          "date": "2026-09-06",
+          "competition": "1. SNL",
+          "opponent": "Koper",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/celje/results/"
+        }
+      ]
+    },
+    {
+      "club": "Sparta Praha",
+      "slug": "sparta-prague",
+      "url": "https://sokascore.com/team/sparta-prague/results/",
+      "valid": true,
+      "latest": []
+    },
+    {
+      "club": "Omonia",
+      "slug": "omonia-nicosia",
+      "url": "https://sokascore.com/team/omonia-nicosia/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-19",
+          "competition": "1. Division",
+          "opponent": "Olympiakos",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/omonia-nicosia/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Celje",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/omonia-nicosia/results/"
+        },
+        {
+          "date": "2026-10-09",
+          "competition": "1. Division",
+          "opponent": "Karmiotissa",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/omonia-nicosia/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "1. Division",
+          "opponent": "Krasava Ypsonas",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/omonia-nicosia/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "UEFA Europa League",
+          "opponent": "Celta Vigo",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/omonia-nicosia/results/"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "1. Division",
+          "opponent": "Apollon Limassol",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/omonia-nicosia/results/"
+        },
+        {
+          "date": "2026-09-07",
+          "competition": "1. Division",
+          "opponent": "Aris",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/omonia-nicosia/results/"
+        }
+      ]
+    },
+    {
+      "club": "Benfica",
+      "slug": "benfica",
+      "url": "https://sokascore.com/team/benfica/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "Celtic",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/benfica/results/"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Primeira Liga",
+          "opponent": "Vitória SC",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/benfica/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Primeira Liga",
+          "opponent": "FC Porto",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/benfica/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "UEFA Europa League",
+          "opponent": "AC Milan",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/benfica/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "Primeira Liga",
+          "opponent": "GIL Vicente",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/benfica/results/"
+        },
+        {
+          "date": "2026-09-09",
+          "competition": "Primeira Liga",
+          "opponent": "Moreirense",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/benfica/results/"
+        },
+        {
+          "date": "2026-09-05",
+          "competition": "Primeira Liga",
+          "opponent": "Maritimo",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/benfica/results/"
+        }
+      ]
+    },
+    {
+      "club": "Viktoria Plzeň",
+      "slug": "viktoria-plzen",
+      "url": "https://sokascore.com/team/viktoria-plzen/results/",
+      "valid": false,
+      "latest": []
+    },
+    {
+      "club": "Levski Sofia",
+      "slug": "levski-sofia",
+      "url": "https://sokascore.com/team/levski-sofia/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Cup",
+          "opponent": "Spartak Pleven",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/levski-sofia/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa League",
+          "opponent": "NEC Nijmegen",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/levski-sofia/results/"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "First League",
+          "opponent": "Cherno More Varna",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/levski-sofia/results/"
+        },
+        {
+          "date": "2026-09-17",
+          "competition": "UEFA Europa League",
+          "opponent": "Red Bull Salzburg",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/levski-sofia/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "First League",
+          "opponent": "Botev Vratsa",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/levski-sofia/results/"
+        },
+        {
+          "date": "2026-09-09",
+          "competition": "Super Cup",
+          "opponent": "CSKA Sofia",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/levski-sofia/results/"
+        },
+        {
+          "date": "2026-09-05",
+          "competition": "First League",
+          "opponent": "CSKA 1948",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/levski-sofia/results/"
+        }
+      ]
+    },
+    {
+      "club": "Kairat Almaty",
+      "slug": "kairat-almaty",
+      "url": "https://sokascore.com/team/kairat-almaty/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Premier League",
+          "opponent": "Irtysh",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kairat-almaty/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Riga",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kairat-almaty/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Premier League",
+          "opponent": "Zhetysu",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kairat-almaty/results/"
+        },
+        {
+          "date": "2026-09-17",
+          "competition": "Premier League",
+          "opponent": "FC Astana",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kairat-almaty/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "Premier League",
+          "opponent": "FK Tobol Kostanay",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kairat-almaty/results/"
+        },
+        {
+          "date": "2026-09-09",
+          "competition": "Premier League",
+          "opponent": "Zhenys",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kairat-almaty/results/"
+        },
+        {
+          "date": "2026-09-05",
+          "competition": "Premier League",
+          "opponent": "Kaspiy",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kairat-almaty/results/"
+        }
+      ]
+    },
+    {
+      "club": "Crvena Zvezda",
+      "slug": "fk-crvena-zvezda",
+      "url": "https://sokascore.com/team/fk-crvena-zvezda/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Super Liga",
+          "opponent": "Mladost Lucani",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/fk-crvena-zvezda/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "FC Lugano",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/fk-crvena-zvezda/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Super Liga",
+          "opponent": "Radnicki 1923",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/fk-crvena-zvezda/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Super Liga",
+          "opponent": "Radnicki NIS",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/fk-crvena-zvezda/results/"
+        },
+        {
+          "date": "2026-09-17",
+          "competition": "Super Liga",
+          "opponent": "Železničar Pančevo",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/fk-crvena-zvezda/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "Super Liga",
+          "opponent": "IMT Novi Beograd",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/fk-crvena-zvezda/results/"
+        },
+        {
+          "date": "2026-09-10",
+          "competition": "Super Liga",
+          "opponent": "Radnik Surdulica",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/fk-crvena-zvezda/results/"
+        }
+      ]
+    },
+    {
+      "club": "Jablonec",
+      "slug": "jablonec",
+      "url": "https://sokascore.com/team/jablonec/results/",
+      "valid": false,
+      "latest": []
+    },
+    {
+      "club": "Lugano",
+      "slug": "lugano",
+      "url": "https://sokascore.com/team/lugano/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-20",
+          "competition": "National League",
+          "opponent": "Servette",
+          "teamGoals": 5,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lugano/results/"
+        },
+        {
+          "date": "2026-10-04",
+          "competition": "National League",
+          "opponent": "Ajoie",
+          "teamGoals": 4,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lugano/results/"
+        },
+        {
+          "date": "2026-09-22",
+          "competition": "National League",
+          "opponent": "Zug",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lugano/results/"
+        },
+        {
+          "date": "2026-09-18",
+          "competition": "National League",
+          "opponent": "EHC Kloten",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lugano/results/"
+        },
+        {
+          "date": "2026-09-04",
+          "competition": "Club Friendly",
+          "opponent": "Rapperswil-Jona",
+          "teamGoals": 7,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/lugano/results/"
+        }
+      ]
+    },
+    {
+      "club": "Iberia Tbilisi",
+      "slug": "iberia-tbilisi",
+      "url": "https://sokascore.com/team/iberia-tbilisi/results/",
+      "valid": false,
+      "latest": []
+    },
+    {
+      "club": "Inter Escaldes",
+      "slug": "inter-escaldes",
+      "url": "https://sokascore.com/team/inter-escaldes/results/",
+      "valid": false,
+      "latest": []
+    },
+    {
+      "club": "Universitatea Craiova",
+      "slug": "universitatea-craiova",
+      "url": "https://sokascore.com/team/universitatea-craiova/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Liga I",
+          "opponent": "Farul Constanta",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/universitatea-craiova/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Getafe",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/universitatea-craiova/results/"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Liga I",
+          "opponent": "Csikszereda",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/universitatea-craiova/results/"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Liga I",
+          "opponent": "FCSB",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/universitatea-craiova/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "Liga I",
+          "opponent": "Corvinul Hunedoara",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/universitatea-craiova/results/"
+        },
+        {
+          "date": "2026-09-07",
+          "competition": "Liga I",
+          "opponent": "Universitatea Cluj",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/universitatea-craiova/results/"
+        },
+        {
+          "date": "2026-09-03",
+          "competition": "Cupa României",
+          "opponent": "FC Bacau",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/universitatea-craiova/results/"
+        }
+      ]
+    },
+    {
+      "club": "Kauno Žalgiris",
+      "slug": "kauno-zalgiris",
+      "url": "https://sokascore.com/team/kauno-zalgiris/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-19",
+          "competition": "A Lyga",
+          "opponent": "Suduva Marijampole",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kauno-zalgiris/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Brighton",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kauno-zalgiris/results/"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Cup",
+          "opponent": "Minija",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kauno-zalgiris/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "A Lyga",
+          "opponent": "Šiauliai",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kauno-zalgiris/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "A Lyga",
+          "opponent": "FK Zalgiris Vilnius",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kauno-zalgiris/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "A Lyga",
+          "opponent": "Panevėžys",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kauno-zalgiris/results/"
+        },
+        {
+          "date": "2026-09-09",
+          "competition": "A Lyga",
+          "opponent": "Suduva Marijampole",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kauno-zalgiris/results/"
+        }
+      ]
+    },
+    {
+      "club": "CSKA Sofia",
+      "slug": "cska-sofia",
+      "url": "https://sokascore.com/team/cska-sofia/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Cup",
+          "opponent": "Nesebar",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/cska-sofia/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Monaco",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/cska-sofia/results/"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "First League",
+          "opponent": "CSKA 1948",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/cska-sofia/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "First League",
+          "opponent": "Lokomotiv Plovdiv",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/cska-sofia/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "First League",
+          "opponent": "Lokomotiv Sofia",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/cska-sofia/results/"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "First League",
+          "opponent": "Arda Kardzhali",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/cska-sofia/results/"
+        },
+        {
+          "date": "2026-09-09",
+          "competition": "Super Cup",
+          "opponent": "Levski Sofia",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/cska-sofia/results/"
+        }
+      ]
+    },
+    {
+      "club": "Pafos",
+      "slug": "pafos",
+      "url": "https://sokascore.com/team/pafos/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-19",
+          "competition": "1. Division",
+          "opponent": "Apoel Nicosia",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/pafos/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Atalanta",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/pafos/results/"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "1. Division",
+          "opponent": "Anorthosis",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/pafos/results/"
+        },
+        {
+          "date": "2026-09-18",
+          "competition": "1. Division",
+          "opponent": "AEL",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/pafos/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "1. Division",
+          "opponent": "AEK Larnaca",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/pafos/results/"
+        },
+        {
+          "date": "2026-09-07",
+          "competition": "1. Division",
+          "opponent": "Olympiakos",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/pafos/results/"
+        },
+        {
+          "date": "2026-09-03",
+          "competition": "Super Cup",
+          "opponent": "Omonia Nicosia",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/pafos/results/"
+        }
+      ]
+    },
+    {
+      "club": "Riga",
+      "slug": "riga",
+      "url": "https://sokascore.com/team/riga/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Virsliga",
+          "opponent": "Super Nova",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/riga/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Kairat Almaty",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/riga/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Virsliga",
+          "opponent": "Tukums",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/riga/results/"
+        },
+        {
+          "date": "2026-10-03",
+          "competition": "Friendlies Clubs",
+          "opponent": "Aris",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/riga/results/"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Virsliga",
+          "opponent": "FS Jelgava",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/riga/results/"
+        },
+        {
+          "date": "2026-09-15",
+          "competition": "Virsliga",
+          "opponent": "Super Nova",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/riga/results/"
+        },
+        {
+          "date": "2026-09-11",
+          "competition": "Virsliga",
+          "opponent": "Auda",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/riga/results/"
+        }
+      ]
+    },
+    {
+      "club": "Egnatia",
+      "slug": "egnatia",
+      "url": "https://sokascore.com/team/egnatia/results/",
+      "valid": false,
+      "latest": []
+    },
+    {
+      "club": "Borac Banja Luka",
+      "slug": "borac-banja-luka",
+      "url": "https://sokascore.com/team/borac-banja-luka/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Panathinaikos",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/borac-banja-luka/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Premijer Liga",
+          "opponent": "BSK Banja Luka",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/borac-banja-luka/results/"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Premijer Liga",
+          "opponent": "Siroki Brijeg",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/borac-banja-luka/results/"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "Premijer Liga",
+          "opponent": "Sloga Doboj",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/borac-banja-luka/results/"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "Premijer Liga",
+          "opponent": "Zrinjski",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/borac-banja-luka/results/"
+        },
+        {
+          "date": "2026-09-06",
+          "competition": "Premijer Liga",
+          "opponent": "FK Sarajevo",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/borac-banja-luka/results/"
+        },
+        {
+          "date": "2026-09-02",
+          "competition": "Premijer Liga",
+          "opponent": "Zeljeznicar Sarajevo",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/borac-banja-luka/results/"
+        }
+      ]
+    },
+    {
+      "club": "KuPS Kuopio",
+      "slug": "kups",
+      "url": "https://sokascore.com/team/kups/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Veikkausliiga",
+          "opponent": "VPS",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kups/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Trabzonspor",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kups/results/"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Veikkausliiga",
+          "opponent": "Inter Turku",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kups/results/"
+        },
+        {
+          "date": "2026-10-08",
+          "competition": "Veikkausliiga",
+          "opponent": "AC Oulu",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kups/results/"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Veikkausliiga",
+          "opponent": "VPS",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kups/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "Veikkausliiga",
+          "opponent": "HJK Helsinki",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kups/results/"
+        },
+        {
+          "date": "2026-09-08",
+          "competition": "Veikkausliiga",
+          "opponent": "Gnistan",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/kups/results/"
+        }
+      ]
+    },
+    {
+      "club": "Lincoln Red Imps",
+      "slug": "lincoln-red-imps",
+      "url": "https://sokascore.com/team/lincoln-red-imps/results/",
+      "valid": false,
+      "latest": []
+    },
+    {
+      "club": "Sint-Truidense",
+      "slug": "sint-truiden",
+      "url": "https://sokascore.com/team/sint-truiden/results/",
+      "valid": false,
+      "latest": []
+    },
+    {
+      "club": "Gent",
+      "slug": "gent",
+      "url": "https://sokascore.com/team/gent/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-18",
+          "competition": "Cup",
+          "opponent": "Rochefort",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/gent/results/"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "UEFA Europa Conference League",
+          "opponent": "Aarhus",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/gent/results/"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Jupiler Pro League",
+          "opponent": "Zulte Waregem",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/gent/results/"
+        },
+        {
+          "date": "2026-09-18",
+          "competition": "Jupiler Pro League",
+          "opponent": "Standard Liege",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/gent/results/"
+        },
+        {
+          "date": "2026-09-13",
+          "competition": "Jupiler Pro League",
+          "opponent": "Genk",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/gent/results/"
+        },
+        {
+          "date": "2026-09-06",
+          "competition": "Jupiler Pro League",
+          "opponent": "Cercle Brugge",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/gent/results/"
+        },
+        {
+          "date": "2026-09-03",
+          "competition": "Jupiler Pro League",
+          "opponent": "OH Leuven",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/gent/results/"
+        }
+      ]
+    },
+    {
+      "club": "Thun",
+      "slug": "thun",
+      "url": "https://sokascore.com/team/thun/results/",
+      "valid": true,
+      "latest": [
+        {
+          "date": "2026-10-17",
+          "competition": "MySports League",
+          "opponent": "Oberthurgau",
+          "teamGoals": 6,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/thun/results/"
+        },
+        {
+          "date": "2026-10-14",
+          "competition": "MySports League",
+          "opponent": "Bulach",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/thun/results/"
+        },
+        {
+          "date": "2026-10-03",
+          "competition": "MySports League",
+          "opponent": "Winterthur",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/thun/results/"
+        },
+        {
+          "date": "2026-09-26",
+          "competition": "MySports League",
+          "opponent": "Wetzikon",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/thun/results/"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "MySports League",
+          "opponent": "Huttwil",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "status": "STATUS_FULL_TIME",
+          "sourceUrl": "https://sokascore.com/team/thun/results/"
+        }
+      ]
+    },
+    {
+      "club": "Hajduk Split",
+      "slug": "hajduk-split",
+      "url": "https://sokascore.com/team/hajduk-split/results/",
+      "valid": false,
+      "latest": []
+    }
+  ],
+  "notes": "SokaScore data used only when club identity and fixture date agree; crosscheck direct official sources for surprising results"
+}

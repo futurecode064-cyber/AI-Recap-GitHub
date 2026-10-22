@@ -1,0 +1,287 @@
+{
+  "matchNightDate": "2026-10-21",
+  "status": "AUDIT_ONLY_NOT_PUBLISHED",
+  "sourceAIPredictions": "football-daily/data/research/2026-10-21-ai-audit.json",
+  "model": "existing main-ai-score-model.js conservative Poisson",
+  "generatedAt": "2026-10-21T02:13:25.500Z",
+  "eligibleCompletedFixtures": 14,
+  "exactScoreHitCounts": [
+    1,
+    0,
+    2
+  ],
+  "oneXtwoHitCounts": [
+    4,
+    4,
+    4
+  ],
+  "FTSourceVerification": "Cross-checked with public football result reports; revalidate official finals before publishing",
+  "matches": [
+    {
+      "fixtureId": "401915395",
+      "FT": "4-1",
+      "archivedAIPicks": [
+        "1-1",
+        "1-0",
+        "2-1"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "fixtureId": "401915396",
+      "FT": "2-4",
+      "archivedAIPicks": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "fixtureId": "401915394",
+      "FT": "3-1",
+      "archivedAIPicks": [
+        "1-2",
+        "1-1",
+        "1-3"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "fixtureId": "401915312",
+      "FT": "2-2",
+      "archivedAIPicks": [
+        "2-1",
+        "3-1",
+        "1-1"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "fixtureId": "401915388",
+      "FT": "3-0",
+      "archivedAIPicks": [
+        "2-1",
+        "2-0",
+        "1-1"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "fixtureId": "401915390",
+      "FT": "1-0",
+      "archivedAIPicks": [
+        "2-1",
+        "2-2",
+        "1-1"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "fixtureId": "401915389",
+      "FT": "1-0",
+      "archivedAIPicks": [
+        "1-2",
+        "1-3",
+        "2-2"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "fixtureId": "401915313",
+      "FT": "4-1",
+      "archivedAIPicks": [
+        "2-1",
+        "2-2",
+        "1-1"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "fixtureId": "401915391",
+      "FT": "2-3",
+      "archivedAIPicks": [
+        "2-1",
+        "1-1",
+        "2-2"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "fixtureId": "401882870",
+      "FT": "3-1",
+      "archivedAIPicks": [
+        "1-1",
+        "0-1",
+        "1-2"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "fixtureId": "den-cup-863721",
+      "FT": "0-2",
+      "archivedAIPicks": [
+        "1-1",
+        "0-1",
+        "1-0"
+      ],
+      "exactHits": [
+        false,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "fixtureId": "401880779",
+      "FT": "1-0",
+      "archivedAIPicks": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "exactHits": [
+        false,
+        false,
+        true
+      ],
+      "outcomeHits": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "fixtureId": "nor-sogndal-raufoss-20261021",
+      "FT": "2-1",
+      "archivedAIPicks": [
+        "2-1",
+        "1-1",
+        "2-2"
+      ],
+      "exactHits": [
+        true,
+        false,
+        false
+      ],
+      "outcomeHits": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "fixtureId": "fin-pk35-jaro-20261021",
+      "FT": "1-1",
+      "archivedAIPicks": [
+        "1-0",
+        "2-0",
+        "1-1"
+      ],
+      "exactHits": [
+        false,
+        false,
+        true
+      ],
+      "outcomeHits": [
+        false,
+        false,
+        true
+      ]
+    }
+  ]
+}
