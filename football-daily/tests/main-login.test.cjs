@@ -25,17 +25,17 @@ function getRequest(route, opts = {}) {
   return new Request("https://future-code-football-daily.pages.dev" + route, opts);
 }
 
-test("only Future Code Main routes require valid signed login", async () => {
+test("daily report pages stay public while owner editor login remains available", async () => {
   const worker = await loadWorker();
   const {env,calls} = fakeEnv();
 
   for (const route of ["/", "/index", "/index/", "/index.html", "/odds", "/odds/", "/odds.html"]) {
     const result = await worker.fetch(getRequest(route), env);
-    assert.equal(result.status, 302, route);
+    assert.equal(result.status, 200, route);
     assert.equal(result.headers.get("X-Football-Worker"), "selective-routes-v1");
-    assert.ok(result.headers.get("Location").startsWith("/login?next="), route);
+    assert.match(await result.text(), /FOOTBALL ASSET/, route);
   }
-  assert.equal(calls.length, 0, "blocked pages must not be served");
+  assert.equal(calls.length, 7, "daily report pages must be publicly served");
 
   for (const route of [
     "/ykz-family/", "/ykz-family/odds.html", "/bw-sport/", "/bw-sport/odds.html",
@@ -47,7 +47,7 @@ test("only Future Code Main routes require valid signed login", async () => {
     const result = await worker.fetch(getRequest(route), env);
     assert.equal(result.status, 200, route);
   }
-  assert.equal(calls.length, 15, "public brand routes and shared assets remain public");
+  assert.equal(calls.length, 22, "main report, public brand routes and shared assets remain public");
 
   const login = await worker.fetch(getRequest("/login?next=%2Fodds%3Fdate%3D2026-10-17"), env);
   assert.equal(login.status, 200);
@@ -94,12 +94,13 @@ test("only Future Code Main routes require valid signed login", async () => {
   assert.match(setCookie, /SameSite=Lax/);
   const cookie = setCookie.split(";")[0];
 
-  const allowed = await worker.fetch(getRequest("/odds.html", {headers:{Cookie:cookie}}), env);
+  const allowed = await worker.fetch(getRequest("/editor/", {headers:{Cookie:cookie}}), env);
   assert.equal(allowed.status, 200);
-  assert.match(await allowed.text(), /Logout/);
+  assert.match(await allowed.text(), /FOOTBALL ASSET/);
   assert.equal(allowed.headers.get("Cache-Control"), "private, no-store, max-age=0");
-  const forbidden = await worker.fetch(getRequest("/", {headers:{Cookie:cookie + "tampered"}}), env);
+  const forbidden = await worker.fetch(getRequest("/editor/", {headers:{Cookie:cookie + "tampered"}}), env);
   assert.equal(forbidden.status, 302);
+  assert.match(forbidden.headers.get("Location"), /\/login\?next=/);
 
   const logout = await worker.fetch(getRequest("/logout", { method:"POST", headers:{
     Origin:"https://future-code-football-daily.pages.dev",Cookie:cookie
@@ -109,12 +110,12 @@ test("only Future Code Main routes require valid signed login", async () => {
   assert.equal(logout.headers.get("Location"), "/login");
 });
 
-test("missing Cloudflare secrets fail closed for main and never affect brand sites", async () => {
+test("missing Cloudflare secrets do not block public reports or brand sites", async () => {
   const worker = await loadWorker();
   const {env} = fakeEnv();
   delete env.FCD_MAIN_PASSWORD;
   let response = await worker.fetch(getRequest("/"), env);
-  assert.equal(response.status, 503);
+  assert.equal(response.status, 200);
   response = await worker.fetch(getRequest("/login"), env);
   assert.equal(response.status, 503);
   response = await worker.fetch(getRequest("/bw-sport/odds.html"), env);

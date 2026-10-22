@@ -381,14 +381,9 @@ async function handleRequest(request, env) {
       if (!originAllowed(request)) return respond("Forbidden", 403);
       return redirect("/login", 303, COOKIE_NAME + "=; Max-Age=0; Path=/; HttpOnly; Secure; SameSite=Lax");
     }
-    if (MAIN_PATHS.has(path)) {
-      if (!ready(env)) return unavailable();
-      if (!(await hasSession(request, env))) {
-        const next = path + new URL(request.url).search;
-        return redirect("/login?next=" + encodeURIComponent(next), 302);
-      }
-      return serveMain(request, env);
-    }
+    // Daily football pages are the public product. Keep owner authentication
+    // for the editor and private analytics routes, but never gate the report.
+    if (MAIN_PATHS.has(path)) return env.ASSETS.fetch(request);
     // Independent Goal Zone APK analytics routes; other brands keep existing behavior.
     if (path === GZ_VISIT_PATH) return gzVisit(request, env);
     if (path === GZ_REPORT_PATH) return gzStats(request, env);
