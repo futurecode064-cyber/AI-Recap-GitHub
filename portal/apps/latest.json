@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-22",
   "apps": [
     {
       "id": "ai-studio",
       "name": "Future Code AI Studio",
       "packageName": "mm.futurecode.videostudio.pro",
-      "versionName": "1.4.2",
-      "versionCode": 9,
+      "versionName": "1.4.1",
+      "versionCode": 8,
       "minSdk": 26,
-      "file": "https://futurecodeaistudio.floot.app/_cdn/static/a3d1afd1-ce75-4303-ab0f-53e1e91bef11-FutureCode-ai-studio-v1.4.2.apk",
-      "sizeBytes": 518806,
-      "sha256": "23a6d0900cad615ce2227274fa1a8ddb7970c40edb7fe27ac4f27902f7e0c040",
+      "file": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/portal/apps/Future-Code-AI-Studio.apk",
+      "sizeBytes": 510614,
+      "sha256": "cd360c22c701074da324d4db6401eeb474abf7afea6af77f5d99a454023368a5",
       "certificateSha256": "e46c3dfab7df42adc81c4fd796c8efc6a50812bca8e465c7d6ba29b936301118",
-      "releasedAt": "2026-10-21"
+      "releasedAt": "2026-10-22"
     },
     {
       "id": "app-creator",
