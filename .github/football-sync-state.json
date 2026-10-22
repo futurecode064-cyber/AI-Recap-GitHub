@@ -2,16 +2,16 @@
   "schema": 1,
   "source_repository": "futurecode064-cyber/future-code-football-daily",
   "source_branch": "main",
-  "source_commit": "8401ca27ab6301018de6ea8196eacd02127cd974",
-  "source_tree": "f1c54a293f5e11ef876761e54ca66d2683e025cd",
-  "target_tree": "f1c54a293f5e11ef876761e54ca66d2683e025cd",
+  "source_commit": "bc1361357bd12bd5e4bc0bef3a1716a01ed82d21",
+  "source_tree": "2e1e0eb149475e21eb347d11acfb74eccb46ccd6",
+  "target_tree": "8c904cab07317b7f3147246e23d7db08b67da9e4",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
-  "last_synced_utc": "2026-10-21T12:08:56.664941+00:00",
+  "last_synced_utc": "2026-10-22T02:06:00Z",
   "reconciled_on": "2026-10-20",
   "reconciliation_note": "Published full article body text in poster and changed asset version to v3 so Main and Goal Zone reload the updated PNG generator.",
-  "last_synced_method": "scoped-owner-approved-myanmar-numerals-odds-frame-only",
+  "last_synced_method": "direct owner-approved minimal 22 October data sync (3 files), prior guard baseline updated",
   "guard_reconciliation": {
     "previous_target_tree": "ddf9afd38b385f967d28b6346559156dd6322aab",
     "verified_production_head": "ed735b465caa89281d76dc60efbe890ee8d089bd",
@@ -201,5 +201,17 @@
       "football-daily/tests/main-table-odds-frames.test.cjs"
     ],
     "note": "Only these approved journal PNG export changes and test maintenance; no match data, Main UI, Goal Zone UI or existing other-client designs replaced. Source-only unrelated changes remain staged for a separate guarded delivery."
+  },
+  "guard_reconciliation_20261022": {
+    "previous_target_tree": "f1c54a293f5e11ef876761e54ca66d2683e025cd",
+    "current_production_tree": "8c904cab07317b7f3147246e23d7db08b67da9e4",
+    "current_source_tree": "2e1e0eb149475e21eb347d11acfb74eccb46ccd6",
+    "changed_production_paths": [
+      "data/today.json",
+      "data/odds/2026-10-22.json",
+      "data/archive/2026-10-21.json"
+    ],
+    "source_only_research_audit_files_not_yet_mirrored": true,
+    "approvedByOwner": true
   }
 }
