@@ -54,7 +54,7 @@ jobs:
               for p in (base/'dex').glob('*.dex'):z.write(p,p.name)
           PY
           "$BT/zipalign" -f -p 4 build/upgrade/unsigned.apk build/FutureCodeAIStudio-v1.4.3-UNSIGNED.apk
-          test -s build/FutureCodeAIStudio-v1.4.2-UNSIGNED.apk
+          test -s build/FutureCodeAIStudio-v1.4.3-UNSIGNED.apk
       - uses: actions/upload-artifact@v4
         with:
           name: fc-ai-studio-v1.4.3-unsigned
