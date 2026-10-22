@@ -2,7 +2,7 @@ name: Future Code AI Studio v1.4.2 Updater APK
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/ai-studio-updater.yml']
+    paths: ['.github/workflows/ai-studio-updater.yml', 'training-app/AndroidManifest.xml', 'training-app/src/mm/futurecode/videostudio/MainActivity.java']
   workflow_dispatch:
 permissions:
   contents: read
