@@ -58,6 +58,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: fc-ai-studio-v1.4.3-unsigned
-          path: build/FutureCodeAIStudio-v1.4.2-UNSIGNED.apk
+          path: build/FutureCodeAIStudio-v1.4.3-UNSIGNED.apk
           if-no-files-found: error
           retention-days: 7
