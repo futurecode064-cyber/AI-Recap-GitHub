@@ -1,0 +1,10 @@
+{
+  "approvedBy": "owner in current ChatGPT conversation",
+  "approvedOn": "2026-10-23",
+  "purpose": "One controlled initial build to activate Workers API + D1 on existing five football brands",
+  "sourceRepository": "futurecode064-cyber/future-code-football-daily",
+  "approvedSourceCommit": "96af1073ba922b4826252fed8d0ce8416eaa75b7",
+  "expectedLegacyProductionHead": "197fe70f95cdac854f9eda0ec20fa4a00afa8150",
+  "expectedFootballTree": "8ea48e10e7fbd8684cd5c974dde10b8ad49a19d9",
+  "followup": "Future daily JSON updates must use direct D1, not this Git sync workflow"
+}
