@@ -318,7 +318,7 @@ async function load(){
  try{
   const base=new URL(document.documentElement.dataset.footballOddsDataUrl||"./data/odds/",document.baseURI);
   const source=new URL(day+".json",base);
-  const response=await fetch(source.href,{cache:"no-store"});
+  const response=await (window.FootballData?window.FootballData.fetch:fetch)(source.href,{cache:"no-store"});
   if(!response.ok)throw Error("HTTP "+response.status);
   const data=await response.json();
   if(data.reportDate!==day||!Array.isArray(data.matches))throw Error("invalid sheet");
@@ -328,7 +328,7 @@ async function load(){
   // The same dataset powers every branded site and its single PNG export.
   try{
    const latestUrl=new URL("evening/"+day+".json",base);
-   const updated=await fetch(latestUrl.href,{cache:"no-store"});
+   const updated=await (window.FootballData?window.FootballData.fetch:fetch)(latestUrl.href,{cache:"no-store"});
    if(updated.ok){
     const supplement=await updated.json();
     if(loadedSheet?.reportDate===day){

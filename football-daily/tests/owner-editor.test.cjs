@@ -11,6 +11,20 @@ async function valid(){const {editorDay}=await mod(),date=editorDay();const form
 function json(data,status=200){return new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json'}});}
 function file(data){return json({content:Buffer.from(JSON.stringify(data)).toString('base64')});}
 
+test('owner resource proxy preserves pinned version and JSON without leaking upstream credentials',async()=>{
+ const {default:w}=await mod(),e=env(),version='a908e488-09bd-4658-a7e9-94ee60701262';
+ e.FCD_ENGINE_ENABLED='true';e.FCD_ENGINE_TOKEN='service-test-secret';
+ e.FOOTBALL_ENGINE={fetch:async request=>{
+  assert.equal(request.headers.get('Authorization'),'Bearer service-test-secret');
+  assert.equal(new URL(request.url).searchParams.get('version'),version);
+  return Response.json({matches:[{fixtureId:'private'}]},{headers:{'X-Football-Version':version,'Set-Cookie':'upstream-private=secret'}});
+ }};
+ const cookie=await session(w,e),r=await w.fetch(req('/api/editor/engine/resource?version='+version+'&path=data%2Ftoday.json',null,cookie),e);
+ assert.equal(r.status,200);assert.equal(r.headers.get('X-Football-Version'),version);
+ assert.equal(r.headers.get('Cache-Control'),'no-store');assert.equal(r.headers.get('Set-Cookie'),null);
+ assert.equal((await r.json()).matches[0].fixtureId,'private');
+});
+
 test('owner editor and every API reject unauthenticated access; brands remain public',async()=>{const {default:w}=await mod(),e=env();for(const p of ['/editor/','/editor/setup.html']){const r=await w.fetch(req(p),e);assert.equal(r.status,302);}for(const p of ['/api/editor/state','/api/editor/status','/api/editor/publish'])assert.equal((await w.fetch(req(p),e)).status,401);assert.equal((await w.fetch(req('/bw-sport/'),e)).status,200);});
 test('editor owner login redirect, cache headers and CSRF are enforced',async()=>{const {default:w}=await mod(),e=env(),cookie=await session(w,e);const page=await w.fetch(req('/editor/'),e);assert.equal(page.status,302);const ok=await w.fetch(req('/editor/',null,cookie),e);assert.equal(ok.status,200);assert.match(ok.headers.get('Cache-Control'),/no-store/);const r=await w.fetch(new Request(origin+'/api/editor/publish',{method:'POST',headers:{Cookie:cookie,Origin:'https://evil.example','Content-Type':'application/json','X-Football-Editor':'1'},body:'{}'}),e);assert.equal(r.status,403);});
 test('validator rejects mismatched dates, fixture odds, forged URLs, bad FT, standings and partial 1X2',async()=>{const {editorErrors}=await mod();let b=await valid();assert.deepEqual(editorErrors(b),[]);b.odds.matches[0].canonicalAway='Wrong';assert.ok(editorErrors(b).length);b=await valid();b.report.matches[0].homeStanding.played=6;assert.ok(editorErrors(b).length);b=await valid();b.report.matches[0].homeOdds='2.1';assert.ok(editorErrors(b).length);b=await valid();b.report.matches[0].fixtureSourceUrl='javascript:alert(1)';assert.ok(editorErrors(b).length);b=await valid();b.results={reportDate:'2000-01-01',matches:[]};assert.ok(editorErrors(b).length);});

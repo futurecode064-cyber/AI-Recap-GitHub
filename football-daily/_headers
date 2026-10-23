@@ -9,3 +9,9 @@
 
 /styles.css
   Cache-Control: public, max-age=120, must-revalidate
+
+/football-engine-config.js
+  Cache-Control: no-store
+
+/football-data-client.js
+  Cache-Control: public, max-age=120, must-revalidate

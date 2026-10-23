@@ -210,7 +210,7 @@
  }
  async function load(){
   try{
-   const response=await fetch(section.dataset.newsUrl,{cache:"no-store"});
+   const response=await (window.FootballData?window.FootballData.fetch:fetch)(section.dataset.newsUrl,{cache:"no-store"});
    if(!response.ok)throw new Error("News feed unavailable");
    const data=await response.json();
    stories=Array.isArray(data.items)?data.items:[];

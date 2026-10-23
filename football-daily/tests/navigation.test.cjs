@@ -17,7 +17,7 @@ function setup(branded=false){
   };
  }
  const document={baseURI:'https://example.com/'+(branded?'myanmar-football/':''),documentElement:{dataset:branded?{footballDataUrl:'../data/today.json'}:{}},getElementById(id){if(!elements.has(id))elements.set(id,element());return elements.get(id)},createElement:element,addEventListener(){}};
- const context=vm.createContext({document,location:new URL(document.baseURI),window:{},Intl,Date,URL,AbortController,setTimeout,clearTimeout,console,fetch(url){return new Promise((resolve,reject)=>requests.push({url,resolve,reject}))}});
+ const context=vm.createContext({document,location:new URL(document.baseURI),window:{},Intl,Date,URL,URLSearchParams,AbortController,setTimeout,clearTimeout,console,fetch(url){return new Promise((resolve,reject)=>requests.push({url,resolve,reject}))}});
  vm.runInContext(fs.readFileSync(path.join(root,'app.js'),'utf8'),context);
  return {run:code=>vm.runInContext(code,context),requests,elements};
 }

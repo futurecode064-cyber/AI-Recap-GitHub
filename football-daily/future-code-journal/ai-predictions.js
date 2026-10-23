@@ -60,7 +60,7 @@
     }
     status.textContent="ပြသထားသော ပွဲ "+matchList.length+" ပွဲ • မော်ဒယ်တွက်ချက်နိုင်သော ပွဲ "+ready+" ပွဲ";
   }
-  fetch(new URL("../data/today.json",document.baseURI),{cache:"no-store"})
+  (window.FootballData?window.FootballData.fetch:fetch)(new URL("../data/today.json",document.baseURI),{cache:"no-store"})
     .then(r=>{if(!r.ok)throw Error("Data unavailable");return r.json();})
     .then(data=>{
       if(data.published!==true||!Array.isArray(data.matches))throw Error("Unpublished or invalid data");

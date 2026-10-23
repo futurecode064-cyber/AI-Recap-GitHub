@@ -201,7 +201,7 @@
     const params=new URLSearchParams(location.search);
     const day=/^\d{4}-\d{2}-\d{2}$/.test(params.get("date")||"")?params.get("date"):
        (()=>{const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Yangon",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const p=Object.fromEntries(parts.map(x=>[x.type,x.value]));return p.year+"-"+p.month+"-"+p.day;})();
-    fetch(new URL("data/odds/evening/"+day+".json",rootUrl),{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("No evening update");return r.json();}).then(data=>{
+    (window.FootballData?window.FootballData.fetch:fetch)(new URL("data/odds/evening/"+day+".json",rootUrl),{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("No evening update");return r.json();}).then(data=>{
       if(!Array.isArray(data.matches)||data.reportDate!==day)throw Error("Invalid evening data");
       section.hidden=false;link.hidden=false;
       line.textContent=data.reportDate.split("-").reverse().join("/")+" · "+data.matches.length+" ပွဲ";

@@ -340,7 +340,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
   if(loading)return;
   loading=true;status.textContent="ပွဲစဉ်စာရင်း ရယူနေသည်…";
   try{
-   const response=await fetch("./data/today.json?fc-ai="+Date.now(),{cache:"no-store"});
+   const response=await (window.FootballData?window.FootballData.fetch:fetch)("./data/today.json?fc-ai="+Date.now(),{cache:"no-store"});
    if(!response.ok)throw new Error("Match report unavailable");
    const data=await response.json();
    if(data.reportDate!==todayKey()||data.published!==true||!Array.isArray(data.matches))throw new Error("Daily report not yet published");
