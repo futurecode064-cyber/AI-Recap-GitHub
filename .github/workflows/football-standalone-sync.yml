@@ -9,6 +9,10 @@ name: Mirror Verified Football Site to Cloudflare Production
 # Manual publishing only: no cron schedule and no automatic push trigger.
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/football-one-time-release-request.json'
 
 permissions:
   contents: write
