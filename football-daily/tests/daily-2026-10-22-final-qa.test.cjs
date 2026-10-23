@@ -5,7 +5,7 @@ const fs=require("node:fs");
 const path=require("node:path");
 const crypto=require("node:crypto");
 const root=path.resolve(__dirname,"..");
-const report=JSON.parse(fs.readFileSync(path.join(root,"data/today.json"),"utf8"));
+const report=JSON.parse(fs.readFileSync(path.join(root,"data/archive/2026-10-22.json"),"utf8"));
 const prices=JSON.parse(fs.readFileSync(path.join(root,"data/odds/2026-10-22.json"),"utf8"));
 const oddsById=new Map(prices.matches.map(m=>[m.fixtureId,m]));
 test("Oct 22 includes exactly 36 authorized rows (not stale Riga–Kairat)",()=>{
@@ -26,8 +26,8 @@ test("All original PDF morning prices remain paired with each match, and sourced
   assert.equal(m.myanmarOdds.goalTotalOdds,o.goalTotalOdds);
   for(const value of [m.homeOdds,m.drawOdds,m.awayOdds])assert.ok(Number(value)>1,"missing 1X2 "+m.pdfRow);
   assert.ok(m.oddsProvider&&/^https:\/\//.test(m.oddsSourceUrl),"1X2 source "+m.pdfRow);
-  assert.equal(o.currentBodyOdds,"");
-  assert.equal(o.currentGoalTotalOdds,"");
+  assert.ok(typeof o.currentBodyOdds==="string" && o.currentBodyOdds.length>0,"verified 22 Oct evening body price "+m.pdfRow);
+  assert.ok(typeof o.currentGoalTotalOdds==="string" && o.currentGoalTotalOdds.length>0,"verified 22 Oct evening goal price "+m.pdfRow);
  }
 });
 test("72 team form records contain five completed real-score rows",()=>{

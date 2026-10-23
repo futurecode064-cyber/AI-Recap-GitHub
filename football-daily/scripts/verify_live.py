@@ -69,7 +69,11 @@ def probes(root):
             url_path = url_path[:-5]
         checks.append({"path": url_path, "status": 200,
                        "sha256": digest((root / relative).read_bytes()), "html": relative.endswith(".html"), "worker": worker(url_path)})
-    for path in ["/", "/index", "/index/", "/odds", "/editor/", "/editor/news.html",
+    # Public editorial pages are intentionally accessible without owner login.
+    # Cloudflare canonical redirects /index and /index/ are not auth failures.
+    for path in ["/", "/odds"]:
+        checks.append({"path": path, "status": 200, "worker": True})
+    for path in ["/editor/", "/editor/news.html",
                  "/future-code-journal/android/stats"]:
         checks.append({"path": path, "status": 302, "login": True, "worker": True})
     for path in ["/api/editor/state", "/api/editor/news", "/future-code-journal/android/api/stats"]:

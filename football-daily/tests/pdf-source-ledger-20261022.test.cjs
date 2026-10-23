@@ -5,7 +5,7 @@ const fs=require("node:fs");
 const path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const ledger=JSON.parse(fs.readFileSync(path.join(root,"data/research/2026-10-22-pdf-source-ledger-audit.json"),"utf8"));
-const report=JSON.parse(fs.readFileSync(path.join(root,"data/today.json"),"utf8"));
+const report=JSON.parse(fs.readFileSync(path.join(root,"data/archive/2026-10-22.json"),"utf8"));
 const odds=JSON.parse(fs.readFileSync(path.join(root,"data/odds/2026-10-22.json"),"utf8"));
 test("22 Oct PDF ledger reconciles every source row to the published fixture and odds data",()=>{
  assert.equal(ledger.totalSourceRows,37);
