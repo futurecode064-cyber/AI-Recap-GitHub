@@ -1,11 +1,11 @@
 "use strict";
-/* Future Code MAIN WEBSITE ONLY. Seven independent sections.
+/* Future Code MAIN WEBSITE ONLY. Nine independent sections.
  * Branded mirror sites do not load this module; shared app.js is unchanged.
  */
 (function(){
   if(!["/","/index.html"].includes(location.pathname))return;
   const TODAY_TITLE="ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ";
-  const MODE_TO_HASH={ai:"#fcAiScoreSection",video:"#fcVideoStudio",previewFrame:"#brandPreviewStudio",oddsFrame:"#brandOddsStudio",news:"#fcNewsSection"};
+  const MODE_TO_HASH={probabilities:"#fcProbSection",ai:"#fcAiScoreSection",video:"#fcVideoStudio",previewFrame:"#brandPreviewStudio",oddsFrame:"#brandOddsStudio",news:"#fcNewsSection"};
   const HASH_TO_MODE=Object.fromEntries(Object.entries(MODE_TO_HASH).map(([mode,hash])=>[hash,mode]));
 
   function init(){
@@ -13,6 +13,7 @@
     const ai=document.getElementById("fcAiScoreSection");
     const video=document.getElementById("fcVideoStudio");
     const news=document.getElementById("fcNewsSection");
+    const probabilities=document.getElementById("fcProbSection");
     const title=document.getElementById("reportHeading");
     if(!nav||!ai||!video||!title||!nav.classList.contains("fc-main-five-nav"))return;
     const previous=nav.querySelector('button[data-day="-1"]');
@@ -20,7 +21,8 @@
     const videoTab=nav.querySelector(".fc-main-studio-tab");
     const aiTab=nav.querySelector(".fc-main-ai-tab");
     const newsTab=nav.querySelector(".fc-main-news-tab");
-    if(!previous||!today||!videoTab||!aiTab||!news||!newsTab)return;
+    const probTab=nav.querySelector(".fc-main-prob-tab");
+    if(!previous||!today||!videoTab||!aiTab||!news||!newsTab||!probabilities||!probTab)return;
 
     const frameTabs=[[nav.querySelector(".fc-main-preview-frame-tab"),"previewFrame","brandPreviewStudio"],[nav.querySelector(".fc-main-odds-frame-tab"),"oddsFrame","brandOddsStudio"]];
     // Both frame studios finish their synchronous setup before DOMContentLoaded.
@@ -35,9 +37,9 @@
     headingObserver.observe(title,{childList:true});
 
     function show(mode){
-      view=["yesterday","today","ai","video","previewFrame","oddsFrame","news"].includes(mode)?mode:"today";
+      view=["yesterday","today","probabilities","ai","video","previewFrame","oddsFrame","news"].includes(mode)?mode:"today";
       document.body.dataset.fcMainView=view;
-      const selection=[[previous,view==="yesterday"],[today,view==="today"],[videoTab,view==="video"],[aiTab,view==="ai"],[newsTab,view==="news"],...frameTabs.filter(([tab])=>tab).map(([tab,mode])=>[tab,view===mode])];
+      const selection=[[previous,view==="yesterday"],[today,view==="today"],[probTab,view==="probabilities"],[videoTab,view==="video"],[aiTab,view==="ai"],[newsTab,view==="news"],...frameTabs.filter(([tab])=>tab).map(([tab,mode])=>[tab,view===mode])];
       for(const [control,on] of selection){
         control.classList.toggle("active",on);
         if(on)control.setAttribute("aria-current",control.tagName==="BUTTON"?"date":"page");
@@ -75,6 +77,7 @@
     aiTab.addEventListener("click",event=>{
       event.preventDefault();navigate("ai",true);
     });
+    probTab.addEventListener("click",event=>{event.preventDefault();navigate("probabilities",true);});
     newsTab.addEventListener("click",event=>{
       event.preventDefault();navigate("news",true);
     });
