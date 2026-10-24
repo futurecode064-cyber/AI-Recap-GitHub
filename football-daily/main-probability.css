@@ -1,0 +1,35 @@
+/* Football probabilities: main homepage only. No mirror, no D1 schema change. */
+body[data-fc-main-view]:not([data-fc-main-view="probabilities"]) #fcProbSection{display:none!important}
+body[data-fc-main-view="probabilities"] :is(#fcNewsSection,#fcAiScoreSection,#fcVideoStudio,#brandPreviewStudio,#brandOddsStudio,#filters,#sectionNote,#resultsDownloadBar,#matchList,.content>.section-heading){display:none!important}
+.fc-prob-section{margin:18px 0 34px;padding:20px;border:1px solid #2e4da9;border-radius:15px;background:linear-gradient(155deg,#071337,#091d43);color:#f3f5ff;font-family:"Noto Sans Myanmar",sans-serif}
+.fc-prob-intro{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.fc-prob-section h2{margin:0 0 8px;color:#fff;font-size:24px;line-height:1.75}
+.fc-prob-subtitle{margin:0 0 15px;color:#c5d5ff;font-size:12px;line-height:1.9}
+.fc-prob-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 12px}
+.fc-prob-controls select{min-width:180px;padding:10px 13px;border-radius:8px;border:1px solid #99b2e5;background:white;color:#15214e;font:700 12px "Noto Sans Myanmar",sans-serif}
+.fc-prob-count{padding:7px 11px;background:#dfeafe;color:#0b2654;border-radius:20px;font-weight:800}
+.fc-prob-status{color:#c7daff;font-size:11px;line-height:1.9;overflow-wrap:anywhere}
+.fc-prob-league{overflow:hidden;border:1px solid #4567d3;border-radius:10px;background:#fff;margin:15px 0}
+.fc-prob-league-header{display:grid;grid-template-columns:115px minmax(0,1fr) repeat(4,83px);align-items:center;min-height:56px;background:linear-gradient(110deg,#08129d,#1c36e6 56%,#0a1377);color:white}
+.fc-prob-league-logo{display:flex;align-items:center;justify-content:center;width:46px;height:43px;margin:5px;background:#fff;border-radius:8px}
+.fc-prob-league-img{width:38px;height:38px;object-fit:contain}
+.fc-prob-league-name{text-align:center;font-size:15px;line-height:1.5;padding:5px}
+.fc-prob-columns{display:contents}
+.fc-prob-columns span{padding:13px 3px;text-align:center;background:#dfe4f5;color:#071735;font-weight:800;font-size:11px;line-height:1.6;border-left:1px solid #aab7d7}
+.fc-prob-row{display:grid;grid-template-columns:115px minmax(0,1fr) repeat(4,83px);align-items:stretch;min-height:58px;border-top:1px solid #cad2e7;color:#0c1830}
+.fc-prob-row:nth-child(even){background:#f2f4fc}
+.fc-prob-time{display:grid;place-items:center;padding:6px;text-align:center;font:800 11px/1.5 "Noto Sans Myanmar",sans-serif;border-right:1px solid #d2d9e8}
+.fc-prob-teams{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:5px;padding:7px 9px;text-align:center;font-size:12px;font-weight:800;min-width:0}
+.fc-prob-team{display:inline-flex;align-items:center;gap:4px;min-width:0;overflow-wrap:anywhere}
+.fc-prob-team>span{max-width:175px}
+.fc-prob-crest{height:24px;width:24px;object-fit:contain;flex:none}
+.fc-prob-vs{font-size:10px;color:#46537f}
+.fc-prob-draw{width:100%;font-size:10px;color:#53669b;font-weight:600}
+.fc-prob-percent{display:grid;place-items:center;font:900 20px/1.2 "Barlow Condensed",sans-serif;border-left:1px solid #cdd4e2}
+.fc-prob-high{background:#d6eedf;color:#145c32}.fc-prob-mid{background:#eaf0ff;color:#233f78}.fc-prob-low{background:#f6e4e7;color:#7f2738}
+.fc-prob-meta{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;padding:5px 10px;background:#e9edf9;color:#445272;border-top:1px solid #d2d9e8;font-size:10px;line-height:1.5}
+.fc-prob-meta a{color:#2347a1;text-decoration:underline}
+.fc-prob-empty{padding:18px;color:#dfe9ff}
+.fc-prob-footnote{margin:14px 0 0;color:#cfdaee;font-size:11px;line-height:1.9}
+.date-tabs.fc-main-five-nav .fc-main-prob-tab{border-color:#5369c2}
+@media(max-width:850px){.fc-prob-section{padding:10px}.fc-prob-league{overflow-x:auto}.fc-prob-league-header{min-width:740px}.fc-prob-row{min-width:740px}.fc-prob-teams{font-size:11px}}
