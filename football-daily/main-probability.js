@@ -12,13 +12,15 @@
   return whole;
  }
  function winChance(match,market,day){
-  // No fake win percentages if the 1X2 draw price or source is absent.
+  // Validate a complete, sourced 1X2 quote before comparing the two win sides.
   for(const m of [market,match]){
    if(!m||m.oddsVerifiedDate&&m.oddsVerifiedDate!==day)continue;
    const values=[finitePrice(m.homeOdds),finitePrice(m.drawOdds),finitePrice(m.awayOdds)];
    if(values.some(v=>v===null)||!m.oddsSourceUrl)continue;
-   const p=percentages(values.map(v=>1/v));
-   if(p)return {home:p[0],draw:p[1],away:p[2],source:m.oddsSourceUrl,provider:m.oddsProvider||"1X2",basis:"အတည်ပြု 1X2 ကြေး"};
+   // Conditional two-way split: if there is a winner (not a draw), which side?
+   // Unlike unconditional 1X2 win probability, the two displayed sides add to 100.
+   const p=percentages([1/values[0],1/values[2]]);
+   if(p)return {home:p[0],away:p[1],source:m.oddsSourceUrl,provider:m.oddsProvider||"1X2",basis:"သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"};
   }
   return null;
  }
@@ -99,7 +101,6 @@
      two.append(mk("span","",m.awayDisplay||m.away||"—"));
      addLogo(two,m.awayCrestUrl,(m.awayDisplay||m.away)+" Logo","fc-prob-crest");
      teams.append(one,mk("span","fc-prob-vs","နှင့်"),two);
-     if(p.win)teams.append(mk("small","fc-prob-draw","သရေ "+p.win.draw+"%"));
      row.append(teams);
      for(const v of [p.win?.home,p.win?.away,p.goals?.over,p.goals?.under]){
       const cell=mk("strong","fc-prob-percent",Number.isInteger(v)?v+"%":"—");
