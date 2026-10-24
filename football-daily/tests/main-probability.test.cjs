@@ -3,10 +3,16 @@ const test=require("node:test"),assert=require("node:assert/strict");
 const model=require("../main-probability.js");
 const source="https://example.com/odds";
 const reportDate="2026-10-24";
-test("1X2 removes margin, preserves draw and sums to 100",()=>{
+test("1X2 two-way conditional split sums home and away to exactly 100",()=>{
  const p=model.winChance({homeOdds:"2.10",drawOdds:"3.40",awayOdds:"3.60",oddsSourceUrl:source,oddsVerifiedDate:reportDate},null,reportDate);
- assert.deepEqual([p.home,p.draw,p.away],[45,28,27]);
- assert.equal(p.home+p.draw+p.away,100);
+ assert.deepEqual([p.home,p.away],[63,37]);
+ assert.equal(p.home+p.away,100);
+ assert.equal(p.draw,undefined);
+});
+test("sample Aston Villa vs Man City quote produces 24% + 76% = 100%",()=>{
+ const p=model.winChance({homeOdds:"5.00",drawOdds:"4.33",awayOdds:"1.62",oddsSourceUrl:source,oddsVerifiedDate:reportDate},null,reportDate);
+ assert.deepEqual([p.home,p.away],[24,76]);
+ assert.equal(p.home+p.away,100);
 });
 test("unverified or stale 1X2 prices never become fabricated percentages",()=>{
  assert.equal(model.winChance({homeOdds:2,awayOdds:2,oddsSourceUrl:source},null,reportDate),null);
