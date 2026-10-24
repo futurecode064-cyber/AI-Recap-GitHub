@@ -125,7 +125,8 @@
       }
       for(const number of root.querySelectorAll(".odds-group .odds-table tbody td.price, .odds-group .odds-table tbody td.prediction")){
         number.style.setProperty("font-size",px+"px","important");
-        number.style.setProperty("font-weight","600","important");
+        // Only odds prices become extra bold; leave prediction typography unchanged.
+        number.style.setProperty("font-weight",number.classList.contains("price")?"900":"600","important");
         number.style.setProperty("font-family",'"Noto Sans Myanmar",sans-serif',"important");
         number.style.setProperty("line-height","1.25","important");
       }

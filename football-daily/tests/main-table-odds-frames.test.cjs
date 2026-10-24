@@ -191,7 +191,7 @@ test('Main odds page alone loads frame controls; sub-brands may share the DOM re
 
 test('Shared renderer accepts odds routes and cache version is refreshed',()=>{
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261021-myanmar-numerals-v2/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261024-extra-bold-odds-v1/);
   assert.match(html,/main-table-odds-frames\.js\?v=20261020-all-frames-zip-v8/);
   assert.ok(domSource.includes('if (!/\\/odds(?:\\.html)?\\/?$/.test(location.pathname)) return;'));
 });
@@ -206,7 +206,7 @@ test('Main odds uses locally hosted HTML DOM screenshot with SVG capture as back
   assert.match(license,/MIT|Permission is hereby granted/);
   assert.ok(html.includes('./vendor/html2canvas.min.js?v=1.4.1'));
   assert.ok(html.indexOf('vendor/html2canvas.min.js')<html.indexOf('main-odds-dom-frame.js'));
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261021-myanmar-numerals-v2/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261024-extra-bold-odds-v1/);
   assert.match(domSource,/window\.html2canvas\(root,/);
   assert.match(domSource,/useCORS:true/);
   assert.match(domSource,/window\.domtoimage\.toBlob\(root/);
@@ -308,9 +308,9 @@ test('Only main odds frame PNG compresses row padding and matches numeric font s
   assert.match(domSource,/line-height:1\.3!important/);
   assert.match(domSource,/for\(const number of root\.querySelectorAll\("\.odds-group \.odds-table tbody td\.price, \.odds-group \.odds-table tbody td\.prediction"\)\)/);
   assert.match(domSource,/number\.style\.setProperty\("font-size",px\+"px","important"\)/);
-  assert.match(domSource,/number\.style\.setProperty\("font-weight","600","important"\)/);
+  assert.match(domSource,/number\.style\.setProperty\("font-weight",number\.classList\.contains\("price"\)\?"900":"600","important"\)/);
   const html=fs.readFileSync(path.join(root,'odds.html'),'utf8');
-  assert.match(html,/main-odds-dom-frame\.js\?v=20261021-myanmar-numerals-v2/);
+  assert.match(html,/main-odds-dom-frame\.js\?v=20261024-extra-bold-odds-v1/);
 });
 
 test('Main PNG clone alone converts both odds columns, prediction and time into Myanmar digits',()=>{
