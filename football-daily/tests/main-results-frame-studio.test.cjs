@@ -93,3 +93,13 @@ test("main entry point links the studio and its frame assets exist",()=>{
     assert.doesNotMatch(html,/main-results-frame-studio\.js/);
   }
 });
+
+test("main results frame league filter reads the same pinned published archive as the page",()=>{
+  assert.match(script,/window\.FootballData\?\.fetch/);
+  assert.match(script,/window\.FootballData\.fetch\.bind\(window\.FootballData\)/);
+  assert.match(script,/new URL\("\.\/data\/archive\/"\+target\+"\.json",document\.baseURI\)/);
+  assert.match(script,/await reader\(url\.toString\(\),\{cache:"no-store"\}\)/);
+  assert.doesNotMatch(script,/await fetch\("\.\/data\/archive\//);
+  const main=fs.readFileSync(path.join(ROOT,"index.html"),"utf8");
+  assert.match(main,/main-results-frame-studio\.js\?v=results-league-d1-20261024/);
+});

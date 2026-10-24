@@ -230,7 +230,14 @@
       const target=yesterdayYangon();
       status("မနေ့က အတည်ပြုဂိုးရလဒ်များ ရယူနေသည်…");
       try{
-        const res=await fetch("./data/archive/"+target+".json?frame="+Date.now(),{cache:"no-store"});
+        // Match the main report's pinned Worker/D1 publication (including owner previews).
+        // A direct browser fetch would read only the stale/missing Pages static archive.
+        const url=new URL("./data/archive/"+target+".json",document.baseURI);
+        url.searchParams.set("frame",Date.now());
+        const reader=window.FootballData?.fetch
+          ?window.FootballData.fetch.bind(window.FootballData)
+          :fetch;
+        const res=await reader(url.toString(),{cache:"no-store"});
         if(mySequence!==sequence)return;
         if(!res.ok)throw Error("မနေ့က ဂိုးရလဒ်စာရင်း မရသေးပါ။");
         const data=await res.json();
