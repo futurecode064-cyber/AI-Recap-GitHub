@@ -63,6 +63,14 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          # Code-only release gate. Daily content belongs exclusively to Worker/D1.
+          # Fail CLOSED before rsync, tests, commits, or any Pages deployment.
+          OLD_DATA_TREE="$(git rev-parse HEAD:football-daily/data)"
+          SRC_DATA_TREE="$(git -C "$RUNNER_TEMP/standalone-football" rev-parse HEAD:football-daily/data)"
+          if [[ "$OLD_DATA_TREE" != "$SRC_DATA_TREE" ]]; then
+            echo "::error::Legacy static data differs; Pages content publishing is disabled. Import and publish with authenticated Worker/D1."
+            exit 1
+          fi
           rsync -a --checksum --delete "$RUNNER_TEMP/standalone-football/football-daily/" football-daily/
           git add -A -- football-daily
           STAGED_ROOT="$(git write-tree)"
