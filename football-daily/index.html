@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./video-studio.css?v=20261016-video2">
 <link rel="stylesheet" href="./main-preview-design.css?v=stadium-compact-20261020">
 <link rel="stylesheet" href="./main-ai-score.css?v=20261021-ai-one-png-zip-v1">
+<link rel="stylesheet" href="./main-probability.css?v=20261024-v1">
 <script defer src="./main-export-logos.js?v=daily-20261021"></script>
 <script defer src="./card-export.js?v=stadium-compact-20261020"></script>
 <script defer src="./social-export.js"></script>
@@ -26,7 +27,8 @@
 <script defer src="./main-ai-bulk-export.js?v=20261021-ai-frame-download-names"></script>
 <script defer src="./main-ai-score.js?v=20261021-ai-frame-download-names"></script>
 <script defer src="./video-studio.js?v=20261016-video2"></script>
-<script defer src="./main-section-tabs.js?v=20261018-seven-tabs"></script>
+<script defer src="./main-probability.js?v=20261024-v1"></script>
+<script defer src="./main-section-tabs.js?v=20261024-nine-tabs"></script>
 <link rel="stylesheet" href="./news-section.css?v=news-poster-20261020-v3">
 <script defer src="./news-section.js?v=daily-20261021"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
@@ -50,16 +52,26 @@
  <section class="content container">
    <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">SELECTED DATE MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
    <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2 id="reportHeading">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill" id="reportPill">● TODAY</span></div>
-   <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football အဓိက အပိုင်း ၈ ခု">
+   <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football အဓိက အပိုင်း ၉ ခု">
      <button type="button" data-day="-1">မနေ့ကရလဒ် <small id="dateYesterday"></small></button>
      <button type="button" data-day="0" class="active">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ <small id="dateToday"></small></button>
      <a class="date-tab-odds" href="./odds.html">ယနေ့ ပေါက်ကြေးများ<small>ပွဲအားလုံး၏ ကြေးစာရင်း ↗</small></a>
+     <a class="fc-main-prob-tab" href="#fcProbSection">ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)<small>အိမ်ရှင် · ဧည့်သည် · ဂိုးပေါ်/အောက်</small></a>
      <a class="fc-main-studio-tab" href="#fcVideoStudio">Video Download Studio<small>Video ဖန်တီး / Download</small></a>
      <a class="fc-main-ai-tab" href="#fcAiScoreSection">AI ခန့်မှန်းချက်များ<small>AI ခန့်မှန်း ၁ · ၂ · ၃</small></a>
      <a class="fc-main-preview-frame-tab" href="#brandPreviewStudio">ပွဲကြို Frame PNG<small>Frame ရွေး / PNG Download</small></a>
      <a class="fc-main-odds-frame-tab" href="#brandOddsStudio">ပေါက်ကြေး Frame PNG<small>Frame ရွေး / ပုံခွဲ Download</small></a>
      <a class="fc-main-news-tab" href="#fcNewsSection">ယနေ့ ဘောလုံးသတင်း<small>သတင်းအမျိုးအစားအလိုက် ဖတ်ရန်</small></a>
    </nav>
+
+<section class="fc-prob-section" id="fcProbSection" aria-labelledby="fcProbTitle">
+  <div class="fc-prob-intro"><h2 id="fcProbTitle">ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)</h2><span id="fcProbDate" class="fc-prob-status"></span></div>
+  <p class="fc-prob-subtitle">လိဂ်အလိုက် အိမ်ရှင်/ဧည့်သည် အနိုင်ရနိုင်ခြေ၊ သရေဖြစ်နိုင်ခြေနှင့် ၂.၅ ဂိုးပေါ်/အောက် ခန့်မှန်းချက်များ</p>
+  <div class="fc-prob-controls"><label for="fcProbLeague">လိဂ်ရွေးရန်</label><select id="fcProbLeague"><option value="all">လိဂ်အားလုံး</option></select><span class="fc-prob-count" id="fcProbCount">—</span></div>
+  <p class="fc-prob-status" id="fcProbStatus" role="status">D1 ပွဲစဉ်ဒေတာကို ရယူနေသည်…</p>
+  <div id="fcProbGroups" aria-live="polite"></div>
+  <p class="fc-prob-footnote">1X2 % သည် ကြေးထဲမှ Bookmaker margin ဖယ်ပြီးတွက်ထားခြင်းဖြစ်သည်။ ၂.၅ ဂိုး % သည် ပြည့်စုံသော ဂိုးကြေးမရှိပါက နောက်ဆုံး ၅ ပွဲဂိုးရလဒ်ဖြင့် ခန့်မှန်းထားခြင်းဖြစ်ပြီး အတည်မဟုတ်ပါ။ ဒေတာမပြည့်စုံပါက — ပြပါမည်။</p>
+</section>
 
 <section class="fc-news-section" id="fcNewsSection" aria-labelledby="fcNewsTitle" data-news-url="./data/news/latest.json">
   <div class="fc-news-header"><div><span class="fc-news-eyebrow">FUTURE CODE · FOOTBALL NEWS</span><h2 id="fcNewsTitle">ယနေ့ ဘောလုံးသတင်း သီးသန့်</h2><p class="fc-news-window" id="fcNewsWindow">သတင်းများ ရယူနေသည်…</p></div><span class="fc-news-count" id="fcNewsCount" aria-live="polite"></span></div>
