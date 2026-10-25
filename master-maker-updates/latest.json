@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "package": "com.futurecode.mastermaker",
+  "versionCode": 4,
+  "versionName": "0.4.0",
+  "minSdk": 26,
+  "encoding": "base64",
+  "size": 181431,
+  "sha256": "8d6268dddd35a8e2c605ead952f2cfba5e6497c6ecd55821da8b9ac6be411152",
+  "url": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/master-maker-updates/maker-4.apk.b64",
+  "notes": "Maker အတွက် automatic update check၊ Wi-Fi download နှင့် update notification ပါဝင်သည်။ ဆရာရှင်းပြပုံ မြန်မာသင်ခန်းစာ ၁၉ ခန်း၊ လက်တွေ့လေ့ကျင့်ခန်း၊ checklist၊ notes၊ ဆက်ဖတ်ခြင်းနှင့် စာလုံးချဲ့ခြင်း ထည့်ထားသည်။ HTML signing backup နှင့် version code သတ်မှတ်ခြင်း ပါသည်။"
+}
