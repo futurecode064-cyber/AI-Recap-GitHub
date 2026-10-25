@@ -1,0 +1,80 @@
+/* KMM Sport Hub — neon crimson / black, scoped to this brand only. */
+:root.kmm-theme{color-scheme:dark;--ink:#0c060b;--panel:#220f1b;--panel2:#2f1422;--border:#81344b;--cream:#fff5f7;--muted:#d8bdc5;--orange:#ff6883;--green:#ff6883}
+.kmm-theme body{background:radial-gradient(ellipse at top,#290919,transparent 46rem),#0c060c;color:#fff7f8}
+.kmm-theme .site-header{background:linear-gradient(95deg,#10050c,#250915);border-bottom:2px solid #ff345c}
+.kmm-theme .header-inner{min-height:87px;height:auto;padding:12px 0;gap:14px}
+.kmm-theme .logo{gap:13px}
+.kmm-theme .kmm-site-logo{width:60px;height:60px;object-fit:cover;border-radius:50%;border:2px solid #ff4165;box-shadow:0 0 0 4px #db173b2f,0 0 24px #e72e5b80;flex:none}
+.kmm-theme .logo-lines b{font:900 clamp(18px,3vw,28px) 'Barlow Condensed',sans-serif;letter-spacing:.05em;color:#fff;text-transform:uppercase}
+.kmm-theme .logo-lines small{color:#ff8699;font:700 11px 'Barlow Condensed',sans-serif;letter-spacing:.14em}
+.kmm-theme .top-edition{color:#f1bbca;font-size:11px}
+.kmm-quick-nav{background:#1c0b15;border-bottom:1px solid #873049}
+.kmm-quick-nav .container{min-height:48px;display:flex;align-items:center;flex-wrap:wrap;gap:9px;padding-top:7px;padding-bottom:7px}
+.kmm-quick-nav strong{font:900 13px 'Barlow Condensed',sans-serif;letter-spacing:.14em;color:#ff5874;margin-right:auto}
+.kmm-quick-nav a{font:700 11px 'Noto Sans Myanmar',sans-serif;color:#ffeaf0;text-decoration:none;padding:8px 13px;border:1px solid #7d3c50;border-radius:99px}
+.kmm-quick-nav a:hover,.kmm-quick-nav a:focus-visible{background:#662039;border-color:#ff6985}
+.kmm-theme .hero{background:radial-gradient(circle at 85% 13%,#ef28554e,transparent 39%),linear-gradient(120deg,#370a1d,#190912 70%,#070409);border-bottom:1px solid #7b2944}
+.kmm-theme .hero:after{border-color:#ff315355;box-shadow:0 0 0 70px #dd164225,0 0 0 150px #ac163018}
+.kmm-theme .hero-topline,.kmm-theme .hero-foot{border-color:#893449;color:#f5c5cf}
+.kmm-theme .eyebrow,.kmm-theme .hero h1 span,.kmm-theme .section-eyebrow{color:#ff738c}
+.kmm-theme .hero-desc{color:#e8c4d0}
+.kmm-theme .kmm-hero-slogan{display:inline-block;padding:7px 15px;margin:0 0 12px;border-left:4px solid #ff4a6a;background:#2d0b19;color:#ffbbca;font:700 12px 'Barlow Condensed',sans-serif;letter-spacing:.15em}
+.kmm-theme .hero-update-notice{background:#270d1bdf;border:1px solid #b83253;border-radius:14px;box-shadow:0 16px 40px #0009}
+.kmm-theme .dashboard-bar,.kmm-theme .match-card{background:#1e0d17;border:1px solid #783047;box-shadow:0 15px 35px #0006}
+.kmm-theme .dashboard-stat{border-color:#6e3048}
+.kmm-theme .dashboard-stat .status-label{color:#ff8ca1}
+.kmm-theme .filters button,.kmm-theme .date-tabs button,.kmm-theme .date-tab-odds{background:#2b1320;border:1px solid #783348;color:#fff0f3}
+.kmm-theme .filters button.selected,.kmm-theme .date-tabs button.active{background:linear-gradient(112deg,#ed294f,#920d2f);border-color:#ff6280;color:#fff}
+.kmm-theme .filters .filter-special{color:#ffb9c6;background:#431526;border-color:#b33c58}
+.kmm-theme .match-topline{background:linear-gradient(90deg,#aa183e,#3c0a1b);border-color:#ac3f54}
+.kmm-theme .vs-banner{background:linear-gradient(90deg,#400a1d,#1c0e19 50%,#390d21)}
+.kmm-theme .match-hero-art{background:radial-gradient(circle at center,#650e2f,#150911 60%,#08070b)}
+.kmm-theme .hero-team-home{background:radial-gradient(ellipse at 20% 15%,#f52d5963,transparent 75%),#260a17}
+.kmm-theme .hero-team-away{background:radial-gradient(ellipse at 80% 12%,#a51b4c50,transparent 75%),#180812}
+.kmm-theme .match-hero-versus{background:linear-gradient(90deg,#280919,#49152b,#2a091a)}
+.kmm-theme .hero-info-bar{background:#170914}
+.kmm-theme .hero-info-bar>.hero-info-fixture{background:#a20e35}
+.kmm-theme .hero-competition,.kmm-theme .hero-info-bar{color:#ff8fa6}
+.kmm-theme .match-market-layout,.kmm-theme .market-form-row{background:#150a13}
+.kmm-theme .match-market-strip.myanmar-market{background:#380c22;border-bottom-color:#fa4970}
+.kmm-theme .match-market-strip .myanmar-market-title,.kmm-theme .match-market-strip .myanmar-market-pair{color:#ff8599}
+.kmm-theme .quick-form,.kmm-theme .market-center{background:#2d1422;border-color:#8c3a52}
+.kmm-theme .market-center .odd{background:#20131c}
+.kmm-theme .market-center-heading,.kmm-theme .quick-form-heading small,.kmm-theme .market-center .odd small{color:#ffb8c8}
+.kmm-theme .analysis-body p{color:#fae7ec}
+.kmm-theme .match-card:has(.match-hero) .analysis-body,.kmm-theme .match-card:has(.match-hero) .match-actions{background:#1f0e19}
+.kmm-theme .match-card:has(.match-hero) .analysis-body h4,.kmm-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#ff9eb2}
+.kmm-theme .match-card:has(.match-hero) .analysis-toggle{background:#391a28;color:#ffd6df}
+.kmm-theme .results-download-bar{background:#2a1120;border-color:#96364f}
+.kmm-theme .results-png-btn,.kmm-theme .odds-export-actions button{background:linear-gradient(115deg,#ee2e50,#a31335);color:#fff;border:1px solid #ff708a;font-weight:900}
+.kmm-theme .odds-hero{background:radial-gradient(circle at 90% 0,#ab1b4185,transparent 47%),linear-gradient(115deg,#4d0b24,#160910);border-color:#7c2941}
+.kmm-theme .odds-hero h1 span,.kmm-theme .odds-kicker{color:#ff839b}
+.kmm-theme .odds-subtitle{color:#f3cfd8}
+.kmm-theme .odds-nav a{background:#2f1322;border-color:#8d324b}
+.kmm-theme .odds-nav a.active{background:#cb163e;border-color:#ff6581;color:#fff}
+.kmm-theme .odds-overview,.kmm-theme .odds-group{background:#21101b;border-color:#79384d}
+.kmm-theme .odds-group h2{background:linear-gradient(90deg,#a9173b,#390b20);border-color:#893c52;color:#fff1f4}
+.kmm-theme .odds-table th{background:#65142e;color:#ffe4e9}
+.kmm-theme .odds-table td{border-color:#7b3952}
+.kmm-theme .odds-table .price{color:#fff;font-weight:900}
+.kmm-theme .odds-table .upper,.kmm-theme .odds-table .prediction,.kmm-theme .odds-table .time{color:#ff9caf}
+.kmm-theme .odds-table tr{background:#2b1322}
+.kmm-theme .odds-note{background:#291320;border-left-color:#ff5976;color:#f2d6dd}
+.kmm-theme .team-badge,.kmm-theme .league-mark{background:#fff}
+.kmm-contact{margin:40px auto 55px;padding:clamp(23px,4vw,38px);border:1px solid #9c3856;border-radius:20px;background:linear-gradient(120deg,#310f20,#120910);box-shadow:0 14px 44px #0006}
+.kmm-contact h2{font-size:clamp(20px,3vw,32px);color:#fff;margin:9px 0}
+.kmm-contact>p{color:#eac6d1;line-height:1.8}
+.kmm-contact .kmm-kicker{font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.18em;color:#ff849a}
+.kmm-contact-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.kmm-contact-link{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff!important;border:1px solid #863651;border-radius:13px;padding:19px;background:#3b1427;transition:transform .15s,border-color .15s}
+.kmm-contact-link:hover,.kmm-contact-link:focus-visible{transform:translateY(-2px);border-color:#ff8299}
+.kmm-contact-icon{display:grid;place-items:center;flex:none;background:#c41741;color:#fff;width:46px;height:46px;border-radius:50%;font-size:23px}
+.kmm-contact-link.viber .kmm-contact-icon{background:#7446ae}
+.kmm-contact-link strong,.kmm-contact-link small{display:block}
+.kmm-contact-link strong{font-size:17px;color:#fff}
+.kmm-contact-link small{font-size:12px;color:#ffc0cc;margin-top:4px}
+.kmm-arrow{margin-left:auto;font-size:21px;color:#ff6986}
+.kmm-viber-note{font-size:11px;margin-top:14px}
+.kmm-theme footer{background:#0c060d;border-color:#8c2947}
+.kmm-theme .footer-inner p{color:#e3bcc7}
+@media(max-width:670px){.kmm-theme .header-inner{min-height:76px}.kmm-theme .kmm-site-logo{width:50px;height:50px}.kmm-theme .logo-lines b{font-size:18px}.kmm-theme .top-edition{display:none}.kmm-quick-nav .container{gap:7px}.kmm-quick-nav strong{width:100%}.kmm-quick-nav a{padding:7px 9px;font-size:10px}.kmm-contact-links{grid-template-columns:1fr}.kmm-contact{margin-bottom:26px}}

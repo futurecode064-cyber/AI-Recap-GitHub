@@ -5,6 +5,7 @@
  const kit=window.FutureCodeCanvasKit;
  const cfg=window.FutureCodeBrandConfig||{};
  const themes={
+  "kmm-sport-hub":{main:"KMM SPORT HUB",sub:"FOOTBALL · MATCHDAY · INSIGHTS",bg:"#160713",second:"#ae1437",accent:"#ff6a82",white:"#fff6f8",symbol:"KMM"},
   "bw-sport":{main:"BW SPORT",sub:"ဘောလုံးဂျာနယ်",bg:"#06152c",second:"#155087",accent:"#58cfff",white:"#f1f9ff",symbol:"BW"},
   "ykz-family":{main:"YKZ FAMILY GROUP",sub:"အတူရှေ့ဆက် YKZ",bg:"#1c0609",second:"#930d17",accent:"#ffcf58",white:"#fff9ee",symbol:"YKZ"},
   "ko-thet-family":{main:"KO THET FAMILY",sub:"ဘောလုံးဂျာနယ်",bg:"#1c090f",second:"#6c1727",accent:"#ffd36e",white:"#fff5e6",symbol:"KTF"}

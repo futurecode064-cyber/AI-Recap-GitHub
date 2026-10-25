@@ -5,7 +5,7 @@
  if(typeof module==='object'&&module.exports)module.exports=api;
  if(!root?.document)return;
  const assetRoot=new URL('.',root.document.currentScript.src);
- const brands={'future-code-journal':'goal-zone','bw-sport':'bw-sport','ykz-family':'ykz','ko-thet-family':'ko-thet'};
+ const brands={'future-code-journal':'goal-zone','bw-sport':'bw-sport','ykz-family':'ykz','ko-thet-family':'ko-thet','kmm-sport-hub':'kmm'};
  const relative=root.location.pathname.slice(assetRoot.pathname.length).split('/')[0];
  let storage=null;try{storage=root.localStorage;}catch{}
  const client=api.createClient({config:root.FC_FOOTBALL_ENGINE||{},assetRoot:assetRoot.href,pageUrl:root.location.href,
