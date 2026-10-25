@@ -161,12 +161,12 @@
   const heroY=86,heroH=387,sideW=450,middleW=252;
   const lx=M,rx=W-M-sideW;
   // Only genuine football club logos, centered in each team's half.
-  fill(ctx,lx,heroY,sideW,heroH,isKMM?"#350b1d":isYKZ?"#321317":isBW?"#12386d":isKTF?"#4e121b":isFCJ?"#292114":"#26343b");
-  fill(ctx,rx,heroY,sideW,heroH,isKMM?"#240816":isYKZ?"#2b2118":isBW?"#082744":isKTF?"#422125":isFCJ?"#17150f":"#193c37");
+  fill(ctx,lx,heroY,sideW,heroH,isKMM?"#340904":isYKZ?"#321317":isBW?"#12386d":isKTF?"#4e121b":isFCJ?"#292114":"#26343b");
+  fill(ctx,rx,heroY,sideW,heroH,isKMM?"#210804":isYKZ?"#2b2118":isBW?"#082744":isKTF?"#422125":isFCJ?"#17150f":"#193c37");
   const light=ctx.createLinearGradient(W/2-145,heroY,W/2+145,heroY+heroH);
-  light.addColorStop(0,isKMM?"#1d0612":isYKZ?"#21080c":isBW?"#062041":isKTF?"#270609":isFCJ?"#100f0c":"#092333");
-  light.addColorStop(.5,isKMM?"#6d1334":isYKZ?"#401616":isBW?"#146ab3":isKTF?"#89212a":isFCJ?"#88672d":"#1b344f");
-  light.addColorStop(1,isKMM?"#14070d":isYKZ?"#1a0b0b":isBW?"#09172f":isKTF?"#240a0e":isFCJ?"#15120c":"#051521");
+  light.addColorStop(0,isKMM?"#170603":isYKZ?"#21080c":isBW?"#062041":isKTF?"#270609":isFCJ?"#100f0c":"#092333");
+  light.addColorStop(.5,isKMM?"#660500":isYKZ?"#401616":isBW?"#146ab3":isKTF?"#89212a":isFCJ?"#88672d":"#1b344f");
+  light.addColorStop(1,isKMM?"#100805":isYKZ?"#1a0b0b":isBW?"#09172f":isKTF?"#240a0e":isFCJ?"#15120c":"#051521");
   fill(ctx,lx+sideW,heroY,middleW,heroH,light);
   if(isFCJ&&!transparent)k.brandArtwork?.(ctx,lx,heroY,W-M*2,heroH,.55);
   const badgeSize=178;
@@ -178,9 +178,9 @@
   if(!opts.hideLeagueLabel)text(ctx,leagueLabel||opts.leagueLabel||MM[match.league]||"FOOTBALL",W/2,heroY+148,fit(ctx,leagueLabel||opts.leagueLabel||MM[match.league]||"FOOTBALL",220,23,14),C.pale,true,"center",220);
   text(ctx,"VS",W/2,heroY+244,90,C.white,true,"center");
   const infoY=473,infoH=83,infoMiddle=460,outer=(fullWidth-infoMiddle)/2;
-  fill(ctx,M,infoY,outer,infoH,isKMM?"#280917":isYKZ?"#250707":isBW?"#082347":isKTF?"#3b1017":isFCJ?"#17140e":"#14090d");
-  fill(ctx,M+outer,infoY,infoMiddle,infoH,isKMM?"#a70e34":isYKZ?"#8f0000":isBW?"#096ed5":isKTF?"#900b18":isFCJ?"#785c28":"#83141b");
-  fill(ctx,M+outer+infoMiddle,infoY,outer,infoH,isKMM?"#280917":isYKZ?"#250707":isBW?"#082347":isFCJ?"#17140e":"#14090d");
+  fill(ctx,M,infoY,outer,infoH,isKMM?"#220906":isYKZ?"#250707":isBW?"#082347":isKTF?"#3b1017":isFCJ?"#17140e":"#14090d");
+  fill(ctx,M+outer,infoY,infoMiddle,infoH,isKMM?"#b20000":isYKZ?"#8f0000":isBW?"#096ed5":isKTF?"#900b18":isFCJ?"#785c28":"#83141b");
+  fill(ctx,M+outer+infoMiddle,infoY,outer,infoH,isKMM?"#220906":isYKZ?"#250707":isBW?"#082347":isFCJ?"#17140e":"#14090d");
   // Only the full fixture is printed: no duplicate standalone club names or time.
   text(ctx,home+" နှင့် "+away,W/2,infoY+39,fit(ctx,home+" နှင့် "+away,infoMiddle-24,27,15),C.white,true,"center",infoMiddle-24);
   const marketY=570;

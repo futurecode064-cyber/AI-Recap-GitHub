@@ -4,7 +4,7 @@
   "source_branch": "main",
   "source_commit": "1e68db985426572edb869201fbbf8652c2b15c30",
   "source_tree": "7731fedc2fe96b731bc21a9c7d972d4324029800",
-  "target_tree": "7731fedc2fe96b731bc21a9c7d972d4324029800",
+  "target_tree": "eb3d6ca2e98500307096bcecac430ca505655741",
   "initial_production_head": "d21dae40e6805cd0300999fdd810987364ff8ee1",
   "created_on": "2026-10-12",
   "description": "Sync guard: never overwrite manual changes to the original Cloudflare production football-daily tree; only advance from this known baseline.",
@@ -226,5 +226,26 @@
     ],
     "otherEditorialFieldsUnchanged": true
   },
-  "last_synced_scope": "football-daily/data/odds/2026-10-23.json, no match previews published yet"
+  "last_synced_scope": "football-daily/data/odds/2026-10-23.json, no match previews published yet",
+  "scoped_kmm_red_gold_release_20261025": {
+    "reason": "Owner-approved KMM true red/gold stadium styling and existing APK link preservation; no other brand/data files touched",
+    "source_commit": "c4c837efd13d078bcf69e2f88ba668b726335802",
+    "production_parent": "5b29539c502bcccb91962f2f5822566e84046479",
+    "prior_live_football_tree": "9743e6dd926c59f5172e3d2b4c238b5d857f79f5",
+    "new_live_football_tree": "eb3d6ca2e98500307096bcecac430ca505655741",
+    "data_tree_verified_unchanged": "a3fb2971b529592132da4b5b43f3bbd8206c0e16",
+    "changed_paths": [
+      "football-daily/brand-download-masthead.js",
+      "football-daily/canvas-image-kit.js",
+      "football-daily/card-export.js",
+      "football-daily/daily-image-export.js",
+      "football-daily/kmm-sport-hub/brand.css",
+      "football-daily/kmm-sport-hub/brand.js",
+      "football-daily/kmm-sport-hub/index.html",
+      "football-daily/kmm-sport-hub/odds.html",
+      "football-daily/tests/kmm-sport-hub.test.cjs"
+    ],
+    "independent_production_apk_link_preserved": true,
+    "full_canonical_mirror_not_performed": true
+  }
 }

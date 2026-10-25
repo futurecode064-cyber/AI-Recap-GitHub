@@ -98,7 +98,7 @@
   const brandName=document.documentElement?.dataset?.footballBrandName||"FUTURE CODE FOOTBALL DAILY";
   const brandConfig=window.FutureCodeBrandConfig||{};
   const brand=brandConfig.id||"future-code";
-  const palette=brand==="kmm-sport-hub"||brandName==="KMM Sport Hub"?{header:"#a70e34",deep:"#360915",accent:"#ff657f",bodyText:"#131720"}:
+  const palette=brand==="kmm-sport-hub"||brandName==="KMM Sport Hub"?{header:"#af0000",deep:"#300903",accent:"#f3c65a",bodyText:"#13110d"}:
    brand==="ykz-family"||brandName==="YKZ FAMILY GROUP"?
    {header:"#aa111b",deep:"#650409",accent:"#ffd36b",bodyText:"#131720"}:
    brand==="bw-sport"||brandName==="BW SPORT ဘောလုံးဂျာနယ်"?

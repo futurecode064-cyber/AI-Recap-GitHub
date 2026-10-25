@@ -1,1 +1,17 @@
-"use strict";(function(){const d=document.documentElement;d.classList.add("kmm-theme");const logo=new URL("./assets/logo.webp",document.baseURI).href;d.dataset.footballBrandName="KMM Sport Hub";d.dataset.footballBrandSlogan="FOOTBALL · MATCHDAY · INSIGHTS";d.dataset.footballBrandLogoUrl=logo;window.FutureCodeBrandConfig=Object.freeze({id:"kmm-sport-hub",name:"KMM Sport Hub",slogan:"FOOTBALL · MATCHDAY · INSIGHTS",logoUrl:logo,dataRoot:new URL("../data/",document.baseURI).href,colors:{primary:"#e21936",darkRed:"#650718",gold:"#ff526a",electric:"#ff526a",black:"#08050a",background:"#0b060b",panel:"#190d16",border:"#7d2034",text:"#fff6f8"}})})();
+"use strict";
+(function(){
+ const root=document.documentElement;
+ root.classList.add("kmm-theme");
+ const logo=new URL("./assets/logo.webp",document.baseURI).href;
+ const artwork=new URL("../future-code-journal/assets/football-gold-stadium.webp",document.baseURI).href;
+ root.dataset.footballBrandName="KMM Sport Hub";
+ root.dataset.footballBrandSlogan="FOOTBALL · MATCHDAY · INSIGHTS";
+ root.dataset.footballBrandLogoUrl=logo;
+ root.dataset.footballBrandArtworkUrl=artwork;
+ window.FutureCodeBrandConfig=Object.freeze({
+  id:"kmm-sport-hub",name:"KMM Sport Hub",slogan:"FOOTBALL · MATCHDAY · INSIGHTS",
+  logoUrl:logo,artworkUrl:artwork,dataRoot:new URL("../data/",document.baseURI).href,
+  colors:{primary:"#d30000",darkRed:"#710000",gold:"#f3c65a",electric:"#f3c65a",
+   black:"#090605",background:"#0e0706",panel:"#220b06",border:"#98712e",text:"#fff3d9"}
+ });
+})();

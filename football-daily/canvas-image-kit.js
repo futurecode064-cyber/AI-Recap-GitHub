@@ -5,7 +5,7 @@
  const bwBranded=document.documentElement?.dataset?.footballBrandName==="BW SPORT ဘောလုံးဂျာနယ်";
  const fcjBranded=document.documentElement?.dataset?.footballBrandName==="ဂိုးဇုံ အားကစား ဂျာနယ်";
  const ktfBranded=document.documentElement?.dataset?.footballBrandName==="Ko Thet Family ဘောလုံးဂျာနယ်";
- const C=kmmBranded?{bg:"#0b060d",head:"#780b29",panel:"#1c0b18",panelAlt:"#321220",divider:"#793048",orange:"#ff647e",pale:"#fff0f3",muted:"#efbdca",white:"#fff9fa"}:
+ const C=kmmBranded?{bg:"#100705",head:"#980000",panel:"#1e0b07",panelAlt:"#35170d",divider:"#997238",orange:"#f3c65a",pale:"#fff1cb",muted:"#e8d19e",white:"#fffaf0"}:
  branded?
   {bg:"#111111",head:"#960000",panel:"#242424",panelAlt:"#353030",divider:"#812f2f",orange:"#ffcf58",pale:"#fff8e9",muted:"#e0cbc0",white:"#fff9ee"}:
  bwBranded?

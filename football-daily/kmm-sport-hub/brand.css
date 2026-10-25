@@ -1,80 +1,162 @@
-/* KMM Sport Hub — neon crimson / black, scoped to this brand only. */
-:root.kmm-theme{color-scheme:dark;--ink:#0c060b;--panel:#220f1b;--panel2:#2f1422;--border:#81344b;--cream:#fff5f7;--muted:#d8bdc5;--orange:#ff6883;--green:#ff6883}
-.kmm-theme body{background:radial-gradient(ellipse at top,#290919,transparent 46rem),#0c060c;color:#fff7f8}
-.kmm-theme .site-header{background:linear-gradient(95deg,#10050c,#250915);border-bottom:2px solid #ff345c}
-.kmm-theme .header-inner{min-height:87px;height:auto;padding:12px 0;gap:14px}
-.kmm-theme .logo{gap:13px}
-.kmm-theme .kmm-site-logo{width:60px;height:60px;object-fit:cover;border-radius:50%;border:2px solid #ff4165;box-shadow:0 0 0 4px #db173b2f,0 0 24px #e72e5b80;flex:none}
-.kmm-theme .logo-lines b{font:900 clamp(18px,3vw,28px) 'Barlow Condensed',sans-serif;letter-spacing:.05em;color:#fff;text-transform:uppercase}
-.kmm-theme .logo-lines small{color:#ff8699;font:700 11px 'Barlow Condensed',sans-serif;letter-spacing:.14em}
-.kmm-theme .top-edition{color:#f1bbca;font-size:11px}
-.kmm-quick-nav{background:#1c0b15;border-bottom:1px solid #873049}
-.kmm-quick-nav .container{min-height:48px;display:flex;align-items:center;flex-wrap:wrap;gap:9px;padding-top:7px;padding-bottom:7px}
-.kmm-quick-nav strong{font:900 13px 'Barlow Condensed',sans-serif;letter-spacing:.14em;color:#ff5874;margin-right:auto}
-.kmm-quick-nav a{font:700 11px 'Noto Sans Myanmar',sans-serif;color:#ffeaf0;text-decoration:none;padding:8px 13px;border:1px solid #7d3c50;border-radius:99px}
-.kmm-quick-nav a:hover,.kmm-quick-nav a:focus-visible{background:#662039;border-color:#ff6985}
-.kmm-theme .hero{background:radial-gradient(circle at 85% 13%,#ef28554e,transparent 39%),linear-gradient(120deg,#370a1d,#190912 70%,#070409);border-bottom:1px solid #7b2944}
-.kmm-theme .hero:after{border-color:#ff315355;box-shadow:0 0 0 70px #dd164225,0 0 0 150px #ac163018}
-.kmm-theme .hero-topline,.kmm-theme .hero-foot{border-color:#893449;color:#f5c5cf}
-.kmm-theme .eyebrow,.kmm-theme .hero h1 span,.kmm-theme .section-eyebrow{color:#ff738c}
-.kmm-theme .hero-desc{color:#e8c4d0}
-.kmm-theme .kmm-hero-slogan{display:inline-block;padding:7px 15px;margin:0 0 12px;border-left:4px solid #ff4a6a;background:#2d0b19;color:#ffbbca;font:700 12px 'Barlow Condensed',sans-serif;letter-spacing:.15em}
-.kmm-theme .hero-update-notice{background:#270d1bdf;border:1px solid #b83253;border-radius:14px;box-shadow:0 16px 40px #0009}
-.kmm-theme .dashboard-bar,.kmm-theme .match-card{background:#1e0d17;border:1px solid #783047;box-shadow:0 15px 35px #0006}
-.kmm-theme .dashboard-stat{border-color:#6e3048}
-.kmm-theme .dashboard-stat .status-label{color:#ff8ca1}
-.kmm-theme .filters button,.kmm-theme .date-tabs button,.kmm-theme .date-tab-odds{background:#2b1320;border:1px solid #783348;color:#fff0f3}
-.kmm-theme .filters button.selected,.kmm-theme .date-tabs button.active{background:linear-gradient(112deg,#ed294f,#920d2f);border-color:#ff6280;color:#fff}
-.kmm-theme .filters .filter-special{color:#ffb9c6;background:#431526;border-color:#b33c58}
-.kmm-theme .match-topline{background:linear-gradient(90deg,#aa183e,#3c0a1b);border-color:#ac3f54}
-.kmm-theme .vs-banner{background:linear-gradient(90deg,#400a1d,#1c0e19 50%,#390d21)}
-.kmm-theme .match-hero-art{background:radial-gradient(circle at center,#650e2f,#150911 60%,#08070b)}
-.kmm-theme .hero-team-home{background:radial-gradient(ellipse at 20% 15%,#f52d5963,transparent 75%),#260a17}
-.kmm-theme .hero-team-away{background:radial-gradient(ellipse at 80% 12%,#a51b4c50,transparent 75%),#180812}
-.kmm-theme .match-hero-versus{background:linear-gradient(90deg,#280919,#49152b,#2a091a)}
-.kmm-theme .hero-info-bar{background:#170914}
-.kmm-theme .hero-info-bar>.hero-info-fixture{background:#a20e35}
-.kmm-theme .hero-competition,.kmm-theme .hero-info-bar{color:#ff8fa6}
-.kmm-theme .match-market-layout,.kmm-theme .market-form-row{background:#150a13}
-.kmm-theme .match-market-strip.myanmar-market{background:#380c22;border-bottom-color:#fa4970}
-.kmm-theme .match-market-strip .myanmar-market-title,.kmm-theme .match-market-strip .myanmar-market-pair{color:#ff8599}
-.kmm-theme .quick-form,.kmm-theme .market-center{background:#2d1422;border-color:#8c3a52}
-.kmm-theme .market-center .odd{background:#20131c}
-.kmm-theme .market-center-heading,.kmm-theme .quick-form-heading small,.kmm-theme .market-center .odd small{color:#ffb8c8}
-.kmm-theme .analysis-body p{color:#fae7ec}
-.kmm-theme .match-card:has(.match-hero) .analysis-body,.kmm-theme .match-card:has(.match-hero) .match-actions{background:#1f0e19}
-.kmm-theme .match-card:has(.match-hero) .analysis-body h4,.kmm-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#ff9eb2}
-.kmm-theme .match-card:has(.match-hero) .analysis-toggle{background:#391a28;color:#ffd6df}
-.kmm-theme .results-download-bar{background:#2a1120;border-color:#96364f}
-.kmm-theme .results-png-btn,.kmm-theme .odds-export-actions button{background:linear-gradient(115deg,#ee2e50,#a31335);color:#fff;border:1px solid #ff708a;font-weight:900}
-.kmm-theme .odds-hero{background:radial-gradient(circle at 90% 0,#ab1b4185,transparent 47%),linear-gradient(115deg,#4d0b24,#160910);border-color:#7c2941}
-.kmm-theme .odds-hero h1 span,.kmm-theme .odds-kicker{color:#ff839b}
-.kmm-theme .odds-subtitle{color:#f3cfd8}
-.kmm-theme .odds-nav a{background:#2f1322;border-color:#8d324b}
-.kmm-theme .odds-nav a.active{background:#cb163e;border-color:#ff6581;color:#fff}
-.kmm-theme .odds-overview,.kmm-theme .odds-group{background:#21101b;border-color:#79384d}
-.kmm-theme .odds-group h2{background:linear-gradient(90deg,#a9173b,#390b20);border-color:#893c52;color:#fff1f4}
-.kmm-theme .odds-table th{background:#65142e;color:#ffe4e9}
-.kmm-theme .odds-table td{border-color:#7b3952}
+/* KMM SPORT HUB — real red + metallic gold matchday design, 2026-10-25.
+   Scoped to KMM only. Shared football JS/data and all other brands stay untouched.
+   Stadium photography is already self-hosted by this repository under Goal Zone assets. */
+:root.kmm-theme{
+ color-scheme:dark;
+ --ink:#090706;--panel:#180b08;--panel2:#2a100b;--border:#866222;
+ --cream:#fff6df;--muted:#dac7a5;--orange:#efc15c;--green:#edbd4c;
+ --kmm-red:#df0000;--kmm-red-dark:#700000;--kmm-gold:#f3c75d;--kmm-gold-soft:#ffe6a0;
+}
+.kmm-theme body{background:radial-gradient(ellipse at 52% 0,#4f0000 0,transparent 48rem),#080607;color:#fff7e7}
+.kmm-theme .site-header{background:linear-gradient(105deg,#080605,#530000 50%,#090607);border-bottom:2px solid #e2ac3e;box-shadow:0 10px 30px #0009}
+.kmm-theme .header-inner{min-height:82px;height:auto;padding:10px 0;gap:15px}
+.kmm-theme .logo{gap:14px}
+.kmm-theme .kmm-site-logo{width:58px;height:58px;object-fit:cover;border-radius:50%;border:2px solid #f3be4c;background:#120804;box-shadow:0 0 0 3px #9a050560,0 0 24px #cb900a75;flex:none}
+.kmm-theme .logo-lines b{font:900 clamp(20px,2.8vw,28px) 'Barlow Condensed',sans-serif;letter-spacing:.04em;color:#ffdc78;text-transform:uppercase}
+.kmm-theme .logo-lines small{color:#fff1bf;font:700 11px 'Barlow Condensed',sans-serif;letter-spacing:.13em}
+.kmm-theme .top-edition{color:#f3dca5;font-size:11px}
+.kmm-quick-nav{background:linear-gradient(90deg,#1b0806,#3e0807 50%,#1b0806);border-bottom:1px solid #a57a29}
+.kmm-quick-nav .container{min-height:49px;display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding-top:7px;padding-bottom:7px}
+.kmm-quick-nav strong{font:900 13px 'Barlow Condensed',sans-serif;letter-spacing:.12em;color:#fbd579;margin-right:auto}
+.kmm-quick-nav a{font:700 11px 'Noto Sans Myanmar',sans-serif;color:#fff0d4;text-decoration:none;padding:8px 14px;border:1px solid #b08839;background:#2b0907;border-radius:9px;transition:background .2s,border-color .2s}
+.kmm-quick-nav a:hover,.kmm-quick-nav a:focus-visible{background:#9e0000;border-color:#ffe29c}
+
+/* Full-width brand artwork like Goal Zone, but using the owner's real KMM logo. */
+.kmm-theme .kmm-stadium-banner{position:relative;height:clamp(190px,20vw,276px);overflow:hidden;border-bottom:2px solid #f4c456;background:#080606;isolation:isolate}
+.kmm-theme .kmm-stadium-banner:before{content:"";position:absolute;inset:-8%;z-index:-2;background:url("../future-code-journal/assets/football-gold-stadium.webp") center 47%/cover no-repeat;filter:sepia(.85) saturate(2.4) hue-rotate(-34deg) contrast(1.25) brightness(.78);transform:scale(1.07)}
+.kmm-theme .kmm-stadium-banner:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 48%,#16000022 2%,#060101cb 77%),linear-gradient(92deg,#29000081 0%,#ce00003d 42%,#ae000031 64%,#0903039a 100%),linear-gradient(0deg,#000b,transparent 29%,#0007)}
+.kmm-theme .kmm-banner-content{position:relative;width:min(1200px,94%);height:100%;margin:auto;display:flex;align-items:center;justify-content:center;gap:26px;text-align:left}
+.kmm-theme .kmm-banner-logo{height:clamp(104px,11vw,172px);width:clamp(104px,11vw,172px);object-fit:contain;flex:none;border-radius:50%;border:3px solid #ffcf62;box-shadow:0 0 0 8px #bd000060,0 0 42px #e60000a8,0 0 65px #e8b84188;background:#170502}
+.kmm-theme .kmm-banner-copy strong{font:900 clamp(40px,7vw,89px) 'Barlow Condensed',Impact,sans-serif;letter-spacing:.09em;line-height:1;display:block;color:#ffe49a;text-shadow:0 3px #552c00,0 5px 18px #000,0 0 24px #e1a734}
+.kmm-theme .kmm-banner-copy small{display:block;margin-top:12px;font:800 clamp(14px,2.3vw,27px) 'Barlow Condensed',sans-serif;letter-spacing:.3em;color:#fff0c7;text-shadow:0 3px 13px #000}
+.kmm-theme .kmm-banner-rule{height:4px;max-width:310px;margin-top:15px;background:linear-gradient(90deg,#dc0000,#ffcd68 55%,transparent);box-shadow:0 0 16px #f80606}
+
+/* Matchday hero: real footballer stadium image, red floodlight tint, deep black text zone. */
+.kmm-theme .hero{position:relative;isolation:isolate;overflow:hidden;background:#160504;border-bottom:2px solid #dcac48}
+.kmm-theme .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url("../future-code-journal/assets/football-gold-stadium.webp") center 47%/cover no-repeat;filter:sepia(.72) saturate(2.2) hue-rotate(-30deg) contrast(1.08);opacity:.86}
+.kmm-theme .hero::after{content:"";display:block;position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 80% 33%,#dd000032,transparent 58%),linear-gradient(90deg,#0d0605f5 0%,#150504ed 37%,#3a0807b0 68%,#19030042 100%),linear-gradient(0deg,#0904039c,transparent 34%,#0006);box-shadow:none;border:0}
+.kmm-theme .hero>.container{position:relative;z-index:1}
+.kmm-theme .hero-topline,.kmm-theme .hero-foot{border-color:#b88733;color:#f0d8a2}
+.kmm-theme .hero-main{min-height:440px;display:grid;grid-template-columns:minmax(0,1fr) minmax(225px,295px);align-items:end;gap:26px;padding-top:58px;padding-bottom:40px}
+.kmm-theme .hero-main>div:first-child{max-width:735px}
+.kmm-theme .hero-main h1{font-weight:900;font-size:clamp(40px,5.6vw,74px);line-height:1.42;color:#fff7e2;text-shadow:0 4px 25px #000}
+.kmm-theme .hero-main h1 span{color:#f8c956;background:linear-gradient(120deg,#fff4bd,#d09a24,#ffe083);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.kmm-theme .eyebrow,.kmm-theme .section-eyebrow{color:#f4c958}
+.kmm-theme .hero-desc{color:#fff1d6;line-height:2.05;max-width:625px;font-size:clamp(13px,1.45vw,16px);text-shadow:0 3px 12px #000}
+.kmm-theme .kmm-hero-slogan{display:inline-block;padding:7px 16px;margin:1px 0 16px;border-left:4px solid #ffca55;background:#400805b8;color:#ffe3a1;font:800 12px 'Barlow Condensed',sans-serif;letter-spacing:.17em}
+.kmm-theme .hero-update-notice{max-width:300px;background:linear-gradient(125deg,#260805e8,#090605ed);border:1px solid #d7a342;border-radius:13px;box-shadow:0 15px 45px #0009,0 0 20px #b809092e;backdrop-filter:blur(5px);color:#fff7e4}
+.kmm-theme .hero-update-notice p:first-child{color:#ffe08c;font-weight:800}
+.kmm-theme .orange-dot,.kmm-theme .green-dot{background:#f8c34f;box-shadow:0 0 12px #ffb51caa}
+
+/* Site cards, buttons, editorial sections and exports use true red / warm gold. */
+.kmm-theme .dashboard-bar,.kmm-theme .match-card{background:linear-gradient(130deg,#240b08,#0d0907);border:1px solid #9d7732;box-shadow:0 16px 36px #0009}
+.kmm-theme .dashboard-stat{border-color:#795923}
+.kmm-theme .dashboard-stat .status-label,.kmm-theme .today-pill{color:#f5cb6b}
+.kmm-theme .filters button,.kmm-theme .date-tabs button,.kmm-theme .date-tab-odds{background:#270b09;border:1px solid #8c6b32;color:#fff1d1}
+.kmm-theme .filters button.selected,.kmm-theme .date-tabs button.active{background:linear-gradient(112deg,#ed0000,#940000);border-color:#f5c65b;color:#fff9e6}
+.kmm-theme .filters .filter-special{color:#ffe19a;background:#390806;border-color:#bd943b}
+.kmm-theme .match-topline,.kmm-theme .match-card:has(.match-hero)>.match-topline{background:linear-gradient(92deg,#b80000,#4c0804);border-color:#bc8f40;color:#ffe6aa}
+.kmm-theme .vs-banner{background:linear-gradient(90deg,#310c07,#110a06 50%,#390b07)}
+.kmm-theme .match-hero-art{background:linear-gradient(90deg,#180505da,#360900b0,#110707df),url("../future-code-journal/assets/football-gold-stadium.webp") center 53%/cover no-repeat}
+.kmm-theme .hero-team-home{background:linear-gradient(90deg,#55090063,#18070663)}
+.kmm-theme .hero-team-away{background:linear-gradient(90deg,#18070663,#5b0d0063)}
+.kmm-theme .match-hero-versus{background:linear-gradient(90deg,#200a06c9,#4c1b09c7,#200a06c9)}
+.kmm-theme .hero-big-vs,.kmm-theme .hero-competition{color:#ffe0a0}
+.kmm-theme .hero-info-bar{background:#170907;color:#f6d392}
+.kmm-theme .hero-info-bar>.hero-info-fixture{background:linear-gradient(90deg,#b50000,#620000);color:#fff6df}
+.kmm-theme .match-market-layout,.kmm-theme .market-form-row{background:#1c0e0a}
+.kmm-theme .match-market-strip.myanmar-market{background:#380b05;border-bottom-color:#d3a442}
+.kmm-theme .match-market-strip .myanmar-market-title,.kmm-theme .match-market-strip .myanmar-market-pair{color:#f9d27b}
+.kmm-theme .quick-form,.kmm-theme .market-center{background:#2b1710;border-color:#8b6734}
+.kmm-theme .market-center .odd{background:#25130e}
+.kmm-theme .market-center-heading,.kmm-theme .quick-form-heading small,.kmm-theme .market-center .odd small{color:#f8d48d}
+.kmm-theme .analysis-body p{color:#fff5e4}
+.kmm-theme .match-card:has(.match-hero) .analysis-body,.kmm-theme .match-card:has(.match-hero) .match-actions{background:#180c09}
+.kmm-theme .match-card:has(.match-hero) .analysis-body h4,.kmm-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#fbd981}
+.kmm-theme .match-card:has(.match-hero) .analysis-toggle{background:#362114;color:#ffe4a5;border:1px solid #a57a32}
+.kmm-theme .results-download-bar{background:#2b1209;border-color:#b88c37}
+.kmm-theme .results-png-btn,.kmm-theme .odds-export-actions button,.kmm-theme .match-download,.kmm-theme .odds-part-download,.kmm-theme .results-part-download{background:linear-gradient(120deg,#940000,#df0900 52%,#960000);color:#ffe9ab;border:1px solid #f4c458;font-weight:900}
+.kmm-theme .results-png-btn:hover,.kmm-theme .odds-export-actions button:hover{background:linear-gradient(125deg,#d80000,#750000)}
+.kmm-theme .odds-hero{position:relative;isolation:isolate;background:linear-gradient(90deg,#110807f2,#470300ad),url("../future-code-journal/assets/football-gold-stadium.webp") center/cover no-repeat;border-color:#b78e3e}
+.kmm-theme .odds-hero h1 span,.kmm-theme .odds-kicker,.kmm-theme .odds-count{color:#ffde87}
+.kmm-theme .odds-subtitle{color:#f3deb6}
+.kmm-theme .odds-nav a{background:#2e0e07;border-color:#a27c33;color:#fff3d5}
+.kmm-theme .odds-nav a.active{background:#b30000;border-color:#e8bb53;color:#fff2cc}
+.kmm-theme .odds-overview,.kmm-theme .odds-group,.kmm-theme .odds-status{background:#1b0f0a;border-color:#85632e;color:#f5e4bf}
+.kmm-theme .odds-group h2{background:linear-gradient(95deg,#bd0000,#330c06);border-color:#96702c;color:#ffe6a6}
+.kmm-theme .odds-table th{background:#590d06;color:#ffe2a0}
+.kmm-theme .odds-table td{border-color:#725324;color:#fff4e4}
 .kmm-theme .odds-table .price{color:#fff;font-weight:900}
-.kmm-theme .odds-table .upper,.kmm-theme .odds-table .prediction,.kmm-theme .odds-table .time{color:#ff9caf}
-.kmm-theme .odds-table tr{background:#2b1322}
-.kmm-theme .odds-note{background:#291320;border-left-color:#ff5976;color:#f2d6dd}
+.kmm-theme .odds-table .upper,.kmm-theme .odds-table .prediction,.kmm-theme .odds-table .time{color:#fbd57f}
+.kmm-theme .odds-table tr{background:#26130e}
+.kmm-theme .odds-note{background:#25130a;border-left-color:#e1b14c;color:#f4deae}
+.kmm-theme .odds-export-sheet .odds-export-header{background:#320b06;border-color:#d6a64b;color:#ffe1a1}
+.kmm-theme .odds-export-sheet .odds-export-header h2{color:#fbd783}
+.kmm-theme .odds-league-filter,.kmm-theme .odds-export-actions{border-color:#9b793b;color:#f9e0ad}
 .kmm-theme .team-badge,.kmm-theme .league-mark{background:#fff}
-.kmm-contact{margin:40px auto 55px;padding:clamp(23px,4vw,38px);border:1px solid #9c3856;border-radius:20px;background:linear-gradient(120deg,#310f20,#120910);box-shadow:0 14px 44px #0006}
-.kmm-contact h2{font-size:clamp(20px,3vw,32px);color:#fff;margin:9px 0}
-.kmm-contact>p{color:#eac6d1;line-height:1.8}
-.kmm-contact .kmm-kicker{font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.18em;color:#ff849a}
+
+/* Contact section: keep owner's original Telegram and Viber targets. */
+.kmm-contact{margin:42px auto 56px;padding:clamp(24px,4vw,38px);border:1px solid #c79a48;border-radius:18px;background:linear-gradient(125deg,#420a05,#130907 77%);box-shadow:0 16px 42px #0009}
+.kmm-contact h2{font-size:clamp(20px,3vw,32px);color:#ffe0a0;margin:10px 0}
+.kmm-contact>p{color:#f7e3c4;line-height:1.85}
+.kmm-contact .kmm-kicker{font:800 13px 'Barlow Condensed',sans-serif;letter-spacing:.18em;color:#f9c65b}
 .kmm-contact-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
-.kmm-contact-link{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff!important;border:1px solid #863651;border-radius:13px;padding:19px;background:#3b1427;transition:transform .15s,border-color .15s}
-.kmm-contact-link:hover,.kmm-contact-link:focus-visible{transform:translateY(-2px);border-color:#ff8299}
-.kmm-contact-icon{display:grid;place-items:center;flex:none;background:#c41741;color:#fff;width:46px;height:46px;border-radius:50%;font-size:23px}
+.kmm-contact-link{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff6de!important;border:1px solid #ae8130;border-radius:12px;padding:19px;background:#300d09;transition:transform .15s,border-color .15s}
+.kmm-contact-link:hover,.kmm-contact-link:focus-visible{transform:translateY(-2px);border-color:#ffde8c;background:#520900}
+.kmm-contact-icon{display:grid;place-items:center;flex:none;background:#b30000;color:#fff8de;width:46px;height:46px;border-radius:50%;font-size:23px}
 .kmm-contact-link.viber .kmm-contact-icon{background:#7446ae}
 .kmm-contact-link strong,.kmm-contact-link small{display:block}
-.kmm-contact-link strong{font-size:17px;color:#fff}
-.kmm-contact-link small{font-size:12px;color:#ffc0cc;margin-top:4px}
-.kmm-arrow{margin-left:auto;font-size:21px;color:#ff6986}
+.kmm-contact-link strong{font-size:17px;color:#ffdf93}
+.kmm-contact-link small{font-size:12px;color:#f5e3bf;margin-top:4px}
+.kmm-arrow{margin-left:auto;font-size:21px;color:#f8cb62}
 .kmm-viber-note{font-size:11px;margin-top:14px}
-.kmm-theme footer{background:#0c060d;border-color:#8c2947}
-.kmm-theme .footer-inner p{color:#e3bcc7}
-@media(max-width:670px){.kmm-theme .header-inner{min-height:76px}.kmm-theme .kmm-site-logo{width:50px;height:50px}.kmm-theme .logo-lines b{font-size:18px}.kmm-theme .top-edition{display:none}.kmm-quick-nav .container{gap:7px}.kmm-quick-nav strong{width:100%}.kmm-quick-nav a{padding:7px 9px;font-size:10px}.kmm-contact-links{grid-template-columns:1fr}.kmm-contact{margin-bottom:26px}}
+.kmm-theme footer{background:#090707;border-top:1px solid #a88039}
+.kmm-theme .footer-inner p{color:#e5cea2}
+@media(max-width:700px){
+ .kmm-theme .header-inner{min-height:72px}
+ .kmm-theme .kmm-site-logo{width:49px;height:49px}
+ .kmm-theme .logo-lines b{font-size:18px}
+ .kmm-theme .top-edition{display:none}
+ .kmm-quick-nav .container{gap:7px}
+ .kmm-quick-nav strong{width:100%}
+ .kmm-quick-nav a{padding:8px 9px;font-size:10px}
+ .kmm-theme .kmm-stadium-banner{height:185px}
+ .kmm-theme .kmm-stadium-banner:before{background-position:67% center}
+ .kmm-theme .kmm-banner-content{gap:15px}
+ .kmm-theme .kmm-banner-logo{height:99px;width:99px}
+ .kmm-theme .kmm-banner-copy strong{font-size:clamp(29px,8vw,48px);letter-spacing:.04em}
+ .kmm-theme .kmm-banner-copy small{font-size:13px;letter-spacing:.12em}
+ .kmm-theme .kmm-banner-rule{margin-top:9px}
+ .kmm-theme .hero::before{background-position:69% center}
+ .kmm-theme .hero::after{background:linear-gradient(0deg,#100504f9 0%,#170603e9 40%,#14040071 90%)}
+ .kmm-theme .hero-main{display:flex;flex-direction:column;align-items:stretch;justify-content:end;gap:18px;min-height:505px;padding-top:40px;padding-bottom:30px}
+ .kmm-theme .hero-main h1{font-size:clamp(34px,8.5vw,47px)}
+ .kmm-theme .hero-desc{font-size:13px;line-height:1.9}
+ .kmm-theme .hero-update-notice{max-width:none}
+ .kmm-contact-links{grid-template-columns:1fr}
+ .kmm-contact{margin-bottom:27px}
+}
+@media(max-width:385px){.kmm-theme .kmm-banner-logo{width:76px;height:76px}.kmm-theme .kmm-banner-copy strong{font-size:31px}.kmm-theme .kmm-banner-copy small{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.kmm-contact-link,.kmm-quick-nav a{transition:none}}
+
+
+/* Published odds sheet deliberately keeps high-contrast white price cells,
+   with KMM-only red league headers and gold accents, including PNG capture. */
+html.kmm-theme{--sheet-brand:#b40000;--sheet-deep:#410500;--sheet-accent:#f4ca61;--sheet-title:#ffe29b;--sheet-ink:#21160e}
+.kmm-theme body .odds-content .odds-group{border-color:#c89c42!important;box-shadow:0 10px 30px #0008}
+.kmm-theme body .odds-content .odds-group h2.odds-league-heading{border-bottom:2px solid #e1b353!important}
+.kmm-theme body .odds-content .odds-table th{background:#a90000!important;color:#fff1c0!important;border-color:#dcae57!important}
+.kmm-theme body .odds-content .odds-table td.upper{background:#fff0cb!important;color:#5b2b09!important}
+.kmm-theme body .odds-content .odds-table .price{font-weight:900!important;color:#18110c!important}
+.kmm-theme .brand-odds-single{background:linear-gradient(120deg,#3b0a04,#130a07);border-color:#bc8c34;color:#ffe6ac}
+.kmm-theme .brand-odds-single button{background:linear-gradient(120deg,#b00000,#750000);border-color:#f5c961;color:#fff1c7}
+.kmm-theme .odds-league-filter{background:#1c0b06;border:1px solid #9d7738;color:#fff0c9}
+@media(max-width:700px){
+ .kmm-theme body main.odds-content #oddsList .odds-group .brand-odds-mobile{background:#330b05!important}
+ .kmm-theme body main.odds-content #oddsList .odds-group .bmo-card{border:1px solid #c99a44;box-shadow:0 3px 15px #22090055}
+ .kmm-theme body main.odds-content .bmo-card .bmo-time{background:#ae0000!important;color:#ffe9b8!important}
+ .kmm-theme body main.odds-content .bmo-card .bmo-market h3{background:#740000!important;color:#fff0c2!important}
+ .kmm-theme body main.odds-content .bmo-card .bmo-vs{color:#b30000!important}
+ .kmm-theme body main.odds-content .bmo-card .bmo-upper{background:#fff0ce!important;color:#67360a!important}
+ .kmm-theme body main.odds-content .bmo-card .bmo-market{border-color:#e0c48c}
+}
