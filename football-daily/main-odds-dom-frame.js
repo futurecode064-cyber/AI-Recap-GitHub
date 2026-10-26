@@ -200,7 +200,7 @@
       }
       // Retain every original website cell, logo, caption and odds value.
       // Export-only typography is applied on this cloned table below.
-      group.style.setProperty("margin","0 0 12px","important");
+      group.style.setProperty("margin",document.documentElement?.dataset?.footballBrandName?"0 0 12px":"0 0 4px","important");
       root.appendChild(group);
     }
     const readable=document.createElement("style");
