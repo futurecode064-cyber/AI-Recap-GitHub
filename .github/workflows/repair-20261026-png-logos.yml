@@ -25,6 +25,7 @@ jobs:
         run: python -m pip install --quiet pillow
       - name: Mirror genuine October 26 crests locally and map both export systems
         run: |
+          python - <<'PY'
           import hashlib, io, json, pathlib, re, time, urllib.parse, urllib.request
           from PIL import Image
           root=pathlib.Path("football-daily")
@@ -100,6 +101,7 @@ jobs:
               assert main_map[url] and brand_map[url]
               assert (assets/brand_map[url]).exists()
           print(json.dumps({"date":"2026-10-26","crestCount":len(urls),"allCrestsPinned":True,"leagueLogosVerified":True,"mainAndBrandMappingsWritten":True}))
+          PY
       - name: Commit verified PNG assets to actual production branch
         run: |
           git config user.name 'future-code-logo-repair[bot]'
