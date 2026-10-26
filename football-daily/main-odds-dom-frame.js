@@ -401,7 +401,7 @@
       prepareOneLine(root);
       const images=[...root.querySelectorAll("img")];
       images.forEach(img=>{
-        const local=window.FutureCodeMainLogoAssets?.imageUrl(img.src);
+        const local=(window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData)?.imageUrl(img.src);
         if(local&&local!==img.src){img.removeAttribute("srcset");img.src=local;}
         img.loading="eager";img.decoding="sync";
       });

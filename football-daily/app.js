@@ -39,7 +39,7 @@ const LEAGUE_BADGE_URLS={"Premier League":"https://crests.football-data.org/PL.p
 if(/^\/(?:index\.html)?$/.test(location.pathname))Object.assign(LEAGUE_BADGE_URLS,{"UEFA Champions League":"https://commons.wikimedia.org/wiki/Special:FilePath/UEFA%20Champions%20League%20logo%20no%20text.svg","League One":"https://commons.wikimedia.org/wiki/Special:FilePath/EFL%20League%20One%20Wordmark.svg"});
 function leagueBadge(league,klass="league-name"){
  const wrap=node("span",klass);
- const url=window.FutureCodeMainLogoAssets?.leagueCrest(canonicalLeague(league))||LEAGUE_BADGE_URLS[canonicalLeague(league)];
+ const url=window.FutureCodeMainLogoAssets?.leagueCrest(canonicalLeague(league))||window.FutureCodeBrandExportData?.leagueCrest(canonicalLeague(league))||LEAGUE_BADGE_URLS[canonicalLeague(league)];
  if(url){const icon=node("img","inline-league-crest");icon.src=url;icon.alt="";icon.loading="lazy";icon.decoding="async";icon.style.width="23px";icon.style.height="23px";icon.style.objectFit="contain";icon.style.verticalAlign="middle";icon.style.marginRight="7px";icon.onerror=()=>icon.remove();wrap.appendChild(icon);}
  wrap.appendChild(document.createTextNode(leagueName(league)));
  return wrap;
@@ -158,7 +158,7 @@ function renderMyanmarOdds(match){
 }
 
 function inlineClubLogo(url,name,classes="mini-club-logo"){
- const src=textOrEmpty(window.FutureCodeMainLogoAssets?.imageUrl(url)||url);
+ const src=textOrEmpty(window.FutureCodeMainLogoAssets?.imageUrl(url)||window.FutureCodeBrandExportData?.imageUrl(url)||url);
  const frame=node("span",classes);
  frame.title=name;
  if(src&&goodUrl(src)){
@@ -238,7 +238,7 @@ function heroSide(match,side){
  const crest=textOrEmpty(match[side+"CrestUrl"]);
  if(crest&&goodUrl(crest)){
   const badge=node("img","hero-team-crest");
-  badge.src=window.FutureCodeMainLogoAssets?.imageUrl(crest)||crest;badge.alt=name+" အသင်းလိုဂို";
+  badge.src=window.FutureCodeMainLogoAssets?.imageUrl(crest)||window.FutureCodeBrandExportData?.imageUrl(crest)||crest;badge.alt=name+" အသင်းလိုဂို";
   badge.loading="lazy";badge.decoding="async";
   badge.onerror=()=>{badge.remove();wrap.appendChild(node("span","hero-crest-fallback",name.slice(0,2)))};
   wrap.appendChild(badge);
