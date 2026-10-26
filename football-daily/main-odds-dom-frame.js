@@ -179,6 +179,19 @@
       if(trs.length!==originals.length)throw Error("Website ပွဲအရေအတွက် မကိုက်ညီပါ။");
       trs.forEach((tr,i)=>{if(!wanted.has(i))tr.remove();});
       if(!document.documentElement?.dataset?.footballBrandName){
+        // Export-only: source HH:mm in every time cell; the date appears once
+        // in the heading. Full kickoffDisplay created massive multi-line rows.
+        for(const [i,tr] of trs.entries()){
+          if(!tr.isConnected)continue;
+          const m=originals[i];
+          const raw=String(m?.kickoff||m?.sourceKickoff||m?.kickoffDisplay||"");
+          const found=raw.match(/(?:^|\s)([01]?\d|2[0-3]):([0-5]\d)(?=\s|$)/);
+          if(!found)throw Error("Frame PNG: ပွဲချိန် မမှန်ပါ — "+(m?.fixtureId||i+1));
+          const cell=tr.querySelector("td.time");
+          if(!cell)throw Error("Frame PNG: ပွဲချိန်အကွက် မရှိပါ");
+          cell.textContent=toMyanmarDigits(found[1].padStart(2,"0")+":"+found[2]);
+          cell.title=String(m?.kickoffDisplay||raw);
+        }
         // Prices (morning/current), predictions and kickoff time use Myanmar digits
         // in frame PNGs only. This never changes the on-screen table or JSON.
         for(const cell of group.querySelectorAll("tbody td.price, tbody td.prediction, tbody td.time")){
@@ -363,7 +376,50 @@
           padding-top:3px!important;padding-bottom:3px!important;
         }
         body .fc-odds-direct-export.fc-main-compact-odds .odds-matchup .club-label {
-          line-height:1.3!important;
+          line-height:1.25!important;
+        }
+        /* A fixed TABLE for exports, not the screen's responsive grid cards.
+           This also prevents mobile CSS from stretching or hiding table rows. */
+        body .fc-odds-direct-export.fc-main-compact-odds {padding:0!important}
+        body .fc-odds-direct-export.fc-main-compact-odds .fc-odds-date-heading {
+          margin:0 0 4px!important;padding:4px 0!important;line-height:1.3!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-group {
+          margin:0 0 4px!important;padding:0!important;border-radius:3px!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table {
+          display:table!important;width:100%!important;table-layout:fixed!important;
+          border-spacing:0!important;border-collapse:collapse!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table thead {display:table-header-group!important}
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table tbody {display:table-row-group!important}
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table tr {
+          display:table-row!important;height:auto!important;margin:0!important;padding:0!important;border-radius:0!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table th,
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table td {
+          display:table-cell!important;box-sizing:border-box!important;vertical-align:middle!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table thead tr th {
+          padding:6px 4px!important;line-height:1.35!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table thead .odds-subheading-row th {
+          padding:4px 3px!important;line-height:1.25!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table tbody tr td {
+          height:72px!important;min-height:0!important;
+          padding:5px 3px!important;line-height:1.25!important;
+          white-space:nowrap!important;word-break:keep-all!important;overflow-wrap:normal!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table tbody td.time {
+          font:900 21px/1.25 "Noto Sans Myanmar",sans-serif!important;
+          white-space:nowrap!important;text-align:center!important;padding:5px 2px!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-table tbody td.team-pair {
+          padding:5px 3px!important;min-width:0!important;
+        }
+        body .fc-odds-direct-export.fc-main-compact-odds .odds-matchup {
+          width:100%!important;min-width:0!important;
         }
       `;
     }
