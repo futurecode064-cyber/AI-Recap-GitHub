@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "package": "com.futurecode.mastermaker",
-  "versionCode": 4,
-  "versionName": "0.4.0",
+  "versionCode": 7,
+  "versionName": "0.7.0",
   "minSdk": 26,
   "encoding": "base64",
-  "size": 181431,
-  "sha256": "8d6268dddd35a8e2c605ead952f2cfba5e6497c6ecd55821da8b9ac6be411152",
-  "url": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/master-maker-updates/maker-4.apk.b64",
-  "notes": "Maker အတွက် automatic update check၊ Wi-Fi download နှင့် update notification ပါဝင်သည်။ ဆရာရှင်းပြပုံ မြန်မာသင်ခန်းစာ ၁၉ ခန်း၊ လက်တွေ့လေ့ကျင့်ခန်း၊ checklist၊ notes၊ ဆက်ဖတ်ခြင်းနှင့် စာလုံးချဲ့ခြင်း ထည့်ထားသည်။ HTML signing backup နှင့် version code သတ်မှတ်ခြင်း ပါသည်။"
+  "size": 185657,
+  "sha256": "98b501b3a307162185d0200eb3027113878f119b5d984e1b96eb66a2d591fffa",
+  "url": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/master-maker-updates/maker-7.apk.b64",
+  "notes": "Native student workflow စစ်ဆေးပြင်ဆင်မှု။ မှားသော Java class တားခြင်း၊ database/Worker နေရာပြောင်းပါက deploy ပြန်စစ်ခြင်း၊ နောက်ဖိုင်ခလုတ်နှင့် install စမ်းပြီး checklist ပါဝင်သည်။ Android ဖုန်းနှင့် live student account အစအဆုံး စမ်းသပ်မှု မပြုရသေးပါ။"
 }
