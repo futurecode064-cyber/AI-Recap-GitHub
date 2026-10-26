@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "package": "com.futurecode.mastermaker",
-  "versionCode": 7,
-  "versionName": "0.7.0",
+  "versionCode": 8,
+  "versionName": "0.8.0",
   "minSdk": 26,
   "encoding": "base64",
-  "size": 185657,
-  "sha256": "98b501b3a307162185d0200eb3027113878f119b5d984e1b96eb66a2d591fffa",
-  "url": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/master-maker-updates/maker-7.apk.b64",
-  "notes": "Native student workflow စစ်ဆေးပြင်ဆင်မှု။ မှားသော Java class တားခြင်း၊ database/Worker နေရာပြောင်းပါက deploy ပြန်စစ်ခြင်း၊ နောက်ဖိုင်ခလုတ်နှင့် install စမ်းပြီး checklist ပါဝင်သည်။ Android ဖုန်းနှင့် live student account အစအဆုံး စမ်းသပ်မှု မပြုရသေးပါ။"
+  "size": 181561,
+  "sha256": "3bb9738039714b320763398b991c8e4302e528fcebaf49f3f67ef6578bb4a7bf",
+  "url": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/master-maker-updates/maker-8.apk.b64",
+  "notes": "GitHub/Cloudflare token ယူနည်းနှင့် Account ID လမ်းညွှန်ကို account အကွက်နားမှာ ထည့်ထားသည်။ မြန်မာဆရာသင်ခန်းစာ ၁၉ ခန်းလုံးကို လက်ရှိခလုတ်နှင့်အစဉ်အတိုင်း ပြန်ရေးထားသည်။ Account မချိတ်မီဖန်တီးသော project ကို ကူးထည့်နိုင်သည်။"
 }
