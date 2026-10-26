@@ -193,12 +193,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "user supplied in conversation",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797788/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://www.laliga.com/en-ES/match/temporada-2026-2027-laliga-ea-sports-sevilla-fc-ca-osasuna-10",
       "fixtureSourceUrl": "https://footballnation.eu/match/la-liga/2026/797788/",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-02",
@@ -379,12 +381,17 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "user supplied in conversation",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "specialChoiceRank": 1,
       "specialPreparedDate": "2026-10-26",
       "specialAnalysisParagraphs": [
-        "ဒီနေ့ ပြင်သစ်လီဂူးဝမ်းရဲ့ အရေးအကြီးဆုံးပွဲစဉ်တစ်ပွဲအဖြစ် ပီအက်စ်ဂျီနဲ့ လိုင်ယွန်တို့ရဲ့ ထိပ်တိုက်တွေ့ဆုံမှုကို မြင်တွေ့ရမှာဖြစ်ပြီး လက်ရှိခြေစွမ်းနဲ့ အသင်းနှစ်သင်းရဲ့ အခြေအနေတွေကို နှိုင်းယှဉ်ကြည့်ရင် အကြိတ်အနယ်ရှိမယ့် ပွဲကောင်းတစ်ပွဲ ဖြစ်လာဖို့ရှိနေပါတယ်။ နှစ်သင်းစလုံး လိဂ်ခုနစ်ပွဲကစားပြီး ၁၄ မှတ်စီ ရရှိထားပေမယ့် လတ်တလောခြေစွမ်းနဲ့ ပွဲအပေါ် ဖိအားပေးနိုင်မှုမှာတော့ အိမ်ရှင် **ပီအက်စ်ဂျီ** က ပိုပြီး အားကောင်းနေတာ တွေ့ရပါတယ်။ နည်းပြ **လူးဝစ်အင်းနရစ်** ရဲ့အသင်းဟာ ပြိုင်ပွဲစုံ နောက်ဆုံးခုနစ်ပွဲဆက် အနိုင်ရရှိထားပြီး ချန်ပီယံလိဂ်မှာ ဘာစီလိုနာကို ၄-၂ ဂိုးနဲ့ အနိုင်ယူခဲ့တာက အသင်းရဲ့ လက်ရှိတိုက်စစ်အင်အားကို ထင်ထင်ရှားရှား ပြသခဲ့ပါတယ်။ ပြင်သစ်လိဂ်မှာလည်း လီမန်းနဲ့ စထရာဘိုးတို့ကို ၃-၁ ဂိုးစီနဲ့ အနိုင်ရခဲ့တာကြောင့် တိုက်စစ်ကစားသမားတွေရဲ့ ဂိုးသွင်းနိုင်မှုနဲ့ ကွင်းလယ်ကနေ တိုက်စစ်ကို ပံ့ပိုးပေးနိုင်မှုက တိုးတက်လာနေပါတယ်။ အထူးသဖြင့် **ဒဲစီရေးဒူအေး** က နောက်ဆုံးပြိုင်ပွဲစုံ သုံးပွဲဆက် ဂိုးသွင်းယူထားသလို ကွင်းလယ်မှာ **ဗီတင်ညာ** နဲ့ **ဖေဘီယန်ရုဇ်** တို့က ဘောလုံးပိုင်ဆိုင်မှုကို ထိန်းချုပ်ပြီး တိုက်စစ်အခွင့်အရေးတွေ ဖန်တီးပေးနိုင်တာကြောင့် လိုင်ယွန်အနေနဲ့ ပီအက်စ်ဂျီရဲ့ တိုက်စစ်ကို ထိန်းချုပ်ဖို့ အတော်လေး အလုပ်များလာနိုင်ပါတယ်။ ဒါပေမဲ့ ပီအက်စ်ဂျီဘက်မှာ **ကွာရာစခီလီယာ၊ ဒမ်ဘီလီ၊ မာကွင်ညို့စ်နဲ့ နူနိုမန်ဒက်စ်** တို့ ဒဏ်ရာကြောင့် မပါဝင်နိုင်တာကတော့ အသင်းရဲ့ အင်အားအပြည့်နဲ့ ပွဲထွက်နိုင်မှုကို ထိခိုက်စေတဲ့ အချက်ဖြစ်နေပါတယ်။ သို့သော် ဘာစီလိုနာလို အသင်းမျိုးကို အဓိကကစားသမားအချို့ မပါဝင်ဘဲ အနိုင်ယူနိုင်ခဲ့တာကြောင့် အင်းနရစ်ရဲ့ ကစားသမားအစားထိုးအသုံးပြုနိုင်မှုနဲ့ အသင်းလိုက်ကစားပုံကိုတော့ လျှော့တွက်လို့ မရပါဘူး။ လိုင်ယွန်ဘက်မှာလည်း ဒီရာသီ လိဂ်ခုနစ်ပွဲမှာ ၁၃ ဂိုးသွင်းပြီး ငါးဂိုးသာ ပေးထားရတာကြောင့် ခံစစ်ပိုင်းမှာ အတော်လေး တည်ငြိမ်တဲ့အသင်းဖြစ်နေပြီး နောက်ဆုံးလိဂ်ပွဲမှာ နိုက်စ်ကို ၂-၁ ဂိုးနဲ့ အနိုင်ယူထားပါတယ်။ နည်းပြ **ပေါ်လိုဖွန်ဆီကာ** ရဲ့အသင်းမှာ **တိုလစ်ဆို၊ တိုင်လာမော်တန်နဲ့ နူအာမာ** တို့လို ကစားသမားတွေရှိနေတာကြောင့် ကွင်းလယ်မှာ ဘောလုံးလုယူပြီး အမြန်တန်ပြန်တိုက်စစ်ဆင်နိုင်တဲ့ အရည်အသွေးရှိနေပါတယ်။ အထူးသဖြင့် မော်တန်ရဲ့ ကွင်းလယ်ဘောလုံးဖြန့်ဝေမှုကို ပီအက်စ်ဂျီဘက်က လျှော့တွက်မိရင် လိုင်ယွန်အတွက် အခွင့်အရေးတွေ ပေါ်လာနိုင်ပါတယ်။ ဒါပေမဲ့ လိုင်ယွန်ဟာ နောက်ဆုံးယူရိုပါလိဂ်ပွဲမှာ ဟော့ဖန်ဟိမ်းကို ၃-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့သလို ဒီပွဲမှာလည်း တိုက်စစ်မှူး **အိုပင်ဒါ** နဲ့ **ရှုလ်ခ်** တို့ ဒဏ်ရာကြောင့် မပါဝင်နိုင်ဘဲ **နာကာမူရာ** ကလည်း ပွဲပယ်ခံထားရတာကြောင့် ဂိုးရနိုင်တဲ့အခွင့်အရေးတွေကို အဆုံးသတ်နိုင်ဖို့ အခက်အခဲရှိလာနိုင်ပါတယ်။ အဲဒီအခြေအနေမှာ ပီအက်စ်ဂျီက သူတို့ရဲ့ ပုံမှန်ဘောလုံးပိုင်ဆိုင်မှုအသာစီးနဲ့ ပွဲကိုထိန်းချုပ်ပြီး လိုင်ယွန်ကို ခံစစ်ပိုင်းမှာ အချိန်ကြာကြာ ဖိအားပေးလာနိုင်သလို ပွဲချိန်ကြာလာတာနဲ့အမျှ အစားထိုးကစားသမားတွေရဲ့ အားသာချက်ကိုပါ အသုံးချနိုင်ဖို့ရှိနေပါတယ်။ လိုင်ယွန်ရဲ့ ခံစစ်တည်ငြိမ်မှုကြောင့် ပီအက်စ်ဂျီအတွက် လွယ်ကူတဲ့ပွဲတစ်ပွဲ ဖြစ်လာဖို့မရှိပေမယ့် လက်ရှိအနိုင်ရရှိမှုဆက်တိုက်ရှိနေတဲ့ ခြေစွမ်း၊ ကွင်းလယ်ထိန်းချုပ်နိုင်မှု၊ တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်မှုနဲ့ အိမ်ကွင်းအားသာချက်တွေကို ပေါင်းစပ်ချိန်ဆကြည့်ရင် လိုင်ယွန်ထက် ပိုမိုအသာစီးရနိုင်တဲ့ **ပီအက်စ်ဂျီကို ရွေးချယ်ပါတယ်။**"
+        "ဒီနေ့ ပြင်သစ်လီဂူးဝမ်းရဲ့ အရေးအကြီးဆုံးပွဲစဉ်တစ်ပွဲအဖြစ် ပီအက်စ်ဂျီနဲ့ လိုင်ယွန်တို့ရဲ့ ထိပ်တိုက်တွေ့ဆုံမှုကို မြင်တွေ့ရမှာဖြစ်ပြီး လက်ရှိခြေစွမ်းနဲ့ အသင်းနှစ်သင်းရဲ့ အခြေအနေတွေကို နှိုင်းယှဉ်ကြည့်ရင် အကြိတ်အနယ်ရှိမယ့် ပွဲကောင်းတစ်ပွဲ ဖြစ်လာဖို့ရှိနေပါတယ်။ နှစ်သင်းစလုံး လိဂ်ခုနစ်ပွဲကစားပြီး ၁၄ မှတ်စီ ရရှိထားပေမယ့် လတ်တလောခြေစွမ်းနဲ့ ပွဲအပေါ် ဖိအားပေးနိုင်မှုမှာတော့ အိမ်ရှင် **ပီအက်စ်ဂျီ** က ပိုပြီး အားကောင်းနေတာ တွေ့ရပါတယ်။ နည်းပြ **လူးဝစ်အင်းနရစ်** ရဲ့အသင်းဟာ ပြိုင်ပွဲစုံ နောက်ဆုံးခုနစ်ပွဲဆက် အနိုင်ရရှိထားပြီး ချန်ပီယံလိဂ်မှာ ဘာစီလိုနာကို ၄-၂ ဂိုးနဲ့ အနိုင်ယူခဲ့တာက အသင်းရဲ့ လက်ရှိတိုက်စစ်အင်အားကို ထင်ထင်ရှားရှား ပြသခဲ့ပါတယ်။ ပြင်သစ်လိဂ်မှာလည်း လီမန်းနဲ့ စထရာဘိုးတို့ကို ၃-၁ ဂိုးစီနဲ့ အနိုင်ရခဲ့တာကြောင့် တိုက်စစ်ကစားသမားတွေရဲ့ ဂိုးသွင်းနိုင်မှုနဲ့ ကွင်းလယ်ကနေ တိုက်စစ်ကို ပံ့ပိုးပေးနိုင်မှုက တိုးတက်လာနေပါတယ်။",
+        "အထူးသဖြင့် **ဒဲစီရေးဒူအေး** က နောက်ဆုံးပြိုင်ပွဲစုံ သုံးပွဲဆက် ဂိုးသွင်းယူထားသလို ကွင်းလယ်မှာ **ဗီတင်ညာ** နဲ့ **ဖေဘီယန်ရုဇ်** တို့က ဘောလုံးပိုင်ဆိုင်မှုကို ထိန်းချုပ်ပြီး တိုက်စစ်အခွင့်အရေးတွေ ဖန်တီးပေးနိုင်တာကြောင့် လိုင်ယွန်အနေနဲ့ ပီအက်စ်ဂျီရဲ့ တိုက်စစ်ကို ထိန်းချုပ်ဖို့ အတော်လေး အလုပ်များလာနိုင်ပါတယ်။ ဒါပေမဲ့ ပီအက်စ်ဂျီဘက်မှာ **ကွာရာစခီလီယာ၊ ဒမ်ဘီလီ၊ မာကွင်ညို့စ်နဲ့ နူနိုမန်ဒက်စ်** တို့ ဒဏ်ရာကြောင့် မပါဝင်နိုင်တာကတော့ အသင်းရဲ့ အင်အားအပြည့်နဲ့ ပွဲထွက်နိုင်မှုကို ထိခိုက်စေတဲ့ အချက်ဖြစ်နေပါတယ်။ သို့သော် ဘာစီလိုနာလို အသင်းမျိုးကို အဓိကကစားသမားအချို့ မပါဝင်ဘဲ အနိုင်ယူနိုင်ခဲ့တာကြောင့် အင်းနရစ်ရဲ့ ကစားသမားအစားထိုးအသုံးပြုနိုင်မှုနဲ့ အသင်းလိုက်ကစားပုံကိုတော့ လျှော့တွက်လို့ မရပါဘူး။",
+        "လိုင်ယွန်ဘက်မှာလည်း ဒီရာသီ လိဂ်ခုနစ်ပွဲမှာ ၁၃ ဂိုးသွင်းပြီး ငါးဂိုးသာ ပေးထားရတာကြောင့် ခံစစ်ပိုင်းမှာ အတော်လေး တည်ငြိမ်တဲ့အသင်းဖြစ်နေပြီး နောက်ဆုံးလိဂ်ပွဲမှာ နိုက်စ်ကို ၂-၁ ဂိုးနဲ့ အနိုင်ယူထားပါတယ်။ နည်းပြ **ပေါ်လိုဖွန်ဆီကာ** ရဲ့အသင်းမှာ **တိုလစ်ဆို၊ တိုင်လာမော်တန်နဲ့ နူအာမာ** တို့လို ကစားသမားတွေရှိနေတာကြောင့် ကွင်းလယ်မှာ ဘောလုံးလုယူပြီး အမြန်တန်ပြန်တိုက်စစ်ဆင်နိုင်တဲ့ အရည်အသွေးရှိနေပါတယ်။ အထူးသဖြင့် မော်တန်ရဲ့ ကွင်းလယ်ဘောလုံးဖြန့်ဝေမှုကို ပီအက်စ်ဂျီဘက်က လျှော့တွက်မိရင် လိုင်ယွန်အတွက် အခွင့်အရေးတွေ ပေါ်လာနိုင်ပါတယ်။ ဒါပေမဲ့ လိုင်ယွန်ဟာ နောက်ဆုံးယူရိုပါလိဂ်ပွဲမှာ ဟော့ဖန်ဟိမ်းကို ၃-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့သလို ဒီပွဲမှာလည်း တိုက်စစ်မှူး **အိုပင်ဒါ** နဲ့ **ရှုလ်ခ်** တို့ ဒဏ်ရာကြောင့် မပါဝင်နိုင်ဘဲ **နာကာမူရာ** ကလည်း ပွဲပယ်ခံထားရတာကြောင့် ဂိုးရနိုင်တဲ့အခွင့်အရေးတွေကို အဆုံးသတ်နိုင်ဖို့ အခက်အခဲရှိလာနိုင်ပါတယ်။",
+        "အဲဒီအခြေအနေမှာ ပီအက်စ်ဂျီက သူတို့ရဲ့ ပုံမှန်ဘောလုံးပိုင်ဆိုင်မှုအသာစီးနဲ့ ပွဲကိုထိန်းချုပ်ပြီး လိုင်ယွန်ကို ခံစစ်ပိုင်းမှာ အချိန်ကြာကြာ ဖိအားပေးလာနိုင်သလို ပွဲချိန်ကြာလာတာနဲ့အမျှ အစားထိုးကစားသမားတွေရဲ့ အားသာချက်ကိုပါ အသုံးချနိုင်ဖို့ရှိနေပါတယ်။ လိုင်ယွန်ရဲ့ ခံစစ်တည်ငြိမ်မှုကြောင့် ပီအက်စ်ဂျီအတွက် လွယ်ကူတဲ့ပွဲတစ်ပွဲ ဖြစ်လာဖို့မရှိပေမယ့် လက်ရှိအနိုင်ရရှိမှုဆက်တိုက်ရှိနေတဲ့ ခြေစွမ်း၊ ကွင်းလယ်ထိန်းချုပ်နိုင်မှု၊ တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်မှုနဲ့ အိမ်ကွင်းအားသာချက်တွေကို ပေါင်းစပ်ချိန်ဆကြည့်ရင် လိုင်ယွန်ထက် ပိုမိုအသာစီးရနိုင်တဲ့ **ပီအက်စ်ဂျီကို ရွေးချယ်ပါတယ်။**"
       ],
       "specialResearchSources": [
         "https://statsnext.com/ligue-1",
@@ -394,7 +401,7 @@
       "standingsSourceUrl": "https://statsnext.com/ligue-1",
       "fixtureSourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-03",
@@ -575,12 +582,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "dated football pre-match results, table and source PDF",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/superligaen/2026/801287/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://turingstats.com/tables/superliga",
       "fixtureSourceUrl": "https://footballnation.eu/match/superligaen/2026/801287/",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-04",
@@ -730,12 +739,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "dated football pre-match results, table and source PDF",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://www.skysports.com/football/santa-clara-vs-benfica/table/564240",
       "fixtureSourceUrl": "https://footballnation.eu/",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-05",
@@ -885,12 +896,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "user supplied in conversation",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://www.laliga.com/en-US/match/temporada-2026-2027-laliga-hypermotion-fc-andorra-burgos-cf-11",
       "fixtureSourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-06",
@@ -1038,12 +1051,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "dated football pre-match results, table and source PDF",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://www.fcnantes.com/articles/20262027/classement.php?wpmobileexternal=true",
       "fixtureSourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-07",
@@ -1193,12 +1208,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "user supplied in conversation",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://www.fcnantes.com/articles/20262027/classement.php?wpmobileexternal=true",
       "fixtureSourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-08",
@@ -1379,12 +1396,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "dated football pre-match results, table and source PDF",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/super-lig/2026/802431/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://www.trivela.football/leagues/turkey/table",
       "fixtureSourceUrl": "https://footballnation.eu/match/super-lig/2026/802431/",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-09",
@@ -1565,12 +1584,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "dated football pre-match results, table and source PDF",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/super-lig/2026/802436/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://www.trivela.football/leagues/turkey/table",
       "fixtureSourceUrl": "https://footballnation.eu/match/super-lig/2026/802436/",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-10",
@@ -1751,12 +1772,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "dated football pre-match results, table and source PDF",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/super-lig/2026/802433/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://www.trivela.football/leagues/turkey/table",
       "fixtureSourceUrl": "https://footballnation.eu/match/super-lig/2026/802433/",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     },
     {
       "fixtureId": "fc-20261026-11",
@@ -1906,12 +1929,14 @@
         "status": "owner_approved_published",
         "reportDate": "2026-10-26",
         "source": "dated football pre-match results, table and source PDF",
-        "authorization": "Owner explicitly directed publication on 2026-10-26"
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "standingsSourceUrl": "https://sverigesfotboll.se/superettan/poangstallning/",
       "fixtureSourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
       "leaguePositionSourceDate": "2026-10-25",
-      "oddsMarket": "Full-time 1X2 source snapshot; distinct from Myanmar body/total opening lines"
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)"
     }
   ],
   "noFixturesLeagues": [],
