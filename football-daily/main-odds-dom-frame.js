@@ -182,7 +182,7 @@
         // Export-only: source HH:mm in every time cell; the date appears once
         // in the heading. Full kickoffDisplay created massive multi-line rows.
         for(const [i,tr] of trs.entries()){
-          if(!tr.isConnected)continue;
+          if(!tr.parentNode)continue;
           const m=originals[i];
           const raw=String(m?.kickoff||m?.sourceKickoff||m?.kickoffDisplay||"");
           const found=raw.match(/(?:^|\s)([01]?\d|2[0-3]):([0-5]\d)(?=\s|$)/);
