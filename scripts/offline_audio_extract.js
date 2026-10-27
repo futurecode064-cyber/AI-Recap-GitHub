@@ -6,9 +6,16 @@ function load(p){return fs.readFileSync(path.resolve(p),'utf8')}
 function jsonSegment(source,prefix,end) {
  const a=source.indexOf(prefix);
  if(a<0)throw new Error('Audio lesson source missing: '+prefix);
- const b=source.indexOf(end,a+prefix.length);
- if(b<0)throw new Error('Audio lesson JSON boundary missing: '+end);
- return JSON.parse(source.slice(a+prefix.length,b));
+ const start=a+prefix.length;let inside=false,escaped=false,level=0,endIndex=-1;
+ for(let i=start;i<source.length;i++){
+   const c=source[i];
+   if(inside){if(escaped){escaped=false;continue}if(c==='\\\\'){escaped=true;continue}if(c==='"'){inside=false}continue}
+   if(c==='"'){inside=true;continue}
+   if(c==='['||c==='{')level++;
+   if(c===']'||c==='}') {level--;if(level===0){endIndex=i+1;break}}
+ }
+ if(endIndex<0)throw new Error('Audio lesson JSON array/object boundary missing');
+ return JSON.parse(source.slice(start,endIndex));
 }
 const output={};
 function put(lang,text){
