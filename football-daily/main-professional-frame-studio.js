@@ -109,7 +109,8 @@ function attach(section,select){
   for(const key of scopes)state.selected[key]=chosen&&state.placements[key].includes(chosen)?chosen:"none";
   save().then(()=>{syncMini();status("Download Frame ရွေးပြီးပါပြီ");}).catch(e=>status(e.message,true));
  });
- const watcher=new MutationObserver(()=>{if(!refreshing)syncNative();});
+ let refreshTimer=0;
+ const watcher=new MutationObserver(()=>{if(refreshing||refreshTimer)return;refreshTimer=setTimeout(()=>{refreshTimer=0;syncNative();},100);});
  watcher.observe(select,{childList:true});
  ready.then(syncNative);
 }
@@ -268,7 +269,7 @@ syncControls();mini();syncNative();
  for(const [section,selector] of [["previews","#fcMatchCustomFrame"],["specials","#fcSpecialCustomFrame"],["ai","#fcAiFrameStyle"],["news","#fcNewsCustomFrame"]]){
   attach(section,document.querySelector(selector));
  }
-const obs=new MutationObserver(()=>mini());obs.observe(document.body,{childList:true,subtree:false});
+let miniTimer=0;const obs=new MutationObserver(()=>{if(miniTimer)return;miniTimer=setTimeout(()=>{miniTimer=0;mini();},100);});obs.observe(document.body,{childList:true,subtree:false});
 const main=document.querySelector("main");if(main)obs.observe(main,{childList:true,subtree:true});
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",()=>ready.then(init),{once:true});else ready.then(init);
