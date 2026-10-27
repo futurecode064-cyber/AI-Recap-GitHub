@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 public class MainActivity extends Activity {
-  static final int CURRENT_VERSION = 2;
+  static final int CURRENT_VERSION = 4;
   static final String META = "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/languages/latest.json";
   static final String CHANNEL = "fc_languages_updates";
   static final String PREF = "fc_language_settings";
@@ -74,9 +74,16 @@ public class MainActivity extends Activity {
         if(tts==null)return;
         Locale locale=Locale.forLanguageTag(language);
         int ready=tts.setLanguage(locale);
-        if(ready<0){Toast.makeText(MainActivity.this,"ဒီဘာသာစကားအတွက် TTS voice တပ်ဆင်ရန်လိုပါသည်။",Toast.LENGTH_LONG).show();return;}
+        if(ready<0){Toast.makeText(MainActivity.this,"ဒီဘာသာစကားအတွက် TTS voice တပ်ဆင်ရန်လိုပါသည်။",Toast.LENGTH_LONG).show();if(web!=null)web.evaluateJavascript("window.FCVoiceStatus&&window.FCVoiceStatus('Voice မရနိုင်ပါ။ ⚙️ Voice ရယူရန် ကိုနှိပ်ပါ။')",null);return;}
         tts.setSpeechRate(.82f);
         tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"future_code_lesson");
+      });
+    }
+    @JavascriptInterface public void installVoice(String language){
+      runOnUiThread(()->{
+        try{startActivity(new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA));}
+        catch(Exception e){try{startActivity(new Intent("com.android.settings.TTS_SETTINGS"));}
+        catch(Exception ignored){web.evaluateJavascript("window.FCVoiceStatus&&window.FCVoiceStatus('Settings → Text-to-speech → Install voice data မှ အသံထည့်သွင်းပါ။')",null);}}
       });
     }
     @JavascriptInterface public void listen(String language,String expected) {
