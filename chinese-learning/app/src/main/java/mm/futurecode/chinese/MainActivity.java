@@ -23,6 +23,7 @@ import org.json.JSONObject;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.InputStream;
+import java.io.ByteArrayOutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -83,8 +84,13 @@ public class MainActivity extends Activity {
         conn.setConnectTimeout(7000);conn.setReadTimeout(7000);
         conn.setRequestProperty("Accept","application/json");
         try(InputStream in=conn.getInputStream()){
-            byte[] data=in.readNBytes(65536);
-            return new String(data,StandardCharsets.UTF_8);
+            ByteArrayOutputStream out=new ByteArrayOutputStream();
+            byte[] buffer=new byte[4096];int n;
+            while((n=in.read(buffer))!=-1){
+                if(out.size()+n>65536)throw new java.io.IOException("Update metadata too long");
+                out.write(buffer,0,n);
+            }
+            return new String(out.toByteArray(),StandardCharsets.UTF_8);
         } finally {conn.disconnect();}
     }
     private void checkUpdates(boolean showResult){
@@ -94,7 +100,7 @@ public class MainActivity extends Activity {
                 int version=o.optInt("versionCode",1);
                 String target=o.optString("apkUrl",PORTAL_URL);
                 if(!target.startsWith("https://"))target=PORTAL_URL;
-                if(version>1){
+                if(version>BuildConfig.VERSION_CODE){
                     callback("window.onUpdateCheck && window.onUpdateCheck("+JSONObject.quote(o.optString("versionName","new"))+","+JSONObject.quote(target)+")");
                 } else if(showResult)callback("window.nativeStatus && window.nativeStatus('နောက်ဆုံး Version ဖြစ်ပါသည်။')");
             }catch(Exception e){if(showResult)callback("window.nativeStatus && window.nativeStatus('Internet ချိတ်ဆက်မှုကို စစ်ဆေးပါ။')");}

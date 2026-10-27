@@ -13,6 +13,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.io.InputStream;
+import java.io.ByteArrayOutputStream;
 
 public class AppSyncJob extends JobService {
     @Override public boolean onStartJob(JobParameters params){
@@ -23,7 +24,13 @@ public class AppSyncJob extends JobService {
                 c.setConnectTimeout(7000);c.setReadTimeout(7000);
                 JSONObject feed;
                 try(InputStream in=c.getInputStream()){
-                    feed=new JSONObject(new String(in.readNBytes(16000),StandardCharsets.UTF_8));
+                    ByteArrayOutputStream out=new ByteArrayOutputStream();
+                    byte[] buf=new byte[4096];int n;
+                    while((n=in.read(buf))!=-1){
+                        if(out.size()+n>16000)throw new java.io.IOException("Notification metadata too long");
+                        out.write(buf,0,n);
+                    }
+                    feed=new JSONObject(new String(out.toByteArray(),StandardCharsets.UTF_8));
                 }finally{c.disconnect();}
                 String id=feed.optString("id","");
                 if(id.isEmpty())return;

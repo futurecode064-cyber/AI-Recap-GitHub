@@ -28,6 +28,14 @@ jobs:
           SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
           test -x "$SDKMANAGER"
           "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Read app version
+        run: |
+          set -euo pipefail
+          VER="$(sed -n "s/.*versionName '\\([^']*\\)'.*/\\1/p" chinese-learning/app/build.gradle | head -n1)"
+          test -n "$VER"
+          echo "APK_VERSION=$VER" >> "$GITHUB_ENV"
+          echo "APK_FILE=Future_Code_Chinese_v$VER.apk" >> "$GITHUB_ENV"
+          echo "RELEASE_TAG=chinese-learning-v$VER" >> "$GITHUB_ENV"
       - name: Assemble APK
         working-directory: chinese-learning
         run: gradle --no-daemon :app:assembleRelease :app:assembleDebug
@@ -58,24 +66,24 @@ jobs:
           echo "::add-mask::$ANDROID_KEYSTORE_PASS"
           export ANDROID_KEYSTORE_PASS
           mkdir -p out
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/fc-chinese-key.p12 --ks-key-alias future-code-chinese --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/Future_Code_Chinese_v1.0.0.apk chinese-learning/app/build/outputs/apk/release/app-release-unsigned.apk
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs out/Future_Code_Chinese_v1.0.0.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/fc-chinese-key.p12 --ks-key-alias future-code-chinese --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/$APK_FILE chinese-learning/app/build/outputs/apk/release/app-release-unsigned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs out/$APK_FILE
           sha256sum out/*.apk
           shred -u /tmp/fc-chinese-sign.json /tmp/fc-chinese-key.p12 /tmp/fc-chinese-init.p12 /tmp/fc-chinese-init.json /tmp/fc-chinese-result.json 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
-          name: Future-Code-Chinese-v1.0.0-signed
-          path: out/Future_Code_Chinese_v1.0.0.apk
+          name: Future-Code-Chinese-signed
+          path: out/*.apk
           if-no-files-found: error
       - name: Publish public APK release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          TAG=chinese-learning-v1.0.0
-          APK=out/Future_Code_Chinese_v1.0.0.apk
+          TAG="$RELEASE_TAG"
+          APK=out/$APK_FILE
           if gh release view "$TAG" >/dev/null 2>&1; then
-            if ! gh release view "$TAG" --json assets -q '.assets[].name' | grep -Fx Future_Code_Chinese_v1.0.0.apk; then gh release upload "$TAG" "$APK"; fi
+            if ! gh release view "$TAG" --json assets -q '.assets[].name' | grep -Fx "$APK_FILE"; then gh release upload "$TAG" "$APK"; fi
           else
-            gh release create "$TAG" "$APK" --title "Future Code Chinese v1.0.0" --notes "Myanmar-first Mandarin learning: six stages, vocabulary, grammar, pronunciation and writing practice. Requires Android 8+, offline reading and quiz. Chinese TTS/recognition depend on device service."
+            gh release create "$TAG" "$APK" --title "Future Code Chinese $APK_VERSION" --notes "Myanmar-first Mandarin learning: six stages, vocabulary, grammar, pronunciation and writing practice. Requires Android 8+, offline reading and quiz. Chinese TTS/recognition depend on device service."
           fi
