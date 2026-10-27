@@ -65,7 +65,8 @@ public class MainActivity extends Activity {
                 return true;
             }
             @Override public void onReceivedError(WebView v,WebResourceRequest req,WebResourceError err){
-                if(req.isForMainFrame()&&!offlineTried&&!v.getUrl().startsWith("file:")){
+                String current=v.getUrl();
+                if(req.isForMainFrame()&&!offlineTried&&(current==null||!current.startsWith("file:"))){
                     offlineTried=true;
                     runOnUiThread(()->v.loadUrl(ASSET));
                 }
@@ -118,7 +119,7 @@ public class MainActivity extends Activity {
         @JavascriptInterface public void speak(String text){
             if(text==null||text.length()>300)return;
             runOnUiThread(()->{
-                if(tts!=null)tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"thai-utterance");
+                if(tts!=null){int lang=tts.setLanguage(new Locale("th","TH"));if(lang>=0)tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"thai-utterance");else Toast.makeText(MainActivity.this,"ဖုန်းထဲမှာ Thai အသံထည့်သွင်းပါ",Toast.LENGTH_LONG).show();}
             });
         }
         @JavascriptInterface public void recognize(String expected){
