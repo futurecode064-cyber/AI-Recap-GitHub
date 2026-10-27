@@ -355,6 +355,7 @@ export default {
 };
 async function handleRequest(request, env) {
     const path = new URL(request.url).pathname;
+    if (path === "/api/editor/sites" || path.startsWith("/api/editor/sites/")) return sbApi(request, env, path);
     if (path.startsWith("/api/editor/engine/")) return engineProxy(request, env, path);
     // Once the D1 publisher is enabled, never silently publish through the legacy GitHub path.
     if (env.FCD_ENGINE_ENABLED === 'true' && path.startsWith('/api/editor/')) {
@@ -695,4 +696,137 @@ async function engineProxy(request, env, path) {
   if (version) safe.set('X-Football-Version', version);
   return new Response(response.body,{status:response.status,headers:safe});
  } catch {return gzJson({error:'D1 engine unavailable; no GitHub publication was attempted'},503);}
+}
+
+/* Owner Website Builder API. Self-service branded sites share football-daily/data/.
+ * Never stores GitHub credentials or uploads client-side. Sites are committed atomically.
+ */
+const SB_ROOT="football-daily/",SB_REGISTRY="football-daily/site-builder/sites.json";
+const SB_ALLOWED=new Set(["topBanner","hero","dashboard","tabs","matches","custom","social","bottomBanner"]);
+const SB_RESERVED=new Set(["editor","api","login","logout","data","assets","index","odds","scripts","vendor","myanmar-football","ykz-family","bw-sport","ko-thet-family","future-code-journal","kmm-sport-hub","site-builder"]);
+function sbFail(message,status=422){const error=new Error(message);error.status=status;throw error}
+function sbSlug(slug){return typeof slug==="string"&&/^[a-z0-9][a-z0-9-]{1,38}[a-z0-9]$/.test(slug)&&!SB_RESERVED.has(slug)}
+function sbText(value,max,name){if(value!=null&&typeof value!=="string")sbFail(name+" format မမှန်ပါ");const s=(value||"").trim();if(s.length>max)sbFail(name+" စာလုံးများလွန်းပါသည်");return s}
+function sbLink(value){const s=sbText(value,350,"URL");if(!s)return "";try{const u=new URL(s);if(u.protocol!=="https:"||u.username||u.password)sbFail("https:// URL သာသုံးပါ");return u.href}catch{sbFail("URL မမှန်ပါ")}}
+function sbValidate(raw,existing){
+ if(!raw||typeof raw!=="object"||!sbSlug(raw.slug))sbFail("Website URL Slug မမှန်ပါ / ယခင် Website အမည်နဲ့ ထပ်နေပါသည်");
+ const c={slug:raw.slug,name:sbText(raw.name,120,"နာမည်"),slogan:sbText(raw.slogan,150,"ဆောင်ပုဒ်"),title:sbText(raw.title,160,"Title"),description:sbText(raw.description,500,"Description"),footerText:sbText(raw.footerText,200,"Footer"),customTitle:sbText(raw.customTitle,100,"Custom Title"),customText:sbText(raw.customText,800,"Custom Text"),fontSize:raw.fontSize,heroStyle:raw.heroStyle,preset:sbText(raw.preset,20,"Preset"),colors:{},sections:[],social:{},assets:{...(existing?.assets||{})},topLink:sbLink(raw.topLink),bottomLink:sbLink(raw.bottomLink)};
+ if(c.name.length<3)sbFail("Website အမည် အနည်းဆုံး ၃ လုံး ဖြည့်ပါ");
+ if(!["normal","large","extra"].includes(c.fontSize)||!["gradient","image","solid"].includes(c.heroStyle))sbFail("Theme setting မမှန်ပါ");
+ for(const key of ["primary","accent","headerColor","background","panel","text"]){const v=raw.colors?.[key];if(typeof v!=="string"||!/^#[a-fA-F0-9]{6}$/.test(v))sbFail("Color "+key+" မမှန်ပါ");c.colors[key]=v.toLowerCase()}
+ if(!Array.isArray(raw.sections)||raw.sections.length!==SB_ALLOWED.size)sbFail("Section အားလုံး သတ်မှတ်ပါ");
+ const seen=new Set();for(const e of raw.sections){if(!e||!SB_ALLOWED.has(e.id)||seen.has(e.id)||typeof e.enabled!=="boolean")sbFail("Section အစီအစဉ် မမှန်ပါ");seen.add(e.id);c.sections.push({id:e.id,enabled:e.enabled})}
+ for(const key of ["facebook","tiktok","telegram"])c.social[key]=sbLink(raw.social?.[key]);
+ c.uploads={};for(const key of ["logo","wallpaper","topBanner","bottomBanner"]){
+  const data=raw.uploads?.[key];if(data==null)continue;
+  if(typeof data!=="string")sbFail("Image format မမှန်ပါ");
+  const m=/^data:image\/(png|jpeg|webp);base64,([A-Za-z0-9+/]+={0,2})$/.exec(data);
+  if(!m)sbFail(key+" ဖိုင်ကို PNG / JPG / WebP အသုံးပြုပါ");
+  const max=key==="wallpaper"?700000:500000;
+  if(m[2].length>Math.ceil(max/3)*4+8)sbFail(key+" ပုံအရွယ်အစားကြီးနေပါသည်");
+  c.uploads[key]={base64:m[2],ext:m[1]==="jpeg"?"jpg":m[1]};
+ }
+ return c;
+}
+async function sbJsonBody(request){
+ if(request.headers.get("Content-Type")?.split(";")[0]!=="application/json")sbFail("JSON request လိုအပ်ပါသည်",415);
+ const reader=request.body?.getReader();if(!reader)sbFail("Body မပါပါ");
+ let n=0;const chunks=[];while(true){const {done,value}=await reader.read();if(done)break;n+=value.byteLength;if(n>3800000){await reader.cancel();sbFail("Upload 3.8MB ကျော်နေပါသည်",413)}chunks.push(value)}
+ const all=new Uint8Array(n);let i=0;for(const chunk of chunks){all.set(chunk,i);i+=chunk.byteLength}
+ try{return JSON.parse(new TextDecoder().decode(all))}catch{sbFail("JSON data မမှန်ပါ")}
+}
+function sbDecodeFile(payload){
+ return new TextDecoder().decode(Uint8Array.from(atob(payload.content.replace(/\s/g,"")),c=>c.charCodeAt(0)));
+}
+function sbBrandJs(c){
+ const publicData={...c};delete publicData.uploads;
+ const serialized=JSON.stringify(publicData).replace(/</g,"\\u003c");
+ return '"use strict";(function(){const c='+serialized+';const logo=new URL(c.assets.logo||"./assets/default-logo.svg",document.baseURI).href;'+
+ 'document.documentElement.classList.add("sb-brand-theme");document.documentElement.dataset.footballBrandName=c.name;document.documentElement.dataset.footballBrandSlogan=c.slogan;document.documentElement.dataset.footballBrandLogoUrl=logo;window.FutureCodeSiteBuilder=c;'+
+ 'window.FutureCodeBrandConfig=Object.freeze({id:c.slug,name:c.name,slogan:c.slogan,logoUrl:logo,dataRoot:new URL("../data/",document.baseURI).href,colors:{primary:c.colors.primary,background:c.colors.background,panel:c.colors.panel,text:c.colors.text,gold:c.colors.accent,border:c.colors.accent,black:c.colors.background}});})();\n';
+}
+function sbBrandCss(c){
+ const x=c.colors;const bg=c.heroStyle==="image"&&c.assets.wallpaper?'linear-gradient(#070d14aa,#070d14cc),url("'+c.assets.wallpaper+'")':c.heroStyle==="solid"?x.primary:"linear-gradient(115deg,"+x.headerColor+","+x.primary+")";
+ return ':root{--sb-main:'+x.primary+';--sb-accent:'+x.accent+';--sb-text:'+x.text+';--sb-font-multiplier:1}'+
+ 'html,body{background:'+x.background+'!important;color:'+x.text+'!important;font-size:calc(100% * var(--sb-font-multiplier))}'+
+ '.site-header{background:'+x.headerColor+'!important;border-bottom:2px solid '+x.accent+'!important}'+
+ '.hero,.odds-hero{background:'+bg+'!important;background-size:cover!important;background-position:center!important}'+
+ '.hero h1 span,.hero-date,.eyebrow,.slim-label,.odds-hero h1 span,.odds-kicker{color:'+x.accent+'!important}'+
+ '.dashboard-bar,.odds-group,.odds-overview,.sb-custom,.sb-social,.sb-dashboard,.sb-tabs,.sb-matches{background:'+x.panel+';color:'+x.text+'}'+
+ '.match-topline,.odds-group h2{background:'+x.headerColor+'!important;color:'+x.accent+'!important}'+
+ '.date-tabs button.active,.filters button.selected,.odds-nav a.active,.odds-export-actions button,.results-png-btn{background:'+x.primary+'!important;color:'+x.text+'!important;border-color:'+x.accent+'!important}'+
+ '.site-header .logo-lines b,.top-edition,footer strong{color:'+x.text+'!important}'+
+ '.sb-banner{padding:14px 0}.sb-banner img{width:100%;max-height:290px;object-fit:contain;border-radius:11px;display:block}'+
+ '.sb-banner a{display:block}.sb-social{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:22px;border-radius:13px}.sb-social a{padding:10px 17px;border:1px solid '+x.accent+';color:'+x.accent+';border-radius:99px}'+
+ '.sb-custom{border:1px solid '+x.accent+';border-radius:13px;padding:25px;white-space:pre-line}.sb-custom h2{color:'+x.accent+'}'+
+ '.sb-matches{padding:20px 0 30px}.sb-tabs,.sb-dashboard{padding:14px 0}[hidden]{display:none!important}@media(max-width:700px){.sb-banner{width:calc(100% - 22px)}}\n';
+}
+function sbBrandHtml(source,c){
+ let h=source.replaceAll("YKZ FAMILY GROUP",escapeHtml(c.name)).replaceAll("အတူရှေ့ဆက် YKZ",escapeHtml(c.slogan)).replaceAll("./assets/logo.webp",c.assets.logo||"./assets/default-logo.svg").replaceAll("#d50000",c.colors.primary);
+ h=h.replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="'+escapeHtml(c.name+" — "+c.description)+'">');
+ h=h.replace(/<link rel="stylesheet" href="\.\/brand\.css\?v=[^"]+">/g,"");
+ h=h.replace(/<script defer src="\.\/brand\.js\?v=[^"]+"><\/script>/g,'<script defer src="./brand.js?v='+c.revision+'"></script>');
+ // On the odds page the original brand.js is loaded, but brand.css was inline on YKZ.
+ return h.replace("</head>",'<link rel="stylesheet" href="./brand.css?v='+c.revision+'"><script defer src="../site-layout.js?v=20261027"></script></head>');
+}
+async function sbApi(request,env,path){
+ if(!ready(env)||!(await hasSession(request,env)))return gzJson({error:"Owner Login လိုအပ်ပါသည်"},401);
+ const url=new URL(request.url);
+ if(request.method==="POST"&&(request.headers.get("Origin")!==url.origin||request.headers.get("X-Football-Editor")!=="1"||request.headers.get("Sec-Fetch-Site")==="cross-site"))return gzJson({error:"Admin Website Builder မှသာ Save လုပ်နိုင်သည်"},403);
+ try{
+  if(path==="/api/editor/sites"&&request.method==="GET"){
+   const data=await editorFile(env,EDITOR_SOURCE,SB_REGISTRY,"main",true);
+   return gzJson({sites:Object.values(data?.sites||{}).sort((a,b)=>(b.updatedAt||"").localeCompare(a.updatedAt||"")),configured:!!env.FCD_EDITOR_GITHUB_TOKEN});
+  }
+  if(path==="/api/editor/sites/status"&&request.method==="GET"){
+   const slug=url.searchParams.get("slug");if(!sbSlug(slug))sbFail("Slug မမှန်ပါ",400);
+   const registry=await editorFile(env,EDITOR_SOURCE,SB_REGISTRY,"main",true);
+   const site=registry?.sites?.[slug];if(!site)sbFail("Website မရှိပါ",404);
+   const live=await env.ASSETS.fetch(new Request(url.origin+"/"+slug+"/config.json?sb="+Date.now(),{cache:"no-store"}));
+   let ok=false;if(live.ok){try{const x=await live.json();ok=x.revision===site.revision}catch{}}
+   return gzJson({phase:ok?"live":"queued",message:ok?"✓ Website အသစ် Live ပေါ် နောက်ဆုံး Revision ရောက်ရှိပါပြီ။":"Website ဖိုင်များ Source GitHub တွင် ရှိနေပြီ။ Production Mirror / Cloudflare Deploy ကို မအတည်ပြုရသေးပါ။",url:url.origin+"/"+slug+"/"});
+  }
+  if(request.method!=="POST"||!["/api/editor/sites/save","/api/editor/sites/deliver"].includes(path))return gzJson({error:"Method မမှန်ပါ"},405);
+  if(!env.FCD_EDITOR_GITHUB_TOKEN)sbFail("FCD_EDITOR_GITHUB_TOKEN Cloudflare Secret မချိတ်ထားပါ",503);
+  const body=await sbJsonBody(request);
+  if(path==="/api/editor/sites/deliver"){
+   if(!sbSlug(body.slug))sbFail("Slug မမှန်ပါ");
+   const data=await editorFile(env,EDITOR_SOURCE,SB_REGISTRY,"main",true);
+   if(!data?.sites?.[body.slug])sbFail("Website မရှိပါ",404);
+   await editorDispatch(env);return gzJson({message:"Production Mirror Workflow ကို ခေါ်ပြီးပါပြီ။ Live Status ပြန်စစ်ပါ။"});
+  }
+  const ref=await editorGithub(env,EDITOR_SOURCE,"git/ref/heads/main"),head=ref.object.sha;
+  const registry=await editorFile(env,EDITOR_SOURCE,SB_REGISTRY,head,true)||{version:1,sites:{}};
+  const old=registry.sites?.[body.slug],c=sbValidate(body,old);
+  if(old&&old.revision!==body.expectedRevision)sbFail("Website ကို အခြားနေရာက ပြင်ပြီးပါပြီ။ Website စာရင်း ပြန်ဖွင့်ပါ",409);
+  if(!old){
+   const exists=await editorGithub(env,EDITOR_SOURCE,"contents/"+SB_ROOT+c.slug+"?ref="+head).then(()=>true,e=>{if(e.status===404)return false;throw e});
+   if(exists)sbFail("ဒီ Slug ကို Website တစ်ခုက သုံးနေပါပြီ",409);
+  }
+  const headCommit=await editorGithub(env,EDITOR_SOURCE,"git/commits/"+head);
+  const treeItems=[];
+  for(const kind of ["logo","wallpaper","topBanner","bottomBanner"]){
+   const item=c.uploads[kind];if(!item)continue;
+   const blob=await editorGithub(env,EDITOR_SOURCE,"git/blobs","POST",{content:item.base64,encoding:"base64"});
+   c.assets[kind]="./assets/"+kind+"."+item.ext;
+   treeItems.push({path:SB_ROOT+c.slug+"/assets/"+kind+"."+item.ext,mode:"100644",type:"blob",sha:blob.sha});
+  }
+  c.revision=crypto.randomUUID();c.updatedAt=new Date().toISOString();delete c.uploads;
+  const [home,odds]=await Promise.all(["ykz-family/index.html","ykz-family/odds.html"].map(p=>editorGithub(env,EDITOR_SOURCE,"contents/"+SB_ROOT+p+"?ref="+head).then(sbDecodeFile)));
+  const pairs=[
+   [SB_REGISTRY,JSON.stringify({...registry,sites:{...(registry.sites||{}),[c.slug]:c}},null,2)+"\n"],
+   [SB_ROOT+c.slug+"/config.json",JSON.stringify(c,null,2)+"\n"],
+   [SB_ROOT+c.slug+"/index.html",sbBrandHtml(home,c)],
+   [SB_ROOT+c.slug+"/odds.html",sbBrandHtml(odds,c)],
+   [SB_ROOT+c.slug+"/brand.js",sbBrandJs(c)],
+   [SB_ROOT+c.slug+"/brand.css",sbBrandCss(c)]
+  ];
+  if(!old)pairs.push([SB_ROOT+c.slug+"/assets/default-logo.svg",'<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><rect width="160" height="160" rx="20" fill="'+c.colors.primary+'"/><text x="80" y="94" text-anchor="middle" fill="'+c.colors.text+'" font-family="sans-serif" font-size="44" font-weight="bold">FC+</text></svg>']);
+  for(const [path,text] of pairs)treeItems.push({path,mode:"100644",type:"blob",content:text});
+  const tree=await editorGithub(env,EDITOR_SOURCE,"git/trees","POST",{base_tree:headCommit.tree.sha,tree:treeItems});
+  const commit=await editorGithub(env,EDITOR_SOURCE,"git/commits","POST",{message:(old?"Update ":"Create ")+"site-builder website "+c.slug,tree:tree.sha,parents:[head]});
+  await editorGithub(env,EDITOR_SOURCE,"git/refs/heads/main","PATCH",{sha:commit.sha,force:false});
+  let dispatched=true;try{await editorDispatch(env)}catch{dispatched=false}
+  return gzJson({slug:c.slug,url:url.origin+"/"+c.slug+"/",revision:c.revision,assets:c.assets,commit:commit.sha,dispatched},202);
+ }catch(e){return gzJson({error:e.message||"Site Builder Error"},e.status||502)}
 }

@@ -15,6 +15,7 @@
     "/logout/",
     "/editor",
     "/editor/*",
+    "/editor/site-builder.html",
     "/api/editor/*",
     "/future-code-journal/",
     "/future-code-journal/index.html",
