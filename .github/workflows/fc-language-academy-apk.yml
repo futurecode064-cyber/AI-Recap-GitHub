@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'portal/apps/languages/**'
+      - '!portal/apps/languages/latest.json'
       - 'language-apk/**'
       - '.github/workflows/fc-language-academy-apk.yml'
   workflow_dispatch:

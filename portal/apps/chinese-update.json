@@ -2,15 +2,15 @@
   "id": "chinese-learning",
   "name": "Future Code Chinese",
   "packageName": "mm.futurecode.chinese",
-  "versionName": "1.0.2",
-  "versionCode": 3,
+  "versionName": "1.0.3",
+  "versionCode": 4,
   "minSdk": 26,
-  "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.2/Future_Code_Chinese_v1.0.2.apk",
-  "sizeBytes": 37695,
-  "sha256": "c92bd80544221ae6a3c0b2fafd8d5d274e80c3ec25adcd8fe192007562c655a7",
+  "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.3/Future_Code_Chinese_v1.0.3.apk",
+  "sizeBytes": 41791,
+  "sha256": "b5b76562d67af5d12eef51bef8a86c17f6170682765725f033bfa498f9280e99",
   "certificateSha256": "984a8f1fcc3a2add33e8faf545b617ab0485f25091116e4c4bcc804ef81c6ecb",
   "releasedAt": "2026-10-27",
   "online": false,
-  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.2/Future_Code_Chinese_v1.0.2.apk",
-  "releaseNotes": "v1.0.2: Progress JSON Backup/Restore, active study day streak accounting, and existing stable signing identity; install approval required."
+  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.3/Future_Code_Chinese_v1.0.3.apk",
+  "releaseNotes": "192 Chinese words and practical expressions across six levels, with offline lessons, flashcards, quizzes, writing and progress backup."
 }
