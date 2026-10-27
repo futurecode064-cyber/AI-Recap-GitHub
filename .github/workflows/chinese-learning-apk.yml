@@ -25,7 +25,9 @@ jobs:
       - name: Prepare Android SDK
         run: |
           set -euo pipefail
-          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          test -x "$SDKMANAGER"
+          "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
       - name: Assemble APK
         working-directory: chinese-learning
         run: gradle --no-daemon :app:assembleRelease :app:assembleDebug
