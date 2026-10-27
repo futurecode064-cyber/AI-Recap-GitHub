@@ -4,6 +4,34 @@
   "repository": "futurecode064-cyber/AI-Recap-GitHub",
   "releases": [
     {
+      "tag": "fc-language-academy-v1.0.5",
+      "siteKey": "future-code-apps",
+      "appKey": "language-academy",
+      "asset": "Future_Code_Language_Academy_v1.0.5.apk",
+      "downloads": 0
+    },
+    {
+      "tag": "english-academy-v1.0.4",
+      "siteKey": "future-code-apps",
+      "appKey": "english-academy",
+      "asset": "Future_Code_English_Academy_v1.0.4.apk",
+      "downloads": 2
+    },
+    {
+      "tag": "chinese-learning-v1.0.6",
+      "siteKey": "future-code-apps",
+      "appKey": "chinese-learning",
+      "asset": "Future_Code_Chinese_v1.0.6.apk",
+      "downloads": 0
+    },
+    {
+      "tag": "future-code-thai-speaking-v1.0.5",
+      "siteKey": "future-code-apps",
+      "appKey": "thai-speaking",
+      "asset": "Future_Code_Thai_Speaking_v1.0.5.apk",
+      "downloads": 0
+    },
+    {
       "tag": "ykz-soccer-tips-v1.1.0",
       "siteKey": "ykz-family",
       "asset": "YKZ-Soccer-Tips.apk",
