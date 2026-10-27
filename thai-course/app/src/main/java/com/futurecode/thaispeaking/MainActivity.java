@@ -77,8 +77,8 @@ public class MainActivity extends Activity {
             if(status==TextToSpeech.SUCCESS) {
                 int availability=tts.setLanguage(new Locale("th","TH"));
                 thaiVoiceReady=availability!=TextToSpeech.LANG_MISSING_DATA&&availability!=TextToSpeech.LANG_NOT_SUPPORTED;
-                if(!thaiVoiceReady) reportThaiVoice("Thai အသံဒေတာ မရှိသေးပါ။ Thai အသံထည့်သွင်းရန် နှိပ်ပါ။",true);
-            } else reportThaiVoice("ဖုန်းမှာ Text-to-Speech Engine အလုပ်မလုပ်ပါ။ Voice Settings ကို ဖွင့်ပါ။",true);
+                // Offline MP3 clips are bundled. System Thai TTS is optional fallback only.
+            } // Built-in offline voice plays independently of system TTS.
         });
         web.loadUrl(HOME);
         scheduleUpdateCheck();
@@ -123,7 +123,8 @@ public class MainActivity extends Activity {
         @JavascriptInterface public void speak(String text){
             if(text==null||text.length()>300)return;
             runOnUiThread(()->{
-                if(tts==null||!thaiVoiceReady){reportThaiVoice("Thai TTS အသံ မရှိပါ။ Thai အသံထည့်သွင်းရန် ကိုနှိပ်ပါ။",true);return;}
+                if(OfflineAudio.play(MainActivity.this,"th",text)){reportThaiVoice("🔊 APK ထဲပါပြီးသား Thai အသံဖိုင်ကို ဖတ်ပြနေပါသည်။",false);return;}
+                if(tts==null||!thaiVoiceReady){reportThaiVoice("အသံဖိုင် ရှာမရပါ။ Offline Audio Build ကို ပြန်စစ်ရန်လိုပါသည်။",false);return;}
                 int lang=tts.setLanguage(new Locale("th","TH"));
                 if(lang<0){thaiVoiceReady=false;reportThaiVoice("Thai Language Voice မရရှိပါ။ အသံဒေတာ ထည့်သွင်းပါ။",true);return;}
                 tts.setSpeechRate(0.85f);
@@ -182,6 +183,7 @@ public class MainActivity extends Activity {
     }
     @Override protected void onResume(){super.onResume();if(tts!=null){int c=tts.setLanguage(new Locale("th","TH"));thaiVoiceReady=c>=0;}}
     @Override protected void onDestroy(){
+        OfflineAudio.stop();
         if(tts!=null){tts.stop();tts.shutdown();}
         if(web!=null){web.removeJavascriptInterface("FCNative");web.destroy();}
         super.onDestroy();
