@@ -7,10 +7,43 @@
   "sourcePage": 1,
   "sourceRows": 21,
   "sourceRowsHeld": [
-    1,
     14
   ],
   "matches": [
+    {
+      "number": 1,
+      "pdfRow": 1,
+      "fixtureId": "fc-20261027-01",
+      "league": "EFL Cup",
+      "leagueDisplay": "အင်္ဂလန် လိဂ်ဖလား",
+      "home": "ဘရက်ဖို့ဒ်စီးတီး",
+      "away": "ပီတာဘရော့",
+      "canonicalHome": "Bradford City",
+      "canonicalAway": "Peterborough United",
+      "upperTeam": "ဘရက်ဖို့ဒ်စီးတီး",
+      "kickoff": "02:15",
+      "sourceKickoff": "02:15",
+      "kickoffDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffDisplay": "2026-10-28 02:15 MMT",
+      "bodyOdds": "1+35",
+      "goalTotalOdds": "3+80",
+      "currentBodyOdds": "1+40",
+      "currentGoalTotalOdds": "3+60",
+      "pdfLastColumn": "2-1",
+      "eligibleForPreview": true,
+      "sourcePage": 1,
+      "sourceIsAuthority": true,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/2155.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/1966.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/48.png",
+      "homeOdds": "1.65",
+      "drawOdds": "3.75",
+      "awayOdds": "5.00",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://www.winonbetonline.com/football/matches/bradford-vs-peterborough-156275/",
+      "oddsVerifiedDate": "2026-10-27"
+    },
     {
       "number": 2,
       "pdfRow": 2,
@@ -640,5 +673,6 @@
     }
   ],
   "currentSourcePDF": "27 စျေး.pdf",
-  "currentSourceSha256": "8dac2bdbaa764b07a92217bcef03fb5de3bba56a350ba9303bb9641ab7610410"
+  "currentSourceSha256": "8dac2bdbaa764b07a92217bcef03fb5de3bba56a350ba9303bb9641ab7610410",
+  "sourceRowsMatched": 20
 }

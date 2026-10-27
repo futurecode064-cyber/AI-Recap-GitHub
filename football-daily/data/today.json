@@ -163,8 +163,8 @@
         "upperTeam": "လာဇီယို",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "3+15"
       }
     },
     {
@@ -300,8 +300,8 @@
         "upperTeam": "ရိုးမား",
         "bodyOdds": "1-95",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-95",
+        "currentGoalTotalOdds": "3+10"
       },
       "formSourceUrl": "https://footballnation.eu/match/serie-a/2026/790983/"
     },
@@ -438,8 +438,8 @@
         "upperTeam": "ကိုမို",
         "bodyOdds": "1+50",
         "goalTotalOdds": "3+30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+40",
+        "currentGoalTotalOdds": "3+10"
       },
       "formSourceUrl": "https://footballnation.eu/match/serie-a/2026/790985/"
     },
@@ -574,7 +574,14 @@
       "oddsSourceUrl": "https://www.winonbetonline.com/football/matches/bradford-vs-peterborough-156275/",
       "oddsVerifiedDate": "2026-10-27",
       "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796495/",
-      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796497/"
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796497/",
+      "myanmarOdds": {
+        "upperTeam": "ဘရက်ဖို့ဒ်စီးတီး",
+        "bodyOdds": "1+35",
+        "goalTotalOdds": "3+80",
+        "currentBodyOdds": "1+40",
+        "currentGoalTotalOdds": "3+60"
+      }
     },
     {
       "fixtureId": "fc-20261027-02",
@@ -732,8 +739,8 @@
         "upperTeam": "အာဆင်နယ်",
         "bodyOdds": "3+60",
         "goalTotalOdds": "4+85",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "3+70",
+        "currentGoalTotalOdds": "4+80"
       }
     },
     {
@@ -1494,8 +1501,8 @@
         "upperTeam": "မိန့်ဇ်",
         "bodyOdds": "1+30",
         "goalTotalOdds": "3-5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+10",
+        "currentGoalTotalOdds": "3+10"
       },
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://www.skysports.com/german-2-bundesliga-scores-fixtures/2026-10-01",
@@ -1636,8 +1643,8 @@
         "upperTeam": "အော့စ်ဘတ်",
         "bodyOdds": "2+60",
         "goalTotalOdds": "3-80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+55",
+        "currentGoalTotalOdds": "3-90"
       },
       "formSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811810/",
       "oddsProvider": "Bet365",
@@ -1775,8 +1782,8 @@
         "upperTeam": "လိုက်ပ်ဇစ်",
         "bodyOdds": "2-20",
         "goalTotalOdds": "4+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-55",
+        "currentGoalTotalOdds": "4+50"
       },
       "formSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811848/",
       "oddsProvider": "Bet365",
@@ -1913,8 +1920,8 @@
         "upperTeam": "ဖရန့်ဖတ်",
         "bodyOdds": "-60",
         "goalTotalOdds": "3-50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "3-50"
       },
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
@@ -2055,8 +2062,8 @@
         "upperTeam": "ကိုလုံး",
         "bodyOdds": "1+80",
         "goalTotalOdds": "3+30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+80",
+        "currentGoalTotalOdds": "3+20"
       },
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
@@ -2198,8 +2205,8 @@
         "upperTeam": "မိုချန်ဂလာဘတ်",
         "bodyOdds": "1-90",
         "goalTotalOdds": "3-70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+90",
+        "currentGoalTotalOdds": "3-75"
       },
       "homeFormSourceUrl": "https://footballnation.eu/match/bundesliga-1/2026/798942/",
       "awayFormScope": "league",
@@ -2340,8 +2347,8 @@
         "upperTeam": "အဲလ်ဗာ့စ်ဘတ်",
         "bodyOdds": "1-65",
         "goalTotalOdds": "3-30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-75",
+        "currentGoalTotalOdds": "3-35"
       },
       "formSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811812/",
       "oddsProvider": "Bet365",
@@ -2478,8 +2485,8 @@
         "upperTeam": "ဒေါ့မွန်",
         "bodyOdds": "1-75",
         "goalTotalOdds": "3-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-60",
+        "currentGoalTotalOdds": "3-55"
       },
       "homeFormSourceUrl": "https://www.skysports.com/borussia-dortmund-scores-fixtures/2026-10-01",
       "awayFormScope": "league",
@@ -2619,8 +2626,8 @@
         "upperTeam": "ဘင်နီဗင်တို",
         "bodyOdds": "1+60",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+55",
+        "currentGoalTotalOdds": "3+40"
       },
       "formSourceUrl": "https://footballnation.eu/match/serie-b/2026/805700/",
       "oddsProvider": "Bet365",
@@ -2757,8 +2764,8 @@
         "upperTeam": "အက်စ်ကိုလီ",
         "bodyOdds": "-65",
         "goalTotalOdds": "3+100",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "3+100"
       },
       "formSourceUrl": "https://footballnation.eu/match/serie-b/2026/805701/",
       "oddsProvider": "Bet365",
@@ -2895,8 +2902,8 @@
         "upperTeam": "ချီဆီနာ",
         "bodyOdds": "-55",
         "goalTotalOdds": "3+95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "2-75"
       },
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
@@ -3037,8 +3044,8 @@
         "upperTeam": "မိုဒီနာ",
         "bodyOdds": "-70",
         "goalTotalOdds": "3+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-70",
+        "currentGoalTotalOdds": "3+80"
       },
       "formSourceUrl": "https://footballnation.eu/match/serie-b/2026/805708/",
       "oddsProvider": "Bet365",
@@ -3175,8 +3182,8 @@
         "upperTeam": "မန်တိုဗာ",
         "bodyOdds": "-65",
         "goalTotalOdds": "2-85",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-50",
+        "currentGoalTotalOdds": "2-80"
       },
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
@@ -3317,8 +3324,8 @@
         "upperTeam": "ပါဒိုဗာ",
         "bodyOdds": "-30",
         "goalTotalOdds": "2-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2-45"
       },
       "formSourceUrl": "https://footballnation.eu/match/serie-b/2026/805706/",
       "oddsProvider": "Bet365",
@@ -3455,8 +3462,8 @@
         "upperTeam": "အန်တယ်လာ",
         "bodyOdds": "-70",
         "goalTotalOdds": "2-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-70",
+        "currentGoalTotalOdds": "2-45"
       },
       "homeFormSourceUrl": "https://footballnation.eu/match/serie-b/2026/805710/",
       "awayFormScope": "league",

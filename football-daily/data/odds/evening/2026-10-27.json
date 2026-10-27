@@ -4,12 +4,24 @@
   "sourceFile": "27 စျေး.pdf",
   "sourceSha256": "8dac2bdbaa764b07a92217bcef03fb5de3bba56a350ba9303bb9641ab7610410",
   "sourceRows": 21,
-  "matchedRows": 19,
+  "matchedRows": 20,
   "heldRows": [
-    1,
     14
   ],
   "matches": [
+    {
+      "row": 1,
+      "fixtureId": "fc-20261027-01",
+      "league": "EFL Cup",
+      "home": "ဘရက်ဖို့ဒ်စီးတီး",
+      "away": "ပီတာဘရော့",
+      "upperTeam": "ဘရက်ဖို့ဒ်စီးတီး",
+      "kickoffDisplay": "2026-10-28 02:15 MMT",
+      "morningBodyOdds": "1+35",
+      "morningGoalTotalOdds": "3+80",
+      "eveningBodyOdds": "1+40",
+      "eveningGoalTotalOdds": "3+60"
+    },
     {
       "row": 2,
       "fixtureId": "fc-20261027-02",
