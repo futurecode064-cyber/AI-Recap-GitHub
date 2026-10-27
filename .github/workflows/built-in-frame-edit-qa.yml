@@ -84,7 +84,7 @@ jobs:
             await page.waitForFunction(()=>document.querySelector('#rfsFrame option[value="best"]')?.textContent==='QA RESULT BUILTIN');
             await results.locator('.fc-bif-reset').click();
             await page.waitForFunction(()=>document.querySelector('#rfsFrame option[value="best"]')?.textContent==='BEST YOUR CHOICE');
-            assert(nativePreview.count()===1,'Preview frame selector missing');
+            assert(await nativePreview.count()===1,'Preview frame selector missing');
             console.log('LIVE BUILT-IN FRAME QA PASS: preview and results names/colors edit, removal, restore, reset and persistence');
             await context.close();
           }finally{await browser.close();}
