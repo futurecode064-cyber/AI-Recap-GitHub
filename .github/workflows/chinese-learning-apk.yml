@@ -38,20 +38,30 @@ jobs:
         run: |
           set -euo pipefail
           umask 077
-          API="https://mxwervqihaqlxybghdak.supabase.co/functions/v1/mandalay-signing"
-          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-mandalay-signing-v1" | jq -er '.value')"
+          API="https://mxwervqihaqlxybghdak.supabase.co/functions/v1/fc-chinese-signing"
+          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-chinese-signing-v1" | jq -er '.value')"
           echo "::add-mask::$OIDC"
           curl -fsS -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o /tmp/fc-chinese-sign.json
+
+          if [[ "$(jq -r '.ready' /tmp/fc-chinese-sign.json)" != "true" ]]; then
+            PASS="$(openssl rand -hex 32)"
+            echo "::add-mask::$PASS"
+            keytool -genkeypair -storetype PKCS12 -keystore /tmp/fc-chinese-init.p12 -storepass "$PASS" -keypass "$PASS" -alias future-code-chinese -keyalg RSA -keysize 3072 -validity 10000 -dname 'CN=Future Code Chinese, O=Future Code, C=MM' -noprompt
+            jq -nc --arg pass "$PASS" --arg b64 "$(base64 -w0 /tmp/fc-chinese-init.p12)" '{action:"initialize",store_password:$pass,keystore_b64:$b64}' > /tmp/fc-chinese-init.json
+            curl -fsS -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data-binary @/tmp/fc-chinese-init.json "$API" -o /tmp/fc-chinese-result.json
+            jq -e '.ok == true' /tmp/fc-chinese-result.json >/dev/null
+            curl -fsS -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o /tmp/fc-chinese-sign.json
+          fi
           jq -e '.ready == true' /tmp/fc-chinese-sign.json >/dev/null
           jq -er '.keystore_b64' /tmp/fc-chinese-sign.json | base64 -d > /tmp/fc-chinese-key.p12
           ANDROID_KEYSTORE_PASS="$(jq -er '.store_password' /tmp/fc-chinese-sign.json)"
           echo "::add-mask::$ANDROID_KEYSTORE_PASS"
           export ANDROID_KEYSTORE_PASS
           mkdir -p out
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/fc-chinese-key.p12 --ks-key-alias future-code-mandalay --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/Future_Code_Chinese_v1.0.0.apk chinese-learning/app/build/outputs/apk/release/app-release-unsigned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/fc-chinese-key.p12 --ks-key-alias future-code-chinese --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/Future_Code_Chinese_v1.0.0.apk chinese-learning/app/build/outputs/apk/release/app-release-unsigned.apk
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs out/Future_Code_Chinese_v1.0.0.apk
           sha256sum out/*.apk
-          shred -u /tmp/fc-chinese-sign.json /tmp/fc-chinese-key.p12 || true
+          shred -u /tmp/fc-chinese-sign.json /tmp/fc-chinese-key.p12 /tmp/fc-chinese-init.p12 /tmp/fc-chinese-init.json /tmp/fc-chinese-result.json 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
           name: Future-Code-Chinese-v1.0.0-signed
