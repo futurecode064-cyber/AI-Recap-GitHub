@@ -459,8 +459,80 @@
       "dailyPreviewText": "အင်္ဂလန်လိဂ်ဝမ်းမှာ ၂၂ မှတ်နဲ့ အဆင့် ၃ အထိ တက်လှမ်းထားတဲ့ ဘရက်ဖို့ဒ်စီးတီး က လက်ရှိပြိုင်ပွဲစုံ နောက်ဆုံး ၁၁ ပွဲဆက် ရှုံးပွဲမရှိခဲ့တာကြောင့် ဒီဖလားပွဲမှာလည်း ယုံကြည်မှုအပြည့်နဲ့ ဝင်ရောက်လာနိုင်ပါတယ်။ နည်းပြသစ် မိုက်ကယ်ဒပ်ဖ် လက်အောက်မှာ ဘရက်ဖို့ဒ်အနေနဲ့ ခံစစ်တည်ငြိမ်မှုကို ဆက်လက်ထိန်းထားဖို့ လိုအပ်ပြီး လိဂ် ၁၂ ပွဲမှာ ငါးဂိုးသာ ပေးထားတဲ့မှတ်တမ်းက အဲဒီအပိုင်းမှာ သူတို့ရဲ့ အားသာချက်ကို ပြသနေပါတယ်။ တစ်ဖက်မှာ ပီတာဘရော့ က လိဂ် ၁၂ ပွဲမှာ ၁၀ မှတ်သာရရှိထားပြီး အဆင့် ၂၁ အထိ ရောက်ရှိနေတာကြောင့် ရလဒ်ပိုင်းမှာ အခက်တွေ့နေပါတယ်။ နောက်ဆုံး ဘရွမ်လေနဲ့ပွဲမှာ နောက်ကျချေပဂိုးကြောင့် သရေတစ်မှတ်ရခဲ့ပေမယ့် ခံစစ်ပိုင်းက အားနည်းနေပြီး ၁၂ ပွဲမှာ ၂၁ ဂိုးအထိ ပေးထားရပါတယ်။ ဖလားပြိုင်ပွဲဆိုတာ မထင်မှတ်တဲ့ရလဒ်တွေ ထွက်ပေါ်နိုင်ပေမယ့် ဘရက်ဖို့ဒ်ရဲ့ ပိုမိုခိုင်မာတဲ့နောက်တန်းနဲ့ အိမ်ကွင်းအားသာချက်က အဆုံးအဖြတ်ပေးနိုင်တာကြောင့် ဘရက်ဖို့ဒ်စီးတီးကို ရွေးချယ်ပါတယ်။",
       "ownerSourceArticleNumber": 4,
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "result": "D",
+          "opponent": "အောက်စဖို့ဒ်ယူနိုက်တက်",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "D",
+          "opponent": "ဘာတန်အယ်လ်ဘီယံ",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "စတီဗင်နစ်",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "D",
+          "opponent": "လေတန်အိုရီးယန့်",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "ရော့သာဟမ်",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "date": "2026-10-06"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "opponent": "ဘရွမ်လေ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "ဟတ်ဒါဖီးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "D",
+          "opponent": "ဘာတန်အယ်လ်ဘီယံ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "လက်စတာစီးတီး",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "အစ်ပ်ဆွစ်ချ် ယူ-၂၁",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "date": "2026-10-06"
+        }
+      ],
       "homeStanding": {
         "position": 3,
         "played": 12,
@@ -496,7 +568,9 @@
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "oddsProvider": "Bet365",
       "oddsSourceUrl": "https://www.winonbetonline.com/football/matches/bradford-vs-peterborough-156275/",
-      "oddsVerifiedDate": "2026-10-27"
+      "oddsVerifiedDate": "2026-10-27",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796495/",
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796497/"
     },
     {
       "fixtureId": "fc-20261027-02",
@@ -674,8 +748,80 @@
       "status": "scheduled",
       "dailyPreviewText": "လက်ရှိလိဂ်မှာ ၁၁ ပွဲကစားပြီး ၁၅ မှတ်နဲ့ အဆင့် ၁၃ မှာ ရပ်တည်နေတဲ့ လက်စတာစီးတီး က နောက်ဆုံးလူတန်နဲ့ပွဲမှာ ၂-၁ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့ပေမယ့် အဲဒီမတိုင်ခင် ဘရွမ်လေကို လေးဂိုးပြတ်၊ ဒွန်ကတ်စတာကို ၂-၁ ဂိုးနဲ့ ဆက်တိုက်အနိုင်ယူခဲ့တာကြောင့် တိုက်စစ်ပိုင်းမှာ အလားအလာကောင်းတွေ ရှိနေပါတယ်။ အိမ်ကွင်းပြန်လည်ကစားရမယ့် ဒီပွဲမှာတော့ ရှုံးပွဲကနေ ရုန်းထွက်ဖို့ ကြိုးစားလာမှာဖြစ်ပြီး လက်ရှိလိဂ်အောက်ဆုံးမှာ ရောက်ရှိနေတဲ့ ဝီဂန် ကို ဖိအားပေးနိုင်ဖို့ ရှိပါတယ်။ ဝီဂန်ဟာ ၁၁ ပွဲမှာ ခုနစ်မှတ်သာရရှိထားပြီး နောက်ဆုံး အောက်စဖို့ဒ်နဲ့ ဟတ်ဒါဖီးလ်တို့ကို ဆက်တိုက်ရှုံးထားတာကြောင့် အသင်းရဲ့ခြေစွမ်းက ယုံကြည်စရာမကောင်းပါဘူး။ ဝီဂန်အနေနဲ့ ခံစစ်ကို စုဖွဲ့ပြီး တန်ပြန်တိုက်စစ်ကနေ အခွင့်အရေးရှာဖို့ ကြိုးစားလာနိုင်ပေမယ့် လက်စတာရဲ့ တိုက်စစ်အင်အားနဲ့ အိမ်ကွင်းအားသာချက်ကို နှိုင်းယှဉ်ရင် လက်စတာစီးတီးကို ရွေးချယ်ပါတယ်။",
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "result": "L",
+          "opponent": "လူတန်တောင်း",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘရွမ်လေ",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "ဒွန်ကတ်စတာ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "ပီတာဘရော့",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "L",
+          "opponent": "စတီဗင်နစ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-06"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "opponent": "ဟတ်ဒါဖီးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "အောက်စဖို့ဒ်ယူနိုက်တက်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "ရက်ဒင်း",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "စတီဗင်နစ်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘလက်ပူးလ်",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "date": "2026-09-22"
+        }
+      ],
       "homeStanding": {
         "position": 13,
         "played": 11,
@@ -703,7 +849,9 @@
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/241.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/982.png",
-      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png"
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796491/",
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796492/"
     },
     {
       "fixtureId": "fc-20261027-preview-07",
@@ -721,8 +869,80 @@
       "status": "scheduled",
       "dailyPreviewText": "လူတန်တောင်း က ဒီရာသီ ၁၁ ပွဲကစားပြီး ၁၇ မှတ်နဲ့ အဆင့် ၁၀ မှာ ရပ်တည်နေကာ နောက်ဆုံး ဘန်စလေနဲ့ လက်စတာစီးတီးတို့ကို နှစ်ပွဲဆက် ၂-၁ ဂိုးစီ အနိုင်ယူထားတာကြောင့် အသင်းရဲ့ယုံကြည်မှု ပြန်လည်မြင့်တက်နေပါတယ်။ အထူးသဖြင့် လက်စတာနဲ့ပွဲမှာ နောက်ဆုံးမိနစ်ပိုင်းအထိ ကြိုးစားပြီး အနိုင်ဂိုးရယူနိုင်ခဲ့တာက ပွဲကိုအဆုံးအထိ တိုက်ပွဲဝင်နိုင်တဲ့စိတ်ဓာတ်ကို ပြသခဲ့ပါတယ်။ ဒါပေမဲ့ ဒွန်ကတ်စတာ ကို လွယ်ကူတဲ့အသင်းအဖြစ် သတ်မှတ်လို့မရပါဘူး။ ဒွန်ကတ်စတာက နောက်ဆုံး ရှက်ဖီးဝင်းစ်ဒေးကို နှစ်ဂိုးပြတ်အနိုင်ယူခဲ့ပြီး အရင်အောက်တိုဘာ ၂၀ ရက်မှာ စတော့ပို့ကို ရှုံးခဲ့တဲ့အခြေအနေကနေ ပြန်လည်ရုန်းထွက်လာနိုင်ခဲ့ပါတယ်။ ဒွန်ကတ်စတာရဲ့ ခံစစ်ကစားပုံကို လူတန်အနေနဲ့ ကျော်ဖြတ်နိုင်ဖို့ လိုအပ်ပေမယ့် အိမ်ရှင်ရဲ့ နောက်ဆုံးနှစ်ပွဲဆက်အနိုင်နဲ့ တိုက်စစ်အခွင့်အရေးအသုံးချနိုင်မှုက ဒီပွဲမှာ အဓိကအားသာချက်ဖြစ်လာနိုင်တာကြောင့် လူတန်တောင်းကို ရွေးချယ်ပါတယ်။",
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "လက်စတာစီးတီး",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘန်စလေ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "L",
+          "opponent": "အမ်ကေဒွန်းစ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "ဝိုင်ကမ်",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "D",
+          "opponent": "ကိုလ်ချက်စတာ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-03"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "ရှက်ဖီးဝင်းစ်ဒေး",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "စတော့ပို့ကောင်တီ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "L",
+          "opponent": "လက်စတာစီးတီး",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘာတန်အယ်လ်ဘီယံ",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "လီဗာပူးလ် ယူ-၂၁",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-09-02"
+        }
+      ],
       "homeStanding": {
         "position": 10,
         "played": 11,
@@ -750,7 +970,9 @@
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/950.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/3013.png",
-      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png"
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796497/",
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796496/"
     },
     {
       "fixtureId": "fc-20261027-preview-08",
@@ -768,8 +990,80 @@
       "status": "scheduled",
       "dailyPreviewText": "အိမ်ရှင် အမ်ကေဒွန်းစ် က လိဂ် ၁၁ ပွဲမှာ ၁၂ မှတ်ရရှိပြီး အဆင့် ၁၈ မှာ ရပ်တည်နေသလို နောက်ဆုံး စတီဗင်နစ်ကို အဝေးကွင်းမှာ တစ်ဂိုးတည်းနဲ့ အနိုင်ယူထားတာကြောင့် ရလဒ်ပိုင်းမှာ ပြန်လည်အားကောင်းလာဖို့ အခွင့်အရေးရှိနေပါတယ်။ အဲဒီပွဲမှာ အနိုင်ရခဲ့ပေမယ့် လိဂ် ၁၁ ပွဲမှာ ၁၈ ဂိုးပေးထားရတဲ့ ခံစစ်ပိုင်းကတော့ ဆက်လက်ပြုပြင်ရဦးမှာဖြစ်ပါတယ်။ တစ်ဖက်မှာ ဘရွမ်လေ က ၁၁ ပွဲမှာ ကိုးမှတ်နဲ့ အဆင့် ၂၂ မှာ ရှိနေပြီး အရင်ပွဲမှာ လက်စတာကို လေးဂိုးပြတ်ရှုံးခဲ့ပြီးနောက် ပီတာဘရော့နဲ့ တစ်ဂိုးစီသရေကျထားပါတယ်။ ဘရွမ်လေရဲ့ နောက်တန်းက ၁၁ ပွဲမှာ ၂၆ ဂိုးအထိ ပေးထားရတာကြောင့် အမ်ကေဒွန်းစ်အနေနဲ့ ဘောလုံးကို ရှေ့တန်းအထိ ထိရောက်စွာပို့ဆောင်နိုင်ရင် ဂိုးသွင်းအခွင့်အရေးတွေ ရရှိနိုင်ပါတယ်။ နှစ်သင်းစလုံး ခံစစ်အားနည်းချက်ရှိနေပေမယ့် လတ်တလောအနိုင်ရလဒ်နဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် အမ်ကေဒွန်းစ်ကို ရွေးချယ်ပါတယ်။",
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "စတီဗင်နစ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "ဘလက်ပူးလ်",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "လူတန်တောင်း",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "ရက်ဒင်း",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘရန့်ဖို့ဒ် ယူ-၂၁",
+          "teamGoals": 7,
+          "opponentGoals": 1,
+          "date": "2026-10-06"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "opponent": "ပီတာဘရော့",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "လက်စတာစီးတီး",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "L",
+          "opponent": "စတော့ပို့ကောင်တီ",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "မန်းစ်ဖီးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "L",
+          "opponent": "ခရော်လီ",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "date": "2026-10-06"
+        }
+      ],
       "homeStanding": {
         "position": 18,
         "played": 11,
@@ -797,7 +1091,9 @@
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/2436.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/3542.png",
-      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png"
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796496/",
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796492/"
     },
     {
       "fixtureId": "fc-20261027-preview-09",
@@ -815,7 +1111,43 @@
       "status": "scheduled",
       "dailyPreviewText": "ဒီပွဲက အမှတ်ပေးဇယားထိပ်ပိုင်းမှာ ရှိနေတဲ့အသင်းနှစ်သင်းရဲ့ အရေးပါတဲ့ထိပ်တိုက်တွေ့ဆုံမှုဖြစ်ပြီး အောက်စဖို့ဒ် က ၁၀ ပွဲကစား ၁၉ မှတ်နဲ့ အဆင့် ၇ မှာ ရှိနေသလို စတော့ပို့ က ၁၂ ပွဲကစား ၂၃ မှတ်နဲ့ အဆင့် ၂ မှာ ရပ်တည်နေပါတယ်။ အောက်စဖို့ဒ်ဟာ နောက်ဆုံး ဘရက်ဖို့ဒ်နဲ့ ဂိုးမရှိသရေကျခဲ့ပေမယ့် အဲဒီမတိုင်ခင် ဝီဂန်ကို ၂-၁ ဂိုးနဲ့ အနိုင်ယူထားပြီး ၁၀ ပွဲမှာ တစ်ပွဲသာ ရှုံးထားတဲ့မှတ်တမ်းက အသင်းရဲ့တည်ငြိမ်မှုကို ပြသနေပါတယ်။ စတော့ပို့ကတော့ တိုက်စစ်ပိုင်းမှာ အားကောင်းနေပြီး လိဂ် ၁၂ ပွဲမှာ ၂၄ ဂိုးသွင်းထားနိုင်သလို ဒွန်ကတ်စတာကို နှစ်ဂိုးပြတ်အနိုင်ရပြီးနောက် နော့စ်ကောင်တီနဲ့ တစ်ဂိုးစီသရေကျခဲ့ပါတယ်။ စတော့ပို့ရဲ့ ဂိုးဖန်တီးနိုင်မှုက အောက်စဖို့ဒ်ကို ဖိအားပေးနိုင်ပေမယ့် အိမ်ရှင်ရဲ့ ရှုံးပွဲနည်းပါးတဲ့မှတ်တမ်းနဲ့ ခံစစ်တည်ငြိမ်မှုကြောင့် ဒီပွဲက အကြိတ်အနယ်ဖြစ်ဖို့ ရှိပါတယ်။ အိမ်ကွင်းအကျိုးသက်ရောက်မှုကို ထည့်တွက်ပြီး အနည်းငယ်ပိုယုံကြည်ရတဲ့အသင်းအဖြစ် အောက်စဖို့ဒ်ယူနိုက်တက်ကို ရွေးချယ်ပါတယ်။",
       "specialChoice": false,
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "result": "D",
+          "opponent": "ဘရက်ဖို့ဒ်စီးတီး",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ဝီဂန်",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "D",
+          "opponent": "မန်းစ်ဖီးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-15"
+        },
+        {
+          "result": "W",
+          "opponent": "နော့စ်ကောင်တီ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "D",
+          "opponent": "အက်ဇီတာ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-06"
+        }
+      ],
       "awayLastFive": [],
       "homeStanding": {
         "position": 7,
@@ -844,7 +1176,8 @@
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/962.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/3005.png",
-      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png"
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796494/"
     },
     {
       "fixtureId": "fc-20261027-preview-10",
@@ -1376,7 +1709,43 @@
       "dailyPreviewText": "ဒီရာသီ ဘွန်ဒက်စ်လီဂါမှာ ခုနစ်ပွဲကစားပြီး သုံးမှတ်သာရရှိထားတဲ့ မိုချန်ဂလာဘတ် က အဆင့် ၁၈ အထိ ရောက်ရှိနေတာကြောင့် အသင်းရဲ့ရာသီအစပိုင်းခြေစွမ်းက စိတ်ပျက်စရာဖြစ်ခဲ့ပါတယ်။ ဒါပေမဲ့ နောက်ဆုံး စတုဂတ်နဲ့ပွဲမှာ ၃-၂ ဂိုးနဲ့ အနိုင်ရခဲ့တာက အသင်းအတွက် အရေးပါတဲ့ပြောင်းလဲမှုတစ်ခုဖြစ်ပြီး ပထမဆုံးလိဂ်နိုင်ပွဲကနေ ရရှိလာတဲ့ယုံကြည်မှုကို ဒီဖလားပွဲမှာ ဆက်လက်အသုံးချဖို့ ကြိုးစားလာနိုင်ပါတယ်။ ဒုတိယတန်းကလပ် ကားလ်စရူး ကတော့ အိမ်ရှင်ရဲ့ ခံစစ်အားနည်းမှုကို အသုံးချဖို့ ကြိုးစားလာမှာဖြစ်ပြီး မိုချန်ဂလာဘတ်က ခုနစ်ပွဲမှာ ၂၂ ဂိုးအထိ ပေးထားရတာကြောင့် အခွင့်အရေးမရှိဘူးလို့ မဆိုနိုင်ပါဘူး။ သို့သော် မိုချန်ဂလာဘတ်အနေနဲ့ စတုဂတ်ကို အနိုင်ရခဲ့တဲ့ပွဲက တိုက်စစ်အဆုံးသတ်နိုင်မှုကို ပြန်လည်ထိန်းသိမ်းနိုင်ရင် အိမ်ကွင်းမှာ ပိုမိုအားကောင်းလာဖို့ ရှိပါတယ်။ နောက်ဆုံးနိုင်ပွဲကြောင့် ရရှိလာတဲ့ယုံကြည်မှုနဲ့ အသင်းအင်အားကို ထည့်တွက်ပြီး မိုချန်ဂလာဘတ်ကို ရွေးချယ်ပါတယ်။",
       "ownerSourceArticleNumber": 16,
       "specialChoice": false,
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "စတုဂတ်",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "date": "2026-10-23"
+        },
+        {
+          "result": "L",
+          "opponent": "ဟော့ဖန်ဟိမ်း",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-18"
+        },
+        {
+          "result": "L",
+          "opponent": "ကိုလုံး",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-11"
+        },
+        {
+          "result": "D",
+          "opponent": "စိန့်ပါလီ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-03"
+        },
+        {
+          "result": "W",
+          "opponent": "ဆီဂန်",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "date": "2026-09-24"
+        }
+      ],
       "awayLastFive": [],
       "homeStanding": {
         "position": 18,
@@ -1417,7 +1786,8 @@
         "goalTotalOdds": "3-70",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "homeFormSourceUrl": "https://footballnation.eu/match/bundesliga-1/2026/798942/"
     },
     {
       "fixtureId": "fc-20261027-13",
@@ -2309,7 +2679,43 @@
       "dailyPreviewText": "အိမ်ရှင် အန်တယ်လာ က ရှစ်ပွဲကစား ကိုးမှတ်နဲ့ အဆင့် ၁၂ မှာ ရပ်တည်နေပြီး နောက်ဆုံး မန်တိုဗာကို တစ်ဂိုးတည်းနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ ပိုမိုပြတ်သားဖို့ လိုအပ်နေပါတယ်။ အန်တယ်လာဟာ ရှစ်ပွဲမှာ ၁၀ ဂိုးသွင်းပြီး ကိုးဂိုးသာ ပေးထားရတာကြောင့် ခံစစ်ပိုင်းက ဆိုးရွားနေတာမျိုး မဟုတ်ပေမယ့် အနိုင်ပွဲတွေကို ဆက်တိုက်ရယူနိုင်စွမ်းတော့ နည်းပါးနေပါတယ်။ အဗယ်လီနို ကလည်း နောက်ဆုံး ပါဒိုဗာကို တစ်ဂိုးတည်းနဲ့ ရှုံးထားပေမယ့် ရှစ်ပွဲမှာ ၁၁ မှတ်ရရှိပြီး အဆင့် ၈ မှာ ရှိနေသလို ၁၂ ဂိုးသွင်းထားနိုင်တာကြောင့် တိုက်စစ်အင်အားမှာ အနည်းငယ်ပိုမိုသာလွန်နေပါတယ်။ အန်တယ်လာအနေနဲ့ အိမ်ကွင်းမှာ ဘောလုံးကိုထိန်းချုပ်နိုင်ဖို့ ကြိုးစားလာနိုင်ပေမယ့် အဗယ်လီနိုက တန်ပြန်တိုက်စစ်အခွင့်အရေးတွေကို ပိုမိုပြတ်သားစွာ အသုံးချနိုင်ရင် အနိုင်ရဖို့ ရှိပါတယ်။ နှစ်သင်းရဲ့ တိုက်စစ်ဂိုးသွင်းနိုင်မှုနဲ့ လက်ရှိရမှတ်အခြေအနေကို ချိန်ဆပြီး အဗယ်လီနိုကို ရွေးချယ်ပါတယ်။",
       "ownerSourceArticleNumber": 25,
       "specialChoice": false,
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "result": "L",
+          "opponent": "မန်တိုဗာ",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ပါဒိုဗာ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "D",
+          "opponent": "ဂျူဗီစတာဘီယာ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "D",
+          "opponent": "",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-09-19"
+        },
+        {
+          "result": "W",
+          "opponent": "ပီဆာ",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "date": "2026-09-11"
+        }
+      ],
       "awayLastFive": [],
       "homeStanding": {
         "position": 12,
@@ -2349,7 +2755,8 @@
         "goalTotalOdds": "2-45",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "homeFormSourceUrl": "https://footballnation.eu/match/serie-b/2026/805710/"
     }
   ],
   "updateStatus": "partial",
