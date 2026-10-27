@@ -112,11 +112,14 @@
   ctx.font='400 16px Arial, sans-serif';
   creditLines.forEach((line,i)=>ctx.fillText(line,68,footerY+68+i*25));
 
-  const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error("PNG unavailable")),"image/png"));
-  return {blob,width:canvas.width,height:canvas.height,filename:(isGoalZone?"Goal-Zone":"Future-Code")+"-News-"+s.id.replace(/[^a-z0-9_-]/gi,"-")+".png"};
+  const customId=document.getElementById("fcNewsCustomFrame")?.value;
+  const frame=customId&&window.FutureCodeCustomFrames?(await window.FutureCodeCustomFrames.list()).find(f=>f.id===customId):null;
+  const output=frame?await window.FutureCodeCustomFrames.wrap(canvas,frame):canvas;
+  const blob=await new Promise((resolve,reject)=>output.toBlob(b=>b?resolve(b):reject(new Error("PNG unavailable")),"image/png"));
+  return {blob,width:output.width,height:output.height,filename:(isGoalZone?"Goal-Zone":"Future-Code")+"-News-"+s.id.replace(/[^a-z0-9_-]/gi,"-")+".png"};
  }
  function posterFor(s){
-  const key=JSON.stringify([s.id,s.title,s.paragraphs,s.image,s.categoryLabel,s.sourceDateLabel,s.imageCredit,s.imageLicense,s.imageFit]);
+  const key=JSON.stringify([document.getElementById("fcNewsCustomFrame")?.value||"",s.id,s.title,s.paragraphs,s.image,s.categoryLabel,s.sourceDateLabel,s.imageCredit,s.imageLicense,s.imageFit]);
   if(!exportCache.has(key))exportCache.set(key,createNewsPoster(s).catch(e=>{exportCache.delete(key);throw e;}));
   return exportCache.get(key);
  }
@@ -223,3 +226,4 @@
  }
  load();
 })();
+

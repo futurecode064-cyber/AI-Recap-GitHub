@@ -204,6 +204,7 @@
     document.head.appendChild(style);
     const el=id=>studio.querySelector("#"+id);
     for(const f of FRAMES)el("rfsFrame").add(new Option(f.title,f.id));
+    window.FutureCodeCustomFrames.list().then(items=>{for(const f of items){FRAMES.push({id:f.id,title:f.name,plain:true,custom:f});el("rfsFrame").add(new Option(f.name,f.id));}}).catch(console.error);
     const showColour=()=>{el("rfsColourWrap").hidden=el("rfsFrame").value!=="plain";};
     el("rfsFrame").addEventListener("change",showColour);
     showColour();
@@ -260,13 +261,14 @@
       const list=matches.filter(m=>selected.has(String(m.league||"အခြားပြိုင်ပွဲ")));
       if(!list.length){status("အတည်ပြုပြီးသား ပွဲနှင့် လိဂ်တစ်ခု အနည်းဆုံး ရွေးပါ။");return;}
       const chosen=FRAMES.find(f=>f.id===el("rfsFrame").value)||FRAMES[0];
-      const frame=withColor(chosen,el("rfsColour").value);
+      const frame=withColor(chosen,chosen.custom?.color||el("rfsColour").value);
       const pages=split(list,el("rfsSplit").value);
       cleanup();disable(true);
       try{
         for(let i=0;i<pages.length;i++){
           status("Frame "+frame.title+" · ပုံ "+(i+1)+"/"+pages.length+" ဖန်တီးနေသည်…");
-          const canvas=await makePng(pages[i],frame,date);
+          let canvas=await makePng(pages[i],frame,date);
+          if(frame.custom)canvas=await window.FutureCodeCustomFrames.wrap(canvas,frame.custom);
           const blob=await new Promise((resolve,reject)=>{
             canvas.toBlob(b=>b&&b.size?resolve(b):reject(Error("PNG ဖန်တီးမရပါ")),"image/png");
           });

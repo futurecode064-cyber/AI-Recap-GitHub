@@ -16,27 +16,28 @@
 <link rel="stylesheet" href="./main-preview-design.css?v=stadium-compact-20261020">
 <link rel="stylesheet" href="./main-ai-score.css?v=20261021-ai-one-png-zip-v1">
 <link rel="stylesheet" href="./main-probability.css?v=20261024-v2">
+<script defer src="./main-custom-frames.js?v=20261027-v1"></script>
 <script defer src="./main-export-logos.js?v=20261026-team-logos-v2"></script>
 <script defer src="./card-export.js?v=stadium-compact-20261020"></script>
 <script defer src="./social-export.js"></script>
 <script defer src="./canvas-image-kit.js?v=stadium-compact-20261020"></script>
 <script defer src="./daily-image-export.js?v=stadium-compact-20261020"></script>
-<script defer src="./main-match-screenshot.js?v=20261016-transparent-all"></script>
+<script defer src="./main-match-screenshot.js?v=custom-frame-20261027"></script>
 <script defer src="./app.js?v=20261027-complete-form-v3"></script>
 <script defer src="./main-ai-score-model.js?v=20261017-main1"></script>
-<script defer src="./main-ai-bulk-export.js?v=20261021-ai-frame-download-names"></script>
-<script defer src="./main-ai-score.js?v=20261021-ai-frame-download-names"></script>
+<script defer src="./main-ai-bulk-export.js?v=custom-frame-20261027"></script>
+<script defer src="./main-ai-score.js?v=custom-frame-20261027"></script>
 <script defer src="./video-studio.js?v=20261016-video2"></script>
 <script defer src="./main-probability.js?v=20261024-v2"></script>
 <script defer src="./main-section-tabs.js?v=20261024-nine-tabs"></script>
 <link rel="stylesheet" href="./news-section.css?v=news-poster-20261020-v3">
-<script defer src="./news-section.js?v=daily-20261021"></script>
+<script defer src="./news-section.js?v=custom-frame-20261027"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
 <script defer src="./frame-preview-renderer.js?v=stadium-compact-20261020"></script>
 <script defer src="./frame-zip.js?v=20261018-1"></script>
-<script defer src="./brand-preview-studio.js?v=d1-today-20261024"></script>
+<script defer src="./brand-preview-studio.js?v=custom-frame-20261027"></script>
 <script defer src="./brand-odds-studio.js?v=20261020-bold-team-names-v2"></script>
-<script defer src="./main-results-frame-studio.js?v=results-league-d1-20261024"></script>
+<script defer src="./main-results-frame-studio.js?v=custom-frame-20261027"></script>
 <style data-desktop-layout="1200">html,body{min-width:1200px}</style></head>
 <body data-fc-main-view="today">
 <header class="site-header"><div class="container header-inner">
@@ -52,6 +53,7 @@
  <section class="content container">
    <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">SELECTED DATE MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
    <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2 id="reportHeading">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill" id="reportPill">● TODAY</span></div>
+   <label style="display:block;margin:14px 0;color:#fff">ပွဲကြို / Special Choice PNG Frame <select id="fcMatchCustomFrame"><option value="">မူရင်းပုံစံ</option></select></label>
    <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football အဓိက အပိုင်း ၉ ခု">
      <button type="button" data-day="-1">မနေ့ကရလဒ် <small id="dateYesterday"></small></button>
      <button type="button" data-day="0" class="active">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ <small id="dateToday"></small></button>
@@ -76,6 +78,7 @@
 <section class="fc-news-section" id="fcNewsSection" aria-labelledby="fcNewsTitle" data-news-url="./data/news/latest.json">
   <div class="fc-news-header"><div><span class="fc-news-eyebrow">FUTURE CODE · FOOTBALL NEWS</span><h2 id="fcNewsTitle">ယနေ့ ဘောလုံးသတင်း သီးသန့်</h2><p class="fc-news-window" id="fcNewsWindow">သတင်းများ ရယူနေသည်…</p></div><span class="fc-news-count" id="fcNewsCount" aria-live="polite"></span></div>
   <a class="fc-news-owner-link" href="/editor/news.html">＋ ဘောလုံးသတင်းတင်ရန် / ပြင်ရန် ↗</a>
+  <label style="color:#fff">သတင်း PNG Frame <select id="fcNewsCustomFrame"><option value="">မူရင်းပုံစံ</option></select></label>
   <nav class="fc-news-filters" id="fcNewsFilters" aria-label="သတင်းအမျိုးအစားရွေးရန်"></nav>
   <div class="fc-news-grid" id="fcNewsGrid" aria-live="polite"><p class="fc-news-status">သတင်းများ ရယူနေသည်…</p></div>
   <p class="fc-news-illustration-note">သတင်းပုံများနှင့် သတင်းအချက်အလက်များကို သက်ဆိုင်ရာ ရင်းမြစ်နှင့် အသုံးပြုခွင့်အတိုင်း ဖော်ပြထားသည်။</p>

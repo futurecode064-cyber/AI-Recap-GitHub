@@ -31,10 +31,16 @@
     // club crests, fixtures, WDL, bookmaker odds, Myanmar prices,
     // and unabridged commentary. No website wallpaper, button or
     // read/collapse toggle. Never invoke the slow DOM serializer.
-    return nativeSave.call(exporter,match,{
-      ...opts,
-      mainScreenshot:true,
-      downloadFilename:fileName
-    });
+    const frameId=document.getElementById("fcMatchCustomFrame")?.value;
+    if(frameId&&window.FutureCodeCustomFrames){
+      const frame=(await window.FutureCodeCustomFrames.list()).find(x=>x.id===frameId);
+      if(frame){
+        const card=await nativeSave.call(exporter,match,{...opts,mainScreenshot:true,downloadFilename:fileName,asCanvas:true});
+        const canvas=await window.FutureCodeCustomFrames.wrap(card,frame);
+        return window.FutureCodeCanvasKit.download(canvas,fileName);
+      }
+    }
+    return nativeSave.call(exporter,match,{...opts,mainScreenshot:true,downloadFilename:fileName});
   };
 })();
+

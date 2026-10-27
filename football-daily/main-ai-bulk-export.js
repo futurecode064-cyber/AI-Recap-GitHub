@@ -164,7 +164,9 @@
   async function renderBlob(page,opts={}){
   if(!page?.matchCount)throw Error("No matches to export");
   const {date,part=1,total=1,scope="all",predict,leagueLabel,leagueLogo,teamName,teamLogo,displayTime}=opts;
-   const theme=AI_COLOURS[opts.frame]||AI_COLOURS.standard;
+   const customFrame=opts.frame?.startsWith("custom-")?(await window.FutureCodeCustomFrames.list()).find(f=>f.id===opts.frame):null;
+   const shade=(hex,f)=>"#"+hex.slice(1).match(/../g).map(x=>Math.round(parseInt(x,16)*f).toString(16).padStart(2,"0")).join("");
+   const theme=customFrame?{base:shade(customFrame.color,.18),header:shade(customFrame.color,.35),league:[shade(customFrame.color,.25),shade(customFrame.color,.45),shade(customFrame.color,.25)],footer:shade(customFrame.color,.25)}:AI_COLOURS[opts.frame]||AI_COLOURS.standard;
   if(typeof predict!=="function")throw Error("Prediction model unavailable");
   let canvas=document.createElement("canvas");const size=dim(page);
   canvas.width=size.width;canvas.height=size.height;
@@ -225,7 +227,7 @@
   rect(ctx,0,size.height-FOOTER,WIDTH,FOOTER,theme.footer);
   text(ctx,AI_BRAND[opts.frame]||"FUTURE CODE  •  MYANMAR FOOTBALL DAILY",20,size.height-23,670,19,"left","#e1ebff");
   text(ctx,scope==="all"?"ALL LEAGUES":String(scope),WIDTH-20,size.height-23,460,19,"right","#eedca6");
-  canvas=await brandCanvas(canvas,opts.frame,{date,matchCount:page.matchCount});
+  canvas=customFrame?await window.FutureCodeCustomFrames.wrap(canvas,customFrame):await brandCanvas(canvas,opts.frame,{date,matchCount:page.matchCount});
    // Keep the complete long poster as one image. Never silently drop fixtures.
    const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
    if(!blob)throw Error("PNG generation failed");
@@ -261,3 +263,4 @@
   }
   return Object.freeze({MAX_ROWS,FRAME_IDS,FRAME_DOWNLOAD_NAMES,frameFileName,planPages,planSinglePage,dim,renderBlob,downloadBlob,savePage});
 });
+

@@ -75,14 +75,15 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
    }else{
     const archive=new window.FutureCodeFrameZip.Archive();
     const date=report.reportDate;
-    for(const [index,frame] of exporter.FRAME_IDS.entries()){
-     button.textContent="ZIP ပြင်ဆင်နေသည်… "+(index+1)+"/"+exporter.FRAME_IDS.length;
-     exportStatus.textContent="Frame "+(index+1)+"/"+exporter.FRAME_IDS.length+" ကို PNG ဖန်တီးနေသည်…";
+    const frameIds=[...exporter.FRAME_IDS,...(await window.FutureCodeCustomFrames.list()).map(f=>f.id)];
+    for(const [index,frame] of frameIds.entries()){
+     button.textContent="ZIP ပြင်ဆင်နေသည်… "+(index+1)+"/"+frameIds.length;
+     exportStatus.textContent="Frame "+(index+1)+"/"+frameIds.length+" ကို PNG ဖန်တီးနေသည်…";
      const png=await exporter.renderBlob(page,singleOptions(frame,scope));
      await archive.add("ai-predictions-"+date+"/"+exporter.frameFileName(frame,date),png);
     }
     exporter.downloadBlob(archive.finish(),"future-code-ai-all-frames-"+date+"-"+selected.length+"-leagues.zip");
-    exportStatus.textContent="လိဂ် "+selected.length+" ခု၊ ပွဲ "+page.matchCount+" ပွဲစီပါသော Frame "+exporter.FRAME_IDS.length+" မျိုး ZIP Download စတင်ပါပြီ။";
+    exportStatus.textContent="လိဂ် "+selected.length+" ခု၊ ပွဲ "+page.matchCount+" ပွဲစီပါသော Frame "+frameIds.length+" မျိုး ZIP Download စတင်ပါပြီ။";
    }
   }catch(err){
    console.error("AI selected leagues single image/ZIP export",err);
@@ -448,3 +449,4 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
  document.getElementById("reloadBtn")?.addEventListener("click",()=>load());
  document.addEventListener("DOMContentLoaded",()=>load());
 })();
+
