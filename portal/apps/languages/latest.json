@@ -1,17 +1,17 @@
 {
   "appId": "fc-language-academy",
   "packageName": "mm.futurecode.languages",
-  "versionCode": 4,
-  "versionName": "1.0.3",
+  "versionCode": 6,
+  "versionName": "1.0.5",
   "channel": "stable",
   "updateReady": true,
   "releasedAt": "2026-10-27",
   "announcement": {
-    "id": "academy-voice-216-20261027-v103",
-    "text": "Language Academy v1.0.3: ၁၂ ဘာသာ × ၁၈ စကားစု အပြည့်အစုံနှင့် Voice Setup ထည့်ထားပါပြီ။"
+    "id": "offline-voice-20261027-v105",
+    "text": "Language Academy v1.0.5 တွင် ၁၂ ဘာသာစကားအတွက် Offline အသံဖိုင် ၂၁၆ ခုကို APK ထဲ တစ်ခါတည်း ထည့်သွင်းထားပါပြီ။"
   },
   "notes": "ဘာသာစကား ၁၂ မျိုးစီတွင် စကားစု ၁၈ ခုစီ (စုစုပေါင်း ၂၁၆ ခု)၊ အသံထွက်လေ့ကျင့်ခန်း၊ စာရေးလေ့ကျင့်ခန်း၊ မေးခွန်းတို၊ အော့ဖ်လိုင်းသင်ခန်းစာနှင့် မှတ်တမ်း Backup/Restore ထပ်တိုးထားပါသည်။ Android ၈ နှင့်အထက်အတွက် ဖြစ်ပါသည်။",
-  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/fc-language-academy-v1.0.3/Future_Code_Language_Academy_v1.0.3.apk",
-  "sha256": "381f0f5b6a50df8a7cb4a822c3916d913bd912ca12abeabe83fc32d619bc567c",
-  "sizeBytes": 33308
+  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/fc-language-academy-v1.0.5/Future_Code_Language_Academy_v1.0.5.apk",
+  "sha256": "d8078dd6746462448a53840326c091e299fc933d760eadad66ac889ded942196",
+  "sizeBytes": 3034708
 }
