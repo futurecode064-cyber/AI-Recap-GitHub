@@ -49,7 +49,7 @@ assert.equal(chinese.reduce((n,l)=>n+l.units.reduce((m,u)=>m+u.words.length,0),0
 new vm.Script(read('chinese-learning/app/src/main/assets/app.js'));
 checks++;
 const academyHtml=read('portal/apps/languages/index.html');
-const inline=[...academyHtml.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)];
+const inline=[...academyHtml.matchAll(/<script\b(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g)];
 assert.equal(inline.length,1);
 new vm.Script(inline[0][1]);
 const mi=inline[0][1].indexOf('const languages=[');
