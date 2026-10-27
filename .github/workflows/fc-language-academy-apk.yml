@@ -1,0 +1,95 @@
+name: Future Code Language Academy Android
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'portal/apps/languages/**'
+      - 'language-apk/**'
+      - '.github/workflows/fc-language-academy-apk.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Prepare Android SDK
+        run: |
+          set -euo pipefail
+          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Compile offline language learning APK
+        run: |
+          set -euo pipefail
+          BT="$ANDROID_HOME/build-tools/35.0.0"
+          AJ="$ANDROID_HOME/platforms/android-35/android.jar"
+          mkdir -p language-apk/assets out build-language/generated build-language/classes build-language/dex
+          cp portal/apps/languages/index.html language-apk/assets/index.html
+          "$BT/aapt2" compile --dir language-apk/res -o build-language/resources.zip
+          "$BT/aapt2" link -I "$AJ" --manifest language-apk/AndroidManifest.xml -A language-apk/assets -o build-language/unsigned.apk --java build-language/generated build-language/resources.zip
+          find language-apk/src build-language/generated -name '*.java' > build-language/sources.txt
+          javac -encoding UTF-8 -source 8 -target 8 -classpath "$AJ" -d build-language/classes @build-language/sources.txt
+          find build-language/classes -name '*.class' -print0 | xargs -0 "$BT/d8" --lib "$AJ" --min-api 26 --output build-language/dex
+          python3 - <<'PY'
+          import zipfile
+          from pathlib import Path
+          with zipfile.ZipFile("build-language/unsigned.apk","a",zipfile.ZIP_DEFLATED) as z:
+              for p in Path("build-language/dex").glob("*.dex"):
+                  z.write(p,p.name)
+          PY
+          "$BT/zipalign" -f -p 4 build-language/unsigned.apk build-language/aligned.apk
+      - name: Sign and verify Android package
+        env:
+          LANGUAGE_KEYSTORE_BASE64: \${{ secrets.FC_LANGUAGE_KEYSTORE_BASE64 }}
+          LANGUAGE_KEYSTORE_PASSWORD: \${{ secrets.FC_LANGUAGE_KEYSTORE_PASSWORD }}
+          LANGUAGE_KEY_ALIAS: \${{ secrets.FC_LANGUAGE_KEY_ALIAS }}
+        run: |
+          set -euo pipefail
+          umask 077
+          KEYSTORE="/tmp/fc-language-keystore.p12"
+          SIGNING_MODE="testing"
+          if [[ -n "$LANGUAGE_KEYSTORE_BASE64" && -n "$LANGUAGE_KEYSTORE_PASSWORD" && -n "$LANGUAGE_KEY_ALIAS" ]]; then
+            printf '%s' "$LANGUAGE_KEYSTORE_BASE64" | base64 -d > "$KEYSTORE"
+            SIGNING_MODE="release"
+            SIGN_PASS="$LANGUAGE_KEYSTORE_PASSWORD"
+            SIGN_ALIAS="$LANGUAGE_KEY_ALIAS"
+          else
+            SIGN_PASS="$(openssl rand -hex 32)"
+            SIGN_ALIAS="future-code-language-test"
+            keytool -genkeypair -keystore "$KEYSTORE" -storetype PKCS12 -alias "$SIGN_ALIAS" -storepass "$SIGN_PASS" -keypass "$SIGN_PASS" -keyalg RSA -keysize 3072 -validity 10000 -dname "CN=Future Code Language Academy Test,O=Future Code,C=MM" -noprompt
+          fi
+          export SIGN_PASS
+          APK_NAME="Future_Code_Language_Academy_v1.0.0.apk"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks "$KEYSTORE" --ks-key-alias "$SIGN_ALIAS" --ks-pass env:SIGN_PASS --key-pass env:SIGN_PASS --out "out/$APK_NAME" build-language/aligned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs "out/$APK_NAME"
+          sha256sum "out/$APK_NAME" > out/SHA256SUMS.txt
+          echo "SIGNING_MODE=$SIGNING_MODE" >> "$GITHUB_ENV"
+          echo "APK_NAME=$APK_NAME" >> "$GITHUB_ENV"
+          rm -f "$KEYSTORE"
+          if [[ "$SIGNING_MODE" != "release" ]]; then
+            echo "::warning::APK is signed with a temporary test key. It installs for preview, but it is NOT eligible for future in-place release updates. Configure FC_LANGUAGE_KEYSTORE_BASE64, FC_LANGUAGE_KEYSTORE_PASSWORD and FC_LANGUAGE_KEY_ALIAS repository secrets for persistent signed release."
+            echo "TEST APK: Safe to try, but do not distribute as a permanent production version." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Future-Code-Language-Academy-APK
+          path: out/*
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish stable signed release only
+        if: env.SIGNING_MODE == 'release'
+        env:
+          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="fc-language-academy-v1.0.0"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "::notice::Already released; download statistics preserved."
+            exit 0
+          fi
+          gh release create "$TAG" "out/$APK_NAME" out/SHA256SUMS.txt --title "Future Code Language Academy v1.0.0" --notes "12-language Myanmar-first foundation release. Android 8+; offline lessons; TTS and speech recognition, writing and quizzes, update notification system. Installation and all APK updates require Android user approval."
