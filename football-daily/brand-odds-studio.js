@@ -24,7 +24,12 @@
  const section=document.createElement('section');section.id='brandOddsStudio';section.className='section container';section.innerHTML=`<h2>Frame အလိုက် ပေါက်ကြေး PNG</h2><p>ဘော်ဒီကြေးကို ကြေးပေးအသင်းဘေး၊ ဂိုးပေါင်းကြေးကို တစ်ဖက်အသင်းဘေးတွင် ပြသပါမည်။</p><div class="bo-controls"><label>Frame <select id="boFrame"></select></label><label id="boColourWrap" hidden>Colour Theme <select id="boColour"><option value="#b51a24">အနီ</option><option value="#16589d">အပြာ</option><option value="#197447">အစိမ်း</option><option value="#976c09">ရွှေ</option><option value="#6d3597">ခရမ်း</option><option value="custom">စိတ်ကြိုက်</option></select><input type="color" id="boCustom" value="#b51a24" aria-label="စိတ်ကြိုက်အရောင်" hidden></label><label>ကြေးအမျိုးအစား <select id="boMarket"><option value="morning">မူလကြေး</option><option value="current">ယခုကြေး</option></select></label><label>ပုံခွဲရန် <select id="boSplit"><option value="auto">ပွဲများလျှင် ၂ ပုံခွဲမည်</option><option value="two">တစ်ဝက်စီ ၂ ပုံ</option><option value="one">တစ်ပုံတည်း</option></select></label></div><fieldset><legend>ပါဝင်စေချင်သည့်လိဂ်များ ရွေးပါ</legend><div id="boLeagues" class="bo-controls"></div></fieldset><div class="bo-controls"><button id="boPreview" type="button">နမူနာကြည့်မယ်</button><button id="boDownload" type="button">ပေါက်ကြေး PNG Download</button><button id="boAllZip" type="button" class="bo-all-zip">⬇ Frame အားလုံး ZIP ဖြင့် Download မည်</button></div><p id="boZipInfo">ရွေးထားသော လိဂ်များကို Frame အမျိုးအစားအားလုံးဖြင့် ZIP တစ်ဖိုင်တည်း Download လုပ်နိုင်ပါသည်။</p><p id="boStatus" role="status" aria-live="polite"></p><div id="boOutput"></div>`;
  const style=document.createElement('style');style.textContent='#brandOddsStudio [hidden],#brandPreviewStudio [hidden]{display:none!important}#brandOddsStudio{padding:28px 20px;border:1px solid #425855;border-radius:16px;margin:30px auto}#brandOddsStudio .bo-controls{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0}#brandOddsStudio select,#brandOddsStudio button{font:inherit;padding:10px;border-radius:8px}#brandOddsStudio button{background:#ffd39b;color:#182426;border:0;cursor:pointer}#brandOddsStudio label{display:flex;gap:8px;align-items:center;flex-wrap:wrap}#brandOddsStudio img{display:block;width:100%;max-width:580px;margin:20px auto}#brandOddsStudio a{display:block;padding:12px}#brandOddsStudio .bo-all-zip{background:#287b53;color:#fff;font-weight:800;flex:1 1 100%;min-height:52px;border:1px solid #80dbab}#brandOddsStudio button:disabled{opacity:.55;cursor:wait}#brandOddsStudio #boZipInfo{color:#b9d4ca;font-size:12px;line-height:2}';document.head.append(style);document.querySelector('main').append(section);
  const el=id=>section.querySelector('#'+id);let rows=[],date='',busy=false;const urls=[];frames.forEach((f,i)=>el('boFrame').add(new Option(f[1],String(i))));
- const frame=()=>frames[Number(el('boFrame').value)];el('boFrame').onchange=()=>{el('boColourWrap').hidden=frame()[0]!=='colour';};el('boColour').onchange=()=>{el('boCustom').hidden=el('boColour').value!=='custom';};
+ window.FutureCodeProfessionalFrames?.attach('odds',el('boFrame'));
+ const frame=()=>{
+ const value=el('boFrame').value;
+ if(value.startsWith('pro:')){const f=window.FutureCodeProfessionalFrames?.getFrame(value);return [value,f?.name||'Professional Frame',f?.color||'#16486c','#fff'];}
+ return frames[Number(value)];
+};el('boFrame').onchange=()=>{el('boColourWrap').hidden=frame()[0]!=='colour';};el('boColour').onchange=()=>{el('boCustom').hidden=el('boColour').value!=='custom';};
  const leagueNames={"UEFA Champions League":"ချန်ပီယံလိဂ်","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","Swedish Superettan":"ဆွီဒင် စူပါတန် လိဂ်","German 3. Liga":"ဂျာမန် ဘွန်ဒစ်လီဂါ ၃","Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","Veikkausliiga":"ဖင်လန် လိဂ်","Eliteserien":"နော်ဝေး လိဂ်","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Turkish Super Lig":"တူရကီ စူပါလိဂ်","Italian Serie C":"အီတလီ စီးရီးစီ"};
  const shade=(hex,f)=>'#'+hex.slice(1).match(/../g).map(x=>Math.min(255,Math.round(parseInt(x,16)*f)).toString(16).padStart(2,'0')).join('');
  const imageCache=new Map();const load=src=>{if(!imageCache.has(src))imageCache.set(src,new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>{imageCache.delete(src);reject(Error('Frame Banner ပုံ ရယူမရပါ — '+src));};im.src=src;}));return imageCache.get(src);};
@@ -46,7 +51,7 @@
  }
  function badge(ctx,kit,src,x,y,label){kit.crest(ctx,src,x,y,64,label);}
  async function draw(list,part,total,chosen=frame()){const kit=window.FutureCodeCanvasKit;if(!kit)throw Error('PNG module မရသေးပါ');await kit.fonts();await kit.preloadImages(list.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]).filter(Boolean));
- const f=chosen,custom=f[0]==='colour',base=custom?(el('boColour').value==='custom'?el('boCustom').value:el('boColour').value):f[2],accent=custom?'#fff':f[3];
+ const f=chosen,isPro=f[0].startsWith('pro:'),custom=f[0]==='colour'||isPro,base=isPro?f[2]:custom?(el('boColour').value==='custom'?el('boCustom').value:el('boColour').value):f[2],accent=custom?'#fff':f[3];
  const artwork=f[4]||null,dir='./assets/table-odds-frames/';
  const full=artwork&&!artwork.split?await load(dir+artwork.file):null;
  const top=custom||full?null:await load(artwork?.split?dir+artwork.file+'-top.jpg':'./assets/odds-frames/'+f[0]+'-top.jpg');
@@ -68,7 +73,7 @@
  else if(known){quote('body',bodyOdds,468);quote('goals',goals,732);}
  else{quote('body','—',468);quote('goals','—',732);}
  write(ctx,m.kickoff||'VS',600,y+42,23,'#12202a','center',90);y+=104;}
- if(full&&bh)ctx.drawImage(full,0,full.height*(1-artwork.bottom),full.width,full.height*artwork.bottom,0,canvas.height-bh,W,bh);else if(bottom)ctx.drawImage(bottom,0,canvas.height-bh,W,bh);const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,'odds'):canvas;return new Promise((resolve,reject)=>framed.toBlob(b=>b?resolve(b):reject(Error('PNG ဖန်တီးမရပါ')),'image/png'));}
+ if(full&&bh)ctx.drawImage(full,0,full.height*(1-artwork.bottom),full.width,full.height*artwork.bottom,0,canvas.height-bh,W,bh);else if(bottom)ctx.drawImage(bottom,0,canvas.height-bh,W,bh);const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,'odds',isPro?f[0]:'none'):canvas;return new Promise((resolve,reject)=>framed.toBlob(b=>b?resolve(b):reject(Error('PNG ဖန်တီးမရပါ')),'image/png'));}
  async function run(download){if(busy)return;const leagues=new Set([...el('boLeagues').querySelectorAll('input:checked')].map(x=>x.value));const list=rows.filter(m=>leagues.has(m.league));if(!list.length){el('boStatus').textContent='လိဂ် အနည်းဆုံးတစ်ခု ရွေးပါ။';return;}busy=true;section.querySelectorAll('button,select,input').forEach(x=>x.disabled=true);try{urls.forEach(URL.revokeObjectURL);urls.length=0;el('boOutput').replaceChildren();const split=el('boSplit').value;const cut=Math.ceil(list.length/2);const groups=list.length>1&&(split==='two'||split==='auto'&&list.length>12)?[list.slice(0,cut),list.slice(cut)]:[list];for(let i=0;i<groups.length;i++){el('boStatus').textContent=`ပုံ ${i+1}/${groups.length} ဖန်တီးနေသည်…`;const blob=await draw(groups[i],i+1,groups.length);const url=URL.createObjectURL(blob);urls.push(url);const a=document.createElement('a');a.href=url;a.download=frame()[0]+'-odds-'+date+'-'+(i+1)+'.png';a.textContent=`⬇ ပုံ ${i+1} Download · ${groups[i].length} ပွဲ`;const im=document.createElement('img');im.src=url;im.alt=frame()[1]+' ပေါက်ကြေး ပုံ '+(i+1);el('boOutput').append(a,im);if(download){a.click();await new Promise(r=>setTimeout(r,500));}}el('boStatus').textContent=`${list.length} ပွဲ · ${groups.map(g=>g.length+' ပွဲ').join(' / ')} · ${groups.length} ပုံ အဆင်သင့်ဖြစ်ပါပြီ။`;}catch(e){el('boStatus').textContent=e.message;}finally{busy=false;section.querySelectorAll('button,select,input').forEach(x=>x.disabled=false);}}
  async function runAllZip(){
   if(busy)return;
@@ -81,8 +86,9 @@
    urls.forEach(URL.revokeObjectURL);urls.length=0;el('boOutput').replaceChildren();
    const mode=el('boSplit').value,cut=Math.ceil(list.length/2);
    const groups=list.length>1&&(mode==='two'||mode==='auto'&&list.length>12)?[list.slice(0,cut),list.slice(cut)]:[list];
-   const archive=new window.FutureCodeFrameZip.Archive(),total=frames.length*groups.length;let count=0;
-   for(const f of frames){
+   const all=[...frames,...(window.FutureCodeProfessionalFrames?(await window.FutureCodeProfessionalFrames.list('odds')).map(f=>['pro:'+f.id,f.name,f.color,'#fff']):[])];
+   const archive=new window.FutureCodeFrameZip.Archive(),total=all.length*groups.length;let count=0;
+   for(const f of all){
     for(let i=0;i<groups.length;i++){
      el('boStatus').textContent='Frame '+f[1]+' · ပုံ '+(i+1)+'/'+groups.length+' · '+(count+1)+'/'+total+' PNG ဖန်တီးနေသည်…';
      const blob=await draw(groups[i],i+1,groups.length,f);
@@ -95,7 +101,7 @@
    const link=document.createElement('a');link.href=url;link.download='main-all-odds-frames-'+date+'.zip';
    link.textContent='⬇ Frame အားလုံး ZIP Download · '+count+' PNG';
    el('boOutput').append(link);link.click();
-   el('boStatus').textContent='Frame '+frames.length+' မျိုး · PNG '+count+' ပုံပါသော ZIP အဆင်သင့်ဖြစ်ပါပြီ။ Download မစခဲ့လျှင် အောက်က ZIP လင့်ခ်ကို နှိပ်ပါ။';
+   el('boStatus').textContent='Frame '+all.length+' မျိုး · PNG '+count+' ပုံပါသော ZIP အဆင်သင့်ဖြစ်ပါပြီ။ Download မစခဲ့လျှင် အောက်က ZIP လင့်ခ်ကို နှိပ်ပါ။';
   }catch(e){console.error('Main homepage odds ZIP failed',e);el('boStatus').textContent='ZIP Download မရပါ — '+(e?.message||String(e));}
   finally{busy=false;section.querySelectorAll('button,select,input').forEach(x=>x.disabled=false);}
  }
