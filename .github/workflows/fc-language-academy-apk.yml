@@ -26,6 +26,11 @@ jobs:
           SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
           test -x "$SDKMANAGER"
           "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
+          VER="$(sed -n 's/.*versionName=\"\([^\"]*\)\".*/\1/p' language-apk/AndroidManifest.xml | head -n1)"
+          test -n "$VER"
+          echo "APK_VERSION=$VER" >> "$GITHUB_ENV"
+          echo "APK_NAME=Future_Code_Language_Academy_v$VER.apk" >> "$GITHUB_ENV"
+          echo "RELEASE_TAG=fc-language-academy-v$VER" >> "$GITHUB_ENV"
       - name: Compile offline language learning APK
         run: |
           set -euo pipefail
@@ -73,14 +78,14 @@ jobs:
           echo "::add-mask::$ANDROID_KEYSTORE_PASS"
           export ANDROID_KEYSTORE_PASS
           mkdir -p out
-          APK_NAME="Future_Code_Language_Academy_v1.0.1.apk"
+          APK_NAME="Future_Code_Language_Academy_v$APK_VERSION.apk"
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/fc-language-key.p12 --ks-key-alias "$SIGN_ALIAS" --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out "out/$APK_NAME" build-language/aligned.apk
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs "out/$APK_NAME"
           sha256sum "out/$APK_NAME" > out/SHA256SUMS.txt
           shred -u /tmp/fc-language-sign.json /tmp/fc-language-key.p12 /tmp/fc-language-init.p12 /tmp/fc-language-init.json /tmp/fc-language-initialized.json 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
-          name: Future-Code-Language-Academy-Official-v1.0.1
+          name: Future-Code-Language-Academy-Official-v${{ env.APK_VERSION }}
           path: out/*
           if-no-files-found: error
           retention-days: 30
@@ -89,9 +94,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          TAG="fc-language-academy-v1.0.1"
+          TAG="$RELEASE_TAG"
           if gh release view "$TAG" >/dev/null 2>&1; then
             echo "Official release preserved (including download counts)."
             exit 0
           fi
-          gh release create "$TAG" out/Future_Code_Language_Academy_v1.0.1.apk out/SHA256SUMS.txt --title "Future Code Language Academy v1.0.1" --notes "Stable private signing certificate for all future APK upgrades. 12-language foundation curriculum, 12 phrases per language, speech practice, writing, quiz and progress backup/restore. Android 8+ offline lessons. Previous v1.0.0 TEST APK uses a different signing key: backup your progress and uninstall the preview before installing official release. Android confirmation required."
+          gh release create "$TAG" out/$APK_NAME out/SHA256SUMS.txt --title "Future Code Language Academy $APK_VERSION" --notes "Stable private signing certificate for all future APK upgrades. 12-language foundation curriculum, 18 phrases per language, speech practice, writing, quiz and progress backup/restore. Android 8+ offline lessons. Previous v1.0.0 TEST APK uses a different signing key: backup your progress and uninstall the preview before installing official release. Android confirmation required."
+
