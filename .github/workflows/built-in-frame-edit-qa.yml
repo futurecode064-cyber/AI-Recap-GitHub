@@ -64,7 +64,7 @@ jobs:
             await page.reload({waitUntil:'domcontentloaded',timeout:40000});
             await page.locator('#brandPreviewStudio + .fc-built-in-frame-editor').waitFor({timeout:30000});
             const previewAgain=page.locator('#brandPreviewStudio + .fc-built-in-frame-editor');
-            assert(await page.evaluate(()=>![...document.querySelector('#brandFrame').options].some(o=>o.textContent==='QA PREVIEW BUILTIN'),'Hidden preview frame returned after refresh');
+            assert(await page.evaluate(()=>![...document.querySelector('#brandFrame').options].some(o=>o.textContent==='QA PREVIEW BUILTIN')),'Hidden preview frame returned after refresh');
             await previewAgain.locator('.fc-bif-select').selectOption('bcf');
             await previewAgain.locator('.fc-bif-restore').click();
             await page.waitForFunction(()=>[...document.querySelector('#brandFrame').options].some(o=>o.textContent==='QA PREVIEW BUILTIN'));
