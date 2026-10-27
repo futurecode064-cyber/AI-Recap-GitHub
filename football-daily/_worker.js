@@ -769,6 +769,7 @@ function sbBrandHtml(source,c){
  // On the odds page the original brand.js is loaded, but brand.css was inline on YKZ.
  return h.replace("</head>",'<link rel="stylesheet" href="./brand.css?v='+c.revision+'"><script defer src="../site-layout.js?v=20261027"></script></head>');
 }
+async function sbDispatch(env){return editorGithub(env,EDITOR_DELIVERY,"actions/workflows/football-site-builder-deploy.yml/dispatches","POST",{ref:"main"});}
 async function sbApi(request,env,path){
  if(!ready(env)||!(await hasSession(request,env)))return gzJson({error:"Owner Login လိုအပ်ပါသည်"},401);
  const url=new URL(request.url);
@@ -793,7 +794,7 @@ async function sbApi(request,env,path){
    if(!sbSlug(body.slug))sbFail("Slug မမှန်ပါ");
    const data=await editorFile(env,EDITOR_SOURCE,SB_REGISTRY,"main",true);
    if(!data?.sites?.[body.slug])sbFail("Website မရှိပါ",404);
-   await editorDispatch(env);return gzJson({message:"Production Mirror Workflow ကို ခေါ်ပြီးပါပြီ။ Live Status ပြန်စစ်ပါ။"});
+   await sbDispatch(env);return gzJson({message:"Production Mirror Workflow ကို ခေါ်ပြီးပါပြီ။ Live Status ပြန်စစ်ပါ။"});
   }
   const ref=await editorGithub(env,EDITOR_SOURCE,"git/ref/heads/main"),head=ref.object.sha;
   const registry=await editorFile(env,EDITOR_SOURCE,SB_REGISTRY,head,true)||{version:1,sites:{}};
@@ -826,7 +827,7 @@ async function sbApi(request,env,path){
   const tree=await editorGithub(env,EDITOR_SOURCE,"git/trees","POST",{base_tree:headCommit.tree.sha,tree:treeItems});
   const commit=await editorGithub(env,EDITOR_SOURCE,"git/commits","POST",{message:(old?"Update ":"Create ")+"site-builder website "+c.slug,tree:tree.sha,parents:[head]});
   await editorGithub(env,EDITOR_SOURCE,"git/refs/heads/main","PATCH",{sha:commit.sha,force:false});
-  let dispatched=true;try{await editorDispatch(env)}catch{dispatched=false}
+  let dispatched=true;try{await sbDispatch(env)}catch{dispatched=false}
   return gzJson({slug:c.slug,url:url.origin+"/"+c.slug+"/",revision:c.revision,assets:c.assets,commit:commit.sha,dispatched},202);
  }catch(e){return gzJson({error:e.message||"Site Builder Error"},e.status||502)}
 }
