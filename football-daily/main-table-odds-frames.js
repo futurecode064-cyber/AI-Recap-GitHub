@@ -105,7 +105,7 @@
       const blob=await new Promise((resolve,reject)=>canvas.toBlob(
         b=>b?.size?resolve(b):reject(Error('PNG ဖန်တီးမရပါ')),'image/png'));
       const url=URL.createObjectURL(blob);urls.push(url);
-      const filename=settings.design[0]+'-odds-table-'+sheet.reportDate+'-'+(i+1)+'.png';
+      const filename=(professional?.id||settings.design[0])+'-odds-table-'+sheet.reportDate+'-'+(i+1)+'.png';
       const a=document.createElement('a');
       a.href=url;a.download=filename;
       a.textContent='⬇ PNG ပုံ '+(i+1)+' Download · '+parts[i].length+' ပွဲ';
@@ -119,7 +119,7 @@
     }
     if(archive){
       const url=URL.createObjectURL(archive.finish()),a=document.createElement('a');
-      a.href=url;a.download=settings.design[0]+'-odds-table-'+sheet.reportDate+'.zip';
+      a.href=url;a.download=(professional?.id||settings.design[0])+'-odds-table-'+sheet.reportDate+'.zip';
       a.textContent='⬇ ပုံ '+parts.length+' ပုံ PNG ZIP Download';
       el('tofOutput').prepend(a);urls.push(url);a.click();
     }
