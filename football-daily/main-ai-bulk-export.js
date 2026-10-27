@@ -228,7 +228,7 @@
   text(ctx,AI_BRAND[opts.frame]||"FUTURE CODE  •  MYANMAR FOOTBALL DAILY",20,size.height-23,670,19,"left","#e1ebff");
   text(ctx,scope==="all"?"ALL LEAGUES":String(scope),WIDTH-20,size.height-23,460,19,"right","#eedca6");
   canvas=customFrame?await window.FutureCodeCustomFrames.wrap(canvas,customFrame):await brandCanvas(canvas,opts.frame,{date,matchCount:page.matchCount});
-  if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,"ai");
+  if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,"ai",String(opts.frame||"").startsWith("pro:")?opts.frame:"none");
    // Keep the complete long poster as one image. Never silently drop fixtures.
    const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
    if(!blob)throw Error("PNG generation failed");
