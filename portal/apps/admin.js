@@ -97,29 +97,42 @@
         tracking.textContent=siteStatus[status]||siteStatus.listed;
         card.append(tracking);
         const metrics=document.createElement("div");metrics.className="metrics";
-        for (const [label,count] of [
-          ["APK Page Views",site.pageViews],["APK Page Browsers",site.uniqueBrowsers],
-          ["Website Button Clicks",site.downloadClicks],["ဒီနေ့",site.today],
-          ["ဒီအပတ်",site.week],["ဒီလ",site.month]
-        ]){
+        const isCatalogue=site.key==="future-code-apps";
+        const hasApkPage=isCatalogue||site.group==="football"||site.siteType==="download";
+        const allMetricRows=[];
+        if(!isCatalogue){
+          allMetricRows.push(
+            ["Website Views",site.websiteViews],
+            ["Website Visitors",site.websiteVisitors],
+            ["ဒီနေ့ Website Views",site.websiteToday],
+            ["ဒီအပတ် Website Views",site.websiteWeek],
+            ["ဒီလ Website Views",site.websiteMonth]
+          );
+        }
+        if(hasApkPage){
+          allMetricRows.push(
+            ["APK Download Page Views",site.pageViews],
+            ["APK Page Browsers",site.uniqueBrowsers],
+            ["APK Download Button Clicks",site.downloadClicks],
+            ["ဒီနေ့ APK Clicks",site.today],
+            ["ဒီအပတ် APK Clicks",site.week],
+            ["ဒီလ APK Clicks",site.month]
+          );
+        }
+        for(const [label,count] of allMetricRows){
           const cell=document.createElement("div");cell.className="site-metric";
           const small=document.createElement("small");small.textContent=label;
           const value=document.createElement("b");value.textContent=renderCount(count);
           cell.append(small,value);metrics.append(cell);
         }
-        if (site.key !== "future-code-apps") {
-          for(const [label,field] of [
-            ["Website Views","websiteViews"],
-            ["Website Visitors","websiteVisitors"],
-            ["ဒီနေ့ Website Views","websiteToday"],
-            ["ဒီအပတ် Website Views","websiteWeek"],
-            ["ဒီလ Website Views","websiteMonth"]
-          ]){
-            const col=document.createElement("div");col.className="site-metric";
-            const title=document.createElement("small");title.textContent=label;
-            const number=document.createElement("b");
-            number.textContent=renderCount(site[field]);
-            col.append(title,number);metrics.append(col);
+        if(site.group==="games"){
+          for(const label of ["တကယ် Game Play Sessions","Online ကစားနေသူ (Live)"]){
+            const cell=document.createElement("div");cell.className="site-metric";
+            const small=document.createElement("small");small.textContent=label;
+            const value=document.createElement("b");value.textContent="—";
+            const hint=document.createElement("small");
+            hint.textContent="မူရင်း Game Server Tracking မချိတ်ရသေး";
+            cell.append(small,value,hint);metrics.append(cell);
           }
         }
         if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"].includes(site.key)) {
@@ -172,7 +185,24 @@
         const texts=[app.name,app.appViews,app.clicks,"—",app.today,app.week,app.month,app.uniqueBrowsers];
         texts.forEach((v,i)=>{
           const cell=document.createElement("td");if(i)cell.className="num";
-          cell.textContent=i === 3 ? "—" : (i ? format.format(v||0) : v);
+          if(i===0){
+            const name=document.createElement("strong");name.textContent=app.name;
+            cell.append(name);
+            if(typeof app.downloadUrl==="string"&&/^https:\/\//.test(app.downloadUrl)){
+              const link=document.createElement("a");
+              link.href=app.downloadUrl;link.target="_blank";link.rel="noopener noreferrer";
+              link.textContent=" မူရင်း APK ↗";
+              link.className="original-apk-link";
+              cell.append(link);
+            }
+            if(app.downloadHost){
+              const provider=document.createElement("small");provider.className="apk-source-label";
+              provider.textContent="Source: "+app.downloadHost;
+              cell.append(provider);
+            }
+          }else{
+            cell.textContent=i===3?"—":format.format(v||0);
+          }
           if (i === 3) { cell.dataset.releaseAppSite=app.siteKey; cell.dataset.releaseAppKey=app.key; }
           line.append(cell);
         });
