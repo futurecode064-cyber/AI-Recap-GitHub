@@ -62,7 +62,7 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
 <main>
 <span class="tag">PRIVATE ADMIN · ANALYTICS</span>
 <h1>Download Statistics Dashboard</h1>
-<p class="subtitle">Future Code APK များ၏ Download ခလုတ်နှိပ်မှုနှင့် Website ကြည့်ရှုမှုစာရင်းကို မြန်မာစံတော်ချိန်ဖြင့် ကြည့်ရန်</p>
+<p class="subtitle">Future Code APK များ၏ Download ခလုတ်နှိပ်မှုနှင့် Website ကြည့်ရှုမှုနှင့် APK Detail Views စာရင်းကို မြန်မာစံတော်ချိန်ဖြင့် ကြည့်ရန်</p>
 <section id="authView" class="panel" aria-labelledby="loginHeading">
   <h2 id="loginHeading">🔒 Admin Login</h2>
   <p class="hint">ခွင့်ပြုထားသော Admin အကောင့်တစ်ခုတည်းသာ Statistics ကြည့်နိုင်ပါသည်။ Password ကို Website မှာ သိမ်းဆည်းထားခြင်း မရှိပါ။</p>
@@ -85,7 +85,9 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
     <div class="actions"><button class="secondary" id="refresh" type="button">↻ Refresh</button><button class="secondary" id="logout" type="button">Logout</button></div>
   </div>
   <div class="stats">
-    <div class="stat"><small>APK Download Page Views (အားလုံး)</small><strong id="visits">—</strong></div>
+    <div class="stat"><small>APK Download Page Views</small><strong id="visits">—</strong></div>
+    <div class="stat"><small>ပုံမှန် Website Page Views</small><strong id="websiteVisits">—</strong></div>
+    <div class="stat"><small>APK Detail Views (Tracking စပြီးနောက်)</small><strong id="detailViews">—</strong></div>
     <div class="stat"><small>Download Clicks (စုစုပေါင်း)</small><strong id="downloads">—</strong></div>
     <div class="stat"><small>Unique Browser IDs (ခန့်မှန်း)</small><strong id="browsers">—</strong></div>
     <div class="stat"><small>ဒီနေ့ Download</small><strong id="today">—</strong></div>
@@ -100,7 +102,7 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
   </section>
   <section class="panel" aria-labelledby="tableHeading">
     <h2 id="tableHeading">APK တစ်ခုချင်းစီ — Category အလိုက် Download စာရင်း</h2>
-    <div style="overflow-x:auto"><table><thead><tr><th>APK အမည်</th><th class="num">စုစုပေါင်း</th><th class="num">ဒီနေ့</th><th class="num">ဒီအပတ်</th><th class="num">ဒီလ</th><th class="num">Browser</th></tr></thead><tbody id="appRows"></tbody></table></div>
+    <div style="overflow-x:auto"><table><thead><tr><th>APK အမည်</th><th class="num">Detail Views</th><th class="num">Download Clicks</th><th class="num">ဒီနေ့</th><th class="num">ဒီအပတ်</th><th class="num">ဒီလ</th><th class="num">Browser</th></tr></thead><tbody id="appRows"></tbody></table></div>
   </section>
   <section class="panel" style="margin-top:18px" aria-labelledby="trendHeading">
     <h2 id="trendHeading">နောက်ဆုံး ၃၀ ရက် Download Clicks</h2>
@@ -139,5 +141,5 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
   <p id="dashStatus" role="status" class="status" aria-live="polite"></p>
 </section>
 </main><footer>Future Code AI Studio · Private Analytics Dashboard</footer>
-<script src="admin.js?v=journal-site-views-20261021" defer></script>
+<script src="admin.js?v=portfolio-views-20261027" defer></script>
 </body></html>
