@@ -1,7 +1,7 @@
 'use strict';
 (()=>{
 const cards=[...document.querySelectorAll('#app-grid .card')],search=document.getElementById('app-search');let category='all';
-const labels={all:'App များအားလုံး',premium:'သင်တန်း APK · Premium',game:'Game APK',daily:'လက်တွေ့ နေ့စဉ်သုံး APK'};
+const labels={all:'App များအားလုံး',premium:'သင်တန်း APK · Premium',language:'ဘာသာစကား APK',game:'Game APK',daily:'လက်တွေ့ နေ့စဉ်သုံး APK'};
 const mm=n=>String(n).replace(/\d/g,d=>'၀၁၂၃၄၅၆၇၈၉'[Number(d)]);
 function filter(){let count=0;const q=search.value.trim().toLocaleLowerCase();cards.forEach(card=>{card.hidden=!((category==='all'||card.dataset.category===category)&&card.textContent.toLocaleLowerCase().includes(q));if(!card.hidden)count++;});document.getElementById('category-title').textContent=labels[category];document.getElementById('app-count').textContent='APK '+mm(count)+' ခု / စုစုပေါင်း '+mm(cards.length)+' ခု';document.getElementById('empty-apps').hidden=count>0;document.querySelectorAll('[data-category]:not(.card)').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===category)));}
 document.querySelectorAll('.store-categories button').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.category;filter();}));search.addEventListener('input',filter);
