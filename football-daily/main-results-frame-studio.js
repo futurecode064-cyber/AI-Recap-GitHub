@@ -278,7 +278,7 @@
           const url=URL.createObjectURL(blob);urls.push(url);
           const page=document.createElement("div");page.className="rfs-page";
           const link=document.createElement("a");link.href=url;
-          link.download=(frame.plain?"goal-results-color":frame.id+"-results")+"-"+date+
+          link.download=(frame.professionalId?frame.professionalId.replace(':','-')+'-results':frame.plain?"goal-results-color":frame.id+"-results")+"-"+date+
             (pages.length>1?"-"+(i+1)+"-of-"+pages.length:"")+".png";
           link.textContent="⬇ ပုံ "+(i+1)+"/"+pages.length+" PNG Download · "+pages[i].length+" ပွဲ";
           const img=document.createElement("img");img.src=url;img.alt=frame.title+" ဂိုးရလဒ် PNG "+(i+1);
