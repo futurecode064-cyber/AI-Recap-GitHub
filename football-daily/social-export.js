@@ -161,7 +161,7 @@
   const ctx=canvas.getContext("2d");if(!ctx)throw Error("PNG Canvas unavailable");
   const imgs=await Promise.all([load(match.homeCrestUrl),load(match.awayCrestUrl),load(opts.brandLogoUrl)]);
   draw(ctx,match,opts,imgs,s[0],s[1]);
-  const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews"):canvas;
+  const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews",document.getElementById("fcMatchCustomFrame")?.value?.startsWith("pro:")?document.getElementById("fcMatchCustomFrame").value:"none"):canvas;
   const blob=await new Promise((resolve,reject)=>framed.toBlob(v=>v?resolve(v):reject(Error("PNG encoding failed")),"image/png"));
   const url=URL.createObjectURL(blob),link=document.createElement("a");
   const slug=t=>String(t||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
