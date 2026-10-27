@@ -36,6 +36,11 @@ jobs:
           echo "APK_VERSION=$VER" >> "$GITHUB_ENV"
           echo "APK_FILE=Future_Code_Chinese_v$VER.apk" >> "$GITHUB_ENV"
           echo "RELEASE_TAG=chinese-learning-v$VER" >> "$GITHUB_ENV"
+      - name: Prepare bundled offline Mandarin speech
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak-ng ffmpeg
+          python3 scripts/generate_offline_audio.py chinese chinese-learning/app/src/main/assets/audio
       - name: Assemble APK
         working-directory: chinese-learning
         run: gradle --no-daemon :app:assembleRelease :app:assembleDebug
