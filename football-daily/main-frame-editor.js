@@ -70,6 +70,7 @@
   node("fcfeName").value=p.name;node("fcfeColor").value=color(p.color);
   node("fcfeTop").value=p.top;node("fcfeBottom").value=p.bottom;
   node("fcfeFile").value="";node("fcfeTopFile").value="";node("fcfeBottomFile").value="";pendingImage="";pendingTop="";pendingBottom="";clearTop=false;clearBottom=false;
+  for(const [id,src] of [["fcfeTopPreview",p.topImage],["fcfeBottomPreview",p.bottomImage]]){node(id).hidden=!src;if(src)node(id).src=src;}
   node("fcfeTopStatus").textContent=p.topImage?"အပေါ် Banner ထည့်ထားသည်":"မထည့်ရသေးပါ";node("fcfeBottomStatus").textContent=p.bottomImage?"အောက် Banner ထည့်ထားသည်":"မထည့်ရသေးပါ";
   if(selected==="colour"&&state.edited.colour){
     const theme=document.getElementById("tofColour"),picker=document.getElementById("tofCustom");
@@ -93,7 +94,7 @@
   const url=URL.createObjectURL(file);
   try{
    const img=await new Promise((ok,bad)=>{const i=new Image();i.onload=()=>ok(i);i.onerror=()=>bad(Error("Frame ပုံဖတ်မရပါ"));i.src=url;});
-   if(img.naturalWidth<200||img.naturalHeight<100)throw Error("Frame ပုံ 200×100 px ထက်ကြီးပါစေ။");
+   if(img.naturalWidth<200||img.naturalHeight<32)throw Error("Frame ပုံ 200×32 px ထက်ကြီးပါစေ။");
    const r=Math.min(1,1600/img.naturalWidth,2400/img.naturalHeight),c=document.createElement("canvas");
    c.width=Math.round(img.naturalWidth*r);c.height=Math.round(img.naturalHeight*r);c.getContext("2d").drawImage(img,0,0,c.width,c.height);
    let data=c.toDataURL("image/webp",.82);if(!data.startsWith("data:image/webp"))data=c.toDataURL("image/jpeg",.75);
@@ -150,8 +151,8 @@
    <label>Frame နာမည်<input id="fcfeName" maxlength="70" type="text"></label>
    <label>Frame အရောင်<input id="fcfeColor" type="color"></label>
    <label>Frame ပုံအသစ် <input id="fcfeFile" type="file" accept="image/jpeg,image/png,image/webp"><small id="fcfePicture"></small></label>
-   <label>အပေါ် Banner ပုံ<input id="fcfeTopFile" type="file" accept="image/jpeg,image/png,image/webp"><small id="fcfeTopStatus"></small><button type="button" id="fcfeClearTop">အပေါ် Banner ဖြုတ်</button></label>
-   <label>အောက် Banner ပုံ<input id="fcfeBottomFile" type="file" accept="image/jpeg,image/png,image/webp"><small id="fcfeBottomStatus"></small><button type="button" id="fcfeClearBottom">အောက် Banner ဖြုတ်</button></label>
+   <label>အပေါ် Banner ပုံ<input id="fcfeTopFile" type="file" accept="image/jpeg,image/png,image/webp"><small id="fcfeTopStatus"></small><img id="fcfeTopPreview" alt="အပေါ် Banner နမူနာ" hidden><button type="button" id="fcfeClearTop">အပေါ် Banner ဖြုတ်</button></label>
+   <label>အောက် Banner ပုံ<input id="fcfeBottomFile" type="file" accept="image/jpeg,image/png,image/webp"><small id="fcfeBottomStatus"></small><img id="fcfeBottomPreview" alt="အောက် Banner နမူနာ" hidden><button type="button" id="fcfeClearBottom">အောက် Banner ဖြုတ်</button></label>
    <label>အပေါ် Frame ပုံနေရာ (%)<input id="fcfeTop" type="number" min="0" max="40"></label>
    <label>အောက် Frame ပုံနေရာ (%)<input id="fcfeBottom" type="number" min="0" max="40"></label>
   </div>
@@ -171,7 +172,7 @@
    #futureCodeFrameEditor .fcfe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}
    #futureCodeFrameEditor label{font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:7px}
    #futureCodeFrameEditor input[type=text],#futureCodeFrameEditor input[type=number],#futureCodeFrameEditor input[type=file]{width:100%;box-sizing:border-box;padding:8px;border:1px solid #a9bac6;border-radius:7px;color:#1c3448;font:inherit}
-   #futureCodeFrameEditor input[type=color]{height:42px;width:100%}
+   #futureCodeFrameEditor input[type=color]{height:42px;width:100%}#futureCodeFrameEditor .fcfe-grid img{width:100%;max-height:110px;object-fit:contain;background:#e5edf4;border-radius:6px}#futureCodeFrameEditor [hidden]{display:none!important}
    #futureCodeFrameEditor button{border:0;border-radius:8px;background:#17457e;color:#fff;font:700 12px/1.8 "Noto Sans Myanmar",sans-serif;cursor:pointer;padding:11px 13px}
    #futureCodeFrameEditor #fcfeRemove{background:#a12632}
    #futureCodeFrameEditor .fcfe-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:end;margin:12px 0}
@@ -190,9 +191,9 @@
    try{pendingImage=await upload(e.target.files[0]);node("fcfePicture").textContent="Frame ပုံအသစ် ရွေးပြီး။ သိမ်းရန် ခလုတ်နှိပ်ပါ။";}
    catch(err){pendingImage="";say(err.message,true);}
   });
-  for(const [input,status,key] of [["fcfeTopFile","fcfeTopStatus","top"],["fcfeBottomFile","fcfeBottomStatus","bottom"]])node(input).addEventListener("change",async e=>{try{const image=await upload(e.target.files[0]);if(key==="top"){pendingTop=image;clearTop=false;}else{pendingBottom=image;clearBottom=false;}node(status).textContent="ပုံရွေးပြီး — သိမ်းရန် ခလုတ်နှိပ်ပါ";}catch(err){say(err.message,true);}});
-  node("fcfeClearTop").onclick=()=>{pendingTop="";clearTop=true;node("fcfeTopStatus").textContent="သိမ်းပြီးလျှင် အပေါ် Banner ဖြုတ်ပါမည်";};
-  node("fcfeClearBottom").onclick=()=>{pendingBottom="";clearBottom=true;node("fcfeBottomStatus").textContent="သိမ်းပြီးလျှင် အောက် Banner ဖြုတ်ပါမည်";};
+  for(const [input,status,key] of [["fcfeTopFile","fcfeTopStatus","top"],["fcfeBottomFile","fcfeBottomStatus","bottom"]])node(input).addEventListener("change",async e=>{try{const image=await upload(e.target.files[0]);if(key==="top"){pendingTop=image;clearTop=false;}else{pendingBottom=image;clearBottom=false;}const preview=node(key==="top"?"fcfeTopPreview":"fcfeBottomPreview");preview.src=image;preview.hidden=false;node(status).textContent="ပုံရွေးပြီး — သိမ်းရန် ခလုတ်နှိပ်ပါ";}catch(err){say(err.message,true);}});
+  node("fcfeClearTop").onclick=()=>{pendingTop="";clearTop=true;node("fcfeTopPreview").hidden=true;node("fcfeTopStatus").textContent="သိမ်းပြီးလျှင် အပေါ် Banner ဖြုတ်ပါမည်";};
+  node("fcfeClearBottom").onclick=()=>{pendingBottom="";clearBottom=true;node("fcfeBottomPreview").hidden=true;node("fcfeBottomStatus").textContent="သိမ်းပြီးလျှင် အောက် Banner ဖြုတ်ပါမည်";};
   node("fcfeAdd").onclick=async()=>{
    try{if(state.custom.length>=40)throw Error("Frame အများဆုံး ၄၀ မျိုး");const p={...form(),image:pendingImage||"",topImage:pendingTop||"",bottomImage:pendingBottom||""};
     const id="custom-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8);
