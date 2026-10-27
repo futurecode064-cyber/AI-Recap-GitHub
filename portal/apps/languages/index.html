@@ -62,4 +62,4 @@ $("restore").onclick=()=>{try{const raw=$("restore-json").value.trim();if(raw.le
 $("reset").onclick=()=>{if(confirm("ယခုဘာသာစကား သင်ယူမှုမှတ်တမ်းအားလုံး ဖျက်မလား?")){delete storage[lang];save();render()}};
 $("update").onclick=async()=>{const el=$("update-status");el.textContent="Version စစ်နေပါသည်...";if(window.FutureCodeNative?.checkUpdates){window.FutureCodeNative.checkUpdates();el.textContent="Android App Update စစ်နေပါသည်။";return}try{const r=await fetch("./latest.json?ts="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("update server မရရှိပါ");const j=await r.json();el.textContent="Website/Android Version: "+(j.versionName||"1.0.0")+(j.announcement?.text?" · "+j.announcement.text:"")}catch(e){el.textContent="Update server ဆက်သွယ်မရပါ။ အင်တာနက်စစ်ပါ။"}};
 render();
-</script></body></html>
+</script><script src="../site-views.js?v=20261027" data-site-key="language-academy-web"></script></body></html>
