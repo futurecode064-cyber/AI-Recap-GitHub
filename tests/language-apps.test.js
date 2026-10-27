@@ -57,7 +57,7 @@ assert.ok(mi>=0);
 const languages=Function(inline[0][1].slice(mi,inline[0][1].indexOf('];',mi)+2)+' return languages;')();
 assert.equal(languages.length,12);
 assert.equal(new Set(languages.map(l=>l[0])).size,12);
-for(const l of languages)assert.equal(l[4].length,18);
+for(const l of languages)assert.equal(l[4].length,12);
 assert.match(academyHtml,/id="restore"/);
 checks++;
 const manifest=json('portal/apps/languages/latest.json');
@@ -81,4 +81,4 @@ for(const file of ['.github/workflows/future-code-thai-apk.yml','.github/workflo
  assert.ok(!workflow.includes('echo "$ANDROID_KEYSTORE_PASS"'));
 }
 checks++;
-console.log('PASS '+checks+' language APK checks: 4 release cards, 4 links, 6/18 Thai, 6/24/192 Chinese, 12-language academy with 18 phrases each, Android versions and secured release workflows.');
+console.log('PASS '+checks+' language APK checks: 4 release cards, 4 links, 6/18 Thai, 6/24/192 Chinese, 12-language web sampler, Android versions and secured release workflows.');
