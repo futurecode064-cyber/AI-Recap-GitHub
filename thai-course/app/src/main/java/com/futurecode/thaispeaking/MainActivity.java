@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
     private static final int VOICE_REQUEST=31;
     private WebView web;
     private TextToSpeech tts;
+    private volatile boolean thaiVoiceReady=false;
     private boolean offlineTried = false;
 
     @SuppressLint({"SetJavaScriptEnabled","AddJavascriptInterface"})
@@ -75,9 +76,9 @@ public class MainActivity extends Activity {
         tts=new TextToSpeech(this,status->{
             if(status==TextToSpeech.SUCCESS) {
                 int availability=tts.setLanguage(new Locale("th","TH"));
-                if(availability==TextToSpeech.LANG_MISSING_DATA||availability==TextToSpeech.LANG_NOT_SUPPORTED)
-                    runOnUiThread(()->Toast.makeText(this,"Thai TTS အသံဒေတာ ထည့်သွင်းရန် လိုအပ်သည်",Toast.LENGTH_LONG).show());
-            }
+                thaiVoiceReady=availability!=TextToSpeech.LANG_MISSING_DATA&&availability!=TextToSpeech.LANG_NOT_SUPPORTED;
+                if(!thaiVoiceReady) reportThaiVoice("Thai အသံဒေတာ မရှိသေးပါ။ Thai အသံထည့်သွင်းရန် နှိပ်ပါ။",true);
+            } else reportThaiVoice("ဖုန်းမှာ Text-to-Speech Engine အလုပ်မလုပ်ပါ။ Voice Settings ကို ဖွင့်ပါ။",true);
         });
         web.loadUrl(HOME);
         scheduleUpdateCheck();
@@ -95,6 +96,9 @@ public class MainActivity extends Activity {
         }catch(Exception ignored){}
     }
 
+    private void reportThaiVoice(String message,boolean needsInstall){
+        runOnUiThread(()->{if(web!=null) web.evaluateJavascript("window.FCThaiTtsStatus&&window.FCThaiTtsStatus("+quoteJs(message)+","+needsInstall+")",null);});
+    }
     private static String quoteJs(String s){
         if(s==null)return "\"\"";
         StringBuilder out=new StringBuilder("\"");
@@ -119,7 +123,30 @@ public class MainActivity extends Activity {
         @JavascriptInterface public void speak(String text){
             if(text==null||text.length()>300)return;
             runOnUiThread(()->{
-                if(tts!=null){int lang=tts.setLanguage(new Locale("th","TH"));if(lang>=0)tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"thai-utterance");else Toast.makeText(MainActivity.this,"ဖုန်းထဲမှာ Thai အသံထည့်သွင်းပါ",Toast.LENGTH_LONG).show();}
+                if(tts==null||!thaiVoiceReady){reportThaiVoice("Thai TTS အသံ မရှိပါ။ Thai အသံထည့်သွင်းရန် ကိုနှိပ်ပါ။",true);return;}
+                int lang=tts.setLanguage(new Locale("th","TH"));
+                if(lang<0){thaiVoiceReady=false;reportThaiVoice("Thai Language Voice မရရှိပါ။ အသံဒေတာ ထည့်သွင်းပါ။",true);return;}
+                tts.setSpeechRate(0.85f);
+                int result=tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"thai-utterance");
+                if(result==TextToSpeech.ERROR)reportThaiVoice("အသံဖတ်မရပါ။ Thai Voice ကို စစ်ဆေးပါ။",true);
+                else reportThaiVoice("🔊 Thai အသံဖတ်ပေးနေသည်...",false);
+            });
+        }
+        @JavascriptInterface public void installThaiVoice(){
+            runOnUiThread(()->{
+                try{startActivity(new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA));}
+                catch(Exception e){
+                    try{startActivity(new Intent("com.android.settings.TTS_SETTINGS"));}
+                    catch(Exception ignored){reportThaiVoice("Phone Settings → Text-to-speech output → Thai Voice ထည့်သွင်းပါ။",true);}
+                }
+            });
+        }
+        @JavascriptInterface public void checkThaiVoice(){
+            runOnUiThread(()->{
+                if(tts==null){reportThaiVoice("Text-to-Speech မစတင်နိုင်ပါ။",true);return;}
+                int code=tts.setLanguage(new Locale("th","TH"));
+                thaiVoiceReady=code>=0;
+                reportThaiVoice(thaiVoiceReady?"Thai Voice ရရှိပါပြီ။ 🔊 ခလုတ်ကို ပြန်နှိပ်ပါ။":"Thai အသံ မရရှိသေးပါ။ ဖုန်း Settings မှ အသံကို ဒေါင်းလုပ်လုပ်ပါ။",!thaiVoiceReady);
             });
         }
         @JavascriptInterface public void recognize(String expected){
@@ -153,6 +180,7 @@ public class MainActivity extends Activity {
     @Override public void onBackPressed(){
         if(web!=null&&web.canGoBack())web.goBack();else super.onBackPressed();
     }
+    @Override protected void onResume(){super.onResume();if(tts!=null){int c=tts.setLanguage(new Locale("th","TH"));thaiVoiceReady=c>=0;}}
     @Override protected void onDestroy(){
         if(tts!=null){tts.stop();tts.shutdown();}
         if(web!=null){web.removeJavascriptInterface("FCNative");web.destroy();}
