@@ -30,7 +30,8 @@ jobs:
             await page.locator('#fcpName').fill('SECTION QA FRAME');
             await page.locator('#fcpPlacement input[value=previews]').check();
             await page.locator('#fcpAdd').click({timeout:15000});
-            await page.waitForFunction(()=>document.querySelector('#fcpStatus')?.textContent.trim(),null,{timeout:15000});
+            await page.waitForTimeout(2000);
+            console.log('DIAGNOSTIC',JSON.stringify(await page.evaluate(()=>({status:document.querySelector('#fcpStatus')?.textContent,options:[...document.querySelectorAll('#fcpFrame option')].map(x=>x.textContent),selected:[...document.querySelectorAll('#fcpPlacement input:checked')].map(x=>x.value),script:[...document.scripts].find(x=>x.src.includes('main-professional-frame-studio'))?.src}))));
             console.log('ADD STATUS',await page.locator('#fcpStatus').innerText());
             assert((await page.locator('#fcpStatus').innerText()).includes('Download'),'Add did not succeed');
             assert.equal(await page.locator('#brandFrame option').filter({hasText:'SECTION QA FRAME'}).count(),1);
