@@ -257,7 +257,27 @@
   function renderReleaseCounts(rows,source){
     document.querySelectorAll('[data-release-app-key]').forEach(el=>{
       const parts=rows.filter(r=>r.siteKey===el.dataset.releaseAppSite&&r.appKey===el.dataset.releaseAppKey);
-      el.textContent=parts.length ? format.format(parts.reduce((sum,r)=>sum+Math.max(0,Number(r.downloads)||0),0)) : "—";
+      el.replaceChildren();
+      if(!parts.length){el.textContent="—";return;}
+      const count=document.createElement("strong");
+      count.textContent=format.format(parts.reduce((sum,r)=>sum+Math.max(0,Number(r.downloads)||0),0));
+      el.append(count);
+      if(["chinese-learning","language-academy"].includes(el.dataset.releaseAppKey)){
+        const details=document.createElement("details");
+        details.className="release-info";
+        const summary=document.createElement("summary");
+        summary.textContent="Version အလိုက် · "+source;
+        const list=document.createElement("ul");
+        parts.slice().sort((a,b)=>b.tag.localeCompare(a.tag)).forEach(row=>{
+          const item=document.createElement("li");
+          item.textContent=row.tag+" — "+format.format(row.downloads)+" downloads";
+          list.append(item);
+        });
+        details.append(summary,list);
+        el.append(details);
+      }else{
+        el.title=source+" · GitHub Releases APK asset downloads";
+      }
     });
     for(const site of releaseSites){
       const count=document.querySelector('[data-release-count-site="'+site+'"]');
@@ -311,7 +331,14 @@
         }
       }catch(_){}
     }
-    if(loaded)renderReleaseCounts(rows,loaded===feeds.length?"GitHub Live":"GitHub Partial");
+    if(loaded){
+      // Keep snapshot data for repositories that could not be reached; never erase
+      // verified historical rows with a partial API response.
+      const liveKeys=new Set(rows.map(r=>[r.siteKey,r.appKey||"",r.tag,r.asset||""].join("|")));
+      const fallback=(snapshot?.releases||[]).filter(r=>!liveKeys.has([r.siteKey,r.appKey||"",r.tag,r.asset||""].join("|")) &&
+        !rows.some(live=>live.siteKey===r.siteKey && live.tag===r.tag));
+      renderReleaseCounts([...rows,...fallback],loaded===feeds.length?"GitHub Live":"GitHub Live + Snapshot");
+    }
     else if(!snapshot?.releases) {
       for(const site of releaseSites){
         const count=document.querySelector('[data-release-count-site="'+site+'"]');

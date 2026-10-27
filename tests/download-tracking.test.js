@@ -46,7 +46,7 @@ for(const click of clicks){
   assert.equal(click.options.method,'POST');
   assert.ok(click.url.endsWith('/rest/v1/rpc/fc_record_portfolio_event'));
 }
-console.log('PASS: 14 direct APK links tracked; Kyar and Language Academy demos are not counted as APK downloads.');
+console.log('PASS: 15 direct APK links tracked; Kyar navigation is not counted as an APK download.');
 const adminHtml = fs.readFileSync(path.join(root, 'portal/apps/admin.html'), 'utf8');
 const adminJs = fs.readFileSync(path.join(root, 'portal/apps/admin.js'), 'utf8');
 const releaseSnapshot = JSON.parse(fs.readFileSync(path.join(root, 'portal/apps/github-releases-snapshot.json'), 'utf8'));
@@ -63,4 +63,7 @@ assert.ok(adminJs.includes('refreshReleaseCounts();'), 'dashboard must fetch rel
 assert.equal(releaseSnapshot.releases.filter(x => x.siteKey === 'ykz-family').reduce((n,x)=>n+x.downloads,0), 3);
 assert.equal(releaseSnapshot.releases.filter(x => x.siteKey === 'ko-thet-family').reduce((n,x)=>n+x.downloads,0), 1);
 assert.equal(releaseSnapshot.releases.filter(x => x.siteKey === 'bw-sport').reduce((n,x)=>n+x.downloads,0), 0);
+assert.equal(releaseSnapshot.releases.filter(x => x.appKey === 'chinese-learning').reduce((n,x)=>n+x.downloads,0), 7, 'Chinese historical release downloads');
+assert.equal(releaseSnapshot.releases.filter(x => x.appKey === 'language-academy').reduce((n,x)=>n+x.downloads,0), 5, 'Language Academy historical release downloads');
+assert.ok(adminJs.includes('Version အလိုက် · '+''), 'Chinese and Language versions must be expandable');
 console.log('PASS: GitHub APK Release historical counts are displayed independently of tracked click events.');

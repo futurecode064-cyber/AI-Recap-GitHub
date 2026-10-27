@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-10-21",
-  "source": "GitHub Releases API, download_count per release asset",
+  "asOf": "2026-10-27",
+  "source": "GitHub Releases API, APK asset download_count per release; snapshots refresh live on dashboard",
   "repository": "futurecode064-cyber/AI-Recap-GitHub",
   "releases": [
     {
@@ -32,6 +32,55 @@
       "siteKey": "bw-sport",
       "asset": "BW-Sport-Journal.apk",
       "downloads": 0
+    },
+    {
+      "tag": "fc-language-academy-v1.0.2",
+      "siteKey": "future-code-apps",
+      "appKey": "language-academy",
+      "asset": "Future_Code_Language_Academy_v1.0.2.apk",
+      "downloads": 0
+    },
+    {
+      "tag": "fc-language-academy-v1.0.1",
+      "siteKey": "future-code-apps",
+      "appKey": "language-academy",
+      "asset": "Future_Code_Language_Academy_v1.0.1.apk",
+      "downloads": 1
+    },
+    {
+      "tag": "chinese-learning-v1.0.3",
+      "siteKey": "future-code-apps",
+      "appKey": "chinese-learning",
+      "asset": "Future_Code_Chinese_v1.0.3.apk",
+      "downloads": 1
+    },
+    {
+      "tag": "chinese-learning-v1.0.2",
+      "siteKey": "future-code-apps",
+      "appKey": "chinese-learning",
+      "asset": "Future_Code_Chinese_v1.0.2.apk",
+      "downloads": 1
+    },
+    {
+      "tag": "chinese-learning-v1.0.1",
+      "siteKey": "future-code-apps",
+      "appKey": "chinese-learning",
+      "asset": "Future_Code_Chinese_v1.0.1.apk",
+      "downloads": 5
+    },
+    {
+      "tag": "chinese-learning-v1.0.0",
+      "siteKey": "future-code-apps",
+      "appKey": "chinese-learning",
+      "asset": "Future_Code_Chinese_v1.0.0.apk",
+      "downloads": 0
+    },
+    {
+      "tag": "fc-language-academy-v1.0.0-preview",
+      "siteKey": "future-code-apps",
+      "appKey": "language-academy",
+      "asset": "Future_Code_Language_Academy_v1.0.0.apk",
+      "downloads": 4
     }
   ]
 }
