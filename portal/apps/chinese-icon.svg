@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128" role="img" aria-label="Future Code Chinese">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#09315f"/><stop offset="1" stop-color="#146acc"/></linearGradient></defs>
+<rect width="128" height="128" rx="26" fill="url(#b)"/>
+<circle cx="45" cy="60" r="35" fill="none" stroke="#81d9ff" stroke-width="3"/>
+<path d="M28 45v38 M28 45h31 M28 62h25" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+<path d="M70 24h36a14 14 0 0 1 14 14v31a14 14 0 0 1-14 14H91L77 96V83h-7a14 14 0 0 1-14-14V38a14 14 0 0 1 14-14" fill="#ffd27f" stroke="#113a70" stroke-width="2"/>
+<text x="88" y="68" fill="#15375a" font-size="35" font-family="Noto Sans SC, sans-serif" font-weight="800" text-anchor="middle">语</text></svg>
