@@ -1,0 +1,100 @@
+name: Verify Oct 27 Team Logos in Six Live PNG Exports
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/football-20261027-logo-visual-qa.yml'
+      - 'football-daily/main-export-logos.js'
+      - 'football-daily/brand-export-data.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: football-20261027-logo-visual-qa
+  cancel-in-progress: true
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium for actual PNG canvas tests
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Read production report and verify actual live site logo pixels
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          import {readFileSync} from 'node:fs';
+          const report=JSON.parse(readFileSync('football-daily/data/today.json','utf8'));
+          if(report.reportDate!=='2026-10-27'||report.matches?.length!==25)throw Error('Unexpected current fixture set');
+          const urls=[...new Set(report.matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]))];
+          if(urls.length!==50)throw Error('Unexpected crest URL identities');
+          const origin='https://future-code-football-daily.pages.dev';
+          const routes=[['Main','/'],['YKZ','/ykz-family/'],['BW Sport','/bw-sport/'],
+                        ['Ko Thet','/ko-thet-family/'],['Goal Zone','/future-code-journal/'],
+                        ['KMM','/kmm-sport-hub/']];
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          let failed=[];
+          try{
+            for(const [name,route] of routes){
+              const context=await browser.newContext({viewport:{width:420,height:900},acceptDownloads:true});
+              const page=await context.newPage();
+              let last;
+              for(let attempt=0;attempt<8;attempt++){
+                try{
+                  await page.goto(origin+route+'?logoqa=20261027-'+attempt,{waitUntil:'domcontentloaded',timeout:30000});
+                  await page.waitForFunction(()=>!!window.FutureCodeFramePreview&&!!(window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData),null,{timeout:15000});
+                  last=await page.evaluate(async rows=>{
+                    const mapper=window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData;
+                    function image(url){
+                      return new Promise((ok,fail)=>{
+                        const im=new Image();im.crossOrigin='anonymous';
+                        const timer=setTimeout(()=>fail(Error('Logo load timeout: '+url)),10000);
+                        im.onload=()=>{clearTimeout(timer);if(im.naturalWidth<32||im.naturalHeight<32)return fail(Error('Logo too small: '+url));ok(im);};
+                        im.onerror=()=>{clearTimeout(timer);fail(Error('Logo broken: '+url));};
+                        im.src=url;
+                      });
+                    }
+                    const urls=[...new Set(rows.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]))];
+                    const local=urls.map(u=>mapper.imageUrl(u));
+                    for(let i=0;i<local.length;i++)if(!local[i].startsWith(location.origin+'/assets/brand-export-teams/'))
+                      throw Error('Not same-origin: '+urls[i]+' => '+local[i]);
+                    await Promise.all(local.map(image));
+                    const first=rows[0];
+                    const actual=await window.FutureCodeFramePreview.render(first);
+                    const noTeams=await window.FutureCodeFramePreview.render({...first,homeCrestUrl:null,awayCrestUrl:null});
+                    const A=actual.getContext('2d',{willReadFrequently:true});
+                    const B=noTeams.getContext('2d',{willReadFrequently:true});
+                    function difference(rect){
+                      const a=A.getImageData(...rect).data,b=B.getImageData(...rect).data;
+                      let n=0;for(let i=0;i<a.length;i+=4)if(Math.abs(a[i]-b[i])+Math.abs(a[i+1]-b[i+1])+Math.abs(a[i+2]-b[i+2])>65)n++;
+                      return n;
+                    }
+                    const home=difference([120,22,205,195]),away=difference([875,22,200,195]);
+                    if(home<150||away<150)throw Error('PNG frame missing team crest pixels: home='+home+' away='+away);
+                    const blob=await new Promise(res=>actual.toBlob(res,'image/png'));
+                    if(!blob||blob.size<12000)throw Error('PNG file encode failed');
+                    return {urls:urls.length,homePixels:home,awayPixels:away,pngBytes:blob.size};
+                  },report.matches);
+                  break;
+                }catch(e){
+                  last=null;
+                  if(attempt===7)throw e;
+                  await page.waitForTimeout(7000);
+                }
+              }
+              console.log(name+' PASS: '+JSON.stringify(last));
+              await context.close();
+            }
+          }catch(e){failed.push(String(e?.stack||e));}
+          finally{await browser.close();}
+          if(failed.length)throw Error(failed.join('\n'));
+          console.log('SIX LIVE SITE PNG CREST PIXEL TESTS: PASS');
+          NODE
