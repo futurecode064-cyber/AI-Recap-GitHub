@@ -1,0 +1,44 @@
+name: Custom Frame Banner Staging QA
+on:
+  push:
+    branches: [frame-studio-banner-20261027]
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: npm install --no-save --no-package-lock playwright && npx playwright install --with-deps chromium
+      - name: Frame upload and cross-section checks
+        run: |
+          python3 -m http.server 8765 --directory football-daily >/tmp/frame-http.log 2>&1 &
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          import assert from 'node:assert/strict';
+          const b=await chromium.launch({args:['--no-sandbox']});
+          try {
+            const ctx=await b.newContext({viewport:{width:1300,height:1000}}), p=await ctx.newPage();
+            await p.goto('http://127.0.0.1:8765/odds.html',{waitUntil:'domcontentloaded'});
+            await p.locator('#futureCodeFrameEditor').waitFor({timeout:30000});
+            const im=await p.evaluate(()=>{let c=document.createElement('canvas');c.width=600;c.height=120;let x=c.getContext('2d');x.fillStyle='#ef4733';x.fillRect(0,0,600,120);return c.toDataURL().split(',')[1]});
+            await p.locator('#fcfeName').fill('CUSTOM BANNER TEST');
+            for(const id of ['fcfeTopFile','fcfeBottomFile']) await p.locator('#'+id).setInputFiles({name:'banner.png',mimeType:'image/png',buffer:Buffer.from(im,'base64')});
+            await p.waitForFunction(()=>document.querySelector('#fcfeTopStatus').textContent.includes('ရွေးပြီး')&&document.querySelector('#fcfeBottomStatus').textContent.includes('ရွေးပြီး'));
+            await p.locator('#fcfeAdd').click();
+            await p.waitForFunction(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[1]==='CUSTOM BANNER TEST'));
+            let custom=await p.evaluate(()=>window.FutureCodeTableOddsFrames.designs.find(d=>d[1]==='CUSTOM BANNER TEST'));
+            assert(custom[4].topImage && custom[4].bottomImage);
+            await p.reload();await p.locator('#futureCodeFrameEditor').waitFor();
+            await p.waitForFunction(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[1]==='CUSTOM BANNER TEST'));
+            await p.goto('http://127.0.0.1:8765/',{waitUntil:'domcontentloaded'});
+            await p.waitForFunction(()=>[...document.querySelectorAll('#brandFrame option')].some(x=>x.textContent==='CUSTOM BANNER TEST'),null,{timeout:30000});
+            await p.waitForFunction(()=>[...document.querySelectorAll('#fcAiFrameStyle option')].some(x=>x.textContent==='CUSTOM BANNER TEST'),null,{timeout:30000});
+            const result=await p.evaluate(async()=>{const f=(await window.FutureCodeCustomFrames.list()).find(x=>x.name==='CUSTOM BANNER TEST');const c=document.createElement('canvas');c.width=600;c.height=200;const out=await window.FutureCodeCustomFrames.wrap(c,f);return {w:out.width,h:out.height,top:out.getContext('2d').getImageData(5,5,1,1).data[0]};});
+            assert.equal(result.w,600);assert.equal(result.h,440);assert(result.top>200);
+            console.log('PASS: two banners saved, persisted and shared to preview/AI; composed PNG pixels verified');
+          } finally {await b.close();}
+          NODE
