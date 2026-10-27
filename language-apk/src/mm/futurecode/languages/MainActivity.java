@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
     web.loadUrl("file:///android_asset/index.html");
     tts=new TextToSpeech(getApplicationContext(),status->{});
     scheduleChecks(this);
-    checkUpdate(true);
+    checkUpdate(false);
     if(getIntent().getBooleanExtra("install_update",false))installDownloaded();
   }
 
