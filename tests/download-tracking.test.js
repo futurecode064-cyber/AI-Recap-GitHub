@@ -54,6 +54,8 @@ assert.ok(adminHtml.includes('siteSections'), 'website category statistics must 
 assert.ok(adminJs.includes('fc_portfolio_inventory_dashboard'), 'admin needs authenticated full portfolio inventory RPC');
 assert.ok(adminHtml.includes('projectInventory'), 'dashboard must list source and draft projects');
 assert.ok(adminJs.includes('trackingStatus'), 'untracked websites must not appear as verified zeros');
+assert.ok(adminJs.includes('Game Play Sessions'), 'actual game plays must be distinct from website page views');
+assert.ok(adminJs.includes('downloadUrl') && adminJs.includes('downloadHost'), 'each APK row should link back to its real release source');
 assert.ok(adminJs.includes('https://api.github.com/repos/futurecode064-cyber/AI-Recap-GitHub/releases?per_page=100'),
   'public GitHub API must support up-to-date release counts');
 assert.ok(adminJs.includes('releaseSnapshot') === false);
