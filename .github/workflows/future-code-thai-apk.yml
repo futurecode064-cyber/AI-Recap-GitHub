@@ -64,16 +64,16 @@ jobs:
           set -euo pipefail
           APK=thai-course/app/build/outputs/apk/debug/app-debug.apk
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
-          if gh release view future-code-thai-speaking-beta-v1.0.0 >/dev/null 2>&1; then
+          if gh release view future-code-thai-speaking-beta-v1.0.1 >/dev/null 2>&1; then
             echo "Public beta already exists; do not replace its APK with a differently signed build."
             exit 0
           fi
-          cp "$APK" /tmp/Future_Code_Thai_Speaking_v1.0.0_Beta.apk
-          gh release create future-code-thai-speaking-beta-v1.0.0 \
-            /tmp/Future_Code_Thai_Speaking_v1.0.0_Beta.apk \
+          cp "$APK" /tmp/Future_Code_Thai_Speaking_v1.0.1_Beta.apk
+          gh release create future-code-thai-speaking-beta-v1.0.1 \
+            /tmp/Future_Code_Thai_Speaking_v1.0.1_Beta.apk \
             --prerelease \
-            --title 'Future Code Thai Speaking v1.0.0 BETA' \
-            --notes 'BETA ONLY. Android debug signature: future official APK cannot update this beta in-place unless certificates match. Backup learning progress before uninstall/reinstall. Educational starter curriculum, not professional-complete.'
+            --title 'Future Code Thai Speaking v1.0.1 BETA' \
+            --notes 'BETA ONLY. Reinstallation and progress backup may be required for this new debug build. Android debug signature: future official APK cannot update this beta in-place unless certificates match. Backup learning progress before uninstall/reinstall. Educational starter curriculum, not professional-complete.'
       - name: Sign official APK only if owner signing secrets are present
         env:
           THAI_KEYSTORE_BASE64: ${{ secrets.THAI_KEYSTORE_BASE64 }}
@@ -98,13 +98,13 @@ jobs:
             --ks-key-alias "$THAI_KEY_ALIAS" \
             --ks-pass "env:THAI_STORE_PASSWORD" \
             --key-pass "env:THAI_KEY_PASSWORD" \
-            --out /tmp/Future_Code_Thai_Speaking_v1.0.0.apk /tmp/fc-thai-aligned.apk
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose /tmp/Future_Code_Thai_Speaking_v1.0.0.apk
-          gh release create future-code-thai-speaking-v1.0.0 \
-            /tmp/Future_Code_Thai_Speaking_v1.0.0.apk \
-            --title 'Future Code Thai Speaking v1.0.0' \
+            --out /tmp/Future_Code_Thai_Speaking_v1.0.1.apk /tmp/fc-thai-aligned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose /tmp/Future_Code_Thai_Speaking_v1.0.1.apk
+          gh release create future-code-thai-speaking-v1.0.1 \
+            /tmp/Future_Code_Thai_Speaking_v1.0.1.apk \
+            --title 'Future Code Thai Speaking v1.0.1' \
             --notes 'Myanmar-first Thai lessons, pronunciation, quizzes and notifications.' \
-            || gh release upload future-code-thai-speaking-v1.0.0 \
-              /tmp/Future_Code_Thai_Speaking_v1.0.0.apk --clobber
+            || gh release upload future-code-thai-speaking-v1.0.1 \
+              /tmp/Future_Code_Thai_Speaking_v1.0.1.apk --clobber
           rm -f /tmp/fc-thai-release.jks
           echo "Signed APK released"
