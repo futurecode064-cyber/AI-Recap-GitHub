@@ -38,7 +38,7 @@ def build(project, output):
                 if not target.exists():
                     try:
                         run(['espeak-ng','-b','1','-v',VOICE[language],'-s','128','-a','170','-w',str(wav),'--stdin'],input=text.encode('utf-8'))
-                        run(['ffmpeg','-nostdin','-hide_banner','-loglevel','error','-y','-i',str(wav),'-ac','1','-ar','16000','-codec:a','libmp3lame','-b:a','48k',str(target)])
+                        run(['ffmpeg','-nostdin','-hide_banner','-loglevel','error','-y','-i',str(wav),'-ac','1','-ar','16000','-codec:a','libmp3lame','-af','atempo=0.85,apad=pad_dur=0.18','-b:a','48k',str(target)])
                         duration=float(run(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(target)]).stdout.decode().strip())
                         if target.stat().st_size<800 or duration<0.20:raise RuntimeError(f'Invalid audio {language}/{digest}: {duration}s')
                     except Exception as err:
