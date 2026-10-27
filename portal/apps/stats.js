@@ -56,6 +56,13 @@
     } catch (_) {}
   }
   record("page_view", null);
+  // The Myanmar Kyar detail page has its own direct APK download link.
+  // Count it as an app detail view without treating navigation as a download.
+  try {
+    if (/\/myanmar-kyar\/(?:index\.html)?$/i.test(new URL(location.href).pathname)) {
+      record("app_view", "myanmar-kyar");
+    }
+  } catch (_) {}
   // Only count when a user actually opens the APK detail panel.
   if (typeof document.addEventListener === 'function') {
     document.addEventListener('click', event => {
