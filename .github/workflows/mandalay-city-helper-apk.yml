@@ -1,0 +1,50 @@
+name: Mandalay City Helper Android APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'mandalay-apk/**'
+      - '.github/workflows/mandalay-city-helper-apk.yml'
+permissions:
+  contents: write
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Install Android SDK
+        run: |
+          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Download official icon
+        run: |
+          mkdir -p mandalay-apk/app/src/main/res/drawable-nodpi
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 "https://futurecodeaistudio.floot.app/_cdn/static/ba053a15-fd86-4201-8055-15e79d52bb55-future-code-mandalay-icon.png" -o mandalay-apk/app/src/main/res/drawable-nodpi/ic_launcher.png
+          file mandalay-apk/app/src/main/res/drawable-nodpi/ic_launcher.png
+          test "$(stat -c%s mandalay-apk/app/src/main/res/drawable-nodpi/ic_launcher.png)" -gt 5000
+      - name: Build installable APK
+        working-directory: mandalay-apk
+        run: gradle --no-daemon --stacktrace :app:assembleDebug
+      - name: Stage APK
+        run: |
+          mkdir -p out
+          cp mandalay-apk/app/build/outputs/apk/debug/app-debug.apk out/Future_Code_Mandalay_City_Helper_v1.0.0.apk
+          sha256sum out/*.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Mandalay-City-Helper-Android-APK
+          path: out/*.apk
+          if-no-files-found: error
+      - name: Publish beta APK download
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create mandalay-city-helper-v1.0.0 out/Future_Code_Mandalay_City_Helper_v1.0.0.apk --title "မြို့လေး ကူညီရေး စွန့်စားခန်း Android v1.0.0 (Beta)" --notes "Android online WebView wrapper of the existing Future Code Mandalay live game. Game website updates load automatically. Local notification polling, owner announcements and APK update check included. Beta APK uses runner's debug certificate: subsequent binary builds require a persistent signing key for in-place upgrades." || gh release upload mandalay-city-helper-v1.0.0 out/Future_Code_Mandalay_City_Helper_v1.0.0.apk --clobber
