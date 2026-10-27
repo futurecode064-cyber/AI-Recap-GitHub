@@ -16,11 +16,12 @@
   state.sections[section]=data;
   const allIds=originals.map(adapter.id);
   function restoreFrames(){
+   const extras=frames.filter(f=>!allIds.includes(adapter.id(f))).map(copy);
    frames.splice(0,frames.length,...originals.filter(f=>!data.hidden.includes(adapter.id(f))).map(base=>{
     const f=copy(base),e=data.edited[adapter.id(base)];
     if(e)adapter.apply(f,e);
     return f;
-   }));
+   }),...extras);
    refreshOptions(frames);
   }
   function write(){persist();restoreFrames();refreshList();selectFrame(currentId||allIds.find(id=>!data.hidden.includes(id))||allIds[0]);}
@@ -35,7 +36,7 @@
   function current(){return currentId;}
   function statusText(message,bad=false){status.textContent=message;status.dataset.error=bad?"true":"false";}
   function selectFrame(id){if(!id)return;currentId=id;selector.value=id;const base=originals.find(f=>adapter.id(f)===id),edit=data.edited[id]||{};q(".fc-bif-name").value=edit.name??adapter.name(base);q(".fc-bif-color").value=validColor(edit.color)?edit.color:adapter.color(base);q(".fc-bif-hide").hidden=data.hidden.includes(id);q(".fc-bif-restore").hidden=!data.hidden.includes(id);}
-  function refreshList(){const old=currentId;selector.replaceChildren();for(const f of originals){const id=adapter.id(f),opt=new Option(adapter.name(f)+(data.hidden.includes(id)?" · ဖြုတ်ထားသည်":""),id);selector.add(opt);}if(old)selector.value=old;}
+  function refreshList(){const old=currentId;selector.replaceChildren();for(const f of originals){const id=adapter.id(f),label=data.edited[id]?.name||adapter.name(f),opt=new Option(label+(data.hidden.includes(id)?" · ဖြုတ်ထားသည်":""),id);selector.add(opt);}if(old)selector.value=old;}
   selector.onchange=()=>selectFrame(selector.value);
   q(".fc-bif-save").onclick=()=>{const id=current(),name=q(".fc-bif-name").value.trim().slice(0,70),color=q(".fc-bif-color").value;if(!name){statusText("Frame နာမည် ထည့်ပါ။",true);return;}if(!validColor(color)){statusText("အရောင်ကုဒ် မမှန်ပါ။",true);return;}data.edited[id]={name,color};write();statusText("Frame ကို ပြင်ဆင်ပြီး သိမ်းလိုက်ပါပြီ။");};
   q(".fc-bif-hide").onclick=()=>{const id=current();if(!data.hidden.includes(id))data.hidden.push(id);write();statusText("Frame ကို ရွေးစရာများမှ ဖြုတ်လိုက်ပါပြီ။ ပြန်ဖော်နိုင်ပါတယ်။");};
