@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
             .build();
         scheduler.schedule(job);
     }
-    @Override public void onResume(){super.onResume(); if(web!=null)checkUpdates(false);}
+    @Override public void onResume(){super.onResume(); if(tts!=null){int r=tts.setLanguage(Locale.SIMPLIFIED_CHINESE);speechReady=r>=0;} if(web!=null)checkUpdates(false);}
     @Override public void onDestroy(){if(tts!=null){tts.stop();tts.shutdown();}if(web!=null)web.destroy();super.onDestroy();}
     private void callback(String expression){runOnUiThread(()->{if(web!=null)web.evaluateJavascript(expression,null);});}
     private static String readUrl(String target) throws Exception {
@@ -111,6 +111,13 @@ public class MainActivity extends Activity {
             runOnUiThread(()->{
                 if(!speechReady){callback("window.nativeStatus && window.nativeStatus('ဖုန်း Settings တွင် Chinese TTS အသံကို ထည့်သွင်းပါ။')");return;}
                 if(text!=null && text.length()<300)tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"fc-zh");
+            });
+        }
+        @JavascriptInterface public void installVoice(){
+            runOnUiThread(()->{
+                try{startActivity(new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA));}
+                catch(Exception e){try{startActivity(new Intent("com.android.settings.TTS_SETTINGS"));}
+                catch(Exception ignored){callback("window.nativeStatus && window.nativeStatus('Phone Settings → Text-to-speech → Chinese Voice ထည့်သွင်းပါ။')");}}
             });
         }
         @JavascriptInterface public void listen(){
