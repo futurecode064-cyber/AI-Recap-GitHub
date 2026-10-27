@@ -51,14 +51,15 @@
   }
   function render(data) {
     for (const [id,value] of [
-      ["visits",data.pageViews],["downloads",data.downloadClicks],
+      ["visits",data.pageViews],["websiteVisits",data.websiteViews],["detailViews",data.appViews],["downloads",data.downloadClicks],
       ["browsers",data.uniqueBrowsers],["today",data.todayDownloads],
       ["week",data.weekDownloads],["month",data.monthDownloads]
     ]) $(id).textContent = format.format(value || 0);
     const sites = data.sites || [];
     const groups = [
       {key:"future-code",label:"📱 Future Code AI Studio — APK များ"},
-      {key:"football",label:"⚽ ဘောလုံးဂျာနယ် APK Website များ"}
+      {key:"football",label:"⚽ ဘောလုံးဂျာနယ် APK Website များ"},
+      {key:"language",label:"🌐 ဘာသာစကားသင်တန်း Website များ"}
     ];
     const siteHost = $("siteSections");
     siteHost.replaceChildren();
@@ -86,7 +87,7 @@
           const value=document.createElement("b");value.textContent=format.format(count||0);
           cell.append(small,value);metrics.append(cell);
         }
-        if (["goal-zone","bw-sport","ykz-family","ko-thet-family"].includes(site.key)) {
+        if (site.key !== "future-code-apps") {
           for(const [label,field] of [
             ["Website Views","websiteViews"],
             ["Website Visitors","websiteVisitors"],
@@ -97,13 +98,11 @@
             const col=document.createElement("div");col.className="site-metric";
             const title=document.createElement("small");title.textContent=label;
             const number=document.createElement("b");
-            number.textContent="—";
-            number.dataset.siteViewSite=site.key;
-            number.dataset.siteViewField=field;
+            number.textContent=format.format(Number(site[field])||0);
             col.append(title,number);metrics.append(col);
           }
         }
-        if (["bw-sport","ykz-family","ko-thet-family"].includes(site.key)) {
+        if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub"].includes(site.key)) {
           const col=document.createElement("div");col.className="site-metric release-metric";
           const small=document.createElement("small");small.textContent="GitHub Releases Downloads";
           const val=document.createElement("b");val.textContent="…";
@@ -111,7 +110,7 @@
           col.append(small,val);metrics.append(col);
         }
         card.append(metrics);
-        if (["bw-sport","ykz-family","ko-thet-family"].includes(site.key)) {
+        if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub"].includes(site.key)) {
           const info=document.createElement("div");info.className="release-info";
           info.dataset.releaseInfoSite=site.key;
           info.textContent="GitHub Releases Download စာရင်း ဖတ်နေပါသည်…";
@@ -131,11 +130,11 @@
       const apps=(data.apps||[]).filter(app=>app.siteKey===site.key);
       if(!apps.length)continue;
       const tr=document.createElement("tr");tr.className="table-group";
-      const td=document.createElement("td");td.colSpan=6;td.textContent=site.name;
+      const td=document.createElement("td");td.colSpan=7;td.textContent=site.name;
       tr.append(td);rows.append(tr);
       for(const app of apps){
         const line=document.createElement("tr");
-        const texts=[app.name,app.clicks,app.today,app.week,app.month,app.uniqueBrowsers];
+        const texts=[app.name,app.appViews,app.clicks,app.today,app.week,app.month,app.uniqueBrowsers];
         texts.forEach((v,i)=>{
           const cell=document.createElement("td");if(i)cell.className="num";
           cell.textContent=i ? format.format(v||0) : v;
@@ -170,11 +169,12 @@
     $("chartRange").textContent = timeline[0].day + " — " + timeline[timeline.length-1].day + " · Myanmar Time";
     $("lastUpdated").textContent = "နောက်ဆုံး Refresh — " + new Date(data.generatedAt || Date.now()).toLocaleString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"medium",timeStyle:"short"}) + " MMT";
   }
-  const releaseSites=["bw-sport","ykz-family","ko-thet-family"];
+  const releaseSites=["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub"];
   function siteForRelease(tag) {
     if(/^bw-sport-journal-v/i.test(tag))return "bw-sport";
     if(/^ykz-soccer-tips-v/i.test(tag))return "ykz-family";
     if(/^ko-thet-family-journal-v/i.test(tag))return "ko-thet-family";
+    if(/^kmm-sport-hub-v/i.test(tag))return "kmm-sport-hub";
     return null;
   }
   function renderReleaseCounts(rows,source){
@@ -268,7 +268,6 @@
       });
       openDashboard();
       render(data);
-      refreshJournalWebsiteViews();
       refreshReleaseCounts();
       refreshNotificationHistory();
       setStatus("dashStatus","Statistics Update အောင်မြင်ပါပြီ။","ok");
