@@ -177,16 +177,16 @@
       "id": "english-academy",
       "name": "Future Code English Academy",
       "packageName": "mm.futurecode.englishacademy",
-      "versionName": "1.0.1",
-      "versionCode": 2,
+      "versionName": "1.0.4",
+      "versionCode": 5,
       "minSdk": 26,
-      "file": "https://future-code-football-daily.pages.dev/english-academy/Future_Code_English_Academy_v1.0.1.apk",
-      "sizeBytes": 148299,
-      "sha256": "0be31687010789e23c3cf43cadd31d36f1e7d10eb5575ce502469fb5cfcb67a9",
+      "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/english-academy-v1.0.4/Future_Code_English_Academy_v1.0.4.apk",
+      "sizeBytes": 6722175,
+      "sha256": "4a6d6adae48ef0a4c12e88c903f5a47c1340b2f6c79e3a0197c82ea55be6682c",
       "certificateSha256": "0e37a26cd08900280d2486ff47fa4ea0375c3c89ac5cba51b47ac31be908ecc3",
       "releasedAt": "2026-10-27",
       "online": false,
-      "releaseNotes": "54 lessons across A0–C1, including one applied capstone per level; offline progress, quizzes, speaking, reading and writing."
+      "releaseNotes": "54 bilingual lessons with 270 offline embedded MP3 clips, speaking practice, reading, writing, quiz, progress and updates."
     },
     {
       "id": "thai-speaking",
