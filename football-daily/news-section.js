@@ -114,12 +114,13 @@
 
   const customId=document.getElementById("fcNewsCustomFrame")?.value;
   const frame=customId&&window.FutureCodeCustomFrames?(await window.FutureCodeCustomFrames.list()).find(f=>f.id===customId):null;
-  const output=frame?await window.FutureCodeCustomFrames.wrap(canvas,frame):canvas;
+  let output=frame?await window.FutureCodeCustomFrames.wrap(canvas,frame):canvas;
+  if(window.FutureCodeProfessionalFrames)output=await window.FutureCodeProfessionalFrames.wrap(output,"news");
   const blob=await new Promise((resolve,reject)=>output.toBlob(b=>b?resolve(b):reject(new Error("PNG unavailable")),"image/png"));
   return {blob,width:output.width,height:output.height,filename:(isGoalZone?"Goal-Zone":"Future-Code")+"-News-"+s.id.replace(/[^a-z0-9_-]/gi,"-")+".png"};
  }
  function posterFor(s){
-  const key=JSON.stringify([document.getElementById("fcNewsCustomFrame")?.value||"",s.id,s.title,s.paragraphs,s.image,s.categoryLabel,s.sourceDateLabel,s.imageCredit,s.imageLicense,s.imageFit]);
+  const key=JSON.stringify([document.getElementById("fcNewsCustomFrame")?.value||"",window.__fcFrameRevision||0,s.id,s.title,s.paragraphs,s.image,s.categoryLabel,s.sourceDateLabel,s.imageCredit,s.imageLicense,s.imageFit]);
   if(!exportCache.has(key))exportCache.set(key,createNewsPoster(s).catch(e=>{exportCache.delete(key);throw e;}));
   return exportCache.get(key);
  }

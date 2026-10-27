@@ -605,7 +605,7 @@
     ctx.fillStyle="#080608";ctx.fillRect(x-5,y-5,cw+10,ch+10);
     ctx.drawImage(shot.picture,x,y,cw,ch);
     ctx.strokeStyle=theme;ctx.lineWidth=6;ctx.strokeRect(x-3,y-3,cw+6,ch+6);
-    return canvas;
+    return window.FutureCodeProfessionalFrames ? await window.FutureCodeProfessionalFrames.wrap(canvas,"odds") : canvas;
   }
   window.FutureCodeOddsDomFrame={draw};
 })();

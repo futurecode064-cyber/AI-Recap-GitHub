@@ -269,6 +269,7 @@
           status("Frame "+frame.title+" · ပုံ "+(i+1)+"/"+pages.length+" ဖန်တီးနေသည်…");
           let canvas=await makePng(pages[i],frame,date);
           if(frame.custom)canvas=await window.FutureCodeCustomFrames.wrap(canvas,frame.custom);
+          if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,"results");
           const blob=await new Promise((resolve,reject)=>{
             canvas.toBlob(b=>b&&b.size?resolve(b):reject(Error("PNG ဖန်တီးမရပါ")),"image/png");
           });

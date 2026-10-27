@@ -192,8 +192,9 @@
   const leagueSuffix=options.league?"-"+String(options.league).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,60):"";
   const partSuffix=options.total>1?"-"+Number(options.part||1)+"-of-"+Number(options.total):"";
   const filename=brand+"-odds-"+kit.day(data.reportDate)+leagueSuffix+partSuffix+".png";
-  if(options.asBlob===true)return {filename,blob:await encodePng(canvas)};
-  await download(canvas,filename);
+  const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,"odds"):canvas;
+  if(options.asBlob===true)return {filename,blob:await encodePng(framed)};
+  await download(framed,filename);
   return {filename,fileCount:1,matchCount:data.matches.length,format:"png"};
  }
 
@@ -232,7 +233,8 @@
   text(ctx,"ပွဲပြီးအတည်ပြုထားသော ဂိုးရလဒ်များ",W/2,H-32,20,C.muted,false,"center");
   const brand=window.FutureCodeBrandConfig?.id;
   const partSuffix=total>1?"-"+part+"-of-"+total:"";
-  await download(canvas,(brand?brand+"-":"football-")+"goal-results-"+kit.day(date)+partSuffix+".png");
+  const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,"results"):canvas;
+  await download(framed,(brand?brand+"-":"football-")+"goal-results-"+kit.day(date)+partSuffix+".png");
  }
  window.FutureCodeDailyExport={saveOdds,saveResults,partition};
 })();

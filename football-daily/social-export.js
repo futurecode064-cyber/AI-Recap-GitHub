@@ -161,7 +161,8 @@
   const ctx=canvas.getContext("2d");if(!ctx)throw Error("PNG Canvas unavailable");
   const imgs=await Promise.all([load(match.homeCrestUrl),load(match.awayCrestUrl),load(opts.brandLogoUrl)]);
   draw(ctx,match,opts,imgs,s[0],s[1]);
-  const blob=await new Promise((resolve,reject)=>canvas.toBlob(v=>v?resolve(v):reject(Error("PNG encoding failed")),"image/png"));
+  const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews"):canvas;
+  const blob=await new Promise((resolve,reject)=>framed.toBlob(v=>v?resolve(v):reject(Error("PNG encoding failed")),"image/png"));
   const url=URL.createObjectURL(blob),link=document.createElement("a");
   const slug=t=>String(t||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
   link.href=url;link.download=[slug(opts.brandName||"football"),slug(match.home),slug(match.away),s[2]].join("-")+".png";

@@ -17,11 +17,11 @@
  function image(src){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>reject(Error('Banner ပုံကို ရယူမရပါ'));im.src=src;});}
  async function render(m,f=selection(),theme=colour(f)){
  const card=await window.FutureCodeFramePreview.render(m,theme);
- if(f[4]){const custom=await window.FutureCodeCustomFrames.wrap(card,f[4]);return new Promise((resolve,reject)=>custom.toBlob(b=>b?resolve(b):reject(Error('PNG ဖန်တီးမရပါ')),'image/png'));}
+ if(f[4]){const custom=await window.FutureCodeCustomFrames.wrap(card,f[4]);const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(custom,'previews'):custom;return new Promise((resolve,reject)=>framed.toBlob(b=>b?resolve(b):reject(Error('PNG ဖန်တီးမရပါ')),'image/png'));}
  const top=f[0]==='colour'?null:await image('./assets/preview-frames/'+f[0]+'-top.jpg');const bottom=f[3]?await image('./assets/preview-frames/'+f[0]+'-bottom.jpg'):null;
  const w=card.width,th=top?Math.round(top.height*w/top.width):0,bh=bottom?Math.round(bottom.height*w/bottom.width):0;
  const out=document.createElement('canvas');out.width=w;out.height=th+card.height+bh;const ctx=out.getContext('2d');ctx.fillStyle=theme.bg;ctx.fillRect(0,0,w,out.height);if(top)ctx.drawImage(top,0,0,w,th);ctx.drawImage(card,0,th);if(bottom)ctx.drawImage(bottom,0,th+card.height,w,bh);
- return new Promise((resolve,reject)=>out.toBlob(b=>b?resolve(b):reject(Error('PNG ဖန်တီးမရပါ')),'image/png'));}
+ const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(out,'previews'):out;return new Promise((resolve,reject)=>framed.toBlob(b=>b?resolve(b):reject(Error('PNG ဖန်တီးမရပါ')),'image/png'));}
  function filename(m,f,i){return f[0]+'-'+String(i+1).padStart(2,'0')+'-'+(m.home+'-vs-'+m.away).replace(/[^a-zA-Z0-9-]/g,'-')+'.png';}
  function link(blob,name,label){const url=URL.createObjectURL(blob);urls.push(url);const a=document.createElement('a');a.href=url;a.download=name;a.textContent=label;a.style.cssText='display:block;margin:12px 0';el('brandDownloads').append(a);return a;}
  async function run(mode){if(busy||!matches.length)return;busy=true;cancel=false;const selected=selection(),theme=colour(selected);section.querySelectorAll('button,select,input').forEach(x=>x.disabled=true);el('brandCancel').disabled=false;el('brandCancel').hidden=false;
