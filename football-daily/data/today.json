@@ -842,16 +842,20 @@
         "goalsAgainst": 17,
         "points": 7
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.40",
+      "drawOdds": "4.72",
+      "awayOdds": "6.55",
       "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/241.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/982.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
       "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796491/",
-      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796492/"
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796492/",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-preview-07",
@@ -963,16 +967,20 @@
         "goalsAgainst": 13,
         "points": 12
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.52",
+      "drawOdds": "4.39",
+      "awayOdds": "5.17",
       "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/950.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/3013.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
       "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796497/",
-      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796496/"
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796496/",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-preview-08",
@@ -1084,16 +1092,20 @@
         "goalsAgainst": 26,
         "points": 9
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.63",
+      "drawOdds": "4.07",
+      "awayOdds": "4.59",
       "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/2436.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/3542.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
       "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796496/",
-      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796492/"
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796492/",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-preview-09",
@@ -1205,9 +1217,9 @@
         "goalsAgainst": 12,
         "points": 23
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "3.27",
+      "drawOdds": "3.62",
+      "awayOdds": "2.00",
       "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/962.png",
@@ -1215,7 +1227,11 @@
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
       "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796494/",
       "awayFormScope": "league",
-      "awayFormSourceUrl": "https://www.skysports.com/league-1-scores-fixtures/2026-10-01"
+      "awayFormSourceUrl": "https://www.skysports.com/league-1-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-preview-10",
@@ -1872,9 +1888,9 @@
         "goalsAgainst": 17,
         "points": 8
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "3.00",
+      "drawOdds": "3.76",
+      "awayOdds": "2.18",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/150.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/32.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
@@ -1894,7 +1910,11 @@
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
       "awayFormScope": "league",
-      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01"
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-12",
@@ -2010,9 +2030,9 @@
         "goalsAgainst": 18,
         "points": 6
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.83",
+      "drawOdds": "3.86",
+      "awayOdds": "3.98",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/36.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/34.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
@@ -2032,7 +2052,11 @@
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
       "awayFormScope": "league",
-      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01"
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-11",
@@ -2148,9 +2172,9 @@
         "goalsAgainst": 20,
         "points": 8
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.35",
+      "drawOdds": "5.38",
+      "awayOdds": "7.51",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/26.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/155.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
@@ -2170,7 +2194,11 @@
       },
       "homeFormSourceUrl": "https://footballnation.eu/match/bundesliga-1/2026/798942/",
       "awayFormScope": "league",
-      "awayFormSourceUrl": "https://www.skysports.com/german-2-bundesliga-scores-fixtures/2026-10-01"
+      "awayFormSourceUrl": "https://www.skysports.com/german-2-bundesliga-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-13",
@@ -2424,9 +2452,9 @@
         "goalsAgainst": 14,
         "points": 12
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.39",
+      "drawOdds": "5.25",
+      "awayOdds": "7.39",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/25.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/39.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
@@ -2445,7 +2473,11 @@
       },
       "homeFormSourceUrl": "https://www.skysports.com/borussia-dortmund-scores-fixtures/2026-10-01",
       "awayFormScope": "league",
-      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01"
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-15",
@@ -2834,9 +2866,9 @@
         "goalsAgainst": 13,
         "points": 7
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.14",
+      "drawOdds": "3.35",
+      "awayOdds": "3.27",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/2072.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/952.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
@@ -2856,7 +2888,11 @@
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
       "awayFormScope": "league",
-      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01"
+      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-18",
@@ -3108,9 +3144,9 @@
         "goalsAgainst": 11,
         "points": 6
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.15",
+      "drawOdds": "3.34",
+      "awayOdds": "3.26",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/1194.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/965.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
@@ -3130,7 +3166,11 @@
       "homeFormScope": "league",
       "homeFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
       "awayFormScope": "league",
-      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01"
+      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     },
     {
       "fixtureId": "fc-20261027-20",
@@ -3383,9 +3423,9 @@
         "goalsAgainst": 9,
         "points": 11
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "2.07",
+      "drawOdds": "3.20",
+      "awayOdds": "3.60",
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/1200.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/2430.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
@@ -3404,7 +3444,11 @@
       },
       "homeFormSourceUrl": "https://footballnation.eu/match/serie-b/2026/805710/",
       "awayFormScope": "league",
-      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01"
+      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z"
     }
   ],
   "updateStatus": "partial",
