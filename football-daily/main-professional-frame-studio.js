@@ -86,7 +86,7 @@ function syncNative(){
   for(const [select,sections] of attached){
    if(!select.isConnected){attached.delete(select);continue;}
    const matches=[...new Map([...sections].flatMap(k=>available(k)).map(f=>[f.id,f])).values()];
-   const expected=matches.map(f=>f.id+"|"+f.name).join(";");
+   const expected=matches.map(f=>f.id+"|"+f.name+" · Professional").join(";");
    const current=[...select.options].filter(o=>o.dataset.fcProfessional).map(o=>o.dataset.fcProfessional+"|"+o.text).join(";");
    if(expected!==current){
     const oldValue=select.value;
