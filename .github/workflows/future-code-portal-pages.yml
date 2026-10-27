@@ -35,6 +35,7 @@ jobs:
           node tests/access.test.js
           node tests/portal.test.js
           node tests/download-tracking.test.js
+          node tests/language-apps.test.js
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
