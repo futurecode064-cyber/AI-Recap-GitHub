@@ -36,7 +36,7 @@
         },
         {
           "date": "2026-10-16",
-          "opponent": "Frosinone",
+          "opponent": "ဖရိုဆီနိုနီ",
           "teamGoals": 2,
           "opponentGoals": 4,
           "result": "L",
@@ -45,7 +45,7 @@
         },
         {
           "date": "2026-10-11",
-          "opponent": "AC Milan",
+          "opponent": "အေစီမီလန်",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -54,7 +54,7 @@
         },
         {
           "date": "2026-09-18",
-          "opponent": "Monza",
+          "opponent": "မွန်ဇာ",
           "teamGoals": 1,
           "opponentGoals": 2,
           "result": "L",
@@ -74,7 +74,7 @@
       "awayLastFive": [
         {
           "date": "2026-10-24",
-          "opponent": "Parma",
+          "opponent": "ပါးမား",
           "teamGoals": 2,
           "opponentGoals": 1,
           "result": "W",
@@ -92,7 +92,7 @@
         },
         {
           "date": "2026-10-11",
-          "opponent": "Monza",
+          "opponent": "မွန်ဇာ",
           "teamGoals": 3,
           "opponentGoals": 1,
           "result": "W",
@@ -110,7 +110,7 @@
         },
         {
           "date": "2026-09-12",
-          "opponent": "AC Milan",
+          "opponent": "အေစီမီလန်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "result": "D",
@@ -158,7 +158,14 @@
       "oddsProvider": "Bet365",
       "oddsSourceUrl": "https://footballnation.eu/match/serie-a/2026/790980/",
       "oddsVerifiedDate": "2026-10-27",
-      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332"
+      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332",
+      "myanmarOdds": {
+        "upperTeam": "လာဇီယို",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "3+25",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-04",
@@ -216,7 +223,14 @@
       "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332",
       "oddsProvider": "Bet365",
       "oddsSourceUrl": "https://footballnation.eu/match/serie-a/2026/790983/",
-      "oddsVerifiedDate": "2026-10-27"
+      "oddsVerifiedDate": "2026-10-27",
+      "myanmarOdds": {
+        "upperTeam": "ရိုးမား",
+        "bodyOdds": "1-95",
+        "goalTotalOdds": "3+25",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-05",
@@ -274,7 +288,14 @@
       "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332",
       "oddsProvider": "Bet365",
       "oddsSourceUrl": "https://footballnation.eu/match/serie-a/2026/790985/",
-      "oddsVerifiedDate": "2026-10-27"
+      "oddsVerifiedDate": "2026-10-27",
+      "myanmarOdds": {
+        "upperTeam": "ကိုမို",
+        "bodyOdds": "1+50",
+        "goalTotalOdds": "3+30",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-01",
@@ -358,7 +379,7 @@
       "homeLastFive": [
         {
           "date": "2026-10-24",
-          "opponent": "Exeter",
+          "opponent": "အက်ဇီတာ",
           "teamGoals": 1,
           "opponentGoals": 2,
           "result": "L",
@@ -367,7 +388,7 @@
         },
         {
           "date": "2026-10-20",
-          "opponent": "Cheltenham",
+          "opponent": "ချယ်တင်ဟမ်",
           "teamGoals": 2,
           "opponentGoals": 4,
           "result": "L",
@@ -376,7 +397,7 @@
         },
         {
           "date": "2026-10-17",
-          "opponent": "Rotherham",
+          "opponent": "ရော့သာဟမ်",
           "teamGoals": 2,
           "opponentGoals": 0,
           "result": "W",
@@ -385,7 +406,7 @@
         },
         {
           "date": "2026-10-10",
-          "opponent": "Walsall",
+          "opponent": "ဝေါလ်ဆော",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -394,7 +415,7 @@
         },
         {
           "date": "2026-10-06",
-          "opponent": "Barnsley",
+          "opponent": "ဘန်စလေ",
           "teamGoals": 4,
           "opponentGoals": 1,
           "result": "W",
@@ -405,7 +426,7 @@
       "awayLastFive": [
         {
           "date": "2026-10-24",
-          "opponent": "Everton",
+          "opponent": "အဲဗာတန်",
           "teamGoals": 2,
           "opponentGoals": 0,
           "result": "W",
@@ -414,7 +435,7 @@
         },
         {
           "date": "2026-10-21",
-          "opponent": "Bayern",
+          "opponent": "ဘိုင်ယန်မြူးနစ်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "result": "D",
@@ -432,7 +453,7 @@
         },
         {
           "date": "2026-10-13",
-          "opponent": "Lille",
+          "opponent": "လီလီ",
           "teamGoals": 3,
           "opponentGoals": 0,
           "result": "W",
@@ -441,7 +462,7 @@
         },
         {
           "date": "2026-10-10",
-          "opponent": "Leeds",
+          "opponent": "လိဒ်စ်",
           "teamGoals": 2,
           "opponentGoals": 1,
           "result": "W",
@@ -486,7 +507,14 @@
       "specialPreparedDate": "2026-10-27",
       "oddsProvider": "Bet365",
       "oddsSourceUrl": "https://www.winonbetonline.com/football/matches/fleetwood-town-vs-arsenal-156271/",
-      "oddsVerifiedDate": "2026-10-27"
+      "oddsVerifiedDate": "2026-10-27",
+      "myanmarOdds": {
+        "upperTeam": "အာဆင်နယ်",
+        "bodyOdds": "3+60",
+        "goalTotalOdds": "4+85",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-preview-06",
@@ -765,7 +793,14 @@
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
       "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
-      "homeStandingSourceUrl": "https://langerball.de/zweite_bundesliga/"
+      "homeStandingSourceUrl": "https://langerball.de/zweite_bundesliga/",
+      "myanmarOdds": {
+        "upperTeam": "မိန့်ဇ်",
+        "bodyOdds": "1+30",
+        "goalTotalOdds": "3-5",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-08",
@@ -821,7 +856,14 @@
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
       "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
-      "homeStandingSourceUrl": "https://datencenter.dfb.de/datencenter/3-liga/2026-2027/32"
+      "homeStandingSourceUrl": "https://datencenter.dfb.de/datencenter/3-liga/2026-2027/32",
+      "myanmarOdds": {
+        "upperTeam": "အော့စ်ဘတ်",
+        "bodyOdds": "2+60",
+        "goalTotalOdds": "3-80",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-07",
@@ -877,7 +919,14 @@
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
       "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
-      "homeStandingSourceUrl": "https://datencenter.dfb.de/datencenter/3-liga/2026-2027/32"
+      "homeStandingSourceUrl": "https://datencenter.dfb.de/datencenter/3-liga/2026-2027/32",
+      "myanmarOdds": {
+        "upperTeam": "လိုက်ပ်ဇစ်",
+        "bodyOdds": "2-20",
+        "goalTotalOdds": "4+80",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-06",
@@ -932,7 +981,14 @@
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "myanmarOdds": {
+        "upperTeam": "ဖရန့်ဖတ်",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "3-50",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-12",
@@ -987,7 +1043,14 @@
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "myanmarOdds": {
+        "upperTeam": "ကိုလုံး",
+        "bodyOdds": "1+80",
+        "goalTotalOdds": "3+30",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-11",
@@ -1043,7 +1106,14 @@
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
       "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
-      "awayStandingSourceUrl": "https://langerball.de/zweite_bundesliga/"
+      "awayStandingSourceUrl": "https://langerball.de/zweite_bundesliga/",
+      "myanmarOdds": {
+        "upperTeam": "မိုချန်ဂလာဘတ်",
+        "bodyOdds": "1-90",
+        "goalTotalOdds": "3-70",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-13",
@@ -1099,7 +1169,14 @@
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
       "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
-      "awayStandingSourceUrl": "https://langerball.de/zweite_bundesliga/"
+      "awayStandingSourceUrl": "https://langerball.de/zweite_bundesliga/",
+      "myanmarOdds": {
+        "upperTeam": "အဲလ်ဗာ့စ်ဘတ်",
+        "bodyOdds": "1-65",
+        "goalTotalOdds": "3-30",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-10",
@@ -1154,7 +1231,14 @@
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "myanmarOdds": {
+        "upperTeam": "ဒေါ့မွန်",
+        "bodyOdds": "1-75",
+        "goalTotalOdds": "3-45",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-15",
@@ -1209,7 +1293,14 @@
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "ဘင်နီဗင်တို",
+        "bodyOdds": "1+60",
+        "goalTotalOdds": "3+40",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-16",
@@ -1264,7 +1355,14 @@
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "အက်စ်ကိုလီ",
+        "bodyOdds": "-65",
+        "goalTotalOdds": "3+100",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-17",
@@ -1319,7 +1417,14 @@
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "ချီဆီနာ",
+        "bodyOdds": "-55",
+        "goalTotalOdds": "3+95",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-18",
@@ -1374,7 +1479,14 @@
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "မိုဒီနာ",
+        "bodyOdds": "-70",
+        "goalTotalOdds": "3+50",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-19",
@@ -1429,7 +1541,14 @@
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "မန်တိုဗာ",
+        "bodyOdds": "-65",
+        "goalTotalOdds": "2-85",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-20",
@@ -1484,7 +1603,14 @@
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "ပါဒိုဗာ",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "2-55",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     },
     {
       "fixtureId": "fc-20261027-21",
@@ -1539,7 +1665,14 @@
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "အန်တယ်လာ",
+        "bodyOdds": "-70",
+        "goalTotalOdds": "2-45",
+        "currentBodyOdds": "",
+        "currentGoalTotalOdds": ""
+      }
     }
   ],
   "updateStatus": "partial",
