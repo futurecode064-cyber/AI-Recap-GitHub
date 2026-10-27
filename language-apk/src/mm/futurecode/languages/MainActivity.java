@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 public class MainActivity extends Activity {
-  static final int CURRENT_VERSION = 4;
+  static final int CURRENT_VERSION = 5;
   static final String META = "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/languages/latest.json";
   static final String CHANNEL = "fc_languages_updates";
   static final String PREF = "fc_language_settings";
@@ -71,7 +71,12 @@ public class MainActivity extends Activity {
   public class Bridge {
     @JavascriptInterface public void speak(String text,String language) {
       runOnUiThread(()->{
-        if(tts==null)return;
+        String code=(language==null?"":language.split("-")[0]).toLowerCase(Locale.ROOT);
+        if(OfflineAudio.play(MainActivity.this,code,text)){
+          if(web!=null)web.evaluateJavascript("window.FCVoiceStatus&&window.FCVoiceStatus('🔊 APK ထဲပါပြီးသား အသံဖိုင် ဖွင့်နေသည်။')",null);
+          return;
+        }
+        if(tts==null){if(web!=null)web.evaluateJavascript("window.FCVoiceStatus&&window.FCVoiceStatus('Offline အသံဖိုင်မတွေ့ပါ။ Build ပြန်စစ်ရန်လိုပါသည်။')",null);return;}
         Locale locale=Locale.forLanguageTag(language);
         int ready=tts.setLanguage(locale);
         if(ready<0){Toast.makeText(MainActivity.this,"ဒီဘာသာစကားအတွက် TTS voice တပ်ဆင်ရန်လိုပါသည်။",Toast.LENGTH_LONG).show();if(web!=null)web.evaluateJavascript("window.FCVoiceStatus&&window.FCVoiceStatus('Voice မရနိုင်ပါ။ ⚙️ Voice ရယူရန် ကိုနှိပ်ပါ။')",null);return;}
@@ -253,7 +258,7 @@ public class MainActivity extends Activity {
     try{startActivity(install);}catch(Exception e){message("Installer မဖွင့်နိုင်ပါ။ Downloads မှ APK ကို ဖွင့်ပါ။");}
   }
   @Override protected void onNewIntent(Intent i){super.onNewIntent(i);setIntent(i);if(i.getBooleanExtra("install_update",false))installDownloaded();}
-  @Override protected void onDestroy(){if(tts!=null)tts.shutdown();if(web!=null)web.destroy();pool.shutdownNow();super.onDestroy();}
+  @Override protected void onDestroy(){OfflineAudio.stop();if(tts!=null)tts.shutdown();if(web!=null)web.destroy();pool.shutdownNow();super.onDestroy();}
 
   public static class UpdateReceiver extends BroadcastReceiver {
     @Override public void onReceive(Context context,Intent intent){
