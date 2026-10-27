@@ -170,6 +170,20 @@
       "certificateSha256": "984a8f1fcc3a2add33e8faf545b617ab0485f25091116e4c4bcc804ef81c6ecb",
       "releasedAt": "2026-10-27",
       "online": false
+    },
+    {
+      "id": "english-academy",
+      "name": "Future Code English Academy",
+      "packageName": "mm.futurecode.englishacademy",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "minSdk": 26,
+      "file": "https://future-code-football-daily.pages.dev/english-academy/Future_Code_English_Academy_v1.0.0.apk",
+      "sizeBytes": 144203,
+      "sha256": "5990fcdb2f5ab2a09ac90c22ac5586b042145a2673b13de1c88eba17cb7ac55d",
+      "certificateSha256": "0e37a26cd08900280d2486ff47fa4ea0375c3c89ac5cba51b47ac31be908ecc3",
+      "releasedAt": "2026-10-27",
+      "online": false
     }
   ]
 }
