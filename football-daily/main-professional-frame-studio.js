@@ -71,7 +71,9 @@ async function wrap(canvas,section,frameId){
  let id=frameId===undefined?state.selected[section]:frameId;
  if(typeof id==="string"&&id.startsWith("pro:"))id=id.slice(4);
  if(!id||id==="none")return canvas;
- const f=get(id);return f?composite(canvas,f):canvas;
+ const f=get(id);
+ if(frameId!==undefined&&typeof frameId==="string"&&frameId.startsWith("pro:")&&!state.placements[section].includes(id))return canvas;
+ return f?composite(canvas,f):canvas;
 }
 const available=section=>(state.placements[section]||[]).map(get).filter(Boolean);
 const attached=new Map();
@@ -101,7 +103,8 @@ function attach(section,select){
  if(!types.includes(section)||!select)return;
  if(attached.has(select)){attached.get(select).add(section);syncNative();return;}
  attached.set(select,new Set([section]));
- select.addEventListener("change",()=>{
+ select.addEventListener("change",event=>{
+  if(!event.isTrusted)return;
   const chosen=nativeId(select),scopes=attached.get(select);
   for(const key of scopes)state.selected[key]=chosen&&state.placements[key].includes(chosen)?chosen:"none";
   save().then(()=>{syncMini();status("Download Frame ရွေးပြီးပါပြီ");}).catch(e=>status(e.message,true));
@@ -262,6 +265,9 @@ el("fcpReset").onclick=async()=>{const f=get(active),t=templates.find(x=>x.id===
 el("fcpBackup").onclick=downloadJson;
 el("fcpImport").onchange=async e=>{try{const file=e.target.files[0];if(!file||file.size>12000000)throw Error("Backup ဖိုင် ကြီးလွန်းသည်");state=validate(JSON.parse(await file.text()));await save();active=state.frames[0].id;syncControls();status("Backup Import ပြီးပါပြီ");}catch(err){status(err.message,true);}finally{e.target.value="";}};
 syncControls();mini();syncNative();
+ for(const [section,selector] of [["previews","#fcMatchCustomFrame"],["specials","#fcMatchCustomFrame"],["ai","#fcAiFrameStyle"],["news","#fcNewsCustomFrame"]]){
+  attach(section,document.querySelector(selector));
+ }
 const obs=new MutationObserver(()=>mini());obs.observe(document.body,{childList:true,subtree:false});
 const main=document.querySelector("main");if(main)obs.observe(main,{childList:true,subtree:true});
 }
