@@ -56,6 +56,11 @@ jobs:
           cp portal/thai-course/index.html portal/thai-course/course.js \
             portal/thai-course/thai-icon.svg portal/thai-course/manifest.webmanifest \
             portal/thai-course/latest.json thai-course/app/src/main/assets/
+      - name: Prepare bundled offline Thai speech
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak-ng ffmpeg
+          python3 scripts/generate_offline_audio.py thai thai-course/app/src/main/assets/audio
       - name: Build Android beta APK
         working-directory: thai-course
         run: gradle --no-daemon :app:assembleDebug
