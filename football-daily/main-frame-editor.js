@@ -163,7 +163,7 @@
   </details><p id="fcfeStatus" role="status" aria-live="polite"></p>`;
   const style=document.createElement("style");style.textContent=`
    #futureCodeFrameEditor{margin:18px 0;padding:20px;border:1px solid #abc1d0;border-radius:12px;background:#fff;color:#142c43}
-   #futureCodeFrameEditor h3{font-size:20px}#futureCodeFrameEditor p{font-size:13px;line-height:1.8}
+   #futureCodeFrameEditor h3{font-size:20px;color:#142c43}#futureCodeFrameEditor p,#futureCodeFrameEditor label,#futureCodeFrameEditor summary,#futureCodeFrameEditor small,#futureCodeFrameEditor span{color:#142c43}#futureCodeFrameEditor input[type=text],#futureCodeFrameEditor input[type=number],#futureCodeFrameEditor input[type=file]{background:#fff;color:#142c43}#futureCodeFrameEditor p{font-size:13px;line-height:1.8}
    #futureCodeFrameEditor .fcfe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}
    #futureCodeFrameEditor label{font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:7px}
    #futureCodeFrameEditor input[type=text],#futureCodeFrameEditor input[type=number],#futureCodeFrameEditor input[type=file]{width:100%;box-sizing:border-box;padding:8px;border:1px solid #a9bac6;border-radius:7px;color:#1c3448;font:inherit}
