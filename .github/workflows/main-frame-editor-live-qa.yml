@@ -1,0 +1,116 @@
+name: Main Frame Editor — Live Browser and PNG Regression
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/main-frame-editor-live-qa.yml'
+      - 'football-daily/main-frame-editor.js'
+      - 'football-daily/main-odds-dom-frame.js'
+      - 'football-daily/odds.html'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript
+        run: |
+          node --check football-daily/main-frame-editor.js
+          node --check football-daily/main-odds-dom-frame.js
+          node --check football-daily/main-table-odds-frames.js
+      - name: Install Chromium for real PNG regression
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Test live browser frame creation, editing, persistence and PNG
+        run: |
+          node --input-type=module <<'NODE'
+          import { chromium } from 'playwright';
+          const assert=(cond,message)=>{if(!cond)throw Error(message);};
+          const origin='https://future-code-football-daily.pages.dev';
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          try{
+            const ctx=await browser.newContext({viewport:{width:1300,height:1050},acceptDownloads:true});
+            const page=await ctx.newPage(),errors=[];
+            page.on('pageerror',e=>errors.push(e.message));
+            for(let attempt=0;attempt<12;attempt++){
+              await page.goto(origin+'/odds.html?date=2026-10-27&frame-editor-test='+attempt,{waitUntil:'domcontentloaded',timeout:40000});
+              try{await page.locator('#futureCodeFrameEditor').waitFor({timeout:7000});break;}
+              catch(e){if(attempt===11)throw e;await page.waitForTimeout(6500);}
+            }
+            await page.locator('.fcfe-row').first().waitFor({timeout:25000});
+            const initial=await page.evaluate(()=>({len:window.FutureCodeTableOddsFrames.designs.length,teams:document.querySelector('#oddsList .club-label')?.textContent,dates:loadedSheet.reportDate}));
+            assert(initial.len>=12&&initial.dates==='2026-10-27','Current verified sheet / built-in frames missing');
+            const customName='CUSTOM OWNER FRAME QA';
+            const picture=await page.evaluate(()=>{
+              const c=document.createElement('canvas');c.width=600;c.height=300;
+              const x=c.getContext('2d');x.fillStyle='#b51c3a';x.fillRect(0,0,600,300);
+              x.fillStyle='#ffd777';x.fillRect(0,0,600,55);x.fillRect(0,245,600,55);
+              x.fillStyle='#ffffff';x.fillRect(30,30,80,65);
+              return c.toDataURL('image/png').split(',')[1];
+            });
+            await page.locator('#fcfeName').fill(customName);
+            await page.locator('#fcfeColor').fill('#b51c3a');
+            await page.locator('#fcfeTop').fill('18');
+            await page.locator('#fcfeBottom').fill('12');
+            await page.locator('#fcfeFile').setInputFiles({name:'frame.png',mimeType:'image/png',buffer:Buffer.from(picture,'base64')});
+            await page.waitForFunction(()=>document.querySelector('#fcfePicture')?.textContent.includes('ရွေးပြီး'),null,{timeout:13000});
+            await page.locator('#fcfeAdd').click();
+            await page.waitForFunction(name=>window.FutureCodeTableOddsFrames.designs.some(d=>d[1]===name),customName,{timeout:12000});
+            const newFrame=await page.evaluate(name=>window.FutureCodeTableOddsFrames.designs.find(d=>d[1]===name),customName);
+            assert(newFrame?.[4]?.image?.startsWith('data:image/'),'Uploaded art is not attached to custom frame');
+            const inputs=page.locator('.fcfe-row').first().locator('input');
+            const newHome='အသင်းနာမည် စမ်းသပ်';
+            await inputs.first().fill(newHome);await inputs.first().blur();
+            const leagueText=page.locator('.fcfe-league input').first();
+            await leagueText.fill('လိဂ်နာမည် စမ်းသပ်');await leagueText.blur();
+            const checked=await page.evaluate(()=>{
+              const row=loadedSheet.matches[0],info=window.FutureCodeFrameEditor.exportNames(loadedSheet.reportDate);
+              return {saved:info.rows[row.fixtureId]?.home,league:info.leagues[row.league],
+                onScreen:document.querySelector('#oddsList .club-label')?.textContent};
+            });
+            assert(checked.saved===newHome&&checked.onScreen===initial.teams,'Export-only edit leaked into website or did not save');
+            assert(checked.league==='လိဂ်နာမည် စမ်းသပ်','League override missing');
+            const rendered=await page.evaluate(async name=>{
+              const d=window.FutureCodeTableOddsFrames.designs.find(x=>x[1]===name);
+              const cv=await window.FutureCodeTableOddsFrames.draw([loadedSheet.matches[0]],
+                {design:d,colour:d[2],date:loadedSheet.reportDate},1,1);
+              return {width:cv.width,height:cv.height,size:cv.toDataURL('image/png').length};
+            },customName);
+            assert(rendered.width===2160&&rendered.height>200&&rendered.size>18000,'Custom PNG renderer failed: '+JSON.stringify(rendered));
+            await page.reload({waitUntil:'domcontentloaded',timeout:40000});
+            await page.locator('.fcfe-row').first().waitFor({timeout:22000});
+            const persisted=await page.evaluate(name=>{
+              const list=window.FutureCodeTableOddsFrames.designs,report=loadedSheet;
+              const e=window.FutureCodeFrameEditor.exportNames(report.reportDate);
+              return {frame:list.some(d=>d[1]===name),home:e.rows[report.matches[0].fixtureId]?.home};
+            },customName);
+            assert(persisted.frame&&persisted.home===newHome,'Frame and export names must persist after refresh');
+            const designIndex=await page.evaluate(()=>window.FutureCodeTableOddsFrames.designs.findIndex(d=>d[0]==='best'));
+            await page.locator('#tofDesign').selectOption(String(designIndex));
+            await page.locator('#fcfeRemove').click();
+            assert(!await page.evaluate(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[0]==='best')),'Removed built-in frame still offered');
+            await page.locator('#fcfeUnhide').click();
+            assert(await page.evaluate(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[0]==='best')),'Restore original frame failed');
+            const [backup]=await Promise.all([page.waitForEvent('download',{timeout:10000}),page.locator('#fcfeBackup').click()]);
+            assert(backup.suggestedFilename().endsWith('.json'),'Backup download missing');
+            assert(errors.length===0,'Browser script error: '+errors.join('; '));
+            console.log('MAIN FRAME EDITOR LIVE QA PASS '+JSON.stringify({builtins:initial.len,custom:customName,
+              pixelPng:rendered,refresh:persisted,exportOnlyNames:true,hideRestore:true,backup:true}));
+            for(const path of ['/ykz-family/odds.html','/bw-sport/odds.html','/ko-thet-family/odds.html',
+                               '/future-code-journal/odds.html','/kmm-sport-hub/odds.html']){
+              await page.goto(origin+path,{waitUntil:'domcontentloaded',timeout:35000});
+              assert(await page.locator('#futureCodeFrameEditor').count()===0,'Main-only frame editor leaked to brand: '+path);
+            }
+            console.log('FIVE BRANDED ODDS ROUTES UNCHANGED: PASS');
+            await ctx.close();
+          }finally{await browser.close();}
+          NODE
