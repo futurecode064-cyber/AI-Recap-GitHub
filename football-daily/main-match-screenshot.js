@@ -37,7 +37,7 @@
       if(frame){
         const card=await nativeSave.call(exporter,match,{...opts,mainScreenshot:true,downloadFilename:fileName,asCanvas:true});
         let canvas=await window.FutureCodeCustomFrames.wrap(card,frame);
-        if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews");
+        if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews",document.getElementById("fcMatchCustomFrame")?.value?.startsWith("pro:")?document.getElementById("fcMatchCustomFrame").value:"none");
         return window.FutureCodeCanvasKit.download(canvas,fileName);
       }
     }
