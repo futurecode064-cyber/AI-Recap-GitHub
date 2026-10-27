@@ -3,12 +3,12 @@
 const LEAGUE_NAMES={
  "Premier League":"ပရီးမီးယားလိဂ်","Championship":"ချန်ပီယံရှစ်",
  "League One":"အင်္ဂလန် လိဂ်ဝမ်း","La Liga":"လာလီဂါ","La Liga 2":"စပိန် လာလီဂါ ၂",
- "Serie A":"စီးရီးအေ","Serie B":"အီတလီ စီးရီးဘီ",
+ "Serie A":"အီတလီ စီးရီးအေ","Serie B":"အီတလီ စီးရီးဘီ",
  "Bundesliga":"ဘွန်ဒက်စ်လီဂါ","2. Bundesliga":"ဂျာမနီ ဘွန်ဒက်စ်လီဂါ ၂",
  "Ligue 1":"လီဂူးဝမ်း","Ligue 2":"ပြင်သစ် လီဂူး ၂",
  "FA Cup":"အင်္ဂလန် FA ဖလား","EFL Cup":"အင်္ဂလန် လိဂ်ဖလား",
  "Coppa Italia":"အီတလီဖလား","Copa del Rey":"စပိန် ဘုရင့်ဖလား",
- "DFB-Pokal":"ဂျာမနီဖလား","Coupe de France":"ပြင်သစ်ဖလား",
+ "DFB-Pokal":"ဂျာမန် ပိုကယ်ဖလား","Coupe de France":"ပြင်သစ်ဖလား",
  "UEFA Champions League":"ချန်ပီယံလိဂ်","UEFA Europa League":"ယူရိုပါလိဂ်",
  "UEFA Conference League":"ယူရိုပါ ကွန်ဖရင့်လိဂ်",
  "UEFA Nations League":"နိုင်ငံအသင်း နေးရှင်းလိဂ်",
@@ -213,6 +213,8 @@ function renderWdlStrip(match,side){
    node("strong","",teamLabel(match,side)),
    node("small","","နောက်ဆုံး ၅ ပွဲ"));
  section.appendChild(heading);
+ const standing=match[side+"Standing"];
+ if(standing && Number.isFinite(standing.position) && Number.isFinite(standing.points)) section.appendChild(node("small","standing-summary","လိဂ်အဆင့် "+standing.position+" · "+standing.points+" မှတ်"));
  const strip=node("div","wdl-strip");
  const items=Array.isArray(match[side+"LastFive"])?match[side+"LastFive"].slice(0,5):[];
  for(const game of items){
