@@ -30,7 +30,9 @@ jobs:
             await page.locator('#fcpName').fill('SECTION QA FRAME');
             await page.locator('#fcpPlacement input[value=previews]').check();
             await page.locator('#fcpAdd').click({timeout:15000});
-            await page.waitForFunction(()=>document.querySelector('#fcpStatus')?.textContent.includes('Download'),null,{timeout:15000});
+            await page.waitForFunction(()=>document.querySelector('#fcpStatus')?.textContent.trim(),null,{timeout:15000});
+            console.log('ADD STATUS',await page.locator('#fcpStatus').innerText());
+            assert((await page.locator('#fcpStatus').innerText()).includes('Download'),'Add did not succeed');
             assert.equal(await page.locator('#brandFrame option').filter({hasText:'SECTION QA FRAME'}).count(),1);
             assert.equal(await page.locator('#fcSpecialCustomFrame option').filter({hasText:'SECTION QA FRAME'}).count(),0);
             await page.locator('#fcpName').fill('SECTION QA EDITED');
