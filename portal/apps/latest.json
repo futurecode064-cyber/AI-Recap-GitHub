@@ -209,18 +209,18 @@
       "id": "language-academy",
       "name": "Future Code Language Academy",
       "packageName": "mm.futurecode.languages",
-      "versionName": "1.0.5",
-      "versionCode": 6,
+      "versionName": "1.0.6",
+      "versionCode": 7,
       "minSdk": 26,
-      "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/fc-language-academy-v1.0.5/Future_Code_Language_Academy_v1.0.5.apk",
+      "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/fc-language-academy-v1.0.6/Future_Code_Language_Academy_v1.0.6.apk",
       "sizeBytes": 3034708,
-      "sha256": "d8078dd6746462448a53840326c091e299fc933d760eadad66ac889ded942196",
+      "sha256": "d3961e5d7483072f2d4b0e15d5ad21d029a94136879d00a741b17bacd51e679c",
       "releasedAt": "2026-10-27",
       "online": false,
       "releaseChannel": "stable",
       "note": "Stable signing identity retained from v1.0.1.",
       "certificateSha256": "85c3dc3a0ac83670196ae8c4aa59c1b2bfef7d34d61193730a0775cf68bdd5b1",
-      "releaseNotes": "12 languages × 18 foundation phrases (216 total) with offline synthesized pronunciation clips (eSpeak NG). Foundational phrase sampler; audio has not been native-teacher certified."
+      "releaseNotes": "12 languages × 18 foundation phrases (216 total), offline synthesized pronunciation audio, quizzes, writing, progress and backup/restore. Android playback uses bundled audio without installed TTS voice; audio is not native-teacher certified. The app is a foundation sampler, not a complete fluency course."
     }
   ]
 }

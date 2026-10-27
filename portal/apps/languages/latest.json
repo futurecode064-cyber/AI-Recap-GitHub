@@ -1,17 +1,17 @@
 {
   "appId": "fc-language-academy",
   "packageName": "mm.futurecode.languages",
-  "versionCode": 6,
-  "versionName": "1.0.5",
+  "versionCode": 7,
+  "versionName": "1.0.6",
   "channel": "stable",
   "updateReady": true,
   "releasedAt": "2026-10-27",
   "announcement": {
-    "id": "offline-voice-20261027-v105",
-    "text": "Language Academy v1.0.5 တွင် ၁၂ ဘာသာစကားအတွက် Offline အသံဖိုင် ၂၁၆ ခုကို APK ထဲ တစ်ခါတည်း ထည့်သွင်းထားပါပြီ။"
+    "id": "offline-audio-ux-20261027-v106",
+    "text": "Language Academy v1.0.6: Android သင်ခန်းစာအသံကို APK ထဲက offline audio ဖြင့် နားထောင်နိုင်ပြီး Voice data ထည့်သွင်းရန် မလိုပါ။ အသံသည် synthetic ဖြစ်ပြီး native teacher စစ်ဆေးအတည်ပြုထားခြင်း မရှိသေးပါ။"
   },
-  "notes": "ဘာသာစကား ၁၂ မျိုးစီတွင် စကားစု ၁၈ ခုစီ (စုစုပေါင်း ၂၁၆ ခု)၊ အသံထွက်လေ့ကျင့်ခန်း၊ စာရေးလေ့ကျင့်ခန်း၊ မေးခွန်းတို၊ အော့ဖ်လိုင်းသင်ခန်းစာနှင့် မှတ်တမ်း Backup/Restore ထပ်တိုးထားပါသည်။ Android ၈ နှင့်အထက်အတွက် ဖြစ်ပါသည်။",
-  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/fc-language-academy-v1.0.5/Future_Code_Language_Academy_v1.0.5.apk",
-  "sha256": "d8078dd6746462448a53840326c091e299fc933d760eadad66ac889ded942196",
+  "notes": "ဘာသာစကား ၁၂ မျိုးတွင် အခြေခံစကားစု ၁၈ ခုစီ (စုစုပေါင်း ၂၁၆)၊ offline အသံ၊ quiz၊ စာရေး၊ progress နှင့် backup/restore ပါဝင်သည်။ Android APK အသံအတွက် TTS Voice data ထည့်သွင်းရန် မလိုပါ။ အသံသည် synthetic ဖြစ်ပြီး native-teacher certified မဟုတ်ပါ။ ဘာသာစကားတစ်ခုစီ၏ အခြေခံ phrase sampler ဖြစ်ပြီး ကျွမ်းကျင်အဆင့်သင်တန်း အပြည့်မဟုတ်ပါ။",
+  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/fc-language-academy-v1.0.6/Future_Code_Language_Academy_v1.0.6.apk",
+  "sha256": "d3961e5d7483072f2d4b0e15d5ad21d029a94136879d00a741b17bacd51e679c",
   "sizeBytes": 3034708
 }

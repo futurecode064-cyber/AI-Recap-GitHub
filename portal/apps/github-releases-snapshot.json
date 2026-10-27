@@ -4,6 +4,13 @@
   "repository": "futurecode064-cyber/AI-Recap-GitHub",
   "releases": [
     {
+      "tag": "fc-language-academy-v1.0.6",
+      "siteKey": "future-code-apps",
+      "appKey": "language-academy",
+      "asset": "Future_Code_Language_Academy_v1.0.6.apk",
+      "downloads": 0
+    },
+    {
       "tag": "fc-language-academy-v1.0.5",
       "siteKey": "future-code-apps",
       "appKey": "language-academy",
