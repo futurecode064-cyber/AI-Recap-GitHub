@@ -75,7 +75,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
    }else{
     const archive=new window.FutureCodeFrameZip.Archive();
     const date=report.reportDate;
-    const frameIds=[...exporter.FRAME_IDS,...(await window.FutureCodeCustomFrames.list()).map(f=>f.id)];
+    const frameIds=[...exporter.FRAME_IDS,...(await window.FutureCodeCustomFrames.list()).map(f=>f.id),...(window.FutureCodeProfessionalFrames?(await window.FutureCodeProfessionalFrames.list("ai")).map(f=>"pro:"+f.id):[])];
     for(const [index,frame] of frameIds.entries()){
      button.textContent="ZIP ပြင်ဆင်နေသည်… "+(index+1)+"/"+frameIds.length;
      exportStatus.textContent="Frame "+(index+1)+"/"+frameIds.length+" ကို PNG ဖန်တီးနေသည်…";
