@@ -56,10 +56,23 @@
       ["week",data.weekDownloads],["month",data.monthDownloads]
     ]) $(id).textContent = format.format(value || 0);
     const sites = data.sites || [];
+    if ($("totalSites")) $("totalSites").textContent = format.format(data.totalSites ?? sites.length);
+    if ($("totalApps")) $("totalApps").textContent = format.format(data.totalApps ?? (data.apps||[]).length);
+    if ($("totalProjects")) $("totalProjects").textContent = format.format((data.projects||[]).length);
+    const siteStatus = {
+      connected:"Tracking ချိတ်ဆက်ပြီး",
+      configured:"Tracking Code တပ်ထား · ပထမမှတ်တမ်းစစ်ဆေးရန်",
+      listed:"Website စာရင်းထည့်ပြီး · Tracking မချိတ်ရသေး",
+      shared:"မူလ APK Website နှင့် Shared Counter",
+      unverified:"Website Link ရှိ · Live Tracking မစစ်နိုင်သေး"
+    };
     const groups = [
       {key:"future-code",label:"📱 Future Code AI Studio — APK များ"},
       {key:"football",label:"⚽ ဘောလုံးဂျာနယ် APK Website များ"},
-      {key:"language",label:"🌐 ဘာသာစကားသင်တန်း Website များ"}
+      {key:"language",label:"🌐 ဘာသာစကားသင်တန်း Website များ"},
+      {key:"business",label:"🏢 Future Code Business / Floot Websites"},
+      {key:"games",label:"🎮 Online Games / Web Projects"},
+      {key:"portal",label:"🧰 Student, Admin & Download Portals"}
     ];
     const siteHost = $("siteSections");
     siteHost.replaceChildren();
@@ -71,11 +84,18 @@
       const heading=document.createElement("h3");heading.textContent=group.label;
       const grid=document.createElement("div");grid.className="site-grid";
       for(const site of members){
+        const status=site.trackingStatus || "listed";
+        const hasCount=(status==="connected"||status==="configured")&&Boolean(site.trackingSince);
+        const renderCount=(v)=>hasCount ? format.format(Number(v)||0) : "—";
         const card=document.createElement("article");card.className="site-card";
         const top=document.createElement("div");top.className="site-heading";
         const name=document.createElement("strong");name.textContent=site.name;
         const link=document.createElement("a");link.href=site.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Website ကြည့်ရန် ↗";
         top.append(name,link);card.append(top);
+        const tracking=document.createElement("div");
+        tracking.className="tracking-label";
+        tracking.textContent=siteStatus[status]||siteStatus.listed;
+        card.append(tracking);
         const metrics=document.createElement("div");metrics.className="metrics";
         for (const [label,count] of [
           ["APK Page Views",site.pageViews],["APK Page Browsers",site.uniqueBrowsers],
@@ -84,7 +104,7 @@
         ]){
           const cell=document.createElement("div");cell.className="site-metric";
           const small=document.createElement("small");small.textContent=label;
-          const value=document.createElement("b");value.textContent=format.format(count||0);
+          const value=document.createElement("b");value.textContent=renderCount(count);
           cell.append(small,value);metrics.append(cell);
         }
         if (site.key !== "future-code-apps") {
@@ -98,7 +118,7 @@
             const col=document.createElement("div");col.className="site-metric";
             const title=document.createElement("small");title.textContent=label;
             const number=document.createElement("b");
-            number.textContent=format.format(Number(site[field])||0);
+            number.textContent=renderCount(site[field]);
             col.append(title,number);metrics.append(col);
           }
         }
@@ -117,12 +137,27 @@
           card.append(info);
         }
         const note=document.createElement("p");note.className="site-note";
-        note.textContent=site.trackingSince ?
+        note.textContent=(site.trackingSince ?
           "မှတ်တမ်းစတင်: "+new Date(site.trackingSince).toLocaleDateString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"medium"})+" · Myanmar Time" :
-          "Tracking တပ်ဆင်ပြီးနောက် View/Click မှတ်တမ်း မရောက်သေးပါ";
+          (siteStatus[status]||"Tracking အခြေအနေမသိရသေး")) +
+          (site.notes ? " · "+site.notes : "");
         card.append(note);grid.append(card);
       }
       section.append(heading,grid);siteHost.append(section);
+    }
+    const inventory=$("projectInventory");
+    if(inventory){
+      inventory.replaceChildren();
+      for(const project of (data.projects||[])){
+        const card=document.createElement("article");card.className="project-card";
+        const label=document.createElement("strong");label.textContent=project.name;card.append(label);
+        const stage=document.createElement("small");stage.textContent="Project: "+project.stage+" · "+project.kind;card.append(stage);
+        const note=document.createElement("p");note.textContent=project.notes||"";card.append(note);
+        if(project.url && /^https:\/\//.test(project.url)){
+          const link=document.createElement("a");link.textContent="Source / Project ↗";link.href=project.url;link.target="_blank";link.rel="noopener noreferrer";card.append(link);
+        }
+        inventory.append(card);
+      }
     }
     const rows = $("appRows");
     rows.replaceChildren();
@@ -285,7 +320,7 @@
     setBusy(true);
     try {
       const token=await accessToken();
-      const data=await jsonRequest("/rest/v1/rpc/fc_download_portfolio_dashboard", {
+      const data=await jsonRequest("/rest/v1/rpc/fc_portfolio_inventory_dashboard", {
         method:"POST", headers:{...headers,"Authorization":"Bearer "+token},body:"{}"
       });
       openDashboard();
