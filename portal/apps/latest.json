@@ -171,7 +171,7 @@
       "releasedAt": "2026-10-27",
       "online": false,
       "releaseChannel": "stable",
-      "releaseNotes": "192 prerecorded Mandarin MP3 audio clips included in APK, available offline without phone TTS. Six-stage courses, writing, reading and quizzes."
+      "releaseNotes": "192 offline synthesized Mandarin audio clips (eSpeak NG); six-stage courses, writing, reading and quizzes. Synthetic pronunciation has not been native-teacher certified."
     },
     {
       "id": "english-academy",
@@ -186,7 +186,7 @@
       "certificateSha256": "0e37a26cd08900280d2486ff47fa4ea0375c3c89ac5cba51b47ac31be908ecc3",
       "releasedAt": "2026-10-27",
       "online": false,
-      "releaseNotes": "54 bilingual lessons with 270 offline embedded MP3 clips, speaking practice, reading, writing, quiz, progress and updates."
+      "releaseNotes": "54 bilingual lessons with 270 offline synthesized pronunciation clips (eSpeak NG), speaking practice, reading, writing, quizzes, progress and update checks. Audio has not been native-teacher certified."
     },
     {
       "id": "thai-speaking",
@@ -203,7 +203,7 @@
       "releaseChannel": "stable",
       "note": "Stable signing identity retained from v1.0.1.",
       "certificateSha256": "cb8e3b40e23982b7ef27d8252a4c26fdd8942d129383b14eed3a3eda0c94ede1",
-      "releaseNotes": "180 included Thai pronunciation MP3 clips with offline playback; 18 lessons, quiz, writing, speech and progress."
+      "releaseNotes": "180 offline synthesized Thai pronunciation clips (eSpeak NG); 18 lessons, quizzes, writing, speech and progress. Audio has not been native-teacher certified."
     },
     {
       "id": "language-academy",
@@ -220,7 +220,7 @@
       "releaseChannel": "stable",
       "note": "Stable signing identity retained from v1.0.1.",
       "certificateSha256": "85c3dc3a0ac83670196ae8c4aa59c1b2bfef7d34d61193730a0775cf68bdd5b1",
-      "releaseNotes": "12 languages × 18 phrases (216 total) with 216 real MP3 clips packaged offline; no Android voice data needed for lessons."
+      "releaseNotes": "12 languages × 18 foundation phrases (216 total) with offline synthesized pronunciation clips (eSpeak NG). Foundational phrase sampler; audio has not been native-teacher certified."
     }
   ]
 }

@@ -67,3 +67,9 @@ assert.equal(releaseSnapshot.releases.filter(x => x.appKey === 'chinese-learning
 assert.equal(releaseSnapshot.releases.filter(x => x.appKey === 'language-academy').reduce((n,x)=>n+x.downloads,0), 5, 'Language Academy historical release downloads');
 assert.ok(adminJs.includes('Version အလိုက် · '+''), 'Chinese and Language versions must be expandable');
 console.log('PASS: GitHub APK Release historical counts are displayed independently of tracked click events.');
+
+const academyHtml = fs.readFileSync(path.join(root, 'portal/apps/languages/index.html'), 'utf8');
+assert.match(academyHtml, /data-site-key="language-academy-web" data-app-key="language-academy"/);
+const migration = fs.readFileSync(path.join(root, 'supabase/migrations/20261027_portfolio_language_site_download_tracking.sql'), 'utf8');
+assert.match(migration, /'language-academy-web', 'language-academy'/);
+console.log('PASS: Language Academy website views are linked to the APK app key.');
