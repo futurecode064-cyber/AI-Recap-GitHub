@@ -32,6 +32,11 @@ jobs:
           echo "APK_VERSION=$VER" >> "$GITHUB_ENV"
           echo "APK_NAME=Future_Code_Language_Academy_v$VER.apk" >> "$GITHUB_ENV"
           echo "RELEASE_TAG=fc-language-academy-v$VER" >> "$GITHUB_ENV"
+      - name: Prepare bundled pronunciation in all 12 languages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak-ng ffmpeg
+          python3 scripts/generate_offline_audio.py academy language-apk/assets/audio
       - name: Compile offline language learning APK
         run: |
           set -euo pipefail
