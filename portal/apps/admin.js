@@ -102,7 +102,7 @@
             col.append(title,number);metrics.append(col);
           }
         }
-        if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub"].includes(site.key)) {
+        if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"].includes(site.key)) {
           const col=document.createElement("div");col.className="site-metric release-metric";
           const small=document.createElement("small");small.textContent="GitHub Releases Downloads";
           const val=document.createElement("b");val.textContent="…";
@@ -110,7 +110,7 @@
           col.append(small,val);metrics.append(col);
         }
         card.append(metrics);
-        if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub"].includes(site.key)) {
+        if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"].includes(site.key)) {
           const info=document.createElement("div");info.className="release-info";
           info.dataset.releaseInfoSite=site.key;
           info.textContent="GitHub Releases Download စာရင်း ဖတ်နေပါသည်…";
@@ -130,14 +130,15 @@
       const apps=(data.apps||[]).filter(app=>app.siteKey===site.key);
       if(!apps.length)continue;
       const tr=document.createElement("tr");tr.className="table-group";
-      const td=document.createElement("td");td.colSpan=7;td.textContent=site.name;
+      const td=document.createElement("td");td.colSpan=8;td.textContent=site.name;
       tr.append(td);rows.append(tr);
       for(const app of apps){
         const line=document.createElement("tr");
-        const texts=[app.name,app.appViews,app.clicks,app.today,app.week,app.month,app.uniqueBrowsers];
+        const texts=[app.name,app.appViews,app.clicks,"—",app.today,app.week,app.month,app.uniqueBrowsers];
         texts.forEach((v,i)=>{
           const cell=document.createElement("td");if(i)cell.className="num";
-          cell.textContent=i ? format.format(v||0) : v;
+          cell.textContent=i === 3 ? "—" : (i ? format.format(v||0) : v);
+          if (i === 3) { cell.dataset.releaseAppSite=app.siteKey; cell.dataset.releaseAppKey=app.key; }
           line.append(cell);
         });
         rows.append(line);
@@ -169,21 +170,35 @@
     $("chartRange").textContent = timeline[0].day + " — " + timeline[timeline.length-1].day + " · Myanmar Time";
     $("lastUpdated").textContent = "နောက်ဆုံး Refresh — " + new Date(data.generatedAt || Date.now()).toLocaleString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"medium",timeStyle:"short"}) + " MMT";
   }
-  const releaseSites=["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub"];
+  const releaseSites=["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"];
   function siteForRelease(tag) {
     if(/^bw-sport-journal-v/i.test(tag))return "bw-sport";
     if(/^ykz-soccer-tips-v/i.test(tag))return "ykz-family";
     if(/^ko-thet-family-journal-v/i.test(tag))return "ko-thet-family";
     if(/^kmm-sport-hub-v/i.test(tag))return "kmm-sport-hub";
+    if(/^bcf-journal-v/i.test(tag))return "bet-city-family";
+    return null;
+  }
+  function appForRelease(tag){
+    const site=siteForRelease(tag);
+    if(site)return {siteKey:site,appKey:site};
+    if(/^mandalay-city-helper-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"mandalay-city-helper"};
+    if(/^future-code-thai-speaking(-beta)?-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"thai-speaking"};
+    if(/^fc-language-academy-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"language-academy"};
+    if(/^chinese-learning-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"chinese-learning"};
     return null;
   }
   function renderReleaseCounts(rows,source){
+    document.querySelectorAll('[data-release-app-key]').forEach(el=>{
+      const parts=rows.filter(r=>r.siteKey===el.dataset.releaseAppSite&&r.appKey===el.dataset.releaseAppKey);
+      el.textContent=parts.length ? format.format(parts.reduce((sum,r)=>sum+Math.max(0,Number(r.downloads)||0),0)) : "—";
+    });
     for(const site of releaseSites){
       const count=document.querySelector('[data-release-count-site="'+site+'"]');
       const info=document.querySelector('[data-release-info-site="'+site+'"]');
       if(!count||!info)continue;
       const parts=rows.filter(row=>row.siteKey===site);
-      count.textContent=format.format(parts.reduce((n,x)=>n+Math.max(0,Number(x.downloads)||0),0));
+      count.textContent=parts.length ? format.format(parts.reduce((n,x)=>n+Math.max(0,Number(x.downloads)||0),0)) : "—";
       info.replaceChildren();
       const label=document.createElement("div");
       label.textContent=source+" · Version အားလုံး၏ Download";
@@ -207,33 +222,40 @@
       if(res.ok)snapshot=await res.json();
       if(Array.isArray(snapshot?.releases))renderReleaseCounts(snapshot.releases,"Snapshot "+snapshot.asOf);
     }catch(_){}
-    try {
-      const res=await fetch("https://api.github.com/repos/futurecode064-cyber/AI-Recap-GitHub/releases?per_page=100",{cache:"no-store"});
-      if(!res.ok)throw Error("GitHub API "+res.status);
-      const releases=await res.json();
-      if(!Array.isArray(releases))throw Error("GitHub response unavailable");
-      const rows=[];
-      for(const release of releases){
-        if(release.draft||!release.published_at)continue;
-        const siteKey=siteForRelease(release.tag_name||"");
-        if(!siteKey)continue;
-        for(const asset of (release.assets||[])){
-          if(!/[.]apk$/i.test(asset.name||""))continue;
-          rows.push({siteKey,tag:release.tag_name,downloads:Math.max(0,Number(asset.download_count)||0)});
+    const feeds=[
+      "https://api.github.com/repos/futurecode064-cyber/AI-Recap-GitHub/releases?per_page=100",
+      "https://api.github.com/repos/futurecode064-cyber/future-code-football-daily/releases?per_page=100"
+    ];
+    const rows=[];let loaded=0;
+    for(const url of feeds){
+      try {
+        const res=await fetch(url,{cache:"no-store"});
+        if(!res.ok)throw Error("GitHub API "+res.status);
+        const releases=await res.json();
+        if(!Array.isArray(releases))throw Error("GitHub response unavailable");
+        loaded++;
+        for(const release of releases) {
+          if(release.draft||!release.published_at)continue;
+          const match=appForRelease(release.tag_name||"");
+          if(!match)continue;
+          for(const asset of release.assets||[]){
+            if(!/[.]apk$/i.test(asset.name||""))continue;
+            rows.push({...match,tag:release.tag_name,downloads:Math.max(0,Number(asset.download_count)||0)});
+          }
         }
-      }
-      renderReleaseCounts(rows,"GitHub Live");
-    }catch(_){
-      if(!snapshot?.releases){
-        for(const site of releaseSites){
-          const count=document.querySelector('[data-release-count-site="'+site+'"]');
-          const info=document.querySelector('[data-release-info-site="'+site+'"]');
-          if(count)count.textContent="—";
-          if(info)info.textContent="GitHub Release စာရင်း ချိတ်ဆက်မရသေးပါ။";
-        }
+      }catch(_){}
+    }
+    if(loaded)renderReleaseCounts(rows,loaded===feeds.length?"GitHub Live":"GitHub Partial");
+    else if(!snapshot?.releases) {
+      for(const site of releaseSites){
+        const count=document.querySelector('[data-release-count-site="'+site+'"]');
+        const info=document.querySelector('[data-release-info-site="'+site+'"]');
+        if(count)count.textContent="—";
+        if(info)info.textContent="GitHub Release စာရင်း ချိတ်ဆက်မရသေးပါ။";
       }
     }
   }
+
   async function refreshJournalWebsiteViews(){
     const siteKeys=["goal-zone","bw-sport","ykz-family","ko-thet-family"];
     try {
