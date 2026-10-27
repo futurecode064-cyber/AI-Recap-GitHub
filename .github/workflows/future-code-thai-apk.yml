@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -57,54 +58,56 @@ jobs:
           path: thai-course/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14
-      - name: Verify and publish one-time public beta APK
+      - name: Assemble permanent-key release APK
+        working-directory: thai-course
+        run: gradle --no-daemon :app:assembleRelease
+      - name: Sign official Thai APK with private persistent signing key
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          API="https://mxwervqihaqlxybghdak.supabase.co/functions/v1/fc-thai-signing"
+          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-thai-signing-v1" | jq -er '.value')"
+          echo "::add-mask::$OIDC"
+          curl -fsS -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o /tmp/fc-thai-sign.json
+          if [[ "$(jq -r '.ready' /tmp/fc-thai-sign.json)" != "true" ]]; then
+            PASS="$(openssl rand -hex 32)"
+            echo "::add-mask::$PASS"
+            keytool -genkeypair -storetype PKCS12 -keystore /tmp/fc-thai-init.p12 -storepass "$PASS" -keypass "$PASS" -alias future-code-thai -keyalg RSA -keysize 3072 -validity 10000 -dname 'CN=Future Code Thai Speaking,O=Future Code,C=MM' -noprompt
+            jq -nc --arg pass "$PASS" --arg b64 "$(base64 -w0 /tmp/fc-thai-init.p12)" '{action:"initialize",store_password:$pass,keystore_b64:$b64}' > /tmp/fc-thai-init.json
+            curl -fsS -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data-binary @/tmp/fc-thai-init.json "$API" -o /tmp/fc-thai-initialized.json
+            jq -e '.ok == true' /tmp/fc-thai-initialized.json >/dev/null
+            curl -fsS -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o /tmp/fc-thai-sign.json
+          fi
+          jq -e '.ready == true' /tmp/fc-thai-sign.json >/dev/null
+          jq -er '.keystore_b64' /tmp/fc-thai-sign.json | base64 -d > /tmp/fc-thai-key.p12
+          ANDROID_KEYSTORE_PASS="$(jq -er '.store_password' /tmp/fc-thai-sign.json)"
+          SIGN_ALIAS="$(jq -er '.key_alias' /tmp/fc-thai-sign.json)"
+          echo "::add-mask::$ANDROID_KEYSTORE_PASS"
+          export ANDROID_KEYSTORE_PASS
+          mkdir -p out
+          BT="$ANDROID_HOME/build-tools/35.0.0"
+          "$BT/zipalign" -f -p 4 thai-course/app/build/outputs/apk/release/app-release-unsigned.apk /tmp/fc-thai-aligned.apk
+          "$BT/apksigner" sign --ks /tmp/fc-thai-key.p12 --ks-key-alias "$SIGN_ALIAS" --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/Future_Code_Thai_Speaking_v1.0.1.apk /tmp/fc-thai-aligned.apk
+          "$BT/apksigner" verify --verbose --print-certs out/Future_Code_Thai_Speaking_v1.0.1.apk
+          sha256sum out/*.apk > out/SHA256SUMS.txt
+          shred -u /tmp/fc-thai-sign.json /tmp/fc-thai-key.p12 /tmp/fc-thai-init.p12 /tmp/fc-thai-init.json /tmp/fc-thai-initialized.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Future-Code-Thai-Speaking-Official-v1.0.1
+          path: out/*
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish stable official Thai release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          APK=thai-course/app/build/outputs/apk/debug/app-debug.apk
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
-          if gh release view future-code-thai-speaking-beta-v1.0.1 >/dev/null 2>&1; then
-            echo "Public beta already exists; do not replace its APK with a differently signed build."
+          TAG="future-code-thai-speaking-v1.0.1"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Official release preserved; no changed signing identity or download counter."
             exit 0
           fi
-          cp "$APK" /tmp/Future_Code_Thai_Speaking_v1.0.1_Beta.apk
-          gh release create future-code-thai-speaking-beta-v1.0.1 \
-            /tmp/Future_Code_Thai_Speaking_v1.0.1_Beta.apk \
-            --prerelease \
-            --title 'Future Code Thai Speaking v1.0.1 BETA' \
-            --notes 'BETA ONLY. Reinstallation and progress backup may be required for this new debug build. Android debug signature: future official APK cannot update this beta in-place unless certificates match. Backup learning progress before uninstall/reinstall. Educational starter curriculum, not professional-complete.'
-      - name: Sign official APK only if owner signing secrets are present
-        env:
-          THAI_KEYSTORE_BASE64: ${{ secrets.THAI_KEYSTORE_BASE64 }}
-          THAI_STORE_PASSWORD: ${{ secrets.THAI_STORE_PASSWORD }}
-          THAI_KEY_ALIAS: ${{ secrets.THAI_KEY_ALIAS }}
-          THAI_KEY_PASSWORD: ${{ secrets.THAI_KEY_PASSWORD }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          if [[ -z "$THAI_KEYSTORE_BASE64" || -z "$THAI_STORE_PASSWORD" || -z "$THAI_KEY_ALIAS" || -z "$THAI_KEY_PASSWORD" ]]; then
-            echo "Private signing key unavailable; official publication safely skipped."
-            exit 0
-          fi
-          printf '%s' "$THAI_KEYSTORE_BASE64" | base64 --decode > /tmp/fc-thai-release.jks
-          chmod 600 /tmp/fc-thai-release.jks
-          (cd thai-course && gradle --no-daemon :app:assembleRelease)
-          APK=thai-course/app/build/outputs/apk/release/app-release-unsigned.apk
-          test -s "$APK"
-          "$ANDROID_HOME/build-tools/35.0.0/zipalign" -p -f 4 "$APK" /tmp/fc-thai-aligned.apk
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign \
-            --ks /tmp/fc-thai-release.jks \
-            --ks-key-alias "$THAI_KEY_ALIAS" \
-            --ks-pass "env:THAI_STORE_PASSWORD" \
-            --key-pass "env:THAI_KEY_PASSWORD" \
-            --out /tmp/Future_Code_Thai_Speaking_v1.0.1.apk /tmp/fc-thai-aligned.apk
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose /tmp/Future_Code_Thai_Speaking_v1.0.1.apk
-          gh release create future-code-thai-speaking-v1.0.1 \
-            /tmp/Future_Code_Thai_Speaking_v1.0.1.apk \
-            --title 'Future Code Thai Speaking v1.0.1' \
-            --notes 'Myanmar-first Thai lessons, pronunciation, quizzes and notifications.' \
-            || gh release upload future-code-thai-speaking-v1.0.1 \
-              /tmp/Future_Code_Thai_Speaking_v1.0.1.apk --clobber
-          rm -f /tmp/fc-thai-release.jks
-          echo "Signed APK released"
+          gh release create "$TAG" out/Future_Code_Thai_Speaking_v1.0.1.apk out/SHA256SUMS.txt --title "Future Code Thai Speaking v1.0.1" --notes "Stable private signing certificate for all future releases. Android 8+; 18 lessons, Thai pronunciation, writing, quiz, flashcards and offline fallback. Android approval required for updates. Users coming from the differently signed v1.0.0 debug beta must back up progress and uninstall the beta before installing this stable release."
