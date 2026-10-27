@@ -27,7 +27,18 @@
    }).catch(()=>{});
   }catch(_){}
  }
- if(viewType==='website'){record('site_view',null);return;}
+ if(viewType==='website'){
+  record('site_view',null);
+  if(app && site==='english-academy-web' && app==='english-academy'){
+   record('page_view',null);record('app_view',app);
+   document.addEventListener('click',event=>{
+    const link=event.target?.closest?.('a[href]');
+    if(!link)return;
+    try{if(new URL(link.href,location.href).pathname.toLowerCase().endsWith('.apk'))record('download_click',app);}catch(_){}
+   },{passive:true});
+  }
+  return;
+}
  record('page_view',null);
  record('app_view',app);
  const download=document.querySelector('a[data-fc-apk-download]');

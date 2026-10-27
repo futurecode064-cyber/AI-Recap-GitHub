@@ -8,5 +8,5 @@ fetch('./latest.json',{cache:'no-store'}).then(r=>r.json()).then(j=>{const a=doc
  const record=(kind)=>{const id=uid();if(!id)return;fetch(endpoint,{method:'POST',mode:'cors',keepalive:true,headers:{apikey:key,'Content-Type':'application/json'},body:JSON.stringify({p_event_id:id,p_event_kind:kind,p_app_key:kind==='download_click'?app:null,p_browser_id:browserId,p_site_key:site})}).catch(()=>{});};
  record('page_view');document.querySelector('[data-fc-english-download]').addEventListener('click',()=>record('download_click'));
 })();
-</script><script src="../apk-portfolio-stats.js?v=portfolio-20261027" data-site-key="english-academy-web" data-view-type="website"></script>
+</script><script src="../apk-portfolio-stats.js?v=portfolio-app-tracking-20261027" data-site-key="english-academy-web" data-app-key="english-academy" data-view-type="website"></script>
 </body></html>
