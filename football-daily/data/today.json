@@ -182,8 +182,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 3,
+        "played": 8,
+        "wins": 5,
+        "draws": 3,
+        "losses": 0,
+        "goalsFor": 19,
+        "goalsAgainst": 6,
+        "points": 18
+      },
+      "awayStanding": {
+        "position": 9,
+        "played": 8,
+        "wins": 4,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 6,
+        "goalsAgainst": 9,
+        "points": 13
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -194,7 +212,8 @@
       "fixtureSources": "https://www.theguardian.com/football/fixtures/2026/Oct/27",
       "leagueLogoCandidateUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
       "leagueLogoSourcePage": "https://www.legaseriea.it/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332"
     },
     {
       "fixtureId": "fc-20261027-05",
@@ -218,8 +237,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 8,
+        "played": 8,
+        "wins": 4,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 13,
+        "goalsAgainst": 11,
+        "points": 13
+      },
+      "awayStanding": {
+        "position": 5,
+        "played": 8,
+        "wins": 5,
+        "draws": 2,
+        "losses": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 7,
+        "points": 17
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -230,7 +267,8 @@
       "fixtureSources": "https://www.theguardian.com/football/fixtures/2026/Oct/27",
       "leagueLogoCandidateUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
       "leagueLogoSourcePage": "https://www.legaseriea.it/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332"
     },
     {
       "fixtureId": "fc-20261027-01",
@@ -564,7 +602,16 @@
       "homeLastFive": [],
       "awayLastFive": [],
       "homeStanding": null,
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 7,
+        "played": 7,
+        "wins": 3,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 16,
+        "goalsAgainst": 13,
+        "points": 10
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -575,7 +622,8 @@
       "fixtureSources": null,
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
       "fixtureId": "fc-20261027-08",
@@ -600,7 +648,16 @@
       "homeLastFive": [],
       "awayLastFive": [],
       "homeStanding": null,
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 9,
+        "played": 7,
+        "wins": 2,
+        "draws": 3,
+        "losses": 2,
+        "goalsFor": 17,
+        "goalsAgainst": 13,
+        "points": 9
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -611,7 +668,8 @@
       "fixtureSources": null,
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
       "fixtureId": "fc-20261027-07",
@@ -636,7 +694,16 @@
       "homeLastFive": [],
       "awayLastFive": [],
       "homeStanding": null,
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 5,
+        "played": 7,
+        "wins": 4,
+        "draws": 0,
+        "losses": 3,
+        "goalsFor": 20,
+        "goalsAgainst": 11,
+        "points": 12
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -647,7 +714,8 @@
       "fixtureSources": null,
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
       "fixtureId": "fc-20261027-06",
@@ -671,8 +739,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 11,
+        "played": 7,
+        "wins": 3,
+        "draws": 0,
+        "losses": 4,
+        "goalsFor": 6,
+        "goalsAgainst": 16,
+        "points": 9
+      },
+      "awayStanding": {
+        "position": 14,
+        "played": 7,
+        "wins": 2,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 10,
+        "goalsAgainst": 17,
+        "points": 8
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -683,7 +769,8 @@
       "fixtureSources": null,
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
       "fixtureId": "fc-20261027-12",
@@ -707,8 +794,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 12,
+        "played": 7,
+        "wins": 2,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 8,
+        "goalsAgainst": 11,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 7,
+        "wins": 1,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 6,
+        "goalsAgainst": 18,
+        "points": 6
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -719,7 +824,8 @@
       "fixtureSources": null,
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
       "fixtureId": "fc-20261027-11",
@@ -743,7 +849,16 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
+      "homeStanding": {
+        "position": 18,
+        "played": 7,
+        "wins": 1,
+        "draws": 0,
+        "losses": 6,
+        "goalsFor": 11,
+        "goalsAgainst": 22,
+        "points": 3
+      },
       "awayStanding": null,
       "homeOdds": null,
       "drawOdds": null,
@@ -755,7 +870,8 @@
       "fixtureSources": null,
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
       "fixtureId": "fc-20261027-13",
@@ -779,7 +895,16 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
+      "homeStanding": {
+        "position": 8,
+        "played": 7,
+        "wins": 3,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 12,
+        "goalsAgainst": 15,
+        "points": 10
+      },
       "awayStanding": null,
       "homeOdds": null,
       "drawOdds": null,
@@ -791,7 +916,8 @@
       "fixtureSources": null,
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
       "fixtureId": "fc-20261027-10",
@@ -815,8 +941,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 2,
+        "played": 7,
+        "wins": 5,
+        "draws": 2,
+        "losses": 0,
+        "goalsFor": 12,
+        "goalsAgainst": 4,
+        "points": 17
+      },
+      "awayStanding": {
+        "position": 6,
+        "played": 7,
+        "wins": 3,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 15,
+        "goalsAgainst": 14,
+        "points": 12
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -827,7 +971,8 @@
       "fixtureSources": null,
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
       "fixtureId": "fc-20261027-15",
@@ -851,8 +996,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 5,
+        "played": 8,
+        "wins": 4,
+        "draws": 2,
+        "losses": 2,
+        "goalsFor": 13,
+        "goalsAgainst": 7,
+        "points": 14
+      },
+      "awayStanding": {
+        "position": 20,
+        "played": 8,
+        "wins": 1,
+        "draws": 1,
+        "losses": 6,
+        "goalsFor": 9,
+        "goalsAgainst": 20,
+        "points": 4
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -863,7 +1026,8 @@
       "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
     },
     {
       "fixtureId": "fc-20261027-16",
@@ -887,8 +1051,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 4,
+        "played": 8,
+        "wins": 4,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 6,
+        "points": 15
+      },
+      "awayStanding": {
+        "position": 19,
+        "played": 8,
+        "wins": 1,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 8,
+        "goalsAgainst": 16,
+        "points": 5
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -899,7 +1081,8 @@
       "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
     },
     {
       "fixtureId": "fc-20261027-17",
@@ -923,8 +1106,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 15,
+        "played": 8,
+        "wins": 1,
+        "draws": 5,
+        "losses": 2,
+        "goalsFor": 8,
+        "goalsAgainst": 12,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 8,
+        "wins": 2,
+        "draws": 1,
+        "losses": 5,
+        "goalsFor": 7,
+        "goalsAgainst": 13,
+        "points": 7
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -935,7 +1136,8 @@
       "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
     },
     {
       "fixtureId": "fc-20261027-18",
@@ -959,8 +1161,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 13,
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 11,
+        "goalsAgainst": 15,
+        "points": 9
+      },
+      "awayStanding": {
+        "position": 3,
+        "played": 8,
+        "wins": 5,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 15,
+        "goalsAgainst": 8,
+        "points": 16
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -971,7 +1191,8 @@
       "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
     },
     {
       "fixtureId": "fc-20261027-19",
@@ -995,8 +1216,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 2,
+        "played": 8,
+        "wins": 5,
+        "draws": 2,
+        "losses": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 8,
+        "points": 17
+      },
+      "awayStanding": {
+        "position": 18,
+        "played": 8,
+        "wins": 1,
+        "draws": 3,
+        "losses": 4,
+        "goalsFor": 6,
+        "goalsAgainst": 11,
+        "points": 6
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -1007,7 +1246,8 @@
       "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
     },
     {
       "fixtureId": "fc-20261027-20",
@@ -1031,8 +1271,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 9,
+        "played": 8,
+        "wins": 3,
+        "draws": 1,
+        "losses": 4,
+        "goalsFor": 7,
+        "goalsAgainst": 10,
+        "points": 10
+      },
+      "awayStanding": {
+        "position": 7,
+        "played": 8,
+        "wins": 3,
+        "draws": 4,
+        "losses": 1,
+        "goalsFor": 10,
+        "goalsAgainst": 7,
+        "points": 13
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -1043,7 +1301,8 @@
       "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
     },
     {
       "fixtureId": "fc-20261027-21",
@@ -1067,8 +1326,26 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 12,
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 10,
+        "goalsAgainst": 9,
+        "points": 9
+      },
+      "awayStanding": {
+        "position": 8,
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 12,
+        "goalsAgainst": 9,
+        "points": 11
+      },
       "homeOdds": null,
       "drawOdds": null,
       "awayOdds": null,
@@ -1079,7 +1356,8 @@
       "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
       "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
       "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
-      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified"
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica"
     }
   ],
   "updateStatus": "partial",
