@@ -161,15 +161,16 @@
       "id": "chinese-learning",
       "name": "Future Code Chinese",
       "packageName": "mm.futurecode.chinese",
-      "versionName": "1.0.1",
-      "versionCode": 2,
+      "versionName": "1.0.2",
+      "versionCode": 3,
       "minSdk": 26,
-      "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.1/Future_Code_Chinese_v1.0.1.apk",
+      "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.2/Future_Code_Chinese_v1.0.2.apk",
       "sizeBytes": 37695,
-      "sha256": "8da50761f6b60fdcaa8d7f4dce7b801e78634d98062d490885d967b59a61cc4b",
+      "sha256": "c92bd80544221ae6a3c0b2fafd8d5d274e80c3ec25adcd8fe192007562c655a7",
       "certificateSha256": "984a8f1fcc3a2add33e8faf545b617ab0485f25091116e4c4bcc804ef81c6ecb",
       "releasedAt": "2026-10-27",
-      "online": false
+      "online": false,
+      "releaseChannel": "stable"
     },
     {
       "id": "english-academy",
@@ -184,6 +185,36 @@
       "certificateSha256": "0e37a26cd08900280d2486ff47fa4ea0375c3c89ac5cba51b47ac31be908ecc3",
       "releasedAt": "2026-10-27",
       "online": false
+    },
+    {
+      "id": "thai-speaking",
+      "name": "Future Code Thai Speaking",
+      "packageName": "com.futurecode.thaispeaking",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/future-code-thai-speaking-v1.0.1/Future_Code_Thai_Speaking_v1.0.1.apk",
+      "sizeBytes": 37839,
+      "sha256": "cc4770489d4e19c6d45073a30c49d5c98d57c0c3a10c0e1da3fa449181920144",
+      "releasedAt": "2026-10-27",
+      "online": true,
+      "releaseChannel": "stable",
+      "note": "Previous debug beta cannot update in place; backup and uninstall."
+    },
+    {
+      "id": "language-academy",
+      "name": "Future Code Language Academy",
+      "packageName": "mm.futurecode.languages",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/fc-language-academy-v1.0.1/Future_Code_Language_Academy_v1.0.1.apk",
+      "sizeBytes": 33308,
+      "sha256": "2c48d6ed74cd23932794b8c1da14a85b029a2ad2e66a349c2659f536e66827d9",
+      "releasedAt": "2026-10-27",
+      "online": false,
+      "releaseChannel": "stable",
+      "note": "Previous 1.0.0 test APK requires uninstall and backup."
     }
   ]
 }
