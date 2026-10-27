@@ -58,3 +58,5 @@ jobs:
             console.log('PROFESSIONAL SECTION QA PASS',JSON.stringify(result));
           } finally { await browser.close(); }
           NODE
+
+# Rerun after deployment routing repair.
