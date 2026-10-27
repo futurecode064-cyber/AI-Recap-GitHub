@@ -1,0 +1,69 @@
+name: Verify 27 Oct Live Odds PNG Logo Downloads
+on:
+  push:
+    branches: [football-daily-render]
+    paths: ['.github/workflows/football-20261027-odds-logo-download-qa.yml']
+permissions:
+  contents: read
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Download REAL odds PNG from each of six production websites
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          import {stat} from 'node:fs/promises';
+          import {readFileSync} from 'node:fs';
+          const sheet=JSON.parse(readFileSync('football-daily/data/odds/2026-10-27.json','utf8'));
+          if(sheet.reportDate!=='2026-10-27'||sheet.matches.length!==19)throw Error('Unexpected odds source');
+          const origin='https://future-code-football-daily.pages.dev';
+          const roots=['/','/ykz-family/','/bw-sport/','/ko-thet-family/','/future-code-journal/','/kmm-sport-hub/'];
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          try{
+            for(const root of roots){
+              const context=await browser.newContext({viewport:{width:1200,height:900},acceptDownloads:true});
+              const page=await context.newPage();
+              const link=origin+root+(root==='/'?'odds.html':'odds.html')+'?date=2026-10-27';
+              await page.goto(link,{waitUntil:'domcontentloaded',timeout:55000});
+              await page.locator('#oddsPngPages button.odds-part-download').first().waitFor({state:'visible',timeout:30000});
+              const logos=await page.evaluate(async rows=>{
+                const mapper=window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData;
+                if(!mapper)throw Error('Missing site logo mapper');
+                let urls=[...new Set(rows.flatMap(x=>[x.homeCrestUrl,x.awayCrestUrl]))];
+                const images=urls.map(x=>mapper.imageUrl(x));
+                for(let x of images)if(!x.startsWith(location.origin+'/assets/brand-export-teams/'))
+                  throw Error('Not pinned same origin '+x);
+                await Promise.all(images.map(src=>new Promise((ok,fail)=>{
+                  const image=new Image();image.crossOrigin='anonymous';
+                  let timer=setTimeout(()=>fail(Error('Logo timed out '+src)),10000);
+                  image.onload=()=>{clearTimeout(timer);if(image.naturalWidth<32)fail(Error('Empty logo '+src));else ok(true);};
+                  image.onerror=()=>{clearTimeout(timer);fail(Error('Logo failed '+src));};
+                  image.src=src;
+                })));
+                return images.length;
+              },sheet.matches);
+              const [download]=await Promise.all([
+                page.waitForEvent('download',{timeout:65000}),
+                page.locator('#oddsPngPages button.odds-part-download').first().click()
+              ]);
+              const path=await download.path();
+              const bytes=(await stat(path)).size;
+              if(bytes<12000||!download.suggestedFilename().endsWith('.png'))
+                throw Error('Odds PNG download not a real PNG '+root+' '+bytes);
+              console.log(root+' ODDS PNG PASS '+JSON.stringify({crests:logos,bytes,file:download.suggestedFilename()}));
+              await context.close();
+            }
+          } finally {await browser.close();}
+          console.log('ALL SIX LIVE 27 OCT ODDS PNG DOWNLOADS PASS');
+          NODE
