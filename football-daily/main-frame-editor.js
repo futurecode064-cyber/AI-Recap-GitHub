@@ -45,7 +45,8 @@
   if(origin&&!edit)return [...origin];
   const custom=!!p.image;
   const frame=custom||(!origin?false:!!origin[3]);
-  return [id,p.name,p.color,frame?{top:p.top/100,bottom:p.bottom/100}:undefined,{image:p.image||""}];
+  return [id,p.name,p.color,frame?{top:p.top/100,bottom:p.bottom/100}:undefined,
+    (p.image||!origin)?{image:p.image||""}:undefined];
  }
  function currentId(){return designs[Number(document.getElementById("tofDesign")?.value||0)]?.[0]||"";}
  function apply(want){
@@ -68,6 +69,10 @@
   node("fcfeName").value=p.name;node("fcfeColor").value=color(p.color);
   node("fcfeTop").value=p.top;node("fcfeBottom").value=p.bottom;
   node("fcfeFile").value="";pendingImage="";
+  if(selected==="colour"&&state.edited.colour){
+    const theme=document.getElementById("tofColour"),picker=document.getElementById("tofCustom");
+    if(theme&&picker){theme.value="custom";picker.value=p.color;theme.dispatchEvent(new Event("change"));}
+  }
   node("fcfePicture").textContent=p.image?"Uploaded Frame ပုံ ရှိသည်":(originals.find(d=>d[0]===selected)?.[3]?"မူရင်း Frame ပုံ":"အရောင် Frame");
   node("fcfeRemove").textContent=ids.has(selected)?"Frame ကို ရွေးစရာထဲမှ ဖြုတ်မယ်":"ကိုယ်ပိုင် Frame ဖျက်မယ်";
   node("fcfeOriginal").hidden=!ids.has(selected);
@@ -182,7 +187,7 @@
    catch(err){pendingImage="";say(err.message,true);}
   });
   node("fcfeAdd").onclick=async()=>{
-   try{if(state.custom.length>=40)throw Error("Frame အများဆုံး ၄၀ မျိုး");const p=form();
+   try{if(state.custom.length>=40)throw Error("Frame အများဆုံး ၄၀ မျိုး");const p={...form(),image:pendingImage||""};
     const id="custom-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8);
     state.custom.push({id,...p});await finish(id,"Frame အသစ် ထည့်သွင်းပြီးပါပြီ။");
    }catch(e){say(e.message,true);}
