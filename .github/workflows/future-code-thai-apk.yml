@@ -73,6 +73,8 @@ jobs:
       - name: Assemble permanent-key release APK
         working-directory: thai-course
         run: gradle --no-daemon :app:assembleRelease
+      - name: Verify every Thai voice is embedded in APK
+        run: python3 scripts/verify_offline_audio_apk.py thai-course/app/build/outputs/apk/release/app-release-unsigned.apk 180
       - name: Sign official Thai APK with private persistent signing key
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

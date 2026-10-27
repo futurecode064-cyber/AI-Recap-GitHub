@@ -57,6 +57,8 @@ jobs:
                   z.write(p,p.name)
           PY
           "$BT/zipalign" -f -p 4 build-language/unsigned.apk build-language/aligned.apk
+      - name: Verify all 12-language voice files are embedded
+        run: python3 scripts/verify_offline_audio_apk.py build-language/aligned.apk 216
       - name: Sign Language Academy with private persistent signing key
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

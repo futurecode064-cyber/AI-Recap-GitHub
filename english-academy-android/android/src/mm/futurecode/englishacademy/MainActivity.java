@@ -102,7 +102,7 @@ public final class MainActivity extends Activity {
       JSONObject j=new JSONObject(sb.toString());
       if(!"mm.futurecode.englishacademy".equals(j.optString("packageName")))throw new Exception("wrong package");
       int newCode=j.optInt("versionCode",0);
-      if(newCode>4){String address=j.optString("apkUrl","");
+      if(newCode>5){String address=j.optString("apkUrl","");
         Uri u=Uri.parse(address);if(!"https".equals(u.getScheme())||!"future-code-football-daily.pages.dev".equals(u.getHost())||!u.getPath().startsWith("/english-academy/")||!u.getPath().endsWith(".apk"))throw new Exception("untrusted update link");
         PollJob.post(this,499,"Future Code English Academy","Version "+j.optString("versionName")+" အသစ်ရပါပြီ။ Update တင်နိုင်ပါပြီ။",address);
         runOnUiThread(()->new android.app.AlertDialog.Builder(this).setTitle("English Academy Update").setMessage("ဗားရှင်းအသစ်ရှိပါပြီ။ Android Install အတည်ပြုချက် လိုအပ်နိုင်ပါသည်။").setPositiveButton("Download",(d,w)->startActivity(new Intent(Intent.ACTION_VIEW,u))).setNegativeButton("Later",null).show());

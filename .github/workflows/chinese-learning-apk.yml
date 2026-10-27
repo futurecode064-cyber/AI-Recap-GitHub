@@ -44,6 +44,8 @@ jobs:
       - name: Assemble APK
         working-directory: chinese-learning
         run: gradle --no-daemon :app:assembleRelease :app:assembleDebug
+      - name: Verify every Mandarin voice is embedded in APK
+        run: python3 scripts/verify_offline_audio_apk.py chinese-learning/app/build/outputs/apk/release/app-release-unsigned.apk 192
       - name: Sign with existing private Future Code signing service
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

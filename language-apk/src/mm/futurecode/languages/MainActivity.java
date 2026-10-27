@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 public class MainActivity extends Activity {
-  static final int CURRENT_VERSION = 5;
+  static final int CURRENT_VERSION = 6;
   static final String META = "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/languages/latest.json";
   static final String CHANNEL = "fc_languages_updates";
   static final String PREF = "fc_language_settings";
