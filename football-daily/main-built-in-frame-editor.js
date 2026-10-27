@@ -39,8 +39,8 @@
   selector.onchange=()=>selectFrame(selector.value);
   q(".fc-bif-save").onclick=()=>{const id=current(),name=q(".fc-bif-name").value.trim().slice(0,70),color=q(".fc-bif-color").value;if(!name){statusText("Frame နာမည် ထည့်ပါ။",true);return;}if(!validColor(color)){statusText("အရောင်ကုဒ် မမှန်ပါ။",true);return;}data.edited[id]={name,color};write();statusText("Frame ကို ပြင်ဆင်ပြီး သိမ်းလိုက်ပါပြီ။");};
   q(".fc-bif-hide").onclick=()=>{const id=current();if(!data.hidden.includes(id))data.hidden.push(id);write();statusText("Frame ကို ရွေးစရာများမှ ဖြုတ်လိုက်ပါပြီ။ ပြန်ဖော်နိုင်ပါတယ်။");};
-  q(".fc-bif-restore").onclick=()=>{const id=current();data.hidden=data.hidden.filter(x=>x!==id);write();statusText("Frame-ийг ပြန်ဖော်လိုо.");};
-  q(".fc-bif-reset").onclick=()=>{delete data.edited[current()];write();statusText("Сонгосон Frame မူရင်းအတိုင်း ပြန်ထားလိုက်ပါပြီ။");};
+  q(".fc-bif-restore").onclick=()=>{const id=current();data.hidden=data.hidden.filter(x=>x!==id);write();statusText("Frame ကို ပြန်ဖော်လိုက်ပါပြီ။");};
+  q(".fc-bif-reset").onclick=()=>{delete data.edited[current()];write();statusText("ရွေးထားတဲ့ Frame ကို မူရင်းအတိုင်း ပြန်ထားလိုက်ပါပြီ။");};
   q(".fc-bif-restore").textContent="ဖြုတ်ထားတဲ့ Frame ပြန်ဖော်မယ်";
   q(".fc-bif-reset").textContent="ရွေးထားတာ မူရင်းပြန်ထားမယ်";
   refreshList();restoreFrames();selectFrame(currentId);
