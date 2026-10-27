@@ -46,7 +46,7 @@ jobs:
               await page.goto(origin+'/?builtin-frame-qa='+attempt,{waitUntil:'domcontentloaded',timeout:40000});
               try{
                 await page.locator('#brandPreviewStudio + .fc-built-in-frame-editor').waitFor({timeout:6500});
-                await page.locator('#mainResultsFrameStudio + .fc-built-in-frame-editor').waitFor({timeout:20000});
+                await page.locator('#resultsDownloadBar + .fc-built-in-frame-editor').waitFor({timeout:20000});
                 loaded=true;break;
               }catch(error){if(attempt===11)throw error;await page.waitForTimeout(5000);}
             }
@@ -71,7 +71,7 @@ jobs:
             await previewAgain.locator('.fc-bif-reset').click();
             await page.waitForFunction(()=>document.querySelector('#brandFrame option')?.textContent==='BCF ခန့်မှန်း');
 
-            const results=page.locator('#mainResultsFrameStudio + .fc-built-in-frame-editor');
+            const results=page.locator('#resultsDownloadBar + .fc-built-in-frame-editor');
             await results.locator('.fc-bif-select').selectOption('best');
             await results.locator('.fc-bif-name').fill('QA RESULT BUILTIN');
             await results.locator('.fc-bif-color').fill('#2255aa');
