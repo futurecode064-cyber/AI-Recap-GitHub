@@ -158,7 +158,7 @@
   function init(){
     const bar=document.getElementById("resultsDownloadBar");
     const previous=document.querySelector('#dateTabs button[data-day="-1"]');
-    if(!bar||!previous)return;
+    if(!bar)return;
     const studio=document.createElement("section");
     studio.id="mainResultsFrameStudio";
     studio.className="results-frame-studio";
@@ -298,7 +298,7 @@
     el("rfsExport").addEventListener("click",()=>run(true));
     el("rfsAll").addEventListener("click",()=>el("rfsLeagues").querySelectorAll("input").forEach(x=>x.checked=true));
     el("rfsNone").addEventListener("click",()=>el("rfsLeagues").querySelectorAll("input").forEach(x=>x.checked=false));
-    previous.addEventListener("click",refresh);
+    previous?.addEventListener("click",refresh);
     document.getElementById("reloadBtn")?.addEventListener("click",()=>{
       if(document.body.dataset.fcMainView==="yesterday")refresh();
     });
