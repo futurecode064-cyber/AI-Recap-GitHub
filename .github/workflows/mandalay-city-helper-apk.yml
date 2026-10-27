@@ -4,7 +4,10 @@ on:
   push:
     branches: [main]
     paths:
-      - 'mandalay-apk/**'
+      - 'mandalay-apk/app/**'
+      - 'mandalay-apk/settings.gradle'
+      - 'mandalay-apk/build.gradle'
+      - 'mandalay-apk/gradle.properties'
       - '.github/workflows/mandalay-city-helper-apk.yml'
 permissions:
   contents: write
@@ -27,6 +30,13 @@ jobs:
           SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
           test -x "$SDKMANAGER"
           "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Determine APK version
+        run: |
+          APK_VERSION="$(sed -n "s/.*versionName '\\([^']*\\)'.*/\\1/p" mandalay-apk/app/build.gradle | head -n1)"
+          test -n "$APK_VERSION"
+          echo "APK_VERSION=$APK_VERSION" >> "$GITHUB_ENV"
+          echo "RELEASE_TAG=mandalay-city-helper-v$APK_VERSION" >> "$GITHUB_ENV"
+          echo "APK_FILE=Future_Code_Mandalay_City_Helper_v$APK_VERSION.apk" >> "$GITHUB_ENV"
       - name: Download official icon
         run: |
           mkdir -p mandalay-apk/app/src/main/res/drawable-nodpi
@@ -60,8 +70,8 @@ jobs:
           echo "::add-mask::$ANDROID_KEYSTORE_PASS"
           export ANDROID_KEYSTORE_PASS
           mkdir -p out
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/mandalay-release.p12 --ks-key-alias future-code-mandalay --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/Future_Code_Mandalay_City_Helper_v1.0.0.apk mandalay-apk/app/build/outputs/apk/release/app-release-unsigned.apk
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs out/Future_Code_Mandalay_City_Helper_v1.0.0.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/mandalay-release.p12 --ks-key-alias future-code-mandalay --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/$APK_FILE mandalay-apk/app/build/outputs/apk/release/app-release-unsigned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs out/$APK_FILE
           sha256sum out/*.apk
           shred -u /tmp/mandalay-init.json /tmp/mandalay-init-result.json /tmp/mandalay-signing.json /tmp/mandalay-release.p12 2>/dev/null || true
       - uses: actions/upload-artifact@v4
@@ -69,13 +79,17 @@ jobs:
           name: Mandalay-City-Helper-Android-APK
           path: out/*.apk
           if-no-files-found: error
-      - name: Publish beta APK download
+      - name: Publish versioned APK without resetting release download counts
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if gh release view mandalay-city-helper-v1.0.0 >/dev/null 2>&1; then
-            gh release upload mandalay-city-helper-v1.0.0 out/Future_Code_Mandalay_City_Helper_v1.0.0.apk --clobber
+          set -euo pipefail
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            if gh release view "$RELEASE_TAG" --json assets -q '.assets[].name' | grep -Fx "$APK_FILE"; then
+              echo "APK version $APK_VERSION already published; preserving public asset and download statistics."
+            else
+              gh release upload "$RELEASE_TAG" "out/$APK_FILE"
+            fi
           else
-            gh release create mandalay-city-helper-v1.0.0 out/Future_Code_Mandalay_City_Helper_v1.0.0.apk --title "မြို့လေး ကူညီရေး စွန့်စားခန်း Android v1.0.0 (Beta)" --notes "Online Android game. Game website updates automatically; local announcement polling and binary-update notices included. APK signed with a private, persistent Android certificate."
+            gh release create "$RELEASE_TAG" "out/$APK_FILE" --title "မြို့လေး ကူညီရေး စွန့်စားခန်း Android v$APK_VERSION" --notes "Android online live game. Persistent Android signing, website hot-updates, owner notifications and checked binary-upgrade prompts. APK installs require explicit Android user approval."
           fi
-          gh release edit mandalay-city-helper-v1.0.0 --notes "Online beta: the existing live Mandalay City Helper game in Android WebView. The APK is signed using a persistent private certificate for future in-place updates. Website game content refreshes automatically; Android must still approve binary APK updates. Notices are fetched periodically, not real-time FCM push."
