@@ -2,15 +2,15 @@
   "id": "chinese-learning",
   "name": "Future Code Chinese",
   "packageName": "mm.futurecode.chinese",
-  "versionName": "1.0.4",
-  "versionCode": 5,
+  "versionName": "1.0.6",
+  "versionCode": 7,
   "minSdk": 26,
-  "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.4/Future_Code_Chinese_v1.0.4.apk",
-  "sizeBytes": 41791,
-  "sha256": "9144742477fa1ffbf00189136c1eddc304a22d5d183e6a6622b1552147614b9d",
+  "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.6/Future_Code_Chinese_v1.0.6.apk",
+  "sizeBytes": 5576455,
+  "sha256": "11152b4ad2716f8a6029450caeb179611a75cae82d37113c4a34697b4ab41455",
   "certificateSha256": "984a8f1fcc3a2add33e8faf545b617ab0485f25091116e4c4bcc804ef81c6ecb",
   "releasedAt": "2026-10-27",
   "online": false,
-  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.4/Future_Code_Chinese_v1.0.4.apk",
-  "releaseNotes": "192 Chinese words and practical expressions across six levels, with offline lessons, flashcards, quizzes, writing and progress backup."
+  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/chinese-learning-v1.0.6/Future_Code_Chinese_v1.0.6.apk",
+  "releaseNotes": "192 real Mandarin speech MP3 files included in Android APK; no separate Chinese voice installation required."
 }
