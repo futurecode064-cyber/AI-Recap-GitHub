@@ -99,9 +99,9 @@ jobs:
             const designIndex=await page.evaluate(()=>window.FutureCodeTableOddsFrames.designs.findIndex(d=>d[0]==='best'));
             await page.locator('#tofDesign').selectOption(String(designIndex));
             await page.locator('#fcfeRemove').click();
-            assert(!await page.evaluate(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[0]==='best')),'Removed built-in frame still offered');
+            await page.waitForFunction(()=>!window.FutureCodeTableOddsFrames.designs.some(d=>d[0]==='best'),null,{timeout:12000});
             await page.locator('#fcfeUnhide').click();
-            assert(await page.evaluate(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[0]==='best')),'Restore original frame failed');
+            await page.waitForFunction(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[0]==='best'),null,{timeout:12000});
             const [backup]=await Promise.all([page.waitForEvent('download',{timeout:10000}),page.locator('#fcfeBackup').click()]);
             assert(backup.suggestedFilename().endsWith('.json'),'Backup download missing');
             assert(errors.length===0,'Browser script error: '+errors.join('; '));
