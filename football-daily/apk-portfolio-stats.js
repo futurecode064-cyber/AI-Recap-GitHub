@@ -5,7 +5,7 @@
   const current=document.currentScript;
   const site=current?.dataset.siteKey;
   const app=current?.dataset.appKey;
-  const allow=new Set(['goal-zone','bw-sport','ykz-family','ko-thet-family']);
+  const allow=new Set(['goal-zone','bw-sport','ykz-family','ko-thet-family','bet-city-family']);
   if(!allow.has(site)||site!==app)return;
   const base='https://mxwervqihaqlxybghdak.supabase.co/rest/v1/rpc/fc_record_portfolio_event';
   const key='sb_publishable_JBcF0nEMbcFSSf7OlCCqmQ_lC1DEM0A';
