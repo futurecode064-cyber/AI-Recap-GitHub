@@ -1,0 +1,17 @@
+{
+  "name": "Future Code Thai Speaking",
+  "short_name": "FC Thai",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071320",
+  "theme_color": "#071320",
+  "icons": [
+    {
+      "src": "thai-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
