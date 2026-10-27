@@ -178,6 +178,33 @@
       const trs=[...group.querySelectorAll("tbody tr")];
       if(trs.length!==originals.length)throw Error("Website ပွဲအရေအတွက် မကိုက်ညီပါ။");
       trs.forEach((tr,i)=>{if(!wanted.has(i))tr.remove();});
+      // Export-only edits operate on a CLONE; the website's odds are untouched.
+      const edits=!document.documentElement?.dataset?.footballBrandName
+        ?window.FutureCodeFrameEditor?.exportNames(date):null;
+      if(edits){
+        const displayName=edits.leagues?.[league];
+        if(displayName){
+          const label=group.querySelector(".main-league-name, .odds-league-heading span:last-child");
+          if(label)label.textContent=displayName;
+        }
+        trs.forEach((tr,i)=>{
+          if(!tr.parentNode)return;
+          const m=originals[i],id=m.fixtureId||m.league+"|"+m.home+"|"+m.away;
+          const words=edits.rows?.[id];
+          if(!words)return;
+          const labels=tr.querySelectorAll(".odds-matchup .club-label");
+          if(labels.length===2){
+            if(words.home)labels[0].textContent=words.home;
+            if(words.away)labels[1].textContent=words.away;
+          }
+          const upper=tr.querySelector("td.upper");
+          if(upper){
+            const original=upper.textContent.trim();
+            if(original===m.home&&words.home)upper.textContent=words.home;
+            else if(original===m.away&&words.away)upper.textContent=words.away;
+          }
+        });
+      }
       if(!document.documentElement?.dataset?.footballBrandName){
         // Export-only: source HH:mm in every time cell; the date appears once
         // in the heading. Full kickoffDisplay created massive multi-line rows.
@@ -539,10 +566,11 @@
   async function draw(rows,settings) {
     if(!Array.isArray(rows)||!rows.length)throw Error("ပေါက်ကြေး ပွဲစာရင်းမရှိပါ။");
     const design=settings.design;
-    const colourOnly=design[0]==="colour";
-    const theme=colourOnly?settings.colour:design[2];
+    const custom=design[4]||null;
+    const colourOnly=design[0]==="colour"||(custom&&!custom.image);
+    const theme=colourOnly?(design[0]==="colour"?settings.colour:design[2]):design[2];
     const framed=Boolean(design[3]),dir="./assets/table-odds-frames/";
-    const banner=framed?await localArtwork(dir+design[0]+"-frame.jpg"):null;
+    const banner=framed?await localArtwork(custom?.image||dir+design[0]+"-frame.jpg"):null;
     const top=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-top.jpg"):null;
     const bottom=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-bottom.jpg"):null;
     const shot=await captureWebsite(rows,theme,settings.date);
