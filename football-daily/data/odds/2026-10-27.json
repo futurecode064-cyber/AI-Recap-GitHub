@@ -169,10 +169,12 @@
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/150.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/32.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null
+      "homeOdds": "3.00",
+      "drawOdds": "3.76",
+      "awayOdds": "2.18",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "number": 7,
@@ -266,10 +268,12 @@
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/132.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/37.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null
+      "homeOdds": "4.20",
+      "drawOdds": "3.85",
+      "awayOdds": "1.76",
+      "oddsProvider": "22Bet",
+      "oddsSourceUrl": "https://ee.22bet.com/en/prematch/football/1008120-dfb-pokal/11456841-vfl-bochum-fsv-mainz",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "number": 10,
@@ -297,10 +301,12 @@
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/25.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/39.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null
+      "homeOdds": "1.39",
+      "drawOdds": "5.25",
+      "awayOdds": "7.39",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "number": 11,
@@ -328,10 +334,12 @@
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/26.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/155.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null
+      "homeOdds": "1.35",
+      "drawOdds": "5.38",
+      "awayOdds": "7.51",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "number": 12,
@@ -359,10 +367,12 @@
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/36.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/34.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null
+      "homeOdds": "1.83",
+      "drawOdds": "3.86",
+      "awayOdds": "3.98",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "number": 13,
@@ -489,10 +499,12 @@
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/2072.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/952.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null
+      "homeOdds": "2.14",
+      "drawOdds": "3.35",
+      "awayOdds": "3.27",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "number": 18,
@@ -553,10 +565,12 @@
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/1194.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/965.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null
+      "homeOdds": "2.15",
+      "drawOdds": "3.34",
+      "awayOdds": "3.26",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "number": 20,
@@ -617,10 +631,12 @@
       "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/1200.png",
       "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/2430.png",
       "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
-      "oddsProvider": null
+      "homeOdds": "2.07",
+      "drawOdds": "3.20",
+      "awayOdds": "3.60",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27"
     }
   ]
 }
