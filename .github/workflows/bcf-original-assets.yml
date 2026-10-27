@@ -1,0 +1,38 @@
+name: Bet City Family original asset import
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - "football-daily/bet-city-family/**"
+permissions:
+  contents: write
+jobs:
+  import-bcf-assets:
+    if: ${{ !contains(github.event.head_commit.message, '[bcf-assets]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          persist-credentials: true
+      - name: Download original user-uploaded banners and logo to self-host
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p football-daily/bet-city-family/assets
+          curl -fLsS --retry 3 --connect-timeout 15 -o football-daily/bet-city-family/assets/banner-top.jpg 'https://cdn.openart.ai/openart-uploads/production/attachment-transfers/817caf2a086180a639a52fdcbd9ab3de857e25a1484cf054d1487cad564f9b7c.jpg'
+          curl -fLsS --retry 3 --connect-timeout 15 -o football-daily/bet-city-family/assets/banner-bottom.jpg 'https://cdn.openart.ai/openart-uploads/production/attachment-transfers/5f61c4806dc0db2f71d605d6dc8c14150bcdb112041915ddfd8e54a493fa1191.jpg'
+          curl -fLsS --retry 3 --connect-timeout 15 -o football-daily/bet-city-family/assets/logo.png 'https://cdn.openart.ai/openart-uploads/production/attachment-transfers/eddbdc54eee7425cb8f3e081d5641471ef09cef49d479cb2cb240d18febd5607.png'
+          test "$(wc -c < football-daily/bet-city-family/assets/banner-top.jpg)" -ge 100000
+          test "$(wc -c < football-daily/bet-city-family/assets/banner-bottom.jpg)" -ge 100000
+          test "$(wc -c < football-daily/bet-city-family/assets/logo.png)" -ge 500000
+      - name: Commit BCF binary originals only
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add football-daily/bet-city-family/assets/banner-top.jpg football-daily/bet-city-family/assets/banner-bottom.jpg football-daily/bet-city-family/assets/logo.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Self-host original BCF banners and logo [bcf-assets]"
+            git push origin HEAD:football-daily-render
+          fi

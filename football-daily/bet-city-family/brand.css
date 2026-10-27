@@ -1,0 +1,101 @@
+/* Bet City Family — isolated electric blue, silver and gold skin */
+:root.bcf-theme{color-scheme:dark;--ink:#020a2d;--panel:#09164c;--panel2:#112e7a;--border:#3b62b7;--cream:#fff;--muted:#bfd8fc;--orange:#ffcc58;--green:#ffca51}
+.bcf-theme body{background:radial-gradient(ellipse at 50% -100px,#0755ce90,transparent 650px),#020827;color:#f5faff}
+.bcf-theme .site-header{background:linear-gradient(105deg,#020930,#053da6 53%,#01093a);border-bottom:2px solid #e8b94a;box-shadow:0 10px 35px #02072ac9}
+.bcf-theme .header-inner{min-height:82px;height:auto;padding:12px 0;gap:16px}
+.bcf-theme .logo{display:flex;align-items:center;gap:14px}
+.bcf-theme .bcf-site-logo{width:62px;height:62px;object-fit:contain;flex:none;border-radius:12px;background:#030b39;filter:drop-shadow(0 3px 8px #f0bc4488)}
+.bcf-theme .logo-lines b{font:900 clamp(18px,2.7vw,28px) 'Barlow Condensed','Noto Sans Myanmar',sans-serif;color:#fff8ed}
+.bcf-theme .logo-lines small{font:700 10px 'Barlow Condensed',sans-serif;color:#ffd77d;letter-spacing:.07em}
+.bcf-theme .top-edition{color:#e0efff;font-size:11px}
+.bcf-quick-nav{background:linear-gradient(90deg,#010d3f,#104dcb 50%,#010b40);border-bottom:1px solid #a88130}
+.bcf-quick-nav .container{min-height:53px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding-top:7px;padding-bottom:7px}
+.bcf-quick-nav strong{margin-right:auto;font:900 15px 'Barlow Condensed',sans-serif;color:#ffd26b;letter-spacing:.12em}
+.bcf-quick-nav a{font:700 11px 'Noto Sans Myanmar',sans-serif;text-decoration:none;padding:8px 13px;border:1px solid #4d7ad0;border-radius:9px;background:#0a246a;color:#fff5dc;transition:.2s}
+.bcf-quick-nav a:is(:hover,:focus-visible){background:#135be4;border-color:#fbd37b}
+.bcf-theme .bcf-stadium-banner{height:clamp(225px,25vw,342px);position:relative;overflow:hidden;isolation:isolate;border-bottom:3px solid #f5c54f;background:radial-gradient(ellipse at 50% 20%,#1768f3,#041459 62%,#01082b)}
+.bcf-theme .bcf-stadium-banner::before{content:"";position:absolute;inset:0;background:url('./assets/footballers.svg') center 52%/cover no-repeat;opacity:1;z-index:-1}
+.bcf-theme .bcf-stadium-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 10%,#041a60aa 33%,#071b70ba 68%,transparent 90%);z-index:-1}
+.bcf-theme .bcf-banner-content{position:relative;width:min(1160px,95%);height:100%;margin:auto;display:flex;align-items:center;justify-content:center;gap:28px}
+.bcf-theme .bcf-banner-logo{width:clamp(100px,12vw,162px);height:clamp(100px,12vw,162px);object-fit:contain;filter:drop-shadow(0 12px 20px #01052b);flex:none}
+.bcf-theme .bcf-banner-copy strong{font:900 clamp(39px,7vw,91px) 'Barlow Condensed',sans-serif;color:#fff;text-shadow:3px 5px 0 #2054c2,0 8px 25px #000;letter-spacing:.06em}
+.bcf-theme .bcf-banner-copy small{display:block;font:800 clamp(12px,1.7vw,24px) 'Barlow Condensed',sans-serif;color:#fbd276;letter-spacing:.11em;text-shadow:0 3px 16px #01021d}
+.bcf-theme .bcf-banner-rule{height:4px;width:min(100%,330px);margin-top:14px;background:linear-gradient(90deg,#ffe19a,#f3bc42 50%,transparent)}
+.bcf-theme .hero{isolation:isolate;overflow:hidden;position:relative;background:radial-gradient(ellipse at 68% 10%,#1856cd,#030a33 67%);border-bottom:2px solid #b68d45}
+.bcf-theme .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url('./assets/footballers.svg') center 54%/cover no-repeat;opacity:.72}
+.bcf-theme .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#020b32fa 1%,#051542ed 45%,#071654a8 82%,#050934ba);border:0;box-shadow:none}
+.bcf-theme .hero>.container{position:relative;z-index:1}
+.bcf-theme .hero-topline,.bcf-theme .hero-foot{color:#d2e5ff;border-color:#5985dc}
+.bcf-theme .hero-main{min-height:385px;display:grid;grid-template-columns:minmax(0,1fr) minmax(225px,300px);align-items:center;gap:25px;padding:48px 0}
+.bcf-theme .hero-main h1{font-weight:900;font-size:clamp(38px,5.3vw,67px);line-height:1.5;color:#fff;text-shadow:0 7px 24px #01041e}
+.bcf-theme .hero-main h1 span{color:#ffdc7b}
+.bcf-theme .eyebrow,.bcf-theme .section-eyebrow{color:#ffcf57}
+.bcf-theme .hero-desc{max-width:650px;color:#e4efff;font-size:clamp(13px,1.3vw,15px);line-height:2.1}
+.bcf-theme .bcf-hero-slogan{display:inline-block;background:#063c94aa;border-left:4px solid #eec45d;color:#ffe097;padding:6px 14px;font:800 11px 'Barlow Condensed',sans-serif;letter-spacing:.13em}
+.bcf-theme .hero-update-notice{background:linear-gradient(125deg,#112f88e8,#030c35ed);border:1px solid #e2ae41;color:#fff;border-radius:15px;box-shadow:0 20px 34px #03092699}
+.bcf-theme .hero-update-notice p:first-child{color:#ffdb83}
+.bcf-theme .orange-dot,.bcf-theme .green-dot{background:#ffd25a;box-shadow:0 0 12px #ffc13a}
+.bcf-theme .dashboard-bar,.bcf-theme .match-card{background:linear-gradient(125deg,#091a57,#050c2c);border:1px solid #496bb7;box-shadow:0 14px 35px #0006}
+.bcf-theme .dashboard-stat{border-color:#4769ae}
+.bcf-theme .dashboard-stat .status-label,.bcf-theme .today-pill{color:#ffd776}
+.bcf-theme .date-tabs button,.bcf-theme .filters button,.bcf-theme .date-tab-odds{background:#0a246a;border:1px solid #4f7ad2;color:#fff}
+.bcf-theme .date-tabs button.active,.bcf-theme .filters button.selected{background:linear-gradient(120deg,#1765f1,#07318f);color:#fff8db;border-color:#ffcb52}
+.bcf-theme .match-topline,.bcf-theme .match-card:has(.match-hero)>.match-topline{background:linear-gradient(105deg,#0b3fb4,#031344);border-color:#3d70d3;color:#fff3d5}
+.bcf-theme .vs-banner{background:linear-gradient(90deg,#021044,#1045a5 51%,#021044)}
+.bcf-theme .match-hero-art{background:linear-gradient(90deg,#041244c7,#133f96a8,#06144dc7),url('./assets/footballers.svg') center/cover no-repeat}
+.bcf-theme .hero-team-home{background:#0a36a34d}.bcf-theme .hero-team-away{background:#102f8c4d}
+.bcf-theme .match-hero-versus{background:linear-gradient(90deg,#071953d9,#073eadb3,#071953d9)}
+.bcf-theme .hero-big-vs,.bcf-theme .hero-competition{color:#ffdb79}
+.bcf-theme .hero-info-bar{background:#061642;color:#f1dc9e}
+.bcf-theme .hero-info-bar>.hero-info-fixture{background:linear-gradient(90deg,#0d59ca,#042a7e);color:#fff}
+.bcf-theme .match-market-layout,.bcf-theme .market-form-row{background:#081c50}
+.bcf-theme .match-market-strip.myanmar-market{background:#082d7b;border-bottom-color:#d9b261}
+.bcf-theme .match-market-strip .myanmar-market-title,.bcf-theme .match-market-strip .myanmar-market-pair{color:#ffda85}
+.bcf-theme .quick-form,.bcf-theme .market-center{background:#142963;border-color:#5072af}
+.bcf-theme .market-center .odd{background:#0c215b}.bcf-theme .market-center-heading,.bcf-theme .quick-form-heading small{color:#fdd373}
+.bcf-theme .analysis-body p{color:#f0f4ff}
+.bcf-theme .match-card:has(.match-hero) .analysis-body,.bcf-theme .match-card:has(.match-hero) .match-actions{background:#07143f}
+.bcf-theme .match-card:has(.match-hero) .analysis-body h4,.bcf-theme .match-card:has(.match-hero) .analysis-body .editorial-highlight{color:#ffdc81}
+.bcf-theme .match-card:has(.match-hero) .analysis-toggle{background:#173875;color:#f9e6a1;border:1px solid #5686d6}
+.bcf-theme .results-download-bar{background:#092a6e;border-color:#f6c04c}
+.bcf-theme .results-png-btn,.bcf-theme .odds-export-actions button,.bcf-theme .match-download,.bcf-theme .odds-part-download,.bcf-theme .results-part-download{background:linear-gradient(115deg,#084bc1,#176ce1);border:1px solid #ffc95d;color:#fff;font-weight:900}
+.bcf-theme .odds-hero{background:linear-gradient(90deg,#030b37d8,#12469f9e),url('./assets/footballers.svg') center/cover no-repeat;border-color:#f1be4f}
+.bcf-theme .odds-hero h1 span,.bcf-theme .odds-kicker,.bcf-theme .odds-count{color:#ffdf92}
+.bcf-theme .odds-subtitle{color:#dfebff}
+.bcf-theme .odds-nav a{background:#061f64;border-color:#5477be;color:#fff}
+.bcf-theme .odds-nav a.active{background:#1956ce;border-color:#e9c663;color:#fff}
+.bcf-theme .odds-overview,.bcf-theme .odds-group,.bcf-theme .odds-status{background:#0a1c55;border-color:#476dc0;color:#f4faff}
+.bcf-theme .odds-group h2{background:linear-gradient(100deg,#114ed0,#04144a);border-color:#4b75bd;color:#fbdc86}
+.bcf-theme .odds-table th{background:#0a398e;color:#fdf7e5}.bcf-theme .odds-table td{border-color:#3b5fae;color:#fff}
+.bcf-theme .odds-table .time,.bcf-theme .odds-table .prediction,.bcf-theme .odds-table .upper{color:#ffdc85}
+.bcf-theme .odds-table tr{background:#071b50}.bcf-theme .odds-note{background:#11275e;color:#e8f3ff;border-left-color:#ffce6f}
+.bcf-theme .odds-export-sheet .odds-export-header{background:#092b7b;border-color:#e6b558;color:#fff}
+.bcf-theme .odds-export-sheet .odds-export-header h2{color:#ffdd84}
+.bcf-theme .team-badge,.bcf-theme .league-mark{background:#fff}
+.bcf-theme .brand-odds-single{background:#041748;border-color:#e6bd52;color:#ffebae}
+.bcf-theme .brand-odds-single button{background:#1453c4;color:#fff;border-color:#ffd36c}
+.bcf-banner-gallery{margin:28px auto 60px;padding:24px;border:1px solid #4677ca;border-radius:16px;background:linear-gradient(125deg,#0d3186,#040d3b);box-shadow:0 18px 38px #0006}
+.bcf-banner-gallery h2{font-size:clamp(19px,2.8vw,27px);color:#ffe08b;margin:0 0 5px}
+.bcf-banner-gallery p{color:#dfeeff;font-size:13px;line-height:2}
+.bcf-banner-gallery figure{margin:12px auto;background:#02103f;border:1px solid #4c73be;border-radius:10px;overflow:hidden;max-width:950px}
+.bcf-banner-gallery figure>img{display:block;width:100%;height:auto}
+.bcf-banner-gallery figcaption{padding:8px 14px;font-size:12px;color:#e9e0b9}
+.bcf-export-example{min-height:175px;background:radial-gradient(circle at center,#1346aa,#031044);display:grid;place-items:center}
+.bcf-export-example img{width:100%;max-height:230px;object-fit:cover}
+.bcf-theme footer{background:#020a2d;border-top:1px solid #6886bf}
+.bcf-theme .footer-inner p{color:#bed3f5}
+@media(max-width:700px){
+ .bcf-theme .header-inner{min-height:70px}.bcf-theme .bcf-site-logo{width:48px;height:48px}
+ .bcf-theme .logo-lines b{font-size:17px}.bcf-theme .top-edition{display:none}
+ .bcf-quick-nav .container{gap:6px}.bcf-quick-nav strong{width:100%}
+ .bcf-quick-nav a{padding:7px 8px;font-size:10px}
+ .bcf-theme .bcf-stadium-banner{height:195px}
+ .bcf-theme .bcf-banner-content{gap:10px}
+ .bcf-theme .bcf-banner-logo{width:74px;height:74px}
+ .bcf-theme .bcf-banner-copy strong{font-size:clamp(28px,7.2vw,48px)}
+ .bcf-theme .bcf-banner-copy small{font-size:11px}
+ .bcf-theme .hero-main{min-height:470px;display:flex;flex-direction:column;align-items:stretch;gap:14px;padding:42px 0 30px}
+ .bcf-theme .hero-main h1{font-size:clamp(30px,7vw,46px)}
+ .bcf-theme .hero-desc{font-size:13px}.bcf-theme .hero-update-notice{max-width:none}
+ .bcf-banner-gallery{padding:14px;margin-bottom:30px}
+}
