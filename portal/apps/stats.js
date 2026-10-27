@@ -56,6 +56,15 @@
     } catch (_) {}
   }
   record("page_view", null);
+  // Only count when a user actually opens the APK detail panel.
+  if (typeof document.addEventListener === 'function') {
+    document.addEventListener('click', event => {
+      const button = event.target?.closest?.('[data-details]');
+      const card = button?.closest?.('.card');
+      const appKey = card?.querySelector?.('a.download[data-app-key]')?.dataset?.appKey;
+      if (appKey) record('app_view', appKey);
+    });
+  }
   document.querySelectorAll("a.download").forEach(anchor => {
     let filename = "";
     try { filename = decodeURIComponent(new URL(anchor.href, location.href).pathname.split('/').pop()); }
