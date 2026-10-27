@@ -211,7 +211,7 @@ function renderWdlStrip(match,side){
  const heading=node("div","quick-form-heading");
  append(heading,inlineClubLogo(match[side+"CrestUrl"],teamLabel(match,side)),
    node("strong","",teamLabel(match,side)),
-   node("small","","နောက်ဆုံး ၅ ပွဲ"));
+   node("small","",match[side+"FormScope"]==="league"?"နောက်ဆုံး ၅ လိဂ်ပွဲ":"နောက်ဆုံး ၅ ပွဲ"));
  section.appendChild(heading);
  const standing=match[side+"Standing"];
  if(standing && Number.isFinite(standing.position) && Number.isFinite(standing.points)) section.appendChild(node("small","standing-summary","လိဂ်အဆင့် "+standing.position+" · "+standing.points+" မှတ်"));
