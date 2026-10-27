@@ -265,7 +265,7 @@ el("fcpReset").onclick=async()=>{const f=get(active),t=templates.find(x=>x.id===
 el("fcpBackup").onclick=downloadJson;
 el("fcpImport").onchange=async e=>{try{const file=e.target.files[0];if(!file||file.size>12000000)throw Error("Backup ဖိုင် ကြီးလွန်းသည်");state=validate(JSON.parse(await file.text()));await save();active=state.frames[0].id;syncControls();status("Backup Import ပြီးပါပြီ");}catch(err){status(err.message,true);}finally{e.target.value="";}};
 syncControls();mini();syncNative();
- for(const [section,selector] of [["previews","#fcMatchCustomFrame"],["specials","#fcMatchCustomFrame"],["ai","#fcAiFrameStyle"],["news","#fcNewsCustomFrame"]]){
+ for(const [section,selector] of [["previews","#fcMatchCustomFrame"],["specials","#fcSpecialCustomFrame"],["ai","#fcAiFrameStyle"],["news","#fcNewsCustomFrame"]]){
   attach(section,document.querySelector(selector));
  }
 const obs=new MutationObserver(()=>mini());obs.observe(document.body,{childList:true,subtree:false});
