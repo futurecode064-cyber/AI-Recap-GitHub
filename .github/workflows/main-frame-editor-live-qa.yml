@@ -46,6 +46,7 @@ jobs:
               try{await page.locator('#futureCodeFrameEditor').waitFor({timeout:7000});break;}
               catch(e){if(attempt===11)throw e;await page.waitForTimeout(6500);}
             }
+            await page.locator('#futureCodeFrameEditor details summary').click();
             await page.locator('.fcfe-row').first().waitFor({timeout:25000});
             const initial=await page.evaluate(()=>({len:window.FutureCodeTableOddsFrames.designs.length,teams:document.querySelector('#oddsList .club-label')?.textContent,dates:loadedSheet.reportDate}));
             assert(initial.len>=12&&initial.dates==='2026-10-27','Current verified sheet / built-in frames missing');
@@ -87,6 +88,7 @@ jobs:
             },customName);
             assert(rendered.width===2160&&rendered.height>200&&rendered.size>18000,'Custom PNG renderer failed: '+JSON.stringify(rendered));
             await page.reload({waitUntil:'domcontentloaded',timeout:40000});
+            await page.locator('#futureCodeFrameEditor details summary').click();
             await page.locator('.fcfe-row').first().waitFor({timeout:22000});
             const persisted=await page.evaluate(name=>{
               const list=window.FutureCodeTableOddsFrames.designs,report=loadedSheet;
