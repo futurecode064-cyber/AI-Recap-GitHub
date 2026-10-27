@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
         scheduler.schedule(job);
     }
     @Override public void onResume(){super.onResume(); if(tts!=null){int r=tts.setLanguage(Locale.SIMPLIFIED_CHINESE);speechReady=r>=0;} if(web!=null)checkUpdates(false);}
-    @Override public void onDestroy(){if(tts!=null){tts.stop();tts.shutdown();}if(web!=null)web.destroy();super.onDestroy();}
+    @Override public void onDestroy(){OfflineAudio.stop();if(tts!=null){tts.stop();tts.shutdown();}if(web!=null)web.destroy();super.onDestroy();}
     private void callback(String expression){runOnUiThread(()->{if(web!=null)web.evaluateJavascript(expression,null);});}
     private static String readUrl(String target) throws Exception {
         HttpURLConnection conn=(HttpURLConnection)new URL(target).openConnection();
@@ -109,7 +109,8 @@ public class MainActivity extends Activity {
     public class NativeBridge {
         @JavascriptInterface public void speak(String text) {
             runOnUiThread(()->{
-                if(!speechReady){callback("window.nativeStatus && window.nativeStatus('ဖုန်း Settings တွင် Chinese TTS အသံကို ထည့်သွင်းပါ။')");return;}
+                if(OfflineAudio.play(MainActivity.this,"zh",text)){callback("window.nativeStatus && window.nativeStatus('🔊 APK Offline Mandarin အသံဖိုင်ကို ဖွင့်နေပါသည်။')");return;}
+                if(!speechReady){callback("window.nativeStatus && window.nativeStatus('Offline အသံဖိုင်မတွေ့ပါ။ APK Audio Build ပြန်စစ်ရန်လိုသည်။')");return;}
                 if(text!=null && text.length()<300)tts.speak(text,TextToSpeech.QUEUE_FLUSH,null,"fc-zh");
             });
         }
