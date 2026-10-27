@@ -17,6 +17,10 @@ jobs:
       - run: |
           npm install --no-save --no-package-lock playwright
           npx playwright install --with-deps chromium
+      - name: Inspect public deployed frame version
+        run: |
+          curl -fsSL https://future-code-football-daily.pages.dev/ | grep 'main-professional-frame-studio.js'
+          curl -fsSL 'https://future-code-football-daily.pages.dev/main-professional-frame-studio.js?v=20261027-frame-stable-v6' | grep -E 'const expected=|const watcher=|miniTimer='
       - name: Check add, section isolation, edit, refresh and PNG
         run: |
           node --input-type=module <<'NODE'
