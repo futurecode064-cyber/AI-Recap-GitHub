@@ -29,10 +29,8 @@ jobs:
             await page.locator('#fcpName').waitFor({timeout:30000});
             await page.locator('#fcpName').fill('SECTION QA FRAME');
             await page.locator('#fcpPlacement input[value=previews]').check();
-            console.log('LIVE SCRIPT',await page.evaluate(async()=>{const src=[...document.scripts].find(s=>s.src.includes('main-professional-frame-studio')).src;const body=await (await fetch(src)).text();return {src,expected:body.split('\\n').find(s=>s.includes('const expected=')),current:body.split('\\n').find(s=>s.includes('const current='))};}));
             await page.locator('#fcpAdd').click({timeout:15000});
-            await page.waitForTimeout(2000);
-            console.log('DIAGNOSTIC',JSON.stringify(await page.evaluate(()=>({status:document.querySelector('#fcpStatus')?.textContent,options:[...document.querySelectorAll('#fcpFrame option')].map(x=>x.textContent),selected:[...document.querySelectorAll('#fcpPlacement input:checked')].map(x=>x.value),script:[...document.scripts].find(x=>x.src.includes('main-professional-frame-studio'))?.src}))));
+            await page.waitForFunction(()=>document.querySelector('#fcpStatus')?.textContent.includes('Download'),null,{timeout:15000});
             console.log('ADD STATUS',await page.locator('#fcpStatus').innerText());
             assert((await page.locator('#fcpStatus').innerText()).includes('Download'),'Add did not succeed');
             assert.equal(await page.locator('#brandFrame option').filter({hasText:'SECTION QA FRAME'}).count(),1);
@@ -42,6 +40,7 @@ jobs:
             await page.waitForFunction(()=>document.querySelector('#fcpStatus')?.textContent.includes('သိမ်းပြီး'),null,{timeout:10000});
             await page.reload({waitUntil:'domcontentloaded',timeout:30000});
             await page.locator('#fcpFrame').waitFor({timeout:30000});
+            await page.waitForFunction(()=>[...document.querySelectorAll('#brandFrame option')].some(x=>x.textContent.includes('SECTION QA EDITED')),null,{timeout:15000});
             assert.equal(await page.locator('#brandFrame option').filter({hasText:'SECTION QA EDITED'}).count(),1);
             assert.equal(await page.locator('#fcSpecialCustomFrame option').filter({hasText:'SECTION QA EDITED'}).count(),0);
             const result=await page.evaluate(async()=>{
