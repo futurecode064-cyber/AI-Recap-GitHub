@@ -7,7 +7,7 @@ const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'portal/apps/index.html'), 'utf8');
 const tracker = fs.readFileSync(path.join(root, 'portal/apps/stats.js'), 'utf8');
-const appKeys = ['ai-studio','app-creator','myanmar-kyar','video-cutter','ai-astrology','el-nino','daily-money','medicine-reminder','kids-learning','safety-guide','goal-zone','mandalay-city-helper','language-academy','chinese-learning'];
+const appKeys = ['ai-studio','app-creator','myanmar-kyar','video-cutter','ai-astrology','el-nino','daily-money','medicine-reminder','kids-learning','safety-guide','goal-zone','mandalay-city-helper','language-academy','chinese-learning','thai-speaking'];
 
 const tags = [...html.matchAll(/<a\b(?=[^>]*class="download")[^>]*>/g)].map(m => m[0]);
 assert.equal(tags.length, appKeys.length, 'all public APKs need analytics');
