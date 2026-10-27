@@ -2,6 +2,7 @@ plugins { id 'com.android.application' }
 android {
     namespace 'mm.futurecode.chinese'
     compileSdk 35
+    buildFeatures { buildConfig true }
     defaultConfig {
         applicationId 'mm.futurecode.chinese'
         minSdk 26
