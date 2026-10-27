@@ -51,7 +51,9 @@ const adminHtml = fs.readFileSync(path.join(root, 'portal/apps/admin.html'), 'ut
 const adminJs = fs.readFileSync(path.join(root, 'portal/apps/admin.js'), 'utf8');
 const releaseSnapshot = JSON.parse(fs.readFileSync(path.join(root, 'portal/apps/github-releases-snapshot.json'), 'utf8'));
 assert.ok(adminHtml.includes('siteSections'), 'website category statistics must render');
-assert.ok(adminJs.includes('fc_download_portfolio_dashboard'), 'admin needs portfolio RPC');
+assert.ok(adminJs.includes('fc_portfolio_inventory_dashboard'), 'admin needs authenticated full portfolio inventory RPC');
+assert.ok(adminHtml.includes('projectInventory'), 'dashboard must list source and draft projects');
+assert.ok(adminJs.includes('trackingStatus'), 'untracked websites must not appear as verified zeros');
 assert.ok(adminJs.includes('https://api.github.com/repos/futurecode064-cyber/AI-Recap-GitHub/releases?per_page=100'),
   'public GitHub API must support up-to-date release counts');
 assert.ok(adminJs.includes('releaseSnapshot') === false);
