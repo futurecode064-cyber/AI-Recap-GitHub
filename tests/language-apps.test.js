@@ -69,8 +69,8 @@ assert.equal(version('thai-speaking').versionCode,thaiLatest.versionCode);
 assert.equal(version('language-academy').versionCode,manifest.versionCode);
 assert.equal(version('language-academy').sha256,manifest.sha256);
 assert.equal(version('thai-speaking').sha256,thaiLatest.sha256);
-assert.match(read('chinese-learning/app/build.gradle'),/versionCode 4[\\s\\S]*versionName '1\\.0\\.3'/);
-assert.match(read('thai-course/app/build.gradle'),/versionCode 3[\\s\\S]*versionName '1\\.0\\.2'/);
+assert.match(read('chinese-learning/app/build.gradle'),/versionCode 4[\s\S]*versionName '1\.0\.3'/);
+assert.match(read('thai-course/app/build.gradle'),/versionCode 3[\s\S]*versionName '1\.0\.2'/);
 assert.match(read('language-apk/AndroidManifest.xml'),/versionCode="3" android:versionName="1.0.2"/);
 checks++;
 for(const file of ['.github/workflows/future-code-thai-apk.yml','.github/workflows/fc-language-academy-apk.yml']){
