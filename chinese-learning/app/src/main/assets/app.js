@@ -65,7 +65,7 @@ quiz.options.map(i=>'<button class="quiz-option '+(quiz.answered>=0?(i===quiz.q?
 function settingspage(){
 return '<h2>⚙ သင်ယူမှု ဆက်တင်</h2><div class="sectionbox"><h3>သင်ယူမှုအခြေအနေ</h3><p class="muted">'+finished()+' / '+lessons()+' သင်ခန်းစာ ပြီးစီးသည်။ တိုးတက်မှုကို ဖုန်းထဲတွင် သိမ်းဆည်းထားသည်။ App ဖျက်ပါက ဒေတာပျက်နိုင်ပါသည်။</p></div>'+
 '<div class="sectionbox"><h3>Notification နဲ့ Update</h3><p class="smallhelp">သင်ခန်းစာအသစ် အသိပေးချက်များကို App မှ အင်တာနက်ချိတ်ချိန်နှင့် Android နောက်ခံစစ်ဆေးချိန်တွင် ရရှိနိုင်သည်။ Real-time Push မဟုတ်ပါ။ Android တွင် Update APK ကို Install လုပ်ရန် အသုံးပြုသူ ခွင့်ပြုရသည်။</p><div class="actions"><button class="btn" data-action="remind">🔔 Notification ခွင့်ပြုမည်</button><button class="btn secondary" data-action="update">Update စစ်မည်</button></div></div>'+
-'<div class="sectionbox"><h3>ဖတ်/ပြော အသံစနစ်</h3><p class="smallhelp">အသံဖတ်ခြင်းသည် ဖုန်းတွင် Chinese TTS Voice ထည့်သွင်းထားမှုအပေါ် မူတည်သည်။ မိုက်ခရိုဖုန်းမှ တရုတ်စာပြန်သိမှုသည် Speech Recognizer ရရှိမှ အလုပ်လုပ်မည်။ အသံထွက်ရမှတ်သည် ဖမ်းယူမိသော စာသားနှင့် တိုက်စစ်ခြင်းသာ ဖြစ်ပြီး အသံနေအသံထား တိကျမှုကို မတိုင်းတာနိုင်ပါ။</p></div>'+
+'<div class="sectionbox"><h3>ဖတ်/ပြော အသံစနစ်</h3><p class="smallhelp">အသံဖတ်ခြင်းသည် ဖုန်းတွင် Chinese TTS Voice ထည့်သွင်းထားမှုအပေါ် မူတည်သည်။ <button data-action="installvoice">⚙️ Chinese အသံထည့်သွင်းရန်</button> မိုက်ခရိုဖုန်းမှ တရုတ်စာပြန်သိမှုသည် Speech Recognizer ရရှိမှ အလုပ်လုပ်မည်။ အသံထွက်ရမှတ်သည် ဖမ်းယူမိသော စာသားနှင့် တိုက်စစ်ခြင်းသာ ဖြစ်ပြီး အသံနေအသံထား တိကျမှုကို မတိုင်းတာနိုင်ပါ။</p></div>'+
 '<div class="sectionbox"><h3>📦 Backup / Restore</h3><p class="smallhelp">ဖုန်းမပြောင်းမီ အောက်က Backup JSON ကို ကူးယူသိမ်းပါ။ ပြန်သွင်းရန် JSON ကို ကူးထည့်ပြီး Restore နှိပ်ပါ။ အဟောင်းကို အစားထိုးမည်ဖြစ်၍ သေချာစစ်ပါ။</p><textarea id="backup-json" rows="5" style="width:100%;box-sizing:border-box;direction:ltr;font-size:12px;padding:10px;border:1px solid #8195ad;border-radius:8px" placeholder="Backup JSON ကို ဒီနေရာမှာ ကူးထည့်ပါ"></textarea><div class="actions"><button class="btn secondary" data-action="backup">Backup JSON ထုတ်မည်</button><button class="btn" data-action="restore">Restore ပြန်သွင်းမည်</button></div></div>'+'<div class="sectionbox"><h3>အကြောင်း</h3><p class="muted">Future Code Chinese v1.0.2 · Android 8.0+ · မြန်မာလူမျိုးများအတွက် မန်ဒရင်အခြေခံမှ အဆင့်မြင့် နမူနာအကြောင်းအရာများ ပါဝင်သော စတင်ထုတ်ဝေမှု။ တရားဝင် HSK စာမေးပွဲအသိအမှတ်ပြု သင်တန်းမဟုတ်ပါ။</p></div>';
 }
 function render(){
@@ -102,8 +102,9 @@ document.addEventListener('click',e=>{
  if(a==='continue'){let found=false;for(let x=0;x<courses.length&&!found;x++)for(let y=0;y<courses[x].units.length&&!found;y++)if(!s.completed[id(x,y)]){select(x,y);found=true}if(!found)select(0,0);go('lesson')}
  else if(a==='level'){lvl=i;go('level')}
  else if(a==='unit'){select(lvl,i);go('lesson')}
- else if(a==='speak'){if(window.FutureCode)FutureCode.speak(active().words[i][0]);else if('speechSynthesis' in window){let u=new SpeechSynthesisUtterance(active().words[i][0]);u.lang='zh-CN';speechSynthesis.speak(u)}else window.nativeStatus('Chinese TTS မရရှိပါ။')}
- else if(a==='listen'){spoken=i;if(window.FutureCode)FutureCode.listen();else window.nativeStatus('စကားပြောစစ်ရန် Android App အသုံးပြုပါ။')}
+ else if(a==='speak'){if(window.FutureCode)FutureCode.speak(active().words[i][0]);else if('speechSynthesis' in window){let u=new SpeechSynthesisUtterance(active().words[i][0]);u.lang='zh-CN';u.onerror=()=>window.nativeStatus('Chinese အသံမရှိသေးပါ။ Phone Text-to-speech Settings မှ Chinese အသံထည့်သွင်းပါ။');speechSynthesis.cancel();speechSynthesis.speak(u)}else window.nativeStatus('Chinese TTS မရရှိပါ။')}
+ else if(a==='installvoice'){if(window.FutureCode?.installVoice)FutureCode.installVoice();else window.nativeStatus('Android Settings → Text-to-speech output မှ Chinese Voice ထည့်သွင်းပါ။')}
+  else if(a==='listen'){spoken=i;if(window.FutureCode)FutureCode.listen();else window.nativeStatus('စကားပြောစစ်ရန် Android App အသုံးပြုပါ။')}
  else if(a==='quiz'){quiz=null;go('quiz')}
  else if(a==='flash'){card=0;reveal=false;go('flash')}
  else if(a==='write'){writing=0;go('write')}
