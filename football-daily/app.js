@@ -223,7 +223,7 @@ function renderWdlStrip(match,side){
   const score=Number.isInteger(game.teamGoals)&&Number.isInteger(game.opponentGoals)?game.teamGoals+"-"+game.opponentGoals:"—";
   const hint=game.date && game.opponent
    ?String(game.date)+" · "+localizedTeam(game.opponent)+" · "+score
-   :"နောက်ဆုံး လိဂ်ပွဲရလဒ် "+letter+" (ဂိုးအတိအကျ မရရှိသေး)";
+   :(game.opponent?localizedTeam(game.opponent)+" · ":"")+"ပွဲရလဒ် "+letter+" · "+score;
   badge.title=hint;badge.setAttribute("aria-label",letter+" · "+hint);
   strip.appendChild(badge);
  }
