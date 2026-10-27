@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22",
+  "updatedAt": "2026-10-27",
   "apps": [
     {
       "id": "ai-studio",
@@ -140,6 +140,19 @@
       "file": "https://future-code-football-daily.pages.dev/future-code-journal/android/GoalZone_Sports_Journal_v1.0.1.apk",
       "sha256": "a94a4c96512424794062f1b292d77a8458154d48fc21021fd05c659d83c94e4f",
       "releasedAt": "2026-10-18"
+    },
+    {
+      "id": "mandalay-city-helper",
+      "name": "မြို့လေး ကူညီရေး စွန့်စားခန်း",
+      "packageName": "mm.futurecode.mandalay",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "minSdk": 26,
+      "file": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/mandalay-city-helper-v1.0.0/Future_Code_Mandalay_City_Helper_v1.0.0.apk",
+      "releasedAt": "2026-10-27",
+      "online": true,
+      "gameUrl": "https://future-code-mandalay-city-helper.cheeky-elf-5504.chatgpt.site/",
+      "releaseChannel": "beta"
     }
   ]
 }
