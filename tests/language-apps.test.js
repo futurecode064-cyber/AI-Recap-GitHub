@@ -57,7 +57,7 @@ assert.ok(mi>=0);
 const languages=Function(inline[0][1].slice(mi,inline[0][1].indexOf('];',mi)+2)+' return languages;')();
 assert.equal(languages.length,12);
 assert.equal(new Set(languages.map(l=>l[0])).size,12);
-for(const l of languages)assert.equal(l[4].length,12);
+for(const l of languages)assert.equal(l[4].length,18,'Every language must contain 18 actual phrases');
 assert.match(academyHtml,/id="restore"/);
 checks++;
 const manifest=json('portal/apps/languages/latest.json');
@@ -69,9 +69,18 @@ assert.equal(version('thai-speaking').versionCode,thaiLatest.versionCode);
 assert.equal(version('language-academy').versionCode,manifest.versionCode);
 assert.equal(version('language-academy').sha256,manifest.sha256);
 assert.equal(version('thai-speaking').sha256,thaiLatest.sha256);
-assert.match(read('chinese-learning/app/build.gradle'),/versionCode 4[\s\S]*versionName '1\.0\.3'/);
-assert.match(read('thai-course/app/build.gradle'),/versionCode 3[\s\S]*versionName '1\.0\.2'/);
-assert.match(read('language-apk/AndroidManifest.xml'),/versionCode="3" android:versionName="1.0.2"/);
+assert.ok(read('chinese-learning/app/build.gradle').includes('versionCode '+version('chinese-learning').versionCode));
+assert.ok(read('chinese-learning/app/build.gradle').includes("versionName '"+version('chinese-learning').versionName+"'"));
+assert.ok(read('thai-course/app/build.gradle').includes('versionCode '+version('thai-speaking').versionCode));
+assert.ok(read('thai-course/app/build.gradle').includes("versionName '"+version('thai-speaking').versionName+"'"));
+assert.ok(read('language-apk/AndroidManifest.xml').includes('android:versionCode="'+version('language-academy').versionCode+'"'));
+assert.ok(read('language-apk/AndroidManifest.xml').includes('android:versionName="'+version('language-academy').versionName+'"'));
+assert.ok(read('english-academy-android/android/AndroidManifest.xml').includes('android:versionCode="'+version('english-academy').versionCode+'"'));
+assert.ok(read('english-academy-android/android/AndroidManifest.xml').includes('android:versionName="'+version('english-academy').versionName+'"'));
+for(const java of ['thai-course/app/src/main/java/com/futurecode/thaispeaking/OfflineAudio.java','chinese-learning/app/src/main/java/mm/futurecode/chinese/OfflineAudio.java','english-academy-android/android/src/mm/futurecode/englishacademy/OfflineAudio.java','language-apk/src/mm/futurecode/languages/OfflineAudio.java']){
+ assert.match(read(java),/audio\//,'APK must play offline speech assets');
+}
+assert.ok(read('scripts/verify_offline_audio_apk.py').includes('assets/audio/manifest.json'));
 checks++;
 for(const file of ['.github/workflows/future-code-thai-apk.yml','.github/workflows/fc-language-academy-apk.yml']){
  const workflow=read(file);
@@ -81,4 +90,4 @@ for(const file of ['.github/workflows/future-code-thai-apk.yml','.github/workflo
  assert.ok(!workflow.includes('echo "$ANDROID_KEYSTORE_PASS"'));
 }
 checks++;
-console.log('PASS '+checks+' language APK checks: 4 release cards, 4 links, 6/18 Thai, 6/24/192 Chinese, 12-language web sampler, Android versions and secured release workflows.');
+console.log('PASS '+checks+' language APK checks: 4 release cards, 4 links, 6/18 Thai, 6/24/192 Chinese, 12-language × 18-phrase sampler, Android versions and secured release workflows.');
