@@ -263,7 +263,7 @@ el("fcpRemoveBottom").onclick=async()=>{get(active).bottomImage="";await save();
 el("fcpDelete").onclick=async()=>{const f=get(active);if(f.builtin||!confirm("ဤ Frame ဖျက်မလား?"))return;state.frames=state.frames.filter(x=>x.id!==active);for(const k of types){state.placements[k]=state.placements[k].filter(id=>id!==active);if(state.selected[k]===active)state.selected[k]="none";}await save();active="navy";syncControls();status("Frame ကို Download စာရင်းအားလုံးမှ ဖယ်ရှားပြီး");};
 el("fcpReset").onclick=async()=>{const f=get(active),t=templates.find(x=>x.id===active);if(!t)return status("မူရင်း Template မဟုတ်ပါ",true);Object.assign(f,{...t});await save();syncControls();status("မူရင်း Frame ပြန်ထားပြီး");};
 el("fcpBackup").onclick=downloadJson;
-el("fcpImport").onchange=async e=>{try{const file=e.target.files[0];if(!file||file.size>12000000)throw Error("Backup ဖိုင် ကြီးလွန်းသည်");state=validate(JSON.parse(await file.text()));await save();active=state.frames[0].id;syncControls();status("Backup Import ပြီးပါပြီ");}catch(err){status(err.message,true);}finally{e.target.value="";}};
+el("fcpImport").onchange=async e=>{try{const file=e.target.files[0];if(!file||file.size>100000000)throw Error("Backup ဖိုင် ကြီးလွန်းသည်");state=validate(JSON.parse(await file.text()));await save();active=state.frames[0].id;syncControls();status("Backup Import ပြီးပါပြီ");}catch(err){status(err.message,true);}finally{e.target.value="";}};
 syncControls();mini();syncNative();
  for(const [section,selector] of [["previews","#fcMatchCustomFrame"],["specials","#fcSpecialCustomFrame"],["ai","#fcAiFrameStyle"],["news","#fcNewsCustomFrame"]]){
   attach(section,document.querySelector(selector));
