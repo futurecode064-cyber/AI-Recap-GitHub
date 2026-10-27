@@ -57,7 +57,7 @@
     ]) $(id).textContent = format.format(value || 0);
     const sites = data.sites || [];
     if ($("totalSites")) $("totalSites").textContent = format.format(data.totalSites ?? sites.length);
-    if ($("totalApps")) $("totalApps").textContent = format.format(data.totalApps ?? (data.apps||[]).length);
+    if ($("totalApps")) $("totalApps").textContent = format.format(new Set((data.apps||[]).map(app=>app.key)).size);
     if ($("totalProjects")) $("totalProjects").textContent = format.format((data.projects||[]).length);
     const siteStatus = {
       connected:"Tracking ချိတ်ဆက်ပြီး",
