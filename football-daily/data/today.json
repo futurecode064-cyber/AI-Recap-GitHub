@@ -202,9 +202,9 @@
         "goalsAgainst": 9,
         "points": 13
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.33",
+      "drawOdds": "4.75",
+      "awayOdds": "9.50",
       "homeCrestUrl": null,
       "awayCrestUrl": null,
       "leagueLogoUrl": null,
@@ -213,7 +213,10 @@
       "leagueLogoCandidateUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
       "leagueLogoSourcePage": "https://www.legaseriea.it/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332"
+      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-a/2026/790983/",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "fixtureId": "fc-20261027-05",
@@ -257,9 +260,9 @@
         "goalsAgainst": 7,
         "points": 17
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "5.00",
+      "drawOdds": "3.60",
+      "awayOdds": "1.73",
       "homeCrestUrl": null,
       "awayCrestUrl": null,
       "leagueLogoUrl": null,
@@ -268,7 +271,10 @@
       "leagueLogoCandidateUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
       "leagueLogoSourcePage": "https://www.legaseriea.it/",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332"
+      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-a/2026/790985/",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "fixtureId": "fc-20261027-01",
@@ -312,9 +318,9 @@
         "goalsAgainst": 21,
         "points": 10
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.65",
+      "drawOdds": "3.75",
+      "awayOdds": "5.00",
       "homeCrestUrl": null,
       "awayCrestUrl": null,
       "leagueLogoUrl": null,
@@ -324,7 +330,10 @@
       "leagueLogoSourcePage": "https://www.footylogos.com/logos/efl-cup",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
       "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
-      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html"
+      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://www.winonbetonline.com/football/matches/bradford-vs-peterborough-156275/",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "fixtureId": "fc-20261027-02",
@@ -693,11 +702,14 @@
         "goalsAgainst": 17,
         "points": 20
       },
-      "homeOdds": null,
-      "drawOdds": null,
-      "awayOdds": null,
+      "homeOdds": "1.95",
+      "drawOdds": "3.50",
+      "awayOdds": "3.60",
       "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
-      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html"
+      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/league-one/2026/796433/",
+      "oddsVerifiedDate": "2026-10-27"
     },
     {
       "fixtureId": "fc-20261027-09",
