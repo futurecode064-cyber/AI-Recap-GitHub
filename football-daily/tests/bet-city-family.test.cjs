@@ -17,7 +17,7 @@ test("BCF image exports require top and bottom originals",()=>{
  assert.match(js,/banner-top\.jpg/);
  assert.match(js,/banner-bottom\.jpg/);
  assert.match(js,/ctx\.drawImage\(top,0,0,width,topHeight\)/);
- assert.match(js,/ctx\.drawImage\(bottom,0,topHeight\+height,width,bottomHeight\)/);
+ assert.match(js,/ctx\.drawImage\(bottom,0,topHeight\+visibleHeight,width,bottomHeight\)/);
 });
 
 test("BCF clean journal does not render cartoon preview or double hero masthead",()=>{

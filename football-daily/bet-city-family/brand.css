@@ -14,7 +14,7 @@
 .bcf-quick-nav a{font:700 11px 'Noto Sans Myanmar',sans-serif;text-decoration:none;padding:8px 13px;border:1px solid #4d7ad0;border-radius:9px;background:#0a246a;color:#fff5dc;transition:.2s}
 .bcf-quick-nav a:is(:hover,:focus-visible){background:#135be4;border-color:#fbd37b}
 .bcf-theme .hero{isolation:isolate;overflow:hidden;position:relative;background:radial-gradient(ellipse at 68% 10%,#1856cd,#030a33 67%);border-bottom:2px solid #b68d45}
-.bcf-theme .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url('./assets/footballers.svg') center 54%/cover no-repeat;opacity:.72}
+.bcf-theme .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url('../future-code-journal/assets/football-gold-stadium.webp') center 54%/cover no-repeat;opacity:.72}
 .bcf-theme .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#020b32fa 1%,#051542ed 45%,#071654a8 82%,#050934ba);border:0;box-shadow:none}
 .bcf-theme .hero>.container{position:relative;z-index:1}
 .bcf-theme .hero-topline,.bcf-theme .hero-foot{color:#d2e5ff;border-color:#5985dc}
@@ -34,7 +34,7 @@
 .bcf-theme .date-tabs button.active,.bcf-theme .filters button.selected{background:linear-gradient(120deg,#1765f1,#07318f);color:#fff8db;border-color:#ffcb52}
 .bcf-theme .match-topline,.bcf-theme .match-card:has(.match-hero)>.match-topline{background:linear-gradient(105deg,#0b3fb4,#031344);border-color:#3d70d3;color:#fff3d5}
 .bcf-theme .vs-banner{background:linear-gradient(90deg,#021044,#1045a5 51%,#021044)}
-.bcf-theme .match-hero-art{background:linear-gradient(90deg,#041244c7,#133f96a8,#06144dc7),url('./assets/footballers.svg') center/cover no-repeat}
+.bcf-theme .match-hero-art{background:linear-gradient(90deg,#041244c7,#133f96a8,#06144dc7),url('../future-code-journal/assets/football-gold-stadium.webp') center/cover no-repeat}
 .bcf-theme .hero-team-home{background:#0a36a34d}.bcf-theme .hero-team-away{background:#102f8c4d}
 .bcf-theme .match-hero-versus{background:linear-gradient(90deg,#071953d9,#073eadb3,#071953d9)}
 .bcf-theme .hero-big-vs,.bcf-theme .hero-competition{color:#ffdb79}
@@ -51,7 +51,7 @@
 .bcf-theme .match-card:has(.match-hero) .analysis-toggle{background:#173875;color:#f9e6a1;border:1px solid #5686d6}
 .bcf-theme .results-download-bar{background:#092a6e;border-color:#f6c04c}
 .bcf-theme .results-png-btn,.bcf-theme .odds-export-actions button,.bcf-theme .match-download,.bcf-theme .odds-part-download,.bcf-theme .results-part-download{background:linear-gradient(115deg,#084bc1,#176ce1);border:1px solid #ffc95d;color:#fff;font-weight:900}
-.bcf-theme .odds-hero{background:linear-gradient(90deg,#030b37d8,#12469f9e),url('./assets/footballers.svg') center/cover no-repeat;border-color:#f1be4f}
+.bcf-theme .odds-hero{background:linear-gradient(90deg,#030b37d8,#12469f9e),url('../future-code-journal/assets/football-gold-stadium.webp') center/cover no-repeat;border-color:#f1be4f}
 .bcf-theme .odds-hero h1 span,.bcf-theme .odds-kicker,.bcf-theme .odds-count{color:#ffdf92}
 .bcf-theme .odds-subtitle{color:#dfebff}
 .bcf-theme .odds-nav a{background:#061f64;border-color:#5477be;color:#fff}
