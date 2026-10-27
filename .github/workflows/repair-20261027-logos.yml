@@ -1,0 +1,44 @@
+name: Repair 27 Oct Genuine Team Crest PNG Downloads
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/repair-20261027-logos.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: football-20261027-logo-asset-repair
+  cancel-in-progress: false
+jobs:
+  pin-genuine-logos:
+    if: github.repository == 'futurecode064-cyber/AI-Recap-GitHub'
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install authentic PNG validation tools
+        run: python -m pip install --quiet Pillow
+      - name: Fetch 27 Oct verified club crest sources and pin all available assets locally
+        run: python football-daily/scripts/repair_20261027_logos.py
+      - name: Commit same-origin crests and both shared PNG export maps
+        if: always()
+        run: |
+          git config user.name 'future-code-crest-repair[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add football-daily/assets/brand-export-teams football-daily/main-export-logos.js football-daily/brand-export-data.js football-daily/data/2026-10-27-logo-repair-receipt.json
+          if git diff --cached --quiet; then
+            echo 'No new pinned crest assets to commit'
+          else
+            git commit -m 'Restore 27 Oct same-origin team logos in all website PNG exporters'
+            git pull --rebase origin football-daily-render
+            git push origin HEAD:football-daily-render
+          fi
+# Repairs the current production branch only; no unrelated fixtures, prices,
+# owner-authored previews, Special Choice, or website branding are modified.
