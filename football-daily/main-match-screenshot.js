@@ -36,7 +36,8 @@
       const frame=(await window.FutureCodeCustomFrames.list()).find(x=>x.id===frameId);
       if(frame){
         const card=await nativeSave.call(exporter,match,{...opts,mainScreenshot:true,downloadFilename:fileName,asCanvas:true});
-        const canvas=await window.FutureCodeCustomFrames.wrap(card,frame);
+        let canvas=await window.FutureCodeCustomFrames.wrap(card,frame);
+        if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews");
         return window.FutureCodeCanvasKit.download(canvas,fileName);
       }
     }
