@@ -8,6 +8,7 @@
     "GoalZone_Sports_Journal_v1.0.1.apk": "goal-zone",
     "Future_Code_Mandalay_City_Helper_v1.0.0.apk": "mandalay-city-helper",
     "Future-Code-AI-Studio.apk": "ai-studio",
+    "Future_Code_Thai_Speaking_v1.0.0_Beta.apk": "thai-speaking",
     "Future_Code_Chinese_v1.0.0.apk": "chinese-learning",
     "Future_Code_Language_Academy_v1.0.0.apk": "language-academy",
     "Future-Code-App-Creator.apk": "app-creator",
