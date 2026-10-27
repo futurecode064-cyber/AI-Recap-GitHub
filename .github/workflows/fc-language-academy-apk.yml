@@ -47,9 +47,9 @@ jobs:
           "$BT/zipalign" -f -p 4 build-language/unsigned.apk build-language/aligned.apk
       - name: Sign and verify Android package
         env:
-          LANGUAGE_KEYSTORE_BASE64: \${{ secrets.FC_LANGUAGE_KEYSTORE_BASE64 }}
-          LANGUAGE_KEYSTORE_PASSWORD: \${{ secrets.FC_LANGUAGE_KEYSTORE_PASSWORD }}
-          LANGUAGE_KEY_ALIAS: \${{ secrets.FC_LANGUAGE_KEY_ALIAS }}
+          LANGUAGE_KEYSTORE_BASE64: ${{ secrets.FC_LANGUAGE_KEYSTORE_BASE64 }}
+          LANGUAGE_KEYSTORE_PASSWORD: ${{ secrets.FC_LANGUAGE_KEYSTORE_PASSWORD }}
+          LANGUAGE_KEY_ALIAS: ${{ secrets.FC_LANGUAGE_KEY_ALIAS }}
         run: |
           set -euo pipefail
           umask 077
@@ -86,7 +86,7 @@ jobs:
       - name: Publish stable signed release only
         if: env.SIGNING_MODE == 'release'
         env:
-          GH_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           TAG="fc-language-academy-v1.0.0"
