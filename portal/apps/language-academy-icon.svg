@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Future Code Language Academy">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#09142b"/><stop offset="1" stop-color="#102c52"/></linearGradient><linearGradient id="talk" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#30d8e8"/><stop offset="1" stop-color="#558cff"/></linearGradient></defs>
+<rect x="8" y="8" width="496" height="496" rx="102" fill="url(#bg)" stroke="#385f85" stroke-width="10"/>
+<circle cx="248" cy="237" r="186" fill="none" stroke="#efc674" stroke-width="20"/><circle cx="248" cy="237" r="148" fill="none" stroke="#efc674" stroke-width="11"/>
+<path d="M194 152h156M194 152v208M194 263h132" fill="none" stroke="#ffffff" stroke-width="31" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M309 285h92c27 0 45 20 45 45v58c0 27-17 45-45 45h-31l-40 37v-37h-21c-29 0-44-20-44-45v-58c0-25 16-45 44-45Z" fill="url(#talk)" stroke="#a1f7ff" stroke-width="9"/>
+<circle cx="311" cy="358" r="10" fill="#0b2240"/><circle cx="355" cy="358" r="10" fill="#0b2240"/><circle cx="399" cy="358" r="10" fill="#0b2240"/>
+</svg>
