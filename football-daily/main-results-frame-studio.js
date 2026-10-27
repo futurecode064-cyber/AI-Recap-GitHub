@@ -204,7 +204,7 @@
     document.head.appendChild(style);
     const el=id=>studio.querySelector("#"+id);
     const refreshNative=active=>{const select=el("rfsFrame"),selected=select.value;select.replaceChildren();for(const f of active)select.add(new Option(f.title,f.id));window.FutureCodeProfessionalFrames?.refresh();if([...select.options].some(o=>o.value===selected))select.value=selected;else if(active.length)select.value=active[0].id;};
-    window.FutureCodeBuiltInFrames?.register("results",FRAMES,{id:f=>f.id,name:f=>f.title,color:f=>f.color||"#1560a0",apply:(f,e)=>{f.title=e.name;f.color=e.color;}},refreshNative);
+    window.FutureCodeBuiltInFrames?.register("results",FRAMES,{id:f=>f.id,name:f=>f.title,color:f=>f.color||"#1560a0",apply:(f,e)=>{f.title=e.name;f.color=e.color;const rgb=e.color.slice(1).match(/../g).map(x=>parseInt(x,16));f.dark="#"+rgb.map(n=>Math.round(n*.45).toString(16).padStart(2,"0")).join("");}},refreshNative);
     refreshNative(FRAMES);
     window.FutureCodeProfessionalFrames?.attach("results",el("rfsFrame"));
     window.FutureCodeCustomFrames.list().then(items=>{for(const f of items){FRAMES.push({id:f.id,title:f.name,plain:true,custom:f});el("rfsFrame").add(new Option(f.name,f.id));}}).catch(console.error);
