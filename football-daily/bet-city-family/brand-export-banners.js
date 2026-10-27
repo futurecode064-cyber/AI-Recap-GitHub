@@ -29,19 +29,24 @@
  function pngBlob(canvas){
   return new Promise((resolve,reject)=>canvas.toBlob(v=>v?resolve(v):reject(Error("BCF PNG encoding failed")),"image/png"));
  }
- async function compose(original){
+ async function compose(original,removeResultHeader=false){
   const [top,bottom]=await Promise.all([localFirst("top"),localFirst("bottom")]);
   const width=original.naturalWidth||original.width;
   const height=original.naturalHeight||original.height;
+  // The owner's first BCF banner already contains the publication title.
+  // Result sheets add their own 208px generic masthead; drop it here, not
+  // the score/leagues content. Other exports retain all their content.
+  const trimTop=removeResultHeader?Math.min(height-1,Math.round(width*209/1200)):0;
+  const visibleHeight=height-trimTop;
   const topHeight=Math.round(width*382/2048);
   const bottomHeight=Math.round(width*291/2048);
   const canvas=document.createElement("canvas");
-  canvas.width=width;canvas.height=topHeight+height+bottomHeight;
+  canvas.width=width;canvas.height=topHeight+visibleHeight+bottomHeight;
   const ctx=canvas.getContext("2d");
   if(!ctx)throw Error("PNG Canvas unsupported");
   ctx.drawImage(top,0,0,width,topHeight);
-  ctx.drawImage(original,0,topHeight,width,height);
-  ctx.drawImage(bottom,0,topHeight+height,width,bottomHeight);
+  ctx.drawImage(original,0,trimTop,width,visibleHeight,0,topHeight,width,visibleHeight);
+  ctx.drawImage(bottom,0,topHeight+visibleHeight,width,bottomHeight);
   return canvas;
  }
  let sequence=0;
@@ -57,7 +62,7 @@
    const response=await fetch(href);
    if(!response.ok)throw Error("Original PNG read failed");
    const original=await fromBlob(await response.blob());
-   const canvas=await compose(original);
+   const canvas=await compose(original,/goal-results/i.test(filename));
    const blob=await pngBlob(canvas);
    const url=URL.createObjectURL(blob);
    try{
