@@ -71,6 +71,19 @@ function renderFlash(){const v=items[flash%items.length];$('flash-thai').textCon
 $('flash-card').addEventListener('click',()=>{revealed=!revealed;renderFlash();if(revealed)speakThai(items[flash%items.length].thai)});
 $('flash-card').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('flash-card').click()}});
 $('flash-next').onclick=()=>{flash=(flash+1)%items.length;revealed=false;renderFlash()};
+let writing=0;
+function renderWriting(){const x=items[writing%items.length];$('write-meaning').textContent=x.my;$('write-input').value='';$('write-result').textContent='';}
+$('write-check').onclick=()=>{
+ const wanted=items[writing%items.length].thai;
+ const actual=$('write-input').value.trim();
+ const normalize=s=>s.normalize('NFC').replace(/[\sฯๆ.,!?]/g,'');
+ const success=normalize(actual)===normalize(wanted);
+ $('write-result').textContent=(success?'✅ မှန်ကန်ပါသည်။':'ထပ်လေ့ကျင့်ပါ။ မှန်ကန်သော ထိုင်းစာ — ')+(!success?wanted:'');
+ $('write-result').className=success?'success':'error';
+};
+$('write-next').onclick=()=>{writing=(writing+1)%items.length;renderWriting()};
+$('write-input').addEventListener('keydown',e=>{if(e.key==='Enter')$('write-check').click()});
+renderWriting();
 function startQuiz(pool){quiz=0;optionsAnswered=false;const candidates=pool||items.map(x=>[x.thai,x.my]);const picks=[...candidates].sort(()=>Math.random()-.5).slice(0,Math.min(10,candidates.length));function show(){if(quiz>=picks.length){$('quiz-root').innerHTML='<div class="panel"><h3>🎉 မေးခွန်းပြီးဆုံးပါပြီ</h3><button id="quiz-again" class="primary">ထပ်လေ့ကျင့်မည်</button></div>';$('quiz-again').onclick=()=>startQuiz(pool);return}const right=picks[quiz],distractors=[...candidates].filter(x=>x[0]!==right[0]).sort(()=>Math.random()-.5).slice(0,3),options=[right,...distractors].sort(()=>Math.random()-.5);$('quiz-root').replaceChildren();const box=document.createElement('div');box.className='question';const t=document.createElement('h3');t.textContent='မေးခွန်း '+(quiz+1)+'/'+picks.length+' · '+right[0];box.append(t);const play=document.createElement('button');play.className='sound';play.textContent='🔊 နားထောင်';play.onclick=()=>speakThai(right[0]);box.append(play);options.forEach(o=>{const b=document.createElement('button');b.className='quiz-opt';b.textContent=o[1];b.onclick=()=>{if(optionsAnswered)return;optionsAnswered=true;state.answered++;if(o[0]===right[0]){state.correct++;b.classList.add('correct')}else{b.classList.add('wrong');[...box.querySelectorAll('.quiz-opt')].find(n=>n.textContent===right[1])?.classList.add('correct')}save();setTimeout(()=>{optionsAnswered=false;quiz++;show()},900)};box.append(b)});$('quiz-root').append(box)}show()}
 $('start-quiz').onclick=()=>startQuiz();
 function renderSpeak(){const a=items[speak%items.length];$('speak-target').textContent=a.thai;$('speak-meaning').textContent=a.my;$('speak-result').textContent='နားထောင်ပြီး လိုက်ပြောပါ။'}
