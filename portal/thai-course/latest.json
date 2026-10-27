@@ -1,7 +1,12 @@
 {
-  "version": "1.0.0",
-  "versionCode": 1,
-  "apkUrl": "",
-  "notes": "စတင်လေ့လာရန် သင်ခန်းစာ ၁၈ ခု၊ Quiz၊ Flashcards၊ Thai TTS နှင့် ထိုင်းစကားပြော လေ့ကျင့်ခန်း",
-  "checkedAt": "2026-10-27"
+  "version": "1.0.1",
+  "versionCode": 2,
+  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/future-code-thai-speaking-v1.0.1/Future_Code_Thai_Speaking_v1.0.1.apk",
+  "notes": "အခြေခံထိုင်းစာ ၁၈ သင်ခန်းစာ၊ အသံထွက်၊ Quiz၊ Flashcards၊ Offline အရန်သင်ခန်းစာ။ Debug Beta ဟောင်းတင်ထားသူများ Progress Backup သိမ်းပြီး Beta ကို ဖယ်ရှားမှ Official APK တင်နိုင်ပါမည်။",
+  "checkedAt": "2026-10-27",
+  "versionName": "1.0.1",
+  "packageName": "com.futurecode.thaispeaking",
+  "channel": "stable",
+  "sha256": "cc4770489d4e19c6d45073a30c49d5c98d57c0c3a10c0e1da3fa449181920144",
+  "sizeBytes": 37839
 }
