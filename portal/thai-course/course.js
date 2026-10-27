@@ -8,7 +8,16 @@ try{let saved=native()?.getProgress?.()||localStorage.getItem(STORE);if(saved)st
 let currLevel=-1,currModule=-1,flash=0,revealed=false,speak=0,quiz=0,optionsAnswered=false;
 function save(){try{const s=JSON.stringify(state);localStorage.setItem(STORE,s);native()?.setProgress?.(s)}catch(e){}renderStats()}
 function renderStats(){const n=Object.keys(state.completed||{}).filter(k=>state.completed[k]).length;$('stat-complete').textContent=n;$('stat-score').textContent=state.answered?Math.round(state.correct/state.answered*100)+'%':'0%';$('stat-total').textContent=course.reduce((x,l)=>x+l[3].length,0)}
-function speakThai(text){if(native()?.speak){native().speak(text);return}if('speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang='th-TH';u.rate=.84;speechSynthesis.speak(u)}else alert('ဖုန်းတွင် Thai Text-to-Speech လိုအပ်ပါသည်')}
+function thaiVoiceMessage(message,needsInstall=false){const e=$('thai-voice-status');if(e){e.textContent=message;e.setAttribute('role','status')}const b=$('thai-install-voice');if(b)b.hidden=!needsInstall}
+window.FCThaiTtsStatus=function(message,needsInstall){thaiVoiceMessage(message,!!needsInstall)};
+function speakThai(text){
+ thaiVoiceMessage('ထိုင်းအသံ ဖတ်ရန် စစ်ဆေးနေသည်...');
+ if(native()?.speak){try{native().speak(text)}catch(e){thaiVoiceMessage('အသံစနစ် ဖွင့်မရပါ။ Thai Voice ကို ထည့်သွင်းပါ။',true)}return}
+ if(!('speechSynthesis' in window)){thaiVoiceMessage('ဒီ Browser မှာ Thai TTS မရနိုင်ပါ။ Android ဖုန်း၏ Speech Services ထဲတွင် Thai အသံကို ထည့်သွင်းပါ။',true);return}
+ const play=()=>{const voices=speechSynthesis.getVoices(),thai=voices.find(v=>/^th(?:-|$)/i.test(v.lang));if(voices.length&&!thai){thaiVoiceMessage('Thai အသံဒေတာ မရှိပါ။ ဖုန်း Settings → Text-to-speech မှ Thai Voice ထည့်သွင်းပါ။',true);return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='th-TH';if(thai)u.voice=thai;u.rate=.84;u.onerror=()=>thaiVoiceMessage('အသံမထွက်ပါ။ Thai Voice ကို စစ်ဆေးပြီး ထပ်နှိပ်ပါ။',true);u.onstart=()=>thaiVoiceMessage('🔊 ထိုင်းအသံ ဖတ်နေသည်...');speechSynthesis.speak(u)};
+ if(speechSynthesis.getVoices().length===0){speechSynthesis.addEventListener('voiceschanged',play,{once:true});setTimeout(play,1200)}else play();
+}
+if($('thai-install-voice'))$('thai-install-voice').onclick=()=>{if(native()?.installThaiVoice){native().installThaiVoice()}else thaiVoiceMessage('Android Settings → System → Languages & input → Text-to-speech output မှ Thai အသံထည့်သွင်းပါ။',true)};
 function tab(name){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===name));document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-selected',String(x.dataset.tab===name)));window.scrollTo(0,0);if(name==='practice')renderFlash();if(name==='speaking')renderSpeak()}
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>tab(b.dataset.tab)));
 function lessonId(l,m){return l+'-'+m}
