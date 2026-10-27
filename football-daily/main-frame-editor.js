@@ -63,9 +63,12 @@
   control.dispatchEvent(new Event("change"));
   if(node("fcfeCount"))node("fcfeCount").textContent="Frame "+designs.length+" မျိုး ရွေးနိုင်ပါသည်။";
   fill();
+  window.FutureCodeProfessionalFrames?.refresh();
  }
  function fill(){
   if(!panel)return;
+  const pro=(document.getElementById("tofDesign")?.value||"").startsWith("pro:");
+  panel.hidden=pro;if(pro)return;
   selected=currentId();const p=settingsFor(selected);
   node("fcfeName").value=p.name;node("fcfeColor").value=color(p.color);
   node("fcfeTop").value=p.top;node("fcfeBottom").value=p.bottom;
