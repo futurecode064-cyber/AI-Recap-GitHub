@@ -1,0 +1,91 @@
+name: Future Code Thai Speaking Android APK
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'thai-course/**'
+      - 'portal/thai-course/**'
+      - '.github/workflows/future-code-thai-apk.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Prepare Android platform
+        run: |
+          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Verify Thai curriculum and metadata
+        run: |
+          node --check portal/thai-course/course.js
+          node --check portal/thai-course/sw.js
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("portal/thai-course")
+          assert len((p/"course.js").read_text()) > 14000
+          for name in ("latest","notice"):
+              data=json.loads((p/(name+".json")).read_text())
+              assert data
+          assert (p/"thai-icon.svg").exists()
+          print("PASS Thai course source and update manifests")
+          PY
+      - name: Bundle offline Thai lessons
+        run: |
+          mkdir -p thai-course/app/src/main/assets
+          cp portal/thai-course/index.html portal/thai-course/course.js \
+            portal/thai-course/thai-icon.svg portal/thai-course/manifest.webmanifest \
+            portal/thai-course/latest.json thai-course/app/src/main/assets/
+      - name: Build Android beta APK
+        working-directory: thai-course
+        run: gradle --no-daemon :app:assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Future-Code-Thai-Speaking-Beta-Debug-APK
+          path: thai-course/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
+      - name: Sign official APK only if owner signing secrets are present
+        env:
+          THAI_KEYSTORE_BASE64: ${{ secrets.THAI_KEYSTORE_BASE64 }}
+          THAI_STORE_PASSWORD: ${{ secrets.THAI_STORE_PASSWORD }}
+          THAI_KEY_ALIAS: ${{ secrets.THAI_KEY_ALIAS }}
+          THAI_KEY_PASSWORD: ${{ secrets.THAI_KEY_PASSWORD }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$THAI_KEYSTORE_BASE64" || -z "$THAI_STORE_PASSWORD" || -z "$THAI_KEY_ALIAS" || -z "$THAI_KEY_PASSWORD" ]]; then
+            echo "Private signing key unavailable; official publication safely skipped."
+            exit 0
+          fi
+          printf '%s' "$THAI_KEYSTORE_BASE64" | base64 --decode > /tmp/fc-thai-release.jks
+          chmod 600 /tmp/fc-thai-release.jks
+          (cd thai-course && gradle --no-daemon :app:assembleRelease)
+          APK=thai-course/app/build/outputs/apk/release/app-release-unsigned.apk
+          test -s "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/zipalign" -p -f 4 "$APK" /tmp/fc-thai-aligned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign \
+            --ks /tmp/fc-thai-release.jks \
+            --ks-key-alias "$THAI_KEY_ALIAS" \
+            --ks-pass "env:THAI_STORE_PASSWORD" \
+            --key-pass "env:THAI_KEY_PASSWORD" \
+            --out /tmp/Future_Code_Thai_Speaking_v1.0.0.apk /tmp/fc-thai-aligned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose /tmp/Future_Code_Thai_Speaking_v1.0.0.apk
+          gh release create future-code-thai-speaking-v1.0.0 \
+            /tmp/Future_Code_Thai_Speaking_v1.0.0.apk \
+            --title 'Future Code Thai Speaking v1.0.0' \
+            --notes 'Myanmar-first Thai lessons, pronunciation, quizzes and notifications.' \
+            || gh release upload future-code-thai-speaking-v1.0.0 \
+              /tmp/Future_Code_Thai_Speaking_v1.0.0.apk --clobber
+          rm -f /tmp/fc-thai-release.jks
+          echo "Signed APK released"
