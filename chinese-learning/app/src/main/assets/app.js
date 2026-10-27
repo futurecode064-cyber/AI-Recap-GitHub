@@ -10,10 +10,11 @@ const $=id=>document.getElementById(id);
 const app=$('app');
 const id=(a,b)=>a+'-'+b;
 const persist=()=>{try{localStorage.setItem(storeKey,JSON.stringify(s))}catch(e){}};
-function daily(){const date=new Date().toISOString().slice(0,10);if(s.last===date)return;
- const previous=new Date(Date.now()-86400000).toISOString().slice(0,10);
+function daily(){const day=offset=>{const d=new Date();d.setDate(d.getDate()+offset);return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')};
+ const date=day(0);if(s.last===date)return;
+ const previous=day(-1);
  s.streak=s.last===previous?(s.streak||0)+1:1;s.last=date;persist();
-}daily();
+}
 const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const lessons=()=>courses.reduce((sum,l)=>sum+l.units.length,0);
 const finished=()=>Object.keys(s.completed).filter(k=>s.completed[k]).length;
@@ -65,7 +66,7 @@ function settingspage(){
 return '<h2>⚙ သင်ယူမှု ဆက်တင်</h2><div class="sectionbox"><h3>သင်ယူမှုအခြေအနေ</h3><p class="muted">'+finished()+' / '+lessons()+' သင်ခန်းစာ ပြီးစီးသည်။ တိုးတက်မှုကို ဖုန်းထဲတွင် သိမ်းဆည်းထားသည်။ App ဖျက်ပါက ဒေတာပျက်နိုင်ပါသည်။</p></div>'+
 '<div class="sectionbox"><h3>Notification နဲ့ Update</h3><p class="smallhelp">သင်ခန်းစာအသစ် အသိပေးချက်များကို App မှ အင်တာနက်ချိတ်ချိန်နှင့် Android နောက်ခံစစ်ဆေးချိန်တွင် ရရှိနိုင်သည်။ Real-time Push မဟုတ်ပါ။ Android တွင် Update APK ကို Install လုပ်ရန် အသုံးပြုသူ ခွင့်ပြုရသည်။</p><div class="actions"><button class="btn" data-action="remind">🔔 Notification ခွင့်ပြုမည်</button><button class="btn secondary" data-action="update">Update စစ်မည်</button></div></div>'+
 '<div class="sectionbox"><h3>ဖတ်/ပြော အသံစနစ်</h3><p class="smallhelp">အသံဖတ်ခြင်းသည် ဖုန်းတွင် Chinese TTS Voice ထည့်သွင်းထားမှုအပေါ် မူတည်သည်။ မိုက်ခရိုဖုန်းမှ တရုတ်စာပြန်သိမှုသည် Speech Recognizer ရရှိမှ အလုပ်လုပ်မည်။ အသံထွက်ရမှတ်သည် ဖမ်းယူမိသော စာသားနှင့် တိုက်စစ်ခြင်းသာ ဖြစ်ပြီး အသံနေအသံထား တိကျမှုကို မတိုင်းတာနိုင်ပါ။</p></div>'+
-'<div class="sectionbox"><h3>အကြောင်း</h3><p class="muted">Future Code Chinese v1.0.0 · Android 8.0+ · မြန်မာလူမျိုးများအတွက် မန်ဒရင်အခြေခံမှ အဆင့်မြင့် နမူနာအကြောင်းအရာများ ပါဝင်သော စတင်ထုတ်ဝေမှု။ တရားဝင် HSK စာမေးပွဲအသိအမှတ်ပြု သင်တန်းမဟုတ်ပါ။</p></div>';
+'<div class="sectionbox"><h3>📦 Backup / Restore</h3><p class="smallhelp">ဖုန်းမပြောင်းမီ အောက်က Backup JSON ကို ကူးယူသိမ်းပါ။ ပြန်သွင်းရန် JSON ကို ကူးထည့်ပြီး Restore နှိပ်ပါ။ အဟောင်းကို အစားထိုးမည်ဖြစ်၍ သေချာစစ်ပါ။</p><textarea id="backup-json" rows="5" style="width:100%;box-sizing:border-box;direction:ltr;font-size:12px;padding:10px;border:1px solid #8195ad;border-radius:8px" placeholder="Backup JSON ကို ဒီနေရာမှာ ကူးထည့်ပါ"></textarea><div class="actions"><button class="btn secondary" data-action="backup">Backup JSON ထုတ်မည်</button><button class="btn" data-action="restore">Restore ပြန်သွင်းမည်</button></div></div>'+'<div class="sectionbox"><h3>အကြောင်း</h3><p class="muted">Future Code Chinese v1.0.2 · Android 8.0+ · မြန်မာလူမျိုးများအတွက် မန်ဒရင်အခြေခံမှ အဆင့်မြင့် နမူနာအကြောင်းအရာများ ပါဝင်သော စတင်ထုတ်ဝေမှု။ တရားဝင် HSK စာမေးပွဲအသိအမှတ်ပြု သင်တန်းမဟုတ်ပါ။</p></div>';
 }
 function render(){
  nav();if(page==='home')app.innerHTML=home();
@@ -93,7 +94,7 @@ window.onSpeechResult=result=>{
  el.className='notification';
  el.innerHTML='<strong>ကြားမိတဲ့ စကား:</strong> '+esc(result)+'<p>'+(match?'✓ စာသားကိုက်ညီပါတယ်။ (အသံနေအသံထား စစ်ဆေးချက် မဟုတ်ပါ)':'စကားလုံးမကိုက်သေးပါ။ နားထောင်ပြီး နောက်တစ်ခေါက် ပြန်ပြောကြည့်ပါ။')+'</p>';
 };
-function mark(){s.completed[id(lvl,unit)]=true;persist();window.nativeStatus('သင်ခန်းစာပြီးစီးမှုကို သိမ်းဆည်းပြီးပါပြီ။');go('level')}
+function mark(){s.completed[id(lvl,unit)]=true;daily();persist();window.nativeStatus('သင်ခန်းစာပြီးစီးမှုကို သိမ်းဆည်းပြီးပါပြီ။');go('level')}
 document.addEventListener('click',e=>{
  const navbtn=e.target.closest('[data-go]');if(navbtn){go(navbtn.dataset.go);return}
  const btn=e.target.closest('[data-action]');if(!btn)return;
@@ -110,11 +111,13 @@ document.addEventListener('click',e=>{
  else if(a==='flip'){reveal=!reveal;render()}
  else if(a==='prev'){card=(card+active().words.length-1)%active().words.length;reveal=false;render()}
  else if(a==='next'){card=(card+1)%active().words.length;reveal=false;render()}
- else if(a==='known'){s.saved[id(lvl,unit)+'-'+card]=true;persist();card=(card+1)%active().words.length;reveal=false;render();window.nativeStatus('မှတ်သားထားပြီးပါပြီ။')}
+ else if(a==='known'){s.saved[id(lvl,unit)+'-'+card]=true;daily();persist();card=(card+1)%active().words.length;reveal=false;render();window.nativeStatus('မှတ်သားထားပြီးပါပြီ။')}
  else if(a==='otherwrite'){writing++;render()}
  else if(a==='clear'){initCanvas()}
- else if(a==='answer' && quiz && quiz.answered<0){quiz.answered=i;render()}
+ else if(a==='answer' && quiz && quiz.answered<0){quiz.answered=i;if(i===quiz.q)daily();render()}
  else if(a==='nextquiz'){newQuiz();render()}
+ else if(a==='backup'){const field=$('backup-json');if(field){field.value=JSON.stringify(s,null,2);field.focus();field.select();window.nativeStatus('Backup ကို ရွေးပြီးပါပြီ။ Copy ကူးပြီး သိမ်းထားပါ။')}}
+ else if(a==='restore'){const field=$('backup-json');try{const raw=field?.value||'';if(raw.length>120000)throw Error('Backup ဖိုင်ကြီးလွန်းသည်');const data=JSON.parse(raw);if(!data||Array.isArray(data)||typeof data!=='object'||!data.completed||typeof data.completed!=='object'||Array.isArray(data.completed)||!data.saved||typeof data.saved!=='object'||Array.isArray(data.saved))throw Error('Format မကိုက်ညီပါ');const allow=new Set(courses.flatMap((l,li)=>l.units.map((u,ui)=>id(li,ui))));const completed={};for(const [k,v] of Object.entries(data.completed)){if(!allow.has(k)||typeof v!=='boolean')throw Error('Lesson ID မှားနေသည်');completed[k]=v}const saved={};for(const [k,v] of Object.entries(data.saved)){if(!/^([0-5])-([0-3])-([0-4])$/.test(k)||typeof v!=='boolean')throw Error('Flashcard ID မှားနေသည်');saved[k]=v}if(!confirm('လက်ရှိ Progress ကို Backup မှတ်တမ်းဖြင့် အစားထိုးမလား?'))return;s={...fresh(),completed,saved,streak:Math.min(366,Math.max(0,Number(data.streak)||0)),last:typeof data.last==='string'?data.last:'',goal:10};persist();go('home');window.nativeStatus('Progress Restore ပြီးပါပြီ။')}catch(e){window.nativeStatus('Backup Restore မအောင်မြင်ပါ: '+e.message)}}
  else if(a==='remind'){if(window.FutureCode)FutureCode.reminder();else window.nativeStatus('Android APK မှ Notification ဖွင့်နိုင်ပါသည်။')}
  else if(a==='update'){if(window.FutureCode)FutureCode.checkUpdates();else window.nativeStatus('Android APK တွင် Update စစ်နိုင်ပါသည်။')}
 });
