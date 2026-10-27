@@ -45,7 +45,7 @@ vm.runInNewContext(read('chinese-learning/app/src/main/assets/course.js'),ctx);
 const chinese=ctx.window.FC_COURSE;
 assert.equal(chinese.length,6);
 assert.equal(chinese.reduce((n,l)=>n+l.units.length,0),24);
-assert.equal(chinese.reduce((n,l)=>n+l.units.reduce((m,u)=>m+u.words.length,0),0),120);
+assert.equal(chinese.reduce((n,l)=>n+l.units.reduce((m,u)=>m+u.words.length,0),0),192);
 new vm.Script(read('chinese-learning/app/src/main/assets/app.js'));
 checks++;
 const academyHtml=read('portal/apps/languages/index.html');
@@ -57,7 +57,7 @@ assert.ok(mi>=0);
 const languages=Function(inline[0][1].slice(mi,inline[0][1].indexOf('];',mi)+2)+' return languages;')();
 assert.equal(languages.length,12);
 assert.equal(new Set(languages.map(l=>l[0])).size,12);
-for(const l of languages)assert.equal(l[4].length,12);
+for(const l of languages)assert.equal(l[4].length,18);
 assert.match(academyHtml,/id="restore"/);
 checks++;
 const manifest=json('portal/apps/languages/latest.json');
@@ -69,9 +69,9 @@ assert.equal(version('thai-speaking').versionCode,thaiLatest.versionCode);
 assert.equal(version('language-academy').versionCode,manifest.versionCode);
 assert.equal(version('language-academy').sha256,manifest.sha256);
 assert.equal(version('thai-speaking').sha256,thaiLatest.sha256);
-assert.match(read('chinese-learning/app/build.gradle'),/versionCode 3[\s\S]*versionName '1\.0\.2'/);
-assert.match(read('thai-course/app/build.gradle'),/versionCode 2[\s\S]*versionName '1\.0\.1'/);
-assert.match(read('language-apk/AndroidManifest.xml'),/versionCode="2" android:versionName="1\.0\.1"/);
+assert.match(read('chinese-learning/app/build.gradle'),/versionCode 4[\\s\\S]*versionName '1\\.0\\.3'/);
+assert.match(read('thai-course/app/build.gradle'),/versionCode 3[\\s\\S]*versionName '1\\.0\\.2'/);
+assert.match(read('language-apk/AndroidManifest.xml'),/versionCode="3" android:versionName="1.0.2"/);
 checks++;
 for(const file of ['.github/workflows/future-code-thai-apk.yml','.github/workflows/fc-language-academy-apk.yml']){
  const workflow=read(file);
@@ -81,4 +81,4 @@ for(const file of ['.github/workflows/future-code-thai-apk.yml','.github/workflo
  assert.ok(!workflow.includes('echo "$ANDROID_KEYSTORE_PASS"'));
 }
 checks++;
-console.log('PASS '+checks+' language APK checks: 4 release cards, 4 links, 6/18 Thai, 6/24/120 Chinese, 12-language academy, Android versions and secured release workflows.');
+console.log('PASS '+checks+' language APK checks: 4 release cards, 4 links, 6/18 Thai, 6/24/192 Chinese, 12-language academy with 18 phrases each, Android versions and secured release workflows.');
