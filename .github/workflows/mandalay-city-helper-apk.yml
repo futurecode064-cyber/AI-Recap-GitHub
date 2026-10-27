@@ -8,6 +8,7 @@ on:
       - '.github/workflows/mandalay-city-helper-apk.yml'
 permissions:
   contents: write
+  id-token: write
 jobs:
   android:
     runs-on: ubuntu-latest
@@ -32,14 +33,37 @@ jobs:
           curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 "https://futurecodeaistudio.floot.app/_cdn/static/ba053a15-fd86-4201-8055-15e79d52bb55-future-code-mandalay-icon.png" -o mandalay-apk/app/src/main/res/drawable-nodpi/ic_launcher.png
           file mandalay-apk/app/src/main/res/drawable-nodpi/ic_launcher.png
           test "$(stat -c%s mandalay-apk/app/src/main/res/drawable-nodpi/ic_launcher.png)" -gt 5000
-      - name: Build installable APK
+      - name: Compile release and debug APK
         working-directory: mandalay-apk
-        run: gradle --no-daemon --stacktrace :app:assembleDebug
-      - name: Stage APK
+        run: gradle --no-daemon --stacktrace :app:assembleDebug :app:assembleRelease
+      - name: Restore or create persistent private Android signing identity
+        shell: bash
         run: |
+          set -euo pipefail
+          umask 077
+          API="https://mxwervqihaqlxybghdak.supabase.co/functions/v1/mandalay-signing"
+          OIDC="$(curl --fail --silent --show-error -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-mandalay-signing-v1" | jq -er '.value')"
+          echo "::add-mask::$OIDC"
+          curl --fail --silent --show-error -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o /tmp/mandalay-signing.json
+          if [[ "$(jq -r '.ready' /tmp/mandalay-signing.json)" != "true" ]]; then
+            PASS="$(openssl rand -hex 32)"
+            echo "::add-mask::$PASS"
+            keytool -genkeypair -storetype PKCS12 -keystore /tmp/mandalay-key.p12 -storepass "$PASS" -keypass "$PASS" -alias future-code-mandalay -keyalg RSA -keysize 3072 -validity 10000 -dname 'CN=Future Code Mandalay City Helper, O=Future Code, C=MM' -noprompt
+            jq -nc --arg pass "$PASS" --arg b64 "$(base64 -w0 /tmp/mandalay-key.p12)" '{action:"initialize",store_password:$pass,keystore_b64:$b64,key_alias:"future-code-mandalay"}' > /tmp/mandalay-init.json
+            curl --fail --silent --show-error -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data-binary @/tmp/mandalay-init.json "$API" -o /tmp/mandalay-init-result.json
+            jq -e '.ok == true' /tmp/mandalay-init-result.json > /dev/null
+            curl --fail --silent --show-error -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o /tmp/mandalay-signing.json
+          fi
+          jq -e '.ready == true' /tmp/mandalay-signing.json > /dev/null
+          jq -r '.keystore_b64' /tmp/mandalay-signing.json | base64 -d > /tmp/mandalay-release.p12
+          ANDROID_KEYSTORE_PASS="$(jq -er '.store_password' /tmp/mandalay-signing.json)"
+          echo "::add-mask::$ANDROID_KEYSTORE_PASS"
+          export ANDROID_KEYSTORE_PASS
           mkdir -p out
-          cp mandalay-apk/app/build/outputs/apk/debug/app-debug.apk out/Future_Code_Mandalay_City_Helper_v1.0.0.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/mandalay-release.p12 --ks-key-alias future-code-mandalay --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/Future_Code_Mandalay_City_Helper_v1.0.0.apk mandalay-apk/app/build/outputs/apk/release/app-release-unsigned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs out/Future_Code_Mandalay_City_Helper_v1.0.0.apk
           sha256sum out/*.apk
+          shred -u /tmp/mandalay-init.json /tmp/mandalay-init-result.json /tmp/mandalay-signing.json /tmp/mandalay-release.p12 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
           name: Mandalay-City-Helper-Android-APK
@@ -49,4 +73,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create mandalay-city-helper-v1.0.0 out/Future_Code_Mandalay_City_Helper_v1.0.0.apk --title "မြို့လေး ကူညီရေး စွန့်စားခန်း Android v1.0.0 (Beta)" --notes "Android online WebView wrapper of the existing Future Code Mandalay live game. Game website updates load automatically. Local notification polling, owner announcements and APK update check included. Beta APK uses runner's debug certificate: subsequent binary builds require a persistent signing key for in-place upgrades." || gh release upload mandalay-city-helper-v1.0.0 out/Future_Code_Mandalay_City_Helper_v1.0.0.apk --clobber
+          if gh release view mandalay-city-helper-v1.0.0 >/dev/null 2>&1; then
+            gh release upload mandalay-city-helper-v1.0.0 out/Future_Code_Mandalay_City_Helper_v1.0.0.apk --clobber
+          else
+            gh release create mandalay-city-helper-v1.0.0 out/Future_Code_Mandalay_City_Helper_v1.0.0.apk --title "မြို့လေး ကူညီရေး စွန့်စားခန်း Android v1.0.0 (Beta)" --notes "Online Android game. Game website updates automatically; local announcement polling and binary-update notices included. APK signed with a private, persistent Android certificate."
+          fi
+          gh release edit mandalay-city-helper-v1.0.0 --notes "Online beta: the existing live Mandalay City Helper game in Android WebView. The APK is signed using a persistent private certificate for future in-place updates. Website game content refreshes automatically; Android must still approve binary APK updates. Notices are fetched periodically, not real-time FCM push."
