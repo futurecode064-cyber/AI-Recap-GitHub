@@ -63,7 +63,7 @@
   control.dispatchEvent(new Event("change"));
   if(node("fcfeCount"))node("fcfeCount").textContent="Frame "+designs.length+" မျိုး ရွေးနိုင်ပါသည်။";
   fill();
-  window.FutureCodeProfessionalFrames?.refresh();
+  window.FutureCodeProfessionalFrames?.refresh();fill();
  }
  function fill(){
   if(!panel)return;
