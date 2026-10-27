@@ -236,13 +236,15 @@
           "result": "L",
           "opponent": "မွန်ဇာ",
           "teamGoals": 0,
-          "opponentGoals": 4
+          "opponentGoals": 4,
+          "date": "2026-10-19"
         },
         {
           "result": "D",
           "opponent": "ဂျူဗင်တပ်စ်",
           "teamGoals": 1,
-          "opponentGoals": 1
+          "opponentGoals": 1,
+          "date": "2026-10-11"
         },
         {
           "result": "W",
@@ -342,7 +344,8 @@
           "result": "W",
           "opponent": "အူဒီးနီးစ်",
           "teamGoals": 2,
-          "opponentGoals": 1
+          "opponentGoals": 1,
+          "date": "2026-10-12"
         },
         {
           "result": "D",
@@ -355,7 +358,8 @@
           "result": "L",
           "opponent": "ရိုးမား",
           "teamGoals": 0,
-          "opponentGoals": 2
+          "opponentGoals": 2,
+          "date": "2026-09-14"
         }
       ],
       "awayLastFive": [
@@ -1533,7 +1537,8 @@
           "result": "W",
           "opponent": "ပရပ်ရှားမန်စတာ",
           "teamGoals": 3,
-          "opponentGoals": 2
+          "opponentGoals": 2,
+          "date": "2026-10-17"
         },
         {
           "result": "D",
@@ -1553,7 +1558,8 @@
           "result": "D",
           "opponent": "ကိုင်ဇာစလောက်တန်း",
           "teamGoals": 1,
-          "opponentGoals": 1
+          "opponentGoals": 1,
+          "date": "2026-10-02"
         }
       ],
       "awayLastFive": [
@@ -1575,7 +1581,8 @@
           "result": "D",
           "opponent": "ဘိုင်ယန်မြူးနစ်",
           "teamGoals": 2,
-          "opponentGoals": 2
+          "opponentGoals": 2,
+          "date": "2026-10-10"
         },
         {
           "result": "D",
@@ -1588,7 +1595,8 @@
           "result": "L",
           "opponent": "ဝါဒါဘရီမင်",
           "teamGoals": 2,
-          "opponentGoals": 3
+          "opponentGoals": 3,
+          "date": "2026-09-19"
         }
       ],
       "homeStanding": {
@@ -1705,7 +1713,8 @@
           "result": "L",
           "opponent": "ရီးရဲလ်မက်ဒရစ်",
           "teamGoals": 1,
-          "opponentGoals": 4
+          "opponentGoals": 4,
+          "date": "2026-10-21"
         },
         {
           "result": "L",
@@ -2283,7 +2292,8 @@
           "result": "W",
           "opponent": "ဆန်အန်တိုနီယို",
           "teamGoals": 7,
-          "opponentGoals": 0
+          "opponentGoals": 0,
+          "date": "2026-09-30"
         },
         {
           "result": "L",
@@ -2555,7 +2565,8 @@
           "result": "L",
           "opponent": "မန်တိုဗာ",
           "teamGoals": 1,
-          "opponentGoals": 3
+          "opponentGoals": 3,
+          "date": "2026-10-11"
         },
         {
           "result": "L",
@@ -2568,7 +2579,8 @@
           "result": "W",
           "opponent": "ကာရာရီဆီ",
           "teamGoals": 1,
-          "opponentGoals": 0
+          "opponentGoals": 0,
+          "date": "2026-09-12"
         }
       ],
       "homeStanding": {
@@ -2705,7 +2717,8 @@
           "result": "L",
           "opponent": "မန်တိုဗာ",
           "teamGoals": 0,
-          "opponentGoals": 2
+          "opponentGoals": 2,
+          "date": "2026-09-13"
         }
       ],
       "homeStanding": {
@@ -2940,13 +2953,15 @@
           "result": "L",
           "opponent": "ကိုပါ",
           "teamGoals": 1,
-          "opponentGoals": 2
+          "opponentGoals": 2,
+          "date": "2026-10-03"
         },
         {
           "result": "L",
           "opponent": "ဗီရိုနာ",
           "teamGoals": 1,
-          "opponentGoals": 2
+          "opponentGoals": 2,
+          "date": "2026-09-20"
         }
       ],
       "awayLastFive": [
@@ -3234,7 +3249,8 @@
           "result": "D",
           "opponent": "ဆမ်ဒိုးရီးယား",
           "teamGoals": 1,
-          "opponentGoals": 1
+          "opponentGoals": 1,
+          "date": "2026-10-24"
         },
         {
           "result": "L",
@@ -3353,7 +3369,7 @@
         },
         {
           "result": "D",
-          "opponent": "",
+          "opponent": "ခရီမိုနီဆီ",
           "teamGoals": 0,
           "opponentGoals": 0,
           "date": "2026-09-19"
