@@ -7,7 +7,7 @@ const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'portal/apps/index.html'), 'utf8');
 const tracker = fs.readFileSync(path.join(root, 'portal/apps/stats.js'), 'utf8');
-const appKeys = ['ai-studio','app-creator','myanmar-kyar','video-cutter','ai-astrology','el-nino','daily-money','medicine-reminder','kids-learning','safety-guide','goal-zone','mandalay-city-helper'];
+const appKeys = ['ai-studio','app-creator','myanmar-kyar','video-cutter','ai-astrology','el-nino','daily-money','medicine-reminder','kids-learning','safety-guide','goal-zone','mandalay-city-helper','language-academy'];
 
 const tags = [...html.matchAll(/<a\b(?=[^>]*class="download")[^>]*>/g)].map(m => m[0]);
 assert.equal(tags.length, appKeys.length, 'all public APKs need analytics');
@@ -15,7 +15,7 @@ const anchors = tags.map(tag => {
   const key = tag.match(/data-app-key="([^"]+)"/)?.[1];
   assert.ok(key, 'missing stable app key: ' + tag);
   const href = tag.match(/href="([^"]+)"/)?.[1];
-  assert.ok(href && (href.endsWith('.apk') || (key === 'myanmar-kyar' && href === '../myanmar-kyar/')), 'missing APK URL: ' + tag);
+  assert.ok(href && (href.endsWith('.apk') || (((key === 'myanmar-kyar' && href === '../myanmar-kyar/') || (key === 'language-academy' && href === 'languages/')))), 'missing APK URL: ' + tag);
   return { href, dataset: {appKey:key}, handlers:{},
     addEventListener(name, fn){this.handlers[name] = fn;} };
 });
@@ -38,15 +38,15 @@ for(const anchor of anchors){
 }
 assert.equal(events.filter(e=>e.body.p_event_kind==='page_view').length,1);
 const clicks=events.filter(e=>e.body.p_event_kind==='download_click');
-assert.equal(clicks.length, appKeys.length-1);
-assert.deepEqual(clicks.map(e=>e.body.p_app_key).sort(),appKeys.filter(k=>k!=='myanmar-kyar').sort());
+assert.equal(clicks.length, appKeys.length-2);
+assert.deepEqual(clicks.map(e=>e.body.p_app_key).sort(),appKeys.filter(k=>k!=='myanmar-kyar'&&k!=='language-academy').sort());
 for(const click of clicks){
   assert.equal(click.body.p_site_key, 'future-code-apps');
   assert.equal(click.options.keepalive,true);
   assert.equal(click.options.method,'POST');
   assert.ok(click.url.endsWith('/rest/v1/rpc/fc_record_portfolio_event'));
 }
-console.log('PASS: 11 direct APK links tracked; Kyar navigation does not double-count its landing-page download.');
+console.log('PASS: 11 direct APK links tracked; Kyar and Language Academy demos are not counted as APK downloads.');
 const adminHtml = fs.readFileSync(path.join(root, 'portal/apps/admin.html'), 'utf8');
 const adminJs = fs.readFileSync(path.join(root, 'portal/apps/admin.js'), 'utf8');
 const releaseSnapshot = JSON.parse(fs.readFileSync(path.join(root, 'portal/apps/github-releases-snapshot.json'), 'utf8'));
