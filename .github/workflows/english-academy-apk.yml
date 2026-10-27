@@ -36,6 +36,11 @@ jobs:
           print(f'APK_FILE=Future_Code_English_Academy_v{version}.apk')
           print(f'RELEASE_TAG=english-academy-v{version}')
           PY
+      - name: Prepare bundled offline English speech
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak-ng ffmpeg
+          python3 scripts/generate_offline_audio.py english english-academy-android/android/assets/audio
       - name: Build offline English Academy
         working-directory: english-academy-android/android
         run: python3 build.py
