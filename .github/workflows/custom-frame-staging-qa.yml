@@ -32,6 +32,10 @@ jobs:
             await p.waitForFunction(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[1]==='CUSTOM BANNER TEST'));
             let custom=await p.evaluate(()=>window.FutureCodeTableOddsFrames.designs.find(d=>d[1]==='CUSTOM BANNER TEST'));
             assert(custom[4].topImage && custom[4].bottomImage);
+            await p.waitForFunction(()=>typeof loadedSheet!=='undefined'&&loadedSheet?.matches?.length,null,{timeout:30000});
+            await p.locator('#tofPreview').click();
+            await p.locator('#tofOutput img').waitFor({timeout:60000});
+            assert((await p.locator('#tofOutput img').getAttribute('src')).startsWith('blob:'));
             await p.reload();await p.locator('#futureCodeFrameEditor').waitFor();
             await p.waitForFunction(()=>window.FutureCodeTableOddsFrames.designs.some(d=>d[1]==='CUSTOM BANNER TEST'));
             await p.goto('http://127.0.0.1:8765/',{waitUntil:'domcontentloaded'});
@@ -39,6 +43,11 @@ jobs:
             await p.waitForFunction(()=>[...document.querySelectorAll('#fcAiFrameStyle option')].some(x=>x.textContent==='CUSTOM BANNER TEST'),null,{timeout:30000});
             const result=await p.evaluate(async()=>{const f=(await window.FutureCodeCustomFrames.list()).find(x=>x.name==='CUSTOM BANNER TEST');const c=document.createElement('canvas');c.width=600;c.height=200;const out=await window.FutureCodeCustomFrames.wrap(c,f);return {w:out.width,h:out.height,top:out.getContext('2d').getImageData(5,5,1,1).data[0]};});
             assert.equal(result.w,600);assert.equal(result.h,440);assert(result.top>200);
+            await p.waitForFunction(()=>document.querySelectorAll('#brandMatch option').length>0,null,{timeout:30000});
+            const opt=await p.locator('#brandFrame option').evaluateAll(xs=>xs.find(x=>x.textContent==='CUSTOM BANNER TEST').value);
+            await p.locator('#brandFrame').selectOption(opt);await p.locator('#brandShow').click();
+            await p.locator('#brandSample').waitFor({state:'visible',timeout:60000});
+            assert((await p.locator('#brandSample').getAttribute('src')).startsWith('blob:'));
             console.log('PASS: two banners saved, persisted and shared to preview/AI; composed PNG pixels verified');
           } finally {await b.close();}
           NODE
