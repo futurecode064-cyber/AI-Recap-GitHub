@@ -69,7 +69,7 @@
    const c=brand?.colors||{};
    const brandTheme=brand?{bg:c.background||c.black||'#080b10',head:c.darkRed||c.navy||c.primary||'#082c54',panel:c.panel||'#061726',alt:c.primary||c.gold||'#12518a',accent:c.electric||c.gold||c.silver||c.primary||'#43b9f0',gold:c.gold||c.electric||c.silver||c.primary||'#edc45b'}:undefined;
    let canvas=await window.FutureCodeFramePreview.render(match,brandTheme||opts.frameTheme,opts);
-   if(!opts.asCanvas&&window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews");
+   if(!opts.asCanvas&&window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews",document.getElementById("fcMatchCustomFrame")?.value?.startsWith("pro:")?document.getElementById("fcMatchCustomFrame").value:"none");
    const filename=opts.downloadFilename||filePart(match.home)+'-vs-'+filePart(match.away)+'.png';
    if(opts.asCanvas)return canvas;
    if(opts.asBlob){const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));return {filename,blob};}
@@ -237,7 +237,7 @@
    ?opts.downloadFilename
    :filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png";
   if(opts.asCanvas===true)return canvas;
-  if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews");
+  if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews",document.getElementById("fcMatchCustomFrame")?.value?.startsWith("pro:")?document.getElementById("fcMatchCustomFrame").value:"none");
   if(opts.asBlob===true){
    if(typeof canvas.toBlob!=="function")throw Error("Browser cannot create PNG");
    const blob=await Promise.race([
