@@ -323,3 +323,15 @@ body .odds-content .main-compact-odds th.main-league-logo .league-crest,
 body .odds-content .main-compact-odds th.main-league-logo .league-mark{display:inline-block!important;vertical-align:middle;width:40px!important;height:40px!important}
 body .odds-content .main-compact-odds th.main-league-name{white-space:nowrap!important;text-align:center!important}
 body .odds-content .main-compact-odds .odds-league-header:has(.odds-league-png-parts:empty){display:none!important}
+
+@font-face{
+ font-family:"Noto Sans Myanmar";
+ src:url("./assets/fonts/NotoSansMyanmar-Variable.ttf") format("truetype");
+ font-style:normal;font-weight:100 900;font-display:swap
+}
+body .odds-content .odds-league-heading span:last-child{
+ font-family:"Noto Sans Myanmar",sans-serif!important;
+ font-size:18px!important;line-height:1.8!important;
+ font-weight:700!important;letter-spacing:0!important;
+ font-variation-settings:"wdth" 100!important;word-break:keep-all!important
+}

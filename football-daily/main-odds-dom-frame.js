@@ -41,11 +41,35 @@
       });
     } finally { URL.revokeObjectURL(url); }
   }
+  // Draw Myanmar ligatures natively after html2canvas, so joined glyphs
+  // and diacritics survive in BCF PNG league headings.
+  function repaintBcfLeagues(canvas,root){
+    if(window.FutureCodeBrandConfig?.id!=="bet-city-family")return;
+    const ctx=canvas.getContext?.("2d");if(!ctx)return;
+    const origin=root.getBoundingClientRect(),scale=canvas.width/Math.max(origin.width,1);
+    for(const span of root.querySelectorAll(".odds-league-heading span:last-child")){
+      const box=span.getBoundingClientRect(),name=String(span.textContent||"").normalize("NFC").trim();
+      if(!name||box.width<20||box.height<12)continue;
+      const x=(box.left-origin.left)*scale,y=(box.top-origin.top)*scale;
+      const w=Math.min(box.width*scale,canvas.width-x),h=box.height*scale;
+      if(w<20||h<10)continue;
+      ctx.save();
+      ctx.fillStyle="#0a328a";ctx.fillRect(x-3*scale,y-2*scale,w+6*scale,h+4*scale);
+      ctx.fillStyle="#fff8ec";ctx.textAlign="left";ctx.textBaseline="middle";
+      let fontSize=22;
+      do{
+       ctx.font='700 '+fontSize*scale+'px "Noto Sans Myanmar",sans-serif';
+       if(ctx.measureText(name).width<=w-7*scale)break;
+      }while(--fontSize>14);
+      ctx.fillText(name,x+2*scale,y+h/2);
+      ctx.restore();
+    }
+  }
   function waitFonts() {
     if (!document.fonts?.ready) return Promise.resolve();
     return Promise.race([
-      document.fonts.ready.catch(()=>{}),
-      new Promise(resolve=>setTimeout(resolve,3500))
+      Promise.all([document.fonts.load('700 22px "Noto Sans Myanmar"',"မြန်မာ စီးရီးအေ ကာရာဘောင်း"),document.fonts.ready]).catch(()=>{}),
+      new Promise(resolve=>setTimeout(resolve,6500))
     ]);
   }
   function waitFrame() {
@@ -178,6 +202,14 @@
       const trs=[...group.querySelectorAll("tbody tr")];
       if(trs.length!==originals.length)throw Error("Website ပွဲအရေအတွက် မကိုက်ညီပါ။");
       trs.forEach((tr,i)=>{if(!wanted.has(i))tr.remove();});
+      // Normalize cloned PNG rows for Main and all six journals.
+      trs.forEach((tr,i)=>{
+        if(!tr.parentNode)return;
+        const fixture=originals[i],cell=tr.querySelector("td.time");
+        if(!cell)return;
+        cell.textContent=window.FutureCodeOddsClock?.short(fixture)||"—";
+        cell.title=String(fixture?.kickoffDisplay||fixture?.kickoff||"");
+      });
       // Export-only edits operate on a CLONE; the website's odds are untouched.
       const edits=!document.documentElement?.dataset?.footballBrandName
         ?window.FutureCodeFrameEditor?.exportNames(date):null;
@@ -523,6 +555,7 @@
           }),25000,"Website HTML Screenshot");
           if(!canvas||!canvas.width||!canvas.height)
             throw Error("HTML Screenshot canvas အလွတ်ဖြစ်နေပါသည်");
+          repaintBcfLeagues(canvas,root);
           window.FutureCodeOddsDomFrame.lastCapture="html2canvas-website-dom";
           return {picture:canvas,height:canvas.height,width:canvas.width};
         }catch(error){

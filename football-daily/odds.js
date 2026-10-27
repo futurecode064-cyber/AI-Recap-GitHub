@@ -4,6 +4,17 @@ function dateKey(){
  const p=new Intl.DateTimeFormat("en-CA",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
  const x=Object.fromEntries(p.map(v=>[v.type,v.value]));return x.year+"-"+x.month+"-"+x.day;
 }
+// Shared across all odds pages, including tomorrow: only HH:mm in fixture rows.
+function shortKickoffClock(match){
+ for(const v of [match?.kickoff,match?.sourceKickoff,match?.kickoffDisplay]){
+  if(v==null)continue;
+  const s=String(v).replace(/[၀-၉]/g,d=>String("၀၁၂၃၄၅၆၇၈၉".indexOf(d))).trim();
+  const m=s.match(/(?:^|[^\d])([01]?\d|2[0-3]):([0-5]\d)(?!\d)/);
+  if(m)return m[1].padStart(2,"0")+":"+m[2];
+ }
+ return "—";
+}
+window.FutureCodeOddsClock=Object.freeze({short:shortKickoffClock});
 function element(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=String(txt);return e;}
 function append(parent,...items){items.forEach(n=>parent.appendChild(n));return parent;}
 function safeLogo(src){if(typeof src!=="string")return "";try{const u=new URL(src,document.baseURI);return u.protocol==="https:"?u.href:"";}catch{return "";}}
@@ -142,7 +153,7 @@ function brandMobileOdds(matches){
   const card=element("article","bmo-card"),teams=element("div","bmo-teams");
   card.setAttribute("role","listitem");
   const time=String(m.kickoffDisplay||m.kickoff||"");
-  const timeNode=element("div","bmo-time",time.replace(/^.*? ည /,"ည ")||"ပွဲချိန် မဖော်ပြထားပါ");
+  const timeNode=element("div","bmo-time",shortKickoffClock(m));
   timeNode.title=time;
   append(teams,team(m.home,m.homeCrestUrl),element("span","bmo-vs","VS"),team(m.away,m.awayCrestUrl));
   const markets=element("div","bmo-markets");
@@ -198,7 +209,7 @@ function render(data){
    const time=String(m.kickoffDisplay||m.kickoff||"");
    // The full editorial date remains available on hover; short evening
    // notation lets team names and original/latest prices stay readable.
-   const shortTime=time.replace(/^.*? ည /,"ည ");
+   const shortTime=shortKickoffClock(m);
    const t=element("td","time",shortTime),pair=element("td","team-pair");
    t.title=time;
    pair.appendChild(matchCell(m));

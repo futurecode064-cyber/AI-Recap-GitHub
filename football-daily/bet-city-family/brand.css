@@ -14,7 +14,7 @@
 .bcf-quick-nav a{font:700 11px 'Noto Sans Myanmar',sans-serif;text-decoration:none;padding:8px 13px;border:1px solid #4d7ad0;border-radius:9px;background:#0a246a;color:#fff5dc;transition:.2s}
 .bcf-quick-nav a:is(:hover,:focus-visible){background:#135be4;border-color:#fbd37b}
 .bcf-theme .hero{isolation:isolate;overflow:hidden;position:relative;background:radial-gradient(ellipse at 68% 10%,#1856cd,#030a33 67%);border-bottom:2px solid #b68d45}
-.bcf-theme .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url('./assets/football-blue-stadium.webp') center 54%/cover no-repeat;opacity:.72}
+.bcf-theme .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url('./assets/football-electric-blue-v3.webp') center 54%/cover no-repeat;opacity:.72}
 .bcf-theme .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#020b32fa 1%,#051542ed 45%,#071654a8 82%,#050934ba);border:0;box-shadow:none}
 .bcf-theme .hero>.container{position:relative;z-index:1}
 .bcf-theme .hero-topline,.bcf-theme .hero-foot{color:#d2e5ff;border-color:#5985dc}
@@ -34,7 +34,7 @@
 .bcf-theme .date-tabs button.active,.bcf-theme .filters button.selected{background:linear-gradient(120deg,#1765f1,#07318f);color:#fff8db;border-color:#ffcb52}
 .bcf-theme .match-topline,.bcf-theme .match-card:has(.match-hero)>.match-topline{background:linear-gradient(105deg,#0b3fb4,#031344);border-color:#3d70d3;color:#fff3d5}
 .bcf-theme .vs-banner{background:linear-gradient(90deg,#021044,#1045a5 51%,#021044)}
-.bcf-theme .match-hero-art{background:linear-gradient(90deg,#041244c7,#133f96a8,#06144dc7),url('./assets/football-blue-stadium.webp') center/cover no-repeat}
+.bcf-theme .match-hero-art{background:linear-gradient(90deg,#041244c7,#133f96a8,#06144dc7),url('./assets/football-electric-blue-v3.webp') center/cover no-repeat}
 .bcf-theme .hero-team-home{background:#0a36a34d}.bcf-theme .hero-team-away{background:#102f8c4d}
 .bcf-theme .match-hero-versus{background:linear-gradient(90deg,#071953d9,#073eadb3,#071953d9)}
 .bcf-theme .hero-big-vs,.bcf-theme .hero-competition{color:#ffdb79}
@@ -51,7 +51,7 @@
 .bcf-theme .match-card:has(.match-hero) .analysis-toggle{background:#173875;color:#f9e6a1;border:1px solid #5686d6}
 .bcf-theme .results-download-bar{background:#092a6e;border-color:#f6c04c}
 .bcf-theme .results-png-btn,.bcf-theme .odds-export-actions button,.bcf-theme .match-download,.bcf-theme .odds-part-download,.bcf-theme .results-part-download{background:linear-gradient(115deg,#084bc1,#176ce1);border:1px solid #ffc95d;color:#fff;font-weight:900}
-.bcf-theme .odds-hero{background:linear-gradient(90deg,#030b37d8,#12469f9e),url('./assets/football-blue-stadium.webp') center/cover no-repeat;border-color:#f1be4f}
+.bcf-theme .odds-hero{background:linear-gradient(90deg,#030b37d8,#12469f9e),url('./assets/football-electric-blue-v3.webp') center/cover no-repeat;border-color:#f1be4f}
 .bcf-theme .odds-hero h1 span,.bcf-theme .odds-kicker,.bcf-theme .odds-count{color:#ffdf92}
 .bcf-theme .odds-subtitle{color:#dfebff}
 .bcf-theme .odds-nav a{background:#061f64;border-color:#5477be;color:#fff}
@@ -89,7 +89,7 @@ html.bcf-theme .bcf-quick-nav strong{font-size:14px}
 html.bcf-theme .hero{min-height:0;position:relative;overflow:hidden;isolation:isolate;background:#04103f}
 html.bcf-theme .hero::before{
  content:"";position:absolute;inset:-4%;z-index:-2;
- background:url("./assets/football-blue-stadium.webp") 60% 56%/cover no-repeat;
+ background:url("./assets/football-electric-blue-v3.webp") 60% 56%/cover no-repeat;
  transform:scaleX(-1) scale(1.07);filter:contrast(1.12) saturate(.94);opacity:.98
 }
 html.bcf-theme .hero::after{
@@ -106,11 +106,11 @@ html.bcf-theme .hero-update-notice{padding:17px}
 html.bcf-theme .hero-topline,html.bcf-theme .hero-foot{padding-top:10px;padding-bottom:10px}
 html.bcf-theme .match-hero-art{
  background:linear-gradient(90deg,#05153fd6,#0b3c89a9,#04143ed6),
- url("./assets/football-blue-stadium.webp") center 64%/cover no-repeat
+ url("./assets/football-electric-blue-v3.webp") center 64%/cover no-repeat
 }
 html.bcf-theme .odds-hero{
  background:linear-gradient(100deg,#03103de9,#0e4094c0 64%,#06103a8b),
- url("./assets/football-blue-stadium.webp") center 61%/cover no-repeat!important;
+ url("./assets/football-electric-blue-v3.webp") center 61%/cover no-repeat!important;
  padding:20px 0 18px;border-bottom:2px solid #f1c258!important
 }
 html.bcf-theme .odds-hero h1{font-size:clamp(24px,3.4vw,35px);line-height:1.6}
@@ -240,4 +240,23 @@ html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-group th.main
  html.bcf-theme .hero::after{background:linear-gradient(0deg,#01082cfb 0%,#082365ed 62%,#09296775)}
  html.bcf-theme .hero-main h1{font-size:clamp(29px,7vw,41px)}
  html.bcf-theme .bcf-quick-nav .container{gap:7px}
+}
+/* Electric blue football photo, fresh asset path to avoid old gray cache. */
+html.bcf-theme .hero::before{
+ background-image:url("./assets/football-electric-blue-v3.webp")!important;
+ filter:none!important;opacity:1!important
+}
+html.bcf-theme .hero::after{
+ background:linear-gradient(90deg,rgba(2,18,76,.87) 0%,rgba(4,35,115,.55) 48%,rgba(5,44,136,.15) 100%)!important
+}
+html.bcf-theme .match-hero-art{
+ background:linear-gradient(90deg,rgba(0,24,89,.7),rgba(3,65,169,.28),rgba(0,23,91,.65)),url("./assets/football-electric-blue-v3.webp") center 60%/cover no-repeat!important
+}
+html.bcf-theme .odds-hero{
+ background:linear-gradient(90deg,rgba(0,24,96,.75),rgba(4,52,149,.37)),url("./assets/football-electric-blue-v3.webp") center 56%/cover no-repeat!important
+}
+html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-league-heading span:last-child{
+ font:700 22px/1.8 "Noto Sans Myanmar",sans-serif!important;
+ font-variation-settings:"wdth" 100!important;white-space:nowrap!important;
+ letter-spacing:0!important;overflow:visible!important
 }

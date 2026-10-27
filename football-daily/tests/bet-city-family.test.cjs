@@ -31,8 +31,8 @@ test("BCF clean journal does not render cartoon preview or double hero masthead"
  }
  assert.doesNotMatch(html,/SPORT HUB/);
  assert.doesNotMatch(css,/footballers\.svg/);
- assert.match(css,/football-blue-stadium\.webp/);
- assert.match(brand,/football-blue-stadium\.webp/);
+ assert.match(css,/football-electric-blue-v3\.webp/);
+ assert.match(brand,/football-electric-blue-v3\.webp/);
 });
 test("BCF PNG export keeps original images and crops only result masthead",()=>{
  const js=fs.readFileSync(path.join(dir,"brand-export-banners.js"),"utf8");
