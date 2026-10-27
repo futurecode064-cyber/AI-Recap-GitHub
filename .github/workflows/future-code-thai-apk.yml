@@ -24,7 +24,9 @@ jobs:
           gradle-version: '8.9'
       - name: Prepare Android platform
         run: |
-          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          test -n "$SDKMANAGER"
+          "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
       - name: Verify Thai curriculum and metadata
         run: |
           node --check portal/thai-course/course.js
