@@ -567,12 +567,13 @@
     if(!Array.isArray(rows)||!rows.length)throw Error("ပေါက်ကြေး ပွဲစာရင်းမရှိပါ။");
     const design=settings.design;
     const custom=design[4]||null;
-    const colourOnly=design[0]==="colour"||(custom&&!custom.image);
+    const separate=!!(custom?.topImage||custom?.bottomImage);
+    const colourOnly=!separate&&(design[0]==="colour"||(custom&&!custom.image));
     const theme=colourOnly?(design[0]==="colour"?settings.colour:design[2]):design[2];
     const framed=Boolean(design[3]),dir="./assets/table-odds-frames/";
-    const banner=framed?await localArtwork(custom?.image||dir+design[0]+"-frame.jpg"):null;
-    const top=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-top.jpg"):null;
-    const bottom=(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-bottom.jpg"):null;
+    const banner=framed&&!separate?await localArtwork(custom?.image||dir+design[0]+"-frame.jpg"):null;
+    const top=separate?(custom.topImage?await localArtwork(custom.topImage):null):(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-top.jpg"):null;
+    const bottom=separate?(custom.bottomImage?await localArtwork(custom.bottomImage):null):(!framed&&!colourOnly)?await localArtwork(dir+design[0]+"-bottom.jpg"):null;
     const shot=await captureWebsite(rows,theme,settings.date);
     const W=2160;
     const {canvas,ctx}=window.FutureCodeCanvasKit.create(W,1);
@@ -608,3 +609,4 @@
   }
   window.FutureCodeOddsDomFrame={draw};
 })();
+

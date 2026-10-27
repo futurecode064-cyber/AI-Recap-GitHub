@@ -5,7 +5,7 @@
  const designs=window.FutureCodeTableOddsFrames?.designs;if(!Array.isArray(designs))return;
  const originals=designs.map(d=>JSON.parse(JSON.stringify(d))),ids=new Set(originals.map(d=>d[0]));
  const blank=()=>({version:1,hidden:[],edited:{},custom:[],names:{}});
- let state=blank(),panel=null,selected="",pendingImage="",dateRendered="";
+ let state=blank(),panel=null,selected="",pendingImage="",pendingTop="",pendingBottom="",clearTop=false,clearBottom=false,dateRendered="";
  const node=id=>panel?.querySelector("#"+id);
  const text=s=>String(s||"").trim().slice(0,95);
  const color=s=>/^#[0-9a-f]{6}$/i.test(s||"")?s:"#244c75";
@@ -18,7 +18,8 @@
  function sanitize(x){
   if(!x||typeof x!=="object")throw Error("Frame Backup မမှန်ပါ");
   const image=typeof x.image==="string"&&/^data:image\/(webp|png|jpeg);base64,/.test(x.image)&&x.image.length<1800000?x.image:"";
-  return {name:text(x.name)||"New Frame",color:color(x.color),top:numeric(x.top,14),bottom:numeric(x.bottom,10),image};
+  const validImage=v=>typeof v==="string"&&/^data:image\/(webp|png|jpeg);base64,/.test(v)&&v.length<1800000?v:"";
+  return {name:text(x.name)||"New Frame",color:color(x.color),top:numeric(x.top,14),bottom:numeric(x.bottom,10),image,topImage:validImage(x.topImage),bottomImage:validImage(x.bottomImage)};
  }
  function validImport(v){
   if(!v||v.version!==1||!Array.isArray(v.hidden)||!Array.isArray(v.custom)||!v.edited||!v.names||v.custom.length>40)throw Error("Frame Studio Backup v1 ဖိုင်မဟုတ်ပါ");
@@ -46,7 +47,7 @@
   const custom=!!p.image;
   const frame=custom||(!origin?false:!!origin[3]);
   return [id,p.name,p.color,frame?{top:p.top/100,bottom:p.bottom/100}:undefined,
-    (p.image||!origin)?{image:p.image||""}:undefined];
+    (p.image||p.topImage||p.bottomImage||!origin)?{image:p.image||"",topImage:p.topImage||"",bottomImage:p.bottomImage||""}:undefined];
  }
  function currentId(){return designs[Number(document.getElementById("tofDesign")?.value||0)]?.[0]||"";}
  function apply(want){
@@ -68,7 +69,8 @@
   selected=currentId();const p=settingsFor(selected);
   node("fcfeName").value=p.name;node("fcfeColor").value=color(p.color);
   node("fcfeTop").value=p.top;node("fcfeBottom").value=p.bottom;
-  node("fcfeFile").value="";pendingImage="";
+  node("fcfeFile").value="";node("fcfeTopFile").value="";node("fcfeBottomFile").value="";pendingImage="";pendingTop="";pendingBottom="";clearTop=false;clearBottom=false;
+  node("fcfeTopStatus").textContent=p.topImage?"အပေါ် Banner ထည့်ထားသည်":"မထည့်ရသေးပါ";node("fcfeBottomStatus").textContent=p.bottomImage?"အောက် Banner ထည့်ထားသည်":"မထည့်ရသေးပါ";
   if(selected==="colour"&&state.edited.colour){
     const theme=document.getElementById("tofColour"),picker=document.getElementById("tofCustom");
     if(theme&&picker){theme.value="custom";picker.value=p.color;theme.dispatchEvent(new Event("change"));}
@@ -79,7 +81,7 @@
  }
  function form(){
   const current=settingsFor(selected);
-  const p={name:text(node("fcfeName").value),color:color(node("fcfeColor").value),top:numeric(node("fcfeTop").value,14),bottom:numeric(node("fcfeBottom").value,10),image:pendingImage||current.image||""};
+  const p={name:text(node("fcfeName").value),color:color(node("fcfeColor").value),top:numeric(node("fcfeTop").value,14),bottom:numeric(node("fcfeBottom").value,10),image:pendingImage||current.image||"",topImage:clearTop?"":pendingTop||current.topImage||"",bottomImage:clearBottom?"":pendingBottom||current.bottomImage||""};
   if(!p.name)throw Error("Frame နာမည် ထည့်ပါ။");
   if(p.top+p.bottom>70)throw Error("အပေါ်/အောက် ပုံအပိုင်း စုစုပေါင်း 70% ထက် မကျော်ရပါ။");
   return p;
@@ -148,6 +150,8 @@
    <label>Frame နာမည်<input id="fcfeName" maxlength="70" type="text"></label>
    <label>Frame အရောင်<input id="fcfeColor" type="color"></label>
    <label>Frame ပုံအသစ် <input id="fcfeFile" type="file" accept="image/jpeg,image/png,image/webp"><small id="fcfePicture"></small></label>
+   <label>အပေါ် Banner ပုံ<input id="fcfeTopFile" type="file" accept="image/jpeg,image/png,image/webp"><small id="fcfeTopStatus"></small><button type="button" id="fcfeClearTop">အပေါ် Banner ဖြုတ်</button></label>
+   <label>အောက် Banner ပုံ<input id="fcfeBottomFile" type="file" accept="image/jpeg,image/png,image/webp"><small id="fcfeBottomStatus"></small><button type="button" id="fcfeClearBottom">အောက် Banner ဖြုတ်</button></label>
    <label>အပေါ် Frame ပုံနေရာ (%)<input id="fcfeTop" type="number" min="0" max="40"></label>
    <label>အောက် Frame ပုံနေရာ (%)<input id="fcfeBottom" type="number" min="0" max="40"></label>
   </div>
@@ -186,8 +190,11 @@
    try{pendingImage=await upload(e.target.files[0]);node("fcfePicture").textContent="Frame ပုံအသစ် ရွေးပြီး။ သိမ်းရန် ခလုတ်နှိပ်ပါ။";}
    catch(err){pendingImage="";say(err.message,true);}
   });
+  for(const [input,status,key] of [["fcfeTopFile","fcfeTopStatus","top"],["fcfeBottomFile","fcfeBottomStatus","bottom"]])node(input).addEventListener("change",async e=>{try{const image=await upload(e.target.files[0]);if(key==="top"){pendingTop=image;clearTop=false;}else{pendingBottom=image;clearBottom=false;}node(status).textContent="ပုံရွေးပြီး — သိမ်းရန် ခလုတ်နှိပ်ပါ";}catch(err){say(err.message,true);}});
+  node("fcfeClearTop").onclick=()=>{pendingTop="";clearTop=true;node("fcfeTopStatus").textContent="သိမ်းပြီးလျှင် အပေါ် Banner ဖြုတ်ပါမည်";};
+  node("fcfeClearBottom").onclick=()=>{pendingBottom="";clearBottom=true;node("fcfeBottomStatus").textContent="သိမ်းပြီးလျှင် အောက် Banner ဖြုတ်ပါမည်";};
   node("fcfeAdd").onclick=async()=>{
-   try{if(state.custom.length>=40)throw Error("Frame အများဆုံး ၄၀ မျိုး");const p={...form(),image:pendingImage||""};
+   try{if(state.custom.length>=40)throw Error("Frame အများဆုံး ၄၀ မျိုး");const p={...form(),image:pendingImage||"",topImage:pendingTop||"",bottomImage:pendingBottom||""};
     const id="custom-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8);
     state.custom.push({id,...p});await finish(id,"Frame အသစ် ထည့်သွင်းပြီးပါပြီ။");
    }catch(e){say(e.message,true);}
