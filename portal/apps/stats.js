@@ -6,6 +6,7 @@
   // Backward compatibility for older pages; all current APK buttons declare a stable data-app-key.
   const knownApps = Object.freeze({
     "GoalZone_Sports_Journal_v1.0.1.apk": "goal-zone",
+    "Future_Code_Mandalay_City_Helper_v1.0.0.apk": "mandalay-city-helper",
     "Future-Code-AI-Studio.apk": "ai-studio",
     "Future-Code-App-Creator.apk": "app-creator",
     "Myanmar-Kyar-Kwet.apk": "myanmar-kyar",
