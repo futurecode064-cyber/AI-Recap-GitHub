@@ -152,7 +152,10 @@
       "releasedAt": "2026-10-27",
       "online": true,
       "gameUrl": "https://future-code-mandalay-city-helper.cheeky-elf-5504.chatgpt.site/",
-      "releaseChannel": "beta"
+      "releaseChannel": "beta",
+      "sha256": "4cd26743aca0fae70fa1261368a014a4e2d2973098e18c19fca52beaa78ede7d",
+      "sizeBytes": 127623,
+      "certificateSha256": "74b3bd501c48bce7bc0b38a2880ec2cc35efb5441fe29f924655146e599571ed"
     }
   ]
 }
