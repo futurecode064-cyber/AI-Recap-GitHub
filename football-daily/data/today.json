@@ -777,7 +777,16 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
+      "homeStanding": {
+        "position": 16,
+        "played": 11,
+        "wins": 3,
+        "draws": 3,
+        "losses": 5,
+        "goalsFor": 13,
+        "goalsAgainst": 25,
+        "points": 12
+      },
       "awayStanding": {
         "position": 9,
         "played": 7,
@@ -799,7 +808,8 @@
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "homeStandingSourceUrl": "https://datencenter.dfb.de/datencenter/3-liga/2026-2027/32"
     },
     {
       "fixtureId": "fc-20261027-07",
@@ -823,7 +833,16 @@
       "specialChoice": false,
       "homeLastFive": [],
       "awayLastFive": [],
-      "homeStanding": null,
+      "homeStanding": {
+        "position": 3,
+        "played": 11,
+        "wins": 6,
+        "draws": 3,
+        "losses": 2,
+        "goalsFor": 19,
+        "goalsAgainst": 13,
+        "points": 21
+      },
       "awayStanding": {
         "position": 5,
         "played": 7,
@@ -845,7 +864,8 @@
       "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
       "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
       "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
-      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table"
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "homeStandingSourceUrl": "https://datencenter.dfb.de/datencenter/3-liga/2026-2027/32"
     },
     {
       "fixtureId": "fc-20261027-06",
