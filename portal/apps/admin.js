@@ -218,6 +218,7 @@
     const site=siteForRelease(tag);
     if(site)return {siteKey:site,appKey:site};
     if(/^mandalay-city-helper-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"mandalay-city-helper"};
+    if(/^english-academy-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"english-academy"};
     if(/^future-code-thai-speaking(-beta)?-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"thai-speaking"};
     if(/^fc-language-academy-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"language-academy"};
     if(/^chinese-learning-v/i.test(tag))return {siteKey:"future-code-apps",appKey:"chinese-learning"};
