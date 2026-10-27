@@ -2,6 +2,7 @@ plugins { id 'com.android.application' }
 android {
     namespace 'com.futurecode.thaispeaking'
     compileSdk 35
+    buildFeatures { buildConfig true }
     defaultConfig {
         applicationId 'com.futurecode.thaispeaking'
         minSdk 26
