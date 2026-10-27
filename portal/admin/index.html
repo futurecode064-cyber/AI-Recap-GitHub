@@ -57,4 +57,6 @@ $("announcementForm").onsubmit=async e=>{e.preventDefault();try{await api("admin
 $("changePasswordForm").onsubmit=async e=>{e.preventDefault();try{await api("admin_change_password",{password:$("newAdminPassword").value});sessionStorage.removeItem(tokenKey);token="";show(false);$("newAdminPassword").value="";say("Password changed. Sign in again.")}catch(err){say(err.message,true)}};
 $("refresh").onclick=reload;$("logout").onclick=async()=>{await api("logout").catch(()=>{});token="";sessionStorage.removeItem(tokenKey);show(false);say("Logout success")};
 if(token)reload();
-</script></body></html>
+</script><script src="../apps/site-views.js?v=portfolio-all-20261027" data-site-key="fc-admin-portal"></script>
+</body>
+</html>
