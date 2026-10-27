@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
     s.setJavaScriptCanOpenWindowsAutomatically(false);
     s.setSupportZoom(false);
     if(Build.VERSION.SDK_INT>=26)s.setSafeBrowsingEnabled(true);
-    CookieManager.getInstance().setAcceptCookie(true);
+    android.webkit.CookieManager.getInstance().setAcceptCookie(true);
     game.setWebViewClient(new WebViewClient(){
       @Override public boolean shouldOverrideUrlLoading(WebView view,WebResourceRequest request) {
         if(!request.isForMainFrame())return false;
