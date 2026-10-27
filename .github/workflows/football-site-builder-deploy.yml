@@ -1,0 +1,118 @@
+name: Deploy owner-created football brand websites
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: football-website-builder-live
+  cancel-in-progress: false
+
+jobs:
+  publish-brand-sites:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout current Cloudflare Pages production branch
+        uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Fetch latest owner-authored website configs from standalone source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet --depth=1 --branch main --single-branch https://github.com/futurecode064-cyber/future-code-football-daily.git "$RUNNER_TEMP/fc-builder-source"
+          test -s "$RUNNER_TEMP/fc-builder-source/football-daily/site-builder/sites.json"
+
+      - name: Scope-check and stage ONLY builder-managed brand folders
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, re, shutil, subprocess
+          from pathlib import Path
+
+          source = Path(os.environ['RUNNER_TEMP']) / 'fc-builder-source' / 'football-daily'
+          dest = Path('football-daily')
+          registry_file = source / 'site-builder' / 'sites.json'
+          registry = json.loads(registry_file.read_text(encoding='utf-8'))
+          new_sites = registry.get('sites', {})
+          if not isinstance(new_sites, dict) or not new_sites:
+              raise SystemExit('No owner-authored builder websites: refusing unrelated deploy.')
+
+          old_file = dest / 'site-builder' / 'sites.json'
+          old_sites = json.loads(old_file.read_text(encoding='utf-8')).get('sites', {}) if old_file.exists() else {}
+          reserved = {'ykz-family','bw-sport','ko-thet-family','future-code-journal',
+                      'kmm-sport-hub','myanmar-football','editor','data','assets',
+                      'vendor','scripts','site-builder','api','index','odds','login','logout'}
+          slugs = []
+          for slug, config in new_sites.items():
+              if not re.fullmatch(r'[a-z0-9][a-z0-9-]{1,38}[a-z0-9]', slug) or slug in reserved:
+                  raise SystemExit('Invalid/reserved brand slug')
+              if config.get('slug') != slug:
+                  raise SystemExit('Brand slug mismatch')
+              folder = source / slug
+              required = ('index.html','odds.html','brand.js','brand.css','config.json')
+              if not all((folder / p).is_file() for p in required):
+                  raise SystemExit('Missing brand site assets for ' + slug)
+              if (dest / slug).exists() and slug not in old_sites:
+                  raise SystemExit('Existing production path not builder-owned: ' + slug)
+              if (folder.is_symlink() or any(p.is_symlink() for p in folder.rglob('*'))):
+                  raise SystemExit('Symlinks not permitted in builder sites')
+              slugs.append(slug)
+
+          # Plan validated before any production changes.
+          for slug in slugs:
+              current = dest / slug
+              if current.exists():
+                  shutil.rmtree(current)
+              shutil.copytree(source / slug, current)
+          (dest / 'site-builder').mkdir(parents=True,exist_ok=True)
+          shutil.copy2(registry_file, dest / 'site-builder' / 'sites.json')
+          subprocess.run(['git','add','-A','--','football-daily/site-builder',
+                           *['football-daily/'+slug for slug in slugs]],check=True)
+          staged = subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines()
+          allowed = ['football-daily/site-builder/'] + ['football-daily/'+slug+'/' for slug in slugs]
+          for path in staged:
+              if not any(path.startswith(prefix) for prefix in allowed):
+                  raise SystemExit('Refusing non-builder change: ' + path)
+          print('Builder-only staged files:',len(staged))
+          PY
+
+      - name: Validate generated site scripts and no changes to shared sports data
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          registry = json.loads(Path('football-daily/site-builder/sites.json').read_text(encoding='utf-8'))
+          subprocess.run(['node','--check','football-daily/site-layout.js'],check=True)
+          for slug in registry['sites']:
+              subprocess.run(['node','--check',f'football-daily/{slug}/brand.js'],check=True)
+              for file in ('index.html','odds.html'):
+                  html=(Path('football-daily')/slug/file).read_text(encoding='utf-8')
+                  if '../data/' not in html and 'data/today.json' not in html:
+                      raise SystemExit('Shared data reference missing: '+slug+'/'+file)
+          PY
+          if git diff --cached --name-only | grep -q '^football-daily/data/'; then
+            echo '::error::Shared football data must never change in a builder release'
+            exit 1
+          fi
+
+      - name: Publish ONLY builder websites to the existing Cloudflare Pages branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --cached --quiet; then
+            echo 'No builder website changes; no deployment needed.'
+            exit 0
+          fi
+          git config user.name 'future-code-builder[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Deploy owner-created branded websites (scoped)'
+          git push origin HEAD:refs/heads/football-daily-render
