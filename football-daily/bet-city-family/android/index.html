@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071a50">
+<meta name="description" content="BCF Bet City Family ဘောလုံးဂျာနယ် တရားဝင် Android APK Download နှင့် QR Code">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<title>BCF ဘောလုံးဂျာနယ် | Official Android APK Download</title>
+<style>
+:root{color-scheme:dark;--navy:#020928;--blue:#0756d5;--electric:#31baff;--gold:#f4c657;--silver:#d8e7ff;--text:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,"Noto Sans Myanmar",sans-serif;color:var(--text);background:radial-gradient(ellipse at 50% -8%,#1556c780,transparent 47%),radial-gradient(circle at 12% 87%,#0754b550,transparent 35%),var(--navy);line-height:1.85}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(125deg,#051c61a0,transparent 42%,#010b3480),url("../assets/football-electric-blue-v3.webp") center center/cover;opacity:.2}
+a{color:inherit}
+.shell{width:min(920px,100%);margin:auto;padding:22px 18px 52px}
+.back{display:inline-block;color:#c5deff;text-decoration:none;font-size:13px;padding:10px 0}
+.back:hover{text-decoration:underline}
+.top{border:1px solid #4d85e2;border-radius:23px;background:linear-gradient(120deg,#05174d 0%,#1054bd 55%,#05184b 100%);box-shadow:0 17px 46px #0009;padding:23px;position:relative;overflow:hidden}
+.top:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% -30%,#3aabff5e,transparent 56%);pointer-events:none}
+.brand{display:flex;align-items:center;gap:20px;position:relative}
+.logo{display:grid;place-items:center;border-radius:19px;border:1px solid #d3ae5d;background:#020b30;padding:6px;flex:0 0 108px;width:108px;height:108px}
+.logo img{max-width:100%;max-height:100%;object-fit:contain}
+.tag{font-size:11px;font-weight:850;color:#ffdb80;letter-spacing:.19em;margin:0}
+h1{margin:3px 0 4px;font-size:clamp(22px,5vw,37px);line-height:1.6}
+.sub{color:#d7eaff;font-size:13px;margin:0}
+.intro{color:#d0e0fb;line-height:2;margin:22px 1px}
+.layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(255px,.75fr);gap:18px}
+.panel{border-radius:19px;border:1px solid #4678cc;background:linear-gradient(140deg,#0a286b,#041337 76%);box-shadow:0 10px 32px #0005;padding:25px}
+.eyebrow{font:850 11px/1.6 system-ui,sans-serif;letter-spacing:.17em;color:#ffd876}
+.panel h2{margin:6px 0 11px;font-size:clamp(20px,3vw,25px)}
+.summary{margin:0 0 16px;color:#c7d9f6;font-size:14px}
+.status{border:1px dashed #5488e6;background:#0b2460;padding:9px 14px;border-radius:9px;color:#ffdf92;text-align:center;font-size:13px;margin-bottom:16px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px 12px;border:1px solid #ffe397;border-radius:11px;background:linear-gradient(110deg,#bb8934,#f7d67e 54%,#c48d31);box-shadow:0 4px 22px #f7c8582a;text-decoration:none;color:#1b1520;font-weight:950;font-size:15px;text-align:center;transition:transform .2s,filter .2s}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);filter:brightness(1.07);outline:2px solid #fff;outline-offset:2px}
+.secondary{background:#0b2c6e;color:#f7dfab;border-color:#d9b359;box-shadow:none}
+.install{font-size:13px;color:#cadbf8;line-height:2;margin:19px 0 0;padding-top:16px;border-top:1px solid #436bb4}
+.install strong{color:#fff2cc}
+.qr-panel{text-align:center}
+.qr-box{display:inline-block;padding:13px;border-radius:16px;background:#fff;box-shadow:0 8px 30px #0005;margin:12px auto}
+.qr-box img{display:block;width:min(100%,244px);height:auto;image-rendering:pixelated}
+.qr-panel p{font-size:13px;color:#bfd8ff;margin:8px 0}
+.qr-panel .link-text{font:12px/1.6 system-ui,sans-serif;color:#d6eaff;overflow-wrap:anywhere}
+.section{margin-top:20px;border:1px solid #2d5ca2;border-radius:16px;background:#061744a3;padding:20px 22px}
+.section h2{margin:0 0 9px;font-size:19px;color:#ffdb81}
+.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:0;padding:0;list-style:none}
+.features li{border:1px solid #2b5d9f;border-radius:10px;padding:11px 13px;background:#081d4b;font-size:13px}
+.features li:before{content:"✓";color:#f3c960;font-weight:900;margin-right:7px}
+.web-options{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.web-options a{display:inline-block;text-decoration:none;padding:9px 15px;border-radius:9px;border:1px solid #3c83db;background:#092966;color:#e9f3ff;font-weight:750;font-size:13px}
+.web-options a:hover{background:#1552a1}
+.footer{text-align:center;color:#96b5e6;font-size:11px;margin-top:23px}
+@media(max-width:650px){.shell{padding:12px 13px 30px}.top,.panel{padding:18px}.brand{gap:12px}.logo{width:75px;height:75px;flex-basis:75px;border-radius:13px}.layout{grid-template-columns:1fr}.features{grid-template-columns:1fr}.tag{font-size:9px}.qr-box img{width:220px}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+<main class="shell">
+<a class="back" href="../">← BCF ဘောလုံးဂျာနယ် Website</a>
+<header class="top">
+  <div class="brand"><div class="logo"><img src="../assets/logo.png" alt="BCF Bet City Family မူရင်း Logo" width="94" height="94"></div>
+  <div><p class="tag">OFFICIAL APPLICATION DOWNLOAD</p><h1>BCF ဘောလုံးဂျာနယ်</h1><p class="sub">BET CITY FAMILY · SENIOR BY MYO PAING</p></div></div>
+</header>
+<p class="intro">BCF ဘောလုံးဂျာနယ်၏ နေ့စဉ် ပွဲကြိုသုံးသပ်ချက်များ၊ Special Choice၊ မြန်မာပေါက်ကြေးနှင့် ပုံများကို Android ဖုန်းထဲ App သွင်းပြီး ကြည့်ရှုနိုင်ပါပြီ။</p>
+<div class="layout">
+<section class="panel" aria-labelledby="apk-heading">
+  <span class="eyebrow">ANDROID APPLICATION</span>
+  <h2 id="apk-heading">BCF Android APK Download</h2>
+  <p class="summary">Android 8.0 နှင့်အထက်တွင် အသုံးပြုနိုင်သည်။ ပုံများကို ဖုန်း Gallery ထဲ သိမ်းနိုင်ပါသည်။</p>
+  <div class="status">Android APK · Version 1.0.0</div>
+  <a class="btn" data-fc-apk-download href="https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/bcf-journal-v1.0.0/BCF-Bet-City-Family-v1.0.0.apk">⬇ Android APK Download</a>
+  <div class="install"><strong>Install လုပ်နည်း</strong><br>Download နှိပ်ပြီး APK ဖိုင်ကိုဖွင့်ပါ။ Install နှိပ်ပါ။ ဖုန်းက မေးလာပါက Browser အတွက် “Install unknown apps” ခွင့်ပြုချက်ပေးပါ။ App ဖွင့်ပြီး Notification ခွင့်ပြုချက်ကို Allow ပေးနိုင်ပါသည်။</div>
+  <div class="web-options"><a href="../">🌐 Website ဖွင့်ရန်</a><a href="../odds.html">⚽ ပေါက်ကြေးများ</a></div>
+</section>
+<section class="panel qr-panel" aria-labelledby="qr-heading">
+  <span class="eyebrow">SCAN AND DOWNLOAD</span>
+  <h2 id="qr-heading">QR Code ဖြင့် Download</h2>
+  <p>ဖုန်း Camera ဖြင့် Scan ဖတ်ပါ။ ဒီ BCF Download Website ကို ဖွင့်ပေးပါမည်။</p>
+  <div class="qr-box"><img alt="BCF APK Download Website အတွက် QR Code" width="244" height="244" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcIAAAHCAQAAAABUY/ToAAADm0lEQVR4nO2cW4rkOBBFT4wF9WlDLaCWIu9gllT0knoH6aXkDuzPApmYD0m2nJXQ0JNFPrjxkTiND5IhuPGQZHP+zqZ//hIEkSJFihQpUqTIxyOtWMBGVgNWYzJrrmxc6lPjnWcr8iHJ6O7uM/gve3OzoXPi3DVXQOfu7n4k7zFbkQ9JLpu+AO7nANOwGixVjADMLNxuTJGvSdrnvGZvsk9PWaCYhu57C+ARZivyEchw7aZPHwlY3h1Yg8d5sBuOKfK1yOpDvQMLMH04xHNIzrIa8fe7G71jAK0aPdd7ivxxcjIzswGI54CNgI3UCBbPAWDNZdmtxhT5ImTWoVZf+oRPH1/m09DBNGDQf5kfn3q29xT506SNgI1bDRbPb06cwU99LeY3qbLxJmOKfBVyy6nXAH3Kf40+YfRfRpzX4OXejLFYlaPnek+RP0eS+4an7X90d+h96yzuz6XycCae6z1F/hy5+VDnRE/kZnW+15efEtXoypV8SGRrJXhFX43JOjf6FJhG8BzfMBxSAFZzFrB4utdsRT4imVWFOHdVc6oYQdahqk05u+4Vy0ReWvWhEq2y05yAnA/FvOCRcj60E/IhkZvV3KeujW2KtCdFtcpPEGfKIr98SGSxUtvHGTeW9+QsAKyBeAKL8xqALsES8Gm462xFPiJZY5knSgJEV9OeuahPqfz3bEk6JLK1ErNmSqCiT/mnuE+/1/vVzeRDIg+2dw2z5/jeWewTlN2Lqd3qKB8SeZVcDZY3t7H/MqCrUY2ygu+/8pJ9p72wIi+skaASvPYmUS31S7tor/KlQyIbq5EsNflQ01SMtStUrVM+JPLCig41V8eDHHP9m7uNs3xI5KXtOXVdVT3U9nsSnbUJ1GMUeWG1P1SLs1J+dVvPKDWeo9pe5BWrIlM2duxekpuKW3rU5NnyIZEH82/Wdqz31de6XiYfEnlpreawbTWrYezajkblQyKPdiFC+d7p0KJu8qEtb5IPiTyS+3c/iuYsoWRBk4WaTi/hCnmP2Yp8LPJQl82dt/mzH3bnR2/7SNIhkZdk/e6H2UeCyd7cRlZr1vKnesTVxhuNKfI1yMtvNjjg5Wz9MuCTbVcj+PTvjP3fMUW+OrkE/JQX72HfAGKfW6J0uvmYIp+Z/PbdD6B8uAHA6Du3+LseC8oHhO42W5GPSDZrruTl1i3F3o/ax1rg14xbObXI3cz//MxV0zfORYoUKVKkSJEvQv4HHsBKEKQulIIAAAAASUVORK5CYII="></div>
+  <p class="link-text">https://future-code-football-daily.pages.dev/bet-city-family/android/</p>
+  <a class="btn secondary" href="../">iPhone / iPad — Website သုံးရန်</a>
+</section>
+</div>
+<section class="section">
+<h2>BCF App တွင် ပါဝင်သော လုပ်ဆောင်ချက်များ</h2>
+<ul class="features">
+<li>နေ့စဉ် ပွဲကြိုသုံးသပ်ချက်များနှင့် Special Choice</li>
+<li>မူလကြေး၊ ယခုကြေး၊ ပွဲပြီးရလဒ်များ</li>
+<li>ပွဲကြို၊ ပေါက်ကြေး PNG ပုံများ Download / Gallery Save</li>
+<li>အကြောင်းအရာအသစ် Notification နှင့် Version Update စစ်ဆေးခြင်း</li>
+</ul>
+</section>
+<footer class="footer">
+<p>iPhone / iPad တွင် APK မသွင်းနိုင်ပါ။ Safari မှ Website ဖွင့်ပြီး Share → Add to Home Screen ကို အသုံးပြုပါ။</p>
+<p>အင်တာနက် လိုအပ်ပါသည်။ APK Update တင်ချိန် Android Install အတည်ပြုချက် လိုအပ်ပါသည်။</p>
+<p>© BCF · BET CITY FAMILY FOOTBALL JOURNAL</p>
+</footer>
+</main>
+<script src="../../apk-portfolio-stats.js" data-site-key="bet-city-family" data-app-key="bet-city-family" data-view-type="download"></script>
+</body></html>
