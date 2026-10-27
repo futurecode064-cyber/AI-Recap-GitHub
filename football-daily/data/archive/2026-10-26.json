@@ -1,0 +1,1979 @@
+{
+  "reportDate": "2026-10-26",
+  "published": true,
+  "sourcePDF": "26(2).pdf",
+  "sourceVerificationDate": "2026-10-26",
+  "matchDateTimezone": "Asia/Yangon",
+  "sourceManifest": {
+    "files": [
+      {
+        "name": "26(2).pdf",
+        "sha256": "21c2cd3e51c5f7fd9614af6e51547ee4c258a617f9639b54fbd1e34749581899"
+      }
+    ]
+  },
+  "dailyMasterPromptVersion": "4.0",
+  "matches": [
+    {
+      "fixtureId": "fc-20261026-01",
+      "pdfRow": 1,
+      "league": "La Liga",
+      "leagueDisplay": "စပိန်လာလီဂါ",
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "homeDisplay": "ဆီဗီးလား",
+      "awayDisplay": "အိုဆာဆူနာ",
+      "sourceKickoff": "02:30",
+      "kickoffUtc": "2026-10-26T20:00:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 02:30 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ဆီဗီးလား",
+        "bodyOdds": "1+95",
+        "goalTotalOdds": "2-45",
+        "currentBodyOdds": "1+90",
+        "currentGoalTotalOdds": "2-40"
+      },
+      "internetPrediction": "1-0",
+      "homeOdds": "1.95",
+      "drawOdds": "3.30",
+      "awayOdds": "4.20",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://footballnation.eu/match/la-liga/2026/797788/",
+      "homeStanding": {
+        "position": 6,
+        "played": 9,
+        "wins": 4,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 14,
+        "goalsAgainst": 16,
+        "points": 14
+      },
+      "awayStanding": {
+        "position": 10,
+        "played": 9,
+        "wins": 3,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 10,
+        "goalsAgainst": 18,
+        "points": 11
+      },
+      "dailyPreviewText": "ဆီဗီလာဟာ ဒီရာသီ လာလီဂါမှာ ကိုးပွဲကစားပြီး ၁၄ မှတ်နဲ့ အဆင့် ၆ နေရာမှာ ရပ်တည်နေသလို ရာသီအစပိုင်းမှာ ရလဒ်ကောင်းတွေ ရယူနိုင်ခဲ့ပေမယ့် နောက်ဆုံးသုံးပွဲမှာတော့ နိုင်ပွဲပျောက်ဆုံးနေပါတယ်။ အထူးသဖြင့် ဘာစီလိုနာကို ၃-၁ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့ပြီးနောက် လီဗန်တေးနဲ့ ၃-၃ ဂိုး သရေကျခဲ့သလို ရီးရဲလ်မက်ဒရစ်ကိုလည်း ၄-၁ ဂိုးနဲ့ ထပ်မံရှုံးနိမ့်ခဲ့တာကြောင့် နောက်တန်းရဲ့ တည်ငြိမ်မှုက အဓိကပြဿနာဖြစ်နေပါတယ်။ ဒါပေမဲ့ လူးဝစ် ဂါစီယာ ပလာဇာ ရဲ့အသင်းဟာ ဒီရာသီ လိဂ်ကိုးပွဲစလုံးမှာ ဂိုးသွင်းယူထားနိုင်ပြီး တိုက်စစ်မှာတော့ အခွင့်အရေးဖန်တီးနိုင်စွမ်း ရှိနေဆဲပါ။ ဒီပွဲမှာလည်း ဒဏ်ရာပြဿနာကနေ ပြန်လည်ကောင်းမွန်လာတဲ့ ကိုချိုရာရှ်ဗီလီ နဲ့ ဂူရီဒီ တို့ လူစာရင်းထဲ ပြန်လည်ပါဝင်လာတာက ဆီဗီလာအတွက် အားတက်စရာ ဖြစ်နေပါတယ်။ အိုဆာဆူနာကတော့ ကိုးပွဲကစားပြီး ၁၁ မှတ်ရရှိထားကာ နည်းပြ ဂျာဂိုဘာ အာရာဆာတေး ပြန်လည်တာဝန်ယူပြီးနောက် နောက်ဆုံးပွဲမှာ ရေဆင်းကို ၂-၀ ဂိုးနဲ့ အနိုင်ယူနိုင်ခဲ့တာကြောင့် အသင်းရဲ့ ယုံကြည်မှု ပြန်တက်လာနေပါတယ်။ အဲဒီပွဲမှာ တိုက်စစ်မှူး ဘူဒီမီယာ ကလည်း ဂိုးသွင်းယူနိုင်ခဲ့တာကြောင့် ဆီဗီလာနောက်တန်းအနေနဲ့ သူ့ကို အထူးသတိထားရမှာပါ။ သို့သော် အိုဆာဆူနာဟာ နောက်ဆုံးအဝေးကွင်းသုံးပွဲစလုံးမှာ လေးဂိုးနဲ့အထက် ပေးထားရသလို ဒီပွဲမှာလည်း အိုင်မာအိုရော့ဇ်နဲ့ ဟယ်ရန်ဒိုတို့ မပါဝင်နိုင်တာကြောင့် ခံစစ်ပိုင်းမှာ အခက်အခဲတွေရှိလာနိုင်ပါတယ်။ **ဆီဗီလာအနေနဲ့ အိမ်ကွင်းမှာ နောက်တန်းအမှားတွေကို လျှော့ချနိုင်မယ်ဆိုရင် အိုဆာဆူနာရဲ့ အဝေးကွင်းအားနည်းချက်ကို အသုံးချနိုင်ဖို့ ရှိနေပြီး လက်ရှိအသင်းအင်အားနဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် ဆီဗီလာကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/177.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/185.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-18",
+          "opponent": "Real Madrid",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-10-12",
+          "opponent": "Levante",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-19",
+          "opponent": "Barcelona",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-16",
+          "opponent": "Deportivo La Coruna",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-11",
+          "opponent": "Valencia",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-18",
+          "opponent": "Racing Santander",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-11",
+          "opponent": "Real Betis",
+          "teamGoals": 2,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-19",
+          "opponent": "Rayo Vallecano",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-16",
+          "opponent": "Atletico Madrid",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-12",
+          "opponent": "Espanyol",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "competition": "La Liga",
+          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://www.skysports.com/football/sevilla-vs-osasuna/4800135003450899232",
+        "https://www.laliga.com/en-ES/match/temporada-2026-2027-laliga-ea-sports-sevilla-fc-ca-osasuna-10"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "user supplied in conversation",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/la-liga/2026/797788/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://www.laliga.com/en-ES/match/temporada-2026-2027-laliga-ea-sports-sevilla-fc-ca-osasuna-10",
+      "fixtureSourceUrl": "https://footballnation.eu/match/la-liga/2026/797788/",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.laliga.com/en-NL/match/temporada-2026-2027-laliga-ea-sports-sevilla-fc-ca-osasuna-10",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-02",
+      "pdfRow": 2,
+      "league": "Ligue 1",
+      "leagueDisplay": "ပြင်သစ်လီဂူးဝမ်း",
+      "home": "Paris Saint-Germain",
+      "away": "Lyon",
+      "homeDisplay": "ပီအက်စ်ဂျီ",
+      "awayDisplay": "လိုင်ယွန်",
+      "sourceKickoff": "02:00",
+      "kickoffUtc": "2026-10-26T19:30:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 02:00 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ပီအက်စ်ဂျီ",
+        "bodyOdds": "1-95",
+        "goalTotalOdds": "3-90",
+        "currentBodyOdds": "1-85",
+        "currentGoalTotalOdds": "3-90"
+      },
+      "internetPrediction": "3-0",
+      "homeOdds": "1.36",
+      "drawOdds": "5.75",
+      "awayOdds": "7.00",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://footballnation.eu/match/ligue-1/2026/",
+      "homeStanding": {
+        "position": 2,
+        "played": 7,
+        "wins": 4,
+        "draws": 2,
+        "losses": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 9,
+        "points": 14
+      },
+      "awayStanding": {
+        "position": 1,
+        "played": 7,
+        "wins": 4,
+        "draws": 2,
+        "losses": 1,
+        "goalsFor": 13,
+        "goalsAgainst": 5,
+        "points": 14
+      },
+      "dailyPreviewText": "ပီအက်စ်ဂျီဟာ ဒီရာသီ ပြင်သစ်လီဂူးဝမ်းမှာ ခုနစ်ပွဲကစားပြီး ၁၄ မှတ်ရရှိထားသလို နောက်ဆုံးကစားခဲ့တဲ့ ပွဲတွေမှာလည်း တိုက်စစ်ပိုင်းက ပိုပြီး ထက်မြက်လာတာ တွေ့ရပါတယ်။ အထူးသဖြင့် ချန်ပီယံလိဂ်မှာ ဘာစီလိုနာကို ၄-၂ ဂိုးနဲ့ အနိုင်ရခဲ့ပြီး လိဂ်ပြိုင်ပွဲမှာလည်း စထရာဘိုးကို ၃-၁ ဂိုး၊ လီမန်းကို ၃-၁ ဂိုးတို့နဲ့ အနိုင်ယူထားတာကြောင့် လူးဝစ်အင်းနရစ် ရဲ့ အသင်းဟာ ဂိုးရနိုင်တဲ့ အခွင့်အရေးတွေကို ထိထိရောက်ရောက် အသုံးချလာနိုင်တာပါ။ ဒါပေမဲ့ အဓိကတိုက်စစ်ကစားသမား ခဗီချာ ကွာရာစခီလီယာ ဒဏ်ရာရရှိထားတာကတော့ တိုက်စစ်ကစားပုံအတွက် ထိခိုက်မှုတစ်ခု ဖြစ်နေပါတယ်။ လိုင်ယွန်ဘက်မှာလည်း ခုနစ်ပွဲကစားပြီး ၁၄ မှတ်ရထားသလို ပေးဂိုးငါးဂိုးသာရှိတဲ့ ခံစစ်ကြောင့် ပီအက်စ်ဂျီရဲ့ တိုက်စစ်ကို လွယ်လွယ်နဲ့ ဂိုးပေးရမယ့်အသင်းမျိုးတော့ မဟုတ်ပါဘူး။ သို့သော် နိုက်စ်ကို ၂-၁ ဂိုးနဲ့ အနိုင်ရပြီးနောက် ယူရိုပါလိဂ်မှာ ဟော့ဖန်ဟိမ်းကို ၃-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် လိုင်ယွန်ရဲ့ ယုံကြည်မှုနဲ့ ခံစစ်တည်ငြိမ်မှုက စမ်းသပ်ခံရမယ့်အခြေအနေမှာ ရှိနေပါတယ်။ ပီအက်စ်ဂျီကတော့ အိမ်ကွင်းမှာ ဘောလုံးပိုင်ဆိုင်မှုကို ထိန်းချုပ်ပြီး တိုက်စစ်ဆင်ကစားဖို့ရှိသလို လိုင်ယွန်အနေနဲ့လည်း သူတို့ရဲ့ ခံစစ်စုဖွဲ့မှုကို အသုံးချပြီး တန်ပြန်တိုက်စစ်ကနေ အခွင့်အရေးရှာဖို့ ကြိုးစားလာနိုင်ပါတယ်။ **နှစ်သင်းရဲ့ လက်ရှိခြေစွမ်းကို ချိန်ဆကြည့်ရင် လိုင်ယွန်ရဲ့ ခံစစ်ကောင်းမွန်မှုကို လျှော့တွက်လို့မရပေမယ့် တိုက်စစ်အင်အားနဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် ဒီပွဲမှာ ပီအက်စ်ဂျီကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": true,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/41.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/60.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-20",
+          "opponent": "Barcelona",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "competition": "UEFA Champions League",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-17",
+          "opponent": "Strasbourg",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "competition": "Ligue 1",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-14",
+          "opponent": "Manchester City",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "UEFA Champions League",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "Le Mans",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Ligue 1",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-20",
+          "opponent": "Marseille",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "competition": "Ligue 1",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-22",
+          "opponent": "Hoffenheim",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "competition": "UEFA Europa League",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-18",
+          "opponent": "Nice",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Ligue 1",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-15",
+          "opponent": "Crystal Palace",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "competition": "UEFA Europa League",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-09",
+          "opponent": "Lens",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "Ligue 1",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-19",
+          "opponent": "Rennes",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "Ligue 1",
+          "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+        "https://statsnext.com/ligue-1"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "user supplied in conversation",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "specialChoiceRank": 1,
+      "specialPreparedDate": "2026-10-26",
+      "specialAnalysisParagraphs": [
+        "ဒီနေ့ ပြင်သစ်လီဂူးဝမ်းရဲ့ အရေးအကြီးဆုံးပွဲစဉ်တစ်ပွဲအဖြစ် ပီအက်စ်ဂျီနဲ့ လိုင်ယွန်တို့ရဲ့ ထိပ်တိုက်တွေ့ဆုံမှုကို မြင်တွေ့ရမှာဖြစ်ပြီး လက်ရှိခြေစွမ်းနဲ့ အသင်းနှစ်သင်းရဲ့ အခြေအနေတွေကို နှိုင်းယှဉ်ကြည့်ရင် အကြိတ်အနယ်ရှိမယ့် ပွဲကောင်းတစ်ပွဲ ဖြစ်လာဖို့ရှိနေပါတယ်။ နှစ်သင်းစလုံး လိဂ်ခုနစ်ပွဲကစားပြီး ၁၄ မှတ်စီ ရရှိထားပေမယ့် လတ်တလောခြေစွမ်းနဲ့ ပွဲအပေါ် ဖိအားပေးနိုင်မှုမှာတော့ အိမ်ရှင် **ပီအက်စ်ဂျီ** က ပိုပြီး အားကောင်းနေတာ တွေ့ရပါတယ်။ နည်းပြ **လူးဝစ်အင်းနရစ်** ရဲ့အသင်းဟာ ပြိုင်ပွဲစုံ နောက်ဆုံးခုနစ်ပွဲဆက် အနိုင်ရရှိထားပြီး ချန်ပီယံလိဂ်မှာ ဘာစီလိုနာကို ၄-၂ ဂိုးနဲ့ အနိုင်ယူခဲ့တာက အသင်းရဲ့ လက်ရှိတိုက်စစ်အင်အားကို ထင်ထင်ရှားရှား ပြသခဲ့ပါတယ်။ ပြင်သစ်လိဂ်မှာလည်း လီမန်းနဲ့ စထရာဘိုးတို့ကို ၃-၁ ဂိုးစီနဲ့ အနိုင်ရခဲ့တာကြောင့် တိုက်စစ်ကစားသမားတွေရဲ့ ဂိုးသွင်းနိုင်မှုနဲ့ ကွင်းလယ်ကနေ တိုက်စစ်ကို ပံ့ပိုးပေးနိုင်မှုက တိုးတက်လာနေပါတယ်။",
+        "အထူးသဖြင့် **ဒဲစီရေးဒူအေး** က နောက်ဆုံးပြိုင်ပွဲစုံ သုံးပွဲဆက် ဂိုးသွင်းယူထားသလို ကွင်းလယ်မှာ **ဗီတင်ညာ** နဲ့ **ဖေဘီယန်ရုဇ်** တို့က ဘောလုံးပိုင်ဆိုင်မှုကို ထိန်းချုပ်ပြီး တိုက်စစ်အခွင့်အရေးတွေ ဖန်တီးပေးနိုင်တာကြောင့် လိုင်ယွန်အနေနဲ့ ပီအက်စ်ဂျီရဲ့ တိုက်စစ်ကို ထိန်းချုပ်ဖို့ အတော်လေး အလုပ်များလာနိုင်ပါတယ်။ ဒါပေမဲ့ ပီအက်စ်ဂျီဘက်မှာ **ကွာရာစခီလီယာ၊ ဒမ်ဘီလီ၊ မာကွင်ညို့စ်နဲ့ နူနိုမန်ဒက်စ်** တို့ ဒဏ်ရာကြောင့် မပါဝင်နိုင်တာကတော့ အသင်းရဲ့ အင်အားအပြည့်နဲ့ ပွဲထွက်နိုင်မှုကို ထိခိုက်စေတဲ့ အချက်ဖြစ်နေပါတယ်။ သို့သော် ဘာစီလိုနာလို အသင်းမျိုးကို အဓိကကစားသမားအချို့ မပါဝင်ဘဲ အနိုင်ယူနိုင်ခဲ့တာကြောင့် အင်းနရစ်ရဲ့ ကစားသမားအစားထိုးအသုံးပြုနိုင်မှုနဲ့ အသင်းလိုက်ကစားပုံကိုတော့ လျှော့တွက်လို့ မရပါဘူး။",
+        "လိုင်ယွန်ဘက်မှာလည်း ဒီရာသီ လိဂ်ခုနစ်ပွဲမှာ ၁၃ ဂိုးသွင်းပြီး ငါးဂိုးသာ ပေးထားရတာကြောင့် ခံစစ်ပိုင်းမှာ အတော်လေး တည်ငြိမ်တဲ့အသင်းဖြစ်နေပြီး နောက်ဆုံးလိဂ်ပွဲမှာ နိုက်စ်ကို ၂-၁ ဂိုးနဲ့ အနိုင်ယူထားပါတယ်။ နည်းပြ **ပေါ်လိုဖွန်ဆီကာ** ရဲ့အသင်းမှာ **တိုလစ်ဆို၊ တိုင်လာမော်တန်နဲ့ နူအာမာ** တို့လို ကစားသမားတွေရှိနေတာကြောင့် ကွင်းလယ်မှာ ဘောလုံးလုယူပြီး အမြန်တန်ပြန်တိုက်စစ်ဆင်နိုင်တဲ့ အရည်အသွေးရှိနေပါတယ်။ အထူးသဖြင့် မော်တန်ရဲ့ ကွင်းလယ်ဘောလုံးဖြန့်ဝေမှုကို ပီအက်စ်ဂျီဘက်က လျှော့တွက်မိရင် လိုင်ယွန်အတွက် အခွင့်အရေးတွေ ပေါ်လာနိုင်ပါတယ်။ ဒါပေမဲ့ လိုင်ယွန်ဟာ နောက်ဆုံးယူရိုပါလိဂ်ပွဲမှာ ဟော့ဖန်ဟိမ်းကို ၃-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့သလို ဒီပွဲမှာလည်း တိုက်စစ်မှူး **အိုပင်ဒါ** နဲ့ **ရှုလ်ခ်** တို့ ဒဏ်ရာကြောင့် မပါဝင်နိုင်ဘဲ **နာကာမူရာ** ကလည်း ပွဲပယ်ခံထားရတာကြောင့် ဂိုးရနိုင်တဲ့အခွင့်အရေးတွေကို အဆုံးသတ်နိုင်ဖို့ အခက်အခဲရှိလာနိုင်ပါတယ်။",
+        "အဲဒီအခြေအနေမှာ ပီအက်စ်ဂျီက သူတို့ရဲ့ ပုံမှန်ဘောလုံးပိုင်ဆိုင်မှုအသာစီးနဲ့ ပွဲကိုထိန်းချုပ်ပြီး လိုင်ယွန်ကို ခံစစ်ပိုင်းမှာ အချိန်ကြာကြာ ဖိအားပေးလာနိုင်သလို ပွဲချိန်ကြာလာတာနဲ့အမျှ အစားထိုးကစားသမားတွေရဲ့ အားသာချက်ကိုပါ အသုံးချနိုင်ဖို့ရှိနေပါတယ်။ လိုင်ယွန်ရဲ့ ခံစစ်တည်ငြိမ်မှုကြောင့် ပီအက်စ်ဂျီအတွက် လွယ်ကူတဲ့ပွဲတစ်ပွဲ ဖြစ်လာဖို့မရှိပေမယ့် လက်ရှိအနိုင်ရရှိမှုဆက်တိုက်ရှိနေတဲ့ ခြေစွမ်း၊ ကွင်းလယ်ထိန်းချုပ်နိုင်မှု၊ တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်မှုနဲ့ အိမ်ကွင်းအားသာချက်တွေကို ပေါင်းစပ်ချိန်ဆကြည့်ရင် လိုင်ယွန်ထက် ပိုမိုအသာစီးရနိုင်တဲ့ **ပီအက်စ်ဂျီကို ရွေးချယ်ပါတယ်။**"
+      ],
+      "specialResearchSources": [
+        "https://statsnext.com/ligue-1",
+        "https://footballnation.eu/match/ligue-1/2026/791565/"
+      ],
+      "specialRiskNote": "လိုင်ယွန်၏ ခံစစ်တည်ငြိမ်မှုနှင့် ပီအက်စ်ဂျီ၏ ဒဏ်ရာပြဿနာများကို ထည့်သွင်းစဉ်းစားရန်။",
+      "standingsSourceUrl": "https://statsnext.com/ligue-1",
+      "fixtureSourceUrl": "https://www.tntsports.co.uk/football/ligue-1/2026-2027/paris-saint-germain-olympique-lyonnais_mtc21875815/live-stats.shtml",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.reuters.com/sports/soccer/mayulu-godts-send-psg-top-with-win-over-olympique-lyonnais-2026-10-26/",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-03",
+      "pdfRow": 3,
+      "league": "Danish Superliga",
+      "leagueDisplay": "ဒိန်းမတ် စူပါလိဂ်",
+      "home": "FC Copenhagen",
+      "away": "Odense",
+      "homeDisplay": "ကိုပင်ဟေဂင်",
+      "awayDisplay": "အိုဒင်ဆီ",
+      "sourceKickoff": "00:30",
+      "kickoffUtc": "2026-10-26T18:00:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 00:30 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ကိုပင်ဟေဂင်",
+        "bodyOdds": "1-35",
+        "goalTotalOdds": "3-5",
+        "currentBodyOdds": "1-25",
+        "currentGoalTotalOdds": "3-5"
+      },
+      "internetPrediction": "2-1",
+      "homeOdds": "1.45",
+      "drawOdds": "4.50",
+      "awayOdds": "6.50",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://footballnation.eu/match/superligaen/2026/801287/",
+      "homeStanding": {
+        "position": 2,
+        "played": 11,
+        "wins": 8,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 25,
+        "goalsAgainst": 11,
+        "points": 25
+      },
+      "awayStanding": {
+        "position": 7,
+        "played": 11,
+        "wins": 3,
+        "draws": 4,
+        "losses": 4,
+        "goalsFor": 10,
+        "goalsAgainst": 15,
+        "points": 13
+      },
+      "dailyPreviewText": "ကိုပင်ဟေဂင်ဟာ ဒီရာသီ ဒိန်းမတ်စူပါလိဂ် ၁၁ ပွဲကစားအပြီး ရမှတ် ၂၅ မှတ် ရထားပြီး အိုဒင်ဆီကတော့ ၁၃ မှတ်သာ ရထားပါတယ်။ အိမ်ရှင်အသင်းဟာ နောက်ဆုံးပြိုင်ပွဲစုံငါးပွဲမှာ အနိုင်နှစ်ပွဲ၊ သရေနှစ်ပွဲနဲ့ အရှုံးတစ်ပွဲ ရရှိထားလို့ ရလဒ်တည်ငြိမ်မှု ပိုကောင်းဖို့လိုပေမယ့် ဘရာဂါကို ၃-၀ ဂိုးနဲ့ အနိုင်ရခဲ့တဲ့ ပွဲက တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်မှုကို ပြသထားပါတယ်။ အိုဒင်ဆီကတော့ ဘရွန်ဘီကို ၂-၁ ဂိုးနဲ့ အနိုင်ရခဲ့ပြီး နောက်ဆုံးငါးပွဲမှာ နှစ်ပွဲနိုင်၊ နှစ်ပွဲသရေ၊ တစ်ပွဲရှုံးဖြစ်လို့ တန်ပြန်တိုက်စစ်နဲ့ အိမ်ရှင်ကို ဒုက္ခပေးနိုင်တဲ့အခြေအနေ ရှိနေပါတယ်။ **ဒါပေမဲ့ ကိုပင်ဟေဂင်ရဲ့ အမှတ်ပေးဇယားအသာစီး၊ အိမ်ကွင်းကစားအားနဲ့ ပွဲကိုထိန်းချုပ်နိုင်မှုတွေကို ချိန်ဆကြည့်ရင် ကိုပင်ဟေဂင်ကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/102.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/509.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/den.1.png",
+      "homeLastFive": [
+        {
+          "result": "D",
+          "date": "2026-10-22",
+          "opponent": "Crvena Zvezda",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "UEFA Conference League",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-10-18",
+          "opponent": "AGF Aarhus",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Danish Superliga",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-15",
+          "opponent": "Braga",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "UEFA Conference League",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-11",
+          "opponent": "Midtjylland",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "Danish Superliga",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-20",
+          "opponent": "Brondby",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "competition": "Danish Superliga",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-18",
+          "opponent": "Brondby",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Danish Superliga",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-10-09",
+          "opponent": "Nordsjaelland",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "competition": "Danish Superliga",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-19",
+          "opponent": "Midtjylland",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Danish Superliga",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-13",
+          "opponent": "Randers",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "competition": "Danish Superliga",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-06",
+          "opponent": "FC Copenhagen",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "home",
+          "competition": "Danish Superliga",
+          "sourceUrl": "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://www.skysports.com/football/fc-copenhagen-vs-ob-odense/stats/556179",
+        "https://turingstats.com/tables/superliga"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "dated football pre-match results, table and source PDF",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/superligaen/2026/801287/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://turingstats.com/tables/superliga",
+      "fixtureSourceUrl": "https://footballnation.eu/match/superligaen/2026/801287/",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://football.sportsfuss.com/match/fc-copenhagen-odense/2026-10-26",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-04",
+      "pdfRow": 4,
+      "league": "Primeira Liga",
+      "leagueDisplay": "ပေါ်တူဂီ ပရီးမီးယားလိဂ်",
+      "home": "Santa Clara",
+      "away": "Benfica",
+      "homeDisplay": "ဆန်တာကလာရာ",
+      "awayDisplay": "ဘင်ဖီကာ",
+      "sourceKickoff": "01:15",
+      "kickoffUtc": "2026-10-26T18:45:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 01:15 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ဘင်ဖီကာ",
+        "bodyOdds": "1-55",
+        "goalTotalOdds": "3+95",
+        "currentBodyOdds": "1-50",
+        "currentGoalTotalOdds": "3+90"
+      },
+      "internetPrediction": "1-3",
+      "homeOdds": "9.00",
+      "drawOdds": "4.33",
+      "awayOdds": "1.38",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://footballnation.eu/",
+      "homeStanding": {
+        "position": 4,
+        "played": 8,
+        "wins": 5,
+        "draws": 3,
+        "losses": 0,
+        "goalsFor": 12,
+        "goalsAgainst": 4,
+        "points": 18
+      },
+      "awayStanding": {
+        "position": 2,
+        "played": 8,
+        "wins": 6,
+        "draws": 1,
+        "losses": 1,
+        "goalsFor": 24,
+        "goalsAgainst": 7,
+        "points": 19
+      },
+      "dailyPreviewText": "ဆန်တာကလာရာဟာ ဒီရာသီ ပေါ်တူဂီပရီးမီးယားလိဂ်မှာ ရမှတ် ၁၈ မှတ်ရရှိထားပြီး ဘင်ဖီကာကတော့ ၁၉ မှတ်နဲ့ အဆင့်မြင့်နေတဲ့အသင်းဖြစ်ပါတယ်။ ဆန်တာကလာရာဟာ နောက်ဆုံးငါးပွဲမှာ သုံးပွဲနိုင်၊ တစ်ပွဲသရေ၊ တစ်ပွဲရှုံး ရရှိထားသလို ဘရာဂါနဲ့ သရေကျခဲ့မှုကလည်း တိုက်စစ်အားကောင်းတဲ့အသင်းကို ခံစစ်စုဖွဲ့ပြီး တုံ့ပြန်နိုင်စွမ်းရှိတာ ပြသနေပါတယ်။ ဘင်ဖီကာကတော့ နောက်ဆုံးပြိုင်ပွဲစုံငါးပွဲမှာ လေးပွဲအနိုင်ရထားပြီး ဥရောပပြိုင်ပွဲတွေမှာလည်း ဂိုးသွင်းအားကောင်းနေပါတယ်။ **အဝေးကွင်းမှာ ခံစစ်အာရုံစိုက်မှုလိုအပ်ပေမယ့် ကွင်းလယ်ကနေ တိုက်စစ်ဖြန့်ကျက်နိုင်မှုနဲ့ အခွင့်အရေးကို အဆုံးသတ်နိုင်စွမ်းမှာ ဘင်ဖီကာက ပိုမိုအသာစီးရနိုင်လို့ ဘင်ဖီကာကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/274.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/61.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/por.1.png",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "opponent": "Mafra",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Casa Pia",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Braga",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Arouca",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Rio Ave",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "Omonia",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Celtic",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Vitoria Guimaraes",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Porto",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "AC Milan",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "sourceUrl": "https://footballnation.eu/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://footballnation.eu/"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "dated football pre-match results, table and source PDF",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://www.skysports.com/football/santa-clara-vs-benfica/table/564240",
+      "fixtureSourceUrl": "https://footballnation.eu/",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://www.skysports.com/football/santa-clara-vs-benfica/live/564240",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-05",
+      "pdfRow": 5,
+      "league": "La Liga 2",
+      "leagueDisplay": "စပိန်လာလီဂါ ၂",
+      "home": "FC Andorra",
+      "away": "Burgos CF",
+      "homeDisplay": "အန်ဒိုရာ",
+      "awayDisplay": "ဘာဂို့စ်",
+      "sourceKickoff": "02:00",
+      "kickoffUtc": "2026-10-26T19:30:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 02:00 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "အန်ဒိုရာ",
+        "bodyOdds": "-70",
+        "goalTotalOdds": "2-75",
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "2-75"
+      },
+      "internetPrediction": "0-0",
+      "homeOdds": "1.87",
+      "drawOdds": "3.54",
+      "awayOdds": "4.22",
+      "oddsProvider": "1xBet",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://www.fcandorra.com/en/matches/season-2026-2027-laliga-hypermotion-11-fc-andorra-vs-burgos-cf-3416",
+      "homeStanding": {
+        "position": 18,
+        "played": 10,
+        "wins": 3,
+        "draws": 1,
+        "losses": 6,
+        "goalsFor": 13,
+        "goalsAgainst": 17,
+        "points": 10
+      },
+      "awayStanding": {
+        "position": 8,
+        "played": 10,
+        "wins": 5,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 13,
+        "goalsAgainst": 10,
+        "points": 17
+      },
+      "dailyPreviewText": "အန်ဒိုရာဟာ ဒီရာသီ လာလီဂါ ၂ မှာ ဆယ်ပွဲကစားပြီး ၁၀ မှတ်သာ ရရှိထားတာကြောင့် အမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရုန်းကန်နေရပါတယ်။ အထူးသဖြင့် ဆယ်ပွဲမှာ ၁၇ ဂိုးအထိ ခွင့်ပြုထားရတဲ့ ခံစစ်က အန်ဒိုရာအတွက် အဓိကစိုးရိမ်စရာ ဖြစ်နေပြီး နောက်ဆုံးကစားခဲ့တဲ့ ဂျီရိုနာနဲ့ပွဲမှာလည်း ၂-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့ပါတယ်။ ဒါပေမဲ့ အန်ဒိုရာဟာ ကတ်စတယ်လွန်ကို ၁-၀ ဂိုးနဲ့ အနိုင်ရခဲ့သလို ဂရန်နာဒါကိုလည်း အဝေးကွင်းမှာ ၃-၂ ဂိုးနဲ့ အနိုင်ယူခဲ့ဖူးတာကြောင့် တိုက်စစ်ပိုင်းမှာ အခွင့်အရေးရရင် ဂိုးသွင်းနိုင်တဲ့ အရည်အသွေးတော့ ရှိနေပါတယ်။ ဘာဂို့စ်ကတော့ ဆယ်ပွဲကစားပြီး ၁၇ မှတ်ရထားသလို ပေးဂိုးဆယ်ဂိုးသာရှိတဲ့ ခံစစ်က အန်ဒိုရာထက် ပိုမိုတည်ငြိမ်နေတာပါ။ နောက်ဆုံးကစားခဲ့တဲ့ ဆာဘာဒယ်နဲ့ပွဲမှာ ၁-၀ ဂိုးနဲ့ အနိုင်ရခဲ့ပြီး အနိုင်ဂိုးကို ကူရို က သွင်းယူပေးခဲ့တာကြောင့် ရှေ့တန်းမှာ အခွင့်အရေးတွေကို အကျိုးရှိရှိ အသုံးချနိုင်သေးတာ တွေ့ရပါတယ်။ အန်ဒိုရာဟာ အိမ်ကွင်းမှာ ဘောလုံးပိုင်ဆိုင်မှုကို ဦးစားပေးပြီး တိုက်စစ်ဆင်လာနိုင်ပေမယ့် ခံစစ်နေရာလွတ်တွေ ပေါ်လာရင် ဘာဂို့စ်က အသုံးချနိုင်ဖို့ အလားအလာရှိပါတယ်။ **နှစ်သင်းရဲ့ ဂိုးပေးရမှုနဲ့ လတ်တလောခြေစွမ်းကို နှိုင်းယှဉ်ကြည့်ရင် အန်ဒိုရာထက် ခံစစ်ပိုပြီး ယုံကြည်ရတဲ့ ဘာဂို့စ်ကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/496.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/1162.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "opponent": "Girona",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Castellon",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Sabadell",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Granada",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Sporting Gijon",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "Sabadell",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Granada",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Almeria",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Eldense",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Las Palmas",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "user supplied in conversation",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://www.laliga.com/en-US/match/temporada-2026-2027-laliga-hypermotion-fc-andorra-burgos-cf-11",
+      "fixtureSourceUrl": "https://scoutpicks.app/matches/laliga-hypermotion/fc-andorra-vs-burgos-19745020",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "2-3",
+      "resultSourceUrl": "https://www.laliga.com/en-ES/match/temporada-2026-2027-laliga-hypermotion-fc-andorra-burgos-cf-11",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-06",
+      "pdfRow": 6,
+      "league": "Ligue 2",
+      "leagueDisplay": "ပြင်သစ်လီဂူး ၂",
+      "home": "Montpellier",
+      "away": "Red Star FC 93",
+      "homeDisplay": "မောင့်ပယ်လီယာ",
+      "awayDisplay": "ရက်စတားစိန့်",
+      "sourceKickoff": "02:15",
+      "kickoffUtc": "2026-10-26T19:45:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 02:15 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "မောင့်ပယ်လီယာ",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "3+100",
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "3+90"
+      },
+      "internetPrediction": "2-1",
+      "homeOdds": "2.38",
+      "drawOdds": "3.20",
+      "awayOdds": "2.70",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+      "homeStanding": {
+        "position": 3,
+        "played": 9,
+        "wins": 5,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 11,
+        "goalsAgainst": 5,
+        "points": 18
+      },
+      "awayStanding": {
+        "position": 6,
+        "played": 9,
+        "wins": 5,
+        "draws": 2,
+        "losses": 2,
+        "points": 17
+      },
+      "dailyPreviewText": "မောင့်ပယ်လီယာဟာ ပြင်သစ်လီဂူး ၂ မှာ ကိုးပွဲကစားအပြီး ရမှတ် ၁၈ မှတ်ရထားပြီး ရက်စတားစိန့်ကတော့ ၁၇ မှတ်ရရှိထားတာကြောင့် ဇယားအပေါ်ပိုင်းမှာ အမှတ်မကွာလှတဲ့နှစ်သင်း တွေ့ဆုံကြမှာပါ။ မောင့်ပယ်လီယာဟာ ရိုဒက်ဇ်ကို ၃-၀၊ ဂရီနိုဘယ်ကို ၂-၀ ဂိုးတို့နဲ့ အနိုင်ရခဲ့တဲ့ နောက်ဆုံးပွဲတွေမှာ ခံစစ်တည်ငြိမ်မှုနဲ့ တိုက်စစ်အခွင့်အရေးအသုံးချမှု နှစ်မျိုးစလုံး ကောင်းမွန်ခဲ့ပါတယ်။ ရက်စတားစိန့်ကတော့ နောက်ဆုံးငါးပွဲမှာ လေးပွဲနိုင်ထားပြီး ဂိုးရနိုင်တဲ့လမ်းကြောင်းတွေရှိပေမယ့် နောက်ဆုံးပွဲမှာ စိန့်အက်တီယန်ကို ၀-၁ နဲ့ ရှုံးခဲ့ပါတယ်။ **နှစ်သင်းစလုံး ထိပ်တိုက်ဖိအားပေးနိုင်တာကြောင့် ပွဲကျပ်နိုင်ပေမယ့် အိမ်ကွင်းအားသာချက်နဲ့ နောက်ဆုံးပွဲနှစ်ပွဲမှာ ဂိုးမပေးရသေးတဲ့ မောင့်ပယ်လီယာကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/162.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/599.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.2.png",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "Rodez",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Grenoble",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Reims",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Pau",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Saint-Etienne",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "opponent": "Saint-Etienne",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Clermont Foot",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Guingamp",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Metz",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Laval",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "dated football pre-match results, table and source PDF",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://www.fcnantes.com/articles/20262027/classement.php?wpmobileexternal=true",
+      "fixtureSourceUrl": "https://oddsrun.com/match/football/fr/876/12026229/france-ligue-2/montpellier-vs-red-star-fc-93/",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.centrepresseaveyron.fr/sports/resultats-sportifs/football/ligue-2/rencontre/548068/montpellier-red-star-fc",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-07",
+      "pdfRow": 7,
+      "league": "Ligue 2",
+      "leagueDisplay": "ပြင်သစ်လီဂူး ၂",
+      "home": "Boulogne",
+      "away": "Stade de Reims",
+      "homeDisplay": "ဘိုလော့နီ",
+      "awayDisplay": "ရိမ်းစ်",
+      "sourceKickoff": "02:15",
+      "kickoffUtc": "2026-10-26T19:45:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 02:15 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ရိမ်းစ်",
+        "bodyOdds": "-35",
+        "goalTotalOdds": "2-50",
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "2-50"
+      },
+      "internetPrediction": "2-1",
+      "homeOdds": "3.10",
+      "drawOdds": "3.00",
+      "awayOdds": "2.15",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+      "homeStanding": {
+        "position": 14,
+        "played": 9,
+        "wins": 1,
+        "draws": 6,
+        "losses": 2,
+        "goalsFor": 6,
+        "goalsAgainst": 6,
+        "points": 9
+      },
+      "awayStanding": {
+        "position": 4,
+        "played": 9,
+        "wins": 4,
+        "draws": 5,
+        "losses": 0,
+        "goalsFor": 19,
+        "goalsAgainst": 11,
+        "points": 17
+      },
+      "dailyPreviewText": "ဘူလော့ဂ်ဟာ ဒီရာသီ ပြင်သစ်လီဂူး ၂ မှာ ကိုးပွဲကစားပြီး ၉ မှတ်သာ ရရှိထားပေမယ့် အသင်းရဲ့ ခံစစ်ပိုင်းကတော့ ထင်သလောက် အားနည်းနေခြင်းမရှိပါဘူး။ ကိုးပွဲမှာ ပေးဂိုးခြောက်ဂိုးသာရှိတာက ခံစစ်စုဖွဲ့မှု ကောင်းမွန်တယ်ဆိုတာ ပြသနေသလို နောက်ဆုံးကစားခဲ့တဲ့ ဂရီနိုဘယ်နဲ့ပွဲမှာလည်း အဝေးကွင်းကနေ ၂-၀ ဂိုးနဲ့ အနိုင်ရခဲ့တာကြောင့် ယုံကြည်မှုတွေ ပြန်တက်လာဖို့ရှိနေပါတယ်။ ဒါပေမဲ့ ကိုးပွဲမှာ သွင်းဂိုးခြောက်ဂိုးသာ ရရှိထားတဲ့ တိုက်စစ်ပိုင်းကတော့ ဘူလော့ဂ်အတွက် အားနည်းချက်ဖြစ်နေပြီး ဂိုးရဖို့ အခွင့်အရေးတွေကို ထိထိရောက်ရောက် အသုံးချနိုင်ဖို့ လိုအပ်နေပါတယ်။ ရိမ်းစ်ကတော့ ကိုးပွဲကစားပြီး ၁၇ မှတ်ရထားသလို ဒီရာသီ လိဂ်ပွဲတစ်ပွဲမှ ရှုံးနိမ့်ထားခြင်းမရှိတာက အသင်းရဲ့ ခြေစွမ်းတည်ငြိမ်မှုကို ဖော်ပြနေပါတယ်။ အထူးသဖြင့် နောက်ဆုံးပွဲမှာ ဒီဂျွန်ကို ၄-၂ ဂိုးနဲ့ အနိုင်ယူထားပြီး စုစုပေါင်း ၁၉ ဂိုးအထိ သွင်းယူထားနိုင်တာကြောင့် ဘူလော့ဂ်ရဲ့ ခံစစ်အတွက် တကယ့်စမ်းသပ်မှုဖြစ်လာမှာပါ။ ဒါပေမဲ့ ရိမ်းစ်ဘက်မှာ အဓိကကစားသမားအချို့ ဒဏ်ရာကြောင့် မပါဝင်နိုင်တာကလည်း နီကိုလတ်စ် အူဆိုင် အတွက် လူစာရင်းရွေးချယ်မှုမှာ အခက်အခဲရှိစေနိုင်ပါတယ်။ ဘူလော့ဂ်ဟာ အိမ်ကွင်းမှာ နောက်တန်းကို ကျစ်လျစ်စွာထားပြီး ရိမ်းစ်ရဲ့ တိုက်စစ်ကို ထိန်းချုပ်ဖို့ ကြိုးစားလာနိုင်ပေမယ့် ရိမ်းစ်က ဂိုးရနိုင်တဲ့ နည်းလမ်းပိုစုံလင်နေတဲ့အသင်း ဖြစ်ပါတယ်။ **နှစ်သင်းရဲ့ လက်ရှိခြေစွမ်းနဲ့ ဂိုးသွင်းနိုင်မှုကို ချိန်ဆကြည့်ရင် ဘူလော့ဂ်ရဲ့ ခံစစ်ကောင်းမွန်မှုကြောင့် ပွဲကျပ်နိုင်ပေမယ့် တိုက်စစ်ပိုင်းမှာ ပိုမိုအသာစီးရနိုင်တဲ့ ရိမ်းစ်ကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/2454.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/164.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.2.png",
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "Grenoble",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Sochaux",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Le Havre",
+          "teamGoals": 1,
+          "opponentGoals": 6,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Nantes",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Clermont Foot",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "Dijon",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Nantes",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Anderlecht",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Montpellier",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Nancy",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://footballnation.eu/match/ligue-2/2026/792573/"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "user supplied in conversation",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://www.fcnantes.com/articles/20262027/classement.php?wpmobileexternal=true",
+      "fixtureSourceUrl": "https://footballnation.eu/match/ligue-2/2026/792573/",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.centrepresseaveyron.fr/sports/resultats-sportifs/football/ligue-2/rencontre/548064/boulogne-reims",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-08",
+      "pdfRow": 8,
+      "league": "Super Lig",
+      "leagueDisplay": "တူရကီ စူပါလိဂ်",
+      "home": "Besiktas",
+      "away": "Istanbul Basaksehir",
+      "homeDisplay": "ဘီဆစ်တပ်",
+      "awayDisplay": "ဘာဆက်ရှီဟာ",
+      "sourceKickoff": "22:30",
+      "kickoffUtc": "2026-10-26T16:00:00Z",
+      "kickoffCalendarDate": "2026-10-26",
+      "kickoffYangon": "2026-10-26 22:30 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ဘီဆစ်တပ်",
+        "bodyOdds": "1-90",
+        "goalTotalOdds": "3-80",
+        "currentBodyOdds": "1-80",
+        "currentGoalTotalOdds": "3-60"
+      },
+      "internetPrediction": "2-0",
+      "homeOdds": "1.28",
+      "drawOdds": "5.50",
+      "awayOdds": "9.00",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://footballnation.eu/match/super-lig/2026/802431/",
+      "homeStanding": {
+        "position": 6,
+        "played": 8,
+        "wins": 5,
+        "draws": 0,
+        "losses": 3,
+        "goalsFor": 16,
+        "goalsAgainst": 10,
+        "points": 15
+      },
+      "awayStanding": {
+        "position": 12,
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 12,
+        "goalsAgainst": 12,
+        "points": 11
+      },
+      "dailyPreviewText": "ဘီဆစ်တပ်ဟာ ဒီရာသီ တူရကီစူပါလိဂ် ရှစ်ပွဲကစားအပြီး ၁၅ မှတ်ရထားပြီး ဘာဆက်ရှီဟာကတော့ ၁၁ မှတ်ရထားပါတယ်။ ဘီဆစ်တပ်ဟာ နောက်ဆုံးယူရိုပါလိဂ်ပွဲမှာ ခရစ္စတယ်ပဲလေ့စ်နဲ့ ၂-၂ ဂိုး သရေကျထားပေမယ့် တရာဇွန်စပေါ့ကို ၀-၂ ဂိုးနဲ့ ရှုံးထားလို့ နောက်တန်းတည်ငြိမ်မှုကို ပြန်လည်တည်ဆောက်ဖို့လိုနေပါတယ်။ ဘာဆက်ရှီဟာကလည်း ဂါဇီယန်တက်ကို ၂-၁ ဂိုးနဲ့ အနိုင်ရပြီး ကွန်ယာစပေါ့နဲ့ ၀-၀ သရေကျခဲ့တာကြောင့် ခံစစ်ဖိအားကို ထိန်းနိုင်သော်လည်း တိုက်စစ်ပိုင်းမှာ တစ်ပွဲနဲ့တစ်ပွဲ ကွာခြားမှုရှိနေပါတယ်။ **အိမ်ရှင်ရဲ့ တိုက်စစ်ဖိအားနဲ့ ကွင်းလယ်ထိန်းချုပ်နိုင်မှုတို့ အသာစီးရနိုင်တဲ့အတွက် ဘီဆစ်တပ်ကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/407.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/111.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/tur.1.png",
+      "homeLastFive": [
+        {
+          "result": "D",
+          "date": "2026-10-22",
+          "opponent": "Crystal Palace",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "competition": "UEFA Europa League",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-19",
+          "opponent": "Trabzonspor",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-15",
+          "opponent": "Hoffenheim",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "UEFA Europa League",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-11",
+          "opponent": "Kocaelispor",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-20",
+          "opponent": "Amedspor",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-18",
+          "opponent": "Gaziantep",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-10-11",
+          "opponent": "Konyaspor",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-19",
+          "opponent": "Genclerbirligi",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-13",
+          "opponent": "Amedspor",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-04",
+          "opponent": "Galatasaray",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://www.skysports.com/football/besiktas-vs-istanbul-basaksehir/5229099737556717232",
+        "https://www.trivela.football/leagues/turkey/table"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "dated football pre-match results, table and source PDF",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/super-lig/2026/802431/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://www.trivela.football/leagues/turkey/table",
+      "fixtureSourceUrl": "https://footballnation.eu/match/super-lig/2026/802431/",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://bjk.com.tr/en/mac_merkezi/canli/25488",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-09",
+      "pdfRow": 9,
+      "league": "Super Lig",
+      "leagueDisplay": "တူရကီ စူပါလိဂ်",
+      "home": "Rizespor",
+      "away": "Trabzonspor",
+      "homeDisplay": "ရိဇက်စပေါ့",
+      "awayDisplay": "ထရာဇွန်စပေါ့",
+      "sourceKickoff": "22:30",
+      "kickoffUtc": "2026-10-26T16:00:00Z",
+      "kickoffCalendarDate": "2026-10-26",
+      "kickoffYangon": "2026-10-26 22:30 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ထရာဇွန်စပေါ့",
+        "bodyOdds": "-95",
+        "goalTotalOdds": "3=",
+        "currentBodyOdds": "-100",
+        "currentGoalTotalOdds": "3="
+      },
+      "internetPrediction": "1-2",
+      "homeOdds": "4.00",
+      "drawOdds": "3.75",
+      "awayOdds": "1.85",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://footballnation.eu/match/super-lig/2026/802436/",
+      "homeStanding": {
+        "position": 13,
+        "played": 8,
+        "wins": 3,
+        "draws": 1,
+        "losses": 4,
+        "goalsFor": 8,
+        "goalsAgainst": 11,
+        "points": 10
+      },
+      "awayStanding": {
+        "position": 4,
+        "played": 8,
+        "wins": 5,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 18,
+        "goalsAgainst": 5,
+        "points": 16
+      },
+      "dailyPreviewText": "ရိဇက်စပေါ့ဟာ တူရကီစူပါလိဂ် ရှစ်ပွဲကစားအပြီး ရမှတ် ၁၀ မှတ်ရရှိထားပြီး ထရာဇွန်စပေါ့ကတော့ ရမှတ် ၁၆ မှတ်နဲ့ အသာစီးရနေပါတယ်။ အိမ်ရှင်က နောက်ဆုံးနှစ်ပွဲမှာ ယဲနီချိုရမ်စပေါ့ကို ၁-၂၊ ဖီနာဘာချီကို ၀-၃ ဂိုးတို့နဲ့ ရှုံးနိမ့်ထားလို့ ခံစစ်ယုံကြည်မှု ပြန်တည်ဆောက်ဖို့ လိုအပ်ပါတယ်။ ထရာဇွန်စပေါ့ကတော့ နောက်ဆုံးပြိုင်ပွဲစုံလေးပွဲဆက် အနိုင်ရထားပြီး ဘီဆစ်တပ်ကို ၂-၀ ဂိုးနဲ့ အနိုင်ယူနိုင်ခဲ့တဲ့ ခြေစွမ်းက အဝေးကွင်းပွဲအတွက် အားတက်စရာဖြစ်နေပါတယ်။ **ရိဇက်စပေါ့အနေနဲ့ အိမ်ကွင်းမှာ တန်ပြန်တိုက်စစ်နဲ့ တုံ့ပြန်နိုင်ပေမယ့် လက်ရှိခံစစ်တည်ငြိမ်မှုနဲ့ အနိုင်ရရှိမှုဆက်တိုက်ရှိနေတဲ့ ထရာဇွန်စပေါ့ကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/405.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/475.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/tur.1.png",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-16",
+          "opponent": "Corum",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-10-10",
+          "opponent": "Fenerbahce",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-20",
+          "opponent": "Goztepe",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-12",
+          "opponent": "Eyupspor",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-07",
+          "opponent": "Alanyaspor",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "date": "2026-10-22",
+          "opponent": "Hearts",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "UEFA Conference League",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-19",
+          "opponent": "Besiktas",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-15",
+          "opponent": "KuPS Kuopio",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "competition": "UEFA Conference League",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "Samsunspor",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-19",
+          "opponent": "Galatasaray",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://www.skysports.com/football/rizespor-vs-trabzonspor/7925936654351235232",
+        "https://www.trivela.football/leagues/turkey/table"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "dated football pre-match results, table and source PDF",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/super-lig/2026/802436/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://www.trivela.football/leagues/turkey/table",
+      "fixtureSourceUrl": "https://footballnation.eu/match/super-lig/2026/802436/",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "3-4",
+      "resultSourceUrl": "https://www.tff.org/Default.aspx?hafta=21&hafta=28&kulupID=3665&pageId=198",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-10",
+      "pdfRow": 10,
+      "league": "Super Lig",
+      "leagueDisplay": "တူရကီ စူပါလိဂ်",
+      "home": "Galatasaray",
+      "away": "Fenerbahce",
+      "homeDisplay": "ဂါလာတာစာရေး",
+      "awayDisplay": "ဖီနာဘာချီ",
+      "sourceKickoff": "01:00",
+      "kickoffUtc": "2026-10-26T18:30:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 01:00 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ဂါလာတာစာရေး",
+        "bodyOdds": "-70",
+        "goalTotalOdds": "3-40",
+        "currentBodyOdds": "-80",
+        "currentGoalTotalOdds": "3-40"
+      },
+      "internetPrediction": "2-2",
+      "homeOdds": "2.20",
+      "drawOdds": "3.80",
+      "awayOdds": "2.80",
+      "oddsProvider": "Bet365",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://footballnation.eu/match/super-lig/2026/802433/",
+      "homeStanding": {
+        "position": 2,
+        "played": 8,
+        "wins": 6,
+        "draws": 1,
+        "losses": 1,
+        "goalsFor": 17,
+        "goalsAgainst": 11,
+        "points": 19
+      },
+      "awayStanding": {
+        "position": 3,
+        "played": 8,
+        "wins": 5,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 22,
+        "goalsAgainst": 6,
+        "points": 16
+      },
+      "dailyPreviewText": "ဂါလာတာစာရေးနဲ့ ဖီနာဘာချီတို့ရဲ့ ဒါဘီပွဲစဉ်ဟာ တူရကီစူပါလိဂ် ဇယားအပေါ်ပိုင်းအတွက် အရေးပါတဲ့ပွဲဖြစ်ပြီး ရှစ်ပွဲအပြီး အိမ်ရှင်က ၁၉ မှတ်နဲ့ အဆင့် ၂၊ ဧည့်သည်က ၁၆ မှတ်နဲ့ အဆင့် ၃ မှာ ရပ်တည်နေပါတယ်။ ဂါလာတာစာရေးဟာ ကာဆင်ပါဆာကို ၃-၁ ဂိုးနဲ့ အနိုင်ယူထားပေမယ့် ချန်ပီယံလိဂ်မှာ ဘာစီလိုနာကို ၁-၄ ဂိုးနဲ့ ရှုံးခဲ့တာကြောင့် ပြိုင်ပွဲစုံခြေစွမ်းကို တစ်ပွဲနဲ့တစ်ပွဲ ချိန်ဆဖို့ လိုနေပါတယ်။ ဖီနာဘာချီကလည်း ရိဇက်စပေါ့ကို ၃-၀ ဂိုး၊ အီယူပ်စပေါ့ကို ၈-၀ ဂိုးနဲ့ အနိုင်ယူနိုင်ခဲ့ပေမယ့် အက်စတွန်ဗီလာကို ၀-၆ ဂိုးနဲ့ ရှုံးထားတာကြောင့် ခံစစ်အကွာအဝေးနဲ့ တိုက်စစ်ပြန်ပြောင်းချိန်တွေမှာ သတိထားရမှာပါ။ **ဒါဘီပွဲဖြစ်တဲ့အတွက် သရေရလဒ်နဲ့ နှစ်ဖက်လုံးရဲ့ တန်ပြန်တိုက်စစ်အန္တရာယ်ကို ထည့်သွင်းစဉ်းစားရပေမယ့် လိဂ်အမှတ်ပေးဇယားအသာစီးနဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် ဂါလာတာစာရေးကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/43.png",
+      "awayCrestUrl": "https://cdn.footballnation.eu/cache/team/873.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/tur.1.png",
+      "homeLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-13",
+          "opponent": "Barcelona",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "competition": "UEFA Champions League",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-09",
+          "opponent": "Kasimpasa",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-19",
+          "opponent": "Trabzonspor",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-13",
+          "opponent": "Kocaelispor",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "L",
+          "date": "2026-09-09",
+          "opponent": "Sporting",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "competition": "UEFA Champions League",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "date": "2026-10-14",
+          "opponent": "Aston Villa",
+          "teamGoals": 0,
+          "opponentGoals": 6,
+          "venueSide": "away",
+          "competition": "UEFA Champions League",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-10-10",
+          "opponent": "Rizespor",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "W",
+          "date": "2026-09-20",
+          "opponent": "Eyupspor",
+          "teamGoals": 8,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-14",
+          "opponent": "Gaziantep",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "competition": "Turkish Super Lig",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        },
+        {
+          "result": "D",
+          "date": "2026-09-10",
+          "opponent": "Roma",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "competition": "UEFA Champions League",
+          "sourceUrl": "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+          "sourceVerification": "DATED_FT_FIXTURE_CHECKED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://www.skysports.com/football/galatasaray-vs-fenerbahce/5401363117964438232",
+        "https://www.trivela.football/leagues/turkey/table"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "dated football pre-match results, table and source PDF",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://footballnation.eu/match/super-lig/2026/802433/",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://www.trivela.football/leagues/turkey/table",
+      "fixtureSourceUrl": "https://footballnation.eu/match/super-lig/2026/802433/",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.anadoluajansi.gov.tr/en/sports/osimhens-brace-fires-galatasaray-to-2-1-derby-victory-over-fenerbahce/4101807",
+      "resultStatus": "FT"
+    },
+    {
+      "fixtureId": "fc-20261026-11",
+      "pdfRow": 11,
+      "league": "Superettan",
+      "leagueDisplay": "ဆွီဒင် စူပါရက်တန်လိဂ်",
+      "home": "Orebro SK",
+      "away": "Falkenbergs FF",
+      "homeDisplay": "အိုရီဘရို",
+      "awayDisplay": "ဖယ်ကန်ဘတ်",
+      "sourceKickoff": "00:35",
+      "kickoffUtc": "2026-10-26T18:05:00Z",
+      "kickoffCalendarDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 00:35 MMT",
+      "nightEditorialDate": "2026-10-26",
+      "status": "finished",
+      "myanmarOdds": {
+        "upperTeam": "ဖယ်ကန်ဘတ်",
+        "bodyOdds": "-10",
+        "goalTotalOdds": "3+65",
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "3+90"
+      },
+      "internetPrediction": "1-2",
+      "homeOdds": "2.30",
+      "drawOdds": "3.40",
+      "awayOdds": "2.50",
+      "oddsProvider": "PokerStars 90min",
+      "oddsIsLive": false,
+      "oddsVerifiedDate": "2026-10-26",
+      "oddsSourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+      "homeStanding": {
+        "position": 15,
+        "played": 27,
+        "wins": 5,
+        "draws": 11,
+        "losses": 11,
+        "goalsFor": 30,
+        "goalsAgainst": 42,
+        "points": 26
+      },
+      "awayStanding": {
+        "position": 2,
+        "played": 27,
+        "wins": 15,
+        "draws": 6,
+        "losses": 6,
+        "goalsFor": 52,
+        "goalsAgainst": 37,
+        "points": 51
+      },
+      "dailyPreviewText": "ဆွီဒင်စူပါရက်တန်လိဂ်မှာ အိုရီဘရိုဟာ ၂၇ ပွဲအပြီး ရမှတ် ၂၆ မှတ်နဲ့ အဆင့် ၁၅ နေရာမှာ ရပ်တည်နေပြီး ဖယ်ကန်ဘတ်ကတော့ ၅၁ မှတ်နဲ့ အဆင့် ၂ နေရာမှာ ရှိပါတယ်။ အိုရီဘရိုဟာ နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာအနိုင်ရထားပြီး သုံးပွဲသရေ၊ တစ်ပွဲရှုံးဖြစ်ပေမယ့် လတ်တလောပွဲတွေမှာ တစ်ဂိုးစီသရေကျနိုင်ခဲ့တာက ခံစစ်စုဖွဲ့မှုကောင်းစွာပြသနေပါတယ်။ ဖယ်ကန်ဘတ်ကတော့ နောက်ဆုံးငါးပွဲမှာ လေးပွဲနိုင်၊ တစ်ပွဲသရေ ရထားသလို လန်းစခရိုနာကို ၄-၃ ဂိုးနဲ့ အနိုင်ယူခဲ့တာကြောင့် တိုက်စစ်အင်အားကောင်းနေပါတယ်။ **အိမ်ရှင်ဘက်မှာ အမှတ်လိုအပ်ချက်ကြောင့် အကြိတ်အနယ်ယှဉ်ပြိုင်လာနိုင်ပေမယ့် ရာသီတစ်လျှောက် ခြေစွမ်းကွာခြားမှုနဲ့ အဝေးကွင်းအနိုင်ရရှိမှုကို ချိန်ဆပြီး ဖယ်ကန်ဘတ်ကို ရွေးချယ်ပါတယ်။**",
+      "specialChoice": false,
+      "homeCrestUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/8527.png",
+      "awayCrestUrl": "https://images.fotmob.com/image_resources/logo/teamlogo/6545.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.2.png",
+      "homeLastFive": [
+        {
+          "result": "D",
+          "opponent": "IFK Norrkoping",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Ljungskile",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "L",
+          "opponent": "Sandvikens",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Nordic United",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "GIF Sundsvall",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "Landskrona",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "IFK Varnamo",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "D",
+          "opponent": "Ostersunds",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Ljungskile",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        },
+        {
+          "result": "W",
+          "opponent": "Osters",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+          "sourceVerification": "OPPONENT_AND_SCORE_COLLECTED_DATES_NOT_RECONCILED"
+        }
+      ],
+      "formAllCompetitions": true,
+      "formDefinition": "Last five reported competitive full-time results; dates not independently verified",
+      "researchSources": [
+        "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7"
+      ],
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "reportDate": "2026-10-26",
+        "source": "dated football pre-match results, table and source PDF",
+        "authorization": "Owner explicitly directed publication on 2026-10-26",
+        "sourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
+      },
+      "standingsSourceUrl": "https://sverigesfotboll.se/superettan/poangstallning/",
+      "fixtureSourceUrl": "https://www.fotmob.com/matches/falkenbergs-ff-vs-orebro/1vmta7",
+      "leaguePositionSourceDate": "2026-10-25",
+      "oddsMarket": "Full-time 1X2 (pre-match reference snapshot)",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://aimatch24.net/match/orebro-sk-vs-falkenbergs-ff-2026-10-26-1497734",
+      "resultStatus": "FT"
+    }
+  ],
+  "noFixturesLeagues": [],
+  "masterPrompt": "FUTURE_CODE_DAILY_MASTER_PROMPT_V3",
+  "sourceLedgerPath": "data/odds/2026-10-26.json",
+  "oddsSheetPath": "data/odds/2026-10-26.json"
+}
