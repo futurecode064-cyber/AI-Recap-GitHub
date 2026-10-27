@@ -55,6 +55,9 @@ tbody tr:last-child td{border-bottom:0}td:first-child{font-weight:650}
 .release-metric b{color:#126b91}.site-note{font-size:11px;color:#6d8091;margin:10px 0 0}.table-group td{background:#edf4fa;color:#254b6a;font-weight:800}
 @media(max-width:700px){.site-grid{grid-template-columns:1fr}.site-card{padding:13px}.site-metric b{font-size:19px}}
 .actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.original-apk-link{color:#126b91;font-size:12px;font-weight:650;display:inline-block;margin-left:7px;white-space:nowrap}
+.apk-source-label{color:#667f93;display:block;font-size:11px;font-weight:400;margin-top:3px}
+.game-analytics-note{font-size:12px;color:#455f7a;background:#eef5fb;padding:12px 14px;border-radius:9px;margin:14px 0}
 .tracking-label{display:inline-block;margin-bottom:12px;font-size:11px;color:#315a74;background:#e9f0f6;padding:4px 9px;border-radius:7px}
 .project-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:15px}
 .project-card{border:1px solid #dce6ef;border-radius:11px;padding:13px;min-width:0}
@@ -108,6 +111,7 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
   <section class="panel" aria-labelledby="sitesHeading">
     <h2 id="sitesHeading">🌐 Websites / Web Apps အားလုံး — သီးခြား Statistics</h2>
     <p class="hint">Tracking တပ်ထားသော Website တွေ၏ View/Click မှတ်တမ်းများကို သီးခြားပြပါသည်။ Tracking မတပ်နိုင်သေးသော Website သို့မဟုတ် Live မစစ်နိုင်သေးသော Project တွေမှာ 0 အစား — ပြပါသည်။ GitHub Release Download နှင့် Button Click မတူပါ။</p>
+    <div class="game-analytics-note">🎮 Game Play Sessions / Online Players ကို မူရင်းဂိမ်း Server သို့မဟုတ် Game Database ကနေ ချိတ်ဆက်ထားမှသာ ပြနိုင်ပါတယ်။ Website ဖွင့်ကြည့်ခြင်း၊ APK ဒေါင်းလုပ်ခလုတ်နှိပ်ခြင်းကို Game Play အဖြစ် မတွက်ထားပါ။ Game Play Tracking မရှိသေးရင် “မူရင်း Game Server Tracking မချိတ်ရသေး” လို့ ပြပါမယ်။</div>
     <div id="siteSections"></div>
     <p class="hint">ဂိုးဇုံ Website ၏ ယခင် Cloudflare D1 download request မှတ်တမ်းကို <a href="https://future-code-football-daily.pages.dev/future-code-journal/android/stats.html" target="_blank" rel="noopener noreferrer">ဂိုးဇုံ Owner Statistics ↗</a> မှ သီးခြားကြည့်နိုင်ပါသည်။ အောက်ပါ အချက်အလက်များမှာ Supabase မှ မှတ်တမ်းများ ဖြစ်ပါသည်။</p>
   </section>
@@ -118,7 +122,7 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
   </section>
   <section class="panel" style="margin-top:18px" aria-labelledby="tableHeading">
     <h2 id="tableHeading">APK တစ်ခုချင်းစီ — View, Click နှင့် GitHub Release Download</h2>
-    <p class="hint">Detail Views သည် APK အသေးစိတ်ဖွင့်ကြည့်ခြင်းဖြစ်ပြီး Download Clicks သည် Download ခလုတ်နှိပ်မှုဖြစ်သည်။ GitHub Downloads သည် GitHub Releases ဖြင့် ဖြန့်ထားသော APK များအတွက်သာ ရနိုင်ပြီး ဒေတာမရှိလျှင် — ပြပါသည်။</p>
+    <p class="hint">APK အမည်ဘေးမှာ မူရင်း APK Download Link နဲ့ Hosting Source ကို ပြထားပါတယ်။ Detail Views သည် APK အသေးစိတ်ဖွင့်ကြည့်ခြင်းဖြစ်ပြီး Download Clicks သည် Download ခလုတ်နှိပ်မှုဖြစ်သည်။ GitHub Downloads သည် GitHub Releases ဖြင့် ဖြန့်ထားသော APK များအတွက်သာ ရနိုင်ပြီး ဒေတာမရှိလျှင် — ပြပါသည်။</p>
     <div style="overflow-x:auto"><table><thead><tr><th>APK အမည်</th><th class="num">Detail Views</th><th class="num">Download Clicks</th><th class="num">GitHub Downloads</th><th class="num">ဒီနေ့</th><th class="num">ဒီအပတ်</th><th class="num">ဒီလ</th><th class="num">Browser</th></tr></thead><tbody id="appRows"></tbody></table></div>
   </section>
   <section class="panel" style="margin-top:18px" aria-labelledby="trendHeading">
@@ -162,5 +166,5 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
   <p id="dashStatus" role="status" class="status" aria-live="polite"></p>
 </section>
 </main><footer>Future Code AI Studio · Private Analytics Dashboard</footer>
-<script src="admin.js?v=portfolio-complete-inventory-20261027" defer></script>
+<script src="admin.js?v=original-sources-games-v20261027-2" defer></script>
 </body></html>
