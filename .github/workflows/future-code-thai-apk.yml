@@ -57,6 +57,23 @@ jobs:
           path: thai-course/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14
+      - name: Verify and publish one-time public beta APK
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          APK=thai-course/app/build/outputs/apk/debug/app-debug.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
+          if gh release view future-code-thai-speaking-beta-v1.0.0 >/dev/null 2>&1; then
+            echo "Public beta already exists; do not replace its APK with a differently signed build."
+            exit 0
+          fi
+          cp "$APK" /tmp/Future_Code_Thai_Speaking_v1.0.0_Beta.apk
+          gh release create future-code-thai-speaking-beta-v1.0.0 \
+            /tmp/Future_Code_Thai_Speaking_v1.0.0_Beta.apk \
+            --prerelease \
+            --title 'Future Code Thai Speaking v1.0.0 BETA' \
+            --notes 'BETA ONLY. Android debug signature: future official APK cannot update this beta in-place unless certificates match. Backup learning progress before uninstall/reinstall. Educational starter curriculum, not professional-complete.'
       - name: Sign official APK only if owner signing secrets are present
         env:
           THAI_KEYSTORE_BASE64: ${{ secrets.THAI_KEYSTORE_BASE64 }}
