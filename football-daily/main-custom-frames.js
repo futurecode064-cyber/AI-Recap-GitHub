@@ -22,5 +22,5 @@
   return out;
  }
  window.FutureCodeCustomFrames={list,wrap};
- document.addEventListener("DOMContentLoaded",()=>{const sel=document.getElementById("fcAiFrameStyle");if(sel)list().then(items=>items.forEach(f=>sel.add(new Option(f.name,f.id)))).catch(console.error);},{once:true});
+ document.addEventListener("DOMContentLoaded",()=>{const selectors=[document.getElementById("fcAiFrameStyle"),document.getElementById("fcNewsCustomFrame")].filter(Boolean);if(selectors.length)list().then(items=>selectors.forEach(sel=>items.forEach(f=>sel.add(new Option(f.name,f.id))))).catch(console.error);},{once:true});
 })();
