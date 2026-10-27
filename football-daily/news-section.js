@@ -115,7 +115,7 @@
   const customId=document.getElementById("fcNewsCustomFrame")?.value;
   const frame=customId&&window.FutureCodeCustomFrames?(await window.FutureCodeCustomFrames.list()).find(f=>f.id===customId):null;
   let output=frame?await window.FutureCodeCustomFrames.wrap(canvas,frame):canvas;
-  if(window.FutureCodeProfessionalFrames)output=await window.FutureCodeProfessionalFrames.wrap(output,"news");
+  if(window.FutureCodeProfessionalFrames)output=await window.FutureCodeProfessionalFrames.wrap(output,"news",customId?.startsWith("pro:")?customId:"none");
   const blob=await new Promise((resolve,reject)=>output.toBlob(b=>b?resolve(b):reject(new Error("PNG unavailable")),"image/png"));
   return {blob,width:output.width,height:output.height,filename:(isGoalZone?"Goal-Zone":"Future-Code")+"-News-"+s.id.replace(/[^a-z0-9_-]/gi,"-")+".png"};
  }
