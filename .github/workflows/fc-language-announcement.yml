@@ -1,0 +1,39 @@
+name: Send Future Code Language Academy Notice
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'မြန်မာဘာသာ Notification စာသား (စာလုံး ၂၀၀ အောက်)'
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Validate and publish notice
+        env:
+          ANNOUNCEMENT_MESSAGE: ${{ inputs.message }}
+        run: |
+          python3 - <<'PY'
+          import json, os, datetime
+          from pathlib import Path
+          message=os.environ['ANNOUNCEMENT_MESSAGE'].strip()
+          if not message or len(message)>200: raise SystemExit('Notice must be 1-200 characters')
+          path=Path('portal/apps/languages/latest.json')
+          data=json.loads(path.read_text(encoding='utf-8'))
+          data['announcement']={
+            'id':'notice-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ'),
+            'text':message
+          }
+          path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+          git config user.name 'future-code-notifications[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add portal/apps/languages/latest.json
+          git commit -m 'Language Academy: publish owner notification'
+          git push origin HEAD:main
