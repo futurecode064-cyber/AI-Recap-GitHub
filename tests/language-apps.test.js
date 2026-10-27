@@ -9,7 +9,7 @@ const json=p=>JSON.parse(read(p));
 const site=read('portal/apps/index.html');
 const releases=json('portal/apps/latest.json').apps;
 const required=['english-academy','thai-speaking','chinese-learning','language-academy'];
-const cards=[...site.matchAll(/<article\\b[\\s\\S]*?<\\/article>/g)].map(m=>m[0]);
+const cards=[...site.matchAll(/<article\b[\s\S]*?<\/article>/g)].map(m=>m[0]);
 let checks=0;
 for(const key of required){
  const card=cards.find(c=>c.includes('data-app="'+key+'"'));
@@ -49,7 +49,7 @@ assert.equal(chinese.reduce((n,l)=>n+l.units.reduce((m,u)=>m+u.words.length,0),0
 new vm.Script(read('chinese-learning/app/src/main/assets/app.js'));
 checks++;
 const academyHtml=read('portal/apps/languages/index.html');
-const inline=[...academyHtml.matchAll(/<script\\b[^>]*>([\\s\\S]*?)<\\/script>/g)];
+const inline=[...academyHtml.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)];
 assert.equal(inline.length,1);
 new vm.Script(inline[0][1]);
 const mi=inline[0][1].indexOf('const languages=[');
@@ -69,14 +69,14 @@ assert.equal(version('thai-speaking').versionCode,thaiLatest.versionCode);
 assert.equal(version('language-academy').versionCode,manifest.versionCode);
 assert.equal(version('language-academy').sha256,manifest.sha256);
 assert.equal(version('thai-speaking').sha256,thaiLatest.sha256);
-assert.match(read('chinese-learning/app/build.gradle'),/versionCode 3[\\s\\S]*versionName '1\\.0\\.2'/);
-assert.match(read('thai-course/app/build.gradle'),/versionCode 2[\\s\\S]*versionName '1\\.0\\.1'/);
-assert.match(read('language-apk/AndroidManifest.xml'),/versionCode="2" versionName="1\\.0\\.1"/);
+assert.match(read('chinese-learning/app/build.gradle'),/versionCode 3[\s\S]*versionName '1\.0\.2'/);
+assert.match(read('thai-course/app/build.gradle'),/versionCode 2[\s\S]*versionName '1\.0\.1'/);
+assert.match(read('language-apk/AndroidManifest.xml'),/versionCode="2" versionName="1\.0\.1"/);
 checks++;
 for(const file of ['.github/workflows/future-code-thai-apk.yml','.github/workflows/fc-language-academy-apk.yml']){
  const workflow=read(file);
  assert.match(workflow,/id-token: write/);
- assert.match(workflow,/apksigner" verify|apksigner"\\s+verify/);
+ assert.match(workflow,/apksigner" verify|apksigner"\s+verify/);
  assert.match(workflow,/OIDC=/);
  assert.ok(!workflow.includes('echo "$ANDROID_KEYSTORE_PASS"'));
 }
