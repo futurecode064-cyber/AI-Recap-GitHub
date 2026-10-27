@@ -95,3 +95,18 @@ jobs:
             exit 0
           fi
           gh release create "$TAG" "out/$APK_NAME" out/SHA256SUMS.txt --title "Future Code Language Academy v1.0.0" --notes "12-language Myanmar-first foundation release. Android 8+; offline lessons; TTS and speech recognition, writing and quizzes, update notification system. Installation and all APK updates require Android user approval."
+
+      - name: Publish preview APK for easy direct public download
+        if: env.SIGNING_MODE == 'testing'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG='fc-language-academy-v1.0.0-preview'
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo 'Previously published preview preserved (including download counts).'
+            exit 0
+          fi
+          gh release create "$TAG" "out/$APK_NAME" out/SHA256SUMS.txt --prerelease \
+            --title 'Future Code Language Academy v1.0.0 TEST APK' \
+            --notes 'PREVIEW/TEST BUILD ONLY. Temporary signing key; future production updates cannot install over this preview. Before installing a production release, uninstall the preview (local learning progress may be lost). Android user approval required. 12-language foundation; not a complete professional curriculum.'
