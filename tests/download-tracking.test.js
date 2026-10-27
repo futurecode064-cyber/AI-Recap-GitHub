@@ -7,7 +7,7 @@ const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'portal/apps/index.html'), 'utf8');
 const tracker = fs.readFileSync(path.join(root, 'portal/apps/stats.js'), 'utf8');
-const appKeys = ['ai-studio','app-creator','myanmar-kyar','video-cutter','ai-astrology','el-nino','daily-money','medicine-reminder','kids-learning','safety-guide','goal-zone','mandalay-city-helper','language-academy','chinese-learning','thai-speaking'];
+const appKeys = ['ai-studio','app-creator','myanmar-kyar','video-cutter','ai-astrology','el-nino','daily-money','medicine-reminder','kids-learning','safety-guide','goal-zone','mandalay-city-helper','language-academy','chinese-learning','thai-speaking','english-academy'];
 
 const tags = [...html.matchAll(/<a\b(?=[^>]*class="download")[^>]*>/g)].map(m => m[0]);
 assert.equal(tags.length, appKeys.length, 'all public APKs need analytics');
@@ -46,7 +46,7 @@ for(const click of clicks){
   assert.equal(click.options.method,'POST');
   assert.ok(click.url.endsWith('/rest/v1/rpc/fc_record_portfolio_event'));
 }
-console.log('PASS: 13 direct APK links tracked; Kyar and Language Academy demos are not counted as APK downloads.');
+console.log('PASS: 14 direct APK links tracked; Kyar and Language Academy demos are not counted as APK downloads.');
 const adminHtml = fs.readFileSync(path.join(root, 'portal/apps/admin.html'), 'utf8');
 const adminJs = fs.readFileSync(path.join(root, 'portal/apps/admin.js'), 'utf8');
 const releaseSnapshot = JSON.parse(fs.readFileSync(path.join(root, 'portal/apps/github-releases-snapshot.json'), 'utf8'));
