@@ -1,0 +1,14 @@
+{
+  "appId": "fc-language-academy",
+  "packageName": "mm.futurecode.languages",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "channel": "foundation-preview",
+  "updateReady": false,
+  "releasedAt": "2026-10-27",
+  "announcement": {
+    "id": "launch-2026-10-27",
+    "text": "Future Code Language Academy အခြေခံသင်ခန်းစာ ၁၂ ဘာသာ ဖွင့်လှစ်ထားပါပြီ။"
+  },
+  "notes": "Actual APK upgrades require a release signed with the same persistent certificate. A test-key APK cannot receive an in-place update."
+}
