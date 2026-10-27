@@ -55,6 +55,14 @@ tbody tr:last-child td{border-bottom:0}td:first-child{font-weight:650}
 .release-metric b{color:#126b91}.site-note{font-size:11px;color:#6d8091;margin:10px 0 0}.table-group td{background:#edf4fa;color:#254b6a;font-weight:800}
 @media(max-width:700px){.site-grid{grid-template-columns:1fr}.site-card{padding:13px}.site-metric b{font-size:19px}}
 .actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.tracking-label{display:inline-block;margin-bottom:12px;font-size:11px;color:#315a74;background:#e9f0f6;padding:4px 9px;border-radius:7px}
+.project-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:15px}
+.project-card{border:1px solid #dce6ef;border-radius:11px;padding:13px;min-width:0}
+.project-card strong,.project-card small{display:block}
+.project-card small{color:#677b8c;font-size:11px;margin-top:5px}
+.project-card p{font-size:12px;color:#52657a;margin:6px 0}
+.project-card a{font-size:12px;color:#126b91}
+@media(max-width:700px){.project-list{grid-template-columns:1fr}}
 footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
 @media(max-width:700px){header,main,footer{padding:15px}.panel{padding:17px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:14px}.stat strong{font-size:25px}table{font-size:12px}th,td{padding:10px 5px}.stat:last-child{grid-column:span 2}}
 </style></head><body>
@@ -85,6 +93,9 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
     <div class="actions"><button class="secondary" id="refresh" type="button">↻ Refresh</button><button class="secondary" id="logout" type="button">Logout</button></div>
   </div>
   <div class="stats">
+    <div class="stat"><small>စာရင်းသွင်း Website / Web Page</small><strong id="totalSites">—</strong></div>
+    <div class="stat"><small>စာရင်းသွင်း APK များ</small><strong id="totalApps">—</strong></div>
+    <div class="stat"><small>Source / Draft Projects</small><strong id="totalProjects">—</strong></div>
     <div class="stat"><small>APK Download Page Views</small><strong id="visits">—</strong></div>
     <div class="stat"><small>ပုံမှန် Website Page Views</small><strong id="websiteVisits">—</strong></div>
     <div class="stat"><small>APK Detail Views (Tracking စပြီးနောက်)</small><strong id="detailViews">—</strong></div>
@@ -95,12 +106,17 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
     <div class="stat"><small>ဒီလ Download</small><strong id="month">—</strong></div>
   </div>
   <section class="panel" aria-labelledby="sitesHeading">
-    <h2 id="sitesHeading">🌐 APK Download Websites — သီးခြား Statistics</h2>
-    <p class="hint">ဂျာနယ် Website Views၊ APK Download Page Views၊ Button Clicks နှင့် GitHub Releases APK Download မှတ်တမ်းများကို <strong>မရောဘဲ</strong> ခွဲပြထားပါသည်။ GitHub Releases တွင် မူလဗားရှင်းအဟောင်းများ၏ Downloads လည်း ပါဝင်ပါသည်။</p>
+    <h2 id="sitesHeading">🌐 Websites / Web Apps အားလုံး — သီးခြား Statistics</h2>
+    <p class="hint">Tracking တပ်ထားသော Website တွေ၏ View/Click မှတ်တမ်းများကို သီးခြားပြပါသည်။ Tracking မတပ်နိုင်သေးသော Website သို့မဟုတ် Live မစစ်နိုင်သေးသော Project တွေမှာ 0 အစား — ပြပါသည်။ GitHub Release Download နှင့် Button Click မတူပါ။</p>
     <div id="siteSections"></div>
     <p class="hint">ဂိုးဇုံ Website ၏ ယခင် Cloudflare D1 download request မှတ်တမ်းကို <a href="https://future-code-football-daily.pages.dev/future-code-journal/android/stats.html" target="_blank" rel="noopener noreferrer">ဂိုးဇုံ Owner Statistics ↗</a> မှ သီးခြားကြည့်နိုင်ပါသည်။ အောက်ပါ အချက်အလက်များမှာ Supabase မှ မှတ်တမ်းများ ဖြစ်ပါသည်။</p>
   </section>
-  <section class="panel" aria-labelledby="tableHeading">
+  <section class="panel" style="margin-top:18px" aria-labelledby="inventoryHeading">
+    <h2 id="inventoryHeading">🗂️ ယခင်ဖန်တီးထားသော Source / Draft Project များ</h2>
+    <p class="hint">Source ရှိပြီး APK/Website မထုတ်ဝေရသေးသော Project တွေကိုလည်း မပျောက်အောင် ထည့်ထားပါသည်။ မထုတ်ဝေရသေးသဖြင့် Download/View Count ကို မဖန်တီးထားပါ။</p>
+    <div id="projectInventory" class="project-list"></div>
+  </section>
+  <section class="panel" style="margin-top:18px" aria-labelledby="tableHeading">
     <h2 id="tableHeading">APK တစ်ခုချင်းစီ — View, Click နှင့် GitHub Release Download</h2>
     <p class="hint">Detail Views သည် APK အသေးစိတ်ဖွင့်ကြည့်ခြင်းဖြစ်ပြီး Download Clicks သည် Download ခလုတ်နှိပ်မှုဖြစ်သည်။ GitHub Downloads သည် GitHub Releases ဖြင့် ဖြန့်ထားသော APK များအတွက်သာ ရနိုင်ပြီး ဒေတာမရှိလျှင် — ပြပါသည်။</p>
     <div style="overflow-x:auto"><table><thead><tr><th>APK အမည်</th><th class="num">Detail Views</th><th class="num">Download Clicks</th><th class="num">GitHub Downloads</th><th class="num">ဒီနေ့</th><th class="num">ဒီအပတ်</th><th class="num">ဒီလ</th><th class="num">Browser</th></tr></thead><tbody id="appRows"></tbody></table></div>
@@ -146,5 +162,5 @@ footer{text-align:center;color:#8390a0;font-size:12px;padding-top:0}
   <p id="dashStatus" role="status" class="status" aria-live="polite"></p>
 </section>
 </main><footer>Future Code AI Studio · Private Analytics Dashboard</footer>
-<script src="admin.js?v=portfolio-release-20261027" defer></script>
+<script src="admin.js?v=portfolio-complete-inventory-20261027" defer></script>
 </body></html>
