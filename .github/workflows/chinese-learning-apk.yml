@@ -1,0 +1,69 @@
+name: Future Code Chinese - Signed Android APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'chinese-learning/**'
+      - '.github/workflows/chinese-learning-apk.yml'
+permissions:
+  contents: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Prepare Android SDK
+        run: |
+          set -euo pipefail
+          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Assemble APK
+        working-directory: chinese-learning
+        run: gradle --no-daemon :app:assembleRelease :app:assembleDebug
+      - name: Sign with existing private Future Code signing service
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          API="https://mxwervqihaqlxybghdak.supabase.co/functions/v1/mandalay-signing"
+          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-mandalay-signing-v1" | jq -er '.value')"
+          echo "::add-mask::$OIDC"
+          curl -fsS -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o /tmp/fc-chinese-sign.json
+          jq -e '.ready == true' /tmp/fc-chinese-sign.json >/dev/null
+          jq -er '.keystore_b64' /tmp/fc-chinese-sign.json | base64 -d > /tmp/fc-chinese-key.p12
+          ANDROID_KEYSTORE_PASS="$(jq -er '.store_password' /tmp/fc-chinese-sign.json)"
+          echo "::add-mask::$ANDROID_KEYSTORE_PASS"
+          export ANDROID_KEYSTORE_PASS
+          mkdir -p out
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign --ks /tmp/fc-chinese-key.p12 --ks-key-alias future-code-mandalay --ks-pass env:ANDROID_KEYSTORE_PASS --key-pass env:ANDROID_KEYSTORE_PASS --out out/Future_Code_Chinese_v1.0.0.apk chinese-learning/app/build/outputs/apk/release/app-release-unsigned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs out/Future_Code_Chinese_v1.0.0.apk
+          sha256sum out/*.apk
+          shred -u /tmp/fc-chinese-sign.json /tmp/fc-chinese-key.p12 || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Future-Code-Chinese-v1.0.0-signed
+          path: out/Future_Code_Chinese_v1.0.0.apk
+          if-no-files-found: error
+      - name: Publish public APK release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG=chinese-learning-v1.0.0
+          APK=out/Future_Code_Chinese_v1.0.0.apk
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            if ! gh release view "$TAG" --json assets -q '.assets[].name' | grep -Fx Future_Code_Chinese_v1.0.0.apk; then gh release upload "$TAG" "$APK"; fi
+          else
+            gh release create "$TAG" "$APK" --title "Future Code Chinese v1.0.0" --notes "Myanmar-first Mandarin learning: six stages, vocabulary, grammar, pronunciation and writing practice. Requires Android 8+, offline reading and quiz. Chinese TTS/recognition depend on device service."
+          fi
