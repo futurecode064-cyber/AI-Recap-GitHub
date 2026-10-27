@@ -32,14 +32,14 @@ jobs:
             await page.locator('#fcpPlacement input[value=previews]').check();
             await page.locator('#fcpAdd').click({timeout:10000});
             await page.waitForFunction(()=>document.querySelector('#fcpStatus')?.textContent.includes('Download'),null,{timeout:10000});
-            await page.locator('#brandFrame').waitFor({timeout:15000});
+            await page.locator('#brandFrame').waitFor({state:'attached',timeout:15000});
             assert.equal(await page.locator('#brandFrame option').filter({hasText:'SECTION QA FRAME'}).count(),1);
             assert.equal(await page.locator('#fcSpecialCustomFrame option').filter({hasText:'SECTION QA FRAME'}).count(),0);
             await page.locator('#fcpName').fill('SECTION QA EDITED');
             await page.locator('#fcpSave').click({timeout:10000});
             await page.waitForFunction(()=>document.querySelector('#fcpStatus')?.textContent.includes('သိမ်းပြီး'),null,{timeout:10000});
             await page.reload({waitUntil:'domcontentloaded',timeout:20000});
-            await page.locator('#brandFrame').waitFor({timeout:20000});
+            await page.locator('#brandFrame').waitFor({state:'attached',timeout:20000});
             await page.waitForFunction(()=>[...document.querySelectorAll('#brandFrame option')].some(x=>x.textContent.includes('SECTION QA EDITED')),null,{timeout:12000});
             assert.equal(await page.locator('#fcSpecialCustomFrame option').filter({hasText:'SECTION QA EDITED'}).count(),0);
             const result=await page.evaluate(async()=>{
