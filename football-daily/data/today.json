@@ -1400,7 +1400,43 @@
           "result": "W"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ဝါဒါဘရီမင်",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ရှော်လ်ကေး",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "လေဗာကူဆင်",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "မိုချန်ဂလာဘတ်",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ဖရန့်ဖတ်",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "result": "L"
+        }
+      ],
       "homeStanding": {
         "position": 14,
         "played": 9,
@@ -1445,7 +1481,9 @@
       "homeFormSourceUrl": "https://www.skysports.com/german-2-bundesliga-scores-fixtures/2026-10-01",
       "oddsProvider": "22Bet",
       "oddsSourceUrl": "https://ee.22bet.com/en/prematch/football/1008120-dfb-pokal/11456841-vfl-bochum-fsv-mainz",
-      "oddsVerifiedDate": "2026-10-27"
+      "oddsVerifiedDate": "2026-10-27",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01"
     },
     {
       "fixtureId": "fc-20261027-08",
@@ -1740,8 +1778,80 @@
       "dailyPreviewText": "ဒီပွဲက ဘွန်ဒက်စ်လီဂါအသင်းနှစ်သင်း ထိပ်တိုက်တွေ့ဆုံတဲ့ ဖလားပွဲဖြစ်ပြီး ဟမ်းဘတ် က ခုနစ်ပွဲမှာ ကိုးမှတ်နဲ့ အဆင့် ၁၁ မှာ ရပ်တည်နေသလို ဖရန့်ဖတ် က ရှစ်မှတ်နဲ့ အဆင့် ၁၄ မှာ ရှိနေပါတယ်။ ဟမ်းဘတ်ဟာ နောက်ဆုံး ပါဒါဘွန်းကို တစ်ဂိုးတည်းနဲ့ ရှုံးနိမ့်ခဲ့ပြီး ခုနစ်ပွဲမှာ ခြောက်ဂိုးသာသွင်းထားနိုင်တာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ အားနည်းချက်ရှိနေပါတယ်။ ဖရန့်ဖတ်ကလည်း နောက်ဆုံး ဒေါ့မွန်ကို တစ်ဂိုးတည်းနဲ့ ရှုံးခဲ့ပြီး လိဂ်ခုနစ်ပွဲမှာ ၁၇ ဂိုးအထိ ပေးထားရတာကြောင့် ခံစစ်တည်ငြိမ်မှု မရှိသေးပါဘူး။ ဖရန့်ဖတ်အနေနဲ့ ဘောလုံးပိုင်ဆိုင်မှုကနေ တိုက်စစ်တည်ဆောက်နိုင်ဖို့ ကြိုးစားလာနိုင်ပေမယ့် နောက်တန်းမှာ နေရာလွတ်ကျန်ခဲ့ရင် ဟမ်းဘတ်အတွက် အသုံးချစရာဖြစ်လာနိုင်ပါတယ်။ နှစ်သင်းစလုံး အားနည်းချက်ရှိနေတဲ့အခြေအနေမှာ အိမ်ကွင်းမှာကစားရမယ့် ဟမ်းဘတ်က ဖလားပွဲရဲ့အရှိန်ကို ပိုမိုအသုံးချနိုင်ဖို့ ရှိတာကြောင့် ဟမ်းဘတ်ကို ရွေးချယ်ပါတယ်။",
       "ownerSourceArticleNumber": 14,
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ပါဒါဘွန်း",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "စတုဂတ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "ဟော့ဖန်ဟိမ်း",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "ကိုလုံး",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "လိုက်ပ်ဇစ်",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "result": "L"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ဒေါ့မွန်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "ကိုလုံး",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "လိုက်ပ်ဇစ်",
+          "teamGoals": 0,
+          "opponentGoals": 6,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "ဖရိုင်းဘတ်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "မိန့်ဇ်",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "result": "W"
+        }
+      ],
       "homeStanding": {
         "position": 11,
         "played": 7,
@@ -1780,7 +1890,11 @@
         "goalTotalOdds": "3-50",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "homeFormScope": "league",
+      "homeFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01"
     },
     {
       "fixtureId": "fc-20261027-12",
@@ -1802,8 +1916,80 @@
       "dailyPreviewText": "ကိုလုံး က ဘွန်ဒက်စ်လီဂါ ခုနစ်ပွဲမှာ ရှစ်မှတ်နဲ့ အဆင့် ၁၂ မှာ ရပ်တည်နေပြီး နောက်ဆုံး ရှော်လ်ကေးနဲ့ ဂိုးမရှိသရေကျခဲ့တာကြောင့် ခံစစ်ပိုင်းမှာ တည်ငြိမ်မှုရှိခဲ့ပေမယ့် တိုက်စစ်ကနေ အနိုင်ဂိုးရယူနိုင်ဖို့ လိုအပ်နေပါတယ်။ တစ်ဖက်မှာ ယူနီယံဘာလင် က ခုနစ်ပွဲမှာ ခြောက်မှတ်သာရရှိပြီး အဆင့် ၁၇ မှာ ရှိနေသလို ၁၈ ဂိုးအထိ ပေးထားရတဲ့ ခံစစ်ပိုင်းက အသင်းရဲ့အကြီးမားဆုံးအားနည်းချက်ဖြစ်နေပါတယ်။ နောက်ဆုံး အော့စ်ဘတ်နဲ့ပွဲမှာ တစ်ဂိုးစီသရေကျခဲ့ပေမယ့် အဝေးကွင်းမှာ ကိုလုံးရဲ့တိုက်စစ်ကို ဆက်တိုက်ထိန်းချုပ်နိုင်ဖို့ လိုအပ်ပါလိမ့်မယ်။ ကိုလုံးအနေနဲ့ ဘောလုံးကို အလျင်စလိုရှေ့တင်ကစားတာထက် ယူနီယံဘာလင်နောက်တန်းရဲ့ နေရာယူပုံအားနည်းချက်ကို အသုံးချနိုင်ရင် ဂိုးသွင်းခွင့်တွေ ရရှိလာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ လက်ရှိခံစစ်တည်ငြိမ်မှုနဲ့ အိမ်ကွင်းအခြေအနေကို နှိုင်းယှဉ်ပြီး ကိုလုံးကို ရွေးချယ်ပါတယ်။",
       "ownerSourceArticleNumber": 15,
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ရှော်လ်ကေး",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "ဖရန့်ဖတ်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "မိုချန်ဂလာဘတ်",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "ဟမ်းဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ဝါဒါဘရီမင်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "အော့စ်ဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ဒေါ့မွန်",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "အဲလ်ဗာ့စ်ဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "ဘိုင်ယန်မြူးနစ်",
+          "teamGoals": 0,
+          "opponentGoals": 7,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "ရှော်လ်ကေး",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "result": "L"
+        }
+      ],
       "homeStanding": {
         "position": 12,
         "played": 7,
@@ -1842,7 +2028,11 @@
         "goalTotalOdds": "3+30",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "homeFormScope": "league",
+      "homeFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01"
     },
     {
       "fixtureId": "fc-20261027-11",
@@ -2177,7 +2367,43 @@
           "result": "D"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "မိန့်ဇ်",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ပါဒါဘွန်း",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "ဒေါ့မွန်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "အော့စ်ဘတ်",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ကိုလုံး",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        }
+      ],
       "homeStanding": {
         "position": 2,
         "played": 7,
@@ -2217,7 +2443,9 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeFormSourceUrl": "https://www.skysports.com/borussia-dortmund-scores-fixtures/2026-10-01"
+      "homeFormSourceUrl": "https://www.skysports.com/borussia-dortmund-scores-fixtures/2026-10-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01"
     },
     {
       "fixtureId": "fc-20261027-15",
