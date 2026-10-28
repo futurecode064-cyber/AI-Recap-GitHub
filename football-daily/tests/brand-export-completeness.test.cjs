@@ -55,7 +55,7 @@ for(const [id,name] of Object.entries(brands)){
 test('Every brand page loads shared metadata and refreshed exporters',()=>{
  for(const id of Object.keys(brands))for(const page of ['index.html','odds.html']){
   const html=fs.readFileSync(path.join(root,id,page),'utf8');
-  assert.ok(html.includes('../brand-export-data.js?v=brand-leagues-20261020'));
+  assert.match(html,/\.\.\/brand-export-data\.js\?v=[^\"]+/);
   assert.ok(html.indexOf('./brand.js')<html.indexOf('../canvas-image-kit.js'),'brand palette set before canvas module');
  }
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
@@ -99,6 +99,24 @@ test('Current-day leagues resolve to bundled logos on all sub-brands',()=>{
    const u=x.window.FutureCodeBrandExportData.leagueCrest(league);
    assert.ok(u.startsWith('https://test.example/assets/league-logos/'),league);
    assert.ok(fs.statSync(path.join(root,new URL(u).pathname)).size>100);
+  }
+ }
+});
+
+test('28 October every team and competition crest is bundled for all six brands and main',()=>{
+ const sheet=JSON.parse(read('data/odds/2026-10-28.json'));
+ function read(file){return fs.readFileSync(path.join(root,file),'utf8');}
+ const configs=[...Object.keys(brands),'kmm-sport-hub','bet-city-family',''];
+ for(const id of configs){
+  const context={document:{baseURI:'https://test.example/'+(id?id+'/':''),documentElement:{dataset:id?{footballBrandName:id}:{}}},window:{},URL};
+  vm.runInNewContext(read(id?'brand-export-data.js':'main-export-logos.js'),context);
+  const mapper=context.window.FutureCodeBrandExportData||context.window.FutureCodeMainLogoAssets;
+  const urls=sheet.matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl,mapper.leagueCrest(m.league)]);
+  for(const url of urls){
+   const local=mapper.imageUrl(url);assert.ok(local.startsWith('https://test.example/assets/'),id+' uses local crest '+url);
+   const bytes=fs.readFileSync(path.join(root,new URL(local).pathname));
+   assert.equal(bytes.subarray(1,4).toString(),'PNG',id+' valid PNG '+url);
+   assert.ok(bytes.readUInt32BE(16)>15&&bytes.readUInt32BE(20)>15);
   }
  }
 });

@@ -46,7 +46,7 @@
   k.crest(ctx,m.homeCrestUrl,119,20,210,m.homeDisplay||m.home,true);
   k.crest(ctx,m.awayCrestUrl,871,20,210,m.awayDisplay||m.away,true);
   box(510,0,180,105,'#dcebf6',12);if(leagueLogo)k.crest(ctx,leagueLogo,566,4,68,'',true);
-  text(leagues[m.league]||m.league||'FOOTBALL',600,89,18,'#061726',true,'center',190);
+  text(m.leagueDisplay||window.FutureCodeBrandExportData?.leagueName(m.league)||leagues[m.league]||m.league||'FOOTBALL',600,89,18,'#061726',true,'center',190);
   plate(426,111,348,86);
   text(m.kickoffYangon||m.kickoff||'ပွဲချိန် မရသေးပါ',600,142,24,'#fff',true,'center',325);
   text('မြန်မာစံတော်ချိန် (MMT)',600,177,16,'#dce9f5',false,'center');

@@ -41,27 +41,30 @@
       });
     } finally { URL.revokeObjectURL(url); }
   }
-  // Draw Myanmar ligatures natively after html2canvas, so joined glyphs
-  // and diacritics survive in BCF PNG league headings.
-  function repaintBcfLeagues(canvas,root){
-    if(window.FutureCodeBrandConfig?.id!=="bet-city-family")return;
-    const ctx=canvas.getContext?.("2d");if(!ctx)return;
-    const origin=root.getBoundingClientRect(),scale=canvas.width/Math.max(origin.width,1);
-    for(const span of root.querySelectorAll(".odds-league-heading span:last-child")){
-      const box=span.getBoundingClientRect(),name=String(span.textContent||"").normalize("NFC").trim();
-      if(!name||box.width<20||box.height<12)continue;
-      const x=(box.left-origin.left)*scale,y=(box.top-origin.top)*scale;
-      const w=Math.min(box.width*scale,canvas.width-x),h=box.height*scale;
-      if(w<20||h<10)continue;
-      ctx.save();
-      ctx.fillStyle="#0a328a";ctx.fillRect(x-3*scale,y-2*scale,w+6*scale,h+4*scale);
-      ctx.fillStyle="#fff8ec";ctx.textAlign="left";ctx.textBaseline="middle";
-      let fontSize=22;
-      do{
-       ctx.font='700 '+fontSize*scale+'px "Noto Sans Myanmar",sans-serif';
-       if(ctx.measureText(name).width<=w-7*scale)break;
-      }while(--fontSize>14);
-      ctx.fillText(name,x+2*scale,y+h/2);
+  // html2canvas lays out Myanmar syllables as separate text fragments. Hide
+  // league labels only in its private clone and paint each complete label ONCE
+  // with the browser's native shaping, retaining the real background and logo.
+  function repaintLeagueLabels(canvas,root){
+    const ctx=canvas.getContext("2d");
+    const origin=root.getBoundingClientRect(),scale=canvas.width/origin.width;
+    for(const label of root.querySelectorAll("[data-fc-native-league]")){
+      const box=label.getBoundingClientRect(),style=getComputedStyle(label);
+      const name=String(label.textContent||"").normalize("NFC").trim();
+      const left=parseFloat(style.paddingLeft)||0,right=parseFloat(style.paddingRight)||0;
+      const width=box.width-left-right-4,height=box.height;
+      if(!name||width<=0||height<=0)continue;
+      ctx.save();ctx.setTransform(scale,0,0,scale,0,0);
+      const x=box.left-origin.left+left+2,y=box.top-origin.top;
+      ctx.beginPath();ctx.rect(x,y,width,height);ctx.clip();
+      ctx.fillStyle=style.color;ctx.textAlign="left";ctx.textBaseline="middle";
+      let size=Math.min(parseFloat(style.fontSize)||26,30);
+      while(size>16){
+        ctx.font=(style.fontWeight||700)+' '+size+'px "Noto Sans Myanmar",sans-serif';
+        if(ctx.measureText(name).width<=width)break;
+        size--;
+      }
+      ctx.font=(style.fontWeight||700)+' '+size+'px "Noto Sans Myanmar",sans-serif';
+      ctx.fillText(name,x,y+height/2,width);
       ctx.restore();
     }
   }
@@ -353,12 +356,22 @@
       }
       body .fc-odds-direct-export.brand-odds-export .odds-league-heading {
         display:flex!important;align-items:center!important;gap:12px!important;
+        width:100%!important;min-width:0!important;margin:0!important;flex:none!important;
         color:#fff!important;font:900 26px/1.5 "Noto Sans Myanmar",sans-serif!important;
       }
       body .fc-odds-direct-export.brand-odds-export .odds-league-heading .league-crest,
       body .fc-odds-direct-export.brand-odds-export .odds-league-heading .league-mark {
         width:54px!important;height:54px!important;box-sizing:border-box!important;
         background:#fff!important;border-radius:8px!important;padding:4px!important;
+      }
+      body .fc-odds-direct-export.brand-odds-export .odds-league-heading span:last-child {
+        display:block!important;flex:1 1 0!important;min-width:0!important;
+        font:700 26px/1.9 "Noto Sans Myanmar",sans-serif!important;
+        letter-spacing:0!important;white-space:nowrap!important;overflow:hidden!important;
+      }
+      body .fc-odds-direct-export.brand-odds-export .odds-league-heading .league-crest,
+      body .fc-odds-direct-export.brand-odds-export .odds-league-heading .league-mark {
+        flex:0 0 54px!important;object-fit:contain!important;
       }
       body .fc-odds-direct-export .fc-odds-date-heading {
         background:linear-gradient(110deg,#111,var(--sheet-brand),#111)!important;
@@ -526,6 +539,9 @@
         new Promise(resolve=>setTimeout(resolve,4000))
       ]);
       await waitFrame();
+      for(const label of root.querySelectorAll(".odds-league-heading span:last-child, th.main-league-name")){
+        label.setAttribute("data-fc-native-league","");
+      }
       const height=Math.ceil(root.scrollHeight);
       if(height<70||height>13000)
         throw Error("PNG ပုံအမြင့်များလွန်းပါသည်။ ပုံခွဲ၍ Download လုပ်ပါ။");
@@ -551,11 +567,16 @@
             windowHeight:Math.max(800,Math.min(17000,height)),
             scrollX:0,
             scrollY:0,
-            foreignObjectRendering:false
+            foreignObjectRendering:false,
+            onclone:doc=>{
+              for(const label of doc.querySelectorAll(".fc-odds-direct-export [data-fc-native-league]")){
+                label.style.setProperty("visibility","hidden","important");
+              }
+            }
           }),25000,"Website HTML Screenshot");
           if(!canvas||!canvas.width||!canvas.height)
             throw Error("HTML Screenshot canvas အလွတ်ဖြစ်နေပါသည်");
-          repaintBcfLeagues(canvas,root);
+          repaintLeagueLabels(canvas,root);
           window.FutureCodeOddsDomFrame.lastCapture="html2canvas-website-dom";
           return {picture:canvas,height:canvas.height,width:canvas.width};
         }catch(error){

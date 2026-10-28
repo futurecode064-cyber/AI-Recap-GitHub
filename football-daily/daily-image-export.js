@@ -111,7 +111,7 @@
   const isFCJ=brand==="future-code-journal";
   const white=isFCJ?"#151410":"#ffffff",light=isFCJ?"#211e17":"#f7f8fa",rule=isFCJ?"#66502d":"#cbd2da",upper=isFCJ?"#3b301b":"#e7e9ed",upperAlt=isFCJ?"#302818":"#dfe2e7";
   const headerText=isFCJ?"#fff2cf":white;
-  const widths=[110,396,166,152,152,176],xs=[M];
+  const widths=[100,396,156,152,152,196],xs=[M];
   for(const w of widths)xs.push(xs[xs.length-1]+w);
 
   // Header color is the brand's own theme. Everything underneath the heading
@@ -162,7 +162,7 @@
     // Spreadsheet-style vertical and horizontal rules stay in the exported PNG.
     for(let i=0;i<xs.length;i++)fill(ctx,xs[i],y,1,68,rule);
     line(ctx,M,y+67,W-M*2,rule);
-    const clock=String(m.kickoffDisplay||m.kickoff||"").replace(/^.*? ည /,"ည ");
+    const clock=window.FutureCodeOddsClock?.short(m)||String(m.kickoff||m.kickoffDisplay||"—").match(/(?:[01]?\d|2[0-3]):[0-5]\d/)?.[0]||"—";
     text(ctx,clock,xs[0]+widths[0]/2,y+34,fit(ctx,clock,widths[0]-10,16,14),palette.bodyText,true,"center",widths[0]-10);
     const mid=xs[1]+widths[1]/2;
     crest(ctx,m.homeCrestUrl,mid-50,y+20,29,m.home);

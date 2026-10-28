@@ -16,6 +16,10 @@
   {bg:"#15090d",head:"#671019",panel:"#34181d",panelAlt:"#45242a",divider:"#9d7133",orange:"#ffd269",pale:"#fff0d4",muted:"#e1c4a6",white:"#fff5e6"}:
  fcjBranded?{bg:"#090909",head:"#322714",panel:"#191713",panelAlt:"#282217",divider:"#7d6032",orange:"#edc66b",pale:"#fff4d9",muted:"#c9bda3",white:"#fff8e8"}:
   {bg:"#101b20",head:"#1d3135",panel:"#203436",panelAlt:"#263d3d",divider:"#425855",orange:"#ffac75",pale:"#f7f5eb",muted:"#bcd0c9",white:"#f5f7f3"};
+ if(typeof FontFace!=="undefined"&&document.fonts?.add){
+  const localFont=new FontFace("Noto Sans Myanmar",'url("'+new URL("assets/fonts/NotoSansMyanmar-Variable.ttf",new URL(document.currentScript?.src||"canvas-image-kit.js",document.baseURI)).href+'")',{weight:"100 900",style:"normal"});
+  document.fonts.add(localFont);
+ }
  const FONT='"Noto Sans Myanmar",sans-serif';
  const imageCache=new Map();
  function sleep(ms){return new Promise(done=>setTimeout(done,ms))}
