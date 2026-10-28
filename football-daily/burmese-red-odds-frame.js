@@ -25,6 +25,7 @@
  }
  function badge(ctx,img,x,y){
   ctx.fillStyle="#eef3f1";ctx.beginPath();ctx.arc(x,y,33,0,2*Math.PI);ctx.fill();
+  if(!img){label(ctx,"—",x,y,24,"#829198",42);return;}
   let w=img.naturalWidth||img.width,h=img.naturalHeight||img.height,ratio=Math.min(57/w,57/h);
   ctx.drawImage(img,x-w*ratio/2,y-h*ratio/2,w*ratio,h*ratio);
  }
@@ -41,7 +42,15 @@
   const date=clean(settings.date),mode=settings.mode==="current"?"current":"original",red=colorOK(settings.color)?settings.color:"#b71624";
   const grouped=new Map();for(const m of rows){if(!grouped.has(m.league))grouped.set(m.league,[]);grouped.get(m.league).push(m);}
   for(const m of rows)if(m.upperTeam!==m.home&&m.upperTeam!==m.away)throw Error("ကြေးပေးအသင်း စစ်ဆေးပါ — "+m.home+"/"+m.away);
-  const icons=await Promise.all(rows.map(m=>Promise.all([load(m.homeCrestUrl,m.home),load(m.awayCrestUrl,m.away)])));
+  // A blocked third-party crest must not cancel every fixture's PNG export.
+  // Preserve verified crests that load; show an honest neutral mark otherwise.
+  const settled=await Promise.all(rows.map(m=>Promise.allSettled([load(m.homeCrestUrl,m.home),load(m.awayCrestUrl,m.away)])));
+  const missing=[];const icons=settled.map((pair,i)=>pair.map((r,j)=>{
+   if(r.status==="fulfilled")return r.value;
+   missing.push((j===0?rows[i].home:rows[i].away)+": "+r.reason?.message);
+   return null;
+  }));
+  if(missing.length)console.warn("Reference red poster: unavailable verified club crests",missing);
   await document.fonts?.ready;
   const W=1200,H=100+[...grouped.values()].reduce((n,a)=>n+72+a.length*104+10,0)+24;
   const c=document.createElement("canvas");c.width=W*2;c.height=H*2;
