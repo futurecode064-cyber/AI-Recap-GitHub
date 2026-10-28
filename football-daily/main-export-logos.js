@@ -8,7 +8,7 @@
  const verifiedCupLogos={"EFL Cup":"https://a.espncdn.com/i/leaguelogos/soccer/500/41.png","DFB-Pokal":"https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png","Copa del Rey":"https://a.espncdn.com/i/leaguelogos/soccer/500/80.png"};
  function leagueCrest(league){return leagues[league]?new URL("./assets/league-logos/"+leagues[league]+".png",document.baseURI).href:(verifiedCupLogos[league]||"");}
  function imageUrl(src){
-  if(typeof src==="string"&&src.includes("SSV-JeddelohII-Logo21_608x383_RGB.png"))return "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_SSV_Jeddeloh.svg?width=512";
+  if(typeof src==="string"&&src.includes("SSV-JeddelohII-Logo21_608x383_RGB.png"))return "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Logo_SSV_Jeddeloh.svg/330px-Logo_SSV_Jeddeloh.svg.png";
   if(teams[src])return new URL("./"+teams[src],document.baseURI).href;
   const alias=String(src||"").match(/crests\.football-data\.org\/([A-Z0-9]+)\.png/);
   return alias&&aliases[alias[1]]?leagueCrest(aliases[alias[1]]):src;
