@@ -45,14 +45,15 @@ jobs:
             for(let attempt=0;attempt<12;attempt++){
               await page.goto(origin+'/?builtin-frame-qa='+attempt,{waitUntil:'domcontentloaded',timeout:40000});
               try{
-                await page.locator('#brandPreviewStudio + .fc-built-in-frame-editor').waitFor({timeout:6500});
-                await page.locator('#resultsDownloadBar + .fc-built-in-frame-editor').waitFor({timeout:20000});
+                await page.locator('#fcpOriginalFrames .fc-built-in-frame-editor[data-frame-section="previews"]').waitFor({timeout:6500});
+                await page.locator('#fcpOriginalFrames .fc-built-in-frame-editor[data-frame-section="results"]').waitFor({timeout:20000});
                 loaded=true;break;
               }catch(error){if(attempt===11)throw error;await page.waitForTimeout(5000);}
             }
-            assert(loaded,'Built-in frame managers did not load on the live home page');
-            const preview=page.locator('#brandPreviewStudio + .fc-built-in-frame-editor');
+            assert(loaded,'Built-in frame managers are missing from the unified Frame Editor');
+            const preview=page.locator('#fcpOriginalFrames .fc-built-in-frame-editor[data-frame-section="previews"]');
             const nativePreview=page.locator('#brandFrame');
+            assert(await page.locator('#fcProfessionalFrameStudio #fcpOriginalFrames').count()===1,'Unified Frame Editor library missing');
             await preview.locator('.fc-bif-select').selectOption('bcf');
             await preview.locator('.fc-bif-name').fill('QA PREVIEW BUILTIN');
             await preview.locator('.fc-bif-color').fill('#aa2244');
@@ -62,8 +63,8 @@ jobs:
             await preview.locator('.fc-bif-hide').click();
             await page.waitForFunction(()=>![...document.querySelector('#brandFrame').options].some(o=>o.textContent==='QA PREVIEW BUILTIN'));
             await page.reload({waitUntil:'domcontentloaded',timeout:40000});
-            await page.locator('#brandPreviewStudio + .fc-built-in-frame-editor').waitFor({timeout:30000});
-            const previewAgain=page.locator('#brandPreviewStudio + .fc-built-in-frame-editor');
+            await page.locator('#fcpOriginalFrames .fc-built-in-frame-editor[data-frame-section="previews"]').waitFor({timeout:30000});
+            const previewAgain=page.locator('#fcpOriginalFrames .fc-built-in-frame-editor[data-frame-section="previews"]');
             assert(await page.evaluate(()=>![...document.querySelector('#brandFrame').options].some(o=>o.textContent==='QA PREVIEW BUILTIN')),'Hidden preview frame returned after refresh');
             await previewAgain.locator('.fc-bif-select').selectOption('bcf');
             await previewAgain.locator('.fc-bif-restore').click();
@@ -71,7 +72,7 @@ jobs:
             await previewAgain.locator('.fc-bif-reset').click();
             await page.waitForFunction(()=>document.querySelector('#brandFrame option')?.textContent==='BCF ခန့်မှန်း');
 
-            const results=page.locator('#resultsDownloadBar + .fc-built-in-frame-editor');
+            const results=page.locator('#fcpOriginalFrames .fc-built-in-frame-editor[data-frame-section="results"]');
             await results.locator('.fc-bif-select').selectOption('best');
             await results.locator('.fc-bif-name').fill('QA RESULT BUILTIN');
             await results.locator('.fc-bif-color').fill('#2255aa');
