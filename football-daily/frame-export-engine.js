@@ -96,7 +96,7 @@ async function exportAll(previewOnly){
  const assignments=studio.combos();
  if(!assignments.length){studio.status("Section အတွက် Frame မသတ်မှတ်ရသေးပါ။ Library မှ အမှန်ခြစ်၍ Save လုပ်ပါ။",true);return;}
  studio.setWorking(true);
- $("downloadLink").hidden=true;$("progressBar").style.width="0";
+ studio.clearExportPreview();$("progressBar").style.width="0";
  let outputURL=null,files=0;const warnings=[];
  try{
   await studio.loadData();
