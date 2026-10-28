@@ -25,7 +25,7 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 <div class="library-grid">
 <div class="panel"><h3>Frames · <span id="frameCount">0</span></h3><input id="search" type="search" placeholder="Frame နာမည် ရှာပါ"><label style="margin-top:13px">Section Filter<select id="librarySection"><option value="all">အားလုံး</option><option value="odds">ပေါက်ကြေး</option><option value="previews">ပွဲကြို</option><option value="specials">Special Choice</option><option value="results">ဂိုးရလဒ်</option><option value="ai">VIP Internet · Bookies · AI Tips</option><option value="news">ဘောလုံးသတင်း</option></select></label><div id="frameList" class="frame-scroll"></div></div>
 <div class="panel"><h2>Frame Settings</h2><p id="emptyFrame" class="hint">ဘယ်ဘက်မှ Frame ရွေးပါ။</p><div id="editorForm" hidden>
-<div class="field-grid"><label class="wide">Frame နာမည်<input id="frameName" maxlength="70"></label><label>Theme Color<input id="frameColor" type="color"></label><label>Banner Fit<select id="frameFit"><option value="contain">မဖြတ်ဘဲ အပြည့်</option><option value="cover">အပြည့်ဖြည့်</option></select></label><label>Top Banner အမြင့်<input id="frameTop" type="number" min="0" max="360"></label><label>Bottom Banner အမြင့်<input id="frameBottom" type="number" min="0" max="360"></label></div>
+<div class="field-grid"><label class="wide">Frame နာမည်<input id="frameName" maxlength="70"></label><label class="wide">Download PNG ဖိုင်နာမည် (မိမိပေးထားသည့်နာမည်အတိုင်း ထွက်မည်)<input id="frameDownloadName" maxlength="100" placeholder="ဥပမာ - BCF-မြန်မာကြေး"></label><label>Theme Color<input id="frameColor" type="color"></label><label>Banner Fit<select id="frameFit"><option value="contain">မဖြတ်ဘဲ အပြည့်</option><option value="cover">အပြည့်ဖြည့်</option></select></label><label>Top Banner အမြင့်<input id="frameTop" type="number" min="0" max="360"></label><label>Bottom Banner အမြင့်<input id="frameBottom" type="number" min="0" max="360"></label></div>
 <div class="upload"><label>အပေါ် Banner ပုံ<input id="frameTopFile" type="file" accept="image/png,image/jpeg,image/webp"></label><p id="topFileState"></p><button class="secondary" id="removeTop">Top ပုံဖြုတ်</button></div>
 <div class="upload"><label>အောက် Banner ပုံ<input id="frameBottomFile" type="file" accept="image/png,image/jpeg,image/webp"></label><p id="bottomFileState"></p><button class="secondary" id="removeBottom">Bottom ပုံဖြုတ်</button></div>
 <div class="line"></div><h3>ဒီ Frame အသုံးပြုမည့် Section များ</h3><div id="scopeChecks" class="scope-list"></div><p class="hint">အမှန်ခြစ်ထားသည့် Section များထဲမှာသာ ZIP ထုတ်မယ်။ Frame ပုံကို မဖျက်ပါ။</p>
@@ -37,6 +37,7 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 <div class="download-grid">
 <div class="panel"><h2>Download Filter</h2><label>Section<select id="downSection"><option value="all">Section အားလုံး</option><option value="odds">ပေါက်ကြေး</option><option value="previews">ပွဲကြိုသုံးသပ်ချက်</option><option value="specials">Special Choice</option><option value="results">ဂိုးရလဒ်</option><option value="ai">VIP Internet · Bookies · AI Tips</option><option value="news">ဘောလုံးသတင်း</option></select></label>
 <label style="margin-top:14px">Frame<select id="downFrame"><option value="all">သတ်မှတ်ထားသော Frame အားလုံး</option></select></label>
+<label style="margin-top:14px" id="oddsModeWrap">မြန်မာကြေး အမျိုးအစား (အနီရောင် Frame)<select id="oddsMode"><option value="original">မူလကြေး</option><option value="current">ယခုကြေး</option></select></label>
 <label style="margin-top:14px">လိဂ် / သတင်းအမျိုးအစား<select id="leagueFilter"><option value="all">အားလုံး</option></select></label>
 <label style="margin-top:14px">ပွဲ / သတင်း<select id="matchFilter"><option value="all">အားလုံး</option></select></label>
 <div class="line"></div><h3>Section အလိုက် PNG ပုံခွဲပုံစံ</h3><p class="hint">Section အားလုံး ZIP ထုတ်သော်လည်း အောက်က Section တစ်ခုချင်းစီ Setting အတိုင်း ပုံခွဲထုတ်ပေးမည်။</p><div id="sectionLayoutSettings" style="display:grid;grid-template-columns:1fr;gap:11px"></div>
@@ -46,6 +47,6 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 </main></div>
 <iframe class="engine" id="engineHome" title="Main site image engine" aria-hidden="true" tabindex="-1" src="./?frame-engine=1&tipEngine=20261028-local-crest-v6"></iframe>
 <iframe class="engine" id="engineOdds" title="Odds image engine" aria-hidden="true" tabindex="-1" src="./odds.html?frame-engine=1&tipEngine=20261028-local-crest-v6"></iframe>
-<script defer src="./frame-workspace.js?v=20261028-pair-layout-v5"></script>
-<script defer src="./frame-export-engine.js?v=20261028-pair-layout-v6"></script>
+<script defer src="./frame-workspace.js?v=20261028-filenames-red-v1"></script>
+<script defer src="./frame-export-engine.js?v=20261028-filenames-red-v1"></script>
 </body></html>
