@@ -103,8 +103,12 @@ test('Current-day leagues resolve to bundled logos on all sub-brands',()=>{
  }
 });
 
-test('28 October every team and competition crest is bundled for all six brands and main',()=>{
- const sheet=JSON.parse(read('data/odds/2026-10-28.json'));
+test('Current publication every team and competition crest is bundled for all six brands and main',()=>{
+ const report=JSON.parse(read('data/today.json'));
+ assert.match(report.reportDate,/^\\d{4}-\\d{2}-\\d{2}$/);
+ const sheet=JSON.parse(read('data/odds/'+report.reportDate+'.json'));
+ assert.equal(sheet.reportDate,report.reportDate);
+ assert.ok(sheet.matches.length,'daily odds cannot be empty');
  function read(file){return fs.readFileSync(path.join(root,file),'utf8');}
  const configs=[...Object.keys(brands),'kmm-sport-hub','bet-city-family',''];
  for(const id of configs){
