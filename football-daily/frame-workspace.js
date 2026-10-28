@@ -1,7 +1,7 @@
 "use strict";
 (function(){
 const $=id=>document.getElementById(id);
-const SECTION={odds:"ပေါက်ကြေး",previews:"ပွဲကြိုသုံးသပ်ချက်",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"AI ခန့်မှန်းချက်",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
+const SECTION={odds:"ပေါက်ကြေး",previews:"ပွဲကြိုသုံးသပ်ချက်",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"VIP Internet · Bookies · AI Tips",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
 const home=$("engineHome"),odds=$("engineOdds"),DB="future-code-professional-frame-studio-v2";
 const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odds-hyper-goal","odds-kmm","odds-special-one","odds-the-freedom","odds-bcf","odds-final-goal","odds-ko-chan","odds-team-pmm","odds-thuta","odds-ymc","odds-ko-tut-pi","odds-khin-khin-htar","preview-bcf","preview-daily","preview-final","preview-ggoal","preview-ko","preview-pmm","preview-htet","results-best","results-htet","results-kotwat","ai-best","ai-final","ai-special","news-journal","special-choice"];
 let state=null,currentId="",isNew=false,working=false,published=null,oddsData=null,archive=null,news=null,date="",savedURL=null;
@@ -9,11 +9,11 @@ const copy=o=>JSON.parse(JSON.stringify(o)),str=x=>String(x??"").trim();
 const goodColor=x=>/^#[\da-f]{6}$/i.test(x||"")?x:"#16486c";
 
 const layoutOptions={
- odds:[["two","ပွဲအားလုံး ၂ ပုံခွဲ"],["one","ပွဲအားလုံး ၁ ပုံတည်း"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
+ odds:[["two","ပွဲအားလုံးကို PNG ၂ ပုံခွဲ"],["one","ပွဲအားလုံး PNG တစ်ပုံတည်း"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  previews:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
  specials:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
- results:[["one","ပွဲအားလုံး တစ်ပုံ"],["two","ပွဲအားလုံး ၂ ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
- ai:[["one","AI ဇယား တစ်ပုံ"],["two","AI ဇယား ၂ ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
+ results:[["one","ပွဲအားလုံး တစ်ပုံ"],["two","ပွဲအားလုံး ၂ ပုံ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
+ ai:[["one","VIP / Bookies / AI ဇယား တစ်ပုံ"],["two","ဇယားကို PNG ၂ ပုံခွဲ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  news:[["one","တစ်ပုဒ်တစ်ပုံ"],["two","သတင်း ၂ ပုဒ် တစ်ပုံ"]]
 };
 const layoutDefaults={odds:"two",previews:"one",specials:"one",results:"one",ai:"one",news:"one"};
@@ -56,7 +56,7 @@ function migrateAssignments(){
  localStorage.setItem("fc-workspace-assignments-v1","yes");return changed;
 }
 async function readyEngines(){
- await waitFor(()=>home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob);
+ await waitFor(()=>home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob&&home.contentWindow?.FutureCodeFrameZip?.Archive);
  await home.contentWindow.FutureCodeProfessionalFrames.ready;
  await waitFor(()=>odds.contentWindow?.FutureCodeProfessionalFrames?.ready&&odds.contentWindow?.FutureCodeTableOddsFrames?.draw&&odds.contentWindow?.FutureCodeFrameEditor?.getOddsSheet);
  await odds.contentWindow.FutureCodeProfessionalFrames.ready;
@@ -237,8 +237,9 @@ $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();s
  initSectionLayouts();
  status("မူလ Website Export Engine နှစ်ခု ဖွင့်နေသည်…");await readyEngines();
  state=await dbRead();normalize();if(migrateAssignments())await dbWrite(state);
- await loadData().catch(e=>{status("Data တချို့ မရသေးပါ — "+e.message,true);});
- currentId=state.frames[0]?.id||"";renderList();renderEditor();renderExportControls();status("Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။");
+ let loadFailure=null;try{await loadData();}catch(e){loadFailure=e;}
+ currentId=state.frames[0]?.id||"";renderList();renderEditor();renderExportControls();
+ status(loadFailure?"Frame Editor ဖွင့်ပြီး၊ Published Data မရသေးပါ — "+loadFailure.message:"Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။",!!loadFailure);
  }catch(e){console.error("Frame Editor",e);status("Frame Editor ဖွင့်မရပါ — "+e.message,true);}})();
-const script=document.createElement("script");script.src="./frame-export-engine.js?v=20261028-vip-layout-v3";document.head.append(script);
+// Export engine is loaded by an ordered defer tag in frame-editor.html. Do not inject it asynchronously.
 })();
