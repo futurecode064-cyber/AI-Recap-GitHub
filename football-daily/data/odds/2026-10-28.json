@@ -508,7 +508,8 @@
       "awayOdds": "1.05",
       "oddsProvider": "DraftKings",
       "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916919",
-      "oddsVerifiedDate": "2026-10-28"
+      "oddsVerifiedDate": "2026-10-28",
+      "homeCrestUrl": "https://www.ssv-regionalliga.de/files/cto_layout/img/vereinswappen/SSV-JeddelohII-Logo21_608x383_RGB.png"
     },
     {
       "number": 15,
@@ -677,7 +678,16 @@
       "pdfLastColumn": "3-0",
       "eligibleForPreview": false,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "homeCrestUrl": "https://futbolme.com/static/img/club/escudo1929.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "homeOdds": "67.00",
+      "drawOdds": "29.00",
+      "awayOdds": "1.04",
+      "oddsSourceUrl": "https://oddseek.com/football/cd-anaitasuna-vs-deportivo-alaves-13655408",
+      "oddsVerifiedDate": "2026-10-28",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ"
     },
     {
       "number": 20,
@@ -707,12 +717,13 @@
       "espnMatchId": "401928527",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928527",
       "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
-      "homeOdds": "18.00",
-      "drawOdds": "10.50",
-      "awayOdds": "1.11",
-      "oddsProvider": "DraftKings",
-      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401928527",
-      "oddsVerifiedDate": "2026-10-28"
+      "homeOdds": "25.00",
+      "drawOdds": "11.00",
+      "awayOdds": "1.14",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ",
+      "oddsSourceUrl": "https://oddseek.com/football/cd-tarancon-vs-levante-13655411",
+      "oddsVerifiedDate": "2026-10-28",
+      "homeCrestUrl": "https://futbolme.com/static/img/club/escudo6419.png"
     },
     {
       "number": 21,
@@ -737,7 +748,16 @@
       "pdfLastColumn": "2-1",
       "eligibleForPreview": false,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "homeCrestUrl": "https://assets.footylogos.com/previews/alcoyano-logo-footylogos-1200.webp",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/84.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "homeOdds": "6.40",
+      "drawOdds": "4.40",
+      "awayOdds": "1.62",
+      "oddsSourceUrl": "https://oddseek.com/football/alcoyano-vs-mallorca-13655777",
+      "oddsVerifiedDate": "2026-10-28",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ"
     },
     {
       "number": 22,
@@ -762,7 +782,16 @@
       "pdfLastColumn": "0-3",
       "eligibleForPreview": false,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "homeCrestUrl": "https://futbolme.com/static/img/club/escudo4301.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "homeOdds": "13.80",
+      "drawOdds": "7.00",
+      "awayOdds": "1.24",
+      "oddsSourceUrl": "https://oddseek.com/football/cd-covadonga-vs-real-valladolid-13655769",
+      "oddsVerifiedDate": "2026-10-28",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ"
     },
     {
       "number": 23,
@@ -787,7 +816,16 @@
       "pdfLastColumn": "2-0",
       "eligibleForPreview": false,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "homeCrestUrl": "https://assets.footylogos.com/previews/cd-cieza-logo-footylogos-1200.webp",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3747.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "homeOdds": "6.40",
+      "drawOdds": "4.90",
+      "awayOdds": "1.50",
+      "oddsSourceUrl": "https://oddseek.com/football/cd-cieza-vs-granada-13655784",
+      "oddsVerifiedDate": "2026-10-28",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ"
     },
     {
       "number": 24,
@@ -813,7 +851,15 @@
       "eligibleForPreview": false,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+      "homeCrestUrl": "https://assets.footylogos.com/previews/cda-navalcarnero-logo-footylogos-1200.webp",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "homeOdds": "18.00",
+      "drawOdds": "9.90",
+      "awayOdds": "1.09",
+      "oddsSourceUrl": "https://checkbestodds.com/football-odds/spain",
+      "oddsVerifiedDate": "2026-10-28",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ"
     },
     {
       "number": 25,
@@ -842,7 +888,14 @@
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
       "espnMatchId": "401928487",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928487",
-      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png"
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "homeCrestUrl": "https://assets.footylogos.com/previews/salamanca-cf-uds-logo-footylogos-1200.webp",
+      "homeOdds": "10.75",
+      "drawOdds": "6.20",
+      "awayOdds": "1.22",
+      "oddsSourceUrl": "https://checkbestodds.com/football-odds/spain",
+      "oddsVerifiedDate": "2026-10-28",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ"
     },
     {
       "number": 26,
@@ -867,7 +920,16 @@
       "pdfLastColumn": "2-1",
       "eligibleForPreview": false,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "homeCrestUrl": "https://futbolme.com/static/img/club/escudo3972.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "homeOdds": "51.00",
+      "drawOdds": "29.00",
+      "awayOdds": "1.02",
+      "oddsSourceUrl": "https://www.sportytrader.com/en/odds/ue-tavernes-valencia-8876736/",
+      "oddsVerifiedDate": "2026-10-28",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ"
     },
     {
       "number": 27,
@@ -897,12 +959,13 @@
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928548",
       "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3842.png",
-      "homeOdds": "4.20",
-      "drawOdds": "3.80",
-      "awayOdds": "1.83",
-      "oddsProvider": "DraftKings",
-      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401928548",
-      "oddsVerifiedDate": "2026-10-28"
+      "homeOdds": "4.25",
+      "drawOdds": "3.84",
+      "awayOdds": "1.73",
+      "oddsProvider": "Comparison – best listed prices, bookmakers may differ",
+      "oddsSourceUrl": "https://checkbestodds.com/football-odds/spain",
+      "oddsVerifiedDate": "2026-10-28",
+      "homeCrestUrl": "https://assets.footylogos.com/previews/xerez-cd-logo-footylogos-1200.webp"
     }
   ]
 }
