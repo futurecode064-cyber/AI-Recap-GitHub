@@ -146,7 +146,7 @@
   ctx.fillStyle=frame.panel;ctx.fillRect(x,y,insideW,stripH);
   ctx.textAlign="left";ctx.fillStyle="#ffffff";
   font(ctx,23,800);
-  ctx.fillText("AI ခန့်မှန်းချက်များ · "+(opts.matchCount||"")+" ပွဲ",x+14,y+42);
+  ctx.fillText("VIP Internet · Bookies · AI Tips · "+(opts.matchCount||"")+" ပွဲ",x+14,y+42);
   ctx.textAlign="right";font(ctx,19,700);
   ctx.fillText(String(opts.date||""),x+insideW-14,y+42);
   ctx.drawImage(source,0,tableTop,WIDTH,tableSourceH,
@@ -161,6 +161,12 @@
   };
   const AI_BRAND={best:"BEST YOUR CHOICE",final:"FINAL GOAL",special:"SPECIAL ONE GROUP"};
   const FRAME_IDS=Object.freeze(["standard","best","final","special"]);
+  // Never truncate a full ISO/Yangon date into the narrow kickoff-time column.
+  function kickoffClock(raw){
+   const value=String(raw||"").replace(/[၀-၉]/g,d=>String("၀၁၂၃၄၅၆၇၈၉".indexOf(d))).trim();
+   const found=value.match(/(?:^|[ T])([01]?\d|2[0-3]):([0-5]\d)(?:\s*(AM|PM))?/i);
+   return found?found[1].padStart(2,"0")+":"+found[2]+(found[3]?" "+found[3].toUpperCase():""):"—";
+  }
   async function renderBlob(page,opts={}){
   if(!page?.matchCount)throw Error("No matches to export");
   const {date,part=1,total=1,scope="all",predict,leagueLabel,leagueLogo,teamName,teamLogo,displayTime}=opts;
@@ -208,7 +214,7 @@
     if(!Array.isArray(scores)||scores.length!==3||scores.some(s=>!(/^(?:\d+-\d+|—)$/.test(s))))throw Error("Invalid AI scoreline");
     rect(ctx,0,y,WIDTH,ROW_H,"#f7f8fc");
     rect(ctx,0,y,112,ROW_H,"#f0f2f8");
-    text(ctx,displayTime?.(m)||"—",56,y+47,106,20,"center","#152457");
+    text(ctx,kickoffClock(displayTime?.(m)||m.sourceKickoff||m.kickoff||m.kickoffYangon),56,y+47,106,20,"center","#152457");
     text(ctx,teamName?.(m,"home")||m.home,352,y+46,219,21,"right","#141b36");
     imageOrFallback(ctx,await loaded(teamLogo?.(m,"home")),366,y+16,43,43);
     text(ctx,"နှင့်",458,y+46,69,15,"center","#65708c");
@@ -262,6 +268,6 @@
     }
     return downloadBlob(blob,"future-code-ai-"+date+"-"+slug(scope)+"-"+part+"-of-"+total+".png");
   }
-  return Object.freeze({MAX_ROWS,FRAME_IDS,FRAME_DOWNLOAD_NAMES,frameFileName,planPages,planSinglePage,dim,renderBlob,downloadBlob,savePage});
+  return Object.freeze({MAX_ROWS,FRAME_IDS,FRAME_DOWNLOAD_NAMES,frameFileName,planPages,planSinglePage,dim,kickoffClock,renderBlob,downloadBlob,savePage});
 });
 
