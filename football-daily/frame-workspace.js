@@ -3,7 +3,7 @@
 const $=id=>document.getElementById(id);
 const SECTION={odds:"ပေါက်ကြေး",previews:"ပွဲကြိုသုံးသပ်ချက်",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"VIP Internet · Bookies · AI Tips",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
 const home=$("engineHome"),odds=$("engineOdds"),DB="future-code-professional-frame-studio-v2";
-const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odds-hyper-goal","odds-kmm","odds-special-one","odds-the-freedom","odds-bcf","odds-final-goal","odds-ko-chan","odds-team-pmm","odds-thuta","odds-ymc","odds-ko-tut-pi","odds-khin-khin-htar","preview-bcf","preview-daily","preview-final","preview-ggoal","preview-ko","preview-pmm","preview-htet","results-best","results-htet","results-kotwat","ai-best","ai-final","ai-special","news-journal","special-choice"];
+const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odds-hyper-goal","odds-kmm","odds-special-one","odds-the-freedom","odds-bcf","odds-final-goal","odds-ko-chan","odds-team-pmm","odds-thuta","odds-ymc","odds-ko-tut-pi","odds-khin-khin-htar","odds-burmese-red","preview-bcf","preview-daily","preview-final","preview-ggoal","preview-ko","preview-pmm","preview-htet","results-best","results-htet","results-kotwat","ai-best","ai-final","ai-special","news-journal","special-choice"];
 let state=null,currentId="",isNew=false,working=false,published=null,oddsData=null,archive=null,news=null,date="",savedURL=null;
 const copy=o=>JSON.parse(JSON.stringify(o)),str=x=>String(x??"").trim();
 const goodColor=x=>/^#[\da-f]{6}$/i.test(x||"")?x:"#16486c";
@@ -51,9 +51,15 @@ function normalize(){
  if(!state||state.version!==2||!Array.isArray(state.frames))state={version:2,frames:[],selected:{},placements:{}};
  const w=home.contentWindow;
  for(const id of IDS)if(!frame(id)){const original=w.FutureCodeProfessionalFrames.getFrame(id);if(original)state.frames.push(original);}
- if(state.frames.length>130)throw Error("Frame အရေအတွက် ၁၃၀ ကျော်ပါသည်။");
+ for(const f of state.frames)if(typeof f.downloadName!=="string")f.downloadName=f.name||"Frame";
+  if(state.frames.length>130)throw Error("Frame အရေအတွက် ၁၃၀ ကျော်ပါသည်။");
  for(const k of TYPES){state.placements[k]=[...new Set((Array.isArray(state.placements[k])?state.placements[k]:[]).filter(id=>!!frame(id)))];
   if(!assigned(state.selected[k],k))state.selected[k]="none";}
+}
+function assignReferenceRed(){
+ if(localStorage.getItem("fc-red-reference-assignment-v1"))return false;
+ const id="odds-burmese-red";if(frame(id)&&!assigned(id,"odds"))state.placements.odds.push(id);
+ localStorage.setItem("fc-red-reference-assignment-v1","yes");return true;
 }
 function migrateAssignments(){
  if(localStorage.getItem("fc-workspace-assignments-v1"))return false;
@@ -117,7 +123,7 @@ function showEditor(){
  const f=frame(currentId);$("emptyFrame").hidden=!!f||isNew;$("editorForm").hidden=!(f||isNew);
  if(!f&&!isNew)return;
  const v=f||{name:"Frame အသစ်",color:"#194b75",top:110,bottom:75,fit:"contain",topImage:"",bottomImage:""};
- $("frameName").value=v.name;$("frameColor").value=goodColor(v.color);
+ $("frameName").value=v.name;$("frameDownloadName").value=v.downloadName||v.name;$("frameColor").value=goodColor(v.color);
  $("frameTop").value=v.top;$("frameBottom").value=v.bottom;$("frameFit").value=v.fit;
  $("frameTopFile").value=$("frameBottomFile").value="";
  $("topFileState").textContent=v.topImage?"ကိုယ်ပိုင်ပုံ ရှိသည်":"မူရင်း Banner / အရောင်";
@@ -157,7 +163,8 @@ async function submit(){
  if(fresh&&frames().length>=130)throw Error("Frame ၁၃၀ မျိုး ပြည့်နေပါပြီ။");
  const topImage=await compress($("frameTopFile").files[0]),bottomImage=await compress($("frameBottomFile").files[0]);
  const id=fresh?"pro-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7):prior.id;
- const item={...(prior||{id,builtin:false,topImage:"",bottomImage:""}),name,color:goodColor($("frameColor").value),fit:$("frameFit").value==="cover"?"cover":"contain",top:Math.round(top),bottom:Math.round(bottom)};
+ const downloadName=str($("frameDownloadName").value).slice(0,100)||name;
+  const item={...(prior||{id,builtin:false,topImage:"",bottomImage:""}),name,downloadName,color:goodColor($("frameColor").value),fit:$("frameFit").value==="cover"?"cover":"contain",top:Math.round(top),bottom:Math.round(bottom)};
  if(topImage!==null)item.topImage=topImage;if(bottomImage!==null)item.bottomImage=bottomImage;
  const scopes=[...$("scopeChecks").querySelectorAll("input:checked")].map(x=>x.value);
  if(fresh)state.frames.push(item);else Object.assign(prior,item);
@@ -192,7 +199,7 @@ function renderExportControls(){
 function renderLeagueFilter(){
  const k=$("downSection").value,host=$("leagueFilter"),old=host.value;
  host.replaceChildren(new Option("အားလုံး","all"));
- if(k!=="all")for(const value of new Set(rawData(k).map(m=>m.league||m.category).filter(Boolean)))host.add(new Option(value,value));
+ if(k!=="all")for(const value of new Set(rawData(k).map(m=>m.league||m.category).filter(Boolean)))host.add(new Option(rawData(k).find(m=>(m.league||m.category)===value)?.leagueDisplay||odds.contentWindow.FutureCodeBurmeseRedOddsFrame?.leagueName?.({league:value})||value,value));
  host.value=[...host.options].some(x=>x.value===old)?old:"all";
  renderMatchFilter();
 }
@@ -240,15 +247,15 @@ $("deleteFrame").onclick=async()=>{const f=frame(currentId);if(!f||f.builtin||!c
  try{state.frames=state.frames.filter(x=>x.id!==f.id);for(const k of TYPES){state.placements[k]=state.placements[k].filter(x=>x!==f.id);if(state.selected[k]===f.id)state.selected[k]="none";}currentId=state.frames[0]?.id||"";await save("ကိုယ်ပိုင် Frame ဖျက်ပြီး");}catch(e){status(e.message,true);}};
 $("removeTop").onclick=()=>resetBanner("topImage");$("removeBottom").onclick=()=>resetBanner("bottomImage");
 $("backup").onclick=exportState;$("importBackup").onchange=async e=>{try{await importState(e.target.files[0]);}catch(x){status(x.message,true);}e.target.value="";};
-$("downSection").onchange=renderExportControls;$("leagueFilter").onchange=renderMatchFilter;
+$("downSection").onchange=()=>{$("oddsModeWrap").hidden=!("all"===$("downSection").value||"odds"===$("downSection").value);renderExportControls();};$("oddsMode").onchange=clearExportPreview;$("leagueFilter").onchange=renderMatchFilter;
 $("downFrame").onchange=clearExportPreview;$("matchFilter").onchange=clearExportPreview;
 $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();status("Published Data ပြန်ရယူပြီး။");}catch(e){status(e.message,true);}};
 (async()=>{try{
  initSectionLayouts();
  status("မူလ Website Export Engine နှစ်ခု ဖွင့်နေသည်…");await readyEngines();
- state=await dbRead();normalize();if(migrateAssignments())await dbWrite(state);
+ state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed();if(migrated||added)await dbWrite(state);
  let loadFailure=null;try{await loadData();}catch(e){loadFailure=e;}
- currentId=state.frames[0]?.id||"";renderList();renderEditor();renderExportControls();
+ currentId=state.frames[0]?.id||"";$("oddsModeWrap").hidden=false;renderList();renderEditor();renderExportControls();
  status(loadFailure?"Frame Editor ဖွင့်ပြီး၊ Published Data မရသေးပါ — "+loadFailure.message:"Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။",!!loadFailure);
  }catch(e){console.error("Frame Editor",e);status("Frame Editor ဖွင့်မရပါ — "+e.message,true);}})();
 // Export engine is loaded by an ordered defer tag in frame-editor.html. Do not inject it asynchronously.
