@@ -77,7 +77,7 @@ jobs:
             await page.locator('#downZip').click();
             const download=await dl;
             assert(download.suggestedFilename().endsWith('.zip'),'ZIP download missing');
-            await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('ZIP အဆင်သင့်'),null,{timeout:30000});
+            await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('အဆင်သင့်') && document.querySelector('#downloadLink')?.download.endsWith('.zip'),null,{timeout:30000});
             const page2=await context.newPage();
             await page2.goto(origin,{waitUntil:'domcontentloaded'});
             const link=await page2.locator('a[href="./frame-editor.html"]').count();
