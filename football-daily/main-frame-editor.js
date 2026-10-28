@@ -148,7 +148,7 @@
  function init(){
   const target=document.getElementById("mainTableOddsFrames");if(!target)return;
   panel=document.createElement("section");panel.id="futureCodeFrameEditor";
-  panel.innerHTML=`<h3>Frame Manager — Frame အသစ်ထည့် / ပြင် / ဖြုတ်</h3>
+  panel.innerHTML=`<h3>ပေါက်ကြေး — မူရင်း Frame / Custom Frame အသေးစိတ် ပြင်ဆင်ရန်</h3>
   <p>JPG/PNG Frame ပုံတင်နိုင်ပြီး အရောင်၊ Frame အပေါ်/အောက် ပုံအပိုင်းကို စိတ်ကြိုက်သတ်မှတ်နိုင်ပါတယ်။ ပြင်ထားတာတွေက ဒီ Browser ထဲမှာပဲ သိမ်းပါတယ်။ တခြားဖုန်း/ကွန်ပျူတာသို့ ပြောင်းဖို့ Backup Download / Import သုံးပါ။</p>
   <div class="fcfe-grid">
    <label>Frame နာမည်<input id="fcfeName" maxlength="70" type="text"></label>
@@ -188,7 +188,14 @@
    @media(max-width:620px){#futureCodeFrameEditor .fcfe-row{grid-template-columns:1fr}}
   `;
   document.head.appendChild(style);
-  target.querySelector("#tofOutput")?.before(panel);
+  // All odds frame controls live in the primary Frame Editor.
+  const place=()=>{const studio=document.getElementById("fcProfessionalFrameStudio");if(!studio)return false;studio.append(panel);return true;};
+  if(!place()){
+    target.querySelector("#tofOutput")?.before(panel);
+    const watcher=new MutationObserver(()=>{if(place())watcher.disconnect();});
+    watcher.observe(document.body,{childList:true,subtree:true});
+    setTimeout(()=>watcher.disconnect(),15000);
+  }
   document.getElementById("tofDesign").addEventListener("change",fill);
   node("fcfeFile").addEventListener("change",async e=>{
    try{pendingImage=await upload(e.target.files[0]);node("fcfePicture").textContent="Frame ပုံအသစ် ရွေးပြီး။ သိမ်းရန် ခလုတ်နှိပ်ပါ။";}
