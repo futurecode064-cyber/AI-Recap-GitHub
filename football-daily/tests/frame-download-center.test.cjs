@@ -79,3 +79,14 @@ test('all current source cup competitions resolve to a real league logo',()=>{
  }
  assert.match(read('frame-editor.html'),/frame-workspace\.js\?v=20261028-pair-layout-v5/);
 });
+
+test('every AI poster uses owner three-column title and HH:mm-only fixture clock',()=>{
+ const ai=require('../main-ai-bulk-export.js');
+ assert.equal(ai.kickoffClock('2026-10-29 02:00 MMT'),'02:00');
+ assert.equal(ai.kickoffClock('11:15 PM'),'11:15 PM');
+ assert.equal(ai.kickoffClock('2026-10-28T19:30:00Z'),'19:30');
+ assert.equal(ai.kickoffClock('not known'),'—');
+ assert.match(read('main-ai-bulk-export.js'),/VIP Internet · Bookies · AI Tips · /);
+ assert.match(read('frame-export-engine.js'),/displayTime:m=>m.sourceKickoff\|\|m.kickoff\|\|m.kickoffYangon/);
+ assert.match(read('main-ai-score.js'),/const text=String\(m.sourceKickoff\|\|m.kickoff\|\|m.kickoffYangon/);
+});
