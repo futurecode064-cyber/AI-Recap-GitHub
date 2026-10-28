@@ -21,7 +21,7 @@ if(!v||v.version!==2||!Array.isArray(v.frames)||v.frames.length>130)throw Error(
 const out=empty(),used=new Set();
 out.frames=v.frames.filter(x=>x&&/^[a-z0-9-]{2,60}$/.test(x.id)&&!used.has(x.id)&&used.add(x.id)).map(x=>({
 id:x.id,name:trim(x.name)||"My Frame",color:color(x.color),top:number(x.top,110),bottom:number(x.bottom,75),
-fit:x.fit==="cover"?"cover":"contain",downloadName:trim(x.downloadName||x.name,100),topImage:pic(x.topImage),bottomImage:pic(x.bottomImage),builtin:allTemplates.some(t=>t.id===x.id)}));
+fit:["contain","cover","stretch"].includes(x.fit)?x.fit:"contain",downloadName:trim(x.downloadName||x.name,100),topImage:pic(x.topImage),bottomImage:pic(x.bottomImage),builtin:allTemplates.some(t=>t.id===x.id)}));
 for(const f of allTemplates)if(!out.frames.some(x=>x.id===f.id))out.frames.push({...f});
 for(const k of types){
  const id=v.selected?.[k];out.selected[k]=getId(id,out.frames)?id:"none";
@@ -47,7 +47,8 @@ function artwork(ctx,img,w,h,y,fit){
 if(!img||h<=0)return;
 const iw=img.naturalWidth||img.width,ih=img.naturalHeight||img.height;
 ctx.save();ctx.beginPath();ctx.rect(0,y,w,h);ctx.clip();
-if(fit==="cover"){const s=Math.max(w/iw,h/ih),cw=w/s,ch=h/s;ctx.drawImage(img,(iw-cw)/2,(ih-ch)/2,cw,ch,0,y,w,h);}
+if(fit==="stretch"){ctx.drawImage(img,0,0,iw,ih,0,y,w,h);}
+else if(fit==="cover"){const s=Math.max(w/iw,h/ih),cw=w/s,ch=h/s;ctx.drawImage(img,(iw-cw)/2,(ih-ch)/2,cw,ch,0,y,w,h);}
 else{const s=Math.min(w/iw,h/ih),dw=iw*s,dh=ih*s;ctx.drawImage(img,(w-dw)/2,y+(h-dh)/2,dw,dh);}
 ctx.restore();
 }
@@ -70,8 +71,9 @@ const original=originalArtwork[f.id];
    if(th>0&&top>0)c.drawImage(im,0,0,im.width,th,0,0,w,top);
    if(bh>0&&bottom>0)c.drawImage(im,0,im.height-bh,im.width,bh,0,h-bottom,w,bottom);
   }else{
-   if(original.top&&top>0)artwork(c,await image(original.top),w,top,0,f.fit);
-   if(original.bottom&&bottom>0)artwork(c,await image(original.bottom),w,bottom,h-bottom,f.fit);
+   // Existing branded banner files are complete artwork (not backgrounds). Fill the chosen ribbon area without clipping their names/logos.
+   if(original.top&&top>0)artwork(c,await image(original.top),w,top,0,"stretch");
+   if(original.bottom&&bottom>0)artwork(c,await image(original.bottom),w,bottom,h-bottom,"stretch");
   }
  }
  artwork(c,a,w,top,0,f.fit);artwork(c,b,w,bottom,h-bottom,f.fit);
@@ -219,7 +221,7 @@ function init(){
 panel=document.createElement("section");panel.id="fcProfessionalFrameStudio";
 panel.innerHTML='<div class="fcp-head"><div><small>FUTURE CODE · MAIN WEBSITE</small><h2>Frame Editor — Frame အားလုံး တစ်နေရာတည်း</h2><p>Frame အသစ်ထည့်ပါ၊ မူရင်းပုံ ၂၅ မျိုးထဲက ရွေးပါ၊ နာမည်/အရောင်/Banner ပြင်ပါ၊ ဘယ် Download Section မှာ အသုံးပြုမလဲ ရွေးပါ။ ပုံဖိုင်မဖျက်ဘဲ ဖြုတ်/ပြန်ဖော်နိုင်ပါတယ်။</p></div><a href="./odds.html">ပေါက်ကြေးစာမျက်နှာ</a></div>'+
 '<div class="fcp-grid"><div class="fcp-card"><label>Frame ရွေးရန်<select id="fcpFrame"></select></label><label>Frame နာမည်<input id="fcpName" type="text" maxlength="70"></label>'+
-'<div class="fcp-pair"><label>Frame အရောင်<input id="fcpColor" type="color"></label><label>Banner Fit<select id="fcpFit"><option value="contain">အပြည့်ပေါ် (မဖြတ်)</option><option value="cover">အပြည့်ဖြည့် (အနားဖြတ်)</option></select></label></div>'+
+'<div class="fcp-pair"><label>Frame အရောင်<input id="fcpColor" type="color"></label><label>Banner Fit<select id="fcpFit"><option value="contain">အပြည့်ပေါ် (မဖြတ်)</option><option value="cover">အပြည့်ဖြည့် (အနားဖြတ်)</option><option value="stretch">အကျယ်/အမြင့် အပြည့် (မဖြတ်)</option></select></label></div>'+
 '<div class="fcp-pair"><label>အပေါ် Banner အမြင့်<input id="fcpTop" type="number" min="0" max="360"></label><label>အောက် Banner အမြင့်<input id="fcpBottom" type="number" min="0" max="360"></label></div>'+
 '<div class="fcp-upload"><b>အပေါ် Banner ပုံ (Top)</b><input type="file" id="fcpTopFile" accept="image/png,image/jpeg,image/webp"><small id="fcpTopState"></small><button id="fcpRemoveTop">Top Banner ဖြုတ်</button></div>'+
 '<div class="fcp-upload"><b>အောက် Banner ပုံ (Bottom)</b><input type="file" id="fcpBottomFile" accept="image/png,image/jpeg,image/webp"><small id="fcpBottomState"></small><button id="fcpRemoveBottom">Bottom Banner ဖြုတ်</button></div>'+
