@@ -142,10 +142,9 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
   return v("year")+"-"+v("month")+"-"+v("day");
  };
  const displayTime=m=>{
-  const text=String(m.kickoffYangon||"").trim();
-  const match=text.match(/(?:ည|မနက်)\s*\d{1,2}:\d{2}/);
-  if(match)return match[0];
-  return text||"—";
+  const text=String(m.sourceKickoff||m.kickoff||m.kickoffYangon||"").trim();
+  const match=text.match(/(?:^|[ T])([01]?\d|2[0-3]):([0-5]\d)(?:\s*(AM|PM))?/i);
+  return match?match[1].padStart(2,"0")+":"+match[2]+(match[3]?" "+match[3].toUpperCase():""):"—";
  };
  function scoreCell(score,i){
   const cell=make("span","fc-ai-score fc-ai-score-"+(i+1),score);
