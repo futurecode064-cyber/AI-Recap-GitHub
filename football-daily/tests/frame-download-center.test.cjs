@@ -61,3 +61,21 @@ test('daily master prompt references are all installed and owner instructions ta
  for(const p of ['DAILY_ONE_SHOT_V6_2026-10-27.md','MYANMAR_MATCH_PREVIEW_MASTER.md','DAILY_FOOTBALL_NEWS_TOP10.md','DAILY_TIPS_POLICY.md']) assert.ok(agent.includes(p),p);
  for(const p of ['docs/master-prompts/DAILY_ONE_SHOT_V6_2026-10-27.md','docs/master-prompts/MYANMAR_MATCH_PREVIEW_MASTER.md','docs/master-prompts/DAILY_FOOTBALL_NEWS_TOP10.md'])assert.ok(fs.statSync(path.join(base,p)).size>1000,p);
 });
+
+test('filter changes invalidate stale preview imagery before next section can show results',()=>{
+ const source=read('frame-workspace.js'),engine=read('frame-export-engine.js');
+ assert.match(source,/function clearExportPreview\(\)/);
+ assert.match(source,/preview\.removeAttribute\("src"\);preview\.hidden=true/);
+ assert.match(source,/\$\("downFrame"\)\.onchange=clearExportPreview/);
+ assert.match(source,/\$\("matchFilter"\)\.onchange=clearExportPreview/);
+ assert.match(engine,/studio\.clearExportPreview\(\)/);
+});
+
+test('all current source cup competitions resolve to a real league logo',()=>{
+ const logos=read('main-export-logos.js'),odds=read('odds.js');
+ for(const league of ['EFL Cup','DFB-Pokal','Copa del Rey']){
+  assert.ok(logos.includes('"'+league+'"'),league);
+  assert.ok(odds.includes('"'+league+'"'),league);
+ }
+ assert.match(read('frame-editor.html'),/frame-workspace\.js\?v=20261028-pair-layout-v5/);
+});
