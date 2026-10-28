@@ -1,0 +1,3641 @@
+{
+  "reportDate": "2026-10-27",
+  "published": true,
+  "matchDateTimezone": "Asia/Yangon",
+  "sourcePDF": "27(2).pdf",
+  "matches": [
+    {
+      "fixtureId": "fc-20261027-03",
+      "pdfRow": 3,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "Sassuolo",
+      "away": "Lazio",
+      "homeDisplay": "ဆက်ဆူအိုလို",
+      "awayDisplay": "လာဇီယို",
+      "sourceKickoff": "00:00",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 00:00 MMT",
+      "kickoffUtc": "2026-10-27T17:30:00Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အိမ်ရှင် ဆက်ဆူအိုလို က ဒီရာသီ ရှစ်ပွဲကစားပြီး ရှစ်မှတ်နဲ့ အဆင့် ၁၄ မှာ ရပ်တည်နေကာ နောက်ဆုံးလေးပွဲမှာ နိုင်ပွဲမရှိခဲ့တာကြောင့် အသင်းရဲ့လက်ရှိခြေစွမ်းက စိတ်ချရတဲ့အနေအထားမှာ မရှိပါဘူး။ နောက်ဆုံးကစားခဲ့တဲ့ ကိုမိုနဲ့ပွဲမှာလည်း နှစ်ဂိုးပြတ်အရေးနိမ့်ခဲ့ပြီး ဂိုးပေါက်တည့်ကန်ချက်တစ်ကြိမ်မှ မရရှိခဲ့တာက တိုက်စစ်ပိုင်းရဲ့ အခက်အခဲကို ပေါ်လွင်စေခဲ့ပါတယ်။ နည်းပြ အကွီလာနီ ရဲ့အသင်းဟာ အိမ်ကွင်းမှာတော့ ရှုံးပွဲမရှိသေးတာကြောင့် ဒီပွဲမှာ ခံစစ်ကိုအားပြုပြီး အခွင့်အရေးရှာဖို့ ကြိုးစားလာနိုင်ပေမယ့် ရင်ဆိုင်ရမယ့် လာဇီယို က လက်ရှိစီးရီးအေရဲ့ အတည်ငြိမ်ဆုံးအသင်းတွေထဲက တစ်သင်းဖြစ်နေပါတယ်။ လာဇီယိုဟာ ရှစ်ပွဲကစားပြီး ခုနစ်ပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ၂၂ မှတ် ရရှိထားသလို ဂျူဗင်တပ်စ်ကို သုံးဂိုးပြတ်အနိုင်ရခဲ့ပြီးနောက် ပါးမားကိုလည်း ၂-၁ ဂိုးနဲ့ ဆက်လက်အနိုင်ယူထားပါတယ်။ နည်းပြ ဂတ်တူဆို ရဲ့အသင်းက တိုက်စစ်မှာ ဂိုးသွင်းအားကောင်းနေသလို ရှစ်ပွဲမှာ ငါးဂိုးသာ ပေးထားရတဲ့ခံစစ်ကလည်း ဆက်ဆူအိုလိုရဲ့ အားနည်းနေတဲ့တိုက်စစ်ကို ထိန်းချုပ်နိုင်ဖို့ အခွင့်အရေးရှိပါတယ်။ ဆက်ဆူအိုလိုရဲ့ အိမ်ကွင်းမရှုံးသေးတဲ့မှတ်တမ်းကို ထည့်တွက်ရမှာဖြစ်ပေမယ့် နှစ်သင်းရဲ့ တိုက်စစ်အဆုံးသတ်နိုင်မှု၊ ခံစစ်တည်ငြိမ်မှုနဲ့ လက်ရှိယုံကြည်မှုတို့ကို နှိုင်းယှဉ်ကြည့်ရင် လာဇီယိုကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 1,
+      "specialChoice": true,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Como",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "result": "L",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "ဖရိုဆီနိုနီ",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "result": "L",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "အေစီမီလန်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "မွန်ဇာ",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "result": "L",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Juventus",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "result": "W",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ပါးမား",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Juventus",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "result": "W",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "မွန်ဇာ",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "result": "W",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Venezia",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "result": "W",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "အေစီမီလန်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D",
+          "competition": "Serie A",
+          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-lazio/4680430483483945232"
+        }
+      ],
+      "homeStanding": {
+        "position": 14,
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 12,
+        "goalsAgainst": 16,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 2,
+        "played": 8,
+        "wins": 7,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 16,
+        "goalsAgainst": 5,
+        "points": 22
+      },
+      "homeOdds": "3.40",
+      "drawOdds": "3.50",
+      "awayOdds": "2.10",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://www.theguardian.com/football/fixtures/2026/Oct/27",
+      "leagueLogoCandidateUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "leagueLogoSourcePage": "https://www.legaseriea.it/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "specialChoiceRank": 2,
+      "specialAnalysisParagraphs": [
+        "အိမ်ရှင် ဆက်ဆူအိုလို က ဒီရာသီ စီးရီးအေမှာ ရှစ်ပွဲကစားပြီး နှစ်ပွဲနိုင်၊ နှစ်ပွဲသရေ၊ လေးပွဲရှုံးနဲ့ ရှစ်မှတ်သာ ရရှိထားပြီး အဆင့် ၁၄ မှာ ရပ်တည်နေရတာကြောင့် ရာသီအစပိုင်းမှာ မျှော်လင့်ထားသလောက် ခြေစွမ်းမပြနိုင်သေးပါဘူး။ နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာအနိုင်ရခဲ့ပြီး နောက်ဆုံးနှစ်ပွဲဆက် ဖရိုဆီနိုနီကို ၄-၂ ဂိုး၊ ကိုမိုကို နှစ်ဂိုးပြတ်နဲ့ ရှုံးနိမ့်ထားတာကြောင့် အသင်းရဲ့ခံစစ်ပိုင်းက အထူးစိုးရိမ်စရာဖြစ်နေပါတယ်။ ရှစ်ပွဲမှာ ၁၆ ဂိုးအထိ ပေးထားရတာကလည်း အဲဒီအားနည်းချက်ကို ရှင်းရှင်းလင်းလင်း ပြသနေပြီး နည်းပြ အကွီလာနီ အနေနဲ့ ခံစစ်ကစားသမားတွေရဲ့ နေရာယူပုံနဲ့ ကွင်းလယ်ကနေ ခံစစ်ကိုပြန်လည်ကူညီပေးနိုင်မှုကို ပြုပြင်ဖို့ လိုအပ်နေပါတယ်။ ဒါပေမဲ့ ဆက်ဆူအိုလိုကို လုံးဝလျှော့တွက်လို့မရတဲ့အချက်က အိမ်ကွင်းမှာ ဒီရာသီ ရှုံးပွဲမရှိသေးဘဲ ဂျူဗင်တပ်စ်ကို ၃-၂ ဂိုးနဲ့ အနိုင်ယူခဲ့သလို အေစီမီလန်ကိုလည်း တစ်ဂိုးစီသရေကစားထားနိုင်တာဖြစ်ပါတယ်။ တိုက်စစ်မှာ ဒိုမီနီကိုဘာရာဒီ က အဓိကအားကိုးရသူဖြစ်ပြီး သူ့ရဲ့တောင်ပံကနေ ဂိုးဖန်တီးနိုင်မှုနဲ့ အဆုံးသတ်နိုင်စွမ်းက လာဇီယိုနောက်တန်းအတွက် သတိထားရမယ့်အချက်ဖြစ်သလို လော်ရီယန်တေး ရဲ့အရှိန်မြန်တဲ့တိုက်စစ်လှုပ်ရှားမှုတွေကလည်း အခွင့်အရေးတစ်ခုဖြစ်လာနိုင်ပါတယ်။ သို့သော် ကွင်းလယ်မှာ အစ္စမေးလ်ကိုနေး နဲ့ ဒန်နီရယ်ဘိုလိုကာ တို့ရဲ့ ဒဏ်ရာပြဿနာရှိနေသလို ခံစစ်မှာလည်း ကစားသမားအချို့ မပါဝင်နိုင်တဲ့အခြေအနေကြောင့် လာဇီယိုရဲ့အရှိန်မြန်တဲ့တိုက်စစ်ကို ရင်ဆိုင်ရာမှာ ဆက်ဆူအိုလိုအတွက် ပိုမိုခက်ခဲလာနိုင်ပါတယ်။",
+        "လာဇီယို ဘက်ကိုကြည့်ရင်တော့ ဒီရာသီ စီးရီးအေမှာ အထူးခြေစွမ်းပြနေတဲ့အသင်းဖြစ်ပြီး ရှစ်ပွဲကစားရာမှာ ခုနစ်ပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ရှုံးပွဲမရှိသေးဘဲ ၂၂ မှတ်နဲ့ အဆင့် ၂ မှာ ရပ်တည်နေပါတယ်။ နည်းပြ ဂတ်တူဆို လက်အောက်မှာ လာဇီယိုရဲ့ကစားပုံက အတော်လေးတည်ငြိမ်လာပြီး တိုက်စစ်မှာ ၁၆ ဂိုးသွင်းထားနိုင်သလို ခံစစ်ကလည်း ငါးဂိုးသာ ပေးထားရတာကြောင့် အနိုင်ရလဒ်တွေကို ထိုက်ထိုက်တန်တန် ရရှိနေတာဖြစ်ပါတယ်။ အထူးသဖြင့် ဒီရာသီ အဝေးကွင်းလေးပွဲစလုံး အနိုင်ရထားပြီး တစ်ဂိုးသာပေးထားရတဲ့မှတ်တမ်းက ဆက်ဆူအိုလိုလို အိမ်ကွင်းအားကောင်းတဲ့အသင်းကို ရင်ဆိုင်ရမယ့် ဒီပွဲအတွက် အရေးပါတဲ့အားသာချက်ဖြစ်နေပါတယ်။ နောက်ဆုံးငါးပွဲမှာ လေးပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ရှုံးပွဲမရှိထားသလို ဂျူဗင်တပ်စ်ကို အဝေးကွင်းမှာ သုံးဂိုးပြတ်အနိုင်ရခဲ့ပြီးနောက် ပါးမားကိုလည်း ၂-၁ ဂိုးနဲ့ ဆက်လက်အနိုင်ယူထားတာကြောင့် အသင်းရဲ့ယုံကြည်မှုက မြင့်မားနေပါတယ်။ ပါးမားနဲ့ပွဲမှာ ကွင်းလယ်ကစားသမား ကန်နက်သ်တေလာ က အရေးပါတဲ့ဦးဆောင်ဂိုးကို သွင်းယူပေးခဲ့သလို ဖရက်တက်စီ ရဲ့ကွင်းလယ်လှုပ်ရှားမှုတွေကလည်း အသင်းရဲ့တိုက်စစ်ကို ပံ့ပိုးပေးနိုင်ပါတယ်။ တောင်ပံမှာ ဇက်ကန်နီ နဲ့ အီဆက်ဆင် တို့ရဲ့ အရှိန်မြန်လှုပ်ရှားမှုနဲ့ နေရာလွတ်ရှာဖွေနိုင်မှုက ဆက်ဆူအိုလိုရဲ့ အားနည်းနေတဲ့နောက်တန်းကို တိုက်ရိုက်ဖိအားပေးနိုင်ဖို့ ရှိပါတယ်။ လာဇီယိုဘက်မှာ ဂတ်မန်ဆန် နဲ့ ရိုဗယ်လာ တို့ရဲ့ ဒဏ်ရာအခြေအနေကို ထည့်တွက်ရမှာဖြစ်ပေမယ့် အသင်းရဲ့လက်ရှိစနစ်မှာ ကစားသမားအများအပြားက တိုက်စစ်ကို ပါဝင်ပံ့ပိုးပေးနိုင်နေတာကြောင့် တစ်ဦးတည်းအပေါ် အလွန်အကျွံမှီခိုနေရတာမျိုး မရှိပါဘူး။ ဆက်ဆူအိုလိုအနေနဲ့ အိမ်ကွင်းမှာ ဘာရာဒီရဲ့စွမ်းဆောင်ရည်ကို အားပြုပြီး ဂိုးသွင်းအခွင့်အရေးတွေ ရှာဖွေနိုင်ပေမယ့် လာဇီယိုရဲ့ ကွင်းလယ်ဘောလုံးထိန်းချုပ်မှု၊ အဝေးကွင်းခံစစ်တည်ငြိမ်မှုနဲ့ ဂိုးအဆုံးသတ်နိုင်မှုတို့ကို ပွဲချိန်တစ်လျှောက် တားဆီးနိုင်ဖို့ မလွယ်ပါဘူး။ နှစ်သင်းရဲ့ လတ်တလောခြေစွမ်းနဲ့ ခံစစ်အခြေအနေကို နှိုင်းယှဉ်ကြည့်ရင် ဆက်ဆူအိုလိုမှာ အိမ်ကွင်းအားသာချက်ရှိနေသော်လည်း လာဇီယိုက အသင်းလိုက်စွမ်းဆောင်ရည်မှာ ပိုမိုပြည့်စုံနေပြီး အနိုင်သုံးမှတ်ရယူနိုင်ဖို့ အလားအလာပိုကောင်းနေတဲ့အတွက် လာဇီယိုကို ရွေးချယ်ပါတယ်။"
+      ],
+      "specialPreparedDate": "2026-10-27",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-a/2026/790980/",
+      "oddsVerifiedDate": "2026-10-27",
+      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332",
+      "myanmarOdds": {
+        "upperTeam": "လာဇီယို",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "3+25",
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "3+15"
+      },
+      "finalScore": "2-6",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874980",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401874980",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-04",
+      "pdfRow": 4,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "AS Roma",
+      "away": "Cagliari",
+      "homeDisplay": "ရိုးမား",
+      "awayDisplay": "ကက်ဂလီယာရီ",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "internetPrediction": "3-1",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "ဒီရာသီ အမှတ်ပေးဇယားထိပ်ပိုင်းမှာ ဆက်လက်ရပ်တည်ဖို့ ကြိုးစားနေတဲ့ ရိုးမား က ရှစ်ပွဲကစားပြီး ၁၈ မှတ်နဲ့ အဆင့် ၃ မှာ ရပ်တည်နေကာ လိဂ်မှာ ရှုံးပွဲမရှိသေးတာကြောင့် အသင်းရဲ့အခြေခံခြေစွမ်းက တည်ငြိမ်နေပါတယ်။ နောက်ဆုံး နာပိုလီနဲ့ကစားခဲ့တဲ့ပွဲမှာ သုံးဂိုးစီသရေကျခဲ့ပေမယ့် နောက်ကလိုက်ကစားရတဲ့အခြေအနေကနေ နှစ်ကြိမ်တိုင်တိုင် ပြန်လည်ချေပနိုင်ခဲ့တာက ရိုးမားကစားသမားတွေရဲ့ စိတ်ဓာတ်ပိုင်းအားကောင်းမှုကို ပြသခဲ့ပါတယ်။ နည်းပြ ဂတ်စ်ပါရီနီ လက်အောက်မှာ တိုက်စစ်မှူး မာလန် က ဂိုးသွင်းပိုင်းမှာ အဓိကအားကိုးရသူဖြစ်ပြီး သူ့ရဲ့ လှုပ်ရှားမှုတွေက ကက်ဂလီယာရီနောက်တန်းကို ဖိအားပေးနိုင်ဖို့ ရှိပါတယ်။ တစ်ဖက်မှာ ကက်ဂလီယာရီ က ၁၃ မှတ်နဲ့ အဆင့် ၉ မှာ ရှိနေပေမယ့် မွန်ဇာကို လေးဂိုးပြတ်ရှုံးခဲ့ပြီးနောက် ဘိုလော့ညာကိုလည်း နှစ်ဂိုးပြတ်ဆက်ရှုံးခဲ့တာကြောင့် အစောပိုင်းက ရရှိထားတဲ့ကစားပုံတည်ငြိမ်မှု ပျောက်ဆုံးလာပါတယ်။ ကက်ဂလီယာရီတိုက်စစ်မှာ ဒန်နီရယ် မာလ်ဒီနီ ကို အားကိုးရနိုင်ပေမယ့် လိဂ်ရှစ်ပွဲမှာ ခြောက်ဂိုးသာသွင်းထားတဲ့အသင်းအနေနဲ့ ရိုးမားရဲ့ခံစစ်ကို ကျော်ဖြတ်ဖို့ မလွယ်ပါဘူး။ အိမ်ကွင်းအားသာချက်အပြင် ဂိုးဖန်တီးနိုင်မှုနဲ့ ခက်ခဲတဲ့ပွဲတွေမှာ ရလဒ်ပြန်ယူနိုင်တဲ့စွမ်းရည်ကို ထည့်သွင်းစဉ်းစားရင် ရိုးမားကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 2,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "D",
+          "opponent": "နာပိုလီ",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "စလိုဗန်ဘရာတီစလာဗာ",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "ဂျီနိုအာ",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "ရီးရဲလ်မက်ဒရစ်",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "date": "2026-10-14"
+        },
+        {
+          "result": "D",
+          "opponent": "ကိုမို",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-11"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "opponent": "ဘိုလော့ညာ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "မွန်ဇာ",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "date": "2026-10-19"
+        },
+        {
+          "result": "D",
+          "opponent": "ဂျူဗင်တပ်စ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-11"
+        },
+        {
+          "result": "W",
+          "opponent": "အူဒီးနီးစ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-09-19"
+        },
+        {
+          "result": "W",
+          "opponent": "အတ္တလန်တာ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-09-12"
+        }
+      ],
+      "homeStanding": {
+        "position": 3,
+        "played": 8,
+        "wins": 5,
+        "draws": 3,
+        "losses": 0,
+        "goalsFor": 19,
+        "goalsAgainst": 6,
+        "points": 18
+      },
+      "awayStanding": {
+        "position": 9,
+        "played": 8,
+        "wins": 4,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 6,
+        "goalsAgainst": 9,
+        "points": 13
+      },
+      "homeOdds": "1.33",
+      "drawOdds": "4.75",
+      "awayOdds": "9.50",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://www.theguardian.com/football/fixtures/2026/Oct/27",
+      "leagueLogoCandidateUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "leagueLogoSourcePage": "https://www.legaseriea.it/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-a/2026/790983/",
+      "oddsVerifiedDate": "2026-10-27",
+      "myanmarOdds": {
+        "upperTeam": "ရိုးမား",
+        "bodyOdds": "1-95",
+        "goalTotalOdds": "3+25",
+        "currentBodyOdds": "1-95",
+        "currentGoalTotalOdds": "3+10"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/serie-a/2026/790983/",
+      "finalScore": "4-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874780",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401874780",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-05",
+      "pdfRow": 5,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "Torino",
+      "away": "Como",
+      "homeDisplay": "တိုရီနို",
+      "awayDisplay": "ကိုမို",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အိမ်ရှင် တိုရီနို က ရာသီအစပိုင်းမှာ ခြေစွမ်းမတည်ငြိမ်ခဲ့ပေမယ့် နောက်ဆုံးသုံးပွဲဆက် အနိုင်ရရှိပြီးနောက် ရှစ်ပွဲကစား ၁၃ မှတ်နဲ့ အဆင့် ၈ အထိ တက်လှမ်းလာနိုင်ခဲ့ပါတယ်။ အူဒီးနီးစ်၊ ပါးမားနဲ့ မွန်ဇာတို့ကို ဆက်တိုက်အနိုင်ယူခဲ့တဲ့ပွဲတွေမှာ တိုက်စစ်မှူး ဂျီယိုဗန်နီ ဆီမြွန်နီ နဲ့ ချီအဒမ်စ် တို့ရဲ့ ဂိုးသွင်းနိုင်မှုက အသင်းအတွက် အရေးပါခဲ့သလို ကွင်းလယ်ပိုင်းကလည်း တိုက်စစ်ကို ပိုမိုပံ့ပိုးပေးနိုင်လာပါတယ်။ ဒါပေမဲ့ ဒီပွဲမှာ ရင်ဆိုင်ရမယ့် ကိုမို က ရှစ်ပွဲမှာ ၁၇ မှတ်ရရှိပြီး အဆင့် ၅ မှာ ရပ်တည်နေတဲ့အသင်းဖြစ်သလို နောက်ဆုံး ဆက်ဆူအိုလိုကို နှစ်ဂိုးပြတ်အနိုင်ယူခဲ့တဲ့ပွဲမှာ တိုက်စစ်မှူး ဒူဗီကတ်စ် က နှစ်ဂိုးစလုံး သွင်းယူပေးနိုင်ခဲ့ပါတယ်။ နည်းပြ ဖာဘရီဂတ်စ် ရဲ့အသင်းဟာ ဘောလုံးပိုင်ဆိုင်မှုနဲ့ တိုက်စစ်ဖန်တီးပုံမှာ အားကောင်းနေပြီး နီကိုပါဇ် လို ဖန်တီးမှုကောင်းတဲ့ကစားသမားကိုလည်း ပိုင်ဆိုင်ထားတာကြောင့် တိုရီနိုခံစစ်အတွက် ခက်ခဲတဲ့ပွဲဖြစ်လာနိုင်ပါတယ်။ တိုရီနိုမှာ အိမ်ကွင်းအားသာချက်နဲ့ အနိုင်ပွဲဆက်နေတဲ့ယုံကြည်မှုရှိပေမယ့် ကိုမိုရဲ့ တိုက်စစ်ကစားပုံက ပိုမိုစုံလင်နေသလို ဂိုးဖန်တီးမှုမှာလည်း အသာစီးရနိုင်တာကြောင့် ဒီပွဲမှာ ကိုမိုကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 3,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "မွန်ဇာ",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "date": "2026-10-23"
+        },
+        {
+          "result": "W",
+          "opponent": "ပါးမား",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "date": "2026-10-19"
+        },
+        {
+          "result": "W",
+          "opponent": "အူဒီးနီးစ်",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-12"
+        },
+        {
+          "result": "D",
+          "opponent": "ဘိုလော့ညာ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-09-19"
+        },
+        {
+          "result": "L",
+          "opponent": "ရိုးမား",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "date": "2026-09-14"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "ဆက်ဆူအိုလို",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "မန်ချက်စတာယူနိုက်တက်",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "date": "2026-10-21"
+        },
+        {
+          "result": "W",
+          "opponent": "ဖီအိုရင်တီးနား",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "date": "2026-10-18"
+        },
+        {
+          "result": "L",
+          "opponent": "ဖီယင်နု",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "date": "2026-10-14"
+        },
+        {
+          "result": "D",
+          "opponent": "ရိုးမား",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-11"
+        }
+      ],
+      "homeStanding": {
+        "position": 8,
+        "played": 8,
+        "wins": 4,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 13,
+        "goalsAgainst": 11,
+        "points": 13
+      },
+      "awayStanding": {
+        "position": 5,
+        "played": 8,
+        "wins": 5,
+        "draws": 2,
+        "losses": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 7,
+        "points": 17
+      },
+      "homeOdds": "5.00",
+      "drawOdds": "3.60",
+      "awayOdds": "1.73",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://www.theguardian.com/football/fixtures/2026/Oct/27",
+      "leagueLogoCandidateUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "leagueLogoSourcePage": "https://www.legaseriea.it/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.skysports.com/football/roma-vs-cagliari/table/556332",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-a/2026/790985/",
+      "oddsVerifiedDate": "2026-10-27",
+      "myanmarOdds": {
+        "upperTeam": "ကိုမို",
+        "bodyOdds": "1+50",
+        "goalTotalOdds": "3+30",
+        "currentBodyOdds": "1+40",
+        "currentGoalTotalOdds": "3+10"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/serie-a/2026/790985/",
+      "finalScore": "1-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874786",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401874786",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-01",
+      "pdfRow": 1,
+      "league": "EFL Cup",
+      "leagueDisplay": "အင်္ဂလန် လိဂ်ဖလား",
+      "home": "Bradford City",
+      "away": "Peterborough United",
+      "homeDisplay": "ဘရက်ဖို့ဒ်စီးတီး",
+      "awayDisplay": "ပီတာဘရော့",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အင်္ဂလန်လိဂ်ဝမ်းမှာ ၂၂ မှတ်နဲ့ အဆင့် ၃ အထိ တက်လှမ်းထားတဲ့ ဘရက်ဖို့ဒ်စီးတီး က လက်ရှိပြိုင်ပွဲစုံ နောက်ဆုံး ၁၁ ပွဲဆက် ရှုံးပွဲမရှိခဲ့တာကြောင့် ဒီဖလားပွဲမှာလည်း ယုံကြည်မှုအပြည့်နဲ့ ဝင်ရောက်လာနိုင်ပါတယ်။ နည်းပြသစ် မိုက်ကယ်ဒပ်ဖ် လက်အောက်မှာ ဘရက်ဖို့ဒ်အနေနဲ့ ခံစစ်တည်ငြိမ်မှုကို ဆက်လက်ထိန်းထားဖို့ လိုအပ်ပြီး လိဂ် ၁၂ ပွဲမှာ ငါးဂိုးသာ ပေးထားတဲ့မှတ်တမ်းက အဲဒီအပိုင်းမှာ သူတို့ရဲ့ အားသာချက်ကို ပြသနေပါတယ်။ တစ်ဖက်မှာ ပီတာဘရော့ က လိဂ် ၁၂ ပွဲမှာ ၁၀ မှတ်သာရရှိထားပြီး အဆင့် ၂၁ အထိ ရောက်ရှိနေတာကြောင့် ရလဒ်ပိုင်းမှာ အခက်တွေ့နေပါတယ်။ နောက်ဆုံး ဘရွမ်လေနဲ့ပွဲမှာ နောက်ကျချေပဂိုးကြောင့် သရေတစ်မှတ်ရခဲ့ပေမယ့် ခံစစ်ပိုင်းက အားနည်းနေပြီး ၁၂ ပွဲမှာ ၂၁ ဂိုးအထိ ပေးထားရပါတယ်။ ဖလားပြိုင်ပွဲဆိုတာ မထင်မှတ်တဲ့ရလဒ်တွေ ထွက်ပေါ်နိုင်ပေမယ့် ဘရက်ဖို့ဒ်ရဲ့ ပိုမိုခိုင်မာတဲ့နောက်တန်းနဲ့ အိမ်ကွင်းအားသာချက်က အဆုံးအဖြတ်ပေးနိုင်တာကြောင့် ဘရက်ဖို့ဒ်စီးတီးကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 4,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "D",
+          "opponent": "အောက်စဖို့ဒ်ယူနိုက်တက်",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "D",
+          "opponent": "ဘာတန်အယ်လ်ဘီယံ",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "စတီဗင်နစ်",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "D",
+          "opponent": "လေတန်အိုရီးယန့်",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "ရော့သာဟမ်",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "date": "2026-10-06"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "opponent": "ဘရွမ်လေ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "ဟတ်ဒါဖီးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "D",
+          "opponent": "ဘာတန်အယ်လ်ဘီယံ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "လက်စတာစီးတီး",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "အစ်ပ်ဆွစ်ချ် ယူ-၂၁",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "date": "2026-10-06"
+        }
+      ],
+      "homeStanding": {
+        "position": 3,
+        "played": 12,
+        "wins": 6,
+        "draws": 4,
+        "losses": 2,
+        "goalsFor": 10,
+        "goalsAgainst": 5,
+        "points": 22
+      },
+      "awayStanding": {
+        "position": 21,
+        "played": 12,
+        "wins": 2,
+        "draws": 4,
+        "losses": 6,
+        "goalsFor": 11,
+        "goalsAgainst": 21,
+        "points": 10
+      },
+      "homeOdds": "1.65",
+      "drawOdds": "3.75",
+      "awayOdds": "5.00",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/48.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
+      "leagueLogoCandidateUrl": "https://assets.footylogos.com/previews/efl-cup-logo-footylogos-1200.webp",
+      "leagueLogoSourcePage": "https://www.footylogos.com/logos/efl-cup",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://www.winonbetonline.com/football/matches/bradford-vs-peterborough-156275/",
+      "oddsVerifiedDate": "2026-10-27",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796495/",
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796497/",
+      "myanmarOdds": {
+        "upperTeam": "ဘရက်ဖို့ဒ်စီးတီး",
+        "bodyOdds": "1+35",
+        "goalTotalOdds": "3+80",
+        "currentBodyOdds": "1+40",
+        "currentGoalTotalOdds": "3+60"
+      },
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921833",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401921833",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-02",
+      "pdfRow": 2,
+      "league": "EFL Cup",
+      "leagueDisplay": "အင်္ဂလန် လိဂ်ဖလား",
+      "home": "Fleetwood Town",
+      "away": "Arsenal",
+      "homeDisplay": "ဖလိဝုဒ်တောင်း",
+      "awayDisplay": "အာဆင်နယ်",
+      "sourceKickoff": "02:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:30 MMT",
+      "kickoffUtc": "2026-10-27T20:00:00Z",
+      "status": "finished",
+      "internetPrediction": "0-4",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "လိဂ်တူးကလပ် ဖလိဝုဒ်တောင်း အတွက် ဒီပွဲက ထိပ်တန်းကလပ်တစ်သင်းကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမယ့် အရေးကြီးတဲ့ဖလားပွဲဖြစ်ပေမယ့် လတ်တလောခြေစွမ်းအရ အားရစရာမရှိပါဘူး။ နောက်ဆုံးနှစ်ပွဲမှာ ချယ်တင်ဟမ်ကို ၄-၂ ဂိုး၊ အက်ဇီတာကို ၂-၁ ဂိုးနဲ့ ဆက်တိုက်ရှုံးနိမ့်ထားတာကြောင့် ခံစစ်ပိုင်းမှာ ပြန်လည်တည်ငြိမ်မှုရရှိဖို့ လိုအပ်နေပါတယ်။ အထူးသဖြင့် ဒီပွဲမှာ ရင်ဆိုင်ရမယ့် အာဆင်နယ် က နောက်ဆုံး ဥရောပချန်ပီယံလိဂ်မှာ ဘိုင်ယန်မြူးနစ်နဲ့ နှစ်ဂိုးစီသရေကျခဲ့ပြီးနောက် ပရီးမီးယားလိဂ်မှာ အဲဗာတန်ကို နှစ်ဂိုးပြတ်အနိုင်ယူထားတာကြောင့် ခြေစွမ်းပိုင်းမှာ အသာစီးရနေပါတယ်။ အာဆင်နယ်အနေနဲ့ ပွဲပန်းမှုကြောင့် အဓိကကစားသမားအချို့ကို အနားပေးလာနိုင်ပေမယ့် အသင်းရဲ့ လူအင်အားအနက်နဲ့ ဘောလုံးပိုင်ဆိုင်မှုအပေါ် အခြေခံတဲ့ တိုက်စစ်ကစားပုံက ဖလိဝုဒ်ကို ဆက်တိုက်ဖိအားပေးနိုင်ဖို့ ရှိပါတယ်။ ဖလိဝုဒ်ရဲ့ အိမ်ကွင်းကြိုးစားအားထုတ်မှုကို လျှော့တွက်လို့မရပေမယ့် နှစ်သင်းကြား အရည်အသွေးကွာခြားချက်က ကြီးမားနေတာကြောင့် အာဆင်နယ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 5,
+      "specialChoice": true,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "အက်ဇီတာ",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "result": "L",
+          "competition": "League Two",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "ချယ်တင်ဟမ်",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "result": "L",
+          "competition": "League Two",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ရော့သာဟမ်",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "result": "W",
+          "competition": "League Two",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "ဝေါလ်ဆော",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D",
+          "competition": "League Two",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        },
+        {
+          "date": "2026-10-06",
+          "opponent": "ဘန်စလေ",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "result": "W",
+          "competition": "EFL Trophy",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "အဲဗာတန်",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "result": "W",
+          "competition": "Premier League",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        },
+        {
+          "date": "2026-10-21",
+          "opponent": "ဘိုင်ယန်မြူးနစ်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D",
+          "competition": "UEFA Champions League",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Nottingham Forest",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W",
+          "competition": "Premier League",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "လီလီ",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "result": "W",
+          "competition": "UEFA Champions League",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "လိဒ်စ်",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W",
+          "competition": "Premier League",
+          "sourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232"
+        }
+      ],
+      "homeStanding": {
+        "position": 18,
+        "played": 13,
+        "wins": 3,
+        "draws": 5,
+        "losses": 5,
+        "points": 14
+      },
+      "awayStanding": {
+        "position": 2,
+        "played": 8,
+        "wins": 7,
+        "draws": 0,
+        "losses": 1,
+        "goalsFor": 13,
+        "goalsAgainst": 5,
+        "points": 21
+      },
+      "homeOdds": "19.00",
+      "drawOdds": "13.00",
+      "awayOdds": "1.07",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3891.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/48.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
+      "leagueLogoCandidateUrl": "https://assets.footylogos.com/previews/efl-cup-logo-footylogos-1200.webp",
+      "leagueLogoSourcePage": "https://www.footylogos.com/logos/efl-cup",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "specialChoiceRank": 1,
+      "specialAnalysisParagraphs": [
+        "အိမ်ရှင် ဖလိဝုဒ်တောင်း အတွက် ဒီပွဲဟာ ကလပ်သမိုင်းတစ်လျှောက် အရေးပါတဲ့ဖလားပွဲတစ်ပွဲဖြစ်ပြီး ပရီးမီးယားလိဂ်ချန်ပီယံ အာဆင်နယ် ကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမှာဖြစ်တာကြောင့် ပရိသတ်အားပေးမှုနဲ့အတူ အကောင်းဆုံးကြိုးစားလာမှာ သေချာပါတယ်။ ဖလိဝုဒ်က လက်ရှိလိဂ်တူးမှာ ၁၃ ပွဲကစားပြီး ၁၄ မှတ်နဲ့ အဆင့် ၁၈ မှာသာ ရပ်တည်နေရသလို နောက်ဆုံးငါးပွဲမှာ နှစ်ပွဲနိုင်၊ တစ်ပွဲသရေ၊ နှစ်ပွဲရှုံးထားပြီး ချယ်တင်ဟမ်နဲ့ အက်ဇီတာတို့ကို နှစ်ပွဲဆက်ရှုံးနိမ့်ထားတာကြောင့် လိဂ်ခြေစွမ်းပိုင်းမှာ တည်ငြိမ်မှုမရှိသေးပါဘူး။ ဒါပေမဲ့ ဖလားပြိုင်ပွဲမှာတော့ ချက်စတာဖီးလ်၊ ရှရူးစ်ဘရီနဲ့ ရှက်ဖီးယူနိုက်တက်တို့ကို ဂိုးမပေးရဘဲ ဆက်တိုက်ကျော်ဖြတ်လာနိုင်ခဲ့ပြီး အထူးသဖြင့် ချန်ပီယံရှစ်ကလပ် ရှက်ဖီးယူနိုက်တက်ကို အနိုင်ယူခဲ့တာက အသင်းရဲ့ခံစစ်စုဖွဲ့ကစားနိုင်မှုကို ပြသခဲ့ပါတယ်။ နည်းပြ မတ်လော်လာ ရဲ့အသင်းဟာ နောက်တန်းမှာ ကစားသမားအင်အားစုဖွဲ့ပြီး တန်ပြန်တိုက်စစ်ကနေ အခွင့်အရေးရှာတဲ့ပုံစံကို အားပြုလာနိုင်သလို ရှေ့တန်းမှာ ချက်အီဗန်စ် က ဒီဖလားပြိုင်ပွဲ သုံးပွဲမှာ သုံးဂိုးသွင်းထားတာကြောင့် အာဆင်နယ်ခံစစ်အနေနဲ့ သူ့ရဲ့နေရာယူလှုပ်ရှားမှုတွေကို သတိထားရမှာပါ။ ဒါပေမဲ့ အဓိကကွင်းလယ်ကစားသမား လူးဝစ်မက်ကန် ပွဲပယ်ခံထားရတာက အာဆင်နယ်လို ဘောလုံးပိုင်ဆိုင်မှုအားကောင်းတဲ့အသင်းကို ရင်ဆိုင်ရာမှာ ဖလိဝုဒ်ရဲ့ ကွင်းလယ်ခံစစ်ကို ပိုမိုခက်ခဲစေနိုင်ပါတယ်။ ",
+        "တစ်ဖက်မှာ အာဆင်နယ် က ပရီးမီးယားလိဂ်ရှစ်ပွဲမှာ ခုနစ်ပွဲနိုင်၊ တစ်ပွဲရှုံးနဲ့ ၂၁ မှတ် ရရှိထားပြီး မန်စီးတီးနဲ့ ရမှတ်တူညီကာ ဂိုးကွာခြားချက်ကြောင့် အဆင့် ၂ မှာ ရပ်တည်နေပါတယ်။ နောက်ဆုံးငါးပွဲမှာ လေးပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ရှုံးပွဲမရှိခဲ့သလို ဘိုင်ယန်မြူးနစ်ကို အဝေးကွင်းမှာ နှစ်ဂိုးစီသရေကစားနိုင်ခဲ့ပြီးနောက် အဲဗာတန်ကို နှစ်ဂိုးပြတ်အနိုင်ယူထားတာကြောင့် အသင်းရဲ့လက်ရှိစွမ်းဆောင်ရည်က အားရစရာကောင်းနေပါတယ်။ အဲဗာတန်နဲ့ပွဲမှာ ခံစစ်ကစားသမား အက်ဇရီကွန်ဆာ နဲ့ ဂါဘရီယယ် တို့က အနိုင်ဂိုးတွေသွင်းယူပေးခဲ့တာကြောင့် အာဆင်နယ်ဟာ တိုက်စစ်မှူးတွေရဲ့ ဂိုးသွင်းနိုင်မှုတစ်ခုတည်းကို အားကိုးနေရတာမဟုတ်ဘဲ နောက်တန်းကနေပါ ဂိုးသွင်းအခွင့်အရေးဖန်တီးနိုင်တဲ့အသင်းဖြစ်ကြောင်း ထပ်မံပြသခဲ့ပါတယ်။ နည်းပြ အာတီတာ အနေနဲ့ လာမယ့်လီဗာပူးလ်နဲ့ ပရီးမီးယားလိဂ်ပွဲအတွက် အဓိကကစားသမားအချို့ကို အနားပေးလာနိုင်ပြီး ဆာကာ နဲ့ ဆာလီဘာ တို့လည်း ဒဏ်ရာပြဿနာကြောင့် မပါဝင်နိုင်ပေမယ့် အသင်းမှာ လူအင်အားအနက်ရှိနေဆဲဖြစ်ပါတယ်။ အထူးသဖြင့် လူငယ်တိုက်စစ်ကစားသမား မက်စ်ဒေါင်းမန်း က အစ်ပ်ဆွစ်ချ်ကို အနိုင်ယူခဲ့တဲ့ လိဂ်ဖလားပွဲမှာ နှစ်ဂိုးသွင်းထားနိုင်ခဲ့တာကြောင့် ဒီပွဲမှာ အခွင့်အရေးရလာရင် ဖလိဝုဒ်ခံစစ်အတွက် အခက်အခဲဖြစ်လာနိုင်ပါတယ်။ ဖလိဝုဒ်ရဲ့ ခံစစ်စုဖွဲ့မှုနဲ့ အိမ်ကွင်းစိတ်ဓာတ်က ပွဲအစပိုင်းမှာ အာဆင်နယ်ကို တားဆီးနိုင်ပေမယ့် ပွဲချိန်ကြာလာတာနဲ့အမျှ အာဆင်နယ်ရဲ့ ဘောလုံးပိုင်ဆိုင်မှု၊ ကွင်းလယ်ဖန်တီးနိုင်မှုနဲ့ တိုက်စစ်ကစားသမားအရည်အသွေးက ပိုမိုအသာစီးရလာနိုင်ပါတယ်။ အာဆင်နယ်ဟာ နောက်ဆုံးငါးပွဲမှာ သုံးဂိုးသာ ပေးထားရတဲ့အပြင် ခံစစ်ကနေ တိုက်စစ်အထိ အင်အားမျှတစွာကစားနိုင်နေတာကြောင့် ဖလိဝုဒ်ရဲ့တန်ပြန်တိုက်စစ်ကို ထိန်းချုပ်နိုင်ဖို့လည်း အခွင့်အရေးကောင်းရှိပါတယ်။ ဖလားပွဲဖြစ်တာကြောင့် မထင်မှတ်တဲ့ရလဒ်ထွက်ပေါ်နိုင်ပေမယ့် နှစ်သင်းရဲ့လက်ရှိခြေစွမ်း၊ လူအင်အားအနက်၊ တိုက်စစ်ဖန်တီးနိုင်မှုနဲ့ ခံစစ်တည်ငြိမ်မှုအားလုံးကို ချိန်ဆကြည့်ရင် ဒီပွဲမှာ အသာစီးရဖို့ အလားအလာအကောင်းဆုံးအသင်းက အာဆင်နယ် ဖြစ်နေတဲ့အတွက် အာဆင်နယ်ကို ရွေးချယ်ပါတယ်။"
+      ],
+      "specialPreparedDate": "2026-10-27",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://www.winonbetonline.com/football/matches/fleetwood-town-vs-arsenal-156271/",
+      "oddsVerifiedDate": "2026-10-27",
+      "myanmarOdds": {
+        "upperTeam": "အာဆင်နယ်",
+        "bodyOdds": "3+60",
+        "goalTotalOdds": "4+85",
+        "currentBodyOdds": "3+70",
+        "currentGoalTotalOdds": "4+80"
+      },
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921835",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401921835",
+      "finalScoreStatus": "STATUS_FINAL_PEN"
+    },
+    {
+      "fixtureId": "fc-20261027-preview-06",
+      "league": "League One",
+      "leagueDisplay": "အင်္ဂလန် လိဂ်ဝမ်း",
+      "home": "Leicester City",
+      "away": "Wigan Athletic",
+      "homeDisplay": "လက်စတာစီးတီး",
+      "awayDisplay": "ဝီဂန်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "dailyPreviewText": "လက်ရှိလိဂ်မှာ ၁၁ ပွဲကစားပြီး ၁၅ မှတ်နဲ့ အဆင့် ၁၃ မှာ ရပ်တည်နေတဲ့ လက်စတာစီးတီး က နောက်ဆုံးလူတန်နဲ့ပွဲမှာ ၂-၁ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့ပေမယ့် အဲဒီမတိုင်ခင် ဘရွမ်လေကို လေးဂိုးပြတ်၊ ဒွန်ကတ်စတာကို ၂-၁ ဂိုးနဲ့ ဆက်တိုက်အနိုင်ယူခဲ့တာကြောင့် တိုက်စစ်ပိုင်းမှာ အလားအလာကောင်းတွေ ရှိနေပါတယ်။ အိမ်ကွင်းပြန်လည်ကစားရမယ့် ဒီပွဲမှာတော့ ရှုံးပွဲကနေ ရုန်းထွက်ဖို့ ကြိုးစားလာမှာဖြစ်ပြီး လက်ရှိလိဂ်အောက်ဆုံးမှာ ရောက်ရှိနေတဲ့ ဝီဂန် ကို ဖိအားပေးနိုင်ဖို့ ရှိပါတယ်။ ဝီဂန်ဟာ ၁၁ ပွဲမှာ ခုနစ်မှတ်သာရရှိထားပြီး နောက်ဆုံး အောက်စဖို့ဒ်နဲ့ ဟတ်ဒါဖီးလ်တို့ကို ဆက်တိုက်ရှုံးထားတာကြောင့် အသင်းရဲ့ခြေစွမ်းက ယုံကြည်စရာမကောင်းပါဘူး။ ဝီဂန်အနေနဲ့ ခံစစ်ကို စုဖွဲ့ပြီး တန်ပြန်တိုက်စစ်ကနေ အခွင့်အရေးရှာဖို့ ကြိုးစားလာနိုင်ပေမယ့် လက်စတာရဲ့ တိုက်စစ်အင်အားနဲ့ အိမ်ကွင်းအားသာချက်ကို နှိုင်းယှဉ်ရင် လက်စတာစီးတီးကို ရွေးချယ်ပါတယ်။",
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "L",
+          "opponent": "လူတန်တောင်း",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘရွမ်လေ",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "ဒွန်ကတ်စတာ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "ပီတာဘရော့",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "L",
+          "opponent": "စတီဗင်နစ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-06"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "opponent": "ဟတ်ဒါဖီးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "အောက်စဖို့ဒ်ယူနိုက်တက်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "ရက်ဒင်း",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "စတီဗင်နစ်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘလက်ပူးလ်",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "date": "2026-09-22"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 11,
+        "wins": 4,
+        "draws": 3,
+        "losses": 4,
+        "goalsFor": 17,
+        "goalsAgainst": 17,
+        "points": 15
+      },
+      "awayStanding": {
+        "position": 24,
+        "played": 11,
+        "wins": 2,
+        "draws": 1,
+        "losses": 8,
+        "goalsFor": 8,
+        "goalsAgainst": 17,
+        "points": 7
+      },
+      "homeOdds": "1.40",
+      "drawOdds": "4.72",
+      "awayOdds": "6.55",
+      "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796491/",
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796492/",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "3-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880834",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401880834",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-preview-07",
+      "league": "League One",
+      "leagueDisplay": "အင်္ဂလန် လိဂ်ဝမ်း",
+      "home": "Luton Town",
+      "away": "Doncaster Rovers",
+      "homeDisplay": "လူတန်တောင်း",
+      "awayDisplay": "ဒွန်ကတ်စတာ",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "dailyPreviewText": "လူတန်တောင်း က ဒီရာသီ ၁၁ ပွဲကစားပြီး ၁၇ မှတ်နဲ့ အဆင့် ၁၀ မှာ ရပ်တည်နေကာ နောက်ဆုံး ဘန်စလေနဲ့ လက်စတာစီးတီးတို့ကို နှစ်ပွဲဆက် ၂-၁ ဂိုးစီ အနိုင်ယူထားတာကြောင့် အသင်းရဲ့ယုံကြည်မှု ပြန်လည်မြင့်တက်နေပါတယ်။ အထူးသဖြင့် လက်စတာနဲ့ပွဲမှာ နောက်ဆုံးမိနစ်ပိုင်းအထိ ကြိုးစားပြီး အနိုင်ဂိုးရယူနိုင်ခဲ့တာက ပွဲကိုအဆုံးအထိ တိုက်ပွဲဝင်နိုင်တဲ့စိတ်ဓာတ်ကို ပြသခဲ့ပါတယ်။ ဒါပေမဲ့ ဒွန်ကတ်စတာ ကို လွယ်ကူတဲ့အသင်းအဖြစ် သတ်မှတ်လို့မရပါဘူး။ ဒွန်ကတ်စတာက နောက်ဆုံး ရှက်ဖီးဝင်းစ်ဒေးကို နှစ်ဂိုးပြတ်အနိုင်ယူခဲ့ပြီး အရင်အောက်တိုဘာ ၂၀ ရက်မှာ စတော့ပို့ကို ရှုံးခဲ့တဲ့အခြေအနေကနေ ပြန်လည်ရုန်းထွက်လာနိုင်ခဲ့ပါတယ်။ ဒွန်ကတ်စတာရဲ့ ခံစစ်ကစားပုံကို လူတန်အနေနဲ့ ကျော်ဖြတ်နိုင်ဖို့ လိုအပ်ပေမယ့် အိမ်ရှင်ရဲ့ နောက်ဆုံးနှစ်ပွဲဆက်အနိုင်နဲ့ တိုက်စစ်အခွင့်အရေးအသုံးချနိုင်မှုက ဒီပွဲမှာ အဓိကအားသာချက်ဖြစ်လာနိုင်တာကြောင့် လူတန်တောင်းကို ရွေးချယ်ပါတယ်။",
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "လက်စတာစီးတီး",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘန်စလေ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "L",
+          "opponent": "အမ်ကေဒွန်းစ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "ဝိုင်ကမ်",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "D",
+          "opponent": "ကိုလ်ချက်စတာ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-03"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "ရှက်ဖီးဝင်းစ်ဒေး",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "စတော့ပို့ကောင်တီ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "L",
+          "opponent": "လက်စတာစီးတီး",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘာတန်အယ်လ်ဘီယံ",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "လီဗာပူးလ် ယူ-၂၁",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-09-02"
+        }
+      ],
+      "homeStanding": {
+        "position": 10,
+        "played": 11,
+        "wins": 5,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 21,
+        "goalsAgainst": 19,
+        "points": 17
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 11,
+        "wins": 3,
+        "draws": 3,
+        "losses": 5,
+        "goalsFor": 12,
+        "goalsAgainst": 13,
+        "points": 12
+      },
+      "homeOdds": "1.52",
+      "drawOdds": "4.39",
+      "awayOdds": "5.17",
+      "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/301.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/279.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796497/",
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796496/",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "3-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880820",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401880820",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-preview-08",
+      "league": "League One",
+      "leagueDisplay": "အင်္ဂလန် လိဂ်ဝမ်း",
+      "home": "Milton Keynes Dons",
+      "away": "Bromley",
+      "homeDisplay": "အမ်ကေဒွန်းစ်",
+      "awayDisplay": "ဘရွမ်လေ",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "dailyPreviewText": "အိမ်ရှင် အမ်ကေဒွန်းစ် က လိဂ် ၁၁ ပွဲမှာ ၁၂ မှတ်ရရှိပြီး အဆင့် ၁၈ မှာ ရပ်တည်နေသလို နောက်ဆုံး စတီဗင်နစ်ကို အဝေးကွင်းမှာ တစ်ဂိုးတည်းနဲ့ အနိုင်ယူထားတာကြောင့် ရလဒ်ပိုင်းမှာ ပြန်လည်အားကောင်းလာဖို့ အခွင့်အရေးရှိနေပါတယ်။ အဲဒီပွဲမှာ အနိုင်ရခဲ့ပေမယ့် လိဂ် ၁၁ ပွဲမှာ ၁၈ ဂိုးပေးထားရတဲ့ ခံစစ်ပိုင်းကတော့ ဆက်လက်ပြုပြင်ရဦးမှာဖြစ်ပါတယ်။ တစ်ဖက်မှာ ဘရွမ်လေ က ၁၁ ပွဲမှာ ကိုးမှတ်နဲ့ အဆင့် ၂၂ မှာ ရှိနေပြီး အရင်ပွဲမှာ လက်စတာကို လေးဂိုးပြတ်ရှုံးခဲ့ပြီးနောက် ပီတာဘရော့နဲ့ တစ်ဂိုးစီသရေကျထားပါတယ်။ ဘရွမ်လေရဲ့ နောက်တန်းက ၁၁ ပွဲမှာ ၂၆ ဂိုးအထိ ပေးထားရတာကြောင့် အမ်ကေဒွန်းစ်အနေနဲ့ ဘောလုံးကို ရှေ့တန်းအထိ ထိရောက်စွာပို့ဆောင်နိုင်ရင် ဂိုးသွင်းအခွင့်အရေးတွေ ရရှိနိုင်ပါတယ်။ နှစ်သင်းစလုံး ခံစစ်အားနည်းချက်ရှိနေပေမယ့် လတ်တလောအနိုင်ရလဒ်နဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် အမ်ကေဒွန်းစ်ကို ရွေးချယ်ပါတယ်။",
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "စတီဗင်နစ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "ဘလက်ပူးလ်",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "W",
+          "opponent": "လူတန်တောင်း",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "ရက်ဒင်း",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "ဘရန့်ဖို့ဒ် ယူ-၂၁",
+          "teamGoals": 7,
+          "opponentGoals": 1,
+          "date": "2026-10-06"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "opponent": "ပီတာဘရော့",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "လက်စတာစီးတီး",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "L",
+          "opponent": "စတော့ပို့ကောင်တီ",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "မန်းစ်ဖီးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "L",
+          "opponent": "ခရော်လီ",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "date": "2026-10-06"
+        }
+      ],
+      "homeStanding": {
+        "position": 18,
+        "played": 11,
+        "wins": 2,
+        "draws": 6,
+        "losses": 3,
+        "goalsFor": 12,
+        "goalsAgainst": 18,
+        "points": 12
+      },
+      "awayStanding": {
+        "position": 22,
+        "played": 11,
+        "wins": 2,
+        "draws": 3,
+        "losses": 6,
+        "goalsFor": 10,
+        "goalsAgainst": 26,
+        "points": 9
+      },
+      "homeOdds": "1.63",
+      "drawOdds": "4.07",
+      "awayOdds": "4.59",
+      "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/390.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796496/",
+      "awayFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796492/",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "4-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880832",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401880832",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-preview-09",
+      "league": "League One",
+      "leagueDisplay": "အင်္ဂလန် လိဂ်ဝမ်း",
+      "home": "Oxford United",
+      "away": "Stockport County",
+      "homeDisplay": "အောက်စဖို့ဒ်ယူနိုက်တက်",
+      "awayDisplay": "စတော့ပို့ကောင်တီ",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "dailyPreviewText": "ဒီပွဲက အမှတ်ပေးဇယားထိပ်ပိုင်းမှာ ရှိနေတဲ့အသင်းနှစ်သင်းရဲ့ အရေးပါတဲ့ထိပ်တိုက်တွေ့ဆုံမှုဖြစ်ပြီး အောက်စဖို့ဒ် က ၁၀ ပွဲကစား ၁၉ မှတ်နဲ့ အဆင့် ၇ မှာ ရှိနေသလို စတော့ပို့ က ၁၂ ပွဲကစား ၂၃ မှတ်နဲ့ အဆင့် ၂ မှာ ရပ်တည်နေပါတယ်။ အောက်စဖို့ဒ်ဟာ နောက်ဆုံး ဘရက်ဖို့ဒ်နဲ့ ဂိုးမရှိသရေကျခဲ့ပေမယ့် အဲဒီမတိုင်ခင် ဝီဂန်ကို ၂-၁ ဂိုးနဲ့ အနိုင်ယူထားပြီး ၁၀ ပွဲမှာ တစ်ပွဲသာ ရှုံးထားတဲ့မှတ်တမ်းက အသင်းရဲ့တည်ငြိမ်မှုကို ပြသနေပါတယ်။ စတော့ပို့ကတော့ တိုက်စစ်ပိုင်းမှာ အားကောင်းနေပြီး လိဂ် ၁၂ ပွဲမှာ ၂၄ ဂိုးသွင်းထားနိုင်သလို ဒွန်ကတ်စတာကို နှစ်ဂိုးပြတ်အနိုင်ရပြီးနောက် နော့စ်ကောင်တီနဲ့ တစ်ဂိုးစီသရေကျခဲ့ပါတယ်။ စတော့ပို့ရဲ့ ဂိုးဖန်တီးနိုင်မှုက အောက်စဖို့ဒ်ကို ဖိအားပေးနိုင်ပေမယ့် အိမ်ရှင်ရဲ့ ရှုံးပွဲနည်းပါးတဲ့မှတ်တမ်းနဲ့ ခံစစ်တည်ငြိမ်မှုကြောင့် ဒီပွဲက အကြိတ်အနယ်ဖြစ်ဖို့ ရှိပါတယ်။ အိမ်ကွင်းအကျိုးသက်ရောက်မှုကို ထည့်တွက်ပြီး အနည်းငယ်ပိုယုံကြည်ရတဲ့အသင်းအဖြစ် အောက်စဖို့ဒ်ယူနိုက်တက်ကို ရွေးချယ်ပါတယ်။",
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "D",
+          "opponent": "ဘရက်ဖို့ဒ်စီးတီး",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ဝီဂန်",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-20"
+        },
+        {
+          "result": "D",
+          "opponent": "မန်းစ်ဖီးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-15"
+        },
+        {
+          "result": "W",
+          "opponent": "နော့စ်ကောင်တီ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "D",
+          "opponent": "အက်ဇီတာ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-06"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "နော့စ်ကောင်တီ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "ဒွန်ကတ်စတာ",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ဘရွမ်လေ",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "ဘန်စလေ",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "ပီတာဘရော့",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        }
+      ],
+      "homeStanding": {
+        "position": 7,
+        "played": 10,
+        "wins": 5,
+        "draws": 4,
+        "losses": 1,
+        "goalsFor": 18,
+        "goalsAgainst": 10,
+        "points": 19
+      },
+      "awayStanding": {
+        "position": 2,
+        "played": 12,
+        "wins": 7,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 24,
+        "goalsAgainst": 12,
+        "points": 23
+      },
+      "homeOdds": "3.27",
+      "drawOdds": "3.62",
+      "awayOdds": "2.00",
+      "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormSourceUrl": "https://footballnation.eu/match/league-one/2026/796494/",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://www.skysports.com/league-1-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880819",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401880819",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-preview-10",
+      "league": "League One",
+      "leagueDisplay": "အင်္ဂလန် လိဂ်ဝမ်း",
+      "home": "Sheffield Wednesday",
+      "away": "Cambridge United",
+      "homeDisplay": "ရှက်ဖီးဝင်းစ်ဒေး",
+      "awayDisplay": "ကိန်းဘရစ်ချ်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "dailyPreviewText": "အိမ်ရှင် ရှက်ဖီးဝင်းစ်ဒေး က လိဂ် ၁၁ ပွဲမှာ ၁၈ မှတ်ရရှိပြီး အဆင့် ၈ မှာ ရှိနေသလို ကိန်းဘရစ်ချ် က ၁၂ ပွဲကစား ၂၀ မှတ်နဲ့ အဆင့် ၆ မှာ ရပ်တည်နေတာကြောင့် အမှတ်ပေးဇယားအရ နှစ်သင်းကြား ကွာခြားချက်ကြီးမားခြင်းမရှိပါဘူး။ ရှက်ဖီးဝင်းစ်ဒေးက နောက်ဆုံး ဒွန်ကတ်စတာကို နှစ်ဂိုးပြတ်ရှုံးထားသလို အဲဒီမတိုင်ခင် နော့စ်ကောင်တီကိုလည်း နှစ်ဂိုးပြတ်ရှုံးထားတာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ ပြဿနာရှိလာပါတယ်။ ကိန်းဘရစ်ချ်ကလည်း နောက်ဆုံး ပလိုင်းမောက်ကို ၃-၂ ဂိုးနဲ့ ရှုံးခဲ့ပေမယ့် အဲဒီပွဲမှာ နှစ်ဂိုးပြန်သွင်းနိုင်ခဲ့တာက တိုက်စစ်အခွင့်အရေးတွေ ဖန်တီးနိုင်နေသေးကြောင်း ပြသနေပါတယ်။ ကိန်းဘရစ်ချ်ဟာ ၁၂ ပွဲမှာ ၂၀ ဂိုးသွင်းထားနိုင်ပေမယ့် ၁၇ ဂိုးပြန်ပေးထားရတဲ့အတွက် ရှက်ဖီးဝင်းစ်ဒေးအနေနဲ့ အိမ်ကွင်းမှာ ပြန်လည်ဂိုးသွင်းနိုင်ဖို့ အခွင့်အရေးရှိပါတယ်။ သို့သော် လတ်တလော ရလဒ်နှစ်ပွဲဆက် အားနည်းနေတဲ့ အိမ်ရှင်နဲ့ယှဉ်ရင် ကိန်းဘရစ်ချ်ရဲ့ တိုက်စစ်က ပိုမိုအလုပ်ဖြစ်နိုင်တာကြောင့် ကိန်းဘရစ်ချ်ကို ရွေးချယ်ပါတယ်။",
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ဒွန်ကတ်စတာ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "နော့စ်ကောင်တီ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ဝင်ဘယ်ဒန်",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "ဟတ်ဒါဖီးလ်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "စတော့ပို့ကောင်တီ",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "result": "D"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ပလိုင်းမောက်",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "ဝိုင်ကမ်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ဘန်စလေ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "ဘလက်ပူးလ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "ဝင်ဘယ်ဒန်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        }
+      ],
+      "homeStanding": {
+        "position": 8,
+        "played": 11,
+        "wins": 5,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 20,
+        "goalsAgainst": 12,
+        "points": 18
+      },
+      "awayStanding": {
+        "position": 6,
+        "played": 12,
+        "wins": 5,
+        "draws": 5,
+        "losses": 2,
+        "goalsFor": 20,
+        "goalsAgainst": 17,
+        "points": 20
+      },
+      "homeOdds": "1.95",
+      "drawOdds": "3.50",
+      "awayOdds": "3.60",
+      "homeStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "awayStandingSourceUrl": "https://thesportsguru.net/blog/league-one-round-up-24-october-2026.html",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/league-one/2026/796433/",
+      "oddsVerifiedDate": "2026-10-27",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/41.png",
+      "homeFormScope": "league",
+      "homeFormSourceUrl": "https://www.skysports.com/league-1-scores-fixtures/2026-10-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://www.skysports.com/league-1-scores-fixtures/2026-10-01",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880816",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401880816",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-09",
+      "pdfRow": 9,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမန်ပိုကယ်ဖလား",
+      "home": "VfL Bochum",
+      "away": "Mainz 05",
+      "homeDisplay": "ဘိုချမ်",
+      "awayDisplay": "မိန့်ဇ်",
+      "sourceKickoff": "23:30",
+      "kickoffCalendarDate": "2026-10-27",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 23:30 MMT",
+      "kickoffUtc": "2026-10-27T17:00:00Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အိမ်ရှင် ဘိုချမ် က ဒုတိယတန်းမှာ ယှဉ်ပြိုင်နေရတဲ့အသင်းဖြစ်ပေမယ့် ဖလားပြိုင်ပွဲမှာ ပထမတန်းကလပ်တစ်သင်းကို အိမ်ကွင်းမှာ ရင်ဆိုင်ခွင့်ရထားတာကြောင့် ခံစစ်ကို စနစ်တကျစုဖွဲ့ပြီး အခွင့်အရေးရှာလာနိုင်ပါတယ်။ ဒါပေမဲ့ ဒီပွဲမှာ ရင်ဆိုင်ရမယ့် မိန့်ဇ် က ဘွန်ဒက်စ်လီဂါမှာ ခုနစ်ပွဲကစား ၁၀ မှတ်နဲ့ အဆင့် ၇ မှာ ရှိနေပြီး လိဂ်ခုနစ်ပွဲမှာ ၁၆ ဂိုးအထိ သွင်းယူထားနိုင်တဲ့အသင်းဖြစ်ပါတယ်။ နောက်ဆုံး ဝါဒါဘရီမင်နဲ့ပွဲမှာ နှစ်ဂိုးသွင်းနိုင်ခဲ့ပေမယ့် သုံးဂိုးပြန်ပေးခဲ့ရတဲ့ ခံစစ်ပိုင်းကတော့ ဘိုချမ်အတွက် အခွင့်အရေးတစ်ခုဖြစ်လာနိုင်ပါတယ်။ မိန့်ဇ်အနေနဲ့ တိုက်စစ်ကိုဖွင့်ကစားရင်း နောက်တန်းမှာ နေရာလွတ်မကျန်အောင် ထိန်းချုပ်ဖို့လိုအပ်ပေမယ့် ပထမတန်းအဆင့် တိုက်စစ်အတွေ့အကြုံနဲ့ ဂိုးဖန်တီးနိုင်မှုမှာ အသာစီးရနေတဲ့အတွက် မိန့်ဇ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 11,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "ဝုလ်ဖ်ဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ကိုင်ဇာစလောက်တန်း",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "အာမီးနီးယား ဘီလီဖဲလ်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ဂရွိုသာဖာ့သ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "ဒရက်စ်ဒင်",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ဝါဒါဘရီမင်",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ရှော်လ်ကေး",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "လေဗာကူဆင်",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "မိုချန်ဂလာဘတ်",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ဖရန့်ဖတ်",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "result": "L"
+        }
+      ],
+      "homeStanding": {
+        "position": 14,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 6,
+        "goalsAgainst": 10,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 7,
+        "played": 7,
+        "wins": 3,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 16,
+        "goalsAgainst": 13,
+        "points": 10
+      },
+      "homeOdds": "4.20",
+      "drawOdds": "3.85",
+      "awayOdds": "1.76",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/121.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": null,
+      "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
+      "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "homeStandingSourceUrl": "https://langerball.de/zweite_bundesliga/",
+      "myanmarOdds": {
+        "upperTeam": "မိန့်ဇ်",
+        "bodyOdds": "1+30",
+        "goalTotalOdds": "3-5",
+        "currentBodyOdds": "1+10",
+        "currentGoalTotalOdds": "3+10"
+      },
+      "homeFormScope": "league",
+      "homeFormSourceUrl": "https://www.skysports.com/german-2-bundesliga-scores-fixtures/2026-10-01",
+      "oddsProvider": "22Bet",
+      "oddsSourceUrl": "https://ee.22bet.com/en/prematch/football/1008120-dfb-pokal/11456841-vfl-bochum-fsv-mainz",
+      "oddsVerifiedDate": "2026-10-27",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917029",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401917029",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-08",
+      "pdfRow": 8,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမန်ပိုကယ်ဖလား",
+      "home": "SG Sonnenhof Großaspach",
+      "away": "FC Augsburg",
+      "homeDisplay": "ဆွန်နင်ဟော့ ဂရော့စ်အက်စ်ပါ့ခ်",
+      "awayDisplay": "အော့စ်ဘတ်",
+      "sourceKickoff": "23:30",
+      "kickoffCalendarDate": "2026-10-27",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 23:30 MMT",
+      "kickoffUtc": "2026-10-27T17:00:00Z",
+      "status": "finished",
+      "internetPrediction": "0-3",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "တတိယတန်းကလပ် ဂရော့စ်အက်စ်ပါ့ခ် အတွက် ဒီပွဲက ဘွန်ဒက်စ်လီဂါအသင်းတစ်သင်းကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမယ့် စိန်ခေါ်မှုကြီးဖြစ်ပါတယ်။ ဖလားပြိုင်ပွဲမှာ အိမ်ရှင်အသင်းတွေက တစ်ပွဲတည်းအဆုံးအဖြတ်ပေးရတဲ့အခြေအနေကို အသုံးချပြီး မထင်မှတ်တဲ့ရလဒ်တွေ ဖန်တီးနိုင်ပေမယ့် ဒီပွဲမှာတော့ အော့စ်ဘတ် ရဲ့ တိုက်စစ်ကို ထိန်းချုပ်နိုင်ဖို့ အဓိကလိုအပ်ပါတယ်။ အော့စ်ဘတ်ဟာ ဘွန်ဒက်စ်လီဂါ ခုနစ်ပွဲမှာ ၁၇ ဂိုးသွင်းထားနိုင်သလို နောက်ဆုံး ယူနီယံဘာလင်နဲ့ပွဲမှာ တစ်ဂိုးစီသရေကျခဲ့ပြီး ကိုးမှတ်နဲ့ အဆင့် ၉ မှာ ရပ်တည်နေပါတယ်။ အော့စ်ဘတ်ရဲ့ခံစစ်က ၁၃ ဂိုးအထိ ပေးထားရတာကြောင့် အမှားအယွင်းကင်းဖို့လိုအပ်ပေမယ့် ဂရော့စ်အက်စ်ပါ့ခ်အနေနဲ့ အဆင့်မြင့်တိုက်စစ်တစ်ခုကို ပွဲချိန်တစ်လျှောက် ထိန်းထားဖို့ မလွယ်ပါဘူး။ အသင်းအင်အားနဲ့ ဂိုးသွင်းနိုင်မှု ကွာခြားချက်ကို အဓိကထားပြီး အော့စ်ဘတ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 12,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "L",
+          "opponent": "ဝေဟင်",
+          "teamGoals": 1,
+          "opponentGoals": 7,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ပရပ်ရှားမန်စတာ",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "D",
+          "opponent": "ဗစ်တိုးရီးယားကိုလုံး",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-14"
+        },
+        {
+          "result": "L",
+          "opponent": "မန်းဟိုင်းမ်",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "D",
+          "opponent": "ကိုင်ဇာစလောက်တန်း",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-02"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "opponent": "ယူနီယံဘာလင်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "အဲလ်ဗာ့စ်ဘတ်",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "D",
+          "opponent": "ဘိုင်ယန်မြူးနစ်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "D",
+          "opponent": "ဟာသာဘာလင်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-02"
+        },
+        {
+          "result": "L",
+          "opponent": "ဝါဒါဘရီမင်",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "date": "2026-09-19"
+        }
+      ],
+      "homeStanding": {
+        "position": 16,
+        "played": 11,
+        "wins": 3,
+        "draws": 3,
+        "losses": 5,
+        "goalsFor": 13,
+        "goalsAgainst": 25,
+        "points": 12
+      },
+      "awayStanding": {
+        "position": 9,
+        "played": 7,
+        "wins": 2,
+        "draws": 3,
+        "losses": 2,
+        "goalsFor": 17,
+        "goalsAgainst": 13,
+        "points": 9
+      },
+      "homeOdds": "8.00",
+      "drawOdds": "5.00",
+      "awayOdds": "1.33",
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/1142.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": null,
+      "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
+      "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "homeStandingSourceUrl": "https://datencenter.dfb.de/datencenter/3-liga/2026-2027/32",
+      "myanmarOdds": {
+        "upperTeam": "အော့စ်ဘတ်",
+        "bodyOdds": "2+60",
+        "goalTotalOdds": "3-80",
+        "currentBodyOdds": "2+55",
+        "currentGoalTotalOdds": "3-90"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811810/",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811810/",
+      "oddsVerifiedDate": "2026-10-27",
+      "finalScore": "2-4",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917028",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401917028",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-07",
+      "pdfRow": 7,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမန်ပိုကယ်ဖလား",
+      "home": "Rot-Weiss Essen",
+      "away": "RB Leipzig",
+      "homeDisplay": "ရော့ဝိုက်စ်အက်ဆင်",
+      "awayDisplay": "လိုက်ပ်ဇစ်",
+      "sourceKickoff": "23:30",
+      "kickoffCalendarDate": "2026-10-27",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 23:30 MMT",
+      "kickoffUtc": "2026-10-27T17:00:00Z",
+      "status": "finished",
+      "internetPrediction": "1-3",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "တတိယတန်းကလပ် ရော့ဝိုက်စ်အက်ဆင် က ဒီပွဲမှာ အိမ်ကွင်းအားသာချက်နဲ့ ပရိသတ်အားပေးမှုကို အသုံးချပြီး ဖလားပြိုင်ပွဲရဲ့ အံ့အားသင့်စရာရလဒ်တစ်ခု ဖန်တီးဖို့ ကြိုးစားလာနိုင်ပါတယ်။ ဒါပေမဲ့ လိုက်ပ်ဇစ် က ဘွန်ဒက်စ်လီဂါမှာ ခုနစ်ပွဲကစား ၁၂ မှတ်နဲ့ အဆင့် ၅ မှာ ရပ်တည်နေသလို နောက်ဆုံး အဲလ်ဗာ့စ်ဘတ်ကို လေးဂိုးပြတ်အနိုင်ယူထားတာကြောင့် တိုက်စစ်ကစားသမားတွေရဲ့ ယုံကြည်မှုမြင့်မားနေပါတယ်။ အဲဒီပွဲမှာ ရိုမူလို က နှစ်ဂိုးသွင်းယူခဲ့ပြီး နူဆာ က တိုက်စစ်အခွင့်အရေးဖန်တီးရာမှာ အရေးပါခဲ့တာကြောင့် အက်ဆင်ရဲ့နောက်တန်းအနေနဲ့ သူတို့ရဲ့ လှုပ်ရှားမှုတွေကို ထိန်းချုပ်နိုင်ဖို့ လိုအပ်ပါလိမ့်မယ်။ လိုက်ပ်ဇစ်ဟာ တိုက်စစ်မှာ ဂိုးဖန်တီးနိုင်မှုကောင်းနေသလို နောက်တန်းကလည်း တတိယတန်းကလပ်တစ်သင်းထက် ပိုမိုအတွေ့အကြုံရှိနေတာကြောင့် ဒီပွဲမှာ လိုက်ပ်ဇစ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 13,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "ရေဂင်စ်ဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-23"
+        },
+        {
+          "result": "L",
+          "opponent": "အင်ဂေါလ်စတက်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "ဖော်တူနာကိုလုံး",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-13"
+        },
+        {
+          "result": "D",
+          "opponent": "ပရပ်ရှားမန်စတာ",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "date": "2026-10-09"
+        },
+        {
+          "result": "D",
+          "opponent": "အာမီးနီးယား ဘီလီဖဲလ်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-03"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "အဲလ်ဗာ့စ်ဘတ်",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "ရီးရဲလ်မက်ဒရစ်",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "date": "2026-10-21"
+        },
+        {
+          "result": "L",
+          "opponent": "ဘိုင်ယန်မြူးနစ်",
+          "teamGoals": 1,
+          "opponentGoals": 6,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "ပီအက်စ်ဗွီ",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-13"
+        },
+        {
+          "result": "W",
+          "opponent": "ဖရန့်ဖတ်",
+          "teamGoals": 6,
+          "opponentGoals": 0,
+          "date": "2026-10-10"
+        }
+      ],
+      "homeStanding": {
+        "position": 3,
+        "played": 11,
+        "wins": 6,
+        "draws": 3,
+        "losses": 2,
+        "goalsFor": 19,
+        "goalsAgainst": 13,
+        "points": 21
+      },
+      "awayStanding": {
+        "position": 5,
+        "played": 7,
+        "wins": 4,
+        "draws": 0,
+        "losses": 3,
+        "goalsFor": 20,
+        "goalsAgainst": 11,
+        "points": 12
+      },
+      "homeOdds": "10.00",
+      "drawOdds": "7.50",
+      "awayOdds": "1.20",
+      "homeCrestUrl": "https://cdn.footballnation.eu/cache/team/1113.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": null,
+      "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
+      "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "homeStandingSourceUrl": "https://datencenter.dfb.de/datencenter/3-liga/2026-2027/32",
+      "myanmarOdds": {
+        "upperTeam": "လိုက်ပ်ဇစ်",
+        "bodyOdds": "2-20",
+        "goalTotalOdds": "4+80",
+        "currentBodyOdds": "2-55",
+        "currentGoalTotalOdds": "4+50"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811848/",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811848/",
+      "oddsVerifiedDate": "2026-10-27",
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917027",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401917027",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-06",
+      "pdfRow": 6,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမန်ပိုကယ်ဖလား",
+      "home": "Hamburger SV",
+      "away": "Eintracht Frankfurt",
+      "homeDisplay": "ဟမ်းဘတ်",
+      "awayDisplay": "ဖရန့်ဖတ်",
+      "sourceKickoff": "23:30",
+      "kickoffCalendarDate": "2026-10-27",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-27 23:30 MMT",
+      "kickoffUtc": "2026-10-27T17:00:00Z",
+      "status": "finished",
+      "internetPrediction": "2-2",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "ဒီပွဲက ဘွန်ဒက်စ်လီဂါအသင်းနှစ်သင်း ထိပ်တိုက်တွေ့ဆုံတဲ့ ဖလားပွဲဖြစ်ပြီး ဟမ်းဘတ် က ခုနစ်ပွဲမှာ ကိုးမှတ်နဲ့ အဆင့် ၁၁ မှာ ရပ်တည်နေသလို ဖရန့်ဖတ် က ရှစ်မှတ်နဲ့ အဆင့် ၁၄ မှာ ရှိနေပါတယ်။ ဟမ်းဘတ်ဟာ နောက်ဆုံး ပါဒါဘွန်းကို တစ်ဂိုးတည်းနဲ့ ရှုံးနိမ့်ခဲ့ပြီး ခုနစ်ပွဲမှာ ခြောက်ဂိုးသာသွင်းထားနိုင်တာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ အားနည်းချက်ရှိနေပါတယ်။ ဖရန့်ဖတ်ကလည်း နောက်ဆုံး ဒေါ့မွန်ကို တစ်ဂိုးတည်းနဲ့ ရှုံးခဲ့ပြီး လိဂ်ခုနစ်ပွဲမှာ ၁၇ ဂိုးအထိ ပေးထားရတာကြောင့် ခံစစ်တည်ငြိမ်မှု မရှိသေးပါဘူး။ ဖရန့်ဖတ်အနေနဲ့ ဘောလုံးပိုင်ဆိုင်မှုကနေ တိုက်စစ်တည်ဆောက်နိုင်ဖို့ ကြိုးစားလာနိုင်ပေမယ့် နောက်တန်းမှာ နေရာလွတ်ကျန်ခဲ့ရင် ဟမ်းဘတ်အတွက် အသုံးချစရာဖြစ်လာနိုင်ပါတယ်။ နှစ်သင်းစလုံး အားနည်းချက်ရှိနေတဲ့အခြေအနေမှာ အိမ်ကွင်းမှာကစားရမယ့် ဟမ်းဘတ်က ဖလားပွဲရဲ့အရှိန်ကို ပိုမိုအသုံးချနိုင်ဖို့ ရှိတာကြောင့် ဟမ်းဘတ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 14,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ပါဒါဘွန်း",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "စတုဂတ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "ဟော့ဖန်ဟိမ်း",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "ကိုလုံး",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "လိုက်ပ်ဇစ်",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "result": "L"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ဒေါ့မွန်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "ကိုလုံး",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "လိုက်ပ်ဇစ်",
+          "teamGoals": 0,
+          "opponentGoals": 6,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "ဖရိုင်းဘတ်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "မိန့်ဇ်",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "result": "W"
+        }
+      ],
+      "homeStanding": {
+        "position": 11,
+        "played": 7,
+        "wins": 3,
+        "draws": 0,
+        "losses": 4,
+        "goalsFor": 6,
+        "goalsAgainst": 16,
+        "points": 9
+      },
+      "awayStanding": {
+        "position": 14,
+        "played": 7,
+        "wins": 2,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 10,
+        "goalsAgainst": 17,
+        "points": 8
+      },
+      "homeOdds": "3.00",
+      "drawOdds": "3.76",
+      "awayOdds": "2.18",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": null,
+      "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
+      "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "myanmarOdds": {
+        "upperTeam": "ဖရန့်ဖတ်",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "3-50",
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "3-50"
+      },
+      "homeFormScope": "league",
+      "homeFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "1-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916920",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401916920",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-12",
+      "pdfRow": 12,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမန်ပိုကယ်ဖလား",
+      "home": "FC Köln",
+      "away": "Union Berlin",
+      "homeDisplay": "ကိုလုံး",
+      "awayDisplay": "ယူနီယံဘာလင်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "ကိုလုံး က ဘွန်ဒက်စ်လီဂါ ခုနစ်ပွဲမှာ ရှစ်မှတ်နဲ့ အဆင့် ၁၂ မှာ ရပ်တည်နေပြီး နောက်ဆုံး ရှော်လ်ကေးနဲ့ ဂိုးမရှိသရေကျခဲ့တာကြောင့် ခံစစ်ပိုင်းမှာ တည်ငြိမ်မှုရှိခဲ့ပေမယ့် တိုက်စစ်ကနေ အနိုင်ဂိုးရယူနိုင်ဖို့ လိုအပ်နေပါတယ်။ တစ်ဖက်မှာ ယူနီယံဘာလင် က ခုနစ်ပွဲမှာ ခြောက်မှတ်သာရရှိပြီး အဆင့် ၁၇ မှာ ရှိနေသလို ၁၈ ဂိုးအထိ ပေးထားရတဲ့ ခံစစ်ပိုင်းက အသင်းရဲ့အကြီးမားဆုံးအားနည်းချက်ဖြစ်နေပါတယ်။ နောက်ဆုံး အော့စ်ဘတ်နဲ့ပွဲမှာ တစ်ဂိုးစီသရေကျခဲ့ပေမယ့် အဝေးကွင်းမှာ ကိုလုံးရဲ့တိုက်စစ်ကို ဆက်တိုက်ထိန်းချုပ်နိုင်ဖို့ လိုအပ်ပါလိမ့်မယ်။ ကိုလုံးအနေနဲ့ ဘောလုံးကို အလျင်စလိုရှေ့တင်ကစားတာထက် ယူနီယံဘာလင်နောက်တန်းရဲ့ နေရာယူပုံအားနည်းချက်ကို အသုံးချနိုင်ရင် ဂိုးသွင်းခွင့်တွေ ရရှိလာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ လက်ရှိခံစစ်တည်ငြိမ်မှုနဲ့ အိမ်ကွင်းအခြေအနေကို နှိုင်းယှဉ်ပြီး ကိုလုံးကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 15,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ရှော်လ်ကေး",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "ဖရန့်ဖတ်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "မိုချန်ဂလာဘတ်",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "ဟမ်းဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ဝါဒါဘရီမင်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "အော့စ်ဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ဒေါ့မွန်",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "အဲလ်ဗာ့စ်ဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "ဘိုင်ယန်မြူးနစ်",
+          "teamGoals": 0,
+          "opponentGoals": 7,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "ရှော်လ်ကေး",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "result": "L"
+        }
+      ],
+      "homeStanding": {
+        "position": 12,
+        "played": 7,
+        "wins": 2,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 8,
+        "goalsAgainst": 11,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 7,
+        "wins": 1,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 6,
+        "goalsAgainst": 18,
+        "points": 6
+      },
+      "homeOdds": "1.83",
+      "drawOdds": "3.86",
+      "awayOdds": "3.98",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": null,
+      "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
+      "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "myanmarOdds": {
+        "upperTeam": "ကိုလုံး",
+        "bodyOdds": "1+80",
+        "goalTotalOdds": "3+30",
+        "currentBodyOdds": "1+80",
+        "currentGoalTotalOdds": "3+20"
+      },
+      "homeFormScope": "league",
+      "homeFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "5-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917026",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401917026",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-11",
+      "pdfRow": 11,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမန်ပိုကယ်ဖလား",
+      "home": "Borussia Mönchengladbach",
+      "away": "Karlsruher SC",
+      "homeDisplay": "မိုချန်ဂလာဘတ်",
+      "awayDisplay": "ကားလ်စရူး",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "internetPrediction": "2-0",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "ဒီရာသီ ဘွန်ဒက်စ်လီဂါမှာ ခုနစ်ပွဲကစားပြီး သုံးမှတ်သာရရှိထားတဲ့ မိုချန်ဂလာဘတ် က အဆင့် ၁၈ အထိ ရောက်ရှိနေတာကြောင့် အသင်းရဲ့ရာသီအစပိုင်းခြေစွမ်းက စိတ်ပျက်စရာဖြစ်ခဲ့ပါတယ်။ ဒါပေမဲ့ နောက်ဆုံး စတုဂတ်နဲ့ပွဲမှာ ၃-၂ ဂိုးနဲ့ အနိုင်ရခဲ့တာက အသင်းအတွက် အရေးပါတဲ့ပြောင်းလဲမှုတစ်ခုဖြစ်ပြီး ပထမဆုံးလိဂ်နိုင်ပွဲကနေ ရရှိလာတဲ့ယုံကြည်မှုကို ဒီဖလားပွဲမှာ ဆက်လက်အသုံးချဖို့ ကြိုးစားလာနိုင်ပါတယ်။ ဒုတိယတန်းကလပ် ကားလ်စရူး ကတော့ အိမ်ရှင်ရဲ့ ခံစစ်အားနည်းမှုကို အသုံးချဖို့ ကြိုးစားလာမှာဖြစ်ပြီး မိုချန်ဂလာဘတ်က ခုနစ်ပွဲမှာ ၂၂ ဂိုးအထိ ပေးထားရတာကြောင့် အခွင့်အရေးမရှိဘူးလို့ မဆိုနိုင်ပါဘူး။ သို့သော် မိုချန်ဂလာဘတ်အနေနဲ့ စတုဂတ်ကို အနိုင်ရခဲ့တဲ့ပွဲက တိုက်စစ်အဆုံးသတ်နိုင်မှုကို ပြန်လည်ထိန်းသိမ်းနိုင်ရင် အိမ်ကွင်းမှာ ပိုမိုအားကောင်းလာဖို့ ရှိပါတယ်။ နောက်ဆုံးနိုင်ပွဲကြောင့် ရရှိလာတဲ့ယုံကြည်မှုနဲ့ အသင်းအင်အားကို ထည့်တွက်ပြီး မိုချန်ဂလာဘတ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 16,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "စတုဂတ်",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "date": "2026-10-23"
+        },
+        {
+          "result": "L",
+          "opponent": "ဟော့ဖန်ဟိမ်း",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-18"
+        },
+        {
+          "result": "L",
+          "opponent": "ကိုလုံး",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-11"
+        },
+        {
+          "result": "D",
+          "opponent": "စိန့်ပါလီ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-03"
+        },
+        {
+          "result": "W",
+          "opponent": "ဆီဂန်",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "date": "2026-09-24"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "မက်ဒ်ဘာ့ဂ်",
+          "teamGoals": 1,
+          "opponentGoals": 6,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "ဒါမ်းစတက်",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "စိန့်ပါလီ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "နုရင်ဘတ်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "ကော့ဘတ်",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "result": "L"
+        }
+      ],
+      "homeStanding": {
+        "position": 18,
+        "played": 7,
+        "wins": 1,
+        "draws": 0,
+        "losses": 6,
+        "goalsFor": 11,
+        "goalsAgainst": 22,
+        "points": 3
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 11,
+        "goalsAgainst": 20,
+        "points": 8
+      },
+      "homeOdds": "1.35",
+      "drawOdds": "5.38",
+      "awayOdds": "7.51",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4471.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": null,
+      "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
+      "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "awayStandingSourceUrl": "https://langerball.de/zweite_bundesliga/",
+      "myanmarOdds": {
+        "upperTeam": "မိုချန်ဂလာဘတ်",
+        "bodyOdds": "1-90",
+        "goalTotalOdds": "3-70",
+        "currentBodyOdds": "2+90",
+        "currentGoalTotalOdds": "3-75"
+      },
+      "homeFormSourceUrl": "https://footballnation.eu/match/bundesliga-1/2026/798942/",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://www.skysports.com/german-2-bundesliga-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917031",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401917031",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-13",
+      "pdfRow": 13,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမန်ပိုကယ်ဖလား",
+      "home": "SV Elversberg",
+      "away": "SV Darmstadt 98",
+      "homeDisplay": "အဲလ်ဗာ့စ်ဘတ်",
+      "awayDisplay": "ဒါမ်းစတက်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "internetPrediction": "3-0",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "ဘွန်ဒက်စ်လီဂါမှာ ခုနစ်ပွဲကစားပြီး ၁၀ မှတ်နဲ့ အဆင့် ၈ မှာ ရပ်တည်နေတဲ့ အဲလ်ဗာ့စ်ဘတ် က နောက်ဆုံး လိုက်ပ်ဇစ်ကို လေးဂိုးပြတ်ရှုံးခဲ့တာကြောင့် ခံစစ်အမှားတွေကို ပြန်လည်ပြုပြင်ဖို့ လိုအပ်နေပါတယ်။ အဲဒီပွဲမတိုင်ခင်ထိ လိဂ်အမှတ်ပေးဇယားအလယ်ပိုင်းမှာ ယှဉ်ပြိုင်နိုင်ခဲ့ပေမယ့် လိုက်ပ်ဇစ်လို တိုက်စစ်မြန်တဲ့အသင်းကို ရင်ဆိုင်ရာမှာ နောက်တန်းရဲ့ ခံနိုင်ရည်အားနည်းခဲ့တာ တွေ့ရပါတယ်။ ဒီပွဲမှာ ဒုတိယတန်းကလပ် ဒါမ်းစတက် ကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမှာဖြစ်ပြီး ပထမတန်းမှာ ပုံမှန်ရင်ဆိုင်နေရတဲ့ ဖိအားမြင့်ပွဲတွေရဲ့အတွေ့အကြုံက အဲလ်ဗာ့စ်ဘတ်အတွက် အကူအညီဖြစ်လာနိုင်ပါတယ်။ ဒါမ်းစတက်အနေနဲ့ အိမ်ရှင်ရဲ့နောက်တန်းကို တန်ပြန်တိုက်စစ်ကနေ ဖိအားပေးနိုင်ပေမယ့် အဲလ်ဗာ့စ်ဘတ်က ဘောလုံးကို ပိုမိုထိန်းချုပ်နိုင်ဖို့ ရှိပါတယ်။ နောက်ဆုံးရှုံးပွဲကနေ ပြန်လည်ရုန်းထွက်လိုတဲ့အခြေအနေနဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် အဲလ်ဗာ့စ်ဘတ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 17,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "L",
+          "opponent": "လိုက်ပ်ဇစ်",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "အော့စ်ဘတ်",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "ယူနီယံဘာလင်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "L",
+          "opponent": "မန်းဟိုင်းမ်",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-09-24"
+        },
+        {
+          "result": "D",
+          "opponent": "ရှော်လ်ကေး",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-09-20"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "opponent": "စိန့်ပါလီ",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-23"
+        },
+        {
+          "result": "L",
+          "opponent": "ကားလ်စရူး",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "date": "2026-10-18"
+        },
+        {
+          "result": "W",
+          "opponent": "ကော့ဘတ်",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "ဆန်အန်တိုနီယို",
+          "teamGoals": 7,
+          "opponentGoals": 0,
+          "date": "2026-09-30"
+        },
+        {
+          "result": "L",
+          "opponent": "ဝုလ်ဖ်ဘတ်",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "date": "2026-09-18"
+        }
+      ],
+      "homeStanding": {
+        "position": 8,
+        "played": 7,
+        "wins": 3,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 12,
+        "goalsAgainst": 15,
+        "points": 10
+      },
+      "awayStanding": {
+        "position": 18,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 8,
+        "goalsAgainst": 18,
+        "points": 8
+      },
+      "homeOdds": "1.42",
+      "drawOdds": "4.75",
+      "awayOdds": "6.00",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3812.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": null,
+      "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
+      "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "awayStandingSourceUrl": "https://langerball.de/zweite_bundesliga/",
+      "myanmarOdds": {
+        "upperTeam": "အဲလ်ဗာ့စ်ဘတ်",
+        "bodyOdds": "1-65",
+        "goalTotalOdds": "3-30",
+        "currentBodyOdds": "1-75",
+        "currentGoalTotalOdds": "3-35"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811812/",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/dfb-pokal/2026/811812/",
+      "oddsVerifiedDate": "2026-10-27",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916923",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401916923",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-10",
+      "pdfRow": 10,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမန်ပိုကယ်ဖလား",
+      "home": "Borussia Dortmund",
+      "away": "Werder Bremen",
+      "homeDisplay": "ဒေါ့မွန်",
+      "awayDisplay": "ဝါဒါဘရီမင်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 02:15 MMT",
+      "kickoffUtc": "2026-10-27T19:45:00Z",
+      "status": "finished",
+      "internetPrediction": "3-0",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "ဘွန်ဒက်စ်လီဂါမှာ ခုနစ်ပွဲကစားပြီး ငါးပွဲနိုင်၊ နှစ်ပွဲသရေနဲ့ ၁၇ မှတ်ရရှိထားတဲ့ ဒေါ့မွန် က အဆင့် ၂ မှာ ရပ်တည်နေသလို ခုနစ်ပွဲမှာ လေးဂိုးသာ ပေးထားရတဲ့ခံစစ်က ဒီရာသီ အသင်းရဲ့အကြီးမားဆုံးအားသာချက်ဖြစ်နေပါတယ်။ နောက်ဆုံး ဖရန့်ဖတ်နဲ့ပွဲမှာလည်း ဘိုင်ယာ ရဲ့အနိုင်ဂိုးနဲ့ တစ်ဂိုးတည်းအနိုင်ရခဲ့ပြီး နည်းပြ နီကိုကိုဗက်ချ် လက်အောက်ကအသင်းဟာ ခက်ခဲတဲ့ပွဲတွေမှာ ရလဒ်ထိန်းသိမ်းနိုင်စွမ်းရှိကြောင်း ပြသခဲ့ပါတယ်။ ဒါပေမဲ့ ဝါဒါဘရီမင် ကလည်း လွယ်ကူတဲ့အသင်းမဟုတ်ဘဲ ခုနစ်ပွဲမှာ ၁၂ မှတ်နဲ့ အဆင့် ၆ မှာ ရပ်တည်နေပြီး နောက်ဆုံး မိန့်ဇ်ကို အဝေးကွင်းမှာ ၃-၂ ဂိုးနဲ့ အနိုင်ယူထားတာကြောင့် တိုက်စစ်ပိုင်းက အားကောင်းနေပါတယ်။ ဝါဒါဘရီမင်ဟာ ခုနစ်ပွဲမှာ ၁၅ ဂိုးသွင်းထားနိုင်ပေမယ့် ၁၄ ဂိုးပြန်ပေးထားရတဲ့အတွက် ဒေါ့မွန်ရဲ့တိုက်စစ်အရှိန်ကို ထိန်းချုပ်နိုင်ဖို့ မလွယ်ပါဘူး။ အထူးသဖြင့် ဒေါ့မွန်ရဲ့ စည်းစနစ်ကျတဲ့ခံစစ်နဲ့ အိမ်ကွင်းမှာဖိအားပေးကစားနိုင်မှုက ဒီပွဲရဲ့အဆုံးအဖြတ်ဖြစ်လာနိုင်တာကြောင့် ဒေါ့မွန်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 18,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ဖရန့်ဖတ်",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "ဆာဘာ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ယူနီယံဘာလင်",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-14",
+          "opponent": "ဘိုဒိုဂလင်မ့်",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "ဝါဒါဘရီမင်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "မိန့်ဇ်",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ပါဒါဘွန်း",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "ဒေါ့မွန်",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "အော့စ်ဘတ်",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ကိုလုံး",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        }
+      ],
+      "homeStanding": {
+        "position": 2,
+        "played": 7,
+        "wins": 5,
+        "draws": 2,
+        "losses": 0,
+        "goalsFor": 12,
+        "goalsAgainst": 4,
+        "points": 17
+      },
+      "awayStanding": {
+        "position": 6,
+        "played": 7,
+        "wins": 3,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 15,
+        "goalsAgainst": 14,
+        "points": 12
+      },
+      "homeOdds": "1.39",
+      "drawOdds": "5.25",
+      "awayOdds": "7.39",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/81.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": null,
+      "leagueLogoCandidateUrl": "https://assets.football-logos.cc/logos/germany/3000x3000/dfb-pokal.f1cc229d.png",
+      "leagueLogoSourcePage": "https://www.dfb.de/maenner/wettbewerbe/dfb-pokal/modus",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.bundesliga.com/en/bundesliga/table",
+      "myanmarOdds": {
+        "upperTeam": "ဒေါ့မွန်",
+        "bodyOdds": "1-75",
+        "goalTotalOdds": "3-45",
+        "currentBodyOdds": "1-60",
+        "currentGoalTotalOdds": "3-55"
+      },
+      "homeFormSourceUrl": "https://www.skysports.com/borussia-dortmund-scores-fixtures/2026-10-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://sport.sky.de/bundesliga-spielplan-ergebnisse/2026-09-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "3-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917030",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401917030",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-15",
+      "pdfRow": 15,
+      "league": "Serie B",
+      "leagueDisplay": "အီတလီ စီးရီးဘီ",
+      "home": "Benevento",
+      "away": "Catanzaro",
+      "homeDisplay": "ဘင်နီဗင်တို",
+      "awayDisplay": "ကက်တန်ဇာရို",
+      "sourceKickoff": "00:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 00:30 MMT",
+      "kickoffUtc": "2026-10-27T18:00:00Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အိမ်ရှင် ဘင်နီဗင်တို က ရှစ်ပွဲကစားပြီး ၁၄ မှတ်နဲ့ အဆင့် ၅ မှာ ရပ်တည်နေသလို နောက်ဆုံး အာရက်ဇိုကို အဝေးကွင်းမှာ အနိုင်ရရှိထားတာကြောင့် အသင်းရဲ့ယုံကြည်မှုကောင်းမွန်နေပါတယ်။ ရှစ်ပွဲမှာ ၁၃ ဂိုးသွင်းပြီး ခုနစ်ဂိုးသာ ပေးထားရတဲ့မှတ်တမ်းကလည်း တိုက်စစ်နဲ့ခံစစ်ကြား ဟန်ချက်ညီနေကြောင်း ပြသနေပါတယ်။ တစ်ဖက်မှာ ကက်တန်ဇာရို က ရှစ်ပွဲမှာ လေးမှတ်သာရရှိပြီး အမှတ်ပေးဇယားအောက်ဆုံးမှာ ရောက်ရှိနေသလို နောက်ဆုံး အက်စ်ကိုလီကို အိမ်ကွင်းမှာ ၆-၁ ဂိုးနဲ့ အရေးနိမ့်ခဲ့တာကြောင့် ခံစစ်ပိုင်းမှာ အကြီးအကျယ်ပြဿနာရှိနေပါတယ်။ ကက်တန်ဇာရိုဟာ ရှစ်ပွဲမှာ ၂၀ ဂိုးအထိ ပေးထားရတဲ့အတွက် ဘင်နီဗင်တိုရဲ့ တိုက်စစ်ကစားသမားတွေအနေနဲ့ အခွင့်အရေးများများ ဖန်တီးနိုင်ဖို့ ရှိပါတယ်။ နှစ်သင်းရဲ့ ခံစစ်တည်ငြိမ်မှုနဲ့ နောက်ဆုံးရလဒ်ကို နှိုင်းယှဉ်ရင် ဘင်နီဗင်တိုကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 19,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "အာရက်ဇို",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "D",
+          "opponent": "ဗီချင်ဇာ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "ချီဆီနာ",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "L",
+          "opponent": "ဖရိုဆီနိုနီ",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-02"
+        },
+        {
+          "result": "W",
+          "opponent": "ကာရာရီဆီ",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-09-19"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "L",
+          "opponent": "အက်စ်ကိုလီ",
+          "teamGoals": 1,
+          "opponentGoals": 6,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "D",
+          "opponent": "ဗီရိုနာ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-16"
+        },
+        {
+          "result": "L",
+          "opponent": "မန်တိုဗာ",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "date": "2026-10-11"
+        },
+        {
+          "result": "L",
+          "opponent": "ဆမ်ဒိုးရီးယား",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-09-19"
+        },
+        {
+          "result": "W",
+          "opponent": "ကာရာရီဆီ",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-09-12"
+        }
+      ],
+      "homeStanding": {
+        "position": 5,
+        "played": 8,
+        "wins": 4,
+        "draws": 2,
+        "losses": 2,
+        "goalsFor": 13,
+        "goalsAgainst": 7,
+        "points": 14
+      },
+      "awayStanding": {
+        "position": 20,
+        "played": 8,
+        "wins": 1,
+        "draws": 1,
+        "losses": 6,
+        "goalsFor": 9,
+        "goalsAgainst": 20,
+        "points": 4
+      },
+      "homeOdds": "1.65",
+      "drawOdds": "3.60",
+      "awayOdds": "5.00",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4059.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3257.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
+      "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
+      "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "ဘင်နီဗင်တို",
+        "bodyOdds": "1+60",
+        "goalTotalOdds": "3+40",
+        "currentBodyOdds": "1+55",
+        "currentGoalTotalOdds": "3+40"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/serie-b/2026/805700/",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-b/2026/805700/",
+      "oddsVerifiedDate": "2026-10-27",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899578",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401899578",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-16",
+      "pdfRow": 16,
+      "league": "Serie B",
+      "leagueDisplay": "အီတလီ စီးရီးဘီ",
+      "home": "Ascoli",
+      "away": "Sampdoria",
+      "homeDisplay": "အက်စ်ကိုလီ",
+      "awayDisplay": "ဆမ်ဒိုးရီးယား",
+      "sourceKickoff": "01:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 01:30 MMT",
+      "kickoffUtc": "2026-10-27T19:00:00Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အက်စ်ကိုလီ က လက်ရှိစီးရီးဘီမှာ ရှစ်ပွဲကစား ၁၅ မှတ်နဲ့ အဆင့် ၄ မှာ ရပ်တည်နေပြီး နောက်ဆုံး ကက်တန်ဇာရိုကို အဝေးကွင်းမှာ ၆-၁ ဂိုးနဲ့ အပြတ်အသတ်အနိုင်ရရှိခဲ့တာကြောင့် တိုက်စစ်ပိုင်းမှာ ယုံကြည်မှုမြင့်မားနေပါတယ်။ အဲဒီပွဲမှာ ဂိုရီ က နှစ်ဂိုးသွင်းယူပေးနိုင်ခဲ့သလို အခြားကစားသမားတွေကလည်း ဂိုးသွင်းရာမှာ ပါဝင်နိုင်ခဲ့တာကြောင့် အက်စ်ကိုလီရဲ့တိုက်စစ်က ကစားသမားတစ်ဦးတည်းကို အားကိုးနေရတဲ့ပုံစံမဟုတ်ပါဘူး။ ဆမ်ဒိုးရီးယား ကတော့ ရှစ်ပွဲမှာ ငါးမှတ်နဲ့ အဆင့် ၁၉ မှာ ရှိနေပြီး နောက်ဆုံး ဆူတီရိုလ်နဲ့ပွဲမှာ ဦးဆောင်နိုင်ခဲ့ပေမယ့် နောက်ဆုံးမိနစ်ပိုင်း ပင်နယ်တီချေပဂိုးကြောင့် အနိုင်သုံးမှတ်ကို လက်လွှတ်ခဲ့ရပါတယ်။ ဆမ်ဒိုးရီးယားရဲ့ ခံစစ်က ရှစ်ပွဲမှာ ၁၆ ဂိုးအထိ ပေးထားရတာကြောင့် လတ်တလောဂိုးသွင်းခြေတွေ့နေတဲ့ အက်စ်ကိုလီတိုက်စစ်ကို ထိန်းနိုင်ဖို့ ခက်ခဲပါလိမ့်မယ်။ အိမ်ရှင်ရဲ့ တိုက်စစ်ယုံကြည်မှုနဲ့ အသင်းလိုက်စွမ်းဆောင်ရည်ကို ထည့်တွက်ပြီး အက်စ်ကိုလီကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 20,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "ကက်တန်ဇာရို",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "D",
+          "opponent": "အမ်ပိုလီ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "D",
+          "opponent": "ဆူတီရိုလ်",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "W",
+          "opponent": "အဗယ်လီနို",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "date": "2026-09-19"
+        },
+        {
+          "result": "L",
+          "opponent": "ပါဒိုဗာ",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-09-12"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "opponent": "ဆူတီရိုလ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "အာရက်ဇို",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-18"
+        },
+        {
+          "result": "L",
+          "opponent": "အဗယ်လီနို",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "date": "2026-10-09"
+        },
+        {
+          "result": "W",
+          "opponent": "ကက်တန်ဇာရို",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-09-19"
+        },
+        {
+          "result": "L",
+          "opponent": "မန်တိုဗာ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "date": "2026-09-13"
+        }
+      ],
+      "homeStanding": {
+        "position": 4,
+        "played": 8,
+        "wins": 4,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 6,
+        "points": 15
+      },
+      "awayStanding": {
+        "position": 19,
+        "played": 8,
+        "wins": 1,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 8,
+        "goalsAgainst": 16,
+        "points": 5
+      },
+      "homeOdds": "2.15",
+      "drawOdds": "3.20",
+      "awayOdds": "3.30",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3346.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2734.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
+      "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
+      "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "အက်စ်ကိုလီ",
+        "bodyOdds": "-65",
+        "goalTotalOdds": "3+100",
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "3+100"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/serie-b/2026/805701/",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-b/2026/805701/",
+      "oddsVerifiedDate": "2026-10-27",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899579",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401899579",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-17",
+      "pdfRow": 17,
+      "league": "Serie B",
+      "leagueDisplay": "အီတလီ စီးရီးဘီ",
+      "home": "Cesena",
+      "away": "Empoli",
+      "homeDisplay": "ချီဆီနာ",
+      "awayDisplay": "အမ်ပိုလီ",
+      "sourceKickoff": "01:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 01:30 MMT",
+      "kickoffUtc": "2026-10-27T19:00:00Z",
+      "status": "finished",
+      "internetPrediction": "1-1",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရုန်းကန်နေရတဲ့အသင်းနှစ်သင်း တွေ့ဆုံမယ့်ပွဲဖြစ်ပြီး ချီဆီနာ က ရှစ်ပွဲကစား ရှစ်မှတ်နဲ့ အဆင့် ၁၅ မှာ ရှိနေသလို အမ်ပိုလီ က ခုနစ်မှတ်နဲ့ အဆင့် ၁၇ မှာ ရပ်တည်နေပါတယ်။ ချီဆီနာဟာ ဒီရာသီ ရှစ်ပွဲမှာ နိုင်ပွဲတစ်ပွဲသာ ရရှိထားပေမယ့် ငါးပွဲသရေကျထားတာကြောင့် ပွဲအများစုမှာ အနိုင်မရခဲ့သော်လည်း ရလဒ်ကို အတိုင်းအတာတစ်ခုအထိ ထိန်းထားနိုင်ခဲ့ပါတယ်။ သို့သော် နောက်ဆုံး မိုဒီနာကို သုံးဂိုးပြတ်ရှုံးခဲ့တာက ခံစစ်အတွက် သတိထားစရာဖြစ်နေပါတယ်။ အမ်ပိုလီကလည်း နောက်ဆုံး ဗီချင်ဇာကို နှစ်ဂိုးပြတ်ရှုံးနိမ့်ခဲ့ပြီး ရှစ်ပွဲမှာ ၁၃ ဂိုးပေးထားရတာကြောင့် အဝေးကွင်းမှာ ယုံကြည်စရာမကောင်းပါဘူး။ နှစ်သင်းစလုံး ခြေစွမ်းအားနည်းနေတဲ့အခြေအနေမှာ ချီဆီနာအနေနဲ့ အိမ်ကွင်းမှာ ပွဲကိုပိုမိုထိန်းချုပ်နိုင်ဖို့ ရှိပြီး ခံစစ်ကိုပြန်လည်တည်ငြိမ်အောင် ထိန်းထားနိုင်မယ်ဆိုရင် ချီဆီနာကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 21,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "မိုဒီနာ",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "အဗယ်လီနို",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "ဘင်နီဗင်တို",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "ဂျူဗီစတာဘီယာ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ခရီမိုနီဆီ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "ဗီချင်ဇာ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "အက်စ်ကိုလီ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "ပါလာမို",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "မိုဒီနာ",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "အာရက်ဇို",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 8,
+        "wins": 1,
+        "draws": 5,
+        "losses": 2,
+        "goalsFor": 8,
+        "goalsAgainst": 12,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 8,
+        "wins": 2,
+        "draws": 1,
+        "losses": 5,
+        "goalsFor": 7,
+        "goalsAgainst": 13,
+        "points": 7
+      },
+      "homeOdds": "2.14",
+      "drawOdds": "3.35",
+      "awayOdds": "3.27",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3337.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2574.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
+      "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
+      "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "ချီဆီနာ",
+        "bodyOdds": "-55",
+        "goalTotalOdds": "3+95",
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "2-75"
+      },
+      "homeFormScope": "league",
+      "homeFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899576",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401899576",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-18",
+      "pdfRow": 18,
+      "league": "Serie B",
+      "leagueDisplay": "အီတလီ စီးရီးဘီ",
+      "home": "Vicenza",
+      "away": "Modena",
+      "homeDisplay": "ဗီချင်ဇာ",
+      "awayDisplay": "မိုဒီနာ",
+      "sourceKickoff": "01:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 01:30 MMT",
+      "kickoffUtc": "2026-10-27T19:00:00Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အိမ်ရှင် ဗီချင်ဇာ က ဒီရာသီ ရှစ်ပွဲမှာ ကိုးမှတ်နဲ့ အဆင့် ၁၃ မှာ ရပ်တည်နေပြီး နောက်ဆုံး အမ်ပိုလီကို အဝေးကွင်းမှာ နှစ်ဂိုးပြတ်အနိုင်ယူခဲ့တာကြောင့် လတ်တလောခြေစွမ်း တိုးတက်လာနိုင်တဲ့အခြေအနေရှိပါတယ်။ အဲဒီပွဲမှာ ခံစစ်ကို ဂိုးမပေးရအောင် ထိန်းထားနိုင်ခဲ့ပေမယ့် ရှစ်ပွဲမှာ ၁၅ ဂိုးပေးထားရတဲ့ ရာသီတစ်လျှောက်ခံစစ်မှတ်တမ်းကိုလည်း လျစ်လျူရှုလို့မရပါဘူး။ တစ်ဖက်မှာ မိုဒီနာ က ၁၆ မှတ်နဲ့ အဆင့် ၃ မှာ ရပ်တည်နေပြီး နောက်ဆုံး ချီဆီနာကို သုံးဂိုးပြတ်အနိုင်ယူထားသလို တိုက်စစ်မှူး ဘယ်လော့တီ ကလည်း နှစ်ဂိုးသွင်းယူပေးနိုင်ခဲ့ပါတယ်။ မိုဒီနာဟာ ရှစ်ပွဲမှာ ၁၅ ဂိုးသွင်းထားနိုင်တာကြောင့် ဗီချင်ဇာရဲ့ ခံစစ်အားနည်းချက်ကို အသုံးချနိုင်ဖို့ ရှိပါတယ်။ ဗီချင်ဇာရဲ့ အိမ်ကွင်းအားသာချက်နဲ့ နောက်ဆုံးနိုင်ပွဲကို ထည့်တွက်ရမှာဖြစ်ပေမယ့် တိုက်စစ်ပိုင်းမှာ ပိုမိုပြတ်သားနေတဲ့ မိုဒီနာကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 22,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "အမ်ပိုလီ",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "date": "2026-10-23"
+        },
+        {
+          "result": "D",
+          "opponent": "ဘင်နီဗင်တို",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "ပီဆာ",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "L",
+          "opponent": "ကိုပါ",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-03"
+        },
+        {
+          "result": "L",
+          "opponent": "ဗီရိုနာ",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-09-20"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "W",
+          "opponent": "ချီဆီနာ",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "ကာရာရီဆီ",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "W",
+          "opponent": "ဗီရိုနာ",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "date": "2026-10-11"
+        },
+        {
+          "result": "W",
+          "opponent": "အမ်ပိုလီ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-09-20"
+        },
+        {
+          "result": "D",
+          "opponent": "ဆူတီရိုလ်",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-09-12"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 11,
+        "goalsAgainst": 15,
+        "points": 9
+      },
+      "awayStanding": {
+        "position": 3,
+        "played": 8,
+        "wins": 5,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 15,
+        "goalsAgainst": 8,
+        "points": 16
+      },
+      "homeOdds": "3.60",
+      "drawOdds": "3.30",
+      "awayOdds": "2.00",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/120.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2573.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
+      "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
+      "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "မိုဒီနာ",
+        "bodyOdds": "-70",
+        "goalTotalOdds": "3+50",
+        "currentBodyOdds": "-70",
+        "currentGoalTotalOdds": "3+80"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/serie-b/2026/805708/",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-b/2026/805708/",
+      "oddsVerifiedDate": "2026-10-27",
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899574",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401899574",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-19",
+      "pdfRow": 19,
+      "league": "Serie B",
+      "leagueDisplay": "အီတလီ စီးရီးဘီ",
+      "home": "Mantova",
+      "away": "Cremonese",
+      "homeDisplay": "မန်တိုဗာ",
+      "awayDisplay": "ခရီမိုနီဆီ",
+      "sourceKickoff": "01:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 01:30 MMT",
+      "kickoffUtc": "2026-10-27T19:00:00Z",
+      "status": "finished",
+      "internetPrediction": "1-1",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "မန်တိုဗာ က ဒီရာသီ စီးရီးဘီမှာ ရှစ်ပွဲကစားပြီး ၁၇ မှတ်နဲ့ အဆင့် ၂ မှာ ရပ်တည်နေပြီး နောက်ဆုံး အန်တယ်လာကို အဝေးကွင်းမှာ တစ်ဂိုးတည်းနဲ့ အနိုင်ရခဲ့တာကြောင့် အသင်းရဲ့ရလဒ်ထိန်းသိမ်းနိုင်မှုက အားရစရာဖြစ်နေပါတယ်။ အဲဒီပွဲမှာ ဂလီအော့ဇီ ရဲ့အစောပိုင်းသွင်းဂိုးကို ပွဲပြီးဆုံးတဲ့အထိ ထိန်းထားနိုင်ခဲ့တာက မန်တိုဗာရဲ့ အနိုင်ရလဒ်ရယူနိုင်စွမ်းကို ပြသနေပါတယ်။ တစ်ဖက်မှာ ခရီမိုနီဆီ က ရှစ်ပွဲမှာ ခြောက်မှတ်သာရရှိပြီး အဆင့် ၁၈ မှာ ရပ်တည်နေရသလို နောက်ဆုံး ဂျူဗီစတာဘီယာကို အိမ်ကွင်းမှာ တစ်ဂိုးတည်းနဲ့ ရှုံးနိမ့်ခဲ့ပါတယ်။ ခရီမိုနီဆီဟာ ရှစ်ပွဲမှာ ခြောက်ဂိုးသာသွင်းထားနိုင်တာကြောင့် မန်တိုဗာရဲ့ ခံစစ်ကို ကျော်ဖြတ်ဖို့ လိုအပ်တဲ့ တိုက်စစ်ထိရောက်မှု မရှိသေးပါဘူး။ မန်တိုဗာက အိမ်ကွင်းမှာ ပွဲကိုထိန်းချုပ်ပြီး အနိုင်ဂိုးရရှိလာတဲ့အခါ ရလဒ်ကိုထိန်းသိမ်းနိုင်ဖို့ အလားအလာရှိတာကြောင့် မန်တိုဗာကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 23,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "အန်တယ်လာ",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ပါလာမို",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "ကက်တန်ဇာရို",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "ပီဆာ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "ဆမ်ဒိုးရီးယား",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "result": "W"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ဂျူဗီစတာဘီယာ",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "ပီဆာ",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "အာရက်ဇို",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "အန်တယ်လာ",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "result": "D"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "ချီဆီနာ",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "result": "D"
+        }
+      ],
+      "homeStanding": {
+        "position": 2,
+        "played": 8,
+        "wins": 5,
+        "draws": 2,
+        "losses": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 8,
+        "points": 17
+      },
+      "awayStanding": {
+        "position": 18,
+        "played": 8,
+        "wins": 1,
+        "draws": 3,
+        "losses": 4,
+        "goalsFor": 6,
+        "goalsAgainst": 11,
+        "points": 6
+      },
+      "homeOdds": "2.15",
+      "drawOdds": "3.34",
+      "awayOdds": "3.26",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3991.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4050.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
+      "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
+      "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "မန်တိုဗာ",
+        "bodyOdds": "-65",
+        "goalTotalOdds": "2-85",
+        "currentBodyOdds": "-50",
+        "currentGoalTotalOdds": "2-80"
+      },
+      "homeFormScope": "league",
+      "homeFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899573",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401899573",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-20",
+      "pdfRow": 20,
+      "league": "Serie B",
+      "leagueDisplay": "အီတလီ စီးရီးဘီ",
+      "home": "Padova",
+      "away": "Südtirol",
+      "homeDisplay": "ပါဒိုဗာ",
+      "awayDisplay": "ဆူတီရိုလ်",
+      "sourceKickoff": "01:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 01:30 MMT",
+      "kickoffUtc": "2026-10-27T19:00:00Z",
+      "status": "finished",
+      "internetPrediction": "1-1",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "ပါဒိုဗာ က ရှစ်ပွဲမှာ ၁၀ မှတ်နဲ့ အဆင့် ၉ မှာ ရပ်တည်နေပြီး နောက်ဆုံး အဗယ်လီနိုကို အဝေးကွင်းမှာ တစ်ဂိုးတည်းနဲ့ အနိုင်ရခဲ့တာကြောင့် အိမ်ကွင်းပြန်ရောက်လာတဲ့ ဒီပွဲမှာလည်း ယုံကြည်မှုရှိနေပါတယ်။ အဲဒီပွဲမှာ ဇူအယ်လီ ရဲ့ဂိုးနဲ့ အနိုင်ရလဒ်ကို ထိန်းထားနိုင်ခဲ့ပေမယ့် ရာသီတစ်လျှောက် ရှစ်ပွဲမှာ ခုနစ်ဂိုးသာသွင်းထားနိုင်တာကြောင့် ပါဒိုဗာရဲ့တိုက်စစ်က အလွန်အားကောင်းတဲ့အဆင့်မှာ မရှိသေးပါဘူး။ ဆူတီရိုလ် ကတော့ ၁၃ မှတ်နဲ့ အဆင့် ၇ မှာ ရပ်တည်နေပြီး နောက်ဆုံး ဆမ်ဒိုးရီးယားနဲ့ပွဲမှာ နောက်ဆုံးမိနစ်ပိုင်းအထိ ကြိုးစားကစားကာ တစ်ဂိုးစီသရေရလဒ်ကို ရယူနိုင်ခဲ့ပါတယ်။ ဆူတီရိုလ်ဟာ ရှစ်ပွဲမှာ ခုနစ်ဂိုးသာ ပေးထားရတာကြောင့် ပါဒိုဗာရဲ့ ဂိုးသွင်းအားနည်းနေတဲ့တိုက်စစ်ကို ထိန်းချုပ်နိုင်ဖို့ ရှိပါတယ်။ နှစ်သင်းကြား ကွာခြားချက်မကြီးမားပေမယ့် ခံစစ်တည်ငြိမ်မှုနဲ့ အမှတ်ပေးဇယားမှာ ပိုမိုအသာစီးရနေတဲ့ ဆူတီရိုလ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 24,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "W",
+          "opponent": "အဗယ်လီနို",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "အန်တယ်လာ",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "L",
+          "opponent": "ကာရာရီဆီ",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "date": "2026-10-11"
+        },
+        {
+          "result": "L",
+          "opponent": "ပါလာမို",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "date": "2026-09-19"
+        },
+        {
+          "result": "W",
+          "opponent": "အက်စ်ကိုလီ",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "date": "2026-09-12"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "result": "D",
+          "opponent": "ဆမ်ဒိုးရီးယား",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "L",
+          "opponent": "ဂျူဗီစတာဘီယာ",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "date": "2026-10-18"
+        },
+        {
+          "result": "D",
+          "opponent": "အက်စ်ကိုလီ",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "L",
+          "opponent": "ဝါကာအင်စ်ဘရွတ်ခ်",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "date": "2026-10-02"
+        },
+        {
+          "result": "W",
+          "opponent": "အာရက်ဇို",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "date": "2026-09-20"
+        }
+      ],
+      "homeStanding": {
+        "position": 9,
+        "played": 8,
+        "wins": 3,
+        "draws": 1,
+        "losses": 4,
+        "goalsFor": 7,
+        "goalsAgainst": 10,
+        "points": 10
+      },
+      "awayStanding": {
+        "position": 7,
+        "played": 8,
+        "wins": 3,
+        "draws": 4,
+        "losses": 1,
+        "goalsFor": 10,
+        "goalsAgainst": 7,
+        "points": 13
+      },
+      "homeOdds": "2.30",
+      "drawOdds": "3.00",
+      "awayOdds": "3.10",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3952.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11139.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
+      "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
+      "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "ပါဒိုဗာ",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "2-55",
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2-45"
+      },
+      "formSourceUrl": "https://footballnation.eu/match/serie-b/2026/805706/",
+      "oddsProvider": "Bet365",
+      "oddsSourceUrl": "https://footballnation.eu/match/serie-b/2026/805706/",
+      "oddsVerifiedDate": "2026-10-27",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899572",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401899572",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261027-21",
+      "pdfRow": 21,
+      "league": "Serie B",
+      "leagueDisplay": "အီတလီ စီးရီးဘီ",
+      "home": "Virtus Entella",
+      "away": "Avellino",
+      "homeDisplay": "အန်တယ်လာ",
+      "awayDisplay": "အဗယ်လီနို",
+      "sourceKickoff": "01:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-27",
+      "kickoffYangon": "2026-10-28 01:30 MMT",
+      "kickoffUtc": "2026-10-27T19:00:00Z",
+      "status": "finished",
+      "internetPrediction": "1-0",
+      "sourcePredictionType": "27.pdf internet prediction, not final score",
+      "dailyPreviewText": "အိမ်ရှင် အန်တယ်လာ က ရှစ်ပွဲကစား ကိုးမှတ်နဲ့ အဆင့် ၁၂ မှာ ရပ်တည်နေပြီး နောက်ဆုံး မန်တိုဗာကို တစ်ဂိုးတည်းနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ ပိုမိုပြတ်သားဖို့ လိုအပ်နေပါတယ်။ အန်တယ်လာဟာ ရှစ်ပွဲမှာ ၁၀ ဂိုးသွင်းပြီး ကိုးဂိုးသာ ပေးထားရတာကြောင့် ခံစစ်ပိုင်းက ဆိုးရွားနေတာမျိုး မဟုတ်ပေမယ့် အနိုင်ပွဲတွေကို ဆက်တိုက်ရယူနိုင်စွမ်းတော့ နည်းပါးနေပါတယ်။ အဗယ်လီနို ကလည်း နောက်ဆုံး ပါဒိုဗာကို တစ်ဂိုးတည်းနဲ့ ရှုံးထားပေမယ့် ရှစ်ပွဲမှာ ၁၁ မှတ်ရရှိပြီး အဆင့် ၈ မှာ ရှိနေသလို ၁၂ ဂိုးသွင်းထားနိုင်တာကြောင့် တိုက်စစ်အင်အားမှာ အနည်းငယ်ပိုမိုသာလွန်နေပါတယ်။ အန်တယ်လာအနေနဲ့ အိမ်ကွင်းမှာ ဘောလုံးကိုထိန်းချုပ်နိုင်ဖို့ ကြိုးစားလာနိုင်ပေမယ့် အဗယ်လီနိုက တန်ပြန်တိုက်စစ်အခွင့်အရေးတွေကို ပိုမိုပြတ်သားစွာ အသုံးချနိုင်ရင် အနိုင်ရဖို့ ရှိပါတယ်။ နှစ်သင်းရဲ့ တိုက်စစ်ဂိုးသွင်းနိုင်မှုနဲ့ လက်ရှိရမှတ်အခြေအနေကို ချိန်ဆပြီး အဗယ်လီနိုကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 25,
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "result": "L",
+          "opponent": "မန်တိုဗာ",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "date": "2026-10-24"
+        },
+        {
+          "result": "W",
+          "opponent": "ပါဒိုဗာ",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "date": "2026-10-17"
+        },
+        {
+          "result": "D",
+          "opponent": "ဂျူဗီစတာဘီယာ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "date": "2026-10-10"
+        },
+        {
+          "result": "D",
+          "opponent": "ခရီမိုနီဆီ",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "date": "2026-09-19"
+        },
+        {
+          "result": "W",
+          "opponent": "ပီဆာ",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "date": "2026-09-11"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "ပါဒိုဗာ",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "result": "L"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "ချီဆီနာ",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "ဆမ်ဒိုးရီးယား",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "အက်စ်ကိုလီ",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "ပါလာမို",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "result": "D"
+        }
+      ],
+      "homeStanding": {
+        "position": 12,
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 10,
+        "goalsAgainst": 9,
+        "points": 9
+      },
+      "awayStanding": {
+        "position": 8,
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 12,
+        "goalsAgainst": 9,
+        "points": 11
+      },
+      "homeOdds": "2.07",
+      "drawOdds": "3.20",
+      "awayOdds": "3.60",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11137.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4055.png",
+      "leagueLogoUrl": "https://media.api-sports.io/football/leagues/136.png",
+      "verificationStatus": "HOLD: team crests, standings, current last-five and 1X2 require independent verification; no live publication",
+      "fixtureSources": "https://sport.sky.it/calcio/serie-b/calendario-risultati",
+      "leagueLogoCandidateUrl": "https://assets.fclogo.top/png/Serie-B-v2018.png",
+      "leagueLogoSourcePage": "https://www.legab.it/seriebkt/",
+      "leagueLogoCandidateUse": "REVIEW_REQUIRED: confirm 2026/27 season branding, reuse rights and actual image; do not publish placeholder as verified",
+      "standingsSourceUrl": "https://www.legab.it/seriebkt/classifica",
+      "myanmarOdds": {
+        "upperTeam": "အန်တယ်လာ",
+        "bodyOdds": "-70",
+        "goalTotalOdds": "2-45",
+        "currentBodyOdds": "-70",
+        "currentGoalTotalOdds": "2-45"
+      },
+      "homeFormSourceUrl": "https://footballnation.eu/match/serie-b/2026/805710/",
+      "awayFormScope": "league",
+      "awayFormSourceUrl": "https://www.skysports.com/italian-serie-b-scores-fixtures/2026-10-01",
+      "oddsProvider": "TipsterArea bookmaker average",
+      "oddsSourceUrl": "https://tipsterarea.com/matches/date-27-10-2026",
+      "oddsVerifiedDate": "2026-10-27",
+      "oddsAsOf": "2026-10-27T00:01:00Z",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899570",
+      "resultVerifiedDate": "2026-10-28",
+      "resultSourceName": "ESPN",
+      "resultMatchId": "401899570",
+      "finalScoreStatus": "STATUS_FULL_TIME"
+    }
+  ],
+  "updateStatus": "final",
+  "sourceManifest": {
+    "files": [
+      {
+        "name": "27.pdf",
+        "sha256": "0fec4e3f2a21c4006bab4b741f8d5fb16d0f0635175376acc71aa314978b838d"
+      },
+      {
+        "name": "Pasted text(20261027-020009).txt",
+        "sha256": "670f17bab1c28747127ed9869a5974de0d1d0bf593b2e68868873d3c7dc40b8e"
+      }
+    ]
+  },
+  "resultVerifiedDate": "2026-10-28"
+}
