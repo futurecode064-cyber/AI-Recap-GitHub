@@ -1,5 +1,11 @@
 name: Future Code Language Academy Android
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'portal/apps/languages/**'
+      - 'language-apk/**'
+      - '.github/workflows/fc-language-academy-apk.yml'
   workflow_dispatch:
 permissions:
   contents: write

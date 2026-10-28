@@ -7,7 +7,7 @@ import argparse,asyncio,hashlib,json,os,ssl,subprocess
 from pathlib import Path
 import edge_tts
 import edge_tts.communicate
-VOICE={'en':'en-US-JennyNeural','th':'th-TH-PremwadeeNeural','zh':'zh-CN-XiaoxiaoNeural','ja':'ja-JP-NanamiNeural','ko':'ko-KR-SunHiNeural','de':'de-DE-KatjaNeural','fr':'fr-FR-DeniseNeural','es':'es-ES-ElviraNeural','ru':'ru-RU-SvetlanaNeural','ar':'ar-SA-ZariyahNeural','hi':'hi-IN-SwaraNeural','vi':'vi-VN-HoaiMyNeural'}
+VOICE={'en':'en-US-JennyNeural','th':'th-TH-NiwatNeural','zh':'zh-CN-XiaoxiaoNeural','ja':'ja-JP-NanamiNeural','ko':'ko-KR-SunHiNeural','de':'de-DE-KatjaNeural','fr':'fr-FR-DeniseNeural','es':'es-ES-ElviraNeural','ru':'ru-RU-SvetlanaNeural','ar':'ar-SA-ZariyahNeural','hi':'hi-IN-SwaraNeural','vi':'vi-VN-HoaiMyNeural'}
 EXPECTED={'thai':(1,250),'chinese':(1,230),'english':(1,290),'academy':(12,360)}
 # Respect the host's trusted CA bundle when one is configured; never disable TLS.
 if os.environ.get('SSL_CERT_FILE'):
@@ -26,14 +26,14 @@ async def build(project,output):
     # A previous eSpeak file at the same hash is never accepted as a neural clip.
     if old.get('engine')!='edge-neural-v1':
         for p in output.glob('*/*.mp3'):p.unlink()
-    semaphore=asyncio.Semaphore(4);completed=0;clips=[]
+    semaphore=asyncio.Semaphore(2);completed=0;clips=[]
     async def generate(lang,text):
         nonlocal completed
         digest=hashlib.sha256(text.encode()).hexdigest()[:24]
         folder=output/lang;folder.mkdir(exist_ok=True);target=folder/(digest+'.mp3')
         async with semaphore:
             if not target.exists():
-                for attempt in range(4):
+                for attempt in range(6):
                     tmp=target.with_suffix('.partial.mp3')
                     try:
                         await asyncio.wait_for(edge_tts.Communicate(text,VOICE[lang],rate='-12%').save(str(tmp)),90)
@@ -42,7 +42,8 @@ async def build(project,output):
                         tmp.replace(target);break
                     except Exception:
                         tmp.unlink(missing_ok=True)
-                        if attempt==3:raise
+                        print(f'{project}: retry {attempt+1}/6 {lang} {text!r}',flush=True)
+                        if attempt==5:raise RuntimeError(f'Neural synthesis failed: {lang} {text!r}')
                         await asyncio.sleep(2*(attempt+1))
             seconds=duration(target)
             if seconds<.2:raise RuntimeError('Invalid speech duration')
