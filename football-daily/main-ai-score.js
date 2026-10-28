@@ -100,7 +100,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
  }
  onePngBtn?.addEventListener("click",()=>specialDownload(onePngBtn,"one"));
  zipFramesBtn?.addEventListener("click",()=>specialDownload(zipFramesBtn,"zip"));
- const labelLeague=s=>leagueNames[s]||s||"အခြားလိဂ်";
+ const labelLeague=s=>report?.matches?.find(m=>m.league===s&&m.leagueDisplay)?.leagueDisplay||leagueNames[s]||"အခြားလိဂ်";
  const team=(m,s)=>String(m[s+"Display"]||m[s]||"").trim();
  const crestFallbackIds={
   "Lincoln City":314,
