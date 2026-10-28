@@ -1,7 +1,7 @@
 "use strict";
 (function(){
 const $=id=>document.getElementById(id);
-const SECTION={odds:"ပေါက်ကြေး",previews:"ပွဲကြိုသုံးသပ်ချက်",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"VIP Internet · Bookies · AI Tips",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
+const SECTION={odds:"ပေါက်ကြေး",oddsCards:"မြန်မာကြေးကတ်ပုံစံ",previews:"ပွဲကြိုသုံးသပ်ချက်",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"VIP Internet · Bookies · AI Tips",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
 const home=$("engineHome"),odds=$("engineOdds"),DB="future-code-professional-frame-studio-v2";
 const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odds-hyper-goal","odds-kmm","odds-special-one","odds-the-freedom","odds-bcf","odds-final-goal","odds-ko-chan","odds-team-pmm","odds-thuta","odds-ymc","odds-ko-tut-pi","odds-khin-khin-htar","odds-burmese-red","preview-bcf","preview-daily","preview-final","preview-ggoal","preview-ko","preview-pmm","preview-htet","results-best","results-htet","results-kotwat","ai-best","ai-final","ai-special","news-journal","special-choice"];
 let state=null,currentId="",isNew=false,working=false,published=null,oddsData=null,archive=null,news=null,date="",savedURL=null;
@@ -9,6 +9,7 @@ const copy=o=>JSON.parse(JSON.stringify(o)),str=x=>String(x??"").trim();
 const goodColor=x=>/^#[\da-f]{6}$/i.test(x||"")?x:"#16486c";
 
 const layoutOptions={
+ oddsCards:[["one","ပွဲအားလုံး PNG တစ်ပုံတည်း"],["two","ပွဲအားလုံး ၂ ပုံခွဲ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  odds:[["two","ပွဲအားလုံးကို PNG ၂ ပုံခွဲ"],["one","ပွဲအားလုံး PNG တစ်ပုံတည်း"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  previews:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
  specials:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
@@ -16,7 +17,7 @@ const layoutOptions={
  ai:[["one","VIP / Bookies / AI ဇယား တစ်ပုံ"],["two","ဇယားကို PNG ၂ ပုံခွဲ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  news:[["one","တစ်ပုဒ်တစ်ပုံ"],["two","သတင်း ၂ ပုဒ် တစ်ပုံ"]]
 };
-const layoutDefaults={odds:"two",previews:"one",specials:"one",results:"one",ai:"one",news:"one"};
+const layoutDefaults={odds:"two",oddsCards:"one",previews:"one",specials:"one",results:"one",ai:"one",news:"one"};
 let sectionLayouts={...layoutDefaults};
 try{const from=JSON.parse(localStorage.getItem("fc-frame-section-layout-v1")||"{}");for(const k of TYPES)if(layoutOptions[k].some(opt=>opt[0]===from[k]))sectionLayouts[k]=from[k];}catch(e){console.warn("Frame layouts read",e);}
 function initSectionLayouts(){
@@ -61,7 +62,19 @@ function assignReferenceRed(){
  const id="odds-burmese-red";if(frame(id)&&!assigned(id,"odds"))state.placements.odds.push(id);
  localStorage.setItem("fc-red-reference-assignment-v1","yes");return true;
 }
-function upgradeOddsBanners(){
+function migrateOddsCardsAssignment(){
+  // Make every existing odds frame, including BCF and Best Your Choice, usable
+  // as a branded skin for the independent Myanmar odds-card layout.
+  if(localStorage.getItem("fc-odds-cards-assignments-v1"))return false;
+  const ids=(state.placements.odds||[]).filter(id=>!!frame(id));
+  const fallback=frames().filter(f=>f.id.startsWith("odds-")).map(f=>f.id);
+  state.placements.oddsCards=[...new Set([...(state.placements.oddsCards||[]),...ids,...fallback])];
+  if(!state.placements.oddsCards.length)return false;
+  state.selected.oddsCards=state.placements.oddsCards.includes("odds-bcf")?"odds-bcf":state.placements.oddsCards[0];
+  localStorage.setItem("fc-odds-cards-assignments-v1","yes");
+  return true;
+ }
+ function upgradeOddsBanners(){
  if(localStorage.getItem("fc-odds-banner-default-height-v1"))return false;
  let changed=false;
  for(const f of frames()){
@@ -84,7 +97,7 @@ function migrateAssignments(){
 async function readyEngines(){
  await waitFor(()=>home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob&&home.contentWindow?.FutureCodeFrameZip?.Archive);
  await home.contentWindow.FutureCodeProfessionalFrames.ready;
- await waitFor(()=>odds.contentWindow?.FutureCodeProfessionalFrames?.ready&&odds.contentWindow?.FutureCodeTableOddsFrames?.draw&&odds.contentWindow?.FutureCodeFrameEditor?.getOddsSheet);
+ await waitFor(()=>odds.contentWindow?.FutureCodeProfessionalFrames?.ready&&odds.contentWindow?.FutureCodeTableOddsFrames?.draw&&odds.contentWindow?.FutureCodeBurmeseRedOddsFrame?.draw&&odds.contentWindow?.FutureCodeFrameEditor?.getOddsSheet);
  await odds.contentWindow.FutureCodeProfessionalFrames.ready;
 }
 function reloadOne(el){return new Promise(ok=>{el.addEventListener("load",ok,{once:true});const u=new URL(el.src,location.href);u.searchParams.set("workspaceReload",String(Date.now()));el.src=u.href;});}
@@ -109,7 +122,7 @@ async function loadData(){
  ]);
  $("reportDate").textContent=date+" · ပွဲ "+data.matches.length;
 }
-const rawData=k=>k==="odds"?(oddsData?.matches||[]):k==="results"?(archive?.matches||[]).filter(m=>m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(m.finalScore||"")):k==="news"?(news?.items||[]):k==="specials"?(published?.matches||[]).filter(m=>m.specialChoice===true||m.specialAnalysisParagraphs?.length):(published?.matches||[]);
+const rawData=k=>(k==="odds"||k==="oddsCards")?(oddsData?.matches||[]):k==="results"?(archive?.matches||[]).filter(m=>m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(m.finalScore||"")):k==="news"?(news?.items||[]):k==="specials"?(published?.matches||[]).filter(m=>m.specialChoice===true||m.specialAnalysisParagraphs?.length):(published?.matches||[]);
 const matchId=m=>m.fixtureId||m.id||m.home+"-"+m.away;
 const matchLabel=m=>m.title||((m.homeDisplay||m.home||"")+" VS "+(m.awayDisplay||m.away||""));
 function showList(){
@@ -266,13 +279,13 @@ $("deleteFrame").onclick=async()=>{const f=frame(currentId);if(!f||f.builtin||!c
  try{state.frames=state.frames.filter(x=>x.id!==f.id);for(const k of TYPES){state.placements[k]=state.placements[k].filter(x=>x!==f.id);if(state.selected[k]===f.id)state.selected[k]="none";}currentId=state.frames[0]?.id||"";await save("ကိုယ်ပိုင် Frame ဖျက်ပြီး");}catch(e){status(e.message,true);}};
 $("removeTop").onclick=()=>resetBanner("topImage");$("removeBottom").onclick=()=>resetBanner("bottomImage");
 $("backup").onclick=exportState;$("importBackup").onchange=async e=>{try{await importState(e.target.files[0]);}catch(x){status(x.message,true);}e.target.value="";};
-$("downSection").onchange=()=>{$("oddsModeWrap").hidden=!("all"===$("downSection").value||"odds"===$("downSection").value);renderExportControls();};$("oddsMode").onchange=clearExportPreview;$("leagueFilter").onchange=renderMatchFilter;
+$("downSection").onchange=()=>{$("oddsModeWrap").hidden=!("all"===$("downSection").value||"odds"===$("downSection").value||"oddsCards"===$("downSection").value);renderExportControls();};$("oddsMode").onchange=clearExportPreview;$("leagueFilter").onchange=renderMatchFilter;
 $("downFrame").onchange=clearExportPreview;$("matchFilter").onchange=clearExportPreview;
 $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();status("Published Data ပြန်ရယူပြီး။");}catch(e){status(e.message,true);}};
 (async()=>{try{
  initSectionLayouts();
  status("မူလ Website Export Engine နှစ်ခု ဖွင့်နေသည်…");await readyEngines();
- state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed(),bannerUpgrade=upgradeOddsBanners();if(migrated||added||bannerUpgrade)await dbWrite(state);
+ state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed(),cardUpgrade=migrateOddsCardsAssignment(),bannerUpgrade=upgradeOddsBanners();if(migrated||added||cardUpgrade||bannerUpgrade)await dbWrite(state);
  let loadFailure=null;try{await loadData();}catch(e){loadFailure=e;}
  currentId=state.frames[0]?.id||"";$("oddsModeWrap").hidden=false;renderList();renderEditor();renderExportControls();
  status(loadFailure?"Frame Editor ဖွင့်ပြီး၊ Published Data မရသေးပါ — "+loadFailure.message:"Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။",!!loadFailure);
