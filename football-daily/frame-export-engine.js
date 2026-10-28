@@ -5,6 +5,7 @@ const $=id=>document.getElementById(id),slug=x=>String(x||"frame").toLowerCase()
 const blobCanvas=canvas=>new Promise((ok,bad)=>canvas.toBlob(b=>b&&b.size?ok(b):bad(Error("PNG Blob မထွက်ပါ")),"image/png"));
 const wait=ms=>new Promise(ok=>setTimeout(ok,ms));
 const splitRows=(rows,mode)=>{
+ if(mode==="pair")return Array.from({length:Math.ceil(rows.length/2)},(_,i)=>rows.slice(i*2,i*2+2));
  if(mode==="league"){const grouped=new Map();for(const row of rows){const key=row.league||"Other";if(!grouped.has(key))grouped.set(key,[]);grouped.get(key).push(row);}return [...grouped.values()];}
  if(mode==="two"&&rows.length>1){const n=Math.ceil(rows.length/2);return [rows.slice(0,n),rows.slice(n)];}
  return [rows];
@@ -99,7 +100,9 @@ async function exportAll(previewOnly){
  let outputURL=null,files=0;const warnings=[];
  try{
   await studio.loadData();
-  const W=studio.getHome(),zip=new W.FutureCodeFrameZip.Archive();
+  const W=studio.getHome();
+   if(!W.FutureCodeFrameZip?.Archive)throw Error("ZIP Engine မတင်နိုင်ပါ။ Browser Refresh လုပ်ပြီး ပြန်စမ်းပါ။");
+   const zip=previewOnly?null:new W.FutureCodeFrameZip.Archive();
   for(let i=0;i<assignments.length;i++){
    const {section,frame:f}=assignments[i];
    const rows=studio.filtered(section),label=studio.SECTION[section]+" · "+f.name;
