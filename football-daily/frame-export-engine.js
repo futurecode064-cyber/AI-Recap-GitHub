@@ -43,6 +43,18 @@ async function* forSection(k,f,rows,mode){
    const out=await stackCanvases(canvases),name=mode==="two"?"pair-"+String(i+1).padStart(2,"0"):chunks[i][0].fixtureId||slug(chunks[i][0].home+"-"+chunks[i][0].away);
    yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(out)};
   }
+  }else if(k==="oddsCards"){
+   const O=s().getOdds(),sheet=s().getOddsData();
+   if(!sheet?.reportDate||!O.FutureCodeBurmeseRedOddsFrame?.draw)throw Error("မြန်မာကြေးကတ်ပုံစံ PNG Engine မရပါ");
+   const parts=splitRows(rows,mode);
+   for(let i=0;i<parts.length;i++){
+    const native=await O.FutureCodeBurmeseRedOddsFrame.draw(parts[i],{
+     date:sheet.reportDate,mode:$("oddsMode")?.value||"original",color,
+     part:i+1,total:parts.length
+    });
+    const framed=await p.wrap(native,"oddsCards","pro:"+f.id);
+    yield {name:outputName(f,i,parts.length),blob:await blobCanvas(framed)};
+   }
  }else if(k==="odds"){
   const O=s().getOdds(),sheet=s().getOddsData();
   if(!sheet?.reportDate||!O.FutureCodeTableOddsFrames?.draw)throw Error("ပေါက်ကြေး Data / PNG Engine မရရှိပါ။");
