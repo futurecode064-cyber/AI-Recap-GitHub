@@ -36,7 +36,7 @@
   panel.dataset.frameSection=section;
   const headline=panel.querySelector("h3");
   if(headline)headline.textContent=(section==="previews"?"ပွဲကြိုသုံးသပ်ချက်":section==="results"?"ဂိုးရလဒ်":section)+" — မူရင်း Frame ပြင် / ဖြုတ် / ပြန်ဖော်";
-  function place(){const master=document.getElementById("fcProfessionalFrameStudio");if(master){master.append(panel);return true;}return false;}
+  function place(){const master=document.getElementById("fcProfessionalFrameStudio");if(master){(document.getElementById("fcpOriginalFrames")||master).append(panel);return true;}return false;}
   if(!place()){
     if(anchor)anchor.insertAdjacentElement("afterend",panel);
     const watcher=new MutationObserver(()=>{if(place())watcher.disconnect();});
