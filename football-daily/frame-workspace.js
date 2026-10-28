@@ -36,6 +36,13 @@ const frame=id=>frames().find(f=>f.id===id);
 const assigned=(id,k)=>state.placements[k]?.includes(id);
 const used=id=>TYPES.filter(k=>assigned(id,k));
 const status=(msg,error=false)=>{const e=$("status");e.textContent=msg;e.dataset.error=error?"1":"0";};
+function clearExportPreview(){
+ const preview=$("downPreviewImage"),old=preview.dataset.url;
+ if(old)URL.revokeObjectURL(old);
+ delete preview.dataset.url;preview.removeAttribute("src");preview.hidden=true;
+ $("previewExportPlaceholder").hidden=false;
+ const link=$("downloadLink");link.hidden=true;link.removeAttribute("href");
+}
 async function waitFor(check,timeout=60000){const start=Date.now();for(;;){try{const x=check();if(x)return x;}catch{}if(Date.now()-start>timeout)throw Error("Frame Export Engine မဖွင့်နိုင်ပါ။ Internet ပြန်စစ်ပြီး Refresh လုပ်ပါ။");await new Promise(r=>setTimeout(r,200));}}
 const dbOpen=()=>new Promise((ok,bad)=>{const r=indexedDB.open(DB,1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains("config"))r.result.createObjectStore("config");};r.onsuccess=()=>ok(r.result);r.onerror=()=>bad(r.error);});
 async function dbRead(){const d=await dbOpen();return new Promise((ok,bad)=>{const t=d.transaction("config"),r=t.objectStore("config").get("main");r.onsuccess=()=>ok(r.result||null);r.onerror=()=>bad(r.error);t.oncomplete=()=>d.close();});}
@@ -173,6 +180,7 @@ async function importState(file){
  state=v;normalize();currentId=state.frames[0]?.id||"";await save("Backup Import ပြီးပါပြီ။");
 }
 function renderExportControls(){
+ clearExportPreview();
  const section=$("downSection").value,host=$("downFrame"),old=host.value;
  host.replaceChildren(new Option("သတ်မှတ်ထားသော Frame အားလုံး","all"));
  for(const f of frames().filter(x=>section==="all"?used(x.id).length:assigned(x.id,section)))host.add(new Option(f.name,f.id));
@@ -189,6 +197,7 @@ function renderLeagueFilter(){
  renderMatchFilter();
 }
 function renderMatchFilter(){
+ clearExportPreview();
  const k=$("downSection").value,host=$("matchFilter"),old=host.value;
  host.replaceChildren(new Option("အားလုံး","all"));
  if(k!=="all")for(const m of rawData(k).filter(m=>$("leagueFilter").value==="all"||(m.league||m.category)===$("leagueFilter").value))host.add(new Option(matchLabel(m),matchId(m)));
@@ -218,7 +227,7 @@ function tab(which){
 window.FCStudio=Object.freeze({
  TYPES,SECTION,getState:()=>state,getHome:()=>home.contentWindow,getOdds:()=>odds.contentWindow,
  getReport:()=>published,getOddsData:()=>oddsData,getArchive:()=>archive,getNews:()=>news,getDate:()=>date,
- combos,filtered,status,setWorking,publishBlob,loadData,readyEngines,getSectionLayout:k=>sectionLayouts[k]||"one"
+ combos,filtered,status,setWorking,publishBlob,loadData,readyEngines,clearExportPreview,getSectionLayout:k=>sectionLayouts[k]||"one"
 });
 $("navLibrary").onclick=()=>tab("library");$("navDownloads").onclick=()=>tab("downloads");$("toDownloads").onclick=()=>tab("downloads");
 $("search").oninput=renderList;$("librarySection").onchange=renderList;
@@ -232,6 +241,7 @@ $("deleteFrame").onclick=async()=>{const f=frame(currentId);if(!f||f.builtin||!c
 $("removeTop").onclick=()=>resetBanner("topImage");$("removeBottom").onclick=()=>resetBanner("bottomImage");
 $("backup").onclick=exportState;$("importBackup").onchange=async e=>{try{await importState(e.target.files[0]);}catch(x){status(x.message,true);}e.target.value="";};
 $("downSection").onchange=renderExportControls;$("leagueFilter").onchange=renderMatchFilter;
+$("downFrame").onchange=clearExportPreview;$("matchFilter").onchange=clearExportPreview;
 $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();status("Published Data ပြန်ရယူပြီး။");}catch(e){status(e.message,true);}};
 (async()=>{try{
  initSectionLayouts();
