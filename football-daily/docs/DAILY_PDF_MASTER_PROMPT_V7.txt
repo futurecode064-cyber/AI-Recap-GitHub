@@ -1,4 +1,4 @@
-အရေးကြီးဆုံး — နေ့စဉ် data တင်ခြင်းကို စနစ်သစ် Workers/D1 data-only publication နဲ့သာ လုပ်ပါ။ GitHub static JSON commit၊ mirror sync၊ Cloudflare Pages build ကို နေ့စဉ် data တင်နည်းအဖြစ် မသုံးပါနဲ့။ Login/API/reader အဆင်မပြေရင် static စနစ်အဟောင်းကို ပြန်မသုံးဘဲ candidate ကိုထိန်းပြီး BLOCKED အကြောင်းရင်းပြောပါ။ Code/infrastructure ပြင်ဆင်မှုကို နေ့စဉ် data update နဲ့ မရောပါနဲ့။
+လက်ရှိ ထုတ်ဝေမှုလမ်းကြောင်း — ပြီးစီးခဲ့သော Work https://chatgpt.com/c/6ae15dc0-6558-83ea-8348-d52bc9dfd358 အတိုင်း PDF/data ပြင်ဆင်စစ်ဆေး → GitHub futurecode064-cyber/AI-Recap-GitHub:football-daily-render ရဲ့ football-daily/ မှာ သက်ဆိုင်ရာဖိုင်များတင် → Cloudflare live data ပြန်စစ်ပါ။ Static website ဖြစ်လို့ npm build/compile မလိုပါ။ Git commit ကြောင့် Cloudflare deployment ဖြစ်နိုင်ပြီး live အောင်မြင်မှုကို ပြန်စစ်ရပါမယ်။ D1-only သို့မဟုတ် deployment လုံးဝမလိုဟု မသတ်မှတ်ပါနဲ့။ လက်ရှိ runtime ကို မပြောင်းပါနဲ့။
 
 မနက်ခင်း ပေါက်ကြေး PDF ကို တွဲပို့ထားပါတယ်။ ဒီနေ့အတွက် လုပ်ပါ။
 
