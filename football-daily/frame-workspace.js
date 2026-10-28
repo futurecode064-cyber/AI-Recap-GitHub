@@ -7,6 +7,30 @@ const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odd
 let state=null,currentId="",isNew=false,working=false,published=null,oddsData=null,archive=null,news=null,date="",savedURL=null;
 const copy=o=>JSON.parse(JSON.stringify(o)),str=x=>String(x??"").trim();
 const goodColor=x=>/^#[\da-f]{6}$/i.test(x||"")?x:"#16486c";
+
+const layoutOptions={
+ odds:[["two","ပွဲအားလုံး ၂ ပုံခွဲ"],["one","ပွဲအားလုံး ၁ ပုံတည်း"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
+ previews:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
+ specials:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
+ results:[["one","ပွဲအားလုံး တစ်ပုံ"],["two","ပွဲအားလုံး ၂ ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
+ ai:[["one","AI ဇယား တစ်ပုံ"],["two","AI ဇယား ၂ ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
+ news:[["one","တစ်ပုဒ်တစ်ပုံ"],["two","သတင်း ၂ ပုဒ် တစ်ပုံ"]]
+};
+const layoutDefaults={odds:"two",previews:"one",specials:"one",results:"one",ai:"one",news:"one"};
+let sectionLayouts={...layoutDefaults};
+try{const from=JSON.parse(localStorage.getItem("fc-frame-section-layout-v1")||"{}");for(const k of TYPES)if(layoutOptions[k].some(opt=>opt[0]===from[k]))sectionLayouts[k]=from[k];}catch(e){console.warn("Frame layouts read",e);}
+function initSectionLayouts(){
+ const host=$("sectionLayoutSettings");if(!host)return;host.replaceChildren();
+ for(const k of TYPES){
+  const label=document.createElement("label"),select=document.createElement("select");
+  label.textContent=SECTION[k];select.dataset.frameSection=k;
+  for(const [value,title] of layoutOptions[k])select.add(new Option(title,value));
+  select.value=sectionLayouts[k];
+  select.onchange=()=>{sectionLayouts[k]=select.value;localStorage.setItem("fc-frame-section-layout-v1",JSON.stringify(sectionLayouts));status(SECTION[k]+" PNG ပုံခွဲပုံစံ သိမ်းပြီး");};
+  label.append(select);host.append(label);
+ }
+}
+
 const frames=()=>state?.frames||[];
 const frame=id=>frames().find(f=>f.id===id);
 const assigned=(id,k)=>state.placements[k]?.includes(id);
@@ -49,6 +73,7 @@ async function loadData(){
  const data=await dataFetch("./data/today.json");
  if(!data?.published||!Array.isArray(data.matches))throw Error("Published ပွဲစာရင်း မရှိသေးပါ။");
  published=data;date=data.reportDate;
+ await home.contentWindow.FutureCodeTipScores?.load(date,(home.contentWindow.FootballData?home.contentWindow.FootballData.fetch:home.contentWindow.fetch.bind(home.contentWindow)));
  oddsData=odds.contentWindow.FutureCodeFrameEditor.getOddsSheet();
  if(!oddsData?.matches?.length){try{await waitFor(()=>odds.contentWindow.FutureCodeFrameEditor.getOddsSheet()?.matches?.length,15000);oddsData=odds.contentWindow.FutureCodeFrameEditor.getOddsSheet();}catch(e){console.warn("Odds data not ready",e);}}
  const yesterday=home.contentWindow.FutureCodeResultsFrames.yesterdayYangon();
@@ -193,7 +218,7 @@ function tab(which){
 window.FCStudio=Object.freeze({
  TYPES,SECTION,getState:()=>state,getHome:()=>home.contentWindow,getOdds:()=>odds.contentWindow,
  getReport:()=>published,getOddsData:()=>oddsData,getArchive:()=>archive,getNews:()=>news,getDate:()=>date,
- combos,filtered,status,setWorking,publishBlob,loadData,readyEngines
+ combos,filtered,status,setWorking,publishBlob,loadData,readyEngines,getSectionLayout:k=>sectionLayouts[k]||"one"
 });
 $("navLibrary").onclick=()=>tab("library");$("navDownloads").onclick=()=>tab("downloads");$("toDownloads").onclick=()=>tab("downloads");
 $("search").oninput=renderList;$("librarySection").onchange=renderList;
@@ -209,6 +234,7 @@ $("backup").onclick=exportState;$("importBackup").onchange=async e=>{try{await i
 $("downSection").onchange=renderExportControls;$("leagueFilter").onchange=renderMatchFilter;
 $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();status("Published Data ပြန်ရယူပြီး။");}catch(e){status(e.message,true);}};
 (async()=>{try{
+ initSectionLayouts();
  status("မူလ Website Export Engine နှစ်ခု ဖွင့်နေသည်…");await readyEngines();
  state=await dbRead();normalize();if(migrateAssignments())await dbWrite(state);
  await loadData().catch(e=>{status("Data တချို့ မရသေးပါ — "+e.message,true);});

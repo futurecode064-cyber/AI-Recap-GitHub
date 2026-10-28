@@ -220,3 +220,7 @@ body:is([data-fc-main-view="previewFrame"],[data-fc-main-view="oddsFrame"]) .con
 .fc-ai-export-single-actions button:disabled{cursor:not-allowed;opacity:.46}
 .fc-ai-export-help{margin:6px 0 0;color:#d6e2fd;font:600 11px/1.8 'Noto Sans Myanmar',sans-serif}
 @media(max-width:620px){.fc-ai-export-single-actions{grid-template-columns:1fr}}
+
+/* Three independent daily columns: neutral VIP, gold Bookies and AI Tips. */
+.fc-ai-head-pred{font:800 13px/1.2 Arial,sans-serif;white-space:nowrap}.fc-ai-score{font-size:21px}.fc-ai-score-1{background:#eef0f7}.fc-ai-score-2{background:#fff7bb}.fc-ai-score-3{background:#ffefad}
+@media(max-width:860px){.fc-ai-head-pred{font-size:11px}}

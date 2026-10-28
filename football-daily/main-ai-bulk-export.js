@@ -185,7 +185,7 @@
   const loaded=async url=>pic(url)?await pic(url):null;
   rect(ctx,0,0,WIDTH,size.height,theme.base);
   rect(ctx,0,0,WIDTH,HEADER,theme.header);
-  text(ctx,(AI_BRAND[opts.frame]||"FUTURE CODE FOOTBALL")+"  ·  AI ခန့်မှန်းချက်များ",20,51,900,34,"left");
+  text(ctx,(AI_BRAND[opts.frame]||"FUTURE CODE FOOTBALL")+"  ·  VIP Internet | Bookies | AI Tips",20,51,1020,30,"left");
   text(ctx,date||"",WIDTH-22,46,215,23,"right","#f8d692");
   text(ctx,"ပွဲ "+page.matchCount+" ပွဲ    ·    PNG "+part+"/"+total,WIDTH-22,93,360,23,"right","#d9e4ff");
   let y=HEADER;
@@ -197,7 +197,7 @@
    rect(ctx,10,y+9,67,66,"#fff");
    imageOrFallback(ctx,await loaded(leagueLogo?.(group.league)),17,y+16,52,52);
    text(ctx,leagueLabel?.(group.league)||group.league,92,y+54,665,26,"left");
-   ["AI ခန့်မှန်း ၁","AI ခန့်မှန်း ၂","AI ခန့်မှန်း ၃"].forEach((title,i)=>{
+   ["VIP Internet","Bookies","AI Tips"].forEach((title,i)=>{
     rect(ctx,scoreX[i]+4,y+11,scoreW-8,62,i===0?"#e7ebf5":"#f8e7a4");
     outline(ctx,scoreX[i]+4,y+11,scoreW-8,62,"#b6b7cb");
     text(ctx,title,scoreX[i]+scoreW/2,y+49,scoreW-17,19,"center","#111a42");
@@ -205,7 +205,7 @@
    y+=LEAGUE_H;
    for(const m of group.matches){
     const scores=predict(m);
-    if(!Array.isArray(scores)||scores.length!==3||scores.some(s=>!/^\d+-\d+$/.test(s)))throw Error("Invalid AI scoreline");
+    if(!Array.isArray(scores)||scores.length!==3||scores.some(s=>!(/^(?:\d+-\d+|—)$/.test(s))))throw Error("Invalid AI scoreline");
     rect(ctx,0,y,WIDTH,ROW_H,"#f7f8fc");
     rect(ctx,0,y,112,ROW_H,"#f0f2f8");
     text(ctx,displayTime?.(m)||"—",56,y+47,106,20,"center","#152457");

@@ -4,6 +4,8 @@
  if(!["/","/index.html"].includes(location.pathname))return;
  const section=document.getElementById("fcAiScoreSection");
  const model=window.FutureCodeAiScoreModel;
+ const tipModel=window.FutureCodeTipScores;
+ const predict=match=>tipModel?.predict(match)||["—","—",model.predict(match)[0]];
  if(!section||!model)return;
  const groups=document.getElementById("fcAiScoreGroups");
  const filter=document.getElementById("fcAiScoreLeague");
@@ -46,7 +48,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
  let specialExportBusy=false;
  const singleOptions=(frame,scope)=>({
   date:report.reportDate,part:1,total:1,scope,frame,
-  predict:model.predict,leagueLabel:labelLeague,
+  predict:predict,leagueLabel:labelLeague,
   leagueLogo:l=>window.FutureCodeMainLogoAssets?.leagueCrest(l)||leagueIcons[l],
   teamName:team,teamLogo:teamCrest,displayTime
  });
@@ -147,7 +149,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
  };
  function scoreCell(score,i){
   const cell=make("span","fc-ai-score fc-ai-score-"+(i+1),score);
-  cell.setAttribute("data-label","AI ခန့်မှန်း "+["၁","၂","၃"][i]);
+  cell.setAttribute("data-label",["VIP Internet","Bookies","AI Tips"][i]);
   return cell;
  }
 
@@ -173,7 +175,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
     try{
      await exporter.savePage(page,{
       date:report.reportDate,part:i+1,total:pages.length,scope,
-      predict:model.predict,leagueLabel:labelLeague,
+      predict:predict,leagueLabel:labelLeague,
       leagueLogo:l=>window.FutureCodeMainLogoAssets?.leagueCrest(l)||leagueIcons[l],
       teamName:team,teamLogo:teamCrest,displayTime,
       frame:document.getElementById("fcAiFrameStyle")?.value||"standard"
@@ -273,7 +275,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
    }
    head.appendChild(iconBox);
    head.appendChild(make("strong","fc-ai-league-title",labelLeague(league)));
-   ["AI ခန့်မှန်း ၁","AI ခန့်မှန်း ၂","AI ခန့်မှန်း ၃"].forEach((label,i)=>{
+   ["VIP Internet","Bookies","AI Tips"].forEach((label,i)=>{
     head.appendChild(make("span","fc-ai-head-pred fc-ai-head-pred-"+(i+1),label));
    });
    const downloadHead=make("span","fc-ai-head-download","PNG");
@@ -294,7 +296,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
     teams.appendChild(make("span","fc-ai-versus","နှင့်"));
     teams.appendChild(away);
     row.appendChild(teams);
-    const scores=model.predict(match);
+    const scores=predict(match);
     const nums=make("div","fc-ai-score-list");
     scores.forEach((score,i)=>nums.appendChild(scoreCell(score,i)));
     row.appendChild(nums);
@@ -310,7 +312,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
       if(frame!=="standard"&&window.FutureCodeAiBulkExport){
        const page=window.FutureCodeAiBulkExport.planPages([match])[0];
        await window.FutureCodeAiBulkExport.savePage(page,{
-        date:report.reportDate,scope:"single",frame,fileSuffix:match.fixtureId||match.home+"-"+match.away,predict:model.predict,leagueLabel:labelLeague,
+        date:report.reportDate,scope:"single",frame,fileSuffix:match.fixtureId||match.home+"-"+match.away,predict:predict,leagueLabel:labelLeague,
         leagueLogo:l=>window.FutureCodeMainLogoAssets?.leagueCrest(l)||leagueIcons[l],
         teamName:team,teamLogo:teamCrest,displayTime
        });
@@ -346,6 +348,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
    const data=await response.json();
    if(data.reportDate!==todayKey()||data.published!==true||!Array.isArray(data.matches))throw new Error("Daily report not yet published");
    report=data;
+   await tipModel?.load(data.reportDate,(window.FootballData?window.FootballData.fetch:fetch));
    options(data.matches);
    createDownloadLeagueChoices(publishedFixtures());
    status.textContent="";render();
@@ -392,7 +395,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
   const ctx=canvas.getContext("2d");if(!ctx)throw new Error("Canvas not supported");
   ctx.fillStyle="#070f4a";ctx.fillRect(0,0,1080,430);
   ctx.fillStyle="#fff";ctx.textAlign="left";ctx.font="800 25px 'Barlow Condensed',sans-serif";
-  ctx.fillText("FUTURE CODE  •  AI ခန့်မှန်းချက်များ",22,43);
+  ctx.fillText("FUTURE CODE  •  VIP Internet | Bookies | AI Tips",22,43);
   const blue=ctx.createLinearGradient(0,60,1080,215);
   blue.addColorStop(0,"#020a8c");blue.addColorStop(.52,"#1d44f7");blue.addColorStop(1,"#07077d");
   ctx.fillStyle=blue;ctx.fillRect(0,60,1080,152);
@@ -410,7 +413,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
    const x=columns[i];
    rounded(ctx,x+4,74,154,124,10,i===0?"#e6edf9":"#f8e89a");
    ctx.fillStyle="#14204b";ctx.textAlign="center";
-   const heading="AI ခန့်မှန်း "+["၁","၂","၃"][i];
+   const heading=["VIP Internet","Bookies","AI Tips"][i];
    fit(ctx,heading,145,22,15);ctx.fillText(heading,x+81,146);
   }
   ctx.fillStyle="#ffffff";ctx.fillRect(0,220,596,190);

@@ -1,0 +1,52 @@
+{
+  "reportDate": "2026-10-28",
+  "timezone": "Asia/Yangon",
+  "description": "Only independently checked, dated external correct-score tips; no estimated/fabricated VIP entries",
+  "items": [
+    {
+      "fixtureId": "fc-20261028-01",
+      "score": "2-1",
+      "home": "Manchester City",
+      "away": "Brighton & Hove Albion",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/man-city-vs-brighton-prediction-28-10-2026/",
+      "sourceDate": "2026-10-26"
+    },
+    {
+      "fixtureId": "fc-20261028-02",
+      "score": "2-2",
+      "home": "AFC Bournemouth",
+      "away": "Aston Villa",
+      "sourceName": "FootballPredictions.com EFL Cup Tips",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/eflcuppredictions/",
+      "sourceDate": "2026-10-26"
+    },
+    {
+      "fixtureId": "fc-20261028-03",
+      "score": "1-1",
+      "home": "Fulham",
+      "away": "Crystal Palace",
+      "sourceName": "FootballPredictions.com EFL Cup Tips",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/eflcuppredictions/",
+      "sourceDate": "2026-10-26"
+    },
+    {
+      "fixtureId": "fc-20261028-04",
+      "score": "1-1",
+      "home": "Sunderland",
+      "away": "Brentford",
+      "sourceName": "FootballPredictions.com EFL Cup Tips",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/eflcuppredictions/",
+      "sourceDate": "2026-10-26"
+    },
+    {
+      "fixtureId": "fc-20261028-05",
+      "score": "2-1",
+      "home": "Liverpool",
+      "away": "Chelsea",
+      "sourceName": "FootballPredictions.com EFL Cup Tips",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/eflcuppredictions/",
+      "sourceDate": "2026-10-26"
+    }
+  ]
+}
