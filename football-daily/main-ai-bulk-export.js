@@ -62,14 +62,14 @@
  function safeHttps(url){
   try{const a=new URL(url);return a.protocol==="https:"?a.href:null;}catch{return null;}
  }
- function loadImage(url,cache){
+ function loadImage(url,cache,timeoutMs=3200){
   const src=safeHttps(window.FutureCodeMainLogoAssets?.imageUrl(url)||url);
   if(!src)return Promise.resolve(null);
   if(cache.has(src))return cache.get(src);
   const request=new Promise(resolve=>{
    const img=new Image();let done=false;
    const finish=r=>{if(done)return;done=true;clearTimeout(timeout);resolve(r);};
-   const timeout=setTimeout(()=>finish(null),3200);
+   const timeout=setTimeout(()=>finish(null),timeoutMs);
    img.crossOrigin="anonymous";
    img.onload=()=>finish(img);img.onerror=()=>finish(null);img.src=src;
   });
@@ -125,8 +125,8 @@
   const frame=AI_FRAMES[id];
   if(!frame)return source; // no frame means ordinary original table
   const url=new URL("./assets/ai-frames/"+frame.asset,document.baseURI).href;
-  const original=await loadImage(url,new Map());
-  if(!original)throw Error("မူရင်း Frame ပုံမရပါ — "+frame.asset);
+  const original=await loadImage(url,new Map(),24000);
+  if(!original){console.warn("AI branded frame image unavailable; using native score table fallback:",frame.asset);return source;}
   const targetW=1200,insideW=targetW-frame.left-frame.right;
   // Brand header/footer in the uploaded poster replace our generic header/footer.
   const tableTop=HEADER,tableSourceH=source.height-HEADER-FOOTER;
