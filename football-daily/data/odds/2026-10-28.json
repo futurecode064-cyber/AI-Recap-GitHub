@@ -30,7 +30,18 @@
       "pdfLastColumn": "2-1",
       "eligibleForPreview": true,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "espnMatchId": "401921834",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921834",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+      "homeOdds": "1.65",
+      "drawOdds": "4.10",
+      "awayOdds": "4.30",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921834",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 2,
@@ -56,7 +67,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png"
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+      "espnMatchId": "401921840",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921840",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+      "homeOdds": "2.25",
+      "drawOdds": "3.45",
+      "awayOdds": "2.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921840",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 3,
@@ -82,7 +103,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+      "espnMatchId": "401921841",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921841",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+      "homeOdds": "1.77",
+      "drawOdds": "3.85",
+      "awayOdds": "3.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921841",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 4,
@@ -109,7 +140,16 @@
       "sourcePage": 1,
       "sourceIsAuthority": true,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+      "espnMatchId": "401921843",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921843",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "homeOdds": "3.30",
+      "drawOdds": "3.50",
+      "awayOdds": "2.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921843",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 5,
@@ -135,7 +175,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png"
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+      "espnMatchId": "401921842",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921842",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+      "homeOdds": "2.10",
+      "drawOdds": "3.75",
+      "awayOdds": "2.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921842",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 6,
@@ -161,8 +211,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/AC%20Milan.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "espnMatchId": "401874993",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874993",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+      "homeOdds": "1.67",
+      "drawOdds": "3.75",
+      "awayOdds": "4.70",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874993",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 7,
@@ -189,7 +248,16 @@
       "sourcePage": 1,
       "sourceIsAuthority": true,
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "espnMatchId": "401874965",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874965",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+      "homeOdds": "2.75",
+      "drawOdds": "3.05",
+      "awayOdds": "2.55",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874965",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 8,
@@ -217,7 +285,15 @@
       "sourceIsAuthority": true,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "espnMatchId": "401874773",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874773",
+      "homeOdds": "7.00",
+      "drawOdds": "5.25",
+      "awayOdds": "1.34",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874773",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 9,
@@ -245,7 +321,15 @@
       "sourceIsAuthority": true,
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "espnMatchId": "401874988",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874988",
+      "homeOdds": "5.00",
+      "drawOdds": "3.60",
+      "awayOdds": "1.65",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874988",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 10,
@@ -271,7 +355,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "espnMatchId": "401874799",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874799",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+      "homeOdds": "4.10",
+      "drawOdds": "3.90",
+      "awayOdds": "1.74",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874799",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 11,
@@ -296,7 +390,18 @@
       "pdfLastColumn": "2-2",
       "eligibleForPreview": true,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "espnMatchId": "401916921",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916921",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7017.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+      "homeOdds": "3.25",
+      "drawOdds": "3.75",
+      "awayOdds": "2.05",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916921",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 12,
@@ -322,7 +427,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png"
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+      "espnMatchId": "401917036",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917036",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png",
+      "homeOdds": "1.53",
+      "drawOdds": "4.80",
+      "awayOdds": "5.25",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917036",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 13,
@@ -347,7 +462,18 @@
       "pdfLastColumn": "0-3",
       "eligibleForPreview": true,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "espnMatchId": "401917032",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917032",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+      "homeOdds": "5.25",
+      "drawOdds": "4.60",
+      "awayOdds": "1.54",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917032",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 14,
@@ -372,7 +498,17 @@
       "pdfLastColumn": "1-2",
       "eligibleForPreview": true,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "espnMatchId": "401916919",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916919",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/129.png",
+      "homeOdds": "23.00",
+      "drawOdds": "17.00",
+      "awayOdds": "1.05",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916919",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 15,
@@ -398,7 +534,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png"
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+      "espnMatchId": "401917033",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917033",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/269.png",
+      "homeOdds": "1.15",
+      "drawOdds": "8.00",
+      "awayOdds": "14.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917033",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 16,
@@ -424,7 +570,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png"
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+      "espnMatchId": "401917035",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917035",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10382.png",
+      "homeOdds": "1.03",
+      "drawOdds": "18.00",
+      "awayOdds": "31.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917035",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 17,
@@ -449,7 +605,18 @@
       "pdfLastColumn": "0-3",
       "eligibleForPreview": true,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "espnMatchId": "401916922",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916922",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2428.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/130.png",
+      "homeOdds": "2.30",
+      "drawOdds": "3.70",
+      "awayOdds": "2.80",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916922",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 18,
@@ -475,7 +642,17 @@
       "eligibleForPreview": true,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+      "espnMatchId": "401917034",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917034",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7884.png",
+      "homeOdds": "5.50",
+      "drawOdds": "5.00",
+      "awayOdds": "1.48",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917034",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 19,
@@ -526,7 +703,16 @@
       "eligibleForPreview": false,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "awayCrestUrl": "https://raw.githubusercontent.com/luukhopman/football-logos/master/logos/Spain%20-%20LaLiga/Levante%20UD.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+      "espnMatchId": "401928527",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928527",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "homeOdds": "18.00",
+      "drawOdds": "10.50",
+      "awayOdds": "1.11",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401928527",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "number": 21,
@@ -653,7 +839,10 @@
       "eligibleForPreview": false,
       "sourcePage": 1,
       "sourceIsAuthority": true,
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png"
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
+      "espnMatchId": "401928487",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928487",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png"
     },
     {
       "number": 26,
@@ -703,7 +892,17 @@
       "pdfLastColumn": "2-1",
       "eligibleForPreview": false,
       "sourcePage": 1,
-      "sourceIsAuthority": true
+      "sourceIsAuthority": true,
+      "espnMatchId": "401928548",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928548",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3842.png",
+      "homeOdds": "4.20",
+      "drawOdds": "3.80",
+      "awayOdds": "1.83",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401928548",
+      "oddsVerifiedDate": "2026-10-28"
     }
   ]
 }
