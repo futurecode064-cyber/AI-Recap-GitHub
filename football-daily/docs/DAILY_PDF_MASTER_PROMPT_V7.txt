@@ -1,3 +1,5 @@
+အရေးကြီးဆုံး — နေ့စဉ် data တင်ခြင်းကို စနစ်သစ် Workers/D1 data-only publication နဲ့သာ လုပ်ပါ။ GitHub static JSON commit၊ mirror sync၊ Cloudflare Pages build ကို နေ့စဉ် data တင်နည်းအဖြစ် မသုံးပါနဲ့။ Login/API/reader အဆင်မပြေရင် static စနစ်အဟောင်းကို ပြန်မသုံးဘဲ candidate ကိုထိန်းပြီး BLOCKED အကြောင်းရင်းပြောပါ။ Code/infrastructure ပြင်ဆင်မှုကို နေ့စဉ် data update နဲ့ မရောပါနဲ့။
+
 မနက်ခင်း ပေါက်ကြေး PDF ကို တွဲပို့ထားပါတယ်။ ဒီနေ့အတွက် လုပ်ပါ။
 
 လက်ရှိ main website ရဲ့ ဒီနေ့အသုံးပြုနေတဲ့ စနစ်၊ section အစီအစဉ်၊ Frame Editor နဲ့ Download Center ပုံစံအတိုင်း နေ့စဉ်အကြောင်းအရာအားလုံးကို စစ်ဆေးပြင်ဆင်ပြီး website တွေမှာ တင်ပါ။
