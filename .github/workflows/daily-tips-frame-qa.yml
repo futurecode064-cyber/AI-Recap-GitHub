@@ -65,7 +65,16 @@ jobs:
               catch(err){if(i===8)throw err;await page.waitForTimeout(5000);}
             }
             assert(ready);
-            await page.waitForFunction(()=>Boolean(window.FCStudio?.getHome()?.FutureCodeTipScores),null,{timeout:50000});
+            try{
+              await page.waitForFunction(()=>Boolean(window.FCStudio?.getHome()?.FutureCodeTipScores),null,{timeout:16000});
+            }catch(err){
+              const debug=await page.evaluate(async()=>{
+                const w=window.FCStudio?.getHome(),u=new URL("./main-tip-scores.js?qa="+Date.now(),location.href);
+                let request="unknown";try{const r=await fetch(u,{cache:"no-store"});request=r.status+" "+(await r.text()).slice(0,100);}catch(e){request=e.message;}
+                return {iframe:w?.location.href,exists:!!w?.FutureCodeTipScores,jsTag:[...(w?.document?.scripts||[])].map(x=>x.src).filter(x=>x.includes("tip-score")||x.includes("ai-score")),pageScript:document.documentElement.outerHTML.includes("frame-workspace.js"),request};
+              });
+              console.log("TIP BROWSER DEBUG",JSON.stringify(debug));throw err;
+            }
             const summary=await page.evaluate(()=>{
               const st=window.FCStudio,models=st.getHome(),m=st.getReport().matches[0];
               const details=models.FutureCodeTipScores.details(m);
