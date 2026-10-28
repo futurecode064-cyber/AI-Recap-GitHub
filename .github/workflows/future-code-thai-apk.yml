@@ -1,13 +1,5 @@
 name: Future Code Thai Speaking Android APK
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'thai-course/**'
-      - 'portal/thai-course/**'
-      - '!portal/thai-course/latest.json'
-      - '!portal/thai-course/notice.json'
-      - '.github/workflows/future-code-thai-apk.yml'
   workflow_dispatch:
 permissions:
   contents: write
