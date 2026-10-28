@@ -67,3 +67,9 @@ test('all-section ZIP path and frame-derived Unicode filenames are enforced by e
  assert.ok(html.includes('frame-multi-download.js')&&html.includes('scopeAll')&&html.includes('scopeNone'));
  assert.equal((html.match(/value="oddsCards"/g)||[]).length,2);
 });
+
+test('real browser select is given exactly one Option at a time',()=>{
+ const js=source('frame-multi-download.js');
+ assert.ok(js.includes('sel.add(new Option("မူလကြေး","original"));sel.add(new Option("ယခုကြေး","current"))'));
+ assert.doesNotMatch(js,/sel\.add\(new Option\([^)]*\),new Option/);
+});

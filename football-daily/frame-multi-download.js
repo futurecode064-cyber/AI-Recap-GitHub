@@ -129,7 +129,7 @@
    if(k==="odds"||k==="oddsCards"){
     const line=text("label","ကြေးအမျိုးအစား","multi-layout");
     const sel=document.createElement("select");sel.dataset.oddsSection=k;
-    sel.add(new Option("မူလကြေး","original"),new Option("ယခုကြေး","current"));sel.value=p.oddsMode;
+    sel.add(new Option("မူလကြေး","original"));sel.add(new Option("ယခုကြေး","current"));sel.value=p.oddsMode;
     sel.onchange=()=>{p.oddsMode=sel.value;persist();studio.clearExportPreview();};
     line.append(sel);bottom.append(line);
    }
