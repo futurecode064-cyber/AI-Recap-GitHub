@@ -2218,7 +2218,58 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": true,
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Eimsbütteler TV",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-10-24/eimsbutteler-tv-vs-ssv-jeddeloh-ii/4379900"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Werder Bremen II",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-10-17/ssv-jeddeloh-ii-vs-sv-werder-bremen-ii/4379891"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "VfB Lübeck",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-10-12/ssv-jeddeloh-ii-vs-vfb-lubeck/4379885"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "SV Drochtersen/Assel",
+          "teamGoals": 2,
+          "opponentGoals": 7,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-10-03/sv-drochtersen-assel-vs-ssv-jeddeloh-ii/4379871"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "Eintracht Norderstedt",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-09-26/ssv-jeddeloh-ii-vs-fc-eintracht-norderstedt-03/4379869"
+        }
+      ],
       "awayLastFive": [
         {
           "date": "2026-10-24",
@@ -2282,7 +2333,7 @@
         "goalsAgainst": 8,
         "points": 25
       },
-      "homeCrestUrl": null,
+      "homeCrestUrl": "https://www.ssv-regionalliga.de/files/cto_layout/img/vereinswappen/SSV-JeddelohII-Logo21_608x383_RGB.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/129.png",
       "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916919",
@@ -2306,7 +2357,8 @@
       "awayOdds": "1.05",
       "oddsProvider": "DraftKings",
       "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916919",
-      "oddsVerifiedDate": "2026-10-28"
+      "oddsVerifiedDate": "2026-10-28",
+      "formSourceUrl": "https://globalsportsarchive.com/en/soccer/team/ssv-jeddeloh-ii/31581/"
     },
     {
       "fixtureId": "fc-20261028-15",
