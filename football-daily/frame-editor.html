@@ -17,6 +17,25 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 .engine{position:absolute;left:-18000px;top:-18000px;width:1440px;height:1000px;opacity:0;pointer-events:none;border:0}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media(max-width:1160px){.library-grid{grid-template-columns:260px 1fr}.library-grid>.panel:last-child{grid-column:span 2}}
 @media(max-width:750px){.shell{grid-template-columns:1fr}aside{flex-direction:row;flex-wrap:wrap;padding:10px;border-right:0;border-bottom:1px solid var(--line)}aside p{display:none}aside button{flex:1;text-align:center;padding:10px}main{padding:17px}.library-grid,.download-grid{grid-template-columns:1fr}.library-grid>.panel:last-child{grid-column:auto}.frame-scroll{max-height:290px}.field-grid{grid-template-columns:1fr 1fr}h1{font-size:22px}}
+.download-grid{grid-template-columns:minmax(0,1fr)}
+.multi-top{display:flex;gap:9px;flex-wrap:wrap;align-items:center;padding:8px 0 15px}.multi-top .hint{flex:1 1 310px;margin:0}
+.multi-card{border:1px solid #557785;border-radius:10px;background:#102734;margin:10px 0;overflow:hidden}
+.multi-card[open]{background:#153444;border-color:#d6ac73}
+.multi-summary{display:flex;align-items:center;gap:13px;cursor:pointer;padding:13px 15px;list-style:none}
+.multi-summary::-webkit-details-marker{display:none}.multi-summary strong{font-size:14px;color:#fff}.multi-summary small{margin-left:auto;color:#d4e6ef;font-size:11px}
+.multi-summary input{width:19px;height:19px;flex:none;accent-color:#eebf76}.multi-summary:after{content:"▾";font-size:18px;color:#f3c37d;margin-left:9px}.multi-card[open] .multi-summary:after{content:"▴"}
+.multi-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;padding:4px 13px 10px}
+.multi-group{border:1px solid #496779;border-radius:9px;padding:10px;background:#102735;min-width:0}
+.multi-group-head{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:7px}
+.multi-group-head strong{flex:1 1 100%;color:#f3cf97;font-size:12px}
+.multi-action{background:#27516a;border:1px solid #64899b;border-radius:6px;padding:4px 8px;color:#fff;font-size:11px}
+.multi-options{max-height:225px;overflow-y:auto;display:grid;gap:4px;padding:3px}
+.multi-option{display:flex;flex-direction:row;align-items:flex-start;gap:9px;padding:6px;border-radius:6px;border:1px solid transparent;font-size:12px;font-weight:500;cursor:pointer}
+.multi-option:hover{background:#244558;border-color:#40667b}.multi-option input{flex:none;width:17px;height:17px;accent-color:#efbd77;margin:3px 0 0}
+.multi-option span{overflow-wrap:anywhere;line-height:1.5}
+.multi-bottom{padding:8px 13px 16px;display:flex;gap:14px;flex-wrap:wrap}
+.multi-layout{min-width:225px;max-width:350px;flex:1 1 225px}
+@media(max-width:940px){.multi-columns{grid-template-columns:1fr}.multi-options{max-height:185px}.multi-summary{flex-wrap:wrap}}
 </style></head><body>
 <header><div><small>FUTURE CODE · FOOTBALL DAILY</small><b>Frame Editor Studio</b></div><a href="./">← Main Website</a></header>
 <div class="shell"><aside><button id="navLibrary" class="active">▦ Frame Library</button><button id="navDownloads">↓ Download Center</button><p>တစ်နေရာတည်းမှာ Frame ပြင်၊ Section ရွေး၊ PNG / ZIP ထုတ်ပါ။</p></aside>
@@ -28,25 +47,26 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 <div class="field-grid"><label class="wide">Frame နာမည်<input id="frameName" maxlength="70"></label><label class="wide">Download PNG ဖိုင်နာမည် (မိမိပေးထားသည့်နာမည်အတိုင်း ထွက်မည်)<input id="frameDownloadName" maxlength="100" placeholder="ဥပမာ - BCF-မြန်မာကြေး"></label><label>Theme Color<input id="frameColor" type="color"></label><label>Banner Fit<select id="frameFit"><option value="contain">မဖြတ်ဘဲ အပြည့်</option><option value="cover">အပြည့်ဖြည့် (အနားဖြတ်)</option><option value="stretch">အကျယ်/အမြင့် အပြည့် (မဖြတ်)</option></select></label><label>Top Banner အမြင့်<input id="frameTop" type="number" min="0" max="360"></label><label>Bottom Banner အမြင့်<input id="frameBottom" type="number" min="0" max="360"></label></div>
 <div class="upload"><label>အပေါ် Banner ပုံ<input id="frameTopFile" type="file" accept="image/png,image/jpeg,image/webp"></label><p id="topFileState"></p><button class="secondary" id="removeTop">Top ပုံဖြုတ်</button></div>
 <div class="upload"><label>အောက် Banner ပုံ<input id="frameBottomFile" type="file" accept="image/png,image/jpeg,image/webp"></label><p id="bottomFileState"></p><button class="secondary" id="removeBottom">Bottom ပုံဖြုတ်</button></div>
-<div class="line"></div><h3>ဒီ Frame အသုံးပြုမည့် Section များ</h3><div id="scopeChecks" class="scope-list"></div><p class="hint">အမှန်ခြစ်ထားသည့် Section များထဲမှာသာ ZIP ထုတ်မယ်။ Frame ပုံကို မဖျက်ပါ။</p>
+<div class="line"></div><h3>ဒီ Frame အသုံးပြုမည့် Section များ</h3><div class="actions"><button type="button" class="secondary" id="scopeAll">Section အားလုံးရွေး</button><button type="button" class="secondary" id="scopeNone">Section အားလုံးဖြုတ်</button></div><div id="scopeChecks" class="scope-list"></div><p class="hint">အမှန်ခြစ်ထားသည့် Section များထဲမှာသာ ZIP ထုတ်မယ်။ Frame ပုံကို မဖျက်ပါ။</p>
 <div class="actions"><button class="gold" id="saveFrame">ပြင်ဆင်ချက် သိမ်းမယ်</button><button class="secondary" id="unassignFrame">Section အားလုံးမှ ဖြုတ်</button><button class="danger" id="deleteFrame">ကိုယ်ပိုင် Frame ဖျက်</button></div></div>
 <div class="line"></div><div class="actions"><button class="secondary" id="backup">Settings Backup</button><label>Backup Import<input id="importBackup" type="file" accept=".json,application/json"></label></div></div>
 <div class="panel"><h2>Frame Preview</h2><div class="preview-area"><div id="previewMock" class="mock"><em class="sample-name">FRAME</em><strong>MATCH PREVIEW</strong><span>HOME 1 - 1 AWAY</span><span>FUTURE CODE · FOOTBALL</span></div><img id="previewImage" hidden alt="Frame နမူနာ"></div><p class="hint">တကယ့် ပွဲ/သတင်း PNG Preview ကို Download Center တွင် ကြည့်ပါ။</p><button class="secondary" id="toDownloads">Download Center သို့</button></div>
 </div></section>
 <section id="downloadsView" hidden><div class="heading"><div><div class="eyebrow">FILTER · PREVIEW · EXPORT</div><h1>Frame Download Center</h1><p>မြန်မာကြေးကတ်ပုံစံ Section တွင် BCF၊ Best Your Choice နှင့် အခြား Frame များ၏ Banner/Theme တူညီစွာ သုံးပါ။ PNG/ZIP အားလုံးကို တစ်နေရာတည်းမှ ထုတ်ပါ။</p></div><button class="secondary" id="refreshData">↻ Published Data ပြန်ယူ</button></div>
 <div class="download-grid">
-<div class="panel"><h2>Download Filter</h2><label>Section<select id="downSection"><option value="all">Section အားလုံး</option><option value="odds">ပေါက်ကြေး</option><option value="oddsCards">မြန်မာကြေးကတ်ပုံစံ (BCF စသည်)</option><option value="previews">ပွဲကြိုသုံးသပ်ချက်</option><option value="specials">Special Choice</option><option value="results">ဂိုးရလဒ်</option><option value="ai">VIP Internet · Bookies · AI Tips</option><option value="news">ဘောလုံးသတင်း</option></select></label>
+<div class="panel"><h2>Section တစ်ခုချင်း Multi-Selection</h2><p class="hint">Section ၇ ခုစလုံးမှာ Frame / လိဂ် / ပွဲ/သတင်း များကို သီးခြား Multi-Select လုပ်ပြီး PNG/ZIP ထုတ်နိုင်ပါတယ်။</p><div id="legacyDownloadFilters" hidden><label>Section<select id="downSection"><option value="all">Section အားလုံး</option><option value="odds">ပေါက်ကြေး</option><option value="oddsCards">မြန်မာကြေးကတ်ပုံစံ (BCF စသည်)</option><option value="previews">ပွဲကြိုသုံးသပ်ချက်</option><option value="specials">Special Choice</option><option value="results">ဂိုးရလဒ်</option><option value="ai">VIP Internet · Bookies · AI Tips</option><option value="news">ဘောလုံးသတင်း</option></select></label>
 <label style="margin-top:14px">Frame<select id="downFrame"><option value="all">သတ်မှတ်ထားသော Frame အားလုံး</option></select></label>
 <label style="margin-top:14px" id="oddsModeWrap">မြန်မာကြေး အမျိုးအစား (ကတ်ပုံစံ)<select id="oddsMode"><option value="original">မူလကြေး</option><option value="current">ယခုကြေး</option></select></label>
 <label style="margin-top:14px">လိဂ် / သတင်းအမျိုးအစား<select id="leagueFilter"><option value="all">အားလုံး</option></select></label>
 <label style="margin-top:14px">ပွဲ / သတင်း<select id="matchFilter"><option value="all">အားလုံး</option></select></label>
-<div class="line"></div><h3>Section အလိုက် PNG ပုံခွဲပုံစံ</h3><p class="hint">Section အားလုံး ZIP ထုတ်သော်လည်း အောက်က Section တစ်ခုချင်းစီ Setting အတိုင်း ပုံခွဲထုတ်ပေးမည်။</p><div id="sectionLayoutSettings" style="display:grid;grid-template-columns:1fr;gap:11px"></div>
-<div class="line"></div><div class="eyebrow" id="reportDate">Data Loading…</div><p class="hint" id="assignmentCount"></p><p class="hint">Section အားလုံး ZIP ယူရာတွင်လည်း အထက်တွင် သတ်မှတ်ထားသော PNG တစ်ပုံလျှင် ပွဲ/သတင်းအရေအတွက်ကို Section အလိုက် သီးခြားလိုက်နာပါမည်။ “၂ ပွဲတစ်ပုံ” နှင့် “အားလုံးကို PNG ၂ ပုံခွဲ” မတူပါ။</p><div class="actions"><button class="secondary" id="downPreview">Preview ၁ ပုံ</button><button class="gold" id="downZip">⬇ ZIP Download</button></div></div>
+<div class="line"></div></div><div id="multiSelectionCenter" aria-label="Section Frame League Match Multi Selection"></div><p id="multiSelectionSummary" class="hint"></p><div hidden><h3>Section အလိုက် PNG ပုံခွဲပုံစံ</h3><p class="hint">Section အားလုံး ZIP ထုတ်သော်လည်း အောက်က Section တစ်ခုချင်းစီ Setting အတိုင်း ပုံခွဲထုတ်ပေးမည်။</p><div id="sectionLayoutSettings" style="display:grid;grid-template-columns:1fr;gap:11px"></div>
+</div><div class="line"></div><div class="eyebrow" id="reportDate">Data Loading…</div><p class="hint" id="assignmentCount"></p><p class="hint">Section အားလုံး ZIP ယူရာတွင်လည်း အထက်တွင် သတ်မှတ်ထားသော PNG တစ်ပုံလျှင် ပွဲ/သတင်းအရေအတွက်ကို Section အလိုက် သီးခြားလိုက်နာပါမည်။ “၂ ပွဲတစ်ပုံ” နှင့် “အားလုံးကို PNG ၂ ပုံခွဲ” မတူပါ။</p><div class="actions"><button class="secondary" id="downPreview">Preview ၁ ပုံ</button><button class="gold" id="downZip">⬇ ZIP Download</button></div></div>
 <div class="panel"><h2>Preview / Download</h2><div class="preview-area"><div class="mock" style="--frame-color:#214864" id="previewExportPlaceholder"><strong>FRAME EXPORT</strong><span>Filter ရွေးပြီး Preview နှိပ်ပါ</span></div><img id="downPreviewImage" alt="Download PNG Preview" hidden></div><a id="downloadLink" hidden></a><div id="progressWrap" hidden><div class="progress"><div id="progressBar"></div></div></div><p class="hint">PNG Preview ကို အကျယ်အပြည့်ပြထားသည်။ အောက်သို့ Scroll ဆွဲ၍ Banner နှင့် ပွဲစဉ်အားလုံးကို စစ်နိုင်ပါသည်။ ZIP တစ်ခုတွင် PNG-Images Folder တစ်ခုသာ ပါပါမည်။</p><p class="hint">PNG Preview ကို ကြည့်ပြီး ZIP/PNG ကို Download ယူနိုင်ပါသည်။ Section အားလုံးရွေးထားလျှင် Frame သတ်မှတ်ထားသည့်ပုံများသာ ပါဝင်မည်။</p></div></div></section>
 <p id="status" role="status" aria-live="polite">Frame Editor ဖွင့်နေသည်…</p>
 </main></div>
 <iframe class="engine" id="engineHome" title="Main site image engine" aria-hidden="true" tabindex="-1" src="./?frame-engine=1&tipEngine=20261028-local-crest-v6"></iframe>
 <iframe class="engine" id="engineOdds" title="Odds image engine" aria-hidden="true" tabindex="-1" src="./odds.html?frame-engine=1&tipEngine=20261028-local-crest-v6"></iframe>
-<script defer src="./frame-workspace.js?v=20261028-odds-cards-v4"></script>
-<script defer src="./frame-export-engine.js?v=20261028-odds-cards-v4"></script>
+<script defer src="./frame-workspace.js?v=20261028-multi-select-v1"></script>
+<script defer src="./frame-multi-download.js?v=20261028-multi-select-v1"></script>
+<script defer src="./frame-export-engine.js?v=20261028-multi-select-v1"></script>
 </body></html>

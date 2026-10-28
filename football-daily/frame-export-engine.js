@@ -49,7 +49,7 @@ async function* forSection(k,f,rows,mode){
    const parts=splitRows(rows,mode);
    for(let i=0;i<parts.length;i++){
     const native=await O.FutureCodeBurmeseRedOddsFrame.draw(parts[i],{
-     date:sheet.reportDate,mode:$("oddsMode")?.value||"original",color,
+     date:sheet.reportDate,mode:window.FCStudioMulti?.oddsMode?.(k)||$("oddsMode")?.value||"original",color,
      part:i+1,total:parts.length
     });
     const framed=await p.wrap(native,"oddsCards","pro:"+f.id);
@@ -63,7 +63,7 @@ async function* forSection(k,f,rows,mode){
    let src;
    if(f.id==="odds-burmese-red"){
     if(!O.FutureCodeBurmeseRedOddsFrame?.draw)throw Error("မြန်မာကြေး အနီရောင် Frame Renderer မရပါ။ Reload လုပ်ပါ");
-    src=await O.FutureCodeBurmeseRedOddsFrame.draw(parts[i],{date:sheet.reportDate,mode:$("oddsMode")?.value||"original",color,part:i+1,total:parts.length});
+    src=await O.FutureCodeBurmeseRedOddsFrame.draw(parts[i],{date:sheet.reportDate,mode:window.FCStudioMulti?.oddsMode?.(k)||$("oddsMode")?.value||"original",color,part:i+1,total:parts.length});
     src=await p.wrap(src,"odds","pro:"+f.id);
    }else{
     const options={design:["colour","Colour",color],colour:color,date:sheet.reportDate,professionalFrame:"pro:"+f.id};
@@ -114,8 +114,8 @@ async function* forSection(k,f,rows,mode){
 }
 async function exportAll(previewOnly){
  const studio=s();if(!studio?.getState()){studio?.status("Frame Library မဖွင့်ရသေးပါ။",true);return;}
- const assignments=studio.combos();
- if(!assignments.length){studio.status("Section အတွက် Frame မသတ်မှတ်ရသေးပါ။ Library မှ အမှန်ခြစ်၍ Save လုပ်ပါ။",true);return;}
+ const assignments=window.FCStudioMulti?.plans?.()||[];
+ if(!assignments.length){studio.status("Section / Frame / လိဂ် / ပွဲ ရွေးချယ်ထားတာ မရှိပါ။ Multi-Selection မှ ရွေးပါ။",true);return;}
  studio.setWorking(true);
  studio.clearExportPreview();$("progressBar").style.width="0";
  let outputURL=null,files=0;const warnings=[],usedNames=new Set();
@@ -126,7 +126,7 @@ async function exportAll(previewOnly){
    const zip=previewOnly?null:new W.FutureCodeFrameZip.Archive();
   for(let i=0;i<assignments.length;i++){
    const {section,frame:f}=assignments[i];
-   const rows=studio.filtered(section),label=studio.SECTION[section]+" · "+f.name;
+   const rows=assignments[i].rows,label=studio.SECTION[section]+" · "+f.name;
    $("progressBar").style.width=Math.round((i/assignments.length)*100)+"%";
    studio.status("Frame "+(i+1)+"/"+assignments.length+" — "+label+" PNG ထုတ်နေသည်…");
    if(!rows.length){warnings.push(label+" (ပွဲ/သတင်း မရှိ)");continue;}

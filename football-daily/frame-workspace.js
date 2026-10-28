@@ -221,6 +221,7 @@ function renderExportControls(){
  const amount=TYPES.reduce((n,k)=>n+state.placements[k].length,0);
  $("assignmentCount").textContent=amount+" Section/Frame တွဲဖက်မှု ရှိပါသည်။";
  renderLeagueFilter();
+ window.FCStudioMulti?.refresh?.();
 }
 function renderLeagueFilter(){
  const k=$("downSection").value,host=$("leagueFilter"),old=host.value;
@@ -259,11 +260,13 @@ function tab(which){
 }
 window.FCStudio=Object.freeze({
  TYPES,SECTION,getState:()=>state,getHome:()=>home.contentWindow,getOdds:()=>odds.contentWindow,
- getReport:()=>published,getOddsData:()=>oddsData,getArchive:()=>archive,getNews:()=>news,getDate:()=>date,
+ getReport:()=>published,getOddsData:()=>oddsData,getArchive:()=>archive,getNews:()=>news,getDate:()=>date,getRows:rawData,
  combos,filtered,status,setWorking,publishBlob,loadData,readyEngines,clearExportPreview,getSectionLayout:k=>sectionLayouts[k]||"one"
 });
 $("navLibrary").onclick=()=>tab("library");$("navDownloads").onclick=()=>tab("downloads");$("toDownloads").onclick=()=>tab("downloads");
 $("search").oninput=renderList;$("librarySection").onchange=renderList;
+ $("scopeAll").onclick=()=>{$("scopeChecks").querySelectorAll('input[type="checkbox"]').forEach(x=>x.checked=true);};
+ $("scopeNone").onclick=()=>{$("scopeChecks").querySelectorAll('input[type="checkbox"]').forEach(x=>x.checked=false);};
  $("frameColor").oninput=()=>{$("previewMock").style.setProperty("--frame-color",goodColor($("frameColor").value));};
  $("frameName").oninput=()=>{
   const prior=frame(currentId),previous=prior?.name||"Frame အသစ်";
