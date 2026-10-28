@@ -17,7 +17,8 @@
  const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
  const fmt=x=>x===undefined||x===null||String(x).trim()===""?"—":String(x);
  const labelTeam=(m,part)=>fmt(m[part+"Display"]||m[part]);
- const leagueName=x=>LEAGUES[x]||x||"Football";
+ const sourceLeagueLabels=new Map();
+ const leagueName=x=>sourceLeagueLabels.get(x)||LEAGUES[x]||"အခြားလိဂ်";
  const dateKey=(offset=0)=>{
   const draftDate=typeof window==='undefined'?null:window.FootballData?.draftDate;
   const parts=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Yangon",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(draftDate?new Date(draftDate+'T06:00:00Z'):new Date());
@@ -384,6 +385,7 @@
    try{
     const chosenMode=mode.value,data=await readData(chosenMode);
     if(version!==loadVersion)return;
+    for(const m of data.matches)if(m.leagueDisplay)sourceLeagueLabels.set(m.league,m.leagueDisplay);
     lastData=data;loadedMode=chosenMode;selectedLeagues=new Set(data.matches.map(m=>String(m.league||"Other")));excludedMatches.clear();
     fillLeague(data.matches);message(data.matches.length+" ပွဲ ရရှိပါပြီ။ လိဂ်နှင့် ပွဲများကို ရွေးနိုင်ပါပြီ။");
    }catch(e){if(version===loadVersion){leagueList.textContent="";message(e.message||"ဒေတာ မရသေးပါ");}}
