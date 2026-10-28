@@ -1,0 +1,44 @@
+name: Cache verified SSV Jeddeloh II crest locally
+on:
+  push:
+    branches: [football-daily-render]
+    paths: ['.github/workflows/cache-jeddeloh-crest.yml']
+permissions:
+  contents: write
+concurrency:
+  group: football-cache-jeddeloh-crest
+  cancel-in-progress: false
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          fetch-depth: 1
+      - name: Fetch and validate authentic Commons PNG, not an invented emblem
+        run: |
+          set -euo pipefail
+          path=football-daily/assets/main-export-teams/ssv-jeddeloh-ii.png
+          mkdir -p "$(dirname "$path")"
+          curl --fail --location --show-error --silent --retry 3 --retry-delay 2 --max-time 60 \
+            --user-agent 'FutureCodeFootballDaily/1.0 (public Wikimedia Commons PD-textlogo retrieval)' \
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Logo_SSV_Jeddeloh.svg/330px-Logo_SSV_Jeddeloh.svg.png' -o "$path"
+          python3 - "$path" <<'PY'
+          import sys,struct,pathlib
+          p=pathlib.Path(sys.argv[1]); data=p.read_bytes()
+          assert data[:8]==b'\x89PNG\r\n\x1a\n', 'NOT PNG'
+          w,h=struct.unpack('>II',data[16:24])
+          assert 150<=w<=2500 and 100<=h<=2500 and len(data)>3000, (w,h,len(data))
+          print('Authentic local logo prepared:',w,h,len(data))
+          PY
+      - name: Commit single immutable PNG source asset without touching site data
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add football-daily/assets/main-export-teams/ssv-jeddeloh-ii.png
+          if git diff --cached --quiet; then echo 'Logo already cached'; exit 0; fi
+          git commit -m 'assets: cache verified Wikimedia Commons SSV Jeddeloh II crest'
+          git push origin HEAD:football-daily-render
