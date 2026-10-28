@@ -153,6 +153,52 @@
       "writing": "This is my mother."
     },
     {
+      "id": "A0-09",
+      "level": "A0",
+      "levelName": "Starter • Zero English",
+      "title": "Simple Daily Requests",
+      "goal": "အခြေခံလိုအပ်ချက်ကို ရှင်းရှင်းလင်းလင်း တောင်းဆိုပါ။",
+      "target": "Could you help me, please?",
+      "translation": "ကျေးဇူးပြု၍ ကျွန်တော့်/ကျွန်မကို ကူညီပေးနိုင်မလား။",
+      "grammar": "Could you + verb? သည် ယဉ်ကျေးသော တောင်းဆိုမှုဖြစ်သည်။",
+      "phrases": [
+        "Could you help me, please?",
+        "I need some water.",
+        "Where can I sit?",
+        "Thank you for your help."
+      ],
+      "reading": "At a shop: Could you help me, please? I need some water. Thank you for your help.",
+      "writing": "Could you help me, please?"
+    },
+    {
+      "id": "A0-10",
+      "level": "A0",
+      "levelName": "Starter • Zero English",
+      "title": "Ask for Repetition",
+      "goal": "နားထောင်၊ နားလည်မှုစစ်၊ အလှည့်ကျပြောပြီး ကိုယ်ပိုင်ဝါကျ ၃ ကြောင်း ရေးပါ။",
+      "target": "Please say it again.",
+      "translation": "နောက်တစ်ကြိမ် ထပ်ပြောပေးပါ။",
+      "grammar": "Please + verb ကို ယဉ်ကျေးစွာ တောင်းဆိုရာတွင် သုံးပါ။",
+      "phrases": [
+        "Please say it again.",
+        "Please speak slowly.",
+        "What does this word mean?",
+        "I understand now."
+      ],
+      "reading": "May is learning English. She asks her teacher to speak slowly. The teacher repeats the word. May understands now.",
+      "writing": "Please say it again.",
+      "comprehension": {
+        "question": "What does May ask her teacher to do?",
+        "answer": "Speak slowly.",
+        "options": [
+          "Speak slowly.",
+          "Leave the room.",
+          "Buy a ticket."
+        ]
+      },
+      "task": "စာသားကို ဖုံးပြီး အနှစ်ချုပ်ကို ကိုယ်ပိုင်စကားဖြင့် ပြောပါ။ နေရာ၊ အချိန်၊ အစားအစာ သို့မဟုတ် အလုပ်အကြောင်းကို ပြောင်းပြီး လူနှစ်ဦး စကားပြောခန်းတစ်ခု ဖန်တီးပါ။"
+    },
+    {
       "id": "A1-01",
       "level": "A1",
       "levelName": "Beginner",
@@ -295,6 +341,52 @@
       ],
       "reading": "Work and Jobs. I work as a designer. She works in a school. I am looking for a job.",
       "writing": "I work as a designer."
+    },
+    {
+      "id": "A1-09",
+      "level": "A1",
+      "levelName": "Beginner",
+      "title": "A Day Plan",
+      "goal": "နေ့စဉ်အစီအစဉ်ကို အစဉ်လိုက်ပြောပါ။",
+      "target": "First, I take the bus to work.",
+      "translation": "အရင်ဆုံး ဘတ်စ်ကားနဲ့ အလုပ်သွားပါတယ်။",
+      "grammar": "First, then, after that နဲ့ အစီအစဉ်ပြနိုင်သည်။",
+      "phrases": [
+        "First, I take the bus to work.",
+        "Then I have lunch at noon.",
+        "After that, I finish my tasks.",
+        "I go home in the evening."
+      ],
+      "reading": "First, I take the bus to work. Then I have lunch at noon. After that, I finish my tasks and go home.",
+      "writing": "First, I take the bus to work."
+    },
+    {
+      "id": "A1-10",
+      "level": "A1",
+      "levelName": "Beginner",
+      "title": "Order a Safe Meal",
+      "goal": "နားထောင်၊ နားလည်မှုစစ်၊ အလှည့်ကျပြောပြီး ကိုယ်ပိုင်ဝါကျ ၃ ကြောင်း ရေးပါ။",
+      "target": "I am allergic to peanuts.",
+      "translation": "မြေပဲနဲ့ ဓာတ်မတည့်ပါ။",
+      "grammar": "I am allergic to + noun ဖြင့် ဓာတ်မတည့်သည့် အစားအစာကို ဖော်ပြပါ။",
+      "phrases": [
+        "I am allergic to peanuts.",
+        "Does this dish contain nuts?",
+        "I would like rice and vegetables.",
+        "Could I have the bill, please?"
+      ],
+      "reading": "Aung orders rice and vegetables. He is allergic to peanuts. He asks the waiter whether the dish contains nuts. The waiter checks with the cook.",
+      "writing": "I am allergic to peanuts.",
+      "comprehension": {
+        "question": "Who checks with the cook?",
+        "answer": "The waiter.",
+        "options": [
+          "The waiter.",
+          "Aung.",
+          "A doctor."
+        ]
+      },
+      "task": "စာသားကို ဖုံးပြီး အနှစ်ချုပ်ကို ကိုယ်ပိုင်စကားဖြင့် ပြောပါ။ နေရာ၊ အချိန်၊ အစားအစာ သို့မဟုတ် အလုပ်အကြောင်းကို ပြောင်းပြီး လူနှစ်ဦး စကားပြောခန်းတစ်ခု ဖန်တီးပါ။"
     },
     {
       "id": "A2-01",
@@ -441,6 +533,52 @@
       "writing": "Could I speak to the manager, please?"
     },
     {
+      "id": "A2-09",
+      "level": "A2",
+      "levelName": "Elementary",
+      "title": "At the Clinic",
+      "goal": "ကျန်းမာရေးလက္ခဏာများကို ရိုးရှင်းစွာရှင်းပြပါ။",
+      "target": "I have had a headache since yesterday.",
+      "translation": "မနေ့ကတည်းက ခေါင်းကိုက်နေပါတယ်။",
+      "grammar": "have/has had + noun + since သည် စတင်ချိန်မှ ယခုထိဖြစ်နေမှုကို ပြသည်။",
+      "phrases": [
+        "I have had a headache since yesterday.",
+        "I feel tired today.",
+        "I am allergic to this medicine.",
+        "Could you explain the instructions?"
+      ],
+      "reading": "I have had a headache since yesterday. I feel tired today. I am allergic to this medicine. Could you explain the instructions?",
+      "writing": "I have had a headache since yesterday."
+    },
+    {
+      "id": "A2-10",
+      "level": "A2",
+      "levelName": "Elementary",
+      "title": "Solve a Travel Problem",
+      "goal": "နားထောင်၊ နားလည်မှုစစ်၊ အလှည့်ကျပြောပြီး ကိုယ်ပိုင်ဝါကျ ၃ ကြောင်း ရေးပါ။",
+      "target": "My train has been cancelled.",
+      "translation": "ကျွန်တော်/ကျွန်မ စီးမယ့်ရထား ဖျက်သိမ်းလိုက်ပါပြီ။",
+      "grammar": "Present perfect passive: has been + past participle သည် ယခုနှင့်ဆက်စပ်နေသော ဖြစ်ရပ်ကို ဖော်ပြသည်။",
+      "phrases": [
+        "My train has been cancelled.",
+        "Is there another train today?",
+        "Can I use the same ticket?",
+        "Please tell me which platform to use."
+      ],
+      "reading": "May has a ticket for the ten o'clock train. It has been cancelled. A station worker offers her a seat on the next train. She asks whether she needs a new ticket.",
+      "writing": "My train has been cancelled.",
+      "comprehension": {
+        "question": "What does May need to confirm?",
+        "answer": "Whether she needs a new ticket.",
+        "options": [
+          "Whether she needs a new ticket.",
+          "The price of lunch.",
+          "The hotel address."
+        ]
+      },
+      "task": "စာသားကို ဖုံးပြီး အနှစ်ချုပ်ကို ကိုယ်ပိုင်စကားဖြင့် ပြောပါ။ နေရာ၊ အချိန်၊ အစားအစာ သို့မဟုတ် အလုပ်အကြောင်းကို ပြောင်းပြီး လူနှစ်ဦး စကားပြောခန်းတစ်ခု ဖန်တီးပါ။"
+    },
+    {
       "id": "B1-01",
       "level": "B1",
       "levelName": "Intermediate",
@@ -583,6 +721,52 @@
       ],
       "reading": "Culture & Etiquette. It is important to respect local customs. Different cultures value different things. Let us be respectful.",
       "writing": "It is important to respect local customs."
+    },
+    {
+      "id": "B1-09",
+      "level": "B1",
+      "levelName": "Intermediate",
+      "title": "Solve a Work Problem",
+      "goal": "ပြဿနာကိုဖော်ပြပြီး လက်တွေ့ဖြေရှင်းချက် အဆိုပြုပါ။",
+      "target": "The delivery is late, so I suggest a new schedule.",
+      "translation": "ပစ္စည်းပို့တာ နောက်ကျနေလို့ အချိန်ဇယားအသစ် အဆိုပြုပါတယ်။",
+      "grammar": "so သည် အကြောင်းရင်းနောက်ဆက်တွဲ ရလဒ်ကို ချိတ်ဆက်ပေးသည်။",
+      "phrases": [
+        "The delivery is late, so I suggest a new schedule.",
+        "We can update the client today.",
+        "The new date should work for everyone.",
+        "Let me know if you see a risk."
+      ],
+      "reading": "The delivery is late, so I suggest a new schedule. We can update the client today and agree on a new date.",
+      "writing": "I suggest a new schedule."
+    },
+    {
+      "id": "B1-10",
+      "level": "B1",
+      "levelName": "Intermediate",
+      "title": "Explain a Delay",
+      "goal": "နားထောင်၊ နားလည်မှုစစ်၊ အလှည့်ကျပြောပြီး ကိုယ်ပိုင်ဝါကျ ၃ ကြောင်း ရေးပါ။",
+      "target": "If I receive the information today, I will finish tomorrow.",
+      "translation": "ဒီနေ့ အချက်အလက်ရရင် မနက်ဖြန် အပြီးလုပ်ပါမယ်။",
+      "grammar": "First conditional: If + present simple, will + verb. အနာဂတ်ဖြစ်နိုင်ခြေနှင့် ရလဒ်ကို ဆက်ပါ။",
+      "phrases": [
+        "If I receive the information today, I will finish tomorrow.",
+        "The task is delayed because some details are missing.",
+        "Could we extend the deadline by one day?",
+        "I will send a progress update this afternoon."
+      ],
+      "reading": "Aung is preparing a report. Two figures are missing, so he cannot finish it today. He asks for one more day and promises to send a progress update. If the figures arrive today, the report will be ready tomorrow.",
+      "writing": "If I receive the information today, I will finish tomorrow.",
+      "comprehension": {
+        "question": "Why is the report delayed?",
+        "answer": "Two figures are missing.",
+        "options": [
+          "Two figures are missing.",
+          "Aung lost his phone.",
+          "The client cancelled it."
+        ]
+      },
+      "task": "စာသားကို ဖုံးပြီး အနှစ်ချုပ်ကို ကိုယ်ပိုင်စကားဖြင့် ပြောပါ။ နေရာ၊ အချိန်၊ အစားအစာ သို့မဟုတ် အလုပ်အကြောင်းကို ပြောင်းပြီး လူနှစ်ဦး စကားပြောခန်းတစ်ခု ဖန်တီးပါ။"
     },
     {
       "id": "B2-01",
@@ -729,6 +913,52 @@
       "writing": "The results suggest a meaningful improvement."
     },
     {
+      "id": "B2-09",
+      "level": "B2",
+      "levelName": "Upper Intermediate",
+      "title": "Present a Recommendation",
+      "goal": "အထောက်အထားနှင့် အကြံပြုချက်ကို စည်းလုံးစွာတင်ပြပါ။",
+      "target": "Based on the results, I recommend a small pilot.",
+      "translation": "ရလဒ်များအပေါ်မူတည်၍ စမ်းသပ်အစီအစဉ်ငယ်တစ်ခုကို အကြံပြုပါတယ်။",
+      "grammar": "Based on + evidence ကို အကြံပြုချက်မတိုင်မီ အကြောင်းပြချက်အဖြစ် သုံးနိုင်သည်။",
+      "phrases": [
+        "Based on the results, I recommend a small pilot.",
+        "This approach reduces the initial risk.",
+        "We can review the data after one month.",
+        "If it succeeds, we can expand the project."
+      ],
+      "reading": "Based on the results, I recommend a small pilot. This approach reduces the initial risk. We can review the data after one month before expanding.",
+      "writing": "Based on the results, I recommend a small pilot."
+    },
+    {
+      "id": "B2-10",
+      "level": "B2",
+      "levelName": "Upper Intermediate",
+      "title": "Evaluate Two Options",
+      "goal": "နားထောင်၊ နားလည်မှုစစ်၊ အလှည့်ကျပြောပြီး ကိုယ်ပိုင်ဝါကျ ၃ ကြောင်း ရေးပါ။",
+      "target": "Although the first option is cheaper, the second is more reliable.",
+      "translation": "ပထမရွေးချယ်မှုက စျေးသက်သာပေမယ့် ဒုတိယရွေးချယ်မှုက ပိုစိတ်ချရပါတယ်။",
+      "grammar": "Although + clause ဖြင့် ဆန့်ကျင်ဘက်အချက်ကို ဆက်ပါ။ ဈေးနှုန်းနှင့် အရည်အသွေးအကြောင်း အထောက်အထားဖြင့် ပြောပါ။",
+      "phrases": [
+        "Although the first option is cheaper, the second is more reliable.",
+        "What evidence supports this recommendation?",
+        "We should consider both cost and long-term maintenance.",
+        "I suggest testing both options before we decide."
+      ],
+      "reading": "A team is choosing software. Option A costs less but needs frequent maintenance. Option B costs more and has reliable support. The team decides to test both before making a final choice.",
+      "writing": "Although the first option is cheaper, the second is more reliable.",
+      "comprehension": {
+        "question": "What does the team decide to do first?",
+        "answer": "Test both options.",
+        "options": [
+          "Test both options.",
+          "Buy the cheapest option immediately.",
+          "Stop using software."
+        ]
+      },
+      "task": "စာသားကို ဖုံးပြီး အနှစ်ချုပ်ကို ကိုယ်ပိုင်စကားဖြင့် ပြောပါ။ နေရာ၊ အချိန်၊ အစားအစာ သို့မဟုတ် အလုပ်အကြောင်းကို ပြောင်းပြီး လူနှစ်ဦး စကားပြောခန်းတစ်ခု ဖန်တီးပါ။"
+    },
+    {
       "id": "C1-01",
       "level": "C1",
       "levelName": "Professional",
@@ -873,96 +1103,6 @@
       "writing": "We should adapt our communication to the audience."
     },
     {
-      "id": "A0-09",
-      "level": "A0",
-      "levelName": "Starter • Zero English",
-      "title": "Simple Daily Requests",
-      "goal": "အခြေခံလိုအပ်ချက်ကို ရှင်းရှင်းလင်းလင်း တောင်းဆိုပါ။",
-      "target": "Could you help me, please?",
-      "translation": "ကျေးဇူးပြု၍ ကျွန်တော့်/ကျွန်မကို ကူညီပေးနိုင်မလား။",
-      "grammar": "Could you + verb? သည် ယဉ်ကျေးသော တောင်းဆိုမှုဖြစ်သည်။",
-      "phrases": [
-        "Could you help me, please?",
-        "I need some water.",
-        "Where can I sit?",
-        "Thank you for your help."
-      ],
-      "reading": "At a shop: Could you help me, please? I need some water. Thank you for your help.",
-      "writing": "Could you help me, please?"
-    },
-    {
-      "id": "A1-09",
-      "level": "A1",
-      "levelName": "Beginner",
-      "title": "A Day Plan",
-      "goal": "နေ့စဉ်အစီအစဉ်ကို အစဉ်လိုက်ပြောပါ။",
-      "target": "First, I take the bus to work.",
-      "translation": "အရင်ဆုံး ဘတ်စ်ကားနဲ့ အလုပ်သွားပါတယ်။",
-      "grammar": "First, then, after that နဲ့ အစီအစဉ်ပြနိုင်သည်။",
-      "phrases": [
-        "First, I take the bus to work.",
-        "Then I have lunch at noon.",
-        "After that, I finish my tasks.",
-        "I go home in the evening."
-      ],
-      "reading": "First, I take the bus to work. Then I have lunch at noon. After that, I finish my tasks and go home.",
-      "writing": "First, I take the bus to work."
-    },
-    {
-      "id": "A2-09",
-      "level": "A2",
-      "levelName": "Elementary",
-      "title": "At the Clinic",
-      "goal": "ကျန်းမာရေးလက္ခဏာများကို ရိုးရှင်းစွာရှင်းပြပါ။",
-      "target": "I have had a headache since yesterday.",
-      "translation": "မနေ့ကတည်းက ခေါင်းကိုက်နေပါတယ်။",
-      "grammar": "have/has had + noun + since သည် စတင်ချိန်မှ ယခုထိဖြစ်နေမှုကို ပြသည်။",
-      "phrases": [
-        "I have had a headache since yesterday.",
-        "I feel tired today.",
-        "I am allergic to this medicine.",
-        "Could you explain the instructions?"
-      ],
-      "reading": "I have had a headache since yesterday. I feel tired today. I am allergic to this medicine. Could you explain the instructions?",
-      "writing": "I have had a headache since yesterday."
-    },
-    {
-      "id": "B1-09",
-      "level": "B1",
-      "levelName": "Intermediate",
-      "title": "Solve a Work Problem",
-      "goal": "ပြဿနာကိုဖော်ပြပြီး လက်တွေ့ဖြေရှင်းချက် အဆိုပြုပါ။",
-      "target": "The delivery is late, so I suggest a new schedule.",
-      "translation": "ပစ္စည်းပို့တာ နောက်ကျနေလို့ အချိန်ဇယားအသစ် အဆိုပြုပါတယ်။",
-      "grammar": "so သည် အကြောင်းရင်းနောက်ဆက်တွဲ ရလဒ်ကို ချိတ်ဆက်ပေးသည်။",
-      "phrases": [
-        "The delivery is late, so I suggest a new schedule.",
-        "We can update the client today.",
-        "The new date should work for everyone.",
-        "Let me know if you see a risk."
-      ],
-      "reading": "The delivery is late, so I suggest a new schedule. We can update the client today and agree on a new date.",
-      "writing": "I suggest a new schedule."
-    },
-    {
-      "id": "B2-09",
-      "level": "B2",
-      "levelName": "Upper Intermediate",
-      "title": "Present a Recommendation",
-      "goal": "အထောက်အထားနှင့် အကြံပြုချက်ကို စည်းလုံးစွာတင်ပြပါ။",
-      "target": "Based on the results, I recommend a small pilot.",
-      "translation": "ရလဒ်များအပေါ်မူတည်၍ စမ်းသပ်အစီအစဉ်ငယ်တစ်ခုကို အကြံပြုပါတယ်။",
-      "grammar": "Based on + evidence ကို အကြံပြုချက်မတိုင်မီ အကြောင်းပြချက်အဖြစ် သုံးနိုင်သည်။",
-      "phrases": [
-        "Based on the results, I recommend a small pilot.",
-        "This approach reduces the initial risk.",
-        "We can review the data after one month.",
-        "If it succeeds, we can expand the project."
-      ],
-      "reading": "Based on the results, I recommend a small pilot. This approach reduces the initial risk. We can review the data after one month before expanding.",
-      "writing": "Based on the results, I recommend a small pilot."
-    },
-    {
       "id": "C1-09",
       "level": "C1",
       "levelName": "Professional",
@@ -979,6 +1119,34 @@
       ],
       "reading": "Provided that the timeline is confirmed, we can proceed. Could we clarify the payment milestones? Let us document the final terms in writing.",
       "writing": "Provided that the timeline is confirmed, we can proceed."
+    },
+    {
+      "id": "C1-10",
+      "level": "C1",
+      "levelName": "Professional",
+      "title": "Clarify Contract Terms",
+      "goal": "နားထောင်၊ နားလည်မှုစစ်၊ အလှည့်ကျပြောပြီး ကိုယ်ပိုင်ဝါကျ ၃ ကြောင်း ရေးပါ။",
+      "target": "Subject to written approval, we can accommodate the revised schedule.",
+      "translation": "စာဖြင့်အတည်ပြုချက်ရရှိပါက ပြင်ဆင်ထားသောအချိန်ဇယားအတိုင်း ညှိနှိုင်းနိုင်ပါတယ်။",
+      "grammar": "Subject to + noun သည် သတ်မှတ်ချက်တစ်ခုအပေါ် မူတည်ကြောင်း ဖော်ပြသည်။ စကားပြောပြီးနောက် စာဖြင့်အတည်ပြုပါ။",
+      "phrases": [
+        "Subject to written approval, we can accommodate the revised schedule.",
+        "Could you clarify whether revisions are included in the fee?",
+        "Any change in scope should be agreed in writing.",
+        "Let us confirm the deliverables and payment milestones."
+      ],
+      "reading": "A supplier can meet a revised schedule provided that the client approves it in writing. The fee covers the agreed deliverables. Extra work requires a separate written agreement. Both parties confirm the payment milestones before proceeding.",
+      "writing": "Subject to written approval, we can accommodate the revised schedule.",
+      "comprehension": {
+        "question": "What is required for extra work?",
+        "answer": "A separate written agreement.",
+        "options": [
+          "A separate written agreement.",
+          "A verbal promise only.",
+          "No approval."
+        ]
+      },
+      "task": "စာသားကို ဖုံးပြီး အနှစ်ချုပ်ကို ကိုယ်ပိုင်စကားဖြင့် ပြောပါ။ နေရာ၊ အချိန်၊ အစားအစာ သို့မဟုတ် အလုပ်အကြောင်းကို ပြောင်းပြီး လူနှစ်ဦး စကားပြောခန်းတစ်ခု ဖန်တီးပါ။"
     }
   ]
 }

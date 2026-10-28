@@ -61,6 +61,8 @@ public final class MainActivity extends Activity {
     });
     setContentView(web);
     web.loadUrl("file:///android_asset/index.html");
+        ReleaseUpdater.handle(this,getIntent());
+        ReleaseUpdater.check(this,false);
     tts = new TextToSpeech(this, status -> {if(status==TextToSpeech.SUCCESS){tts.setLanguage(Locale.US);tts.setSpeechRate(0.85f);}});
     if (getSharedPreferences("fc_english_settings",MODE_PRIVATE).getBoolean("notices",false)) PollJob.schedule(this);
     background.execute(() -> checkVersion(false));
@@ -68,7 +70,7 @@ public final class MainActivity extends Activity {
 
   final class Bridge {
     @JavascriptInterface public void speak(String sentence){
-      if(sentence==null || sentence.length()>350)return;
+      if(sentence==null || sentence.length()>2000)return;
       runOnUiThread(()->{if(OfflineAudio.play(MainActivity.this,"en",sentence))return;if(tts!=null){int ready=tts.setLanguage(Locale.US);if(ready<0){sendError("English Voice မရှိပါ။ Phone Settings → Text-to-speech မှ English အသံထည့်သွင်းပါ။");return;}tts.speak(sentence,TextToSpeech.QUEUE_FLUSH,null,"fc-en-tts");}else sendError("ဖုန်း၏ Text-to-speech စနစ် အလုပ်မလုပ်ပါ။");});
     }
     @JavascriptInterface public void listen(){runOnUiThread(()->{
@@ -93,23 +95,9 @@ public final class MainActivity extends Activity {
     sendError("အသံမဖမ်းနိုင်ပါ။ ထပ်စမ်းကြည့်ပါ။");
   }
   private void sendError(String msg){if(web!=null)web.evaluateJavascript("window.onNativeError("+JSONObject.quote(msg)+")",null);}
-  private void checkVersion(boolean explicit){
-    HttpsURLConnection c=null;
-    try{
-      URL url=new URL(UPDATE_JSON);c=(HttpsURLConnection)url.openConnection();c.setConnectTimeout(7500);c.setReadTimeout(7500);c.setRequestProperty("Accept","application/json");
-      if(c.getResponseCode()!=200)throw new Exception("no manifest");
-      StringBuilder sb=new StringBuilder();try(BufferedReader r=new BufferedReader(new InputStreamReader(c.getInputStream(),"UTF-8"))){String line;while((line=r.readLine())!=null && sb.length()<12000)sb.append(line);}
-      JSONObject j=new JSONObject(sb.toString());
-      if(!"mm.futurecode.englishacademy".equals(j.optString("packageName")))throw new Exception("wrong package");
-      int newCode=j.optInt("versionCode",0);
-      if(newCode>5){String address=j.optString("apkUrl","");
-        Uri u=Uri.parse(address);if(!"https".equals(u.getScheme())||!"future-code-football-daily.pages.dev".equals(u.getHost())||!u.getPath().startsWith("/english-academy/")||!u.getPath().endsWith(".apk"))throw new Exception("untrusted update link");
-        PollJob.post(this,499,"Future Code English Academy","Version "+j.optString("versionName")+" အသစ်ရပါပြီ။ Update တင်နိုင်ပါပြီ။",address);
-        runOnUiThread(()->new android.app.AlertDialog.Builder(this).setTitle("English Academy Update").setMessage("ဗားရှင်းအသစ်ရှိပါပြီ။ Android Install အတည်ပြုချက် လိုအပ်နိုင်ပါသည်။").setPositiveButton("Download",(d,w)->startActivity(new Intent(Intent.ACTION_VIEW,u))).setNegativeButton("Later",null).show());
-      }else if(explicit)runOnUiThread(()->Toast.makeText(this,"လက်ရှိ App က နောက်ဆုံးဗားရှင်းဖြစ်ပါတယ်",Toast.LENGTH_LONG).show());
-    }catch(Exception e){if(explicit)runOnUiThread(()->Toast.makeText(this,"Update Server မရနိုင်သေးပါ",Toast.LENGTH_LONG).show());}
-    finally{if(c!=null)c.disconnect();}
-  }
+  private void checkVersion(boolean explicit){ReleaseUpdater.check(this,explicit);}
   @Override public void onBackPressed(){if(web!=null)web.evaluateJavascript("document.getElementById('overlay').hidden?false:(document.getElementById('closeModal').click(),true)",v->{if("false".equals(v))super.onBackPressed();});else super.onBackPressed();}
   @Override public void onDestroy(){background.shutdownNow();OfflineAudio.stop();if(tts!=null){tts.stop();tts.shutdown();}if(web!=null){web.removeJavascriptInterface("Android");web.destroy();}super.onDestroy();}
+
+    @Override protected void onNewIntent(Intent intent){super.onNewIntent(intent);setIntent(intent);ReleaseUpdater.handle(this,intent);}
 }

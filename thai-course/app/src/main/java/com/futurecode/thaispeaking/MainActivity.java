@@ -80,7 +80,9 @@ public class MainActivity extends Activity {
                 // Offline MP3 clips are bundled. System Thai TTS is optional fallback only.
             } // Built-in offline voice plays independently of system TTS.
         });
-        web.loadUrl(HOME);
+        web.loadUrl(ASSET);
+        ReleaseUpdater.handle(this,getIntent());
+        ReleaseUpdater.check(this,false);
         scheduleUpdateCheck();
         if(Build.VERSION.SDK_INT>=33&&checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)!=PackageManager.PERMISSION_GRANTED)
             requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS},42);
@@ -113,6 +115,7 @@ public class MainActivity extends Activity {
         return out.append('"').toString();
     }
     private class Bridge {
+        @JavascriptInterface public void checkUpdates(){ReleaseUpdater.check(MainActivity.this,true);}
         @JavascriptInterface public String getProgress(){
             return getSharedPreferences("fc_thai",MODE_PRIVATE).getString("progress","");
         }
@@ -188,4 +191,6 @@ public class MainActivity extends Activity {
         if(web!=null){web.removeJavascriptInterface("FCNative");web.destroy();}
         super.onDestroy();
     }
+
+    @Override protected void onNewIntent(Intent intent){super.onNewIntent(intent);setIntent(intent);ReleaseUpdater.handle(this,intent);}
 }

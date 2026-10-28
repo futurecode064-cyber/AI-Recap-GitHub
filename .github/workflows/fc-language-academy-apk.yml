@@ -35,7 +35,8 @@ jobs:
       - name: Prepare bundled pronunciation in all 12 languages
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y espeak-ng ffmpeg
+          sudo apt-get install -y ffmpeg
+          python3 -m pip install edge-tts==7.3.1
           python3 scripts/generate_offline_audio.py academy language-apk/assets/audio
       - name: Compile offline language learning APK
         run: |
@@ -91,6 +92,8 @@ jobs:
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs "out/$APK_NAME"
           sha256sum "out/$APK_NAME" > out/SHA256SUMS.txt
           shred -u /tmp/fc-language-sign.json /tmp/fc-language-key.p12 /tmp/fc-language-init.p12 /tmp/fc-language-init.json /tmp/fc-language-initialized.json 2>/dev/null || true
+      - name: Verify original certificate and complete neural speech coverage
+        run: python3 scripts/verify_language_release.py academy "out/$APK_NAME"
       - uses: actions/upload-artifact@v4
         with:
           name: Future-Code-Language-Academy-Official-v${{ env.APK_VERSION }}
@@ -107,5 +110,5 @@ jobs:
             echo "Official release preserved (including download counts)."
             exit 0
           fi
-          gh release create "$TAG" out/$APK_NAME out/SHA256SUMS.txt --title "Future Code Language Academy $APK_VERSION" --notes "Stable private signing certificate for all future APK upgrades. 12-language foundation curriculum, 18 phrases per language, speech practice, writing, quiz and progress backup/restore. Android 8+ offline lessons. Previous v1.0.0 TEST APK uses a different signing key: backup your progress and uninstall the preview before installing official release. Android confirmation required."
+          gh release create "$TAG" out/$APK_NAME out/SHA256SUMS.txt --title "Future Code Language Academy $APK_VERSION" --notes "Stable private signing certificate for all future APK upgrades. 12-language foundation curriculum, 30 phrases per language, speech practice, writing, quiz and progress backup/restore. Android 8+ offline lessons. Previous v1.0.0 TEST APK uses a different signing key: backup your progress and uninstall the preview before installing official release. Android confirmation required."
 

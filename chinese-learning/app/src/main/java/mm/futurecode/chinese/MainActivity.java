@@ -62,6 +62,8 @@ public class MainActivity extends Activity {
         web.addJavascriptInterface(new NativeBridge(),"FutureCode");
         setContentView(web);
         web.loadUrl("file:///android_asset/index.html");
+        ReleaseUpdater.handle(this,getIntent());
+        ReleaseUpdater.check(this,false);
         tts=new TextToSpeech(this,status->{
             if(status==TextToSpeech.SUCCESS) {
                 int result=tts.setLanguage(Locale.SIMPLIFIED_CHINESE);
@@ -93,19 +95,7 @@ public class MainActivity extends Activity {
             return new String(out.toByteArray(),StandardCharsets.UTF_8);
         } finally {conn.disconnect();}
     }
-    private void checkUpdates(boolean showResult){
-        new Thread(()->{
-            try {
-                JSONObject o=new JSONObject(readUrl(UPDATE_URL));
-                int version=o.optInt("versionCode",1);
-                String target=o.optString("apkUrl",PORTAL_URL);
-                if(!target.startsWith("https://"))target=PORTAL_URL;
-                if(version>BuildConfig.VERSION_CODE){
-                    callback("window.onUpdateCheck && window.onUpdateCheck("+JSONObject.quote(o.optString("versionName","new"))+","+JSONObject.quote(target)+")");
-                } else if(showResult)callback("window.nativeStatus && window.nativeStatus('နောက်ဆုံး Version ဖြစ်ပါသည်။')");
-            }catch(Exception e){if(showResult)callback("window.nativeStatus && window.nativeStatus('Internet ချိတ်ဆက်မှုကို စစ်ဆေးပါ။')");}
-        }).start();
-    }
+    private void checkUpdates(boolean showResult){ReleaseUpdater.check(this,showResult);}
     public class NativeBridge {
         @JavascriptInterface public void speak(String text) {
             runOnUiThread(()->{
@@ -162,4 +152,6 @@ public class MainActivity extends Activity {
     @Override public void onBackPressed(){
         callback("window.goHome && window.goHome()");
     }
+
+    @Override protected void onNewIntent(Intent intent){super.onNewIntent(intent);setIntent(intent);ReleaseUpdater.handle(this,intent);}
 }

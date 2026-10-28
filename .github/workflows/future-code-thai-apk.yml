@@ -59,7 +59,8 @@ jobs:
       - name: Prepare bundled offline Thai speech
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y espeak-ng ffmpeg
+          sudo apt-get install -y ffmpeg
+          python3 -m pip install edge-tts==7.3.1
           python3 scripts/generate_offline_audio.py thai thai-course/app/src/main/assets/audio
       - name: Build Android beta APK
         working-directory: thai-course
@@ -108,6 +109,8 @@ jobs:
           "$BT/apksigner" verify --verbose --print-certs out/$APK_NAME
           sha256sum out/*.apk > out/SHA256SUMS.txt
           shred -u /tmp/fc-thai-sign.json /tmp/fc-thai-key.p12 /tmp/fc-thai-init.p12 /tmp/fc-thai-init.json /tmp/fc-thai-initialized.json 2>/dev/null || true
+      - name: Verify original certificate and complete neural speech coverage
+        run: python3 scripts/verify_language_release.py thai "out/$APK_NAME"
       - uses: actions/upload-artifact@v4
         with:
           name: Future-Code-Thai-Speaking-Official-v${{ env.APK_VERSION }}
@@ -124,5 +127,5 @@ jobs:
             echo "Official release preserved; no changed signing identity or download counter."
             exit 0
           fi
-          gh release create "$TAG" out/$APK_NAME out/SHA256SUMS.txt --title "Future Code Thai Speaking $APK_VERSION" --notes "Stable private signing certificate for all future releases. Android 8+; 18 lessons plus expanded dialogue practice, Thai pronunciation, writing, quiz, flashcards and offline fallback. Android approval required for updates. Users coming from the differently signed v1.0.0 debug beta must back up progress and uninstall the beta before installing this stable release."
+          gh release create "$TAG" out/$APK_NAME out/SHA256SUMS.txt --title "Future Code Thai Speaking $APK_VERSION" --notes "Stable private signing certificate for all future releases. Android 8+; 24 lessons plus expanded dialogue practice, Thai pronunciation, writing, quiz, flashcards and offline fallback. Android approval required for updates. Users coming from the differently signed v1.0.0 debug beta must back up progress and uninstall the beta before installing this stable release."
 

@@ -39,7 +39,8 @@ jobs:
       - name: Prepare bundled offline Mandarin speech
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y espeak-ng ffmpeg
+          sudo apt-get install -y ffmpeg
+          python3 -m pip install edge-tts==7.3.1
           python3 scripts/generate_offline_audio.py chinese chinese-learning/app/src/main/assets/audio
       - name: Assemble APK
         working-directory: chinese-learning
@@ -77,6 +78,8 @@ jobs:
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs out/$APK_FILE
           sha256sum out/*.apk
           shred -u /tmp/fc-chinese-sign.json /tmp/fc-chinese-key.p12 /tmp/fc-chinese-init.p12 /tmp/fc-chinese-init.json /tmp/fc-chinese-result.json 2>/dev/null || true
+      - name: Verify original certificate and complete neural speech coverage
+        run: python3 scripts/verify_language_release.py chinese "out/$APK_FILE"
       - uses: actions/upload-artifact@v4
         with:
           name: Future-Code-Chinese-signed
@@ -92,6 +95,6 @@ jobs:
           if gh release view "$TAG" >/dev/null 2>&1; then
             if ! gh release view "$TAG" --json assets -q '.assets[].name' | grep -Fx "$APK_FILE"; then gh release upload "$TAG" "$APK"; fi
           else
-            gh release create "$TAG" "$APK" --title "Future Code Chinese $APK_VERSION" --notes "Myanmar-first Mandarin learning: six stages, vocabulary, grammar, pronunciation and writing practice. Requires Android 8+, offline reading and quiz. Chinese TTS/recognition depend on device service."
+            gh release create "$TAG" "$APK" --title "Future Code Chinese $APK_VERSION" --notes "Myanmar-first Mandarin learning: six stages, vocabulary, grammar, pronunciation and writing practice. Requires Android 8+, offline reading and quiz. Neural Mandarin recordings are bundled for offline playback. Speech recognition depends on device service."
           fi
 

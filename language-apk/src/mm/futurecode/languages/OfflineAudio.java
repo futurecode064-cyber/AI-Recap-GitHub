@@ -20,13 +20,14 @@ public final class OfflineAudio {
         return out.toString();
     }
     public static synchronized boolean play(Context ctx,String language,String sentence){
-        if(sentence==null||sentence.trim().isEmpty()||sentence.length()>600)return false;
+        if(sentence==null||sentence.trim().isEmpty()||sentence.length()>2000)return false;
         if(!language.matches("[a-z]{2}"))return false;
         MediaPlayer next=null;
         try {
-            String digest=hash(sentence);
+            String digest=hash(sentence.trim());
+            long revision=ctx.getPackageManager().getPackageInfo(ctx.getPackageName(),0).lastUpdateTime;
             String asset="audio/"+language+"/"+digest+".mp3";
-            File clip=new File(ctx.getCacheDir(),"fc-offline-"+language+"-"+digest+".mp3");
+            File clip=new File(ctx.getCacheDir(),"fc-offline-"+revision+"-"+language+"-"+digest+".mp3");
             if(!clip.exists()||clip.length()<800){
                 try(InputStream input=ctx.getAssets().open(asset);FileOutputStream out=new FileOutputStream(clip)){
                     byte[] buf=new byte[8192];int len;while((len=input.read(buf))!=-1)out.write(buf,0,len);

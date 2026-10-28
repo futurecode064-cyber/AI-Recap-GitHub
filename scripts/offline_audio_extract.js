@@ -9,7 +9,7 @@ function jsonSegment(source,prefix,end) {
  const start=a+prefix.length;let inside=false,escaped=false,level=0,endIndex=-1;
  for(let i=start;i<source.length;i++){
    const c=source[i];
-   if(inside){if(escaped){escaped=false;continue}if(c==='\\\\'){escaped=true;continue}if(c==='"'){inside=false}continue}
+   if(inside){if(escaped){escaped=false;continue}if(c==='\\'){escaped=true;continue}if(c==='"'){inside=false}continue}
    if(c==='"'){inside=true;continue}
    if(c==='['||c==='{')level++;
    if(c===']'||c==='}') {level--;if(level===0){endIndex=i+1;break}}
@@ -25,6 +25,8 @@ function put(lang,text){
 if(project==='thai'){
  const course=jsonSegment(load('portal/thai-course/course.js'),'const course=',';const $=');
  for(const level of course)for(const module of level[3])for(const word of module[2])put('th',word[0]);
+ const names=jsonSegment(load('portal/thai-course/course.js'),'const letterNames=',';');
+ for(const name of Object.values(names))put('th',name);
 } else if(project==='chinese'){
  const course=jsonSegment(load('chinese-learning/app/src/main/assets/course.js'),'window.FC_COURSE=',';');
  for(const level of course)for(const unit of level.units)for(const word of unit.words)put('zh',word[0]);

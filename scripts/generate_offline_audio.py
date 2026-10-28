@@ -1,59 +1,60 @@
 #!/usr/bin/env python3
-"""Generate REAL prerecorded offline MP3 lesson clips; no device TTS engine required.
-This synthesizes using free/libre eSpeak NG at APK build time, not at runtime.
-No model/data access occurs on learner devices. This is a robotic TTS voice,
-not a native-speaker recording; native-speaker QA is needed for tone pedagogy.
+"""Build-time neural speech. Every playable teaching model is embedded in the APK.
+No device voice download, runtime synthesis, or robotic fallback is used.
+A failed synthesis fails the release. Human native-teacher certification is separate.
 """
-import argparse
-import hashlib
-import json
-import subprocess
-import sys
+import argparse,asyncio,hashlib,json,os,ssl,subprocess
 from pathlib import Path
-from tempfile import TemporaryDirectory
+import edge_tts
+import edge_tts.communicate
+VOICE={'en':'en-US-JennyNeural','th':'th-TH-PremwadeeNeural','zh':'zh-CN-XiaoxiaoNeural','ja':'ja-JP-NanamiNeural','ko':'ko-KR-SunHiNeural','de':'de-DE-KatjaNeural','fr':'fr-FR-DeniseNeural','es':'es-ES-ElviraNeural','ru':'ru-RU-SvetlanaNeural','ar':'ar-SA-ZariyahNeural','hi':'hi-IN-SwaraNeural','vi':'vi-VN-HoaiMyNeural'}
+EXPECTED={'thai':(1,250),'chinese':(1,230),'english':(1,290),'academy':(12,360)}
+# Respect the host's trusted CA bundle when one is configured; never disable TLS.
+if os.environ.get('SSL_CERT_FILE'):
+    edge_tts.communicate._SSL_CTX=ssl.create_default_context()
 
-VOICE = {'zh':'zh','en':'en-us','th':'th','ja':'ja','ko':'ko','de':'de','fr':'fr','es':'es','ru':'ru','ar':'ar','hi':'hi','vi':'vi'}
-EXPECTED={'thai':(1,150),'chinese':(1,180),'english':(1,200),'academy':(12,216)}
+def duration(p):
+    return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(p)]).decode().strip())
 
-def run(args, **kwargs):
-    return subprocess.run(args, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, **kwargs)
-
-def build(project, output):
-    raw=run(['node','scripts/offline_audio_extract.js',project]).stdout
-    groups=json.loads(raw)
-    expected_languages, min_total=EXPECTED[project]
-    unique=sum(len(v) for v in groups.values())
-    if len(groups)!=expected_languages or unique<min_total:
-        raise RuntimeError(f'{project}: incomplete offline lesson set ({len(groups)} languages, {unique} items)')
-    output.mkdir(parents=True, exist_ok=True)
-    manifest={'schema':1,'project':project,'engine':'espeak-ng','generated':{},'clipCount':0}
-    with TemporaryDirectory() as tmp:
-        wav=Path(tmp)/'clip.wav'
-        for language,phrases in groups.items():
-            if language not in VOICE:raise RuntimeError('Unsupported voice '+language)
-            dest=output/language;dest.mkdir(exist_ok=True)
-            for i,text in enumerate(phrases):
-                digest=hashlib.sha256(text.encode('utf-8')).hexdigest()[:24]
-                target=dest/(digest+'.mp3')
-                if not target.exists():
+async def build(project,output):
+    groups=json.loads(subprocess.check_output(['node','scripts/offline_audio_extract.js',project]))
+    n=sum(map(len,groups.values()));languages,minimum=EXPECTED[project]
+    if len(groups)!=languages or n<minimum:raise RuntimeError(f'Incomplete curriculum: {len(groups)} languages, {n} clips')
+    output.mkdir(parents=True,exist_ok=True)
+    metadata=output/'manifest.json'
+    old=json.loads(metadata.read_text()) if metadata.exists() else {}
+    # A previous eSpeak file at the same hash is never accepted as a neural clip.
+    if old.get('engine')!='edge-neural-v1':
+        for p in output.glob('*/*.mp3'):p.unlink()
+    semaphore=asyncio.Semaphore(4);completed=0;clips=[]
+    async def generate(lang,text):
+        nonlocal completed
+        digest=hashlib.sha256(text.encode()).hexdigest()[:24]
+        folder=output/lang;folder.mkdir(exist_ok=True);target=folder/(digest+'.mp3')
+        async with semaphore:
+            if not target.exists():
+                for attempt in range(4):
+                    tmp=target.with_suffix('.partial.mp3')
                     try:
-                        run(['espeak-ng','-b','1','-v',VOICE[language],'-s','128','-a','170','-w',str(wav),'--stdin'],input=text.encode('utf-8'))
-                        run(['ffmpeg','-nostdin','-hide_banner','-loglevel','error','-y','-i',str(wav),'-ac','1','-ar','16000','-codec:a','libmp3lame','-af','atempo=0.85,apad=pad_dur=0.18','-b:a','48k',str(target)])
-                        duration=float(run(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(target)]).stdout.decode().strip())
-                        if target.stat().st_size<800 or duration<0.20:raise RuntimeError(f'Invalid audio {language}/{digest}: {duration}s')
-                    except Exception as err:
-                        raise RuntimeError(f'Audio generation failed for {language} clip {i}: {text[:50]!r}: {err}') from err
-                manifest['clipCount']+=1
-            manifest['generated'][language]=len(phrases)
-            print(f'{project}: {language} {len(phrases)} physical mp3 files',flush=True)
-    (output/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    files=list(output.glob('*/*.mp3'))
-    if len(files)!=manifest['clipCount']:raise RuntimeError(f'Audio clip count mismatch {len(files)} != {manifest["clipCount"]}')
-    print('Offline audio ready:',json.dumps(manifest,ensure_ascii=False),flush=True)
-
+                        await asyncio.wait_for(edge_tts.Communicate(text,VOICE[lang],rate='-12%').save(str(tmp)),90)
+                        seconds=duration(tmp)
+                        if tmp.stat().st_size<800 or seconds<.2:raise RuntimeError('Empty speech')
+                        tmp.replace(target);break
+                    except Exception:
+                        tmp.unlink(missing_ok=True)
+                        if attempt==3:raise
+                        await asyncio.sleep(2*(attempt+1))
+            seconds=duration(target)
+            if seconds<.2:raise RuntimeError('Invalid speech duration')
+            clips.append({'language':lang,'text':text,'path':f'{lang}/{digest}.mp3','voice':VOICE[lang],'duration':round(seconds,3),'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
+            completed+=1
+            if completed%25==0 or completed==n:print(f'{project}: {completed}/{n} verified neural clips',flush=True)
+    await asyncio.gather(*(generate(lang,text) for lang,phrases in groups.items() for text in phrases))
+    required={c['path'] for c in clips}
+    for p in output.glob('*/*.mp3'):
+        if p.relative_to(output).as_posix() not in required:p.unlink()
+    manifest={'schema':2,'project':project,'engine':'edge-neural-v1','generated':{k:len(v) for k,v in groups.items()},'clipCount':n,'nativeTeacherCertified':False,'clips':sorted(clips,key=lambda c:c['path'])}
+    metadata.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+    print(f'PASS {project}: {n} neural recordings ready for offline packaging',flush=True)
 if __name__=='__main__':
-    parser=argparse.ArgumentParser()
-    parser.add_argument('project',choices=EXPECTED)
-    parser.add_argument('output',type=Path)
-    args=parser.parse_args()
-    build(args.project,args.output)
+    p=argparse.ArgumentParser();p.add_argument('project',choices=EXPECTED);p.add_argument('output',type=Path);a=p.parse_args();asyncio.run(build(a.project,a.output))
