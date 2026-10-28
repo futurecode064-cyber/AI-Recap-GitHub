@@ -136,7 +136,7 @@ function showEditor(){
  const f=frame(currentId);$("emptyFrame").hidden=!!f||isNew;$("editorForm").hidden=!(f||isNew);
  if(!f&&!isNew)return;
  const v=f||{name:"Frame အသစ်",color:"#194b75",top:110,bottom:75,fit:"contain",topImage:"",bottomImage:""};
- $("frameName").value=v.name;$("frameDownloadName").value=v.downloadName||v.name;$("frameColor").value=goodColor(v.color);
+ $("frameName").value=v.name;$("frameDownloadName").value=v.downloadName||v.name;$("frameDownloadName").dataset.customName=(v.downloadName&&v.downloadName!==v.name)?"1":"";$("frameColor").value=goodColor(v.color);
  $("frameTop").value=v.top;$("frameBottom").value=v.bottom;$("frameFit").value=v.fit;
  $("frameTopFile").value=$("frameBottomFile").value="";
  $("topFileState").textContent=v.topImage?"ကိုယ်ပိုင်ပုံ ရှိသည်":"မူရင်း Banner / အရောင်";
@@ -177,7 +177,7 @@ async function submit(){
  const topImage=await compress($("frameTopFile").files[0]),bottomImage=await compress($("frameBottomFile").files[0]);
  const id=fresh?"pro-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7):prior.id;
  const downloadName=str($("frameDownloadName").value).slice(0,100)||name;
-  const item={...(prior||{id,builtin:false,topImage:"",bottomImage:""}),name,downloadName,color:goodColor($("frameColor").value),fit:$("frameFit").value==="cover"?"cover":"contain",top:Math.round(top),bottom:Math.round(bottom)};
+  const item={...(prior||{id,builtin:false,topImage:"",bottomImage:""}),name,downloadName,color:goodColor($("frameColor").value),fit:["contain","cover","stretch"].includes($("frameFit").value)?$("frameFit").value:"contain",top:Math.round(top),bottom:Math.round(bottom)};
  if(topImage!==null)item.topImage=topImage;if(bottomImage!==null)item.bottomImage=bottomImage;
  const scopes=[...$("scopeChecks").querySelectorAll("input:checked")].map(x=>x.value);
  if(fresh)state.frames.push(item);else Object.assign(prior,item);
@@ -252,7 +252,13 @@ window.FCStudio=Object.freeze({
 $("navLibrary").onclick=()=>tab("library");$("navDownloads").onclick=()=>tab("downloads");$("toDownloads").onclick=()=>tab("downloads");
 $("search").oninput=renderList;$("librarySection").onchange=renderList;
  $("frameColor").oninput=()=>{$("previewMock").style.setProperty("--frame-color",goodColor($("frameColor").value));};
- $("frameName").oninput=()=>{$("previewMock").querySelector(".sample-name").textContent=$("frameName").value;};
+ $("frameName").oninput=()=>{
+  const prior=frame(currentId),previous=prior?.name||"Frame အသစ်";
+  const filename=$("frameDownloadName");
+  if(!filename.dataset.customName||filename.value===previous){filename.value=$("frameName").value;filename.dataset.customName="";}
+  $("previewMock").querySelector(".sample-name").textContent=$("frameName").value;
+ };
+ $("frameDownloadName").oninput=()=>{$("frameDownloadName").dataset.customName="1";};
 $("addFrame").onclick=()=>{isNew=true;currentId="";renderList();renderEditor();};
 $("saveFrame").onclick=async()=>{try{await submit();}catch(e){status("Save မရပါ — "+e.message,true);}};
 $("unassignFrame").onclick=async()=>{if(!currentId)return;try{for(const k of TYPES){state.placements[k]=state.placements[k].filter(x=>x!==currentId);if(state.selected[k]===currentId)state.selected[k]="none";}await save("Frame ကို Section အားလုံးမှ ဖြုတ်ထားပြီး။ မူရင်းပုံ မဖျက်ထားပါ။");}catch(e){status(e.message,true);}};
