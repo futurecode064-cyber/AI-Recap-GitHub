@@ -1,3 +1,5 @@
+> **ACTIVE OWNER UPDATE 2026-10-28 — V7:** Read `football-daily/docs/DAILY_PUBLICATION_V7.md` (relative to repository root) first. Current owner says preserve today's main website system. PDF + “ဒီနေ့အတွက် လုပ်ပါ” authorizes complete morning publishing. The V7 contract overrides historical draft-only, manuscript-required, D1/static and paragraph-count conflicts. Run `daily_package_guard.py` on candidate resources and verify every live section and real downloads before COMPLETE. Master prompt: `football-daily/docs/DAILY_PDF_MASTER_PROMPT_V7.txt`.
+
 # Future Code Football Daily — ACTIVE OWNER CONTRACT (2026-10-28)
 
 This file is the standing daily publishing instruction for the EXISTING six-brand project. **Not a ChatGPT scheduled task, new site, database, paid API, or autonomous background agent.** When the owner provides a morning Myanmar odds PDF and says to publish today's football content, read this file and the named references and run that day's publication using available connected tools. Do not ask the owner to repeat permanent rules. Never falsely claim work happened if tools cannot perform it.
