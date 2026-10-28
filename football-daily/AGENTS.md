@@ -45,3 +45,12 @@ Brand clones keep existing visuals. No unsupported backend/image-processing chan
 
 ## Operational truth
 A repository Markdown prompt is a permanent rule for future agent-led runs, **not a cron crawler or AI execution engine**. Running fresh web research, OCR/PDF extraction and original AI editorial writing still requires an invoked connected agent or an explicitly provisioned execution service; GitHub Actions alone does not create a free always-on AI. Never create ChatGPT scheduled tasks to mimic this request.
+
+## Permanent daily download-format gate — owner confirmed 2026-10-28
+Apply the corrected 28 October export layout on EVERY daily update, including Main, Bet City Family, Goal Zone, YKZ, BW Sport, Ko Thet and KMM. Preserve each brand's existing banners and palette.
+- Keep each league heading once in its own header; never paint it over column headers or fixture rows. Retain the absolute native-canvas transform regression.
+- Resolve ALL team and competition crest URLs for the candidate day's report, odds and results to verified bundled images. A previously cached day's coverage is not sufficient. Add new clubs and competitions to both main and brand mappings before publication; never use unrelated crests or silently accept blank tiles.
+- Check Myanmar shaping, long team/league labels, full article text, aligned columns, HH:mm odds clocks, intact original/current prices and undistorted top/bottom banners.
+- Run current-day asset coverage and native-label tests, then exercise real PNG downloads on desktop and mobile. Check all-in-one, both split parts and league-selected outputs; previews/results and existing ZIP modes must retain their selected content.
+- Visually inspect downloaded images, especially lower-division cup teams and long names. After publishing, verify actual live downloads across all six clone sites. A commit, successful HTTP response or PNG signature alone does not certify layout or complete logos.
+This is a persistent release-quality rule for invoked daily publishing, not a newly requested scheduled task.
