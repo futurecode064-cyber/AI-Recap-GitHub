@@ -771,7 +771,11 @@
       "resultVerifiedDate": "2026-10-28",
       "resultSourceName": "ESPN",
       "resultMatchId": "401921835",
-      "finalScoreStatus": "STATUS_FINAL_PEN"
+      "finalScoreStatus": "STATUS_FINAL_PEN",
+      "penaltyScore": "5-3",
+      "penaltyWinner": "Fleetwood Town",
+      "penaltySourceUrl": "https://www.skysports.com/football/fleetwood-town-vs-arsenal/report/578610",
+      "resultNote": "ပုံမှန်ပွဲချိန် ၁-၁ သရေ၊ ပင်နယ်တီ ၅-၃ ဖြင့် ဖလိဝုဒ်တောင်း အနိုင်ရ"
     },
     {
       "fixtureId": "fc-20261027-preview-06",
