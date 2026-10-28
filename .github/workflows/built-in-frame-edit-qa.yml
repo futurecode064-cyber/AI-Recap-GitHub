@@ -43,7 +43,7 @@ jobs:
             const page=await context.newPage();
             let loaded=false;
             for(let attempt=0;attempt<12;attempt++){
-              await page.goto(origin+'/?builtin-frame-qa='+attempt,{waitUntil:'domcontentloaded',timeout:40000});
+              await page.goto(origin+'/?frame-engine=1&builtin-frame-qa='+attempt,{waitUntil:'domcontentloaded',timeout:40000});
               try{
                 await page.locator('#fcpOriginalFrames .fc-built-in-frame-editor[data-frame-section="previews"]').waitFor({timeout:6500});
                 await page.locator('#fcpOriginalFrames .fc-built-in-frame-editor[data-frame-section="results"]').waitFor({timeout:20000});

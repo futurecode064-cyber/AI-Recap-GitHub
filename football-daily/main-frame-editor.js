@@ -107,7 +107,7 @@
  }
  function dataset(){return typeof loadedSheet!=="undefined"?loadedSheet:null;}
  function namesFor(date){const n=state.names[date]||{leagues:{},rows:{}};return {leagues:{...n.leagues},rows:{...n.rows}};}
- window.FutureCodeFrameEditor=Object.freeze({exportNames:namesFor,getFrames:()=>designs.map(x=>x[0])});
+ window.FutureCodeFrameEditor=Object.freeze({exportNames:namesFor,getOddsSheet:dataset,getFrames:()=>designs.map(x=>x[0])});
  function names(){
   const sheet=dataset(),host=node("fcfeNames");
   if(!sheet?.matches?.length||!host)return;

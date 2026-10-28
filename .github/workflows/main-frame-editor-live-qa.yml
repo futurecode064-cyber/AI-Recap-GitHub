@@ -42,7 +42,7 @@ jobs:
             const page=await ctx.newPage(),errors=[];
             page.on('pageerror',e=>errors.push(e.message));
             for(let attempt=0;attempt<12;attempt++){
-              await page.goto(origin+'/odds.html?date=2026-10-27&frame-editor-test='+attempt,{waitUntil:'domcontentloaded',timeout:40000});
+              await page.goto(origin+'/odds.html?date=2026-10-27&frame-engine=1&frame-editor-test='+attempt,{waitUntil:'domcontentloaded',timeout:40000});
               try{await page.locator('#futureCodeFrameEditor').waitFor({timeout:7000});break;}
               catch(e){if(attempt===11)throw e;await page.waitForTimeout(6500);}
             }

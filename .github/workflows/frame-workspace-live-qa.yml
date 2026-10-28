@@ -1,0 +1,88 @@
+name: Unified Frame Workspace — Browser / PNG / ZIP Acceptance
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/frame-workspace-live-qa.yml'
+      - 'football-daily/frame-editor.html'
+      - 'football-daily/frame-workspace.js'
+      - 'football-daily/frame-export-engine.js'
+      - 'football-daily/main-professional-frame-studio.js'
+      - 'football-daily/main-frame-editor.js'
+      - 'football-daily/news-section.js'
+      - 'football-daily/index.html'
+      - 'football-daily/odds.html'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check workspace JavaScript syntax
+        run: |
+          node --check football-daily/frame-workspace.js
+          node --check football-daily/frame-export-engine.js
+          node --check football-daily/main-professional-frame-studio.js
+          node --check football-daily/main-frame-editor.js
+          node --check football-daily/news-section.js
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Validate single editor, real preview and ZIP
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          import assert from 'node:assert/strict';
+          const origin='https://future-code-football-daily.pages.dev/';
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          try {
+            const context=await browser.newContext({viewport:{width:1440,height:1040},acceptDownloads:true});
+            const page=await context.newPage();
+            const errors=[];page.on('pageerror',e=>errors.push(e.message));
+            for(let attempt=0;attempt<8;attempt++){
+              await page.goto(origin+'frame-editor.html?acceptance='+attempt,{waitUntil:'domcontentloaded',timeout:45000});
+              try{await page.locator('#frameList .frame-row').first().waitFor({timeout:12000});break;}
+              catch(e){if(attempt===7)throw e;await page.waitForTimeout(5500);}
+            }
+            const initial=await page.evaluate(()=>({count:window.FCStudio.getState().frames.length,scopes:window.FCStudio.TYPES.length,versions:[
+              !!window.FCStudio.getHome().FutureCodeFramePreview,
+              !!window.FCStudio.getOdds().FutureCodeTableOddsFrames
+            ]}));
+            assert(initial.count>=30&&initial.scopes===6&&initial.versions.every(Boolean),JSON.stringify(initial));
+            await page.locator('#librarySection').selectOption('odds');
+            await page.locator('#frameList .frame-row').filter({hasText:'BCF · ပေါက်ကြေး'}).first().click();
+            assert(await page.locator('#scopeChecks input[value=odds]').isChecked(),'BCF default odds scope missing');
+            await page.locator('#scopeChecks input[value=previews]').check();
+            await page.locator('#saveFrame').click();
+            await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('သိမ်းပြီး'),null,{timeout:55000});
+            let combination=await page.evaluate(()=>window.FCStudio.getState().placements);
+            assert(combination.previews.includes('odds-bcf')&&combination.odds.includes('odds-bcf'),'Cross-section BCF assignment failed');
+            await page.locator('#navDownloads').click();
+            await page.locator('#downSection').selectOption('odds');
+            await page.locator('#downFrame').selectOption('odds-bcf');
+            const first=await page.locator('#matchFilter option').nth(1).getAttribute('value');
+            assert(first,'Actual odds fixture not loaded');await page.locator('#matchFilter').selectOption(first);
+            await page.locator('#downPreview').click();
+            await page.locator('#downPreviewImage').waitFor({timeout:100000,state:'visible'});
+            const png=await page.locator('#downloadLink').getAttribute('download');
+            assert(png?.endsWith('.png'),'Preview single PNG link unavailable');
+            const dl=page.waitForEvent('download',{timeout:100000});
+            await page.locator('#downZip').click();
+            const download=await dl;
+            assert(download.suggestedFilename().endsWith('.zip'),'ZIP download missing');
+            await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('ZIP အဆင်သင့်'),null,{timeout:30000});
+            const page2=await context.newPage();
+            await page2.goto(origin,{waitUntil:'domcontentloaded'});
+            const link=await page2.locator('a[href="./frame-editor.html"]').count();
+            assert(link>=1,'Frame Editor link missing on main site');
+            console.log('UNIFIED FRAME WORKSPACE PASS',JSON.stringify({count:initial.count,scopeCount:initial.scopes,png,zip:download.suggestedFilename(),crossSectionBCF:true,mainNav:true,errors}));
+            await context.close();
+          }finally{await browser.close();}
+          NODE

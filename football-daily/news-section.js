@@ -58,7 +58,7 @@
    img.onerror=()=>{clearTimeout(timer);reject(new Error("Photo unavailable"));};img.src=new URL(src,location.href).href;
   });
  }
- async function createNewsPoster(s){
+ async function createNewsPoster(s,explicitFrameId){
   await loadNewsFont();
   const photo=await loadNewsPhoto(s.image);
   const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");
@@ -112,13 +112,14 @@
   ctx.font='400 16px Arial, sans-serif';
   creditLines.forEach((line,i)=>ctx.fillText(line,68,footerY+68+i*25));
 
-  const customId=document.getElementById("fcNewsCustomFrame")?.value;
+  const customId=explicitFrameId===undefined?document.getElementById("fcNewsCustomFrame")?.value:explicitFrameId;
   const frame=customId&&window.FutureCodeCustomFrames?(await window.FutureCodeCustomFrames.list()).find(f=>f.id===customId):null;
   let output=frame?await window.FutureCodeCustomFrames.wrap(canvas,frame):canvas;
   if(window.FutureCodeProfessionalFrames)output=await window.FutureCodeProfessionalFrames.wrap(output,"news",customId?.startsWith("pro:")?customId:"none");
   const blob=await new Promise((resolve,reject)=>output.toBlob(b=>b?resolve(b):reject(new Error("PNG unavailable")),"image/png"));
   return {blob,width:output.width,height:output.height,filename:(isGoalZone?"Goal-Zone":"Future-Code")+"-News-"+s.id.replace(/[^a-z0-9_-]/gi,"-")+".png"};
  }
+ window.FutureCodeNewsFrameExport=Object.freeze({list:()=>stories.slice(),render:(story,frameId)=>createNewsPoster(story,frameId)});
  function posterFor(s){
   const key=JSON.stringify([document.getElementById("fcNewsCustomFrame")?.value||"",window.__fcFrameRevision||0,s.id,s.title,s.paragraphs,s.image,s.categoryLabel,s.sourceDateLabel,s.imageCredit,s.imageLicense,s.imageFit]);
   if(!exportCache.has(key))exportCache.set(key,createNewsPoster(s).catch(e=>{exportCache.delete(key);throw e;}));
