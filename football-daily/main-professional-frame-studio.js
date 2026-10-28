@@ -4,7 +4,10 @@
 if(document.documentElement.dataset.footballBrandName||!(/^\/(?:index\.html)?$/.test(location.pathname)||/^\/odds(?:\.html)?\/?$/.test(location.pathname)))return;
 const labels={results:"ဂိုးရလဒ်",previews:"ပွဲကြိုသုံးသပ်ချက်",specials:"Special Choice",odds:"ပေါက်ကြေး",ai:"AI ခန့်မှန်းချက်",news:"ဘောလုံးသတင်း"},types=Object.keys(labels);
 const templates=[["navy","Professional Navy","#16486c"],["gold","Premium Gold","#856119"],["red","Editorial Red","#842630"],["green","Sports Green","#18553d"]].map(a=>({id:a[0],name:a[1],color:a[2],top:110,bottom:75,fit:"contain",topImage:"",bottomImage:"",builtin:true}));
-const empty=()=>({version:2,frames:templates.map(x=>({...x})),selected:Object.fromEntries(types.map(x=>[x,"none"])),placements:Object.fromEntries(types.map(x=>[x,[]]))});
+/* Preserved original artwork templates are available for every eligible download section. */
+const originalArtwork={"odds-best":{"top":"./assets/table-odds-frames/best-top.jpg","bottom":"./assets/table-odds-frames/best-bottom.jpg"},"odds-htet":{"top":"./assets/table-odds-frames/htet-top.jpg","bottom":"./assets/table-odds-frames/htet-bottom.jpg"},"odds-ggoal":{"full":"./assets/table-odds-frames/ggoal-frame.jpg","t":0.166016,"b":0.052734},"odds-hyper-goal":{"full":"./assets/table-odds-frames/hyper-goal-frame.jpg","t":0.129504,"b":0.101914},"odds-kmm":{"full":"./assets/table-odds-frames/kmm-frame.jpg","t":0.10498,"b":0.064941},"odds-special-one":{"full":"./assets/table-odds-frames/special-one-frame.jpg","t":0.073313,"b":0.037145},"odds-the-freedom":{"full":"./assets/table-odds-frames/the-freedom-frame.jpg","t":0,"b":0},"odds-bcf":{"full":"./assets/table-odds-frames/bcf-frame.jpg","t":0.092773,"b":0.072265},"odds-final-goal":{"full":"./assets/table-odds-frames/final-goal-frame.jpg","t":0.148571,"b":0.037142},"odds-ko-chan":{"full":"./assets/table-odds-frames/ko-chan-frame.jpg","t":0.134645,"b":0},"odds-team-pmm":{"full":"./assets/table-odds-frames/team-pmm-frame.jpg","t":0.15625,"b":0.118652},"odds-thuta":{"full":"./assets/table-odds-frames/thuta-frame.jpg","t":0.131835,"b":0.096679},"odds-ymc":{"full":"./assets/table-odds-frames/ymc-frame.jpg","t":0.160481,"b":0.117352},"odds-ko-tut-pi":{"full":"./assets/table-odds-frames/ko-tut-pi-frame.jpg","t":0.143162,"b":0.142628},"odds-khin-khin-htar":{"full":"./assets/table-odds-frames/khin-khin-htar-frame.jpg","t":0.186757,"b":0.134125},"preview-bcf":{"top":"./assets/preview-frames/bcf-top.jpg","bottom":"./assets/preview-frames/bcf-bottom.jpg"},"preview-daily":{"top":"./assets/preview-frames/daily-top.jpg","bottom":"./assets/preview-frames/daily-bottom.jpg"},"preview-final":{"top":"./assets/preview-frames/final-top.jpg","bottom":"./assets/preview-frames/final-bottom.jpg"},"preview-ggoal":{"top":"./assets/preview-frames/ggoal-top.jpg","bottom":"./assets/preview-frames/ggoal-bottom.jpg"},"preview-ko":{"top":"./assets/preview-frames/ko-top.jpg"},"preview-pmm":{"top":"./assets/preview-frames/pmm-top.jpg"},"preview-htet":{"top":"./assets/preview-frames/htet-top.jpg","bottom":"./assets/preview-frames/htet-bottom.jpg"},"results-best":{"top":"./assets/table-odds-frames/best-top.jpg","bottom":"./assets/table-odds-frames/best-bottom.jpg"},"results-htet":{"top":"./assets/table-odds-frames/htet-top.jpg","bottom":"./assets/table-odds-frames/htet-bottom.jpg"},"results-kotwat":{"full":"./assets/table-odds-frames/ko-tut-pi-frame.jpg","t":0.29,"b":0.21}};
+const allTemplates=[...templates,...[{"id":"odds-best","name":"Best Your Choice · ပေါက်ကြေး","color":"#132ab0","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-htet","name":"Htet Ko · ပေါက်ကြေး","color":"#145800","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-ggoal","name":"GGOAL · ပေါက်ကြေး","color":"#b58100","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-hyper-goal","name":"Hyper Goal · ပေါက်ကြေး","color":"#986100","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-kmm","name":"KMM · ပေါက်ကြေး","color":"#a50918","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-special-one","name":"Special One · ပေါက်ကြေး","color":"#236c87","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-the-freedom","name":"The Freedom · ပေါက်ကြေး","color":"#8b6d24","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-bcf","name":"BCF · ပေါက်ကြေး","color":"#073682","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-final-goal","name":"Final Goal · ပေါက်ကြေး","color":"#876013","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-ko-chan","name":"Ko Chan · ပေါက်ကြေး","color":"#0d1745","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-team-pmm","name":"Team PMM · ပေါက်ကြေး","color":"#5e0814","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-thuta","name":"THUTA · ပေါက်ကြေး","color":"#115136","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-ymc","name":"YMC · ပေါက်ကြေး","color":"#16113d","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-ko-tut-pi","name":"ကိုတွတ်ပီ · ပေါက်ကြေး","color":"#9a1114","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"odds-khin-khin-htar","name":"ခင်ခင်ထား · ပေါက်ကြေး","color":"#77005b","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"preview-bcf","name":"BCF · ပွဲကြို","color":"#16486c","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"preview-daily","name":"Daily Double · ပွဲကြို","color":"#842630","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"preview-final","name":"Final Goal · ပွဲကြို","color":"#856119","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"preview-ggoal","name":"GGOAL · ပွဲကြို","color":"#856119","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"preview-ko","name":"Ko Chan · ပွဲကြို","color":"#16486c","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"preview-pmm","name":"Team PMM · ပွဲကြို","color":"#842630","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"preview-htet","name":"Htet Ko · ပွဲကြို","color":"#18553d","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"results-best","name":"Best Your Choice · ဂိုးရလဒ်","color":"#161cbe","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"results-htet","name":"Htet Ko · ဂိုးရလဒ်","color":"#126c21","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true},{"id":"results-kotwat","name":"ကိုတွတ်ပီ · ဂိုးရလဒ်","color":"#ba1114","top":110,"bottom":75,"fit":"contain","topImage":"","bottomImage":"","builtin":true}]];
+const empty=()=>({version:2,frames:allTemplates.map(x=>({...x})),selected:Object.fromEntries(types.map(x=>[x,"none"])),placements:Object.fromEntries(types.map(x=>[x,[]]))});
 let state=empty(),panel=null,active="navy",queue=Promise.resolve();
 const get=id=>state.frames.find(f=>f.id===id);
 const color=s=>/^#[\da-f]{6}$/i.test(s||"")?s:"#16486c";
@@ -12,12 +15,12 @@ const number=(v,d)=>Number.isFinite(+v)?Math.max(0,Math.min(360,Math.round(+v)))
 const trim=(s,max=70)=>String(s||"").trim().slice(0,max);
 const pic=x=>typeof x==="string"&&/^data:image\/(png|webp|jpeg);base64,/.test(x)&&x.length<1500000?x:"";
 function validate(v){
-if(!v||v.version!==2||!Array.isArray(v.frames)||v.frames.length>44)throw Error("Frame Backup v2 မမှန်ပါ");
+if(!v||v.version!==2||!Array.isArray(v.frames)||v.frames.length>130)throw Error("Frame Backup v2 မမှန်ပါ");
 const out=empty(),used=new Set();
 out.frames=v.frames.filter(x=>x&&/^[a-z0-9-]{2,60}$/.test(x.id)&&!used.has(x.id)&&used.add(x.id)).map(x=>({
 id:x.id,name:trim(x.name)||"My Frame",color:color(x.color),top:number(x.top,110),bottom:number(x.bottom,75),
-fit:x.fit==="cover"?"cover":"contain",topImage:pic(x.topImage),bottomImage:pic(x.bottomImage),builtin:templates.some(t=>t.id===x.id)}));
-for(const f of templates)if(!out.frames.some(x=>x.id===f.id))out.frames.unshift({...f});
+fit:x.fit==="cover"?"cover":"contain",topImage:pic(x.topImage),bottomImage:pic(x.bottomImage),builtin:allTemplates.some(t=>t.id===x.id)}));
+for(const f of allTemplates)if(!out.frames.some(x=>x.id===f.id))out.frames.push({...f});
 for(const k of types){
  const id=v.selected?.[k];out.selected[k]=getId(id,out.frames)?id:"none";
  const listed=Array.isArray(v.placements?.[k])?v.placements[k]:id&&id!=="none"?[id]:[];
@@ -58,7 +61,18 @@ const out=document.createElement("canvas");out.width=w;out.height=h;
 const c=out.getContext("2d");if(!c)throw Error("Canvas မရနိုင်ပါ");
 c.fillStyle=shade(f.color,.33);c.fillRect(0,0,w,h);band(c,w,0,top,f.color);band(c,w,h-bottom,bottom,f.color);
 const [a,b]=await Promise.all([f.topImage?image(f.topImage):null,f.bottomImage?image(f.bottomImage):null]);
-artwork(c,a,w,top,0,f.fit);artwork(c,b,w,bottom,h-bottom,f.fit);
+const original=originalArtwork[f.id];
+ if(original){
+  if(original.full){
+   const im=await image(original.full),th=Math.floor(im.height*original.t),bh=Math.floor(im.height*original.b);
+   if(th>0&&top>0)c.drawImage(im,0,0,im.width,th,0,0,w,top);
+   if(bh>0&&bottom>0)c.drawImage(im,0,im.height-bh,im.width,bh,0,h-bottom,w,bottom);
+  }else{
+   if(original.top&&top>0)artwork(c,await image(original.top),w,top,0,f.fit);
+   if(original.bottom&&bottom>0)artwork(c,await image(original.bottom),w,bottom,h-bottom,f.fit);
+  }
+ }
+ artwork(c,a,w,top,0,f.fit);artwork(c,b,w,bottom,h-bottom,f.fit);
 c.drawImage(source,0,top+pad);
 c.strokeStyle=f.color;c.lineWidth=Math.max(3,Math.floor(pad/2));c.strokeRect(c.lineWidth/2,top+pad+c.lineWidth/2,w-c.lineWidth,source.height-c.lineWidth);
 return out;
@@ -201,7 +215,7 @@ try{
 function downloadJson(){const b=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),url=URL.createObjectURL(b),a=document.createElement("a");a.href=url;a.download="future-code-pro-frame-settings-v2.json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}
 function init(){
 panel=document.createElement("section");panel.id="fcProfessionalFrameStudio";
-panel.innerHTML='<div class="fcp-head"><div><small>FUTURE CODE · MAIN WEBSITE</small><h2>Frame Editor — Frame အားလုံး တစ်နေရာတည်း</h2><p>Frame အသစ် ထည့်ခြင်း၊ မူရင်း Frame ပြင်/ဖြုတ်/ပြန်ဖော်ခြင်း၊ အရောင်၊ Top/Bottom Banner နှင့် Section အလိုက် Download Frame များကို တစ်နေရာတည်းမှ စီမံပါ။ မူရင်းပုံဖိုင်များကို မဖျက်ပါ။</p></div><a href="./odds.html">ပေါက်ကြေးစာမျက်နှာ</a></div>'+
+panel.innerHTML='<div class="fcp-head"><div><small>FUTURE CODE · MAIN WEBSITE</small><h2>Frame Editor — Frame အားလုံး တစ်နေရာတည်း</h2><p>Frame အသစ်ထည့်ပါ၊ မူရင်းပုံ ၂၅ မျိုးထဲက ရွေးပါ၊ နာမည်/အရောင်/Banner ပြင်ပါ၊ ဘယ် Download Section မှာ အသုံးပြုမလဲ ရွေးပါ။ ပုံဖိုင်မဖျက်ဘဲ ဖြုတ်/ပြန်ဖော်နိုင်ပါတယ်။</p></div><a href="./odds.html">ပေါက်ကြေးစာမျက်နှာ</a></div>'+
 '<div class="fcp-grid"><div class="fcp-card"><label>Frame ရွေးရန်<select id="fcpFrame"></select></label><label>Frame နာမည်<input id="fcpName" type="text" maxlength="70"></label>'+
 '<div class="fcp-pair"><label>Frame အရောင်<input id="fcpColor" type="color"></label><label>Banner Fit<select id="fcpFit"><option value="contain">အပြည့်ပေါ် (မဖြတ်)</option><option value="cover">အပြည့်ဖြည့် (အနားဖြတ်)</option></select></label></div>'+
 '<div class="fcp-pair"><label>အပေါ် Banner အမြင့်<input id="fcpTop" type="number" min="0" max="360"></label><label>အောက် Banner အမြင့်<input id="fcpBottom" type="number" min="0" max="360"></label></div>'+
@@ -244,7 +258,7 @@ function assignFrame(id,sections){
 }
 el("fcpAdd").onclick=async()=>{
  try{
-  if(state.frames.length>=44)throw Error("Frame အများဆုံး ၄၄ မျိုးသာ ဖန်တီးနိုင်သည်");
+  if(state.frames.length>=130)throw Error("Frame အများဆုံး ၁၃၀ မျိုးသာ ဖန်တီးနိုင်သည်");
   const sections=chosenSections();if(!sections.length)throw Error("ထည့်မည့် Section အနည်းဆုံးတစ်ခု ရွေးပါ။");
   const id="pro-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7);
   const template={id,name:"Frame အသစ်",color:"#244c75",top:110,bottom:75,fit:"contain",topImage:"",bottomImage:"",builtin:false};
@@ -263,7 +277,7 @@ el("fcpSave").onclick=async()=>{const f=get(active);if(!f)return;try{
 el("fcpRemoveTop").onclick=async()=>{get(active).topImage="";await save();fill();status("အပေါ် Banner ဖြုတ်ပြီး");};
 el("fcpRemoveBottom").onclick=async()=>{get(active).bottomImage="";await save();fill();status("အောက် Banner ဖြုတ်ပြီး");};
 el("fcpDelete").onclick=async()=>{const f=get(active);if(f.builtin||!confirm("ဤ Frame ဖျက်မလား?"))return;state.frames=state.frames.filter(x=>x.id!==active);for(const k of types){state.placements[k]=state.placements[k].filter(id=>id!==active);if(state.selected[k]===active)state.selected[k]="none";}await save();active="navy";syncControls();status("Frame ကို Download စာရင်းအားလုံးမှ ဖယ်ရှားပြီး");};
-el("fcpReset").onclick=async()=>{const f=get(active),t=templates.find(x=>x.id===active);if(!t)return status("မူရင်း Template မဟုတ်ပါ",true);Object.assign(f,{...t});await save();syncControls();status("မူရင်း Frame ပြန်ထားပြီး");};
+el("fcpReset").onclick=async()=>{const f=get(active),t=allTemplates.find(x=>x.id===active);if(!t)return status("မူရင်း Template မဟုတ်ပါ",true);Object.assign(f,{...t});await save();syncControls();status("မူရင်း Frame ပြန်ထားပြီး");};
 el("fcpBackup").onclick=downloadJson;
 el("fcpImport").onchange=async e=>{try{const file=e.target.files[0];if(!file||file.size>100000000)throw Error("Backup ဖိုင် ကြီးလွန်းသည်");state=validate(JSON.parse(await file.text()));await save();active=state.frames[0].id;syncControls();status("Backup Import ပြီးပါပြီ");}catch(err){status(err.message,true);}finally{e.target.value="";}};
 syncControls();mini();syncNative();
