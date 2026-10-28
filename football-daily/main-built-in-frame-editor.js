@@ -32,7 +32,17 @@
   if(!document.getElementById("fcBuiltInFrameEditorStyle")){style.id="fcBuiltInFrameEditorStyle";document.head.append(style);}
   let anchor=document.getElementById(section==="previews"?"brandPreviewStudio":"mainResultsFrameStudio");
   if(section==="results"&&anchor?.parentElement?.id==="resultsDownloadBar")anchor=anchor.parentElement;
-  if(anchor)anchor.insertAdjacentElement("afterend",panel);
+  // Keep the original preview/results controls inside the one Frame Editor.
+  panel.dataset.frameSection=section;
+  const headline=panel.querySelector("h3");
+  if(headline)headline.textContent=(section==="previews"?"ပွဲကြိုသုံးသပ်ချက်":section==="results"?"ဂိုးရလဒ်":section)+" — မူရင်း Frame ပြင် / ဖြုတ် / ပြန်ဖော်";
+  function place(){const master=document.getElementById("fcProfessionalFrameStudio");if(master){master.append(panel);return true;}return false;}
+  if(!place()){
+    if(anchor)anchor.insertAdjacentElement("afterend",panel);
+    const watcher=new MutationObserver(()=>{if(place())watcher.disconnect();});
+    watcher.observe(document.body,{childList:true,subtree:true});
+    setTimeout(()=>watcher.disconnect(),15000);
+  }
   const q=s=>panel.querySelector(s),selector=q(".fc-bif-select"),status=q(".fc-bif-status");
   function current(){return currentId;}
   function statusText(message,bad=false){status.textContent=message;status.dataset.error=bad?"true":"false";}
