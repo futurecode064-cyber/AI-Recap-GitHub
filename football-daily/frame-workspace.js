@@ -240,5 +240,5 @@ $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();s
  await loadData().catch(e=>{status("Data တချို့ မရသေးပါ — "+e.message,true);});
  currentId=state.frames[0]?.id||"";renderList();renderEditor();renderExportControls();status("Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။");
  }catch(e){console.error("Frame Editor",e);status("Frame Editor ဖွင့်မရပါ — "+e.message,true);}})();
-const script=document.createElement("script");script.src="./frame-export-engine.js?v=20261028-vip-layout-v2";document.head.append(script);
+const script=document.createElement("script");script.src="./frame-export-engine.js?v=20261028-vip-layout-v3";document.head.append(script);
 })();
