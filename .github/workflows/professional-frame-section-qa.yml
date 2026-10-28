@@ -20,7 +20,7 @@ jobs:
       - name: Inspect public deployed frame version
         run: |
           curl -fsSL https://future-code-football-daily.pages.dev/ | grep 'main-professional-frame-studio.js'
-          curl -fsSL 'https://future-code-football-daily.pages.dev/main-professional-frame-studio.js?v=20261027-frame-stable-v6' | grep -E 'const expected=|const watcher=|miniTimer='
+          curl -fsSL 'https://future-code-football-daily.pages.dev/main-professional-frame-studio.js?v=20261028-original-library-v2' | grep -q 'const originalArtwork='
       - name: Check add, section isolation, edit, refresh and PNG
         run: |
           node --input-type=module <<'NODE'
@@ -56,6 +56,20 @@ jobs:
             });
             assert(result.height>300&&result.png);
             console.log('PROFESSIONAL SECTION QA PASS',JSON.stringify(result));
+            // An original odds artwork can also be enabled for previews without deleting the source file.
+            await page.locator('#fcpFrame').selectOption('odds-bcf');
+            await page.locator('#fcpPlacement input[value=previews]').check();
+            await page.locator('#fcpPlacement input[value=odds]').check();
+            await page.locator('#fcpSave').click();
+            const original=await page.evaluate(async()=>{
+              const list=await window.FutureCodeProfessionalFrames.list('odds');
+              if(!list.some(f=>f.id==='odds-bcf'))throw Error('BCF preset absent from odds dropdown');
+              const cvs=document.createElement('canvas');cvs.width=500;cvs.height=250;
+              const out=await window.FutureCodeProfessionalFrames.wrap(cvs,'odds','pro:odds-bcf');
+              return {width:out.width,height:out.height,bytes:out.toDataURL('image/png').length};
+            });
+            assert(original.width===500&&original.height>250&&original.bytes>10000,'Original BCF PNG artwork not exported');
+            console.log('ORIGINAL 25-FRAME CATALOG CROSS-SECTION PNG PASS',JSON.stringify(original));
           } finally { await browser.close(); }
           NODE
 
