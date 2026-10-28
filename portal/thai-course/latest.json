@@ -1,12 +1,13 @@
 {
-  "version": "1.0.5",
-  "versionCode": 6,
-  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/future-code-thai-speaking-v1.0.5/Future_Code_Thai_Speaking_v1.0.5.apk",
-  "notes": "180 offline synthesized Thai pronunciation audio clips (eSpeak NG) are bundled inside the APK. Works without installed Android Thai TTS voice. Audio has not been certified by a native teacher.",
-  "checkedAt": "2026-10-27",
-  "versionName": "1.0.5",
+  "version": "1.0.7",
+  "versionCode": 8,
+  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/future-code-thai-speaking-v1.0.7/Future_Code_Thai_Speaking_v1.0.7.apk",
+  "notes": "အဆင့် ၆ ဆင့်၊ သင်ခန်းစာ ၂၄ ခု၊ ထိုင်းဗျည်းအမည်နှင့် နေ့စဉ်စကားပြောအတွက် Neural offline အသံဖိုင် ၂၆၉ ပါဝင်သည်။ မူလအသံကိုနားထောင်ပြီး လိုက်ပြောခြင်း၊ အစားအစာမှာခြင်း၊ ခရီးသွားခြင်းနှင့် အလုပ်ခွင်ဆွေးနွေးခြင်းကို မြန်မာအဓိပ္ပာယ်နှင့် လေ့ကျင့်ပါ။ Quiz၊ Flashcard၊ စာရေး၊ Progress နှင့် Backup/Restore ပါဝင်သည်။ အသံနားထောင်ရန် Voice data ထပ်ထည့်ရန် မလိုပါ။ Speech recognition သည် ဖုန်းဝန်ဆောင်မှုပေါ် မူတည်နိုင်သည်။ Update ကို အလိုအလျောက်စစ်ပြီး ဒေါင်းလုပ်ဖိုင် checksum စစ်ဆေးကာ Android Install အတည်ပြုချက်ဖြင့် တင်နိုင်သည်။ အသံသည် စက်ဖြင့်ဖန်တီးထားပြီး native ဆရာစစ်ဆေးအတည်ပြုထားခြင်း မရှိသေးပါ။",
+  "checkedAt": "2026-10-28",
+  "versionName": "1.0.7",
   "packageName": "com.futurecode.thaispeaking",
   "channel": "stable",
-  "sha256": "9a7da19ece2938f50762d97a28c44dbd9c5480d019e84bdf46d2c16f3c0912a8",
-  "sizeBytes": 3359583
+  "sha256": "75d72aa1481f46d3337f87a2c96e90c7d703d48eac69745556fd6e86f1a3d1df",
+  "sizeBytes": 3969705,
+  "certificateSha256": "cb8e3b40e23982b7ef27d8252a4c26fdd8942d129383b14eed3a3eda0c94ede1"
 }
