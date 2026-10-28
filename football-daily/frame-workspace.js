@@ -61,6 +61,19 @@ function assignReferenceRed(){
  const id="odds-burmese-red";if(frame(id)&&!assigned(id,"odds"))state.placements.odds.push(id);
  localStorage.setItem("fc-red-reference-assignment-v1","yes");return true;
 }
+function upgradeOddsBanners(){
+ if(localStorage.getItem("fc-odds-banner-default-height-v1"))return false;
+ let changed=false;
+ for(const f of frames()){
+  if(f.builtin&&f.id.startsWith("odds-")&&f.id!=="odds-burmese-red"&&
+     f.top===110&&f.bottom===75&&!f.topImage&&!f.bottomImage){
+   // Reference frame ribbons were too narrow relative to exported rows.
+   f.top=160;f.bottom=110;changed=true;
+  }
+ }
+ localStorage.setItem("fc-odds-banner-default-height-v1","yes");
+ return changed;
+}
 function migrateAssignments(){
  if(localStorage.getItem("fc-workspace-assignments-v1"))return false;
  let changed=false;
@@ -253,7 +266,7 @@ $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();s
 (async()=>{try{
  initSectionLayouts();
  status("မူလ Website Export Engine နှစ်ခု ဖွင့်နေသည်…");await readyEngines();
- state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed();if(migrated||added)await dbWrite(state);
+ state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed(),bannerUpgrade=upgradeOddsBanners();if(migrated||added||bannerUpgrade)await dbWrite(state);
  let loadFailure=null;try{await loadData();}catch(e){loadFailure=e;}
  currentId=state.frames[0]?.id||"";$("oddsModeWrap").hidden=false;renderList();renderEditor();renderExportControls();
  status(loadFailure?"Frame Editor ဖွင့်ပြီး၊ Published Data မရသေးပါ — "+loadFailure.message:"Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။",!!loadFailure);
