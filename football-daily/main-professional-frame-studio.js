@@ -246,7 +246,7 @@ async function formFrame(existing){
  if(!name)throw Error("Frame နာမည် ထည့်ပါ။");
  const top=number(el("fcpTop").value,110),bottom=number(el("fcpBottom").value,75);
  if(top+bottom>650)throw Error("Banner နှစ်ခု အမြင့်များနေသည်။");
- const out={...existing,name,color:color(el("fcpColor").value),top,bottom,fit:el("fcpFit").value};
+ const out={...existing,name,downloadName:existing.downloadName&&existing.downloadName!==existing.name?existing.downloadName:name,color:color(el("fcpColor").value),top,bottom,fit:el("fcpFit").value};
  if(el("fcpTopFile").files[0])out.topImage=await compress(el("fcpTopFile").files[0]);
  if(el("fcpBottomFile").files[0])out.bottomImage=await compress(el("fcpBottomFile").files[0]);
  return out;

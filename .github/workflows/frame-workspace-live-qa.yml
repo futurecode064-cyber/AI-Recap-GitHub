@@ -40,6 +40,7 @@ jobs:
           node --input-type=module <<'NODE'
           import {chromium} from 'playwright';
           import assert from 'node:assert/strict';
+          import {readFile} from 'node:fs/promises';
           const origin='https://future-code-football-daily.pages.dev/';
           const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
           try {
@@ -55,34 +56,49 @@ jobs:
               !!window.FCStudio.getHome().FutureCodeFramePreview,
               !!window.FCStudio.getOdds().FutureCodeTableOddsFrames
             ]}));
-            assert(initial.count>=30&&initial.scopes===6&&initial.versions.every(Boolean),JSON.stringify(initial));
+            assert(initial.count>=30&&initial.scopes===7&&initial.versions.every(Boolean),JSON.stringify(initial));
+            assert(await page.locator('#downSection option[value="oddsCards"]').count()===1,'Missing new Burmese odds cards download section');
+            assert(await page.locator('#librarySection option[value="oddsCards"]').count()===1,'Missing new card section library filter');
             await page.locator('#librarySection').selectOption('odds');
             await page.locator('#frameList .frame-row').filter({hasText:'BCF · ပေါက်ကြေး'}).first().click();
             assert(await page.locator('#scopeChecks input[value=odds]').isChecked(),'BCF default odds scope missing');
+            assert(await page.locator('#scopeChecks input[value=oddsCards]').isChecked(),'BCF must also be available as branded Burmese cards');
+            await page.locator('#frameDownloadName').fill('BCF-မြန်မာကြေး');
             await page.locator('#scopeChecks input[value=previews]').check();
             await page.locator('#saveFrame').click();
             await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('သိမ်းပြီး'),null,{timeout:55000});
             let combination=await page.evaluate(()=>window.FCStudio.getState().placements);
-            assert(combination.previews.includes('odds-bcf')&&combination.odds.includes('odds-bcf'),'Cross-section BCF assignment failed');
+            assert(combination.previews.includes('odds-bcf')&&combination.odds.includes('odds-bcf')&&combination.oddsCards.includes('odds-bcf'),'Cross-section BCF assignment failed');
             await page.locator('#navDownloads').click();
-            await page.locator('#downSection').selectOption('odds');
+            await page.locator('#downSection').selectOption('oddsCards');
             await page.locator('#downFrame').selectOption('odds-bcf');
             const first=await page.locator('#matchFilter option').nth(1).getAttribute('value');
             assert(first,'Actual odds fixture not loaded');await page.locator('#matchFilter').selectOption(first);
             await page.locator('#downPreview').click();
             await page.locator('#downPreviewImage').waitFor({timeout:100000,state:'visible'});
             const png=await page.locator('#downloadLink').getAttribute('download');
-            assert(png?.endsWith('.png'),'Preview single PNG link unavailable');
+            assert(png==='BCF-မြန်မာကြေး.png','PNG name must match the Frame Editor download-name setting, received '+png);
+            const previewMetrics=await page.locator('#downPreviewImage').evaluate(img=>({width:img.naturalWidth,height:img.naturalHeight,cssMaxHeight:getComputedStyle(img).maxHeight}));
+            assert(previewMetrics.width>=1200&&previewMetrics.height>250&&previewMetrics.cssMaxHeight==='none','Banner / full-width scroll preview was downsized: '+JSON.stringify(previewMetrics));
             const dl=page.waitForEvent('download',{timeout:100000});
             await page.locator('#downZip').click();
             const download=await dl;
             assert(download.suggestedFilename().endsWith('.zip'),'ZIP download missing');
+            const data=await readFile(await download.path());
+            const entries=[];let offset=0;
+            while(offset+30<=data.length&&data.readUInt32LE(offset)===0x04034b50){
+              const length=data.readUInt16LE(offset+26),extra=data.readUInt16LE(offset+28),size=data.readUInt32LE(offset+18);
+              entries.push(data.subarray(offset+30,offset+30+length).toString('utf8'));
+              offset+=30+length+extra+size;
+            }
+            assert(entries.length>0&&entries.every(n=>n.startsWith('PNG-Images/')&&!n.slice('PNG-Images/'.length).includes('/')),'ZIP must contain all PNGs in just one flat PNG-Images folder: '+JSON.stringify(entries));
+            assert(entries.includes('PNG-Images/BCF-မြန်မာကြေး.png'),'ZIP must preserve the user-defined Myanmar PNG filename: '+JSON.stringify(entries));
             await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('အဆင်သင့်') && document.querySelector('#downloadLink')?.download.endsWith('.zip'),null,{timeout:30000});
             const page2=await context.newPage();
             await page2.goto(origin,{waitUntil:'domcontentloaded'});
             const link=await page2.locator('a[href="./frame-editor.html"]').count();
             assert(link>=1,'Frame Editor link missing on main site');
-            console.log('UNIFIED FRAME WORKSPACE PASS',JSON.stringify({count:initial.count,scopeCount:initial.scopes,png,zip:download.suggestedFilename(),crossSectionBCF:true,mainNav:true,errors}));
+            console.log('UNIFIED FRAME WORKSPACE PASS',JSON.stringify({count:initial.count,scopeCount:initial.scopes,png,zip:download.suggestedFilename(),crossSectionBCF:true,mainNav:true,oneZipFolder:true,filenameFromEditor:true,brandedOddsCards:true,errors}));
             await context.close();
           }finally{await browser.close();}
           NODE
