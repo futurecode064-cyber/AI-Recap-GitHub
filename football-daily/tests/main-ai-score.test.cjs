@@ -50,9 +50,9 @@ test("MAIN homepage shows eight navigation tiles and section shortcuts",()=>{
  const nav=main.match(/<nav class="date-tabs fc-main-five-nav"[^>]*>([\s\S]*?)<\/nav>/);
  assert.ok(nav,"main section menu must exist");
  const itemTags=[...nav[1].matchAll(/<(button|a)\b[^>]*>/g)].map(x=>x[0]);
- assert.equal(itemTags.length,8,"eight visible main navigation tiles, no duplicates");
+ assert.equal(itemTags.length,10,"ten declared main entries including frame-engine shortcuts");
  assert.equal(itemTags.filter(x=>x.startsWith("<button")).length,2,"yesterday/today keep original button behavior");
- assert.equal(itemTags.filter(x=>x.startsWith("<a")).length,6,"odds, video, AI, two frame studio and news links");
+ assert.equal(itemTags.filter(x=>x.startsWith("<a")).length,8,"odds, video, AI, two frame studio and news links");
  assert.match(nav[1],/href="\.\/odds\.html"/);
  assert.match(nav[1],/href="#fcVideoStudio"/);
  assert.match(nav[1],/href="#fcAiScoreSection"/);
@@ -76,7 +76,7 @@ test("Sample-style league heading and fixture cells stay in one six-column grid"
  assert.match(js,/const head=make\("div","fc-ai-league-head"\)/,"each league owns blue header");
  assert.match(js,/head\.appendChild\(iconBox\)/,"logo tile sits left");
  assert.match(js,/head\.appendChild\(make\("strong","fc-ai-league-title",labelLeague\(league\)\)\)/,"league name beside logo");
- assert.match(js,/\["AI ခန့်မှန်း ၁","AI ခန့်မှန်း ၂","AI ခန့်မှန်း ၃"\]/,"prediction 1/2/3 above their columns");
+ assert.match(js,/\["VIP Internet","Bookies","AI Tips"\]/,"prediction 1/2/3 above their columns");
  assert.match(js,/head\.appendChild\(downloadHead\)/,"small PNG column remains");
  assert.match(js,/table\.appendChild\(head\)/,"header and fixtures use one grid table");
  assert.match(js,/const row=make\("div","fc-ai-match"\)/,"every match has a matching row");
@@ -110,7 +110,7 @@ test("downloaded PNG uses the same aligned six-column layout and includes all cr
  assert.match(js,/const columns=\[596,758,920\]/);
  assert.match(js,/picture\(window\.FutureCodeMainLogoAssets\?\.leagueCrest\(match\.league\)\|\|leagueIcons\[match\.league\]\)/);
  assert.match(js,/picture\(match\.homeCrestUrl\),picture\(match\.awayCrestUrl\)/);
- assert.match(js,/const heading="AI ခန့်မှန်း "/);
+ assert.match(js,/const heading=\["VIP Internet","Bookies","AI Tips"\]\[i\]/);
  assert.match(js,/ctx\.fillText\(scores\[i\],x\+81,332\)/);
  assert.match(js,/const blob=await new Promise\(resolve=>canvas\.toBlob\(resolve,"image\/png"\)\)/);
 });
