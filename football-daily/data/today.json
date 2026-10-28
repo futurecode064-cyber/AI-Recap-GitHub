@@ -28,22 +28,149 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
-      "standingsSourceUrl": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Aston Villa",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879256"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Ipswich Town",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879259"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Liverpool",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879264"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Sunderland",
+          "teamGoals": 5,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879272"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Manchester United",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879278"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Liverpool",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878765"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Crystal Palace",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879261"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Sunderland",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878772"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Arsenal",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879274"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Coventry City",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879282"
+        }
+      ],
+      "homeStanding": {
+        "position": 1,
+        "played": 8,
+        "wins": 7,
+        "draws": 0,
+        "losses": 1,
+        "goalsFor": 20,
+        "goalsAgainst": 9,
+        "points": 21
+      },
+      "awayStanding": {
+        "position": 3,
+        "played": 8,
+        "wins": 5,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 23,
+        "goalsAgainst": 7,
+        "points": 16
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921834",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
       "myanmarOdds": {
         "upperTeam": "မန်စီးတီး",
         "bodyOdds": "1+40",
         "goalTotalOdds": "3-35",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401921834",
+      "homeOdds": "1.65",
+      "drawOdds": "4.10",
+      "awayOdds": "4.30",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921834",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-02",
@@ -71,14 +198,14 @@
       "specialChoice": false,
       "homeLastFive": [
         {
-          "date": "2026-10-22",
-          "opponent": "AC Milan",
+          "date": "2026-10-25",
+          "opponent": "Manchester United",
           "teamGoals": 3,
           "opponentGoals": 0,
-          "venueSide": "home",
+          "venueSide": "away",
           "result": "W",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/bournemouth-vs-ac-milan/577779"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879252"
         },
         {
           "date": "2026-10-18",
@@ -87,18 +214,8 @@
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/bournemouth-vs-sunderland/559504"
-        },
-        {
-          "date": "2026-10-15",
-          "opponent": "Sturm Graz",
-          "teamGoals": 3,
-          "opponentGoals": 0,
-          "venueSide": "home",
-          "result": "W",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/bournemouth-vs-sturm-graz/577761"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879263"
         },
         {
           "date": "2026-10-10",
@@ -107,8 +224,8 @@
           "opponentGoals": 5,
           "venueSide": "away",
           "result": "L",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/chelsea-vs-bournemouth/559496"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878775"
         },
         {
           "date": "2026-09-20",
@@ -117,35 +234,111 @@
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/bournemouth-vs-liverpool/559484"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879276"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Brentford",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879285"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Manchester City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879256"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Newcastle United",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879258"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Brentford",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878776"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879269"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Nottingham Forest",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879284"
+        }
+      ],
       "homeStanding": {
-        "position": 17,
-        "played": 7,
-        "wins": 1,
+        "position": 13,
+        "played": 8,
+        "wins": 2,
         "draws": 3,
         "losses": 3,
-        "goalsFor": 9,
+        "goalsFor": 12,
         "goalsAgainst": 13,
-        "goalDifference": -4,
-        "points": 6
+        "points": 9
       },
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 9,
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 9,
+        "goalsAgainst": 12,
+        "points": 11
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
-      "standingsSourceUrl": "https://www.skysports.com/football/manchester-united-vs-bournemouth/table/5782183476081516232",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921840",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
       "myanmarOdds": {
         "upperTeam": "ဘုန်းမောက်",
         "bodyOdds": "-40",
         "goalTotalOdds": "3+45",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401921840",
+      "homeOdds": "2.25",
+      "drawOdds": "3.45",
+      "awayOdds": "2.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921840",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-03",
@@ -171,83 +364,149 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [
+      "homeLastFive": [
         {
-          "date": "2026-10-22",
-          "opponent": "Besiktas",
-          "teamGoals": 2,
-          "opponentGoals": 2,
+          "date": "2026-10-24",
+          "opponent": "Coventry City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
           "venueSide": "away",
-          "result": "D",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/besiktas-vs-crystal-palace/577778"
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879255"
         },
         {
-          "date": "2026-10-18",
-          "opponent": "Brighton",
-          "teamGoals": 0,
-          "opponentGoals": 5,
-          "venueSide": "away",
-          "result": "L",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/brighton-and-hove-albion-vs-crystal-palace/559506"
-        },
-        {
-          "date": "2026-10-15",
-          "opponent": "Lyon",
-          "teamGoals": 2,
-          "opponentGoals": 3,
-          "venueSide": "away",
-          "result": "L",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/lyon-vs-crystal-palace/577769"
-        },
-        {
-          "date": "2026-10-11",
-          "opponent": "N Forest",
-          "teamGoals": 3,
-          "opponentGoals": 1,
+          "date": "2026-10-17",
+          "opponent": "Hull City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/crystal-palace-vs-nottingham-forest/559498"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878770"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Ipswich Town",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879265"
         },
         {
           "date": "2026-09-20",
-          "opponent": "Leeds",
+          "opponent": "Manchester United",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878777"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Liverpool",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "D",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/leeds-united-vs-crystal-palace/559489"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879279"
         }
       ],
-      "homeStanding": null,
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Newcastle United",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879254"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Brighton & Hove Albion",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879261"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Nottingham Forest",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879266"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Leeds United",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879273"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Ipswich Town",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879281"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 8,
+        "goalsAgainst": 10,
+        "points": 8
+      },
       "awayStanding": {
-        "position": 16,
-        "played": 7,
+        "position": 17,
+        "played": 8,
         "wins": 2,
         "draws": 1,
-        "losses": 4,
+        "losses": 5,
         "goalsFor": 9,
-        "goalsAgainst": 17,
-        "goalDifference": -8,
+        "goalsAgainst": 19,
         "points": 7
       },
-      "homeCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
-      "standingsSourceUrl": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921841",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
       "myanmarOdds": {
         "upperTeam": "ဖူလ်ဟမ်",
         "bodyOdds": "1+80",
         "goalTotalOdds": "3+35",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401921841",
+      "homeOdds": "1.77",
+      "drawOdds": "3.85",
+      "awayOdds": "3.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921841",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-04",
@@ -275,57 +534,67 @@
       "specialChoice": false,
       "homeLastFive": [
         {
-          "date": "2026-10-22",
-          "opponent": "Lech Poznan",
-          "teamGoals": 1,
-          "opponentGoals": 1,
-          "venueSide": "away",
+          "date": "2026-10-25",
+          "opponent": "Leeds United",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
           "result": "D",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/lech-poznan-vs-sunderland/577787"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878764"
         },
         {
           "date": "2026-10-18",
-          "opponent": "B'mouth",
+          "opponent": "AFC Bournemouth",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/bournemouth-vs-sunderland/559504"
-        },
-        {
-          "date": "2026-10-15",
-          "opponent": "Torreense",
-          "teamGoals": 2,
-          "opponentGoals": 1,
-          "venueSide": "away",
-          "result": "W",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/torreense-vs-sunderland/577775"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879263"
         },
         {
           "date": "2026-10-10",
-          "opponent": "Brighton",
+          "opponent": "Brighton & Hove Albion",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/sunderland-vs-brighton-and-hove-albion/559503"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878772"
         },
         {
           "date": "2026-09-20",
-          "opponent": "Man City",
+          "opponent": "Manchester City",
           "teamGoals": 3,
           "opponentGoals": 5,
           "venueSide": "away",
           "result": "L",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/manchester-city-vs-sunderland/559490"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879272"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Arsenal",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878779"
         }
       ],
       "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Hull City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878766"
+        },
         {
           "date": "2026-10-17",
           "opponent": "Liverpool",
@@ -333,8 +602,8 @@
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/brentford-vs-liverpool/559505"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
         },
         {
           "date": "2026-10-10",
@@ -343,8 +612,8 @@
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/aston-villa-vs-brentford/559495"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878776"
         },
         {
           "date": "2026-09-18",
@@ -353,64 +622,59 @@
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/brentford-vs-chelsea/559485"
-        },
-        {
-          "date": "2026-09-15",
-          "opponent": "Reading",
-          "teamGoals": 2,
-          "opponentGoals": 1,
-          "venueSide": "away",
-          "result": "W",
-          "competition": "Carabao Cup Round 3",
-          "sourceUrl": "https://www.skysports.com/football/reading-vs-brentford/577584"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879275"
         },
         {
           "date": "2026-09-12",
-          "opponent": "B'mouth",
+          "opponent": "AFC Bournemouth",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/bournemouth-vs-brentford/559475"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879285"
         }
       ],
       "homeStanding": {
         "position": 20,
-        "played": 7,
+        "played": 8,
         "wins": 1,
-        "draws": 1,
+        "draws": 2,
         "losses": 5,
         "goalsFor": 6,
         "goalsAgainst": 14,
-        "goalDifference": -8,
-        "points": 4
+        "points": 5
       },
       "awayStanding": {
-        "position": 7,
-        "played": 7,
+        "position": 6,
+        "played": 8,
         "wins": 2,
-        "draws": 4,
+        "draws": 5,
         "losses": 1,
-        "goalsFor": 13,
-        "goalsAgainst": 8,
-        "goalDifference": 5,
-        "points": 10
+        "goalsFor": 14,
+        "goalsAgainst": 9,
+        "points": 11
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
-      "standingsSourceUrl": "https://www.skysports.com/football/sunderland-vs-leeds-united/table/7898091536612287232",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921843",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
       "myanmarOdds": {
         "upperTeam": "ဘရန့်ဖို့ဒ်",
         "bodyOdds": "-80",
         "goalTotalOdds": "3+65",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401921843",
+      "homeOdds": "3.30",
+      "drawOdds": "3.50",
+      "awayOdds": "2.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921843",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-05",
@@ -438,14 +702,14 @@
       "specialChoice": false,
       "homeLastFive": [
         {
-          "date": "2026-10-20",
-          "opponent": "Villarreal",
-          "teamGoals": 4,
-          "opponentGoals": 3,
+          "date": "2026-10-25",
+          "opponent": "Brighton & Hove Albion",
+          "teamGoals": 2,
+          "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "UEFA Champions League",
-          "sourceUrl": "https://www.skysports.com/football/liverpool-vs-villarreal/577635"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878765"
         },
         {
           "date": "2026-10-17",
@@ -454,65 +718,131 @@
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/brentford-vs-liverpool/559505"
-        },
-        {
-          "date": "2026-10-14",
-          "opponent": "Linz ASK",
-          "teamGoals": 6,
-          "opponentGoals": 3,
-          "venueSide": "away",
-          "result": "W",
-          "competition": "UEFA Champions League",
-          "sourceUrl": "https://www.skysports.com/football/linz-ask-vs-liverpool/577627"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
         },
         {
           "date": "2026-10-11",
-          "opponent": "Man City",
+          "opponent": "Manchester City",
           "teamGoals": 0,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/liverpool-vs-manchester-city/559501"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879264"
         },
         {
           "date": "2026-09-20",
-          "opponent": "B'mouth",
+          "opponent": "AFC Bournemouth",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/bournemouth-vs-liverpool/559484"
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879276"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Fulham",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879279"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878767"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Everton",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878771"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878775"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Brentford",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879275"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Hull City",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879283"
+        }
+      ],
       "homeStanding": {
-        "position": 5,
-        "played": 7,
-        "wins": 3,
+        "position": 4,
+        "played": 8,
+        "wins": 4,
         "draws": 3,
         "losses": 1,
-        "goalsFor": 9,
+        "goalsFor": 11,
         "goalsAgainst": 8,
-        "goalDifference": 1,
-        "points": 12
+        "points": 15
       },
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 5,
+        "played": 8,
+        "wins": 4,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 17,
+        "goalsAgainst": 15,
+        "points": 13
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.efl.com/news/2026/september/18/carabao-cup-round-four-schedule-confirmed/",
-      "standingsSourceUrl": "https://www.skysports.com/football/liverpool-vs-brighton-and-hove-albion/table/4941839284565786232",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921842",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
       "myanmarOdds": {
         "upperTeam": "လီဗာပူးလ်",
         "bodyOdds": "-60",
         "goalTotalOdds": "3-40",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401921842",
+      "homeOdds": "2.10",
+      "drawOdds": "3.75",
+      "awayOdds": "2.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921842",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-06",
@@ -540,14 +870,14 @@
       "specialChoice": false,
       "homeLastFive": [
         {
-          "date": "2026-10-22",
-          "opponent": "B'mouth",
-          "teamGoals": 0,
-          "opponentGoals": 3,
+          "date": "2026-10-25",
+          "opponent": "Udinese",
+          "teamGoals": 2,
+          "opponentGoals": 0,
           "venueSide": "away",
-          "result": "L",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/bournemouth-vs-ac-milan/577779"
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874779"
         },
         {
           "date": "2026-10-18",
@@ -556,18 +886,8 @@
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "W",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/ac-milan-vs-atalanta/556310"
-        },
-        {
-          "date": "2026-10-15",
-          "opponent": "Salzburg",
-          "teamGoals": 4,
-          "opponentGoals": 0,
-          "venueSide": "away",
-          "result": "W",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/red-bull-salzburg-vs-ac-milan/577773"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874978"
         },
         {
           "date": "2026-10-11",
@@ -576,8 +896,8 @@
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "D",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/sassuolo-vs-ac-milan/556304"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874789"
         },
         {
           "date": "2026-09-20",
@@ -586,35 +906,111 @@
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/ac-milan-vs-lecce/556290"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874944"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Lazio",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874941"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Cagliari",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874958"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Internazionale",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874953"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Lecce",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874776"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Torino",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874767"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Napoli",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874792"
+        }
+      ],
       "homeStanding": {
         "position": 5,
-        "played": 7,
-        "wins": 4,
+        "played": 8,
+        "wins": 5,
         "draws": 3,
         "losses": 0,
-        "goalsFor": 14,
+        "goalsFor": 16,
         "goalsAgainst": 7,
-        "goalDifference": 7,
-        "points": 15
+        "points": 18
       },
-      "awayStanding": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/Italy%20-%20Serie%20A/AC%20Milan.png",
-      "awayCrestUrl": null,
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
-      "fixtureSourceUrl": "https://www.legaseriea.it/",
-      "standingsSourceUrl": "https://www.skysports.com/football/udinese-vs-ac-milan/table/5632923472258058232",
+      "awayStanding": {
+        "position": 13,
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 8,
+        "goalsAgainst": 10,
+        "points": 8
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874993",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
       "myanmarOdds": {
         "upperTeam": "အေစီမီလန်",
         "bodyOdds": "1+45",
         "goalTotalOdds": "3+80",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401874993",
+      "homeOdds": "1.67",
+      "drawOdds": "3.75",
+      "awayOdds": "4.70",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874993",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-07",
@@ -640,8 +1036,69 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": false,
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Lazio",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874955"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Torino",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874784"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Internazionale",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875021"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Genoa",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874801"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Como",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874933"
+        }
+      ],
       "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "AC Milan",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874779"
+        },
         {
           "date": "2026-10-18",
           "opponent": "Lecce",
@@ -649,8 +1106,8 @@
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/udinese-vs-lecce/556314"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874771"
         },
         {
           "date": "2026-10-12",
@@ -659,8 +1116,8 @@
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/torino-vs-udinese/556305"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874763"
         },
         {
           "date": "2026-09-19",
@@ -669,54 +1126,59 @@
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/udinese-vs-cagliari/556294"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874964"
         },
         {
           "date": "2026-09-14",
-          "opponent": "Inter",
+          "opponent": "Internazionale",
           "teamGoals": 3,
           "opponentGoals": 5,
           "venueSide": "away",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/inter-milan-vs-udinese/556279"
-        },
-        {
-          "date": "2026-09-07",
-          "opponent": "Lazio",
-          "teamGoals": 1,
-          "opponentGoals": 2,
-          "venueSide": "home",
-          "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/udinese-vs-lazio/556275"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874966"
         }
       ],
-      "homeStanding": null,
-      "awayStanding": {
-        "position": 16,
-        "played": 7,
+      "homeStanding": {
+        "position": 19,
+        "played": 8,
         "wins": 1,
         "draws": 1,
-        "losses": 5,
-        "goalsFor": 9,
-        "goalsAgainst": 16,
-        "goalDifference": -7,
+        "losses": 6,
+        "goalsFor": 5,
+        "goalsAgainst": 15,
         "points": 4
       },
-      "homeCrestUrl": null,
+      "awayStanding": {
+        "position": 17,
+        "played": 8,
+        "wins": 1,
+        "draws": 1,
+        "losses": 6,
+        "goalsFor": 9,
+        "goalsAgainst": 18,
+        "points": 4
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
-      "fixtureSourceUrl": "https://www.legaseriea.it/",
-      "standingsSourceUrl": "https://www.legaseriea.it/",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874965",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
       "myanmarOdds": {
         "upperTeam": "အူဒီးနီးစ်",
         "bodyOdds": "-15",
         "goalTotalOdds": "2-40",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401874965",
+      "homeOdds": "2.75",
+      "drawOdds": "3.05",
+      "awayOdds": "2.55",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874965",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-08",
@@ -744,14 +1206,24 @@
       "specialChoice": true,
       "homeLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "Genoa",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874952"
+        },
+        {
           "date": "2026-10-17",
           "opponent": "Napoli",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/venezia-vs-napoli/556315"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874760"
         },
         {
           "date": "2026-10-12",
@@ -760,8 +1232,8 @@
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/atalanta-vs-venezia/556296"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875005"
         },
         {
           "date": "2026-09-19",
@@ -770,8 +1242,8 @@
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/venezia-vs-lazio/556295"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874956"
         },
         {
           "date": "2026-09-11",
@@ -780,30 +1252,20 @@
           "opponentGoals": 4,
           "venueSide": "home",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/venezia-vs-fiorentina/556285"
-        },
-        {
-          "date": "2026-09-06",
-          "opponent": "Frosinone",
-          "teamGoals": 2,
-          "opponentGoals": 3,
-          "venueSide": "away",
-          "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/frosinone-vs-venezia/556269"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874759"
         }
       ],
       "awayLastFive": [
         {
-          "date": "2026-10-21",
-          "opponent": "Shak Donetsk",
-          "teamGoals": 1,
-          "opponentGoals": 0,
+          "date": "2026-10-25",
+          "opponent": "Fiorentina",
+          "teamGoals": 2,
+          "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "competition": "UEFA Champions League",
-          "sourceUrl": "https://www.skysports.com/football/inter-milan-vs-shakhtar-donetsk/577646"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875036"
         },
         {
           "date": "2026-10-17",
@@ -812,18 +1274,8 @@
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/bologna-vs-inter-milan/556306"
-        },
-        {
-          "date": "2026-10-13",
-          "opponent": "Club Brugge",
-          "teamGoals": 3,
-          "opponentGoals": 4,
-          "venueSide": "home",
-          "result": "L",
-          "competition": "UEFA Champions League",
-          "sourceUrl": "https://www.skysports.com/football/inter-milan-vs-club-brugge/577618"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874953"
         },
         {
           "date": "2026-10-10",
@@ -832,47 +1284,55 @@
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/inter-milan-vs-parma/556300"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875021"
         },
         {
           "date": "2026-09-19",
-          "opponent": "Roma",
+          "opponent": "AS Roma",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/roma-vs-inter-milan/556293"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874753"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Udinese",
+          "teamGoals": 5,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874966"
         }
       ],
       "homeStanding": {
         "position": 20,
-        "played": 7,
+        "played": 8,
         "wins": 1,
         "draws": 0,
-        "losses": 6,
+        "losses": 7,
         "goalsFor": 6,
-        "goalsAgainst": 16,
-        "goalDifference": -10,
+        "goalsAgainst": 17,
         "points": 3
       },
       "awayStanding": {
         "position": 2,
-        "played": 7,
-        "wins": 6,
+        "played": 8,
+        "wins": 7,
         "draws": 1,
         "losses": 0,
-        "goalsFor": 21,
-        "goalsAgainst": 9,
-        "goalDifference": 12,
-        "points": 19
+        "goalsFor": 23,
+        "goalsAgainst": 10,
+        "points": 22
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
-      "fixtureSourceUrl": "https://www.legaseriea.it/",
-      "standingsSourceUrl": "https://www.skysports.com/football/genoa-vs-venezia/table/6638050749015618232",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874773",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
       "myanmarOdds": {
         "upperTeam": "အင်တာမီလန်",
         "bodyOdds": "1-100",
@@ -885,7 +1345,14 @@
         "အင်တာမီလန်ဟာ ဒီရာသီ အီတလီစီးရီးအေမှာ အကောင်းဆုံးခြေစွမ်းပြနေတဲ့ အသင်းတွေထဲက တစ်သင်းဖြစ်ပြီး ရှစ်ပွဲကစား ခုနစ်ပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ၂၂ မှတ်ရထားသလို ၂၃ ဂိုးအထိ သွင်းယူထားနိုင်တာကြောင့် တိုက်စစ်ပိုင်းမှာ အလွန်ထက်မြက်နေပါတယ်။ နည်းပြ ခရစ္စတီယန်ချီဗူး ရဲ့အသင်းဟာ နောက်ဆုံး ဖီအိုရင်တီးနားနဲ့ပွဲမှာ နောက်ကလိုက်ကစားပြီး ၂-၁ ဂိုးနဲ့ ပြန်လည်အနိုင်ယူခဲ့တာကြောင့် ပွဲအတွင်း ဖိအားတွေကို ရင်ဆိုင်ဖြေရှင်းနိုင်တဲ့ အရည်အသွေးကိုလည်း ပြသထားပါတယ်။ ဗင်နီဇီယာကတော့ စီးရီးဘီကနေ ပြန်တန်းတက်လာပြီးနောက် ရှစ်ပွဲမှာ ခုနစ်ပွဲရှုံး၊ သုံးမှတ်သာ ရရှိထားကာ အမှတ်ပေးဇယား အောက်ဆုံးမှာ ရောက်ရှိနေပါတယ်။ အထူးသဖြင့် ၁၇ ဂိုးအထိ ပေးထားရတဲ့ ခံစစ်က အင်တာမီလန်ရဲ့ တိုက်စစ်အတွက် အခွင့်အရေးတွေ ပိုမိုဖန်တီးပေးနိုင်တဲ့ အားနည်းချက်ဖြစ်နေပါတယ်။ ဒါပေမဲ့ နည်းပြသစ် ဒါဗီဒီနီကိုလာ လက်အောက်မှာ နာပိုလီကို အနိုင်ယူခဲ့တဲ့ပွဲကဲ့သို့ ခံစစ်ကို နောက်ဆုတ်စုဖွဲ့ပြီး တန်ပြန်တိုက်စစ်ဆင်နိုင်တာကြောင့် အင်တာမီလန်အနေနဲ့ သတိမလွတ်သင့်ပါဘူး။ အာကောအဒမ်စ် နဲ့ ဂျွန်ယီဘိုအာ တို့ရဲ့ လျင်မြန်မှုက ဗင်နီဇီယာအတွက် အဓိကလက်နက်ဖြစ်နိုင်ပေမယ့် အင်တာမီလန်က ကွင်းလယ်ထိန်းချုပ်နိုင်မှုနဲ့ အခွင့်အရေးဖန်တီးနိုင်မှုမှာ ပိုမိုသာလွန်နေပါတယ်။ အသင်းခေါင်းဆောင် လော်တာရိုမာတီနက်ဇ် ဒဏ်ရာကြောင့် မပါနိုင်ပေမယ့် မာကပ်စ်သူရမ်၊ အန်ဂျီဘွန်နီနဲ့ ပီယိုအက်စ်ပိုစီတို တို့လို တိုက်စစ်ကစားသမားတွေကို အသုံးပြုနိုင်တာကြောင့် ဗင်နီဇီယာရဲ့ နောက်တန်းကို ဖိအားပေးနိုင်ဖို့ရှိနေပြီး",
         "အင်တာမီလန်ကို ရွေးချယ်ပါတယ်။"
       ],
-      "specialPreparedDate": "2026-10-28"
+      "specialPreparedDate": "2026-10-28",
+      "espnMatchId": "401874773",
+      "homeOdds": "7.00",
+      "drawOdds": "5.25",
+      "awayOdds": "1.34",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874773",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-09",
@@ -913,14 +1380,24 @@
       "specialChoice": false,
       "homeLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "Venezia",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874952"
+        },
+        {
           "date": "2026-10-17",
-          "opponent": "Roma",
+          "opponent": "AS Roma",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/roma-vs-genoa/556313"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874935"
         },
         {
           "date": "2026-10-10",
@@ -929,8 +1406,8 @@
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/genoa-vs-fiorentina/556299"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874947"
         },
         {
           "date": "2026-09-20",
@@ -939,18 +1416,8 @@
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/parma-vs-genoa/556292"
-        },
-        {
-          "date": "2026-09-15",
-          "opponent": "Südtirol",
-          "teamGoals": 1,
-          "opponentGoals": 0,
-          "venueSide": "home",
-          "result": "W",
-          "competition": "Coppa Italia Second Round",
-          "sourceUrl": "https://www.skysports.com/football/genoa-vs-sudtirol/577537"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874801"
         },
         {
           "date": "2026-09-12",
@@ -959,20 +1426,20 @@
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "D",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/genoa-vs-frosinone/556278"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874991"
         }
       ],
       "awayLastFive": [
         {
-          "date": "2026-10-22",
-          "opponent": "Rennes",
+          "date": "2026-10-25",
+          "opponent": "Lecce",
           "teamGoals": 2,
-          "opponentGoals": 2,
-          "venueSide": "home",
-          "result": "D",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/juventus-vs-rennes/577786"
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874772"
         },
         {
           "date": "2026-10-18",
@@ -981,18 +1448,8 @@
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/juventus-vs-lazio/556309"
-        },
-        {
-          "date": "2026-10-15",
-          "opponent": "Celta Vigo",
-          "teamGoals": 2,
-          "opponentGoals": 1,
-          "venueSide": "away",
-          "result": "W",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/celta-vigo-vs-juventus/577763"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874765"
         },
         {
           "date": "2026-10-11",
@@ -1001,8 +1458,8 @@
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "D",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/cagliari-vs-juventus/556297"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874764"
         },
         {
           "date": "2026-09-20",
@@ -1011,44 +1468,59 @@
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "Italian Serie A",
-          "sourceUrl": "https://www.skysports.com/football/juventus-vs-atalanta/556289"
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874757"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Sassuolo",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874750"
         }
       ],
       "homeStanding": {
-        "position": 17,
-        "played": 7,
-        "wins": 1,
+        "position": 16,
+        "played": 8,
+        "wins": 2,
         "draws": 1,
         "losses": 5,
-        "goalsFor": 5,
+        "goalsFor": 6,
         "goalsAgainst": 13,
-        "goalDifference": -8,
-        "points": 4
+        "points": 7
       },
       "awayStanding": {
-        "position": 9,
-        "played": 7,
-        "wins": 3,
+        "position": 7,
+        "played": 8,
+        "wins": 4,
         "draws": 2,
         "losses": 2,
-        "goalsFor": 9,
+        "goalsFor": 11,
         "goalsAgainst": 8,
-        "goalDifference": 1,
-        "points": 11
+        "points": 14
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
-      "fixtureSourceUrl": "https://www.legaseriea.it/",
-      "standingsSourceUrl": "https://www.skysports.com/football/genoa-vs-venezia/table/6638050749015618232",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874988",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
       "myanmarOdds": {
         "upperTeam": "ဂျူဗင်တပ်စ်",
         "bodyOdds": "1+50",
         "goalTotalOdds": "2-60",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401874988",
+      "homeOdds": "5.00",
+      "drawOdds": "3.60",
+      "awayOdds": "1.65",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874988",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-10",
@@ -1074,22 +1546,149 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
-      "fixtureSourceUrl": "https://www.legaseriea.it/",
-      "standingsSourceUrl": "https://www.legaseriea.it/",
+      "homeLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Torino",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874957"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Cagliari",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874762"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Lazio",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874951"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Sassuolo",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874756"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Lecce",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874936"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "AS Roma",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874948"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Venezia",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874760"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Frosinone",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874754"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Fiorentina",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874934"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Bologna",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874792"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 8,
+        "wins": 2,
+        "draws": 1,
+        "losses": 5,
+        "goalsFor": 15,
+        "goalsAgainst": 18,
+        "points": 7
+      },
+      "awayStanding": {
+        "position": 10,
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 13,
+        "goalsAgainst": 10,
+        "points": 11
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874799",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
       "myanmarOdds": {
         "upperTeam": "နာပိုလီ",
         "bodyOdds": "1+40",
         "goalTotalOdds": "3+35",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401874799",
+      "homeOdds": "4.10",
+      "drawOdds": "3.90",
+      "awayOdds": "1.74",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874799",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-11",
@@ -1115,22 +1714,149 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.dfb.de/dfb-pokal/",
-      "standingsSourceUrl": "https://www.dfb.de/dfb-pokal/",
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Holstein Kiel",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885078"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "1. FC Magdeburg",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885088"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "VfL Osnabruck",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885093"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Hertha Berlin",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885106"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "TSV Eintracht Braunschweig",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885112"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "FC Cologne",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884756"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Mainz",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884765"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "SC Freiburg",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884778"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "SV Elversberg",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884783"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "1. FC Union Berlin",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884793"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 11,
+        "goalsAgainst": 18,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 16,
+        "played": 7,
+        "wins": 1,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 4,
+        "goalsAgainst": 7,
+        "points": 6
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7017.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916921",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.2",
       "myanmarOdds": {
         "upperTeam": "ရှော်လ်ကေး",
         "bodyOdds": "-90",
         "goalTotalOdds": "3+15",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401916921",
+      "homeOdds": "3.25",
+      "drawOdds": "3.75",
+      "awayOdds": "2.05",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916921",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-12",
@@ -1158,81 +1884,147 @@
       "specialChoice": false,
       "homeLastFive": [
         {
-          "date": "2026-10-22",
-          "opponent": "Monaco",
-          "teamGoals": 0,
+          "date": "2026-10-25",
+          "opponent": "Bayern Munich",
+          "teamGoals": 1,
           "opponentGoals": 3,
-          "venueSide": "away",
+          "venueSide": "home",
           "result": "L",
-          "competition": "UEFA Conference League",
-          "sourceUrl": "https://www.skysports.com/football/monaco-vs-sc-freiburg/577915"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884759"
         },
         {
           "date": "2026-10-18",
-          "opponent": "Leverkusen",
+          "opponent": "Bayer Leverkusen",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/bayer-leverkusen-vs-sc-freiburg/563355"
-        },
-        {
-          "date": "2026-10-15",
-          "opponent": "FK Jablonec",
-          "teamGoals": 3,
-          "opponentGoals": 2,
-          "venueSide": "home",
-          "result": "W",
-          "competition": "UEFA Conference League",
-          "sourceUrl": "https://www.skysports.com/football/sc-freiburg-vs-fk-jablonec/577890"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884771"
         },
         {
           "date": "2026-10-11",
-          "opponent": "Schalke",
+          "opponent": "Schalke 04",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/sc-freiburg-vs-schalke/563351"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884778"
         },
         {
           "date": "2026-09-19",
-          "opponent": "Frankfurt",
+          "opponent": "Eintracht Frankfurt",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/eintracht-frankfurt-vs-sc-freiburg/563338"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884787"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Borussia Mönchengladbach",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884796"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "VfL Bochum",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885079"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "1. FC Heidenheim 1846",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885092"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "1. FC Nürnberg",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885097"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "SV Darmstadt 98",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885110"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "St. Pauli",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885119"
+        }
+      ],
       "homeStanding": {
         "position": 3,
-        "played": 6,
+        "played": 7,
         "wins": 4,
         "draws": 1,
-        "losses": 1,
-        "goalsFor": 15,
-        "goalsAgainst": 6,
-        "goalDifference": 9,
+        "losses": 2,
+        "goalsFor": 16,
+        "goalsAgainst": 9,
         "points": 13
       },
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 4,
+        "played": 9,
+        "wins": 4,
+        "draws": 4,
+        "losses": 1,
+        "goalsFor": 23,
+        "goalsAgainst": 14,
+        "points": 16
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.dfb.de/dfb-pokal/",
-      "standingsSourceUrl": "https://www.skysports.com/football/sc-freiburg-vs-bayern-munich/table/7232947212961966232",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917036",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.1",
       "myanmarOdds": {
         "upperTeam": "ဖရိုင်းဘတ်",
         "bodyOdds": "1-40",
         "goalTotalOdds": "3-60",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401917036",
+      "homeOdds": "1.53",
+      "drawOdds": "4.80",
+      "awayOdds": "5.25",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917036",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-13",
@@ -1258,22 +2050,149 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.dfb.de/dfb-pokal/",
-      "standingsSourceUrl": "https://www.dfb.de/dfb-pokal/",
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Hamburg SV",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884755"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Werder Bremen",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884766"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "VfB Stuttgart",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884773"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884782"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Borussia Dortmund",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884799"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Borussia Mönchengladbach",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884761"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Hamburg SV",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884767"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "SC Paderborn 07",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884773"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Borussia Dortmund",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884789"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884797"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 7,
+        "wins": 2,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 6,
+        "goalsAgainst": 9,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 15,
+        "played": 7,
+        "wins": 2,
+        "draws": 0,
+        "losses": 5,
+        "goalsFor": 10,
+        "goalsAgainst": 13,
+        "points": 6
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917032",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.1",
       "myanmarOdds": {
         "upperTeam": "စတုဂတ်",
         "bodyOdds": "1-15",
         "goalTotalOdds": "3-15",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401917032",
+      "homeOdds": "5.25",
+      "drawOdds": "4.60",
+      "awayOdds": "1.54",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917032",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-14",
@@ -1300,14 +2219,74 @@
       },
       "specialChoice": true,
       "homeLastFive": [],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Arminia Bielefeld",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885081"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Holstein Kiel",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885087"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "SpVgg Greuther Fürth",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885098"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Dynamo Dresden",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885106"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "VfL Osnabruck",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885111"
+        }
+      ],
       "homeStanding": null,
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 1,
+        "played": 9,
+        "wins": 8,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 20,
+        "goalsAgainst": 8,
+        "points": 25
+      },
       "homeCrestUrl": null,
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.dfb.de/dfb-pokal/",
-      "standingsSourceUrl": "https://www.dfb.de/dfb-pokal/",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/129.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916919",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.dfb_pokal",
       "myanmarOdds": {
         "upperTeam": "ဟာသာဘာလင်",
         "bodyOdds": "3-50",
@@ -1320,7 +2299,14 @@
         "ဂျက်ဒယ်လိုဟာ ဂျာမန်စတုတ္ထတန်းလိဂ်မှာ ကစားနေတဲ့အသင်းဖြစ်ပေမယ့် ဒီဖလားပြိုင်ပွဲ ပထမအဆင့်မှာ ဒုတိယတန်းအသင်း ဟိုက်ဒင်ဟိုင်းကို ၅-၂ ဂိုးနဲ့ အနိုင်ယူခဲ့တာကြောင့် အသင်းကြီးတွေကို အခက်တွေ့စေနိုင်တဲ့ အရည်အသွေးရှိနေပါတယ်။ ဒါပေမဲ့ လိဂ်ပြိုင်ပွဲမှာ ခံစစ်အားနည်းနေပြီး ၁၅ ပွဲမှာ ၃၇ ဂိုးအထိ ပေးထားရသလို နည်းပြအပြောင်းအလဲကိုလည်း မကြာသေးခင်က ပြုလုပ်ထားပါတယ်။ နည်းပြသစ် ဘူရတ်ဘာဟာ လက်အောက်မှာ ပထမဆုံးပွဲကို သရေကျခဲ့ပေမယ့် အသင်းရဲ့ ခံစစ်တည်ငြိမ်မှုကို ချက်ချင်းပြန်လည်တည်ဆောက်နိုင်ဖို့တော့ မလွယ်ပါဘူး။ ဟာသာဘာလင်ကတော့ ဘွန်ဒက်စ်လီဂါ ၂ မှာ အမှတ်ပေးဇယားဦးဆောင်နေပြီး ပြိုင်ပွဲစုံ ဆယ်ပွဲမှာ ကိုးပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ရှုံးပွဲမရှိသေးတာကြောင့် ခြေစွမ်းက အလွန်ကောင်းမွန်နေပါတယ်။ နောက်ဆုံး ဘီလီဖဲလ်ကို ၁-၀ ဂိုးနဲ့ အနိုင်ရခဲ့တဲ့ပွဲမှာ ဂျိုဆစ်ဘရီကာလို က အရေးပါတဲ့ အနိုင်ဂိုးသွင်းယူခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်နိုင်မှုကိုလည်း ယုံကြည်ရပါတယ်။ ဂျက်ဒယ်လိုဟာ အိမ်ကွင်းပရိသတ်အားပေးမှုနဲ့ ကြိုးစားကစားလာနိုင်ပေမယ့် လူစာရင်းအရည်အသွေး၊ လက်ရှိခြေစွမ်းနဲ့ ခံစစ်တည်ငြိမ်မှုမှာ သိသိသာသာ ပိုမိုသာလွန်နေတဲ့",
         "ဟာသာဘာလင်ကို ရွေးချယ်ပါတယ်။"
       ],
-      "specialPreparedDate": "2026-10-28"
+      "specialPreparedDate": "2026-10-28",
+      "espnMatchId": "401916919",
+      "homeOdds": "23.00",
+      "drawOdds": "17.00",
+      "awayOdds": "1.05",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916919",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-15",
@@ -1348,34 +2334,24 @@
       "specialChoice": false,
       "homeLastFive": [
         {
-          "date": "2026-10-22",
-          "opponent": "OFI",
-          "teamGoals": 2,
-          "opponentGoals": 0,
+          "date": "2026-10-25",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 0,
+          "opponentGoals": 3,
           "venueSide": "away",
-          "result": "W",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/ofi-vs-bayer-leverkusen/577789"
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884760"
         },
         {
           "date": "2026-10-18",
-          "opponent": "Freiburg",
+          "opponent": "SC Freiburg",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/bayer-leverkusen-vs-sc-freiburg/563355"
-        },
-        {
-          "date": "2026-10-15",
-          "opponent": "Lech Poznan",
-          "teamGoals": 4,
-          "opponentGoals": 0,
-          "venueSide": "away",
-          "result": "W",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/lech-poznan-vs-bayer-leverkusen/577768"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884771"
         },
         {
           "date": "2026-10-10",
@@ -1384,8 +2360,8 @@
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "W",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/mainz-vs-bayer-leverkusen/563347"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884776"
         },
         {
           "date": "2026-09-20",
@@ -1394,35 +2370,111 @@
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/bayer-leverkusen-vs-rb-leipzig/563336"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884788"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "FC Augsburg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884795"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Kaiserslautern",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885080"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Energie Cottbus",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885084"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "VfL Wolfsburg",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885097"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Karlsruher SC",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885107"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Hannover 96",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885116"
+        }
+      ],
       "homeStanding": {
         "position": 4,
-        "played": 6,
+        "played": 7,
         "wins": 4,
         "draws": 1,
-        "losses": 1,
+        "losses": 2,
         "goalsFor": 16,
-        "goalsAgainst": 9,
-        "goalDifference": 7,
+        "goalsAgainst": 12,
         "points": 13
       },
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 2,
+        "played": 9,
+        "wins": 5,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 21,
+        "goalsAgainst": 12,
+        "points": 18
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.dfb.de/dfb-pokal/",
-      "standingsSourceUrl": "https://www.skysports.com/football/tsg-hoffenheim-vs-bayer-leverkusen/table/4636451075638118232",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/269.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917033",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.1",
       "myanmarOdds": {
         "upperTeam": "လေဗာကူဆင်",
         "bodyOdds": "2-50",
         "goalTotalOdds": "4+10",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401917033",
+      "homeOdds": "1.15",
+      "drawOdds": "8.00",
+      "awayOdds": "14.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917033",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-16",
@@ -1450,14 +2502,14 @@
       "specialChoice": false,
       "homeLastFive": [
         {
-          "date": "2026-10-21",
-          "opponent": "Arsenal",
-          "teamGoals": 2,
-          "opponentGoals": 2,
-          "venueSide": "home",
-          "result": "D",
-          "competition": "UEFA Champions League",
-          "sourceUrl": "https://www.skysports.com/football/bayern-munich-vs-arsenal/577643"
+          "date": "2026-10-25",
+          "opponent": "SC Freiburg",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884759"
         },
         {
           "date": "2026-10-17",
@@ -1466,18 +2518,8 @@
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/bayern-munich-vs-rb-leipzig/563358"
-        },
-        {
-          "date": "2026-10-13",
-          "opponent": "Viking",
-          "teamGoals": 3,
-          "opponentGoals": 3,
-          "venueSide": "away",
-          "result": "D",
-          "competition": "UEFA Champions League",
-          "sourceUrl": "https://www.skysports.com/football/viking-vs-bayern-munich/577622"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884772"
         },
         {
           "date": "2026-10-10",
@@ -1486,8 +2528,8 @@
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/fc-augsburg-vs-bayern-munich/563349"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884777"
         },
         {
           "date": "2026-09-18",
@@ -1496,35 +2538,111 @@
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/bayern-munich-vs-1-fc-union-berlin/563339"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884790"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "SV Elversberg",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884791"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Karlsruher SC",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885077"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Dynamo Dresden",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885088"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Hannover 96",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885095"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "SpVgg Greuther Fürth",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885103"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Kaiserslautern",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885113"
+        }
+      ],
       "homeStanding": {
-        "position": 2,
-        "played": 6,
-        "wins": 4,
+        "position": 1,
+        "played": 7,
+        "wins": 5,
         "draws": 2,
         "losses": 0,
-        "goalsFor": 22,
-        "goalsAgainst": 5,
-        "goalDifference": 17,
-        "points": 14
+        "goalsFor": 25,
+        "goalsAgainst": 6,
+        "points": 17
       },
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 5,
+        "played": 9,
+        "wins": 5,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 20,
+        "goalsAgainst": 12,
+        "points": 16
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.dfb.de/dfb-pokal/",
-      "standingsSourceUrl": "https://www.skysports.com/football/sc-freiburg-vs-bayern-munich/table/7232947212961966232",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10382.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917035",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.1",
       "myanmarOdds": {
         "upperTeam": "ဘိုင်ယန်မြူးနစ်",
         "bodyOdds": "3-65",
         "goalTotalOdds": "4-90",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401917035",
+      "homeOdds": "1.03",
+      "drawOdds": "18.00",
+      "awayOdds": "31.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917035",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-17",
@@ -1550,22 +2668,149 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
-      "homeCrestUrl": null,
-      "awayCrestUrl": null,
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.dfb.de/dfb-pokal/",
-      "standingsSourceUrl": "https://www.dfb.de/dfb-pokal/",
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "TSV Eintracht Braunschweig",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885076"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "St. Pauli",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885091"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "1. FC Magdeburg",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885095"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "VfL Bochum",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885109"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "1. FC Nürnberg",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885116"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "1. FC Nürnberg",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885080"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "VfL Bochum",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885090"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "1. FC Heidenheim 1846",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885100"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "TSV Eintracht Braunschweig",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885108"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "1. FC Magdeburg",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885113"
+        }
+      ],
+      "homeStanding": {
+        "position": 16,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 8,
+        "goalsAgainst": 15,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 3,
+        "played": 9,
+        "wins": 5,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 9,
+        "goalsAgainst": 4,
+        "points": 18
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2428.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/130.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916922",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.2",
       "myanmarOdds": {
         "upperTeam": "ဟန်နိုဗာ",
         "bodyOdds": "-35",
         "goalTotalOdds": "3=",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401916922",
+      "homeOdds": "2.30",
+      "drawOdds": "3.70",
+      "awayOdds": "2.80",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916922",
+      "oddsVerifiedDate": "2026-10-28"
     },
     {
       "fixtureId": "fc-20261028-18",
@@ -1591,83 +2836,149 @@
         "source": "Pasted markdown(2).md"
       },
       "specialChoice": false,
-      "homeLastFive": [],
-      "awayLastFive": [
+      "homeLastFive": [
         {
-          "date": "2026-10-22",
-          "opponent": "Lyon",
+          "date": "2026-10-25",
+          "opponent": "Dynamo Dresden",
           "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/tsg-hoffenheim-vs-lyon/577784"
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885078"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Hertha Berlin",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885087"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "TSV Eintracht Braunschweig",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885094"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "VfL Osnabruck",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885105"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "1. FC Heidenheim 1846",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885118"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884760"
         },
         {
           "date": "2026-10-18",
-          "opponent": "M'gladbach",
+          "opponent": "Borussia Mönchengladbach",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/monchengladbach-vs-tsg-hoffenheim/563356"
-        },
-        {
-          "date": "2026-10-15",
-          "opponent": "Besiktas",
-          "teamGoals": 2,
-          "opponentGoals": 3,
-          "venueSide": "home",
-          "result": "L",
-          "competition": "UEFA Europa League",
-          "sourceUrl": "https://www.skysports.com/football/tsg-hoffenheim-vs-besiktas/577766"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884768"
         },
         {
           "date": "2026-10-10",
-          "opponent": "Hamburg",
+          "opponent": "Hamburg SV",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/tsg-hoffenheim-vs-hamburg/563353"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884779"
         },
         {
           "date": "2026-09-20",
-          "opponent": "Paderborn",
+          "opponent": "SC Paderborn 07",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "competition": "German Bundesliga",
-          "sourceUrl": "https://www.skysports.com/football/sc-paderborn-07-vs-tsg-hoffenheim/563342"
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884782"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "VfB Stuttgart",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884797"
         }
       ],
-      "homeStanding": null,
+      "homeStanding": {
+        "position": 13,
+        "played": 9,
+        "wins": 1,
+        "draws": 5,
+        "losses": 3,
+        "goalsFor": 10,
+        "goalsAgainst": 11,
+        "points": 8
+      },
       "awayStanding": {
-        "position": 14,
-        "played": 6,
-        "wins": 2,
+        "position": 10,
+        "played": 7,
+        "wins": 3,
         "draws": 0,
         "losses": 4,
-        "goalsFor": 11,
+        "goalsFor": 14,
         "goalsAgainst": 14,
-        "goalDifference": -3,
-        "points": 6
+        "points": 9
       },
-      "homeCrestUrl": null,
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7884.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
-      "leagueLogoUrl": null,
-      "fixtureSourceUrl": "https://www.dfb.de/dfb-pokal/",
-      "standingsSourceUrl": "https://www.dfb.de/dfb-pokal/",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917034",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.2",
       "myanmarOdds": {
         "upperTeam": "ဟော့ဖန်ဟိမ်း",
         "bodyOdds": "1-40",
         "goalTotalOdds": "3-100",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
-      }
+      },
+      "espnMatchId": "401917034",
+      "homeOdds": "5.50",
+      "drawOdds": "5.00",
+      "awayOdds": "1.48",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917034",
+      "oddsVerifiedDate": "2026-10-28"
     }
   ],
   "updateStatus": "partial",
@@ -1683,5 +2994,6 @@
       }
     ]
   },
-  "noFixturesLeagues": []
+  "noFixturesLeagues": [],
+  "researchVerifiedDate": "2026-10-28"
 }
