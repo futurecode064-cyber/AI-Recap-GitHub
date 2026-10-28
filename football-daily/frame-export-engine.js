@@ -2,6 +2,8 @@
 (function(){
 const s=()=>window.FCStudio;
 const $=id=>document.getElementById(id),slug=x=>String(x||"frame").toLowerCase().normalize("NFKD").replace(/[^a-z0-9-]+/g,"-").replace(/^-|-$/g,"").slice(0,60)||"frame";
+const baseName=f=>String(f.downloadName||f.name||"Frame").normalize("NFC").replace(/\.png$/i,"").replace(/[\\/:*?"<>|\x00-\x1f]/g,"-").replace(/[. ]+$/g,"").trim().slice(0,100)||"Frame";
+const outputName=(f,i,total)=>baseName(f)+(total>1?"-"+String(i+1).padStart(2,"0"):"")+".png";
 const blobCanvas=canvas=>new Promise((ok,bad)=>canvas.toBlob(b=>b&&b.size?ok(b):bad(Error("PNG Blob မထွက်ပါ")),"image/png"));
 const wait=ms=>new Promise(ok=>setTimeout(ok,ms));
 const splitRows=(rows,mode)=>{
@@ -39,16 +41,23 @@ async function* forSection(k,f,rows,mode){
     canvases.push(await p.wrap(src,k,"pro:"+f.id));
    }
    const out=await stackCanvases(canvases),name=mode==="two"?"pair-"+String(i+1).padStart(2,"0"):chunks[i][0].fixtureId||slug(chunks[i][0].home+"-"+chunks[i][0].away);
-   yield {name:name+".png",blob:await blobCanvas(out)};
+   yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(out)};
   }
  }else if(k==="odds"){
   const O=s().getOdds(),sheet=s().getOddsData();
   if(!sheet?.reportDate||!O.FutureCodeTableOddsFrames?.draw)throw Error("ပေါက်ကြေး Data / PNG Engine မရရှိပါ။");
   const parts=splitRows(rows,mode);
   for(let i=0;i<parts.length;i++){
-   const options={design:["colour","Colour",color],colour:color,date:sheet.reportDate,professionalFrame:"pro:"+f.id};
-   const src=await O.FutureCodeTableOddsFrames.draw(parts[i],options,i+1,parts.length);
-   yield {name:"odds-"+String(i+1).padStart(2,"0")+".png",blob:await blobCanvas(src)};
+   let src;
+   if(f.id==="odds-burmese-red"){
+    if(!O.FutureCodeBurmeseRedOddsFrame?.draw)throw Error("မြန်မာကြေး အနီရောင် Frame Renderer မရပါ။ Reload လုပ်ပါ");
+    src=await O.FutureCodeBurmeseRedOddsFrame.draw(parts[i],{date:sheet.reportDate,mode:$("oddsMode")?.value||"original",color,part:i+1,total:parts.length});
+    src=await p.wrap(src,"odds","pro:"+f.id);
+   }else{
+    const options={design:["colour","Colour",color],colour:color,date:sheet.reportDate,professionalFrame:"pro:"+f.id};
+    src=await O.FutureCodeTableOddsFrames.draw(parts[i],options,i+1,parts.length);
+   }
+   yield {name:outputName(f,i,parts.length),blob:await blobCanvas(src)};
   }
  }else if(k==="results"){
   const R=W.FutureCodeResultsFrames,archive=s().getArchive(),parts=splitRows(rows,mode);
@@ -57,7 +66,7 @@ async function* forSection(k,f,rows,mode){
    const dark="#"+color.slice(1).match(/../g).map(h=>Math.round(parseInt(h,16)*.30).toString(16).padStart(2,"0")).join("");
    const native=await R.makePng(parts[i],{id:"plain",title:"Plain",color,dark,plain:true,scoreInk:"#ffffff"},archive.reportDate||s().getDate());
    const out=await p.wrap(native,k,"pro:"+f.id);
-   yield {name:"results-"+String(i+1).padStart(2,"0")+".png",blob:await blobCanvas(out)};
+   yield {name:outputName(f,i,parts.length),blob:await blobCanvas(out)};
   }
  }else if(k==="ai"){
   const api=W.FutureCodeAiBulkExport,model=W.FutureCodeAiScoreModel;
@@ -78,7 +87,7 @@ async function* forSection(k,f,rows,mode){
     cv.getContext("2d").drawImage(img,0,0);img.close();
     b=await blobCanvas(await p.wrap(cv,"ai","pro:"+f.id));
    }
-   yield {name:"ai-"+String(i+1).padStart(2,"0")+".png",blob:b};
+   yield {name:outputName(f,i,pages.length),blob:b};
   }
  }else if(k==="news"){
   if(!W.FutureCodeNewsFrameExport?.render)throw Error("News Poster Module မရပါ");
@@ -87,7 +96,7 @@ async function* forSection(k,f,rows,mode){
    const posters=[];
    for(const story of chunks[i])posters.push((await W.FutureCodeNewsFrameExport.render(story,"pro:"+f.id)).blob);
    const filename=mode==="two"?"news-pair-"+String(i+1).padStart(2,"0"):slug(chunks[i][0].id);
-   yield {name:filename+".png",blob:await stackBlobs(posters)};
+   yield {name:outputName(f,i,chunks.length),blob:await stackBlobs(posters)};
   }
  }
 }
@@ -97,7 +106,7 @@ async function exportAll(previewOnly){
  if(!assignments.length){studio.status("Section အတွက် Frame မသတ်မှတ်ရသေးပါ။ Library မှ အမှန်ခြစ်၍ Save လုပ်ပါ။",true);return;}
  studio.setWorking(true);
  studio.clearExportPreview();$("progressBar").style.width="0";
- let outputURL=null,files=0;const warnings=[];
+ let outputURL=null,files=0;const warnings=[],usedNames=new Set();
  try{
   await studio.loadData();
   const W=studio.getHome();
@@ -117,12 +126,17 @@ async function exportAll(previewOnly){
       const url=URL.createObjectURL(result.blob);
       prev.dataset.url=url;prev.src=url;prev.hidden=false;$("previewExportPlaceholder").hidden=true;
       // The sample is also downloadable, but preview does not trigger a download.
-      const a=$("downloadLink");a.hidden=false;a.href=url;a.download=slug(f.name)+"-"+result.name;a.textContent="⬇ Preview PNG Download";
+      const a=$("downloadLink");a.hidden=false;a.href=url;a.download=result.name;a.textContent="⬇ Preview PNG Download";
       $("progressBar").style.width="100%";
       studio.status(label+" — PNG Preview ဖန်တီးပြီး။");return;
      }
-     const path=section+"/"+slug(f.name)+"-"+f.id+"/"+result.name;
-     await zip.add(path,result.blob);files++;
+     // Flat archive: all PNGs share the same single top-level folder.
+     let uniqueName=result.name,inc=2;
+     while(usedNames.has(uniqueName.toLocaleLowerCase())){
+      uniqueName=result.name.replace(/\.png$/i,"")+"-"+inc+++".png";
+     }
+     usedNames.add(uniqueName.toLocaleLowerCase());
+     await zip.add("PNG-Images/"+uniqueName,result.blob);files++;
      if(files%4===0)await wait(0);
     }
    }catch(err){warnings.push(label+" — "+err.message);console.warn("Section PNG failed",section,f.id,err);}
