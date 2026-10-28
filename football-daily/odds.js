@@ -35,6 +35,8 @@ function matchCell(m){
  append(div,element("span","club-label",m.home),badge(m.home,m.homeCrestUrl),element("span","mini-vs","VS"),badge(m.away,m.awayCrestUrl),element("span","club-label",m.away));
  return div;
 }
+// Verified cup competition logos are provided by the fixture source; never show a fake club/league crest.
+Object.assign(leagueLogos,{"EFL Cup":"https://a.espncdn.com/i/leaguelogos/soccer/500/41.png","DFB-Pokal":"https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png","Copa del Rey":"https://a.espncdn.com/i/leaguelogos/soccer/500/80.png"});
 const mainLeagueFiles={"Premier League":"eng.1","Serie A":"ita.1","La Liga":"esp.1","Allsvenskan":"swe.1","Danish Superliga":"den.1","Primeira Liga":"por.1","La Liga 2":"esp.2","Ligue 2":"fra.2","Turkish Super Lig":"tur.1","Swedish Superettan":"swe.2","Danish Cup":"den.cup","Norwegian 1. Division":"nor.2","Veikkausliiga Playoffs":"fin.1"};
 const isMainOdds=!document.documentElement.dataset.footballBrandName&&/^\/odds(?:\.html)?\/?$/.test(location.pathname);
 if(isMainOdds){
