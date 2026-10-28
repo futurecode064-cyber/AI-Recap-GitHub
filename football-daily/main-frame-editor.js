@@ -189,7 +189,7 @@
   `;
   document.head.appendChild(style);
   // All odds frame controls live in the primary Frame Editor.
-  const place=()=>{const studio=document.getElementById("fcProfessionalFrameStudio");if(!studio)return false;studio.append(panel);return true;};
+  const place=()=>{const studio=document.getElementById("fcProfessionalFrameStudio");if(!studio)return false;(document.getElementById("fcpOriginalFrames")||studio).append(panel);return true;};
   if(!place()){
     target.querySelector("#tofOutput")?.before(panel);
     const watcher=new MutationObserver(()=>{if(place())watcher.disconnect();});
