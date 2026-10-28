@@ -65,6 +65,7 @@ jobs:
               catch(err){if(i===8)throw err;await page.waitForTimeout(5000);}
             }
             assert(ready);
+            await page.waitForFunction(()=>Boolean(window.FCStudio?.getHome()?.FutureCodeTipScores),null,{timeout:50000});
             const summary=await page.evaluate(()=>{
               const st=window.FCStudio,models=st.getHome(),m=st.getReport().matches[0];
               const details=models.FutureCodeTipScores.details(m);
@@ -96,7 +97,7 @@ jobs:
               if(await opts.count()>1)await page.locator('#matchFilter').selectOption(await opts.nth(1).getAttribute('value'));
               await page.locator('#downPreview').click();
               try{
-                await page.waitForFunction(()=>!document.querySelector('#progressWrap')?.hidden===false,null,{timeout:100000});
+                await page.waitForFunction(()=>document.querySelector('#progressWrap')?.hidden===true,null,{timeout:100000});
               }catch(e){}
               const state=await page.locator('#status').innerText();
               if(!state.includes('PNG Preview'))throw Error(section+' preview: '+state);

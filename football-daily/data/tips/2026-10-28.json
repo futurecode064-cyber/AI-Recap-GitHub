@@ -47,6 +47,123 @@
       "sourceName": "FootballPredictions.com EFL Cup Tips",
       "sourceUrl": "https://footballpredictions.com/footballpredictions/eflcuppredictions/",
       "sourceDate": "2026-10-26"
+    },
+    {
+      "fixtureId": "fc-20261028-06",
+      "home": "AC Milan",
+      "away": "Bologna",
+      "score": "2-0",
+      "sourceName": "FootballPredictions.com Serie A",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/serieapredictions/page/5/",
+      "sourceDate": "2026-10-27"
+    },
+    {
+      "fixtureId": "fc-20261028-07",
+      "home": "Parma",
+      "away": "Udinese",
+      "score": "1-1",
+      "sourceName": "FootballPredictions.com Serie A",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/serieapredictions/page/5/",
+      "sourceDate": "2026-10-27"
+    },
+    {
+      "fixtureId": "fc-20261028-08",
+      "home": "Venezia",
+      "away": "Inter Milan",
+      "score": "1-2",
+      "sourceName": "FootballPredictions.com Serie A",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/serieapredictions/page/5/",
+      "sourceDate": "2026-10-27"
+    },
+    {
+      "fixtureId": "fc-20261028-09",
+      "home": "Genoa",
+      "away": "Juventus",
+      "score": "0-2",
+      "sourceName": "FootballPredictions.com Serie A",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/serieapredictions/page/5/",
+      "sourceDate": "2026-10-27"
+    },
+    {
+      "fixtureId": "fc-20261028-10",
+      "home": "Monza",
+      "away": "Napoli",
+      "score": "2-2",
+      "sourceName": "FootballPredictions.com Serie A",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/serieapredictions/page/5/",
+      "sourceDate": "2026-10-27"
+    },
+    {
+      "fixtureId": "fc-20261028-11",
+      "home": "Dynamo Dresden",
+      "away": "Schalke 04",
+      "score": "1-1",
+      "sourceName": "PredictZ DFB-Pokal Correct Score",
+      "sourceUrl": "https://www.predictz.com/predictions/today/correct-score/fixed/",
+      "sourceDate": "2026-10-28"
+    },
+    {
+      "fixtureId": "fc-20261028-12",
+      "home": "Freiburg",
+      "away": "Wolfsburg",
+      "score": "2-0",
+      "sourceName": "PredictZ DFB-Pokal Correct Score",
+      "sourceUrl": "https://www.predictz.com/predictions/today/correct-score/fixed/",
+      "sourceDate": "2026-10-28"
+    },
+    {
+      "fixtureId": "fc-20261028-13",
+      "home": "Paderborn",
+      "away": "Stuttgart",
+      "score": "1-2",
+      "sourceName": "PredictZ DFB-Pokal Correct Score",
+      "sourceUrl": "https://www.predictz.com/predictions/today/correct-score/fixed/",
+      "sourceDate": "2026-10-28"
+    },
+    {
+      "fixtureId": "fc-20261028-14",
+      "home": "Jeddeloh II",
+      "away": "Hertha Berlin",
+      "score": "0-4",
+      "sourceName": "PredictZ DFB-Pokal Correct Score",
+      "sourceUrl": "https://www.predictz.com/predictions/today/correct-score/fixed/",
+      "sourceDate": "2026-10-28"
+    },
+    {
+      "fixtureId": "fc-20261028-15",
+      "home": "Bayer Leverkusen",
+      "away": "1. FC Nurnberg",
+      "score": "3-1",
+      "sourceName": "PredictZ DFB-Pokal Correct Score",
+      "sourceUrl": "https://www.predictz.com/predictions/today/correct-score/fixed/",
+      "sourceDate": "2026-10-28"
+    },
+    {
+      "fixtureId": "fc-20261028-16",
+      "home": "Bayern Munich",
+      "away": "Magdeburg",
+      "score": "3-0",
+      "sourceName": "PredictZ DFB-Pokal Correct Score",
+      "sourceUrl": "https://www.predictz.com/predictions/today/correct-score/fixed/",
+      "sourceDate": "2026-10-28"
+    },
+    {
+      "fixtureId": "fc-20261028-17",
+      "home": "Hannover 96",
+      "away": "Kaiserslautern",
+      "score": "1-1",
+      "sourceName": "PredictZ DFB-Pokal Correct Score",
+      "sourceUrl": "https://www.predictz.com/predictions/today/correct-score/fixed/",
+      "sourceDate": "2026-10-28"
+    },
+    {
+      "fixtureId": "fc-20261028-18",
+      "home": "Holstein Kiel",
+      "away": "Hoffenheim",
+      "score": "1-2",
+      "sourceName": "PredictZ DFB-Pokal Correct Score",
+      "sourceUrl": "https://www.predictz.com/predictions/today/correct-score/fixed/",
+      "sourceDate": "2026-10-28"
     }
   ]
 }

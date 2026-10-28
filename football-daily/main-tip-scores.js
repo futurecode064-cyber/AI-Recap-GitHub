@@ -25,7 +25,16 @@
   oddsProbs=oddsProbs.map(x=>x/sum);
   const target=oddsProbs.indexOf(Math.max(...oddsProbs));
   const total=clamp(2.45+(totalLine-2.5)*.68,1.25,5.7);
-  const edge=clamp(Math.log(oddsProbs[0]/oddsProbs[2])*.55,-1.45,1.45);
+  const upper=String(match?.myanmarOdds?.upperTeam||"").trim();
+  const hc=String(match?.myanmarOdds?.currentBodyOdds||match?.myanmarOdds?.bodyOdds||"").match(/^(\d+)/);
+  const handicapGoals=hc?clamp(Number(hc[1]),0,3):0;
+  const homeNames=[match.homeDisplay,match.home].filter(Boolean).map(String);
+  const awayNames=[match.awayDisplay,match.away].filter(Boolean).map(String);
+  const upperHome=homeNames.includes(upper),upperAway=awayNames.includes(upper);
+  // Body handicap strengthens the independently inferred favourite by a small
+  // amount; it is not interpreted as the bookmaker's own exact-score forecast.
+  const bodyEdge=handicapGoals*(upperHome?.09:upperAway?-.09:0);
+  const edge=clamp(Math.log(oddsProbs[0]/oddsProbs[2])*.55+bodyEdge,-1.45,1.45);
   const lambdas=[clamp(total/2+edge/2,.2,4.8),clamp(total/2-edge/2,.2,4.8)];
   const outcomes=[];
   for(let x=0;x<=7;x++)for(let y=0;y<=7;y++){
