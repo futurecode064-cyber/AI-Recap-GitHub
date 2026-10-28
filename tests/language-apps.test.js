@@ -59,7 +59,7 @@ assert.equal(languages.length,12);
 assert.equal(new Set(languages.map(l=>l[0])).size,12);
 for(const l of languages)assert.equal(l[4].length,30,'Every language must contain 30 actual phrases');
 assert.match(academyHtml,/id="restore"/);
-assert.match(academyHtml,/Version 1\.0\.7/);
+assert.match(academyHtml,/Version 1\.0\.8/);
 assert.ok(academyHtml.includes('if(window.FutureCodeNative)$(\"install-voice\").classList.add(\"hidden\")'),'Android APK must not ask learners to install TTS voice data when bundled audio is present');
 assert.ok(academyHtml.includes('APK ထဲပါပြီးသား offline အသံဖိုင်ကို ဖွင့်နေသည်။'));
 checks++;
