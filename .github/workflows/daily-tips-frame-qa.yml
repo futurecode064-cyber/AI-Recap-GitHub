@@ -97,8 +97,9 @@ jobs:
               ['ai','ai-best','one'],
               ['news','news-journal','one']
             ];
-            const success=[];
+            const success=[],failures=[];
             for(const [section,frame,layout] of cases){
+             try{
               await page.locator('#downSection').selectOption(section);
               await page.locator('#downFrame').selectOption(frame);
               await page.locator('[data-frame-section="'+section+'"]').selectOption(layout);
@@ -113,7 +114,10 @@ jobs:
               const img=await page.locator('#downPreviewImage').evaluate(n=>({visible:!n.hidden,width:n.naturalWidth,height:n.naturalHeight}));
               assert(img.visible&&img.width>300&&img.height>200,section+' PNG missing '+JSON.stringify(img));
               success.push(section);
+             }catch(e){failures.push(section+': '+e.message);console.log('SECTION PREVIEW FAILURE',section,e.message);}
             }
+            console.log('ALL SECTION PREVIEW RESULTS',JSON.stringify({success,failures}));
+            if(failures.length)throw Error('Some section previews failed: '+failures.join(' | '));
             await page.locator('#downSection').selectOption('odds');
             await page.locator('#downFrame').selectOption('odds-bcf');
             await page.locator('[data-frame-section="odds"]').selectOption('two');
