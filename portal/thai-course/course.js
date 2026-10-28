@@ -10,6 +10,7 @@ function save(){try{const s=JSON.stringify(state);localStorage.setItem(STORE,s);
 function renderStats(){const n=Object.keys(state.completed||{}).filter(k=>state.completed[k]).length;$('stat-complete').textContent=n;$('stat-score').textContent=state.answered?Math.round(state.correct/state.answered*100)+'%':'0%';$('stat-total').textContent=course.reduce((x,l)=>x+l[3].length,0)}
 function thaiVoiceMessage(message,needsInstall=false){const e=$('thai-voice-status');if(e){e.textContent=message;e.setAttribute('role','status')}const b=$('thai-install-voice');if(b)b.hidden=!needsInstall}
 window.FCThaiTtsStatus=function(message,needsInstall){thaiVoiceMessage(message,!!needsInstall)};
+if(native()?.speak)thaiVoiceMessage('🔊 APK ထဲပါ Neural offline အသံဖိုင်များ အသင့်သုံးနိုင်ပါပြီ။ Voice data ထပ်ထည့်ရန် မလိုပါ။');
 function speakThai(text){
  thaiVoiceMessage('ထိုင်းအသံ ဖတ်ရန် စစ်ဆေးနေသည်...');
  if(native()?.speak){try{native().speak(text)}catch(e){thaiVoiceMessage('အသံစနစ် ဖွင့်မရပါ။ Thai Voice ကို ထည့်သွင်းပါ။',true)}return}

@@ -5,6 +5,8 @@ on:
     paths:
       - 'thai-course/**'
       - 'portal/thai-course/**'
+      - '!portal/thai-course/latest.json'
+      - '!portal/thai-course/notice.json'
       - '.github/workflows/future-code-thai-apk.yml'
   workflow_dispatch:
 permissions:
@@ -54,6 +56,24 @@ jobs:
           cp portal/thai-course/index.html portal/thai-course/course.js \
             portal/thai-course/thai-icon.svg portal/thai-course/manifest.webmanifest \
             portal/thai-course/latest.json thai-course/app/src/main/assets/
+      - name: Reuse the verified neural recordings from the previous signed release
+        run: |
+          curl -fL --retry 2 'https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/future-code-thai-speaking-v1.0.6/Future_Code_Thai_Speaking_v1.0.6.apk' -o /tmp/fc-thai-neural-previous.apk
+          python3 scripts/verify_language_release.py thai /tmp/fc-thai-neural-previous.apk
+          python3 - <<'PYTHON'
+          import zipfile
+          from pathlib import Path
+          root=Path('thai-course/app/src/main/assets/audio')
+          with zipfile.ZipFile('/tmp/fc-thai-neural-previous.apk') as z:
+              for name in z.namelist():
+                  if not name.startswith('assets/audio/') or name.endswith('/'):
+                      continue
+                  relative=Path(name[len('assets/audio/'):])
+                  assert not relative.is_absolute() and '..' not in relative.parts
+                  target=root/relative
+                  target.parent.mkdir(parents=True,exist_ok=True)
+                  target.write_bytes(z.read(name))
+          PYTHON
       - name: Prepare bundled offline Thai speech
         run: |
           sudo apt-get update -qq
