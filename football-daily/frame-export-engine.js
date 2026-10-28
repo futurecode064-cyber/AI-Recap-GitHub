@@ -53,7 +53,8 @@ async function* forSection(k,f,rows,mode){
   const R=W.FutureCodeResultsFrames,archive=s().getArchive(),parts=splitRows(rows,mode);
   if(!R?.makePng)throw Error("Result PNG Engine မရှိပါ");
   for(let i=0;i<parts.length;i++){
-   const native=await R.makePng(parts[i],{id:"plain",title:"Plain",color:color,plain:true},archive.reportDate||s().getDate());
+   const dark="#"+color.slice(1).match(/../g).map(h=>Math.round(parseInt(h,16)*.30).toString(16).padStart(2,"0")).join("");
+   const native=await R.makePng(parts[i],{id:"plain",title:"Plain",color,dark,plain:true,scoreInk:"#ffffff"},archive.reportDate||s().getDate());
    const out=await p.wrap(native,k,"pro:"+f.id);
    yield {name:"results-"+String(i+1).padStart(2,"0")+".png",blob:await blobCanvas(out)};
   }
