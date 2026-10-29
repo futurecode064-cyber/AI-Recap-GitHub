@@ -118,26 +118,34 @@
    }
   }
   async function load(){
-   status.textContent="ထုတ်ဝေထားသော D1 ဒေတာကို စစ်ဆေးနေသည်…";
+   status.textContent="ထုတ်ဝေထားသော ယနေ့ဒေတာကို ဖတ်ရှုနေသည်…";
    try{
-    const client=root.FootballData;
-    if(!client){status.textContent="D1 ဒေတာချိတ်ဆက်မှု မရသေးပါ";return;}
-    const state=await client.ready();
-    if(state.fallback||state.stale||state.draft&&state.error){status.textContent="D1 ထုတ်ဝေမှု မရနိုင်သဖြင့် % အဟောင်းများကို မပြပါ";return;}
-    const report=state.resources?.["data/today.json"];
-    if(!report||!Array.isArray(report.matches)||!/^\d{4}-\d{2}-\d{2}$/.test(report.reportDate||"")){status.textContent="ပွဲစဉ်ဒေတာ မပြည့်စုံပါ";return;}
+    // Production uses checked-in JSON on Cloudflare Pages while FC_FOOTBALL_ENGINE.enabled is false.
+    // Never block the published static site behind a disabled Worker/D1 manifest.
+    const reader=root.FootballData?.fetch?.bind(root.FootballData)||root.fetch.bind(root);
+    const response=await reader("./data/today.json?prob="+Date.now(),{cache:"no-store"});
+    if(!response.ok)throw Error("Daily report HTTP "+response.status);
+    const report=await response.json();
+    if(!report?.published||!Array.isArray(report.matches)||!/\d{4}-\d{2}-\d{2}/.test(report.reportDate||""))throw Error("No published report");
     day=report.reportDate;
-    const odds=state.resources["data/odds/"+day+".json"];
-    if(!Array.isArray(odds?.matches)||!odds.matches.length){status.textContent="ယနေ့ ပေါက်ကြေး မထုတ်ဝေရသေးပါ";return;}
-    const oddsById=new Map((Array.isArray(odds?.matches)?odds.matches:[]).filter(m=>m.fixtureId).map(m=>[m.fixtureId,m]));
-    entries=report.matches.filter(m=>m&&m.home&&m.away&&m.status!=="cancelled").map(m=>({match:m,prob:analyze(m,oddsById.get(m.fixtureId),day)}));
-    const unique=new Map(entries.map(x=>[x.match.league||"Other",x.match.leagueDisplay||x.match.league||"အခြားလိဂ်"]));
+    const priceResponse=await reader("./data/odds/"+encodeURIComponent(day)+".json?prob="+Date.now(),{cache:"no-store"});
+    if(!priceResponse.ok)throw Error("No price sheet for "+day);
+    const odds=await priceResponse.json();
+    if(odds.reportDate!==day||!Array.isArray(odds.matches)||!odds.matches.length)throw Error("Price date mismatch");
+    const byId=new Map(odds.matches.filter(x=>x.fixtureId).map(x=>[x.fixtureId,x]));
+    entries=report.matches.filter(m=>m&&m.home&&m.away&&m.status!=="cancelled").map(match=>({match,prob:analyze(match,byId.get(match.fixtureId),day)}));
+    const leagues=new Map(entries.map(x=>[x.match.league||"Other",x.match.leagueDisplay||x.match.league||"အခြားလိဂ်"]));
     filter.replaceChildren();const all=mk("option","","လိဂ်အားလုံး");all.value="all";filter.append(all);
-    for(const [key,value] of unique){const opt=mk("option","",value);opt.value=key;filter.append(opt);}
-    $("fcProbDate").textContent="D1 ထုတ်ဝေသည့်ရက် "+day;
-    status.textContent="D1 Version "+state.version+" · ယနေ့ပွဲစဉ်များအတွက် အလိုအလျောက်တွက်ချက်ထားသည်";
+    for(const [key,value] of leagues){const opt=mk("option","",value);opt.value=key;filter.append(opt);}
+    $("fcProbDate").textContent="ယနေ့ထုတ်ဝေမှု "+day;
+    const complete=entries.filter(x=>x.prob.win&&x.prob.goals).length;
+    status.textContent="အတည်ပြုထားသော 1X2 နှင့် ဂိုးဒေတာမှ တွက်ချက်ထားသည် · "+complete+"/"+entries.length+" ပွဲ";
     render();
-   }catch{status.textContent="ဒေတာဖတ်ရှုမှု မအောင်မြင်ပါ။ Refresh လုပ်ပါ။";}
+   }catch(err){
+    entries=[];list.replaceChildren(mk("p","fc-prob-empty","ယနေ့ဖြစ်နိုင်ခြေဒေတာကို မဖတ်နိုင်သေးပါ။"));
+    status.textContent="ဖြစ်နိုင်ခြေဒေတာ မရရှိသေးပါ: "+(err?.message||"Unknown error");
+    count.textContent="0 ပွဲ";
+   }
   }
   filter.addEventListener("change",render);
   load();
