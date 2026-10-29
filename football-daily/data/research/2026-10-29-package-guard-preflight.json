@@ -1,0 +1,18 @@
+{
+  "status": "STRUCTURAL_PASS",
+  "errors": [],
+  "counts": {
+    "previews": 15,
+    "odds": 15,
+    "special": 2,
+    "tips": 15,
+    "news": 10,
+    "ft": 18
+  },
+  "externalImagesNotBundled": 22,
+  "sourceAccuracyIssues": [
+    "PDF WinAnsi legacy font Unicode crosswalk not independently decoded",
+    "Aarhus Fremad standing WDL unverified",
+    "Image export crest caching for 22/30 team logos not yet updated"
+  ]
+}
