@@ -32,6 +32,8 @@ jobs:
           try{
             await page.goto('https://future-code-football-daily.pages.dev/frame-editor.html?qa=20261029',{waitUntil:'domcontentloaded',timeout:45000});
             await page.waitForFunction(()=>window.FCStudio?.getReport()?.reportDate==='2026-10-29'&&window.FCStudio?.getHome()?.FutureCodeFramePreview?.render&&window.FCStudio?.getHome()?.FutureCodeFrameZip?.Archive,null,{timeout:65000});
+            await page.evaluate(async()=>{await window.FCStudio.loadData()});
+            await page.waitForFunction(()=>{const s=window.FCStudio;return s?.getRows('odds')?.length===15&&s?.getRows('results')?.length===18&&s?.getRows('news')?.length===10;},null,{timeout:45000});
             const details=await page.evaluate(async()=>{
               const s=window.FCStudio, h=s.getHome();
               const keys=['odds','previews','specials','results','ai','news'];
