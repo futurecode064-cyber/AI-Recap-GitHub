@@ -70,10 +70,13 @@ jobs:
             let combination=await page.evaluate(()=>window.FCStudio.getState().placements);
             assert(combination.previews.includes('odds-bcf')&&combination.odds.includes('odds-bcf')&&combination.oddsCards.includes('odds-bcf'),'Cross-section BCF assignment failed');
             await page.locator('#navDownloads').click();
-            await page.locator('#downSection').selectOption('oddsCards');
-            await page.locator('#downFrame').selectOption('odds-bcf');
-            const first=await page.locator('#matchFilter option').nth(1).getAttribute('value');
-            assert(first,'Actual odds fixture not loaded');await page.locator('#matchFilter').selectOption(first);
+            const card=page.locator('details[data-section="oddsCards"]');
+            if(!(await card.evaluate(el=>el.open)))await card.locator('summary').click();
+            // Download Center uses visible per-section Multi-Selection, not the hidden legacy filters.
+            await card.locator('.multi-group').nth(0).locator('[data-action="none"]').click();
+            await card.locator('.multi-group').nth(0).locator('.multi-option').filter({hasText:'BCF · ပေါက်ကြေး'}).locator('input').check();
+            await card.locator('.multi-group').nth(2).locator('[data-action="none"]').click();
+            await card.locator('.multi-group').nth(2).locator('.multi-option').first().locator('input').check();
             await page.locator('#downPreview').click();
             await page.locator('#downPreviewImage').waitFor({timeout:100000,state:'visible'});
             const png=await page.locator('#downloadLink').getAttribute('download');
@@ -91,14 +94,14 @@ jobs:
               entries.push(data.subarray(offset+30,offset+30+length).toString('utf8'));
               offset+=30+length+extra+size;
             }
-            assert(entries.length>0&&entries.every(n=>n.startsWith('PNG-Images/')&&!n.slice('PNG-Images/'.length).includes('/')),'ZIP must contain all PNGs in just one flat PNG-Images folder: '+JSON.stringify(entries));
-            assert(entries.includes('PNG-Images/BCF-မြန်မာကြေး.png'),'ZIP must preserve the user-defined Myanmar PNG filename: '+JSON.stringify(entries));
+            assert(entries.length>0&&entries.every(n=>n.startsWith('မြန်မာကြေးကတ်ပုံစံ/')),'ZIP must group PNGs by section: '+JSON.stringify(entries));
+            assert(entries.includes('မြန်မာကြေးကတ်ပုံစံ/BCF-မြန်မာကြေး.png'),'ZIP must preserve the user-defined Myanmar PNG filename: '+JSON.stringify(entries));
             await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('အဆင်သင့်') && document.querySelector('#downloadLink')?.download.endsWith('.zip'),null,{timeout:30000});
             const page2=await context.newPage();
             await page2.goto(origin,{waitUntil:'domcontentloaded'});
             const link=await page2.locator('a[href="./frame-editor.html"]').count();
             assert(link>=1,'Frame Editor link missing on main site');
-            console.log('UNIFIED FRAME WORKSPACE PASS',JSON.stringify({count:initial.count,scopeCount:initial.scopes,png,zip:download.suggestedFilename(),crossSectionBCF:true,mainNav:true,oneZipFolder:true,filenameFromEditor:true,brandedOddsCards:true,errors}));
+            console.log('UNIFIED FRAME WORKSPACE PASS',JSON.stringify({count:initial.count,scopeCount:initial.scopes,png,zip:download.suggestedFilename(),crossSectionBCF:true,mainNav:true,sectionFolder:true,filenameFromEditor:true,brandedOddsCards:true,errors}));
             await context.close();
           }finally{await browser.close();}
           NODE
