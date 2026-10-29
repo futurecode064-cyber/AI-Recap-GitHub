@@ -162,8 +162,12 @@ function schedulePreview(){
 }
 function showEditor(){
  const f=frame(currentId);$("emptyFrame").hidden=!!f||isNew;$("editorForm").hidden=!(f||isNew);
+  $("frameSettingsTitle").textContent=isNew?"Frame အသစ်တိုးရန်":"Frame Settings";
+  $("frameCreateHelp").hidden=!isNew;
+  if(isNew){const section=$("librarySection").value;
+   $("frameCreateHelp").textContent="အဆင့် ၁ — Frame နာမည်ရေးပါ။ အဆင့် ၂ — Top/Bottom Banner တင်ပါ။ အဆင့် ၃ — အောက်မှာ အသုံးပြုမည့် Section ကို ရွေးပါ"+(section!=="all"?" ("+SECTION[section]+" ကို ကြိုရွေးထားပါတယ်)":"")+"။ အဆင့် ၄ — ‘＋ Frame အသစ် ထည့်သွင်းမယ်’ ကိုနှိပ်ပါ။";}
  if(!f&&!isNew)return;
- const v=f||{name:"Frame အသစ်",color:"#194b75",top:110,bottom:75,fit:"contain",topImage:"",bottomImage:""};
+ const v=f||{name:"",color:"#194b75",top:110,bottom:75,fit:"contain",topImage:"",bottomImage:""};
  $("frameName").value=v.name;$("frameDownloadName").value=v.downloadName||v.name;$("frameDownloadName").dataset.customName=(v.downloadName&&v.downloadName!==v.name)?"1":"";$("frameColor").value=goodColor(v.color);
  $("frameTop").value=v.top;$("frameBottom").value=v.bottom;$("frameFit").value=v.fit;
  $("frameTopFile").value=$("frameBottomFile").value="";
@@ -172,13 +176,13 @@ function showEditor(){
  $("scopeChecks").replaceChildren();
  for(const k of TYPES){
   const label=document.createElement("label"),input=document.createElement("input");
-  label.className="scope";input.type="checkbox";input.value=k;input.checked=!!f&&assigned(f.id,k);
+  label.className="scope";input.type="checkbox";input.value=k;input.checked=f?assigned(f.id,k):(isNew&&$("librarySection").value===k);
   label.append(input,document.createTextNode(SECTION[k]));$("scopeChecks").append(label);
  }
  $("deleteFrame").hidden=!f||f.builtin;
  $("unassignFrame").hidden=!f;
  $("saveFrame").textContent=isNew?"＋ Frame အသစ် ထည့်သွင်းမယ်":"ပြင်ဆင်ချက် သိမ်းမယ်";
- const p=$("previewMock");p.style.setProperty("--frame-color",goodColor(v.color));p.querySelector(".sample-name").textContent=v.name;
+ const p=$("previewMock");p.style.setProperty("--frame-color",goodColor(v.color));p.querySelector(".sample-name").textContent=v.name||"FRAME အသစ်";
  $("previewImage").hidden=true;p.hidden=false;schedulePreview();
 }
 function select(id){currentId=id;isNew=false;showList();showEditor();}
@@ -209,6 +213,7 @@ async function submit(){
   const item={...(prior||{id,builtin:false,topImage:"",bottomImage:""}),name,downloadName,color:goodColor($("frameColor").value),fit:["contain","cover","stretch"].includes($("frameFit").value)?$("frameFit").value:"contain",top:Math.round(top),bottom:Math.round(bottom)};
  if(topImage!==null)item.topImage=topImage;if(bottomImage!==null)item.bottomImage=bottomImage;
  const scopes=[...$("scopeChecks").querySelectorAll("input:checked")].map(x=>x.value);
+  if(fresh&&!scopes.length)throw Error("Frame အသစ်အတွက် Section အနည်းဆုံး ၁ ခု အမှန်ခြစ်ရွေးပါ။");
  if(fresh)state.frames.push(item);else Object.assign(prior,item);
  for(const k of TYPES){
   state.placements[k]=state.placements[k].filter(x=>x!==id);
@@ -216,7 +221,7 @@ async function submit(){
   if(!scopes.includes(k)&&state.selected[k]===id)state.selected[k]="none";
   if(scopes.includes(k)&&state.selected[k]==="none")state.selected[k]=id;
  }
- isNew=false;currentId=id;await save(name+" ပြင်ဆင်ချက် သိမ်းပြီး။ Section Filter နှင့် Download တွေမှာ ပြောင်းလဲပြီး။");
+ isNew=false;currentId=id;await save((fresh?"Frame အသစ် ‘"+name+"’ ထည့်သွင်းပြီး။":"‘"+name+"’ ပြင်ဆင်ချက် သိမ်းပြီး။")+" Section Filter နှင့် Download Center မှာ အသုံးပြုနိုင်ပါပြီ။");
 }
 function resetBanner(field){const f=frame(currentId);if(!f)return;f[field]="";save("Banner ပုံဖြုတ်ပြီး။").catch(e=>status(e.message,true));}
 function exportState(){const text=JSON.stringify(state,null,2),blob=new Blob([text],{type:"application/json"});
@@ -310,7 +315,14 @@ $("search").oninput=renderList;$("librarySection").onchange=renderList;
   $("previewMock").querySelector(".sample-name").textContent=$("frameName").value;
  };
  $("frameDownloadName").oninput=()=>{$("frameDownloadName").dataset.customName="1";};
-$("addFrame").onclick=()=>{isNew=true;currentId="";renderList();renderEditor();};
+function beginNewFrame(){
+   tab("library");isNew=true;currentId="";renderList();renderEditor();
+   $("frameName").focus({preventScroll:true});
+   $("frameSettingsPanel").scrollIntoView({behavior:"smooth",block:"start"});
+   status("Frame အသစ် ဖန်တီးရန် နာမည်၊ Banner နှင့် Section ရွေးပြီး အောက်ဆုံးက ‘＋ Frame အသစ် ထည့်သွင်းမယ်’ ကိုနှိပ်ပါ။");
+  }
+  $("addFrame").onclick=beginNewFrame;
+  $("addFrameFromList").onclick=beginNewFrame;
 $("saveFrame").onclick=async()=>{try{await submit();}catch(e){status("Save မရပါ — "+e.message,true);}};
 $("unassignFrame").onclick=async()=>{if(!currentId)return;try{for(const k of TYPES){state.placements[k]=state.placements[k].filter(x=>x!==currentId);if(state.selected[k]===currentId)state.selected[k]="none";}await save("Frame ကို Section အားလုံးမှ ဖြုတ်ထားပြီး။ မူရင်းပုံ မဖျက်ထားပါ။");}catch(e){status(e.message,true);}};
 $("deleteFrame").onclick=async()=>{const f=frame(currentId);if(!f||f.builtin||!confirm(f.name+" ကို အပြီးဖျက်မလား?"))return;
