@@ -85,6 +85,15 @@ jobs:
             const page=await browser.newPage({viewport:{width:1440,height:1000},acceptDownloads:true});
             await page.goto('https://future-code-football-daily.pages.dev/?fullqa='+Date.now(),{waitUntil:'domcontentloaded',timeout:60000});
             await page.waitForFunction(date=>document.querySelectorAll('.fc-ai-match').length>0&&document.querySelectorAll('.fc-prob-row').length>0&&document.querySelectorAll('.fc-news-card').length>0&&document.querySelector('#fcProbDate')?.textContent?.includes(date),expected.reportDate,{timeout:60000});
+            // GitHub checks start before Cloudflare finishes deploying the commit.
+            // Wait for this release's actual prose and VIP ledger, not merely its date.
+            await page.waitForFunction(async expected=>{
+              const report=await(await fetch('/data/today.json?release='+Date.now(),{cache:'no-store'})).json();
+              return report.reportDate===expected.reportDate&&report.matches.length===expected.matches.length&&
+                report.matches.every((m,i)=>m.fixtureId===expected.matches[i].fixtureId&&m.dailyPreviewText===expected.matches[i].dailyPreviewText);
+            },expected,{timeout:600000,polling:10000});
+            await page.reload({waitUntil:'domcontentloaded'});
+            await page.waitForFunction(()=>document.querySelectorAll('.fc-ai-match').length>0&&document.querySelectorAll('.fc-prob-row').length>0,null,{timeout:60000});
             const full=await page.evaluate(()=>{
               const ai=[...document.querySelectorAll('.fc-ai-match')].map(row=>[...row.querySelectorAll('.fc-ai-score')].map(x=>x.textContent.trim()));
               const prob=[...document.querySelectorAll('.fc-prob-row')].map(row=>[...row.querySelectorAll('.fc-prob-percent')].map(x=>x.textContent.trim()));
@@ -104,6 +113,9 @@ jobs:
               assert.equal(parseInt(cells[2])+parseInt(cells[3]),100);
             }
             assert.equal(full.newsCount,10);
+            // News is hidden behind a section tab and its images are lazy loaded.
+            await page.locator('a[href="#fcNewsSection"]').first().click();
+            for(const photo of await page.locator('.fc-news-card img.fc-news-image').all())await photo.scrollIntoViewIfNeeded();
             console.log('NEWS PHOTO HTTP DEBUG',JSON.stringify(await page.evaluate(async()=>{
               const cards=[...document.querySelectorAll('.fc-news-card')];
               const items=cards.map((c,i)=>({id:i,url:c.querySelector('img')?.src||'',w:c.querySelector('img')?.naturalWidth||0,caption:c.querySelector('.fc-news-image-caption')?.textContent||''}));
@@ -139,6 +151,7 @@ jobs:
             const goal=await browser.newPage({viewport:{width:960,height:800}});
             await goal.goto('https://future-code-football-daily.pages.dev/future-code-journal/?newsqa='+Date.now(),{waitUntil:'domcontentloaded',timeout:45000});
             await goal.waitForFunction(()=>document.querySelectorAll('.fc-news-card img.fc-news-image').length===10,null,{timeout:45000});
+            for(const photo of await goal.locator('.fc-news-card img.fc-news-image').all())await photo.scrollIntoViewIfNeeded();
             await goal.waitForFunction(()=>[...document.querySelectorAll('.fc-news-card img.fc-news-image')].every(x=>x.complete&&x.naturalWidth>0),null,{timeout:30000});
             console.log('GOAL ZONE 10 NEWS IMAGES: PASS');
           }finally{await browser.close();}
