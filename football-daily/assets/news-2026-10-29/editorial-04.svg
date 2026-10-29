@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="SUNDERLAND and BRENTFORD — custom editorial illustration, not a match photograph">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07162d"/><stop offset=".55" stop-color="#e43d39"/><stop offset="1" stop-color="#ce8d52"/></linearGradient>
+<linearGradient id="pitch" x1=".5" y1="0" x2=".5" y2="1"><stop stop-color="#154e3a"/><stop offset="1" stop-color="#0c2b2d"/></linearGradient>
+<linearGradient id="light" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fcf5dc" stop-opacity=".72"/><stop offset="1" stop-color="#fef3c9" stop-opacity="0"/></linearGradient>
+<pattern id="crowd" width="26" height="14" patternUnits="userSpaceOnUse"><path d="M2 2h5m4 4h6m2-5h4" stroke="#ffffff" stroke-opacity=".24" stroke-width="2"/></pattern>
+</defs>
+<rect width="1200" height="675" fill="#05132c"/>
+<rect width="1200" height="410" fill="url(#sky)"/>
+<path d="M0 280 Q600 130 1200 280 V485 H0Z" fill="#091328"/>
+<path d="M0 285 Q600 144 1200 285 V430 H0Z" fill="url(#crowd)" opacity=".85"/>
+<path d="M0 400 Q600 360 1200 400 L1200 675 H0Z" fill="url(#pitch)"/>
+<path d="M-40 690 L420 410 L780 410 L1240 690" fill="none" stroke="#cce6db" stroke-width="5" opacity=".43"/>
+<ellipse cx="600" cy="586" rx="230" ry="76" fill="none" stroke="#dcece6" stroke-width="4" opacity=".38"/>
+<path d="M600 411v264" stroke="#dcece6" stroke-width="4" opacity=".26"/>
+<g opacity=".48"><path d="M120 25h20v350h-20z M1080 25h20v350h-20z" fill="#eef7ff"/><path d="M20 110 L230 250 L230 400 L20 250Z" fill="url(#light)"/><path d="M1180 110L970 250L970 400L1180 250Z" fill="url(#light)"/><rect x="70" y="42" width="120" height="24" fill="#eaf3ff"/><rect x="1010" y="42" width="120" height="24" fill="#eaf3ff"/></g>
+<g transform="translate(210 395)"><path d="M-80-50L-25-95L27-95L83-50L54 36L27 28L27 150L-25 150L-25 28L-55 36Z" fill="#e43d39" stroke="#ffffff" stroke-opacity=".7" stroke-width="5"/><path d="M-25-95L0-56L27-95" fill="none" stroke="#ffffff" stroke-width="6" opacity=".55"/></g>
+<g transform="translate(985 395)"><path d="M-80-50L-25-95L27-95L83-50L54 36L27 28L27 150L-25 150L-25 28L-55 36Z" fill="#ce8d52" stroke="#ffffff" stroke-opacity=".7" stroke-width="5"/><path d="M-25-95L0-56L27-95" fill="none" stroke="#ffffff" stroke-width="6" opacity=".55"/></g>
+<circle cx="600" cy="515" r="65" fill="#ffffff" stroke="#0b1d31" stroke-width="8"/><path d="M600 472l28 19-11 32h-33l-11-32z" fill="#153350"/><path d="M573 491l-32-12m87 12l30-12m-41 44l25 28m-58-28l-27 28" stroke="#153350" stroke-width="7" fill="none"/>
+<rect x="35" y="30" width="1130" height="210" rx="24" fill="#061328" fill-opacity=".87" stroke="#fff" stroke-opacity=".25" stroke-width="2"/>
+<text x="80" y="76" fill="#d2e8fb" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">ENGLISH CUP · KNOCKOUT</text>
+<text x="80" y="138" fill="#ffffff" font-family="Arial, sans-serif" font-size="52" font-weight="900">SUNDERLAND</text>
+<text x="600" y="137" text-anchor="middle" fill="#d2e8fb" font-family="Arial, sans-serif" font-size="30" font-weight="800">VS</text>
+<text x="1120" y="138" text-anchor="end" fill="#ffffff" font-family="Arial, sans-serif" font-size="50" font-weight="900">BRENTFORD</text>
+<path d="M82 170H1118" stroke="#c8d8e6" opacity=".4"/>
+<text x="80" y="206" fill="#f2c96b" font-family="Arial, sans-serif" font-size="23" font-weight="600">FUTURE CODE FOOTBALL DAILY  ·  EDITORIAL ILLUSTRATION</text>
+<rect x="20" y="625" width="1160" height="30" rx="10" fill="#061328" fill-opacity=".9"/>
+<text x="600" y="645" text-anchor="middle" fill="#cddbe5" font-family="Arial, sans-serif" font-size="18" font-weight="500">ORIGINAL GRAPHIC · NOT A PHOTOGRAPH OF THE REPORTED EVENT</text>
+</svg>
