@@ -131,12 +131,12 @@ dependencies { implementation 'com.google.firebase:firebase-messaging:26.0.1' }
 FCGRADLE
 mkdir -p APPDIR
 cat > APPDIR/FcmStarter.java <<'FCSTARTER'
-STARTER
+__STARTER_CONTENT__
 FCSTARTER
 cat > APPDIR/PushMessageService.java <<'FCSERVICE'
-SERVICE
+__SERVICE_CONTENT__
 FCSERVICE
-""".replace("APP_MAIN",appdir+"/MainActivity.java").replace("APPDIR",appdir).replace("STARTER",starter.strip()).replace("SERVICE",service.strip())
+""".replace("APP_MAIN",appdir+"/MainActivity.java").replace("APPDIR",appdir).replace("__STARTER_CONTENT__",starter.strip()).replace("__SERVICE_CONTENT__",service.strip())
 script=script.replace("gradle --no-daemon :app:assembleDebug",patch+"\ngradle --no-daemon :app:assembleDebug",1)
 out=Path("/tmp/football_vnext_"+brand+".sh")
 out.write_text(script,encoding="utf-8")
