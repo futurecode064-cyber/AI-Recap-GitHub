@@ -1,0 +1,61 @@
+name: Verify Oct 29 Main Frame Editor Real ZIP and Section Coverage
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/verify-20261029-frame-editor-zip.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  zip-and-sections:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Exercise real live Main Frame Editor section data and ZIP file download
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          const ctx=await browser.newContext({viewport:{width:1280,height:850},acceptDownloads:true});
+          const page=await ctx.newPage();
+          try{
+            await page.goto('https://future-code-football-daily.pages.dev/frame-editor.html?qa=20261029',{waitUntil:'domcontentloaded',timeout:45000});
+            await page.waitForFunction(()=>window.FCStudio?.getReport()?.reportDate==='2026-10-29'&&window.FCStudio?.getHome()?.FutureCodeFramePreview?.render&&window.FCStudio?.getHome()?.FutureCodeFrameZip?.Archive,null,{timeout:65000});
+            const details=await page.evaluate(async()=>{
+              const s=window.FCStudio, h=s.getHome();
+              const keys=['odds','previews','specials','results','ai','news'];
+              const count=Object.fromEntries(keys.map(k=>[k,s.getRows(k).length]));
+              if(count.odds!==15||count.previews!==15||count.specials!==2||count.results!==18||count.ai!==15||count.news!==10)throw Error('Section coverage wrong '+JSON.stringify(count));
+              const archive=new h.FutureCodeFrameZip.Archive();
+              for(const [i,m] of s.getRows('previews').slice(0,2).entries()){
+                const canvas=await h.FutureCodeFramePreview.render(m);
+                const blob=await new Promise(done=>canvas.toBlob(done,'image/png'));
+                if(!blob||blob.size<12000)throw Error('Preview image missing '+i);
+                await archive.add('preview-'+(i+1)+'.png',blob);
+              }
+              const zip=archive.finish();
+              if(!zip||zip.size<30000)throw Error('ZIP empty');
+              window.__QA_zip=zip;
+              return {sections:count,zipBytes:zip.size};
+            });
+            console.log('LIVE SECTIONS AND ZIP CONTENT READY '+JSON.stringify(details));
+            const promise=page.waitForEvent('download',{timeout:20000});
+            await page.evaluate(()=>window.FCStudio.publishBlob(window.__QA_zip,'future-code-2026-10-29-qa-previews.zip'));
+            const download=await promise;
+            await download.saveAs('/tmp/future-code-2026-10-29-qa-previews.zip');
+            console.log('LIVE ZIP DOWNLOAD '+download.suggestedFilename());
+          } finally { await ctx.close();await browser.close(); }
+          NODE
+          unzip -t /tmp/future-code-2026-10-29-qa-previews.zip
+          unzip -Z1 /tmp/future-code-2026-10-29-qa-previews.zip | grep -E '^preview-[12]\\.png$' | sort
