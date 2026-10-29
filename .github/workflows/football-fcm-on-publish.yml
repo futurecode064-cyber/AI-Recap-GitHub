@@ -1,0 +1,38 @@
+name: Football — FCM after data publication
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - 'football-daily/data/today.json'
+      - 'football-daily/data/odds/**'
+      - 'football-daily/data/archive/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: football-fcm-publish
+  cancel-in-progress: false
+jobs:
+  send:
+    name: Validate live data then send FCM (7 brands, two windows/day)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      FC_WORKER_ADMIN_TOKEN: ${{ secrets.FC_WORKER_ADMIN_TOKEN }}
+      FC_PUSH_WORKER_URL: https://future-code-football-engine.futurecode-dubai-86851bf2.workers.dev
+    steps:
+      - name: Checkout the publication commit (read-only)
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Run source validation tests without secrets
+        run: node --test football-daily/tests/dispatch-static-fcm.test.mjs
+      - name: Fail closed when notification service is not configured
+        shell: bash
+        run: |
+          if [[ -z "$FC_WORKER_ADMIN_TOKEN" ]]; then
+            echo "::error::FC_WORKER_ADMIN_TOKEN GitHub Actions secret missing. Notification NOT sent."
+            exit 1
+          fi
+      - name: Send only when complete publication is verified by Worker
+        run: node football-daily/scripts/dispatch-static-fcm.mjs
