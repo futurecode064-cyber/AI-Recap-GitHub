@@ -2,6 +2,15 @@
 /* Main Website only. Uses the pinned Worker/D1 publication; never polls or scrapes in browsers. */
 (function(root){
  const finitePrice=x=>{const n=Number(x);return x!==null&&x!==undefined&&String(x).trim()!==""&&Number.isFinite(n)&&n>1.001&&n<1000?n:null;};
+ // A price published on the previous night for today's fixture is valid pre-match
+ // research; comparing quote date == fixture date incorrectly blanks every 1X2 row.
+ function freshQuote(source,day){
+  const value=source?.oddsVerifiedDate;
+  if(!value)return true;
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(value)||!/^\d{4}-\d{2}-\d{2}$/.test(day||""))return false;
+  const quoted=Date.parse(value+"T00:00:00Z"),scheduled=Date.parse(day+"T00:00:00Z");
+  return Number.isFinite(quoted)&&Number.isFinite(scheduled)&&quoted<=scheduled&&(scheduled-quoted)<=2*86400000;
+ }
  function percentages(weights){
   const sum=weights.reduce((a,b)=>a+b,0);
   if(!sum||weights.some(v=>!Number.isFinite(v)||v<0))return null;
@@ -14,7 +23,7 @@
  function winChance(match,market,day){
   // Validate a complete, sourced 1X2 quote before comparing the two win sides.
   for(const m of [market,match]){
-   if(!m||m.oddsVerifiedDate&&m.oddsVerifiedDate!==day)continue;
+   if(!m||!freshQuote(m,day))continue;
    const values=[finitePrice(m.homeOdds),finitePrice(m.drawOdds),finitePrice(m.awayOdds)];
    if(values.some(v=>v===null)||!m.oddsSourceUrl)continue;
    // Conditional two-way split: if there is a winner (not a draw), which side?
@@ -37,7 +46,7 @@
  function goalChance(m,market,day){
   // Only two-sided verified decimal totals may be converted directly.
   for(const v of [market,m]){
-   if(!v||v.oddsVerifiedDate&&v.oddsVerifiedDate!==day)continue;
+   if(!v||!freshQuote(v,day))continue;
    const a=finitePrice(v.overOdds),b=finitePrice(v.underOdds);
    const line=Number(v.totalGoalsLine??v.goalLine??NaN);
    if(a&&b&&Number.isFinite(line)&&line===2.5&&v.oddsSourceUrl){
