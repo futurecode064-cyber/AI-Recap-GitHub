@@ -1,20 +1,19 @@
-name: Pin Oct 29 Licensed Football News Images (All 10)
+name: Render Oct 29 Ten Valid Main/Goal-Zone News PNGs
 on:
   push:
     branches: [football-daily-render]
-    paths:
-      - '.github/workflows/pin-20261029-news-photos.yml'
+    paths: ['.github/workflows/pin-20261029-news-photos.yml']
   workflow_dispatch:
 permissions:
   contents: write
 concurrency:
-  group: fc-football-news-photo-20261029
+  group: fc-football-news-image-render-20261029
   cancel-in-progress: false
 jobs:
-  license-photo-gate:
+  create-and-verify:
     if: github.repository == 'futurecode064-cyber/AI-Recap-GitHub'
     runs-on: ubuntu-latest
-    timeout-minutes: 16
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,36 +22,38 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Pillow required for genuine image validation
+      - name: Install PIL to rasterize original images as real PNG
         run: python -m pip install --quiet Pillow
-      - name: Pin all 10 verified reusable editorial photos
-        run: python football-daily/scripts/pin_20261029_news_photos.py
-      - name: Verify every image file, license and distinct news story
+      - name: Render ten distinct English club-specific editorial illustrations
+        run: python football-daily/scripts/render_20261029_news_illustrations.py
+      - name: Validate each of the ten PNG assets and attribution
         run: |
           python - <<'PY'
-          import json,pathlib
+          import pathlib,json
           from PIL import Image
           root=pathlib.Path('football-daily')
-          j=json.loads((root/'data/news/latest.json').read_text())
-          assert len(j['items'])==10 and all(s['image'].startswith('/assets/news-2026-10-29/') for s in j['items'])
-          assert len(set(s['image'] for s in j['items']))==10
-          for s in j['items']:
-              assert s['imageCredit'] and s['imageLicense'] and s['imageSourceUrl'] and s['imageCaption']
-              im=root/s['image'].lstrip('/')
-              with Image.open(im) as photo:
-                  photo.verify()
-              assert im.stat().st_size>7000,im
-          print('10 UNIQUE LICENSED NEWS PHOTOS: PASS')
+          news=json.loads((root/'data/news/latest.json').read_text())
+          assert len(news['items'])==10
+          assert len(set(item['image'] for item in news['items']))==10
+          for item in news['items']:
+              assert item['image'].endswith('.png') and item['image'].startswith('/assets/news-2026-10-29/')
+              assert item['imageCredit'] and item['imageLicense'] and item['imageCaption']
+              path=root/item['image'].lstrip('/')
+              assert path.exists(),path
+              with Image.open(path) as im:
+                  im.verify()
+                  assert im.format=='PNG' and im.size==(1200,675),path
+          print('TEN NEW SAME-ORIGIN NEWS PNGS VERIFIED')
           PY
-      - name: Deploy photo + metadata together only after validation
+      - name: Publish images and news feed atomically
         run: |
-          git config user.name 'future-code-news-images[bot]'
+          git config user.name 'future-code-daily-news-render[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add football-daily/assets/news-2026-10-29 football-daily/data/news/latest.json
           if git diff --cached --quiet; then
-            echo "Images already pinned; nothing to change"
+             echo 'No changed images to publish'
           else
-            git commit -m 'Publish 10 rights-checked football news photos on same origin with image credits'
-            git pull --rebase origin football-daily-render
-            git push origin HEAD:football-daily-render
+             git commit -m 'Publish ten genuine PNG illustrated news visuals with event-specific labels'
+             git pull --rebase origin football-daily-render
+             git push origin HEAD:football-daily-render
           fi
