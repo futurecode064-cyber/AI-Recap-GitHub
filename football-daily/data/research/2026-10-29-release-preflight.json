@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-29",
+  "status": "CANDIDATE_READY_FOR_GUARD",
+  "clubSourceCount": 30,
+  "cachedClubCount": 30,
+  "leagueLogos": {
+    "EFL Cup": "eng.cup",
+    "Serie A": "ita.1",
+    "Veikkausliiga": "fin.1",
+    "Allsvenskan": "swe.1",
+    "DBU Pokalen": "den.cup",
+    "Saudi Pro League": "ksa.1",
+    "Taça da Liga": "por.cup"
+  },
+  "newsCount": 10,
+  "previewCount": 15,
+  "oddsCount": 15,
+  "tipsCount": 15,
+  "specialChoice": 2,
+  "yesterdayArchive": "data/archive/2026-10-28.json",
+  "limitation": "Browser PNG/ZIP and live CDN QA still required after publication"
+}

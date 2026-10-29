@@ -1,0 +1,103 @@
+{
+  "reportDate": "2026-10-29",
+  "timezone": "Asia/Yangon",
+  "description": "Only independently cited external correct-score tips, unverified cases explicitly unavailable",
+  "items": [
+    {
+      "fixtureId": "fc-20261029-01",
+      "home": "Everton",
+      "away": "Newcastle United",
+      "score": "1-2",
+      "sourceName": "Sports Mole outcome model correct-score estimate",
+      "sourceUrl": "https://www.sportsmole.co.uk/football/efl-cup/everton-vs-newcastle-united_game_260686.html",
+      "sourceDate": "2026-10-28"
+    },
+    {
+      "fixtureId": "fc-20261029-02",
+      "home": "Frosinone",
+      "away": "Lecce",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-03",
+      "home": "Fiorentina",
+      "away": "Atalanta",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-04",
+      "home": "FC Inter Turku",
+      "away": "HJK Helsinki",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-05",
+      "home": "KuPS",
+      "away": "IF Gnistan",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-06",
+      "home": "Hammarby IF",
+      "away": "IK Sirius",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-07",
+      "home": "Kalmar FF",
+      "away": "GAIS",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-08",
+      "home": "Örgryte IS",
+      "away": "Mjällby AIF",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-09",
+      "home": "Aarhus Fremad",
+      "away": "F.C. København",
+      "score": "1-1",
+      "sourceName": "Vecta Score published correct-score model",
+      "sourceUrl": "https://vectascore.com/football/match/aarhus-fremad-vs-fc-copenhagen-84106/",
+      "sourceDate": "2026-10-29"
+    },
+    {
+      "fixtureId": "fc-20261029-10",
+      "home": "FC Midtjylland",
+      "away": "Odense Boldklub",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-11",
+      "home": "Al Khaleej",
+      "away": "Al Hazem",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-12",
+      "home": "Al Nassr",
+      "away": "Al Kholood",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-13",
+      "home": "Al Riyadh",
+      "away": "Al Qadsiah",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-14",
+      "home": "Braga",
+      "away": "FC Famalicao",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    },
+    {
+      "fixtureId": "fc-20261029-15",
+      "home": "Benfica",
+      "away": "Gil Vicente",
+      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+    }
+  ]
+}
