@@ -12,9 +12,9 @@ from pathlib import Path
 
 BRANDS = {
     "ykz": dict(package="com.futurecode.ykzsoccertips",topic="fc_football_ykz",prefix="YKZ-Soccer-Tips",code=4,name="1.2.1",old_code=2,old_name="1.1.0"),
-    "bw": dict(package="com.futurecode.bwsportjournal",topic="fc_football_bw",prefix="BW-Sport-Journal",code=4,name="1.0.3",old_code=1,old_name="1.0.0"),
-    "ko_thet": dict(package="com.futurecode.kothetfamilyjournal",topic="fc_football_ko_thet",prefix="Ko-Thet-Family-Journal",code=3,name="1.0.2",old_code=2,old_name="1.0.1"),
-    "kmm": dict(package="com.futurecode.kmmsporthub",topic="fc_football_kmm",prefix="KMM-Sport-Hub",code=2,name="1.0.1",old_code=1,old_name="1.0.0"),
+    "bw": dict(package="com.futurecode.bwsportjournal",topic="fc_football_bw",prefix="BW-Sport-Journal",code=3,name="1.0.2",old_code=1,old_name="1.0.0"),
+    "ko_thet": dict(package="com.futurecode.kothetfamilyjournal",topic="fc_football_ko_thet",prefix="Ko-Thet-Family-Journal",code=4,name="1.0.3",old_code=2,old_name="1.0.1"),
+    "kmm": dict(package="com.futurecode.kmmsporthub",topic="fc_football_kmm",prefix="KMM-Sport-Hub",code=3,name="1.0.2",old_code=1,old_name="1.0.0"),
 }
 WORKFLOWS = {
     "ykz": ".github/workflows/ykz-soccer-tips-apk.yml",
