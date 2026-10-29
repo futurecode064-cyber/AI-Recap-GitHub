@@ -18,10 +18,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     env:
-      FC_FIREBASE_APP_ID: ${{ secrets.FC_FIREBASE_APP_ID }}
-      FC_FIREBASE_API_KEY: ${{ secrets.FC_FIREBASE_API_KEY }}
       FC_FIREBASE_PROJECT_ID: ${{ secrets.FC_FIREBASE_PROJECT_ID }}
       FC_FIREBASE_SENDER_ID: ${{ secrets.FC_FIREBASE_SENDER_ID }}
+      FC_REQUIRE_FCM: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
+      FC_FIREBASE_APP_ID_YKZ: ${{ secrets.FC_FIREBASE_APP_ID_YKZ }}
+      FC_FIREBASE_API_KEY_YKZ: ${{ secrets.FC_FIREBASE_API_KEY_YKZ }}
+      FC_FIREBASE_APP_ID_BW: ${{ secrets.FC_FIREBASE_APP_ID_BW }}
+      FC_FIREBASE_API_KEY_BW: ${{ secrets.FC_FIREBASE_API_KEY_BW }}
+      FC_FIREBASE_APP_ID_KO_THET: ${{ secrets.FC_FIREBASE_APP_ID_KO_THET }}
+      FC_FIREBASE_API_KEY_KO_THET: ${{ secrets.FC_FIREBASE_API_KEY_KO_THET }}
+      FC_FIREBASE_APP_ID_KMM: ${{ secrets.FC_FIREBASE_APP_ID_KMM }}
+      FC_FIREBASE_API_KEY_KMM: ${{ secrets.FC_FIREBASE_API_KEY_KMM }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -53,7 +60,11 @@ jobs:
           unzip -l "$APK" | grep -F classes.dex
           sha256sum "$APK" | tee "$APK.sha256"
           printf '%s\n' "$PKG versionCode $VC : staged APK signatures have not been proven equal to original APK signers" >> "$GITHUB_STEP_SUMMARY"
-          if [[ -n "$FC_FIREBASE_APP_ID" && -n "$FC_FIREBASE_API_KEY" && -n "$FC_FIREBASE_PROJECT_ID" && -n "$FC_FIREBASE_SENDER_ID" ]]; then
+          APP_ID_KEY="FC_FIREBASE_APP_ID_${{ matrix.brand }}"
+          API_KEY="FC_FIREBASE_API_KEY_${{ matrix.brand }}"
+          APP_ID_KEY="${APP_ID_KEY^^}"
+          API_KEY="${API_KEY^^}"
+          if [[ -n "${!APP_ID_KEY:-}" && -n "${!API_KEY:-}" && -n "$FC_FIREBASE_PROJECT_ID" && -n "$FC_FIREBASE_SENDER_ID" ]]; then
             echo 'Firebase client config available at build-time (live push still untested)' >> "$GITHUB_STEP_SUMMARY"
           else
             echo 'Firebase client config unavailable: APK FCM code is compiled but push is NOT active' >> "$GITHUB_STEP_SUMMARY"
@@ -67,7 +78,7 @@ jobs:
             *-apk-output/*.sha256
           retention-days: 30
       - name: Publish separate fresh-install-only preview release (never clobber old URLs)
-        if: success()
+        if: success() && github.event_name == 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
