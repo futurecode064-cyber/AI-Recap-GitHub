@@ -114,13 +114,14 @@ async function* forSection(k,f,rows,mode){
 }
 async function exportAll(previewOnly){
  const studio=s();if(!studio?.getState()){studio?.status("Frame Library မဖွင့်ရသေးပါ။",true);return;}
- const assignments=window.FCStudioMulti?.plans?.()||[];
+ let assignments=window.FCStudioMulti?.plans?.()||[];
  if(!assignments.length){studio.status("Section / Frame / လိဂ် / ပွဲ ရွေးချယ်ထားတာ မရှိပါ။ Multi-Selection မှ ရွေးပါ။",true);return;}
  studio.setWorking(true);
  studio.clearExportPreview();$("progressBar").style.width="0";
  let outputURL=null,files=0;const warnings=[],usedNames=new Set();
  try{
   await studio.loadData();
+  assignments=window.FCStudioMulti?.plans?.()||[];
   const W=studio.getHome();
    if(!W.FutureCodeFrameZip?.Archive)throw Error("ZIP Engine မတင်နိုင်ပါ။ Browser Refresh လုပ်ပြီး ပြန်စမ်းပါ။");
    const zip=previewOnly?null:new W.FutureCodeFrameZip.Archive();
@@ -142,13 +143,14 @@ async function exportAll(previewOnly){
       $("progressBar").style.width="100%";
       studio.status(label+" — PNG Preview ဖန်တီးပြီး။");return;
      }
-     // Flat archive: all PNGs share the same single top-level folder.
+     // Each section owns its filenames, including identically named frames.
+     const folder=studio.SECTION[section].replace(/[\\/:*?"<>|]/g,"-");
      let uniqueName=result.name,inc=2;
-     while(usedNames.has(uniqueName.toLocaleLowerCase())){
+     while(usedNames.has(section+"/"+uniqueName.toLocaleLowerCase())){
       uniqueName=result.name.replace(/\.png$/i,"")+"-"+inc+++".png";
      }
-     usedNames.add(uniqueName.toLocaleLowerCase());
-     await zip.add("PNG-Images/"+uniqueName,result.blob);files++;
+     usedNames.add(section+"/"+uniqueName.toLocaleLowerCase());
+     await zip.add(folder+"/"+uniqueName,result.blob);files++;
      if(files%4===0)await wait(0);
     }
    }catch(err){warnings.push(label+" — "+err.message);console.warn("Section PNG failed",section,f.id,err);}

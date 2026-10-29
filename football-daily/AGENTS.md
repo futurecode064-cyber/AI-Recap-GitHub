@@ -54,3 +54,10 @@ Apply the corrected 28 October export layout on EVERY daily update, including Ma
 - Run current-day asset coverage and native-label tests, then exercise real PNG downloads on desktop and mobile. Check all-in-one, both split parts and league-selected outputs; previews/results and existing ZIP modes must retain their selected content.
 - Visually inspect downloaded images, especially lower-division cup teams and long names. After publishing, verify actual live downloads across all six clone sites. A commit, successful HTTP response or PNG signature alone does not certify layout or complete logos.
 This is a persistent release-quality rule for invoked daily publishing, not a newly requested scheduled task.
+
+## Download Center owner update 2026-10-29
+- ZIP uses one Unicode folder per section; do not flatten to PNG-Images. Duplicate frame filenames are resolved within each section.
+- Original artwork ribbons use their source width/height (or original full-frame crop) ratio, independent of daily fixture count. Never stretch every built-in banner into a shared fixed height.
+- When repainting native Myanmar league labels, hide only text in the html2canvas clone using transparent text; visibility:hidden also removes the cell background and makes white lettering disappear.
+- Keep export table rows/cells height:auto and min-height:0 so screen/mobile card heights cannot inflate PNG tables.
+- Run frame-banner-ratio, frame-multi-selection and frame-studio-export regression tests and inspect real PNG/ZIP after format edits.

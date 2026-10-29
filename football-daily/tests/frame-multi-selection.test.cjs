@@ -61,7 +61,7 @@ test('all-section ZIP path and frame-derived Unicode filenames are enforced by e
  const exporter=source('frame-export-engine.js'),workspace=source('frame-workspace.js'),html=source('frame-editor.html');
  assert.ok(exporter.includes('window.FCStudioMulti?.plans?.()'),'exporter must honor independent multi-section plans');
  assert.ok(exporter.includes('assignments[i].rows'),'each frame exports only the selected fixtures');
- assert.ok(exporter.includes('zip.add("PNG-Images/"+uniqueName'),'one ZIP folder, no section subfolders');
+ assert.ok(exporter.includes('zip.add(folder+"/"+uniqueName'),'one folder per section');
  assert.ok(exporter.includes('f.downloadName||f.name'),'Unicode frame filename used');
  assert.ok(workspace.includes('getRows:rawData'),'real published per-section rows required');
  assert.ok(html.includes('frame-multi-download.js')&&html.includes('scopeAll')&&html.includes('scopeNone'));

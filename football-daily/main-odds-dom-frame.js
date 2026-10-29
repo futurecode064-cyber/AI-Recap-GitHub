@@ -466,11 +466,12 @@
         body .fc-odds-direct-export.fc-main-compact-odds .odds-table thead {display:table-header-group!important}
         body .fc-odds-direct-export.fc-main-compact-odds .odds-table tbody {display:table-row-group!important}
         body .fc-odds-direct-export.fc-main-compact-odds .odds-table tr {
-          display:table-row!important;height:auto!important;margin:0!important;padding:0!important;border-radius:0!important;
+          display:table-row!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;border-radius:0!important;
         }
         body .fc-odds-direct-export.fc-main-compact-odds .odds-table th,
         body .fc-odds-direct-export.fc-main-compact-odds .odds-table td {
           display:table-cell!important;box-sizing:border-box!important;vertical-align:middle!important;
+          height:auto!important;min-height:0!important;
         }
         body .fc-odds-direct-export.fc-main-compact-odds .odds-table thead tr th {
           padding:6px 4px!important;line-height:1.35!important;
@@ -542,6 +543,14 @@
       for(const label of root.querySelectorAll(".odds-league-heading span:last-child, th.main-league-name")){
         label.setAttribute("data-fc-native-league","");
       }
+      // Prevent silent empty league labels in PNGs when screen styles hide table headings.
+      for(const group of root.querySelectorAll('.main-compact-odds')){
+        const label=group.querySelector('th.main-league-name');
+        if(!label?.textContent?.trim())throw Error('PNG လိဂ်ခေါင်းစဉ် မရှိပါ');
+        label.style.setProperty('visibility','visible','important');
+        label.style.setProperty('opacity','1','important');
+        label.style.setProperty('color','#fff','important');
+      }
       const height=Math.ceil(root.scrollHeight);
       if(height<70||height>13000)
         throw Error("PNG ပုံအမြင့်များလွန်းပါသည်။ ပုံခွဲ၍ Download လုပ်ပါ။");
@@ -570,7 +579,8 @@
             foreignObjectRendering:false,
             onclone:doc=>{
               for(const label of doc.querySelectorAll(".fc-odds-direct-export [data-fc-native-league]")){
-                label.style.setProperty("visibility","hidden","important");
+                label.style.setProperty("color","transparent","important");
+                label.style.setProperty("-webkit-text-fill-color","transparent","important");
               }
             }
           }),25000,"Website HTML Screenshot");

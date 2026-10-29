@@ -58,22 +58,29 @@ const g=ctx.createLinearGradient(0,y,w,y+h);g.addColorStop(0,shade(hex,.35));g.a
 ctx.fillStyle=g;ctx.fillRect(0,y,w,h);ctx.fillStyle="rgba(255,255,255,.34)";ctx.fillRect(18,y+h-3,w-36,2);
 }
 async function composite(source,f){
-const w=source.width,top=Math.round(f.top*w/1200),bottom=Math.round(f.bottom*w/1200),pad=Math.max(10,Math.round(w*.012)),h=top+source.height+bottom+pad*2;
+const w=source.width;
+const original=originalArtwork[f.id];
+const [a,b,full,originalTop,originalBottom]=await Promise.all([
+ f.topImage?image(f.topImage):null,f.bottomImage?image(f.bottomImage):null,
+ original?.full?image(original.full):null,original?.top?image(original.top):null,original?.bottom?image(original.bottom):null]);
+// Built-in artwork always uses its source aspect ratio, independently of daily row count.
+const top=a?Math.round(f.top*w/1200):full?Math.floor(full.height*original.t)*w/full.width:originalTop?originalTop.height*w/originalTop.width:Math.round(f.top*w/1200);
+const bottom=b?Math.round(f.bottom*w/1200):full?Math.floor(full.height*original.b)*w/full.width:originalBottom?originalBottom.height*w/originalBottom.width:Math.round(f.bottom*w/1200);
+const pad=Math.max(10,Math.round(w*.012)),h=top+source.height+bottom+pad*2;
 if(h>32767||h*w>110000000)throw Error("PNG ပုံအမြင့်များလွန်းပါသည်။ Banner အမြင့်လျှော့ပါ။");
 const out=document.createElement("canvas");out.width=w;out.height=h;
 const c=out.getContext("2d");if(!c)throw Error("Canvas မရနိုင်ပါ");
 c.fillStyle=shade(f.color,.33);c.fillRect(0,0,w,h);band(c,w,0,top,f.color);band(c,w,h-bottom,bottom,f.color);
-const [a,b]=await Promise.all([f.topImage?image(f.topImage):null,f.bottomImage?image(f.bottomImage):null]);
-const original=originalArtwork[f.id];
+
  if(original){
   if(original.full){
-   const im=await image(original.full),th=Math.floor(im.height*original.t),bh=Math.floor(im.height*original.b);
+   const im=full,th=Math.floor(im.height*original.t),bh=Math.floor(im.height*original.b);
    if(th>0&&top>0)c.drawImage(im,0,0,im.width,th,0,0,w,top);
    if(bh>0&&bottom>0)c.drawImage(im,0,im.height-bh,im.width,bh,0,h-bottom,w,bottom);
   }else{
    // Existing branded banner files are complete artwork (not backgrounds). Fill the chosen ribbon area without clipping their names/logos.
-   if(original.top&&top>0)artwork(c,await image(original.top),w,top,0,"stretch");
-   if(original.bottom&&bottom>0)artwork(c,await image(original.bottom),w,bottom,h-bottom,"stretch");
+   if(original.top&&top>0)artwork(c,originalTop,w,top,0,"contain");
+   if(original.bottom&&bottom>0)artwork(c,originalBottom,w,bottom,h-bottom,"contain");
   }
  }
  artwork(c,a,w,top,0,f.fit);artwork(c,b,w,bottom,h-bottom,f.fit);
