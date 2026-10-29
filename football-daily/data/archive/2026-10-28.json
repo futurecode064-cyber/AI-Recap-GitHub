@@ -1,0 +1,3112 @@
+{
+  "reportDate": "2026-10-28",
+  "published": true,
+  "matchDateTimezone": "Asia/Yangon",
+  "sourcePDF": "28.pdf",
+  "matches": [
+    {
+      "fixtureId": "fc-20261028-01",
+      "pdfRow": 1,
+      "league": "EFL Cup",
+      "leagueDisplay": "အင်္ဂလန် ကာရာဘောင်းဖလား",
+      "home": "Manchester City",
+      "away": "Brighton & Hove Albion",
+      "homeDisplay": "မန်စီးတီး",
+      "awayDisplay": "ဘရိုက်တန်",
+      "sourceKickoff": "02:00",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:00 MMT",
+      "kickoffUtc": "2026-10-28T19:30:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "မန်စီးတီးဟာ ဒီရာသီ ပရီးမီးယားလိဂ်မှာ ပထမဆုံးခုနစ်ပွဲဆက် အနိုင်ရရှိခဲ့ပေမယ့် နောက်ဆုံး အက်စတွန်ဗီလာနဲ့ပွဲမှာ ၂-၁ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် အနိုင်ရရှိမှုဆက်တိုက်ရှိနေတဲ့ မှတ်တမ်း ရပ်တန့်သွားခဲ့ပါတယ်။ နည်းပြ အန်ဇိုမာရက်စကာ ရဲ့အသင်းဟာ လိဂ်ရှစ်ပွဲမှာ ၂၁ မှတ်ရထားပြီး အဆင့် ၁ နေရာမှာ ရပ်တည်နေပေမယ့် ပြိုင်ပွဲစုံ နောက်ဆုံးလေးပွဲမှာ ကိုးဂိုးအထိ ပေးထားရတဲ့ ခံစစ်က စိုးရိမ်စရာဖြစ်နေပါတယ်။ ဘရိုက်တန်ကတော့ လိဂ်ရှစ်ပွဲမှာ ၁၆ မှတ်နဲ့ အဆင့် ၃ နေရာမှာ ရှိနေသလို ၂၃ ဂိုးအထိ သွင်းယူထားနိုင်တာကြောင့် မန်စီးတီးရဲ့ လတ်တလောခံစစ်အားနည်းချက်ကို အသုံးချနိုင်တဲ့ အရည်အသွေးရှိပါတယ်။ ဒါပေမဲ့ ဘရိုက်တန်ဟာ နောက်ဆုံးနှစ်ပွဲဆက် ဂိုးမသွင်းနိုင်ခဲ့သလို လီဗာပူးလ်ကို ၂-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ ပြန်လည်တိုးတက်ဖို့ လိုအပ်နေပါတယ်။ ဟူဇယ်လာ ရဲ့အသင်းမှာ ဒဏ်ရာပြဿနာတွေလည်း ရှိနေပြီး မန်စီးတီးဘက်မှာလည်း ဟာလန်း အပါအဝင် အဓိကကစားသမားအချို့ကို အနားပေးဖို့ စီစဉ်ထားတာကြောင့် ပွဲထွက်လူစာရင်းအပြောင်းအလဲတွေက အရေးပါလာနိုင်ပါတယ်။ မန်စီးတီးဟာ ပြီးခဲ့တဲ့အဆင့်မှာ နောဝစ်ချ်ကို ၅-၀ ဂိုးနဲ့ အနိုင်ရထားပြီး အရန်ကစားသမားတွေနဲ့လည်း တိုက်စစ်ဖိအားပေးနိုင်ကြောင်း ပြသထားပါတယ်။ ဘရိုက်တန်ရဲ့ လျင်မြန်တဲ့တိုက်စစ်ကြောင့် ဂိုးပေးရနိုင်ပေမယ့် အိမ်ကွင်းမှာ လူစာရင်းအင်အားပိုတောင့်တင်းပြီး တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်တဲ့ မန်စီးတီးကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 6,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Aston Villa",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879256"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Ipswich Town",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879259"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Liverpool",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879264"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Sunderland",
+          "teamGoals": 5,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879272"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Manchester United",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879278"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Liverpool",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878765"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Crystal Palace",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879261"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Sunderland",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878772"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Arsenal",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879274"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Coventry City",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879282"
+        }
+      ],
+      "homeStanding": {
+        "position": 1,
+        "played": 8,
+        "wins": 7,
+        "draws": 0,
+        "losses": 1,
+        "goalsFor": 20,
+        "goalsAgainst": 9,
+        "points": 21
+      },
+      "awayStanding": {
+        "position": 3,
+        "played": 8,
+        "wins": 5,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 23,
+        "goalsAgainst": 7,
+        "points": 16
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921834",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
+      "myanmarOdds": {
+        "upperTeam": "မန်စီးတီး",
+        "bodyOdds": "1+40",
+        "goalTotalOdds": "3-35",
+        "currentBodyOdds": "1+35",
+        "currentGoalTotalOdds": "3-40"
+      },
+      "espnMatchId": "401921834",
+      "homeOdds": "1.65",
+      "drawOdds": "4.10",
+      "awayOdds": "4.30",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921834",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "2-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921834",
+      "finalStatus": "STATUS_FINAL_PEN"
+    },
+    {
+      "fixtureId": "fc-20261028-02",
+      "pdfRow": 2,
+      "league": "EFL Cup",
+      "leagueDisplay": "အင်္ဂလန် ကာရာဘောင်းဖလား",
+      "home": "AFC Bournemouth",
+      "away": "Aston Villa",
+      "homeDisplay": "ဘုန်းမောက်",
+      "awayDisplay": "အက်စတွန်ဗီလာ",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-4",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဘုန်းမောက်ဟာ ရာသီအစပိုင်းမှာ ရလဒ်တွေ မတည်ငြိမ်ခဲ့ပေမယ့် နောက်ဆုံး ပြိုင်ပွဲစုံလေးပွဲဆက် အနိုင်ရထားတာကြောင့် အသင်းရဲ့ ခြေစွမ်းက သိသိသာသာ ပြန်လည်တိုးတက်လာပါတယ်။ အထူးသဖြင့် နောက်ဆုံးပရီးမီးယားလိဂ်ပွဲမှာ မန်ယူကို အဝေးကွင်းမှာ ၃-၀ ဂိုးနဲ့ အနိုင်ရရှိခဲ့တာက မာကိုရို့စ် ရဲ့အသင်းအတွက် ယုံကြည်မှုအကြီးအကျယ် မြင့်တက်စေခဲ့ပါတယ်။ ယူရိုပါလိဂ်မှာလည်း အေစီမီလန်နဲ့ စတမ်းဂရက်ဇ်တို့ကို အနိုင်ရထားတာကြောင့် ဘုန်းမောက်ရဲ့ တိုက်စစ်ပိုင်းဟာ အခွင့်အရေးတွေကို အဆုံးသတ်နိုင်လာတာ တွေ့ရပါတယ်။ ဒါပေမဲ့ အက်စတွန်ဗီလာကလည်း လက်ရှိခြေစွမ်းအရ အားကောင်းနေတဲ့အသင်းဖြစ်ပြီး ပြိုင်ပွဲစုံ နောက်ဆုံးခုနစ်ပွဲမှာ ခြောက်ပွဲနိုင်၊ တစ်ပွဲသရေကျထားသလို မန်စီးတီးကို ၂-၁ ဂိုးနဲ့ အနိုင်ရခဲ့တာကြောင့် တိုက်စစ်နဲ့ ကွင်းလယ်ကစားပုံက ပိုမိုတည်ငြိမ်လာပါတယ်။ နည်းပြ အူနိုင်းအမ်မရီ ရဲ့အသင်းဟာ အဲဒီခုနစ်ပွဲအတွင်း ဂိုး ၂၀ အထိ သွင်းယူထားနိုင်တာကြောင့် ဘုန်းမောက်ရဲ့ ခံစစ်အတွက် အခက်အခဲဖြစ်လာနိုင်ပါတယ်။ နှစ်သင်းစလုံး နောက်ဆုံးပွဲတွေမှာ ခြေစွမ်းပြထားပေမယ့် လိဂ်ဖလားပွဲဖြစ်တာကြောင့် အရန်ကစားသမားတွေကို အသုံးပြုဖို့ရှိနေပြီး လူစာရင်းအင်အားအနက်အရှိုင်းက အရေးပါလာနိုင်ပါတယ်။ ဘုန်းမောက်ဟာ အိမ်ကွင်းမှာ ဖိအားပေးနိုင်ပေမယ့် ပွဲအခြေအနေကို ပြောင်းလဲထိန်းချုပ်နိုင်တဲ့ ကွင်းလယ်နဲ့ တိုက်စစ်အင်အားမှာ ပိုပြီး ယုံကြည်ရတဲ့ အက်စတွန်ဗီလာကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 7,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Manchester United",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879252"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Sunderland",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879263"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Chelsea",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878775"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Liverpool",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879276"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Brentford",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879285"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Manchester City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879256"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Newcastle United",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879258"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Brentford",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878776"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879269"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Nottingham Forest",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879284"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 12,
+        "goalsAgainst": 13,
+        "points": 9
+      },
+      "awayStanding": {
+        "position": 9,
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 9,
+        "goalsAgainst": 12,
+        "points": 11
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921840",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
+      "myanmarOdds": {
+        "upperTeam": "ဘုန်းမောက်",
+        "bodyOdds": "-40",
+        "goalTotalOdds": "3+45",
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "3+45"
+      },
+      "espnMatchId": "401921840",
+      "homeOdds": "2.25",
+      "drawOdds": "3.45",
+      "awayOdds": "2.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921840",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "3-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921840",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-03",
+      "pdfRow": 3,
+      "league": "EFL Cup",
+      "leagueDisplay": "အင်္ဂလန် ကာရာဘောင်းဖလား",
+      "home": "Fulham",
+      "away": "Crystal Palace",
+      "homeDisplay": "ဖူလ်ဟမ်",
+      "awayDisplay": "ခရစ္စတယ်ပဲလေ့စ်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-4",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဖူလ်ဟမ်ဟာ ဒီရာသီအစပိုင်း ပရီးမီးယားလိဂ် ခြောက်ပွဲဆက် နိုင်ပွဲမရခဲ့ပေမယ့် နောက်ဆုံးမှာတော့ ရလဒ်ကောင်းတွေ ပြန်လည်ရရှိလာပြီး ဟားလ်စီးတီးနဲ့ ကိုဗင်ထရီတို့ကို ၁-၀ ဂိုးစီနဲ့ အနိုင်ယူထားပါတယ်။ နည်းပြ အာဘီလိုအာ ရဲ့အသင်းဟာ ပြိုင်ပွဲစုံ နောက်ဆုံးခြောက်ပွဲမှာ တစ်ပွဲသာရှုံးထားပြီး အထူးသဖြင့် အော်စကာဘော့ဘ် က နောက်ဆုံးပွဲတွေမှာ အရေးပါတဲ့ အနိုင်ဂိုးတွေ သွင်းယူပေးနိုင်တာကြောင့် ဖူလ်ဟမ်တိုက်စစ်မှာ ယုံကြည်မှုတိုးတက်လာပါတယ်။ ခရစ္စတယ်ပဲလေ့စ်ကတော့ လိဂ်ရှစ်ပွဲမှာ ၇ မှတ်သာ ရရှိထားပြီး နောက်ဆုံးပွဲမှာ နယူးကာဆယ်ကို ၂-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့သလို ဘရိုက်တန်ကိုလည်း ၅-၀ ဂိုးနဲ့ ရှုံးထားတာကြောင့် ခံစစ်ပိုင်းမှာ အလွန်အားနည်းနေတာ တွေ့ရပါတယ်။ နည်းပြ ပီယာဆေ့ချ် ရဲ့အသင်းဟာ လိဂ်ရှစ်ပွဲမှာ ၁၉ ဂိုးအထိ ပေးထားရတာကြောင့် ဖူလ်ဟမ်ရဲ့ လတ်တလော တိုက်စစ်အဆုံးသတ်နိုင်မှုကို ထိန်းချုပ်ဖို့ အခက်အခဲရှိလာနိုင်ပါတယ်။ သို့သော် ပဲလေ့စ်ဟာ ဒီဖလားပြိုင်ပွဲမှာ မစ်ဒယ်ဘရော့ကို ၃-၀ ဂိုးနဲ့ အနိုင်ရထားတာကြောင့် ဖလားပွဲမှာ ခြေစွမ်းပြနိုင်တဲ့ အရည်အသွေးတော့ ရှိနေပါတယ်။ ဖူလ်ဟမ်က အိမ်ကွင်းမှာ ရလဒ်ကောင်းတွေ ပြန်ရနေပြီး ပဲလေ့စ်ရဲ့ ခံစစ်အမှားတွေကို တိုက်ရိုက်အသုံးချနိုင်ဖို့ရှိတာကြောင့် ဖူလ်ဟမ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 8,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Coventry City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879255"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Hull City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878770"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Ipswich Town",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879265"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Manchester United",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878777"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Liverpool",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879279"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Newcastle United",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879254"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Brighton & Hove Albion",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879261"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Nottingham Forest",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879266"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Leeds United",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879273"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Ipswich Town",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879281"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 8,
+        "goalsAgainst": 10,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 8,
+        "wins": 2,
+        "draws": 1,
+        "losses": 5,
+        "goalsFor": 9,
+        "goalsAgainst": 19,
+        "points": 7
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921841",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
+      "myanmarOdds": {
+        "upperTeam": "ဖူလ်ဟမ်",
+        "bodyOdds": "1+80",
+        "goalTotalOdds": "3+35",
+        "currentBodyOdds": "1+70",
+        "currentGoalTotalOdds": "3+30"
+      },
+      "espnMatchId": "401921841",
+      "homeOdds": "1.77",
+      "drawOdds": "3.85",
+      "awayOdds": "3.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921841",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "0-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921841",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-04",
+      "pdfRow": 4,
+      "league": "EFL Cup",
+      "leagueDisplay": "အင်္ဂလန် ကာရာဘောင်းဖလား",
+      "home": "Sunderland",
+      "away": "Brentford",
+      "homeDisplay": "ဆန်းဒါးလန်း",
+      "awayDisplay": "ဘရန့်ဖို့ဒ်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-4",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဆန်းဒါးလန်းဟာ ဒီရာသီ ပရီးမီးယားလိဂ်မှာ ရလဒ်တွေ ဆိုးရွားနေပြီး ရှစ်ပွဲကစား ၅ မှတ်သာရရှိထားတာကြောင့် အမှတ်ပေးဇယား အောက်ဆုံးမှာ ရပ်တည်နေရပါတယ်။ နောက်ဆုံး လိဒ်စ်ယူနိုက်တက်နဲ့ပွဲမှာ ဂိုးမရှိသရေကျပြီး လေးပွဲဆက်ရှုံးနိမ့်ခဲ့တဲ့ အခြေအနေကို ရပ်တန့်နိုင်ခဲ့ပေမယ့် ရှစ်ပွဲမှာ ၁၄ ဂိုးပေးထားရတဲ့ ခံစစ်က နည်းပြ ရီဂျစ်လီဘရစ် အတွက် အဓိကပြဿနာဖြစ်နေဆဲပါ။ ဒါပေမဲ့ ဘရိုင်ယန်ဘရော့ဘီ ဒဏ်ရာကနေ ပြန်လည်ကစားနိုင်လာတာကြောင့် တိုက်စစ်ပိုင်းမှာ အားတက်စရာ ဖြစ်နေပါတယ်။ ဘရန့်ဖို့ဒ်ကတော့ လိဂ်ရှစ်ပွဲမှာ ၁၁ မှတ်ရထားသလို အဝေးကွင်းမှာ ရှုံးပွဲမရှိသေးတာက ဆန်းဒါးလန်းထက် ပိုမိုယုံကြည်ရတဲ့ အချက်ဖြစ်နေပါတယ်။ နည်းပြ ကိသ်အန်ဒရူးစ် ရဲ့အသင်းဟာ လိဂ်ဖလားပြိုင်ပွဲမှာ ဘာမင်ဂမ်ကို ၆-၁ ဂိုး၊ ရီဒင်းကို ၂-၁ ဂိုးနဲ့ အနိုင်ရထားပြီး ဖလားပွဲတွေမှာ တိုက်စစ်အင်အားကောင်းမွန်နေပါတယ်။ အထူးသဖြင့် ဂျေဒန်အန်သိုနီ က ဖလားပြိုင်ပွဲမှာ ဂိုးဖန်တီးမှုပိုင်းကနေ အရေးပါတဲ့ အခန်းကဏ္ဍမှာ ပါဝင်နေပြီး ဆန်းဒါးလန်းရဲ့ နောက်တန်းအတွက် အခက်အခဲဖြစ်လာနိုင်ပါတယ်။ ဘရန့်ဖို့ဒ်ဘက်မှာလည်း ရီကိုဟင်နရီ ဒဏ်ရာကြောင့် မပါဝင်နိုင်ပေမယ့် လိဂ်ဖလားမှာ ပိုမိုထက်မြက်တဲ့ တိုက်စစ်ကစားပုံနဲ့ လက်ရှိအဝေးကွင်းရလဒ်တွေကို ချိန်ဆပြီး ဘရန့်ဖို့ဒ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 9,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Leeds United",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878764"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879263"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Brighton & Hove Albion",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878772"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Manchester City",
+          "teamGoals": 3,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879272"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Arsenal",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878779"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Hull City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878766"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Liverpool",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Aston Villa",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878776"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Chelsea",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879275"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879285"
+        }
+      ],
+      "homeStanding": {
+        "position": 20,
+        "played": 8,
+        "wins": 1,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 6,
+        "goalsAgainst": 14,
+        "points": 5
+      },
+      "awayStanding": {
+        "position": 6,
+        "played": 8,
+        "wins": 2,
+        "draws": 5,
+        "losses": 1,
+        "goalsFor": 14,
+        "goalsAgainst": 9,
+        "points": 11
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921843",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
+      "myanmarOdds": {
+        "upperTeam": "ဘရန့်ဖို့ဒ်",
+        "bodyOdds": "-80",
+        "goalTotalOdds": "3+65",
+        "currentBodyOdds": "-80",
+        "currentGoalTotalOdds": "3+60"
+      },
+      "espnMatchId": "401921843",
+      "homeOdds": "3.30",
+      "drawOdds": "3.50",
+      "awayOdds": "2.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921843",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "3-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921843",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-05",
+      "pdfRow": 5,
+      "league": "EFL Cup",
+      "leagueDisplay": "အင်္ဂလန် ကာရာဘောင်းဖလား",
+      "home": "Liverpool",
+      "away": "Chelsea",
+      "homeDisplay": "လီဗာပူးလ်",
+      "awayDisplay": "ချဲလ်ဆီး",
+      "sourceKickoff": "02:30",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:30 MMT",
+      "kickoffUtc": "2026-10-28T20:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-4",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဒီနေ့ ကာရာဘောင်းဖလားပြိုင်ပွဲရဲ့ စိတ်ဝင်စားစရာအကောင်းဆုံးပွဲတစ်ပွဲကတော့ အန်းဖီးလ်ကွင်းမှာ ကစားမယ့် လီဗာပူးလ်နဲ့ ချဲလ်ဆီးတို့ရဲ့ တွေ့ဆုံမှုဖြစ်ပါတယ်။ လီဗာပူးလ်ဟာ နည်းပြ အန်ဒိုနီအီရာအိုလာ လက်အောက်မှာ လက်ရှိရာသီ ပြိုင်ပွဲစုံတစ်ပွဲသာ ရှုံးနိမ့်ထားပြီး နောက်ဆုံးလေးပွဲဆက် အနိုင်ရထားတာကြောင့် အသင်းရဲ့ ယုံကြည်မှုက အလွန်ကောင်းမွန်နေပါတယ်။ အထူးသဖြင့် ချန်ပီယံလိဂ်မှာ ဗီလာရီးရဲလ်ကို ၄-၃ ဂိုးနဲ့ အနိုင်ရခဲ့တဲ့ပွဲမှာ နောက်ကလိုက်ကစားပြီး ပြန်လည်အနိုင်ယူနိုင်ခဲ့သလို နောက်ဆုံးပရီးမီးယားလိဂ်ပွဲမှာလည်း ဘရိုက်တန်ကို ၂-၀ ဂိုးနဲ့ အနိုင်ရခဲ့တာကြောင့် တိုက်စစ်ပိုင်းကောင်းမွန်နေသလို ခံစစ်လည်း ပြန်လည်တည်ငြိမ်လာပါတယ်။ ချဲလ်ဆီးကတော့ နည်းပြ ဇာဘီအလွန်ဆို လက်အောက်မှာ ရလဒ်မတည်ငြိမ်သေးဘဲ နောက်ဆုံး တော့တင်ဟမ်ကို အိမ်ကွင်းမှာ ၂-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် လီဗာပူးလ်နဲ့ပွဲမတိုင်ခင် ယုံကြည်မှု ပြန်လည်တည်ဆောက်ဖို့ လိုအပ်နေပါတယ်။ ချဲလ်ဆီးမှာ ကိုးလ်ပါလ်မာ ပွဲပယ်ခံထားရသလို ရီးစ်ဂျိမ်းစ် နဲ့ ဂျိုအာပက်ဒရို တို့လည်း ဒဏ်ရာကြောင့် မပါဝင်နိုင်တာက တိုက်စစ်အခွင့်အရေးဖန်တီးမှုနဲ့ ခံစစ်ပိုင်းကို ထိခိုက်စေနိုင်ပါတယ်။ လီဗာပူးလ်မှာလည်း ဒဏ်ရာပြဿနာတွေ ရှိနေပြီး ဂတ်ပို နဲ့ ရီယိုအန်ဂူမိုဟာ တို့လို ကစားသမားတွေက အရေးပါတဲ့ တာဝန်တွေ ယူလာရနိုင်ပါတယ်။ ဖလားပွဲဖြစ်တာကြောင့် နှစ်သင်းစလုံး လူစာရင်းအပြောင်းအလဲတွေ ပြုလုပ်နိုင်ပေမယ့် နောက်ဆုံးပွဲတွေမှာ ပိုမိုတည်ငြိမ်ပြီး နောက်ကလိုက်ကစားရတဲ့အခြေအနေမျိုးမှာတောင် အနိုင်ရလဒ်ကို ပြန်လည်ရယူနိုင်တဲ့ ခြေစွမ်း၊ အိမ်ကွင်းအားသာချက်တို့ကြောင့် လီဗာပူးလ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 10,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Brighton & Hove Albion",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878765"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Brentford",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879262"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Manchester City",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879264"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879276"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Fulham",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879279"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878767"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Everton",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878771"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878775"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Brentford",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879275"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Hull City",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 English Premier League",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879283"
+        }
+      ],
+      "homeStanding": {
+        "position": 4,
+        "played": 8,
+        "wins": 4,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 11,
+        "goalsAgainst": 8,
+        "points": 15
+      },
+      "awayStanding": {
+        "position": 5,
+        "played": 8,
+        "wins": 4,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 17,
+        "goalsAgainst": 15,
+        "points": 13
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/41.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921842",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/eng.1",
+      "myanmarOdds": {
+        "upperTeam": "လီဗာပူးလ်",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "3-40",
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3-40"
+      },
+      "espnMatchId": "401921842",
+      "homeOdds": "2.10",
+      "drawOdds": "3.75",
+      "awayOdds": "2.90",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401921842",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921842",
+      "finalStatus": "STATUS_FINAL_PEN"
+    },
+    {
+      "fixtureId": "fc-20261028-06",
+      "pdfRow": 6,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "AC Milan",
+      "away": "Bologna",
+      "homeDisplay": "အေစီမီလန်",
+      "awayDisplay": "ဘိုလော့ညာ",
+      "sourceKickoff": "00:00",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 00:00 MMT",
+      "kickoffUtc": "2026-10-28T17:30:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "အေစီမီလန်ဟာ ဒီရာသီ စီးရီးအေမှာ ရှုံးပွဲမရှိသေးတဲ့ အသင်းတွေထဲက တစ်သင်းဖြစ်ပြီး ရှစ်ပွဲကစား ၁၈ မှတ်နဲ့ အမှတ်ပေးဇယား အဆင့် ၄ နေရာမှာ ရပ်တည်နေပါတယ်။ နည်းပြ ရူဘင်အာမိုရင် လက်အောက်မှာ လိဂ်ခြေစွမ်းတည်ငြိမ်နေသလို နောက်ဆုံးကစားခဲ့တဲ့ အူဒီးနီးစ်နဲ့ပွဲမှာလည်း ၂-၀ ဂိုးနဲ့ အနိုင်ယူပြီး ယူရိုပါလိဂ်မှာ ဘုန်းမောက်ကို ရှုံးနိမ့်ခဲ့တဲ့ရလဒ်ဆိုးကို ချက်ချင်းတုံ့ပြန်နိုင်ခဲ့တာပါ။ အထူးသဖြင့် ခရစ္စတီယန်ပူလီဆစ် နဲ့ အိုမာရီဟတ်ချင်ဆန် တို့ရဲ့ ဂိုးသွင်းနိုင်မှုက မီလန်တိုက်စစ်အတွက် အားသာချက်ဖြစ်နေပြီး ဘိုလော့ညာရဲ့ ခံစစ်ကို ဖိအားပေးနိုင်ဖို့ ရှိနေပါတယ်။ ဘိုလော့ညာကတော့ ရှစ်ပွဲမှာ ၈ မှတ်သာရထားပေမယ့် နည်းပြအပြောင်းအလဲနောက်ပိုင်း ခြေစွမ်းပြန်လည်တိုးတက်လာပြီး နောက်ဆုံး ကာဂလီယာရီကို ၂-၀ ဂိုးနဲ့ အနိုင်ရခဲ့တာက အသင်းရဲ့ ယုံကြည်မှုကို မြင့်တက်စေပါတယ်။ သို့သော် အော်ဆိုလီနီ နဲ့ ရောဘတ်တိုပစ်ကိုလီ တို့ရဲ့ ဒဏ်ရာပြဿနာတွေက ဘိုလော့ညာရဲ့ တိုက်စစ်အင်အားကို ထိခိုက်စေနိုင်ပြီး မီလန်ဘက်မှာလည်း အဓိကကစားသမားအချို့ မပါဝင်နိုင်တဲ့အခြေအနေ ရှိနေပါတယ်။ မီလန်ဟာ ဒီပွဲပြီးရင် အင်တာမီလန်နဲ့ ဒါဘီပွဲကို ရင်ဆိုင်ရဖို့ရှိတာကြောင့် လူစာရင်းအပြောင်းအလဲတွေ ရှိနိုင်ပေမယ့် အိမ်ကွင်းမှာ လက်ရှိခြေစွမ်းကောင်းနေတာနဲ့ တိုက်စစ်အခွင့်အရေးကို ပိုမိုအသုံးချနိုင်မှုကြောင့် အေစီမီလန်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 1,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Udinese",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874779"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Atalanta",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874978"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Sassuolo",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874789"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Lecce",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874944"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Lazio",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874941"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Cagliari",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874958"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Internazionale",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874953"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Lecce",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874776"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Torino",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874767"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Napoli",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874792"
+        }
+      ],
+      "homeStanding": {
+        "position": 5,
+        "played": 8,
+        "wins": 5,
+        "draws": 3,
+        "losses": 0,
+        "goalsFor": 16,
+        "goalsAgainst": 7,
+        "points": 18
+      },
+      "awayStanding": {
+        "position": 13,
+        "played": 8,
+        "wins": 2,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 8,
+        "goalsAgainst": 10,
+        "points": 8
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874993",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
+      "myanmarOdds": {
+        "upperTeam": "အေစီမီလန်",
+        "bodyOdds": "1+45",
+        "goalTotalOdds": "3+80",
+        "currentBodyOdds": "1+55",
+        "currentGoalTotalOdds": "2-65"
+      },
+      "espnMatchId": "401874993",
+      "homeOdds": "1.67",
+      "drawOdds": "3.75",
+      "awayOdds": "4.70",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874993",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "2-4",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874993",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-07",
+      "pdfRow": 7,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "Parma",
+      "away": "Udinese",
+      "homeDisplay": "ပါးမား",
+      "awayDisplay": "အူဒီးနီးစ်",
+      "sourceKickoff": "00:00",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 00:00 MMT",
+      "kickoffUtc": "2026-10-28T17:30:00.000Z",
+      "status": "finished",
+      "internetPrediction": "3-1",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဒီပွဲကတော့ အမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရုန်းကန်နေရတဲ့ အသင်းနှစ်သင်း တွေ့ဆုံမှုဖြစ်ပြီး ပါးမားနဲ့ အူဒီးနီးစ်တို့ဟာ ရှစ်ပွဲကစားပြီး ၄ မှတ်စီသာ ရရှိထားကြပါတယ်။ အိမ်ရှင်ပါးမားက ရှစ်ပွဲမှာ ငါးဂိုးသာ သွင်းယူထားနိုင်တာကြောင့် တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ ပြဿနာရှိနေသလို နောက်ဆုံးသုံးပွဲဆက် ရှုံးနိမ့်ထားတာကလည်း အသင်းအပေါ် ဖိအားတွေ ပိုမိုများပြားစေပါတယ်။ ဒါပေမဲ့ နောက်ဆုံး လာဇီယိုနဲ့ပွဲမှာ ပထမပိုင်းကစားပုံ တိုးတက်လာခဲ့ပြီး ဆီမိုနီလွန်တာနီ ဂိုးသွင်းနိုင်ခဲ့တာကြောင့် နည်းပြ အယ်လ်ဘာတိုဂျီလာဒီနို အတွက် တိုက်စစ်ပိုင်းမှာ မျှော်လင့်ချက်တစ်ခု ဖြစ်လာပါတယ်။ အူဒီးနီးစ်ကတော့ ပိုပြီးစိုးရိမ်စရာကောင်းတဲ့ အခြေအနေမှာ ရှိနေပြီး လိဂ်ခြောက်ပွဲဆက် ရှုံးနိမ့်ထားသလို ရှစ်ပွဲမှာ ၁၈ ဂိုးအထိ ပေးထားရတာကြောင့် ခံစစ်တည်ငြိမ်မှု ကင်းမဲ့နေပါတယ်။ ကွင်းလယ်က အက်ကယ်လန်ကမ့် က ဂိုးသွင်းအားနဲ့ ပံ့ပိုးပေးနေပေမယ့် ကီးနန်ဒေးဗစ် က လိဂ်ဂိုးမရသေးတာကြောင့် ရှေ့တန်းက အခွင့်အရေးတွေကို အဆုံးသတ်နိုင်ဖို့ လိုအပ်နေပါတယ်။ အူဒီးနီးစ်အနေနဲ့ ပါးမားရဲ့ တိုက်စစ်အားနည်းချက်ကို အသုံးချနိုင်ရင် အသာစီးရနိုင်ပေမယ့် လက်ရှိပေးဂိုးများနေတဲ့ ခံစစ်ကြောင့် အဝေးကွင်းမှာ အမှားတွေ ထပ်မံကြုံတွေ့နိုင်ပါတယ်။ ပါးမားကလည်း အားကောင်းတဲ့အသင်းမဟုတ်ပေမယ့် အိမ်ကွင်းအားသာချက်နဲ့ နောက်ဆုံးပွဲက တိုးတက်လာတဲ့ ကစားပုံကို အခြေခံပြီး ပါးမားကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 2,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Lazio",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874955"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Torino",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874784"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Internazionale",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875021"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Genoa",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874801"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Como",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874933"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "AC Milan",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874779"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Lecce",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874771"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "Torino",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874763"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Cagliari",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874964"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Internazionale",
+          "teamGoals": 3,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874966"
+        }
+      ],
+      "homeStanding": {
+        "position": 19,
+        "played": 8,
+        "wins": 1,
+        "draws": 1,
+        "losses": 6,
+        "goalsFor": 5,
+        "goalsAgainst": 15,
+        "points": 4
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 8,
+        "wins": 1,
+        "draws": 1,
+        "losses": 6,
+        "goalsFor": 9,
+        "goalsAgainst": 18,
+        "points": 4
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874965",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
+      "myanmarOdds": {
+        "upperTeam": "အူဒီးနီးစ်",
+        "bodyOdds": "-15",
+        "goalTotalOdds": "2-40",
+        "currentBodyOdds": "-5",
+        "currentGoalTotalOdds": "2-70"
+      },
+      "espnMatchId": "401874965",
+      "homeOdds": "2.75",
+      "drawOdds": "3.05",
+      "awayOdds": "2.55",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874965",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874965",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-08",
+      "pdfRow": 8,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "Venezia",
+      "away": "Inter Milan",
+      "homeDisplay": "ဗင်နီဇီယာ",
+      "awayDisplay": "အင်တာမီလန်",
+      "sourceKickoff": "00:00",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 00:00 MMT",
+      "kickoffUtc": "2026-10-28T17:30:00.000Z",
+      "status": "finished",
+      "internetPrediction": "3-1",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "အင်တာမီလန်ဟာ ဒီရာသီ အီတလီစီးရီးအေမှာ အကောင်းဆုံးခြေစွမ်းပြနေတဲ့ အသင်းတွေထဲက တစ်သင်းဖြစ်ပြီး ရှစ်ပွဲကစား ခုနစ်ပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ၂၂ မှတ်ရထားသလို ၂၃ ဂိုးအထိ သွင်းယူထားနိုင်တာကြောင့် တိုက်စစ်ပိုင်းမှာ အလွန်ထက်မြက်နေပါတယ်။ နည်းပြ ခရစ္စတီယန်ချီဗူး ရဲ့အသင်းဟာ နောက်ဆုံး ဖီအိုရင်တီးနားနဲ့ပွဲမှာ နောက်ကလိုက်ကစားပြီး ၂-၁ ဂိုးနဲ့ ပြန်လည်အနိုင်ယူခဲ့တာကြောင့် ပွဲအတွင်း ဖိအားတွေကို ရင်ဆိုင်ဖြေရှင်းနိုင်တဲ့ အရည်အသွေးကိုလည်း ပြသထားပါတယ်။ ဗင်နီဇီယာကတော့ စီးရီးဘီကနေ ပြန်တန်းတက်လာပြီးနောက် ရှစ်ပွဲမှာ ခုနစ်ပွဲရှုံး၊ သုံးမှတ်သာ ရရှိထားကာ အမှတ်ပေးဇယား အောက်ဆုံးမှာ ရောက်ရှိနေပါတယ်။ အထူးသဖြင့် ၁၇ ဂိုးအထိ ပေးထားရတဲ့ ခံစစ်က အင်တာမီလန်ရဲ့ တိုက်စစ်အတွက် အခွင့်အရေးတွေ ပိုမိုဖန်တီးပေးနိုင်တဲ့ အားနည်းချက်ဖြစ်နေပါတယ်။ ဒါပေမဲ့ နည်းပြသစ် ဒါဗီဒီနီကိုလာ လက်အောက်မှာ နာပိုလီကို အနိုင်ယူခဲ့တဲ့ပွဲကဲ့သို့ ခံစစ်ကို နောက်ဆုတ်စုဖွဲ့ပြီး တန်ပြန်တိုက်စစ်ဆင်နိုင်တာကြောင့် အင်တာမီလန်အနေနဲ့ သတိမလွတ်သင့်ပါဘူး။ အာကောအဒမ်စ် နဲ့ ဂျွန်ယီဘိုအာ တို့ရဲ့ လျင်မြန်မှုက ဗင်နီဇီယာအတွက် အဓိကလက်နက်ဖြစ်နိုင်ပေမယ့် အင်တာမီလန်က ကွင်းလယ်ထိန်းချုပ်နိုင်မှုနဲ့ အခွင့်အရေးဖန်တီးနိုင်မှုမှာ ပိုမိုသာလွန်နေပါတယ်။ အသင်းခေါင်းဆောင် လော်တာရိုမာတီနက်ဇ် ဒဏ်ရာကြောင့် မပါနိုင်ပေမယ့် မာကပ်စ်သူရမ်၊ အန်ဂျီဘွန်နီနဲ့ ပီယိုအက်စ်ပိုစီတို တို့လို တိုက်စစ်ကစားသမားတွေကို အသုံးပြုနိုင်တာကြောင့် ဗင်နီဇီယာရဲ့ နောက်တန်းကို ဖိအားပေးနိုင်ဖို့ရှိနေပြီး အင်တာမီလန်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 3,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": true,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Genoa",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874952"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Napoli",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874760"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "Atalanta",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875005"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Lazio",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874956"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Fiorentina",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874759"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Fiorentina",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875036"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Bologna",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874953"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Parma",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875021"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "AS Roma",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874753"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Udinese",
+          "teamGoals": 5,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874966"
+        }
+      ],
+      "homeStanding": {
+        "position": 20,
+        "played": 8,
+        "wins": 1,
+        "draws": 0,
+        "losses": 7,
+        "goalsFor": 6,
+        "goalsAgainst": 17,
+        "points": 3
+      },
+      "awayStanding": {
+        "position": 2,
+        "played": 8,
+        "wins": 7,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 23,
+        "goalsAgainst": 10,
+        "points": 22
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874773",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
+      "myanmarOdds": {
+        "upperTeam": "အင်တာမီလန်",
+        "bodyOdds": "1-100",
+        "goalTotalOdds": "3-100",
+        "currentBodyOdds": "1-100",
+        "currentGoalTotalOdds": "3-85"
+      },
+      "specialChoiceRank": 1,
+      "specialAnalysisParagraphs": [
+        "အင်တာမီလန်ဟာ ဒီရာသီ အီတလီစီးရီးအေမှာ အကောင်းဆုံးခြေစွမ်းပြနေတဲ့ အသင်းတွေထဲက တစ်သင်းဖြစ်ပြီး ရှစ်ပွဲကစား ခုနစ်ပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ၂၂ မှတ်ရထားသလို ၂၃ ဂိုးအထိ သွင်းယူထားနိုင်တာကြောင့် တိုက်စစ်ပိုင်းမှာ အလွန်ထက်မြက်နေပါတယ်။ နည်းပြ ခရစ္စတီယန်ချီဗူး ရဲ့အသင်းဟာ နောက်ဆုံး ဖီအိုရင်တီးနားနဲ့ပွဲမှာ နောက်ကလိုက်ကစားပြီး ၂-၁ ဂိုးနဲ့ ပြန်လည်အနိုင်ယူခဲ့တာကြောင့် ပွဲအတွင်း ဖိအားတွေကို ရင်ဆိုင်ဖြေရှင်းနိုင်တဲ့ အရည်အသွေးကိုလည်း ပြသထားပါတယ်။ ဗင်နီဇီယာကတော့ စီးရီးဘီကနေ ပြန်တန်းတက်လာပြီးနောက် ရှစ်ပွဲမှာ ခုနစ်ပွဲရှုံး၊ သုံးမှတ်သာ ရရှိထားကာ အမှတ်ပေးဇယား အောက်ဆုံးမှာ ရောက်ရှိနေပါတယ်။ အထူးသဖြင့် ၁၇ ဂိုးအထိ ပေးထားရတဲ့ ခံစစ်က အင်တာမီလန်ရဲ့ တိုက်စစ်အတွက် အခွင့်အရေးတွေ ပိုမိုဖန်တီးပေးနိုင်တဲ့ အားနည်းချက်ဖြစ်နေပါတယ်။ ဒါပေမဲ့ နည်းပြသစ် ဒါဗီဒီနီကိုလာ လက်အောက်မှာ နာပိုလီကို အနိုင်ယူခဲ့တဲ့ပွဲကဲ့သို့ ခံစစ်ကို နောက်ဆုတ်စုဖွဲ့ပြီး တန်ပြန်တိုက်စစ်ဆင်နိုင်တာကြောင့် အင်တာမီလန်အနေနဲ့ သတိမလွတ်သင့်ပါဘူး။ အာကောအဒမ်စ် နဲ့ ဂျွန်ယီဘိုအာ တို့ရဲ့ လျင်မြန်မှုက ဗင်နီဇီယာအတွက် အဓိကလက်နက်ဖြစ်နိုင်ပေမယ့် အင်တာမီလန်က ကွင်းလယ်ထိန်းချုပ်နိုင်မှုနဲ့ အခွင့်အရေးဖန်တီးနိုင်မှုမှာ ပိုမိုသာလွန်နေပါတယ်။ အသင်းခေါင်းဆောင် လော်တာရိုမာတီနက်ဇ် ဒဏ်ရာကြောင့် မပါနိုင်ပေမယ့် မာကပ်စ်သူရမ်၊ အန်ဂျီဘွန်နီနဲ့ ပီယိုအက်စ်ပိုစီတို တို့လို တိုက်စစ်ကစားသမားတွေကို အသုံးပြုနိုင်တာကြောင့် ဗင်နီဇီယာရဲ့ နောက်တန်းကို ဖိအားပေးနိုင်ဖို့ရှိနေပြီး",
+        "အင်တာမီလန်ကို ရွေးချယ်ပါတယ်။"
+      ],
+      "specialPreparedDate": "2026-10-28",
+      "espnMatchId": "401874773",
+      "homeOdds": "7.00",
+      "drawOdds": "5.25",
+      "awayOdds": "1.34",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874773",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874773",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-09",
+      "pdfRow": 9,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "Genoa",
+      "away": "Juventus",
+      "homeDisplay": "ဂျီနိုအာ",
+      "awayDisplay": "ဂျူဗင်တပ်စ်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-4",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဂျီနိုအာဟာ ရှစ်ပွဲကစားပြီး ၇ မှတ်သာ ရရှိထားတာကြောင့် အမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရှိနေပေမယ့် လတ်တလော အိမ်ကွင်းခြေစွမ်းကတော့ တိုးတက်လာနေပါတယ်။ အထူးသဖြင့် နောက်ဆုံးလိဂ်သုံးပွဲမှာ နှစ်ပွဲအနိုင်ရထားသလို ဗင်နီဇီယာကိုလည်း ၁-၀ ဂိုးနဲ့ အနိုင်ယူထားတာကြောင့် နည်းပြ ဒီရော့ဆီ ရဲ့အသင်းဟာ ခံစစ်ပိုင်းမှာ ပိုမိုစုစည်းလာတာ တွေ့ရပါတယ်။ ဂျူဗင်တပ်စ်ကတော့ ရှစ်ပွဲကစားပြီး ၁၄ မှတ်ရထားပြီး ရာသီအစပိုင်းက မတည်ငြိမ်တဲ့ရလဒ်တွေကြောင့် ထိပ်ဆုံးအသင်းတွေနဲ့ ရမှတ်ကွာဟနေပေမယ့် နောက်ဆုံး လက်ချီကို ၂-၀ ဂိုးနဲ့ အနိုင်ယူခဲ့တာက အသင်းအတွက် အရေးပါတဲ့ အလှည့်အပြောင်းဖြစ်လာနိုင်ပါတယ်။ အဲဒီပွဲမှာ ဝက်စ်တန်မက်ကင်နီ နဲ့ ဒေါက်ဂလပ်စ်လူးဝစ် တို့ ဂိုးသွင်းယူနိုင်ခဲ့သလို ဒေါက်ဂလပ်စ်လူးဝစ်ရဲ့ ကွင်းလယ်ကနေ ဘောလုံးဖြန့်ဝေမှုကလည်း ဂျူဗင်တပ်စ်တိုက်စစ်ကို ပံ့ပိုးပေးနေပါတယ်။ ဒါပေမဲ့ ကင်နန်ယယ်လ်ဒစ်ဇ်၊ လူကာတယ်လီနဲ့ ချီဇာ အပါအဝင် လူစာရင်းပိုင်း ဒဏ်ရာပြဿနာတွေကြောင့် နည်းပြ စပယ်လက်တီ အနေနဲ့ အကောင်းဆုံးလူစာရင်းကို အသုံးပြုနိုင်ဖို့ ခက်ခဲနေပါတယ်။ ဂျီနိုအာဟာ အိမ်ကွင်းမှာ တည်ငြိမ်တဲ့ခံစစ်နဲ့ ဂျူဗင်တပ်စ်ကို အချိန်ကြာကြာ ထိန်းချုပ်ဖို့ ကြိုးစားနိုင်ပေမယ့် ဂိုးသွင်းအားနည်းနေတဲ့အချက်က အဓိကပြဿနာ ဖြစ်လာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ ကစားသမားအရည်အသွေး၊ ကွင်းလယ်စွမ်းဆောင်ရည်နဲ့ နောက်ဆုံးပွဲက အနိုင်ရလဒ်ကို ချိန်ဆကြည့်ရင် ဂျူဗင်တပ်စ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 4,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Venezia",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874952"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "AS Roma",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874935"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Fiorentina",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874947"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Parma",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874801"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Frosinone",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874991"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Lecce",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874772"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Lazio",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874765"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Cagliari",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874764"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Atalanta",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874757"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Sassuolo",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874750"
+        }
+      ],
+      "homeStanding": {
+        "position": 16,
+        "played": 8,
+        "wins": 2,
+        "draws": 1,
+        "losses": 5,
+        "goalsFor": 6,
+        "goalsAgainst": 13,
+        "points": 7
+      },
+      "awayStanding": {
+        "position": 7,
+        "played": 8,
+        "wins": 4,
+        "draws": 2,
+        "losses": 2,
+        "goalsFor": 11,
+        "goalsAgainst": 8,
+        "points": 14
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874988",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
+      "myanmarOdds": {
+        "upperTeam": "ဂျူဗင်တပ်စ်",
+        "bodyOdds": "1+50",
+        "goalTotalOdds": "2-60",
+        "currentBodyOdds": "1+65",
+        "currentGoalTotalOdds": "2-20"
+      },
+      "espnMatchId": "401874988",
+      "homeOdds": "5.00",
+      "drawOdds": "3.60",
+      "awayOdds": "1.65",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874988",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874988",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-10",
+      "pdfRow": 10,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "Monza",
+      "away": "Napoli",
+      "homeDisplay": "မွန်ဇာ",
+      "awayDisplay": "နာပိုလီ",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-4",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "မွန်ဇာဟာ ဒီရာသီ စီးရီးအေ ရှစ်ပွဲကစားပြီး ၇ မှတ်သာ ရရှိထားပေမယ့် တိုက်စစ်ပိုင်းမှာ ၁၅ ဂိုးအထိ သွင်းယူထားနိုင်တာကြောင့် အမှတ်ပေးဇယားအောက်ပိုင်းအသင်းတစ်သင်းဖြစ်ပေမယ့် ဂိုးသွင်းအားကို လျှော့တွက်လို့မရပါဘူး။ အထူးသဖြင့် ဗာရယ်လာ က ဂိုးသွင်းခြေတွေ့နေပြီး အသင်းရဲ့ အဓိကတိုက်စစ်လက်နက်ဖြစ်နေသလို အိမ်ကွင်းမှာ ပိုပြီး အားကောင်းတဲ့ကစားပုံကိုလည်း ပြသနိုင်ပါတယ်။ ဒါပေမဲ့ ရှစ်ပွဲမှာ ၁၈ ဂိုးအထိ ပေးထားရတဲ့ ခံစစ်က နာပိုလီလို တိုက်စစ်အင်အားရှိတဲ့ အသင်းနဲ့တွေ့တဲ့အခါ အဓိကအားနည်းချက်ဖြစ်လာနိုင်ပါတယ်။ နာပိုလီကတော့ ရှစ်ပွဲမှာ ၁၁ မှတ်နဲ့ ရာသီအစပိုင်းရလဒ်တွေ မတည်ငြိမ်ခဲ့ပေမယ့် နောက်ဆုံးပွဲတွေမှာ တိုက်စစ်စွမ်းဆောင်ရည်က သိသိသာသာ တိုးတက်လာပါတယ်။ ချန်ပီယံလိဂ်မှာ ဘိုဒိုဂလင့်ကို ၄-၃ ဂိုးနဲ့ အနိုင်ရခဲ့ပြီး ရိုးမားနဲ့ပွဲမှာလည်း ၃-၃ ဂိုး သရေကျခဲ့တာကြောင့် နှစ်ပွဲအတွင်း ခုနစ်ဂိုးသွင်းနိုင်ခဲ့တာ ဖြစ်ပါတယ်။ အထူးသဖြင့် စကော့မက်တွန်မီနေး က အဲဒီနှစ်ပွဲစလုံးမှာ နှစ်ဂိုးစီသွင်းယူနိုင်ခဲ့ပြီး နာပိုလီရဲ့ ကွင်းလယ်ကနေ ဂိုးရနိုင်တဲ့ အားသာချက်ကို ပြသထားပါတယ်။ ဒါပေမဲ့ နာပိုလီရဲ့ ခံစစ်ကလည်း လွယ်လွယ်နဲ့ ဂိုးပေးနေရတာကြောင့် မွန်ဇာရဲ့ တန်ပြန်တိုက်စစ်ကို သတိထားဖို့ လိုအပ်ပါတယ်။ နှစ်သင်းစလုံး ခံစစ်ပိုင်းမှာ အားနည်းချက်ရှိပေမယ့် တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်မှုနဲ့ အဆုံးသတ်နိုင်မှုမှာ ပိုမိုအားကောင်းလာတဲ့ နာပိုလီကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 5,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Torino",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874957"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Cagliari",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874762"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Lazio",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874951"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Sassuolo",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874756"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Lecce",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874936"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "AS Roma",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874948"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Venezia",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874760"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Frosinone",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874754"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Fiorentina",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874934"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Bologna",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 Italian Serie A",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874792"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 8,
+        "wins": 2,
+        "draws": 1,
+        "losses": 5,
+        "goalsFor": 15,
+        "goalsAgainst": 18,
+        "points": 7
+      },
+      "awayStanding": {
+        "position": 10,
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 13,
+        "goalsAgainst": 10,
+        "points": 11
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874799",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ita.1",
+      "myanmarOdds": {
+        "upperTeam": "နာပိုလီ",
+        "bodyOdds": "1+40",
+        "goalTotalOdds": "3+35",
+        "currentBodyOdds": "1+60",
+        "currentGoalTotalOdds": "3+45"
+      },
+      "espnMatchId": "401874799",
+      "homeOdds": "4.10",
+      "drawOdds": "3.90",
+      "awayOdds": "1.74",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401874799",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "1-4",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874799",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-11",
+      "pdfRow": 11,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမနီ ပိုကယ်ဖလား",
+      "home": "Dynamo Dresden",
+      "away": "Schalke 04",
+      "homeDisplay": "ဒရက်စ်ဒင်",
+      "awayDisplay": "ရှော်လ်ကေး",
+      "sourceKickoff": "23:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-28 23:30 MMT",
+      "kickoffUtc": "2026-10-28T17:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-2",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဒီပွဲမှာတော့ ဘွန်ဒက်စ်လီဂါ ၂ အသင်းနှစ်သင်း တွေ့ဆုံမှာဖြစ်ပြီး ဒရက်စ်ဒင်ဟာ ပထမအဆင့်မှာ ဝက်စ်ဖာလီယာရိုင်နန်ကို ၆-၀ ဂိုးနဲ့ အနိုင်ယူထားတာကြောင့် ဖလားပွဲမှာ တိုက်စစ်အခွင့်အရေးတွေကို အသုံးချနိုင်တဲ့ အရည်အသွေးရှိနေပါတယ်။ ဒါပေမဲ့ နောက်ဆုံးလိဂ်ပွဲမှာ ဟိုလ်စတိန်းကီးလ်ကို ၃-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် ဒီပွဲမှာ ခံစစ်ပိုင်းပြန်လည်တည်ငြိမ်ဖို့ လိုအပ်နေပါတယ်။ ရှော်လ်ကေးကတော့ ဖလားပထမအဆင့်မှာ ဟာလီရှာကို အချိန်ပိုအထိ ကစားပြီး ၅-၂ ဂိုးနဲ့ အနိုင်ရထားသလို ဝါရင့်တိုက်စစ်မှူး အီဒင်ဂျက်ကို က အဲဒီပွဲမှာ နှစ်ဂိုးသွင်းယူခဲ့တာကြောင့် အရေးကြီးတဲ့ပွဲတွေမှာ အတွေ့အကြုံကို အသုံးချနိုင်တဲ့ အားသာချက်ရှိနေပါတယ်။ ဒရက်စ်ဒင်ဟာ အိမ်ကွင်းမှာ တိုက်စစ်ဖိအားပေးဖို့ ကြိုးစားလာနိုင်ပေမယ့် ရှော်လ်ကေးက ကွင်းလယ်နဲ့ တိုက်စစ်ပိုင်းမှာ အတွေ့အကြုံရှိတဲ့ ကစားသမားတွေကို အားကိုးနိုင်သလို အခွင့်အရေးအဆုံးသတ်နိုင်မှုကလည်း ပိုမိုယုံကြည်ရပါတယ်။ ဒရက်စ်ဒင်ရဲ့ နောက်ဆုံးခံစစ်စွမ်းဆောင်ရည်ကို အခြေခံပြီး ရှော်လ်ကေးကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 12,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Holstein Kiel",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885078"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "1. FC Magdeburg",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885088"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "VfL Osnabruck",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885093"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Hertha Berlin",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885106"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "TSV Eintracht Braunschweig",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885112"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "FC Cologne",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884756"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Mainz",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884765"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "SC Freiburg",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884778"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "SV Elversberg",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884783"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "1. FC Union Berlin",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884793"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 11,
+        "goalsAgainst": 18,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 16,
+        "played": 7,
+        "wins": 1,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 4,
+        "goalsAgainst": 7,
+        "points": 6
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7017.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916921",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.2",
+      "myanmarOdds": {
+        "upperTeam": "ရှော်လ်ကေး",
+        "bodyOdds": "-90",
+        "goalTotalOdds": "3+15",
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "3+25"
+      },
+      "espnMatchId": "401916921",
+      "homeOdds": "3.25",
+      "drawOdds": "3.75",
+      "awayOdds": "2.05",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916921",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916921",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-12",
+      "pdfRow": 12,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမနီ ပိုကယ်ဖလား",
+      "home": "Freiburg",
+      "away": "Wolfsburg",
+      "homeDisplay": "ဖရိုင်းဘတ်",
+      "awayDisplay": "ဝုလ်ဖ်ဘတ်",
+      "sourceKickoff": "23:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-28 23:30 MMT",
+      "kickoffUtc": "2026-10-28T17:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-3",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဖရိုင်းဘတ်ဟာ ဘွန်ဒက်စ်လီဂါမှာ ခုနစ်ပွဲကစားပြီး ၁၃ မှတ်နဲ့ အဆင့် ၃ နေရာမှာ ရှိနေပေမယ့် လတ်တလော ပြိုင်ပွဲစုံသုံးပွဲဆက် ရှုံးနိမ့်ထားတာကြောင့် နည်းပြ ဂျူလီယန်ရှုစတာ အတွက် ဖိအားများနေပါတယ်။ နောက်ဆုံး ဘိုင်ယန်မြူးနစ်ကို ၃-၁ ဂိုးနဲ့ ရှုံးခဲ့သလို မိုနာကိုနဲ့ လေဗာကူဆင်တို့ကိုလည်း ဆက်တိုက်ရှုံးနိမ့်ခဲ့တာကြောင့် အသင်းရဲ့ ခံစစ်တည်ငြိမ်မှု ပြန်လည်တည်ဆောက်ဖို့ လိုအပ်နေပါတယ်။ ဝုလ်ဖ်ဘတ်ကတော့ ဒီရာသီ ဘွန်ဒက်စ်လီဂါ ၂ မှာ ကစားနေရပေမယ့် ကိုးပွဲမှာ ၁၆ မှတ်နဲ့ အဆင့် ၄ နေရာမှာ ရပ်တည်နေသလို နောက်ဆုံးပြိုင်ပွဲစုံလေးပွဲမှာ ရှုံးပွဲမရှိထားတာကြောင့် လက်ရှိခြေစွမ်းက ဖရိုင်းဘတ်ထက်တောင် ပိုမိုတည်ငြိမ်နေတာပါ။ သို့သော် ဝုလ်ဖ်ဘတ်ဟာ အဝေးကွင်းရလဒ်တွေမှာ တည်ငြိမ်မှုအားနည်းနေသလို ဖရိုင်းဘတ်ကလည်း ဘိုင်ယန်နဲ့မတွေ့ခင် အိမ်ကွင်းငါးပွဲဆက် အနိုင်ရထားတာကြောင့် အိမ်ကွင်းမှာ ပြန်လည်ခြေစွမ်းပြနိုင်ဖို့ ရှိပါတယ်။ ဝုလ်ဖ်ဘတ်ရဲ့ လတ်တလောခြေစွမ်းကို လျှော့တွက်လို့မရပေမယ့် အမြင့်ဆုံးလိဂ်မှာ ကစားနေတဲ့ အသင်းအင်အားနဲ့ အိမ်ကွင်းတိုက်စစ်ဖိအားပေးနိုင်မှုကြောင့် ဖရိုင်းဘတ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 11,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Bayern Munich",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884759"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884771"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Schalke 04",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884778"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Eintracht Frankfurt",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884787"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Borussia Mönchengladbach",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884796"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "VfL Bochum",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885079"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "1. FC Heidenheim 1846",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885092"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "1. FC Nürnberg",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885097"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "SV Darmstadt 98",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885110"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "St. Pauli",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885119"
+        }
+      ],
+      "homeStanding": {
+        "position": 3,
+        "played": 7,
+        "wins": 4,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 16,
+        "goalsAgainst": 9,
+        "points": 13
+      },
+      "awayStanding": {
+        "position": 4,
+        "played": 9,
+        "wins": 4,
+        "draws": 4,
+        "losses": 1,
+        "goalsFor": 23,
+        "goalsAgainst": 14,
+        "points": 16
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917036",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.1",
+      "myanmarOdds": {
+        "upperTeam": "ဖရိုင်းဘတ်",
+        "bodyOdds": "1-40",
+        "goalTotalOdds": "3-60",
+        "currentBodyOdds": "1+5",
+        "currentGoalTotalOdds": "3-80"
+      },
+      "espnMatchId": "401917036",
+      "homeOdds": "1.53",
+      "drawOdds": "4.80",
+      "awayOdds": "5.25",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917036",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "3-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917036",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-13",
+      "pdfRow": 13,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမနီ ပိုကယ်ဖလား",
+      "home": "Paderborn",
+      "away": "Stuttgart",
+      "homeDisplay": "ပါဒါဘွန်း",
+      "awayDisplay": "စတုဂတ်",
+      "sourceKickoff": "23:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-28 23:30 MMT",
+      "kickoffUtc": "2026-10-28T17:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-3",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ပါဒါဘွန်းဟာ ဒီရာသီ ဘွန်ဒက်စ်လီဂါကို တန်းတက်လာပြီးနောက် နည်းပြ ရက်ဖ်ကက်တီမန်း လက်အောက်မှာ ထင်သလောက် မဆိုးတဲ့ခြေစွမ်းကို ပြသထားပြီး နောက်ဆုံးလိဂ်ပွဲမှာ ဟမ်းဘတ်ကို ၁-၀ ဂိုးနဲ့ အနိုင်ရခဲ့ပါတယ်။ အဲဒီပွဲမှာ ရာယန်ဖိလစ်ပီ က နောက်ကျပွဲချိန်မှာ အနိုင်ဂိုးသွင်းယူခဲ့တာကြောင့် အသင်းရဲ့ ယုံကြည်မှုက တိုးတက်လာနေပါတယ်။ စတုဂတ်ကတော့ ပြီးခဲ့တဲ့အောက်တိုဘာ ၁၀ ရက်မှာ ပါဒါဘွန်းကို ၂-၀ ဂိုးနဲ့ အနိုင်ယူခဲ့ပေမယ့် နောက်ဆုံးလိဂ်ပွဲမှာ မိုချင်ဂလာဘတ်ကို ၃-၂ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် လတ်တလောခြေစွမ်း မတည်ငြိမ်သေးပါဘူး။ နည်းပြ ဆီဘက်စတီယန်ဟိုးနက်စ် ရဲ့အသင်းဟာ အဝေးကွင်းမှာလည်း ရှုံးပွဲများနေပြီး ပါဒါဘွန်းရဲ့ အိမ်ကွင်းဖိအားပေးနိုင်မှုကို ထိန်းချုပ်ဖို့ ခက်ခဲလာနိုင်ပါတယ်။ ဒါပေမဲ့ စတုဂတ်မှာ ဒီမီရိုဗစ် လို ဂိုးသွင်းနိုင်တဲ့ တိုက်စစ်မှူးရှိနေသလို တစ်ဦးချင်းအရည်အသွေးနဲ့ ပွဲအတွေ့အကြုံပိုင်းမှာလည်း ပါဒါဘွန်းထက် အသာစီးရနိုင်ပါတယ်။ ပါဒါဘွန်းက လတ်တလောခြေစွမ်းပိုတည်ငြိမ်ပေမယ့် စတုဂတ်ရဲ့ တိုက်စစ်အင်အားနဲ့ အရေးကြီးတဲ့ပွဲတွေမှာ ပွဲအခြေအနေကို ပြောင်းလဲနိုင်စွမ်းကြောင့် စတုဂတ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 13,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Hamburg SV",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884755"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Werder Bremen",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884766"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "VfB Stuttgart",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884773"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884782"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Borussia Dortmund",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884799"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Borussia Mönchengladbach",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884761"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Hamburg SV",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884767"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "SC Paderborn 07",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884773"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Borussia Dortmund",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884789"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884797"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 7,
+        "wins": 2,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 6,
+        "goalsAgainst": 9,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 15,
+        "played": 7,
+        "wins": 2,
+        "draws": 0,
+        "losses": 5,
+        "goalsFor": 10,
+        "goalsAgainst": 13,
+        "points": 6
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917032",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.1",
+      "myanmarOdds": {
+        "upperTeam": "စတုဂတ်",
+        "bodyOdds": "1-15",
+        "goalTotalOdds": "3-15",
+        "currentBodyOdds": "1=",
+        "currentGoalTotalOdds": "3-45"
+      },
+      "espnMatchId": "401917032",
+      "homeOdds": "5.25",
+      "drawOdds": "4.60",
+      "awayOdds": "1.54",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917032",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "0-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917032",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-14",
+      "pdfRow": 14,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမနီ ပိုကယ်ဖလား",
+      "home": "Jeddeloh II",
+      "away": "Hertha Berlin",
+      "homeDisplay": "ဂျက်ဒယ်လို",
+      "awayDisplay": "ဟာသာဘာလင်",
+      "sourceKickoff": "23:30",
+      "kickoffCalendarDate": "2026-10-28",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-28 23:30 MMT",
+      "kickoffUtc": "2026-10-28T17:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဂျက်ဒယ်လိုဟာ ဂျာမန်စတုတ္ထတန်းလိဂ်မှာ ကစားနေတဲ့အသင်းဖြစ်ပေမယ့် ဒီဖလားပြိုင်ပွဲ ပထမအဆင့်မှာ ဒုတိယတန်းအသင်း ဟိုက်ဒင်ဟိုင်းကို ၅-၂ ဂိုးနဲ့ အနိုင်ယူခဲ့တာကြောင့် အသင်းကြီးတွေကို အခက်တွေ့စေနိုင်တဲ့ အရည်အသွေးရှိနေပါတယ်။ ဒါပေမဲ့ လိဂ်ပြိုင်ပွဲမှာ ခံစစ်အားနည်းနေပြီး ၁၅ ပွဲမှာ ၃၇ ဂိုးအထိ ပေးထားရသလို နည်းပြအပြောင်းအလဲကိုလည်း မကြာသေးခင်က ပြုလုပ်ထားပါတယ်။ နည်းပြသစ် ဘူရတ်ဘာဟာ လက်အောက်မှာ ပထမဆုံးပွဲကို သရေကျခဲ့ပေမယ့် အသင်းရဲ့ ခံစစ်တည်ငြိမ်မှုကို ချက်ချင်းပြန်လည်တည်ဆောက်နိုင်ဖို့တော့ မလွယ်ပါဘူး။ ဟာသာဘာလင်ကတော့ ဘွန်ဒက်စ်လီဂါ ၂ မှာ အမှတ်ပေးဇယားဦးဆောင်နေပြီး ပြိုင်ပွဲစုံ ဆယ်ပွဲမှာ ကိုးပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ရှုံးပွဲမရှိသေးတာကြောင့် ခြေစွမ်းက အလွန်ကောင်းမွန်နေပါတယ်။ နောက်ဆုံး ဘီလီဖဲလ်ကို ၁-၀ ဂိုးနဲ့ အနိုင်ရခဲ့တဲ့ပွဲမှာ ဂျိုဆစ်ဘရီကာလို က အရေးပါတဲ့ အနိုင်ဂိုးသွင်းယူခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်နိုင်မှုကိုလည်း ယုံကြည်ရပါတယ်။ ဂျက်ဒယ်လိုဟာ အိမ်ကွင်းပရိသတ်အားပေးမှုနဲ့ ကြိုးစားကစားလာနိုင်ပေမယ့် လူစာရင်းအရည်အသွေး၊ လက်ရှိခြေစွမ်းနဲ့ ခံစစ်တည်ငြိမ်မှုမှာ သိသိသာသာ ပိုမိုသာလွန်နေတဲ့ ဟာသာဘာလင်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 14,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": true,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Eimsbütteler TV",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-10-24/eimsbutteler-tv-vs-ssv-jeddeloh-ii/4379900"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Werder Bremen II",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-10-17/ssv-jeddeloh-ii-vs-sv-werder-bremen-ii/4379891"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "VfB Lübeck",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-10-12/ssv-jeddeloh-ii-vs-vfb-lubeck/4379885"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "SV Drochtersen/Assel",
+          "teamGoals": 2,
+          "opponentGoals": 7,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-10-03/sv-drochtersen-assel-vs-ssv-jeddeloh-ii/4379871"
+        },
+        {
+          "date": "2026-09-26",
+          "opponent": "Eintracht Norderstedt",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "Regionalliga Nord",
+          "sourceUrl": "https://globalsportsarchive.com/en/soccer/match/2026-09-26/ssv-jeddeloh-ii-vs-fc-eintracht-norderstedt-03/4379869"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Arminia Bielefeld",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885081"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Holstein Kiel",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885087"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "SpVgg Greuther Fürth",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885098"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Dynamo Dresden",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885106"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "VfL Osnabruck",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885111"
+        }
+      ],
+      "homeStanding": null,
+      "awayStanding": {
+        "position": 1,
+        "played": 9,
+        "wins": 8,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 20,
+        "goalsAgainst": 8,
+        "points": 25
+      },
+      "homeCrestUrl": "https://www.ssv-regionalliga.de/files/cto_layout/img/vereinswappen/SSV-JeddelohII-Logo21_608x383_RGB.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/129.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916919",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.dfb_pokal",
+      "myanmarOdds": {
+        "upperTeam": "ဟာသာဘာလင်",
+        "bodyOdds": "3-50",
+        "goalTotalOdds": "5+50",
+        "currentBodyOdds": "3-85",
+        "currentGoalTotalOdds": "5+55"
+      },
+      "specialChoiceRank": 2,
+      "specialAnalysisParagraphs": [
+        "ဂျက်ဒယ်လိုဟာ ဂျာမန်စတုတ္ထတန်းလိဂ်မှာ ကစားနေတဲ့အသင်းဖြစ်ပေမယ့် ဒီဖလားပြိုင်ပွဲ ပထမအဆင့်မှာ ဒုတိယတန်းအသင်း ဟိုက်ဒင်ဟိုင်းကို ၅-၂ ဂိုးနဲ့ အနိုင်ယူခဲ့တာကြောင့် အသင်းကြီးတွေကို အခက်တွေ့စေနိုင်တဲ့ အရည်အသွေးရှိနေပါတယ်။ ဒါပေမဲ့ လိဂ်ပြိုင်ပွဲမှာ ခံစစ်အားနည်းနေပြီး ၁၅ ပွဲမှာ ၃၇ ဂိုးအထိ ပေးထားရသလို နည်းပြအပြောင်းအလဲကိုလည်း မကြာသေးခင်က ပြုလုပ်ထားပါတယ်။ နည်းပြသစ် ဘူရတ်ဘာဟာ လက်အောက်မှာ ပထမဆုံးပွဲကို သရေကျခဲ့ပေမယ့် အသင်းရဲ့ ခံစစ်တည်ငြိမ်မှုကို ချက်ချင်းပြန်လည်တည်ဆောက်နိုင်ဖို့တော့ မလွယ်ပါဘူး။ ဟာသာဘာလင်ကတော့ ဘွန်ဒက်စ်လီဂါ ၂ မှာ အမှတ်ပေးဇယားဦးဆောင်နေပြီး ပြိုင်ပွဲစုံ ဆယ်ပွဲမှာ ကိုးပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ရှုံးပွဲမရှိသေးတာကြောင့် ခြေစွမ်းက အလွန်ကောင်းမွန်နေပါတယ်။ နောက်ဆုံး ဘီလီဖဲလ်ကို ၁-၀ ဂိုးနဲ့ အနိုင်ရခဲ့တဲ့ပွဲမှာ ဂျိုဆစ်ဘရီကာလို က အရေးပါတဲ့ အနိုင်ဂိုးသွင်းယူခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်နိုင်မှုကိုလည်း ယုံကြည်ရပါတယ်။ ဂျက်ဒယ်လိုဟာ အိမ်ကွင်းပရိသတ်အားပေးမှုနဲ့ ကြိုးစားကစားလာနိုင်ပေမယ့် လူစာရင်းအရည်အသွေး၊ လက်ရှိခြေစွမ်းနဲ့ ခံစစ်တည်ငြိမ်မှုမှာ သိသိသာသာ ပိုမိုသာလွန်နေတဲ့",
+        "ဟာသာဘာလင်ကို ရွေးချယ်ပါတယ်။"
+      ],
+      "specialPreparedDate": "2026-10-28",
+      "espnMatchId": "401916919",
+      "homeOdds": "23.00",
+      "drawOdds": "17.00",
+      "awayOdds": "1.05",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916919",
+      "oddsVerifiedDate": "2026-10-28",
+      "formSourceUrl": "https://globalsportsarchive.com/en/soccer/team/ssv-jeddeloh-ii/31581/",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916919",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-15",
+      "pdfRow": 15,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမနီ ပိုကယ်ဖလား",
+      "home": "Bayer Leverkusen",
+      "away": "1. FC Nurnberg",
+      "homeDisplay": "လေဗာကူဆင်",
+      "awayDisplay": "နုရင်ဘတ်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-2",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "လေဗာကူဆင်ဟာ ဒီရာသီ ဘွန်ဒက်စ်လီဂါမှာ အဖွင့်ပွဲရှုံးနိမ့်ခဲ့ပေမယ့် နောက်ပိုင်း ပြိုင်ပွဲစုံ ရှစ်ပွဲဆက် ရှုံးပွဲမရှိတဲ့ ခြေစွမ်းကို ပြသနိုင်ခဲ့ပြီး နည်းပြ ကားလက်စ်မာတီနက်ဇ် ရဲ့ ကစားပုံက အသင်းအတွက် တဖြည်းဖြည်း အကျိုးရှိလာခဲ့ပါတယ်။ ဒါပေမဲ့ နောက်ဆုံး ဟော့ဖန်ဟိမ်းကို ၃-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့တာက ခံစစ်ပိုင်းမှာ ပြန်လည်ပြင်ဆင်ဖို့ လိုအပ်နေကြောင်း ပြသနေပါတယ်။ နုရင်ဘတ်ကတော့ ဘွန်ဒက်စ်လီဂါ ၂ မှာ အဆင့် ၂ နေရာမှာ ရပ်တည်နေပြီး နည်းပြ မီရိုစလက်ဗ်ကလိုဆေး လက်အောက်မှာ ခြေစွမ်းတည်ငြိမ်မှုရှိပေမယ့် နောက်ဆုံး ကိုင်ဇာစလော့တန်ကို ၁-၀ ဂိုးနဲ့ ရှုံးနိမ့်ထားပါတယ်။ ဖလားပထမအဆင့်မှာလည်း ဗစ်တိုးရီးယားကိုလုံးနဲ့ သရေကျခဲ့ပြီး ပင်နယ်တီအဆုံးအဖြတ်နဲ့သာ နောက်တစ်ဆင့်တက်နိုင်ခဲ့တာကြောင့် အဆင့်မြင့်အသင်းတွေကို ရင်ဆိုင်တဲ့အခါ အခက်တွေ့နိုင်ပါတယ်။ လေဗာကူဆင်ဘက်မှာ ဒဏ်ရာပြဿနာတချို့ ရှိနေပေမယ့် ပက်ထရစ်ရှစ်ခ် နဲ့ နာသန်တယ်လာ တို့လို တိုက်စစ်ကစားသမားတွေကို အသုံးပြုနိုင်သလို အိမ်ကွင်းမှာ ဘောလုံးပိုင်ဆိုင်မှုအသာစီးနဲ့ နုရင်ဘတ်ကို ဖိအားပေးနိုင်ဖို့ရှိနေပါတယ်။ နှစ်သင်းရဲ့ အသင်းအင်အားနဲ့ လိဂ်အဆင့်ကွာခြားချက်ကို ထည့်တွက်ပြီး လေဗာကူဆင်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 17,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884760"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "SC Freiburg",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884771"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Mainz",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884776"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "RB Leipzig",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884788"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "FC Augsburg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884795"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Kaiserslautern",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885080"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Energie Cottbus",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885084"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "VfL Wolfsburg",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885097"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Karlsruher SC",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885107"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Hannover 96",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885116"
+        }
+      ],
+      "homeStanding": {
+        "position": 4,
+        "played": 7,
+        "wins": 4,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 16,
+        "goalsAgainst": 12,
+        "points": 13
+      },
+      "awayStanding": {
+        "position": 2,
+        "played": 9,
+        "wins": 5,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 21,
+        "goalsAgainst": 12,
+        "points": 18
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/269.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917033",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.1",
+      "myanmarOdds": {
+        "upperTeam": "လေဗာကူဆင်",
+        "bodyOdds": "2-50",
+        "goalTotalOdds": "4+10",
+        "currentBodyOdds": "2-60",
+        "currentGoalTotalOdds": "4="
+      },
+      "espnMatchId": "401917033",
+      "homeOdds": "1.15",
+      "drawOdds": "8.00",
+      "awayOdds": "14.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917033",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "5-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917033",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-16",
+      "pdfRow": 16,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမနီ ပိုကယ်ဖလား",
+      "home": "Bayern Munich",
+      "away": "Magdeburg",
+      "homeDisplay": "ဘိုင်ယန်မြူးနစ်",
+      "awayDisplay": "မက်ဂဒီဘတ်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-3",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဘိုင်ယန်မြူးနစ်ဟာ ဒီရာသီ ဂျာမန်ဘွန်ဒက်စ်လီဂါမှာ အမှတ်ပေးဇယားကို ဦးဆောင်နေပြီး လက်ရှိရာသီ လိဂ်ရှုံးပွဲမရှိသေးသလို နောက်ဆုံး ဖရိုင်းဘတ်ကို အဝေးကွင်းမှာ ၃-၁ ဂိုးနဲ့ အနိုင်ယူခဲ့တာကြောင့် အသင်းရဲ့ အင်အားကို ထပ်မံပြသနိုင်ခဲ့ပါတယ်။ နည်းပြ ဗင်းဆင့်ကွန်ပနီ နဲ့ အဓိကကစားသမားအချို့ မပါဝင်နိုင်တဲ့ အခြေအနေမှာတောင် အနိုင်ရရှိခဲ့တာက ဘိုင်ယန်ရဲ့ လူစာရင်းအင်အားနဲ့ အသင်းလိုက်ကစားပုံကို သက်သေပြနေပါတယ်။ အထူးသဖြင့် ဟယ်ရီကိန်း ရဲ့ ဂိုးသွင်းစွမ်းဆောင်ရည်နဲ့ ရှေ့တန်းက ဖိအားပေးနိုင်မှုကြောင့် မက်ဂဒီဘတ်ခံစစ်အတွက် ခက်ခဲတဲ့ပွဲ ဖြစ်လာဖို့ရှိနေပါတယ်။ ဒါပေမဲ့ မက်ဂဒီဘတ်ကလည်း ဒီရာသီ ဘွန်ဒက်စ်လီဂါ ၂ မှာ လတ်တလောခြေစွမ်းကောင်းနေပြီး နောက်ဆုံး ကားလ်စ်ရူဟာကို ၆-၁ ဂိုးနဲ့ အနိုင်ယူခဲ့တာကြောင့် တိုက်စစ်ပိုင်းမှာ ယုံကြည်မှုအပြည့်ရှိနေပါတယ်။ မက်ဂဒီဘတ်ရဲ့ တိုက်စစ်အင်အားကို လျှော့တွက်လို့မရပေမယ့် ဘိုင်ယန်က အိမ်ကွင်းမှာ ဘောလုံးပိုင်ဆိုင်မှုကို ထိန်းချုပ်ပြီး တိုက်စစ်အခွင့်အရေးတွေ ဆက်တိုက်ဖန်တီးနိုင်တဲ့အသင်း ဖြစ်ပါတယ်။ နွိုင်ယာ နဲ့ မူဆီယာလာ တို့ မပါဝင်နိုင်ပေမယ့် ဂနာဘရီ နဲ့ လန်းနတ်ကားလ် တို့လို အခြားရွေးချယ်စရာတွေ ရှိနေသေးတာကြောင့် နှစ်သင်းရဲ့ အသင်းအင်အား၊ လတ်တလောခြေစွမ်းနဲ့ အိမ်ကွင်းအားသာချက်ကို နှိုင်းယှဉ်ပြီး ဘိုင်ယန်မြူးနစ်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 18,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "SC Freiburg",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884759"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "RB Leipzig",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884772"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "FC Augsburg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884777"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "1. FC Union Berlin",
+          "teamGoals": 7,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884790"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "SV Elversberg",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884791"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Karlsruher SC",
+          "teamGoals": 6,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885077"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Dynamo Dresden",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885088"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Hannover 96",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885095"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "SpVgg Greuther Fürth",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885103"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Kaiserslautern",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885113"
+        }
+      ],
+      "homeStanding": {
+        "position": 1,
+        "played": 7,
+        "wins": 5,
+        "draws": 2,
+        "losses": 0,
+        "goalsFor": 25,
+        "goalsAgainst": 6,
+        "points": 17
+      },
+      "awayStanding": {
+        "position": 5,
+        "played": 9,
+        "wins": 5,
+        "draws": 1,
+        "losses": 3,
+        "goalsFor": 20,
+        "goalsAgainst": 12,
+        "points": 16
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/10382.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917035",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.1",
+      "myanmarOdds": {
+        "upperTeam": "ဘိုင်ယန်မြူးနစ်",
+        "bodyOdds": "3-65",
+        "goalTotalOdds": "4-90",
+        "currentBodyOdds": "3-95",
+        "currentGoalTotalOdds": "5+85"
+      },
+      "espnMatchId": "401917035",
+      "homeOdds": "1.03",
+      "drawOdds": "18.00",
+      "awayOdds": "31.00",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917035",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "6-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917035",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-17",
+      "pdfRow": 17,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမနီ ပိုကယ်ဖလား",
+      "home": "Hannover 96",
+      "away": "Kaiserslautern",
+      "homeDisplay": "ဟန်နိုဗာ",
+      "awayDisplay": "ကိုင်ဇာစလော့တန်",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-3",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဟန်နိုဗာဟာ ဒီရာသီ ဘွန်ဒက်စ်လီဂါ ၂ မှာ ကိုးပွဲကစားပြီး နှစ်ပွဲသာ အနိုင်ရထားတာကြောင့် အမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရုန်းကန်နေရပါတယ်။ နည်းပြ ဆန်ဒရိုဝက်ဂ်နာ ရဲ့အသင်းဟာ ဖလားပထမအဆင့်မှာ ဟဲမလင်ဂန်ကို ၉-၁ ဂိုးနဲ့ အနိုင်ရခဲ့ပေမယ့် လိဂ်ပြိုင်ပွဲမှာတော့ နောက်ဆုံးသုံးပွဲဆက် နိုင်ပွဲမရှိသလို နောက်ဆုံး ဘရောင်ရှ်ဝိုင်းကိုလည်း ၂-၀ ဂိုးနဲ့ ရှုံးနိမ့်ခဲ့တာကြောင့် တိုက်စစ်ပိုင်းက အခွင့်အရေးအသုံးချနိုင်ဖို့ လိုအပ်နေပါတယ်။ ကိုင်ဇာစလော့တန်ကတော့ ကိုးပွဲကစားပြီး ငါးပွဲနိုင်၊ သုံးပွဲသရေ၊ တစ်ပွဲရှုံးနဲ့ အဆင့် ၃ နေရာမှာ ရပ်တည်နေသလို ပေးဂိုးလေးဂိုးသာရှိတဲ့ ခံစစ်ကြောင့် ဟန်နိုဗာထက် ပိုမိုတည်ငြိမ်နေပါတယ်။ အထူးသဖြင့် နောက်ဆုံးလိဂ်လေးပွဲဆက် ပေးဂိုးမရှိခဲ့သလို နုရင်ဘတ်ကိုလည်း ၁-၀ ဂိုးနဲ့ အနိုင်ရခဲ့တာကြောင့် ကိုင်ဇာစလော့တန်ရဲ့ ခံစစ်စုဖွဲ့မှုကို အလွယ်တကူ ဖြတ်ကျော်နိုင်ဖို့ မလွယ်ပါဘူး။ ဟန်နိုဗာက အိမ်ကွင်းမှာ ပိုမိုအားကောင်းနိုင်ပေမယ့် ကိုင်ဇာစလော့တန်ရဲ့ ခံစစ်တည်ငြိမ်မှု၊ လတ်တလောရလဒ်ကောင်းတွေကြောင့် ကိုင်ဇာစလော့တန်ကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 16,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "TSV Eintracht Braunschweig",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885076"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "St. Pauli",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885091"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "1. FC Magdeburg",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885095"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "VfL Bochum",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885109"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "1. FC Nürnberg",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885116"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "1. FC Nürnberg",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885080"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "VfL Bochum",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885090"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "1. FC Heidenheim 1846",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885100"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "TSV Eintracht Braunschweig",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885108"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "1. FC Magdeburg",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885113"
+        }
+      ],
+      "homeStanding": {
+        "position": 16,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 8,
+        "goalsAgainst": 15,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 3,
+        "played": 9,
+        "wins": 5,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 9,
+        "goalsAgainst": 4,
+        "points": 18
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2428.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/130.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916922",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.2",
+      "myanmarOdds": {
+        "upperTeam": "ဟန်နိုဗာ",
+        "bodyOdds": "-35",
+        "goalTotalOdds": "3=",
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "3+5"
+      },
+      "espnMatchId": "401916922",
+      "homeOdds": "2.30",
+      "drawOdds": "3.70",
+      "awayOdds": "2.80",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401916922",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401916922",
+      "finalStatus": "STATUS_FULL_TIME"
+    },
+    {
+      "fixtureId": "fc-20261028-18",
+      "pdfRow": 18,
+      "league": "DFB-Pokal",
+      "leagueDisplay": "ဂျာမနီ ပိုကယ်ဖလား",
+      "home": "Holstein Kiel",
+      "away": "Hoffenheim",
+      "homeDisplay": "ဟိုလ်စတိန်းကီးလ်",
+      "awayDisplay": "ဟော့ဖန်ဟိမ်း",
+      "sourceKickoff": "02:15",
+      "kickoffCalendarDate": "2026-10-29",
+      "nightEditorialDate": "2026-10-28",
+      "kickoffYangon": "2026-10-29 02:15 MMT",
+      "kickoffUtc": "2026-10-28T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "28.pdf internet prediction, not final result",
+      "dailyPreviewText": "ဟိုလ်စတိန်းကီးလ်ဟာ ဒီရာသီ ဘွန်ဒက်စ်လီဂါ ၂ မှာ ရာသီအစပိုင်းက ရလဒ်တွေ မကောင်းခဲ့ပေမယ့် နောက်ဆုံးပွဲမှာ ဒရက်စ်ဒင်ကို ၃-၀ ဂိုးနဲ့ အနိုင်ရရှိခဲ့တာကြောင့် ယုံကြည်မှုတွေ ပြန်လည်တိုးတက်လာပါတယ်။ အဲဒီပွဲမှာ ဖီးလ်ဟာရက်စ် နဲ့ ဂျော်ဂျီကဗီလီတိုင်ယာ တို့ ဂိုးသွင်းနိုင်ခဲ့တာကြောင့် တိုက်စစ်ပိုင်းမှာလည်း တိုးတက်မှုရှိလာပါတယ်။ ဟော့ဖန်ဟိမ်းကတော့ ဘွန်ဒက်စ်လီဂါမှာ နောက်ဆုံးသုံးပွဲဆက် အနိုင်ရရှိထားသလို လေဗာကူဆင်ကိုလည်း ၃-၀ ဂိုးနဲ့ အနိုင်ယူခဲ့တာကြောင့် ခြေစွမ်းက အလွန်ကောင်းမွန်နေပါတယ်။ နည်းပြ ခရစ္စတီယန်အီလ်ဇာ ရဲ့အသင်းဟာ ဖလားပထမအဆင့်မှာ အာအူးကို ၄-၀ ဂိုးနဲ့ အနိုင်ရထားပြီး ခရာမာရစ် နဲ့ မိုးစတက် တို့လို ဂိုးရနိုင်တဲ့ ကစားသမားတွေကို အသုံးပြုနိုင်ပါတယ်။ ဟိုလ်စတိန်းကီးလ်က အိမ်ကွင်းမှာ တိုက်စစ်ကစားပုံကောင်းလာပေမယ့် ဟော့ဖန်ဟိမ်းရဲ့ လတ်တလောအနိုင်ရရှိမှုတွေ၊ အမြင့်ဆုံးလိဂ်အတွေ့အကြုံနဲ့ တိုက်စစ်အဆုံးသတ်နိုင်မှုကို နှိုင်းယှဉ်ကြည့်ရင် ဟော့ဖန်ဟိမ်းကို ရွေးချယ်ပါတယ်။",
+      "ownerSourceArticleNumber": 15,
+      "previewJournalist": {
+        "status": "owner_approved_published",
+        "source": "Pasted markdown(2).md"
+      },
+      "specialChoice": false,
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Dynamo Dresden",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885078"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Hertha Berlin",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885087"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "TSV Eintracht Braunschweig",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885094"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "VfL Osnabruck",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885105"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "1. FC Heidenheim 1846",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German 2. Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885118"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884760"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Borussia Mönchengladbach",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884768"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Hamburg SV",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884779"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "SC Paderborn 07",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884782"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "VfB Stuttgart",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "2026-27 German Bundesliga",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884797"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 9,
+        "wins": 1,
+        "draws": 5,
+        "losses": 3,
+        "goalsFor": 10,
+        "goalsAgainst": 11,
+        "points": 8
+      },
+      "awayStanding": {
+        "position": 10,
+        "played": 7,
+        "wins": 3,
+        "draws": 0,
+        "losses": 4,
+        "goalsFor": 14,
+        "goalsAgainst": 14,
+        "points": 9
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7884.png",
+      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+      "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2061.png",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917034",
+      "standingsSourceUrl": "https://www.espn.com/soccer/standings/_/league/ger.2",
+      "myanmarOdds": {
+        "upperTeam": "ဟော့ဖန်ဟိမ်း",
+        "bodyOdds": "1-40",
+        "goalTotalOdds": "3-100",
+        "currentBodyOdds": "1-40",
+        "currentGoalTotalOdds": "4+90"
+      },
+      "espnMatchId": "401917034",
+      "homeOdds": "5.50",
+      "drawOdds": "5.00",
+      "awayOdds": "1.48",
+      "oddsProvider": "DraftKings",
+      "oddsSourceUrl": "https://www.espn.com/soccer/odds/_/gameId/401917034",
+      "oddsVerifiedDate": "2026-10-28",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917034",
+      "finalStatus": "STATUS_FINAL_PEN"
+    }
+  ],
+  "updateStatus": "partial",
+  "sourceManifest": {
+    "files": [
+      {
+        "name": "28.pdf",
+        "sha256": "f0b54e80d19646ded925274c74a80aa8ecdd53e57384353d61d6b443418aef79"
+      },
+      {
+        "name": "Pasted markdown(2).md",
+        "sha256": "ed450e5f286c6d31d80207d44fec1ab4ddff9adbb9630b5845c4a1a183f36fc4"
+      }
+    ]
+  },
+  "noFixturesLeagues": [],
+  "researchVerifiedDate": "2026-10-28",
+  "currentOddsSourceFile": "28 စျေး.pdf",
+  "archivedDate": "2026-10-29",
+  "archiveStatus": {
+    "verifiedFinished": 18,
+    "pending": 0,
+    "note": "Final-score statuses sourced independently from ESPN event scoreboard; PDF predictions never used as FT."
+  }
+}
