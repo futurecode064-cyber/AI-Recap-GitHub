@@ -178,7 +178,7 @@ android {
 }
 FC_RELEASE_SIGNING
 """
-    script=script.replace("gradle --no-daemon :app:assembleDebug",signing_patch+"\\ngradle --no-daemon :app:assembleRelease",1)
+    script=script.replace("gradle --no-daemon :app:assembleDebug",signing_patch+"\ngradle --no-daemon :app:assembleRelease",1)
     script=script.replace("app/build/outputs/apk/debug/app-debug.apk","app/build/outputs/apk/release/app-release.apk")
 
 out=Path("/tmp/football_vnext_"+brand+".sh")
