@@ -1,0 +1,72 @@
+name: Publish Oct 29 Football Daily with Genuine Crests and V7 Guard
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/publish-20261029-with-crest-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: fc-football-20261029-once
+  cancel-in-progress: false
+jobs:
+  source-and-asset-gate:
+    if: github.repository == 'futurecode064-cyber/AI-Recap-GitHub'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout active production branch
+        uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          persist-credentials: true
+          fetch-depth: 2
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install crest validator
+        run: python -m pip install --quiet Pillow
+      - name: Validate and cache all genuine team and league crest PNG assets
+        run: python football-daily/scripts/prepare_20261029_release.py
+      - name: Strict source and cross-file V7 package guard
+        run: python football-daily/scripts/daily_package_guard.py --root football-daily --date 2026-10-29 --special-count 2
+      - name: Browser JS syntax
+        run: |
+          node --check football-daily/main-export-logos.js
+          node --check football-daily/brand-export-data.js
+          node --check football-daily/app.js
+          node --check football-daily/canvas-image-kit.js
+      - name: Source and crest integrity before pushing live
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('football-daily')
+          j=json.loads((root/'data/today.json').read_text(encoding='utf-8'))
+          assert j['reportDate']=='2026-10-29' and len(j['matches'])==15
+          a=root/'assets/brand-export-teams'
+          maps=json.loads((root/'assets/brand-export-teams/sources.json').read_text(encoding='utf-8'))
+          # Dynamic map update is written in native JS; each source must have a same-origin cached PNG.
+          for m in j['matches']:
+              for side in ('home','away'):
+                  import hashlib
+                  url=m[side+'CrestUrl']
+                  path=a/(hashlib.sha256(url.encode('utf-8')).hexdigest()[:16]+'.png')
+                  assert path.is_file() and path.stat().st_size>120,(m['fixtureId'],side,url)
+          assert sum(m['specialChoice'] is True for m in j['matches'])==2
+          PY
+      - name: Publish one coherent release commit, only after every gate succeeds
+        run: |
+          git config user.name 'future-code-daily-release[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add football-daily/data/today.json football-daily/data/odds/2026-10-29.json football-daily/data/tips/2026-10-29.json football-daily/data/news/latest.json football-daily/data/research/2026-10-29-release-preflight.json football-daily/assets/brand-export-teams football-daily/assets/league-logos football-daily/main-export-logos.js football-daily/brand-export-data.js
+          git diff --cached --stat
+          git diff --cached --quiet && { echo 'No changes to publish'; exit 0; }
+          git commit -m 'Publish verified 29 Oct football daily: 15 matches 2 choices 10 news and genuine PNG crests'
+          git pull --rebase origin football-daily-render
+          git push origin HEAD:football-daily-render
+      - name: Final commit receipt
+        run: |
+          git rev-parse HEAD
+          git status --porcelain
