@@ -1,0 +1,9 @@
+/* Football APK version update section: isolated from match controls and print exports. */
+.fc-apk-update-box{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:12px 0 18px;padding:15px 18px;border:1px solid var(--accent,#d6a74c);border-radius:14px;background:linear-gradient(120deg,rgba(210,165,65,.14),rgba(14,25,39,.13));box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.fc-apk-update-box .fc-apk-update-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:0 0 auto;min-height:47px;padding:12px 17px;border:1px solid var(--accent,#f3c76a);border-radius:10px;text-decoration:none;font-weight:850;line-height:1.5;background:var(--accent,#e6bd5f);color:#171d23;box-shadow:0 3px 8px rgba(0,0,0,.13)}
+.fc-apk-update-box .fc-apk-update-button:hover,.fc-apk-update-box .fc-apk-update-button:focus-visible{filter:brightness(1.09);outline:2px solid currentColor;outline-offset:2px}
+.fc-apk-update-box .fc-apk-update-details{flex:1 1 240px;min-width:0}
+.fc-apk-update-box .fc-apk-update-label{display:block;color:inherit;font-weight:800;font-size:15px;line-height:1.65}
+.fc-apk-update-box .fc-apk-update-note{color:inherit;opacity:.93;font-size:12px;margin:4px 0 0;line-height:1.8}
+.fc-apk-install-note{font-size:13px;line-height:1.85;margin:12px 0 14px;padding:12px 14px;border:1px solid var(--border,#ad8a47);border-radius:10px;background:rgba(180,128,37,.12);color:inherit}
+@media(max-width:640px){.fc-apk-update-box{padding:13px;margin:12px 0}.fc-apk-update-box .fc-apk-update-button{width:100%}.fc-apk-update-box .fc-apk-update-details{flex-basis:100%}}
