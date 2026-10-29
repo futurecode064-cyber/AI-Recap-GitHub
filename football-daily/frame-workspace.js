@@ -136,14 +136,29 @@ function showList(){
  }
  $("frameCount").textContent=String(host.childElementCount);
 }
-function realPreview(id){
- const w=home.contentWindow,sel=w.document.getElementById("fcpFrame"),c=w.document.getElementById("fcpPreview");
- if(!sel||!c||!id)return;
- sel.value=id;sel.dispatchEvent(new w.Event("change"));
- setTimeout(()=>{if(currentId!==id||isNew)return;try{
-  const url=c.toDataURL("image/png");if(url.length<6000)return;
-  $("previewImage").src=url;$("previewImage").hidden=false;$("previewMock").hidden=true;
- }catch(e){console.warn("Frame preview fallback",e);}},900);
+let previewSequence=0,previewTimer=0;
+function realPreview(){
+ const token=++previewSequence,prior=frame(currentId),id=currentId,creating=isNew;
+ if(!prior&&!creating)return;
+ const w=home.contentWindow,api=w?.FutureCodeProfessionalFrames;
+ if(!api?.renderSample)return;
+ const urls=[];
+ const config={...(prior||{id:"draft-preview",name:"Frame အသစ်",topImage:"",bottomImage:"",builtin:false}),
+  color:goodColor($("frameColor").value),
+  top:Number($("frameTop").value)||0,bottom:Number($("frameBottom").value)||0,
+  fit:$("frameFit").value||"contain"};
+ for(const [id,key] of [["frameTopFile","topImage"],["frameBottomFile","bottomImage"]]){
+  const file=$(id).files[0];if(file){config[key]=URL.createObjectURL(file);urls.push(config[key]);}
+ }
+ api.renderSample(config).then(canvas=>{
+  if(token!==previewSequence||currentId!==id||isNew!==creating)return;
+  $("previewImage").src=canvas.toDataURL("image/png");
+  $("previewImage").hidden=false;$("previewMock").hidden=true;
+ }).catch(err=>{if(token===previewSequence){console.warn("Frame preview",err);status("Preview မရပါ — "+err.message,true);}})
+ .finally(()=>urls.forEach(url=>URL.revokeObjectURL(url)));
+}
+function schedulePreview(){
+ clearTimeout(previewTimer);previewTimer=setTimeout(realPreview,140);
 }
 function showEditor(){
  const f=frame(currentId);$("emptyFrame").hidden=!!f||isNew;$("editorForm").hidden=!(f||isNew);
@@ -164,7 +179,7 @@ function showEditor(){
  $("unassignFrame").hidden=!f;
  $("saveFrame").textContent=isNew?"＋ Frame အသစ် ထည့်သွင်းမယ်":"ပြင်ဆင်ချက် သိမ်းမယ်";
  const p=$("previewMock");p.style.setProperty("--frame-color",goodColor(v.color));p.querySelector(".sample-name").textContent=v.name;
- $("previewImage").hidden=true;p.hidden=false;if(f&&!isNew)realPreview(f.id);
+ $("previewImage").hidden=true;p.hidden=false;schedulePreview();
 }
 function select(id){currentId=id;isNew=false;showList();showEditor();}
 function renderList(){showList();}
@@ -174,10 +189,11 @@ async function compress(file){
  if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>8000000)throw Error("PNG/JPG/WEBP 8MB အောက်သာ ရွေးပါ။");
  const img=await createImageBitmap(file);
  if(img.width<250||img.height<40){img.close();throw Error("Banner အနည်းဆုံး 250×40 px ဖြစ်ရပါမည်။");}
- const ratio=Math.min(1,1800/img.width,500/img.height);
- const c=document.createElement("canvas");c.width=Math.max(1,Math.round(img.width*ratio));c.height=Math.max(1,Math.round(img.height*ratio));
- c.getContext("2d").drawImage(img,0,0,c.width,c.height);img.close();
- const data=c.toDataURL("image/webp",.77);if(data.length>=1500000)throw Error("ပုံအရွယ်အစား ကြီးလွန်းနေသည်။");return data;
+ img.close();
+ // FileReader stores the ORIGINAL file bytes. No 1800px downscale or lossy WebP pass.
+ const data=await new Promise((ok,bad)=>{const reader=new FileReader();reader.onload=()=>ok(reader.result);reader.onerror=()=>bad(reader.error||Error("မူရင်း Banner မဖတ်နိုင်ပါ"));reader.readAsDataURL(file);});
+ if(data.length>=12000000)throw Error("Banner data 12MB ကျော်နေပါသည်။");
+ return data;
 }
 async function submit(){
  if(working)return;
@@ -206,10 +222,10 @@ function resetBanner(field){const f=frame(currentId);if(!f)return;f[field]="";sa
 function exportState(){const text=JSON.stringify(state,null,2),blob=new Blob([text],{type:"application/json"});
  const a=document.createElement("a"),url=URL.createObjectURL(blob);a.href=url;a.download="future-code-frame-editor-backup.json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),20000);}
 async function importState(file){
- if(!file||file.size>14000000)throw Error("JSON Backup 14MB အောက်လိုပါသည်။");
+ if(!file||file.size>100000000)throw Error("JSON Backup 100MB အောက်လိုပါသည်။");
  const v=JSON.parse(await file.text());if(v?.version!==2||!Array.isArray(v.frames)||v.frames.length>130||!v.placements||!v.selected)throw Error("Frame Studio Backup v2 မဟုတ်ပါ။");
  const seen=new Set();
- for(const f of v.frames){if(!f||!(/^[a-z0-9-]{2,60}$/.test(f.id))||seen.has(f.id)||!/^#[\da-f]{6}$/i.test(f.color||"")||String(f.topImage||"").length>=1500000||String(f.bottomImage||"").length>=1500000)throw Error("Frame Backup မမှန်ပါ");seen.add(f.id);}
+ for(const f of v.frames){if(!f||!(/^[a-z0-9-]{2,60}$/.test(f.id))||seen.has(f.id)||!/^#[\da-f]{6}$/i.test(f.color||"")||String(f.topImage||"").length>=12000000||String(f.bottomImage||"").length>=12000000)throw Error("Frame Backup မမှန်ပါ");seen.add(f.id);}
  state=v;normalize();currentId=state.frames[0]?.id||"";await save("Backup Import ပြီးပါပြီ။");
 }
 function renderExportControls(){
@@ -267,7 +283,26 @@ $("navLibrary").onclick=()=>tab("library");$("navDownloads").onclick=()=>tab("do
 $("search").oninput=renderList;$("librarySection").onchange=renderList;
  $("scopeAll").onclick=()=>{$("scopeChecks").querySelectorAll('input[type="checkbox"]').forEach(x=>x.checked=true);};
  $("scopeNone").onclick=()=>{$("scopeChecks").querySelectorAll('input[type="checkbox"]').forEach(x=>x.checked=false);};
- $("frameColor").oninput=()=>{$("previewMock").style.setProperty("--frame-color",goodColor($("frameColor").value));};
+ $("frameColor").oninput=()=>{$("previewMock").style.setProperty("--frame-color",goodColor($("frameColor").value));schedulePreview();};
+ for(const input of ["frameTop","frameBottom","frameFit"])$(input).addEventListener("input",schedulePreview);
+ async function selectedBanner(side){
+  const file=$(side==="top"?"frameTopFile":"frameBottomFile").files[0];
+  if(!file){schedulePreview();return;}
+  try{
+   if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>8000000)throw Error("PNG/JPG/WEBP 8MB အောက်သာ ရွေးပါ။");
+   const image=await createImageBitmap(file);
+   const w=image.width,h=image.height;image.close();
+   if(w<250||h<40)throw Error("Banner အနည်းဆုံး 250×40 px ဖြစ်ရပါမည်။");
+   const target=$(side==="top"?"frameTop":"frameBottom");
+   target.value=String(Math.min(360,Math.max(1,Math.round(1200*h/w))));
+   $(side==="top"?"topFileState":"bottomFileState").textContent=
+      "မူရင်းပုံ "+w+"×"+h+" px · "+(file.size/1048576).toFixed(2)+" MB · အမြင့် auto သတ်မှတ်ပြီး";
+   if(w<1200)status("Banner အကျယ် "+w+" px ဖြစ်နေသည်။ 1200 px သို့မဟုတ် ပိုကြီးသောပုံက ပိုကြည်ပါသည်။",true);
+   schedulePreview();
+  }catch(err){status(err.message,true);$(side==="top"?"frameTopFile":"frameBottomFile").value="";schedulePreview();}
+ }
+ $("frameTopFile").onchange=()=>selectedBanner("top");
+ $("frameBottomFile").onchange=()=>selectedBanner("bottom");
  $("frameName").oninput=()=>{
   const prior=frame(currentId),previous=prior?.name||"Frame အသစ်";
   const filename=$("frameDownloadName");
