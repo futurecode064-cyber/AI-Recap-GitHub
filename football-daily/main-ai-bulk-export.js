@@ -109,17 +109,19 @@
            left:140,right:215,contentTop:237,contentBottom:214,panel:"#074970"}
  });
  function drawOriginalArtwork(ctx,img,height,frame){
-  const w=1200,originalHeight=img.naturalHeight||img.height;
-  if(height<=originalHeight){
-   ctx.drawImage(img,0,0,w,originalHeight);
-   return;
-  }
-  // Lengthen ONLY a quiet middle strip when many fixtures need more space.
-  // The user's own header, watermark/logo and footer stay at original scale.
-  const y=frame.stretchY,extra=height-originalHeight;
-  ctx.drawImage(img,0,0,img.width,y,0,0,w,y);
-  ctx.drawImage(img,0,y,img.width,1,0,y,w,extra);
-  ctx.drawImage(img,0,y,img.width,originalHeight-y,0,y+extra,w,originalHeight-y);
+  // Preserve the source artwork's natural proportions. Stretching a file of
+  // arbitrary native width directly to 1200 x its old HEIGHT distorted banners.
+  const sw=img.naturalWidth||img.width,sh=img.naturalHeight||img.height;
+  if(!(sw>0&&sh>0))throw Error("Invalid source artwork");
+  const w=1200,scale=w/sw,baseH=sh*scale;
+  if(height<=baseH+1){ctx.drawImage(img,0,0,w,baseH);return;}
+  // Only extend a quiet middle line; NEVER stretch the decorated top or footer.
+  const top=Math.min(Math.max(1,frame.stretchY),Math.floor(baseH-2));
+  const sourceY=top/scale;
+  const extra=height-baseH;
+  ctx.drawImage(img,0,0,sw,sourceY,0,0,w,top);
+  ctx.drawImage(img,0,sourceY,sw,Math.min(1,sh-sourceY),0,top,w,extra+1);
+  ctx.drawImage(img,0,sourceY,sw,sh-sourceY,0,top+extra,w,baseH-top);
  }
  async function brandCanvas(source,id,opts={}){
   const frame=AI_FRAMES[id];
@@ -128,17 +130,19 @@
   const original=await loadImage(url,new Map(),24000);
   if(!original){console.warn("AI branded frame image unavailable; using native score table fallback:",frame.asset);return source;}
   const targetW=1200,insideW=targetW-frame.left-frame.right;
-  // Brand header/footer in the uploaded poster replace our generic header/footer.
   const tableTop=HEADER,tableSourceH=source.height-HEADER-FOOTER;
   const tableH=Math.ceil(tableSourceH*insideW/WIDTH),stripH=62;
   const panelH=tableH+stripH;
-  const height=Math.max(original.naturalHeight||original.height,
-                        frame.contentTop+panelH+frame.contentBottom);
+  // Keep the original artwork's TOP BANNER and BOTTOM RIBBON unobstructed.
+  // Prior contentTop values were only ~14-20 px below banner bottoms.
+  const y=Math.max(frame.contentTop,frame.top+64),x=frame.left;
+  const bottomReserve=Math.max(frame.contentBottom,frame.bottom+45);
+  const nativeHeight=(original.naturalHeight||original.height)*targetW/(original.naturalWidth||original.width);
+  const height=Math.ceil(Math.max(nativeHeight,y+panelH+bottomReserve));
   const out=document.createElement("canvas");
   out.width=targetW;out.height=height;
   const ctx=out.getContext("2d");if(!ctx)throw Error("Frame canvas unavailable");
   drawOriginalArtwork(ctx,original,height,frame);
-  const x=frame.left,y=frame.contentTop;
   ctx.save();
   ctx.fillStyle=frame.panel;ctx.globalAlpha=.92;
   ctx.fillRect(x-5,y-5,insideW+10,panelH+10);
