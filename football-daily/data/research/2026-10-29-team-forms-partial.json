@@ -1,0 +1,1423 @@
+{
+  "reportDate": "2026-10-29",
+  "source": "ESPN site API team schedule 2026 season",
+  "teams": {
+    "eng.1:368": {
+      "team": "Everton",
+      "league": "eng.1",
+      "espnId": "368",
+      "lastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Arsenal",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878768"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Chelsea",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878771"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Hull City",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878774"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Ipswich Town",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878778"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879277"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/368/schedule?season=2026"
+    },
+    "eng.1:361": {
+      "team": "Newcastle United",
+      "league": "eng.1",
+      "espnId": "361",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Crystal Palace",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879254"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Aston Villa",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879258"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "Coventry City",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879267"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Hull City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879271"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Leeds United",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879280"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/361/schedule?season=2026"
+    },
+    "ita.1:4057": {
+      "team": "Frosinone",
+      "league": "ita.1",
+      "espnId": "4057",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Atalanta",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874972"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Sassuolo",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874959"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Napoli",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874754"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Como",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874752"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Genoa",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874991"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/teams/4057/schedule?season=2026"
+    },
+    "ita.1:113": {
+      "team": "Lecce",
+      "league": "ita.1",
+      "espnId": "113",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Juventus",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874772"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Udinese",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874771"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Bologna",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874776"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "AC Milan",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874944"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Monza",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874936"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/teams/113/schedule?season=2026"
+    },
+    "ita.1:109": {
+      "team": "Fiorentina",
+      "league": "ita.1",
+      "espnId": "109",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Internazionale",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875036"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Como",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874774"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Genoa",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874947"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Napoli",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874934"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Venezia",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874759"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/teams/109/schedule?season=2026"
+    },
+    "ita.1:105": {
+      "team": "Atalanta",
+      "league": "ita.1",
+      "espnId": "105",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Frosinone",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874972"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "AC Milan",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874978"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "Venezia",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875005"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Juventus",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874757"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Cagliari",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874979"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/teams/105/schedule?season=2026"
+    },
+    "swe.1:2495": {
+      "team": "Hammarby IF",
+      "league": "swe.1",
+      "espnId": "2495",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Mjällby AIF",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842854"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Halmstads BK",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842845"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Djurgården",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842837"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Degerfors IF",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842827"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "IF Brommapojkarna",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842821"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/2495/schedule?season=2026"
+    },
+    "swe.1:8547": {
+      "team": "IK Sirius",
+      "league": "swe.1",
+      "espnId": "8547",
+      "lastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "AIK",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842853"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "IF Elfsborg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842843"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "GAIS",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874016"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Örgryte IS",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874085"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Degerfors IF",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874021"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/8547/schedule?season=2026"
+    },
+    "swe.1:3052": {
+      "team": "Kalmar FF",
+      "league": "swe.1",
+      "espnId": "3052",
+      "lastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "IF Brommapojkarna",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842855"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Degerfors IF",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842846"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "Malmö FF",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874018"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "BK Häcken",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842831"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "IF Elfsborg",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842818"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/3052/schedule?season=2026"
+    },
+    "swe.1:8222": {
+      "team": "GAIS",
+      "league": "swe.1",
+      "espnId": "8222",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "IFK Göteborg",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842857"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Örgryte IS",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842849"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "IK Sirius",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874016"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Mjällby AIF",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842830"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Djurgården",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401873992"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/8222/schedule?season=2026"
+    },
+    "swe.1:131552": {
+      "team": "Örgryte IS",
+      "league": "swe.1",
+      "espnId": "131552",
+      "lastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Djurgården",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842850"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "GAIS",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842849"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "BK Häcken",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842836"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "IK Sirius",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874085"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Malmö FF",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842823"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/131552/schedule?season=2026"
+    },
+    "swe.1:20301": {
+      "team": "Mjällby AIF",
+      "league": "swe.1",
+      "espnId": "20301",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Hammarby IF",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842854"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Västerås SK",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842842"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Degerfors IF",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874087"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "GAIS",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842830"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "AIK",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "swe.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874083"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/20301/schedule?season=2026"
+    },
+    "den.1:572": {
+      "team": "FC Midtjylland",
+      "league": "den.1",
+      "espnId": "572",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Lyngby Boldklub",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874547"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Viborg FF",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874524"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "F.C. København",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874498"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Odense Boldklub",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874536"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Brøndby IF",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874539"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/den.1/teams/572/schedule?season=2026"
+    },
+    "den.1:11550": {
+      "team": "Odense Boldklub",
+      "league": "den.1",
+      "espnId": "11550",
+      "lastFive": [
+        {
+          "date": "2026-10-26",
+          "opponent": "F.C. København",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874531"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Brøndby IF",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874548"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "FC Nordsjælland",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874517"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "FC Midtjylland",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874536"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Randers FC",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "den.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874527"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/den.1/teams/11550/schedule?season=2026"
+    },
+    "por.1:2994": {
+      "team": "Braga",
+      "league": "por.1",
+      "espnId": "2994",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "C.D. Nacional",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885416"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Gil Vicente",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885480"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "Sporting CP",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885427"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Santa Clara",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885432"
+        },
+        {
+          "date": "2026-09-14",
+          "opponent": "Estoril",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885445"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams/2994/schedule?season=2026"
+    },
+    "por.1:12698": {
+      "team": "FC Famalicao",
+      "league": "por.1",
+      "espnId": "12698",
+      "lastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Rio Ave",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885415"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "Alverca",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885425"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "C.D. Nacional",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885434"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Sporting CP",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885443"
+        },
+        {
+          "date": "2026-09-05",
+          "opponent": "Estrela",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885455"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams/12698/schedule?season=2026"
+    },
+    "por.1:1929": {
+      "team": "Benfica",
+      "league": "por.1",
+      "espnId": "1929",
+      "lastFive": [
+        {
+          "date": "2026-10-26",
+          "opponent": "Santa Clara",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885414"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Vitória de Guimaraes",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885421"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "FC Porto",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885433"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Gil Vicente",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885439"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Moreirense",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885470"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams/1929/schedule?season=2026"
+    },
+    "por.1:3699": {
+      "team": "Gil Vicente",
+      "league": "por.1",
+      "espnId": "3699",
+      "lastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "FC Porto",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885417"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Braga",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885480"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "Moreirense",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885423"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Maritimo",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885435"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Benfica",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "por.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885439"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams/3699/schedule?season=2026"
+    },
+    "ksa.1:21829": {
+      "team": "Al Khaleej",
+      "league": "ksa.1",
+      "espnId": "21829",
+      "lastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Al Ahli",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900892"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Al Fateh",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900447"
+        },
+        {
+          "date": "2026-10-15",
+          "opponent": "Al Fayha",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900902"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Al Ettifaq",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900913"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Al Nassr",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900921"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/21829/schedule?season=2026"
+    },
+    "ksa.1:21964": {
+      "team": "Al Hazem",
+      "league": "ksa.1",
+      "espnId": "21964",
+      "lastFive": [
+        {
+          "date": "2026-10-22",
+          "opponent": "Al Fayha",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900891"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Al Hilal",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900896"
+        },
+        {
+          "date": "2026-10-15",
+          "opponent": "Al Fateh",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900904"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Neom SC",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900910"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Al Ahli",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900922"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/21964/schedule?season=2026"
+    },
+    "ksa.1:817": {
+      "team": "Al Nassr",
+      "league": "ksa.1",
+      "espnId": "817",
+      "lastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Al Faisaly",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900444"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "Neom SC",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900446"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "Al Diriyah",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900907"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Al Khaleej",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900921"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Abha",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900357"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/817/schedule?season=2026"
+    },
+    "ksa.1:22028": {
+      "team": "Al Kholood",
+      "league": "ksa.1",
+      "espnId": "22028",
+      "lastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Al Ettifaq",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900889"
+        },
+        {
+          "date": "2026-10-15",
+          "opponent": "Al Faisaly",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900450"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "Al Qadsiah",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900908"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Al Riyadh",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900919"
+        },
+        {
+          "date": "2026-09-09",
+          "opponent": "Al Shabab",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900359"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/22028/schedule?season=2026"
+    },
+    "ksa.1:21965": {
+      "team": "Al Riyadh",
+      "league": "ksa.1",
+      "espnId": "21965",
+      "lastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Al Taawoun",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900887"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "Al Diriyah",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900893"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Al Fayha",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900911"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Al Kholood",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900919"
+        },
+        {
+          "date": "2026-09-07",
+          "opponent": "Al Khaleej",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900365"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/21965/schedule?season=2026"
+    },
+    "ksa.1:22022": {
+      "team": "Al Qadsiah",
+      "league": "ksa.1",
+      "espnId": "22022",
+      "lastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Al Hilal",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900888"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "Al Taawoun",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900894"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Abha",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900901"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "Al Kholood",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900908"
+        },
+        {
+          "date": "2026-09-11",
+          "opponent": "Al Ettifaq",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ksa.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900920"
+        }
+      ],
+      "lastFiveStatus": "PASS",
+      "sourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/22022/schedule?season=2026"
+    }
+  },
+  "errors": []
+}
