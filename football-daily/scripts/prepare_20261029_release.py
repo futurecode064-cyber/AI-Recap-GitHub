@@ -24,7 +24,7 @@ for match in report['matches']:
   u=match.get(side+'CrestUrl')
   if not u or not u.startswith('https://'): raise RuntimeError('Missing authentic crest '+match['fixtureId']+' '+side)
   source_to_name.setdefault(u,set()).add(match[side])
-allowed={'a.espncdn.com','www.footylogos.com','static.bongda24h.vn','r2.thesportsdb.com','assets.football-logos.cc','www.ligaportugal.pt'}
+allowed={'a.espncdn.com','www.footylogos.com','static.bongda24h.vn','r2.thesportsdb.com','assets.football-logos.cc','www.ligaportugal.pt','cdn.shopify.com'}
 def download_png(url):
  host=urllib.parse.urlparse(url).hostname
  if host not in allowed: raise RuntimeError('Unapproved crest source '+url)
