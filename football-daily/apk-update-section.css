@@ -7,3 +7,26 @@
 .fc-apk-update-box .fc-apk-update-note{color:inherit;opacity:.93;font-size:12px;margin:4px 0 0;line-height:1.8}
 .fc-apk-install-note{font-size:13px;line-height:1.85;margin:12px 0 14px;padding:12px 14px;border:1px solid var(--border,#ad8a47);border-radius:10px;background:rgba(180,128,37,.12);color:inherit}
 @media(max-width:640px){.fc-apk-update-box{padding:13px;margin:12px 0}.fc-apk-update-box .fc-apk-update-button{width:100%}.fc-apk-update-box .fc-apk-update-details{flex-basis:100%}}
+
+/* Four first-class section tiles, matching the original yesterday/today/odds row. */
+.date-tabs:has(.fc-apk-date-tile){grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+.date-tabs:has(.fc-apk-date-tile)>*{min-width:0;min-height:114px;height:100%;box-sizing:border-box}
+.date-tabs .fc-apk-date-tile{
+ display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+ padding:11px 9px;border-radius:12px;border:1px solid #4b73c8;
+ background:#102964;color:#fff0c0;font-size:clamp(11px,1vw,14px);font-weight:800;
+ line-height:1.6;text-decoration:none;overflow-wrap:anywhere;transition:background .15s,border-color .15s;
+}
+.date-tabs .fc-apk-date-tile strong{font-size:inherit;font-weight:850}
+.date-tabs .fc-apk-date-tile small{display:block;margin-top:3px;font-size:10px;line-height:1.5;color:#f7dfa4;font-weight:600}
+.date-tabs .fc-apk-date-tile .fc-apk-date-note{font-size:9px;line-height:1.55;opacity:.92}
+.date-tabs .fc-apk-date-tile:hover,.date-tabs .fc-apk-date-tile:focus-visible{
+ background:#174394;color:white;border-color:#f5c979;outline:2px solid #f5c979;outline-offset:2px
+}
+@media(max-width:760px){
+ .date-tabs:has(.fc-apk-date-tile){grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .date-tabs:has(.fc-apk-date-tile)>*{min-height:112px}
+ .date-tabs .fc-apk-date-tile{padding:10px 6px}
+ .date-tabs .fc-apk-date-tile .fc-apk-date-note{font-size:9px}
+}
+@media print{.date-tabs .fc-apk-date-tile{display:none}}
