@@ -21,6 +21,10 @@ jobs:
       FC_FIREBASE_PROJECT_ID: ${{ secrets.FC_FIREBASE_PROJECT_ID }}
       FC_FIREBASE_SENDER_ID: ${{ secrets.FC_FIREBASE_SENDER_ID }}
       FC_REQUIRE_FCM: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
+      FC_APK_RELEASE_KEYSTORE_B64: ${{ secrets.FC_APK_RELEASE_KEYSTORE_B64 }}
+      FC_APK_RELEASE_STOREPASS: ${{ secrets.FC_APK_RELEASE_STOREPASS }}
+      FC_APK_RELEASE_ALIAS: ${{ secrets.FC_APK_RELEASE_ALIAS }}
+      FC_APK_RELEASE_KEYPASS: ${{ secrets.FC_APK_RELEASE_KEYPASS }}
       FC_FIREBASE_APP_ID_YKZ: ${{ secrets.FC_FIREBASE_APP_ID_YKZ }}
       FC_FIREBASE_API_KEY_YKZ: ${{ secrets.FC_FIREBASE_API_KEY_YKZ }}
       FC_FIREBASE_APP_ID_BW: ${{ secrets.FC_FIREBASE_APP_ID_BW }}
