@@ -151,8 +151,16 @@ jobs:
             const goal=await browser.newPage({viewport:{width:960,height:800}});
             await goal.goto('https://future-code-football-daily.pages.dev/future-code-journal/?newsqa='+Date.now(),{waitUntil:'domcontentloaded',timeout:45000});
             await goal.waitForFunction(()=>document.querySelectorAll('.fc-news-card img.fc-news-image').length===10,null,{timeout:45000});
-            for(const photo of await goal.locator('.fc-news-card img.fc-news-image').all())await photo.scrollIntoViewIfNeeded();
-            await goal.waitForFunction(()=>[...document.querySelectorAll('.fc-news-card img.fc-news-image')].every(x=>x.complete&&x.naturalWidth>0),null,{timeout:30000});
+            // Goal Zone holds news in a hidden tab. Lazy images cannot be scrolled into view
+            // until the tab is selected, but image URLs can be verified without changing UI.
+            await goal.evaluate(async()=>{
+              const srcs=[...document.querySelectorAll('.fc-news-card img.fc-news-image')].map(x=>x.src);
+              if(srcs.length!==10)throw Error('Goal Zone news card image count '+srcs.length);
+              await Promise.all(srcs.map(src=>new Promise((done,fail)=>{
+                const im=new Image();im.onload=()=>im.naturalWidth>=400?done():fail(Error('Small image '+src));
+                im.onerror=()=>fail(Error('Broken news photo '+src));im.src=src;
+              })));
+            });
             console.log('GOAL ZONE 10 NEWS IMAGES: PASS');
           }finally{await browser.close();}
           NODE
