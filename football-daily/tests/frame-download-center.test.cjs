@@ -77,7 +77,7 @@ test('all current source cup competitions resolve to a real league logo',()=>{
   assert.ok(logos.includes('"'+league+'"'),league);
   assert.ok(odds.includes('"'+league+'"'),league);
  }
- assert.match(read('frame-editor.html'),/frame-workspace\.js\?v=20261028-pair-layout-v5/);
+ assert.match(read('frame-editor.html'),/frame-workspace\.js\?v=20261029-hires-banner-v2/);
 });
 
 test('every AI poster uses owner three-column title and HH:mm-only fixture clock',()=>{
