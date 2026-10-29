@@ -46,9 +46,14 @@ assert script.count("gradle --no-daemon :app:assembleDebug") == 1
 package=cfg["package"]
 topic=cfg["topic"]
 project=os.environ.get("FC_FIREBASE_PROJECT_ID","")
-appid=os.environ.get("FC_FIREBASE_APP_ID","")
-apikey=os.environ.get("FC_FIREBASE_API_KEY","")
+appid=os.environ.get("FC_FIREBASE_APP_ID_"+brand.upper(),"")
+apikey=os.environ.get("FC_FIREBASE_API_KEY_"+brand.upper(),"")
 sender=os.environ.get("FC_FIREBASE_SENDER_ID","")
+ready=bool(project and appid and apikey and sender)
+if ready and (not appid.startswith("1:"+sender+":android:") or not re.match(r"^1:[0-9]+:android:[a-fA-F0-9]+$",appid)):
+    raise SystemExit("FCM app ID must match this brand's registered Android app and Sender ID")
+if os.environ.get("FC_REQUIRE_FCM")=="true" and not ready:
+    raise SystemExit("BLOCKED: brand-specific Firebase Android credentials are missing; do NOT distribute an unconfigured APK")
 def j(v):
     return json.dumps(str(v), ensure_ascii=True)
 
@@ -152,4 +157,4 @@ script=script.replace("gradle --no-daemon :app:assembleDebug",patch+"\ngradle --
 out=Path("/tmp/football_vnext_"+brand+".sh")
 out.write_text(script,encoding="utf-8")
 out.chmod(0o700)
-print("Prepared "+brand+" version "+cfg["name"]+" / "+cfg["package"]+" FCM client-configured="+str(bool(project and sender and appid and apikey)))
+print("Prepared "+brand+" version "+cfg["name"]+" / "+cfg["package"]+" FCM client-configured="+str(ready))
