@@ -104,6 +104,13 @@ jobs:
               assert.equal(parseInt(cells[2])+parseInt(cells[3]),100);
             }
             assert.equal(full.newsCount,10);
+            console.log('NEWS PHOTO HTTP DEBUG',JSON.stringify(await page.evaluate(async()=>{
+              const cards=[...document.querySelectorAll('.fc-news-card')];
+              const items=cards.map((c,i)=>({id:i,url:c.querySelector('img')?.src||'',w:c.querySelector('img')?.naturalWidth||0,caption:c.querySelector('.fc-news-image-caption')?.textContent||''}));
+              const first=items[0]?.url;
+              let probe={};if(first)try{let response=await fetch(first,{cache:'no-store'});probe={status:response.status,type:response.headers.get('content-type'),preview:(await response.text()).slice(0,150)};}catch(e){probe={error:String(e)}}
+              return {items,probe};
+            })));
             await page.waitForFunction(()=>[...document.querySelectorAll('.fc-news-card img.fc-news-image')].length===10&&[...document.querySelectorAll('.fc-news-card img.fc-news-image')].every(x=>x.complete&&x.naturalWidth>0),null,{timeout:30000});
             const images=await page.evaluate(async()=>{
               const report=await (await fetch('/data/today.json',{cache:'no-store'})).json();
