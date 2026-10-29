@@ -73,3 +73,10 @@ The owner's exact professional Burmese journalist prompt is `docs/master-prompts
 - Automated checks must validate report row counts, source IDs, score provenance, date, percent coverage, ten news visuals with licenses, successful image loads and actual browser Canvas PNG and ZIP. Fail visibly rather than reporting COMPLETE on only a GitHub commit or a HTTP 200.
 
 These GitHub instructions are durable release gates for *invoked* daily updates, not an always-on autonomous crawler or a claim that all external tips/photos will always exist.
+
+## Completion gate reconciled 2026-10-29
+- Use the current one-paragraph premium Special Choice standard; never reintroduce an obsolete minimum of two/four paragraphs in guards or tests. Preserve article sources separately.
+- Recheck the actual fixture-specific 1X2 page on publication day. Keep publisher snapshot date/time separate from oddsVerifiedDate (the actual check date); never advance a verification date without reading the prices. Run the probability model on every candidate row and require coverage counts.
+- Search external fixture-specific exact-score publications for every VIP row before declaring it unavailable. Keep external source/date/check date and orientation; do not use local Bookies/AI/PDF scores to fill VIP. Log unavailable reasons explicitly.
+- Require all ten news images with credit, license/context, caption and a working image file. Label original illustrations as illustrations; never describe them as real event photographs.
+- Completion requires current normal/premium prose actually visible live plus nonblank probability/tips coverage and real PNG/ZIP QA. A saved draft alone is unfinished.

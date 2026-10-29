@@ -19,10 +19,20 @@ test("every published day with preview fixtures includes up to five current user
   assert.equal(m.awayLastFive.length,5,key+" must show five verified away-team games");
   assert.ok([m.homeOdds,m.drawOdds,m.awayOdds].every(v=>Number(v)>1),key+" needs a verified 1X2 triplet");
   assert.ok(typeof m.oddsProvider==="string"&&m.oddsProvider.trim(),key+" named bookmaker required");
-  if(m.oddsMarket.includes("reference snapshot")){
+  if(m.oddsMarket?.includes("reference snapshot")){
    assert.equal(m.oddsIsLive,false);assert.equal(m.oddsVerifiedDate,data.reportDate);
   }
   assert.ok(/^https:/.test(m.oddsSourceUrl),key+" prices must have a credible URL");
+  if(m.previewJournalist?.status==="revised_to_owner_master"){
+   assert.equal(m.specialAnalysisParagraphs.length,1,"Current owner standard: one developed premium paragraph");
+   const prose=m.specialAnalysisParagraphs[0];
+   assert.ok(prose.length>m.dailyPreviewText.length,key+" premium must go deeper than ordinary preview");
+   assert.ok(!prose.includes("\n")&&!prose.includes("ပြိုင်ဘက်"));
+   assert.ok(!/\d\s*[-–:]\s*\d|ဘော်ဒီ|ပေါက်ကြေး|https:\/\//.test(prose));
+   assert.match(prose,/ကို ရွေး(?:ချယ်)?ပါတယ်။(?:\*\*)?$/);
+   assert.ok(m.previewJournalist.researchSources.length>=2);
+   continue;
+  }
   if(m.specialUserVerbatim?.exactCopy){
    assert.equal(m.specialUserVerbatim.rank,m.specialChoiceRank);
    assert.ok(m.specialUserVerbatim.source&&m.specialChoiceSourceHeading);

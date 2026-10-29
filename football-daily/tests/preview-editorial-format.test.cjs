@@ -20,7 +20,7 @@ function assertStanding(s,label){
  assert.ok(s.points<=s.wins*3+s.draws,label+" points cannot exceed performance points; verified disciplinary point deductions may apply");
  assert.ok(s.position>=1,label+" invalid table rank");
 }
-test("normal website articles follow the author-approved 16 October three-paragraph style with one bold selection",()=>{
+test("normal website articles follow the current owner journalist master and preserve historical articles",()=>{
  assert.ok(Array.isArray(data.matches),"daily matches array required (empty dates are valid)");
  for(const [i,m] of data.matches.entries()){
   const desc="#"+(i+1)+" "+(m.homeDisplay||m.home)+" vs "+(m.awayDisplay||m.away);
@@ -38,11 +38,13 @@ test("normal website articles follow the author-approved 16 October three-paragr
   }
   // New author-uploaded journalist prompt is authoritative after owner's 17 Oct approval.
   // The separate preview-v2-quality.test.cjs now enforces its natural single-paragraph quality.
-  if(data.reportDate>="2026-10-17"&&m.previewJournalist?.status==="owner_approved_published"){
+  if(data.reportDate>="2026-10-17"&&["owner_approved_published","revised_to_owner_master"].includes(m.previewJournalist?.status)){
    assert.ok(typeof t==="string"&&t.trim().length>=300,desc+": substantial journal article required");
    assert.ok(!t.includes("\\n"),desc+": one flowing paragraph");
    assert.ok(t.includes(m.homeDisplay)&&t.includes(m.awayDisplay),desc+": verified Burmese team spellings");
    assert.ok(!/ဘော်ဒီကြေး|ဂိုးပေါင်းကြေး|ခန့်မှန်းဂိုးရလဒ်|\\bPDF\\b/.test(t),desc+": markets and source details are elsewhere");
+   assert.ok(!t.includes("\n")&&!t.includes("ပြိုင်ဘက်"),desc+": one connected paragraph with named teams");
+   assert.match(t,/ကို ရွေး(?:ချယ်)?ပါတယ်။(?:\*\*)?$/,desc+": named final selection");
    continue;
   }
   assert.ok(typeof t==="string"&&t.trim().length>=250,desc+": dailyPreviewText must be a substantial article");

@@ -22,10 +22,14 @@
         "status": "scheduled",
         "internetPrediction": "2-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "အဲဗာတန်က ပြည်တွင်းလိဂ် အမှတ်ပေးဇယား အဆင့် 11၊ ရမှတ် 10 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 2 ပွဲရှုံးထားပါတယ်။ နယူးကာဆယ်ကတော့ အဆင့် 8၊ ရမှတ် 11 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 0 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ အဲဗာတန်က နောက်ဆုံးနှစ်ပွဲဆက် ရှုံးထားတာကြောင့် အိမ်ကွင်းမှာ တုံ့ပြန်နိုင်ဖို့လိုနေချိန် နယူးကာဆယ်က နောက်ဆုံးကစားခဲ့တဲ့ လိဂ်ပွဲမှာ နိုင်ပွဲရထားပါတယ်။ ဖလားပြိုင်ပွဲရဲ့ တစ်ပွဲတည်း အဆုံးအဖြတ်မှာ လူစာရင်းအပြောင်းအလဲ၊ ပုံမှန်ဂိုးဖန်တီးနိုင်စွမ်းနဲ့ ကွင်းလယ်ဘောလုံးဆယ်ယူမှုက အရေးပါလာမှာပါ။ အဲဗာတန်က အိမ်ကွင်းအားသာချက်ရှိပေမယ့် ဂိုးရရှိမှုအခက်အခဲက ရလဒ်ပြန်တက်ဖို့ တားဆီးနိုင်ပြီး နယူးကာဆယ်ရဲ့ အဝေးကွင်းဖိအားပေးမှုကို ထိန်းချုပ်ရပါမယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး နယူးကာဆယ်ကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "အဲဗာတန်ရဲ့ အိမ်ကွင်းမှာ နယူးကာဆယ်ကို ရင်ဆိုင်ရမယ့် ဒီဖလားပွဲဟာ နောက်ပိုင်းခြေစွမ်း ကျဆင်းနေတဲ့ အိမ်ရှင်အတွက် လမ်းကြောင်းပြန်တည့်ဖို့ အခွင့်အရေးပါပဲ။ အဲဗာတန်က အာဆင်နယ်နဲ့ ချဲလ်ဆီးကို နှစ်ပွဲဆက် ဂိုးမသွင်းနိုင်ဘဲ ရှုံးခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်မှုကို အရင်ဆုံးပြင်ရမှာ ဖြစ်သလို လိဂ်ရှစ်ပွဲမှာ ရှစ်ဂိုးသာရထားတဲ့ အနေအထားကလည်း အဲဒီအားနည်းချက်ကို ပြနေပါတယ်။ နယူးကာဆယ်က နောက်ဆုံးပွဲမှာ ပဲလေ့စ်ကို အနိုင်ရထားပေမယ့် ရှစ်ပွဲမှာ ၁၄ ဂိုးပေးထားတဲ့ ခံစစ်ကို အဲဗာတန်က အကျိုးရှိရှိ အသုံးချနိုင်ရင် အိမ်ရှင်အတွက် မျှော်လင့်ချက်ရှိပါတယ်။ ဒါပေမယ့် အခွင့်အရေးကို ဂိုးဖြစ်အောင်ပြောင်းနိုင်မှုမှာ နယူးကာဆယ်ကို အနည်းငယ်ပိုယုံကြည်ရတာကြောင့် **နယူးကာဆယ်** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401921844",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/368/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -154,7 +158,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
-        "leagueLogoUrl": "assets/league-logos/eng.cup.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.cup.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921844",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/368/schedule?season=2026",
         "myanmarOdds": {
@@ -169,8 +173,10 @@
         "awayOdds": "3.18",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
-        "espnMatchId": "401921844"
+        "oddsVerifiedDate": "2026-10-29",
+        "espnMatchId": "401921844",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-02",
@@ -189,10 +195,14 @@
         "status": "scheduled",
         "internetPrediction": "2-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "ဖရိုစီနိုနီက သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 6၊ ရမှတ် 14 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ လက်ချီကတော့ အဆင့် 14၊ ရမှတ် 9 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 0 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ ဖရိုစီနိုနီက အတ္တလန်တာကွင်းမှာ လေးဂိုးစီသရေကျခဲ့ပြီး ဆာဆူအိုလိုကိုလည်း လေးဂိုးသွင်းနိုင်ခဲ့တာကြောင့် တိုက်စစ်ရဲ့ ပုံစံက တည်ငြိမ်ပါတယ်။ လက်ချီကတော့ ဂျူဗင်တပ်စ်ကို ဂိုးမရဘဲ ရှုံးထားပေမယ့် အူဒီးနီးစ်ကွင်းမှာ သုံးဂိုးသွင်းအနိုင်ရခဲ့ဖူးပါတယ်။ ဒီနှစ်သင်းရဲ့ လတ်တလောဂိုးပေးရမှုကို ချိန်ဆကြည့်ရင် ဖရိုစီနိုနီရဲ့ အိမ်ကွင်းတိုက်စစ်က ပွဲကို ဦးဆောင်ဖို့ အခွင့်ကောင်းပိုများပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး ဖရိုစီနိုနီကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "ဖရိုစီနိုနီက အတ္တလန်တာနဲ့ လေးဂိုးစီ သရေကျခဲ့တဲ့ပွဲမှာ တိုက်စစ်အင်အားကို ပြနိုင်ခဲ့သလို ဆာဆူအိုလိုကိုလည်း လေးဂိုးသွင်းခဲ့တာကြောင့် အိမ်ကွင်းမှာ လက်ချီကို ဖိအားပေးနိုင်ဖို့ရှိပါတယ်။ ဒါပေမယ့် အဲဒီနောက်ဆုံးပွဲမှာ လေးဂိုးပြန်ပေးခဲ့ရတဲ့အချက်က တိုက်စစ်ကို အလွန်အကျွံအားထားလိုက်ရင် နောက်တန်းကွက်လပ်တွေ ပေါ်လာနိုင်တယ်ဆိုတာ သတိပေးနေပါတယ်။ လက်ချီက ဂျူဗင်တပ်စ်ကို ဂိုးမရဘဲ ရှုံးထားပေမယ့် အူဒီးနီးစ်ကွင်းမှာ သုံးဂိုးသွင်းနိုင်ခဲ့တာကြောင့် ဂိုးအခွင့်အရေးရရင် အဆုံးသတ်နိုင်စွမ်းမရှိတဲ့အသင်းတော့ မဟုတ်ပါဘူး။ သို့သော် ရှစ်ပွဲမှာ ၁၇ ဂိုးသွင်းထားတဲ့ ဖရိုစီနိုနီရဲ့ တိုက်စစ်အရှိန်က ဒီပွဲအတွက် ပိုပြီးစိတ်ချရတာကြောင့် **ဖရိုစီနိုနီ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401874976",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/teams/4057/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -321,7 +331,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
-        "leagueLogoUrl": "assets/league-logos/ita.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874976",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/teams/4057/schedule?season=2026",
         "myanmarOdds": {
@@ -336,8 +346,10 @@
         "awayOdds": "4.71",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
-        "espnMatchId": "401874976"
+        "oddsVerifiedDate": "2026-10-29",
+        "espnMatchId": "401874976",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-03",
@@ -356,10 +368,14 @@
         "status": "scheduled",
         "internetPrediction": "1-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "ဖီအိုရင်တီးနားက သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 19၊ ရမှတ် 4 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ အတ္တလန်တာကတော့ အဆင့် 12၊ ရမှတ် 10 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ ဖီအိုရင်တီးနားက ရာသီအစရှစ်ပွဲမှာ ရမှတ်နည်းနေသဖြင့် အိမ်ကွင်းကို အားကိုးပြီး အတ္တလန်တာကို ဖိအားပေးဖို့လိုပါတယ်။ အတ္တလန်တာက ဖရိုစီနိုနီနဲ့ လေးဂိုးစီသရေကျခဲ့တဲ့ပွဲမှာ တိုက်စစ်အသွင်ပြနိုင်ခဲ့ပေမယ့် ခံစစ်မှာ လေးဂိုးပြန်ပေးလိုက်ရတာက ပြဿနာပါ။ နှစ်သင်းစလုံး ခံစစ်အတွက် အာရုံစိုက်ဖို့လိုပေမယ့် အတ္တလန်တာရဲ့ အလုံးစုံလိဂ်ရလဒ်က ဖီအိုရင်တီးနားထက် အနည်းငယ်တည်ငြိမ်နေပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး အတ္တလန်တာကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "ဖီအိုရင်တီးနားအတွက်တော့ အတ္တလန်တာနဲ့ပွဲဟာ စိတ်ဓာတ်ရေးရာတင်မကဘဲ အမှတ်ပေးဇယားမှာ အောက်ခြေကနေ ရုန်းထွက်ဖို့ပါ အရေးကြီးနေပါတယ်။ ရှစ်ပွဲမှာ လေးမှတ်သာရထားပြီး နောက်ဆုံးသုံးပွဲဆက် ရှုံးထားတဲ့ ဖီအိုရင်တီးနားက တိုက်စစ်တင်ကစားတဲ့အခါ နောက်တန်းတည်ငြိမ်မှု ပျက်လွယ်နေတာကို ပြင်ဖို့လိုပါတယ်။ အတ္တလန်တာကလည်း ဖရိုစီနိုနီနဲ့ လေးဂိုးစီသရေကျခဲ့လို့ ခံစစ်မှာ အာမခံချက်မရှိပေမယ့် ရှေ့တန်းက ဂိုးအခွင့်အရေးဖန်တီးနိုင်ပြီး ရှစ်ပွဲမှာ ၁၄ ဂိုးသွင်းထားပါတယ်။ ဖီအိုရင်တီးနားရဲ့ အိမ်ကွင်းတုံ့ပြန်မှုကို လျှော့မတွက်သင့်ပေမယ့် လက်ရှိကစားပုံနှိုင်းယှဉ်ရင် **အတ္တလန်တာ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401874969",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/teams/109/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -488,7 +504,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
-        "leagueLogoUrl": "assets/league-logos/ita.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874969",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/teams/109/schedule?season=2026",
         "myanmarOdds": {
@@ -503,8 +519,10 @@
         "awayOdds": "3.11",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
-        "espnMatchId": "401874969"
+        "oddsVerifiedDate": "2026-10-29",
+        "espnMatchId": "401874969",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-04",
@@ -523,10 +541,14 @@
         "status": "scheduled",
         "internetPrediction": "1-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "အင်တာတူရ်ကူက သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 1၊ ရမှတ် 55 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 3 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ ဟယ်လ်ဆင်ကီကတော့ အဆင့် 2၊ ရမှတ် 52 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 3 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 0 ပွဲရှုံးထားပါတယ်။ အင်တာတူရ်ကူက နောက်ဆုံးပွဲမှာ VPS ကို အနိုင်ရပြီး ချန်ပီယံအုပ်စု ထိပ်ဆုံးကို ဆက်ထိန်းထားနိုင်ခဲ့ပါတယ်။ ဟယ်လ်ဆင်ကီကလည်း ကူပီအက်စ်နဲ့ သရေမတိုင်ခင် ဂနစ္စတန်ကို လေးဂိုး၊ AC Oulu ကို လေးဂိုး သွင်းခဲ့တာကြောင့် တိုက်စစ်က အားကောင်းနေပါတယ်။ အင်တာတူရ်ကူရဲ့ ပုံမှန်ခံစစ်စည်းကမ်းနဲ့ ဟယ်လ်ဆင်ကီရဲ့ ဂိုးသွင်းအရှိန်တို့ တိုက်ဆိုင်တဲ့ပွဲဖြစ်ပြီး အိမ်ရှင်က နေရာလွတ်မပေးနိုင်ဖို့ အရေးကြီးပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး အင်တာတူရ်ကူကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "ဖင်လန်ချန်ပီယံဆုအတွက် အရေးကြီးလာတဲ့ ဒီတွေ့ဆုံမှုမှာ အင်တာတူရ်ကူက အမှတ်ပေးဇယားကို ဦးဆောင်ထားပြီး ဟယ်လ်ဆင်ကီက သုံးမှတ်အကွာက လိုက်နေပါတယ်။ အင်တာတူရ်ကူဟာ VPS ကို အဝေးကွင်းမှာ အနိုင်ရထားသလို ကူပီအက်စ်ကိုလည်း ဂိုးမပေးဘဲ နိုင်ခဲ့တာကြောင့် အရေးကြီးတဲ့အချိန်မှာ ခံစစ်ကို ထိန်းနိုင်စွမ်းရှိပါတယ်။ ဟယ်လ်ဆင်ကီကတော့ ဂနစ္စတန်ကို လေးဂိုး၊ AC Oulu ကို လေးဂိုးသွင်းခဲ့ပြီး နောက်ဆုံး ကူပီအက်စ်နဲ့ သရေကျခဲ့တာကြောင့် တိုက်စစ်အန္တရာယ်က အိမ်ရှင်ထက်တောင် ပိုများနိုင်ပါတယ်။ ဒါပေမယ့် ထိပ်ဆုံးနေရာကို ထိန်းသိမ်းဖို့လိုတဲ့ အင်တာတူရ်ကူရဲ့ စည်းကမ်းရှိတဲ့ ကစားပုံနဲ့ အိမ်ကွင်းအားသာချက်ကို ချိန်ဆပြီး **အင်တာတူရ်ကူ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2",
+            "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -655,7 +677,7 @@
         },
         "homeCrestUrl": "https://static.bongda24h.vn/Medias/original/2023/03/14/fc-inter-turku-1403141153.png",
         "awayCrestUrl": "https://r2.thesportsdb.com/images/media/team/badge/n7towl1615757839.png",
-        "leagueLogoUrl": "assets/league-logos/fin.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fin.1.png",
         "fixtureSourceUrl": "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2",
         "standingsSourceUrl": "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2",
         "myanmarOdds": {
@@ -670,7 +692,9 @@
         "awayOdds": "2.74",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-05",
@@ -689,10 +713,14 @@
         "status": "scheduled",
         "internetPrediction": "2-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "ကူပီအက်စ်က သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 3၊ ရမှတ် 52 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 2 ပွဲရှုံးထားပါတယ်။ ဂနစ္စတန်ကတော့ အဆင့် 5၊ ရမှတ် 42 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 0 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ ကူပီအက်စ်က ဟယ်လ်ဆင်ကီနဲ့ နှစ်ဂိုးစီသရေ၊ VPS ကို နှစ်ဂိုးပြတ်နိုင်ပေမယ့် အင်တာတူရ်ကူနဲ့ AC Oulu တို့ကို ဂိုးမသွင်းနိုင်ဘဲ ရှုံးထားပါတယ်။ ဂနစ္စတန်ကတော့ နောက်ဆုံးသုံးပွဲဆက် ရှုံးထားပြီး ခံစစ်မှာ AC Oulu ကို လေးဂိုးအထိ ပေးလိုက်ရပါတယ်။ အိမ်ရှင်ရဲ့ တိုက်စစ်က အစောပိုင်းဂိုးရနိုင်ရင် ပွဲကို ထိန်းနိုင်ချေရှိသလို ဂနစ္စတန်အနေနဲ့ ရှေ့တန်းကို အတင်းတက်ပြီး နေရာလွတ်ပေးမိတာကို ရှောင်ရပါမယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး ကူပီအက်စ်ကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "ကူပီအက်စ်က ချန်ပီယံအုပ်စုမှာ အဆင့်သုံးနေရာကနေ ထိပ်ဆုံးကို ဆက်လိုက်နေတဲ့အတွက် ဂနစ္စတန်နဲ့ပွဲမှာ ရမှတ်ဆုံးရှုံးလို့ မဖြစ်ပါဘူး။ ဟယ်လ်ဆင်ကီကွင်းမှာ နှစ်ဂိုးစီသရေကျခဲ့ပြီး VPS ကို နှစ်ဂိုးပြတ်နိုင်ခဲ့တဲ့ ကူပီအက်စ်က တိုက်စစ်အလုပ်လုပ်တဲ့နေ့မှာ အခွင့်အရေးတွေ ဖန်တီးနိုင်ပါတယ်။ ဂနစ္စတန်ကတော့ နောက်ဆုံးသုံးပွဲဆက် ရှုံးထားပြီး အဲဒီသုံးပွဲမှာ စုစုပေါင်း ကိုးဂိုးအထိ ပေးခဲ့ရတာကြောင့် နောက်တန်းတည်ငြိမ်မှုက သိသာတဲ့ပြဿနာဖြစ်နေပါတယ်။ ဂနစ္စတန်အနေနဲ့ အစောပိုင်းမှာ ခံစစ်စုဖွဲ့နိုင်ရင် ပွဲကိုကြာရှည်ထိန်းနိုင်ပေမယ့် ကူပီအက်စ်ရဲ့ အိမ်ကွင်းဖိအားကို တစ်ပွဲလုံး ခံနိုင်ဖို့ မလွယ်တာကြောင့် **ကူပီအက်စ်** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2",
+            "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -821,7 +849,7 @@
         },
         "homeCrestUrl": "https://assets.football-logos.cc/logos/finland/1500x1500/kups.21757560.png",
         "awayCrestUrl": "https://cdn.shopify.com/s/files/1/0098/7552/1636/files/Gnistan_logo_RGB.png?v=1742217387",
-        "leagueLogoUrl": "assets/league-logos/fin.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fin.1.png",
         "fixtureSourceUrl": "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2",
         "standingsSourceUrl": "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2",
         "myanmarOdds": {
@@ -836,7 +864,9 @@
         "awayOdds": "5.99",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-06",
@@ -855,10 +885,14 @@
         "status": "scheduled",
         "internetPrediction": "3-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "ဟမ်မာဘီက သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 2၊ ရမှတ် 49 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 4 ပွဲနိုင်၊ 0 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ စီးရီးယပ်စ်ကတော့ အဆင့် 1၊ ရမှတ် 55 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 3 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ ဟမ်မာဘီက အမှတ်ပေးဇယား ဒုတိယနေရာမှာ ရှိနေသော်လည်း စီးရီးယပ်စ်က ထိပ်ဆုံးမှာ ဦးဆောင်နေပြီး နှစ်သင်းကြား အမှတ်ကွာဟမှုရှိပါတယ်။ အိမ်ကွင်းဟမ်မာဘီက ပိုမိုဖိအားပေးကစားလာနိုင်ပေမယ့် စီးရီးယပ်စ်ရဲ့ ရာသီတစ်လျှောက် အနိုင်ရပွဲအရေအတွက်က ပိုများနေပါတယ်။ ထိပ်တန်းနေရာအတွက် ရလဒ်တစ်ခုချင်း အရေးပါတဲ့အချိန်ဖြစ်လို့ အစောပိုင်းတန်ပြန်တိုက်စစ်နဲ့ အလယ်တန်းဘောလုံးပိုင်ဆိုင်မှုက ပွဲရဲ့ ဟန်ချက်ကို ဆုံးဖြတ်နိုင်ပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး ဟမ်မာဘီကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "ဟမ်မာဘီက ချန်ပီယံပြိုင်ပွဲမှာ ရှေ့က စီးရီးယပ်စ်ကို လိုက်မီဖို့ ကြိုးစားနေရတဲ့အချိန် ဒီတွေ့ဆုံမှုဟာ သာမန်လိဂ်ပွဲထက် ပိုအရေးကြီးလာပါတယ်။ ဟမ်မာဘီက နောက်ဆုံးနှစ်ပွဲမှာ မျယ်လ်ဘီနဲ့ ဟယ်လ်မ်စတတ်တို့ကို ဂိုးမပေးဘဲ နိုင်ခဲ့ပြီး ခံစစ်တည်ငြိမ်မှု ပြန်ရနေသော်လည်း စီးရီးယပ်စ်က ရာသီတစ်လျှောက် ရမှတ်ပိုစုဆောင်းနိုင်ခဲ့တဲ့အသင်းပါ။ စီးရီးယပ်စ်ရဲ့ နောက်ဆုံး AIK ကို ရှုံးနိမ့်မှုက အိမ်ရှင်အတွက် အခွင့်အရေးဖြစ်လာနိုင်ပြီး ဟမ်မာဘီက ကွင်းလယ်ဖိအားတင်နိုင်ရင် အန္တရာယ်ရှိပါတယ်။ ရာသီတစ်လျှောက် ခြေစွမ်းနဲ့ အိမ်ကွင်းအရှိန် နှစ်ခုကို ချိန်ဆတဲ့အခါ **ဟမ်မာဘီ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401842861",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/2495/schedule?season=2026"
+          ]
         },
         "specialChoice": true,
         "homeLastFive": [
@@ -987,7 +1021,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2495.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8547.png",
-        "leagueLogoUrl": "assets/league-logos/swe.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842861",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/2495/schedule?season=2026",
         "myanmarOdds": {
@@ -1002,14 +1036,15 @@
         "awayOdds": "5.43",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
+        "oddsVerifiedDate": "2026-10-29",
         "espnMatchId": "401842861",
         "specialChoiceRank": 1,
         "specialPreparedDate": "2026-10-29",
         "specialAnalysisParagraphs": [
-          "ဟမ်မာဘီနဲ့ စီးရီးယပ်စ်ဟာ ဆွီဒင်အော်လ်ဆွင်စကန် ထိပ်ဆုံးနှစ်နေရာမှာ ရပ်တည်နေတဲ့အတွက် ဒီတစ်ပွဲရဲ့ ရမှတ်ဟာ ရာသီအဆုံး ချန်ပီယံဆုအတွက် အရေးပါလာမှာပါ။ စီးရီးယပ်စ်က ၂၅ ပွဲအပြီး ၅၅ မှတ်ရရှိထားပြီး ဟမ်မာဘီက ၄၉ မှတ်နဲ့ လိုက်နေပါတယ်။",
-          "ပွဲမှာ ဟမ်မာဘီရဲ့ အိမ်ကွင်းဖိအားပေးနိုင်မှုနဲ့ စီးရီးယပ်စ်ရဲ့ တည်ငြိမ်တဲ့ အနိုင်ရပွဲနှုန်းကို နှိုင်းယှဉ်ကြည့်ရင် ပွဲစဉ်အပေါ် ဖိအားတည်ဆောက်နိုင်တဲ့ ဟမ်မာဘီကို ရွေးချယ်ပါတယ်။"
-        ]
+          "ချန်ပီယံဆုအတွက် အမှတ်ပေးဇယားထိပ်ဆုံးနှစ်သင်း ထိပ်တိုက်တွေ့ရမယ့် ဒီပွဲက ဟမ်မာဘီအတွက် ရာသီအဆုံးမှာ အလှည့်အပြောင်းဖြစ်စေနိုင်တဲ့အခွင့်အရေးပါပဲ။ အမှတ်ပေးဇယားမှာ စီးရီးယပ်စ်က ၂၅ ပွဲအပြီး ၅၅ မှတ်နဲ့ ဦးဆောင်ထားပြီး ဟမ်မာဘီက ၄၉ မှတ်နဲ့ ဒုတိယနေရာမှာ လိုက်နေတာကြောင့် အိမ်ကွင်းမှာ အနိုင်ယူနိုင်မှ ချန်ပီယံပြိုင်ပွဲကို ပိုမိုအသက်ဝင်အောင် လုပ်နိုင်မှာပါ။ ဟမ်မာဘီရဲ့ နောက်ဆုံးခြေစွမ်းကိုကြည့်ရင် မျယ်လ်ဘီကို နှစ်ဂိုးပြတ်၊ ဟယ်လ်မ်စတတ်ကို တစ်ဂိုးနဲ့ ဆက်တိုက်အနိုင်ယူထားပြီး နှစ်ပွဲလုံး ဂိုးမပေးခဲ့ရတာက အရေးကြီးဆုံးအားသာချက် ဖြစ်လာပါတယ်။ အဲဒီလို ခံစစ်ကို အရင်တည်ငြိမ်အောင်လုပ်ပြီးမှ ရှေ့တန်းတက်ကစားနိုင်တာကြောင့် စီးရီးယပ်စ်ရဲ့ ဂိုးသွင်းအားကို တားဆီးဖို့ အထောက်အကူဖြစ်ပါတယ်။ စီးရီးယပ်စ်က ဒီရာသီ ၂၅ ပွဲမှာ ၅၆ ဂိုးအထိသွင်းထားလို့ အမှတ်ပေးဇယားထိပ်ဆုံးမှာ ရှိနေတာက အလကားမဟုတ်ပါဘူး။ ဒါပေမယ့် နောက်ဆုံး AIK ကို ရှုံးထားတဲ့ပွဲက အခွင့်အရေးပေးလိုက်ရင် စီးရီးယပ်စ်နောက်တန်းကိုလည်း ထိုးဖောက်လို့ရတယ်ဆိုတာ ပြသခဲ့ပါတယ်။ ဟမ်မာဘီက ရာသီတစ်လျှောက် ၅၂ ဂိုးသွင်းထားပေမယ့် ၂၁ ဂိုးသာ ပေးထားတဲ့ခံစစ်က စီးရီးယပ်စ်ရဲ့ ၃၂ ပေးဂိုးနဲ့ ကွာခြားနေတဲ့အချက်ကို မေ့ထားလို့မရပါဘူး။ ဒီကွာခြားချက်ကြောင့်ပဲ ဟမ်မာဘီက တိုက်စစ်ကို အပြည့်မဖွင့်ဘဲ စည်းကမ်းတကျ ကစားရင်း စီးရီးယပ်စ်ရဲ့ အလွန်အကျွံတက်လာမှုကို အခွင့်ကောင်းယူနိုင်ပါတယ်။ စီးရီးယပ်စ်က ဂိုးသွင်းအားနဲ့ ရာသီတစ်လျှောက် နိုင်ပွဲအရေအတွက်မှာ အသာရှိတာကြောင့် ပွဲကလွယ်မယ်လို့ မဆိုနိုင်ပေမယ့် ထိပ်ဆုံးနေရာကို လိုက်မီဖို့ လိုအပ်ချက်၊ အိမ်ကွင်းဖိအားပေးနိုင်မှုနဲ့ လတ်တလောဂိုးမပေးရတဲ့ အခြေအနေတွေက ဒီပွဲမှာ ဟမ်မာဘီဘက်ကို တဖြည်းဖြည်း အသာစီးပေးလာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ တိုက်စစ်အင်အားက အနီးစပ်ဆုံးဖြစ်နေတဲ့အချိန် နောက်တန်းကို ပိုထိန်းနိုင်တဲ့အားသာချက်ကို အဓိကထားပြီး **ဟမ်မာဘီ** ကို ရွေးချယ်ပါတယ်။"
+        ],
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-07",
@@ -1028,10 +1063,14 @@
         "status": "scheduled",
         "internetPrediction": "1-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "ကယ်လ်မာက သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 13၊ ရမှတ် 22 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 0 ပွဲသရေ၊ 4 ပွဲရှုံးထားပါတယ်။ ဂိုက်စ်ကတော့ အဆင့် 11၊ ရမှတ် 31 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ ကယ်လ်မာက အမှတ်ပေးဇယား အောက်ပိုင်းမှာ ရှိပြီး ဒီရာသီ ရှုံးပွဲများနေသလို ဂိုက်စ်ကလည်း ရလဒ်တည်ငြိမ်မှုရှာဖွေနေရပါတယ်။ နှစ်သင်းရဲ့ အမှတ်ကွာဟမှုကြောင့် ဂိုက်စ်က အဆင့်ပိုကောင်းသော်လည်း ကယ်လ်မာအတွက် အိမ်ကွင်းရမှတ်က ပိုပြီး လိုအပ်နေပါတယ်။ ဂိုးသွင်းအခွင့်အရေး အနည်းငယ်သာရနိုင်တဲ့ ပွဲမျိုးမှာ ကွင်းလယ်အမှားတစ်ချက်နဲ့ တည်ကန်ဘောအခြေအနေတွေက အဓိကကျလာဖို့ရှိပြီး ဧည့်သည်ဘက်ရဲ့ ရာသီခြေစွမ်းကို ပိုမိုယုံကြည်ရပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး ဂိုက်စ်ကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "ကယ်လ်မာအတွက် အိမ်ကွင်းမှာ ဂိုက်စ်ကို ရင်ဆိုင်ရမယ့်ဒီပွဲက အမှတ်ပေးဇယားအောက်ပိုင်းကနေ လွတ်မြောက်ဖို့ အရေးကြီးနေပါတယ်။ ကယ်လ်မာက နောက်ဆုံး ဘရွမ်မာပွိုင်ကာနာကို သုံးဂိုးပြတ်ရှုံးခဲ့ပြီး ရာသီ ၂၅ ပွဲမှာ ၄၁ ဂိုးပေးထားတာကြောင့် ခံစစ်အမှားတွေကို မလျှော့ချနိုင်သေးဘူးဆိုတာ ထင်ရှားနေပါတယ်။ ဂိုက်စ်ကလည်း နောက်ဆုံးသုံးပွဲမှာ နိုင်ပွဲမရထားလို့ အရမ်းတည်ငြိမ်တဲ့အသင်း မဟုတ်ပေမယ့် ကယ်လ်မာထက် ရမှတ်ကိုးမှတ်အသာရရှိထားပြီး ပေးဂိုးလည်း သိသိသာသာနည်းပါတယ်။ အိမ်ရှင်ရဲ့ အားထုတ်မှုကြောင့် ပွဲကျပ်နိုင်သော်လည်း နောက်တန်းတည်ငြိမ်မှုဘက်မှာ ပိုယုံကြည်ရတဲ့ **ဂိုက်စ်** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401842859",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/3052/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -1160,7 +1199,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3052.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8222.png",
-        "leagueLogoUrl": "assets/league-logos/swe.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842859",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/3052/schedule?season=2026",
         "myanmarOdds": {
@@ -1175,8 +1214,10 @@
         "awayOdds": "2.82",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
-        "espnMatchId": "401842859"
+        "oddsVerifiedDate": "2026-10-29",
+        "espnMatchId": "401842859",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-08",
@@ -1195,10 +1236,14 @@
         "status": "scheduled",
         "internetPrediction": "1-2",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "အော်ဂရီတီက သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 15၊ ရမှတ် 19 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ မျယ်လ်ဘီကတော့ အဆင့် 12၊ ရမှတ် 23 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 0 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ အော်ဂရီတီက ဇယားအောက်ခြေပိုင်းမှာ တည်ရှိနေပြီး ခံစစ်ရဲ့ ဂိုးပေးရမှုကို လျှော့ချဖို့လိုနေပါတယ်။ မျယ်လ်ဘီက အနိုင်ရပွဲအရေအတွက် မများပေမယ့် သရေပွဲအများအပြားနဲ့ ရမှတ်စုဆောင်းနိုင်ခဲ့တာကြောင့် စည်းကမ်းရှိတဲ့ ကစားပုံတစ်မျိုး မြင်ရပါတယ်။ အိမ်ရှင်က ဖိအားပေးကစားလာနိုင်ပေမယ့် မျယ်လ်ဘီအနေနဲ့ ကွင်းလယ်ကို ထိန်းထားပြီး အော်ဂရီတီရဲ့ နောက်တန်းနေရာလွတ်တွေကို အသုံးချနိုင်ရင် ရမှတ်ယူဖို့ အခွင့်အရေးရှိပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး မျယ်လ်ဘီကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "အော်ဂရီတီက ရာသီ ၂၅ ပွဲမှာ ၅၆ ဂိုးအထိ ပေးထားတာကြောင့် မျယ်လ်ဘီနဲ့ပွဲမှာ တိုက်စစ်ထက် ခံစစ်ကို အရင်တည်ဆောက်ရမယ့်အနေအထားပါ။ ဂိုက်စ်ကို လေးဂိုးသွင်းနိုင်ခဲ့တဲ့ပွဲက အော်ဂရီတီရဲ့ ရှေ့တန်းမှာ အဆုံးသတ်နိုင်စွမ်းရှိတယ်ဆိုတာ ပြသပေမယ့် ဟက်ကန်ကို သုံးဂိုးပြတ်ရှုံးထားတာက တည်ငြိမ်မှုမရှိသေးကြောင်း ရှင်းပြနေပါတယ်။ မျယ်လ်ဘီကလည်း ဟမ်မာဘီနဲ့ ဗက်စတာရော့စ်တို့ကို နှစ်ပွဲဆက် ရှုံးထားလို့ အသာစီးရမယ့်အနေအထား မဟုတ်ပါဘူး။ သို့ပေမယ့် အော်ဂရီတီရဲ့ နောက်တန်းကွက်လပ်တွေကို အကျိုးရှိရှိ အသုံးချနိုင်မယ့် အခွင့်အရေးက မျယ်လ်ဘီမှာ ပိုရှိနိုင်တာကြောင့် **မျယ်လ်ဘီ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401842865",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/131552/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -1327,7 +1372,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131552.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20301.png",
-        "leagueLogoUrl": "assets/league-logos/swe.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842865",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/teams/131552/schedule?season=2026",
         "myanmarOdds": {
@@ -1342,8 +1387,10 @@
         "awayOdds": "2.26",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
-        "espnMatchId": "401842865"
+        "oddsVerifiedDate": "2026-10-29",
+        "espnMatchId": "401842865",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-09",
@@ -1362,10 +1409,14 @@
         "status": "scheduled",
         "internetPrediction": "0-3",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "အာဟုစ်ဖရီးမတ်က ပြည်တွင်းလိဂ် အမှတ်ပေးဇယား အဆင့် 5၊ ရမှတ် 15 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 2 ပွဲရှုံးထားပါတယ်။ ကိုပင်ဟေဂင်ကတော့ အဆင့် 2၊ ရမှတ် 26 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ အာဟုစ်ဖရီးမတ်က ဒုတိယတန်းပွဲတွေမှာ နောက်ဆုံးနှစ်ပွဲဆက် ဂိုးမရှိသရေကျထားပြီး အခွင့်အရေးအဆုံးသတ်မှု ကောင်းမွန်ဖို့ လိုနေပါတယ်။ ကိုပင်ဟေဂင်ကတော့ ဒိန်းမတ်ထိပ်တန်းလိဂ် ဒုတိယနေရာမှာရှိပေမယ့် နောက်ဆုံးနှစ်ပွဲဆက် သရေကျထားတာကြောင့် အရှိန်ပြန်တင်လိုနေပါတယ်။ ဖလားပွဲဖြစ်လို့ အရန်လူစာရင်းအသုံးပြုနိုင်သော်လည်း အဆင့်မြင့်လိဂ်မှာ ရင်ဆိုင်နေရတဲ့ ဖိအားနဲ့ လူစာရင်းအရည်အသွေးကြောင့် ကိုပင်ဟေဂင်အတွက် ထိန်းချုပ်နိုင်ခြေ ပိုများပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး ကိုပင်ဟေဂင်ကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "အာဟုစ်ဖရီးမတ်က ဒိန်းမတ်ဖလားမှာ ကိုပင်ဟေဂင်ကို အိမ်ကွင်းလက်ခံရမှာဖြစ်ပေမယ့် နှစ်သင်းရဲ့ လိဂ်အဆင့်နဲ့ လူစာရင်းအင်အားက ကွာခြားနေပါတယ်။ အာဟုစ်ဖရီးမတ်က ဗိုင်လေနဲ့ အက်စ်ဘယာ့ဂ်တို့ကို နှစ်ပွဲဆက် ဂိုးမရှိသရေကျခဲ့ပြီး ဂိုးဖန်တီးမှုမှာ ပြဿနာရှိနေတာ တွေ့ရပါတယ်။ ကိုပင်ဟေဂင်ကလည်း အိုဒင်ဆီနဲ့ AGF ကို နှစ်ပွဲဆက်သရေကျခဲ့ပေမယ့် ထိပ်တန်းလိဂ်မှာ ဒုတိယနေရာကို ရယူထားပြီး ဘောလုံးပိုင်ဆိုင်မှုနဲ့ ကစားပုံစည်းကမ်းက ပိုပြီးအားသာပါတယ်။ ဖလားပွဲမှာ အိမ်ရှင်က ခံစစ်နဲ့ ပွဲကိုဆွဲထားနိုင်သော်လည်း တစ်ပွဲလုံး အခွင့်အရေးဖန်တီးနိုင်မှုအရ **ကိုပင်ဟေဂင်** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.tntsports.co.uk/football/dbu-pokalen/calendar-results.shtml",
+            "https://www.pitchlabstats.com/team/dnk-aarhus-fremad"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -1492,7 +1543,7 @@
         },
         "homeCrestUrl": "https://www.footylogos.com/dls/logo/aarhus-fremad.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/909.png",
-        "leagueLogoUrl": "assets/league-logos/den.cup.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/den.cup.png",
         "fixtureSourceUrl": "https://www.tntsports.co.uk/football/dbu-pokalen/calendar-results.shtml",
         "standingsSourceUrl": "https://www.pitchlabstats.com/team/dnk-aarhus-fremad",
         "myanmarOdds": {
@@ -1507,7 +1558,9 @@
         "awayOdds": "1.25",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-10",
@@ -1526,10 +1579,14 @@
         "status": "scheduled",
         "internetPrediction": "3-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "မစ်ဂျီလန်းက ပြည်တွင်းလိဂ် အမှတ်ပေးဇယား အဆင့် 1၊ ရမှတ် 28 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 4 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 0 ပွဲရှုံးထားပါတယ်။ အိုဒင်ဆီကတော့ အဆင့် 7၊ ရမှတ် 14 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 3 ပွဲသရေ၊ 0 ပွဲရှုံးထားပါတယ်။ မစ်ဂျီလန်းက ဒိန်းမတ်ထိပ်တန်းလိဂ်မှာ ရှုံးပွဲမရှိသေးတဲ့အတွက် ဒီဖလားပွဲမှာလည်း ယုံကြည်မှုရှိရှိ ဝင်ကစားနိုင်ပါတယ်။ အိုဒင်ဆီကတော့ ရာသီရလဒ်ကို တည်ငြိမ်အောင် ကြိုးစားနေရပြီး ကွင်းလယ်ကို ပြန်ဆုတ်ကာ မစ်ဂျီလန်းရဲ့ ဖိအားပေးမှုကို ထိန်းနိုင်ဖို့လိုပါတယ်။ နောက်ဆုံးတွေ့ဆုံခဲ့တဲ့ လိဂ်ပွဲတွေက နှစ်သင်းဟန်ချက်ကို ထိခိုက်စေနိုင်ပေမယ့် ပိုင်ဆိုင်မှုနဲ့ ဂိုးအခွင့်အရေးဖန်တီးနိုင်မှုမှာ အိမ်ရှင်ဘက်ကို ပိုမိုအလေးထားရပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး မစ်ဂျီလန်းကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "မစ်ဂျီလန်းက ဒိန်းမတ်လိဂ်မှာ ရှုံးပွဲမရှိဘဲ ဦးဆောင်နေတဲ့ အသင်းဖြစ်လို့ အိုဒင်ဆီနဲ့ ဖလားပွဲမှာလည်း အိမ်ကွင်းကနေ ပုံမှန်တိုက်စစ်အရှိန်ကို ထိန်းထားနိုင်ဖို့ ရှိပါတယ်။ နောက်ဆုံးပွဲတွေမှာ လင်းဘီ၊ ဗီဘော့ဂ်နဲ့ ကိုပင်ဟေဂင်ကို ဆက်တိုက်အနိုင်ယူခဲ့တဲ့ မစ်ဂျီလန်းက ပွဲကျပ်တဲ့အချိန် အနိုင်ဂိုးရှာနိုင်စွမ်း ရှိနေပါတယ်။ အိုဒင်ဆီကလည်း ဘရွန်းဘီကို အနိုင်ယူထားသလို ကိုပင်ဟေဂင်နဲ့ သရေကျထားတာကြောင့် လွယ်လွယ်ကူကူ အရှုံးပေးမယ့်အသင်း မဟုတ်ပါဘူး။ ဒါပေမယ့် မစ်ဂျီလန်းရဲ့ ရာသီတစ်လျှောက် တည်ငြိမ်မှုနဲ့ အိမ်ကွင်းထိန်းချုပ်နိုင်မှုက အိုဒင်ဆီထက် ရှေ့ရောက်နေတာကြောင့် **မစ်ဂျီလန်း** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.tntsports.co.uk/football/dbu-pokalen/calendar-results.shtml",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/den.1/teams/572/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -1658,7 +1715,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/572.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11550.png",
-        "leagueLogoUrl": "assets/league-logos/den.cup.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/den.cup.png",
         "fixtureSourceUrl": "https://www.tntsports.co.uk/football/dbu-pokalen/calendar-results.shtml",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/den.1/teams/572/schedule?season=2026",
         "myanmarOdds": {
@@ -1673,7 +1730,9 @@
         "awayOdds": "4.55",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-11",
@@ -1692,10 +1751,14 @@
         "status": "scheduled",
         "internetPrediction": "1-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "အယ်လ်ခါလိဂျ်က သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 10၊ ရမှတ် 12 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ အယ်လ်ဟာဇမ်ကတော့ အဆင့် 13၊ ရမှတ် 10 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 0 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ အယ်လ်ခါလိဂျ်က ဒီရာသီ သရေပွဲများနေပြီး အဆုံးအဖြတ်ရလဒ် ရှာဖွေဖို့ခက်ခဲနေသလို အယ်လ်ဟာဇမ်ကလည်း အနိုင်ရမှုနည်းပါတယ်။ ဇယားအလယ်အောက်ပိုင်းက နှစ်သင်းဖြစ်လို့ အမှတ်တစ်မှတ်စီရဖို့ထက် အနိုင်ရလဒ်က ပိုပြီး အရေးပါလာနိုင်ပါတယ်။ အိမ်ရှင်က အစောပိုင်းဖိအားတင်နိုင်သော်လည်း အယ်လ်ဟာဇမ်ရဲ့ ခံစစ်တုံ့ပြန်မှုနဲ့ တန်ပြန်တိုက်စစ်ကို သတိထားရမှာပါ။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး အယ်လ်ခါလိဂျ်ကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "အယ်လ်ခါလိဂျ်က အယ်လ်ဟာဇမ်ကို အိမ်ကွင်းမှာ လက်ခံရတဲ့အချိန် နောက်ဆုံး အယ်လ်အာလီကို လေးဂိုးပေးခဲ့ရတဲ့ ခံစစ်အမှားတွေကို မဖြစ်မနေ ပြန်ပြင်ရမှာပါ။ အဲဒီမတိုင်ခင် အယ်လ်ဖာတက်နဲ့ အယ်လ်ဖေဟာတို့ကို ဆက်တိုက်အနိုင်ရခဲ့တာကြောင့် အယ်လ်ခါလိဂျ်ရဲ့ တိုက်စစ်မှာ အခွင့်အရေးရရင် အဆုံးသတ်နိုင်စွမ်းရှိနေပါတယ်။ အယ်လ်ဟာဇမ်ကတော့ နောက်ဆုံးသုံးပွဲမှာ နိုင်ပွဲမရှိဘဲ အယ်လ်ဟီလာနဲ့ အယ်လ်ဖာတက်တို့ကို ရှုံးထားတာကြောင့် အဝေးကွင်းမှာ ဖိအားအောက်ရောက်နိုင်ပါတယ်။ နှစ်သင်းစလုံး ခံစစ်အားနည်းချက်ရှိပေမယ့် လတ်တလောအနိုင်ရပွဲတွေကနေ ယုံကြည်မှုအနည်းငယ်ပိုရှိတဲ့ **အယ်လ်ခါလိဂျ်** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401900882",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/21829/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -1824,7 +1887,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21829.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21964.png",
-        "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2488.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ksa.1.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900882",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/21829/schedule?season=2026",
         "myanmarOdds": {
@@ -1839,8 +1902,10 @@
         "awayOdds": "3.16",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
-        "espnMatchId": "401900882"
+        "oddsVerifiedDate": "2026-10-29",
+        "espnMatchId": "401900882",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-12",
@@ -1859,10 +1924,14 @@
         "status": "scheduled",
         "internetPrediction": "3-0",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "အယ်လ်နာဆာက သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 2၊ ရမှတ် 25 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 4 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 0 ပွဲရှုံးထားပါတယ်။ အယ်လ်ခူလုဒ်ကတော့ အဆင့် 9၊ ရမှတ် 12 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 0 ပွဲသရေ၊ 4 ပွဲရှုံးထားပါတယ်။ အယ်လ်နာဆာက ရာသီအစကနေ အနိုင်ရပွဲအများအပြားနဲ့ ဇယားထိပ်ပိုင်းမှာ ဆက်တိုက်ရပ်တည်နေသလို အယ်လ်ခူလုဒ်ကတော့ အမှတ်ပေးဇယား အလယ်ပိုင်းမှာရှိပါတယ်။ အိမ်ရှင်ရဲ့ ရမှတ်စုဆောင်းနိုင်မှုနဲ့ တိုက်စစ်ဖန်တီးအားက ဧည့်သည်ထက် ပိုမိုတည်ငြိမ်နေတာကြောင့် အယ်လ်ခူလုဒ်အတွက် နောက်တန်းကို စုဖွဲ့ထားဖို့ အရေးကြီးပါတယ်။ အယ်လ်နာဆာက ဘောလုံးပိုင်ဆိုင်မှုကို ထိန်းနိုင်ခဲ့ရင် အိမ်ကွင်းမှာ အခွင့်အရေး ပိုမိုဖန်တီးနိုင်မှာပါ။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး အယ်လ်နာဆာကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "အယ်လ်နာဆာက ရာသီဆယ်ပွဲမှာ ရှစ်ပွဲအနိုင်ယူပြီး အမှတ်ပေးဇယားဒုတိယနေရာမှာ ရှိသလို နောက်ဆုံးကစားခဲ့တဲ့ပွဲတွေမှာလည်း အနိုင်ရလဒ်တွေ ဆက်တိုက်ယူထားတာကြောင့် အယ်လ်ခူလုဒ်ကို အိမ်ကွင်းလက်ခံရတဲ့အချိန် ပွဲကို ဦးဆောင်နိုင်ဖို့ရှိပါတယ်။ အယ်လ်ဖိုင်ဆလီကို သုံးဂိုးသွင်းနိုင်ခဲ့ပြီး နီအွန်ကို ဂိုးမပေးဘဲအနိုင်ရခဲ့တဲ့ ကစားပုံက တိုက်စစ်နဲ့ခံစစ်ကြား ဟန်ချက်ကို ပြနေပါတယ်။ အယ်လ်ခူလုဒ်ကတော့ နောက်ဆုံးသုံးပွဲဆက် ရှုံးထားပြီး အဲဒီပွဲတွေမှာ ဂိုးပေးရမှုများတာကြောင့် အယ်လ်နာဆာရဲ့ ဖိအားကို တစ်ပွဲလုံးခံနိုင်ဖို့ ခက်ပါတယ်။ နှစ်သင်းရဲ့ လက်ရှိရလဒ်နဲ့ ဂိုးပေးရမှုကွာခြားချက်ကို နှိုင်းယှဉ်ကြည့်ရင် **အယ်လ်နာဆာ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401900881",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/817/schedule?season=2026"
+          ]
         },
         "specialChoice": true,
         "homeLastFive": [
@@ -1991,7 +2060,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/817.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/22028.png",
-        "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2488.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ksa.1.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900881",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/817/schedule?season=2026",
         "myanmarOdds": {
@@ -2006,14 +2075,15 @@
         "awayOdds": "11.32",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
+        "oddsVerifiedDate": "2026-10-29",
         "espnMatchId": "401900881",
         "specialChoiceRank": 2,
         "specialPreparedDate": "2026-10-29",
         "specialAnalysisParagraphs": [
-          "အယ်လ်နာဆာက ပွဲ ၁၀ ပွဲမှ ၂၅ မှတ်ရရှိထားပြီး ထိပ်ပိုင်းမှာ အင်အားကောင်းနေတဲ့အသင်းဖြစ်ပါတယ်။ အယ်လ်ခူလုဒ်က ပွဲ ၁၀ ပွဲကစား ၁၂ မှတ်သာ ရရှိထားပြီး အိမ်ရှင်ရဲ့ တိုက်စစ်ဖိအားကို ခံနိုင်ဖို့ အရေးကြီးပါတယ်။",
-          "ဘောလုံးပိုင်ဆိုင်မှုနဲ့ ရမှတ်စုဆောင်းနိုင်မှုက နှစ်သင်းကြား ကွာခြားချက်ရှိနေပြီး အိမ်ကွင်းမှာ ပုံမှန်ကစားပုံကို ထိန်းနိုင်တဲ့ အယ်လ်နာဆာကို ရွေးချယ်ပါတယ်။"
-        ]
+          "အယ်လ်နာဆာက ဆော်ဒီပရိုလိဂ် ထိပ်ဆုံးနေရာကို ဆက်လက်လိုက်နေချိန်မှာ အယ်လ်ခူလုဒ်ကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမယ့်ပွဲဟာ လက်လွတ်ခံလို့မရတဲ့ ရမှတ်သုံးမှတ်ပါပဲ။ နည်းပြ **အန်ဂျီ ပိုစတီကိုဂလူး** လက်အောက်က အယ်လ်နာဆာဟာ ဆယ်ပွဲကစား ရှစ်ပွဲနိုင်ပြီး ၂၅ မှတ်နဲ့ ဒုတိယနေရာရောက်နေသလို အနိုင်ရပွဲတွေ ဆက်တိုက်ရရှိလာတာကြောင့် အသင်းရဲ့ ယုံကြည်မှုကလည်း မြင့်တက်နေပါတယ်။ နောက်ဆုံး အယ်လ်ဖိုင်ဆလီကို သုံးဂိုးသွင်းအနိုင်ရတဲ့ပွဲမှာ **ခရစ္စတီယာနို ရော်နယ်ဒို** က ဂိုးသွင်းနိုင်ခဲ့သလို **အန်ဂျယ်လို ဂါဘရီယယ်** ကလည်း ရှေ့တန်းကို အားဖြည့်ပေးနိုင်ခဲ့ပါတယ်။ ဒီလို ဂိုးသွင်းနိုင်တဲ့ကစားသမားတွေ ရှိနေတဲ့အတွက် အယ်လ်နာဆာအနေနဲ့ ကွင်းလယ်ကနေ အခွင့်အရေးအမျိုးမျိုးဖန်တီးနိုင်သလို အယ်လ်ခူလုဒ်နောက်တန်းက တစ်ဦးတည်းကို ပိတ်ဆို့ရုံနဲ့ လုံလောက်မှာ မဟုတ်ပါဘူး။ အယ်လ်ခူလုဒ်ဘက်မှာ နည်းပြ **ဒက်စ် ဘာကင်ဟမ်** က နောက်ဆုံးလိဂ်ပွဲ လေးပွဲဆက် ရှုံးနိမ့်မှုကို ရပ်တန့်ဖို့ ကြိုးစားနေရပြီး အဲဒီလေးပွဲမှာ ၁၃ ဂိုးအထိ ပေးခဲ့ရတာက ခံစစ်မှာ အလွန်စိုးရိမ်စရာကောင်းတဲ့အချက်ပါ။ အထူးသဖြင့် အယ်လ်ကာဒီဆီယာကို ငါးဂိုးပြတ်၊ အယ်လ်အက်တီဖတ်ကို သုံးဂိုးပြတ် ရှုံးထားတာကြောင့် အယ်လ်နာဆာရဲ့ မြန်မြန်ဆန်ဆန် ဖိအားပေးမှုကို ခံနိုင်ဖို့ နောက်တန်းကို ပိုစည်းကမ်းတကျ စုဖွဲ့ရမှာ ဖြစ်ပါတယ်။ ဒါပေမယ့် အယ်လ်နာဆာအနေနဲ့လည်း ရှေ့တန်းကို အလွန်အကျွံတင်ပြီး နောက်ခံနေရာလွတ်တွေ ဖန်တီးမိရင် အယ်လ်ခူလုဒ်ရဲ့ တန်ပြန်တုံ့ပြန်မှုက ခြိမ်းခြောက်လာနိုင်ပါတယ်။ အဲဒီအန္တရာယ်ကို ထိန်းနိုင်ဖို့ အယ်လ်နာဆာက ပွဲအစကတည်းက ကွင်းလယ်ဘောလုံးပိုင်ဆိုင်မှုကို ထိန်းထားပြီး အခွင့်အရေးကောင်းတဲ့အချိန်မှာသာ တိုက်စစ်အားတင်သင့်ပါတယ်။ ရှေ့တန်းမှာ ဂိုးအဆုံးသတ်နိုင်တဲ့လူစာရင်းရှိမှု၊ ရာသီတစ်လျှောက် ပေးဂိုးရှစ်ဂိုးသာရှိတဲ့ ခံစစ်နဲ့ အယ်လ်ခူလုဒ်ရဲ့ နောက်ဆုံးဂိုးပေးရမှုပုံစံကို ပေါင်းပြီးချိန်ဆကြည့်ရင် ဒီပွဲမှာ **အယ်လ်နာဆာ** ကို ရွေးချယ်ပါတယ်။"
+        ],
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-13",
@@ -2032,10 +2102,14 @@
         "status": "scheduled",
         "internetPrediction": "0-3",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "အယ်လ်ရီယာဒ်က သက်ဆိုင်ရာလိဂ် အမှတ်ပေးဇယား အဆင့် 11၊ ရမှတ် 12 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ အယ်လ်ကာဒီဆီယာကတော့ အဆင့် 3၊ ရမှတ် 25 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 3 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ အယ်လ်ရီယာဒ်က ပွဲအများအပြားမှာ ရမှတ်ဆုံးရှုံးခဲ့ပြီး ရာသီတစ်လျှောက် အနိုင်ရမှုက အကန့်အသတ်ရှိနေပါတယ်။ အယ်လ်ကာဒီဆီယာကတော့ အနိုင်ရပွဲနှုန်းကောင်းပြီး ဇယားထိပ်ပိုင်းမှာ ဆက်လက်ရပ်တည်နေပါတယ်။ အယ်လ်ရီယာဒ်က အိမ်ကွင်းပရိသတ်ရှေ့မှာ ခံစစ်ကို ခိုင်မာအောင် ထိန်းထားနိုင်မှ တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်မယ်ဖြစ်ပြီး အယ်လ်ကာဒီဆီယာရဲ့ ဂိုးအခွင့်အရေးဖန်တီးမှုကို ကြံ့ကြံ့ခံရပါမယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး အယ်လ်ကာဒီဆီယာကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "အယ်လ်ရီယာဒ်က အယ်လ်တာအွန်ကို အနိုင်ယူထားပေမယ့် ရာသီဆယ်ပွဲမှာ ၁၉ ဂိုးပေးထားတာကြောင့် အယ်လ်ကာဒီဆီယာနဲ့ပွဲမှာ နောက်တန်းအတွက် စမ်းသပ်မှုကြီးတစ်ခု ဖြစ်လာပါတယ်။ အယ်လ်ကာဒီဆီယာကတော့ လိဂ် ၁၁ ပွဲမှာ ၂၅ မှတ်ရရှိထားပြီး ၂၆ ဂိုးအထိ သွင်းယူထားလို့ အခွင့်အရေးတစ်ကြိမ်ရရင် အဆုံးသတ်နိုင်တဲ့အင်အား ရှိပါတယ်။ အယ်လ်ဟီလာကို နောက်ဆုံးရှုံးခဲ့ပေမယ့် အယ်လ်တာအွန်နဲ့ အက်ဘ်ဟာတို့ကို အနိုင်ရခဲ့တဲ့အတွက် အဲဒီရှုံးပွဲတစ်ပွဲနဲ့ တိုက်စစ်အန္တရာယ်ကို လျှော့တွက်လို့ မရပါဘူး။ အယ်လ်ရီယာဒ်က အိမ်ကွင်းမှာ တုံ့ပြန်နိုင်သော်လည်း ခံစစ်ကွက်လပ်ကို အသုံးချဖို့ ပိုအခွင့်ကောင်းရှိတဲ့ **အယ်လ်ကာဒီဆီယာ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.espn.com/soccer/match/_/gameId/401900880",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/21965/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -2164,7 +2238,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21965.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/22022.png",
-        "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2488.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ksa.1.png",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900880",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/teams/21965/schedule?season=2026",
         "myanmarOdds": {
@@ -2179,8 +2253,10 @@
         "awayOdds": "1.29",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28",
-        "espnMatchId": "401900880"
+        "oddsVerifiedDate": "2026-10-29",
+        "espnMatchId": "401900880",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-14",
@@ -2199,10 +2275,14 @@
         "status": "scheduled",
         "internetPrediction": "2-1",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "စပို့တင်းဘရာဂါက ပြည်တွင်းလိဂ် အမှတ်ပေးဇယား အဆင့် 8၊ ရမှတ် 11 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 1 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 3 ပွဲရှုံးထားပါတယ်။ ဖာမာလီကာအိုကတော့ အဆင့် 11၊ ရမှတ် 10 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 2 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ စပို့တင်းဘရာဂါက ပေါ်တူဂီလိဂ်မှာ ရာသီအစ ရလဒ်အတက်အကျရှိနေသော်လည်း ဒီပွဲက အိမ်ကွင်းဖလားပွဲဖြစ်တာကြောင့် အားပြန်တင်လာနိုင်ပါတယ်။ ဖာမာလီကာအိုက သရေပွဲအများအပြားနဲ့ အမှတ်စုဆောင်းထားပြီး အဝေးကွင်းမှာ ခံစစ်ကို စည်းကမ်းတကျ ထိန်းဖို့လိုပါတယ်။ ဘရာဂါရဲ့ လှုပ်ရှားမှုမြန်တဲ့ တိုက်စစ်ကို ထိန်းနိုင်ဖို့ ဖာမာလီကာအိုအတွက် ကွင်းလယ်အကာအကွယ်က အရေးကြီးလာနိုင်ပြီး ပွဲပြီးချိန်အထိ အားကောင်းကောင်း တုံ့ပြန်နိုင်ရပါမယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး စပို့တင်းဘရာဂါကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "စပို့တင်းဘရာဂါက လိဂ်နောက်ဆုံးသုံးပွဲဆက် ရှုံးထားလို့ ဖာမာလီကာအိုနဲ့ လိဂ်ဖလားပွဲကို ခြေစွမ်းပြန်လည်ပြသဖို့ အရေးကြီးတဲ့အခွင့်အရေးအဖြစ် မြင်ရမှာပါ။ ဂီးလ်ဗစ်ဆန်တီနဲ့ စပို့တင်းကို ဂိုးသွင်းခဲ့ပေမယ့် ရမှတ်မရခဲ့တာက ဘရာဂါရဲ့ ရှေ့တန်းက အခွင့်အရေးဖန်တီးနိုင်ပေမယ့် နောက်တန်းအကာအကွယ် မလုံလောက်သေးတဲ့အခြေအနေကို ပြနေပါတယ်။ ဖာမာလီကာအိုက ရီယိုအာဗီကို လေးဂိုးပြတ်နိုင်ခဲ့တာကြောင့် အခွင့်အရေးရရင် ဂိုးပြတ်နိုင်တဲ့အသင်းဖြစ်ပြီး ဘရာဂါရဲ့ အလွန်အကျွံတက်ကစားမှုကို အခွင့်ကောင်းယူနိုင်ပါတယ်။ ဒါပေမယ့် ဖလားပွဲအတွေ့အကြုံနဲ့ အိမ်ကွင်းတုံ့ပြန်မှုကို အလေးထားပြီး **စပို့တင်းဘရာဂါ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.rtp.pt/noticias/desporto/taca-da-liga/gil-vicente/calendario",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams/2994/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -2331,7 +2411,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12698.png",
-        "leagueLogoUrl": "https://www.ligaportugal.pt/backoffice/assets/ic_allianzcup_cbcb5ca1e0.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/por.cup.png",
         "fixtureSourceUrl": "https://www.rtp.pt/noticias/desporto/taca-da-liga/gil-vicente/calendario",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams/2994/schedule?season=2026",
         "myanmarOdds": {
@@ -2346,7 +2426,9 @@
         "awayOdds": "4.22",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       },
       {
         "fixtureId": "fc-20261029-15",
@@ -2365,10 +2447,14 @@
         "status": "scheduled",
         "internetPrediction": "2-2",
         "sourcePredictionType": "29(1).pdf source internet prediction; not FT and not VIP Internet",
-        "dailyPreviewText": "ဘင်ဖီကာက ပြည်တွင်းလိဂ် အမှတ်ပေးဇယား အဆင့် 2၊ ရမှတ် 22 မှတ်ရရှိထားပြီး နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 4 ပွဲနိုင်၊ 0 ပွဲသရေ၊ 1 ပွဲရှုံးထားပါတယ်။ ဂီးလ်ဗစ်ဆန်တီကတော့ အဆင့် 7၊ ရမှတ် 14 မှတ်နဲ့ နောက်ဆုံး ပြီးဆုံးခဲ့တဲ့ ၅ ပွဲမှာ 2 ပွဲနိုင်၊ 1 ပွဲသရေ၊ 2 ပွဲရှုံးထားပါတယ်။ ဘင်ဖီကာက ပေါ်တူဂီလိဂ်မှာ အနိုင်ရပွဲနှုန်းမြင့်မားပြီး ဇယားထိပ်ပိုင်းမှာ အားကောင်းနေတာကြောင့် ဖလားပွဲမှာ အိမ်ကွင်းအားသာချက်ကို အပြည့်အသုံးချနိုင်ဖို့ရှိပါတယ်။ ဂီးလ်ဗစ်ဆန်တီက တိုက်စစ်အခွင့်အရေးရတဲ့အချိန် အဆုံးသတ်နိုင်ဖို့ လိုအပ်သလို တည်ကန်ဘောတွေကနေ ရလဒ်ကို ပြောင်းလဲဖို့ ကြိုးစားလာနိုင်ပါတယ်။ ဘင်ဖီကာအနေနဲ့ ကွင်းလယ်ပိုင်ဆိုင်မှုထိန်းထားပြီး ဂီးလ်ဗစ်ဆန်တီရဲ့ တန်ပြန်တိုက်စစ်ကို ကာကွယ်နိုင်ရင် ဦးဆောင်နိုင်ခြေ ပိုများနေပါတယ်။ နှစ်သင်းရဲ့ နောက်ဆုံးရလဒ်နဲ့ လိဂ်ခြေစွမ်း၊ အိမ်ကွင်းအခြေအနေကို ချိန်ဆကြည့်ပြီး ဘင်ဖီကာကို ရွေးချယ်ပါတယ်။",
+        "dailyPreviewText": "ဘင်ဖီကာက ပေါ်တူဂီလိဂ် ကိုးပွဲမှာ ခုနစ်ပွဲအနိုင်ရထားပြီး ဂိုးသွင်းအားကောင်းနေတဲ့အတွက် ဂီးလ်ဗစ်ဆန်တီကို လိဂ်ဖလားမှာ လက်ခံရတာက အသာစီးယူနိုင်မယ့် အခွင့်အရေးပါပဲ။ စန်တာကလာရာနဲ့ ဗစ်တိုးရီးယားဂွီမာရက်စ်တို့ကို ဆက်တိုက်အနိုင်ရထားတာကြောင့် ပေါ်တိုကို ရှုံးခဲ့တဲ့အပြီး ယုံကြည်မှု ပြန်ရလာပါတယ်။ ဂီးလ်ဗစ်ဆန်တီကလည်း ဘရာဂါကို အနိုင်ယူထားပြီး နောက်ဆုံးသုံးပွဲမှာ နှစ်ပွဲနိုင်ထားတာကြောင့် ပုံမှန်ခံစစ်အောက်ကနေ တန်ပြန်အခွင့်အရေးယူနိုင်ပါတယ်။ ဒါပေမယ့် ဘင်ဖီကာရဲ့ တစ်ပွဲပျမ်းမျှဂိုးသွင်းအားနဲ့ အိမ်ကွင်းတိုက်စစ်က ပိုပြီး ဖိအားပေးနိုင်မယ့်အတွက် **ဘင်ဖီကာ** ကို ရွေးချယ်ပါတယ်။",
         "previewJournalist": {
-          "status": "fresh_composed_verified_results_and_standings",
-          "source": "2026-10-29 independent research"
+          "status": "revised_to_owner_master",
+          "source": "2026-10-29-owner-journalist-draft.json",
+          "researchSources": [
+            "https://www.rtp.pt/noticias/desporto/taca-da-liga/gil-vicente/calendario",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams/1929/schedule?season=2026"
+          ]
         },
         "specialChoice": false,
         "homeLastFive": [
@@ -2497,7 +2583,7 @@
         },
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3699.png",
-        "leagueLogoUrl": "https://www.ligaportugal.pt/backoffice/assets/ic_allianzcup_cbcb5ca1e0.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/por.cup.png",
         "fixtureSourceUrl": "https://www.rtp.pt/noticias/desporto/taca-da-liga/gil-vicente/calendario",
         "standingsSourceUrl": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams/1929/schedule?season=2026",
         "myanmarOdds": {
@@ -2512,7 +2598,9 @@
         "awayOdds": "6.63",
         "oddsProvider": "TipsterArea 2026-10-28 20:06 snapshot (average bookie 1X2)",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28",
+        "oddsVerificationNote": "Rechecked exact fixture and all three prices against dated TipsterArea 29 October page; publisher snapshot remains 28 October 20:06."
       }
     ],
     "updateStatus": "V7_RESEARCHED_PUBLISH_CANDIDATE",
@@ -2569,7 +2657,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401921844",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921844",
-        "leagueLogoUrl": "assets/league-logos/eng.cup.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.cup.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
         "homeOdds": "2.23",
@@ -2577,7 +2665,8 @@
         "awayOdds": "3.18",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 2,
@@ -2605,7 +2694,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401874976",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874976",
-        "leagueLogoUrl": "assets/league-logos/ita.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
         "homeOdds": "1.67",
@@ -2613,7 +2702,8 @@
         "awayOdds": "4.71",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 3,
@@ -2641,7 +2731,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401874969",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874969",
-        "leagueLogoUrl": "assets/league-logos/ita.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
         "homeOdds": "2.22",
@@ -2649,7 +2739,8 @@
         "awayOdds": "3.11",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 4,
@@ -2676,7 +2767,7 @@
         "sourcePage": 1,
         "sourceIsAuthority": true,
         "fixtureSourceUrl": "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2",
-        "leagueLogoUrl": "assets/league-logos/fin.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fin.1.png",
         "homeCrestUrl": "https://static.bongda24h.vn/Medias/original/2023/03/14/fc-inter-turku-1403141153.png",
         "awayCrestUrl": "https://r2.thesportsdb.com/images/media/team/badge/n7towl1615757839.png",
         "homeOdds": "2.37",
@@ -2684,7 +2775,8 @@
         "awayOdds": "2.74",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 5,
@@ -2711,7 +2803,7 @@
         "sourcePage": 1,
         "sourceIsAuthority": true,
         "fixtureSourceUrl": "https://www.veikkausliiga.com/tilastot/2026/veikkausliiga/ottelut/?group=2",
-        "leagueLogoUrl": "assets/league-logos/fin.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fin.1.png",
         "homeCrestUrl": "https://assets.football-logos.cc/logos/finland/1500x1500/kups.21757560.png",
         "awayCrestUrl": "https://cdn.shopify.com/s/files/1/0098/7552/1636/files/Gnistan_logo_RGB.png?v=1742217387",
         "homeOdds": "1.46",
@@ -2719,7 +2811,8 @@
         "awayOdds": "5.99",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 6,
@@ -2747,7 +2840,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401842861",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842861",
-        "leagueLogoUrl": "assets/league-logos/swe.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2495.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8547.png",
         "homeOdds": "1.50",
@@ -2755,7 +2848,8 @@
         "awayOdds": "5.43",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 7,
@@ -2783,7 +2877,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401842859",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842859",
-        "leagueLogoUrl": "assets/league-logos/swe.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3052.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/8222.png",
         "homeOdds": "2.38",
@@ -2791,7 +2885,8 @@
         "awayOdds": "2.82",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 8,
@@ -2819,7 +2914,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401842865",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842865",
-        "leagueLogoUrl": "assets/league-logos/swe.1.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131552.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20301.png",
         "homeOdds": "2.89",
@@ -2827,7 +2922,8 @@
         "awayOdds": "2.26",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 9,
@@ -2854,7 +2950,7 @@
         "sourcePage": 1,
         "sourceIsAuthority": true,
         "fixtureSourceUrl": "https://www.tntsports.co.uk/football/dbu-pokalen/calendar-results.shtml",
-        "leagueLogoUrl": "assets/league-logos/den.cup.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/den.cup.png",
         "homeCrestUrl": "https://www.footylogos.com/dls/logo/aarhus-fremad.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/909.png",
         "homeOdds": "9.36",
@@ -2862,7 +2958,8 @@
         "awayOdds": "1.25",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 10,
@@ -2889,7 +2986,7 @@
         "sourcePage": 1,
         "sourceIsAuthority": true,
         "fixtureSourceUrl": "https://www.tntsports.co.uk/football/dbu-pokalen/calendar-results.shtml",
-        "leagueLogoUrl": "assets/league-logos/den.cup.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/den.cup.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/572.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11550.png",
         "homeOdds": "1.61",
@@ -2897,7 +2994,8 @@
         "awayOdds": "4.55",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 11,
@@ -2925,7 +3023,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401900882",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900882",
-        "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2488.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ksa.1.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21829.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21964.png",
         "homeOdds": "2.14",
@@ -2933,7 +3031,8 @@
         "awayOdds": "3.16",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 12,
@@ -2961,7 +3060,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401900881",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900881",
-        "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2488.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ksa.1.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/817.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/22028.png",
         "homeOdds": "1.19",
@@ -2969,7 +3068,8 @@
         "awayOdds": "11.32",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 13,
@@ -2997,7 +3097,7 @@
         "sourceIsAuthority": true,
         "espnMatchId": "401900880",
         "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401900880",
-        "leagueLogoUrl": "https://a.espncdn.com/i/leaguelogos/soccer/500/2488.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ksa.1.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/21965.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/22022.png",
         "homeOdds": "8.18",
@@ -3005,7 +3105,8 @@
         "awayOdds": "1.29",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 14,
@@ -3032,7 +3133,7 @@
         "sourcePage": 1,
         "sourceIsAuthority": true,
         "fixtureSourceUrl": "https://www.rtp.pt/noticias/desporto/taca-da-liga/gil-vicente/calendario",
-        "leagueLogoUrl": "https://www.ligaportugal.pt/backoffice/assets/ic_allianzcup_cbcb5ca1e0.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/por.cup.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12698.png",
         "homeOdds": "1.75",
@@ -3040,7 +3141,8 @@
         "awayOdds": "4.22",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       },
       {
         "number": 15,
@@ -3067,7 +3169,7 @@
         "sourcePage": 1,
         "sourceIsAuthority": true,
         "fixtureSourceUrl": "https://www.rtp.pt/noticias/desporto/taca-da-liga/gil-vicente/calendario",
-        "leagueLogoUrl": "https://www.ligaportugal.pt/backoffice/assets/ic_allianzcup_cbcb5ca1e0.png",
+        "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/por.cup.png",
         "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
         "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3699.png",
         "homeOdds": "1.38",
@@ -3075,7 +3177,8 @@
         "awayOdds": "6.63",
         "oddsProvider": "TipsterArea",
         "oddsSourceUrl": "https://tipsterarea.com/matches/date-29-10-2026",
-        "oddsVerifiedDate": "2026-10-28"
+        "oddsVerifiedDate": "2026-10-29",
+        "oddsSnapshotDate": "2026-10-28"
       }
     ],
     "currentPriceStatus": "unavailable_not_supplied"
@@ -3083,7 +3186,7 @@
   "tips": {
     "reportDate": "2026-10-29",
     "timezone": "Asia/Yangon",
-    "description": "Only independently cited external correct-score tips, unverified cases explicitly unavailable",
+    "description": "Independently checked external fixture-specific correct-score predictions; separate from local Bookies and AI models.",
     "items": [
       {
         "fixtureId": "fc-20261029-01",
@@ -3098,43 +3201,78 @@
         "fixtureId": "fc-20261029-02",
         "home": "Frosinone",
         "away": "Lecce",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "2-1",
+        "sourceName": "Sports Mole editorial prediction",
+        "sourceUrl": "https://www.sportsmole.co.uk/football/fiorentina/serie-a-predictions/feature/more-disappointment-for-sarri-atalanta-thursdays-serie-a-predictions_607865.html",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-03",
         "home": "Fiorentina",
         "away": "Atalanta",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "2-1",
+        "sourceName": "Sports Mole editorial prediction",
+        "sourceUrl": "https://www.sportsmole.co.uk/football/fiorentina/serie-a-predictions/feature/more-disappointment-for-sarri-atalanta-thursdays-serie-a-predictions_607865.html",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-04",
         "home": "FC Inter Turku",
         "away": "HJK Helsinki",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "1-2",
+        "sourceName": "Forebet published correct-score model",
+        "sourceUrl": "https://www.forebet.com/en/football/matches/inter-turku-hjk-helsinki-2557699",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-05",
         "home": "KuPS",
         "away": "IF Gnistan",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "2-1",
+        "sourceName": "FulltimeStats published correct-score model",
+        "sourceUrl": "https://fulltimestats.com/match/kups-vs-gnistan-2026-10-29",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-06",
         "home": "Hammarby IF",
         "away": "IK Sirius",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "2-0",
+        "sourceName": "OhMyTip published score prediction",
+        "sourceUrl": "https://ohmytip.com/prediction/hammarby-ff-vs-sirius-prediction-29-10-2026-1494318",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-07",
         "home": "Kalmar FF",
         "away": "GAIS",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "1-0",
+        "sourceName": "OhMyTip published score prediction",
+        "sourceUrl": "https://ohmytip.com/prediction/kalmar-ff-vs-gais-prediction-29-10-2026-1494319",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-08",
         "home": "Örgryte IS",
         "away": "Mjällby AIF",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "2-1",
+        "sourceName": "FulltimeStats published outcome score prediction",
+        "sourceUrl": "https://fulltimestats.com/match/orgryte-is-vs-mjallby-aif-2026-10-29",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-09",
@@ -3149,37 +3287,67 @@
         "fixtureId": "fc-20261029-10",
         "home": "FC Midtjylland",
         "away": "Odense Boldklub",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "3-1",
+        "sourceName": "BetClan published correct-score model",
+        "sourceUrl": "https://www.betclan.com/predictionsdetails/football/1640480/fc-midtjylland-v-odense-prediction-h2h-tip-and-match-preview/",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-11",
         "home": "Al Khaleej",
         "away": "Al Hazem",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "2-1",
+        "sourceName": "Betimate published correct-score model",
+        "sourceUrl": "https://betimate.com/en/news/previews/al-khaleej-saihat-vs-al-hazm-prediction-odds-betting-tips-10292026-2960038",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-12",
         "home": "Al Nassr",
         "away": "Al Kholood",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "2-0",
+        "sourceName": "FootballPredictions.AI external published model",
+        "sourceUrl": "https://footballpredictions.ai/football-predictions/al-nassr-vs-al-kholood-predictions-tips-29-oct-2026/",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-13",
         "home": "Al Riyadh",
         "away": "Al Qadsiah",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "0-2",
+        "sourceName": "OddAlerts external simulation",
+        "sourceUrl": "https://www.oddalerts.com/simulations/al-riyadh-vs-al-qadsiah-prediction/420636032",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-14",
         "home": "Braga",
         "away": "FC Famalicao",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "3-1",
+        "sourceName": "BetClan published correct-score model",
+        "sourceUrl": "https://www.betclan.com/predictionsdetails/football/1589436/sc-braga-v-famalicao-prediction-h2h-tip-and-match-preview/",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       },
       {
         "fixtureId": "fc-20261029-15",
         "home": "Benfica",
         "away": "Gil Vicente",
-        "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+        "score": "3-1",
+        "sourceName": "SoccerSite published correct-score model",
+        "sourceUrl": "https://www.soccersite.com/predictions-benfica-vs-gil-vicente-tips-and-stats-offbto7b7",
+        "sourceDate": "2026-10-29",
+        "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+        "verifiedDate": "2026-10-29"
       }
     ]
   },
@@ -3199,19 +3367,28 @@
           "ပင်နယ်တီအဆုံးအဖြတ်မှာ ဝက်စလေဖိုဖာနာ နောက်ဆုံးကန်သွင်းမှု လွဲချော်သွားတာက ချဲလ်ဆီးရဲ့ မျှော်လင့်ချက်ကို အဆုံးသတ်ခဲ့ပါတယ်။",
           "လီဗာပူးလ်ဟာ ကွာတားဖိုင်နယ်မှာ ဘုန်းမောက်နဲ့ ဆက်လက်တွေ့ဆုံရမှာဖြစ်ပြီး လူစာရင်းပြောင်းလဲမှုနဲ့ ခံစစ်တည်ငြိမ်ရေးက နောက်တစ်ဆင့်အတွက် အရေးပါနေပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-01.svg",
+        "imageAlt": "LIVERPOOL / CHELSEA — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.skysports.com/football/news/13604032/liverpool-1-1-chelsea-6-5-on-pens-wesley-fofana-misses-crucial-spot-kick-as-reds-advance-in-carabao-cup",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-01.svg",
         "imageFit": "contain",
         "sourceName": "Sky Sports",
         "sourceUrl": "https://www.skysports.com/football/news/13604032/liverpool-1-1-chelsea-6-5-on-pens-wesley-fofana-misses-crucial-spot-kick-as-reds-advance-in-carabao-cup",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/The_Kop%2C_Liverpool%27s_Anfield_stadium_-_geograph.org.uk_-_81526.jpg",
+          "artist": "Sue Adair",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AThe_Kop%2C_Liverpool's_Anfield_stadium_-_geograph.org.uk_-_81526.jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "man-city-brighton-carabao-20261029",
@@ -3224,19 +3401,28 @@
           "မန်စီးတီးက အဆုံးအဖြတ်ကန်သွင်းမှုမှာ ပိုတည်ငြိမ်ခဲ့တာကြောင့် ပြိုင်ပွဲကနေ မထွက်ခဲ့ရဘဲ ရလဒ်ကောင်းကို ထိန်းနိုင်ခဲ့ပါတယ်။",
           "နောက်တစ်ဆင့်မှာတော့ ပွဲချိန်အတွင်း ဂိုးပေးရမှုနဲ့ ပြန်လည်စုဖွဲ့မှုကို မြှင့်တင်ရမှာဖြစ်ပြီး ကစားသမားအလှည့်ကျအသုံးပြုမှုလည်း သက်ရောက်နိုင်ပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-02.svg",
+        "imageAlt": "MAN CITY / BRIGHTON — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-28",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-02.svg",
         "imageFit": "contain",
         "sourceName": "Sky Sports",
         "sourceUrl": "https://www.skysports.com/football-scores-fixtures/2026-10-28",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Exterior_of_the_Etihad_Stadium_and_Etihad_Campus%2C_Ashton_New_Road%2C_Manchester_%28March_2015%29_%281%29.jpg/960px-Exterior_of_the_Etihad_Stadium_and_Etihad_Campus%2C_Ashton_New_Road%2C_Manchester_%28March_2015%29_%281%29.jpg",
+          "artist": "User:Hassocks5489",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AExterior_of_the_Etihad_Stadium_and_Etihad_Campus%2C_Ashton_New_Road%2C_Manchester_(March_2015)_(1).jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "bournemouth-villa-carabao-20261029",
@@ -3249,19 +3435,28 @@
           "ဗီလာက လူစာရင်းအပြောင်းအလဲများစွာ ပြုလုပ်ခဲ့တဲ့ပွဲမှာ ဘုန်းမောက်ရဲ့ အခွင့်အရေးအဆုံးသတ်မှုကို မထိန်းနိုင်ခဲ့ပါဘူး။",
           "ဒီနိုင်ပွဲကြောင့် ဘုန်းမောက်က ပြိုင်ပွဲစုံ ငါးပွဲဆက်အနိုင်ရရှိထားပြီး လီဗာပူးလ်နဲ့ ကွာတားဖိုင်နယ်မှာ တွေ့ဆုံရမှာ ဖြစ်ပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-03.svg",
+        "imageAlt": "BOURNEMOUTH / ASTON VILLA — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.skysports.com/football/news/13604015/bournemouth-3-0-aston-villa-cherries-win-fifth-consecutive-game-to-reach-carabao-cup-quarter-finals",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-03.svg",
         "imageFit": "contain",
         "sourceName": "Sky Sports",
         "sourceUrl": "https://www.skysports.com/football/news/13604015/bournemouth-3-0-aston-villa-cherries-win-fifth-consecutive-game-to-reach-carabao-cup-quarter-finals",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Bournemouth_v_Wigan_2018_01.jpg/960px-Bournemouth_v_Wigan_2018_01.jpg",
+          "artist": "Ungry Young Man",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ABournemouth_v_Wigan_2018_01.jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "sunderland-brentford-20261029",
@@ -3274,19 +3469,28 @@
           "ဘရန့်ဖို့ဒ်က ပြန်လည်တုံ့ပြန်နိုင်ခဲ့ပေမယ့် အဆုံးအဖြတ်ရလဒ်ကို မပြောင်းလဲနိုင်ခဲ့ပါဘူး။",
           "ဆန်းဒါးလန်းအတွက် နောက်တစ်ဆင့်မှာ ခံစစ်တည်ငြိမ်မှုနဲ့ ကွင်းလယ်အပြောင်းအရွှေ့က ပိုပြီး အရေးကြီးလာနိုင်ပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-04.svg",
+        "imageAlt": "SUNDERLAND / BRENTFORD — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.skysports.com/football/news/13604016/sunderland-3-2-brentford-jocelin-ta-bi-shines-for-black-cats-making-all-three-goals-to-reach-carabao-cup-quarter-finals",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-04.svg",
         "imageFit": "contain",
         "sourceName": "Sky Sports",
         "sourceUrl": "https://www.skysports.com/football/news/13604016/sunderland-3-2-brentford-jocelin-ta-bi-shines-for-black-cats-making-all-three-goals-to-reach-carabao-cup-quarter-finals",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Stadium_of_Light%2C_Sunderland-Southend_game%2C_2007.jpg",
+          "artist": "The original uploader was Elysium 73 at English Wikipedia.",
+          "license": "Public domain",
+          "licenseUrl": "",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AStadium_of_Light%2C_Sunderland-Southend_game%2C_2007.jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "fleetwood-arsenal-20261029",
@@ -3299,19 +3503,28 @@
           "ပွဲအဆုံးပိုင်းမှာ အာဆင်နယ်လူငယ် မက်စ်ဒေါမန် အနီကတ်ပြခံရပြီးနောက် ဖလီးဝုဒ်က ခံစစ်ကို ပိုမိုတည်ငြိမ်အောင် ထိန်းထားနိုင်ခဲ့ပါတယ်။",
           "ပင်နယ်တီမှာ ဂိုးသမား ဂျေးလင့်ချ် ကာကွယ်မှု အရေးပါခဲ့ပြီး ဖလီးဝုဒ်က အသင်းသမိုင်းမှာ ပထမဆုံး ဖလားကွာတားဖိုင်နယ်ကို တက်ရောက်ခဲ့ပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-05.svg",
+        "imageAlt": "FLEETWOOD / ARSENAL — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.efl.com/news/2026/october/28/carabao-cup--fleetwood-town-shock-arsenal-in-shootout-win/",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-05.svg",
         "imageFit": "contain",
         "sourceName": "English Football League",
         "sourceUrl": "https://www.efl.com/news/2026/october/28/carabao-cup--fleetwood-town-shock-arsenal-in-shootout-win/",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/FTFC01.jpg/960px-FTFC01.jpg",
+          "artist": "Tangerines at English Wikipedia",
+          "license": "Public domain",
+          "licenseUrl": "",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AFTFC01.jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "arsenal-women-benfica-20261029",
@@ -3324,19 +3537,28 @@
           "ဒုတိယပိုင်းမှာ ပင်နယ်တီဂိုးလည်း သွင်းယူနိုင်ခဲ့တာကြောင့် အင်္ဂလန်တိုက်စစ်မှူးတစ်ဦးရဲ့ ဥရောပပြိုင်ပွဲမှတ်တမ်းအတွက် အရေးပါတဲ့ည ဖြစ်လာပါတယ်။",
           "အာဆင်နယ်အတွက် ဒီနိုင်ပွဲက အုပ်စုအဆင့်ရမှတ်နဲ့ ယုံကြည်မှုကို တိုးစေခဲ့ပြီး နောက်လာမယ့် ဥရောပပွဲတွေအတွက် လှုံ့ဆော်မှုဖြစ်စေခဲ့ပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-06.svg",
+        "imageAlt": "ARSENAL WOMEN / BENFICA — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.uefa.com/womenschampionsleague/news/02aa-21f034a30d04-4669b15ca343-1000--women-s-champions-league-matchday-3-round-up-alessia-russo/",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-06.svg",
         "imageFit": "contain",
         "sourceName": "UEFA",
         "sourceUrl": "https://www.uefa.com/womenschampionsleague/news/02aa-21f034a30d04-4669b15ca343-1000--women-s-champions-league-matchday-3-round-up-alessia-russo/",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Arsenal_WFC_vs._VfL_Wolfsburg_%282022%29.jpg/960px-Arsenal_WFC_vs._VfL_Wolfsburg_%282022%29.jpg",
+          "artist": "FromMorningToMidnight",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AArsenal_WFC_vs._VfL_Wolfsburg_(2022).jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "inter-venezia-20261029",
@@ -3349,19 +3571,28 @@
           "မတီယာစ်မိုရီနိုနဲ့ ရီဒူဝါန်ဟယ်လ်ဟယ်လ်တို့ရဲ့ ကိုယ့်ဂိုးကိုယ်သွင်းမိမှုတွေက အင်တာအတွက် အဆုံးအဖြတ်ဖြစ်ခဲ့ပါတယ်။",
           "ဒီနိုင်ပွဲကြောင့် အင်တာမီလန်က စီးရီးအေဇယားထိပ်သို့ ပြန်ရောက်လာပြီး ဗင်နီဇီယာက အောက်ဆုံးမှာ ဆက်ရှိခဲ့ပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-07.svg",
+        "imageAlt": "INTER MILAN / VENEZIA — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.theguardian.com/football/2026/oct/28/european-football-two-late-own-goals-return-inter-top-serie-a-venezia",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-07.svg",
         "imageFit": "contain",
         "sourceName": "The Guardian",
         "sourceUrl": "https://www.theguardian.com/football/2026/oct/28/european-football-two-late-own-goals-return-inter-top-serie-a-venezia",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/2009-08_Derby-_AC_Milan_vs_Inter_at_San_Siro.jpg/960px-2009-08_Derby-_AC_Milan_vs_Inter_at_San_Siro.jpg",
+          "artist": "nobbiwan",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3A2009-08_Derby-_AC_Milan_vs_Inter_at_San_Siro.jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "bologna-milan-20261029",
@@ -3374,23 +3605,32 @@
           "အေစီမီလန်ဘက်မှ အယ်လ်ဖတ်ဒ်ဂျိုဆစ်ဆေးက နှစ်ဂိုးသွင်းနိုင်ခဲ့သော်လည်း ဒုတိယပိုင်းမှာ ခံစစ်ထိန်းချုပ်မှု လျော့နည်းသွားခဲ့ပါတယ်။",
           "ဘိုလော့ဂ်နာအတွက် စိတ်ဓာတ်ပိုင်းနဲ့ အမှတ်ပေးဇယားရပ်တည်မှုအတွက် အရေးပါတဲ့ နိုင်ပွဲဖြစ်သလို မီလန်အတွက် ရာသီပထမဆုံးလိဂ်ရှုံးပွဲ ဖြစ်လာပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-08.svg",
+        "imageAlt": "BOLOGNA / AC MILAN — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.theguardian.com/football/2026/oct/28/european-football-two-late-own-goals-return-inter-top-serie-a-venezia",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-08.svg",
         "imageFit": "contain",
         "sourceName": "The Guardian",
         "sourceUrl": "https://www.theguardian.com/football/2026/oct/28/european-football-two-late-own-goals-return-inter-top-serie-a-venezia",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Stadio_Dall%27Ara_-_Bologna.jpg/960px-Stadio_Dall%27Ara_-_Bologna.jpg",
+          "artist": "Revol Web",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AStadio_Dall'Ara_-_Bologna.jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "burnley-celestini-20261029",
-        "category": "team",
+        "category": "team-player",
         "categoryLabel": "အသင်းနှင့် ကစားသမားသတင်း",
         "title": "ဘန်လေက ဖာဘီယိုဆယ်လက်စတီနီကို နည်းပြချုပ်သစ်ခန့်အပ်",
         "paragraphs": [
@@ -3399,23 +3639,32 @@
           "ဘန်လေက လိဂ်ပွဲ ၁၂ ပွဲမှာ တစ်ပွဲသာ အနိုင်ရထားပြီး ရလဒ်နဲ့ အသင်းယုံကြည်မှုကို အလျင်အမြန် ပြန်တည်ဆောက်ရန် လိုအပ်နေပါတယ်။",
           "နည်းပြသစ်ရဲ့ ပထမဆုံးစိန်ခေါ်မှုမှာ လူစာရင်းနဲ့ ကစားပုံညှိနှိုင်းရေးပါဝင်ပြီး ပို့စ်မောက်နဲ့ တွေ့ဆုံမယ့်ပွဲက စမ်းသပ်မှုတစ်ခု ဖြစ်လာနိုင်ပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-09.svg",
+        "imageAlt": "BURNLEY FC / HEAD COACH — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.theguardian.com/football/2026/oct/28/burnley-former-cska-moscow-manager-fabio-celestini-new-head-coach",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-09.svg",
         "imageFit": "contain",
         "sourceName": "Press Association / The Guardian",
         "sourceUrl": "https://www.theguardian.com/football/2026/oct/28/burnley-former-cska-moscow-manager-fabio-celestini-new-head-coach",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Turf_Moor_panorama.jpg/960px-Turf_Moor_panorama.jpg",
+          "artist": "Adam Haworth",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ATurf_Moor_panorama.jpg"
+        },
+        "imageLocalCached": true
       },
       {
         "id": "man-united-carrick-bruno-20261029",
-        "category": "team",
+        "category": "team-player",
         "categoryLabel": "အသင်းနှင့် ကစားသမားသတင်း",
         "title": "မန်ယူနည်းပြ ကာရစ်နဲ့ အသင်းခေါင်းဆောင် ဘရူနိုတို့ တွေ့ဆုံဆွေးနွေးမှု ပြုလုပ်",
         "paragraphs": [
@@ -3424,19 +3673,28 @@
           "သတင်းဖော်ပြချက်အရ နှစ်ဦးစလုံးက အသင်းရလဒ်ကို ဦးစားပေးဖို့ ဆွေးနွေးခဲ့ပြီး ဆက်ဆံရေးပြန်လည်ထိန်းသိမ်းဖို့ ကြိုးစားနေကြပါတယ်။",
           "ချဲလ်ဆီးနဲ့ လိဂ်ပွဲမတိုင်မီ ဘရူနို ပြန်လည်ပါဝင်နိုင်မယ့် အခြေအနေက မန်ယူကွင်းလယ်ကစားပုံအပေါ် သက်ရောက်နိုင်ပါတယ်။"
         ],
-        "image": null,
-        "imageAlt": "",
-        "imageCaption": "",
-        "imageCredit": "",
-        "imageLicense": "Photo reuse not verified",
+        "image": "/assets/news-2026-10-29/editorial-10.svg",
+        "imageAlt": "MAN UNITED / TEAM CAPTAIN — Future Code မူရင်းသတင်းသရုပ်ဖော်ဂရပ်ဖစ်",
+        "imageCaption": "သတင်းနှင့်သက်ဆိုင်သော မူရင်းသရုပ်ဖော်ဂရပ်ဖစ် (အမှန်တကယ်ပွဲဓာတ်ပုံမဟုတ်ပါ)",
+        "imageCredit": "Future Code AI Studio",
+        "imageLicense": "Original editorial illustration",
         "imageLicenseUrl": null,
-        "imageSourceUrl": "https://www.skysports.com/football/news/13604738/bruno-fernandes-man-utd-head-coach-michael-carrick-and-club-captain-hold-clear-the-air-talks-ahead-of-chelsea-fixture",
+        "imageSourceUrl": "https://future-code-football-daily.pages.dev/assets/news-2026-10-29/editorial-10.svg",
         "imageFit": "contain",
         "sourceName": "Sky Sports",
         "sourceUrl": "https://www.skysports.com/football/news/13604738/bruno-fernandes-man-utd-head-coach-michael-carrick-and-club-captain-hold-clear-the-air-talks-ahead-of-chelsea-fixture",
         "sourceDateISO": "2026-10-28",
         "sourceDateLabel": "၂၈ အောက်တိုဘာ ၂၀၂၆",
-        "photoVerification": "Source photo copyright unverified; no image copied"
+        "photoVerification": "Source photo copyright unverified; no image copied",
+        "imageContext": "Original brand-specific editorial illustration; no real event photo claim",
+        "archivedCommonsPhoto": {
+          "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Manchester_%2C_Trafford_-_Old_Trafford_Stadium_-_geograph.org.uk_-_3724146.jpg/960px-Manchester_%2C_Trafford_-_Old_Trafford_Stadium_-_geograph.org.uk_-_3724146.jpg",
+          "artist": "Lewis Clarke",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AManchester_%2C_Trafford_-_Old_Trafford_Stadium_-_geograph.org.uk_-_3724146.jpg"
+        },
+        "imageLocalCached": true
       }
     ]
   }

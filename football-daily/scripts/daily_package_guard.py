@@ -38,14 +38,29 @@ for m in ms:
         for game in form:check(game.get('result') in ['W','D','L'] and bool(game.get('date')),f'{ident}: invalid last-five entry')
     for f in ['homeOdds','drawOdds','awayOdds','homeCrestUrl','awayCrestUrl','leagueLogoUrl','oddsSourceUrl']:check(bool(m.get(f)),f'{ident}: missing {f}')
 choices=[m for m in ms if m.get('specialChoice')];check(len(choices)==a.special_count,'Special Choice count differs from requested count')
-for m in choices:check(len(m.get('specialAnalysisParagraphs',[]))>=2,f"{m.get('fixtureId')}: special analysis incomplete")
+for m in choices:
+    paragraphs=m.get('specialAnalysisParagraphs',[])
+    # The owner's current premium standard is one developed paragraph, not
+    # the historical multi-paragraph template. Require depth, not padding.
+    check(len(paragraphs)==1 and isinstance(paragraphs[0],str) and
+          len(paragraphs[0])>len(m.get('dailyPreviewText','')) and
+          bool(re.search(r'ကို ရွေး(?:ချယ်)?ပါတယ်။(?:\*\*)?$',paragraphs[0])),
+          f"{m.get('fixtureId')}: premium one-paragraph special analysis incomplete")
+for m in ms:
+    check(m.get('oddsVerifiedDate')==str(day),f"{m.get('fixtureId')}: 1X2 not reverified for today's probability section")
 tids={x.get('fixtureId') for x in t.get('items',[])}
 for ident in byid:check(ident in tids,f'{ident}: VIP source or explicit unavailable record missing')
 for item in t.get('items',[]):
     check(item.get('fixtureId') in byid,'Tips contain unknown fixture')
     check(bool(item.get('unavailableReason')) or all(item.get(f) for f in ['score','sourceUrl','sourceName','sourceDate']),'VIP tip lacks provenance')
 check(n.get('date')==str(day),'News is stale');check(len(n.get('items',[]))==10,'News must contain ten items')
-for item in n.get('items',[]):check(bool(item.get('sourceUrl')),'News source missing')
+for item in n.get('items',[]):
+    check(bool(item.get('sourceUrl')),'News source missing')
+    check(all(item.get(f) for f in ['image','imageCredit','imageCaption','imageSourceUrl','imageLicense']),
+          f"{item.get('id')}: news image or provenance missing")
+    image=item.get('image','')
+    if image.startswith('/'):
+        check((a.root/image.lstrip('/')).is_file(),f"{item.get('id')}: bundled news image missing")
 check(y.get('reportDate')==str(day-timedelta(days=1)),'Yesterday archive date mismatch')
 for m in y.get('matches',[]):
     if m.get('status')=='finished':check(bool(re.fullmatch(r'\d+-\d+',str(m.get('finalScore','')))) and bool(m.get('resultSourceUrl')),f"{m.get('fixtureId')}: FT lacks score/source")

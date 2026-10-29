@@ -1,7 +1,7 @@
 {
   "reportDate": "2026-10-29",
   "timezone": "Asia/Yangon",
-  "description": "Only independently cited external correct-score tips, unverified cases explicitly unavailable",
+  "description": "Independently checked external fixture-specific correct-score predictions; separate from local Bookies and AI models.",
   "items": [
     {
       "fixtureId": "fc-20261029-01",
@@ -16,43 +16,78 @@
       "fixtureId": "fc-20261029-02",
       "home": "Frosinone",
       "away": "Lecce",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "2-1",
+      "sourceName": "Sports Mole editorial prediction",
+      "sourceUrl": "https://www.sportsmole.co.uk/football/fiorentina/serie-a-predictions/feature/more-disappointment-for-sarri-atalanta-thursdays-serie-a-predictions_607865.html",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-03",
       "home": "Fiorentina",
       "away": "Atalanta",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "2-1",
+      "sourceName": "Sports Mole editorial prediction",
+      "sourceUrl": "https://www.sportsmole.co.uk/football/fiorentina/serie-a-predictions/feature/more-disappointment-for-sarri-atalanta-thursdays-serie-a-predictions_607865.html",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-04",
       "home": "FC Inter Turku",
       "away": "HJK Helsinki",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "1-2",
+      "sourceName": "Forebet published correct-score model",
+      "sourceUrl": "https://www.forebet.com/en/football/matches/inter-turku-hjk-helsinki-2557699",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-05",
       "home": "KuPS",
       "away": "IF Gnistan",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "2-1",
+      "sourceName": "FulltimeStats published correct-score model",
+      "sourceUrl": "https://fulltimestats.com/match/kups-vs-gnistan-2026-10-29",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-06",
       "home": "Hammarby IF",
       "away": "IK Sirius",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "2-0",
+      "sourceName": "OhMyTip published score prediction",
+      "sourceUrl": "https://ohmytip.com/prediction/hammarby-ff-vs-sirius-prediction-29-10-2026-1494318",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-07",
       "home": "Kalmar FF",
       "away": "GAIS",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "1-0",
+      "sourceName": "OhMyTip published score prediction",
+      "sourceUrl": "https://ohmytip.com/prediction/kalmar-ff-vs-gais-prediction-29-10-2026-1494319",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-08",
       "home": "Örgryte IS",
       "away": "Mjällby AIF",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "2-1",
+      "sourceName": "FulltimeStats published outcome score prediction",
+      "sourceUrl": "https://fulltimestats.com/match/orgryte-is-vs-mjallby-aif-2026-10-29",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-09",
@@ -67,37 +102,67 @@
       "fixtureId": "fc-20261029-10",
       "home": "FC Midtjylland",
       "away": "Odense Boldklub",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "3-1",
+      "sourceName": "BetClan published correct-score model",
+      "sourceUrl": "https://www.betclan.com/predictionsdetails/football/1640480/fc-midtjylland-v-odense-prediction-h2h-tip-and-match-preview/",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-11",
       "home": "Al Khaleej",
       "away": "Al Hazem",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "2-1",
+      "sourceName": "Betimate published correct-score model",
+      "sourceUrl": "https://betimate.com/en/news/previews/al-khaleej-saihat-vs-al-hazm-prediction-odds-betting-tips-10292026-2960038",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-12",
       "home": "Al Nassr",
       "away": "Al Kholood",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "2-0",
+      "sourceName": "FootballPredictions.AI external published model",
+      "sourceUrl": "https://footballpredictions.ai/football-predictions/al-nassr-vs-al-kholood-predictions-tips-29-oct-2026/",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-13",
       "home": "Al Riyadh",
       "away": "Al Qadsiah",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "0-2",
+      "sourceName": "OddAlerts external simulation",
+      "sourceUrl": "https://www.oddalerts.com/simulations/al-riyadh-vs-al-qadsiah-prediction/420636032",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-14",
       "home": "Braga",
       "away": "FC Famalicao",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "3-1",
+      "sourceName": "BetClan published correct-score model",
+      "sourceUrl": "https://www.betclan.com/predictionsdetails/football/1589436/sc-braga-v-famalicao-prediction-h2h-tip-and-match-preview/",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     },
     {
       "fixtureId": "fc-20261029-15",
       "home": "Benfica",
       "away": "Gil Vicente",
-      "unavailableReason": "No independently verified current external exact-score publication. PDF printed score is not VIP Internet."
+      "score": "3-1",
+      "sourceName": "SoccerSite published correct-score model",
+      "sourceUrl": "https://www.soccersite.com/predictions-benfica-vs-gil-vicente-tips-and-stats-offbto7b7",
+      "sourceDate": "2026-10-29",
+      "sourceDateMeaning": "Fixture date shown by publisher; checked 2026-10-29, publication timestamp not asserted",
+      "verifiedDate": "2026-10-29"
     }
   ]
 }
