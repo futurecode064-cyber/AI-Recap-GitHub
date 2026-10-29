@@ -15,7 +15,7 @@ const get=id=>state.frames.find(f=>f.id===id);
 const color=s=>/^#[\da-f]{6}$/i.test(s||"")?s:"#16486c";
 const number=(v,d)=>Number.isFinite(+v)?Math.max(0,Math.min(360,Math.round(+v))):d;
 const trim=(s,max=70)=>String(s||"").trim().slice(0,max);
-const pic=x=>typeof x==="string"&&/^data:image\/(png|webp|jpeg);base64,/.test(x)&&x.length<1500000?x:"";
+const pic=x=>typeof x==="string"&&/^data:image\/(png|webp|jpeg);base64,/.test(x)&&x.length<12000000?x:"";
 function validate(v){
 if(!v||v.version!==2||!Array.isArray(v.frames)||v.frames.length>130)throw Error("Frame Backup v2 မမှန်ပါ");
 const out=empty(),used=new Set();
@@ -69,7 +69,7 @@ const bottom=b?Math.round(f.bottom*w/1200):full?Math.floor(full.height*original.
 const pad=Math.max(10,Math.round(w*.012)),h=top+source.height+bottom+pad*2;
 if(h>32767||h*w>110000000)throw Error("PNG ပုံအမြင့်များလွန်းပါသည်။ Banner အမြင့်လျှော့ပါ။");
 const out=document.createElement("canvas");out.width=w;out.height=h;
-const c=out.getContext("2d");if(!c)throw Error("Canvas မရနိုင်ပါ");
+const c=out.getContext("2d");if(!c)throw Error("Canvas မရနိုင်ပါ");c.imageSmoothingEnabled=true;c.imageSmoothingQuality="high";
 c.fillStyle=shade(f.color,.33);c.fillRect(0,0,w,h);band(c,w,0,top,f.color);band(c,w,h-bottom,bottom,f.color);
 
  if(original){
@@ -84,9 +84,23 @@ c.fillStyle=shade(f.color,.33);c.fillRect(0,0,w,h);band(c,w,0,top,f.color);band(
   }
  }
  artwork(c,a,w,top,0,f.fit);artwork(c,b,w,bottom,h-bottom,f.fit);
+ // Keep theme visible even when banners contain fully opaque artwork.
+ const stripe=Math.max(4,Math.round(w*.006));
+ c.fillStyle=f.color;c.fillRect(0,top,w,stripe);
+ c.fillRect(0,h-bottom-stripe,w,stripe);
 c.drawImage(source,0,top+pad);
 c.strokeStyle=f.color;c.lineWidth=Math.max(3,Math.floor(pad/2));c.strokeRect(c.lineWidth/2,top+pad+c.lineWidth/2,w-c.lineWidth,source.height-c.lineWidth);
 return out;
+}
+// Render the same frame layout used by the real export (including native ribbon aspect ratio).
+async function renderSample(f){
+ const width=600,source=document.createElement("canvas");source.width=width;source.height=270;
+ const ctx=source.getContext("2d");ctx.fillStyle="#eef4f8";ctx.fillRect(0,0,width,270);
+ ctx.fillStyle="#132b42";ctx.fillRect(20,18,width-40,58);
+ ctx.fillStyle="#fff";ctx.font="bold 27px sans-serif";ctx.fillText("MATCH PREVIEW",34,57);
+ ctx.fillStyle="#173247";ctx.font="bold 25px sans-serif";ctx.fillText("HOME     VS     AWAY",38,145);
+ ctx.fillStyle="#9bb7c4";for(let i=0;i<4;i++)ctx.fillRect(38,176+i*19,width-76,7);
+ return composite(source,f);
 }
 /* The optional third argument gives a specific download design. "none" disables
    extra artwork so all-frames ZIPs keep their original unmodified designs. */
@@ -142,24 +156,19 @@ function attach(section,select){
 function refresh(){syncNative();syncMini();}
 const getFrame=id=>{const f=get(String(id||"").replace(/^pro:/,""));return f?{...f}:null;};
 window.FutureCodeProfessionalFrames=Object.freeze({
- wrap,ready,attach,refresh,getFrame,
+ wrap,ready,attach,refresh,getFrame,renderSample,
  list:async section=>(await ready,available(section).map(f=>({...f}))),
  getSelected:async name=>(await ready,state.selected[name]||"none"),sections:labels
 });
 const el=id=>panel?.querySelector("#"+id);
 function status(msg,error){const n=el("fcpStatus");if(n){n.textContent=msg;n.style.color=error?"#ff9c9c":"#aef3ca";}}
 function preview(){
-const f=get(active),canvas=el("fcpPreview");if(!f||!canvas)return;
-const src=document.createElement("canvas");src.width=500;src.height=225;const c=src.getContext("2d");
-c.fillStyle="#f0f5f8";c.fillRect(0,0,500,225);c.fillStyle="#13283b";c.fillRect(16,18,468,52);
-c.fillStyle="#fff";c.font="bold 24px sans-serif";c.fillText("MATCH PREVIEW",30,51);
-c.fillStyle="#122a3c";c.font="bold 22px sans-serif";c.fillText("HOME  1 - 1  AWAY",35,124);
-c.fillStyle="#6a8491";for(let i=0;i<4;i++)c.fillRect(35,151+i*15,420,6);
-composite(src,{...f,topImage:"",bottomImage:""}).then(async base=>{
- const out=canvas.getContext("2d");canvas.width=base.width;canvas.height=base.height;out.drawImage(base,0,0);
- const top=Math.round(f.top*500/1200),bottom=Math.round(f.bottom*500/1200),[a,b]=await Promise.all([f.topImage?image(f.topImage):null,f.bottomImage?image(f.bottomImage):null]);
- if(active!==f.id)return;artwork(out,a,500,top,0,f.fit);artwork(out,b,500,bottom,canvas.height-bottom,f.fit);
-}).catch(e=>status(e.message,true));
+ const f=get(active),canvas=el("fcpPreview");if(!f||!canvas)return;
+ renderSample(f).then(out=>{
+  if(active!==f.id)return;
+  canvas.width=out.width;canvas.height=out.height;
+  canvas.getContext("2d").drawImage(out,0,0);
+ }).catch(e=>status(e.message,true));
 }
 function fill(){
 const f=get(active);if(!f)return;
@@ -213,15 +222,17 @@ row.append(label,link);target.prepend(row);created=true;
 }if(created)syncMini();
 }
 async function compress(file){
-if(!file)return null;
-if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>8000000)throw Error("PNG/JPG/WEBP 8MB အောက် ပုံရွေးပါ။");
-const url=URL.createObjectURL(file);
-try{
- const im=await image(url);if(im.naturalWidth<250||im.naturalHeight<40)throw Error("Banner အနည်းဆုံး 250×40 px လိုအပ်ပါသည်။");
- const s=Math.min(1,1800/im.naturalWidth,500/im.naturalHeight),c=document.createElement("canvas");
- c.width=Math.round(im.naturalWidth*s);c.height=Math.round(im.naturalHeight*s);c.getContext("2d").drawImage(im,0,0,c.width,c.height);
- const data=c.toDataURL("image/webp",.78);if(data.length>=1500000)throw Error("Banner ပုံအရွယ်အစား လျှော့ပါ။");return data;
-}finally{URL.revokeObjectURL(url);}
+ if(!file)return null;
+ if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>8000000)throw Error("PNG/JPG/WEBP 8MB အောက် ပုံရွေးပါ။");
+ const src=URL.createObjectURL(file);
+ try{
+  const im=await image(src);
+  if(im.naturalWidth<250||im.naturalHeight<40)throw Error("Banner အနည်းဆုံး 250×40 px လိုအပ်ပါသည်။");
+  // Preserve the original compressed PNG/JPG/WebP bytes; never replace with downscaled WebP.
+  const uri=await new Promise((ok,bad)=>{const reader=new FileReader();reader.onload=()=>ok(reader.result);reader.onerror=()=>bad(reader.error||Error("Banner ဖတ်မရပါ"));reader.readAsDataURL(file);});
+  if(uri.length>=12000000)throw Error("မူရင်း Banner ပုံဖိုင် အရွယ်အစား ကြီးလွန်းပါသည်");
+  return uri;
+ }finally{URL.revokeObjectURL(src);}
 }
 function downloadJson(){const b=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),url=URL.createObjectURL(b),a=document.createElement("a");a.href=url;a.download="future-code-pro-frame-settings-v2.json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}
 function init(){
