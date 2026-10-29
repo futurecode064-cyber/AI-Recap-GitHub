@@ -1,0 +1,67 @@
+name: Verify 29 Oct Main and Six Brand PNG Downloads
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/verify-20261029-live-downloads.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live-png-seven-brands:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium renderer
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Verify source report and real browser canvas PNG export on seven branded routes
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          import {readFileSync} from 'node:fs';
+          const report=JSON.parse(readFileSync('football-daily/data/today.json','utf8'));
+          if(report.reportDate!=='2026-10-29'||report.matches.length!==15)throw Error('Wrong published report');
+          const routes=[['Main','/'],['YKZ','/ykz-family/'],['BW Sport','/bw-sport/'],['Ko Thet','/ko-thet-family/'],['Goal Zone','/future-code-journal/'],['KMM','/kmm-sport-hub/'],['Bet City','/bet-city-family/']];
+          const origin='https://future-code-football-daily.pages.dev';
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          const failures=[];
+          try{
+            for(const [name,path] of routes){
+              const ctx=await browser.newContext({viewport:{width:420,height:900},acceptDownloads:true});
+              const page=await ctx.newPage();
+              try{
+                await page.goto(origin+path+'?dailyqa=20261029',{waitUntil:'domcontentloaded',timeout:40000});
+                await page.waitForFunction(()=>Boolean(window.FutureCodeFramePreview&&(window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData)),null,{timeout:25000});
+                const result=await page.evaluate(async matches=>{
+                  const mapper=window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData;
+                  const urls=[...new Set(matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]))];
+                  const mapped=urls.map(u=>mapper.imageUrl(u));
+                  for(const u of mapped)if(!u.startsWith(location.origin+'/assets/brand-export-teams/'))throw Error('Not same-origin club crest: '+u);
+                  await Promise.all(mapped.map(u=>new Promise((ok,fail)=>{const im=new Image();im.onload=()=>im.naturalWidth>=32&&im.naturalHeight>=32?ok():fail(Error('Bad image dimensions '+u));im.onerror=()=>fail(Error('Image HTTP fail '+u));im.src=u;})));
+                  const test=matches[0];
+                  const canvas=await window.FutureCodeFramePreview.render(test);
+                  const noCrest=await window.FutureCodeFramePreview.render({...test,homeCrestUrl:null,awayCrestUrl:null});
+                  const c=canvas.getContext('2d',{willReadFrequently:true}),d=noCrest.getContext('2d',{willReadFrequently:true});
+                  function delta(rect){const a=c.getImageData(...rect).data,b=d.getImageData(...rect).data;let change=0;for(let k=0;k<a.length;k+=4)if(Math.abs(a[k]-b[k])+Math.abs(a[k+1]-b[k+1])+Math.abs(a[k+2]-b[k+2])>65)change++;return change;}
+                  const home=delta([120,22,205,195]),away=delta([875,22,200,195]);
+                  if(home<120||away<120)throw Error('PNG crest pixels absent home='+home+' away='+away);
+                  const blob=await new Promise(ok=>canvas.toBlob(ok,'image/png'));
+                  if(!blob||blob.size<12000)throw Error('PNG download image too small or invalid');
+                  return {cachedCrests:urls.length,homePixels:home,awayPixels:away,bytes:blob.size};
+                },report.matches);
+                console.log(name+' PASS '+JSON.stringify(result));
+              }catch(e){failures.push(name+': '+String(e?.stack||e));console.error(name+' FAIL '+String(e))}
+              finally{await ctx.close()}
+            }
+          }finally{await browser.close()}
+          if(failures.length)throw Error('LIVE PNG FAILED: '+failures.join('\n'));
+          console.log('SEVEN BRAND LIVE PNG CREST QA PASS');
+          NODE
