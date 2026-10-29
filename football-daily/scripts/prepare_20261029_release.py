@@ -13,7 +13,7 @@ MAIN=ROOT/'main-export-logos.js';BRAND=ROOT/'brand-export-data.js'
 teamsdir=ROOT/'assets/brand-export-teams';teamsdir.mkdir(parents=True,exist_ok=True)
 main_source=MAIN.read_text(encoding='utf-8');brand_source=BRAND.read_text(encoding='utf-8')
 def find_obj(source,key):
- m=re.search(r'const '+re.escape(key)+r'=(\\{.*?\\});',source,re.S)
+ m=re.search(r'const '+re.escape(key)+r'=(\{.*?\});',source,re.S)
  if not m: raise RuntimeError('Missing JS map '+key)
  return json.loads(m.group(1))
 main_map=find_obj(main_source,'teams')
@@ -84,7 +84,7 @@ for group in (report['matches'],odds['matches']):
   m['leagueLogoUrl']='https://future-code-football-daily.pages.dev/assets/league-logos/'+league_file+'.png'
 # Safely extend existing lookup maps preserving all legacy entries and frames.
 def replace_obj(text,key,obj):
- patt=r'(const '+re.escape(key)+r'=)\\{.*?\\};'
+ patt=r'(const '+re.escape(key)+r'=)\{.*?\};'
  val=json.dumps(obj,ensure_ascii=False,separators=(',',':'))
  changed,count=re.subn(patt,lambda m:m.group(1)+val+';',text,count=1,flags=re.S)
  if count!=1: raise RuntimeError('JS map missing '+key)
@@ -104,7 +104,7 @@ for m in report['matches']:
 # News media photos are intentionally not copied: source rights unverified.
 def write_json(path,data):
  path.parent.mkdir(parents=True,exist_ok=True)
- path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+ path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+chr(10),encoding='utf-8')
 write_json(ROOT/'data/today.json',report)
 write_json(ROOT/'data/odds'/('2026-10-29.json'),odds)
 write_json(ROOT/'data/tips'/('2026-10-29.json'),tips)
