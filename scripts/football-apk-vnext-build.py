@@ -11,8 +11,8 @@ import sys
 from pathlib import Path
 
 BRANDS = {
-    "ykz": dict(package="com.futurecode.ykzsoccertips",topic="fc_football_ykz",prefix="YKZ-Soccer-Tips",code=3,name="1.2.0",old_code=2,old_name="1.1.0"),
-    "bw": dict(package="com.futurecode.bwsportjournal",topic="fc_football_bw",prefix="BW-Sport-Journal",code=2,name="1.0.1",old_code=1,old_name="1.0.0"),
+    "ykz": dict(package="com.futurecode.ykzsoccertips",topic="fc_football_ykz",prefix="YKZ-Soccer-Tips",code=4,name="1.2.1",old_code=2,old_name="1.1.0"),
+    "bw": dict(package="com.futurecode.bwsportjournal",topic="fc_football_bw",prefix="BW-Sport-Journal",code=4,name="1.0.3",old_code=1,old_name="1.0.0"),
     "ko_thet": dict(package="com.futurecode.kothetfamilyjournal",topic="fc_football_ko_thet",prefix="Ko-Thet-Family-Journal",code=3,name="1.0.2",old_code=2,old_name="1.0.1"),
     "kmm": dict(package="com.futurecode.kmmsporthub",topic="fc_football_kmm",prefix="KMM-Sport-Hub",code=2,name="1.0.1",old_code=1,old_name="1.0.0"),
 }
@@ -54,6 +54,8 @@ def j(v):
 
 starter="""package %s;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.util.Log;
@@ -64,8 +66,17 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public final class FcmStarter {
  private static final String APP_ID=%s,API_KEY=%s,PROJECT=%s,SENDER=%s,TOPIC=%s;
  public static void start(Activity a){
-  if(Build.VERSION.SDK_INT>=33&&a.checkSelfPermission("android.permission.POST_NOTIFICATIONS")!=PackageManager.PERMISSION_GRANTED)
-    a.requestPermissions(new String[]{"android.permission.POST_NOTIFICATIONS"},1301);
+  if(!a.getSharedPreferences("fc_notify_first_open",0).getBoolean("explained",false)){
+   a.getSharedPreferences("fc_notify_first_open",0).edit().putBoolean("explained",true).apply();
+   new AlertDialog.Builder(a)
+     .setTitle("Notification Allow")
+     .setMessage("Notification Allow ကို ON ထားပါက နေ့စဉ် ပေါက်ကြေးများ ရပြီ ဆိုတာကို သိရှိနိုင်ပါသည်။")
+     .setPositiveButton("Allow",(dialog,which)->{
+       if(Build.VERSION.SDK_INT>=33&&a.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS)!=PackageManager.PERMISSION_GRANTED)
+         a.requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS},1301);
+     })
+     .setNegativeButton("နောက်မှ",(dialog,which)->{}).show();
+  }
   if(APP_ID.isEmpty()||API_KEY.isEmpty()||PROJECT.isEmpty()||SENDER.isEmpty())return;
   try{
    if(FirebaseApp.getApps(a).isEmpty()){
