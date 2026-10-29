@@ -97,6 +97,51 @@ jobs:
             assert(entries.length>0&&entries.every(n=>n.startsWith('မြန်မာကြေးကတ်ပုံစံ/')),'ZIP must group PNGs by section: '+JSON.stringify(entries));
             assert(entries.includes('မြန်မာကြေးကတ်ပုံစံ/BCF-မြန်မာကြေး.png'),'ZIP must preserve the user-defined Myanmar PNG filename: '+JSON.stringify(entries));
             await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('အဆင်သင့်') && document.querySelector('#downloadLink')?.download.endsWith('.zip'),null,{timeout:30000});
+            // Regression: upload 2400px artwork, auto-anchor both ribbons, retain PNG source and verify real exported pixels.
+            await page.locator('#navLibrary').click();
+            await page.locator('#addFrame').click();
+            await page.locator('#frameName').fill('HighRes QA Frame');
+            await page.locator('#frameDownloadName').fill('HighRes QA');
+            await page.locator('#scopeChecks input[value="oddsCards"]').check();
+            const artwork=await page.evaluate(()=>{
+              const encode=(h,color)=>{const c=document.createElement('canvas');c.width=2400;c.height=h;const x=c.getContext('2d');x.fillStyle=color;x.fillRect(0,0,2400,h);return c.toDataURL('image/png').split(',')[1];};
+              return {top:encode(400,'#ff0000'),bottom:encode(200,'#0000ff')};
+            });
+            await page.locator('#frameTopFile').setInputFiles({name:'top-hires.png',mimeType:'image/png',buffer:Buffer.from(artwork.top,'base64')});
+            await page.locator('#frameBottomFile').setInputFiles({name:'bottom-hires.png',mimeType:'image/png',buffer:Buffer.from(artwork.bottom,'base64')});
+            await page.waitForFunction(()=>document.querySelector('#frameTop').value==='200'&&document.querySelector('#frameBottom').value==='100');
+            await page.locator('#frameColor').fill('#12a4e5');
+            await page.locator('#previewImage').waitFor({state:'visible',timeout:30000});
+            await page.locator('#saveFrame').click();
+            await page.waitForFunction(()=>window.FCStudio?.getState()?.frames?.some(f=>f.name==='HighRes QA Frame'),null,{timeout:60000});
+            const uploaded=await page.evaluate(()=>{
+              const f=window.FCStudio.getState().frames.find(f=>f.name==='HighRes QA Frame');
+              return {id:f.id,color:f.color,top:f.top,bottom:f.bottom,
+               topFormat:f.topImage?.slice(0,22),bottomFormat:f.bottomImage?.slice(0,22),
+               topImage:f.topImage,bottomImage:f.bottomImage};
+            });
+            assert.equal(uploaded.topFormat,'data:image/png;base64,');
+            assert.equal(uploaded.bottomFormat,'data:image/png;base64,');
+            assert.equal(uploaded.top,200);assert.equal(uploaded.bottom,100);
+            assert.equal(uploaded.color,'#12a4e5');
+            assert.equal(uploaded.topImage, 'data:image/png;base64,'+artwork.top,'Top image was recompressed or resized');
+            assert.equal(uploaded.bottomImage, 'data:image/png;base64,'+artwork.bottom,'Bottom image was recompressed or resized');
+            await page.locator('#navDownloads').click();
+            const hiCard=page.locator('details[data-section="oddsCards"]');
+            if(!(await hiCard.evaluate(el=>el.open)))await hiCard.locator('summary').click();
+            await hiCard.locator('.multi-group').nth(0).locator('[data-action="none"]').click();
+            await hiCard.locator('.multi-group').nth(0).locator('.multi-option').filter({hasText:'HighRes QA Frame'}).locator('input').check();
+            await page.locator('#downPreview').click();
+            await page.locator('#downPreviewImage').waitFor({state:'visible',timeout:100000});
+            const edges=await page.locator('#downPreviewImage').evaluate(img=>{
+              const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;
+              const x=c.getContext('2d');x.drawImage(img,0,0);
+              const px=(y)=>Array.from(x.getImageData(Math.floor(c.width/2),y,1,1).data);
+              return {width:c.width,top:px(10),bottom:px(c.height-10)};
+            });
+            assert(edges.width>=1200&&edges.top[0]>230&&edges.top[1]<25&&edges.top[2]<25,'Top banner not flush/red: '+JSON.stringify(edges));
+            assert(edges.bottom[2]>230&&edges.bottom[0]<25&&edges.bottom[1]<25,'Bottom banner not flush/blue: '+JSON.stringify(edges));
+            console.log('HIGH-RES BANNER LIVE QA PASS',JSON.stringify({width:edges.width,top:edges.top,bottom:edges.bottom,color:uploaded.color,originalBinary:true}));
             const page2=await context.newPage();
             await page2.goto(origin,{waitUntil:'domcontentloaded'});
             const link=await page2.locator('a[href="./frame-editor.html"]').count();
