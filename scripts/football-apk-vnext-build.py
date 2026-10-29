@@ -154,6 +154,33 @@ __SERVICE_CONTENT__
 FCSERVICE
 """.replace("APP_MAIN",appdir+"/MainActivity.java").replace("APPDIR",appdir).replace("__STARTER_CONTENT__",starter.strip()).replace("__SERVICE_CONTENT__",service.strip())
 script=script.replace("gradle --no-daemon :app:assembleDebug",patch+"\ngradle --no-daemon :app:assembleDebug",1)
+if os.environ.get("FC_REQUIRE_FCM")=="true":
+    signing_vars=["FC_APK_RELEASE_KEYSTORE_B64","FC_APK_RELEASE_STOREPASS","FC_APK_RELEASE_ALIAS","FC_APK_RELEASE_KEYPASS"]
+    if any(not os.environ.get(k) for k in signing_vars):
+        raise SystemExit("BLOCKED: persistent owner APK signing keystore must be securely configured")
+    signing_patch=r"""
+set +x
+printf '%s' "$FC_APK_RELEASE_KEYSTORE_B64" | base64 --decode > /tmp/fc-football-release.jks
+chmod 600 /tmp/fc-football-release.jks
+export FC_APK_KEYSTORE_PATH=/tmp/fc-football-release.jks
+trap 'rm -f /tmp/fc-football-release.jks' EXIT
+cat >> app/build.gradle <<'FC_RELEASE_SIGNING'
+android {
+ signingConfigs {
+  fcOwner {
+   storeFile file(System.getenv("FC_APK_KEYSTORE_PATH"))
+   storePassword System.getenv("FC_APK_RELEASE_STOREPASS")
+   keyAlias System.getenv("FC_APK_RELEASE_ALIAS")
+   keyPassword System.getenv("FC_APK_RELEASE_KEYPASS")
+  }
+ }
+ buildTypes { release { signingConfig signingConfigs.fcOwner; minifyEnabled false } }
+}
+FC_RELEASE_SIGNING
+"""
+    script=script.replace("gradle --no-daemon :app:assembleDebug",signing_patch+"\\ngradle --no-daemon :app:assembleRelease",1)
+    script=script.replace("app/build/outputs/apk/debug/app-debug.apk","app/build/outputs/apk/release/app-release.apk")
+
 out=Path("/tmp/football_vnext_"+brand+".sh")
 out.write_text(script,encoding="utf-8")
 out.chmod(0o700)
