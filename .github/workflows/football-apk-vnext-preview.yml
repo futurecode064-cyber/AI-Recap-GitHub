@@ -40,10 +40,10 @@ jobs:
         run: |
           set -euo pipefail
           case "${{ matrix.brand }}" in
-            ykz) APK='ykz-apk-output/YKZ-Soccer-Tips.apk'; PKG='com.futurecode.ykzsoccertips'; VC=3 ;;
-            bw) APK='bw-apk-output/BW-Sport-Journal.apk'; PKG='com.futurecode.bwsportjournal'; VC=2 ;;
-            ko_thet) APK='ko-thet-apk-output/Ko-Thet-Family-Journal.apk'; PKG='com.futurecode.kothetfamilyjournal'; VC=3 ;;
-            kmm) APK='kmm-apk-output/KMM-Sport-Hub.apk'; PKG='com.futurecode.kmmsporthub'; VC=2 ;;
+            ykz) APK='ykz-apk-output/YKZ-Soccer-Tips.apk'; PKG='com.futurecode.ykzsoccertips'; VC=4 ;;
+            bw) APK='bw-apk-output/BW-Sport-Journal.apk'; PKG='com.futurecode.bwsportjournal'; VC=3 ;;
+            ko_thet) APK='ko-thet-apk-output/Ko-Thet-Family-Journal.apk'; PKG='com.futurecode.kothetfamilyjournal'; VC=4 ;;
+            kmm) APK='kmm-apk-output/KMM-Sport-Hub.apk'; PKG='com.futurecode.kmmsporthub'; VC=3 ;;
           esac
           test -s "$APK"
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
@@ -73,10 +73,10 @@ jobs:
         shell: bash
         run: |
           case "${{ matrix.brand }}" in
-            ykz) APK='ykz-apk-output/YKZ-Soccer-Tips.apk'; TAG='fc-ykz-v1.2.0-preview' ;;
-            bw) APK='bw-apk-output/BW-Sport-Journal.apk'; TAG='fc-bw-v1.0.1-preview' ;;
-            ko_thet) APK='ko-thet-apk-output/Ko-Thet-Family-Journal.apk'; TAG='fc-ko-thet-v1.0.2-preview' ;;
-            kmm) APK='kmm-apk-output/KMM-Sport-Hub.apk'; TAG='fc-kmm-v1.0.1-preview' ;;
+            ykz) APK='ykz-apk-output/YKZ-Soccer-Tips.apk'; TAG='fc-ykz-v1.2.1-preview' ;;
+            bw) APK='bw-apk-output/BW-Sport-Journal.apk'; TAG='fc-bw-v1.0.2-preview' ;;
+            ko_thet) APK='ko-thet-apk-output/Ko-Thet-Family-Journal.apk'; TAG='fc-ko-thet-v1.0.3-preview' ;;
+            kmm) APK='kmm-apk-output/KMM-Sport-Hub.apk'; TAG='fc-kmm-v1.0.2-preview' ;;
           esac
           if gh release view "$TAG" >/dev/null 2>&1; then
             echo "Preview release exists; refusing to overwrite $TAG"
