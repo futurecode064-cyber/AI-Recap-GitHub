@@ -2,8 +2,8 @@
   "packageName": "com.futurecode.solarquote",
   "versionCode": 2,
   "versionName": "1.0.1",
-  "notes": "SolarQuote now includes daily update checks. The public signed release APK has not yet been published.",
-  "apkUrl": "",
-  "sha256": "",
+  "notes": "Future Code SolarQuote - stable signed release, offline quote calculators and update checks",
+  "apkUrl": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/solarquote/releases/FutureCodeSolarQuote-v1.0.1.apk",
+  "sha256": "8a133520165c6a9131f412526d844823c8880c5d269855d04789bba365bba183",
   "publishedAt": "2026-10-30"
 }
