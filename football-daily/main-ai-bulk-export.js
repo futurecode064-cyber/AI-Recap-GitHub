@@ -176,7 +176,16 @@
   const {date,part=1,total=1,scope="all",predict,leagueLabel,leagueLogo,teamName,teamLogo,displayTime}=opts;
    const customFrame=opts.frame?.startsWith("custom-")?(await window.FutureCodeCustomFrames.list()).find(f=>f.id===opts.frame):null;
    const shade=(hex,f)=>"#"+hex.slice(1).match(/../g).map(x=>Math.round(parseInt(x,16)*f).toString(16).padStart(2,"0")).join("");
-   const theme=customFrame?{base:shade(customFrame.color,.18),header:shade(customFrame.color,.35),league:[shade(customFrame.color,.25),shade(customFrame.color,.45),shade(customFrame.color,.25)],footer:shade(customFrame.color,.25)}:AI_COLOURS[opts.frame]||AI_COLOURS.standard;
+   // The Frame Editor colour controls the PNG table itself, not just its banners.
+   const proFrameId=typeof opts.frame==="string"&&opts.frame.startsWith("pro:")?opts.frame.slice(4):"";
+   const proFrame=proFrameId?window.FutureCodeProfessionalFrames?.getFrame?.(proFrameId):null;
+   if(proFrameId&&!proFrame)throw Error("Selected Frame is not loaded. Refresh Frame Editor and retry.");
+   const selectedColor=/^#[0-9a-f]{6}$/i.test(opts.frameColor||"")?opts.frameColor:proFrame?.color||customFrame?.color||"";
+   const theme=/^#[0-9a-f]{6}$/i.test(selectedColor)?{
+    base:shade(selectedColor,.22),header:shade(selectedColor,.47),
+    league:[shade(selectedColor,.66),selectedColor,shade(selectedColor,.66)],
+    footer:shade(selectedColor,.47)
+   }:AI_COLOURS[opts.frame]||AI_COLOURS.standard;
   if(typeof predict!=="function")throw Error("Prediction model unavailable");
   let canvas=document.createElement("canvas");const size=dim(page);
   canvas.width=size.width;canvas.height=size.height;
@@ -237,6 +246,18 @@
   rect(ctx,0,size.height-FOOTER,WIDTH,FOOTER,theme.footer);
   text(ctx,AI_BRAND[opts.frame]||"FUTURE CODE  •  MYANMAR FOOTBALL DAILY",20,size.height-23,670,19,"left","#e1ebff");
   text(ctx,scope==="all"?"ALL LEAGUES":String(scope),WIDTH-20,size.height-23,460,19,"right","#eedca6");
+  // Professional frames have their own top and bottom artwork. Avoid painting
+  // the generic FUTURE CODE masthead/footer between those banners.
+  if(opts.cleanPoster===true||(opts.cleanPoster!==false&&proFrameId)){
+   const tableHeight=size.height-HEADER-FOOTER,captionHeight=60;
+   const clean=document.createElement("canvas");clean.width=WIDTH;clean.height=captionHeight+tableHeight;
+   const cleanCtx=clean.getContext("2d");if(!cleanCtx)throw Error("Poster canvas unavailable");
+   rect(cleanCtx,0,0,WIDTH,captionHeight,theme.header);
+   text(cleanCtx,"VIP Internet · Bookies · AI Tips",20,41,880,27,"left");
+   text(cleanCtx,date||"",WIDTH-20,40,255,23,"right","#fff2c0");
+   cleanCtx.drawImage(canvas,0,HEADER,WIDTH,tableHeight,0,captionHeight,WIDTH,tableHeight);
+   canvas=clean;
+  }
   canvas=customFrame?await window.FutureCodeCustomFrames.wrap(canvas,customFrame):await brandCanvas(canvas,opts.frame,{date,matchCount:page.matchCount});
   if(window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,"ai",String(opts.frame||"").startsWith("pro:")?opts.frame:"none");
    // Keep the complete long poster as one image. Never silently drop fixtures.
