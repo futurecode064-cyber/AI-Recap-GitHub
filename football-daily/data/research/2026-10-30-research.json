@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-30",
+  "fixtures": [
+    {
+      "fixtureId": "fc-20261030-01",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401882817",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-02",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401884746",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-03",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401876421",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-04",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401876416",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-05",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401876420",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-06",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.2/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401880190",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-07",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.2/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401885068",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-08",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.2/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401885066",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-09",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/nor.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401843468",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-10",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/den.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401874738",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-11",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/por.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401885408",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    },
+    {
+      "fixtureId": "fc-20261030-12",
+      "formScope": "completed competitive matches only; friendlies excluded; newest first",
+      "standingsSource": "https://site.web.api.espn.com/apis/v2/sports/soccer/bel.1/standings?season=2026",
+      "fixtureSource": "https://www.espn.com/soccer/match/_/gameId/401878956",
+      "playerManagerInjuryStatus": "Only independently verified official medical/club facts included in prose; unconfirmed claims omitted"
+    }
+  ],
+  "crests": {
+    "date": "2026-10-30",
+    "verifiedDistinctCrests": 54,
+    "allSourceImagesDecode": true,
+    "cachedMap": {
+      "https://a.espncdn.com/i/teamlogos/soccer/500/102.png": "assets/main-export-teams/9611443b45925244.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/88.png": "assets/brand-export-teams/e8e3d4a33a3a846e.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png": "assets/brand-export-teams/7aea2b2acce2a976.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png": "assets/brand-export-teams/517f0bf0fd226c6b.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png": "assets/brand-export-teams/65f6395e093a028d.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/160.png": "assets/main-export-teams/d82373d3e95dc134.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png": "assets/brand-export-teams/fe028afd93929a33.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/169.png": "assets/brand-export-teams/e7a4e0768592b0e5.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/166.png": "assets/brand-export-teams/77fce39d01c37dcf.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/175.png": "assets/brand-export-teams/38bf88e115acc674.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/398.png": "assets/brand-export-teams/90969f5884bf50ed.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/352.png": "assets/brand-export-teams/cef83304ce773915.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/2506.png": "assets/brand-export-teams/d1ed4436b65a7191.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/3067.png": "assets/brand-export-teams/ad919db3b558f1d5.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/123.png": "assets/brand-export-teams/cbe18f61f4d13fe8.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/121.png": "assets/brand-export-teams/c484286e20bf4468.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png": "assets/brand-export-teams/5baac917dbebb333.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/510.png": "assets/brand-export-teams/c0e7f3db2bd3100f.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/7860.png": "assets/brand-export-teams/96e2a6fc43e2671d.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/3132.png": "assets/brand-export-teams/06c7dd56500b1c48.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/21581.png": "assets/brand-export-teams/4913411fc47dd1a5.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/2250.png": "assets/brand-export-teams/02862e69da065705.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/4691.png": "assets/brand-export-teams/f93505752fbdf276.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/570.png": "assets/brand-export-teams/20f447bc4c82e36c.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/368.png": "assets/brand-export-teams/9e98bf04b25c96de.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/361.png": "assets/brand-export-teams/062eabdac65b09d2.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png": "assets/brand-export-teams/d724a35c3c26c18e.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/113.png": "assets/brand-export-teams/894e60abd344a4d2.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/109.png": "assets/brand-export-teams/b2b6ebb4cf18a35f.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/105.png": "assets/brand-export-teams/b23238054fa57d8b.png",
+      "https://static.bongda24h.vn/Medias/original/2023/03/14/fc-inter-turku-1403141153.png": "assets/brand-export-teams/723471a15ff49c0a.png",
+      "https://r2.thesportsdb.com/images/media/team/badge/n7towl1615757839.png": "assets/brand-export-teams/9fe948a5bc087e4c.png",
+      "https://assets.football-logos.cc/logos/finland/1500x1500/kups.21757560.png": "assets/brand-export-teams/4a22ec914d6d667f.png",
+      "https://cdn.shopify.com/s/files/1/0098/7552/1636/files/Gnistan_logo_RGB.png?v=1742217387": "assets/brand-export-teams/0e4e68397a11e439.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/2495.png": "assets/brand-export-teams/d77a8fcc34e1f4a2.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/8547.png": "assets/brand-export-teams/de33b5cb296641b7.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/3052.png": "assets/brand-export-teams/4e1a98bce38c5b8b.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/8222.png": "assets/brand-export-teams/be39a8fdff87141d.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/131552.png": "assets/brand-export-teams/04f91b7ffd3e6de4.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/20301.png": "assets/brand-export-teams/1f097849a141e73c.png",
+      "https://www.footylogos.com/dls/logo/aarhus-fremad.png": "assets/brand-export-teams/1e17dea748181d56.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/909.png": "assets/brand-export-teams/d07edf610228efc6.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/572.png": "assets/brand-export-teams/70f9b191cc1e7576.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/11550.png": "assets/brand-export-teams/130afda4f5181a57.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/21829.png": "assets/brand-export-teams/39d854b6c372fb34.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/21964.png": "assets/brand-export-teams/6eb15e8228abdf3e.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/817.png": "assets/brand-export-teams/1910cab422766b42.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/22028.png": "assets/brand-export-teams/4e7f35f5a87328b4.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/21965.png": "assets/brand-export-teams/c92e36315720639e.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/22022.png": "assets/brand-export-teams/fedaf05279b25200.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png": "assets/brand-export-teams/7a113a10ffb56f39.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/12698.png": "assets/brand-export-teams/c4ccefa4a6489b83.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png": "assets/brand-export-teams/32f88392e44a8b5c.png",
+      "https://a.espncdn.com/i/teamlogos/soccer/500/3699.png": "assets/brand-export-teams/396c9a927b0ef2ff.png"
+    }
+  },
+  "vipTipCount": 12,
+  "ftVerifiedCount": 15,
+  "sourceSnapshots": "ESPN scoreboard, all-competition team schedules and 2026 league standings; exact IDs and source links recorded in report",
+  "officialMedical": "https://www.psg.fr/content/point-medical-avant-havre-ac-paris-saint-germain-ligue-1-2026-2027",
+  "unavailableFacts": "Unconfirmed individual injury/manager claims are omitted, not invented",
+  "specialChoiceIds": [
+    "fc-20261030-03",
+    "fc-20261030-12"
+  ]
+}

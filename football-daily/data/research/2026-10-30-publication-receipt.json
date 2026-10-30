@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-30",
+  "status": "CANDIDATE_PASSED_BEFORE_PUBLICATION",
+  "rollbackCommit": "3c3117acfdaa71781d6b3e26f18fba755c87758e",
+  "counts": {
+    "pdfRows": 12,
+    "previews": 12,
+    "specialChoice": 2,
+    "yesterdayFT": 15,
+    "vipSourcedTips": 12,
+    "bookiesModel": 12,
+    "aiModel": 12,
+    "probabilityRows": 12,
+    "news": 10,
+    "newsVisuals": 10
+  },
+  "gate": "daily_package_guard STRUCTURAL_PASS",
+  "assetQA": "54 team crests decoded and visually inspected; 9 league mappings; all 10 news PNG decode",
+  "clockCorrections": [
+    {
+      "fixtureId": "fc-20261030-06",
+      "kickoff": "2026-10-31 02:30 MMT"
+    },
+    {
+      "fixtureId": "fc-20261030-11",
+      "kickoff": "2026-10-31 02:45 MMT"
+    }
+  ],
+  "focusedRegression": "21/22 PASS; remaining pre-existing probability test treats previous-day verified quotes as stale, conflicting with current two-day runtime policy. Candidate-day verification is explicitly 30 Oct for every quote and 12/12 model coverage passed. No runtime probability code changed.",
+  "newsPhotos": "All visuals are distinct original contextual illustrations, visibly labelled as not actual event photos. Unverified third-party photos not copied.",
+  "liveQA": "Pending post-deployment browser sections and real PNG/ZIP downloads"
+}

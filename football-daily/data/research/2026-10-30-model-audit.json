@@ -1,0 +1,245 @@
+{
+  "coverage": 12,
+  "rows": [
+    {
+      "id": "fc-20261030-01",
+      "win": {
+        "home": 82,
+        "away": 18,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 70,
+        "under": 30,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401928522"
+      },
+      "bookies": "1-0",
+      "ai": "1-1",
+      "vip": "2-1"
+    },
+    {
+      "id": "fc-20261030-02",
+      "win": {
+        "home": 40,
+        "away": 60,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 70,
+        "under": 30,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401916923"
+      },
+      "bookies": "0-1",
+      "ai": "1-2",
+      "vip": "2-1"
+    },
+    {
+      "id": "fc-20261030-03",
+      "win": {
+        "home": 11,
+        "away": 89,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 75,
+        "under": 25,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401876426"
+      },
+      "bookies": "0-2",
+      "ai": "1-2",
+      "vip": "1-2"
+    },
+    {
+      "id": "fc-20261030-04",
+      "win": {
+        "home": 47,
+        "away": 53,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 68,
+        "under": 32,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401876428"
+      },
+      "bookies": "0-1",
+      "ai": "1-1",
+      "vip": "1-1"
+    },
+    {
+      "id": "fc-20261030-05",
+      "win": {
+        "home": 53,
+        "away": 47,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 55,
+        "under": 45,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401876425"
+      },
+      "bookies": "1-0",
+      "ai": "1-1",
+      "vip": "1-0"
+    },
+    {
+      "id": "fc-20261030-06",
+      "win": {
+        "home": 53,
+        "away": 47,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 55,
+        "under": 45,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401880200"
+      },
+      "bookies": "1-0",
+      "ai": "1-1",
+      "vip": "2-1"
+    },
+    {
+      "id": "fc-20261030-07",
+      "win": {
+        "home": 69,
+        "away": 31,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 38,
+        "under": 62,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401885081"
+      },
+      "bookies": "1-0",
+      "ai": "1-1",
+      "vip": "2-1"
+    },
+    {
+      "id": "fc-20261030-08",
+      "win": {
+        "home": 45,
+        "away": 55,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 40,
+        "under": 60,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401885083"
+      },
+      "bookies": "0-1",
+      "ai": "1-1",
+      "vip": "2-1"
+    },
+    {
+      "id": "fc-20261030-09",
+      "win": {
+        "home": 71,
+        "away": 29,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 70,
+        "under": 30,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401843372"
+      },
+      "bookies": "2-1",
+      "ai": "1-1",
+      "vip": "2-1"
+    },
+    {
+      "id": "fc-20261030-10",
+      "win": {
+        "home": 59,
+        "away": 41,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 75,
+        "under": 25,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401874547"
+      },
+      "bookies": "1-0",
+      "ai": "1-1",
+      "vip": "2-1"
+    },
+    {
+      "id": "fc-20261030-11",
+      "win": {
+        "home": 11,
+        "away": 89,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 58,
+        "under": 42,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401885419"
+      },
+      "bookies": "0-2",
+      "ai": "1-2",
+      "vip": "0-2"
+    },
+    {
+      "id": "fc-20261030-12",
+      "win": {
+        "home": 21,
+        "away": 79,
+        "source": "https://tipsterarea.com/matches/date-30-10-2026",
+        "provider": "TipsterArea average 1X2 (publisher snapshot 2026-10-29 20:00; rechecked 2026-10-30)",
+        "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+      },
+      "goals": {
+        "over": 66,
+        "under": 34,
+        "line": "2.5",
+        "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+        "source": "https://www.espn.com/soccer/match/_/gameId/401878966"
+      },
+      "bookies": "0-1",
+      "ai": "0-2",
+      "vip": "1-2"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "reportDate": "2026-10-30",
+  "timezone": "Asia/Yangon",
+  "items": [
+    {
+      "fixtureId": "fc-20261030-01",
+      "home": "Villarreal",
+      "away": "Espanyol",
+      "score": "2-1",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/primeradivisionpredictions/",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-02",
+      "home": "SV Elversberg",
+      "away": "Mainz",
+      "score": "2-1",
+      "sourceName": "Fulltime Stats",
+      "sourceUrl": "https://fulltimestats.com/match/sv-elversberg-vs-fsv-mainz-05-2026-10-30",
+      "sourceDate": "2026-10-30",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-03",
+      "home": "Le Havre AC",
+      "away": "Paris Saint-Germain",
+      "score": "1-2",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/le-havre-vs-psg-prediction-30-10-2026/",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-04",
+      "home": "Nice",
+      "away": "Stade Rennais",
+      "score": "1-1",
+      "sourceName": "TipsQuant",
+      "sourceUrl": "https://tipsquant.com/match/nice-vs-rennes-prediction/",
+      "sourceDate": "2026-10-27",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-05",
+      "home": "Lille",
+      "away": "Lens",
+      "score": "1-0",
+      "sourceName": "Betimate",
+      "sourceUrl": "https://betimate.com/en/news/previews/lille-vs-lens-prediction-odds-betting-tips-10302026-2962227",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-06",
+      "home": "Sheffield United",
+      "away": "Wrexham",
+      "score": "2-1",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/championshippredictions/sheffield-united-vs-wrexham-prediction-30-10-2026/",
+      "sourceDate": "2026-10-29",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-07",
+      "home": "Arminia Bielefeld",
+      "away": "TSV Eintracht Braunschweig",
+      "score": "2-1",
+      "sourceName": "Betimate",
+      "sourceUrl": "https://betimate.com/en/news/previews/arminia-bielefeld-vs-eintracht-braunschweig-prediction-odds-betting-tips-10302026-2961945",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-08",
+      "home": "Energie Cottbus",
+      "away": "VfL Bochum",
+      "score": "2-1",
+      "sourceName": "Betimate",
+      "sourceUrl": "https://betimate.com/en/news/previews/cottbus-vs-bochum-prediction-odds-betting-tips-10302026-2961943",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-09",
+      "home": "Bodo/Glimt",
+      "away": "Viking FK",
+      "score": "2-1",
+      "sourceName": "Betimate",
+      "sourceUrl": "https://betimate.com/en/news/previews/bodoglimt-vs-viking-fk-prediction-odds-betting-tips-10302026-2961954",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-10",
+      "home": "Lyngby Boldklub",
+      "away": "Randers FC",
+      "score": "2-1",
+      "sourceName": "Betimate",
+      "sourceUrl": "https://betimate.com/en/news/previews/lyngby-vs-randers-fc-prediction-odds-betting-tips-10302026-2961953",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-11",
+      "home": "Casa Pia",
+      "away": "Sporting CP",
+      "score": "0-2",
+      "sourceName": "Metis Football",
+      "sourceUrl": "https://metisfootball.com/match/primeira_liga/casa-pia-vs-sporting-2026-10-30",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    },
+    {
+      "fixtureId": "fc-20261030-12",
+      "home": "Zulte-Waregem",
+      "away": "Club Brugge",
+      "score": "1-2",
+      "sourceName": "Betimate",
+      "sourceUrl": "https://betimate.com/en/news/previews/zulte-waregem-vs-club-brugge-prediction-odds-betting-tips-10302026-2962222",
+      "sourceDate": "2026-10-28",
+      "sourceVerifiedDate": "2026-10-30",
+      "fixtureDate": "2026-10-30",
+      "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
+    }
+  ]
+}
