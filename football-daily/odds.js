@@ -168,6 +168,7 @@ function brandMobileOdds(matches){
 }
 
 function render(data){
+ for(const m of data.matches||[])if(m.league&&m.leagueDisplay)groups[m.league]=m.leagueDisplay;
  const root=document.getElementById("oddsList");root.replaceChildren();
  document.getElementById("oddsCount").textContent=String(data.matches.length);
  document.getElementById("oddsDate").textContent=data.reportDate.split("-").reverse().join("/")+" · မူလ (မနက်) / ယခု (နေ့ခင်း၊ ညနေ)";

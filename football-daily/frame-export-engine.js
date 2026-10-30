@@ -88,7 +88,7 @@ async function* forSection(k,f,rows,mode){
    const nativeStyle=({"ai-best":"best","ai-final":"final","ai-special":"special"})[f.id];
    let b=await api.renderBlob(pages[i],{
     date:s().getDate(),part:i+1,total:pages.length,scope:"all",frame:nativeStyle||"pro:"+f.id,
-    predict:W.FutureCodeTipScores?.predict||model.predict,leagueLabel:l=>l,
+    predict:W.FutureCodeTipScores?.predict||model.predict,leagueLabel:l=>rows.find(m=>m.league===l&&m.leagueDisplay)?.leagueDisplay||l,
     leagueLogo:l=>W.FutureCodeMainLogoAssets?.leagueCrest(l),
     teamName:(m,side)=>m[side+"Display"]||m[side],
     teamLogo:(m,side)=>m[side+"CrestUrl"],

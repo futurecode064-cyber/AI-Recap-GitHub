@@ -35,7 +35,7 @@ const LEAGUE_ALIASES={
  "EURO":"UEFA Euro","European Championship":"UEFA Euro","Euro Qualifiers":"UEFA Euro Qualifying"
 };
 function canonicalLeague(value){return LEAGUE_ALIASES[value]||value;}
-function leagueName(value){const key=canonicalLeague(value);return LEAGUE_NAMES[key]||value||"ပွဲကြိုသုံးသပ်ချက်";}
+function leagueName(value){const key=canonicalLeague(value);return report.matches.find(m=>canonicalLeague(m.league)===key&&m.leagueDisplay)?.leagueDisplay||LEAGUE_NAMES[key]||value||"ပွဲကြိုသုံးသပ်ချက်";}
 const LEAGUE_BADGE_URLS={"Premier League":"https://crests.football-data.org/PL.png","Championship":"https://crests.football-data.org/ELC.png","Serie A":"https://crests.football-data.org/SA.png","La Liga":"https://crests.football-data.org/PD.png","Bundesliga":"https://crests.football-data.org/BL1.png","Ligue 1":"https://crests.football-data.org/FL1.png","Ligue 2":"https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20Ligue%202%20BKT%202024.svg","La Liga 2":"https://commons.wikimedia.org/wiki/Special:FilePath/LaLiga%20Hypermotion%202023%20Vertical%20Logo.svg"};
 if(/^\/(?:index\.html)?$/.test(location.pathname))Object.assign(LEAGUE_BADGE_URLS,{"UEFA Champions League":"https://commons.wikimedia.org/wiki/Special:FilePath/UEFA%20Champions%20League%20logo%20no%20text.svg","League One":"https://commons.wikimedia.org/wiki/Special:FilePath/EFL%20League%20One%20Wordmark.svg"});
 Object.assign(LEAGUE_BADGE_URLS,{"Serie B":"https://media.api-sports.io/football/leagues/136.png","League One":"https://media.api-sports.io/football/leagues/41.png","EFL Cup":"https://media.api-sports.io/football/leagues/48.png","DFB-Pokal":"https://media.api-sports.io/football/leagues/81.png"});
