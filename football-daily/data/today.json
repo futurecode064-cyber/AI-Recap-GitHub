@@ -6140,13 +6140,30 @@
       }
     }
   ],
-  "updateStatus": "PARTIAL: owner text and morning PDF odds live; independent markets/news/FT and some crest/form verification pending",
-  "researchVerifiedDate": null,
+  "updateStatus": "PUBLISHED_DATA_COMPLETE: 33 verbatim owner previews, 5 verbatim Special Choices, 33 original PDF Myanmar odds, 33 sourced 1X2, 66 crest URLs, 66 complete last-five lists and standings, 33 sourced VIP tips, computed Bookies/AI and probabilities, 12 verified previous-night FT, 10 dated news items + 10 original illustrations. Browser visual/PNG/ZIP QA still unverified (TinyFish wallet limit).",
+  "researchVerifiedDate": "2026-10-31",
   "sourceManifest": {
     "sourcePDF": "31(1).pdf",
     "sourceRows": 33,
     "ownerPreviews": 33,
     "ownerSpecialChoices": 5,
-    "morningOddsOnly": true
+    "morningOddsOnly": true,
+    "confirmedMatchPreviews": 33,
+    "confirmedSpecialChoices": 5,
+    "confirmedOriginalOddsRows": 33,
+    "source1x2Rows": 33,
+    "clubCrestUrls": 66,
+    "leagueLogoFiles": 6,
+    "completeFiveMatchLists": 66,
+    "verifiedStandingsSides": 66,
+    "datedVipForecasts": 33,
+    "bookiesModelInputRows": 33,
+    "aiModelInputRows": 33,
+    "probabilityInputRows": 33,
+    "previousNightFinished": 12,
+    "sourcedNews": 10,
+    "originalNewsIllustrations": 10,
+    "visualQA": "NOT_RUN: browser automation wallet exhausted; same-origin image mapping not complete; PNG/ZIP validation outstanding",
+    "verifiedDataDate": "2026-10-31"
   }
 }
