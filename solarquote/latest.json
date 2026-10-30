@@ -1,0 +1,9 @@
+{
+  "packageName": "com.futurecode.solarquote",
+  "versionCode": 2,
+  "versionName": "1.0.1",
+  "notes": "SolarQuote now includes daily update checks. The public signed release APK has not yet been published.",
+  "apkUrl": "",
+  "sha256": "",
+  "publishedAt": "2026-10-30"
+}
