@@ -96,7 +96,7 @@ return out;
 async function renderSample(f){
  const width=600,source=document.createElement("canvas");source.width=width;source.height=270;
  const ctx=source.getContext("2d");ctx.fillStyle="#eef4f8";ctx.fillRect(0,0,width,270);
- ctx.fillStyle="#132b42";ctx.fillRect(20,18,width-40,58);
+ ctx.fillStyle=shade(color(f.color),.48);ctx.fillRect(20,18,width-40,58);
  ctx.fillStyle="#fff";ctx.font="bold 27px sans-serif";ctx.fillText("MATCH PREVIEW",34,57);
  ctx.fillStyle="#173247";ctx.font="bold 25px sans-serif";ctx.fillText("HOME     VS     AWAY",38,145);
  ctx.fillStyle="#9bb7c4";for(let i=0;i<4;i++)ctx.fillRect(38,176+i*19,width-76,7);
