@@ -84,6 +84,16 @@
       ],
       "awayLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "AFC Bournemouth",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879252"
+        },
+        {
           "date": "2026-10-21",
           "opponent": "Como",
           "teamGoals": 1,
@@ -122,16 +132,6 @@
           "result": "D",
           "competition": "Premier League",
           "sourceUrl": "https://www.skysports.com/football/manchester-united-vs-tottenham-hotspur/559502"
-        },
-        {
-          "date": "2026-09-20",
-          "opponent": "Fulham",
-          "teamGoals": 1,
-          "opponentGoals": 1,
-          "venueSide": "away",
-          "result": "D",
-          "competition": "Premier League",
-          "sourceUrl": "https://www.skysports.com/football/fulham-vs-manchester-united/559488"
         }
       ],
       "homeStanding": {
@@ -140,20 +140,19 @@
         "wins": 4,
         "draws": 1,
         "losses": 3,
+        "points": 13,
         "goalsFor": 17,
-        "goalsAgainst": 15,
-        "points": 13
+        "goalsAgainst": 15
       },
       "awayStanding": {
-        "position": 15,
-        "played": 7,
+        "position": 16,
+        "played": 8,
         "wins": 1,
         "draws": 4,
-        "losses": 2,
+        "losses": 3,
+        "points": 7,
         "goalsFor": 10,
-        "goalsAgainst": 10,
-        "goalDifference": 0,
-        "points": 7
+        "goalsAgainst": 13
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
@@ -256,6 +255,16 @@
       ],
       "awayLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "Sunderland",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878764"
+        },
+        {
           "date": "2026-10-18",
           "opponent": "Man Utd",
           "teamGoals": 1,
@@ -294,16 +303,6 @@
           "result": "W",
           "competition": "Premier League",
           "sourceUrl": "https://www.skysports.com/football/leeds-united-vs-newcastle-united/559479"
-        },
-        {
-          "date": "2026-09-09",
-          "opponent": "Chelsea",
-          "teamGoals": 3,
-          "opponentGoals": 6,
-          "venueSide": "away",
-          "result": "L",
-          "competition": "Carabao Cup Round 3",
-          "sourceUrl": "https://www.skysports.com/football/chelsea-vs-leeds-united/577586"
         }
       ],
       "homeStanding": {
@@ -312,20 +311,19 @@
         "wins": 2,
         "draws": 3,
         "losses": 3,
+        "points": 9,
         "goalsFor": 12,
-        "goalsAgainst": 13,
-        "points": 9
+        "goalsAgainst": 13
       },
       "awayStanding": {
-        "position": 8,
-        "played": 7,
+        "position": 7,
+        "played": 8,
         "wins": 2,
-        "draws": 4,
+        "draws": 5,
         "losses": 1,
+        "points": 11,
         "goalsFor": 9,
-        "goalsAgainst": 6,
-        "goalDifference": 3,
-        "points": 10
+        "goalsAgainst": 6
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
@@ -426,18 +424,78 @@
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879285"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Ipswich Town",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879253"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Arsenal",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878769"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Crystal Palace",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879266"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Coventry City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879270"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Aston Villa",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879284"
+        }
+      ],
       "homeStanding": {
         "position": 6,
         "played": 8,
         "wins": 2,
         "draws": 5,
         "losses": 1,
+        "points": 11,
         "goalsFor": 14,
-        "goalsAgainst": 9,
-        "points": 11
+        "goalsAgainst": 9
       },
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 18,
+        "played": 8,
+        "wins": 1,
+        "draws": 3,
+        "losses": 4,
+        "points": 6,
+        "goalsFor": 6,
+        "goalsAgainst": 10
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.1.png",
@@ -485,7 +543,58 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Fulham",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879255"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Tottenham Hotspur",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879257"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "Newcastle United",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879267"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Nottingham Forest",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879270"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Brighton & Hove Albion",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879282"
+        }
+      ],
       "awayLastFive": [
         {
           "date": "2026-10-25",
@@ -538,16 +647,25 @@
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878779"
         }
       ],
-      "homeStanding": null,
+      "homeStanding": {
+        "position": 19,
+        "played": 8,
+        "wins": 2,
+        "draws": 0,
+        "losses": 6,
+        "points": 6,
+        "goalsFor": 6,
+        "goalsAgainst": 15
+      },
       "awayStanding": {
         "position": 20,
         "played": 8,
         "wins": 1,
         "draws": 2,
         "losses": 5,
+        "points": 5,
         "goalsFor": 6,
-        "goalsAgainst": 14,
-        "points": 5
+        "goalsAgainst": 14
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
@@ -598,6 +716,16 @@
       },
       "homeLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "Brentford",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878766"
+        },
+        {
           "date": "2026-10-17",
           "opponent": "Fulham",
           "teamGoals": 0,
@@ -636,32 +764,81 @@
           "result": "D",
           "competition": "Premier League",
           "sourceUrl": "https://www.skysports.com/football/chelsea-vs-hull-city/559476"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Nottingham Forest",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879253"
         },
         {
-          "date": "2026-09-08",
-          "opponent": "Sunderland",
+          "date": "2026-10-17",
+          "opponent": "Manchester City",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879259"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Fulham",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879265"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Everton",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "L",
-          "competition": "Carabao Cup Round 3",
-          "sourceUrl": "https://www.skysports.com/football/sunderland-vs-hull-city/577585"
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878778"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Crystal Palace",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879281"
         }
       ],
-      "awayLastFive": [],
       "homeStanding": {
-        "position": 11,
-        "played": 7,
+        "position": 10,
+        "played": 8,
         "wins": 2,
-        "draws": 3,
+        "draws": 4,
         "losses": 2,
-        "goalsFor": 8,
-        "goalsAgainst": 7,
-        "goalDifference": 1,
-        "points": 9
+        "points": 10,
+        "goalsFor": 9,
+        "goalsAgainst": 8
       },
-      "awayStanding": null,
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/England%20-%20Premier%20League/Hull%20City.png",
+      "awayStanding": {
+        "position": 12,
+        "played": 8,
+        "wins": 3,
+        "draws": 1,
+        "losses": 4,
+        "points": 10,
+        "goalsFor": 12,
+        "goalsAgainst": 16
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.1.png",
       "homeOdds": "2.66",
@@ -818,9 +995,9 @@
         "wins": 7,
         "draws": 0,
         "losses": 1,
+        "points": 21,
         "goalsFor": 20,
-        "goalsAgainst": 9,
-        "points": 21
+        "goalsAgainst": 9
       },
       "awayStanding": {
         "position": 3,
@@ -828,9 +1005,9 @@
         "wins": 5,
         "draws": 1,
         "losses": 2,
+        "points": 16,
         "goalsFor": 23,
-        "goalsAgainst": 7,
-        "points": 16
+        "goalsAgainst": 7
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
@@ -885,7 +1062,58 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Chelsea",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878767"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Coventry City",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879257"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Manchester United",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878773"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Aston Villa",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879269"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Everton",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879277"
+        }
+      ],
       "awayLastFive": [
         {
           "date": "2026-10-25",
@@ -938,16 +1166,25 @@
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879281"
         }
       ],
-      "homeStanding": null,
+      "homeStanding": {
+        "position": 14,
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "points": 9,
+        "goalsFor": 8,
+        "goalsAgainst": 10
+      },
       "awayStanding": {
         "position": 17,
         "played": 8,
         "wins": 2,
         "draws": 1,
         "losses": 5,
+        "points": 7,
         "goalsFor": 9,
-        "goalsAgainst": 19,
-        "points": 7
+        "goalsAgainst": 19
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
@@ -1106,9 +1343,9 @@
         "wins": 3,
         "draws": 2,
         "losses": 3,
+        "points": 11,
         "goalsFor": 9,
-        "goalsAgainst": 12,
-        "points": 11
+        "goalsAgainst": 12
       },
       "awayStanding": {
         "position": 15,
@@ -1116,9 +1353,9 @@
         "wins": 2,
         "draws": 2,
         "losses": 4,
+        "points": 8,
         "goalsFor": 8,
-        "goalsAgainst": 10,
-        "points": 8
+        "goalsAgainst": 10
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
@@ -1169,6 +1406,16 @@
       },
       "homeLastFive": [
         {
+          "date": "2026-10-28",
+          "opponent": "AC Milan",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874993"
+        },
+        {
           "date": "2026-10-24",
           "opponent": "Cagliari",
           "teamGoals": 2,
@@ -1207,19 +1454,19 @@
           "result": "D",
           "competition": "2026-27 Italian Serie A",
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874767"
-        },
-        {
-          "date": "2026-09-13",
-          "opponent": "Napoli",
-          "teamGoals": 0,
-          "opponentGoals": 1,
-          "venueSide": "away",
-          "result": "L",
-          "competition": "2026-27 Italian Serie A",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874792"
         }
       ],
       "awayLastFive": [
+        {
+          "date": "2026-10-28",
+          "opponent": "Napoli",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874799"
+        },
         {
           "date": "2026-10-23",
           "opponent": "Torino",
@@ -1259,37 +1506,27 @@
           "result": "W",
           "competition": "2026-27 Italian Serie A",
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874756"
-        },
-        {
-          "date": "2026-09-13",
-          "opponent": "Lecce",
-          "teamGoals": 2,
-          "opponentGoals": 3,
-          "venueSide": "away",
-          "result": "L",
-          "competition": "2026-27 Italian Serie A",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874936"
         }
       ],
       "homeStanding": {
-        "position": 13,
-        "played": 8,
-        "wins": 2,
+        "position": 11,
+        "played": 9,
+        "wins": 3,
         "draws": 2,
         "losses": 4,
-        "goalsFor": 8,
-        "goalsAgainst": 10,
-        "points": 8
+        "points": 11,
+        "goalsFor": 12,
+        "goalsAgainst": 12
       },
       "awayStanding": {
-        "position": 15,
-        "played": 8,
+        "position": 16,
+        "played": 9,
         "wins": 2,
         "draws": 1,
-        "losses": 5,
-        "goalsFor": 15,
-        "goalsAgainst": 18,
-        "points": 7
+        "losses": 6,
+        "points": 7,
+        "goalsFor": 16,
+        "goalsAgainst": 22
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
@@ -1340,6 +1577,16 @@
       },
       "homeLastFive": [
         {
+          "date": "2026-10-28",
+          "opponent": "Parma",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874965"
+        },
+        {
           "date": "2026-10-25",
           "opponent": "AC Milan",
           "teamGoals": 0,
@@ -1378,74 +1625,79 @@
           "result": "L",
           "competition": "2026-27 Italian Serie A",
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874964"
-        },
-        {
-          "date": "2026-09-14",
-          "opponent": "Internazionale",
-          "teamGoals": 3,
-          "opponentGoals": 5,
-          "venueSide": "away",
-          "result": "L",
-          "competition": "2026-27 Italian Serie A",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874966"
         }
       ],
       "awayLastFive": [
         {
-          "result": "D",
-          "opponent": "နာပိုလီ",
+          "date": "2026-10-27",
+          "opponent": "Cagliari",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874780"
+        },
+        {
+          "date": "2026-10-24",
+          "opponent": "Napoli",
           "teamGoals": 3,
           "opponentGoals": 3,
-          "date": "2026-10-24"
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874948"
         },
         {
-          "result": "W",
-          "opponent": "စလိုဗန်ဘရာတီစလာဗာ",
-          "teamGoals": 4,
-          "opponentGoals": 0,
-          "date": "2026-10-20"
-        },
-        {
-          "result": "W",
-          "opponent": "ဂျီနိုအာ",
+          "date": "2026-10-17",
+          "opponent": "Genoa",
           "teamGoals": 2,
           "opponentGoals": 0,
-          "date": "2026-10-17"
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874935"
         },
         {
-          "result": "L",
-          "opponent": "ရီးရဲလ်မက်ဒရစ်",
-          "teamGoals": 3,
-          "opponentGoals": 4,
-          "date": "2026-10-14"
-        },
-        {
-          "result": "D",
-          "opponent": "ကိုမို",
+          "date": "2026-10-11",
+          "opponent": "Como",
           "teamGoals": 0,
           "opponentGoals": 0,
-          "date": "2026-10-11"
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874940"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Internazionale",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874753"
         }
       ],
       "homeStanding": {
         "position": 17,
-        "played": 8,
+        "played": 9,
         "wins": 1,
-        "draws": 1,
+        "draws": 2,
         "losses": 6,
+        "points": 5,
         "goalsFor": 9,
-        "goalsAgainst": 18,
-        "points": 4
+        "goalsAgainst": 18
       },
       "awayStanding": {
         "position": 3,
-        "played": 8,
-        "wins": 5,
+        "played": 9,
+        "wins": 6,
         "draws": 3,
         "losses": 0,
-        "goalsFor": 19,
-        "goalsAgainst": 6,
-        "points": 18
+        "points": 21,
+        "goalsFor": 23,
+        "goalsAgainst": 8
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
@@ -1496,6 +1748,16 @@
       },
       "homeLastFive": [
         {
+          "date": "2026-10-28",
+          "opponent": "Bologna",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874993"
+        },
+        {
           "date": "2026-10-25",
           "opponent": "Udinese",
           "teamGoals": 2,
@@ -1534,19 +1796,19 @@
           "result": "W",
           "competition": "2026-27 Italian Serie A",
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874944"
-        },
-        {
-          "date": "2026-09-12",
-          "opponent": "Lazio",
-          "teamGoals": 2,
-          "opponentGoals": 2,
-          "venueSide": "away",
-          "result": "D",
-          "competition": "2026-27 Italian Serie A",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874941"
         }
       ],
       "awayLastFive": [
+        {
+          "date": "2026-10-28",
+          "opponent": "Venezia",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ita.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874773"
+        },
         {
           "date": "2026-10-25",
           "opponent": "Fiorentina",
@@ -1586,37 +1848,27 @@
           "result": "D",
           "competition": "2026-27 Italian Serie A",
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874753"
-        },
-        {
-          "date": "2026-09-14",
-          "opponent": "Udinese",
-          "teamGoals": 5,
-          "opponentGoals": 3,
-          "venueSide": "home",
-          "result": "W",
-          "competition": "2026-27 Italian Serie A",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874966"
         }
       ],
       "homeStanding": {
         "position": 5,
-        "played": 8,
+        "played": 9,
         "wins": 5,
         "draws": 3,
-        "losses": 0,
-        "goalsFor": 16,
-        "goalsAgainst": 7,
-        "points": 18
+        "losses": 1,
+        "points": 18,
+        "goalsFor": 18,
+        "goalsAgainst": 11
       },
       "awayStanding": {
-        "position": 2,
-        "played": 8,
-        "wins": 7,
+        "position": 1,
+        "played": 9,
+        "wins": 8,
         "draws": 1,
         "losses": 0,
-        "goalsFor": 23,
-        "goalsAgainst": 10,
-        "points": 22
+        "points": 25,
+        "goalsFor": 25,
+        "goalsAgainst": 10
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
@@ -1667,6 +1919,16 @@
       },
       "homeLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "Real Sociedad",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882829"
+        },
+        {
           "date": "2026-10-21",
           "opponent": "Ath Club",
           "teamGoals": 3,
@@ -1705,32 +1967,81 @@
           "result": "L",
           "competition": "Spanish La Liga",
           "sourceUrl": "https://www.skysports.com/football/villarreal-vs-levante/562993"
-        },
-        {
-          "date": "2026-09-13",
-          "opponent": "Barcelona",
-          "teamGoals": 2,
-          "opponentGoals": 4,
-          "venueSide": "home",
-          "result": "L",
-          "competition": "Spanish La Liga",
-          "sourceUrl": "https://www.skysports.com/football/levante-vs-barcelona/562967"
         }
       ],
-      "awayLastFive": [],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Deportivo",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882834"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Espanyol",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882843"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Alavés",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882856"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Real Madrid",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882865"
+        },
+        {
+          "date": "2026-09-16",
+          "opponent": "Osasuna",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882875"
+        }
+      ],
       "homeStanding": {
-        "position": 13,
-        "played": 9,
+        "position": 15,
+        "played": 10,
         "wins": 2,
         "draws": 4,
-        "losses": 3,
-        "goalsFor": 15,
-        "goalsAgainst": 17,
-        "goalDifference": -2,
-        "points": 10
+        "losses": 4,
+        "points": 10,
+        "goalsFor": 16,
+        "goalsAgainst": 19
       },
-      "awayStanding": null,
-      "homeCrestUrl": "https://raw.githubusercontent.com/luukhopman/football-logos/master/logos/Spain%20-%20LaLiga/Levante%20UD.png",
+      "awayStanding": {
+        "position": 2,
+        "played": 10,
+        "wins": 8,
+        "draws": 1,
+        "losses": 1,
+        "points": 25,
+        "goalsFor": 20,
+        "goalsAgainst": 8
+      },
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
       "homeOdds": "5.35",
@@ -1783,8 +2094,69 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Elche",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882830"
+        },
+        {
+          "date": "2026-10-19",
+          "opponent": "Getafe",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882842"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Osasuna",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882860"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Espanyol",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882868"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Real Madrid",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882880"
+        }
+      ],
       "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "Real Betis",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882833"
+        },
         {
           "date": "2026-10-22",
           "opponent": "Celtic",
@@ -1824,29 +2196,27 @@
           "result": "D",
           "competition": "Spanish La Liga",
           "sourceUrl": "https://www.skysports.com/football/elche-vs-celta-vigo/562996"
-        },
-        {
-          "date": "2026-09-19",
-          "opponent": "R Santandr",
-          "teamGoals": 5,
-          "opponentGoals": 0,
-          "venueSide": "home",
-          "result": "W",
-          "competition": "Spanish La Liga",
-          "sourceUrl": "https://www.skysports.com/football/celta-vigo-vs-racing-santander/562986"
         }
       ],
-      "homeStanding": null,
-      "awayStanding": {
-        "position": 9,
+      "homeStanding": {
+        "position": 17,
         "played": 9,
         "wins": 2,
-        "draws": 5,
+        "draws": 3,
+        "losses": 4,
+        "points": 9,
+        "goalsFor": 12,
+        "goalsAgainst": 20
+      },
+      "awayStanding": {
+        "position": 9,
+        "played": 10,
+        "wins": 2,
+        "draws": 6,
         "losses": 2,
+        "points": 12,
         "goalsFor": 10,
-        "goalsAgainst": 7,
-        "goalDifference": 3,
-        "points": 11
+        "goalsAgainst": 7
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/101.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
@@ -1897,6 +2267,16 @@
       },
       "homeLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "Celta Vigo",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882833"
+        },
+        {
           "date": "2026-10-21",
           "opponent": "Feyenoord",
           "teamGoals": 1,
@@ -1935,31 +2315,80 @@
           "result": "W",
           "competition": "Spanish La Liga",
           "sourceUrl": "https://www.skysports.com/football/real-betis-vs-osasuna/563001"
-        },
+        }
+      ],
+      "awayLastFive": [
         {
-          "date": "2026-09-20",
-          "opponent": "Deportivo",
+          "date": "2026-10-23",
+          "opponent": "Alavés",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "D",
-          "competition": "Spanish La Liga",
-          "sourceUrl": "https://www.skysports.com/football/deportivo-la-coruna-vs-real-betis/562987"
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882836"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Real Sociedad",
+          "teamGoals": 2,
+          "opponentGoals": 5,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882841"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "Espanyol",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882851"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Getafe",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882861"
+        },
+        {
+          "date": "2026-09-17",
+          "opponent": "Villarreal",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882869"
         }
       ],
-      "awayLastFive": [],
       "homeStanding": {
         "position": 4,
-        "played": 9,
+        "played": 10,
         "wins": 6,
-        "draws": 1,
+        "draws": 2,
         "losses": 2,
+        "points": 20,
         "goalsFor": 16,
-        "goalsAgainst": 14,
-        "goalDifference": 2,
-        "points": 19
+        "goalsAgainst": 14
       },
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 20,
+        "played": 10,
+        "wins": 0,
+        "draws": 5,
+        "losses": 5,
+        "points": 5,
+        "goalsFor": 7,
+        "goalsAgainst": 19
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
@@ -2015,6 +2444,16 @@
       },
       "homeLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "Real Madrid",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882832"
+        },
+        {
           "date": "2026-10-20",
           "opponent": "PSG",
           "teamGoals": 2,
@@ -2053,31 +2492,80 @@
           "result": "W",
           "competition": "Spanish La Liga",
           "sourceUrl": "https://www.skysports.com/football/barcelona-vs-getafe/562995"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Málaga",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882836"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Celta Vigo",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882845"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Atlético Madrid",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882856"
         },
         {
           "date": "2026-09-19",
-          "opponent": "Sevilla",
-          "teamGoals": 3,
-          "opponentGoals": 1,
+          "opponent": "Athletic Club",
+          "teamGoals": 0,
+          "opponentGoals": 0,
           "venueSide": "away",
-          "result": "W",
-          "competition": "Spanish La Liga",
-          "sourceUrl": "https://www.skysports.com/football/sevilla-vs-barcelona/562991"
+          "result": "D",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882866"
+        },
+        {
+          "date": "2026-09-15",
+          "opponent": "Valencia",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "esp.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882876"
         }
       ],
-      "awayLastFive": [],
       "homeStanding": {
         "position": 1,
-        "played": 9,
+        "played": 10,
         "wins": 9,
         "draws": 0,
-        "losses": 0,
-        "goalsFor": 39,
-        "goalsAgainst": 9,
-        "goalDifference": 30,
-        "points": 27
+        "losses": 1,
+        "points": 27,
+        "goalsFor": 40,
+        "goalsAgainst": 11
       },
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 7,
+        "played": 10,
+        "wins": 3,
+        "draws": 3,
+        "losses": 4,
+        "points": 12,
+        "goalsFor": 14,
+        "goalsAgainst": 11
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
@@ -2133,39 +2621,54 @@
       },
       "homeLastFive": [
         {
-          "result": "D",
-          "opponent": "ယူနီယံဘာလင်",
+          "date": "2026-10-24",
+          "opponent": "1. FC Union Berlin",
           "teamGoals": 1,
           "opponentGoals": 1,
-          "date": "2026-10-24"
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884758"
         },
         {
-          "result": "L",
-          "opponent": "အဲလ်ဗာ့စ်ဘတ်",
+          "date": "2026-10-17",
+          "opponent": "SV Elversberg",
           "teamGoals": 3,
           "opponentGoals": 4,
-          "date": "2026-10-17"
-        },
-        {
-          "result": "D",
-          "opponent": "ဘိုင်ယန်မြူးနစ်",
-          "teamGoals": 2,
-          "opponentGoals": 2,
-          "date": "2026-10-10"
-        },
-        {
-          "result": "D",
-          "opponent": "ဟာသာဘာလင်",
-          "teamGoals": 2,
-          "opponentGoals": 2,
-          "date": "2026-10-02"
-        },
-        {
+          "venueSide": "away",
           "result": "L",
-          "opponent": "ဝါဒါဘရီမင်",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884764"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Bayern Munich",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884777"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Werder Bremen",
           "teamGoals": 2,
           "opponentGoals": 3,
-          "date": "2026-09-19"
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884784"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884795"
         }
       ],
       "awayLastFive": [
@@ -2226,9 +2729,9 @@
         "wins": 2,
         "draws": 3,
         "losses": 2,
+        "points": 9,
         "goalsFor": 17,
-        "goalsAgainst": 13,
-        "points": 9
+        "goalsAgainst": 13
       },
       "awayStanding": {
         "position": 3,
@@ -2236,9 +2739,9 @@
         "wins": 4,
         "draws": 1,
         "losses": 2,
+        "points": 13,
         "goalsFor": 16,
-        "goalsAgainst": 9,
-        "points": 13
+        "goalsAgainst": 9
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
@@ -2397,9 +2900,9 @@
         "wins": 4,
         "draws": 1,
         "losses": 2,
+        "points": 13,
         "goalsFor": 16,
-        "goalsAgainst": 12,
-        "points": 13
+        "goalsAgainst": 12
       },
       "awayStanding": {
         "position": 15,
@@ -2407,9 +2910,9 @@
         "wins": 2,
         "draws": 0,
         "losses": 5,
+        "points": 6,
         "goalsFor": 10,
-        "goalsAgainst": 13,
-        "points": 6
+        "goalsAgainst": 13
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
@@ -2460,39 +2963,54 @@
       },
       "homeLastFive": [
         {
-          "result": "W",
-          "opponent": "စတုဂတ်",
+          "date": "2026-10-23",
+          "opponent": "VfB Stuttgart",
           "teamGoals": 3,
           "opponentGoals": 2,
-          "date": "2026-10-23"
-        },
-        {
-          "result": "L",
-          "opponent": "ဟော့ဖန်ဟိမ်း",
-          "teamGoals": 1,
-          "opponentGoals": 2,
-          "date": "2026-10-18"
-        },
-        {
-          "result": "L",
-          "opponent": "ကိုလုံး",
-          "teamGoals": 1,
-          "opponentGoals": 2,
-          "date": "2026-10-11"
-        },
-        {
-          "result": "D",
-          "opponent": "စိန့်ပါလီ",
-          "teamGoals": 1,
-          "opponentGoals": 1,
-          "date": "2026-10-03"
-        },
-        {
+          "venueSide": "away",
           "result": "W",
-          "opponent": "ဆီဂန်",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884761"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "TSG Hoffenheim",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884768"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "FC Cologne",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884774"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Mainz",
           "teamGoals": 3,
-          "opponentGoals": 0,
-          "date": "2026-09-24"
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884786"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "SC Freiburg",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884796"
         }
       ],
       "awayLastFive": [
@@ -2553,9 +3071,9 @@
         "wins": 1,
         "draws": 0,
         "losses": 6,
+        "points": 3,
         "goalsFor": 11,
-        "goalsAgainst": 22,
-        "points": 3
+        "goalsAgainst": 22
       },
       "awayStanding": {
         "position": 13,
@@ -2563,9 +3081,9 @@
         "wins": 2,
         "draws": 2,
         "losses": 3,
+        "points": 8,
         "goalsFor": 6,
-        "goalsAgainst": 9,
-        "points": 8
+        "goalsAgainst": 9
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
@@ -2668,39 +3186,54 @@
       ],
       "awayLastFive": [
         {
-          "result": "W",
-          "opponent": "အဲလ်ဗာ့စ်ဘတ်",
+          "date": "2026-10-24",
+          "opponent": "SV Elversberg",
           "teamGoals": 4,
           "opponentGoals": 0,
-          "date": "2026-10-24"
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884762"
         },
         {
-          "result": "L",
-          "opponent": "ရီးရဲလ်မက်ဒရစ်",
-          "teamGoals": 1,
-          "opponentGoals": 4,
-          "date": "2026-10-21"
-        },
-        {
-          "result": "L",
-          "opponent": "ဘိုင်ယန်မြူးနစ်",
+          "date": "2026-10-17",
+          "opponent": "Bayern Munich",
           "teamGoals": 1,
           "opponentGoals": 6,
-          "date": "2026-10-17"
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884772"
         },
         {
-          "result": "W",
-          "opponent": "ပီအက်စ်ဗွီ",
-          "teamGoals": 1,
-          "opponentGoals": 0,
-          "date": "2026-10-13"
-        },
-        {
-          "result": "W",
-          "opponent": "ဖရန့်ဖတ်",
+          "date": "2026-10-10",
+          "opponent": "Eintracht Frankfurt",
           "teamGoals": 6,
           "opponentGoals": 0,
-          "date": "2026-10-10"
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884780"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Bayer Leverkusen",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884788"
+        },
+        {
+          "date": "2026-09-13",
+          "opponent": "Hamburg SV",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884798"
         }
       ],
       "homeStanding": {
@@ -2709,19 +3242,19 @@
         "wins": 1,
         "draws": 3,
         "losses": 3,
+        "points": 6,
         "goalsFor": 4,
-        "goalsAgainst": 7,
-        "points": 6
+        "goalsAgainst": 7
       },
       "awayStanding": {
-        "position": 5,
+        "position": 6,
         "played": 7,
         "wins": 4,
         "draws": 0,
         "losses": 3,
+        "points": 12,
         "goalsFor": 20,
-        "goalsAgainst": 11,
-        "points": 12
+        "goalsAgainst": 11
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
@@ -2773,38 +3306,53 @@
       "homeLastFive": [
         {
           "date": "2026-10-24",
-          "opponent": "မိန့်ဇ်",
+          "opponent": "Mainz",
           "teamGoals": 3,
           "opponentGoals": 2,
-          "result": "W"
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884757"
         },
         {
           "date": "2026-10-17",
-          "opponent": "ပါဒါဘွန်း",
+          "opponent": "SC Paderborn 07",
           "teamGoals": 2,
           "opponentGoals": 2,
-          "result": "D"
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884766"
         },
         {
           "date": "2026-10-09",
-          "opponent": "ဒေါ့မွန်",
+          "opponent": "Borussia Dortmund",
           "teamGoals": 2,
           "opponentGoals": 2,
-          "result": "D"
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884781"
         },
         {
           "date": "2026-09-19",
-          "opponent": "အော့စ်ဘတ်",
+          "opponent": "FC Augsburg",
           "teamGoals": 3,
           "opponentGoals": 2,
-          "result": "W"
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884784"
         },
         {
           "date": "2026-09-12",
-          "opponent": "ကိုလုံး",
+          "opponent": "FC Cologne",
           "teamGoals": 1,
           "opponentGoals": 1,
-          "result": "D"
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884792"
         }
       ],
       "awayLastFive": [
@@ -2860,14 +3408,14 @@
         }
       ],
       "homeStanding": {
-        "position": 6,
+        "position": 7,
         "played": 7,
         "wins": 3,
         "draws": 3,
         "losses": 1,
+        "points": 12,
         "goalsFor": 15,
-        "goalsAgainst": 14,
-        "points": 12
+        "goalsAgainst": 14
       },
       "awayStanding": {
         "position": 10,
@@ -2875,9 +3423,9 @@
         "wins": 3,
         "draws": 0,
         "losses": 4,
+        "points": 9,
         "goalsFor": 14,
-        "goalsAgainst": 14,
-        "points": 9
+        "goalsAgainst": 14
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
@@ -2981,38 +3529,53 @@
       "awayLastFive": [
         {
           "date": "2026-10-24",
-          "opponent": "ဖရန့်ဖတ်",
+          "opponent": "Eintracht Frankfurt",
           "teamGoals": 1,
           "opponentGoals": 0,
-          "result": "W"
-        },
-        {
-          "date": "2026-10-20",
-          "opponent": "ဆာဘာ",
-          "teamGoals": 2,
-          "opponentGoals": 1,
-          "result": "W"
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884763"
         },
         {
           "date": "2026-10-17",
-          "opponent": "ယူနီယံဘာလင်",
+          "opponent": "1. FC Union Berlin",
           "teamGoals": 0,
           "opponentGoals": 0,
-          "result": "D"
-        },
-        {
-          "date": "2026-10-14",
-          "opponent": "ဘိုဒိုဂလင်မ့်",
-          "teamGoals": 0,
-          "opponentGoals": 1,
-          "result": "L"
+          "venueSide": "away",
+          "result": "D",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884769"
         },
         {
           "date": "2026-10-09",
-          "opponent": "ဝါဒါဘရီမင်",
+          "opponent": "Werder Bremen",
           "teamGoals": 2,
           "opponentGoals": 2,
-          "result": "D"
+          "venueSide": "home",
+          "result": "D",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884781"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "VfB Stuttgart",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884789"
+        },
+        {
+          "date": "2026-09-12",
+          "opponent": "SC Paderborn 07",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "ger.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884799"
         }
       ],
       "homeStanding": {
@@ -3021,9 +3584,9 @@
         "wins": 5,
         "draws": 2,
         "losses": 0,
+        "points": 17,
         "goalsFor": 25,
-        "goalsAgainst": 6,
-        "points": 17
+        "goalsAgainst": 6
       },
       "awayStanding": {
         "position": 2,
@@ -3031,9 +3594,9 @@
         "wins": 5,
         "draws": 2,
         "losses": 0,
+        "points": 17,
         "goalsFor": 12,
-        "goalsAgainst": 4,
-        "points": 17
+        "goalsAgainst": 4
       },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
@@ -3084,6 +3647,16 @@
       },
       "homeLastFive": [
         {
+          "date": "2026-10-25",
+          "opponent": "Toulouse",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "fra.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876423"
+        },
+        {
           "date": "2026-10-17",
           "opponent": "RC Lens",
           "teamGoals": 1,
@@ -3122,19 +3695,19 @@
           "result": "L",
           "competition": "French Ligue 1",
           "sourceUrl": "https://www.skysports.com/football/lille-vs-troyes/557028"
-        },
-        {
-          "date": "2026-09-06",
-          "opponent": "Strasbourg",
-          "teamGoals": 2,
-          "opponentGoals": 6,
-          "venueSide": "home",
-          "result": "L",
-          "competition": "French Ligue 1",
-          "sourceUrl": "https://www.skysports.com/football/troyes-vs-strasbourg/557023"
         }
       ],
       "awayLastFive": [
+        {
+          "date": "2026-10-25",
+          "opponent": "AJ Auxerre",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "fra.1",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876429"
+        },
         {
           "date": "2026-10-16",
           "opponent": "Toulouse",
@@ -3174,41 +3747,29 @@
           "result": "D",
           "competition": "French Ligue 1",
           "sourceUrl": "https://www.skysports.com/football/le-mans-vs-rc-lens/557027"
-        },
-        {
-          "date": "2026-09-05",
-          "opponent": "Nice",
-          "teamGoals": 1,
-          "opponentGoals": 1,
-          "venueSide": "away",
-          "result": "D",
-          "competition": "French Ligue 1",
-          "sourceUrl": "https://www.skysports.com/football/nice-vs-le-mans/557020"
         }
       ],
       "homeStanding": {
         "position": 17,
-        "played": 7,
+        "played": 8,
         "wins": 1,
-        "draws": 1,
+        "draws": 2,
         "losses": 5,
+        "points": 5,
         "goalsFor": 5,
-        "goalsAgainst": 16,
-        "goalDifference": -11,
-        "points": 4
+        "goalsAgainst": 16
       },
       "awayStanding": {
-        "position": 16,
-        "played": 7,
+        "position": 15,
+        "played": 8,
         "wins": 1,
-        "draws": 3,
+        "draws": 4,
         "losses": 3,
-        "goalsFor": 10,
-        "goalsAgainst": 15,
-        "goalDifference": -5,
-        "points": 6
+        "points": 7,
+        "goalsFor": 11,
+        "goalsAgainst": 16
       },
-      "homeCrestUrl": "https://cdn.jsdelivr.net/gh/luukhopman/football-logos@master/logos/France%20-%20Ligue%201/ESTAC%20Troyes.png",
+      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png",
       "homeOdds": "2.34",
@@ -3255,10 +3816,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Burnley",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880204"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Millwall",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880215"
+        },
+        {
+          "date": "2026-10-14",
+          "opponent": "West Ham United",
+          "teamGoals": 0,
+          "opponentGoals": 6,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880224"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Sheffield United",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880238"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Swansea City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880252"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Cardiff City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880206"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880220"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Preston North End",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880232"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "West Bromwich Albion",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880234"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Middlesbrough",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880256"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 12,
+        "wins": 4,
+        "draws": 3,
+        "losses": 5,
+        "points": 15,
+        "goalsFor": 13,
+        "goalsAgainst": 20
+      },
+      "awayStanding": {
+        "position": 7,
+        "played": 12,
+        "wins": 5,
+        "draws": 5,
+        "losses": 2,
+        "points": 20,
+        "goalsFor": 20,
+        "goalsAgainst": 12
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3306,10 +3987,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880205"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Portsmouth",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880214"
+        },
+        {
+          "date": "2026-10-14",
+          "opponent": "Southampton",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880223"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Swansea City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880236"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880250"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880197"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880211"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Cardiff City",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880229"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Burnley",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880235"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Bristol City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880255"
+        }
+      ],
+      "homeStanding": {
+        "position": 20,
+        "played": 12,
+        "wins": 4,
+        "draws": 0,
+        "losses": 8,
+        "points": 12,
+        "goalsFor": 20,
+        "goalsAgainst": 22
+      },
+      "awayStanding": {
+        "position": 21,
+        "played": 12,
+        "wins": 3,
+        "draws": 2,
+        "losses": 7,
+        "points": 11,
+        "goalsFor": 10,
+        "goalsAgainst": 20
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3357,10 +4158,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Bristol City",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880199"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Derby County",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880217"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Middlesbrough",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880227"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880243"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Sheffield United",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880247"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "West Bromwich Albion",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880202"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Wrexham",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880209"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Birmingham City",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880232"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Millwall",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880239"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880248"
+        }
+      ],
+      "homeStanding": {
+        "position": 9,
+        "played": 12,
+        "wins": 6,
+        "draws": 2,
+        "losses": 4,
+        "points": 20,
+        "goalsFor": 18,
+        "goalsAgainst": 16
+      },
+      "awayStanding": {
+        "position": 24,
+        "played": 12,
+        "wins": 1,
+        "draws": 2,
+        "losses": 9,
+        "points": 5,
+        "goalsFor": 10,
+        "goalsAgainst": 25
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3408,10 +4329,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Middlesbrough",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880207"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Southampton",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880213"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880226"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Stoke City",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880243"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Norwich City",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880250"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Stoke City",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880199"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Sheffield United",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880219"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880231"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880242"
+        },
+        {
+          "date": "2026-09-18",
+          "opponent": "Watford",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880255"
+        }
+      ],
+      "homeStanding": {
+        "position": 18,
+        "played": 12,
+        "wins": 4,
+        "draws": 2,
+        "losses": 6,
+        "points": 14,
+        "goalsFor": 16,
+        "goalsAgainst": 23
+      },
+      "awayStanding": {
+        "position": 14,
+        "played": 12,
+        "wins": 4,
+        "draws": 3,
+        "losses": 5,
+        "points": 15,
+        "goalsFor": 12,
+        "goalsAgainst": 15
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3459,10 +4500,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Lincoln City",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880204"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880218"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880230"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Watford",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880235"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Derby County",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880254"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Millwall",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880203"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880277"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Norwich City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880214"
+        },
+        {
+          "date": "2026-10-14",
+          "opponent": "Sheffield United",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880222"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Southampton",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880237"
+        }
+      ],
+      "homeStanding": {
+        "position": 22,
+        "played": 12,
+        "wins": 1,
+        "draws": 5,
+        "losses": 6,
+        "points": 8,
+        "goalsFor": 17,
+        "goalsAgainst": 25
+      },
+      "awayStanding": {
+        "position": 12,
+        "played": 12,
+        "wins": 5,
+        "draws": 3,
+        "losses": 4,
+        "points": 18,
+        "goalsFor": 16,
+        "goalsAgainst": 15
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3510,10 +4671,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "West Ham United",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880198"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880213"
+        },
+        {
+          "date": "2026-10-14",
+          "opponent": "Norwich City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880223"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Portsmouth",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880237"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Wrexham",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880245"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Swansea City",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880201"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Birmingham City",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880220"
+        },
+        {
+          "date": "2026-10-14",
+          "opponent": "Derby County",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880221"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "West Ham United",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880233"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Preston North End",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880248"
+        }
+      ],
+      "homeStanding": {
+        "position": 6,
+        "played": 12,
+        "wins": 7,
+        "draws": 3,
+        "losses": 2,
+        "points": 20,
+        "goalsFor": 24,
+        "goalsAgainst": 12
+      },
+      "awayStanding": {
+        "position": 8,
+        "played": 12,
+        "wins": 5,
+        "draws": 5,
+        "losses": 2,
+        "points": 20,
+        "goalsFor": 20,
+        "goalsAgainst": 12
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3561,10 +4842,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Southampton",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880198"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Swansea City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880212"
+        },
+        {
+          "date": "2026-10-14",
+          "opponent": "Lincoln City",
+          "teamGoals": 6,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880224"
+        },
+        {
+          "date": "2026-10-09",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880233"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Millwall",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880251"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Preston North End",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880202"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880210"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Wrexham",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880225"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Birmingham City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880234"
+        },
+        {
+          "date": "2026-09-20",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880246"
+        }
+      ],
+      "homeStanding": {
+        "position": 3,
+        "played": 12,
+        "wins": 6,
+        "draws": 4,
+        "losses": 2,
+        "points": 22,
+        "goalsFor": 32,
+        "goalsAgainst": 15
+      },
+      "awayStanding": {
+        "position": 5,
+        "played": 12,
+        "wins": 6,
+        "draws": 3,
+        "losses": 3,
+        "points": 21,
+        "goalsFor": 16,
+        "goalsAgainst": 13
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3612,10 +5013,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 0,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880201"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "West Ham United",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880212"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Millwall",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880228"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Norwich City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880236"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Lincoln City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880252"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Wrexham",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880208"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "West Bromwich Albion",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880210"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Bristol City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880231"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Cardiff City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880244"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Portsmouth",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880249"
+        }
+      ],
+      "homeStanding": {
+        "position": 2,
+        "played": 12,
+        "wins": 7,
+        "draws": 2,
+        "losses": 3,
+        "points": 23,
+        "goalsFor": 16,
+        "goalsAgainst": 13
+      },
+      "awayStanding": {
+        "position": 11,
+        "played": 12,
+        "wins": 5,
+        "draws": 3,
+        "losses": 4,
+        "points": 18,
+        "goalsFor": 19,
+        "goalsAgainst": 16
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3663,10 +5184,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-23",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880207"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Cardiff City",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880216"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Stoke City",
+          "teamGoals": 3,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880227"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Wolverhampton Wanderers",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880240"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Birmingham City",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880256"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Norwich City",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880205"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Watford",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880211"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Burnley",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880230"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Bristol City",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880242"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Cardiff City",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880253"
+        }
+      ],
+      "homeStanding": {
+        "position": 1,
+        "played": 12,
+        "wins": 7,
+        "draws": 4,
+        "losses": 1,
+        "points": 25,
+        "goalsFor": 27,
+        "goalsAgainst": 17
+      },
+      "awayStanding": {
+        "position": 19,
+        "played": 12,
+        "wins": 3,
+        "draws": 5,
+        "losses": 4,
+        "points": 14,
+        "goalsFor": 11,
+        "goalsAgainst": 18
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3720,10 +5361,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Portsmouth",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880203"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Lincoln City",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880215"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Swansea City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880228"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Preston North End",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880239"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "West Ham United",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880251"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Sheffield United",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880200"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Stoke City",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880217"
+        },
+        {
+          "date": "2026-10-14",
+          "opponent": "Queens Park Rangers",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880221"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Wrexham",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880241"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Burnley",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880254"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 12,
+        "wins": 4,
+        "draws": 3,
+        "losses": 5,
+        "points": 15,
+        "goalsFor": 19,
+        "goalsAgainst": 20
+      },
+      "awayStanding": {
+        "position": 23,
+        "played": 12,
+        "wins": 1,
+        "draws": 4,
+        "losses": 7,
+        "points": 7,
+        "goalsFor": 10,
+        "goalsAgainst": 21
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
@@ -3771,10 +5532,130 @@
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
-      "homeLastFive": [],
-      "awayLastFive": [],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Watford",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880197"
+        },
+        {
+          "date": "2026-10-20",
+          "opponent": "Portsmouth",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880277"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Burnley",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880218"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Bolton Wanderers",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880226"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Middlesbrough",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880240"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "opponent": "Birmingham City",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880206"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "Middlesbrough",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880216"
+        },
+        {
+          "date": "2026-10-13",
+          "opponent": "Watford",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880229"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Blackburn Rovers",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880244"
+        },
+        {
+          "date": "2026-09-19",
+          "opponent": "Charlton Athletic",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "eng.2",
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880253"
+        }
+      ],
+      "homeStanding": {
+        "position": 4,
+        "played": 12,
+        "wins": 6,
+        "draws": 3,
+        "losses": 3,
+        "points": 21,
+        "goalsFor": 20,
+        "goalsAgainst": 16
+      },
+      "awayStanding": {
+        "position": 16,
+        "played": 12,
+        "wins": 3,
+        "draws": 5,
+        "losses": 4,
+        "points": 14,
+        "goalsFor": 19,
+        "goalsAgainst": 17
+      },
       "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
       "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
