@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="my"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#09121e"><title>Mandalay Street Racing | Future Code</title>
+<meta name="description" content="Future Code Mandalay Street Racing — choose a car, race through stylized Mandalay streets, earn prize coins and upgrade your racer.">
+<link rel="stylesheet" href="./style.css"><script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js" defer></script><script src="./game.js" defer></script></head>
+<body>
+<div id="app">
+<header class="top">
+ <div class="brand"><span class="mark">F<span>C</span></span><div><div class="overline">FUTURE CODE AI STUDIO · ORIGINAL RACING GAME</div><h1>MANDALAY <em>STREET RACING</em></h1><div class="edition">MIDNIGHT CIRCUIT <span>·</span> WEB PLAY EDITION v0.1</div></div></div>
+ <div class="head-right"><div class="credit-balance"><span>🏁 GARAGE COINS</span><strong id="coins">2,000</strong></div><div class="tag">MMR · 2026</div></div>
+</header>
+<div class="shell">
+<div class="nav"><button class="tab active" data-screen="garage">🚘 ကားဂိုဒေါင်</button><button class="tab" data-screen="tracks">🗺️ ပြိုင်ကွင်းများ</button><button class="tab" data-screen="online">🌐 Online Race <small>Beta</small></button><div class="navright"><span id="networkDot" class="dot"></span><span id="netMini">Single-player ready</span></div></div>
+<section id="garage" class="screen">
+ <div class="intro"><div><div class="eyebrow">01 / BUILD YOUR LEGEND</div><h2>ရွေးချယ်ပါ။ <span>ပြိုင်ပါ။ အနိုင်ယူပါ။</span></h2><p>မန္တလေးမြို့က လမ်းမကြီးတွေပေါ်က အတုယူထားတဲ့ Virtual Racing Circuit များမှာ ကားအမျိုးမျိုးနဲ့ အဆင့်အလိုက် ပြိုင်ပါ။ ဆုကြေးနဲ့ ကိုယ့်ကားကို မြှင့်တင်ပါ။</p></div><div class="intro-stats"><div><b>05</b><small>CAR MODELS</small></div><div><b>04</b><small>RACE TRACKS</small></div><div><b>03</b><small>NITRO BOOSTS</small></div></div></div>
+ <div class="garage-wrap"><div class="vehicle-display panel"><div class="stage-grid"></div><div id="heroCar" class="hero-car"></div><div class="vehicle-overlay"><div><span class="car-label">CURRENT RIDE</span><h3 id="heroName">CITY HATCH</h3><span id="heroDesc">Urban performance edition</span></div><div class="color-picker" id="colors"></div></div></div>
+ <div class="car-side panel"><div class="section-title"><h3>SELECT YOUR CAR</h3><span>05 VEHICLES</span></div><div class="car-list" id="carList"></div><div class="performance"><div class="section-title"><h3>PERFORMANCE</h3><span id="performanceTotal"></span></div><div id="statBars"></div></div>
+ <div class="garage-actions"><button class="primary wide" id="selectOrBuy">ကားရွေးမယ်</button><button class="ghost wide" id="quickRace">🏁 အခုပြိုင်မယ်</button></div></div></div>
+ <div class="upgrade-panel panel"><div class="section-title"><h3>🛠 PERFORMANCE GARAGE</h3><span>UPGRADE WITH RACE WINNINGS</span></div><div class="upgrade-grid" id="upgradeList"></div></div>
+</section>
+<section id="tracks" class="screen hidden"><div class="intro compact"><div><div class="eyebrow">02 / CITY CIRCUITS</div><h2>မန္တလေးရဲ့ <span>ပြိုင်ကွင်းများ</span></h2><p>ကျုံးပတ်လည်၊ လမ်း ၇၈၊ လမ်း ၃၅ တို့ကို စိတ်ကူးယဉ်ပြိုင်ကွင်းအဖြစ် တည်ဆောက်ထားပါတယ်။ တကယ့်မြေပုံနဲ့ တစ်ပုံစံတည်း မဟုတ်ပါ။</p></div></div><div class="track-grid" id="trackList"></div><div class="prize-panel panel"><div class="section-title"><h3>🏆 RACE PRIZE PAYOUT</h3><span>IN-GAME CREDITS ONLY</span></div><div class="prizes"><div><b>🥇 1ST</b><strong>8,000</strong></div><div><b>🥈 2ND</b><strong>5,000</strong></div><div><b>🥉 3RD</b><strong>3,000</strong></div><div><b>4TH+</b><strong>1,000</strong></div></div></div></section>
+<section id="online" class="screen hidden"><div class="intro compact"><div><div class="eyebrow">03 / REAL PLAYERS</div><h2>သူငယ်ချင်းတွေနဲ့ <span>Online ပြိုင်ပါ</span></h2><p>Host တစ်ယောက် Room Code ဖန်တီးပြီး သူငယ်ချင်းတွေကို မျှဝေပါ။ ၂–၅ ယောက်အထိ Peer-to-peer ချိတ်ဆက်ဖို့ စနစ်ရေးထားတဲ့ Beta ဖြစ်ပါတယ်။ ချိတ်ဆက်နိုင်မှုက Network နဲ့ WebRTC အပေါ် မူတည်ပါတယ်။</p></div></div>
+ <div class="online-grid"><div class="panel online-card"><div class="num">01</div><h3>ROOM ဖန်တီးရန်</h3><p>သင့်ကိုယ်ပိုင် Room Code ထုတ်ပါ။ Host က ပြိုင်ပွဲစတင်မယ်။</p><input id="playerName" maxlength="18" placeholder="သင့် နာမည်" value="Mandalay Racer"><button id="hostBtn" class="primary wide">🌐 HOST ROOM</button></div>
+ <div class="panel online-card"><div class="num">02</div><h3>ROOM ဝင်ရန်</h3><p>သူငယ်ချင်းရဲ့ ၆ လုံး Room Code ကို ထည့်ပါ။</p><input id="roomInput" maxlength="6" placeholder="ဥပမာ ABC123" autocapitalize="characters"><button id="joinBtn" class="ghost wide">ROOM JOIN</button></div>
+ <div class="panel online-status"><div class="section-title"><h3>ROOM STATUS</h3><span id="onlineBadge">OFFLINE</span></div><div class="room-code" id="roomCode">------</div><p id="roomStatus">မချိတ်ဆက်ရသေးပါ။</p><div id="roster" class="roster"></div><div class="online-actions"><button id="startOnline" class="primary" disabled>🏁 ONLINE RACE START</button><button id="leaveRoom" class="ghost">ROOM ပိတ်မယ်</button></div></div></div>
+ <div class="warning"><b>Beta Networking:</b> PeerJS public signaling service အသုံးပြုထားပါတယ်။ Connection/Latency/NAT အခက်အခဲရှိနိုင်ပြီး ပြိုင်ပွဲရလဒ်များကို server-side မစစ်ရသေးပါ။ Online အတည်ပြုစမ်းသပ်မှု မပြီးသေးပါ။</div>
+</section>
+<section id="race" class="screen hidden"><div class="race-top"><div><span id="raceTrackName" class="eyebrow">WEST MOAT SPRINT</span><h2>RACE <span>IN PROGRESS</span></h2></div><button id="exitRace" class="ghost">← GARAGE</button></div>
+ <div class="race-frame"><canvas id="raceCanvas" width="1280" height="720" aria-label="Pseudo 3D live racing game viewport"></canvas><div class="race-hud">
+ <div class="hud-top"><div class="position"><strong id="racePosition">4<span>TH</span></strong><small>POSITION</small></div><div class="race-progress"><span id="lapLabel">LAP 1 / 2</span><div class="progress-track"><div id="progressBar"></div></div><div class="race-time" id="timeLabel">00:00.00</div></div><div class="race-currency"><span>WALLET</span><b id="raceCoins">2,000</b></div></div>
+ <div class="speed-hud"><div class="nitro-meter"><span>⚡ NITRO <strong id="nitroCount">x3</strong></span><div class="nitro-bar"><i id="nitroFill"></i></div><small>SHIFT / BOOST</small></div><div class="speed-readout"><b id="speedValue">0</b><span>KM/H</span></div><div class="fuel-hud"><span>⛽ FUEL</span><div class="fuelbar"><i id="fuelFill"></i></div></div></div></div>
+ <div class="countdown hidden" id="countdown"><b id="countNum">3</b></div>
+ <div class="race-msg hidden" id="raceMsg"></div>
+ </div>
+ <div class="race-bottom"><div class="race-keys">🕹 WASD / ARROWS · SPACE BRAKE · SHIFT NITRO · TOUCH BUTTONS</div><div id="livePeers" class="peer-meter"></div></div>
+ <div class="touch"><button id="leftTouch" aria-label="Steer left">◀</button><button id="rightTouch" aria-label="Steer right">▶</button><button id="brakeTouch" class="brake" aria-label="Brake">BRAKE</button><button id="nitroTouch" class="boost" aria-label="Nitro">⚡ NITRO</button><button id="gasTouch" class="gas" aria-label="Accelerate">GAS ▲</button></div>
+</section>
+<footer>© Future Code AI Studio · Original concept and game code · Virtual closed-course racing only · <span>All rewards are fictional in-game Coins.</span></footer></div>
+</div>
+<div id="toast" class="toast"></div>
+<div id="modal" class="modal-backdrop hidden"><div class="modal"><div class="modal-logo">🏆</div><div class="eyebrow" id="modalEyebrow">FINISH LINE</div><h2 id="modalTitle">RACE COMPLETE</h2><p id="modalDetail"></p><div class="modal-reward" id="modalReward"></div><div class="modal-actions"><button class="primary" id="modalPrimary">နောက်တစ်ကြိမ်ပြိုင်မယ်</button><button class="ghost" id="modalSecondary">ကားဂိုဒေါင်</button></div></div></div>
+</body></html>
