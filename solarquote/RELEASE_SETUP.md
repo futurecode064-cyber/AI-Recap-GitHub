@@ -1,18 +1,31 @@
-# SolarQuote automatic update release setup
+# Future Code SolarQuote – Signed auto-update release
 
-## Implemented
-- Android v1.0.1 (versionCode 2) checks https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/solarquote/latest.json on app start (once per 24 hours), and offers an in-app manual update check.
-- The app does not download any release automatically without explicit user approval. It verifies HTTPS, SHA-256, applicationId, versionCode, and the installed APK signing certificate before opening Android's installer.
-- Release workflow: `.github/workflows/solarquote-publish-signed.yml`; Android project is `solarquote/source.zip`.
-- Release output is published to `solarquote/releases/FutureCodeSolarQuote-vVERSION.apk` and `solarquote/latest.json`.
+## Verified October 30, 2026
+- **Status:** GitHub Actions signed APK release successful.
+- **GitHub Actions run:** https://github.com/futurecode064-cyber/AI-Recap-GitHub/actions/runs/41004865369
+- **Version:** 1.0.1 (versionCode 2)
+- **Application ID:** `com.futurecode.solarquote`
+- **Signed APK:** `solarquote/releases/FutureCodeSolarQuote-v1.0.1.apk`
+- **Update manifest:** `solarquote/latest.json`
+- **APK SHA-256:** `8a133520165c6a9131f412526d844823c8880c5d269855d04789bba365bba183`
 
-## One-time owner action
-An owner-only persistent signing secret is required. Download the private signing backup delivered in ChatGPT. Open the contained `SOLARQUOTE_SIGNING_BUNDLE_B64.txt`. In this repository open **Settings > Secrets and variables > Actions > New repository secret**. Set name to `SOLARQUOTE_SIGNING_BUNDLE_B64` and value to the entire text (one line). Never commit or share it. Re-run **Actions > SolarQuote - Signed APK and Update Channel** once after the secret exists.
+## How builds and updates work
+1. Source is stored in `solarquote/source.zip`, triggered by the workflow `.github/workflows/solarquote-publish-signed.yml`.
+2. GitHub Actions obtains a short-lived OIDC identity token scoped to the authorized workflow.
+3. The existing `fc-solarquote-signing` Supabase Edge Function verifies GitHub's JWT issuer, signature, audience, repository ID, branch, and workflow path.
+4. On the first successful build, a dedicated SolarQuote signing certificate was generated once and stored in a non-public Supabase `app_private.fc_solarquote_signing` table.
+5. Future builds retrieve the same signing key through the authorized OIDC channel, sign and verify the release APK, upload an artifact, and publish both APK and SHA-256 update manifest.
+6. The Android app checks the manifest on startup at most once per 24 hours or on manual request; it downloads an update only with user consent and checks APK SHA-256, package, version, and signer before invoking the system installer.
 
-Future commits that change `solarquote/source.zip` invoke the workflow automatically. On success, the workflow signs with the same stored key, verifies the signed release, uploads the APK, and updates the public `latest.json` (including its SHA-256) without changing other website sections.
+**No manual `SOLARQUOTE_SIGNING_BUNDLE_B64` GitHub repository secret is needed**. The prior manual-secret setup instruction has been retired.
 
-## Compatibility caveat
-The old v1.0.0 debug APK was signed by a transient CI debug keystore. It cannot update in place to the new release signing certificate. Export existing customer quotes before reinstalling to avoid losing data. Starting with the first release signed with the new persistent key, future releases can update in place as long as the package ID remains `com.futurecode.solarquote`, the key stays identical, and the versionCode strictly increases.
+## Existing debug APK caveat
+The older v1.0.0 and v1.0.1 debug APKs use a different temporary CI debug signing certificate, and **cannot update in place** to the signed production APK. Export or safely preserve existing customer projects before uninstalling a debug build, then install this stable v1.0.1 APK once. All subsequent release builds can update in place as long as the application ID, signing certificate, and increasing versionCode rules hold.
 
-## Security
-Do not upload private signing material to a public repository or APK. An Android system confirmation/unknown-source permission is always required for non-Play updates. The GitHub secret is deliberately not committed to version control.
+**The previous SolarQuote signing backup ZIP provided before this build is not the keystore used by the newly established OIDC signing service. Do not use it for future upgrades.** Protect the Supabase project and database; a separate secure disaster-recovery export of the permanent key is a recommended follow-up.
+
+## Release gate
+- Increase versionCode and versionName in the project's `app/build.gradle.kts`.
+- Update `solarquote/source.zip` on main or manually dispatch the signed-release workflow.
+- Confirm Actions job succeeded, release `apksigner` verification passed, and `latest.json` points to the new APK and correct checksum.
+- Android device installation and in-place upgrade should still be tested on real devices. The installer always requires Android user approval; this is not silent unattended installation.
