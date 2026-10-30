@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="PREMIER LEAGUE original editorial illustration">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6b36c4"/><stop offset="1" stop-color="#2f176c"/></linearGradient><pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M0 0L80 80M80 0L0 80" stroke="#ffffff" stroke-width="0.6" opacity=".13"/></pattern></defs>
+<rect width="1200" height="750" fill="url(#bg)"/><rect width="1200" height="750" fill="url(#grain)"/>
+<circle cx="903" cy="360" r="275" fill="none" stroke="white" stroke-width="8" opacity=".16"/><circle cx="903" cy="360" r="205" fill="none" stroke="white" stroke-width="4" opacity=".15"/>
+<path d="M0 510Q240 405 515 530T1200 475V750H0Z" fill="#080f21" opacity=".28"/>
+<g transform="translate(908 365)" opacity=".87"><rect x="-130" y="-118" width="260" height="236" rx="9" fill="none" stroke="white" stroke-width="11"/><circle r="34" fill="none" stroke="white" stroke-width="9"/><path d="M-130 0h260" stroke="white" stroke-width="7"/><g fill="white"><circle cx="-72" cy="-76" r="11"/><circle cx="72" cy="-76" r="11"/><circle cx="0" cy="90" r="11"/></g></g>
+<rect x="74" y="80" width="380" height="48" rx="24" fill="#081327" opacity=".55"/><text x="94" y="111" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#ffffff">FUTURE CODE • FOOTBALL</text>
+<rect x="72" y="160" width="7" height="244" rx="4" fill="#ffffff"/><text x="101" y="233" font-family="Arial,sans-serif" font-size="43" font-weight="800" fill="#ffffff">PREMIER LEAGUE</text><text x="103" y="290" font-family="Arial,sans-serif" font-size="26" fill="#eef5fc">GAMEWEEK 9 TEAM NEWS</text>
+<text x="75" y="660" font-family="Arial,sans-serif" font-size="22" font-weight="600" fill="white">EDITORIAL ILLUSTRATION • NOT AN EVENT PHOTOGRAPH</text>
+<text x="75" y="696" font-family="Arial,sans-serif" font-size="17" fill="#edf0f5">31 OCT 2026  •  FUTURE CODE AI STUDIO  •  ORIGINAL ARTWORK 07</text>
+</svg>

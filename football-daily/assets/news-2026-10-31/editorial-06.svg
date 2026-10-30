@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="SUNDERLAND / COVENTRY original editorial illustration">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d83436"/><stop offset="1" stop-color="#1b202c"/></linearGradient><pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M0 0L80 80M80 0L0 80" stroke="#ffffff" stroke-width="0.6" opacity=".13"/></pattern></defs>
+<rect width="1200" height="750" fill="url(#bg)"/><rect width="1200" height="750" fill="url(#grain)"/>
+<circle cx="903" cy="360" r="275" fill="none" stroke="white" stroke-width="8" opacity=".16"/><circle cx="903" cy="360" r="205" fill="none" stroke="white" stroke-width="4" opacity=".15"/>
+<path d="M0 510Q240 405 515 530T1200 475V750H0Z" fill="#080f21" opacity=".28"/>
+<g transform="translate(908 365)" opacity=".87"><circle cx="0" cy="0" r="112" stroke="white" stroke-width="14" fill="none"/><path d="M0 -52l53 36-20 62h-66l-20 -62zM0 -52L-28 -104M53 -16l50 -43M33 46l23 64M-33 46l-25 64M-53 -16l-51 -42" stroke="white" stroke-width="9" fill="none"/></g>
+<rect x="74" y="80" width="380" height="48" rx="24" fill="#081327" opacity=".55"/><text x="94" y="111" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#ffffff">FUTURE CODE • FOOTBALL</text>
+<rect x="72" y="160" width="7" height="244" rx="4" fill="#ffffff"/><text x="101" y="233" font-family="Arial,sans-serif" font-size="43" font-weight="800" fill="#ffffff">SUNDERLAND / COVENTRY</text><text x="103" y="290" font-family="Arial,sans-serif" font-size="26" fill="#eef5fc">PREMIER LEAGUE PREVIEW</text>
+<text x="75" y="660" font-family="Arial,sans-serif" font-size="22" font-weight="600" fill="white">EDITORIAL ILLUSTRATION • NOT AN EVENT PHOTOGRAPH</text>
+<text x="75" y="696" font-family="Arial,sans-serif" font-size="17" fill="#edf0f5">31 OCT 2026  •  FUTURE CODE AI STUDIO  •  ORIGINAL ARTWORK 06</text>
+</svg>
