@@ -29,8 +29,8 @@
         "upperTeam": "ဗီလာရီးရဲလ်",
         "bodyOdds": "1-60",
         "goalTotalOdds": "3-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-55",
+        "currentGoalTotalOdds": "3-35"
       },
       "homeLastFive": [
         {
@@ -225,8 +225,8 @@
         "upperTeam": "မိုန့်ဇ်",
         "bodyOdds": "-55",
         "goalTotalOdds": "3-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "3-45"
       },
       "homeLastFive": [
         {
@@ -421,8 +421,8 @@
         "upperTeam": "ပီအက်စ်ဂျီ",
         "bodyOdds": "2+35",
         "goalTotalOdds": "3-100",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+60",
+        "currentGoalTotalOdds": "3-85"
       },
       "homeLastFive": [
         {
@@ -621,8 +621,8 @@
         "upperTeam": "ရင်းနက်စ်",
         "bodyOdds": "-15",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-5",
+        "currentGoalTotalOdds": "3+35"
       },
       "homeLastFive": [
         {
@@ -817,8 +817,8 @@
         "upperTeam": "လိုင်လီ",
         "bodyOdds": "-10",
         "goalTotalOdds": "3+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-15",
+        "currentGoalTotalOdds": "3+100"
       },
       "homeLastFive": [
         {
@@ -1013,8 +1013,8 @@
         "upperTeam": "ရှက်ဖီးလ်ယူ",
         "bodyOdds": "-10",
         "goalTotalOdds": "2-95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2-100"
       },
       "homeLastFive": [
         {
@@ -1209,8 +1209,8 @@
         "upperTeam": "ဘီလီဖီးလ်",
         "bodyOdds": "1+80",
         "goalTotalOdds": "3+30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+90",
+        "currentGoalTotalOdds": "3+50"
       },
       "homeLastFive": [
         {
@@ -1405,8 +1405,8 @@
         "upperTeam": "ဘိုချမ်",
         "bodyOdds": "-25",
         "goalTotalOdds": "3-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "3-45"
       },
       "homeLastFive": [
         {
@@ -1601,8 +1601,8 @@
         "upperTeam": "ဘိုဒိုဂလင့်",
         "bodyOdds": "1+5",
         "goalTotalOdds": "4+65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-5",
+        "currentGoalTotalOdds": "4+50"
       },
       "homeLastFive": [
         {
@@ -1797,8 +1797,8 @@
         "upperTeam": "လင်းဘိုင်",
         "bodyOdds": "-55",
         "goalTotalOdds": "3+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "3+10"
       },
       "homeLastFive": [
         {
@@ -1993,8 +1993,8 @@
         "upperTeam": "စပို့တင်းလစ္စဘွန်း",
         "bodyOdds": "2+90",
         "goalTotalOdds": "3=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+95",
+        "currentGoalTotalOdds": "3+10"
       },
       "homeLastFive": [
         {
@@ -2189,8 +2189,8 @@
         "upperTeam": "ကလပ်ဘရုဂျက်",
         "bodyOdds": "1-40",
         "goalTotalOdds": "3-60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-70",
+        "currentGoalTotalOdds": "3-60"
       },
       "homeLastFive": [
         {
@@ -2377,5 +2377,7 @@
       "Competitive completed last-five, friendlies excluded",
       "News visuals are original contextual illustrations, explicitly labelled, not event photographs"
     ]
-  }
+  },
+  "currentPriceSourcePDF": "30 စျေး.pdf",
+  "currentPriceSourceDate": "2026-10-30"
 }
