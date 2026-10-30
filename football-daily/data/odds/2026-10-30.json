@@ -1,9 +1,9 @@
 {
   "reportDate": "2026-10-30",
-  "priceStatus": "morning",
+  "priceStatus": "morning-and-current",
   "sourceFile": "30.pdf",
   "sourcePDF": "30.pdf",
-  "priceSheetType": "Myanmar morning original odds; current prices blank",
+  "priceSheetType": "Myanmar morning original odds and 30 October current odds (owner-supplied PDF)",
   "sourcePage": 1,
   "sourceRows": 12,
   "matches": [
