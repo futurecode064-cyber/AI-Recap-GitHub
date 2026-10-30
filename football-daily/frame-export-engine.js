@@ -86,19 +86,17 @@ async function* forSection(k,f,rows,mode){
   const pages=splitRows(rows,mode).map(chunk=>api.planSinglePage(chunk)).filter(Boolean);
   for(let i=0;i<pages.length;i++){
    const nativeStyle=({"ai-best":"best","ai-final":"final","ai-special":"special"})[f.id];
-   let b=await api.renderBlob(pages[i],{
+   // Native built-in artwork and user-uploaded artwork are wrapped just once.
+   // The saved Editor theme colour is also passed to the inner score table.
+   const b=await api.renderBlob(pages[i],{
     date:s().getDate(),part:i+1,total:pages.length,scope:"all",frame:nativeStyle||"pro:"+f.id,
+    frameColor:color,cleanPoster:!nativeStyle,
     predict:W.FutureCodeTipScores?.predict||model.predict,leagueLabel:l=>rows.find(m=>m.league===l&&m.leagueDisplay)?.leagueDisplay||l,
     leagueLogo:l=>W.FutureCodeMainLogoAssets?.leagueCrest(l),
     teamName:(m,side)=>m[side+"Display"]||m[side],
     teamLogo:(m,side)=>m[side+"CrestUrl"],
     displayTime:m=>m.kickoff||m.kickoffYangon||m.sourceKickoff
    });
-   if(nativeStyle){
-    const img=await createImageBitmap(b),cv=W.document.createElement("canvas");cv.width=img.width;cv.height=img.height;
-    cv.getContext("2d").drawImage(img,0,0);img.close();
-    b=await blobCanvas(await p.wrap(cv,"ai","pro:"+f.id));
-   }
    yield {name:outputName(f,i,pages.length),blob:b};
   }
  }else if(k==="news"){
