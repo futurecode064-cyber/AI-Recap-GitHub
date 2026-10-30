@@ -142,7 +142,7 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
   return v("year")+"-"+v("month")+"-"+v("day");
  };
  const displayTime=m=>{
-  const text=String(m.sourceKickoff||m.kickoff||m.kickoffYangon||"").trim();
+  const text=String(m.kickoff||m.kickoffYangon||m.sourceKickoff||"").trim();
   const match=text.match(/(?:^|[ T])([01]?\d|2[0-3]):([0-5]\d)(?:\s*(AM|PM))?/i);
   return match?match[1].padStart(2,"0")+":"+match[2]+(match[3]?" "+match[3].toUpperCase():""):"—";
  };

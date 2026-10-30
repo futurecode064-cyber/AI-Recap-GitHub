@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "status": "CANDIDATE_PASSED_BEFORE_PUBLICATION",
+  "status": "PUBLISHED_LIVE_MAIN_CONFIRMED_FINAL_DOWNLOAD_QA_PENDING",
   "rollbackCommit": "3c3117acfdaa71781d6b3e26f18fba755c87758e",
   "counts": {
     "pdfRows": 12,
@@ -26,7 +26,8 @@
       "kickoff": "2026-10-31 02:45 MMT"
     }
   ],
-  "focusedRegression": "21/22 PASS; remaining pre-existing probability test treats previous-day verified quotes as stale, conflicting with current two-day runtime policy. Candidate-day verification is explicitly 30 Oct for every quote and 12/12 model coverage passed. No runtime probability code changed.",
+  "focusedRegression": "22/22 PASS after reconciling the stale-date test with current price snapshot policy",
   "newsPhotos": "All visuals are distinct original contextual illustrations, visibly labelled as not actual event photos. Unverified third-party photos not copied.",
-  "liveQA": "Pending post-deployment browser sections and real PNG/ZIP downloads"
+  "liveQA": "Cloudflare deploy success; main shows 12 previews and 2 Special Choices; 12/12 live three-column tips displayed. Final correction makes all AI/frame clocks prefer verified kickoff, plus Myanmar league filter names.",
+  "liveCommit": "eddeccf957078c57d09bec92b71f97fe5a9e85da"
 }

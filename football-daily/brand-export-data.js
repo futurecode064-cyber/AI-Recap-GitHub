@@ -14,6 +14,7 @@
   return remote[league]?"https://crests.football-data.org/"+remote[league]+".png":"";
  }
  Object.assign(names,{"EFL Cup":"အင်္ဂလန် ကာရာဘောင်း ဖလား","DFB-Pokal":"ဂျာမန် ပိုကယ်ဖလား","Copa del Rey":"စပိန် ဘုရင့်ဖလား"});
+ Object.assign(names,{"La Liga":"စပိန် လာလီဂါ","Bundesliga":"ဂျာမန် ဘွန်ဒက်စ်လီဂါ","Ligue 1":"ပြင်သစ် လီဂူး ၁","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","2. Bundesliga":"ဂျာမန် ဘွန်ဒက်စ်လီဂါ ၂","Eliteserien":"နော်ဝေ လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီမီယာလိဂ်","Belgian Pro League":"ဘယ်လ်ဂျီယံ အေလိဂ်","EFL Cup":"အင်္ဂလန် ကာရာဘောင်းဖလား","Serie A":"အီတလီ စီးရီးအေ","Veikkausliiga":"ဖင်လန် ဗိုက်ကာအက်စ်လီဂါ","Allsvenskan":"ဆွီဒင် အော်လ်ဆွင်စကန်","DBU Pokalen":"ဒိန်းမတ် ဖလား","Saudi Pro League":"ဆော်ဒီ ပရိုလိဂ်","Taça da Liga":"ပေါ်တူဂီ လိဂ်ဖလား"});
  function leagueName(league){return names[league]||league||"FOOTBALL";}
  function imageUrl(src){return teamFiles[src]?new URL("../assets/brand-export-teams/"+teamFiles[src],document.baseURI).href:src;}
  function formResult(game){

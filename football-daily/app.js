@@ -16,6 +16,7 @@ const LEAGUE_NAMES={
  "UEFA Euro":"ဥရောပနိုင်ငံများဖလား","UEFA Euro Qualifying":"ယူရို ခြေစစ်ပွဲ"
 };
 Object.assign(LEAGUE_NAMES,{"Danish Cup":"ဒိန်းမတ် ဖလား","Norwegian 1. Division":"နော်ဝေးလိဂ် ၁","Veikkausliiga Playoffs":"ဖင်လန် လိဂ် ပလေးအော့","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Liga Portugal":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","Turkish Super Lig":"တူရကီ စူပါလိဂ်","Super Lig":"တူရကီ စူပါလိဂ်","Superettan":"ဆွီဒင် စူပါရက်တန်လိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga":"စပိန်လာလီဂါ","La Liga 2":"စပိန်လာလီဂါ ၂","Ligue 1":"ပြင်သစ်လီဂူးဝမ်း","Ligue 2":"ပြင်သစ်လီဂူး ၂"});
+Object.assign(LEAGUE_NAMES,{"La Liga":"စပိန် လာလီဂါ","Bundesliga":"ဂျာမန် ဘွန်ဒက်စ်လီဂါ","Ligue 1":"ပြင်သစ် လီဂူး ၁","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","2. Bundesliga":"ဂျာမန် ဘွန်ဒက်စ်လီဂါ ၂","Eliteserien":"နော်ဝေ လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီမီယာလိဂ်","Belgian Pro League":"ဘယ်လ်ဂျီယံ အေလိဂ်","EFL Cup":"အင်္ဂလန် ကာရာဘောင်းဖလား","Serie A":"အီတလီ စီးရီးအေ","Veikkausliiga":"ဖင်လန် ဗိုက်ကာအက်စ်လီဂါ","Allsvenskan":"ဆွီဒင် အော်လ်ဆွင်စကန်","DBU Pokalen":"ဒိန်းမတ် ဖလား","Saudi Pro League":"ဆော်ဒီ ပရိုလိဂ်","Taça da Liga":"ပေါ်တူဂီ လိဂ်ဖလား"});
 const LEAGUE_ALIASES={
  "England League 1":"League One","EFL League One":"League One",
  "League 1":"League One","English League One":"League One",
@@ -63,6 +64,7 @@ const TEAM_NAMES_MM={
  "Saint-Étienne":"စိန့်အက်တီယန်","Clermont":"ကလယ်မွန့်","Red Star":"ရက်ဒ်စတား",
  "Rodez":"ရိုဒက်ဇ်","Celtа Fortuna":"ဆယ်လ်တာ ဖော်ကျူနာ"
 };
+Object.assign(TEAM_NAMES_MM,{"Villarreal":"ဗီလာရီးရဲလ်","Espanyol":"အက်စ်ပန်ညို","SV Elversberg":"အဲလ်ဗာ့စ်ဘတ်","Mainz":"မိုန့်ဇ်","Le Havre AC":"လီဟာဗေးလ်","Paris Saint-Germain":"ပီအက်စ်ဂျီ","Nice":"နိစ်","Stade Rennais":"ရင်းနက်စ်","Lille":"လိုင်လီ","Lens":"လန်းစ်","Sheffield United":"ရှက်ဖီးလ်ယူ","Wrexham":"ဝရက်ဟမ်း","Arminia Bielefeld":"ဘီလီဖီးလ်","TSV Eintracht Braunschweig":"ဘရောင်းရှဝိတ်","Energie Cottbus":"ကော့ဘတ်","VfL Bochum":"ဘိုချမ်","Bodo/Glimt":"ဘိုဒိုဂလင့်","Viking FK":"ဗစ်ကင်း","Lyngby Boldklub":"လင်းဘိုင်","Randers FC":"ရန်ဒါ","Casa Pia":"ကာဆာပီယာ","Sporting CP":"စပို့တင်းလစ္စဘွန်း","Zulte-Waregem":"ဝါရီဂမ်","Club Brugge":"ကလပ်ဘရုဂျက်","Everton":"အဲဗာတန်","Newcastle United":"နယူးကာဆယ်","Frosinone":"ဖရိုစီနိုနီ","Lecce":"လက်ချီ","Fiorentina":"ဖီအိုရင်တီးနား","Atalanta":"အတ္တလန်တာ","FC Inter Turku":"အင်တာတူရ်ကူ","HJK Helsinki":"ဟယ်လ်ဆင်ကီ","KuPS":"ကူပီအက်စ်","IF Gnistan":"ဂနစ္စတန်","Hammarby IF":"ဟမ်မာဘီ","IK Sirius":"စီးရီးယပ်စ်","Kalmar FF":"ကယ်လ်မာ","GAIS":"ဂိုက်စ်","Örgryte IS":"အော်ဂရီတီ","Mjällby AIF":"မျယ်လ်ဘီ","Aarhus Fremad":"အာဟုစ်ဖရီးမတ်","F.C. København":"ကိုပင်ဟေဂင်","FC Midtjylland":"မစ်ဂျီလန်း","Odense Boldklub":"အိုဒင်ဆီ","Al Khaleej":"အယ်လ်ခါလိဂျ်","Al Hazem":"အယ်လ်ဟာဇမ်","Al Nassr":"အယ်လ်နာဆာ","Al Kholood":"အယ်လ်ခူလုဒ်","Al Riyadh":"အယ်လ်ရီယာဒ်","Al Qadsiah":"အယ်လ်ကာဒီဆီယာ","Braga":"စပို့တင်းဘရာဂါ","FC Famalicao":"ဖာမာလီကာအို","Benfica":"ဘင်ဖီကာ","Gil Vicente":"ဂီးလ်ဗစ်ဆန်တီ"});
 function localizedTeam(value){return TEAM_NAMES_MM[value]||value||"";}
 const TZ="Asia/Yangon";
 let report={matches:[],published:false},selectedLeague="all",selectedDay=0;
@@ -288,6 +290,7 @@ function renderFinished(match){
  const centre=node("div","result-score",match.finalScore);
  append(banner,teamSide(match,"home"),centre,teamSide(match,"away"));
  card.appendChild(banner);
+ if(match.penaltyScore)card.appendChild(node("div","result-meta","ပင်နယ်တီအဆုံးအဖြတ် "+match.penaltyScore));
  card.appendChild(node("div","result-meta",teamLabel(match,"home")+"  ·  "+teamLabel(match,"away")+"  |  ပွဲပြီး · "+(match.kickoffYangon||"")));
  return card;
 }

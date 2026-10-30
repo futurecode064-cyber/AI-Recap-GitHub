@@ -36,7 +36,7 @@
   label(ctx,name,x+83,y+18,18,"white",158);
   label(ctx,price||"—",x+83,y+49,29,"white",158);
  }
- function time(m){return window.FutureCodeOddsClock?.short?.(m)||clean(m.sourceKickoff||m.kickoff).match(/\d\d:\d\d/)?.[0]||"—";}
+ function time(m){return window.FutureCodeOddsClock?.short?.(m)||clean(m.kickoff||m.sourceKickoff).match(/\d\d:\d\d/)?.[0]||"—";}
  function league(m){const v=clean(m.leagueDisplay);return /[\u1000-\u109f]/.test(v)&&!/[A-Za-z]/.test(v)?v:names[m.league]||"မြန်မာလို လိဂ်အမည် မသတ်မှတ်ရသေး";}
  function market(m,mode){return mode==="current"?{body:m.currentBodyOdds,goal:m.currentGoalTotalOdds}:{body:m.bodyOdds,goal:m.goalTotalOdds};}
  async function draw(rows,settings={}){

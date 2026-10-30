@@ -218,7 +218,7 @@
     if(!Array.isArray(scores)||scores.length!==3||scores.some(s=>!(/^(?:\d+-\d+|—)$/.test(s))))throw Error("Invalid AI scoreline");
     rect(ctx,0,y,WIDTH,ROW_H,"#f7f8fc");
     rect(ctx,0,y,112,ROW_H,"#f0f2f8");
-    text(ctx,kickoffClock(displayTime?.(m)||m.sourceKickoff||m.kickoff||m.kickoffYangon),56,y+47,106,20,"center","#152457");
+    text(ctx,kickoffClock(displayTime?.(m)||m.kickoff||m.kickoffYangon||m.sourceKickoff),56,y+47,106,20,"center","#152457");
     text(ctx,teamName?.(m,"home")||m.home,352,y+46,219,21,"right","#141b36");
     imageOrFallback(ctx,await loaded(teamLogo?.(m,"home")),366,y+16,43,43);
     text(ctx,"နှင့်",458,y+46,69,15,"center","#65708c");

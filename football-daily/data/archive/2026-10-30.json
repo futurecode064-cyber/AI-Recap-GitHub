@@ -197,7 +197,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "02:30"
     },
     {
       "fixtureId": "fc-20261030-02",
@@ -392,7 +393,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "02:00"
     },
     {
       "fixtureId": "fc-20261030-03",
@@ -591,7 +593,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "00:30"
     },
     {
       "fixtureId": "fc-20261030-04",
@@ -786,7 +789,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "00:30"
     },
     {
       "fixtureId": "fc-20261030-05",
@@ -981,7 +985,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "02:35"
     },
     {
       "fixtureId": "fc-20261030-06",
@@ -1176,7 +1181,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "02:30"
     },
     {
       "fixtureId": "fc-20261030-07",
@@ -1371,7 +1377,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "00:00"
     },
     {
       "fixtureId": "fc-20261030-08",
@@ -1566,7 +1573,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "00:00"
     },
     {
       "fixtureId": "fc-20261030-09",
@@ -1761,7 +1769,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "00:30"
     },
     {
       "fixtureId": "fc-20261030-10",
@@ -1956,7 +1965,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "00:30"
     },
     {
       "fixtureId": "fc-20261030-11",
@@ -2151,7 +2161,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "02:45"
     },
     {
       "fixtureId": "fc-20261030-12",
@@ -2349,7 +2360,8 @@
           "fixtureDate": "2026-10-30",
           "sourceType": "external publisher prediction; not FT; not our Bookies or AI model"
         }
-      }
+      },
+      "kickoff": "02:15"
     }
   ],
   "updateStatus": "PUBLISHED_VERIFIED_MORNING",

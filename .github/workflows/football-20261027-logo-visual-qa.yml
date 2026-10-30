@@ -1,4 +1,4 @@
-name: Verify Oct 27 Team Logos in Six Live PNG Exports
+name: Verify Current Daily Team Logos in Live PNG Exports
 on:
   push:
     branches: [football-daily-render]
@@ -33,13 +33,16 @@ jobs:
           import {chromium} from 'playwright';
           import {readFileSync} from 'node:fs';
           const report=JSON.parse(readFileSync('football-daily/data/today.json','utf8'));
-          if(report.reportDate!=='2026-10-27'||report.matches?.length!==25)throw Error('Unexpected current fixture set');
+          if(!/^\d{4}-\d{2}-\d{2}$/.test(report.reportDate)||!report.matches?.length)throw Error('Missing dated current fixture set');
+          const odds=JSON.parse(readFileSync('football-daily/data/odds/'+report.reportDate+'.json','utf8'));
+          const eligible=odds.matches.filter(m=>m.eligibleForPreview).map(m=>m.fixtureId).sort();
+          if(JSON.stringify(report.matches.map(m=>m.fixtureId).sort())!==JSON.stringify(eligible))throw Error('Current preview coverage differs from eligible PDF rows');
           const urls=[...new Set(report.matches.flatMap(m=>[m.homeCrestUrl,m.awayCrestUrl]))];
-          if(urls.length!==50)throw Error('Unexpected crest URL identities');
+          if(urls.length<2||report.matches.some(m=>!m.homeCrestUrl||!m.awayCrestUrl))throw Error('Missing current team crest identities');
           const origin='https://future-code-football-daily.pages.dev';
           const routes=[['Main','/'],['YKZ','/ykz-family/'],['BW Sport','/bw-sport/'],
                         ['Ko Thet','/ko-thet-family/'],['Goal Zone','/future-code-journal/'],
-                        ['KMM','/kmm-sport-hub/']];
+                        ['KMM','/kmm-sport-hub/'],['Bet City Family','/bet-city-family/']];
           const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
           let failed=[];
           try{
@@ -49,7 +52,7 @@ jobs:
               let last;
               for(let attempt=0;attempt<8;attempt++){
                 try{
-                  await page.goto(origin+route+'?logoqa=20261027-'+attempt,{waitUntil:'domcontentloaded',timeout:30000});
+                  await page.goto(origin+route+'?logoqa='+report.reportDate+'-'+attempt,{waitUntil:'domcontentloaded',timeout:30000});
                   await page.waitForFunction(()=>!!window.FutureCodeFramePreview&&!!(window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData),null,{timeout:15000});
                   last=await page.evaluate(async rows=>{
                     const mapper=window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData;
@@ -96,5 +99,5 @@ jobs:
           }catch(e){failed.push(String(e?.stack||e));}
           finally{await browser.close();}
           if(failed.length)throw Error(failed.join('\n'));
-          console.log('SIX LIVE SITE PNG CREST PIXEL TESTS: PASS');
+          console.log('ALL SEVEN LIVE SITE PNG CREST PIXEL TESTS: PASS');
           NODE

@@ -92,7 +92,7 @@ async function* forSection(k,f,rows,mode){
     leagueLogo:l=>W.FutureCodeMainLogoAssets?.leagueCrest(l),
     teamName:(m,side)=>m[side+"Display"]||m[side],
     teamLogo:(m,side)=>m[side+"CrestUrl"],
-    displayTime:m=>m.sourceKickoff||m.kickoff||m.kickoffYangon
+    displayTime:m=>m.kickoff||m.kickoffYangon||m.sourceKickoff
    });
    if(nativeStyle){
     const img=await createImageBitmap(b),cv=W.document.createElement("canvas");cv.width=img.width;cv.height=img.height;

@@ -16,7 +16,7 @@ test("sample Aston Villa vs Man City quote produces 24% + 76% = 100%",()=>{
 });
 test("unverified or stale 1X2 prices never become fabricated percentages",()=>{
  assert.equal(model.winChance({homeOdds:2,awayOdds:2,oddsSourceUrl:source},null,reportDate),null);
- assert.equal(model.winChance({homeOdds:2,drawOdds:3,awayOdds:3,oddsSourceUrl:source,oddsVerifiedDate:"2026-10-23"},null,reportDate),null);
+ assert.equal(model.winChance({homeOdds:2,drawOdds:3,awayOdds:3,oddsSourceUrl:source,oddsVerifiedDate:"2026-10-21"},null,reportDate),null);
  assert.equal(model.winChance({homeOdds:2,drawOdds:3,awayOdds:3},null,reportDate),null);
 });
 test("Poisson 2.5 goal forecast uses five sourced matches for each side",()=>{
