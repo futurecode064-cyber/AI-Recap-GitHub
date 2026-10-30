@@ -232,30 +232,32 @@ function render(data){
  }
 }
 
-/* Keep source morning prices immutable; only add verified afternoon quotes
- * from the same-day supplemental report to precisely corresponding PDF rows.
- * Unknown, outdated or mismatched rows remain blank rather than guessed. */
+/* Preserve source-matched original quotes and already verified current PDF quotes.
+ * An optional same-day supplement can update only the matching fixture/row.
+ * Never erase valid current prices simply because the optional file is absent. */
 function mergeLatestOdds(morning,update){
  if(!morning||!Array.isArray(morning.matches))throw Error("Missing original odds");
- const blank=morning.matches.map(m=>({...m,currentBodyOdds:"",currentGoalTotalOdds:""}));
+ const validQuote=q=>typeof q==="string"&&/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(q.trim())?q.trim():"";
+ const baseline=morning.matches.map(m=>({...m,
+  currentBodyOdds:validQuote(m.currentBodyOdds),
+  currentGoalTotalOdds:validQuote(m.currentGoalTotalOdds)
+ }));
  if(!update||update.reportDate!==morning.reportDate||!Array.isArray(update.matches))
-  return {...morning,matches:blank};
+  return {...morning,matches:baseline};
  const byRow=new Map();
  for(const item of update.matches){
   const row=Number(item.row);
   if(!Number.isSafeInteger(row)||row<1||byRow.has(row))continue;
   byRow.set(row,item);
  }
- const merged=blank.map((m,index)=>{
+ const merged=baseline.map((m,index)=>{
   const row=Number(m.pdfRow||m.number||index+1),x=byRow.get(row);
   if(!x)return m;
   if(["league","home","away","upperTeam","kickoffDisplay"].some(k=>String(x[k]??"")!==String(m[k]??"")))return m;
   if(String(x.morningBodyOdds)!==String(m.bodyOdds)||String(x.morningGoalTotalOdds)!==String(m.goalTotalOdds))return m;
-  const currentBodyOdds=typeof x.eveningBodyOdds==="string"?x.eveningBodyOdds.trim():"";
-  const currentGoalTotalOdds=typeof x.eveningGoalTotalOdds==="string"?x.eveningGoalTotalOdds.trim():"";
   return {...m,
-   currentBodyOdds:/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(currentBodyOdds)?currentBodyOdds:"",
-   currentGoalTotalOdds:/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(currentGoalTotalOdds)?currentGoalTotalOdds:""
+   currentBodyOdds:validQuote(x.eveningBodyOdds)||m.currentBodyOdds,
+   currentGoalTotalOdds:validQuote(x.eveningGoalTotalOdds)||m.currentGoalTotalOdds
   };
  });
  return {...morning,matches:merged};
