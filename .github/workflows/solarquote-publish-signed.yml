@@ -1,0 +1,106 @@
+name: SolarQuote - Signed APK and Update Channel
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'solarquote/source.zip'
+      - '.github/workflows/solarquote-publish-signed.yml'
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      SIGNING_BUNDLE_B64: ${{ secrets.SOLARQUOTE_SIGNING_BUNDLE_B64 }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require a persistent signing key
+        run: |
+          if [ -z "$SIGNING_BUNDLE_B64" ]; then
+            echo 'Missing SOLARQUOTE_SIGNING_BUNDLE_B64 repository secret. No APK released.' >&2
+            exit 1
+          fi
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - name: Install Android platform and build-tools
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+      - name: Expand project and private signing key
+        shell: bash
+        run: |
+          mkdir -p solarquote/project solarquote/signing
+          unzip -q solarquote/source.zip -d solarquote/project
+          python3 - <<'PY'
+          import base64, json, os, pathlib
+          bundle = json.loads(base64.b64decode(os.environ['SIGNING_BUNDLE_B64']))
+          signing = pathlib.Path('solarquote/signing')
+          (signing / 'release.jks').write_bytes(base64.b64decode(bundle['keystoreB64']))
+          with open(os.environ['GITHUB_ENV'], 'a') as f:
+              f.write('SOLARQUOTE_STORE_PASSWORD=' + bundle['storePassword'] + '\n')
+              f.write('SOLARQUOTE_KEY_PASSWORD=' + bundle['keyPassword'] + '\n')
+          PY
+      - name: Build unsigned release APK
+        working-directory: solarquote/project
+        run: gradle --no-daemon --stacktrace :app:assembleRelease
+      - name: Align, sign, verify and hash
+        shell: bash
+        run: |
+          set -euo pipefail
+          UNSIGNED=solarquote/project/app/build/outputs/apk/release/app-release-unsigned.apk
+          ALIGN=solarquote/signing/app-aligned.apk
+          SIGNED=solarquote/signing/app-signed.apk
+          TOOLS="$ANDROID_HOME/build-tools/35.0.0"
+          test -s "$UNSIGNED"
+          "$TOOLS/zipalign" -f -p 4 "$UNSIGNED" "$ALIGN"
+          "$TOOLS/apksigner" sign --ks solarquote/signing/release.jks --ks-key-alias solarquote \
+            --ks-pass env:SOLARQUOTE_STORE_PASSWORD --key-pass env:SOLARQUOTE_KEY_PASSWORD \
+            --out "$SIGNED" "$ALIGN"
+          "$TOOLS/apksigner" verify --verbose "$SIGNED"
+          "$TOOLS/aapt" dump badging "$SIGNED" | grep -E '^(package:|sdkVersion:|targetSdkVersion:)' 
+          mkdir -p solarquote/releases
+          python3 - <<'PY'
+          import datetime,hashlib,json,pathlib,re,shutil
+          grade=pathlib.Path('solarquote/project/app/build.gradle.kts').read_text()
+          code=int(re.search(r'versionCode\s*=\s*(\d+)',grade).group(1))
+          version=re.search(r'versionName\s*=\s*"([^"]+)"',grade).group(1)
+          fn=f'FutureCodeSolarQuote-v{version}.apk'
+          apk=pathlib.Path('solarquote/releases')/fn
+          shutil.copy2('solarquote/signing/app-signed.apk', apk)
+          sha=hashlib.sha256(apk.read_bytes()).hexdigest()
+          update={
+            'packageName':'com.futurecode.solarquote',
+            'versionCode':code,
+            'versionName':version,
+            'notes':'Future Code SolarQuote - stable signed release, offline quote calculators and update checks',
+            'apkUrl':'https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/solarquote/releases/'+fn,
+            'sha256':sha,
+            'publishedAt':datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+          }
+          pathlib.Path('solarquote/latest.json').write_text(json.dumps(update,indent=2,ensure_ascii=False)+'\n')
+          pathlib.Path('solarquote/release-sha256.txt').write_text(sha+'  '+fn+'\n')
+          print('Built signed',fn,'versionCode',code,'hash',sha)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SolarQuote-signed-release
+          path: |
+            solarquote/releases/*.apk
+            solarquote/latest.json
+            solarquote/release-sha256.txt
+          if-no-files-found: error
+      - name: Publish public APK and update manifest
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add solarquote/releases/ solarquote/latest.json solarquote/release-sha256.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish SolarQuote signed APK and verified update manifest [skip ci]"
+            git push origin HEAD:main
+          fi
