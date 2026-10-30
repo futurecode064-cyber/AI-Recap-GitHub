@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1d1b">
+<title>Village Farming Crew | Future Code AI Studio</title>
+<meta name="description" content="Play Village Farming Crew — plant, water, harvest and deliver rice in a beautiful miniature Myanmar village farming game.">
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans Myanmar","Myanmar Text",sans-serif;color:#eef8ec;background:#091712;--panel:#122820;--muted:#a8c2ad;--gold:#f7ce7c;--teal:#6bd9ad;--line:#2e5145}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 55% -18%,#28503b,#091712 61%);overflow-x:hidden}
+button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible{outline:3px solid #f9d77e;outline-offset:3px}
+.shell{max-width:1640px;margin:auto;padding:15px 17px 32px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,#f4e19d,#bada7e);color:#1c3d29;font-size:30px;width:55px;height:55px;box-shadow:0 4px 24px #cfdd8127}
+.eyebrow{color:#cdddb0;font-weight:900;letter-spacing:.15em;font-size:10px}
+h1{font-family:Georgia,"Noto Serif Myanmar",serif;font-size:clamp(23px,3vw,38px);line-height:1.18;margin:3px 0 0;letter-spacing:-.035em}
+h1 span{color:#f5d58e}.smallmark{font-size:12px;border:1px solid #3d5d49;border-radius:99px;padding:9px 12px;color:#d9e7c9}
+.stats{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.stat{min-width:104px;border:1px solid #365849;border-radius:13px;background:#183026cf;padding:8px 13px}
+.stat small{display:block;font-size:10px;color:#acc6b5;margin-bottom:2px;text-transform:uppercase;letter-spacing:.09em}
+.stat b{font-size:19px;color:#f9e8b6;font-variant-numeric:tabular-nums}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 316px;gap:15px}
+.gameframe{position:relative;background:#0e261d;border:1px solid #46634b;border-radius:23px;overflow:hidden;box-shadow:0 28px 70px #040c0780}
+canvas{display:block;width:100%;height:auto;aspect-ratio:1100/700;touch-action:pan-y;background:#bfdfaa}
+.canvaslabel{position:absolute;left:16px;top:16px;background:#10261fde;border:1px solid #4b6e55a8;padding:9px 12px;border-radius:13px;backdrop-filter:blur(10px)}
+.canvaslabel b{display:block;font-size:12px}.canvaslabel small{font-size:10px;color:#b9cfb0}
+.weatherchip{position:absolute;top:16px;right:16px;background:#122820dd;border:1px solid #5f876e;padding:10px 13px;border-radius:13px;font-size:13px;font-weight:700}
+.bottomtag{position:absolute;bottom:12px;left:14px;border-radius:11px;background:#0d271ee8;padding:10px 13px;color:#e0f3d4;font-size:11px;max-width:85%;pointer-events:none}
+.side{display:flex;flex-direction:column;gap:13px}
+.panel{background:#132820f0;border:1px solid #315443;border-radius:20px;padding:17px;box-shadow:0 9px 35px #020c0544}
+.panel h2{font-size:14px;letter-spacing:.04em;margin:0 0 10px;color:#f7e8b8}
+.panel p{font-size:12px;color:#adc5b0;line-height:1.65;margin:8px 0}
+.progress{height:11px;background:#071a12;border:1px solid #355c47;border-radius:99px;overflow:hidden}
+.bar{height:100%;width:0;background:linear-gradient(90deg,#70d48c,#f1d171);transition:width .25s;border-radius:99px}
+.taskrow{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:13px 0 6px;font-size:13px}
+.taskrow strong{color:#ffe6a3}
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tool{border:1px solid #345848;border-radius:13px;background:#203e30;color:#e7f4e0;padding:11px 7px;min-height:68px;display:flex;flex-direction:column;gap:4px;align-items:center;justify-content:center;transition:.12s}
+.tool .emoji{font-size:23px}.tool .hint{font-size:10px;color:#bad2c0}
+.tool.active{background:#e3d68c;border-color:#ffedb0;color:#28452c;box-shadow:0 0 0 2px #d6dc8e35}
+.tool.active .hint{color:#53613a}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:11px}
+.action{border:none;border-radius:12px;background:#296f54;color:#eefcec;font-weight:800;padding:12px 10px;font-size:12px}
+.action.secondary{background:#425d36}.action:disabled{opacity:.44;cursor:not-allowed}
+.upgrade{width:100%;border:1px solid #8d8252;background:#383c2b;color:#ffe3a0;border-radius:11px;padding:11px;margin-top:9px;text-align:left;font-size:12px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}.tiny{border:1px solid #37604b;background:#1d3d30;color:#e4f2df;padding:8px 11px;border-radius:10px;font-size:11px}
+.legend{display:flex;gap:8px;flex-wrap:wrap;font-size:11px;color:#d3e4ca}.legend span{padding:6px 9px;border-radius:99px;background:#294435}
+.footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:12px 5px;color:#90b29b;font-size:11px}
+.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:17px;background:linear-gradient(180deg,#0d28179a,#07150ce8);backdrop-filter:blur(7px);z-index:2}
+.overlay.hidden{display:none}.modal{width:min(520px,100%);background:linear-gradient(155deg,#1c432e,#10251f);border:1px solid #a2b777;border-radius:22px;padding:clamp(19px,4vw,30px);box-shadow:0 18px 65px #051309c8;text-align:center}
+.modal .heroicon{font-size:44px}.modal h2{font-family:Georgia,"Noto Serif Myanmar",serif;font-size:clamp(24px,4vw,35px);margin:8px 0 10px;color:#ffe3a1}
+.modal p{color:#d9e7d5;font-size:13px;line-height:1.75;margin:10px 0}
+.primary{background:linear-gradient(120deg,#f2d47d,#d2dfa0);border:none;border-radius:13px;padding:14px 22px;font-weight:900;color:#173e2b;font-size:15px;min-width:170px;margin-top:12px}
+.footnote{font-size:10px!important;color:#b3ceb0!important}
+.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(40px);opacity:0;transition:.2s;z-index:5;background:#fff1ba;color:#29422b;border:2px solid #a8bb73;border-radius:14px;padding:12px 20px;box-shadow:0 8px 28px #0009;max-width:min(90vw,470px);font-weight:800;font-size:13px;text-align:center;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+.help{color:#b3d5b5;font-size:11px;line-height:1.75}
+@media(max-width:1050px){.layout{grid-template-columns:minmax(0,1fr)}.side{display:grid;grid-template-columns:1fr 1fr}.side .panel:last-child{grid-column:1/-1}.stats{width:100%}.stat{flex:1}}
+@media(max-width:600px){.shell{padding:9px 9px 24px}header{gap:10px}.logo{width:45px;height:45px}.smallmark{display:none}.stat{min-width:75px;padding:8px 7px}.stat b{font-size:16px}canvas{min-height:335px;object-fit:cover}.canvaslabel{left:7px;top:7px;padding:5px 8px}.weatherchip{right:6px;top:7px;padding:6px;font-size:11px}.bottomtag{bottom:7px;left:7px;padding:6px 8px;font-size:10px}.gameframe{border-radius:14px}.side{display:flex}.panel{padding:13px}.tool{min-height:64px}.modal{padding:18px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+<div class="brand"><div class="logo">🌾</div><div><div class="eyebrow">FUTURE CODE AI STUDIO · MINI GAME SERIES</div><h1>Village <span>Farming</span> Crew</h1></div></div>
+<div class="smallmark">Web Play Edition · v0.2</div>
+<div class="stats">
+<div class="stat"><small>LEVEL</small><b id="level">01 / 20</b></div>
+<div class="stat"><small>⏱ ကျန်ချိန်</small><b id="clock">02:20</b></div>
+<div class="stat"><small>🪙 ငွေ</small><b id="coins">0</b></div>
+<div class="stat"><small>🚛 ကားပေါ်</small><b id="truckCount">0 / 4</b></div>
+</div>
+</header>
+<div class="layout">
+<main class="gameframe">
+<canvas id="world" width="1100" height="700" aria-label="Interactive farming game world. Tap a field tile to perform your chosen farming action." role="img"></canvas>
+<div class="canvaslabel"><b>🌿 တောင်ယာရွာလေး</b><small>လယ်ကွက် ၁၆ ကွက် · Tap လုပ်၍ ကစားပါ</small></div>
+<div class="weatherchip" id="weatherChip">☀️ နေသာ</div>
+<div class="bottomtag" id="statusText" role="status">စတင်ရန် Play ကိုနှိပ်ပါ။</div>
+<div class="overlay" id="overlay">
+<div class="modal"><div class="heroicon" id="modalIcon">🚜</div><h2 id="modalTitle">ရွာလေးကို အတူတူ စိုက်ပျိုးကြမယ်</h2>
+<p id="modalText">လယ်ထွန် → မျိုးစေ့ကြဲ → ရေသွင်း → စပါးရိတ် → ကားပေါ်တင် → ဂိုဒေါင်ပို့။<br>လယ်ကွက်ကို နှိပ်ပြီး အလုပ်လုပ်ပါ။ မစ်ရှင်ပြီးရင် Level တက်မယ်။</p>
+<button class="primary" id="startBtn">▶ စကစားမယ်</button>
+<p class="footnote">လက်ရှိ Web Demo မှာ Single-player ပါ။ Multiplayer Server မချိတ်ရသေးပါ။</p></div></div>
+</main>
+<aside class="side">
+<section class="panel">
+<h2>🎯 ဒီ Level ရဲ့ မစ်ရှင်</h2>
+<p id="missionDesc">စပါးရိတ်ပြီး ဂိုဒေါင်သို့ အရောက်ပို့ပါ။</p>
+<div class="taskrow"><span>ဂိုဒေါင်ပို့ပြီး / လိုအပ်</span><strong id="progressText">0 / 2 အိတ်</strong></div>
+<div class="progress"><div class="bar" id="missionBar"></div></div>
+<div class="taskrow"><span>🌾 ရိတ်ပြီး စပါး</span><strong id="onField">0 အိတ်</strong></div>
+<div class="taskrow"><span>🌧 ရာသီဥတု</span><strong id="weatherName">နေသာ</strong></div>
+</section>
+<section class="panel">
+<h2>🛠 လယ်ယာလုပ်ငန်း ရွေးပါ</h2>
+<div class="tools" id="tools">
+<button class="tool active" data-tool="plow"><span class="emoji">🚜</span><b>လယ်ထွန်</b><span class="hint">1</span></button>
+<button class="tool" data-tool="sow"><span class="emoji">🌱</span><b>မျိုးစေ့ကြဲ</b><span class="hint">2</span></button>
+<button class="tool" data-tool="water"><span class="emoji">💧</span><b>ရေသွင်း</b><span class="hint">3</span></button>
+<button class="tool" data-tool="harvest"><span class="emoji">🌾</span><b>စပါးရိတ်</b><span class="hint">4</span></button>
+</div>
+<p>အလုပ်ရွေးပြီး အလယ်က လယ်ကွက်ကို နှိပ်ပါ။ စိုက်ပြီးရင် စပါးရင့်သန်တဲ့အထိ ခဏစောင့်ပါ။</p>
+<div class="actions">
+<button class="action secondary" id="loadBtn">📦 ကားပေါ်တင် (L)</button>
+<button class="action" id="deliverBtn">🚚 ဂိုဒေါင်ပို့ (D)</button>
+</div>
+<button class="upgrade" id="upgradeBtn">⚡ စိုက်ပျိုးရေးတိုးတက်မှု · 75 ကျပ်</button>
+</section>
+<section class="panel">
+<h2>🎮 ကစားနည်း</h2>
+<div class="legend"><span>🟤 ထွန်ပြီး</span><span>🌱 စိုက်ပြီး</span><span>💧 ရေသွင်းပြီး</span><span>🌾 ရိတ်ရန်အသင့်</span></div>
+<p class="help">ဖုန်း: Tool ကိုရွေးပြီး လယ်ကွက်နှိပ်ပါ။ ကားပေါ်တင်၊ ဂိုဒေါင်ပို့ Button တွေကို အသုံးပြုပါ။<br>Computer: 1–4 Tool · Space အလုပ်လုပ် · Arrow/WASD လယ်ကွက်ရွေး · L ကားပေါ်တင် · D ပို့ဆောင်။</p>
+<div class="controls"><button class="tiny" id="pauseBtn">⏸ ရပ်/ဆက် (P)</button><button class="tiny" id="soundBtn">🔊 အသံဖွင့်</button><button class="tiny" id="resetBtn">↻ အသစ်ပြန်စ</button></div>
+<p id="record" class="help"></p>
+</section>
+</aside>
+</div>
+<div class="footer"><span>© Future Code AI Studio · Village Farming Crew Web Edition</span><span>သေးငယ်သော Map • Auto Save • ဖုန်း/ကွန်ပျူတာ Browser</span></div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+(function(){
+const cvs=document.getElementById("world"),g=cvs.getContext("2d");
+const $=id=>document.getElementById(id);
+const W=1100,H=700,HW=104,HH=48,COLS=4,ROWS=4;
+const STAGES=["empty","plowed","seeded","wet","ripe"];
+const TOOLS=["plow","sow","water","harvest"], LABEL={plow:"လယ်ထွန်",sow:"မျိုးစေ့ကြဲ",water:"ရေသွင်း",harvest:"စပါးရိတ်"};
+const STORAGE="future-code-village-farming-web-v2";
+const SKY=["☀️ နေသာ","🌧️ မိုးရွာ","🏜️ မိုးခေါင်"],WX=["နေသာ","မိုးရွာ","မိုးခေါင်"];
+let tool="plow",paused=true,ended=false,run=false,muted=false,frame=0,prev=0,acc=0,particles=[],toastTimer=null,selected=0;
+let data={level:1,coins:0,delivered:0,sacks:0,cargo:0,capacity:4,boost:0,time:140,weather:0,weatherElapsed:0,plots:Array.from({length:16},()=>({s:0,growth:0})),best:1,total:0,deliveryTimer:0};
+try{const old=JSON.parse(localStorage.getItem(STORAGE)||"null");if(old&&old.version===2&&old.data&&Array.isArray(old.data.plots)&&old.data.plots.length===16){data={...data,...old.data};data.plots=data.plots.map(p=>({s:Math.max(0,Math.min(4,Number(p.s)||0)),growth:Math.max(0,Number(p.growth)||0)}));}}catch(e){}
+const target=()=>Math.min(16,Math.ceil(1+data.level*.65));
+const tile=(r,c)=>({x:548+(c-r)*HW,y:226+(c+r)*HH});
+const arr=()=>data.plots;
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify({version:2,data}));}catch(e){}}
+function speak(txt){$("statusText").textContent=txt;clearTimeout(toastTimer);$("toast").textContent=txt;$("toast").classList.add("show");toastTimer=setTimeout(()=>$("toast").classList.remove("show"),2100);}
+function beep(type){if(muted)return;try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const ac=beep.ctx||(beep.ctx=new C());if(ac.state==="suspended")ac.resume();const o=ac.createOscillator(),v=ac.createGain();o.type="sine";o.frequency.value=type==="bad"?240:type==="win"?740:520;v.gain.setValueAtTime(.04,ac.currentTime);v.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+.16);o.connect(v);v.connect(ac.destination);o.start();o.stop(ac.currentTime+.16);}catch(e){}}
+function setTool(t){tool=t;document.querySelectorAll(".tool").forEach(b=>b.classList.toggle("active",b.dataset.tool===tool));$("statusText").textContent="ရွေးထားသည် — "+LABEL[t]+"။ လယ်ကွက်ကိုနှိပ်ပါ။";}
+function refresh(){
+$("level").textContent=String(data.level).padStart(2,"0")+" / 20";
+$("clock").textContent=String(Math.floor(Math.max(0,data.time)/60)).padStart(2,"0")+":"+String(Math.floor(Math.max(0,data.time)%60)).padStart(2,"0");
+$("clock").style.color=data.time<25?"#ff9c7d":"#f9e8b6";
+$("coins").textContent=data.coins;
+$("truckCount").textContent=data.cargo+" / "+data.capacity;
+$("progressText").textContent=data.delivered+" / "+target()+" အိတ်";
+$("missionBar").style.width=Math.min(100,100*data.delivered/target())+"%";
+$("onField").textContent=data.sacks+" အိတ်";
+$("weatherChip").textContent=SKY[data.weather];
+$("weatherName").textContent=WX[data.weather];
+$("missionDesc").textContent="Level "+data.level+" — စပါး "+target()+" အိတ်ကို အချိန်မကုန်ခင် ဂိုဒေါင်သို့ ပို့ဆောင်ပါ။";
+$("loadBtn").disabled=!run||paused||data.sacks<1||data.cargo>=data.capacity||data.deliveryTimer>0;
+$("deliverBtn").disabled=!run||paused||data.cargo<1||data.deliveryTimer>0;
+$("upgradeBtn").textContent="⚡ စိုက်ပျိုးရေးအရှိန် မြှင့် (အဆင့် "+data.boost+") · "+(75+data.boost*75)+" ကျပ်";
+$("upgradeBtn").disabled=!run||paused||data.coins<75+data.boost*75||data.boost>=4;
+$("pauseBtn").textContent=paused?"▶ ဆက်ကစား (P)":"⏸ ခေတ္တရပ် (P)";
+$("record").textContent="အမြင့်ဆုံး Level: "+data.best+" · ပို့ဆောင်ပြီး စုစုပေါင်း: "+data.total+" အိတ်";
+}
+function showModal(icon,title,txt,btn){paused=true;run=false;$("modalIcon").textContent=icon;$("modalTitle").textContent=title;$("modalText").innerHTML=txt;$("startBtn").textContent=btn;$("overlay").classList.remove("hidden");refresh();}
+function begin(){run=true;paused=false;ended=false;$("overlay").classList.add("hidden");$("statusText").textContent="လုပ်ငန်းကို စတင်ပါ။ လယ်ထွန်ရန် လယ်ကွက်ကိုနှိပ်ပါ။";save();refresh();}
+function resetStage(){data.delivered=0;data.sacks=0;data.cargo=0;data.time=Math.max(85,145-Math.floor(data.level*2.8));data.plots=Array.from({length:16},()=>({s:0,growth:0}));data.weather=0;data.weatherElapsed=0;data.deliveryTimer=0;selected=0;save();refresh();}
+function completeLevel(){
+beep("win");data.coins+=30+data.level*14;data.best=Math.max(data.best,data.level+1);
+if(data.level>=20){ended=true;showModal("🏆","လယ်ယာရွာရဲ့ ချန်ပီယံ!","Level ၂၀ အားလုံး အောင်မြင်ပြီးပါပြီ။ တောင်သူရွာလေးကို အောင်မြင်စွာ ဦးဆောင်နိုင်ခဲ့ပါပြီ။","အသစ်ပြန်ကစားမယ်");data.level=1;resetStage();return;}
+data.level++;resetStage();showModal("🎉","Level "+(data.level-1)+" အောင်မြင်ပြီ!","နောက် Level "+data.level+" မှာ စပါး "+target()+" အိတ်ကို အချိန်ပိုတိုအတွင်း သယ်ပို့ရပါမယ်။<br>အလုပ်တွေ ပိုခက်လာပါပြီ။","▶ နောက် Level ကစားမယ်");
+}
+function doAction(idx){
+if(!run||paused)return;
+const p=arr()[idx];if(!p)return;selected=idx;
+let expected=tool==="plow"?0:tool==="sow"?1:tool==="water"?2:4;
+if(p.s!==expected){const advice=p.s===0?"ပထမ လယ်ထွန်ပါ။":p.s===1?"မျိုးစေ့ကြဲပါ။":p.s===2?"ရေသွင်းပါ။":p.s===3?"စပါးရင့်အောင် ခဏစောင့်ပါ။":"စပါးရိတ်ရန် အသင့်ဖြစ်နေပြီ။";speak("ဒီကွက်မှာ "+advice);beep("bad");refresh();return;}
+if(tool==="harvest"){p.s=0;p.growth=0;data.sacks++;data.coins+=6;speak("စပါးရိတ်ပြီးပါပြီ! (+၁ အိတ်) ကားပေါ်တင်ပါ။");}
+else{p.s++;p.growth=0;speak(LABEL[tool]+" ပြီးစီးပါပြီ။");}
+spawn(idx);beep("ok");save();refresh();
+}
+function loadTruck(){if(!run||paused||data.deliveryTimer>0)return;const count=Math.min(data.sacks,data.capacity-data.cargo);if(count<1){speak("ရိတ်ပြီးစပါး မရှိသေးပါ။");return;}data.sacks-=count;data.cargo+=count;speak("ကုန်တင်ကားပေါ် စပါး "+count+" အိတ် တင်ပြီးပါပြီ။");beep("ok");save();refresh();}
+function deliver(){if(!run||paused||!data.cargo||data.deliveryTimer>0)return;data.deliveryTimer=4.5;speak("ကုန်တင်ကား ဂိုဒေါင်သို့ ထွက်ခွာနေပါပြီ...");beep("ok");save();refresh();}
+function upgrade(){const cost=75+data.boost*75;if(!run||paused||data.coins<cost||data.boost>=4)return;data.coins-=cost;data.boost++;speak("စိုက်ပျိုးရေးအမြန်နှုန်း တိုးတက်သွားပြီ!");beep("ok");save();refresh();}
+function spawn(idx){let r=Math.floor(idx/4),c=idx%4,{x,y}=tile(r,c);for(let i=0;i<12;i++)particles.push({x,y:y-12,vx:(Math.random()-.5)*140,vy:-(45+Math.random()*125),life:.35+Math.random()*.5,col:tool==="water"?"#7bdfff":tool==="harvest"?"#fbe27e":"#edda8c"});}
+function polygon(pts,fill,stroke,line=1){g.beginPath();g.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;i++)g.lineTo(pts[i][0],pts[i][1]);g.closePath();if(fill){g.fillStyle=fill;g.fill();}if(stroke){g.strokeStyle=stroke;g.lineWidth=line;g.stroke();}}
+function line(x1,y1,x2,y2,col,w=2){g.strokeStyle=col;g.lineWidth=w;g.beginPath();g.moveTo(x1,y1);g.lineTo(x2,y2);g.stroke();}
+function rect(x,y,w,h,col){g.fillStyle=col;g.fillRect(x,y,w,h);}
+function ellipse(x,y,rx,ry,col){g.beginPath();g.ellipse(x,y,rx,ry,0,0,Math.PI*2);g.fillStyle=col;g.fill();}
+function tx(text,x,y,size=15,col="#fff",weight="bold",align="center"){g.fillStyle=col;g.textAlign=align;g.font=weight+" "+size+"px system-ui, sans-serif";g.fillText(text,x,y);}
+function tree(x,y,s=1){ellipse(x,y+9*s,30*s,12*s,"#3a6c3c55");line(x,y,x,y-42*s,"#79553a",10*s);for(let i=0;i<5;i++){let a=i*2.4;ellipse(x+Math.sin(a)*17*s,y-43*s+Math.cos(a)*11*s,21*s,17*s,i%2?"#267343":"#3f9150");}ellipse(x-8*s,y-57*s,12*s,8*s,"#73ac62a9");}
+function hut(x,y,s=1){const bw=86*s,bh=58*s;ellipse(x,y+37*s,76*s,23*s,"#163c2670");polygon([[x-bw/2,y],[x,y-30*s],[x+bw/2,y],[x,y+30*s]],"#d9b783","#705333",2);polygon([[x-bw/2,y],[x,y+30*s],[x,y+67*s],[x-bw/2,y+37*s]],"#aa754b","#6b432a",2);polygon([[x,y+30*s],[x+bw/2,y],[x+bw/2,y+37*s],[x,y+67*s]],"#c18c53","#6b432a",2);polygon([[x-60*s,y-7*s],[x-4*s,y-56*s],[x+57*s,y-7*s],[x+5*s,y+32*s]],"#9f543d","#673c2b",2);for(let j=0;j<7;j++)line(x-51*s+j*17*s,y-6*s-((j<4?j:6-j)*9*s),x+6*s+j*7*s,y+27*s-((j<4?j:6-j)*8*s),"#d87c4b66",1);rect(x+13*s,y+25*s,17*s,25*s,"#69482f");}
+function silo(x,y){ellipse(x,y+24,33,13,"#25553e66");rect(x-26,y-80,52,100,"#b6b5a1");ellipse(x,y-80,26,11,"#d5d3b4");ellipse(x,y+20,26,11,"#777f6f");polygon([[x-32,y-80],[x,y-112],[x+32,y-80]],"#bc7357","#8f4b3d",2);line(x-25,y-43,x+24,y-43,"#8e9b89",2);line(x-25,y-10,x+24,y-10,"#8e9b89",2);}
+function truck(x,y,travel){const a=travel?Math.sin((1-data.deliveryTimer/4.5)*Math.PI)*130:0;x-=a;y-=a*.38;ellipse(x,y+24,67,22,"#203f306a");polygon([[x-57,y-4],[x+5,y-27],[x+64,y+2],[x+1,y+26]],"#c99637","#7f672e",2);polygon([[x+6,y-27],[x+35,y-52],[x+77,y-33],[x+64,y+2]],"#e9c86b","#6c7142",2);polygon([[x+35,y-52],[x+63,y-43],[x+75,y-30],[x+49,y-35]],"#94c8ba","#45686d",1);rect(x-28,y-20,3,28,"#fff8cc");ellipse(x-23,y+24,13,9,"#292c27");ellipse(x+42,y+28,13,9,"#292c27");if(data.cargo>0)for(let i=0;i<Math.min(data.cargo,4);i++){ellipse(x-25+i*11,y-19+i*2,12,6,"#e0b16b");}tx("🚚",x+9,y-49,23);}
+function drawPlot(r,c,p,highlight){let {x,y}=tile(r,c),top=[[x,y-HH+3],[x+HW-3,y],[x,y+HH-3],[x-HW+3,y]];let fill=p.s===0?"#9b9e53":p.s===1?"#8e6842":p.s===2?"#806a45":p.s===3?"#517448":"#c6a857";polygon([[x-HW+3,y],[x,y+HH-3],[x+HW-3,y],[x+HW-3,y+8],[x,y+HH+5],[x-HW+3,y+8]],"#745735","#866b44",1);polygon(top,fill,highlight?"#fff1a2":"#c7c986",highlight?5:2);
+const a=(k,m)=>{let px=x+(k-2)*24,py=y+(m-2)*11;return{px,py};};
+g.save();g.beginPath();g.moveTo(x,y-HH+5);g.lineTo(x+HW-5,y);g.lineTo(x,y+HH-5);g.lineTo(x-HW+5,y);g.closePath();g.clip();
+if(p.s===1||p.s===2){for(let k=-4;k<=4;k++)line(x-115+k*28,y-40,x+115+k*28,y+65,"#704e33",3);}
+if(p.s===2||p.s===3||p.s===4){for(let i=0;i<5;i++)for(let j=0;j<4;j++){let xx=x+(i-j)*18-7,yy=y+(i+j-3.5)*10-4;const tall=p.s===4?22:p.s===3?10:5;line(xx,yy,xx-3,yy-tall,p.s===4?"#cda63b":"#2b7b43",p.s===4?3:2);line(xx-3,yy-tall,xx-8,yy-tall-4,p.s===4?"#ecd15c":"#66bf60",2);if(p.s===4)ellipse(xx-3,yy-tall-3,3,4,"#edd775");}}
+if(p.s===3){for(let i=0;i<4;i++)ellipse(x+(i-2)*32,y+(i-1.5)*11,3,1.5,"#b1d9beaa");}
+g.restore();if(p.s===0&&((r+c)%3===0))ellipse(x,y,15,5,"#b2a76488");if(highlight){tx("●",x,y-50,18,"#fff5ad");}
+}
+function render(t){
+let dt=Math.min(.065,prev?(t-prev)/1000:0);prev=t;frame=t/1000;
+const sky=g.createLinearGradient(0,0,0,H);sky.addColorStop(0,data.weather===1?"#71958c":"#88c6b6");sky.addColorStop(.49,"#c8e4a6");sky.addColorStop(1,"#729a63");rect(0,0,W,H,sky);
+polygon([[0,207],[90,140],[174,188],[268,108],[405,203],[536,129],[705,210],[842,147],[1010,202],[1100,135],[1100,345],[0,345]],"#699a78");polygon([[0,259],[140,195],[290,242],[453,194],[620,245],[850,185],[1005,243],[1100,206],[1100,440],[0,430]],"#7cad76");
+for(let i=0;i<14;i++){let x=i*99-34+Math.sin(i*7)*16;ellipse(x,290+(i%3)*21,46,15,"#86b47c55");}
+rect(0,312,W,H-312,"#79a365");
+polygon([[0,600],[118,555],[210,623],[364,598],[561,679],[452,720],[0,720]],"#59a9a1");for(let i=0;i<11;i++)line(i*48,615+(i%3)*13,i*48+26,629+(i%3)*13,"#9ad5bf",2);
+polygon([[945,430],[1000,417],[1100,468],[1100,595],[956,529],[816,501]],"#b99c66","#d0bb89",2);
+polygon([[175,281],[217,304],[339,360],[320,393],[125,324]],"#d0b47c");
+polygon([[745,601],[872,536],[1110,568],[1110,620],[883,575],[812,635]],"#c1a46e");
+for(let i=0;i<32;i++){let x=(i*107+32)%W,y=350+((i*131)%340);if(x>220&&x<870&&y>202&&y<608)continue;ellipse(x,y,2.3,1.7,i%2?"#a2be71":"#c8cf8b");}
+tree(54,345,.83);tree(102,405,.65);tree(225,164,.72);tree(920,165,.69);tree(1051,373,.84);tree(990,622,.86);tree(885,646,.6);tree(80,627,.83);tree(1064,195,.65);
+hut(195,244,1.24);silo(1027,335);ellipse(1052,341,36,9,"#add2ca");rect(1023,313,55,27,"#5594a5");ellipse(1050,312,27,10,"#72d0d5");tx("WATER",1047,332,11,"#d9f4e4");
+polygon([[792,158],[844,190],[774,218],[724,188]],"#b2a773","#d6c896");tx("ဂိုဒေါင်",782,175,15,"#173f2d");
+for(let r=0;r<4;r++)for(let c=0;c<4;c++)drawPlot(r,c,arr()[r*4+c],r*4+c===selected);
+let k=Math.floor(selected/4),j=selected%4,ps=tile(k,j);ellipse(ps.x,ps.y+35,17,7,"#24382855");let bounce=Math.sin(frame*4)*2;line(ps.x,ps.y+17+bounce,ps.x,ps.y-9+bounce,"#2c563f",10);ellipse(ps.x,ps.y-16+bounce,9,9,"#f0b683");polygon([[ps.x-13,ps.y-17+bounce],[ps.x,ps.y-33+bounce],[ps.x+13,ps.y-17+bounce]],"#ecdb88","#b28c50",1);tx("👨‍🌾",ps.x,ps.y-23+bounce,20);
+truck(942,536,data.deliveryTimer>0);
+if(data.weather===1)for(let i=0;i<95;i++){const xx=(i*97+frame*175)%W,yy=(i*117+frame*220)%H;line(xx,yy,xx-9,yy+17,"#daeef074",1.5);}
+if(data.weather===2){rect(0,0,W,H,"#f7b45719");}
+for(let i=particles.length-1;i>=0;i--){let p=particles[i];p.life-=dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=195*dt;if(p.life<=0){particles.splice(i,1);continue;}ellipse(p.x,p.y,3,3,p.col);}
+if(run&&!paused){acc+=dt;if(acc>=.2){updateWorld(acc);acc=0;}}requestAnimationFrame(render);
+}
+function updateWorld(dt){
+data.time-=dt;data.weatherElapsed+=dt;if(data.time<=0){data.time=0;ended=true;showModal("⌛","အချိန်ကုန်သွားပြီ!","ဒီ Level အတွက် စပါး "+target()+" အိတ် မပို့နိုင်ခဲ့ပါ။ ထပ်ကြိုးစားရအောင်။","↻ Level ပြန်ကစားမယ်");save();return;}
+if(data.weatherElapsed>32){data.weatherElapsed=0;data.weather=(data.weather+1+Math.floor(Math.random()*2))%3;if(data.level===1)data.weather=0;speak("ရာသီဥတု ပြောင်းလဲသွားပြီ — "+WX[data.weather]);}
+for(const p of arr())if(p.s===3){p.growth+=dt*(.9+data.boost*.35)*(data.weather===1?1.8:data.weather===2?.65:1);if(p.growth>=Math.max(4.3,9-data.level*.16)){p.s=4;p.growth=0;}}
+if(data.deliveryTimer>0){data.deliveryTimer-=dt;if(data.deliveryTimer<=0){const c=data.cargo;data.deliveryTimer=0;data.cargo=0;data.delivered+=c;data.total+=c;data.coins+=c*(18+data.level*2);speak("ဂိုဒေါင်သို့ "+c+" အိတ် ပို့ပြီးပါပြီ!");beep("ok");if(data.delivered>=target()){completeLevel();return;}save();}}
+refresh();
+}
+cvs.addEventListener("pointerdown",function(e){const box=cvs.getBoundingClientRect(),x=(e.clientX-box.left)*W/box.width,y=(e.clientY-box.top)*H/box.height;let found=-1,dist=Infinity;for(let r=0;r<4;r++)for(let c=0;c<4;c++){let q=tile(r,c),dx=Math.abs(x-q.x)/HW,dy=Math.abs(y-q.y)/HH;if(dx+dy<.97&&dx+dy<dist){dist=dx+dy;found=r*4+c;}}if(found>=0)doAction(found);});
+document.querySelectorAll("[data-tool]").forEach(b=>b.addEventListener("click",()=>setTool(b.dataset.tool)));
+$("loadBtn").onclick=loadTruck;$("deliverBtn").onclick=deliver;$("upgradeBtn").onclick=upgrade;
+$("startBtn").onclick=()=>{if(ended){resetStage();ended=false;}begin();};
+$("pauseBtn").onclick=()=>{if(!run){if(!ended)begin();return;}paused=!paused;speak(paused?"ခေတ္တရပ်ထားသည်။":"ပြန်စကစားနေပါပြီ။");refresh();};
+$("soundBtn").onclick=()=>{muted=!muted;$("soundBtn").textContent=muted?"🔇 အသံပိတ်":"🔊 အသံဖွင့်";if(!muted)beep("ok");};
+$("resetBtn").onclick=()=>{if(!confirm("ဒီ Level ကို အသစ်ပြန်စမလား?"))return;resetStage();ended=false;begin();};
+document.addEventListener("keydown",e=>{const k=e.key.toLowerCase();if(["arrowdown","arrowup","arrowleft","arrowright"," ","w","a","s","d"].includes(k)&&document.activeElement?.tagName!=="BUTTON")e.preventDefault();if(k>="1"&&k<="4")setTool(TOOLS[Number(k)-1]);else if(k==="l")loadTruck();else if(k==="d")deliver();else if(k==="p"){$("pauseBtn").click();}else if(k===" "){doAction(selected);}else if(["arrowleft","a","arrowright","arrowup","w","arrowdown","s"].includes(k)){let r=Math.floor(selected/4),c=selected%4;if(k==="arrowleft"||k==="a")c--;if(k==="arrowright")c++;if(k==="arrowup"||k==="w")r--;if(k==="arrowdown"||k==="s")r++;selected=Math.min(15,Math.max(0,r))*4+Math.min(3,Math.max(0,c));}});
+function init(){refresh();$("modalText").innerHTML="လယ်ထွန် → မျိုးစေ့ကြဲ → ရေသွင်း → စပါးရိတ် → ကားပေါ်တင် → ဂိုဒေါင်ပို့။<br>Level "+data.level+" မှာ စပါး "+target()+" အိတ်ကို အချိန်မီပို့ရပါမယ်။";requestAnimationFrame(render);}
+init();
+})();
+</script>
+</body></html>
