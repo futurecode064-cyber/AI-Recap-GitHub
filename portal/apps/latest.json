@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-10-30",
   "apps": [
     {
       "id": "ai-studio",
@@ -225,6 +225,22 @@
       "certificateSha256": "85c3dc3a0ac83670196ae8c4aa59c1b2bfef7d34d61193730a0775cf68bdd5b1",
       "releaseNotes": "360 bundled neural offline speech recordings. Expanded bilingual practical curriculum; original signing identity and verified in-app updates. Machine-generated speech; native-teacher certification and physical Android install testing not completed.",
       "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/fc-language-academy-v1.0.8/Future_Code_Language_Academy_v1.0.8.apk"
+    },
+    {
+      "id": "solarquote",
+      "name": "Future Code SolarQuote",
+      "packageName": "com.futurecode.solarquote",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/solarquote/releases/FutureCodeSolarQuote-v1.0.1.apk",
+      "apkUrl": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/solarquote/releases/FutureCodeSolarQuote-v1.0.1.apk",
+      "sha256": "8a133520165c6a9131f412526d844823c8880c5d269855d04789bba365bba183",
+      "sizeBytes": 660776,
+      "releasedAt": "2026-10-30",
+      "online": false,
+      "releaseChannel": "stable",
+      "releaseNotes": "Battery runtime, solar panel and inverter estimates, offline project quotation and PDF export; verified signed APK, automatic update check with Android install approval; physical-device QA pending."
     }
   ]
 }

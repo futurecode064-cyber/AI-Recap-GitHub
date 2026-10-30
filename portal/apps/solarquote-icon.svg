@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="t d">
+<title id="t">Future Code SolarQuote</title><desc id="d">Future Code FC mark with solar sun and photovoltaic panel</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b2548"/><stop offset="1" stop-color="#086c87"/></linearGradient><linearGradient id="panel" x2="0" y2="1"><stop stop-color="#31b7dc"/><stop offset="1" stop-color="#165d96"/></linearGradient></defs>
+<rect x="6" y="6" width="244" height="244" rx="48" fill="url(#bg)"/>
+<circle cx="188" cy="69" r="23" fill="#ffbd4b"/>
+<g stroke="#ffbd4b" stroke-width="5" stroke-linecap="round"><path d="M188 32v-10 M188 116v-9 M151 69h-11 M225 69h10 M161 42l-8-8 M214 96l8 8 M215 42l8-8 M162 96l-8 8"/></g>
+<path d="M44 113l113-13 48 90-119 9z" fill="url(#panel)" stroke="#9bebff" stroke-width="5" stroke-linejoin="round"/>
+<g stroke="#b6eeff" opacity=".9" stroke-width="4"><path d="M80 109l35 84 M117 104l34 86 M160 129L63 140 M177 159L79 169"/></g>
+<path d="M132 195v16 M105 212h60" stroke="#eefaff" stroke-width="7" stroke-linecap="round"/>
+<rect x="22" y="22" width="83" height="47" rx="14" fill="#ffffff" opacity=".96"/><text x="63" y="55" font-family="Arial,sans-serif" font-size="27" font-weight="900" fill="#08567b" text-anchor="middle">FC</text>
+<text x="128" y="238" font-family="Arial,sans-serif" font-weight="700" font-size="19" fill="white" text-anchor="middle">SolarQuote</text>
+</svg>

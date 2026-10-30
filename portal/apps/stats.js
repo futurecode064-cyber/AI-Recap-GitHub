@@ -5,6 +5,7 @@
   const publishableKey = "sb_publishable_JBcF0nEMbcFSSf7OlCCqmQ_lC1DEM0A";
   // Backward compatibility for older pages; all current APK buttons declare a stable data-app-key.
   const knownApps = Object.freeze({
+    "FutureCodeSolarQuote-v1.0.1.apk": "solarquote",
     "GoalZone_Sports_Journal_v1.0.1.apk": "goal-zone",
     "Future_Code_Mandalay_City_Helper_v1.0.0.apk": "mandalay-city-helper",
     "Future-Code-AI-Studio.apk": "ai-studio",
