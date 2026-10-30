@@ -8,20 +8,13 @@ on:
       - '.github/workflows/solarquote-publish-signed.yml'
 permissions:
   contents: write
+  id-token: write
 jobs:
   release:
     runs-on: ubuntu-latest
     timeout-minutes: 35
-    env:
-      SIGNING_BUNDLE_B64: ${{ secrets.SOLARQUOTE_SIGNING_BUNDLE_B64 }}
     steps:
       - uses: actions/checkout@v4
-      - name: Require a persistent signing key
-        run: |
-          if [ -z "$SIGNING_BUNDLE_B64" ]; then
-            echo 'Missing SOLARQUOTE_SIGNING_BUNDLE_B64 repository secret. No APK released.' >&2
-            exit 1
-          fi
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -32,20 +25,37 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
-      - name: Expand project and private signing key
-        shell: bash
+      - name: Unpack standalone SolarQuote project
         run: |
           mkdir -p solarquote/project solarquote/signing
           unzip -q solarquote/source.zip -d solarquote/project
-          python3 - <<'PY'
-          import base64, json, os, pathlib
-          bundle = json.loads(base64.b64decode(os.environ['SIGNING_BUNDLE_B64']))
-          signing = pathlib.Path('solarquote/signing')
-          (signing / 'release.jks').write_bytes(base64.b64decode(bundle['keystoreB64']))
-          with open(os.environ['GITHUB_ENV'], 'a') as f:
-              f.write('SOLARQUOTE_STORE_PASSWORD=' + bundle['storePassword'] + '\n')
-              f.write('SOLARQUOTE_KEY_PASSWORD=' + bundle['keyPassword'] + '\n')
-          PY
+          test -f solarquote/project/settings.gradle.kts
+      - name: Restore or securely initialize permanent signing key (GitHub OIDC + Supabase)
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          API="https://mxwervqihaqlxybghdak.supabase.co/functions/v1/fc-solarquote-signing"
+          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-solarquote-signing-v1" | jq -er '.value')"
+          echo "::add-mask::$OIDC"
+          curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json"             --data '{"action":"get"}' "$API" -o /tmp/solarquote-key-info.json
+          if [ "$(jq -r '.ready' /tmp/solarquote-key-info.json)" != "true" ]; then
+            PASS="$(openssl rand -hex 32)"
+            echo "::add-mask::$PASS"
+            keytool -genkeypair -storetype PKCS12               -keystore /tmp/solarquote-create.p12               -storepass "$PASS" -keypass "$PASS" -alias solarquote               -keyalg RSA -keysize 3072 -validity 10000               -dname "CN=Future Code SolarQuote, O=Future Code AI Studio, C=MM" -noprompt
+            jq -nc --arg pass "$PASS" --arg b64 "$(base64 -w0 /tmp/solarquote-create.p12)"               '{action:"initialize",store_password:$pass,keystore_b64:$b64}' > /tmp/solarquote-init.json
+            curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json"               --data-binary @/tmp/solarquote-init.json "$API" -o /tmp/solarquote-init-result.json
+            jq -e '.ok == true' /tmp/solarquote-init-result.json >/dev/null
+            curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json"               --data '{"action":"get"}' "$API" -o /tmp/solarquote-key-info.json
+          fi
+          jq -e '.ready == true and .key_alias == "solarquote"' /tmp/solarquote-key-info.json >/dev/null
+          jq -er '.keystore_b64' /tmp/solarquote-key-info.json | base64 --decode > solarquote/signing/release.jks
+          test -s solarquote/signing/release.jks
+          PASS="$(jq -er '.store_password' /tmp/solarquote-key-info.json)"
+          echo "::add-mask::$PASS"
+          echo "SOLARQUOTE_STORE_PASSWORD=$PASS" >> "$GITHUB_ENV"
+          echo "SOLARQUOTE_KEY_PASSWORD=$PASS" >> "$GITHUB_ENV"
+          rm -f /tmp/solarquote-key-info.json /tmp/solarquote-init.json             /tmp/solarquote-init-result.json /tmp/solarquote-create.p12
       - name: Build unsigned release APK
         working-directory: solarquote/project
         run: gradle --no-daemon --stacktrace :app:assembleRelease
