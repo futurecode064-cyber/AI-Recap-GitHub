@@ -51,12 +51,29 @@ function leagueHeading(league){
  return heading;
 }
 
+/* Explicitly split checked fixtures into 1, 2, or 3 balanced PNGs.
+   A user downloads each part by an independent click; browsers do not block batch popups.
+   The screenshot renderer remains the same for all three modes. */
+function splitOddsIntoParts(matches,wanted){
+ if(!Array.isArray(matches)||!matches.length)return [];
+ const total=Math.min(matches.length,Math.max(1,Math.min(3,Math.trunc(wanted)||1)));
+ const base=Math.floor(matches.length/total),extra=matches.length%total;
+ let start=0;
+ return Array.from({length:total},(_,i)=>{
+  const count=base+(i<extra?1:0);
+  const slice=matches.slice(start,start+count);start+=count;
+  return {matches:slice,count,index:i+1,total};
+ });
+}
+let selectedImageCount=2;
 /* Shared branded odds PNG buttons: one separate user click per balanced PNG part. */
-function makeOddsPngButtons(host,data,matches,scope){
+function makeOddsPngButtons(host,data,matches,scope,requestedParts=null){
  host.replaceChildren();
  const kit=window.FutureCodeDailyExport;
  if(!kit?.partition||!kit?.saveOdds||!matches.length)return 0;
- const pages=kit.partition(matches,isMainOdds?{threshold:3,maxPerPage:3}:{});
+ const pages=requestedParts===null
+  ?kit.partition(matches,isMainOdds?{threshold:3,maxPerPage:3}:{})
+  :splitOddsIntoParts(matches,requestedParts);
  for(const page of pages){
   const button=element("button","odds-part-download","⬇ PNG "+page.index+"/"+page.total+" · "+page.count+" ပွဲ");
   button.type="button";
@@ -68,6 +85,7 @@ function makeOddsPngButtons(host,data,matches,scope){
    button.textContent="PNG ပြင်ဆင်နေသည်…";
    try{
     const options={part:page.index,total:page.total};
+    if(requestedParts===1)options.singleImage=true;
     if(scope!=="all")options.league=scope;
     await kit.saveOdds({...data,matches:page.matches},options);
     button.textContent="✓ PNG Download စတင်ပြီး";
@@ -84,44 +102,19 @@ function makeOddsPngButtons(host,data,matches,scope){
  }
  return pages.length;
 }
-/* One unbroken PNG for a whole journal or the checked leagues.
-   This route is available only on branded odds pages, never the root. */
-async function downloadSingleBrandOdds(button,selection){
- if(isMainOdds||button.disabled||!loadedSheet?.matches?.length)return;
- const matches=selection==="all"?loadedSheet.matches:
-  loadedSheet.matches.filter(m=>selectedLeagues.has(m.league||"အခြားပြိုင်ပွဲ"));
- const status=document.getElementById("oddsExportStatus");
- if(!matches.length){if(status)status.textContent="လိဂ် အနည်းဆုံးတစ်ခု ရွေးပါ။";return;}
- const controls=[...document.querySelectorAll(".brand-odds-single button")];
- const label=button.textContent;
- controls.forEach(b=>b.disabled=true);
- button.textContent="တစ်ပုံတည်း PNG ဖန်တီးနေသည်…";
- if(status)status.textContent=matches.length+" ပွဲကို တစ်ပုံတည်း ပြင်ဆင်နေသည်…";
- try{
-  if(!window.FutureCodeDailyExport?.saveOdds)throw Error("PNG Module မရသေးပါ။");
-  const options={singleImage:true};
-  if(selection==="selected")options.league="selected";
-  await window.FutureCodeDailyExport.saveOdds({...loadedSheet,matches},options);
-  if(status)status.textContent=matches.length+" ပွဲ · တစ်ပုံတည်း PNG Download စတင်ပြီးပါပြီ။";
- }catch(error){
-  console.error("Brand one-image odds export failed",error);
-  if(status)status.textContent="တစ်ပုံတည်း PNG မရပါ — "+(error?.message||String(error));
- }finally{
-  button.textContent=label;
-  controls.forEach(b=>{b.disabled=b.id==="brandSingleSelected"&&!selectedLeagues.size;});
- }
-}
+/* Every branded filter export uses the exact PNG 1/2 website-table design. */
 function renderSelectedOddsButtons(){
  const host=document.getElementById("oddsPngPages"),status=document.getElementById("oddsExportStatus");
  if(!host||!loadedSheet)return;
  const matches=loadedSheet.matches.filter(m=>selectedLeagues.has(m.league||"အခြားပြိုင်ပွဲ"));
  const all=matches.length===loadedSheet.matches.length;
- const parts=makeOddsPngButtons(host,loadedSheet,matches,all?"all":"selected");
+ const brand=!isMainOdds&&Boolean(document.documentElement.dataset.footballBrandName);
+ const wanted=brand?selectedImageCount:null;
+ const parts=makeOddsPngButtons(host,loadedSheet,matches,all?"all":"selected",wanted);
  if(status)status.textContent=matches.length
-  ?matches.length+" ပွဲ · "+selectedLeagues.size+" လိဂ် · PNG "+parts+" ပုံကို တစ်ပုံချင်း Download လုပ်နိုင်ပါသည်။"
+  ?matches.length+" ပွဲ · "+selectedLeagues.size+" လိဂ် · PNG "+parts+" ပုံကို အထက်က PNG ခလုတ်များဖြင့် တစ်ပုံချင်း Download လုပ်နိုင်ပါသည်။"
   :"Download လုပ်ရန် အနည်းဆုံး လိဂ်တစ်ခု ရွေးပါ။";
 }
-
 /* Render the same verified odds as compact mobile-only cards.
    The original HTML table remains untouched for PNG export. */
 function brandMobileOdds(matches){
@@ -279,8 +272,7 @@ function setupLeagueFilter(data){
  const checkboxes=[];
  function update(){
   renderSelectedOddsButtons();
-  const selected=document.getElementById("brandSingleSelected");
-  if(selected)selected.disabled=!selectedLeagues.size;
+
  }
  for(const league of unique){
   const label=element("label","odds-league-choice");
@@ -296,19 +288,31 @@ function setupLeagueFilter(data){
  panel.appendChild(title);panel.appendChild(description);panel.appendChild(controls);panel.appendChild(choices);
  actions.parentNode.insertBefore(panel,actions);
  if(!isMainOdds&&document.documentElement.dataset.footballBrandName){
-  const one=element("section","brand-odds-single");
-  const heading=element("h2","","တစ်ပုံတည်း ပေါက်ကြေး PNG Download");
-  const hint=element("p","","ပွဲစဉ်များနှင့် လိဂ်ခေါင်းစဉ်များအားလုံးကို ပုံတစ်ပုံတည်းတွင် စုပေးပါမည်။");
-  const buttons=element("div","brand-odds-single-actions");
-  const allButton=element("button","","⬇ လိဂ်အားလုံး · တစ်ပုံတည်း PNG");
-  const selectedButton=element("button","","⬇ ရွေးထားသောလိဂ်များ · တစ်ပုံတည်း PNG");
-  allButton.type="button";selectedButton.type="button";
-  allButton.id="brandSingleAll";selectedButton.id="brandSingleSelected";
-  allButton.addEventListener("click",()=>downloadSingleBrandOdds(allButton,"all"));
-  selectedButton.addEventListener("click",()=>downloadSingleBrandOdds(selectedButton,"selected"));
-  buttons.append(allButton,selectedButton);
-  one.append(heading,hint,buttons);
-  actions.parentNode.insertBefore(one,actions);
+  selectedImageCount=2; // The existing PNG 1/2 and PNG 2/2 design is the default.
+  const modePanel=element("section","brand-odds-modes");
+  modePanel.id="brandOddsModes";
+  modePanel.appendChild(element("h3","brand-odds-modes-heading","Download ပုံအရေအတွက် ရွေးပါ"));
+  modePanel.appendChild(element("p","brand-odds-modes-description","League ရွေးထားသည့် ပွဲများကို PNG 1/2 ပုံစံအတိုင်း တူညီသော ဇယား Design ဖြင့် Download လုပ်နိုင်ပါသည်။"));
+  const modeButtons=element("div","brand-odds-mode-controls");
+  modeButtons.setAttribute("role","group");modeButtons.setAttribute("aria-label","ပေါက်ကြေး PNG ပုံအရေအတွက်");
+  for(const [count,label] of [[1,"တစ်ပုံတည်း Download"],[2,"၂ ပုံခွဲ Download"],[3,"၃ ပုံခွဲ Download"]]){
+   const choice=element("button","brand-odds-mode-button",label);
+   choice.type="button";choice.dataset.parts=String(count);
+   choice.setAttribute("aria-pressed",String(selectedImageCount===count));
+   choice.classList.toggle("is-selected",selectedImageCount===count);
+   choice.addEventListener("click",()=>{
+    selectedImageCount=count;
+    for(const other of modeButtons.querySelectorAll("button")){
+     const active=other===choice;
+     other.setAttribute("aria-pressed",String(active));
+     other.classList.toggle("is-selected",active);
+    }
+    update();
+   });
+   modeButtons.appendChild(choice);
+  }
+  modePanel.appendChild(modeButtons);
+  panel.appendChild(modePanel);
  }
  const legacy=document.getElementById("oddsPngBtn");
  if(legacy)legacy.style.display="none";
