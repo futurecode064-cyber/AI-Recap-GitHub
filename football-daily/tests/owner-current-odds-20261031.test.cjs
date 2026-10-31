@@ -57,7 +57,9 @@ test("Old mismatched team spellings do not survive in current previews or Specia
   m.homeDisplay,m.awayDisplay,m.dailyPreviewText,m.specialChoiceSourceHeading,
   m.specialChoiceSourceSubtitle,...(m.specialAnalysisParagraphs||[])
  ].filter(Boolean).join("\n")).join("\n");
- for(const old of Object.keys(registry.oldToPDFTeamNames)){
+ for(const [old,correct] of Object.entries(registry.oldToPDFTeamNames)){
+  // Short name can be a prefix of the correct PDF form, e.g. ထရွိုင် → ထရွိုင်း.
+  if(correct.startsWith(old))continue;
   assert.ok(!texts.includes(old),"Old non-PDF spelling "+old);
  }
  assert.equal(today.matches.filter(m=>m.specialChoice).length,5);
