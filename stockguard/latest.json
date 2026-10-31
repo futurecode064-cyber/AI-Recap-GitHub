@@ -1,9 +1,9 @@
 {
   "packageName": "com.futurecode.stockguard",
-  "versionCode": 1,
-  "versionName": "1.0.0",
-  "notes": "Offline inventory, barcode sales, daily profit, low-stock dashboard, CSV and JSON backup",
-  "apkUrl": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/stockguard/releases/FutureCodeStockGuard-v1.0.0.apk",
-  "sha256": "4433a7d9ba7743ae96e540dd66db7a6b487e731911181786e8d38eab3b33f511",
-  "publishedAt": "2026-10-31"
+  "versionCode": 2,
+  "versionName": "1.1.0",
+  "notes": "Professional inventory update: Future Code icon, stock movement history, sales history, product search, background notices, low-stock alerts and secure in-app updater",
+  "apkUrl": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/stockguard/releases/FutureCodeStockGuard-v1.1.0.apk",
+  "sha256": "fcb412e3a54e355b06977f65a0f6efdf94cbe18a4775ed4c462ac9d98dddc208",
+  "publishedAt": "2026-10-31T04:55:11.997833+00:00"
 }
