@@ -154,6 +154,53 @@ __SERVICE_CONTENT__
 FCSERVICE
 """.replace("APP_MAIN",appdir+"/MainActivity.java").replace("APPDIR",appdir).replace("__STARTER_CONTENT__",starter.strip()).replace("__SERVICE_CONTENT__",service.strip())
 script=script.replace("gradle --no-daemon :app:assembleDebug",patch+"\ngradle --no-daemon :app:assembleDebug",1)
+# Android 8/9: app-specific external files are often invisible in Gallery.
+# Ask for legacy scoped storage permission and save to public Pictures instead.
+# Android 10+ keeps the existing scoped MediaStore implementation unchanged.
+gallery_folder={"ykz":"YKZ Soccer Tips","bw":"BW Sport","ko_thet":"Ko Thet Family","kmm":"KMM Sport Hub"}[brand]
+gallery_patch=r"""
+python3 - <<'FC_GALLERY_PATCH'
+from pathlib import Path
+p=Path("app/src/main/AndroidManifest.xml")
+s=p.read_text()
+needle='<application '
+assert s.count(needle)==1
+s=s.replace(needle,'<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/><application ',1)
+p.write_text(s)
+main=Path("APP_MAIN")
+v=main.read_text()
+assert v.count("if (Build.VERSION.SDK_INT>=29) {")==1
+assert v.count("getExternalFilesDir(Environment.DIRECTORY_PICTURES)")==1
+assert v.count("class NativeDownload {")==1
+assert v.count("@Override protected void onActivityResult(")==1
+v=v.replace("class NativeDownload {",'private String pendingGalleryData, pendingGalleryName, pendingGalleryMime;\n           class NativeDownload {',1)
+v=v.replace("if (Build.VERSION.SDK_INT>=29) {",'''if (Build.VERSION.SDK_INT>=23 && Build.VERSION.SDK_INT<29 &&
+                    checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)!=android.content.pm.PackageManager.PERMISSION_GRANTED){
+                    synchronized(MainActivity.this){pendingGalleryData=data;pendingGalleryName=name;pendingGalleryMime=mime;}
+                    runOnUiThread(()->requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE},7391));
+                    return;
+                  }
+                  if (Build.VERSION.SDK_INT>=29) {''',1)
+v=v.replace("getExternalFilesDir(Environment.DIRECTORY_PICTURES)",
+            'new java.io.File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"GALLERY_FOLDER")',1)
+v=v.replace("@Override protected void onActivityResult(",'''@Override public void onRequestPermissionsResult(int code,String[] p,int[] grants){
+               super.onRequestPermissionsResult(code,p,grants);
+               if(code!=7391)return;
+               String data,name,mime;
+               synchronized(this){data=pendingGalleryData;name=pendingGalleryName;mime=pendingGalleryMime;
+                 pendingGalleryData=null;pendingGalleryName=null;pendingGalleryMime=null;}
+               if(data==null)return;
+               if(grants.length>0 && grants[0]==android.content.pm.PackageManager.PERMISSION_GRANTED){
+                 new Thread(()->new NativeDownload().save(data,name,mime),"FC-GallerySave").start();
+               }else msg("Gallery ထဲ ပုံသိမ်းရန် Storage ခွင့်ပြုချက် လိုအပ်ပါသည်။");
+             }
+             @Override protected void onActivityResult(''',1)
+main.write_text(v)
+print("Android 8/9 Gallery permission/public Pictures patch applied")
+FC_GALLERY_PATCH
+""".replace("APP_MAIN",appdir+"/MainActivity.java").replace("GALLERY_FOLDER",gallery_folder)
+script=script.replace("gradle --no-daemon :app:assembleDebug",gallery_patch+"\ngradle --no-daemon :app:assembleDebug",1)
+
 if os.environ.get("FC_REQUIRE_FCM")=="true":
     signing_vars=["FC_APK_RELEASE_KEYSTORE_B64","FC_APK_RELEASE_STOREPASS","FC_APK_RELEASE_ALIAS","FC_APK_RELEASE_KEYPASS"]
     if any(not os.environ.get(k) for k in signing_vars):
