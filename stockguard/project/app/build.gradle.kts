@@ -12,7 +12,7 @@ android {
         versionCode = 2
         versionName = "1.1.0"
     }
-    buildTypes {
+    buildFeatures { buildConfig = true }\n    buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
