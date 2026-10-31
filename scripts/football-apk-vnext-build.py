@@ -144,6 +144,10 @@ j.write_text(v)
 FCPATCH
 cat >> app/build.gradle <<'FCGRADLE'
 dependencies { implementation 'com.google.firebase:firebase-messaging:26.0.1' }
+android { defaultConfig {
+  resValue 'string','google_app_id', '\"__FC_APP_ID__\"'
+  resValue 'string','gcm_defaultSenderId', '\"__FC_SENDER_ID__\"'
+} }
 FCGRADLE
 mkdir -p APPDIR
 cat > APPDIR/FcmStarter.java <<'FCSTARTER'
@@ -152,7 +156,7 @@ FCSTARTER
 cat > APPDIR/PushMessageService.java <<'FCSERVICE'
 __SERVICE_CONTENT__
 FCSERVICE
-""".replace("APP_MAIN",appdir+"/MainActivity.java").replace("APPDIR",appdir).replace("__STARTER_CONTENT__",starter.strip()).replace("__SERVICE_CONTENT__",service.strip())
+""".replace("APP_MAIN",appdir+"/MainActivity.java").replace("APPDIR",appdir).replace("__STARTER_CONTENT__",starter.strip()).replace("__SERVICE_CONTENT__",service.strip()).replace("__FC_APP_ID__",appid).replace("__FC_SENDER_ID__",sender)
 script=script.replace("gradle --no-daemon :app:assembleDebug",patch+"\ngradle --no-daemon :app:assembleDebug",1)
 # Android 8/9: app-specific external files are often invisible in Gallery.
 # Ask for legacy scoped storage permission and save to public Pictures instead.
