@@ -3,7 +3,6 @@ package com.futurecode.stockguard
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
-import android.database.sqlite.SQLiteConstraintException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import org.json.JSONArray
@@ -32,15 +31,36 @@ data class DashboardStats(
 
 data class CheckoutResult(val ok: Boolean, val message: String, val saleId: Long = -1)
 
-class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.db", null, 1) {
+data class SaleSummary(
+    val id: Long,
+    val createdAt: Long,
+    val revenue: Long,
+    val cost: Long
+)
+
+data class StockMovement(
+    val id: Long,
+    val productId: Long,
+    val productName: String,
+    val delta: Int,
+    val note: String,
+    val createdAt: Long
+)
+
+class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.db", null, 2) {
     override fun onConfigure(db: SQLiteDatabase) {
         super.onConfigure(db)
         db.setForeignKeyConstraintsEnabled(true)
     }
 
     override fun onCreate(db: SQLiteDatabase) {
+        createCore(db)
+        createV2(db)
+    }
+
+    private fun createCore(db: SQLiteDatabase) {
         db.execSQL("""
-            CREATE TABLE products(
+            CREATE TABLE IF NOT EXISTS products(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
                 barcode TEXT UNIQUE,
@@ -52,7 +72,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
             )
         """.trimIndent())
         db.execSQL("""
-            CREATE TABLE sales(
+            CREATE TABLE IF NOT EXISTS sales(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 created_at INTEGER NOT NULL,
                 total_revenue INTEGER NOT NULL CHECK(total_revenue >= 0),
@@ -60,7 +80,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
             )
         """.trimIndent())
         db.execSQL("""
-            CREATE TABLE sale_items(
+            CREATE TABLE IF NOT EXISTS sale_items(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 sale_id INTEGER NOT NULL,
                 product_id INTEGER NOT NULL,
@@ -71,12 +91,29 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
                 FOREIGN KEY(sale_id) REFERENCES sales(id) ON DELETE CASCADE
             )
         """.trimIndent())
-        db.execSQL("CREATE INDEX idx_products_name ON products(name)")
-        db.execSQL("CREATE INDEX idx_sales_created ON sales(created_at)")
-        db.execSQL("CREATE INDEX idx_sale_items_sale ON sale_items(sale_id)")
+        db.execSQL("CREATE INDEX IF NOT EXISTS idx_products_name ON products(name)")
+        db.execSQL("CREATE INDEX IF NOT EXISTS idx_sales_created ON sales(created_at)")
+        db.execSQL("CREATE INDEX IF NOT EXISTS idx_sale_items_sale ON sale_items(sale_id)")
     }
 
-    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) = Unit
+    private fun createV2(db: SQLiteDatabase) {
+        db.execSQL("""
+            CREATE TABLE IF NOT EXISTS stock_movements(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                product_id INTEGER NOT NULL,
+                product_name TEXT NOT NULL,
+                delta INTEGER NOT NULL,
+                note TEXT NOT NULL DEFAULT '',
+                created_at INTEGER NOT NULL
+            )
+        """.trimIndent())
+        db.execSQL("CREATE INDEX IF NOT EXISTS idx_stock_movements_created ON stock_movements(created_at)")
+        db.execSQL("CREATE INDEX IF NOT EXISTS idx_stock_movements_product ON stock_movements(product_id)")
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        if (oldVersion < 2) createV2(db)
+    }
 
     private fun productFromCursor(c: Cursor): Product = Product(
         id = c.getLong(c.getColumnIndexOrThrow("id")),
@@ -95,6 +132,22 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
             SELECT id,name,barcode,category,buy_price,sell_price,stock,low_stock
             FROM products ORDER BY name COLLATE NOCASE
         """.trimIndent(), null).use { c ->
+            while (c.moveToNext()) result += productFromCursor(c)
+        }
+        return result
+    }
+
+    fun searchProducts(query: String): List<Product> {
+        val q = query.trim()
+        if (q.isEmpty()) return allProducts()
+        val like = "%$q%"
+        val result = mutableListOf<Product>()
+        readableDatabase.rawQuery("""
+            SELECT id,name,barcode,category,buy_price,sell_price,stock,low_stock
+            FROM products
+            WHERE name LIKE ? OR barcode LIKE ? OR category LIKE ?
+            ORDER BY name COLLATE NOCASE
+        """.trimIndent(), arrayOf(like, like, like)).use { c ->
             while (c.moveToNext()) result += productFromCursor(c)
         }
         return result
@@ -149,10 +202,19 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
     ): Long {
         require(name.isNotBlank())
         require(buyPrice >= 0 && sellPrice >= 0 && stock >= 0 && lowStock >= 0)
-        return writableDatabase.insertOrThrow(
-            "products", null,
-            valuesForProduct(name, barcode, category, buyPrice, sellPrice, stock, lowStock)
-        )
+        val db = writableDatabase
+        db.beginTransaction()
+        return try {
+            val id = db.insertOrThrow(
+                "products", null,
+                valuesForProduct(name, barcode, category, buyPrice, sellPrice, stock, lowStock)
+            )
+            if (stock > 0) insertMovement(db, id, name.trim(), stock, "Initial stock")
+            db.setTransactionSuccessful()
+            id
+        } finally {
+            db.endTransaction()
+        }
     }
 
     fun updateProduct(
@@ -161,15 +223,61 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
     ): Boolean {
         require(name.isNotBlank())
         require(buyPrice >= 0 && sellPrice >= 0 && stock >= 0 && lowStock >= 0)
-        return writableDatabase.update(
-            "products",
-            valuesForProduct(name, barcode, category, buyPrice, sellPrice, stock, lowStock),
-            "id=?", arrayOf(id.toString())
-        ) == 1
+        val old = productById(id) ?: return false
+        val db = writableDatabase
+        db.beginTransaction()
+        return try {
+            val changed = db.update(
+                "products",
+                valuesForProduct(name, barcode, category, buyPrice, sellPrice, stock, lowStock),
+                "id=?", arrayOf(id.toString())
+            ) == 1
+            val delta = stock - old.stock
+            if (changed && delta != 0) insertMovement(db, id, name.trim(), delta, "Product edit")
+            if (changed) db.setTransactionSuccessful()
+            changed
+        } finally {
+            db.endTransaction()
+        }
     }
 
     fun deleteProduct(id: Long): Boolean =
         writableDatabase.delete("products", "id=?", arrayOf(id.toString())) == 1
+
+    fun adjustStock(productId: Long, delta: Int, note: String): Boolean {
+        if (delta == 0) return false
+        val db = writableDatabase
+        db.beginTransaction()
+        return try {
+            val p = db.rawQuery("""
+                SELECT id,name,barcode,category,buy_price,sell_price,stock,low_stock
+                FROM products WHERE id=?
+            """.trimIndent(), arrayOf(productId.toString())).use { c ->
+                if (c.moveToFirst()) productFromCursor(c) else null
+            } ?: return false
+            if (p.stock + delta < 0) return false
+            val changed = db.execUpdate(
+                "UPDATE products SET stock=stock+? WHERE id=? AND stock+?>=0",
+                arrayOf(delta, productId, delta)
+            )
+            if (changed != 1) return false
+            insertMovement(db, p.id, p.name, delta, note.ifBlank { "Manual adjustment" })
+            db.setTransactionSuccessful()
+            true
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    private fun insertMovement(db: SQLiteDatabase, productId: Long, name: String, delta: Int, note: String) {
+        db.insertOrThrow("stock_movements", null, ContentValues().apply {
+            put("product_id", productId)
+            put("product_name", name)
+            put("delta", delta)
+            put("note", note)
+            put("created_at", System.currentTimeMillis())
+        })
+    }
 
     fun checkout(cart: Map<Long, Int>): CheckoutResult {
         if (cart.isEmpty()) return CheckoutResult(false, "Cart is empty")
@@ -179,7 +287,6 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
             val lines = mutableListOf<Pair<Product, Int>>()
             var revenue = 0L
             var cost = 0L
-
             for ((id, qty) in cart) {
                 if (qty <= 0) return CheckoutResult(false, "Invalid quantity")
                 val p = db.rawQuery("""
@@ -193,13 +300,11 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
                 revenue += p.sellPrice * qty
                 cost += p.buyPrice * qty
             }
-
             val saleId = db.insertOrThrow("sales", null, ContentValues().apply {
                 put("created_at", System.currentTimeMillis())
                 put("total_revenue", revenue)
                 put("total_cost", cost)
             })
-
             for ((p, qty) in lines) {
                 db.insertOrThrow("sale_items", null, ContentValues().apply {
                     put("sale_id", saleId)
@@ -214,8 +319,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
                     arrayOf(qty, p.id, qty)
                 )
                 if (changed != 1) return CheckoutResult(false, "${p.name}: stock changed; retry")
+                insertMovement(db, p.id, p.name, -qty, "Sale #$saleId")
             }
-
             db.setTransactionSuccessful()
             CheckoutResult(true, "Sale saved", saleId)
         } catch (e: Exception) {
@@ -261,6 +366,45 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
         return DashboardStats(revenue, cost, revenue - cost, count, low)
     }
 
+    fun inventoryCostValue(): Long =
+        readableDatabase.rawQuery(
+            "SELECT COALESCE(SUM(stock*buy_price),0) FROM products", null
+        ).use { c -> if (c.moveToFirst()) c.getLong(0) else 0L }
+
+    fun recentSales(limit: Int = 50): List<SaleSummary> {
+        val result = mutableListOf<SaleSummary>()
+        readableDatabase.rawQuery("""
+            SELECT id,created_at,total_revenue,total_cost FROM sales
+            ORDER BY created_at DESC LIMIT ?
+        """.trimIndent(), arrayOf(limit.coerceIn(1, 200).toString())).use { c ->
+            while (c.moveToNext()) result += SaleSummary(c.getLong(0), c.getLong(1), c.getLong(2), c.getLong(3))
+        }
+        return result
+    }
+
+    fun saleItemsText(saleId: Long): String {
+        val lines = mutableListOf<String>()
+        readableDatabase.rawQuery("""
+            SELECT product_name,qty,sell_price FROM sale_items WHERE sale_id=? ORDER BY id
+        """.trimIndent(), arrayOf(saleId.toString())).use { c ->
+            while (c.moveToNext()) lines += "${c.getString(0)} × ${c.getInt(1)} = ${c.getLong(2) * c.getInt(1)} ကျပ်"
+        }
+        return lines.joinToString("\n")
+    }
+
+    fun recentMovements(limit: Int = 80): List<StockMovement> {
+        val result = mutableListOf<StockMovement>()
+        readableDatabase.rawQuery("""
+            SELECT id,product_id,product_name,delta,note,created_at
+            FROM stock_movements ORDER BY created_at DESC LIMIT ?
+        """.trimIndent(), arrayOf(limit.coerceIn(1, 300).toString())).use { c ->
+            while (c.moveToNext()) result += StockMovement(
+                c.getLong(0), c.getLong(1), c.getString(2), c.getInt(3), c.getString(4), c.getLong(5)
+            )
+        }
+        return result
+    }
+
     fun salesCsv(): String {
         val out = StringBuilder()
         out.append("sale_id,created_at,product,qty,buy_price,sell_price,line_revenue,line_cost\n")
@@ -274,14 +418,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
                 val buy = c.getLong(4)
                 val sell = c.getLong(5)
                 val cols = listOf(
-                    c.getLong(0).toString(),
-                    c.getLong(1).toString(),
-                    c.getString(2),
-                    qty.toString(),
-                    buy.toString(),
-                    sell.toString(),
-                    (sell * qty).toString(),
-                    (buy * qty).toString()
+                    c.getLong(0).toString(), c.getLong(1).toString(), c.getString(2),
+                    qty.toString(), buy.toString(), sell.toString(),
+                    (sell * qty).toString(), (buy * qty).toString()
                 )
                 out.append(cols.joinToString(",") { csv(it) }).append('\n')
             }
@@ -289,117 +428,92 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
         return out.toString()
     }
 
-    private fun csv(value: String): String =
-        "\"" + value.replace("\"", "\"\"") + "\""
+    private fun csv(value: String): String = "\"" + value.replace("\"", "\"\"") + "\""
 
     fun backupJson(): String {
         val root = JSONObject()
         root.put("format", "future-code-stockguard")
-        root.put("version", 1)
+        root.put("version", 2)
 
-        val products = JSONArray()
-        readableDatabase.rawQuery("""
-            SELECT id,name,barcode,category,buy_price,sell_price,stock,low_stock FROM products ORDER BY id
-        """.trimIndent(), null).use { c ->
-            while (c.moveToNext()) {
-                products.put(JSONObject().apply {
-                    put("id", c.getLong(0))
-                    put("name", c.getString(1))
-                    put("barcode", c.getString(2) ?: "")
-                    put("category", c.getString(3) ?: "")
-                    put("buy_price", c.getLong(4))
-                    put("sell_price", c.getLong(5))
-                    put("stock", c.getInt(6))
-                    put("low_stock", c.getInt(7))
-                })
-            }
+        fun rows(sql: String, mapper: (Cursor) -> JSONObject): JSONArray {
+            val a = JSONArray()
+            readableDatabase.rawQuery(sql, null).use { c -> while (c.moveToNext()) a.put(mapper(c)) }
+            return a
         }
 
-        val sales = JSONArray()
-        readableDatabase.rawQuery("""
-            SELECT id,created_at,total_revenue,total_cost FROM sales ORDER BY id
-        """.trimIndent(), null).use { c ->
-            while (c.moveToNext()) {
-                sales.put(JSONObject().apply {
-                    put("id", c.getLong(0))
-                    put("created_at", c.getLong(1))
-                    put("total_revenue", c.getLong(2))
-                    put("total_cost", c.getLong(3))
-                })
-            }
-        }
-
-        val items = JSONArray()
-        readableDatabase.rawQuery("""
-            SELECT id,sale_id,product_id,product_name,qty,buy_price,sell_price FROM sale_items ORDER BY id
-        """.trimIndent(), null).use { c ->
-            while (c.moveToNext()) {
-                items.put(JSONObject().apply {
-                    put("id", c.getLong(0))
-                    put("sale_id", c.getLong(1))
-                    put("product_id", c.getLong(2))
-                    put("product_name", c.getString(3))
-                    put("qty", c.getInt(4))
-                    put("buy_price", c.getLong(5))
-                    put("sell_price", c.getLong(6))
-                })
-            }
-        }
-
-        root.put("products", products)
-        root.put("sales", sales)
-        root.put("sale_items", items)
+        root.put("products", rows(
+            "SELECT id,name,barcode,category,buy_price,sell_price,stock,low_stock FROM products ORDER BY id"
+        ) { c -> JSONObject().apply {
+            put("id", c.getLong(0)); put("name", c.getString(1)); put("barcode", c.getString(2) ?: "")
+            put("category", c.getString(3) ?: ""); put("buy_price", c.getLong(4)); put("sell_price", c.getLong(5))
+            put("stock", c.getInt(6)); put("low_stock", c.getInt(7))
+        }})
+        root.put("sales", rows(
+            "SELECT id,created_at,total_revenue,total_cost FROM sales ORDER BY id"
+        ) { c -> JSONObject().apply {
+            put("id", c.getLong(0)); put("created_at", c.getLong(1)); put("total_revenue", c.getLong(2)); put("total_cost", c.getLong(3))
+        }})
+        root.put("sale_items", rows(
+            "SELECT id,sale_id,product_id,product_name,qty,buy_price,sell_price FROM sale_items ORDER BY id"
+        ) { c -> JSONObject().apply {
+            put("id", c.getLong(0)); put("sale_id", c.getLong(1)); put("product_id", c.getLong(2)); put("product_name", c.getString(3))
+            put("qty", c.getInt(4)); put("buy_price", c.getLong(5)); put("sell_price", c.getLong(6))
+        }})
+        root.put("stock_movements", rows(
+            "SELECT id,product_id,product_name,delta,note,created_at FROM stock_movements ORDER BY id"
+        ) { c -> JSONObject().apply {
+            put("id", c.getLong(0)); put("product_id", c.getLong(1)); put("product_name", c.getString(2))
+            put("delta", c.getInt(3)); put("note", c.getString(4)); put("created_at", c.getLong(5))
+        }})
         return root.toString(2)
     }
 
     fun restoreJson(raw: String) {
         val root = JSONObject(raw)
         require(root.optString("format") == "future-code-stockguard") { "Not a StockGuard backup" }
-        require(root.optInt("version") == 1) { "Unsupported backup version" }
+        val version = root.optInt("version")
+        require(version == 1 || version == 2) { "Unsupported backup version" }
         val products = root.getJSONArray("products")
         val sales = root.getJSONArray("sales")
         val items = root.getJSONArray("sale_items")
+        val movements = if (version >= 2) root.optJSONArray("stock_movements") ?: JSONArray() else JSONArray()
 
         val db = writableDatabase
         db.beginTransaction()
         try {
+            db.delete("stock_movements", null, null)
             db.delete("sale_items", null, null)
             db.delete("sales", null, null)
             db.delete("products", null, null)
-
             for (i in 0 until products.length()) {
                 val o = products.getJSONObject(i)
                 db.insertOrThrow("products", null, ContentValues().apply {
-                    put("id", o.getLong("id"))
-                    put("name", o.getString("name"))
-                    val b = o.optString("barcode")
-                    if (b.isBlank()) putNull("barcode") else put("barcode", b)
-                    put("category", o.optString("category"))
-                    put("buy_price", o.getLong("buy_price"))
-                    put("sell_price", o.getLong("sell_price"))
-                    put("stock", o.getInt("stock"))
-                    put("low_stock", o.getInt("low_stock"))
+                    put("id", o.getLong("id")); put("name", o.getString("name"))
+                    val b = o.optString("barcode"); if (b.isBlank()) putNull("barcode") else put("barcode", b)
+                    put("category", o.optString("category")); put("buy_price", o.getLong("buy_price"))
+                    put("sell_price", o.getLong("sell_price")); put("stock", o.getInt("stock")); put("low_stock", o.getInt("low_stock"))
                 })
             }
             for (i in 0 until sales.length()) {
                 val o = sales.getJSONObject(i)
                 db.insertOrThrow("sales", null, ContentValues().apply {
-                    put("id", o.getLong("id"))
-                    put("created_at", o.getLong("created_at"))
-                    put("total_revenue", o.getLong("total_revenue"))
-                    put("total_cost", o.getLong("total_cost"))
+                    put("id", o.getLong("id")); put("created_at", o.getLong("created_at"))
+                    put("total_revenue", o.getLong("total_revenue")); put("total_cost", o.getLong("total_cost"))
                 })
             }
             for (i in 0 until items.length()) {
                 val o = items.getJSONObject(i)
                 db.insertOrThrow("sale_items", null, ContentValues().apply {
-                    put("id", o.getLong("id"))
-                    put("sale_id", o.getLong("sale_id"))
-                    put("product_id", o.getLong("product_id"))
-                    put("product_name", o.getString("product_name"))
-                    put("qty", o.getInt("qty"))
-                    put("buy_price", o.getLong("buy_price"))
-                    put("sell_price", o.getLong("sell_price"))
+                    put("id", o.getLong("id")); put("sale_id", o.getLong("sale_id")); put("product_id", o.getLong("product_id"))
+                    put("product_name", o.getString("product_name")); put("qty", o.getInt("qty"))
+                    put("buy_price", o.getLong("buy_price")); put("sell_price", o.getLong("sell_price"))
+                })
+            }
+            for (i in 0 until movements.length()) {
+                val o = movements.getJSONObject(i)
+                db.insertOrThrow("stock_movements", null, ContentValues().apply {
+                    put("id", o.getLong("id")); put("product_id", o.getLong("product_id")); put("product_name", o.getString("product_name"))
+                    put("delta", o.getInt("delta")); put("note", o.optString("note")); put("created_at", o.getLong("created_at"))
                 })
             }
             db.setTransactionSuccessful()
