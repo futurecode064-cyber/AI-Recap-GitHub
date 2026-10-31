@@ -1,0 +1,61 @@
+name: PushDesk Android Build
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pushdesk/project/**'
+      - '.github/workflows/pushdesk-build.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Prepare Android SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+      - name: Build installable test APK
+        working-directory: pushdesk/project
+        run: gradle --no-daemon --stacktrace :admin:assembleDebug
+      - name: Verify package and hash
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK="pushdesk/project/admin/build/outputs/apk/debug/admin-debug.apk"
+          test -s "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | grep -E '^(package:|sdkVersion:|targetSdkVersion:|application-label:)'
+          mkdir -p pushdesk/releases
+          cp "$APK" pushdesk/releases/FutureCode-PushDesk-v1.0.0-test.apk
+          sha256sum pushdesk/releases/FutureCode-PushDesk-v1.0.0-test.apk > pushdesk/FutureCode-PushDesk-v1.0.0-test-SHA256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FutureCode-PushDesk-v1.0.0-test
+          path: |
+            pushdesk/releases/FutureCode-PushDesk-v1.0.0-test.apk
+            pushdesk/FutureCode-PushDesk-v1.0.0-test-SHA256.txt
+          if-no-files-found: error
+      - name: Publish test APK
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add pushdesk/releases/FutureCode-PushDesk-v1.0.0-test.apk pushdesk/FutureCode-PushDesk-v1.0.0-test-SHA256.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish PushDesk v1.0.0 test APK [skip ci]"
+            git push origin HEAD:main
+          fi
