@@ -1,0 +1,153 @@
+name: FC Four Football APK vNext - preview only
+on:
+  push:
+    branches: ['feature/football-apk-vnext-20261029']
+    paths:
+      - 'scripts/football-apk-vnext-build.py'
+      - '.github/workflows/football-apk-vnext-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    name: Fresh Install APK - ${{ matrix.brand }}
+    strategy:
+      fail-fast: false
+      matrix:
+        brand: [ykz, bw, ko_thet, kmm]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      FC_FIREBASE_PROJECT_ID: ${{ secrets.FC_FIREBASE_PROJECT_ID }}
+      FC_GOOGLE_SERVICES_JSON: ${{ secrets.FC_GOOGLE_SERVICES_JSON }}
+      FC_FIREBASE_SENDER_ID: ${{ secrets.FC_FIREBASE_SENDER_ID }}
+      FC_REQUIRE_FCM: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
+      FC_APK_RELEASE_KEYSTORE_B64: ${{ secrets.FC_APK_RELEASE_KEYSTORE_B64 }}
+      FC_APK_RELEASE_STOREPASS: ${{ secrets.FC_APK_RELEASE_STOREPASS }}
+      FC_APK_RELEASE_ALIAS: ${{ secrets.FC_APK_RELEASE_ALIAS }}
+      FC_APK_RELEASE_KEYPASS: ${{ secrets.FC_APK_RELEASE_KEYPASS }}
+      FC_FIREBASE_APP_ID_YKZ: ${{ secrets.FC_FIREBASE_APP_ID_YKZ }}
+      FC_FIREBASE_API_KEY_YKZ: ${{ secrets.FC_FIREBASE_API_KEY_YKZ }}
+      FC_FIREBASE_APP_ID_BW: ${{ secrets.FC_FIREBASE_APP_ID_BW }}
+      FC_FIREBASE_API_KEY_BW: ${{ secrets.FC_FIREBASE_API_KEY_BW }}
+      FC_FIREBASE_APP_ID_KO_THET: ${{ secrets.FC_FIREBASE_APP_ID_KO_THET }}
+      FC_FIREBASE_API_KEY_KO_THET: ${{ secrets.FC_FIREBASE_API_KEY_KO_THET }}
+      FC_FIREBASE_APP_ID_KMM: ${{ secrets.FC_FIREBASE_APP_ID_KMM }}
+      FC_FIREBASE_API_KEY_KMM: ${{ secrets.FC_FIREBASE_API_KEY_KMM }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require the six-app Firebase client JSON from protected GitHub secret
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+          raw=os.environ.get("FC_GOOGLE_SERVICES_JSON","")
+          if not raw:
+              raise SystemExit("FC_GOOGLE_SERVICES_JSON missing; FCM preview build blocked")
+          cfg=json.loads(raw)
+          info=cfg.get("project_info",{})
+          if info.get("project_id")!="future-code-football" or str(info.get("project_number",""))!="76526416523":
+              raise SystemExit("Wrong Firebase project/Android sender")
+          wanted={"com.futurecode.ykzsoccertips","com.futurecode.bwsportjournal",
+                  "com.futurecode.kothetfamilyjournal","com.futurecode.kmmsporthub",
+                  "mm.futurecode.sportsjournal","mm.futurecode.betcityfamily"}
+          seen=set()
+          for client in cfg.get("client",[]):
+              a=client.get("client_info",{})
+              p=a.get("android_client_info",{}).get("package_name")
+              aid=a.get("mobilesdk_app_id","")
+              k=client.get("api_key",[])
+              if p in seen or not aid.startswith("1:76526416523:android:") or not k or not k[0].get("current_key"):
+                  raise SystemExit("Missing or invalid Firebase client: "+str(p))
+              seen.add(p)
+          if seen!=wanted:
+              raise SystemExit("Expected exact six Android brand Firebase clients")
+          print("PASS: verified six Firebase Android clients from GitHub Actions secret; key values redacted")
+          PY
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - uses: gradle/actions/setup-gradle@v4
+        with: {gradle-version: '8.9'}
+      - name: Android SDK
+        run: |
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Reuse each original brand build and add FCM-capable variant
+        run: |
+          python3 scripts/football-apk-vnext-build.py "${{ matrix.brand }}"
+          bash "/tmp/football_vnext_${{ matrix.brand }}.sh"
+      - name: Verify generated APK and manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "${{ matrix.brand }}" in
+            ykz) APK='ykz-apk-output/YKZ-Soccer-Tips.apk'; PKG='com.futurecode.ykzsoccertips'; VC=4 ;;
+            bw) APK='bw-apk-output/BW-Sport-Journal.apk'; PKG='com.futurecode.bwsportjournal'; VC=3 ;;
+            ko_thet) APK='ko-thet-apk-output/Ko-Thet-Family-Journal.apk'; PKG='com.futurecode.kothetfamilyjournal'; VC=4 ;;
+            kmm) APK='kmm-apk-output/KMM-Sport-Hub.apk'; PKG='com.futurecode.kmmsporthub'; VC=3 ;;
+          esac
+          test -s "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            case "${{ matrix.brand }}" in
+              ykz) EXPECTED_SIGNER="98324b19c40426e41162282a5c06255cd57666fbdfff1d2803729c17a2b2c1b3" ;;
+              bw) EXPECTED_SIGNER="63888a7d0d7565ed1046c01a5637f3071ba29a56d59d1cf75ff0bd4a32e7e660" ;;
+              ko_thet) EXPECTED_SIGNER="4ecafa18303da822d13c6cd21722a9116d0e3f26bfffdc8eb1bc80d88efc84c9" ;;
+              kmm) EXPECTED_SIGNER="38403cbba83ccb921f30107f212ac63793c5e7c3311706be96d391e8c18e2659" ;;
+            esac
+            ACTUAL_SIGNER="$("$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --print-certs "$APK" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' | head -1)"
+            if [[ "${ACTUAL_SIGNER,,}" != "$EXPECTED_SIGNER" ]]; then
+              echo "::error::Original APK signer differs for ${{ matrix.brand }}. No in-place update permitted."
+              exit 1
+            fi
+          fi
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | grep -F "name='$PKG'"
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | grep -F "versionCode='$VC'"
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump xmltree "$APK" AndroidManifest.xml | grep -F 'PushMessageService'
+          unzip -l "$APK" | grep -F classes.dex
+          # Verify Firebase resource identities whenever the private client JSON was supplied.
+          if [[ -n "$FC_GOOGLE_SERVICES_JSON" ]]; then
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump resources "$APK" | grep -F 'google_app_id' >/dev/null
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump resources "$APK" | grep -F 'gcm_defaultSenderId' >/dev/null
+            echo "FCM client resources embedded for the registered Android package" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Firebase JSON Actions secret unavailable: CI preview is NOT push-ready" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          sha256sum "$APK" | tee "$APK.sha256"
+          printf '%s\n' "$PKG versionCode $VC : staged APK signatures have not been proven equal to original APK signers" >> "$GITHUB_STEP_SUMMARY"
+          APP_ID_KEY="FC_FIREBASE_APP_ID_${{ matrix.brand }}"
+          API_KEY="FC_FIREBASE_API_KEY_${{ matrix.brand }}"
+          APP_ID_KEY="${APP_ID_KEY^^}"
+          API_KEY="${API_KEY^^}"
+          if [[ -n "${!APP_ID_KEY:-}" && -n "${!API_KEY:-}" && -n "$FC_FIREBASE_PROJECT_ID" && -n "$FC_FIREBASE_SENDER_ID" ]]; then
+            echo 'Firebase client config available at build-time (live push still untested)' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Firebase client config unavailable: APK FCM code is compiled but push is NOT active' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: FC-vNext-${{ matrix.brand }}-FRESH-INSTALL-ONLY
+          path: |
+            *-apk-output/*.apk
+            *-apk-output/*.sha256
+          retention-days: 30
+      - name: Publish separate fresh-install-only preview release (never clobber old URLs)
+        if: success() && github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          case "${{ matrix.brand }}" in
+            ykz) APK='ykz-apk-output/YKZ-Soccer-Tips.apk'; TAG='fc-ykz-v1.2.1-preview' ;;
+            bw) APK='bw-apk-output/BW-Sport-Journal.apk'; TAG='fc-bw-v1.0.2-preview' ;;
+            ko_thet) APK='ko-thet-apk-output/Ko-Thet-Family-Journal.apk'; TAG='fc-ko-thet-v1.0.3-preview' ;;
+            kmm) APK='kmm-apk-output/KMM-Sport-Hub.apk'; TAG='fc-kmm-v1.0.2-preview' ;;
+          esac
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Preview release exists; refusing to overwrite $TAG"
+            exit 1
+          fi
+          gh release create "$TAG" "$APK" "$APK.sha256" --target "$GITHUB_SHA" --prerelease \
+            --title "FC ${{ matrix.brand }} FCM-capable vNext (fresh install preview only)" \
+            --notes 'PREVIEW ONLY: original APK signing keys are not recovered for this brand. This CI-debug-signed APK cannot update the currently installed app in place. Existing release URLs remain unchanged. The FCM receiver code is included, but live notifications need configured Firebase client/server and device tests. Do not distribute as an in-place update.'
