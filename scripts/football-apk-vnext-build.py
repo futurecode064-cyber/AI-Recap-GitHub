@@ -49,6 +49,27 @@ project=os.environ.get("FC_FIREBASE_PROJECT_ID","")
 appid=os.environ.get("FC_FIREBASE_APP_ID_"+brand.upper(),"")
 apikey=os.environ.get("FC_FIREBASE_API_KEY_"+brand.upper(),"")
 sender=os.environ.get("FC_FIREBASE_SENDER_ID","")
+# A single Firebase google-services.json contains all six registered Android clients.
+# Read the JSON from a protected GitHub Actions secret; do not store owner keys in Git.
+google_services=os.environ.get("FC_GOOGLE_SERVICES_JSON","").strip()
+if google_services:
+    document=json.loads(google_services)
+    info=document.get("project_info",{})
+    matches=[client for client in document.get("client",[])
+             if client.get("client_info",{}).get("android_client_info",{}).get("package_name")==package]
+    if len(matches)!=1:
+        raise SystemExit("BLOCKED: Firebase JSON must contain exactly one Android client for "+package)
+    client=matches[0]
+    keyring=client.get("api_key",[])
+    if not keyring or not keyring[0].get("current_key"):
+        raise SystemExit("BLOCKED: Firebase Android API key absent from private build input")
+    resolved=(info.get("project_id",""), client["client_info"].get("mobilesdk_app_id",""),
+              keyring[0]["current_key"],str(info.get("project_number","")))
+    if any(not value for value in resolved):
+        raise SystemExit("BLOCKED: Firebase Android client config incomplete")
+    if project and project!=resolved[0] or appid and appid!=resolved[1] or sender and sender!=resolved[3]:
+        raise SystemExit("BLOCKED: Firebase client config conflicts with previously configured values")
+    project,appid,apikey,sender=resolved
 ready=bool(project and appid and apikey and sender)
 if ready and (not appid.startswith("1:"+sender+":android:") or not re.match(r"^1:[0-9]+:android:[a-fA-F0-9]+$",appid)):
     raise SystemExit("FCM app ID must match this brand's registered Android app and Sender ID")
