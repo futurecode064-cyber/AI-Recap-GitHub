@@ -1,3 +1,10 @@
+
+## Permanent kickoff time format — owner correction 2026-10-31
+- Every public website, sub-brand, odds table, match preview/result, frame/PNG and downloaded image MUST show Myanmar-local match times in **12-hour English AM/PM**, e.g. `19:00 → 7:00 PM`, `01:30 → 1:30 AM`, `00:00 → 12:00 AM`, `12:00 → 12:00 PM`. Never show raw `HH:mm` in public-facing time cells.
+- Keep source and machine fields `sourceKickoff`, `kickoff` and `kickoffUtc` canonical and accurate (24h/ISO); **format only at display/export boundaries** using the shared `window.FutureCodeTime.clock(match)` helper from `football-data-client.js`. Do not modify match hours to fit formatting or infer unsupported kickoff times.
+- For after-midnight matches, retain their **actual Asia/Yangon calendar date** in `kickoffCalendarDate` / `kickoffDate`, separate from `nightEditorialDate` and report date. `FutureCodeTime.full(match)` is for exact-date tooltip/metadata; visible narrow time cells show clock only. Do not roll 1:30 AM back to the previous calendar day.
+- Maintain/regression-test `football-daily/tests/time-format-12h.test.cjs` and `football-daily/tests/odds-clock-all-brands.test.cjs` on every future daily publication. Do not revert versioned HTML to legacy HH:mm format.
+
 > **ACTIVE OWNER UPDATE 2026-10-28 — V7:** Read `football-daily/docs/DAILY_PUBLICATION_V7.md` (relative to repository root) first. Current owner says preserve today's main website system. PDF + “ဒီနေ့အတွက် လုပ်ပါ” authorizes complete morning publishing. The V7 contract overrides historical draft-only, manuscript-required, D1/static and paragraph-count conflicts. Run `daily_package_guard.py` on candidate resources and verify every live section and real downloads before COMPLETE. Master prompt: `football-daily/docs/DAILY_PDF_MASTER_PROMPT_V7.txt`.
 
 # Future Code Football Daily — ACTIVE OWNER CONTRACT (2026-10-28)
