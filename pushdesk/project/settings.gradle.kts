@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "FutureCodePushDesk"
-include(":admin", ":receiver")
+include(":admin")
