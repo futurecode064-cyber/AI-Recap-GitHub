@@ -1,3 +1,10 @@
+
+## Permanent kickoff time format — owner correction 2026-10-31
+- Every public website, sub-brand, odds table, match preview/result, frame/PNG and downloaded image MUST show Myanmar-local match times in **12-hour English AM/PM**, e.g. `19:00 → 7:00 PM`, `01:30 → 1:30 AM`, `00:00 → 12:00 AM`, `12:00 → 12:00 PM`. Never show raw `HH:mm` in public-facing time cells.
+- Keep source and machine fields `sourceKickoff`, `kickoff` and `kickoffUtc` canonical and accurate (24h/ISO); **format only at display/export boundaries** using the shared `window.FutureCodeTime.clock(match)` helper from `football-data-client.js`. Do not modify match hours to fit formatting or infer unsupported kickoff times.
+- For after-midnight matches, retain their **actual Asia/Yangon calendar date** in `kickoffCalendarDate` / `kickoffDate`, separate from `nightEditorialDate` and report date. `FutureCodeTime.full(match)` is for exact-date tooltip/metadata; visible narrow time cells show clock only. Do not roll 1:30 AM back to the previous calendar day.
+- Maintain/regression-test `football-daily/tests/time-format-12h.test.cjs` and `football-daily/tests/odds-clock-all-brands.test.cjs` on every future daily publication. Do not revert versioned HTML to legacy HH:mm format.
+
 > **ACTIVE PUBLICATION ROUTE — reconciled 2026-10-28:** Follow the completed Work `https://chatgpt.com/c/6ae15dc0-6558-83ea-8348-d52bc9dfd358`: prepare/validate daily resources, publish targeted files to `futurecode064-cyber/AI-Recap-GitHub:football-daily-render` under `football-daily/`, then verify Cloudflare live data. This static HTML/CSS/JS site needs no application compilation (`npm build`); Git-integrated Cloudflare deployment may still occur after commits. Do not describe this as deployment-free or D1-only. The earlier D1-only clarification was an assistant interpretation error, not an owner instruction. Preserve the existing runtime and do not activate D1 or switch architecture as part of daily content.
 
 # Daily publication contract V7 — 2026-10-28
