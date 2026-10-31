@@ -290,7 +290,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, "stockguard.d
     }
 
     private fun csv(value: String): String =
-        "\\"" + value.replace("\\"", "\\"\\\"") + "\\""
+        "\"" + value.replace("\"", "\"\"") + "\""
 
     fun backupJson(): String {
         val root = JSONObject()
