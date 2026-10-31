@@ -97,7 +97,7 @@
  function mm(m){
   const o=m.myanmarOdds||{},h=o.handicap||{},g=o.goals||{};
   return [
-   valid(o.bodyOdds)?o.bodyOdds:[valid(h.line)?"အကျော "+h.line:"",valid(h.home)?m.home+" "+h.home:"",valid(h.away)?m.away+" "+h.away:""].filter(Boolean).join(" · ")||"—",
+   valid(o.bodyOdds)?o.bodyOdds:[valid(h.line)?"အကျော "+h.line:"",valid(h.home)?(m.homeDisplay||m.home)+" "+h.home:"",valid(h.away)?(m.awayDisplay||m.away)+" "+h.away:""].filter(Boolean).join(" · ")||"—",
    valid(o.goalTotalOdds)?o.goalTotalOdds:[valid(g.line)?"ဂိုးပေါင်း "+g.line:"",valid(g.over)?"Over "+g.over:"",valid(g.under)?"Under "+g.under:""].filter(Boolean).join(" · ")||"—"
   ];
  }
@@ -113,14 +113,14 @@
   const faceY=story?241:217,faceH=story?455:feed?345:295;
   round(ctx,58,faceY,964,faceH,22,"#2b443e",C.line);
   const size=story?215:feed?175:145,y=faceY+(story?54:feed?48:38);
-  crest(ctx,imgs[0],m.home,285,y,size);crest(ctx,imgs[1],m.away,795,y,size);
+  crest(ctx,imgs[0],m.homeDisplay||m.home,285,y,size);crest(ctx,imgs[1],m.awayDisplay||m.away,795,y,size);
   const vsY=y+size/2;round(ctx,481,vsY-50,118,100,48,"#16292c",C.gold);
   ctx.save();ctx.font=font(43,true);ctx.textBaseline="middle";ctx.fillStyle=C.gold;ctx.textAlign="center";ctx.fillText("VS",540,vsY);ctx.restore();
-  teamName(ctx,m.home,285,y+size+16);teamName(ctx,m.away,795,y+size+16);
+  teamName(ctx,m.homeDisplay||m.home,285,y+size+16);teamName(ctx,m.awayDisplay||m.away,795,y+size+16);
   const oddsY=faceY+faceH+24;
   round(ctx,58,oddsY,964,114,14,"#31443b",C.line);
   const oddsW=964/3;
-  [[m.home+" နိုင် (1)",m.homeOdds],["သရေ (X)",m.drawOdds],[m.away+" နိုင် (2)",m.awayOdds]].forEach(([label,val],i)=>{
+  [[(m.homeDisplay||m.home)+" နိုင် (1)",m.homeOdds],["သရေ (X)",m.drawOdds],[(m.awayDisplay||m.away)+" နိုင် (2)",m.awayOdds]].forEach(([label,val],i)=>{
    const cx=58+oddsW*(i+.5);
    text(ctx,label,cx,oddsY+12,18,C.muted,false,"center");
    text(ctx,valid(val)?val:"—",cx,oddsY+54,31,C.white,true,"center");

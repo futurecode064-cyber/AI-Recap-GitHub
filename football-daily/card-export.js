@@ -107,7 +107,7 @@
   const textKit=transparent?{...k,text}:k;
   await fonts();
   const W=1200,M=24,fullWidth=W-2*M;
-  const home=String(match.home||""),away=String(match.away||"");
+  const home=String(match.homeDisplay||match.home||""),away=String(match.awayDisplay||match.away||"");
   // Special Choice exports contain ONLY specialAnalysisParagraphs; no duplicate normal preview.
   const specialOnly=opts.special===true;
   const preview=stripScorePrediction(match.dailyPreviewText||"ပွဲကြိုသုံးသပ်ချက်များ မရသေးပါ");

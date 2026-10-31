@@ -64,3 +64,12 @@ test("Old mismatched team spellings do not survive in current previews or Specia
  }
  assert.equal(today.matches.filter(m=>m.specialChoice).length,5);
 });
+
+test("All seven preview and social PNG renderers prioritize owner PDF Myanmar display names",()=>{
+ const card=fs.readFileSync(path.join(root,"card-export.js"),"utf8");
+ const social=fs.readFileSync(path.join(root,"social-export.js"),"utf8");
+ assert.match(card,/match\.homeDisplay\|\|match\.home/);
+ assert.match(card,/match\.awayDisplay\|\|match\.away/);
+ assert.match(social,/teamName\(ctx,m\.homeDisplay\|\|m\.home/);
+ assert.match(social,/teamName\(ctx,m\.awayDisplay\|\|m\.away/);
+});
