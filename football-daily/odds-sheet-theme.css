@@ -335,3 +335,33 @@ body .odds-content .odds-league-heading span:last-child{
  font-weight:700!important;letter-spacing:0!important;
  font-variation-settings:"wdth" 100!important;word-break:keep-all!important
 }
+
+/* 2026-10-31 — Shared fixed-layout odds PNG modes for every sub-brand. */
+body .odds-league-filter .brand-odds-modes{
+ margin-top:16px;padding-top:15px;border-top:1px solid #637c79;
+}
+body .odds-league-filter .brand-odds-modes-heading{
+ margin:0 0 5px;color:#ffdaa3;font:800 16px/1.65 "Noto Sans Myanmar",sans-serif;
+}
+body .odds-league-filter .brand-odds-modes-description{
+ margin:0 0 12px;color:#dfebe8;font:500 12px/1.8 "Noto Sans Myanmar",sans-serif;
+}
+body .odds-league-filter .brand-odds-mode-controls{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;
+}
+body .odds-league-filter .brand-odds-mode-button{
+ width:100%;min-width:0;min-height:54px;border:1px solid #799892;
+ border-radius:10px;background:#28454a;color:#ffffff;cursor:pointer;
+ font:800 13px/1.55 "Noto Sans Myanmar",sans-serif;padding:9px 7px;
+}
+body .odds-league-filter .brand-odds-mode-button.is-selected,
+body .odds-league-filter .brand-odds-mode-button[aria-pressed="true"]{
+ color:#172725;background:#ffdfaa;border-color:#fff2d6;
+}
+body .odds-league-filter .brand-odds-mode-button:focus-visible{
+ outline:3px solid #ffdfaa;outline-offset:2px;
+}
+@media(max-width:600px){
+ body .odds-league-filter .brand-odds-mode-controls{gap:5px}
+ body .odds-league-filter .brand-odds-mode-button{font-size:11px;padding:9px 4px;min-height:62px}
+}
