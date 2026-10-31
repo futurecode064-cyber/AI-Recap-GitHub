@@ -105,6 +105,11 @@ public final class FcmStarter {
   }
   if(APP_ID.isEmpty()||API_KEY.isEmpty()||PROJECT.isEmpty()||SENDER.isEmpty())return;
   try{
+   // Create the channel before any background FCM notification arrives.
+   if(Build.VERSION.SDK_INT>=26){
+    android.app.NotificationManager nm=(android.app.NotificationManager)a.getSystemService(Activity.NOTIFICATION_SERVICE);
+    if(nm!=null)nm.createNotificationChannel(new android.app.NotificationChannel("fc_live","Football Updates",android.app.NotificationManager.IMPORTANCE_DEFAULT));
+   }
    if(FirebaseApp.getApps(a).isEmpty()){
     FirebaseOptions opts=new FirebaseOptions.Builder().setApplicationId(APP_ID).setApiKey(API_KEY)
       .setProjectId(PROJECT).setGcmSenderId(SENDER).build();
