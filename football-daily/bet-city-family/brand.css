@@ -124,10 +124,10 @@ html.bcf-theme body .odds-content .odds-group h2.odds-league-heading{
 html.bcf-theme body .odds-content .odds-table th{
  background:#0b42a6!important;color:#fff5dd!important;border-color:#7296ce!important
 }
-html.bcf-theme body .odds-content .odds-table th,
-html.bcf-theme body .odds-content .odds-table td{line-height:1.45!important}
-html.bcf-theme body .odds-content .odds-table td{padding:7px 5px!important}
-html.bcf-theme body .odds-content .odds-table td.team-pair{padding:7px 4px!important}
+html.bcf-theme body main.odds-content .odds-table th,
+html.bcf-theme body main.odds-content .odds-table td{line-height:1.45!important}
+html.bcf-theme body main.odds-content .odds-table td{padding:7px 5px!important}
+html.bcf-theme body main.odds-content .odds-table td.team-pair{padding:7px 4px!important}
 html.bcf-theme body .odds-content .odds-matchup .mini-vs{color:#0a48a7!important}
 html.bcf-theme .odds-nav a.active{background:#1054cd!important;color:#fff!important;border-color:#ffd672!important}
 html.bcf-theme .odds-export-actions button,
@@ -149,91 +149,10 @@ html.bcf-theme body main.odds-content #oddsList .bmo-market h3{
 }
 html.bcf-theme .bcf-download-status{margin:7px 0;color:#ffdc81;font-size:12px}
 html.bcf-theme #bcfDownloadStatus:empty{display:none}
-/* Tight image output.  Generic exporter defaults to 31px team text, 29px
-   data cells and 47px logos: those cause oversize gaps and clipping in BCF.
-   Apply to off-screen cloned capture only; source on-screen table is unchanged. */
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export{
- --sheet-brand:#1053c8!important;--sheet-deep:#061c54!important;
- --export-tint:#dce9fc!important;
- padding:4px!important;box-sizing:border-box!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .fc-odds-date-heading{
- background:#0b3e99!important;border:1px solid #f6ca6b!important;
- font:800 21px/1.3 "Noto Sans Myanmar",sans-serif!important;
- margin:0 0 5px!important;padding:6px 0!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-group{
- margin:0 0 7px!important;border:1px solid #4276be!important;border-radius:7px!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-league-header{
- padding:5px 10px!important;margin:0!important;
- background:linear-gradient(105deg,#051a50,#0a51c4)!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-league-heading{
- font:800 19px/1.35 "Noto Sans Myanmar",sans-serif!important;gap:7px!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-league-heading .league-crest,
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-league-heading .league-mark{
- width:34px!important;height:34px!important;padding:3px!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table{
- display:table!important;table-layout:fixed!important;border-collapse:collapse!important;
- width:100%!important;min-width:0!important;font-size:16px!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table thead{
- display:table-header-group!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table tbody{
- display:table-row-group!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table tr{
- display:table-row!important;margin:0!important;padding:0!important;height:auto!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table th,
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table thead tr th{
- display:table-cell!important;
- font:800 15px/1.35 "Noto Sans Myanmar",sans-serif!important;
- padding:6px 4px!important;white-space:normal!important;
- color:#fff!important;background:#0a3c96!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table tbody td{
- display:table-cell!important;height:auto!important;min-height:0!important;
- padding:5px 4px!important;font:750 18px/1.25 "Noto Sans Myanmar",sans-serif!important;
- vertical-align:middle!important;overflow:visible!important;box-sizing:border-box!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table tbody td.time,
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table tbody td.upper{
- font:800 17px/1.25 "Noto Sans Myanmar",sans-serif!important;padding:5px 2px!important;
- white-space:normal!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table tbody td.price,
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-table tbody td.prediction{
- font:900 20px/1.25 "Barlow Condensed","Noto Sans Myanmar",sans-serif!important;
- padding:5px 2px!important;white-space:nowrap!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-matchup{
- display:grid!important;grid-template-columns:minmax(0,1fr) 33px 18px 33px minmax(0,1fr)!important;
- min-width:0!important;width:100%!important;column-gap:3px!important;
- align-items:center!important;gap:3px!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-matchup .club-label{
- font:800 17px/1.3 "Noto Sans Myanmar",sans-serif!important;
- white-space:normal!important;overflow:visible!important;overflow-wrap:anywhere!important;
- word-break:normal!important;min-width:0!important;max-width:100%!important;text-overflow:clip!important;
- text-align:center!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-matchup .team-badge{
- width:32px!important;height:32px!important;flex:0 0 32px!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-matchup .mini-vs{
- font:900 16px/1 "Barlow Condensed",sans-serif!important;color:#0a459f!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-group .odds-table th.main-league-name{
- font-size:19px!important;padding:6px 5px!important
-}
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-group th.main-league-logo .league-crest{
- width:37px!important;height:37px!important;padding:3px!important
-}
+/* Export parity: Bet City uses the SAME uncompressed, full-size PNG table
+   layout as BW Sport (shared main-odds-dom-frame.js).  BCF's own blue/gold
+   palette and original top/bottom banners are preserved separately.
+   Do not add brand-specific 17px team fonts or 32px logos here. */
 @media(max-width:700px){
  html.bcf-theme .hero-main{min-height:325px;padding:24px 0 22px}
  html.bcf-theme .hero::before{background-position:55% center}
@@ -255,8 +174,4 @@ html.bcf-theme .match-hero-art{
 html.bcf-theme .odds-hero{
  background:linear-gradient(90deg,rgba(0,24,96,.75),rgba(4,52,149,.37)),url("./assets/football-electric-blue-v3.webp") center 56%/cover no-repeat!important
 }
-html.bcf-theme body .fc-odds-direct-export.brand-odds-export .odds-league-heading span:last-child{
- font:700 22px/1.8 "Noto Sans Myanmar",sans-serif!important;
- font-variation-settings:"wdth" 100!important;white-space:nowrap!important;
- letter-spacing:0!important;overflow:visible!important
-}
+/* League heading typography now follows BW Sport's shared exporter. */
