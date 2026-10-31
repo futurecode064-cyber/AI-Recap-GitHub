@@ -69,7 +69,12 @@
   // Mirror pages use only their own palette; they do not expose frame selection.
   const oddsPage=Boolean(document?.documentElement?.dataset)&&
     typeof location!=="undefined"&&/\/odds(?:\.html)?\/?$/.test(location.pathname);
-  if(oddsPage&&window.FutureCodeOddsDomFrame?.draw&&!options.singleImage){
+  // ALL odds-page modes (one image, two images, three images, chosen leagues)
+  // use the identical native table screenshot renderer as PNG 1/2.
+  // Do not fall back to an alternate Canvas sheet with different column widths.
+  if(oddsPage){
+   if(!window.FutureCodeOddsDomFrame?.draw)
+    throw Error("Website ဇယားပုံစံ PNG Renderer မရရှိပါ။ Page ကို Refresh လုပ်ပါ။");
    const config=window.FutureCodeBrandConfig||{};
    const colour=config.colors?.primary||config.colors?.gold||"#c41017";
    const canvas=await window.FutureCodeOddsDomFrame.draw(data.matches,{
