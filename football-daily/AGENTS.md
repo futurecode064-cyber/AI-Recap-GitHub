@@ -1,4 +1,13 @@
 
+## Owner PDF spelling and matching — permanent requirement (2026-10-31)
+- For all daily football sections, source team names (including abbreviations) from the OWNER-SUPPLIED PDF, not English/ESPN team-name normalization. Preserve English canonical identifiers only for internal match joins, stats and external source URLs.
+- Old W49ArtHouse-2009 / Win Innwa–style PDF text can extract as Latin characters; explicitly decode the legacy font to real Myanmar Unicode before publication. Validate every translated club name against the original PDF row and ensure it renders cleanly with Noto Sans Myanmar. Never put raw legacy ASCII into a public label.
+- Update all SAME-DAY surfaces together: \`data/today.json\` homeDisplay/awayDisplay/myanmarOdds, \`data/odds/YYYY-MM-DD.json\` home/away/upperTeam plus morning/current quotes, \`data/odds/evening/YYYY-MM-DD.json\`, preview and Special Choice headings and team mentions, editorial assets, news mentioning those clubs, and shared PNG/ZIP exporters. Keep unrelated text and original owner prose otherwise intact.
+- The owner current-price PDF may have a different row order from the morning PDF. Join by fixture identity, both teams and local kickoff, **never positional row alone**, then verify all four handicap/total figures and forecast. On 2026-10-31, Championship PDF rows 27–32 were reordered; use \`data/pdf-name-aliases/2026-10-31.json\` as an immutable 33-row audit.
+- Never fill current-odds gaps with morning prices or invented numbers. All published current prices must cite a separate owner current-price PDF; retain the PDF filename and original/current row mapping. 12-hour local time rules remain unchanged.
+- Add and pass a daily market-and-name consistency guard: every published match must agree across \`today\`, the odds sheet, the evening supplement, article headings, and screenshot data. Verify actual deployed live JSON and a sample downloaded picture.
+
+
 ## Permanent kickoff time format — owner correction 2026-10-31
 - Every public website, sub-brand, odds table, match preview/result, frame/PNG and downloaded image MUST show Myanmar-local match times in **12-hour English AM/PM**, e.g. `19:00 → 7:00 PM`, `01:30 → 1:30 AM`, `00:00 → 12:00 AM`, `12:00 → 12:00 PM`. Never show raw `HH:mm` in public-facing time cells.
 - Keep source and machine fields `sourceKickoff`, `kickoff` and `kickoffUtc` canonical and accurate (24h/ISO); **format only at display/export boundaries** using the shared `window.FutureCodeTime.clock(match)` helper from `football-data-client.js`. Do not modify match hours to fit formatting or infer unsupported kickoff times.
