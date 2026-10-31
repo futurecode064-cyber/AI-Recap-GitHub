@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-10-31",
   "apps": [
+    {
+      "id": "stockguard",
+      "name": "Future Code StockGuard",
+      "packageName": "com.futurecode.stockguard",
+      "versionName": "1.1.0",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCodeStockGuard-v1.1.0.apk",
+      "sizeBytes": 25939084,
+      "sha256": "fcb412e3a54e355b06977f65a0f6efdf94cbe18a4775ed4c462ac9d98dddc208",
+      "certificateSha256": "2c24815b7198edbaa107b86a2c31ebf55ffbf5a81caef2c0b5adb0232114088a",
+      "releasedAt": "2026-10-31",
+      "online": false,
+      "releaseChannel": "stable",
+      "releaseNotes": "Professional inventory update: Future Code icon, product search, stock in/out and movement history, sales history, low-stock alerts, full backup/restore, remote notices and secure in-app update checking. Core inventory and sales features work offline; update and notice sync require Internet.",
+      "apkUrl": "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCodeStockGuard-v1.1.0.apk"
+    },
     {
       "id": "ai-studio",
       "name": "Future Code AI Studio",
