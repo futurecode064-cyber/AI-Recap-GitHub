@@ -1,0 +1,31 @@
+name: Football Owner PDF — Current Odds and Myanmar Labels
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - 'football-daily/data/today.json'
+      - 'football-daily/data/odds/**'
+      - 'football-daily/data/pdf-name-aliases/**'
+      - 'football-daily/data/editorial/**'
+      - 'football-daily/card-export.js'
+      - 'football-daily/social-export.js'
+      - 'football-daily/tests/owner-current-odds-20261031.test.cjs'
+      - '.github/workflows/football-owner-current-pdf-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  owner-source-consistency:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check live preview and social exporter syntax
+        run: |
+          node --check football-daily/card-export.js
+          node --check football-daily/social-export.js
+      - name: Verify 33 PDF pairs, current prices, 6 realigned matches and all seven PNG team name renderers
+        run: node --test football-daily/tests/owner-current-odds-20261031.test.cjs
