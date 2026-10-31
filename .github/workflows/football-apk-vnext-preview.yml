@@ -19,6 +19,7 @@ jobs:
     timeout-minutes: 35
     env:
       FC_FIREBASE_PROJECT_ID: ${{ secrets.FC_FIREBASE_PROJECT_ID }}
+      FC_GOOGLE_SERVICES_JSON: ${{ secrets.FC_GOOGLE_SERVICES_JSON }}
       FC_FIREBASE_SENDER_ID: ${{ secrets.FC_FIREBASE_SENDER_ID }}
       FC_REQUIRE_FCM: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
       FC_APK_RELEASE_KEYSTORE_B64: ${{ secrets.FC_APK_RELEASE_KEYSTORE_B64 }}
@@ -62,6 +63,14 @@ jobs:
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | grep -F "versionCode='$VC'"
           "$ANDROID_HOME/build-tools/35.0.0/aapt" dump xmltree "$APK" AndroidManifest.xml | grep -F 'PushMessageService'
           unzip -l "$APK" | grep -F classes.dex
+          # Verify Firebase resource identities whenever the private client JSON was supplied.
+          if [[ -n "$FC_GOOGLE_SERVICES_JSON" ]]; then
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump resources "$APK" | grep -F 'google_app_id' >/dev/null
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump resources "$APK" | grep -F 'gcm_defaultSenderId' >/dev/null
+            echo "FCM client resources embedded for the registered Android package" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Firebase JSON Actions secret unavailable: CI preview is NOT push-ready" >> "$GITHUB_STEP_SUMMARY"
+          fi
           sha256sum "$APK" | tee "$APK.sha256"
           printf '%s\n' "$PKG versionCode $VC : staged APK signatures have not been proven equal to original APK signers" >> "$GITHUB_STEP_SUMMARY"
           APP_ID_KEY="FC_FIREBASE_APP_ID_${{ matrix.brand }}"
