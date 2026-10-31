@@ -112,7 +112,7 @@ function renderSelectedOddsButtons(){
  const wanted=brand?selectedImageCount:null;
  const parts=makeOddsPngButtons(host,loadedSheet,matches,all?"all":"selected",wanted);
  if(status)status.textContent=matches.length
-  ?matches.length+" ပွဲ · "+selectedLeagues.size+" လိဂ် · PNG "+parts+" ပုံကို အထက်က PNG ခလုတ်များဖြင့် တစ်ပုံချင်း Download လုပ်နိုင်ပါသည်။"
+  ?matches.length+" ပွဲ · "+selectedLeagues.size+" လိဂ် · PNG "+parts+" ပုံကို အောက်မှာ ပေါ်လာသော PNG ခလုတ်များကို တစ်ပုံချင်းနှိပ်၍ Download လုပ်နိုင်ပါသည်။"
   :"Download လုပ်ရန် အနည်းဆုံး လိဂ်တစ်ခု ရွေးပါ။";
 }
 /* Render the same verified odds as compact mobile-only cards.
@@ -292,7 +292,7 @@ function setupLeagueFilter(data){
   const modePanel=element("section","brand-odds-modes");
   modePanel.id="brandOddsModes";
   modePanel.appendChild(element("h3","brand-odds-modes-heading","Download ပုံအရေအတွက် ရွေးပါ"));
-  modePanel.appendChild(element("p","brand-odds-modes-description","League ရွေးထားသည့် ပွဲများကို PNG 1/2 ပုံစံအတိုင်း တူညီသော ဇယား Design ဖြင့် Download လုပ်နိုင်ပါသည်။"));
+  modePanel.appendChild(element("p","brand-odds-modes-description","League ရွေးပြီး ပုံအရေအတွက်ကို နှိပ်ရွေးပါ။ အောက်က PNG ခလုတ်များကို တစ်ပုံချင်းနှိပ်ပြီး ယူနိုင်ပါသည်။ ပုံအားလုံးမှာ PNG 1/2 နှင့်တူသော ဇယား Design ကို သုံးပါသည်။"));
   const modeButtons=element("div","brand-odds-mode-controls");
   modeButtons.setAttribute("role","group");modeButtons.setAttribute("aria-label","ပေါက်ကြေး PNG ပုံအရေအတွက်");
   for(const [count,label] of [[1,"တစ်ပုံတည်း Download"],[2,"၂ ပုံခွဲ Download"],[3,"၃ ပုံခွဲ Download"]]){
