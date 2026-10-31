@@ -53,7 +53,7 @@
     const body=el("tbody");
     for(const m of matches){
       const tr=el("tr");
-      tr.appendChild(el("td","evening-time",m.kickoffDisplay));
+      tr.appendChild(el("td","evening-time",window.FutureCodeTime?.clock(m)||m.kickoffDisplay));
       const pair=el("td","evening-pair");
       const a=el("span","",m.home),b=el("span","",m.away);
       pair.appendChild(a);pair.appendChild(el("span","evening-vs","VS"));pair.appendChild(b);

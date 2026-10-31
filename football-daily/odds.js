@@ -6,13 +6,7 @@ function dateKey(){
 }
 // Shared across all odds pages, including tomorrow: only HH:mm in fixture rows.
 function shortKickoffClock(match){
- for(const v of [match?.kickoff,match?.sourceKickoff,match?.kickoffDisplay]){
-  if(v==null)continue;
-  const s=String(v).replace(/[၀-၉]/g,d=>String("၀၁၂၃၄၅၆၇၈၉".indexOf(d))).trim();
-  const m=s.match(/(?:^|[^\d])([01]?\d|2[0-3]):([0-5]\d)(?!\d)/);
-  if(m)return m[1].padStart(2,"0")+":"+m[2];
- }
- return "—";
+ return window.FutureCodeTime?.clock(match)||"—";
 }
 window.FutureCodeOddsClock=Object.freeze({short:shortKickoffClock});
 function element(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=String(txt);return e;}
@@ -156,7 +150,7 @@ function brandMobileOdds(matches){
   card.setAttribute("role","listitem");
   const time=String(m.kickoffDisplay||m.kickoff||"");
   const timeNode=element("div","bmo-time",shortKickoffClock(m));
-  timeNode.title=time;
+  timeNode.title=window.FutureCodeTime?.full(m)||time;
   append(teams,team(m.home,m.homeCrestUrl),element("span","bmo-vs","VS"),team(m.away,m.awayCrestUrl));
   const markets=element("div","bmo-markets");
   append(markets,market("ဘော်ဒီကြေး",m.bodyOdds,m.currentBodyOdds),market("ဂိုးပေါင်းကြေး",m.goalTotalOdds,m.currentGoalTotalOdds));
@@ -214,7 +208,7 @@ function render(data){
    // notation lets team names and original/latest prices stay readable.
    const shortTime=shortKickoffClock(m);
    const t=element("td","time",shortTime),pair=element("td","team-pair");
-   t.title=time;
+   t.title=window.FutureCodeTime?.full(m)||time;
    pair.appendChild(matchCell(m));
    const bodyLatest=element("td","price odds-current",m.currentBodyOdds??"");
    const goalLatest=element("td","price odds-current",m.currentGoalTotalOdds??"");

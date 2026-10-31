@@ -168,8 +168,11 @@
   // Never truncate a full ISO/Yangon date into the narrow kickoff-time column.
   function kickoffClock(raw){
    const value=String(raw||"").replace(/[၀-၉]/g,d=>String("၀၁၂၃၄၅၆၇၈၉".indexOf(d))).trim();
-   const found=value.match(/(?:^|[ T])([01]?\d|2[0-3]):([0-5]\d)(?:\s*(AM|PM))?/i);
-   return found?found[1].padStart(2,"0")+":"+found[2]+(found[3]?" "+found[3].toUpperCase():""):"—";
+   const found=value.match(/(?:^|[^\d])([01]?\d|2[0-3]):([0-5]\d)(?:\s*(AM|PM))?(?!\d)/i);
+   if(!found)return "—";
+   let h=Number(found[1]);
+   if(found[3]){if(h<1||h>12)return "—";h=h%12+(found[3].toUpperCase()==="PM"?12:0)}
+   return String(h%12||12)+":"+found[2]+" "+(h>=12?"PM":"AM");
   }
   async function renderBlob(page,opts={}){
   if(!page?.matchCount)throw Error("No matches to export");

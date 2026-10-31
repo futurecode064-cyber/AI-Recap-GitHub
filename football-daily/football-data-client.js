@@ -20,10 +20,41 @@
    };
    if(root.document.body)show();else root.document.addEventListener('DOMContentLoaded',show,{once:true});
   }});
+ root.FutureCodeTime=Object.freeze(api.time);
  root.FootballData=Object.freeze(client);client.ready();
 })(typeof window==='undefined'?null:window,function(){
  'use strict';
  const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
+ // All public clocks are Myanmar-local, 12-hour AM/PM; original 24-hour values remain canonical in JSON.
+ // The actual calendar date is taken from the fixture, never from the publication/report day.
+ const MYANMAR_DIGITS='၀၁၂၃၄၅၆၇၈၉';
+ function matchClock(value){
+  const raw=(typeof value==='object'&&value!==null)
+   ?([value.kickoff,value.sourceKickoff,value.kickoffYangon,value.kickoffDisplay].find(v=>v!==undefined&&v!==null&&String(v).trim())||'')
+   :String(value??'');
+  const normal=String(raw).replace(/[၀-၉]/g,c=>String(MYANMAR_DIGITS.indexOf(c))).trim();
+  const m=normal.match(/(?:^|[^\d])([01]?\d|2[0-3]):([0-5]\d)(?:\s*(AM|PM))?(?!\d)/i);
+  if(!m)return '—';
+  let h=Number(m[1]);
+  if(m[3]){
+   if(h<1||h>12)return '—';
+   h=h%12+(m[3].toUpperCase()==='PM'?12:0);
+  }
+  return String(h%12||12)+':'+m[2]+' '+(h>=12?'PM':'AM');
+ }
+ function matchCalendarDate(value){
+  if(!value||typeof value!=='object')return '';
+  for(const x of [value.kickoffCalendarDate,value.kickoffDate,value.kickoffYangon,value.kickoffDisplay]){
+   const match=String(x||'').match(/^\d{4}-\d{2}-\d{2}/);
+   if(match)return match[0];
+  }
+  return '';
+ }
+ function matchFullTime(value){
+  const clock=matchClock(value),date=matchCalendarDate(value);
+  return (date?date+' ':'')+clock+(clock==='—'?'':' MMT');
+ }
+
  const jsonResponse=(value,status=200,headers={})=>new Response(JSON.stringify(value),{status,headers:{'Content-Type':'application/json; charset=utf-8',...headers}});
  function dayKey(now=new Date(),offset=0){const d=new Date(now.getTime()+390*60000);d.setUTCDate(d.getUTCDate()+offset);return d.toISOString().slice(0,10);}
  async function loadPublishedBundle({apiBase,paths,optionalPaths=[],brand='main',fetcher=fetch,storage=null,timeoutMs=10000}){
@@ -95,5 +126,5 @@
    return jsonResponse(state.resources[path],200,{'X-Football-Version':state.version,'Cache-Control':'no-store'});
   }};
  }
- return {loadPublishedBundle,createClient,dayKey};
+ return {loadPublishedBundle,createClient,dayKey,time:{clock:matchClock,date:matchCalendarDate,full:matchFullTime}};
 });

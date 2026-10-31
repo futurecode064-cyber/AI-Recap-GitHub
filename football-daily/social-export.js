@@ -109,7 +109,7 @@
   round(ctx,16,16,w-32,h-32,28,C.paper,C.line);
   brand(ctx,o,imgs[2]);
   text(ctx,"◈ "+(o.leagueLabel||m.league||""),59,163,21,C.gold,true);
-  text(ctx,m.kickoffYangon||"",1023,163,19,C.muted,false,"right");
+  text(ctx,window.FutureCodeTime?.clock(m)||m.kickoffYangon||"",1023,163,19,C.muted,false,"right");
   const faceY=story?241:217,faceH=story?455:feed?345:295;
   round(ctx,58,faceY,964,faceH,22,"#2b443e",C.line);
   const size=story?215:feed?175:145,y=faceY+(story?54:feed?48:38);

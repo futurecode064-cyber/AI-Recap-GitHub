@@ -255,7 +255,7 @@ function renderMatchHero(match){
  const artwork=node("div","match-hero-art");
  const middle=node("div","match-hero-versus");
  middle.appendChild(leagueBadge(match.league,"hero-competition"));
- middle.appendChild(node("span","hero-kickoff",match.kickoffYangon||""));
+ middle.appendChild(node("span","hero-kickoff",window.FutureCodeTime?.clock(match)||match.kickoffYangon||""));
  middle.appendChild(node("small","hero-timezone","မြန်မာစံတော်ချိန် (MMT)"));
  middle.appendChild(node("span","hero-big-vs","VS"));
  append(artwork,heroSide(match,"home"),middle,heroSide(match,"away"));
@@ -291,7 +291,7 @@ function renderFinished(match){
  append(banner,teamSide(match,"home"),centre,teamSide(match,"away"));
  card.appendChild(banner);
  if(match.penaltyScore)card.appendChild(node("div","result-meta","ပင်နယ်တီအဆုံးအဖြတ် "+match.penaltyScore));
- card.appendChild(node("div","result-meta",teamLabel(match,"home")+"  ·  "+teamLabel(match,"away")+"  |  ပွဲပြီး · "+(match.kickoffYangon||"")));
+ card.appendChild(node("div","result-meta",teamLabel(match,"home")+"  ·  "+teamLabel(match,"away")+"  |  ပွဲပြီး · "+(window.FutureCodeTime?.clock(match)||match.kickoffYangon||"")));
  return card;
 }
 function renderFixtureOnly(match){
@@ -299,7 +299,7 @@ function renderFixtureOnly(match){
  const headline=node("div","match-topline");
  append(headline,
   leagueBadge(match.league),
-  node("span","match-time",(match.status==="live"?"🔴 LIVE "+(match.liveScore||"")+" · ":"")+(match.kickoffYangon||"")));
+  node("span","match-time",(match.status==="live"?"🔴 LIVE "+(match.liveScore||"")+" · ":"")+(window.FutureCodeTime?.clock(match)||match.kickoffYangon||"")));
  card.appendChild(headline);
  const banner=node("div","vs-banner");
  append(banner,teamSide(match,"home"),node("div","vs-circle","VS"),teamSide(match,"away"));

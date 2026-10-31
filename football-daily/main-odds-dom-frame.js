@@ -211,7 +211,7 @@
         const fixture=originals[i],cell=tr.querySelector("td.time");
         if(!cell)return;
         cell.textContent=window.FutureCodeOddsClock?.short(fixture)||"—";
-        cell.title=String(fixture?.kickoffDisplay||fixture?.kickoff||"");
+        cell.title=window.FutureCodeTime?.full(fixture)||String(fixture?.kickoffDisplay||fixture?.kickoff||"");
       });
       // Export-only edits operate on a CLONE; the website's odds are untouched.
       const edits=!document.documentElement?.dataset?.footballBrandName
@@ -246,13 +246,12 @@
         for(const [i,tr] of trs.entries()){
           if(!tr.parentNode)continue;
           const m=originals[i];
-          const raw=String(m?.kickoff||m?.sourceKickoff||m?.kickoffDisplay||"");
-          const found=raw.match(/(?:^|\s)([01]?\d|2[0-3]):([0-5]\d)(?=\s|$)/);
-          if(!found)throw Error("Frame PNG: ပွဲချိန် မမှန်ပါ — "+(m?.fixtureId||i+1));
+          const clock=window.FutureCodeTime?.clock(m)||window.FutureCodeOddsClock?.short(m)||"—";
+          if(clock==="—")throw Error("Frame PNG: ပွဲချိန် မမှန်ပါ — "+(m?.fixtureId||i+1));
           const cell=tr.querySelector("td.time");
           if(!cell)throw Error("Frame PNG: ပွဲချိန်အကွက် မရှိပါ");
-          cell.textContent=toMyanmarDigits(found[1].padStart(2,"0")+":"+found[2]);
-          cell.title=String(m?.kickoffDisplay||raw);
+          cell.textContent=clock;
+          cell.title=window.FutureCodeTime?.full(m)||String(m?.kickoffDisplay||m?.kickoff||"");
         }
         // Prices (morning/current), predictions and kickoff time use Myanmar digits
         // in frame PNGs only. This never changes the on-screen table or JSON.

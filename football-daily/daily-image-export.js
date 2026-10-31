@@ -162,7 +162,7 @@
     // Spreadsheet-style vertical and horizontal rules stay in the exported PNG.
     for(let i=0;i<xs.length;i++)fill(ctx,xs[i],y,1,68,rule);
     line(ctx,M,y+67,W-M*2,rule);
-    const clock=window.FutureCodeOddsClock?.short(m)||String(m.kickoff||m.kickoffDisplay||"—").match(/(?:[01]?\d|2[0-3]):[0-5]\d/)?.[0]||"—";
+    const clock=window.FutureCodeTime?.clock(m)||window.FutureCodeOddsClock?.short(m)||"—";
     text(ctx,clock,xs[0]+widths[0]/2,y+34,fit(ctx,clock,widths[0]-10,16,14),palette.bodyText,true,"center",widths[0]-10);
     const mid=xs[1]+widths[1]/2;
     crest(ctx,m.homeCrestUrl,mid-50,y+20,29,m.home);
@@ -218,7 +218,7 @@
     fill(ctx,M,y,W-M*2,200,C.panel,12);
     fill(ctx,M,y,W-M*2,44,C.head,10);
     text(ctx,"◈ "+(window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league),M+18,y+23,17,C.orange,true);
-    text(ctx,m.kickoffYangon||"",W-M-19,y+23,15,C.muted,false,"right");
+    text(ctx,window.FutureCodeTime?.clock(m)||m.kickoffYangon||"",W-M-19,y+23,15,C.muted,false,"right");
     crest(ctx,m.homeCrestUrl,M+62,y+59,78,m.homeDisplay||m.home);
     crest(ctx,m.awayCrestUrl,W-M-140,y+59,78,m.awayDisplay||m.away);
     const hn=m.homeDisplay||m.home||"",an=m.awayDisplay||m.away||"";
