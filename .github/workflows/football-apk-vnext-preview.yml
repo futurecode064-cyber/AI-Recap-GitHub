@@ -36,6 +36,35 @@ jobs:
       FC_FIREBASE_API_KEY_KMM: ${{ secrets.FC_FIREBASE_API_KEY_KMM }}
     steps:
       - uses: actions/checkout@v4
+      - name: Require the six-app Firebase client JSON from protected GitHub secret
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+          raw=os.environ.get("FC_GOOGLE_SERVICES_JSON","")
+          if not raw:
+              raise SystemExit("FC_GOOGLE_SERVICES_JSON missing; FCM preview build blocked")
+          cfg=json.loads(raw)
+          info=cfg.get("project_info",{})
+          if info.get("project_id")!="future-code-football" or str(info.get("project_number",""))!="76526416523":
+              raise SystemExit("Wrong Firebase project/Android sender")
+          wanted={"com.futurecode.ykzsoccertips","com.futurecode.bwsportjournal",
+                  "com.futurecode.kothetfamilyjournal","com.futurecode.kmmsporthub",
+                  "mm.futurecode.sportsjournal","mm.futurecode.betcityfamily"}
+          seen=set()
+          for client in cfg.get("client",[]):
+              a=client.get("client_info",{})
+              p=a.get("android_client_info",{}).get("package_name")
+              aid=a.get("mobilesdk_app_id","")
+              k=client.get("api_key",[])
+              if p in seen or not aid.startswith("1:76526416523:android:") or not k or not k[0].get("current_key"):
+                  raise SystemExit("Missing or invalid Firebase client: "+str(p))
+              seen.add(p)
+          if seen!=wanted:
+              raise SystemExit("Expected exact six Android brand Firebase clients")
+          print("PASS: verified six Firebase Android clients from GitHub Actions secret; key values redacted")
+          PY
       - uses: actions/setup-java@v4
         with: {distribution: temurin, java-version: '17'}
       - uses: gradle/actions/setup-gradle@v4
