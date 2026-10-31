@@ -1,0 +1,30 @@
+name: Football Brand Odds — Same PNG Layout QA
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - 'football-daily/odds.js'
+      - 'football-daily/daily-image-export.js'
+      - 'football-daily/odds-sheet-theme.css'
+      - 'football-daily/*/odds.html'
+      - 'football-daily/tests/brand-odds-unified-layout.test.cjs'
+      - '.github/workflows/football-brand-odds-unified-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export-layout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate renderer code
+        run: |
+          node --check football-daily/odds.js
+          node --check football-daily/daily-image-export.js
+          node --check football-daily/tests/brand-odds-unified-layout.test.cjs
+      - name: Verify six sites use exactly the same PNG table for 1/2/3 part downloads
+        run: node --test football-daily/tests/brand-odds-unified-layout.test.cjs
