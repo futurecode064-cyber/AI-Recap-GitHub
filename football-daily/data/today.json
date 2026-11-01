@@ -2989,7 +2989,9 @@
     "previousNightFinished": 33,
     "sourcedNews": 10,
     "originalNewsIllustrations": 10,
-    "currentPriceStatus": "NO_NEW_CURRENT_PDF"
+    "currentPriceStatus": "owner-pdf-verified-all-19",
+    "currentPriceSourcePdf": "1 စျေး.pdf",
+    "currentPriceMatchedRows": 19
   },
   "currentPriceSourcePdf": "1 စျေး.pdf",
   "currentPriceSourceRows": 19,
