@@ -19,13 +19,29 @@ async function run(){
   await page.waitForFunction(()=>document.querySelectorAll("#fcV2Cards .fc-v2-card").length===16,null,{timeout:45000});
   assert.equal(await cards.count(),16);
   assert.equal(await page.locator("body").getAttribute("data-fc-main-view"),"previewV2");
-  assert(await page.locator("#fcV2Cards .fc-v2-ribbon").count()===16);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-ribbon").count(),16);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-quote").count(),32);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-time").count(),16);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-odds-team").count(),32);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-market").count(),0);
   const content=await cards.first().innerText();
-  assert(content.includes("ရွေးချယ်မှု")&&content.includes("မူလ")&&content.includes("လီဗာပူးလ်"),content.slice(0,300));
+  assert(content.includes("ရွေးချယ်မှု")&&content.includes("ဂိုးပေါင်းကြေး")&&content.includes("ဘော်ဒီကြေး")&&content.includes("လီဗာပူးလ်"),content.slice(0,500));
   assert.equal(await page.locator("#fcV2Cards .fc-v2-logo").count(),64);
-  const checkedPhoto=await page.evaluate(()=>({withPhoto:document.querySelectorAll(".fc-v2-photo").length,blankChoices:[...document.querySelectorAll(".fc-v2-pick strong")].filter(x=>x.textContent.includes("အတည်မပြုရသေး")).length}));
+  const textLayout=await page.evaluate(()=>{
+   const ps=[...document.querySelectorAll("#fcV2Cards .fc-v2-desc p")];
+   const badStarts=ps.flatMap(p=>p.textContent.split("\n")).filter(line=>/^[\u102B-\u103E\u1056-\u1059\u1060-\u109D]/u.test(line));
+   const ctx=document.createElement("canvas").getContext("2d");
+   const overwide=ps.flatMap(p=>{const s=getComputedStyle(p);ctx.font=s.fontWeight+" "+s.fontSize+" "+s.fontFamily;return p.textContent.split("\n").filter(x=>x&&ctx.measureText(x).width>p.clientWidth+3);});
+   return {font:ps[0]&&getComputedStyle(ps[0]).fontFamily,fontLoaded:document.fonts.check('16px "FCMyanmar"'),lines:ps.map(p=>p.textContent.split("\n").length),badStarts,overwide};
+  });
+  assert(textLayout.font.includes("FCMyanmar")&&textLayout.fontLoaded,JSON.stringify(textLayout));
+  assert.equal(textLayout.badStarts.length,0,JSON.stringify(textLayout.badStarts));
+  assert.equal(textLayout.overwide.length,0,JSON.stringify(textLayout.overwide));
+  assert(textLayout.lines.some(n=>n>1),"Myanmar summary must wrap into deliberate lines");
+  const checkedPhoto=await page.evaluate(()=>({withPhoto:document.querySelectorAll(".fc-v2-photo").length,blankChoices:[...document.querySelectorAll(".fc-v2-pick strong")].filter(x=>x.textContent.includes("အတည်မပြုရသေး")).length,accent:getComputedStyle(document.querySelector(".fc-v2-section")).getPropertyValue("--fc-v2-accent").trim()}));
   assert.equal(checkedPhoto.withPhoto,6);
   assert.equal(checkedPhoto.blankChoices,0);
+  assert(/^#[0-9a-f]{6}$/i.test(checkedPhoto.accent));
   const twoEvent=page.waitForEvent("download",{timeout:90000});
   await page.locator("#fcV2Two").click();const two=await twoEvent;
   const twoBytes=await readFile(await two.path());
@@ -71,7 +87,8 @@ async function run(){
   assert(zipped.subarray(0,4).equals(Buffer.from([0x50,0x4b,0x03,0x04])));
   assert(zipped.includes(Buffer.from("Version 2")),"ZIP missing Version 2 folder");
   assert.equal(browserErrors.length,0,JSON.stringify(browserErrors));
-  console.log("PREVIEW V2 LIVE BROWSER PNG/ZIP PASS "+JSON.stringify({cards:await cards.count(),historicPhotos:checkedPhoto.withPhoto,selectedAll:16,twoPng:[width(twoBytes),height(twoBytes)],threePng:[width(threeBytes),height(threeBytes)],editorTriple:dimensions,zipBytes:zipped.length,head:"776eb95c"}));
+  await page.screenshot({path:"preview-v2-live.png",fullPage:true});
+  console.log("PREVIEW V2 LIVE BROWSER PNG/ZIP PASS "+JSON.stringify({cards:await cards.count(),marketStrips:32,wordWrapped:textLayout.lines.length,localFont:textLayout.fontLoaded,historicPhotos:checkedPhoto.withPhoto,theme:checkedPhoto.accent,twoPng:[width(twoBytes),height(twoBytes)],threePng:[width(threeBytes),height(threeBytes)],editorTriple:dimensions,zipBytes:zipped.length,head:"2123dc92"}));
  }finally{await context.close();await browser.close();}
 }
 run().catch(e=>{console.error(e.stack||e);process.exitCode=1;});
