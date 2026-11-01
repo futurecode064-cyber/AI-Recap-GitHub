@@ -64,16 +64,25 @@
   return lines.length?lines:[""];
  }
  function loadImage(src){
-  if(typeof src!=="string"||!/^https:\/\//i.test(src))return Promise.resolve(null);
-  if(imageCache.has(src))return imageCache.get(src);
+  if(typeof src!=="string"||!src.trim())return Promise.resolve(null);
+  let resolvedUrl;
+  try{
+   const mapped=window.FutureCodeMainLogoAssets?.imageUrl(src)||window.FutureCodeBrandExportData?.imageUrl(src)||src;
+   const parsed=new URL(mapped,document.baseURI);
+   if(parsed.protocol!=="https:"&&parsed.origin!==location.origin)return Promise.resolve(null);
+   resolvedUrl=parsed.href;
+  }catch(_){return Promise.resolve(null)}
+  if(imageCache.has(resolvedUrl))return imageCache.get(resolvedUrl);
   const task=new Promise(resolve=>{
    const img=new Image();let done=false;
-   const finish=v=>{if(done)return;done=true;clearTimeout(timer);if(!v)imageCache.delete(src);resolve(v)};
+   const finish=v=>{if(done)return;done=true;clearTimeout(timer);if(!v)imageCache.delete(resolvedUrl);resolve(v)};
    const brandedExport=Boolean(document.documentElement?.dataset?.footballBrandName||window.FutureCodeMainLogoAssets);
    const timer=setTimeout(()=>finish(null),brandedExport?6500:950);
-   img.crossOrigin="anonymous";img.onload=()=>finish(img);img.onerror=()=>finish(null);img.src=window.FutureCodeMainLogoAssets?.imageUrl(src)||window.FutureCodeBrandExportData?.imageUrl(src)||src;
+   if(resolvedUrl.startsWith("https://"))img.crossOrigin="anonymous";
+   img.onload=()=>finish(img);img.onerror=()=>finish(null);img.src=resolvedUrl;
   });
-  imageCache.set(src,task);return task;
+  imageCache.set(resolvedUrl,task);
+  return task;
  }
  async function preload(urls){
   await Promise.all([...new Set(urls.filter(Boolean))].map(loadImage));
