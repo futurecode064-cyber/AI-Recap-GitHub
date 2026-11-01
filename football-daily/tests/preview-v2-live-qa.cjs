@@ -38,10 +38,24 @@ async function run(){
   assert.equal(textLayout.badStarts.length,0,JSON.stringify(textLayout.badStarts));
   assert.equal(textLayout.overwide.length,0,JSON.stringify(textLayout.overwide));
   assert(textLayout.lines.some(n=>n>1),"Myanmar summary must wrap into deliberate lines");
+  const editorial=await page.evaluate(async()=>{
+   const source=await (await fetch("./data/today.json",{cache:"no-store"})).json();
+   const rendered=[...document.querySelectorAll("#fcV2Cards .fc-v2-desc p")].map(p=>(p.dataset.rawText||p.textContent).trim());
+   return {count:source.matches.filter(m=>m.previewV2Summary).length,matches:source.matches.every((m,i)=>m.previewV2Summary?.trim()===rendered[i]),stale:source.matches.some(m=>!m.previewV2EditorialStatus)};
+  });
+  assert.equal(editorial.count,16,JSON.stringify(editorial));
+  assert(editorial.matches&&!editorial.stale,"Version 2 must render the manually edited short summaries, not mechanical excerpts");
   const checkedPhoto=await page.evaluate(()=>({withPhoto:document.querySelectorAll(".fc-v2-photo").length,blankChoices:[...document.querySelectorAll(".fc-v2-pick strong")].filter(x=>x.textContent.includes("အတည်မပြုရသေး")).length,accent:getComputedStyle(document.querySelector(".fc-v2-section")).getPropertyValue("--fc-v2-accent").trim()}));
   assert.equal(checkedPhoto.withPhoto,6);
   assert.equal(checkedPhoto.blankChoices,0);
   assert(/^#[0-9a-f]{6}$/i.test(checkedPhoto.accent));
+  const frameMeta=await page.evaluate(async()=>{
+   const p=window.FutureCodeProfessionalFrames;
+   await p.ready;
+   const id=await p.getSelected("previewsV2");
+   const selected=p.getFrame(id);
+   return {id,top:selected?.top||0,bottom:selected?.bottom||0};
+  });
   const twoEvent=page.waitForEvent("download",{timeout:90000});
   await page.locator("#fcV2Two").click();const two=await twoEvent;
   const twoBytes=await readFile(await two.path());
@@ -50,6 +64,12 @@ async function run(){
   const threeEvent=page.waitForEvent("download",{timeout:90000});
   await page.locator("#fcV2Three").click();const three=await threeEvent;
   const threeBytes=await readFile(await three.path());
+  const expectedTwo=2*850+12+Math.round(frameMeta.top*1200/1200)+Math.round(frameMeta.bottom*1200/1200)+2*Math.max(10,Math.round(1200*.012));
+  const expectedThree=3*850+24+frameMeta.top+frameMeta.bottom+2*Math.max(10,Math.round(1200*.012));
+  // If frame is the browser's selected V2 design, there may be original built-in art with natural height.
+  // Assert the delta between two/three exports is ONE 850px card + ONE 12px gap, not an extra banner.
+  assert.equal(height(threeBytes)-height(twoBytes),862,"Repeated banner between cards");
+
   assert(width(threeBytes)>=1200&&height(threeBytes)>2500);
   const editor=await context.newPage();editor.on("pageerror",err=>browserErrors.push(err.message));
   await editor.goto(origin+"frame-editor.html",{waitUntil:"domcontentloaded",timeout:45000});
@@ -80,6 +100,9 @@ async function run(){
   await png.waitFor({state:"visible",timeout:90000});
   const dimensions=await png.evaluate(im=>({w:im.naturalWidth,h:im.naturalHeight}));
   assert(dimensions.w>=1200&&dimensions.h>=2500,JSON.stringify(dimensions));
+  // Editor's group image must have one outer frame, identical height to the 3-row main export.
+  assert.equal(dimensions.h,height(threeBytes),JSON.stringify({editor:dimensions.h,main:height(threeBytes)}));
+
   const zipEvent=editor.waitForEvent("download",{timeout:90000});
   await editor.locator("#downZip").click();const zip=await zipEvent;
   const zipped=await readFile(await zip.path());
