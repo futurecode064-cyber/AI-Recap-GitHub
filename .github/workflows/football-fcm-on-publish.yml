@@ -27,6 +27,11 @@ jobs:
         with: {node-version: '22'}
       - name: Run source validation tests without secrets
         run: node --test football-daily/tests/dispatch-static-fcm.test.mjs
+      - name: Wait for successful live Cloudflare Pages publication before any FCM dispatch
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 football-daily/scripts/verify_live.py --source-commit "$GITHUB_SHA" --attempts 12 --interval 10 --summary "$GITHUB_STEP_SUMMARY"
       - name: Fail closed when notification service is not configured
         shell: bash
         run: |
