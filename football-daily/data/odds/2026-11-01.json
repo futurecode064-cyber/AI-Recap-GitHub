@@ -1,9 +1,9 @@
 {
   "reportDate": "2026-11-01",
-  "priceStatus": "MORNING_ONLY",
+  "priceStatus": "MORNING_AND_CURRENT",
   "sourcePDF": "1.pdf",
   "sourceRows": 19,
-  "priceSheetType": "morning original PDF",
+  "priceSheetType": "morning original PDF + owner current-price PDF",
   "matches": [
     {
       "number": 1,
@@ -25,8 +25,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-25",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "3+90",
       "pdfLastColumn": "1-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -41,7 +41,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/liverpool.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/arsenal.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 1,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "23:00"
     },
     {
       "number": 2,
@@ -63,8 +67,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "2+60",
       "goalTotalOdds": "3-85",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+95",
+      "currentGoalTotalOdds": "3-85",
       "pdfLastColumn": "3-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -79,7 +83,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/como.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/venezia.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 2,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "18:00"
     },
     {
       "number": 3,
@@ -101,8 +109,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-60",
       "goalTotalOdds": "3-70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-70",
+      "currentGoalTotalOdds": "3-80",
       "pdfLastColumn": "2-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -117,7 +125,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/frosinone.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/torino.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 3,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "20:30"
     },
     {
       "number": 4,
@@ -139,8 +151,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "1-35",
       "goalTotalOdds": "3+70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-20",
+      "currentGoalTotalOdds": "3+65",
       "pdfLastColumn": "3-0",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -155,7 +167,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/lazio.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/cagliari.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 4,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "20:30"
     },
     {
       "number": 5,
@@ -177,8 +193,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-35",
       "goalTotalOdds": "2-30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-20",
+      "currentGoalTotalOdds": "2-25",
       "pdfLastColumn": "0-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -193,7 +209,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/lecce.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/genoa.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 5,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "23:30"
     },
     {
       "number": 6,
@@ -215,8 +235,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-30",
       "goalTotalOdds": "2-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-50",
+      "currentGoalTotalOdds": "2-90",
       "pdfLastColumn": "1-0",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -231,7 +251,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/juventus.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/napoli.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 6,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "02:15"
     },
     {
       "number": 7,
@@ -253,8 +277,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-30",
       "goalTotalOdds": "2+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-35",
+      "currentGoalTotalOdds": "3+10",
       "pdfLastColumn": "0-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -269,7 +293,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/getafe.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/1d934d1239fc65c4.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 7,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "19:30"
     },
     {
       "number": 8,
@@ -291,8 +319,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "2-10",
       "goalTotalOdds": "4-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-10",
+      "currentGoalTotalOdds": "4-10",
       "pdfLastColumn": "0-4",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -307,7 +335,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/racing-santander.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/real-madrid.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 8,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "21:45"
     },
     {
       "number": 9,
@@ -329,8 +361,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-35",
       "goalTotalOdds": "3+100",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "2-85",
       "pdfLastColumn": "2-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -345,7 +377,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/elche.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/valencia.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 9,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "00:00"
     },
     {
       "number": 10,
@@ -367,8 +403,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-60",
       "goalTotalOdds": "3+35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-80",
+      "currentGoalTotalOdds": "3+60",
       "pdfLastColumn": "2-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -383,7 +419,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/athletic-bilbao.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/real-sociedad.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 10,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "02:30"
     },
     {
       "number": 11,
@@ -405,8 +445,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-10",
       "goalTotalOdds": "3+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-5",
+      "currentGoalTotalOdds": "3+40",
       "pdfLastColumn": "1-2",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -421,7 +461,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/union-berlin.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/fc-koln.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 11,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "21:00"
     },
     {
       "number": 12,
@@ -443,8 +487,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "1-10",
       "goalTotalOdds": "3-60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-5",
+      "currentGoalTotalOdds": "3-60",
       "pdfLastColumn": "3-0",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -459,7 +503,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/eintracht-frankfurt.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/hamburger.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 12,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "23:00"
     },
     {
       "number": 13,
@@ -481,8 +529,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "1+85",
       "goalTotalOdds": "3=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+85",
+      "currentGoalTotalOdds": "3=",
       "pdfLastColumn": "2-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -497,7 +545,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/strasbourg.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/auxerre.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 13,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "20:30"
     },
     {
       "number": 14,
@@ -519,8 +571,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "1-60",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-50",
+      "currentGoalTotalOdds": "3+30",
       "pdfLastColumn": "3-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -535,7 +587,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/lyon.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/angers.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 14,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "22:45"
     },
     {
       "number": 15,
@@ -557,8 +613,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-25",
       "goalTotalOdds": "3+80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-20",
+      "currentGoalTotalOdds": "3+85",
       "pdfLastColumn": "2-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -573,7 +629,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/paris-fc.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/monaco.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 15,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "22:45"
     },
     {
       "number": 16,
@@ -595,8 +655,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-90",
       "goalTotalOdds": "3-15",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-100",
+      "currentGoalTotalOdds": "3-35",
       "pdfLastColumn": "2-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": true,
@@ -611,7 +671,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/marseille.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/toulouse.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 16,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "02:15"
     },
     {
       "number": 17,
@@ -633,8 +697,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-10",
       "goalTotalOdds": "3-5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-5",
+      "currentGoalTotalOdds": "3=",
       "pdfLastColumn": "2-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": false,
@@ -649,7 +713,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/greuther-furth.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/holstein-kiel.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.2.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.2.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 17,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "19:00"
     },
     {
       "number": 18,
@@ -671,8 +739,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-60",
       "goalTotalOdds": "3+35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "3=",
       "pdfLastColumn": "2-1",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": false,
@@ -687,7 +755,11 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/sankt-pauli.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/nurnberg.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.2.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.2.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 18,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "19:00"
     },
     {
       "number": 19,
@@ -709,8 +781,8 @@
       "nightEditorialDate": "2026-11-01",
       "bodyOdds": "-60",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-60",
+      "currentGoalTotalOdds": "3+30",
       "pdfLastColumn": "2-2",
       "sourcePredictionType": "Owner PDF last column; not verified VIP, AI or FT",
       "eligibleForPreview": false,
@@ -725,8 +797,18 @@
       "oddsProvider": "TipsterArea",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/hannover.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/dynamo-dresden.svg",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.2.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ger.2.png",
+      "currentPriceSourcePdf": "1 စျေး.pdf",
+      "currentPricePdfRow": 19,
+      "currentPriceVerifiedDate": "2026-11-01",
+      "currentPricePdfKickoff": "19:00"
     }
   ],
-  "currentPriceStatus": "NO_OWNER_CURRENT_PRICE_PDF"
+  "currentPriceStatus": "NO_OWNER_CURRENT_PRICE_PDF",
+  "currentPriceSourcePdf": "1 စျေး.pdf",
+  "currentPriceSourceRows": 19,
+  "currentPriceMatchedRows": 19,
+  "currentPriceHeldRows": 0,
+  "currentPriceUpdatedAt": "2026-11-01 13:49 MMT",
+  "currentPriceAudit": "All 19 current-price rows match the same-date fixture identities and exact morning handicap/goal-total quotes. Row 11 PDF kickoff is 21:00 MMT while stored kickoff is 20:00; the official Bundesliga fixture listing confirms 15:30 CET (21:00 MMT). Existing kickoff fields were intentionally left unchanged because this update changes current odds only."
 }
