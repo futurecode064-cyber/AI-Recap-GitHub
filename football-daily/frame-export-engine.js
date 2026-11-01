@@ -37,11 +37,11 @@ async function* forSection(k,f,rows,mode){
    const chunks=Array.from({length:Math.ceil(rows.length/size)},(_,i)=>rows.slice(i*size,i*size+size));
    for(let i=0;i<chunks.length;i++){
     const canvases=[];
-    for(const m of chunks[i]){
-     const src=await render(m,{color});
-     canvases.push(await p.wrap(src,k,"pro:"+f.id));
-    }
-    yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(await stackCanvases(canvases))};
+    for(const m of chunks[i])canvases.push(await render(m,{color}));
+    // One combined canvas, then exactly one frame: no repeated banners.
+    const combined=await stackCanvases(canvases);
+    const framed=await p.wrap(combined,k,"pro:"+f.id);
+    yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(framed)};
    }
   }else if(k==="previews"||k==="specials"){
   const theme={bg:"#071a2b",head:color,panel:"#102c3d",alt:color,accent:"#f5c86e"};
