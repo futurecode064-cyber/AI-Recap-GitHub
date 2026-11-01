@@ -137,11 +137,20 @@
  }
  const cache=new Map();
  function image(src){
-  if(!src||!/^https:\/\//.test(src))return Promise.resolve(null);
-  if(cache.has(src))return cache.get(src);
+  if(!src)return Promise.resolve(null);
+  let resolvedUrl;
+  try{
+   const mapped=window.FutureCodeMainLogoAssets?.imageUrl(src)||window.FutureCodeBrandExportData?.imageUrl(src)||src;
+   const parsed=new URL(mapped,document.baseURI);
+   if(parsed.protocol!=="https:"&&parsed.origin!==location.origin)return Promise.resolve(null);
+   resolvedUrl=parsed.href;
+  }catch(_){return Promise.resolve(null)}
+  if(cache.has(resolvedUrl))return cache.get(resolvedUrl);
   const p=new Promise(resolve=>{const im=new Image();let done=false;const doneOnce=v=>{if(done)return;done=true;clearTimeout(timeout);resolve(v);};
-   const timeout=setTimeout(()=>doneOnce(null),5000);im.crossOrigin="anonymous";im.onload=()=>doneOnce(im);im.onerror=()=>doneOnce(null);im.src=src;
-  });cache.set(src,p);return p;
+   const timeout=setTimeout(()=>doneOnce(null),6500);
+   if(resolvedUrl.startsWith("https://"))im.crossOrigin="anonymous";
+   im.onload=()=>doneOnce(im);im.onerror=()=>doneOnce(null);im.src=resolvedUrl;
+  });cache.set(resolvedUrl,p);return p;
  }
  function cover(ctx,img,x,y,w,h){const s=Math.max(w/img.naturalWidth,h/img.naturalHeight),sw=w/s,sh=h/s;ctx.drawImage(img,(img.naturalWidth-sw)/2,(img.naturalHeight-sh)/2,sw,sh,x,y,w,h);}
  function contain(ctx,img,x,y,w,h){const s=Math.min(w/img.naturalWidth,h/img.naturalHeight),dw=img.naturalWidth*s,dh=img.naturalHeight*s;ctx.drawImage(img,x+(w-dw)/2,y+(h-dh)/2,dw,dh);}
@@ -163,8 +172,12 @@
   const col=/^#[\da-f]{6}$/i.test(options.color||"")?options.color:"#07527a",deep=shade(col,.78);
   c.fillStyle="#e8f0f5";c.fillRect(0,0,1200,850);
   c.fillStyle=col;c.fillRect(0,0,1200,67);c.textAlign="center";c.textBaseline="middle";c.fillStyle="#fff";
-  fitMyanmar(c,m.leagueDisplay||m.league,600,35,1110,25,800,15);
-  const [h,a,p,stadium]=await Promise.all([image(m.homeCrestUrl),image(m.awayCrestUrl),image(media(m)),image(new URL("./assets/preview-stadium-night.jpg",document.baseURI).href)]);
+  contain(c,l,24,10,48,48);
+  fitMyanmar(c,m.leagueDisplay||m.league,600,35,1010,25,800,15);
+  const leagueUrl=window.FutureCodeMainLogoAssets?.leagueCrest(m.league)||window.FutureCodeBrandExportData?.leagueCrest?.(m.league)||"";
+  const [h,a,l,p,stadium]=await Promise.all([image(m.homeCrestUrl),image(m.awayCrestUrl),image(leagueUrl),image(media(m)),image(new URL("./assets/preview-stadium-night.jpg",document.baseURI).href)]);
+  if(!h||!a)throw Error("အသင်း Logo မပြည့်စုံပါ — "+(m.homeDisplay||m.home)+" / "+(m.awayDisplay||m.away)+"။ Logo မပြည့်ဘဲ Download မထုတ်ပါ။");
+  if(!l)throw Error("လိဂ် Logo မရရှိပါ — "+(m.leagueDisplay||m.league)+"။ လိဂ် Logo မပြည့်ဘဲ Download မထုတ်ပါ။");
   c.save();c.beginPath();c.roundRect(20,84,435,492,18);c.clip();
   if(stadium)cover(c,stadium,20,84,435,492);else{c.fillStyle="#18415f";c.fillRect(20,84,435,492);}
   if(p)cover(c,p,20,84,435,492);
