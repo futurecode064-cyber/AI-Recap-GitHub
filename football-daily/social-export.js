@@ -12,10 +12,18 @@
  }
  function load(url){
   return new Promise(resolve=>{
-   if(!/^https:\/\//.test(String(url||""))){resolve(null);return}
+   if(!url){resolve(null);return}
+   let src;
+   try{
+    const mapped=window.FutureCodeMainLogoAssets?.imageUrl(url)||window.FutureCodeBrandExportData?.imageUrl(url)||url;
+    const parsed=new URL(mapped,document.baseURI);
+    if(parsed.protocol!=="https:"&&parsed.origin!==location.origin){resolve(null);return}
+    src=parsed.href;
+   }catch(_){resolve(null);return}
    const img=new Image();let settled=false;const id=setTimeout(()=>end(null),6500);
    function end(v){if(settled)return;settled=true;clearTimeout(id);resolve(v)}
-   img.crossOrigin="anonymous";img.onload=()=>end(img);img.onerror=()=>end(null);img.src=url;
+   if(src.startsWith("https://"))img.crossOrigin="anonymous";
+   img.onload=()=>end(img);img.onerror=()=>end(null);img.src=src;
   });
  }
  function fit(ctx,img,x,y,w,h){
@@ -160,6 +168,7 @@
   const canvas=document.createElement("canvas");canvas.width=s[0];canvas.height=s[1];
   const ctx=canvas.getContext("2d");if(!ctx)throw Error("PNG Canvas unavailable");
   const imgs=await Promise.all([load(match.homeCrestUrl),load(match.awayCrestUrl),load(opts.brandLogoUrl)]);
+  if(!imgs[0]||!imgs[1])throw Error("အသင်း Logo မပြည့်စုံပါ — "+(match.homeDisplay||match.home)+" / "+(match.awayDisplay||match.away)+"။ Logo မပြည့်ဘဲ Download မထုတ်ပါ။");
   draw(ctx,match,opts,imgs,s[0],s[1]);
   const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews",document.getElementById(opts.special?"fcSpecialCustomFrame":"fcMatchCustomFrame")?.value?.startsWith("pro:")?document.getElementById(opts.special?"fcSpecialCustomFrame":"fcMatchCustomFrame").value:"none"):canvas;
   const blob=await new Promise((resolve,reject)=>framed.toBlob(v=>v?resolve(v):reject(Error("PNG encoding failed")),"image/png"));
