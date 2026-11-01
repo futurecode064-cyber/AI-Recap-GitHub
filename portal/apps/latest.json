@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31",
+  "updatedAt": "2026-11-01",
   "apps": [
     {
       "id": "stockguard",
@@ -35,14 +35,15 @@
       "id": "app-creator",
       "name": "Future Code",
       "packageName": "mm.futurecode.academy",
-      "versionName": "1.5.1",
-      "versionCode": 11,
+      "versionName": "1.5.3",
+      "versionCode": 13,
       "minSdk": 26,
-      "file": "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/Future-Code-App-Creator.apk",
+      "file": "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/Future-Code-1.5.3.apk",
       "sizeBytes": 804127,
-      "sha256": "6a4732b1694e712ed7f0a0fd5ccfa65aeb1edda474332e9cd7a83b4d0e1d3cbf",
+      "sha256": "5c74d6360ebb3d7941c372d8d179a5ca52a10536c61f918a4daf419bbe3c2d4a",
       "certificateSha256": "8250c2dec832ffa15c68a3b649af6bbac4131ecd753b7a48a921ec53ce622771",
-      "releasedAt": "2026-10-29"
+      "releasedAt": "2026-11-01",
+      "releaseNotes": "Future Code အသုံးပြုပြီး APK ထုတ်နည်း အခန်း ၅ ခန်း၊ သင်ခန်းစာ ၃၀ ပုဒ်။ နမူနာ၊ AI HTML၊ Website/ZIP၊ စမ်းသပ်ခြင်း၊ backup နှင့် update လမ်းညွှန်များ ပြန်လည်စီစဉ်ထားပါသည်။"
     },
     {
       "id": "myanmar-kyar",
