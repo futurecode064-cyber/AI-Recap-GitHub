@@ -38,6 +38,7 @@ async function run(){
   const editor=await context.newPage();editor.on("pageerror",err=>browserErrors.push(err.message));
   await editor.goto(origin+"frame-editor.html",{waitUntil:"domcontentloaded",timeout:45000});
   await editor.waitForFunction(()=>window.FCStudio?.getState()?.frames?.length>30,null,{timeout:70000});
+  await editor.waitForFunction(()=>window.FCStudio?.getRows("previewsV2")?.length===16,null,{timeout:70000});
   const editorState=await editor.evaluate(()=>({
    scopes:window.FCStudio.TYPES,
    frame:(window.FCStudio.getState().placements.previewsV2||[]).length,
