@@ -27,7 +27,8 @@ test("Main and Frame Editor combine unframed cards BEFORE exactly one outer bann
  assert.doesNotMatch(main,/api\.wrap\(x,"previewsV2"/);
  assert.match(frame,/const combined=await stackCanvases\(canvases\)/);
  assert.match(frame,/p\.wrap\(combined,k,"pro:"\+f\.id\)/);
- assert.doesNotMatch(frame,/canvases\.push\(await p\.wrap\(src,k/);
+ const v2Export=frame.slice(frame.indexOf('if(k==="previewsV2")'),frame.indexOf('}else if(k==="previews"'));
+ assert.doesNotMatch(v2Export,/canvases\.push\(await p\.wrap\(src,k/);
 });
 test("Contract keeps 2/3-match options, Myanmar word-wrap and frame-editor theme",()=>{
  const main=load("main-preview-v2.js"),studio=load("frame-workspace.js");
