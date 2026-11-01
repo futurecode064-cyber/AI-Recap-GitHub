@@ -31,7 +31,19 @@ async function stackBlobs(blobs){
 }
 async function* forSection(k,f,rows,mode){
  const W=s().getHome(),p=W.FutureCodeProfessionalFrames,color=f.color||"#16486c";
- if(k==="previews"||k==="specials"){
+ if(k==="previewsV2"){
+   const render=W.FutureCodePreviewV2?.render;if(!render)throw Error("Preview Version 2 PNG Engine မရရှိပါ");
+   const size=mode==="triple"?3:mode==="pair"?2:1;
+   const chunks=Array.from({length:Math.ceil(rows.length/size)},(_,i)=>rows.slice(i*size,i*size+size));
+   for(let i=0;i<chunks.length;i++){
+    const canvases=[];
+    for(const m of chunks[i]){
+     const src=await render(m,{color});
+     canvases.push(await p.wrap(src,k,"pro:"+f.id));
+    }
+    yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(await stackCanvases(canvases))};
+   }
+  }else if(k==="previews"||k==="specials"){
   const theme={bg:"#071a2b",head:color,panel:"#102c3d",alt:color,accent:"#f5c86e"};
   const chunks=mode==="two"?Array.from({length:Math.ceil(rows.length/2)},(_,i)=>rows.slice(i*2,i*2+2)):rows.map(m=>[m]);
   for(let i=0;i<chunks.length;i++){

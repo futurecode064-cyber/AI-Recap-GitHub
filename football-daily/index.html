@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="./styles.css?v=20261029-nonblocking-fonts">
 <link rel="stylesheet" href="./video-studio.css?v=20261016-video2">
 <link rel="stylesheet" href="./main-preview-design.css?v=stadium-compact-20261020">
+<link rel="stylesheet" href="./main-preview-v2.css?v=preview-v2-20261101">
 <link rel="stylesheet" href="./main-ai-score.css?v=20261028-vip-bookie-ai-v1">
 <link rel="stylesheet" href="./main-probability.css?v=20261024-v2">
 <script defer src="./main-professional-frame-studio.js?v=20261030-live-preview-theme-v3"></script>
@@ -31,7 +32,8 @@
 <script defer src="./main-ai-score.js?v=20261030-verified-times-labels-v1"></script>
 <script defer src="./video-studio.js?v=20261028-my-label-v7"></script>
 <script defer src="./main-probability.js?v=20261029-static-json-fix-v2"></script>
-<script defer src="./main-section-tabs.js?v=20261024-nine-tabs"></script>
+<script defer src="./main-preview-v2.js?v=preview-v2-20261101"></script>
+<script defer src="./main-section-tabs.js?v=preview-v2-20261101"></script>
 <link rel="stylesheet" href="./news-section.css?v=news-poster-20261020-v3">
 <script defer src="./news-section.js?v=20261028-frame-workspace-v1"></script>
 <!-- Main Future Code publication: text selection and copy are allowed. -->
@@ -57,9 +59,10 @@
    <div class="section-heading"><div><span class="section-eyebrow">THE DAILY MATCH REPORT</span><h2 id="reportHeading">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ</h2></div><span class="today-pill" id="reportPill">● TODAY</span></div>
    <label style="display:block;margin:14px 0;color:#fff">ပွဲကြိုသုံးသပ်ချက် PNG Frame <select id="fcMatchCustomFrame"><option value="">မူရင်းပုံစံ</option></select></label>
    <label style="display:block;margin:10px 0;color:#fff">Special Choice PNG Frame <select id="fcSpecialCustomFrame"><option value="">မူရင်းပုံစံ</option></select></label>
-   <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football အဓိက အပိုင်း ၉ ခု">
+   <nav class="date-tabs fc-main-five-nav" id="dateTabs" aria-label="Future Code Football section navigation">
      <button type="button" data-day="-1">မနေ့ကရလဒ် <small id="dateYesterday"></small></button>
      <button type="button" data-day="0" class="active">ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ <small id="dateToday"></small></button>
+     <a class="fc-main-preview-v2-tab" href="#fcPreviewV2">ပွဲကြိုသုံးသပ်ချက် Version 2<small>ပွဲပုံ · အတိုချုပ် · ရွေးချယ်မှု · မြန်မာကြေး</small></a>
      <a class="date-tab-odds" href="./odds.html">ယနေ့ ပေါက်ကြေးများ<small>ပွဲအားလုံး၏ ကြေးစာရင်း ↗</small></a>
      <a class="fc-main-prob-tab" href="#fcProbSection">ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)<small>အိမ်ရှင် · ဧည့်သည် · ဂိုးပေါ်/အောက်</small></a>
      <a class="fc-main-studio-tab" href="#fcVideoStudio">Video Download Studio<small>Video ဖန်တီး / Download</small></a>
@@ -70,6 +73,21 @@
      <a class="fc-main-news-tab" href="#fcNewsSection">ယနေ့ ဘောလုံးသတင်း<small>သတင်းအမျိုးအစားအလိုက် ဖတ်ရန်</small></a>
    </nav>
 
+<section class="fc-v2-section" id="fcPreviewV2" aria-labelledby="fcV2Heading">
+ <div class="fc-v2-heading"><div><h2 id="fcV2Heading">ပွဲကြိုသုံးသပ်ချက် Version 2</h2><p>မူရင်းပွဲကြိုမှ အတိုချုပ် · ရွေးချယ်မှု · ပေါက်ကြေး · ပွဲပုံ</p></div><span class="fc-v2-count" id="fcV2Count">—</span></div>
+ <div class="fc-v2-tools">
+  <label>လိဂ်ရွေးရန်<select id="fcV2League"><option value="all">လိဂ်အားလုံး</option></select></label>
+  <label>Frame ရွေးရန်<select id="fcV2Frame"><option value="none">မူရင်း Version 2</option></select></label>
+  <button type="button" id="fcV2Two">⬇ ၂ ပွဲ PNG Download</button>
+  <button type="button" id="fcV2Three">⬇ ၃ ပွဲ PNG Download</button>
+  <button type="button" id="fcV2Zip">⬇ ရွေးထားသောပွဲ ZIP</button>
+  <button type="button" id="fcV2Reload">↻ Refresh</button>
+  <span class="fc-v2-status" id="fcV2Status" role="status"></span>
+  <span class="fc-v2-status" id="fcV2Selected">0 ပွဲ ရွေးထားသည်</span>
+ </div>
+ <p class="fc-v2-status">ရက်စွဲ: <span id="fcV2Date">—</span> · ပွဲပုံမှတ်တမ်းနှင့် မြန်မာကြေးများကို မူရင်းရင်းမြစ်အတိုင်း သီးခြားပြထားပါသည်။ ယခုကြေးမရှိလျှင် မဖြည့်ပါ။</p>
+ <div class="fc-v2-cards" id="fcV2Cards" aria-live="polite"><p>ယနေ့ပွဲကြို ဖတ်ယူနေပါသည်…</p></div>
+</section>
 <section class="fc-prob-section" id="fcProbSection" aria-labelledby="fcProbTitle">
   <div class="fc-prob-intro"><h2 id="fcProbTitle">ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)</h2><span id="fcProbDate" class="fc-prob-status"></span></div>
   <p class="fc-prob-subtitle">လိဂ်အလိုက် အိမ်ရှင်/ဧည့်သည် နှစ်ဖက်အလေးသာမှု (ပေါင်း ၁၀၀%) နှင့် ၂.၅ ဂိုးပေါ်/အောက် (ပေါင်း ၁၀၀%)</p>

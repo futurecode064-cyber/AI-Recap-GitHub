@@ -1,9 +1,9 @@
 "use strict";
 (function(){
 const $=id=>document.getElementById(id);
-const SECTION={odds:"ပေါက်ကြေး",oddsCards:"မြန်မာကြေးကတ်ပုံစံ",previews:"ပွဲကြိုသုံးသပ်ချက်",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"VIP Internet · Bookies · AI Tips",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
+const SECTION={odds:"ပေါက်ကြေး",oddsCards:"မြန်မာကြေးကတ်ပုံစံ",previews:"ပွဲကြိုသုံးသပ်ချက်",previewsV2:"ပွဲကြိုသုံးသပ်ချက် Version 2",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"VIP Internet · Bookies · AI Tips",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
 const home=$("engineHome"),odds=$("engineOdds"),DB="future-code-professional-frame-studio-v2";
-const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odds-hyper-goal","odds-kmm","odds-special-one","odds-the-freedom","odds-bcf","odds-final-goal","odds-ko-chan","odds-team-pmm","odds-thuta","odds-ymc","odds-ko-tut-pi","odds-khin-khin-htar","odds-burmese-red","preview-bcf","preview-daily","preview-final","preview-ggoal","preview-ko","preview-pmm","preview-htet","results-best","results-htet","results-kotwat","ai-best","ai-final","ai-special","news-journal","special-choice"];
+const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odds-hyper-goal","odds-kmm","odds-special-one","odds-the-freedom","odds-bcf","odds-final-goal","odds-ko-chan","odds-team-pmm","odds-thuta","odds-ymc","odds-ko-tut-pi","odds-khin-khin-htar","odds-burmese-red","preview-v2-blue","preview-bcf","preview-daily","preview-final","preview-ggoal","preview-ko","preview-pmm","preview-htet","results-best","results-htet","results-kotwat","ai-best","ai-final","ai-special","news-journal","special-choice"];
 let state=null,currentId="",isNew=false,working=false,published=null,oddsData=null,archive=null,news=null,date="",savedURL=null;
 const copy=o=>JSON.parse(JSON.stringify(o)),str=x=>String(x??"").trim();
 const goodColor=x=>/^#[\da-f]{6}$/i.test(x||"")?x:"#16486c";
@@ -12,12 +12,13 @@ const layoutOptions={
  oddsCards:[["one","ပွဲအားလုံး PNG တစ်ပုံတည်း"],["two","ပွဲအားလုံး ၂ ပုံခွဲ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  odds:[["two","ပွဲအားလုံးကို PNG ၂ ပုံခွဲ"],["one","ပွဲအားလုံး PNG တစ်ပုံတည်း"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  previews:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
+  previewsV2:[["one","တစ်ပွဲတစ်ပုံ"],["pair","၂ ပွဲ တစ်ပုံ"],["triple","၃ ပွဲ တစ်ပုံ"]],
  specials:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
  results:[["one","ပွဲအားလုံး တစ်ပုံ"],["two","ပွဲအားလုံး ၂ ပုံ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  ai:[["one","VIP / Bookies / AI ဇယား တစ်ပုံ"],["two","ဇယားကို PNG ၂ ပုံခွဲ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  news:[["one","တစ်ပုဒ်တစ်ပုံ"],["two","သတင်း ၂ ပုဒ် တစ်ပုံ"]]
 };
-const layoutDefaults={odds:"two",oddsCards:"one",previews:"one",specials:"one",results:"one",ai:"one",news:"one"};
+const layoutDefaults={odds:"two",oddsCards:"one",previews:"one",previewsV2:"pair",specials:"one",results:"one",ai:"one",news:"one"};
 let sectionLayouts={...layoutDefaults};
 try{const from=JSON.parse(localStorage.getItem("fc-frame-section-layout-v1")||"{}");for(const k of TYPES)if(layoutOptions[k].some(opt=>opt[0]===from[k]))sectionLayouts[k]=from[k];}catch(e){console.warn("Frame layouts read",e);}
 function initSectionLayouts(){
@@ -57,6 +58,13 @@ function normalize(){
  for(const k of TYPES){state.placements[k]=[...new Set((Array.isArray(state.placements[k])?state.placements[k]:[]).filter(id=>!!frame(id)))];
   if(!assigned(state.selected[k],k))state.selected[k]="none";}
 }
+function assignPreviewV2(){
+ if(localStorage.getItem("fc-preview-v2-assignment-v1"))return false;
+ const id="preview-v2-blue";if(!frame(id))return false;
+ if(!assigned(id,"previewsV2"))state.placements.previewsV2.push(id);
+ state.selected.previewsV2=id;
+ localStorage.setItem("fc-preview-v2-assignment-v1","yes");return true;
+}
 function assignReferenceRed(){
  if(localStorage.getItem("fc-red-reference-assignment-v1"))return false;
  const id="odds-burmese-red";if(frame(id)&&!assigned(id,"odds"))state.placements.odds.push(id);
@@ -95,7 +103,7 @@ function migrateAssignments(){
  localStorage.setItem("fc-workspace-assignments-v1","yes");return changed;
 }
 async function readyEngines(){
- await waitFor(()=>home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob&&home.contentWindow?.FutureCodeFrameZip?.Archive);
+ await waitFor(()=>home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodePreviewV2?.render&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob&&home.contentWindow?.FutureCodeFrameZip?.Archive);
  await home.contentWindow.FutureCodeProfessionalFrames.ready;
  await waitFor(()=>odds.contentWindow?.FutureCodeProfessionalFrames?.ready&&odds.contentWindow?.FutureCodeTableOddsFrames?.draw&&odds.contentWindow?.FutureCodeBurmeseRedOddsFrame?.draw&&odds.contentWindow?.FutureCodeFrameEditor?.getOddsSheet);
  await odds.contentWindow.FutureCodeProfessionalFrames.ready;
@@ -335,7 +343,7 @@ $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();s
 (async()=>{try{
  initSectionLayouts();
  status("မူလ Website Export Engine နှစ်ခု ဖွင့်နေသည်…");await readyEngines();
- state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed(),cardUpgrade=migrateOddsCardsAssignment(),bannerUpgrade=upgradeOddsBanners();if(migrated||added||cardUpgrade||bannerUpgrade)await dbWrite(state);
+ state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed(),cardUpgrade=migrateOddsCardsAssignment(),bannerUpgrade=upgradeOddsBanners(),previewV2Added=assignPreviewV2();if(migrated||added||cardUpgrade||bannerUpgrade||previewV2Added)await dbWrite(state);
  let loadFailure=null;try{await loadData();}catch(e){loadFailure=e;}
  currentId=state.frames[0]?.id||"";$("oddsModeWrap").hidden=false;renderList();renderEditor();renderExportControls();
  status(loadFailure?"Frame Editor ဖွင့်ပြီး၊ Published Data မရသေးပါ — "+loadFailure.message:"Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။",!!loadFailure);
