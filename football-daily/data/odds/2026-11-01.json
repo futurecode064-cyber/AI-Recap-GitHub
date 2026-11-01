@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-11-01",
-  "priceStatus": "MORNING_AND_CURRENT",
+  "priceStatus": "morning-original-plus-current",
   "sourcePDF": "1.pdf",
   "sourceRows": 19,
   "priceSheetType": "morning original PDF + owner current-price PDF",
@@ -804,11 +804,11 @@
       "currentPricePdfKickoff": "19:00"
     }
   ],
-  "currentPriceStatus": "NO_OWNER_CURRENT_PRICE_PDF",
+  "currentPriceStatus": "owner-pdf-verified-all-19",
   "currentPriceSourcePdf": "1 စျေး.pdf",
   "currentPriceSourceRows": 19,
   "currentPriceMatchedRows": 19,
   "currentPriceHeldRows": 0,
   "currentPriceUpdatedAt": "2026-11-01 13:49 MMT",
-  "currentPriceAudit": "All 19 current-price rows match the same-date fixture identities and exact morning handicap/goal-total quotes. Row 11 PDF kickoff is 21:00 MMT while stored kickoff is 20:00; the official Bundesliga fixture listing confirms 15:30 CET (21:00 MMT). Existing kickoff fields were intentionally left unchanged because this update changes current odds only."
+  "currentPriceAudit": "All 19 current-price rows match the same-date fixture identities and exact morning handicap/goal-total quotes. For row 11, sourceKickoff is 20:00 but the existing kickoff and kickoffDisplay are already 21:00 MMT; the owner PDF also prints 9:00 PM, confirmed by the official Bundesliga fixture schedule (15:30 CET = 21:00 MMT). No kickoff field was changed in this current-odds-only update."
 }

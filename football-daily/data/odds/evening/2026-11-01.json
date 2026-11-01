@@ -7,7 +7,7 @@
   "matchedRows": 19,
   "heldRows": 0,
   "updatedAt": "2026-11-01 13:49 MMT",
-  "sourceDescription": "Owner-provided current-price PDF matched against the same-date morning sheet by fixture ID, both Myanmar team labels and exact original handicap/goal-total quotes. PDF row 11 prints 9:00 PM; the stored morning kickoff is 8:00 PM, while the official Bundesliga fixture schedule confirms 15:30 CET (21:00 MMT). Existing kickoff fields are unchanged in this current-odds-only update.",
+  "sourceDescription": "Owner-provided current-price PDF matched against the same-date morning sheet by fixture ID, both Myanmar team labels and exact original handicap/goal-total quotes. For row 11, sourceKickoff is 20:00 but the existing kickoffDisplay is already 21:00 MMT; the owner PDF and official Bundesliga fixture schedule both confirm 9:00 PM MMT. No kickoff field was changed in this current-odds-only update.",
   "matches": [
     {
       "row": 1,
