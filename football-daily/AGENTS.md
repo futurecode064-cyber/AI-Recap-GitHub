@@ -96,3 +96,27 @@ These GitHub instructions are durable release gates for *invoked* daily updates,
 - Search external fixture-specific exact-score publications for every VIP row before declaring it unavailable. Keep external source/date/check date and orientation; do not use local Bookies/AI/PDF scores to fill VIP. Log unavailable reasons explicitly.
 - Require all ten news images with credit, license/context, caption and a working image file. Label original illustrations as illustrations; never describe them as real event photographs.
 - Completion requires current normal/premium prose actually visible live plus nonblank probability/tips coverage and real PNG/ZIP QA. A saved draft alone is unfinished.
+
+## PERMANENT DAILY MATCH PREVIEW VERSION 2 FORMAT — OWNER CONFIRMED 2026-11-01
+Apply this exact approved Preview Version 2 format to every eligible daily fixture, every publication date, and every brand/site surface that consumes the shared section. Do not treat it as a one-day sample or revert to the older layout.
+
+### Card composition and content
+- One match card contains: (1) authentic, match-relevant stadium/match photograph with both clubs' correct crests integrated cleanly; (2) both Myanmar club names and a concise summary derived from that day's full approved match preview; (3) a clearly separated ရွေးချယ်မှု strip showing the selected club/market exactly as the approved preview says; and (4) the Myanmar odds-card strip below.
+- The odds strip MUST follow the owner's second Myanmar odds-card reference, not the old two-column/team-versus layout: home team + home crest on the left, central market/price panel, away crest + away team on the right. Within the central panel show the verified Myanmar goal-total price (ဂိုးပေါင်းကြေး), actual local kickoff time, and verified Myanmar handicap/body price (ဘော်ဒီကြေး) in the approved compact hierarchy. Keep original/morning and current/evening prices distinct; never substitute one for the other. Do not add decorative labels or extra rows that crowd the central strip.
+- Match photographs must depict the actual clubs, players, stadium or match context and be relevant to that fixture. Do not use generic AI graphics, abstract football backgrounds or unrelated player collages as article photographs. Preserve image provenance/usage rights and use verified club crests, not guessed logos.
+
+### Myanmar text rendering — hard gate
+- Use the project's bundled/local Noto Sans Myanmar font (FCMyanmar where already registered) for every generated card and downloaded image; wait for document.fonts.ready before measuring or exporting.
+- Wrap Myanmar text at Unicode word boundaries using Intl.Segmenter('my',{granularity:'word'}) or the project's verified equivalent. Never split Myanmar syllables/grapheme clusters or break by arbitrary character count. Preserve punctuation and spaces; no orphaned combining marks at line starts, clipping, overflow, overlapping text or chopped paragraphs.
+- Fit the concise summary to the card with deliberate line-height, paragraph spacing, safe padding and measured font size. Keep the full original preview in the source section; Version 2 is its concise summary, not a replacement. If content cannot fit legibly, reflow/expand the card rather than shrinking below readable size or silently truncating.
+- Regression-check long Myanmar names and multi-sentence summaries at desktop/mobile and in the actual PNG export. Verify font loaded and no text line exceeds its content width.
+
+### Theme, Frame Editor and downloads
+- Version 2 must be a first-class ပွဲကြိုသုံးသပ်ချက် Version 2 section in the existing Frame Editor and Download Center. Reuse the existing shared section frame/theme settings, banner proportions, output dimensions, typography controls, selected-frame behavior and export pipeline. Do not hardcode a separate blue palette or bypass the user's selected theme; the downloaded PNG must reflect the same active theme as the other sections.
+- Keep the explicit ၂ ပွဲ Download and ၃ ပွဲ Download options. Each export must contain exactly the requested number of selected match cards per image/file, in stable fixture order; ZIP contains only the selected Version 2 exports and valid image files. Retain existing preview, multi-select, filters and download behavior for every unrelated section.
+- Every daily run must refresh Version 2 cards from the current day's approved preview, actual team photographs/crests, selection and matching odds. Never carry yesterday's fixtures, selection, photo or prices into today's section.
+
+### Required daily QA before publication is COMPLETE
+- Check all eligible fixtures have a Version 2 card and a nonblank, justified selection; each summary matches the current full preview; team names and kickoff match the source PDF/data; both crests and relevant photo are correct; goal-total and handicap values match the correct original/current source.
+- Browser-test Frame Editor section registration, theme-color changes, 2-match and 3-match downloads, and ZIP contents. Open actual downloaded PNGs and inspect Myanmar text wrapping, photo/logo fidelity, odds strip alignment and selected theme. Run the Version 2 live regression test and record card count, image dimensions, ZIP validity and Cloudflare live-resource read-back.
+- Missing or unverified fixture/photo/odds/font/export is recorded as PARTIAL/UNAVAILABLE with exact reason; never claim Version 2 daily QA PASS from a commit alone.
