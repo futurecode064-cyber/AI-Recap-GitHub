@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-11-01",
-  "status": "CANDIDATE_STRUCTURAL_PASS_LIVE_QA_PENDING",
+  "status": "LIVE_JSON_VALIDATED__RUNTIME_PNG_DOWNLOAD_NOT_VERIFIED",
   "sourcePdf": "1.pdf",
   "pdfSha256": "35a4f3ee48da46006a6a181f8b1b989014d06e89969b4d1fdda63233e38beaff",
   "pdfRows": 19,
@@ -15,12 +15,28 @@
   "crestUrlsOddsOnly": 6,
   "FTMatches": 33,
   "FTSource": "https://www.theguardian.com/football/results",
-  "vipPublished": 2,
-  "vipUnavailableReasons": 14,
+  "vipPublished": 16,
+  "vipUnavailableReasons": 0,
   "news": 10,
-  "newsOriginalVectorImages": 10,
+  "newsOriginalVectorImages": 0,
   "currentOdds": "MISSING_SOURCE_BLANK",
   "unionBerlinKolnLocalTime": "9:00 PM Asia/Yangon; PDF source 8:00 PM",
   "prePublishStructuralCheck": "PASS, 0 errors in equivalent schema/date/joins/coverage validation, original Python guard not executed",
-  "liveBrowserQA": "PENDING"
+  "liveBrowserQA": "PENDING",
+  "vipExactScoreSource": "Forepitch independent 2026-11-01 published predictions page, same-day per-fixture scorelines",
+  "newsRealPersonPhotographs": 10,
+  "newsNoMatchPreviewOrResultReport": true,
+  "newsPhotoProvenance": "Wikimedia Commons file pages with original authors, dates, CC/CC0 licenses, photos clearly labelled archival; news sources 2026-10-30/31",
+  "latestCommitNews": "7a2b99ed745c65d8aba3afe1330f767a1816dbbe",
+  "liveValidation": {
+    "reportDate": "2026-11-01",
+    "vipItems": 16,
+    "vipMissing": 0,
+    "newsItems": 10,
+    "newsRealPhotos": 10,
+    "oldGraphicReferences": 0,
+    "fullArticleImagesAndCredits": true,
+    "source": "Direct live Cloudflare /data/tips/2026-11-01.json and /data/news/latest.json",
+    "browserInteractiveDownloadTest": "NOT_PERFORMED"
+  }
 }
