@@ -1,0 +1,23 @@
+name: Football FCM static publish bridge QA
+on:
+  push:
+    branches: [feature/football-notification-bridge-20261029]
+    paths:
+      - 'football-daily/scripts/dispatch-static-fcm.mjs'
+      - 'football-daily/tests/dispatch-static-fcm.test.mjs'
+      - '.github/workflows/football-fcm-bridge-qa.yml'
+      - '.github/workflows/football-fcm-on-publish.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: node --check football-daily/scripts/dispatch-static-fcm.mjs
+      - run: node --test football-daily/tests/dispatch-static-fcm.test.mjs
+      - name: Ensure no plaintext private key was committed
+        run: |
+          ! grep -E '-----BEGIN (RSA |EC )?PRIVATE KEY-----' football-daily/scripts/dispatch-static-fcm.mjs
