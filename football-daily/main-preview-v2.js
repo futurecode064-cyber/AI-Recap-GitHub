@@ -8,21 +8,7 @@
  let items=[],date="",selected=new Set(),busy=false,wrapFrame=0;
  const clean=s=>String(s??"").replace(/\*\*|&#x20;|&nbsp;/g,"").normalize("NFC").replace(/\r\n?/g,"\n").replace(/[ \t]+/g," ").replace(/\n[ \t]+/g,"\n").trim();
  const clock=m=>window.FutureCodeTime?.clock?.(m)||m.kickoff||m.sourceKickoff||"—";
- function summary(m){
-  const raw=clean(m.dailyPreviewText);if(!raw)return "";
-  const paragraphs=raw.split(/\n+/u).map(x=>x.trim()).filter(Boolean),out=[];
-  for(const para of paragraphs){
-   const sentences=para.match(/[^။!?]+[။!?]?/gu)||[para];let part="";
-   for(const sentence of sentences){
-    const next=part?part+" "+sentence.trim():sentence.trim();
-    if(part&&(part.length>350||next.length>580))break;
-    part=next;if(part.length>=350)break;
-   }
-   if(part)out.push(part);
-   if(out.join("\n").length>=580)break;
-  }
-  return out.join("\n\n")||raw;
- }
+ function summary(m){return clean(m.previewV2Summary)||(m.previewV2EditorialStatus?"":"ဤပွဲအတွက် အတိုချုပ်စာကို အတည်ပြုနေဆဲ ဖြစ်ပါသည်။");}
  function choice(m){
   const last=clean(m.dailyPreviewText).slice(-260);
   for(const side of ["home","away"]){
@@ -172,12 +158,12 @@
   const col=/^#[\da-f]{6}$/i.test(options.color||"")?options.color:"#07527a",deep=shade(col,.78);
   c.fillStyle="#e8f0f5";c.fillRect(0,0,1200,850);
   c.fillStyle=col;c.fillRect(0,0,1200,67);c.textAlign="center";c.textBaseline="middle";c.fillStyle="#fff";
-  contain(c,l,24,10,48,48);
   fitMyanmar(c,m.leagueDisplay||m.league,600,35,1010,25,800,15);
   const leagueUrl=window.FutureCodeMainLogoAssets?.leagueCrest(m.league)||window.FutureCodeBrandExportData?.leagueCrest?.(m.league)||"";
   const [h,a,l,p,stadium]=await Promise.all([image(m.homeCrestUrl),image(m.awayCrestUrl),image(leagueUrl),image(media(m)),image(new URL("./assets/preview-stadium-night.jpg",document.baseURI).href)]);
   if(!h||!a)throw Error("အသင်း Logo မပြည့်စုံပါ — "+(m.homeDisplay||m.home)+" / "+(m.awayDisplay||m.away)+"။ Logo မပြည့်ဘဲ Download မထုတ်ပါ။");
   if(!l)throw Error("လိဂ် Logo မရရှိပါ — "+(m.leagueDisplay||m.league)+"။ လိဂ် Logo မပြည့်ဘဲ Download မထုတ်ပါ။");
+  contain(c,l,24,10,48,48);
   c.save();c.beginPath();c.roundRect(20,84,435,492,18);c.clip();
   if(stadium)cover(c,stadium,20,84,435,492);else{c.fillStyle="#18415f";c.fillRect(20,84,435,492);}
   if(p)cover(c,p,20,84,435,492);
@@ -225,19 +211,26 @@
   try{
    const checked=items.filter(m=>selected.has(m.fixtureId)),rows=(checked.length?checked:items).slice(0,amount||items.length);
    if(!rows.length)throw Error("ပွဲရွေးထားခြင်းမရှိပါ");status.textContent=rows.length+" ပွဲ PNG ပြင်ဆင်နေပါသည်";
-   const chosen=el("fcV2Frame")?.value||"none",api=window.FutureCodeProfessionalFrames,frame=chosen!=="none"?api?.getFrame?.(chosen):null,canvases=[];
-   for(const m of rows){let x=await render(m,{color:frame?.color});if(chosen!=="none"&&api?.wrap)x=await api.wrap(x,"previewsV2","pro:"+chosen);canvases.push(x);}
-   if(zip){
-    const Archive=window.FutureCodeFrameZip?.Archive;if(!Archive)throw Error("ZIP engine မရပါ");const archive=new Archive();
-    for(let i=0;i<canvases.length;i++)await archive.add("ပွဲကြိုသုံးသပ်ချက် Version 2/Preview-V2-"+String(i+1).padStart(2,"0")+".png",await canvasBlob(canvases[i]));
-    save(archive.finish(),"Preview-V2-"+date+"-"+rows.length+"-matches.zip");
-   }else{
+   const chosen=el("fcV2Frame")?.value||"none",api=window.FutureCodeProfessionalFrames,frame=chosen!=="none"?api?.getFrame?.(chosen):null;
+   const makeCombined=async chunk=>{
+    const canvases=[];
+    for(const m of chunk)canvases.push(await render(m,{color:frame?.color}));
     const width=Math.max(...canvases.map(x=>x.width)),height=canvases.reduce((v,x)=>v+x.height,0)+(canvases.length-1)*12;
     if(height>32767||height*width>108000000)throw Error("PNG အမြင့်များလွန်းပါသည်");
-    const out=document.createElement("canvas");out.width=width;out.height=height;const cx=out.getContext("2d");cx.fillStyle="#e3ecf2";cx.fillRect(0,0,width,height);
-    let y=0;for(const x of canvases){cx.drawImage(x,(width-x.width)/2,y);y+=x.height+12;}
-    save(await canvasBlob(out),"Preview-V2-"+date+"-"+rows.length+"-matches.png");
-   }
+    const out=document.createElement("canvas");out.width=width;out.height=height;
+    const cx=out.getContext("2d");cx.fillStyle="#e3ecf2";cx.fillRect(0,0,width,height);
+    let y=0;for(const c of canvases){cx.drawImage(c,(width-c.width)/2,y);y+=c.height+12;}
+    // Group cards first, then apply the chosen frame exactly once.
+    return chosen!=="none"&&api?.wrap?api.wrap(out,"previewsV2","pro:"+chosen):out;
+   };
+   if(zip){
+    const Archive=window.FutureCodeFrameZip?.Archive;if(!Archive)throw Error("ZIP engine မရပါ");
+    const archive=new Archive(),groupSize=amount===2||amount===3?amount:3;
+    for(let i=0;i<rows.length;i+=groupSize){
+     await archive.add("ပွဲကြိုသုံးသပ်ချက် Version 2/Preview-V2-"+String(Math.floor(i/groupSize)+1).padStart(2,"0")+".png",await canvasBlob(await makeCombined(rows.slice(i,i+groupSize))));
+    }
+    save(archive.finish(),"Preview-V2-"+date+"-"+rows.length+"-matches.zip");
+   }else save(await canvasBlob(await makeCombined(rows)),"Preview-V2-"+date+"-"+rows.length+"-matches.png");
    status.textContent=rows.length+" ပွဲ Download အဆင်သင့်";
   }catch(e){status.textContent="Download မရပါ — "+e.message;}finally{busy=false;}
  }
