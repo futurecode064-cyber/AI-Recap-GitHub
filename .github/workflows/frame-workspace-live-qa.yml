@@ -56,7 +56,7 @@ jobs:
               !!window.FCStudio.getHome().FutureCodeFramePreview,
               !!window.FCStudio.getOdds().FutureCodeTableOddsFrames
             ]}));
-            assert(initial.count>=30&&initial.scopes===7&&initial.versions.every(Boolean),JSON.stringify(initial));
+            assert(initial.count>=30&&initial.scopes===8&&initial.versions.every(Boolean),JSON.stringify(initial));
             assert(await page.locator('#downSection option[value="oddsCards"]').count()===1,'Missing new Burmese odds cards download section');
             assert(await page.locator('#librarySection option[value="oddsCards"]').count()===1,'Missing new card section library filter');
             await page.locator('#librarySection').selectOption('odds');

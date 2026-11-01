@@ -1,0 +1,31 @@
+name: Preview Version 2 — Live Browser PNG ZIP Acceptance
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/preview-v2-live-qa.yml'
+      - 'football-daily/tests/preview-v2-live-qa.cjs'
+      - 'football-daily/index.html'
+      - 'football-daily/main-preview-v2.js'
+      - 'football-daily/main-preview-v2.css'
+      - 'football-daily/frame-editor.html'
+      - 'football-daily/frame-workspace.js'
+      - 'football-daily/frame-export-engine.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Verify real Cloudflare Version 2 UI and PNG/ZIP
+        run: node football-daily/tests/preview-v2-live-qa.cjs
