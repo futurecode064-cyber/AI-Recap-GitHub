@@ -11,6 +11,10 @@ on:
       - 'football-daily/frame-editor.html'
       - 'football-daily/frame-workspace.js'
       - 'football-daily/frame-export-engine.js'
+      - 'football-daily/data/today.json'
+      - 'football-daily/config/preview-v2-format.json'
+      - 'football-daily/scripts/validate_preview_v2.cjs'
+      - 'football-daily/tests/preview-v2-daily-contract.test.cjs'
   workflow_dispatch:
 permissions:
   contents: read
@@ -23,6 +27,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Enforce daily Preview V2 editorial and format contract
+        run: |
+          node football-daily/scripts/validate_preview_v2.cjs football-daily/data/today.json
+          node --test football-daily/tests/preview-v2-daily-contract.test.cjs
       - name: Install Chromium
         run: |
           npm install --no-save --no-package-lock playwright

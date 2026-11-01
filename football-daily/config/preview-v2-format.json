@@ -1,0 +1,73 @@
+{
+  "name": "Future Code Preview V2",
+  "version": "2.1",
+  "permanent": true,
+  "timezone": "Asia/Yangon",
+  "source": {
+    "report": "data/today.json",
+    "canonicalFixtureKey": "fixtureId",
+    "fullOriginal": "dailyPreviewText",
+    "editorial": "previewV2Summary",
+    "selection": "previewV2Selection",
+    "editorialDate": "previewV2EditorialDate",
+    "sourceDate": "previewV2SourcePreviewDate",
+    "status": "previewV2EditorialStatus",
+    "image": "previewV2Media"
+  },
+  "content": {
+    "summaryMinLength": 180,
+    "summaryMaxLength": 720,
+    "minSentences": 2,
+    "editorialRequired": true,
+    "allowMechanicalExcerpts": false,
+    "requireNamedSelection": true,
+    "keepOriginalUnchanged": true,
+    "requireMyanmarNames": true,
+    "requireBothCrests": true,
+    "requireSourceDateMatch": true
+  },
+  "display": {
+    "font": "FCMyanmar",
+    "fontFallback": "Noto Sans Myanmar",
+    "wordBreak": "Intl.Segmenter(my,word)",
+    "cardWidthPx": 1200,
+    "cardHeightPx": 850,
+    "gapPx": 12,
+    "oddsStripOrder": [
+      "home crest/name",
+      "goal total odds",
+      "12-hour Myanmar-local kickoff",
+      "body/handicap odds",
+      "away name/crest"
+    ],
+    "originalAndCurrentSeparate": true
+  },
+  "export": {
+    "groupSizes": [
+      1,
+      2,
+      3
+    ],
+    "bannerPolicy": "single pair per final combined PNG",
+    "pipeline": [
+      "render unframed cards",
+      "stack in fixture order",
+      "wrap selected frame once",
+      "encode PNG or ZIP"
+    ],
+    "forbidInnerBanners": true,
+    "frameThemeFromEditor": true,
+    "zipContainsPNG": true
+  },
+  "qa": {
+    "validateDailyJSON": true,
+    "comparePdfNames": true,
+    "testDynamicFixtureCount": true,
+    "testEditorialDate": true,
+    "testFullPreview": true,
+    "testSingleBannerViaHeightDelta": true,
+    "checkImageAndLogoFidelity": true,
+    "checkPNGAndZIP": true,
+    "verifyCloudflareLive": true
+  }
+}

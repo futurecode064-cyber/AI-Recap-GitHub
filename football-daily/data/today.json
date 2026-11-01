@@ -194,7 +194,11 @@
         "historical": true
       },
       "previewV2Summary": "လီဗာပူးလ်ဟာ ပြိုင်ပွဲစုံ နောက်ဆုံးငါးပွဲဆက် အနိုင်ရထားပြီး အိမ်ကွင်းမှာ ခံစစ်စည်းကမ်းကောင်းကောင်းနဲ့ အခွင့်အရေးကို ထိရောက်စွာ အသုံးချလာနိုင်ပါတယ်။ အာဆင်နယ်က ရမှတ်ပိုများပြီး ခံစစ်လည်း တည်ငြိမ်ပေမယ့် ဆာကာနဲ့ ဆာလီဘာတို့ မပါနိုင်တာက အားနည်းချက် ဖြစ်လာနိုင်ပါတယ်။ အီဆက်ရဲ့ ဂိုးသွင်းခြေစွမ်းနဲ့ အိမ်ကွင်းအရှိန်ကို ချိန်ဆကြည့်ရင် လီဗာပူးလ်ဘက်ကို ပိုမိုယုံကြည်ရပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "လီဗာပူးလ်"
     },
     {
       "fixtureId": "fc-20261101-02",
@@ -378,7 +382,11 @@
         "over": "2.67"
       },
       "previewV2Summary": "ဂီတာဖေးရဲ့ အဓိကပြဿနာက ဂိုးသွင်းအားနည်းမှုဖြစ်ပြီး လိဂ်ဆယ်ပွဲမှာ ငါးဂိုးသာ သွင်းယူထားနိုင်ပါတယ်။ ဆီဗီလာကတော့ အိုဆာဆူနာနဲ့ပွဲ အနိုင်ရပြီးနောက် ကစားပုံပိုမိုတည်ငြိမ်လာသလို ကွင်းလယ်မှာလည်း အသာစီးယူနိုင်တဲ့အင်အားရှိပါတယ်။ အိမ်ရှင်ရဲ့ ခံစစ်ကို ကျော်ဖြတ်နိုင်ဖို့ လိုပေမယ့် လတ်တလောခြေစွမ်းကိုကြည့်ရင် ဆီဗီလာက ပိုမိုအားသာပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဆီဗီလာ"
     },
     {
       "fixtureId": "fc-20261101-03",
@@ -564,7 +572,11 @@
         "over": "1.19"
       },
       "previewV2Summary": "ရေးဆင်း ဆန်တန်ဒါဟာ အိမ်ကွင်းအားနဲ့ လူငယ်တိုက်စစ်မှူး ဇာဘီရီရဲ့ ဂိုးသွင်းခြေစွမ်းကို အားထားရမှာပါ။ ဒါပေမဲ့ ဆယ်ပွဲမှာ ၂၆ ဂိုးအထိ ခွင့်ပြုထားတဲ့ ခံစစ်က အမ်ဘတ်ပေ၊ ဘယ်လင်ဂမ်တို့ပါဝင်တဲ့ ရီးရဲလ်မက်ဒရစ်တိုက်စစ်ကို ထိန်းဖို့ ခက်ခဲနိုင်ပါတယ်။ ရေးဆင်းဘက်က အစပိုင်းမှာ ဖိအားပေးနိုင်သော်လည်း အဆုံးသတ်ပိုင်းကွာခြားချက်ကြောင့် ရီးရဲလ်မက်ဒရစ်ကို ပိုမိုအားထားနိုင်ပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ရီးရဲလ်မက်ဒရစ်"
     },
     {
       "fixtureId": "fc-20261101-04",
@@ -748,7 +760,11 @@
         "over": "2.00"
       },
       "previewV2Summary": "အယ်လ်ချီဟာ နောက်ဆုံးလိဂ်လေးပွဲမှာ ရှစ်မှတ်ရယူထားပြီး တိုက်စစ်ပိုင်းကလည်း တဖြည်းဖြည်း ထက်မြက်လာပါတယ်။ ဗလင်စီယာကတော့ အမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရုန်းကန်နေရသလို ဂိုးသွင်းအခွင့်အရေး ဖန်တီးနိုင်မှုလည်း နည်းပါးနေပါတယ်။ အိမ်ရှင်ရဲ့ လတ်တလောတိုးတက်မှုနဲ့ ဧည့်သည်အသင်းရဲ့ လူစာရင်းအခက်အခဲတွေကို ထည့်တွက်ရင် အယ်လ်ချီက အသာစီးရနိုင်တဲ့ပွဲပါ။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "အယ်လ်ချီ"
     },
     {
       "fixtureId": "fc-20261101-05",
@@ -932,7 +948,11 @@
         "over": "1.77"
       },
       "previewV2Summary": "ဘီလ်ဘာအိုဟာ ဂီတာဖေးနဲ့ ဖလားပွဲတွေမှာ ဂိုးသွင်းအားပြသခဲ့ပြီး ဝီလီယံစ်ညီအစ်ကိုရဲ့ တောင်ပံတိုက်စစ်လည်း အားကောင်းလာပါတယ်။ ဆိုစီဒက်က လိဂ်လေးပွဲဆက်အနိုင်ရထားပေမယ့် ခံစစ်မှာ ဂိုးပေးရမှု များနေသေးပါတယ်။ ဆန်မာမက်စ်ကွင်းက အရှိန်နဲ့ ဘီလ်ဘာအိုရဲ့ လူစာရင်းပြန်လည်ပြည့်စုံလာမှုကြောင့် အိမ်ရှင်ဘက်ကို ပိုမိုယုံကြည်ရပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "အက်သလက်တစ် ဘီလ်ဘာအို"
     },
     {
       "fixtureId": "fc-20261101-06",
@@ -1118,7 +1138,11 @@
         "over": "1.41"
       },
       "previewV2Summary": "ဖာဘရီဂတ်စ်ရဲ့ ကိုမိုဟာ ပြိုင်ပွဲစုံလေးပွဲဆက် အနိုင်ရထားပြီး အဲဒီလေးပွဲမှာ ၁၂ ဂိုးအထိ သွင်းယူထားပါတယ်။ ဗင်နီဇီယာကတော့ ကိုးပွဲမှာ တစ်ပွဲသာ အနိုင်ရထားသလို တိုက်စစ်နဲ့ ခံစစ်နှစ်ပိုင်းစလုံး အားနည်းနေပါတယ်။ နီကိုပါ့ဇ်တို့ရဲ့ ဖန်တီးမှုနဲ့ အိမ်ကွင်းတိုက်စစ်အရှိန်ကိုကြည့်ရင် ကိုမိုက ပွဲကိုဦးဆောင်နိုင်မယ့် အလားအလာပိုများပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ကိုမို"
     },
     {
       "fixtureId": "fc-20261101-07",
@@ -1310,7 +1334,11 @@
         "historical": true
       },
       "previewV2Summary": "တန်းတက်အသင်း ဖရိုဆီနိုနီဟာ ကိုးပွဲမှာ ၂၂ ဂိုးသွင်းထားပြီး နောက်ဆုံးသုံးပွဲတည်းမှာ ၁၃ ဂိုးအထိ ရရှိထားပါတယ်။ တိုရီနိုက တိုက်စစ်မှာ အန္တရာယ်ပေးနိုင်ပေမယ့် နောက်ဆုံး ကိုမိုနဲ့ပွဲမှာ ဦးဆောင်ဂိုးရပြီးမှ ခံစစ်ပြိုလဲခဲ့ပါတယ်။ ရိုင်မွန်ဒို ဦးဆောင်တဲ့ ဖရိုဆီနိုနီရဲ့ ဂိုးသွင်းအရှိန်ဟာ ဒီပွဲအတွက် အဓိကအားသာချက်ဖြစ်ပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဖရိုဆီနိုနီ"
     },
     {
       "fixtureId": "fc-20261101-08",
@@ -1504,7 +1532,11 @@
         "historical": true
       },
       "previewV2Summary": "လာဇီယိုဟာ လိဂ်ကိုးပွဲမှာ ရှုံးပွဲမရှိသေးဘဲ နောက်ဆုံး ဆက်ဆူအိုလိုကို ခြောက်ဂိုးသွင်း အနိုင်ရထားပါတယ်။ ဇက်ကာညီနဲ့ နော့စ်လင်တို့ရဲ့ လှုပ်ရှားမှုက ထက်မြက်နေချိန်မှာ ကာဂလီယာရီက သုံးပွဲဆက် ရှုံးနိမ့်ပြီး ခံစစ်တည်ငြိမ်မှု ပျောက်နေပါတယ်။ မာလ်ဒီနီရဲ့ တန်ပြန်တိုက်စစ်ကို သတိထားရမယ့်အစား လာဇီယိုရဲ့ စုစည်းမှုနဲ့ အိမ်ကွင်းအင်အားကို ပိုမိုအားထားနိုင်ပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "လာဇီယို"
     },
     {
       "fixtureId": "fc-20261101-09",
@@ -1688,7 +1720,11 @@
         "over": "2.48"
       },
       "previewV2Summary": "လက်ချီဟာ နောက်ဆုံးနှစ်ပွဲမှာ ဂိုးအများအပြား ခွင့်ပြုခဲ့ရပြီး လူစာရင်းပိုင်းမှာလည်း ဒဏ်ရာနဲ့ ပွဲပယ်ပြဿနာတွေ ရှိနေပါတယ်။ ဂျီနိုအာကတော့ နောက်ဆုံးလေးပွဲမှာ သုံးပွဲအနိုင်ရထားပြီး ခံစစ်တည်ငြိမ်မှုနဲ့ အဆုံးသတ်ပိုင်း တိုးတက်လာပါတယ်။ အိမ်ရှင်ရဲ့ ရုန်းကန်လိုစိတ်ရှိမယ့်ပွဲဖြစ်ပေမယ့် လက်ရှိခြေစွမ်းအရ ဂျီနိုအာဘက်က ပိုပြီး ယုံကြည်ရပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဂျီနိုအာ"
     },
     {
       "fixtureId": "fc-20261101-10",
@@ -1880,7 +1916,11 @@
         "historical": true
       },
       "previewV2Summary": "ဂျူဗင်တပ်စ်ဟာ ဘောလုံးကို ထိန်းချုပ်နိုင်ပေမယ့် ဂိုးသွင်းအဆုံးသတ်ပိုင်းမှာ အားနည်းနေပြီး အဓိကကစားသမားတချို့လည်း ဒဏ်ရာကြောင့် မပါနိုင်ပါဘူး။ နာပိုလီကတော့ မွန်ဇာကို လေးဂိုးသွင်းအနိုင်ရထားပြီး ဟွိုင်လန်းနဲ့ ဒီဘရိုင်းတို့ရဲ့ တိုက်စစ်ပူးပေါင်းမှု ပိုမိုအသက်ဝင်လာပါတယ်။ နှစ်သင်းစလုံးမှာ လူစာရင်းအခက်အခဲရှိပေမယ့် လတ်တလော ဂိုးသွင်းနိုင်စွမ်းမှာ နာပိုလီက အသာစီးရနေပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "နာပိုလီ"
     },
     {
       "fixtureId": "fc-20261101-11",
@@ -2064,7 +2104,11 @@
         "over": "1.69"
       },
       "previewV2Summary": "ယူနီယံဘာလင်ဟာ လိဂ်မှာ အမှတ်နည်းနေသော်လည်း နောက်ဆုံးပွဲတွေမှာ ခံစစ်စုစည်းမှုပိုကောင်းလာပါတယ်။ ကိုလုံးက ဖလားပွဲမှာ ယူနီယံကို ငါးဂိုးပြတ် အနိုင်ရခဲ့ပေမယ့် လိဂ်အဝေးကွင်းသုံးပွဲစလုံး ရှုံးထားတာက အဓိကအားနည်းချက်ပါ။ ဖလားပွဲရလဒ်ကိုသာကြည့်လို့မရဘဲ အိမ်ကွင်းအားသာချက်နဲ့ ခံစစ်တည်ငြိမ်မှုကို ထည့်တွက်ရင် ယူနီယံဘာလင်ဘက်ကို ပိုမိုအားထားနိုင်ပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ယူနီယံဘာလင်"
     },
     {
       "fixtureId": "fc-20261101-12",
@@ -2256,7 +2300,11 @@
         "historical": true
       },
       "previewV2Summary": "ဖရန့်ဖတ်ဟာ လိဂ်နောက်ဆုံးသုံးပွဲမှာ တစ်ဂိုးသာ သွင်းထားနိုင်ပေမယ့် ဟမ်းဘတ်ကို ဖလားပွဲမှာ သုံးဂိုးသွင်းအနိုင်ရထားတာက ယုံကြည်မှုရစေပါတယ်။ ဟမ်းဘတ်ကတော့ နောက်ဆုံးနှစ်ပွဲဆက်ရှုံးထားသလို အဝေးကွင်းခံစစ်မှာလည်း အားနည်းနေပါတယ်။ နှစ်သင်းစလုံး ခံစစ်အပြည့်အဝ မတည်ငြိမ်သေးပေမယ့် ဖလားပွဲမှာ ပြသခဲ့တဲ့ ဖရန့်ဖတ်ရဲ့ အဆုံးသတ်နိုင်စွမ်းကို ပိုယုံကြည်ရပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဖရန့်ဖတ်"
     },
     {
       "fixtureId": "fc-20261101-13",
@@ -2440,7 +2488,11 @@
         "over": "1.66"
       },
       "previewV2Summary": "စထရာဘိုးဟာ လိဂ်လေးပွဲဆက် ရှုံးနိမ့်ထားပြီး ခံစစ်က ပေးဂိုးများနေသလို အရေးပါတဲ့ကစားသမားအချို့လည်း မပါနိုင်ပါဘူး။ အော်ဇေးကတော့ လတ်တလော အမှတ်ပြန်စုဆောင်းလာနိုင်ပြီး ရှေ့တန်းက အာချာရဲ့ ဂိုးသွင်းခြေစွမ်းကလည်း အားရစရာရှိပါတယ်။ အော်ဇေးရဲ့ အဝေးကွင်းခံစစ်က စိုးရိမ်စရာရှိပေမယ့် လက်ရှိနှစ်သင်းရဲ့ အရှိန်ကို နှိုင်းယှဉ်ရင် ဧည့်သည်အသင်းဘက်ကို ပိုမိုယုံကြည်ရပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "အော်ဇေး"
     },
     {
       "fixtureId": "fc-20261101-14",
@@ -2632,7 +2684,11 @@
         "historical": true
       },
       "previewV2Summary": "လိုင်ယွန်ဟာ နောက်ဆုံးနှစ်ပွဲဆက် ဂိုးမသွင်းနိုင်ခဲ့ပေမယ့် အိမ်ကွင်းမှာတော့ လေးပွဲဆက်အနိုင်ရထားပြီး ၁၂ ဂိုးအထိ သွင်းယူထားပါတယ်။ အန်ဂါစ်က ခံစစ်ပိုင်း ပြန်လည်တည်ငြိမ်လာသော်လည်း လိုင်ယွန်ရဲ့ ကွင်းလယ်အချိတ်အဆက်နဲ့ အိမ်ကွင်းတိုက်စစ်ကို ထိန်းရခက်နိုင်ပါတယ်။ အိမ်ကွင်းအချက်အလက်တွေကို အဓိကထားကြည့်ရင် လိုင်ယွန်ရဲ့ အနိုင်ရနိုင်ခြေက ပိုမိုအားကောင်းနေပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "လိုင်ယွန်"
     },
     {
       "fixtureId": "fc-20261101-15",
@@ -2816,7 +2872,11 @@
         "over": "1.88"
       },
       "previewV2Summary": "ပဲရစ်အက်ဖ်စီဟာ အိမ်ကွင်းရှုံးပွဲမရှိသေးပေမယ့် နောက်ဆုံးနှစ်ပွဲမှာ ငါးဂိုးအထိ ခွင့်ပြုထားပြီး ခံစစ်နဲ့ ကွင်းလယ်ကြား နေရာလွတ်တွေ ဖြစ်လာနေပါတယ်။ မိုနာကိုက လိဂ်မှာ နိုင်ပွဲပျောက်နေသော်လည်း ပေးဂိုးနည်းပြီး ဂိုလိုဗင်၊ ဇာကာရီယာတို့ရဲ့ ကွင်းလယ်ထိန်းချုပ်မှုကောင်းပါတယ်။ အိမ်ရှင်ရဲ့ အိမ်ကွင်းအင်အားကို လျှော့တွက်လို့မရပေမယ့် ခံစစ်တည်ငြိမ်မှုကြောင့် မိုနာကိုက အနည်းငယ်အသာရှိပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "မိုနာကို"
     },
     {
       "fixtureId": "fc-20261101-16",
@@ -3000,7 +3060,11 @@
         "over": "1.54"
       },
       "previewV2Summary": "မာဆေးဟာ လိဂ်သုံးပွဲဆက် အနိုင်ရထားပြီး တိုက်စစ်မှာ ကစားသမားအများအပြား ဂိုးသွင်းနိုင်နေတာက အားသာချက်ပါ။ တူးလော့စ်ကလည်း နောက်ဆုံးငါးပွဲဆက် မရှုံးထားသလို အဝေးကွင်းမှာ အန္တရာယ်ပေးနိုင်တဲ့အသင်း ဖြစ်နေပါတယ်။ မာဆေးရဲ့ ခံစစ်က ဂိုးပေးရမှုများနေသော်လည်း အိမ်ကွင်းတိုက်စစ်အရှိန်နဲ့ လတ်တလောအနိုင်ရမှုတွေကြောင့် မာဆေးဘက်ကို ပိုယုံကြည်ရပါတယ်။",
-      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01"
+      "previewV2EditorialStatus": "human-reviewed concise derivative of owner original preview, 2026-11-01",
+      "previewV2EditorialDate": "2026-11-01",
+      "previewV2SourcePreviewDate": "2026-11-01",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "မာဆေး"
     }
   ],
   "updateStatus": "NOV 1 MORNING: PDF 19, previews 16 owner prose, specials 3 owner premium, 1X2/last-five/standings 16, sourced FT 33, VIP external 2 + 14 unavailable, 10 dated news with illustrations; evening prices withheld",

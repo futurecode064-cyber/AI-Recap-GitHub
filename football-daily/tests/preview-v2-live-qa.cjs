@@ -13,20 +13,24 @@ async function run(){
  const page=await context.newPage();page.on("pageerror",err=>browserErrors.push(err.message));
  try{
   await page.goto(origin,{waitUntil:"domcontentloaded",timeout:50000});
+  const daily=await page.evaluate(async()=>{const res=await fetch("./data/today.json",{cache:"no-store"});if(!res.ok)throw Error("Published daily report unavailable");return res.json();});
+  const expectedCount=daily.matches.filter(m=>m.fixtureId&&m.dailyPreviewText&&m.myanmarOdds).length;
+  const expectedPhotos=daily.matches.filter(m=>/^https:\/\//.test(m.previewV2Media?.url||"")).length;
+  assert(expectedCount>=3,"At least three eligible fixtures required for 2/3-match export smoke tests");
   await page.locator(".fc-main-preview-v2-tab").waitFor({timeout:25000});
   await page.locator(".fc-main-preview-v2-tab").click();
   const cards=page.locator("#fcV2Cards .fc-v2-card");
-  await page.waitForFunction(()=>document.querySelectorAll("#fcV2Cards .fc-v2-card").length===16,null,{timeout:45000});
-  assert.equal(await cards.count(),16);
+  await page.waitForFunction(expected=>document.querySelectorAll("#fcV2Cards .fc-v2-card").length===expected,expectedCount,{timeout:45000});
+  assert.equal(await cards.count(),expectedCount);
   assert.equal(await page.locator("body").getAttribute("data-fc-main-view"),"previewV2");
-  assert.equal(await page.locator("#fcV2Cards .fc-v2-ribbon").count(),16);
-  assert.equal(await page.locator("#fcV2Cards .fc-v2-quote").count(),32);
-  assert.equal(await page.locator("#fcV2Cards .fc-v2-time").count(),16);
-  assert.equal(await page.locator("#fcV2Cards .fc-v2-odds-team").count(),32);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-ribbon").count(),expectedCount);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-quote").count(),expectedCount*2);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-time").count(),expectedCount);
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-odds-team").count(),expectedCount*2);
   assert.equal(await page.locator("#fcV2Cards .fc-v2-market").count(),0);
   const content=await cards.first().innerText();
-  assert(content.includes("ရွေးချယ်မှု")&&content.includes("ဂိုးပေါင်းကြေး")&&content.includes("ဘော်ဒီကြေး")&&content.includes("လီဗာပူးလ်"),content.slice(0,500));
-  assert.equal(await page.locator("#fcV2Cards .fc-v2-logo").count(),64);
+  assert(content.includes("ရွေးချယ်မှု")&&content.includes("ဂိုးပေါင်းကြေး")&&content.includes("ဘော်ဒီကြေး")&&content.includes(daily.matches[0].homeDisplay),content.slice(0,500));
+  assert.equal(await page.locator("#fcV2Cards .fc-v2-logo").count(),expectedCount*4);
   const textLayout=await page.evaluate(()=>{
    const ps=[...document.querySelectorAll("#fcV2Cards .fc-v2-desc p")];
    const badStarts=ps.flatMap(p=>p.textContent.split("\n")).filter(line=>/^[\u102B-\u103E\u1056-\u1059\u1060-\u109D]/u.test(line));
@@ -43,10 +47,10 @@ async function run(){
    const rendered=[...document.querySelectorAll("#fcV2Cards .fc-v2-desc p")].map(p=>(p.dataset.rawText||p.textContent).trim());
    return {count:source.matches.filter(m=>m.previewV2Summary).length,matches:source.matches.every((m,i)=>m.previewV2Summary?.trim()===rendered[i]),stale:source.matches.some(m=>!m.previewV2EditorialStatus)};
   });
-  assert.equal(editorial.count,16,JSON.stringify(editorial));
+  assert.equal(editorial.count,expectedCount,JSON.stringify(editorial));
   assert(editorial.matches&&!editorial.stale,"Version 2 must render the manually edited short summaries, not mechanical excerpts");
   const checkedPhoto=await page.evaluate(()=>({withPhoto:document.querySelectorAll(".fc-v2-photo").length,blankChoices:[...document.querySelectorAll(".fc-v2-pick strong")].filter(x=>x.textContent.includes("အတည်မပြုရသေး")).length,accent:getComputedStyle(document.querySelector(".fc-v2-section")).getPropertyValue("--fc-v2-accent").trim()}));
-  assert.equal(checkedPhoto.withPhoto,6);
+  assert.equal(checkedPhoto.withPhoto,expectedPhotos);
   assert.equal(checkedPhoto.blankChoices,0);
   assert(/^#[0-9a-f]{6}$/i.test(checkedPhoto.accent));
   const frameMeta=await page.evaluate(async()=>{
@@ -64,17 +68,18 @@ async function run(){
   const threeEvent=page.waitForEvent("download",{timeout:90000});
   await page.locator("#fcV2Three").click();const three=await threeEvent;
   const threeBytes=await readFile(await three.path());
-  const expectedTwo=2*850+12+Math.round(frameMeta.top*1200/1200)+Math.round(frameMeta.bottom*1200/1200)+2*Math.max(10,Math.round(1200*.012));
+  const expectedTwo=2*850+12+frameMeta.top+frameMeta.bottom+2*Math.max(10,Math.round(1200*.012));
   const expectedThree=3*850+24+frameMeta.top+frameMeta.bottom+2*Math.max(10,Math.round(1200*.012));
   // If frame is the browser's selected V2 design, there may be original built-in art with natural height.
   // Assert the delta between two/three exports is ONE 850px card + ONE 12px gap, not an extra banner.
   assert.equal(height(threeBytes)-height(twoBytes),862,"Repeated banner between cards");
+  assert(textLayout.lines.every(n=>n>=1),"Every source summary must be visible");
 
   assert(width(threeBytes)>=1200&&height(threeBytes)>2500);
   const editor=await context.newPage();editor.on("pageerror",err=>browserErrors.push(err.message));
   await editor.goto(origin+"frame-editor.html",{waitUntil:"domcontentloaded",timeout:45000});
   await editor.waitForFunction(()=>window.FCStudio?.getState()?.frames?.length>30,null,{timeout:70000});
-  await editor.waitForFunction(()=>window.FCStudio?.getRows("previewsV2")?.length===16,null,{timeout:70000});
+  await editor.waitForFunction(count=>window.FCStudio?.getRows("previewsV2")?.length===count,expectedCount,{timeout:70000});
   const editorState=await editor.evaluate(()=>({
    scopes:window.FCStudio.TYPES,
    frame:(window.FCStudio.getState().placements.previewsV2||[]).length,
@@ -82,7 +87,7 @@ async function run(){
    canRender:typeof document.querySelector("#engineHome").contentWindow.FutureCodePreviewV2?.render==="function"
   }));
   assert(editorState.scopes.includes("previewsV2"),JSON.stringify(editorState));
-  assert(editorState.frame>=1&&editorState.matches===16&&editorState.canRender,JSON.stringify(editorState));
+  assert(editorState.frame>=1&&editorState.matches===expectedCount&&editorState.canRender,JSON.stringify(editorState));
   assert.equal(await editor.locator('#librarySection option[value="previewsV2"]').count(),1);
   assert.equal(await editor.locator('#downSection option[value="previewsV2"]').count(),1);
   await editor.locator("#navDownloads").click();
@@ -111,7 +116,7 @@ async function run(){
   assert(zipped.includes(Buffer.from("Version 2")),"ZIP missing Version 2 folder");
   assert.equal(browserErrors.length,0,JSON.stringify(browserErrors));
   await page.screenshot({path:"preview-v2-live.png",fullPage:true});
-  console.log("PREVIEW V2 LIVE BROWSER PNG/ZIP PASS "+JSON.stringify({cards:await cards.count(),marketStrips:32,wordWrapped:textLayout.lines.length,localFont:textLayout.fontLoaded,historicPhotos:checkedPhoto.withPhoto,theme:checkedPhoto.accent,twoPng:[width(twoBytes),height(twoBytes)],threePng:[width(threeBytes),height(threeBytes)],editorTriple:dimensions,zipBytes:zipped.length}));
+  console.log("PREVIEW V2 LIVE BROWSER PNG/ZIP PASS "+JSON.stringify({cards:await cards.count(),marketStrips:expectedCount*2,wordWrapped:textLayout.lines.length,localFont:textLayout.fontLoaded,historicPhotos:checkedPhoto.withPhoto,theme:checkedPhoto.accent,twoPng:[width(twoBytes),height(twoBytes)],threePng:[width(threeBytes),height(threeBytes)],editorTriple:dimensions,zipBytes:zipped.length}));
  }finally{await context.close();await browser.close();}
 }
 run().catch(e=>{console.error(e.stack||e);process.exitCode=1;});

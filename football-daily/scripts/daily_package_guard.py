@@ -37,6 +37,20 @@ for m in ms:
         form=m.get(side+'LastFive',[]);check(len(form)==5,f'{ident}: {side} last five incomplete')
         for game in form:check(game.get('result') in ['W','D','L'] and bool(game.get('date')),f'{ident}: invalid last-five entry')
     for f in ['homeOdds','drawOdds','awayOdds','homeCrestUrl','awayCrestUrl','leagueLogoUrl','oddsSourceUrl']:check(bool(m.get(f)),f'{ident}: missing {f}')
+# Permanent Preview V2 candidate guard from 2026-11-01 onward.
+# Prevent publishing a new day with copied/opening sentence summaries or duplicate banners.
+if day >= date(2026,11,1):
+    for m in ms:
+        ident=m.get('fixtureId','?')
+        summary=m.get('previewV2Summary','')
+        source=m.get('dailyPreviewText','')
+        chosen=m.get('previewV2Selection')
+        check(m.get('previewV2FormatVersion')=='2.1',f'{ident}: missing active V2 format 2.1')
+        check(m.get('previewV2EditorialDate')==str(day) and m.get('previewV2SourcePreviewDate')==str(day),f'{ident}: stale V2 editorial/source date')
+        check(isinstance(summary,str) and 180<=len(summary.strip())<=720 and summary.count('။')>=2,f'{ident}: unreviewed or incomplete V2 editorial')
+        check(isinstance(summary,str) and not source.startswith(summary[:110]),f'{ident}: V2 mechanically clipped from original')
+        check(isinstance(chosen,str) and chosen in [m.get('homeDisplay'),m.get('awayDisplay')],f'{ident}: V2 selection must match PDF Myanmar team name')
+        check('reviewed' in str(m.get('previewV2EditorialStatus','')),f'{ident}: V2 human/editorial review marker missing')
 choices=[m for m in ms if m.get('specialChoice')];check(len(choices)==a.special_count,'Special Choice count differs from requested count')
 for m in choices:
     paragraphs=m.get('specialAnalysisParagraphs',[])

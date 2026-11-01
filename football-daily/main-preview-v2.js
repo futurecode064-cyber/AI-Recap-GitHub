@@ -10,6 +10,7 @@
  const clock=m=>window.FutureCodeTime?.clock?.(m)||m.kickoff||m.sourceKickoff||"—";
  function summary(m){return clean(m.previewV2Summary)||(m.previewV2EditorialStatus?"":"ဤပွဲအတွက် အတိုချုပ်စာကို အတည်ပြုနေဆဲ ဖြစ်ပါသည်။");}
  function choice(m){
+  if(m.previewV2Selection && [m.homeDisplay,m.awayDisplay].includes(m.previewV2Selection))return m.previewV2Selection;
   const last=clean(m.dailyPreviewText).slice(-260);
   for(const side of ["home","away"]){
    const name=m[side+"Display"]||m[side];
@@ -116,7 +117,10 @@
   const f=window.FootballData?.fetch||fetch,res=await f(new URL("./data/today.json",document.baseURI),{cache:"no-store"});
   if(!res.ok)throw Error("Published data မရပါ");
   const j=await res.json();if(!j.published||!Array.isArray(j.matches))throw Error("ပွဲကြိုဒေတာ မရပါ");
-  items=j.matches.filter(m=>m.fixtureId&&m.dailyPreviewText&&m.myanmarOdds);date=j.reportDate;
+  const eligible=j.matches.filter(m=>m.fixtureId&&m.dailyPreviewText&&m.myanmarOdds);
+  const missing=eligible.filter(m=>!clean(m.previewV2Summary)||m.previewV2EditorialDate!==j.reportDate||m.previewV2SourcePreviewDate!==j.reportDate||m.previewV2FormatVersion!=="2.1"||![m.homeDisplay,m.awayDisplay].includes(m.previewV2Selection));
+  if(missing.length)throw Error("Version 2 အတိုချုပ်/ရွေးချယ်မှု အတည်မပြုရသေးသောပွဲ "+missing.length+" ပွဲရှိပါတယ်။ အချက်အလက်ကို ပြန်စစ်ရန် လိုအပ်ပါတယ်။");
+  items=eligible;date=j.reportDate;
   const selector=el("fcV2League"),prior=selector.value;selector.replaceChildren(new Option("လိဂ်အားလုံး","all"));
   [...new Set(items.map(m=>m.league))].forEach(k=>selector.add(new Option(items.find(m=>m.league===k)?.leagueDisplay||k,k)));
   selector.value=[...selector.options].some(x=>x.value===prior)?prior:"all";el("fcV2Date").textContent=date;cards();
@@ -151,6 +155,7 @@
  }
  async function render(m,options={}){
   if(!m?.fixtureId)throw Error("Match not found");
+  if(!clean(m.previewV2Summary)||!m.previewV2Selection)throw Error("Version 2 editorial missing for "+m.fixtureId);
   await window.FutureCodeCanvasKit?.fonts?.();
   await document.fonts?.load('500 18px "FCMyanmar"');
   const canvas=document.createElement("canvas");canvas.width=1200;canvas.height=850;
