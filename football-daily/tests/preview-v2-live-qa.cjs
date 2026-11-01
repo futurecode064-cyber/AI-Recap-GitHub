@@ -88,7 +88,7 @@ async function run(){
   assert(zipped.includes(Buffer.from("Version 2")),"ZIP missing Version 2 folder");
   assert.equal(browserErrors.length,0,JSON.stringify(browserErrors));
   await page.screenshot({path:"preview-v2-live.png",fullPage:true});
-  console.log("PREVIEW V2 LIVE BROWSER PNG/ZIP PASS "+JSON.stringify({cards:await cards.count(),marketStrips:32,wordWrapped:textLayout.lines.length,localFont:textLayout.fontLoaded,historicPhotos:checkedPhoto.withPhoto,theme:checkedPhoto.accent,twoPng:[width(twoBytes),height(twoBytes)],threePng:[width(threeBytes),height(threeBytes)],editorTriple:dimensions,zipBytes:zipped.length,head:"2123dc92"}));
+  console.log("PREVIEW V2 LIVE BROWSER PNG/ZIP PASS "+JSON.stringify({cards:await cards.count(),marketStrips:32,wordWrapped:textLayout.lines.length,localFont:textLayout.fontLoaded,historicPhotos:checkedPhoto.withPhoto,theme:checkedPhoto.accent,twoPng:[width(twoBytes),height(twoBytes)],threePng:[width(threeBytes),height(threeBytes)],editorTriple:dimensions,zipBytes:zipped.length}));
  }finally{await context.close();await browser.close();}
 }
 run().catch(e=>{console.error(e.stack||e);process.exitCode=1;});
