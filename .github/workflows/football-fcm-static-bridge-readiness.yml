@@ -1,0 +1,25 @@
+name: Football FCM Static Bridge Readiness (secret names only)
+on:
+  push:
+    branches: ['feature/football-notification-bridge-20261029']
+    paths: ['.github/workflows/football-fcm-static-bridge-readiness.yml']
+permissions:
+  contents: read
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    env:
+      FC_WORKER_ADMIN_TOKEN: ${{ secrets.FC_WORKER_ADMIN_TOKEN }}
+    steps:
+      - name: Verify worker admin dispatch credential presence (do not disclose value)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -n "${FC_WORKER_ADMIN_TOKEN:-}" ]]; then
+            echo "FC_WORKER_ADMIN_TOKEN=present"
+            echo "Static to Worker FCM bridge: GitHub credential present (actual match not verified)" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "FC_WORKER_ADMIN_TOKEN=missing"
+            echo "::warning::GitHub cannot authenticate to the Cloudflare push Worker until owner-configured admin token is installed"
+            echo "Static to Worker FCM bridge: BLOCKED by missing GitHub Actions secret" >> "$GITHUB_STEP_SUMMARY"
+          fi
