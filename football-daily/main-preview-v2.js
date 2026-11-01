@@ -63,7 +63,7 @@
   const odd=market(m),ribbon=create("div","fc-v2-ribbon");
   const home=create("div","fc-v2-odds-team fc-v2-home");home.append(crest(m,"home"),create("strong","",m.homeDisplay||m.home));
   const away=create("div","fc-v2-odds-team fc-v2-away");away.append(crest(m,"away"),create("strong","",m.awayDisplay||m.away));
-  const time=create("div","fc-v2-time");time.append(create("strong","",clock(m)),create("small","","အပေါ်အသင်း · "+odd.upper));
+  const time=create("div","fc-v2-time");time.append(create("strong","",clock(m)));
   ribbon.append(home,quoteBox("goal","ဂိုးပေါင်းကြေး",odd.goal,odd.currentGoal),time,quoteBox("body","ဘော်ဒီကြေး",odd.body,odd.currentBody),away);
   const pick=create("label","fc-v2-check"),input=document.createElement("input");input.type="checkbox";input.checked=selected.has(m.fixtureId);
   input.onchange=()=>{if(input.checked)selected.add(m.fixtureId);else selected.delete(m.fixtureId);el("fcV2Selected").textContent=selected.size+" ပွဲ ရွေးထားသည်";};
@@ -202,9 +202,7 @@
   quote(340,"ဂိုးပေါင်းကြေး",odd.goal,odd.currentGoal);
   quote(686,"ဘော်ဒီကြေး",odd.body,odd.currentBody);
   c.fillStyle="#fff";c.strokeStyle="#cbd6de";c.lineWidth=2;c.fillRect(522,rowY+28,156,144);c.strokeRect(522,rowY+28,156,144);
-  c.fillStyle="#153c5d";c.textAlign="center";c.textBaseline="middle";c.font="900 21px Arial,sans-serif";c.fillText(clock(m),600,rowY+87,145);
-  fitMyanmar(c,"အပေါ်အသင်း",600,rowY+119,145,13,800,11);
-  fitMyanmar(c,odd.upper,600,rowY+146,145,13,800,10);
+  c.fillStyle="#153c5d";c.textAlign="center";c.textBaseline="middle";c.font="900 21px Arial,sans-serif";c.fillText(clock(m),600,rowY+100,145);
   return canvas;
  }
  const canvasBlob=canvas=>new Promise((ok,bad)=>canvas.toBlob(b=>b?.size?ok(b):bad(Error("PNG မထွက်ပါ")),"image/png"));
