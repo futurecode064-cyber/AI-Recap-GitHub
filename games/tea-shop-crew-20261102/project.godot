@@ -1,0 +1,23 @@
+; Future Code AI Studio — Tea Shop Morning Crew
+config_version=5
+
+[application]
+config/name="Tea Shop Morning Crew"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/description="Cooperative 2–5 player Myanmar tea shop shift"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/handheld/orientation=0
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.55, 0.73, 0.83, 1)
+
+[physics]
+3d/run_on_separate_thread=false
