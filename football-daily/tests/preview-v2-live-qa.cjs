@@ -76,7 +76,7 @@ async function run(){
    const pick=(x,y)=>[...ctx.getImageData(x,y,1,1).data].slice(0,3);
    return {
     heights:canvases.map(c=>c.height),widths:canvases.map(c=>c.width),
-    articlePanel:pick(810,96),timePanel:pick(600,sample.height-70),photoPixel:pick(70,160),
+    articlePanel:pick(1163,115),timePanel:pick(600,sample.height-70),photoPixel:pick(70,160),
     mediaCount:src.matches.filter(m=>m.previewV2Media?.url).length
    };
   });
