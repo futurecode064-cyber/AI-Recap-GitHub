@@ -201,14 +201,22 @@
   }
   async function exportWithFallback(type,group,ctx,notes){
     try{
-      return await exportGroup(type,group,ctx);
+      const original=await exportGroup(type,group,ctx);
+      if(!original?.width||!original?.height||typeof original.toBlob!=="function")
+        throw Error("PNG Canvas အချက်အလက် မပြည့်စုံပါ");
+      return original;
     }catch(originalError){
       console.warn("GOAL ZONE original exporter fallback",type,originalError);
       notes.push(type+" — "+(originalError?.message||String(originalError)));
       const pages=[];
       for(const item of group){
-        try{pages.push(await exportGroup(type,[item],ctx));}
-        catch(e){pages.push(await fallbackCard(type,item,ctx.day));}
+        if(group.length===1){pages.push(await fallbackCard(type,item,ctx.day));continue;}
+        try{
+          const output=await exportGroup(type,[item],ctx);
+          if(!output?.width||!output?.height||typeof output.toBlob!=="function")
+            throw Error("Invalid original PNG Canvas");
+          pages.push(output);
+        }catch(e){pages.push(await fallbackCard(type,item,ctx.day));}
       }
       return stack(pages);
     }
