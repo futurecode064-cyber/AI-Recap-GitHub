@@ -64,18 +64,30 @@ async function run(){
   await page.locator("#fcV2Two").click();const two=await twoEvent;
   const twoBytes=await readFile(await two.path());
   assert(two.suggestedFilename().endsWith(".png"));
-  assert(width(twoBytes)>=1200&&height(twoBytes)>1600&&height(twoBytes)<2500);
+  assert(width(twoBytes)>=1200&&height(twoBytes)>1380&&height(twoBytes)<2500);
   const threeEvent=page.waitForEvent("download",{timeout:90000});
   await page.locator("#fcV2Three").click();const three=await threeEvent;
   const threeBytes=await readFile(await three.path());
-  const expectedTwo=2*850+12+frameMeta.top+frameMeta.bottom+2*Math.max(10,Math.round(1200*.012));
-  const expectedThree=3*850+24+frameMeta.top+frameMeta.bottom+2*Math.max(10,Math.round(1200*.012));
+  const expectedTwo=2*690+12+frameMeta.top+frameMeta.bottom+2*Math.max(10,Math.round(1200*.012));
+  const expectedThree=3*690+24+frameMeta.top+frameMeta.bottom+2*Math.max(10,Math.round(1200*.012));
   // If frame is the browser's selected V2 design, there may be original built-in art with natural height.
-  // Assert the delta between two/three exports is ONE 850px card + ONE 12px gap, not an extra banner.
-  assert.equal(height(threeBytes)-height(twoBytes),862,"Repeated banner between cards");
+  // Assert the delta between two/three exports is ONE 690px card + ONE 12px gap, not an extra banner.
+  assert.equal(height(threeBytes)-height(twoBytes),702,"Repeated banner between cards");
+  assert.equal(expectedThree-expectedTwo,702,"Card dimensions out of sync");
+  const journal=await page.evaluate(async()=>{
+   const data=await (await fetch("./data/today.json",{cache:"no-store"})).json();
+   const c=await window.FutureCodePreviewV2.render(data.matches[0],{color:"#145800"});
+   const p=c.getContext("2d").getImageData(0,0,c.width,c.height).data;
+   const rgb=(x,y)=>[...p.slice((y*c.width+x)*4,(y*c.width+x)*4+3)];
+   return {width:c.width,height:c.height,leagueBand:rgb(600,30),cardPanel:rgb(810,95),marketPanel:rgb(399,612),oddsTime:rgb(602,620)};
+  });
+  assert.equal(journal.width,1200);assert.equal(journal.height,690);
+  assert(journal.cardPanel.every(x=>x>=205),"Journal analysis panel is not clean light paper");
+  assert(journal.marketPanel[1]>journal.marketPanel[0],"Green/Gold goal market panel missing");
+  assert(journal.oddsTime.every(x=>x>=190),"Odds time middle panel missing");
   assert(textLayout.lines.every(n=>n>=1),"Every source summary must be visible");
 
-  assert(width(threeBytes)>=1200&&height(threeBytes)>2500);
+  assert(width(threeBytes)>=1200&&height(threeBytes)>2080);
   const editor=await context.newPage();editor.on("pageerror",err=>browserErrors.push(err.message));
   await editor.goto(origin+"frame-editor.html",{waitUntil:"domcontentloaded",timeout:45000});
   await editor.waitForFunction(()=>window.FCStudio?.getState()?.frames?.length>30,null,{timeout:70000});
@@ -104,7 +116,7 @@ async function run(){
   await editor.locator("#downPreview").click();
   await png.waitFor({state:"visible",timeout:90000});
   const dimensions=await png.evaluate(im=>({w:im.naturalWidth,h:im.naturalHeight}));
-  assert(dimensions.w>=1200&&dimensions.h>=2500,JSON.stringify(dimensions));
+  assert(dimensions.w>=1200&&dimensions.h>=2080,JSON.stringify(dimensions));
   // Editor's group image must have one outer frame, identical height to the 3-row main export.
   assert.equal(dimensions.h,height(threeBytes),JSON.stringify({editor:dimensions.h,main:height(threeBytes)}));
 
