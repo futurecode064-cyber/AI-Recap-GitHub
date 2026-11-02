@@ -12,12 +12,12 @@ const splitRows=(rows,mode)=>{
  if(mode==="two"&&rows.length>1){const n=Math.ceil(rows.length/2);return [rows.slice(0,n),rows.slice(n)];}
  return [rows];
 };
-async function stackCanvases(list){
+async function stackCanvases(list,gap=12){
  if(list.length===1)return list[0];
- const W=s().getHome(),width=Math.max(...list.map(c=>c.width)),height=list.reduce((n,c)=>n+c.height,0)+12*(list.length-1);
+ const W=s().getHome(),width=Math.max(...list.map(c=>c.width)),height=list.reduce((n,c)=>n+c.height,0)+gap*(list.length-1);
  if(height>32767||height*width>108000000)throw Error("PNG အမြင့်များလွန်းပါသည်။ တစ်ပွဲတစ်ပုံ ပြောင်းပါ");
  const out=W.document.createElement("canvas");out.width=width;out.height=height;const ctx=out.getContext("2d");ctx.fillStyle="#f0f4f8";ctx.fillRect(0,0,width,height);
- let y=0;for(const c of list){ctx.drawImage(c,Math.floor((width-c.width)/2),y);y+=c.height+12;}return out;
+ let y=0;for(const c of list){ctx.drawImage(c,Math.floor((width-c.width)/2),y);y+=c.height+gap;}return out;
 }
 async function stackBlobs(blobs){
  if(blobs.length===1)return blobs[0];
@@ -39,7 +39,7 @@ async function* forSection(k,f,rows,mode){
     const canvases=[];
     for(const m of chunks[i])canvases.push(await render(m,{color}));
     // One combined canvas, then exactly one frame: no repeated banners.
-    const combined=await stackCanvases(canvases);
+    const combined=await stackCanvases(canvases,4);
     const framed=await p.wrap(combined,k,"pro:"+f.id);
     yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(framed)};
    }
