@@ -92,7 +92,7 @@ jobs:
           godot --headless --verbose --path . --export-debug Android build/TeaShopRushCrew-arm64-debug.apk 2>&1 | tee build/export.log
           test -s build/TeaShopRushCrew-arm64-debug.apk
           sha256sum build/TeaShopRushCrew-arm64-debug.apk | tee build/SHA256.txt
-          APK_SIGNER=$(find /opt/android-sdk /usr/local/lib/android/sdk -name apksigner -type f 2>/dev/null | sort -V | tail -1)
+          APK_SIGNER=$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -1)
           if [ -n "$APK_SIGNER" ]; then "$APK_SIGNER" verify --verbose --print-certs build/TeaShopRushCrew-arm64-debug.apk | tee build/signature.txt; fi
           unzip -t build/TeaShopRushCrew-arm64-debug.apk | tail -2
       - name: Upload APK and evidence
