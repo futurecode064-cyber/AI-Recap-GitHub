@@ -74,8 +74,14 @@
   async function withBanner(source){
     const w=source.width,h=Math.round(w*270/988),output=canvasOf(w,source.height+h);
     const ctx=output.getContext("2d");ctx.fillStyle="#0d0b07";ctx.fillRect(0,0,w,h);
-    const img=await loadImage(bannerUrl);
-    ctx.drawImage(img,0,0,w,h);ctx.drawImage(source,0,h);
+    const img=await loadImage(bannerUrl).catch(()=>null);
+    if(img)ctx.drawImage(img,0,0,w,h);
+    else{
+      ctx.fillStyle="#cba456";ctx.textAlign="center";
+      ctx.font="900 "+Math.round(h*.31)+'px "Noto Sans Myanmar",sans-serif';
+      ctx.fillText("GOAL ZONE · ဂိုးဇုံ အားကစား ဂျာနယ်",w/2,h*.63,w*.9);
+    }
+    ctx.drawImage(source,0,h);
     return output;
   }
   function pieces(array,mode){
@@ -94,6 +100,8 @@
     if(!canvases.length)throw Error("PNG ဆွဲရန် ပုံမရှိပါ");
     if(canvases.length===1)return canvases[0];
     const gap=16,maxTileWidth=Math.max(...canvases.map(c=>c.width));
+    const mobile=typeof navigator!=="undefined"&&/Android|iPhone|iPad/i.test(navigator.userAgent||"");
+    const maxWidth=mobile?4096:7800,maxHeight=mobile?7500:12500,maxPixels=mobile?14000000:28000000;
     let best=null;
     for(let columns=1;columns<=Math.min(canvases.length,7);columns++){
       const rowCount=Math.ceil(canvases.length/columns);
@@ -101,7 +109,7 @@
         Math.max(...canvases.slice(r*columns,(r+1)*columns).map(c=>Math.ceil(c.height*maxTileWidth/c.width))));
       const naturalWidth=columns*maxTileWidth+(columns-1)*gap;
       const naturalHeight=rowHeights.reduce((a,b)=>a+b,0)+(rowCount-1)*gap;
-      const scale=Math.min(1,8000/naturalWidth,13500/naturalHeight,Math.sqrt(39000000/(naturalWidth*naturalHeight)));
+      const scale=Math.min(1,maxWidth/naturalWidth,maxHeight/naturalHeight,Math.sqrt(maxPixels/(naturalWidth*naturalHeight)));
       if(!best||scale>best.scale+0.000001||(Math.abs(scale-best.scale)<0.000001&&naturalHeight<best.naturalHeight)){
         best={columns,rowHeights,naturalWidth,naturalHeight,scale};
       }
@@ -122,6 +130,98 @@
       ctx.strokeRect(xx,yy,tileW,tileH);
     }
     return result;
+  }
+  // Use an accurate, text-complete publication card if an external photograph
+  // or an individual original renderer fails, instead of losing the whole ZIP.
+  async function fallbackCard(type,item,date){
+    const W=1200,side=44,head=200;
+    let title="",detail="",body="",label="";
+    const home=item?.homeDisplay||item?.home||"",away=item?.awayDisplay||item?.away||"";
+    if(type==="news"){
+      label="ဘောလုံးသတင်း · "+(item.categoryLabel||"GOAL ZONE");
+      title=String(item.title||"ဘောလုံးသတင်း");
+      body=(Array.isArray(item.paragraphs)?item.paragraphs:[]).join("\n\n");
+      detail="မူရင်းသတင်းပုံကို PNG အဖြစ်မထည့်နိုင်သဖြင့် စာသားကို ပြည့်စုံအောင် ဖော်ပြထားသည်။";
+    }else{
+      label=item.leagueDisplay||item.league||"GOAL ZONE";
+      title=home+"  VS  "+away;
+      if(type==="preview")body=item.dailyPreviewText||item.preview||"";
+      if(type==="special")body=(item.specialAnalysisParagraphs||[]).join("\n\n")||item.dailyPreviewText||"";
+      if(type==="results")detail="ပွဲပြီး အတည်ပြုရလဒ်  "+String(item.finalScore||"—");
+      if(type==="odds")detail="မူလကြေး "+String(item.bodyOdds??item.morningBodyOdds??"—")+" · ဂိုးကြေး "+String(item.goalTotalOdds??item.morningGoalTotalOdds??"—")+" · ယခုကြေး "+String(item.currentBodyOdds||"—");
+      if(type==="ai"){
+        const numbers=window.FutureCodeAiScoreModel?.predict?.(item);
+        detail="AI ဂိုးရလဒ် ခန့်မှန်းချက်  "+(Array.isArray(numbers)?numbers.join(" · "):"အချက်အလက် မလုံလောက်");
+      }
+      if(type==="probability"){
+        const p=window.FutureCodeProbabilityModel?.analyze?.(item,null,date);
+        detail="အိမ်ရှင် "+(p?.win?.home??"—")+"% · ဧည့်သည် "+(p?.win?.away??"—")+"% · ဂိုးပေါ် "+(p?.goals?.over??"—")+"% · ဂိုးအောက် "+(p?.goals?.under??"—")+"%";
+      }
+    }
+    const measure=canvasOf(W,5).getContext("2d");
+    const size=type==="news"?24:26,maxTextWidth=W-2*side-25;
+    measure.font="500 "+size+'px "Noto Sans Myanmar",sans-serif';
+    const lines=[];
+    for(const paragraph of String(body||"").replace(/\*\*/g,"").split(/\n+/)){
+      if(!paragraph.trim()) {lines.push("");continue;}
+      const segments=typeof Intl.Segmenter==="function"?
+        Array.from(new Intl.Segmenter("my",{granularity:"word"}).segment(paragraph),x=>x.segment):
+        Array.from(paragraph);
+      let line="";
+      for(const token of segments){
+        if(line&&measure.measureText(line+token).width>maxTextWidth){
+          lines.push(line);line="";
+        }
+        line+=token;
+      }
+      if(line)lines.push(line);
+    }
+    const bodyStart=head+(detail?85:20),lineHeight=44;
+    const H=Math.min(12000,Math.max(590,bodyStart+lines.length*lineHeight+90));
+    const result=canvasOf(W,H),ctx=result.getContext("2d");
+    ctx.fillStyle="#14110b";ctx.fillRect(0,0,W,H);
+    ctx.fillStyle="#302413";ctx.fillRect(18,18,W-36,H-36);
+    ctx.strokeStyle="#d4b16b";ctx.lineWidth=3;ctx.strokeRect(18,18,W-36,H-36);
+    ctx.fillStyle="#7c581d";ctx.fillRect(18,18,W-36,78);
+    ctx.textBaseline="alphabetic";
+    ctx.font='800 25px "Noto Sans Myanmar",sans-serif';ctx.fillStyle="#fff0c8";
+    ctx.fillText(label,side,68,W-side*2);
+    ctx.fillStyle="#ffdf91";ctx.font='800 33px "Noto Sans Myanmar",sans-serif';
+    ctx.fillText(title,side,155,W-side*2);
+    if(detail){
+      ctx.fillStyle="#f3d39a";ctx.font='700 24px "Noto Sans Myanmar",sans-serif';
+      ctx.fillText(detail,side,228,W-side*2);
+    }
+    ctx.fillStyle="#f6edda";ctx.font="500 "+size+'px "Noto Sans Myanmar",sans-serif';
+    let y=bodyStart;
+    for(const line of lines){if(y>H-70)break;if(line)ctx.fillText(line,side,y,maxTextWidth);y+=lineHeight;}
+    ctx.fillStyle="#c2a270";ctx.font='600 18px "Noto Sans Myanmar",sans-serif';
+    ctx.fillText("GOAL ZONE  ·  "+date,side,H-38,W-side*2);
+    return result;
+  }
+  async function exportWithFallback(type,group,ctx,notes){
+    try{
+      return await exportGroup(type,group,ctx);
+    }catch(originalError){
+      console.warn("GOAL ZONE original exporter fallback",type,originalError);
+      notes.push(type+" — "+(originalError?.message||String(originalError)));
+      const pages=[];
+      for(const item of group){
+        try{pages.push(await exportGroup(type,[item],ctx));}
+        catch(e){pages.push(await fallbackCard(type,item,ctx.day));}
+      }
+      return stack(pages);
+    }
+  }
+  async function pngWithRetry(canvas){
+    try{return await png(canvas);}
+    catch(e){
+      const scale=Math.min(.7,2300/canvas.width,4500/canvas.height);
+      if(!Number.isFinite(scale)||scale<=0)throw e;
+      const small=canvasOf(Math.max(1,Math.floor(canvas.width*scale)),Math.max(1,Math.floor(canvas.height*scale)));
+      small.getContext("2d").drawImage(canvas,0,0,small.width,small.height);
+      return png(small);
+    }
   }
   function download(blob,filename){
     const url=URL.createObjectURL(blob),a=document.createElement("a");
@@ -303,7 +403,7 @@
         results:finals,ai:matches,probability:matches,news:stories};
       const ZIP=window.FutureCodeFrameZip?.Archive;
       if(!ZIP){status.textContent="ZIP module မရရှိပါ";return;}
-      btn.disabled=true;let count=0;const archive=new ZIP();
+      btn.disabled=true;let count=0;const warnings=[];const archive=new ZIP();
       const original=btn.textContent;btn.textContent="PNG ပုံများ စုစည်းနေသည်…";
       try{
         for(const type of chosen){
@@ -313,16 +413,27 @@
           const groups=pieces(records,mode);
           for(let i=0;i<groups.length;i++){
             status.textContent=type+" · "+(i+1)+"/"+groups.length+" ပုံ ဖန်တီးနေသည်…";
-            const art=await exportGroup(type,groups[i],context);
-            const branded=await withBanner(art);
-            const filename=type+"/GOAL-ZONE-"+day+"-"+type+"-"+mode+"-"+String(i+1).padStart(2,"0")+"-of-"+String(groups.length).padStart(2,"0")+".png";
-            await archive.add(filename,await png(branded));count++;
+            try{
+              const art=await exportWithFallback(type,groups[i],context,warnings);
+              const branded=await withBanner(art);
+              const filename=type+"/GOAL-ZONE-"+day+"-"+type+"-"+mode+"-"+String(i+1).padStart(2,"0")+"-of-"+String(groups.length).padStart(2,"0")+".png";
+              await archive.add(filename,await pngWithRetry(branded));count++;
+            }catch(pieceError){
+              console.error("GOAL ZONE PNG failed",type,i+1,pieceError);
+              warnings.push(type+" "+(i+1)+"/"+groups.length+" — "+(pieceError?.message||String(pieceError)));
+            }
             await new Promise(resolve=>setTimeout(resolve,0));
           }
         }
         if(!count)throw Error("ရွေးထားသောပွဲ/Section အတွက် ထုတ်ဝေထားသော ပုံမရှိသေးပါ");
+        if(warnings.length)await archive.add("EXPORT-NOTES.txt",new Blob([
+          "GOAL ZONE · "+day+"\nSome originals required a readable fallback or could not be exported.\n"+
+          warnings.join("\n")+"\n"
+        ],{type:"text/plain;charset=utf-8"}));
         download(archive.finish(),"GOAL-ZONE-"+day+"-custom-sections-"+count+"-PNGs.zip");
-        status.textContent="✓ ZIP တွင် PNG "+count+" ပုံ ပါဝင်သည်။ Download စတင်ပြီးပါပြီ။";
+        status.textContent=warnings.length
+          ?"ZIP Download စတင်ပြီးပါပြီ။ PNG "+count+" ပုံ ထုတ်ထားပြီး၊ ပြန်စစ်ရန် "+warnings.length+" ခုကို ZIP ထဲက EXPORT-NOTES.txt မှာ ဖော်ပြထားပါသည်။"
+          :"✓ ZIP တွင် PNG "+count+" ပုံ ပါဝင်သည်။ Download စတင်ပြီးပါပြီ။";
       }catch(e){console.error("Goal Zone ZIP export",e);status.textContent="ZIP Download မအောင်မြင်ပါ — "+(e.message||e);}
       finally{btn.disabled=false;btn.textContent=original;}
     });
