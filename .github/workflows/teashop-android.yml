@@ -16,6 +16,11 @@ jobs:
       image: barichello/godot-ci:4.5.1
     steps:
       - uses: actions/checkout@v4
+      - name: Install Android SDK 35 and Build Tools 35
+        uses: android-actions/setup-android@v3
+        with:
+          cmdline-tools-version: 12266719
+          packages: 'platform-tools build-tools;35.0.0 platforms;android-35'
       - name: Toolchain versions
         run: |
           set -eux
@@ -81,7 +86,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          godot --headless --path . --export-debug Android build/TeaShopRushCrew-arm64-debug.apk 2>&1 | tee build/export.log
+          export GODOT_ANDROID_KEYSTORE_DEBUG_PATH="$HOME/.android/debug.keystore"
+          export GODOT_ANDROID_KEYSTORE_DEBUG_USER="androiddebugkey"
+          export GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD="android"
+          godot --headless --verbose --path . --export-debug Android build/TeaShopRushCrew-arm64-debug.apk 2>&1 | tee build/export.log
           test -s build/TeaShopRushCrew-arm64-debug.apk
           sha256sum build/TeaShopRushCrew-arm64-debug.apk | tee build/SHA256.txt
           APK_SIGNER=$(find /opt/android-sdk /usr/local/lib/android/sdk -name apksigner -type f 2>/dev/null | sort -V | tail -1)
