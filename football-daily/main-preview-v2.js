@@ -157,67 +157,118 @@
   if(!m?.fixtureId)throw Error("Match not found");
   if(!clean(m.previewV2Summary)||!m.previewV2Selection)throw Error("Version 2 editorial missing for "+m.fixtureId);
   await window.FutureCodeCanvasKit?.fonts?.();
-  await document.fonts?.load('500 18px "FCMyanmar"');
-  const canvas=document.createElement("canvas");canvas.width=1200;canvas.height=850;
-  const c=canvas.getContext("2d");if(!c)throw Error("Canvas မရပါ");
-  const col=/^#[\da-f]{6}$/i.test(options.color||"")?options.color:"#07527a",deep=shade(col,.78);
-  c.fillStyle="#e8f0f5";c.fillRect(0,0,1200,850);
-  c.fillStyle=col;c.fillRect(0,0,1200,67);c.textAlign="center";c.textBaseline="middle";c.fillStyle="#fff";
-  fitMyanmar(c,m.leagueDisplay||m.league,600,35,1010,25,800,15);
-  const leagueUrl=window.FutureCodeMainLogoAssets?.leagueCrest(m.league)||window.FutureCodeBrandExportData?.leagueCrest?.(m.league)||"";
-  const [h,a,l,p,stadium]=await Promise.all([image(m.homeCrestUrl),image(m.awayCrestUrl),image(leagueUrl),image(media(m)),image(new URL("./assets/preview-stadium-night.jpg",document.baseURI).href)]);
-  if(!h||!a)throw Error("အသင်း Logo မပြည့်စုံပါ — "+(m.homeDisplay||m.home)+" / "+(m.awayDisplay||m.away)+"။ Logo မပြည့်ဘဲ Download မထုတ်ပါ။");
-  if(!l)throw Error("လိဂ် Logo မရရှိပါ — "+(m.leagueDisplay||m.league)+"။ လိဂ် Logo မပြည့်ဘဲ Download မထုတ်ပါ။");
-  contain(c,l,24,10,48,48);
-  c.save();c.beginPath();c.roundRect(20,84,435,492,18);c.clip();
-  if(stadium)cover(c,stadium,20,84,435,492);else{c.fillStyle="#18415f";c.fillRect(20,84,435,492);}
-  if(p)cover(c,p,20,84,435,492);
-  c.fillStyle="rgba(4,18,34,.67)";c.fillRect(20,409,435,167);
-  if(h)contain(c,h,48,422,145,133);if(a)contain(c,a,277,422,145,133);
-  c.fillStyle="white";c.font="900 29px Arial";c.fillText("VS",235,493);c.restore();
-  c.fillStyle="#486176";c.font='500 14px "FCMyanmar",sans-serif';c.fillText(caption(m),238,600,435);
-  c.textAlign="left";c.textBaseline="alphabetic";c.fillStyle="#174061";
-  fitMyanmar(c,(m.homeDisplay||m.home)+" နှင့် "+(m.awayDisplay||m.away),482,126,690,25,800,15);
-  // Four editorial sentences: both clubs, decisive matchup, then selection.
-  // Never silently cut off a downloaded Burmese paragraph.
-  c.fillStyle="#293e4b";c.textBaseline="middle";
-  const upperY=181,lowerY=492,descriptionWidth=683;
-  let bodyLines=[],lineHeight=0,descriptionHeight=Infinity;
-  for(const fontSize of [18,17,16,15,14]){
-   c.font='500 '+fontSize+'px "FCMyanmar",sans-serif';
-   const candidate=wrapMyanmar(summary(m),descriptionWidth,s=>c.measureText(s).width);
-   const candidateHeight=candidate.reduce((height,line)=>height+(line?Math.round(fontSize*1.72):8),0);
-   if(candidateHeight<=lowerY-upperY){bodyLines=candidate;lineHeight=Math.round(fontSize*1.72);descriptionHeight=candidateHeight;break;}
+  await document.fonts?.ready;
+  await document.fonts?.load('500 19px "FCMyanmar"');
+  await document.fonts?.load('800 24px "FCMyanmar"');
+  const W=1200,H=690,canvas=document.createElement("canvas");
+  canvas.width=W;canvas.height=H;
+  const c=canvas.getContext("2d");if(!c)throw Error("PNG Canvas မရပါ");
+  c.imageSmoothingEnabled=true;c.imageSmoothingQuality="high";
+  const col=/^#[\da-f]{6}$/i.test(options.color||"")?options.color:"#11613b";
+  const dark=shade(col,.58),ink="#12382b",gold="#e1be66",cream="#fffdf7";
+  const rounded=(x,y,w,h,r,fill,stroke,line=2)=>{
+   c.beginPath();c.roundRect(x,y,w,h,r);
+   if(fill){c.fillStyle=fill;c.fill();}
+   if(stroke){c.strokeStyle=stroke;c.lineWidth=line;c.stroke();}
+  };
+  const text=(value,x,y,sz,color,weight=700,maxWidth)=>{
+   c.fillStyle=color;c.textAlign="center";c.textBaseline="middle";
+   fitMyanmar(c,value,x,y,maxWidth??1100,sz,weight,12);
+  };
+  const [home,away,league,photo,stadium]=await Promise.all([
+   image(m.homeCrestUrl),image(m.awayCrestUrl),
+   image(window.FutureCodeMainLogoAssets?.leagueCrest(m.league)||window.FutureCodeBrandExportData?.leagueCrest?.(m.league)||""),
+   image(media(m)),image(new URL("./assets/preview-stadium-night.jpg",document.baseURI).href)
+  ]);
+  // No partial or incorrect team/league branding in downloads.
+  if(!home||!away)throw Error("အသင်းလိုဂို မပြည့်စုံပါ — "+(m.homeDisplay||m.home)+" / "+(m.awayDisplay||m.away));
+  if(!league)throw Error("လိဂ်လိုဂို မပြည့်စုံပါ — "+(m.leagueDisplay||m.league));
+  c.fillStyle=dark;c.fillRect(0,0,W,H);
+  // Gold-rimmed league title, matching the compact professional journal example.
+  c.fillStyle=gold;c.fillRect(14,27,1172,3);
+  rounded(275,5,650,57,17,dark,gold,3);
+  rounded(25,7,170,53,13,"#ffffff",gold,2);
+  contain(c,league,38,11,143,44);
+  text(m.leagueDisplay||m.league,600,34,27,"#ffffff",900,610);
+
+  // Single tightly framed match card: image left, full analysis right, pick underneath.
+  rounded(12,70,1176,470,18,"#fffdf9",dark,5);
+  rounded(18,76,1164,458,14,cream,gold,2);
+  c.save();c.beginPath();c.roundRect(28,86,417,436,14);c.clip();
+  if(stadium)cover(c,stadium,28,86,417,436);
+  else{c.fillStyle="#123a49";c.fillRect(28,86,417,436);}
+  if(photo)cover(c,photo,28,86,417,436);
+  const vignette=c.createLinearGradient(0,328,0,522);
+  vignette.addColorStop(0,"rgba(3,18,21,0)");
+  vignette.addColorStop(1,"rgba(2,12,16,.94)");
+  c.fillStyle=vignette;c.fillRect(28,310,417,212);
+  contain(c,home,43,370,150,132);
+  contain(c,away,282,370,150,132);
+  c.fillStyle="#ffffff";c.font="900 33px Arial,sans-serif";
+  c.textAlign="center";c.textBaseline="middle";c.fillText("VS",238,456);
+  c.restore();
+  rounded(28,86,417,436,14,null,"#d7dfda",2);
+  rounded(455,86,720,436,11,"#ffffff","#cad9d0",2);
+  text((m.homeDisplay||m.home)+" နှင့် "+(m.awayDisplay||m.away),813,122,27,ink,900,680);
+
+  // Measure every Burmese line; choose the largest readable size that fits.
+  // No fixed character slicing, ellipsis, unrendered lines or off-card text.
+  const paragraph=summary(m),left=474,available=684,top=164,bottom=469;
+  let lines=[],fontSize=0,lineHeight=0;
+  for(const size of [21,20,19,18,17,16,15]){
+   c.font='550 '+size+'px "FCMyanmar",sans-serif';
+   const candidate=wrapMyanmar(paragraph,available,s=>c.measureText(s).width);
+   const leading=Math.round(size*1.52);
+   const height=candidate.reduce((n,line)=>n+(line?leading:8),0);
+   if(height<=bottom-top){lines=candidate;fontSize=size;lineHeight=leading;break;}
   }
-  if(!bodyLines.length||descriptionHeight>lowerY-upperY)
-   throw Error("ပွဲကြိုစာသား အပြည့်အစုံကို PNG ထဲ ထည့်မရပါ — "+(m.homeDisplay||m.home)+" / "+(m.awayDisplay||m.away));
-  let y=upperY;
-  for(const line of bodyLines){
+  if(!lines.length)throw Error("စာပိုဒ်အပြည့်အစုံကို ဂျာနယ်ပုံထဲ ထည့်ရန် နေရာမလုံလောက်ပါ — "+(m.homeDisplay||m.home)+" / "+(m.awayDisplay||m.away));
+  c.font='550 '+fontSize+'px "FCMyanmar",sans-serif';
+  c.fillStyle="#253830";c.textAlign="left";c.textBaseline="top";
+  let y=top;
+  for(const line of lines){
    if(!line){y+=8;continue;}
-   c.fillText(line,482,y,descriptionWidth);y+=lineHeight;
+   c.fillText(line,left,y,available);y+=lineHeight;
   }
-  c.fillStyle=col;c.fillRect(475,522,705,74);c.fillStyle="#fff";c.textAlign="left";c.textBaseline="middle";
-  fitMyanmar(c,"ရွေးချယ်မှု",495,551,140,18,800,13);
-  c.textAlign="center";fitMyanmar(c,choice(m),830,560,500,24,900,14);
-  const odd=market(m),rowY=625,rowH=200;
-  c.fillStyle="#f8fbfd";c.fillRect(15,rowY,1170,rowH);c.strokeStyle=col;c.lineWidth=6;c.strokeRect(18,rowY+3,1164,rowH-6);
-  c.fillStyle="#f1f5f8";c.fillRect(28,rowY+13,294,rowH-26);c.fillRect(878,rowY+13,294,rowH-26);
-  if(h)contain(c,h,48,rowY+51,84,92);
-  if(a)contain(c,a,1068,rowY+51,84,92);
-  c.fillStyle="#153c5d";c.textAlign="center";c.textBaseline="middle";
-  fitMyanmar(c,m.homeDisplay||m.home,220,rowY+100,160,22,900,12);
-  fitMyanmar(c,m.awayDisplay||m.away,978,rowY+100,160,22,900,12);
-  function quote(x,label,value,current){
-   c.fillStyle=col;c.fillRect(x,rowY+28,174,144);
-   c.fillStyle="#fff";c.textAlign="center";c.textBaseline="middle";
-   fitMyanmar(c,label,x+87,rowY+53,160,16,800,12);
-   c.font='900 26px "FCMyanmar",sans-serif';c.fillText(value,x+87,rowY+98,160);
-   c.font='650 12px "FCMyanmar",sans-serif';c.fillText(current!=="—"?"ယခု "+current:"မူလကြေး",x+87,rowY+145,160);
+  // Journal-style green selection bar with its own gold-accented label.
+  rounded(465,483,700,40,7,dark,gold,2);
+  c.beginPath();c.moveTo(654,484);c.lineTo(636,522);
+  c.strokeStyle=gold;c.lineWidth=4;c.stroke();
+  text("ရွေးချယ်မှု -",557,503,18,gold,900,170);
+  text(choice(m),909,503,22,"#ffffff",900,485);
+
+  // Symmetric one-row Myanmar odds panel: club/crest → goal → time → body → club/crest.
+  rounded(12,548,1176,130,16,"#ffffff",dark,5);
+  rounded(19,555,1162,116,12,"#f7faf7",gold,2);
+  const odd=market(m),rowTop=562,rowH=102;
+  const segments=[
+   {x:28,w:273,side:"home"},
+   {x:308,w:183,kind:"goal",label:"ဂိုးပေါင်းကြေး",value:odd.goal,current:odd.currentGoal},
+   {x:498,w:204,kind:"time"},
+   {x:709,w:183,kind:"body",label:"ဘော်ဒီကြေး",value:odd.body,current:odd.currentBody},
+   {x:899,w:273,side:"away"}
+  ];
+  for(const s of segments){
+   if(s.side){
+    rounded(s.x,rowTop,s.w,rowH,6,"#f1f5f2","#dee7df",1);
+    const crest=s.side==="home"?home:away;
+    const label=s.side==="home"?(m.homeDisplay||m.home):(m.awayDisplay||m.away);
+    const ix=s.side==="home"?s.x+9:s.x+s.w-83;
+    contain(c,crest,ix,rowTop+13,74,76);
+    text(label,s.side==="home"?s.x+183:s.x+90,rowTop+52,21,ink,900,176);
+   }else if(s.kind==="time"){
+    rounded(s.x,rowTop,s.w,rowH,5,"#ffffff","#b8d2c2",2);
+    text("ပွဲစတင်ချိန်",s.x+s.w/2,rowTop+23,16,ink,750,185);
+    c.fillStyle="#152b30";c.textAlign="center";c.textBaseline="middle";
+    c.font="900 28px Arial,sans-serif";
+    c.fillText(clock(m),s.x+s.w/2,rowTop+65,s.w-14);
+   }else{
+    rounded(s.x,rowTop,s.w,rowH,5,dark,null);
+    text(s.label,s.x+s.w/2,rowTop+20,15,"#ffffff",850,174);
+    text(s.value,s.x+s.w/2,rowTop+54,28,"#ffffff",900,170);
+    text(s.current!=="—"?"ယခု "+s.current:"မူလကြေး",s.x+s.w/2,rowTop+84,12,"#e7f0e4",650,168);
+   }
   }
-  quote(340,"ဂိုးပေါင်းကြေး",odd.goal,odd.currentGoal);
-  quote(686,"ဘော်ဒီကြေး",odd.body,odd.currentBody);
-  c.fillStyle="#fff";c.strokeStyle="#cbd6de";c.lineWidth=2;c.fillRect(522,rowY+28,156,144);c.strokeRect(522,rowY+28,156,144);
-  c.fillStyle="#153c5d";c.textAlign="center";c.textBaseline="middle";c.font="900 21px Arial,sans-serif";c.fillText(clock(m),600,rowY+100,145);
   return canvas;
  }
  const canvasBlob=canvas=>new Promise((ok,bad)=>canvas.toBlob(b=>b?.size?ok(b):bad(Error("PNG မထွက်ပါ")),"image/png"));
