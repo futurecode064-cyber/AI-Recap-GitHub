@@ -425,7 +425,18 @@
               const art=await exportWithFallback(type,groups[i],context,warnings);
               const branded=await withBanner(art);
               const filename=type+"/GOAL-ZONE-"+day+"-"+type+"-"+mode+"-"+String(i+1).padStart(2,"0")+"-of-"+String(groups.length).padStart(2,"0")+".png";
-              await archive.add(filename,await pngWithRetry(branded));count++;
+              let output;
+              try{
+                output=await pngWithRetry(branded);
+              }catch(encodeError){
+                // Canvas export may fail on mobile due to cross-origin crests,
+                // photos, or memory. Retry with accurate text-only cards.
+                warnings.push(type+" PNG encoding — "+(encodeError?.message||String(encodeError)));
+                const originals=[];
+                for(const record of groups[i])originals.push(await fallbackCard(type,record,day));
+                output=await pngWithRetry(await withBanner(stack(originals)));
+              }
+              await archive.add(filename,output);count++;
             }catch(pieceError){
               console.error("GOAL ZONE PNG failed",type,i+1,pieceError);
               warnings.push(type+" "+(i+1)+"/"+groups.length+" — "+(pieceError?.message||String(pieceError)));
