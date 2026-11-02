@@ -1,5 +1,5 @@
 "use strict";
-/* Main Website only. Uses the pinned Worker/D1 publication; never polls or scrapes in browsers. */
+/* Main + Goal Zone share exact published odds / match probability model. */
 (function(root){
  const finitePrice=x=>{const n=Number(x);return x!==null&&x!==undefined&&String(x).trim()!==""&&Number.isFinite(n)&&n>1.001&&n<1000?n:null;};
  // A price published on the previous night for today's fixture is valid pre-match
@@ -69,9 +69,11 @@
  }
  const model=Object.freeze({percentages,winChance,goalChance,analyze});
  if(typeof module==="object"&&module.exports)module.exports=model;
+ if(root)root.FutureCodeProbabilityModel=model;
  if(!root||!root.document)return;
  const doc=root.document;
- if(!["/","/index.html"].includes(root.location.pathname))return;
+ const isGoalZone=/^\/future-code-journal\/(?:index\.html)?$/.test(root.location.pathname);
+ if(!["/","/index.html"].includes(root.location.pathname)&&!isGoalZone)return;
  const $=id=>doc.getElementById(id);
  const safeUrl=url=>{try{const u=new URL(url);return u.protocol==="https:"?u.href:null;}catch{return null;}};
  const mk=(tag,cls,txt)=>{const e=doc.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=String(txt);return e;};
@@ -132,12 +134,13 @@
     // Production uses checked-in JSON on Cloudflare Pages while FC_FOOTBALL_ENGINE.enabled is false.
     // Never block the published static site behind a disabled Worker/D1 manifest.
     const reader=root.FootballData?.fetch?.bind(root.FootballData)||root.fetch.bind(root);
-    const response=await reader("./data/today.json?prob="+Date.now(),{cache:"no-store"});
+    const sourcePrefix=isGoalZone?"../":"./";
+    const response=await reader(sourcePrefix+"data/today.json?prob="+Date.now(),{cache:"no-store"});
     if(!response.ok)throw Error("Daily report HTTP "+response.status);
     const report=await response.json();
     if(!report?.published||!Array.isArray(report.matches)||!/\d{4}-\d{2}-\d{2}/.test(report.reportDate||""))throw Error("No published report");
     day=report.reportDate;
-    const priceResponse=await reader("./data/odds/"+encodeURIComponent(day)+".json?prob="+Date.now(),{cache:"no-store"});
+    const priceResponse=await reader(sourcePrefix+"data/odds/"+encodeURIComponent(day)+".json?prob="+Date.now(),{cache:"no-store"});
     if(!priceResponse.ok)throw Error("No price sheet for "+day);
     const odds=await priceResponse.json();
     if(odds.reportDate!==day||!Array.isArray(odds.matches)||!odds.matches.length)throw Error("Price date mismatch");
