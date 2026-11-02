@@ -157,12 +157,12 @@
   const analysis=previewText(m);
   // Full-width text height follows the entire verified preview; never clip it.
   const metric=document.createElement("canvas").getContext("2d");
-  const fontSize=27,leading=Math.ceil(fontSize*1.50);
+  const fontSize=24,leading=Math.ceil(fontSize*1.55);
   metric.font='550 '+fontSize+'px "FCMyanmar",sans-serif';
   const lines=wrapMyanmar(analysis,textW-44,t=>metric.measureText(t).width);
   const bodyH=lines.reduce((v,line)=>v+(line?leading:8),0);
-  const contentH=Math.max(260,57+bodyH+12+44+10);
-  const marketTop=contentTop+contentH+8,cardH=marketTop+123;
+  const contentH=Math.max(280,69+bodyH+12+53+10);
+  const marketTop=contentTop+contentH+8,cardH=marketTop+141;
   const canvas=document.createElement("canvas");canvas.width=W;canvas.height=cardH;
   const c=canvas.getContext("2d");if(!c)throw Error("PNG Canvas မရပါ");
   c.imageSmoothingEnabled=true;c.imageSmoothingQuality="high";
@@ -187,31 +187,31 @@
   c.strokeStyle=gold;c.lineWidth=3;c.beginPath();c.moveTo(13,29);c.lineTo(1187,29);c.stroke();
   box(272,5,660,56,14,dark,gold,3);
   box(24,6,176,52,10,"#ffffff",gold,2);contain(c,league,34,9,156,45);
-  centered(m.leagueDisplay||m.league,601,33,615,26,900);
+  centered(m.leagueDisplay||m.league,601,33,615,29,900);
 
   // One full-width editorial panel; all other card elements remain unchanged.
   box(12,67,1176,contentH+11,13,"#fbfdfa",gold,4);
   box(textX,contentTop,textW,contentH,8,"#ffffff","#c4d8cd",2);
-  centered((m.homeDisplay||m.home)+" နှင့် "+(m.awayDisplay||m.away),textX+textW/2,contentTop+30,textW-30,30,900,ink);
+  centered((m.homeDisplay||m.home)+" နှင့် "+(m.awayDisplay||m.away),textX+textW/2,contentTop+34,textW-30,32,900,ink);
   c.fillStyle="#203d30";c.textAlign="left";c.textBaseline="top";
   c.font='550 '+fontSize+'px "FCMyanmar",sans-serif';
-  let y=contentTop+57;
-  const cutoff=contentTop+contentH-53;
+  let y=contentTop+69;
+  const cutoff=contentTop+contentH-62;
   for(const line of lines){
    if(!line){y+=8;continue;}
    if(y+leading>cutoff)throw Error("ပွဲကြိုသုံးသပ်ချက် စာသားထပ်နေပါသည် — "+(m.homeDisplay||m.home));
    c.fillText(line,textX+22,y,textW-44);y+=leading;
   }
-  const pickY=contentTop+contentH-44;
-  box(textX+9,pickY,textW-18,37,5,dark,gold,2);
+  const pickY=contentTop+contentH-53;
+  box(textX+9,pickY,textW-18,46,5,dark,gold,2);
   c.strokeStyle=gold;c.lineWidth=3;c.beginPath();
-  c.moveTo(textX+306,pickY+1);c.lineTo(textX+292,pickY+36);c.stroke();
-  centered("ရွေးချယ်မှု -",textX+148,pickY+19,280,17,900,gold);
-  centered(choice(m),textX+textW/2+148,pickY+19,textW-332,21,900,"#fff");
+  c.moveTo(textX+306,pickY+1);c.lineTo(textX+292,pickY+45);c.stroke();
+  centered("ရွေးချယ်မှု -",textX+148,pickY+23,280,22,900,gold);
+  centered(choice(m),textX+textW/2+148,pickY+23,textW-332,27,900,"#fff");
 
   // No seams or floating boxes: the five columns share one continuous border.
-  const o=market(m),rowY=marketTop+5,rowH=101;
-  box(12,marketTop,1176,115,10,"#fff",gold,4);
+  const o=market(m),rowY=marketTop+8,rowH=115;
+  box(12,marketTop,1176,131,10,"#fff",gold,4);
   const cols=[
    {x:19,w:280,side:"home"},
    {x:299,w:191,kind:"goal",label:"ဂိုးပေါင်းကြေး",value:o.goal,current:o.currentGoal},
@@ -228,16 +228,16 @@
    if(s.side){
     const im=s.side==="home"?home:away,label=s.side==="home"?(m.homeDisplay||m.home):(m.awayDisplay||m.away);
     const ix=s.side==="home"?s.x+8:s.x+s.w-80;
-    contain(c,im,ix,rowY+11,72,80);
-    centered(label,s.side==="home"?s.x+187:s.x+92,rowY+53,175,20,900,ink);
+    contain(c,im,ix,rowY+13,72,89);
+    centered(label,s.side==="home"?s.x+187:s.x+92,rowY+61,175,23,900,ink);
    }else if(s.kind==="time"){
-    centered("ပွဲစတင်ချိန်",center,rowY+24,s.w-18,15,800,ink);
+    centered("ပွဲစတင်ချိန်",center,rowY+29,s.w-18,19,800,ink);
     c.textAlign="center";c.textBaseline="middle";c.fillStyle="#1d3139";
-    c.font="900 27px Arial,sans-serif";c.fillText(clock(m),center,rowY+69,s.w-16);
+    c.font="900 31px Arial,sans-serif";c.fillText(clock(m),center,rowY+78,s.w-16);
    }else{
-    centered(s.label,center,rowY+21,s.w-12,15,800);
-    centered(s.value,center,rowY+52,s.w-12,27,900);
-    centered(s.current!=="—"?"ယခု "+s.current:"မူလကြေး",center,rowY+82,s.w-12,12,650);
+    centered(s.label,center,rowY+26,s.w-12,18,800);
+    centered(s.value,center,rowY+64,s.w-12,32,900);
+    centered(s.current!=="—"?"ယခု "+s.current:"မူလကြေး",center,rowY+99,s.w-12,16,750);
    }
   }
   return canvas;
