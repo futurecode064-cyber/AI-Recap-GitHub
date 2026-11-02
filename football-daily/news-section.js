@@ -101,9 +101,15 @@
   const mix=(hex,toward,amount)=>"#"+[0,2,4].map(i=>Math.round(parseInt(hex.slice(i+1,i+3),16)*(1-amount)+toward*amount).toString(16).padStart(2,"0")).join("");
   const ink=mix(accent,0,.80),deep=mix(accent,0,.46),light=mix(accent,255,.78),gold="#ffdb58";
   const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs.filter(p=>typeof p==="string"&&p.trim()):[];
-  const titleFont=56,titleLH=92,titleWidth=590,titleTop=356;
-  ctx.font='800 '+titleFont+'px "FCNewsMyanmar"';
-  const titleLines=headlineLines(ctx,s.title,titleWidth);
+  const titleWidth=590,titleTop=356;
+  let titleFont=58,titleLines=[];
+  do{
+   ctx.font='800 '+titleFont+'px "FCNewsMyanmar"';
+   titleLines=headlineLines(ctx,s.title,titleWidth);
+   if(titleLines.length<2||ctx.measureText(titleLines[titleLines.length-1]).width>=titleWidth*.35||titleFont<=48)break;
+   titleFont-=2;
+  }while(true);
+  const titleLH=Math.ceil(titleFont*1.64);
   const titleEnd=titleTop+(titleLines.length-1)*titleLH;
   // The opening paragraph sits beside the photo; all remaining prose continues below.
   const bodyFont=27,lineHeight=51,leadWidth=535;
