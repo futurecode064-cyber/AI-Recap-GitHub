@@ -49,6 +49,6 @@ test("Colour journal PNG hides every photo caption while keeping source credits"
  assert.doesNotMatch(js,/const caption=s\.imageCaption/);
  assert.doesNotMatch(js,/card\.append\(node\("div",s\.imageCaption/);
  assert.match(css,/\.fc-news-attribution/);
- assert.match(read("index.html"),/news-section\.js\?v=journal-polish-20261102-v2/);
- assert.match(read("future-code-journal/index.html"),/news-section\.js\?v=journal-polish-20261102-v2/);
+ assert.match(read("index.html"),/news-section\.js\?v=journal-editorial-20261102-v3/);
+ assert.match(read("future-code-journal/index.html"),/news-section\.js\?v=journal-editorial-20261102-v3/);
 });
