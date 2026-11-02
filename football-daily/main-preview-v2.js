@@ -157,7 +157,7 @@
   const analysis=previewText(m);
   // Full-width text height follows the entire verified preview; never clip it.
   const metric=document.createElement("canvas").getContext("2d");
-  const fontSize=20,leading=Math.ceil(fontSize*1.48);
+  const fontSize=27,leading=Math.ceil(fontSize*1.50);
   metric.font='550 '+fontSize+'px "FCMyanmar",sans-serif';
   const lines=wrapMyanmar(analysis,textW-44,t=>metric.measureText(t).width);
   const bodyH=lines.reduce((v,line)=>v+(line?leading:8),0);
@@ -192,7 +192,7 @@
   // One full-width editorial panel; all other card elements remain unchanged.
   box(12,67,1176,contentH+11,13,"#fbfdfa",gold,4);
   box(textX,contentTop,textW,contentH,8,"#ffffff","#c4d8cd",2);
-  centered((m.homeDisplay||m.home)+" နှင့် "+(m.awayDisplay||m.away),textX+textW/2,contentTop+30,textW-30,24,900,ink);
+  centered((m.homeDisplay||m.home)+" နှင့် "+(m.awayDisplay||m.away),textX+textW/2,contentTop+30,textW-30,30,900,ink);
   c.fillStyle="#203d30";c.textAlign="left";c.textBaseline="top";
   c.font='550 '+fontSize+'px "FCMyanmar",sans-serif';
   let y=contentTop+57;
