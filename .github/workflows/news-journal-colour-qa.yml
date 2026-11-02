@@ -1,0 +1,98 @@
+name: Colour Football News Journal — Real PNG Browser QA
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/news-journal-colour-qa.yml'
+      - 'football-daily/news-section.js'
+      - 'football-daily/news-section.css'
+      - 'football-daily/tests/news-section.test.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  news-png:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source code and news regression
+        run: |
+          node --check football-daily/news-section.js
+          node --test football-daily/tests/news-section.test.cjs
+      - name: Install browser
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Verify news PNG is really downloadable on public live site
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          import assert from 'node:assert/strict';
+          import {readFile} from 'node:fs/promises';
+          const base='https://future-code-football-daily.pages.dev';
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          let exported=0;
+          try{
+           const context=await browser.newContext({viewport:{width:1400,height:950},acceptDownloads:true});
+           for(const [route,site] of [['/?frame-engine=1','Main'],['/future-code-journal/?section=news','Goal Zone']]){
+            const page=await context.newPage();
+            page.setDefaultTimeout(25000);
+            const errors=[];
+            page.on('pageerror',e=>errors.push(e.message));
+            await page.goto(base+route,{waitUntil:'domcontentloaded',timeout:55000});
+            if(site==='Main')await page.locator('.fc-main-news-tab').click();
+            await page.locator('#fcNewsGrid .fc-news-card').first().waitFor({timeout:40000});
+            assert.equal(await page.locator('#fcNewsGrid .fc-news-image-caption').count(),0,site+' contains photo-under-caption');
+            const cards=page.locator('#fcNewsGrid .fc-news-card');
+            let ok=false,lastStatus='';
+            for(let i=0;i<Math.min(10,await cards.count());i++){
+             const card=cards.nth(i);
+             const preview=card.locator('.fc-news-export-secondary');
+             if(!await preview.count())continue;
+             await preview.click();
+             try{
+              const dialog=page.locator('dialog.fc-news-preview');
+              await dialog.locator('img').waitFor({state:'visible',timeout:23000});
+              const picture=await dialog.locator('img').evaluate(async img=>{
+               await img.decode();
+               const result={width:img.naturalWidth,height:img.naturalHeight};
+               const canvas=document.createElement('canvas');
+               canvas.width=80;canvas.height=80;canvas.getContext('2d').drawImage(img,0,0,80,80);
+               result.hasBytes=!!canvas.toDataURL('image/png').length;
+               return result;
+              });
+              assert(picture.width>=1100&&picture.height>=1600&&picture.hasBytes,site+' small/blank PNG '+JSON.stringify(picture));
+              const file=await dialog.locator('a[download]').getAttribute('download');
+              assert(file?.endsWith('.png'),site+' missing .png export name');
+              const dl=page.waitForEvent('download',{timeout:30000});
+              await dialog.locator('a[download]').click();
+              const download=await dl,bytes=await readFile(await download.path());
+              assert(bytes.length>20000&&bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])),site+' invalid PNG bytes '+bytes.length);
+              await dialog.screenshot({path:'news-journal-'+site.replaceAll(' ','-').toLowerCase()+'.png'});
+              await dialog.locator('button').first().click();
+              console.log(site+' OK',JSON.stringify(picture),'pngBytes',bytes.length,'name',download.suggestedFilename());
+              ok=true;exported++;break;
+             }catch(e){
+              lastStatus=await card.locator('.fc-news-export-status').innerText().catch(()=>e.message);
+              await page.locator('dialog.fc-news-preview button').first().click().catch(()=>{});
+              console.warn(site+' story '+i+' export failed:',e.message,'status:',lastStatus);
+             }
+            }
+            assert(ok,site+' could not render any real news poster: '+lastStatus);
+            assert(!errors.some(e=>/SyntaxError|ReferenceError/.test(e)),site+' javascript errors: '+errors.join('; '));
+            await page.close();
+           }
+           assert.equal(exported,2,'Both news sites must export');
+          }finally{await browser.close();}
+          NODE
+      - name: Keep PNG preview screenshots as evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: colour-news-journal-previews
+          path: news-journal-*.png
+          if-no-files-found: ignore
