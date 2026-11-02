@@ -21,6 +21,26 @@ jobs:
           set -eux
           godot --version
           ls -lah /root/.local/share/godot/export_templates/ || true
+      - name: Configure Android SDK, Java and Godot templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "HOME=$HOME ANDROID_HOME=${ANDROID_HOME:-unset}"
+          command -v javac
+          JAVA_PATH="$(dirname "$(dirname "$(readlink -f "$(command -v javac)")")")"
+          echo "JAVA_PATH=$JAVA_PATH"
+          mkdir -p "$HOME/.local/share/godot/export_templates" "$HOME/.config/godot" "$HOME/.android"
+          cp -a /root/.local/share/godot/export_templates/4.5.1.stable "$HOME/.local/share/godot/export_templates/"
+          SDK_PATH="${ANDROID_HOME:-/opt/android-sdk}"
+          cat > "$HOME/.config/godot/editor_settings-4.tres" <<EOF
+          [gd_resource type="EditorSettings" format=3]
+
+          [resource]
+          export/android/java_sdk_path = "$JAVA_PATH"
+          export/android/android_sdk_path = "$SDK_PATH"
+          EOF
+          keytool -genkeypair -keystore "$HOME/.android/debug.keystore" -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=Android Debug,O=Future Code,C=MM" -noprompt
+          test -s "$HOME/.local/share/godot/export_templates/4.5.1.stable/android_debug.apk"
       - name: Static QA
         shell: bash
         run: |
