@@ -4,6 +4,7 @@ func _initialize() -> void:
 	call_deferred("_run")
 func _run() -> void:
 	var host := "--host" in OS.get_cmdline_user_args()
+	var expected := 5 if "--five" in OS.get_cmdline_user_args() else 2
 	game = load("res://main.tscn").instantiate()
 	root.add_child(game)
 	await process_frame
@@ -14,7 +15,7 @@ func _run() -> void:
 		game._join_room()
 	await create_timer(3.0).timeout
 	if host:
-		if game.players.size() != 2:
+		if game.players.size() != expected:
 			printerr("HOST_FAIL no join, count=",game.players.size())
 			quit(2)
 			return
@@ -47,7 +48,7 @@ func _run() -> void:
 			printerr("HOST_FAIL finish=",game.ended," completed=",game.completed," target=",game.target)
 			quit(3)
 			return
-		print("HOST_PASS connected=2 completed=",game.completed," coins=",game.coins," level=",game.level)
+		print("HOST_PASS connected=", expected, " completed=",game.completed," coins=",game.coins," level=",game.level)
 		quit(0)
 	else:
 		var ok := false
@@ -60,5 +61,5 @@ func _run() -> void:
 			printerr("CLIENT_FAIL connected=",game.players.size()," completed=",game.completed," ended=",game.ended)
 			quit(4)
 			return
-		print("CLIENT_PASS connected=2 completed=",game.completed," result=",game.result_text)
+		print("CLIENT_PASS connected=", expected, " completed=",game.completed," result=",game.result_text)
 		quit(0)
