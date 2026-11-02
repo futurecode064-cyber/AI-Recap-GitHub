@@ -368,6 +368,7 @@ export default {
 };
 async function handleRequest(request, env) {
     const path = new URL(request.url).pathname;
+    if (path === "/api/news-image") return serveNewsImage(request);
     if (path === "/bet-city-family" || path.startsWith("/bet-city-family/")) return suspendedBetCity(request);
     if (path === "/api/editor/sites" || path.startsWith("/api/editor/sites/")) return sbApi(request, env, path);
     if (path.startsWith("/api/editor/engine/")) return engineProxy(request, env, path);
@@ -417,6 +418,34 @@ async function handleRequest(request, env) {
     if (GZ_JOURNAL_PAGES.has(path)) return gzJournalPage(request, env, GZ_JOURNAL_PAGES.get(path));
     // Shared data, scripts, brand routes and assets are publicly accessible.
     return env.ASSETS.fetch(request);
+}
+
+// Same-origin licensed-image gateway for newspaper PNG canvas exports.
+// No arbitrary URL proxying: Commons image hosts and image file types only.
+async function serveNewsImage(request){
+  if(request.method!=="GET")return new Response("Method Not Allowed",{status:405,headers:{"Allow":"GET"}});
+  const raw=new URL(request.url).searchParams.get("src");
+  if(!raw||raw.length>1800)return new Response("Invalid photo URL",{status:400});
+  let url;
+  try{url=new URL(raw);}catch{return new Response("Invalid photo URL",{status:400});}
+  if(url.protocol!=="https:"||url.username||url.password||url.port||
+    !["upload.wikimedia.org","thumb.wikimedia.org"].includes(url.hostname)||
+    !url.pathname.startsWith("/wikipedia/commons/")||
+    !/\.(jpe?g|png|webp)$/i.test(url.pathname)){
+    return new Response("Photo source not permitted",{status:403});
+  }
+  try{
+    const image=await fetch(url.href,{method:"GET",redirect:"error",headers:{"Accept":"image/jpeg,image/png,image/webp"}});
+    if(!image.ok)return new Response("Image source unavailable",{status:502});
+    const mime=(image.headers.get("content-type")||"").split(";")[0].toLowerCase();
+    const size=Number(image.headers.get("content-length")||0);
+    if(!["image/jpeg","image/png","image/webp"].includes(mime)||size>8*1024*1024){
+      return new Response("Unsupported or oversized photo",{status:415});
+    }
+    const h=new Headers({"Content-Type":mime,"Cache-Control":"public, max-age=86400, s-maxage=604800",
+      "X-Content-Type-Options":"nosniff","Cross-Origin-Resource-Policy":"same-origin"});
+    return new Response(image.body,{status:200,headers:h});
+  }catch{return new Response("Image source unavailable",{status:502});}
 }
 
 // Owner content editor. GitHub credentials stay in encrypted Cloudflare secrets.
