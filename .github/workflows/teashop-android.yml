@@ -1,0 +1,70 @@
+name: Future Code Tea Shop — Godot Android QA
+
+on:
+  push:
+    branches: [futurecode-teashop-20261102]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  godot-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    container:
+      image: barichello/godot-ci:4.5.1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain versions
+        run: |
+          set -eux
+          godot --version
+          ls -lah /root/.local/share/godot/export_templates/ || true
+      - name: Static QA
+        run: python3 tests/static_check.py
+      - name: Godot import and script parse
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p build
+          godot --headless --editor --path . --quit 2>&1 | tee build/import.log
+          if grep -E 'SCRIPT ERROR|Parse Error|Parse error|ERROR:' build/import.log; then exit 1; fi
+      - name: Mission and save/load headless test
+        shell: bash
+        run: |
+          set -o pipefail
+          godot --headless --path . --script tests/mission_test.gd 2>&1 | tee build/mission.log
+          grep -q 'CI MISSION PASS' build/mission.log
+      - name: Two-process ENet loopback smoke test
+        shell: bash
+        run: |
+          set -euo pipefail
+          godot --headless --path . --script tests/network_test.gd -- --host > build/host.log 2>&1 &
+          HOST_PID=$!
+          sleep 2
+          timeout 35s godot --headless --path . --script tests/network_test.gd -- --client > build/client.log 2>&1 || { cat build/host.log build/client.log; exit 1; }
+          wait "$HOST_PID" || { cat build/host.log; exit 1; }
+          grep -q 'CI NETWORK HOST PASS' build/host.log
+          grep -q 'CI NETWORK CLIENT PASS' build/client.log
+      - name: Android arm64 debug export
+        shell: bash
+        run: |
+          set -euo pipefail
+          godot --headless --path . --export-debug Android build/TeaShopRushCrew-arm64-debug.apk 2>&1 | tee build/export.log
+          test -s build/TeaShopRushCrew-arm64-debug.apk
+          sha256sum build/TeaShopRushCrew-arm64-debug.apk | tee build/SHA256.txt
+          APK_SIGNER=$(find /opt/android-sdk /usr/local/lib/android/sdk -name apksigner -type f 2>/dev/null | sort -V | tail -1)
+          if [ -n "$APK_SIGNER" ]; then "$APK_SIGNER" verify --verbose --print-certs build/TeaShopRushCrew-arm64-debug.apk | tee build/signature.txt; fi
+          unzip -t build/TeaShopRushCrew-arm64-debug.apk | tail -2
+      - name: Upload APK and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: future-code-teashop-android-qa
+          path: |
+            build/*.apk
+            build/*.log
+            build/*.txt
+          if-no-files-found: warn
+          retention-days: 30

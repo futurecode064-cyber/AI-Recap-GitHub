@@ -1,13 +1,4 @@
-.gradle/
-.idea/
-local.properties
-**/build/
-*.iml
-*.jks
+.godot/
+build/
 *.keystore
-captures/
-.externalNativeBuild/
-.cxx/
-
-*.p12
-*password.txt
+*.jks
