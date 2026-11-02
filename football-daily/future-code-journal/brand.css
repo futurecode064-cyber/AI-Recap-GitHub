@@ -196,3 +196,40 @@
   .fcj-theme .gz-journal-banner{height:auto;min-height:0}
   .fcj-theme .gz-journal-banner img{width:100%;height:auto;max-width:100%}
 }
+
+/* Goal Zone Download Center v2 — keep original gold/black theme and banner. */
+:root.fcj-theme #gzDownloadCenter{display:block!important;scroll-margin-top:18px;margin:22px 0 28px;background:linear-gradient(140deg,#18140e,#292116 65%,#16120a);border:1px solid #ca9e49;border-radius:14px;padding:clamp(14px,3vw,24px);box-shadow:0 12px 34px #0007;color:#f8eccf}
+.fcj-theme .gz-center-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:16px 0}
+.fcj-theme .gz-center-filters label{display:grid;gap:8px;font-size:13px;font-weight:700;color:#f4dfb3}
+.fcj-theme .gz-center-filters select{width:100%;padding:11px 12px;background:#fff8eb;border:1px solid #e8c784;border-radius:9px;color:#21190a;font:700 13px "Noto Sans Myanmar",sans-serif}
+.fcj-theme .gz-center-matches{margin:16px 0;padding:13px;background:#12100b;border:1px solid #796033;border-radius:10px}
+.fcj-theme .gz-center-matches summary{cursor:pointer;color:#ffda86;font-size:13px;font-weight:800;line-height:1.8}
+.fcj-theme .gz-center-match-actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.fcj-theme .gz-center-match-actions button{padding:8px 12px;background:#47331b;border:1px solid #ae8743;color:#ffe6ac;border-radius:7px;cursor:pointer;font:700 12px "Noto Sans Myanmar",sans-serif}
+.fcj-theme #gzBulkMatchList{max-height:260px;overflow:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:5px}
+.fcj-theme #gzBulkMatchList label{display:flex;gap:8px;align-items:center;padding:9px;background:#292217;border-radius:7px;border:1px solid #665332;color:#f5e6c7;font:600 12px/1.8 "Noto Sans Myanmar",sans-serif;overflow-wrap:anywhere}
+.fcj-theme #gzBulkMatchList label[hidden]{display:none}
+.fcj-theme #gzBulkMatchList input{accent-color:#dbb45e;flex:none}
+.fcj-theme #gzBulkStatus{color:#ead4a4;font-size:12px;line-height:2;margin-top:10px}
+.fcj-theme #gzDownloadCenter .gz-bulk-download{width:100%;min-height:48px;font-size:14px}
+.fcj-theme .gz-prob-wrap{padding-top:5px;padding-bottom:5px}
+.fcj-theme #fcProbSection{scroll-margin-top:20px;border-color:#8e6c32;background:linear-gradient(140deg,#16120d,#2a2318);color:#f6eddd;box-shadow:0 11px 30px #0005}
+.fcj-theme #fcProbSection h2{color:#ffda7d}
+.fcj-theme #fcProbSection .fc-prob-subtitle,.fcj-theme #fcProbSection .fc-prob-status,.fcj-theme #fcProbSection .fc-prob-footnote{color:#e9d6ae}
+.fcj-theme #fcProbSection .fc-prob-league{border-color:#99723b;background:#fdf8eb}
+.fcj-theme #fcProbSection .fc-prob-league-header{background:linear-gradient(120deg,#211709,#97702e 57%,#1a140b)}
+.fcj-theme #fcProbSection .fc-prob-columns span{background:#e6cc98;color:#2f210d;border-color:#bfa575}
+.fcj-theme #fcProbSection .fc-prob-row{color:#2a1c10;border-color:#e2d1a9}
+.fcj-theme #fcProbSection .fc-prob-row:nth-child(even){background:#f8eed7}
+.fcj-theme #fcProbSection .fc-prob-percent{border-color:#e4d3aa}
+.fcj-theme #fcProbSection .fc-prob-high{background:#dbe9d8;color:#24572b}
+.fcj-theme #fcProbSection .fc-prob-mid{background:#f6e7be;color:#68440e}
+.fcj-theme #fcProbSection .fc-prob-low{background:#f1dce0;color:#782938}
+.fcj-theme #fcProbSection .fc-prob-meta{background:#efe2c4;color:#624b23;border-color:#d4bc8c}
+.fcj-theme #fcProbSection .fc-prob-meta a{color:#65400b}
+.fcj-theme #fcProbSection .fc-prob-controls select{background:#fff6db;color:#30220d;border:1px solid #d4ac5f}
+.fcj-theme #fcProbSection .fc-prob-count{background:#e6c06c;color:#1d170d}
+.fcj-theme #fcProbSection .fc-prob-empty{color:#f5dfaf}
+@media(max-width:690px){.fcj-theme .gz-center-filters{grid-template-columns:1fr}.fcj-theme #gzBulkMatchList{grid-template-columns:1fr}.fcj-theme #gzDownloadCenter{padding:13px}.fcj-theme #fcProbSection{padding:12px}}
+
+:root.fcj-theme body[data-fc-main-view] #fcProbSection{display:block!important}
