@@ -22,7 +22,7 @@ body[data-fc-main-view="previewV2"] :is(#fcProbSection,#fcNewsSection,#fcAiScore
 .fc-v2-card{border:3px solid var(--fc-v2-accent);background:#edf2f6;border-radius:13px;overflow:hidden;box-shadow:0 12px 34px #0008;color:#152b3c}
 .fc-v2-head{display:flex;justify-content:space-between;gap:12px;align-items:center;background:var(--fc-v2-accent);padding:11px 19px;color:white;font:800 17px/1.9 FCMyanmar,"Noto Sans Myanmar",sans-serif}
 .fc-v2-head span{white-space:nowrap;color:#e7f3fb;font:700 13px/1.7 Arial,FCMyanmar,sans-serif}
-.fc-v2-grid{display:grid;grid-template-columns:35% minmax(0,1fr);gap:15px;padding:15px;background:linear-gradient(115deg,#dbe5ee,#f7fafc)}
+.fc-v2-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:15px;padding:15px;background:linear-gradient(115deg,#dbe5ee,#f7fafc)}
 .fc-v2-media{min-height:260px;position:relative;background:#0b3b5d url("./assets/preview-stadium-night.jpg") center/cover;border:4px solid #fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 15px #0b233738}
 .fc-v2-photo{width:100%;height:100%;min-height:260px;position:absolute;inset:0;object-fit:cover}
 .fc-v2-team-photos{position:absolute;bottom:30px;left:0;right:0;display:flex;align-items:center;justify-content:space-evenly;background:#051c35b8;padding:10px;min-height:95px}
