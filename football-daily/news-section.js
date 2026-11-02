@@ -99,7 +99,7 @@
   const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");
   if(!ctx)throw new Error("Canvas unavailable");
   const mix=(hex,toward,amount)=>"#"+[0,2,4].map(i=>Math.round(parseInt(hex.slice(i+1,i+3),16)*(1-amount)+toward*amount).toString(16).padStart(2,"0")).join("");
-  const ink=mix(accent,0,.80),deep=mix(accent,0,.46),light=mix(accent,255,.78),gold="#ffdb58";
+  const ink=mix(accent,0,.80),deep=mix(accent,0,.46),light=mix(accent,255,.78),trim=mix(accent,255,.42),shine=mix(accent,255,.87);
   const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs.filter(p=>typeof p==="string"&&p.trim()):[];
   const titleWidth=590,titleTop=356;
   let titleFont=58,titleLines=[];
@@ -148,16 +148,16 @@
   polygon([[W,190],[W,680],[440,heroEnd],[120,heroEnd]],"#ffffff0a");
   const halo=ctx.createRadialGradient(180,670,10,180,670,850);halo.addColorStop(0,"#ffffff");halo.addColorStop(.5,light);halo.addColorStop(1,"#ffffff00");ctx.fillStyle=halo;ctx.fillRect(0,230,760,heroEnd-230);
   // Metallic corner rails and angled yellow accents echo the supplied sports cover.
-  polygon([[16,18],[W-16,18],[W-16,70],[W-36,51],[36,51],[16,70]],gold);
-  polygon([[16,18],[62,18],[16,64]],"#fff4b3");
+  polygon([[16,18],[W-16,18],[W-16,70],[W-36,51],[36,51],[16,70]],trim);
+  polygon([[16,18],[62,18],[16,64]],shine);
   ctx.strokeStyle="#070d17";ctx.lineWidth=18;ctx.strokeRect(17,17,W-34,H-34);
-  ctx.strokeStyle=gold;ctx.lineWidth=4;ctx.strokeRect(29,29,W-58,H-58);
+  ctx.strokeStyle=trim;ctx.lineWidth=4;ctx.strokeRect(29,29,W-58,H-58);
   // Large dimensional brand masthead, fitted by measurement without distortion.
   let mastSize=120;
   do{ctx.font='900 '+mastSize+'px "FCNewsMyanmar",Arial,sans-serif';if(ctx.measureText(masthead).width<=contentW||mastSize<=30)break;mastSize-=2;}while(true);
-  const brandGradient=ctx.createLinearGradient(0,74,0,201);brandGradient.addColorStop(0,"#ffffff");brandGradient.addColorStop(.35,"#ffffff");brandGradient.addColorStop(.55,gold);brandGradient.addColorStop(1,"#e9a917");
+  const brandGradient=ctx.createLinearGradient(0,74,0,201);brandGradient.addColorStop(0,"#ffffff");brandGradient.addColorStop(.35,"#ffffff");brandGradient.addColorStop(.55,trim);brandGradient.addColorStop(1,mix(accent,0,.08));
   ctx.save();ctx.shadowColor="#0009";ctx.shadowBlur=7;ctx.shadowOffsetY=9;ctx.lineJoin="round";ctx.strokeStyle=ink;ctx.lineWidth=13;ctx.strokeText(masthead,pad,186);ctx.strokeStyle="#ffffff";ctx.lineWidth=4;ctx.strokeText(masthead,pad,186);ctx.fillStyle=brandGradient;ctx.fillText(masthead,pad,186);ctx.restore();
-  polygon([[pad,214],[W-pad,214],[W-pad-35,228],[pad+35,228]],gold);
+  polygon([[pad,214],[W-pad,214],[W-pad-35,228],[pad+35,228]],trim);
   // Full-height hero panel. Preserve the entire portrait when the feed requests contain.
   const {x,y,w,h}=photoBox,iw=photo.naturalWidth,ih=photo.naturalHeight;
   ctx.save();ctx.beginPath();ctx.moveTo(x+54,y);ctx.lineTo(x+w,y);ctx.lineTo(x+w,y+h);ctx.lineTo(x-40,y+h);ctx.lineTo(x-8,y+180);ctx.closePath();ctx.clip();
@@ -170,7 +170,7 @@
   }
   const shade=ctx.createLinearGradient(x,y,x,y+h);shade.addColorStop(0,"#00000000");shade.addColorStop(.7,"#00000000");shade.addColorStop(1,ink);ctx.fillStyle=shade;ctx.fillRect(x-50,y,w+50,h);
   ctx.restore();
-  ctx.strokeStyle=gold;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(x+54,y);ctx.lineTo(x-8,y+180);ctx.lineTo(x-40,y+h);ctx.stroke();
+  ctx.strokeStyle=trim;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(x+54,y);ctx.lineTo(x-8,y+180);ctx.lineTo(x-40,y+h);ctx.stroke();
   // Headline layers: safe white keyline, dark extrusion, alternating ink and accent.
   ctx.font='800 '+titleFont+'px "FCNewsMyanmar"';ctx.lineJoin="round";
   titleLines.forEach((line,i)=>{
@@ -183,12 +183,12 @@
   ctx.fillStyle=ink;ctx.font='500 '+bodyFont+'px "FCNewsMyanmar"';
   leadLines.forEach((line,i)=>ctx.fillText(line,pad,leadTop+22+i*lineHeight));
   polygon([[42,heroEnd],[W-42,heroEnd-46],[W-42,H-48],[42,H-48]],"#fffffffa");
-  polygon([[42,heroEnd],[W-42,heroEnd-46],[W-42,heroEnd-35],[42,heroEnd+11]],gold);
+  polygon([[42,heroEnd],[W-42,heroEnd-46],[W-42,heroEnd-35],[42,heroEnd+11]],trim);
   ctx.fillStyle=ink;ctx.font='400 '+bodyFont+'px "FCNewsMyanmar"';
   columns.forEach((list,i)=>list.forEach(e=>{if(!e.gap)ctx.fillText(e.line,pad+i*(colW+space),bodyTop+30+e.row*lineHeight);}));
   if(bodyRows){ctx.fillStyle=light;ctx.fillRect(W/2,bodyTop,1,bodyRows*lineHeight);}
   // Decorative bottom rail only. No source, caption, credit or extra footer copy is painted.
-  polygon([[42,H-48],[W-42,H-48],[W-74,H-30],[74,H-30]],gold);
+  polygon([[42,H-48],[W-42,H-48],[W-74,H-30],[74,H-30]],trim);
   let output=canvas;
   if(customFrame)output=await window.FutureCodeCustomFrames.wrap(output,customFrame);
   if(window.FutureCodeProfessionalFrames){
