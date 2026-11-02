@@ -186,7 +186,17 @@
       "previewV2EditorialDate": "2026-11-02",
       "previewV2SourcePreviewDate": "2026-11-02",
       "previewV2FormatVersion": "2.1",
-      "previewV2Selection": "နယူးကာဆယ်"
+      "previewV2Selection": "နယူးကာဆယ်",
+      "previewV2Media": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Wayne_Rooney_%282%29_-_Everton_Football_Club.jpg/960px-Wayne_Rooney_%282%29_-_Everton_Football_Club.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wayne_Rooney_(2)_-_Everton_Football_Club.jpg",
+        "credit": "Everton Football Club / Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "caption": "နယူးကာဆယ်–အဲဗာတန် (၂၀၁၇) ယခင်တွေ့ဆုံမှုဓာတ်ပုံ",
+        "historical": true,
+        "mediaDate": "2017-12-13",
+        "photoType": "historic-head-to-head"
+      }
     },
     {
       "fixtureId": "fc-20261102-02",
@@ -370,7 +380,19 @@
       "previewV2EditorialDate": "2026-11-02",
       "previewV2SourcePreviewDate": "2026-11-02",
       "previewV2FormatVersion": "2.1",
-      "previewV2Selection": "ဖီအိုရင်တီးနား"
+      "previewV2Selection": "ဖီအိုရင်တီးနား",
+      "previewV2Media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/US_Sassuolo_Calcio_v_Torino_FC%2C_22_December_2018_07.jpg",
+        "secondaryUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Cristiano_Biraghi_Fiorentina.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:US_Sassuolo_Calcio_v_Torino_FC,_22_December_2018_07.jpg",
+        "secondarySourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Biraghi_Fiorentina.jpg",
+        "credit": "grazypolis / Marzlee7, via Wikimedia Commons",
+        "license": "CC BY-SA 2.0 / CC BY-SA 4.0",
+        "caption": "ဆက်ဆူအိုလိုနှင့် ဖီအိုရင်တီးနား ယခင်ကစားသမားဓာတ်ပုံများ",
+        "historical": true,
+        "mediaDate": "2018 / 2022",
+        "photoType": "historic-player-pair"
+      }
     },
     {
       "fixtureId": "fc-20261102-03",
@@ -740,7 +762,17 @@
       "previewV2EditorialDate": "2026-11-02",
       "previewV2SourcePreviewDate": "2026-11-02",
       "previewV2FormatVersion": "2.1",
-      "previewV2Selection": "ကော်ရူနာ"
+      "previewV2Selection": "ကော်ရူနာ",
+      "previewV2Media": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Deporosasuna.JPG/960px-Deporosasuna.JPG",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deporosasuna.JPG",
+        "credit": "LopedeAguirre9 / Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "caption": "ကော်ရူနာ–အိုဆာဆူနာ (၂၀၁၂) ယခင်တွေ့ဆုံမှုဓာတ်ပုံ",
+        "historical": true,
+        "mediaDate": "2012-08-20",
+        "photoType": "historic-head-to-head"
+      }
     },
     {
       "fixtureId": "fc-20261102-05",
@@ -2661,7 +2693,17 @@
       "previewV2EditorialDate": "2026-11-02",
       "previewV2SourcePreviewDate": "2026-11-02",
       "previewV2FormatVersion": "2.1",
-      "previewV2Selection": "ဗယ်လာဒိုလစ်"
+      "previewV2Selection": "ဗယ်လာဒိုလစ်",
+      "previewV2Media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Real_Valladolid_-_CD_Legan%C3%A9s_2018-12-01_%2817%29.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Real_Valladolid_-_CD_Legan%C3%A9s_2018-12-01_(17).jpg",
+        "credit": "Real Valladolid / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "caption": "ဗယ်လာဒိုလစ်–လီဂန်နက်စ် (၂၀၁၈) ယခင်တွေ့ဆုံမှုဓာတ်ပုံ",
+        "historical": true,
+        "mediaDate": "2018-12-01",
+        "photoType": "historic-head-to-head"
+      }
     },
     {
       "fixtureId": "fc-20261102-16",
