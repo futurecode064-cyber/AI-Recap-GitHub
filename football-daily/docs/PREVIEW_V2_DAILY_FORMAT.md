@@ -4,7 +4,7 @@
 
 ## Daily editorial workflow
 
-For **every eligible fixture**, take that day's approved full `dailyPreviewText` as the factual/source basis, then **write an original natural, concise Burmese editorial** (not first N sentences). Preserve both teams' real strengths and weaknesses, verified facts, and the precise source-approved recommendation. No fabricated player/injury/odds details or exact-score promises. Keep a flowing 2–4 sentence paragraph in `previewV2Summary`, use Myanmar team spellings identical to today's source PDF, and never substitute stale prior-date content. Store `previewV2Selection` as one of the exact `homeDisplay`/`awayDisplay` values, and match the original prose ending.
+For **every eligible fixture**, take that day's approved full `dailyPreviewText` as the factual/source basis, then **write an original natural, concise Burmese editorial** (not first N sentences). Preserve both teams' real strengths and weaknesses, verified facts, and the precise source-approved recommendation. No fabricated player/injury/odds details or exact-score promises. Write ONE flowing, professional Burmese paragraph with **four meaningful sentences** in `previewV2Summary`: (1) the home club's single most important current strength or concern with grounded detail; (2) the away club's single most important strength or concern; (3) the decisive matchup-specific reason after comparing those two factors; and (4) the exact approved team selection ending with `ကို ရွေးချယ်ပါတယ်။`. No generic filler, mechanical trimming, or two-sentence micro summaries. Keep the summary approximately 300–760 Myanmar Unicode characters, with legible typography on the website and in PNG exports. Use the exact Myanmar club spellings from today's PDF, and never reuse old-date content. Store `previewV2Selection` as one of the exact `homeDisplay`/`awayDisplay` values, and match the original prose ending.
 
 Required per-match fields (add to existing `data/today.json`, do not replace other data):
 
@@ -25,7 +25,7 @@ Both dates **must equal** `reportDate`. Only fill `previewV2Media` when a real s
 
 1. League + correct local kickoff (12-hour AM/PM).
 2. Relevant verified photo (or genuine team crests), both teams' Myanmar names.
-3. New natural short journalist paragraph; do **not** alter the full article.
+3. Medium-length, four-sentence journalist paragraph: one key fact per team, the critical head-to-head explanation, and the chosen team. Preserve the complete original article.
 4. Selection with the exact source-approved team.
 5. Compact Myanmar odds ribbon in order: home crest/name → goal total → time → body handicap → away name/crest. Morning and independently sourced current odds are separate, current unavailable = visibly unavailable.
 
@@ -38,7 +38,7 @@ Myanmar text uses locally bundled `FCMyanmar` (Noto Sans Myanmar) and Unicode-sa
 - **3 matches:** render three unframed cards → stack three → **wrap once**.
 - ZIP groups follow the same rule on **each combined PNG**.
 - No repeated top/bottom banners in the middle. Preserve correct original proportions, safe padding, frame/editor settings, ZIP folder names, team crest fidelity.
-- If card height is 850 px, gap 12 px, then 3-match PNG height minus 2-match PNG height must be **862 px** when the same frame is selected (no extra banner).
+- Card height stays 850 px and the gap stays 12 px; 3-match PNG height minus 2-match PNG height must be **862 px** for the same frame. The Myanmar text renderer must fit the entire four-sentence paragraph by measured word wrapping and never silently cut off lines.
 
 ## Publication QA / blocking gates
 
