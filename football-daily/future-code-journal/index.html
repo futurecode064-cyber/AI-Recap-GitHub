@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+Myanmar:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="./sections.css?v=gz-separated-20261021">
+<link rel="stylesheet" href="../main-probability.css?v=gz-prob-20261102">
 <link rel="icon" type="image/webp" href="./assets/logo.webp?v=sports-gold-20261018-goal-zone"><link rel="stylesheet" href="../styles.css?v=20261029-nonblocking-fonts"><link rel="stylesheet" href="./brand.css?v=gz-banner-bulk-20261018b">
 <script defer src="./brand.js?v=sports-gold-20261018-goal-zone"></script>
 <script defer src="../card-export.js?v=20261031-pdf-exact-names-v2"></script>
@@ -25,6 +26,8 @@
 <script defer src="../main-ai-score-model.js"></script>
 <script defer src="../frame-zip.js?v=gz-bulk-20261018"></script>
 <script defer src="./goal-zone-downloads.js?v=brand-data-complete-20261019"></script>
+<script defer src="./goal-zone-download-center.js?v=20261102-v1"></script>
+<script defer src="../main-probability.js?v=gz-prob-20261102"></script>
 <script defer src="./ai-predictions.js?v=gz-main-model-20261019"></script>
 <script defer src="./sections.js?v=gz-separated-20261021"></script>
 <script defer src="../content-protection.js?v=copy-guard-20261013"></script>
@@ -49,6 +52,8 @@
      <a href="?section=special" data-gz-section-link="special">Special Choice</a>
      <a href="?section=results" data-gz-section-link="results">ဂိုးရလဒ်</a>
      <a href="./odds.html">ပေါက်ကြေးများ ↗</a>
+      <a href="#fcProbSection">ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)</a>
+      <a href="#gzDownloadCenter">ZIP Download Center</a>
      <a href="./android/">Android App Download ↗</a>
    </nav>
    <div class="dashboard-bar"><div class="dashboard-stat"><span class="stat-label">SELECTED DATE MATCHES</span><strong id="matchCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">SPECIAL CHOICES</span><strong id="specialCount">—</strong></div><div class="dashboard-stat"><span class="stat-label">UPDATE STATUS</span><strong class="status-label" id="statusText">စစ်ဆေးနေသည်</strong></div><button id="reloadBtn" type="button" class="reload-btn"><span aria-hidden="true">↻</span> Refresh</button></div>
@@ -77,6 +82,19 @@
    <div id="resultsDownloadBar" class="results-download-bar" hidden><button id="resultsPngBtn" type="button" class="results-png-btn">⬇ ဂိုးရလဒ်များ PNG Download</button><span>ပွဲပြီးအတည်ပြုထားသော ရလဒ်အားလုံး</span></div>
    <div id="gzSpecialEmpty" hidden role="status">ယနေ့အတွက် အတည်ပြုရွေးချယ်ထားသော Special Choice ပွဲ မရှိသေးပါ။</div>
    <div id="matchList" class="matches" aria-live="polite"><div class="empty-card"><span class="empty-icon">↻</span><h3>သုံးသပ်ချက်များ ရယူနေပါတယ်…</h3></div></div>
+ </section>
+<section class="container gz-prob-wrap">
+  <section class="fc-prob-section" id="fcProbSection" aria-labelledby="fcProbTitle">
+    <div class="fc-prob-intro"><h2 id="fcProbTitle">ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)</h2><span id="fcProbDate" class="fc-prob-status"></span></div>
+    <p class="fc-prob-subtitle">အိမ်ရှင် · ဧည့်သည် နှစ်ဖက်အလေးသာမှုနှင့် ၂.၅ ဂိုးပေါ်/အောက် ဖြစ်နိုင်ခြေ</p>
+    <div class="fc-prob-controls"><label for="fcProbLeague">ပြိုင်ပွဲရွေးရန်</label>
+      <select id="fcProbLeague"><option value="all">လိဂ်အားလုံး</option></select>
+      <span class="fc-prob-count" id="fcProbCount">—</span>
+    </div>
+    <p id="fcProbStatus" class="fc-prob-status" role="status">ပွဲစဉ်ဖြစ်နိုင်ခြေ ဒေတာ ရယူနေသည်…</p>
+    <div id="fcProbGroups" aria-live="polite"></div>
+    <p class="fc-prob-footnote">အိမ်ရှင် % နှင့် ဧည့်သည် % သည် သရေမပါသော နှစ်ဖက်အလေးသာမှုဖြစ်ပြီး၊ ဂိုးပေါ်/အောက်မှာ ၂.၅ ဂိုးစည်းမှတ်ကို အခြေခံထားပါသည်။ ကြေး သို့မဟုတ် နောက်ဆုံး ၅ ပွဲဒေတာ မပြည့်စုံပါက — ပြမည်။ အာမခံချက်မဟုတ်ပါ။</p>
+  </section>
  </section>
 <section class="container fcj-ai" id="fcj-ai">
   <div class="fcj-ai-intro"><span class="fcj-kicker">DATA-ASSISTED MATCH OUTLOOK</span><h2>AI ခန့်မှန်းချက်</h2>
