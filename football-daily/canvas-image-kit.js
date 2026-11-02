@@ -90,14 +90,14 @@
  function crest(ctx,url,x,y,size,label="",noBackground=false){
   // Transparent standalone match PNGs keep crests without white logo tiles.
   if(!noBackground)fill(ctx,x,y,size,size,"#eef2f0",size/2);
-  const img=imageCache.get(url);
-  if(img){ // data is loaded asynchronously. drawLogo() receives resolved images via resolved cache
-   const found=resolved.get(url);
-   if(found&&found.naturalWidth&&found.naturalHeight){
-    const k=Math.min((size-8)/found.naturalWidth,(size-8)/found.naturalHeight);
-    const w=found.naturalWidth*k,h=found.naturalHeight*k;
-    try{ctx.drawImage(found,x+(size-w)/2,y+(size-h)/2,w,h);return}catch(_){}
-   }
+  // The cache is keyed by mapped URLs, but callers pass original fixture URLs.
+  // Only the resolved map has the original key. Using imageCache.get(url)
+  // here made successfully loaded bundled crests silently turn into initials.
+  const found=resolved.get(url);
+  if(found&&found.naturalWidth>0&&found.naturalHeight>0){
+   const k=Math.min((size-8)/found.naturalWidth,(size-8)/found.naturalHeight);
+   const w=found.naturalWidth*k,h=found.naturalHeight*k;
+   try{ctx.drawImage(found,x+(size-w)/2,y+(size-h)/2,w,h);return}catch(_){}
   }
   text(ctx,String(label||"?").slice(0,2),x+size/2,y+size/2,Math.max(10,Math.floor(size*.27)),noBackground?"#ffffff":"#263e3f",true,"center",size-6);
  }
@@ -105,7 +105,14 @@
  async function preloadImages(urls){
   const brandUrl=document.documentElement?.dataset?.footballBrandLogoUrl;
   const artworkUrl=fcjBranded?document.documentElement?.dataset?.footballBrandArtworkUrl:null;
-  await Promise.all([...new Set([...urls,brandUrl,artworkUrl].filter(Boolean))].map(async url=>{const im=await loadImage(url);resolved.set(url,im)}));
+  const missing=[];
+  await Promise.all([...new Set([...urls,brandUrl,artworkUrl].filter(Boolean))].map(async url=>{
+   const im=await loadImage(url);
+   resolved.set(url,im);
+   // Refuse today's PNG when a locally bundled daily club crest did not load.
+   if(/\/assets\/team-logos\/\d{4}-\d{2}-\d{2}\//.test(String(url))&&(!im||!im.naturalWidth||!im.naturalHeight))missing.push(url);
+  }));
+  if(missing.length)throw Error("PNG အသင်းလိုဂို မပြည့်စုံပါ — "+missing.map(url=>url.split("/").pop()).join(", "));
  }
 
  // Optional sourced photos are cropped to the visual hero area. Returns false when unavailable.
