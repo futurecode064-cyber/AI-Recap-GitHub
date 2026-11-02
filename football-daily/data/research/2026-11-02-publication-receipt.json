@@ -9,7 +9,7 @@
   "currentPriceRows": 0,
   "photoQA": "unverified",
   "pngZipQA": "unverified",
-  "logoHD": 12,
+  "logoHD": 32,
   "audit": [
     {
       "row": 1,
@@ -369,5 +369,8 @@
     "https://tipsterarea.com/matches/date-02-11-2026",
     "https://forepitch.com/football/predictions/2026-11-02/",
     "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo"
-  ]
+  ],
+  "logoLocallyCached": 32,
+  "logoCrestSource": "https://github.com/JoseArroyave/football-logos",
+  "logoQA": "32 authentic SVGs cached in production branch; downloaded PNG/ZIP pixels not yet visually checked"
 }
