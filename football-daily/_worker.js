@@ -344,6 +344,18 @@ async function serveMain(request, env) {
   headers.set("Referrer-Policy", "no-referrer");
   return new Response(content.replace(/<\/body>/i, LOGOUT_MARKUP + "</body>"), { status: asset.status, headers });
 }
+// Bet City Family is a suspended tenant. This is a server-side response, not
+// a cosmetic overlay: no legacy menu, odds, downloads or brand JS is delivered.
+const BCF_SUSPENDED_HTML = "<!doctype html>\n<html lang=\"my\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\">\n<meta name=\"robots\" content=\"noindex,nofollow\">\n<meta name=\"theme-color\" content=\"#101724\">\n<title>Bet City Family — ဝန်ဆောင်မှု ရပ်နားထားပါသည်</title>\n<style>\n*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#101724;color:#fff}\nbody{font-family:\"Noto Sans Myanmar\",\"Myanmar Text\",Padauk,system-ui,sans-serif;line-height:1.9}\n.screen{position:fixed;inset:0;z-index:2147483647;background:radial-gradient(ellipse at 50% 0%,#263a5a 0%,#101724 65%);display:flex;align-items:center;justify-content:center;padding:18px 14px;overflow-y:auto}\n.card{width:min(100%,530px);padding:clamp(18px,5vw,32px);margin:auto;text-align:center;border:1px solid #354660;border-radius:24px;background:#182235;box-shadow:0 22px 70px #0008}\n.lock{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;background:#27334c;display:grid;place-items:center;color:#e4b75d;font-size:32px}\n.brand{font:800 clamp(24px,6vw,32px)/1.2 system-ui,sans-serif;letter-spacing:.025em;margin:0}\n.status{margin:8px 0 24px;color:#eac47f;font:700 12px/1.5 system-ui,sans-serif;letter-spacing:.16em}\n.message{background:#202d40;border:1px solid #435470;border-radius:16px;padding:24px 18px;margin-bottom:20px}\nh1{font-size:clamp(17px,4.3vw,22px);line-height:1.85;margin:0 0 16px;color:#fff}\np{font-size:clamp(13px,3.6vw,15px);color:#d9e2ef;margin:0 0 14px;line-height:2}\np:last-child{margin-bottom:0}\n.renew{display:block;width:100%;padding:14px 12px;background:#ddb35a;border:1px solid #f6d186;border-radius:12px;color:#17202c;text-decoration:none;font-size:clamp(13px,3.6vw,16px);font-weight:800;line-height:1.8;transition:background .2s}\n.renew:hover,.renew:focus-visible{background:#f0c977;outline:3px solid #fff;outline-offset:3px}\n.credit{font:500 11px/1.5 system-ui,sans-serif;color:#9daec7;margin:20px 0 0}\n@media(max-height:620px){.screen{align-items:flex-start}.card{padding:16px}.lock{margin-bottom:9px}.status{margin-bottom:12px}.message{padding:14px;margin-bottom:14px}.credit{margin-top:12px}}\n</style>\n</head>\n<body>\n<main class=\"screen\"><section class=\"card\" aria-labelledby=\"notice-heading\">\n<div class=\"lock\" aria-hidden=\"true\">&#128274;</div>\n<div class=\"brand\">BET CITY FAMILY</div>\n<div class=\"status\">SERVICE SUSPENDED</div>\n<div class=\"message\">\n<h1 id=\"notice-heading\">Bet City ဂျာနယ် နေ့စဉ် ဂျာနယ် ဝန်ဆောင်မှု ရပ်နားထားပါသည်</h1>\n<p>ဤ Website နှင့် APK ၏ ဝန်ဆောင်မှုကို လက်ရှိတွင် ရပ်ဆိုင်းလိုက်ပါသဖြင့်</p>\n<p>နေ့စဉ် ဂျာနယ်ကို ပြန်လည်အသုံးပြုလိုပါက Package များနှင့် ဈေးနှုန်းများကို ကြည့်ရှုပြီး ပြန်လည်ရယူနိုင်ပါသည်။</p>\n</div>\n<a class=\"renew\" href=\"/football-packages/\">ဝန်ဆောင်မှု ပြန်လည်ရယူရန် &#8594;</a>\n<div class=\"credit\">Powered by Future Code AI Studio</div>\n</section></main>\n</body>\n</html>";
+function suspendedBetCity(request) {
+  if (request.method !== "GET" && request.method !== "HEAD") return respond("Method Not Allowed", 405, {"Allow":"GET, HEAD"});
+  return respond(request.method === "HEAD" ? null : BCF_SUSPENDED_HTML, 200, {
+    "Content-Type":"text/html; charset=utf-8",
+    "Content-Security-Policy":"default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+    "X-Robots-Tag":"noindex, nofollow"
+  });
+}
+
 export default {
   async fetch(request, env) {
     const response = await handleRequest(request, env);
@@ -355,6 +367,7 @@ export default {
 };
 async function handleRequest(request, env) {
     const path = new URL(request.url).pathname;
+    if (path === "/bet-city-family" || path.startsWith("/bet-city-family/")) return suspendedBetCity(request);
     if (path === "/api/editor/sites" || path.startsWith("/api/editor/sites/")) return sbApi(request, env, path);
     if (path.startsWith("/api/editor/engine/")) return engineProxy(request, env, path);
     // Once the D1 publisher is enabled, never silently publish through the legacy GitHub path.
