@@ -38,7 +38,7 @@ Myanmar text uses locally bundled `FCMyanmar` (Noto Sans Myanmar) and Unicode-sa
 - **3 matches:** render three unframed cards → stack three → **wrap once**.
 - ZIP groups follow the same rule on **each combined PNG**.
 - No repeated top/bottom banners in the middle. Preserve correct original proportions, safe padding, frame/editor settings, ZIP folder names, team crest fidelity.
-- Card height stays 850 px and the gap stays 12 px; 3-match PNG height minus 2-match PNG height must be **862 px** for the same frame. The Myanmar text renderer must fit the entire four-sentence paragraph by measured word wrapping and never silently cut off lines.
+- Card height is 690 px, width 1200 px and the inter-card gap is 12 px; 3-match PNG height minus 2-match PNG height must be **702 px** for the same frame. The Myanmar text renderer must fit the entire four-sentence paragraph by measured word wrapping and never silently cut off lines.
 
 ## Publication QA / blocking gates
 
@@ -54,3 +54,7 @@ The validator checks schema/provenance/consistency, **not** the truth of externa
 - `config/preview-v2-format.json` — durable format parameters
 - `scripts/validate_preview_v2.cjs`, `tests/preview-v2-daily-contract.test.cjs` — daily validation
 - `.github/workflows/preview-v2-live-qa.yml` — browser, PNG/ZIP acceptance on actual live site
+
+## Owner-approved compact fixed journal design (2026-11-02)
+
+The main Preview V2 download (including Frame Editor 2/3 match PNG and ZIP) uses one fixed 1200×690 card per fixture. Preserve the actual approved editorial text, league and both crests. Each card has a centered, gold-edged league ribbon; a photographic/team-crest panel on the left; a white editorial panel on the right with all four full sentences safely word-wrapped; a gold-rimmed selection band; and one symmetric five-segment bottom strip showing home crest/name, original/current goal total, local 12-hour kickoff, original/current body/handicap, away name/crest. The selected frame supplies the brand color and actual uploaded artwork, with exactly one TOP and BOTTOM banner for the *entire multi-match* PNG. Never rasterize the AI example image into the output: it contains illustrative text and cannot safely substitute actual fixture data. Do not crop, truncate, stretch or hide verified text or crests; if a paragraph cannot fit, block the download with a clear error rather than silently remove lines.
