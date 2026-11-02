@@ -29,7 +29,8 @@
     "/future-code-journal/odds",
     "/future-code-journal/odds/",
     "/bet-city-family",
-    "/bet-city-family/*"
+    "/bet-city-family/*",
+    "/api/news-image"
   ],
   "exclude": []
 }
