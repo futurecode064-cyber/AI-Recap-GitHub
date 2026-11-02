@@ -27,7 +27,9 @@
     "/future-code-journal/android/*.apk",
     "/future-code-journal/index",
     "/future-code-journal/odds",
-    "/future-code-journal/odds/"
+    "/future-code-journal/odds/",
+    "/bet-city-family",
+    "/bet-city-family/*"
   ],
   "exclude": []
 }
