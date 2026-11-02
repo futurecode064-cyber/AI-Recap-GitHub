@@ -11,7 +11,7 @@
     const empty = document.getElementById("gzSpecialEmpty");
     if (!nav || !filters || !list || !heading || !pill || !empty) return;
 
-    const sections = ["previews", "news", "ai", "special", "results"];
+    const sections = ["previews", "news", "ai", "special", "results", "probabilities", "downloads"];
     const known = new Set(sections);
     let active = "previews";
     let resetFilter = true;
@@ -19,6 +19,8 @@
 
     function requestedSection() {
       const query = new URLSearchParams(location.search).get("section");
+      if (location.hash === "#gzDownloadCenter") return "downloads";
+      if (location.hash === "#fcProbSection") return "probabilities";
       if (known.has(query)) return query;
       if (location.hash === "#fcNewsSection") return "news";
       if (location.hash === "#fcj-ai") return "ai";
@@ -39,7 +41,7 @@
     }
 
     function synchronizeMatches() {
-      if (active === "news" || active === "ai") return;
+      if (active === "news" || active === "ai" || active === "downloads" || active === "probabilities") return;
       const desiredDay = active === "results" ? "-1" : "0";
       const day = document.querySelector('#dateTabs button[data-day="' + desiredDay + '"]');
       if (day && !day.classList.contains("active")) {
@@ -100,7 +102,7 @@
         url.hash = "";
         history.pushState({goalZoneSection:next}, "", url.pathname + url.search);
       }
-      list.hidden = false;
+      list.hidden = next === "downloads" || next === "probabilities";
       empty.hidden = true;
       synchronizeMatches();
     }
