@@ -355,7 +355,8 @@ func _on_peer_disconnected(id: int) -> void:
 		players.erase(id)
 		if running and players.size() < 2:
 			_finish(false, "A teammate disconnected.")
-		_broadcast()
+		if not ended:
+			_broadcast()
 	_refresh_ui()
 
 @rpc("any_peer", "call_remote", "reliable")
@@ -611,7 +612,7 @@ func _pack_state() -> Dictionary:
 func _broadcast() -> void:
 	_render_players()
 	_refresh_ui()
-	if multiplayer.is_server() and multiplayer.multiplayer_peer != null:
+	if multiplayer.is_server() and multiplayer.multiplayer_peer != null and multiplayer.multiplayer_peer.get_connection_status() == MultiplayerPeer.CONNECTION_CONNECTED and players.size() > 1:
 		_rpc_snapshot.rpc(_pack_state())
 
 @rpc("authority", "call_remote", "reliable")
