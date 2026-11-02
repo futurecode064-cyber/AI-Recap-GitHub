@@ -19,12 +19,12 @@ Required per-match fields (add to existing `data/today.json`, do not replace oth
 }
 ```
 
-Both dates **must equal** `reportDate`. Only fill `previewV2Media` when a real sourced photograph exists with URL, source URL, author, caption, licence and archive-context disclosure; otherwise show both team crests with the fallback. No synthetic match photographs.
+Both dates **must equal** `reportDate`. Only fill `previewV2Media` when a real sourced photograph exists with URL, source URL, author, caption, licence and archive-context disclosure; otherwise clearly label the photograph as unavailable, without substituting a logo collage or unrelated stadium/player image. Never claim a historical photograph depicts today's fixture. No synthetic match photographs.
 
 ## One approved match card
 
 1. League + correct local kickoff (12-hour AM/PM).
-2. Relevant verified photo (or genuine team crests), both teams' Myanmar names.
+2. Relevant, licensed player or past head-to-head photo; the photograph is real rather than a crest-overlay mockup. Both Myanmar team names remain in the title and odds strip.
 3. Medium-length, four-sentence journalist paragraph: one key fact per team, the critical head-to-head explanation, and the chosen team. Preserve the complete original article.
 4. Selection with the exact source-approved team.
 5. Compact Myanmar odds ribbon in order: home crest/name → goal total → time → body handicap → away name/crest. Morning and independently sourced current odds are separate, current unavailable = visibly unavailable.
@@ -38,7 +38,7 @@ Myanmar text uses locally bundled `FCMyanmar` (Noto Sans Myanmar) and Unicode-sa
 - **3 matches:** render three unframed cards → stack three → **wrap once**.
 - ZIP groups follow the same rule on **each combined PNG**.
 - No repeated top/bottom banners in the middle. Preserve correct original proportions, safe padding, frame/editor settings, ZIP folder names, team crest fidelity.
-- Card height is 690 px, width 1200 px and the inter-card gap is 12 px; 3-match PNG height minus 2-match PNG height must be **702 px** for the same frame. The Myanmar text renderer must fit the entire four-sentence paragraph by measured word wrapping and never silently cut off lines.
+- Each card has a fixed width of 1200 px, variable height computed from the full text, and a narrow 4 px inter-card seam; with the same outer frame, the difference between a three-match PNG and a two-match PNG equals the exact third card height plus 4 px. The Myanmar text renderer must fit the entire four-sentence paragraph by measured word wrapping and never silently cut off lines.
 
 ## Publication QA / blocking gates
 
@@ -55,6 +55,13 @@ The validator checks schema/provenance/consistency, **not** the truth of externa
 - `scripts/validate_preview_v2.cjs`, `tests/preview-v2-daily-contract.test.cjs` — daily validation
 - `.github/workflows/preview-v2-live-qa.yml` — browser, PNG/ZIP acceptance on actual live site
 
-## Owner-approved compact fixed journal design (2026-11-02)
+## Owner-approved proportional photo / compact journal design (2026-11-02)
 
-The main Preview V2 download (including Frame Editor 2/3 match PNG and ZIP) uses one fixed 1200×690 card per fixture. Preserve the actual approved editorial text, league and both crests. Each card has a centered, gold-edged league ribbon; a photographic/team-crest panel on the left; a white editorial panel on the right with all four full sentences safely word-wrapped; a gold-rimmed selection band; and one symmetric five-segment bottom strip showing home crest/name, original/current goal total, local 12-hour kickoff, original/current body/handicap, away name/crest. The selected frame supplies the brand color and actual uploaded artwork, with exactly one TOP and BOTTOM banner for the *entire multi-match* PNG. Never rasterize the AI example image into the output: it contains illustrative text and cannot safely substitute actual fixture data. Do not crop, truncate, stretch or hide verified text or crests; if a paragraph cannot fit, block the download with a clear error rather than silently remove lines.
+The main Preview V2 download (including Frame Editor 2/3 match PNG and ZIP) uses one 1200-pixel-wide card with measured, content-dependent height per fixture; the real photo and analysis panels MUST share the same top and bottom coordinates, and no oversized empty panel may remain. Preserve the actual approved editorial text, league and both crests. Each card has a centered, gold-edged league ribbon; a verified photograph or licensed historical-player photo pair (not oversized club crests) on the left; a white editorial panel on the right with all four full sentences safely word-wrapped; a gold-rimmed selection band; and one symmetric five-segment bottom strip showing home crest/name, original/current goal total, local 12-hour kickoff, original/current body/handicap, away name/crest. The selected frame supplies the brand color and actual uploaded artwork, with exactly one TOP and BOTTOM banner for the *entire multi-match* PNG. Never rasterize the AI example image into the output: it contains illustrative text and cannot safely substitute actual fixture data. Do not crop, truncate, stretch or hide verified text or crests; if a paragraph cannot fit, block the download with a clear error rather than silently remove lines.
+
+### Permanent photograph and alignment correction, 2026-11-02
+- Main Preview V2 PNG layout follows the actual four-sentence editorial height. Measure Myanmar text using local font and make photograph panel exactly the same height as the editorial panel. No arbitrary fixed 436px photograph, 690px card, blank gaps or drifting market columns.
+- Use licensed archived photos of the correct clubs or players. Label them historical with mediaDate and provide credit/license/source metadata in previewV2Media. For two-portrait combinations also store secondaryUrl and secondarySourceUrl. Put image credit and license into PNG. No Getty/paywalled photos without permission.
+- Both club crests still belong in the symmetric odds strip, but never serve as a substitute for the main player photograph. For unverified images use an honest photo-pending panel, not an unrelated photo.
+- Five odds strip columns meet edge-to-edge under one shared border. Main Website and Frame Editor share card dimensions, a 4px gap, and exactly one top and one bottom banner per combined PNG.
+- For 2026-11-02, photo rights and source verified for fixture IDs 01, 02, 04 and 15; other fixture imagery is not yet verified.
