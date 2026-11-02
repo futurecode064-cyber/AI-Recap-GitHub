@@ -233,8 +233,8 @@
    const grad=c.createLinearGradient(0,gy,0,gy+43);grad.addColorStop(0,"rgba(0,0,0,0)");
    grad.addColorStop(1,"rgba(0,0,0,.85)");
    c.fillStyle=grad;c.fillRect(photoX,gy,photoW,43);
-   centered(photoInfo.historical?"ယခင်ပွဲ/ကစားသမားပုံ · Wikimedia Commons":"သက်ဆိုင်ရာပွဲဓာတ်ပုံ",
-    photoX+photoW/2,contentTop+contentH-16,photoW-16,13,700);
+   centered(photoInfo.historical?(photoInfo.credit||"Wikimedia Commons")+" · "+(photoInfo.license||"CC"):"သက်ဆိုင်ရာပွဲဓာတ်ပုံ",
+    photoX+photoW/2,contentTop+contentH-16,photoW-16,12,650);
   }
   c.restore();box(photoX,contentTop,photoW,contentH,8,null,"#d9e6df",2);
   box(textX,contentTop,textW,contentH,8,"#ffffff","#c4d8cd",2);
