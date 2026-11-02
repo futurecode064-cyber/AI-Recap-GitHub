@@ -37,8 +37,8 @@
     "fontFallback": "Noto Sans Myanmar",
     "wordBreak": "Intl.Segmenter(my,word)",
     "cardWidthPx": 1200,
-    "cardHeightPx": 690,
-    "gapPx": 12,
+    "cardHeightPx": null,
+    "gapPx": 4,
     "oddsStripOrder": [
       "home crest/name",
       "goal total odds",
@@ -47,7 +47,9 @@
       "away name/crest"
     ],
     "originalAndCurrentSeparate": true,
-    "designStyle": "compact fixed-grid green/gold journal layout, with selected frame color, gold accents, photo left, editorial right, selection strip and one-row odds"
+    "designStyle": "compact fixed-grid green/gold journal layout, with selected frame color, gold accents, photo left, editorial right, selection strip and one-row odds",
+    "cardHeightPolicy": "measured per-fixture from full Burmese text; photo and analysis always equal-height",
+    "photoPolicy": "Verified historical match or player photo (with credit and clearly dated historical context); never replace with logos or claim as current-day picture"
   },
   "export": {
     "groupSizes": [
