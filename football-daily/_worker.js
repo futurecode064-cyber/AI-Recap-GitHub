@@ -435,8 +435,8 @@ async function serveNewsImage(request){
     return new Response("Photo source not permitted",{status:403});
   }
   try{
-    const image=await fetch(url.href,{method:"GET",redirect:"error",headers:{"Accept":"image/jpeg,image/png,image/webp"}});
-    if(!image.ok)return new Response("Image source unavailable",{status:502});
+    const image=await fetch(url.href,{method:"GET",redirect:"error",headers:{"Accept":"image/jpeg,image/png,image/webp","User-Agent":"FutureCodeFootballDaily/1.0 (https://future-code-football-daily.pages.dev; football news illustration export)"}});
+    if(!image.ok)return new Response("Image source unavailable: "+image.status,{status:502});
     const mime=(image.headers.get("content-type")||"").split(";")[0].toLowerCase();
     const size=Number(image.headers.get("content-length")||0);
     if(!["image/jpeg","image/png","image/webp"].includes(mime)||size>8*1024*1024){
