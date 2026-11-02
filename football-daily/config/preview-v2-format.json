@@ -15,16 +15,22 @@
     "image": "previewV2Media"
   },
   "content": {
-    "summaryMinLength": 180,
-    "summaryMaxLength": 720,
-    "minSentences": 2,
+    "summaryMinLength": 300,
+    "summaryMaxLength": 760,
+    "minSentences": 4,
     "editorialRequired": true,
     "allowMechanicalExcerpts": false,
     "requireNamedSelection": true,
     "keepOriginalUnchanged": true,
     "requireMyanmarNames": true,
     "requireBothCrests": true,
-    "requireSourceDateMatch": true
+    "requireSourceDateMatch": true,
+    "editorialStructure": [
+      "home club's most important factor",
+      "away club's most important factor",
+      "decisive matchup-specific reasoning",
+      "source-approved named selection"
+    ]
   },
   "display": {
     "font": "FCMyanmar",
