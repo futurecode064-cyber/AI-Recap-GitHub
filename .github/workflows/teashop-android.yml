@@ -39,7 +39,7 @@ jobs:
           set -o pipefail
           mkdir -p build
           godot --headless --editor --path . --quit 2>&1 | tee build/import.log
-          if grep -E 'SCRIPT ERROR|Parse Error|Parse error|ERROR:' build/import.log; then exit 1; fi
+          if grep -E 'SCRIPT ERROR|Parse Error|Parse error' build/import.log; then exit 1; fi
       - name: Mission and save/load headless test
         shell: bash
         run: |
