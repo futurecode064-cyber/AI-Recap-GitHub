@@ -53,7 +53,7 @@ func _run() -> void:
 	else:
 		var ok := false
 		for i in range(120):
-			if game.ended and game.completed == game.target and game.players.size() == 2:
+			if game.ended and game.completed == game.target and game.players.size() == expected:
 				ok = true
 				break
 			await create_timer(0.1).timeout
