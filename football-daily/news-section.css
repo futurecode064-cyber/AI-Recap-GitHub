@@ -89,3 +89,37 @@ body[data-fc-main-view]:not([data-fc-main-view="news"]) #fcNewsSection{display:n
 @media(max-width:800px){#fcNewsSection{padding:20px}#fcNewsSection .fc-news-lead{grid-template-columns:1fr}#fcNewsSection .fc-news-lead .fc-news-image-wrap{height:auto;min-height:0;aspect-ratio:16/10}#fcNewsSection .fc-news-lead h3{font-size:25px}}
 @media(max-width:680px){#fcNewsSection .fc-news-grid{grid-template-columns:1fr;gap:26px}#fcNewsSection .fc-news-header{align-items:flex-start}#fcNewsSection .fc-news-header h2{font-size:26px}#fcNewsSection .fc-news-card h3{font-size:22px}#fcNewsSection .fc-news-copy{font-size:16px}#fcNewsSection .fc-news-filter{font-size:12px;padding:8px 10px}}
 @media(prefers-reduced-motion:reduce){#fcNewsSection .fc-news-image{transition:none}}
+
+/* V4 sports-journal cover direction, based on the owner's visual reference. */
+#fcNewsSection{--news-accent:#d82529;--cover-dark:#071a3b;--cover-bright:#1258c9;--cover-gold:#ffcf30;background:linear-gradient(135deg,#071a3b,#174b9e 48%,#06152f);padding:30px;border:3px solid var(--cover-gold);box-shadow:inset 0 0 0 8px #071324,0 20px 65px #0007;border-radius:0;color:white}
+#fcNewsSection[data-news-brand="goal-zone"]{--news-accent:#e8bb3d;--cover-dark:#12100c;--cover-bright:#80621c;--cover-gold:#ffe073;background:linear-gradient(135deg,#14120e,#66501b 48%,#080a10)}
+#fcNewsSection .fc-news-header{padding:24px 14px 32px;border-top:0;border-bottom:5px solid var(--cover-gold);background:repeating-linear-gradient(90deg,#ffffff08 0,#ffffff08 1px,transparent 1px,transparent 7px);box-shadow:0 10px 25px #0003}
+#fcNewsSection .fc-news-eyebrow{color:var(--cover-gold);font-size:17px;letter-spacing:.15em}
+#fcNewsSection .fc-news-header h2{color:white;font-size:clamp(30px,4vw,49px);text-shadow:2px 3px 0 #0007,0 4px 18px #0005}
+#fcNewsSection .fc-news-window,#fcNewsSection .fc-news-count,#fcNewsSection .fc-news-illustration-note,#fcNewsSection .fc-news-meta{display:none}
+#fcNewsSection .fc-news-filters{border-color:#ffffff38;padding:12px 0;gap:6px}
+#fcNewsSection .fc-news-filter{background:#07101e80;color:white;border:1px solid #ffffff29;transform:skewX(-3deg)}
+#fcNewsSection .fc-news-filter[aria-pressed="true"]{background:var(--cover-gold);color:#111a2c;box-shadow:none;border-color:var(--cover-gold)}
+#fcNewsSection .fc-news-grid{gap:27px}
+#fcNewsSection .fc-news-card{padding:0;border:1px solid #ffffff4d;background:linear-gradient(145deg,#ffffff,#eef4ff);box-shadow:7px 8px 0 #0004;overflow:hidden}
+#fcNewsSection .fc-news-image-wrap{position:relative;aspect-ratio:4/5;isolation:isolate;border:0;background:var(--cover-dark);overflow:hidden}
+#fcNewsSection .fc-news-image-wrap::before{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(180deg,#0000 22%,#0002 45%,var(--cover-dark) 98%)}
+#fcNewsSection .fc-news-image-wrap::after{inset:12px;z-index:3;border:2px solid var(--cover-gold);box-shadow:none;clip-path:polygon(0 0,29% 0,29% 2%,2% 2%,2% 35%,0 35%,0 0,100% 100%,71% 100%,71% 98%,98% 98%,98% 65%,100% 65%,100% 100%)}
+#fcNewsSection .fc-news-image{height:100%;object-position:center 22%}
+#fcNewsSection .fc-news-card h3.fc-news-cover-title{position:absolute;z-index:2;left:27px;right:27px;bottom:25px;margin:0;font-size:clamp(24px,2.7vw,36px);line-height:1.9;color:#fff;font-weight:800;text-shadow:2px 3px 0 #0007,0 3px 12px #000b;overflow-wrap:break-word}
+#fcNewsSection .fc-news-cover-title::before{content:"";display:block;width:100px;height:6px;margin-bottom:20px;background:var(--cover-gold);transform:skewX(-30deg);box-shadow:12px -10px 0 var(--news-accent)}
+#fcNewsSection .fc-news-card-body{padding:27px}
+#fcNewsSection .fc-news-copy{font-size:16px;line-height:2.15;color:#16243a}
+#fcNewsSection .fc-news-copy:first-of-type{font-weight:600;border-left:4px solid var(--news-accent);padding-left:17px}
+#fcNewsSection .fc-news-lead{display:grid;grid-template-columns:1.05fr 1fr;gap:0;border-bottom:0}
+#fcNewsSection .fc-news-lead .fc-news-image-wrap{height:100%;min-height:700px;aspect-ratio:auto}
+#fcNewsSection .fc-news-lead .fc-news-card-body{padding:30px}
+#fcNewsSection .fc-news-lead h3.fc-news-cover-title{font-size:34px}
+#fcNewsSection .fc-news-export{background:#e9edf4;border-color:#c8d0db;border-left-color:var(--news-accent);padding:14px;margin-top:25px}
+#fcNewsSection .fc-news-export-label{color:#263850}
+#fcNewsSection .fc-news-export-button{background:linear-gradient(120deg,var(--cover-dark),var(--cover-bright));color:white;border-color:transparent}
+#fcNewsSection .fc-news-owner-link{background:var(--cover-gold);color:#172132;margin-top:20px}
+#fcNewsSection>label{color:white!important}
+#fcNewsSection .fcp-mini{background:#061126b0;border-color:var(--cover-gold);border-radius:0}
+@media(max-width:800px){#fcNewsSection .fc-news-lead{grid-template-columns:1fr}#fcNewsSection .fc-news-lead .fc-news-image-wrap{height:auto;min-height:0;aspect-ratio:4/5}#fcNewsSection .fc-news-lead h3.fc-news-cover-title{font-size:29px}}
+@media(max-width:680px){#fcNewsSection{padding:17px}#fcNewsSection .fc-news-header{padding:18px 0 23px}#fcNewsSection .fc-news-header h2{font-size:28px}#fcNewsSection .fc-news-card-body,#fcNewsSection .fc-news-lead .fc-news-card-body{padding:21px}#fcNewsSection .fc-news-card h3.fc-news-cover-title{left:22px;right:22px;font-size:26px}}

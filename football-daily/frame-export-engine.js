@@ -118,7 +118,7 @@ async function* forSection(k,f,rows,mode){
    const posters=[];
    for(const story of chunks[i])posters.push((await W.FutureCodeNewsFrameExport.render(story,"pro:"+f.id)).blob);
    const filename=mode==="two"?"news-pair-"+String(i+1).padStart(2,"0"):slug(chunks[i][0].id);
-   yield {name:outputName(f,i,chunks.length),blob:await stackBlobs(posters)};
+   yield {name:outputName(f,i,chunks.length),blob:await W.FutureCodeNewsFrameExport.metadata(await stackBlobs(posters),chunks[i])};
   }
  }
 }
