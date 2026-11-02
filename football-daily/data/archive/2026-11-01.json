@@ -1967,7 +1967,7 @@
       "nightEditorialDate": "2026-11-01",
       "kickoffYangon": "2026-11-01 21:00 MMT",
       "kickoffUtc": "2026-11-01T14:30:00.000Z",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF internet forecast, not independently sourced VIP or FT",
       "specialChoice": false,
@@ -2138,7 +2138,10 @@
       "previewV2EditorialDate": "2026-11-01",
       "previewV2SourcePreviewDate": "2026-11-01",
       "previewV2FormatVersion": "2.1",
-      "previewV2Selection": "ယူနီယံဘာလင်"
+      "previewV2Selection": "ယူနီယံဘာလင်",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-01-11-2026",
+      "resultVerifiedDate": "2026-11-02"
     },
     {
       "fixtureId": "fc-20261101-12",
@@ -2155,7 +2158,7 @@
       "nightEditorialDate": "2026-11-01",
       "kickoffYangon": "2026-11-01 23:00 MMT",
       "kickoffUtc": "2026-11-01T16:30:00.000Z",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF internet forecast, not independently sourced VIP or FT",
       "specialChoice": false,
@@ -2334,7 +2337,10 @@
       "previewV2EditorialDate": "2026-11-01",
       "previewV2SourcePreviewDate": "2026-11-01",
       "previewV2FormatVersion": "2.1",
-      "previewV2Selection": "ဖရန့်ဖတ်"
+      "previewV2Selection": "ဖရန့်ဖတ်",
+      "finalScore": "3-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-01-11-2026",
+      "resultVerifiedDate": "2026-11-02"
     },
     {
       "fixtureId": "fc-20261101-13",
@@ -3109,7 +3115,7 @@
       "resultSourceUrl": "https://tipsterarea.com/matches/date-01-11-2026"
     }
   ],
-  "updateStatus": "Archived Nov 1 fixtures; 14 final scores confirmed via TipsterArea as of Nov 2",
+  "updateStatus": "Archived Nov 1 fixtures; all 16 selected final scores confirmed from TipsterArea on Nov 2",
   "researchVerifiedDate": "2026-11-01",
   "sourceManifest": {
     "sourcePDF": "1.pdf",
@@ -3130,7 +3136,7 @@
     "currentPriceStatus": "owner-pdf-verified-all-19",
     "currentPriceSourcePdf": "1 စျေး.pdf",
     "currentPriceMatchedRows": 19,
-    "finalResultsVerified": 14
+    "finalResultsVerified": 16
   },
   "currentPriceSourcePdf": "1 စျေး.pdf",
   "currentPriceSourceRows": 19,
