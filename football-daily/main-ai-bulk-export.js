@@ -62,7 +62,7 @@
  function safeHttps(url){
   try{const a=new URL(url);return a.protocol==="https:"?a.href:null;}catch{return null;}
  }
- function loadImage(url,cache,timeoutMs=3200){
+ function loadImage(url,cache,timeoutMs=9000){
   const src=safeHttps(window.FutureCodeMainLogoAssets?.imageUrl(url)||url);
   if(!src)return Promise.resolve(null);
   if(cache.has(src))return cache.get(src);
@@ -205,6 +205,19 @@
   await Promise.all(images);
   const pic=url=>cache.get(safeHttps(window.FutureCodeMainLogoAssets?.imageUrl(url)||url));
   const loaded=async url=>pic(url)?await pic(url):null;
+  // All crests must have decoded before exporting; never silently draw initials.
+  const missing=[];
+  for(const group of page.groups){
+   const leagueURL=leagueLogo?.(group.league);
+   if(leagueURL&&!(await loaded(leagueURL)))missing.push("league "+group.league);
+   for(const m of group.matches){
+    for(const side of ["home","away"]){
+     const crestURL=teamLogo?.(m,side)||m[side+"CrestUrl"];
+     if(!crestURL||!(await loaded(crestURL)))missing.push((m[side]||"club")+" "+side);
+    }
+   }
+  }
+  if(missing.length)throw Error("PNG အသင်း/လိဂ်လိုဂို မပြည့်စုံပါ — "+missing.slice(0,8).join(", "));
   rect(ctx,0,0,WIDTH,size.height,theme.base);
   rect(ctx,0,0,WIDTH,HEADER,theme.header);
   text(ctx,(AI_BRAND[opts.frame]||"FUTURE CODE FOOTBALL")+"  ·  VIP Internet | Bookies | AI Tips",20,51,1020,30,"left");
