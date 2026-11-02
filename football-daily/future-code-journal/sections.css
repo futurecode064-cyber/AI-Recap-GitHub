@@ -55,3 +55,36 @@
   .fcj-theme #gzSectionNav{padding:9px;gap:7px}
   .fcj-theme #gzSectionNav a{padding:10px 12px}
 }
+
+
+/* A dedicated tab, not an always-visible ZIP form above every journal section. */
+:root.fcj-theme:not([data-gz-section="downloads"]) #gzDownloadCenter,
+:root.fcj-theme:not([data-gz-section="probabilities"]) .gz-prob-wrap {
+  display:none!important;
+}
+:root.fcj-theme[data-gz-section="downloads"] #gzDownloadCenter {
+  display:block!important;
+  margin-top:16px;
+}
+:root.fcj-theme[data-gz-section="downloads"] .content > :is(
+  .dashboard-bar,.section-heading,.fc-news-section,.date-tabs,.filters,
+  #sectionNote,#resultsDownloadBar,#gzSpecialEmpty,#matchList
+),
+:root.fcj-theme[data-gz-section="downloads"] .fcj-ai,
+:root.fcj-theme[data-gz-section="probabilities"] .content > :is(
+  .dashboard-bar,.section-heading,.fc-news-section,.date-tabs,.filters,
+  #sectionNote,#resultsDownloadBar,#gzSpecialEmpty,#matchList
+),
+:root.fcj-theme[data-gz-section="probabilities"] .fcj-ai {
+  display:none!important;
+}
+:root.fcj-theme[data-gz-section="downloads"] .gz-prob-wrap,
+:root.fcj-theme[data-gz-section="probabilities"] #gzDownloadCenter {
+  display:none!important;
+}
+:root.fcj-theme[data-gz-section="downloads"] #gzSectionNav [data-gz-section-link="downloads"],
+:root.fcj-theme[data-gz-section="probabilities"] #gzSectionNav [data-gz-section-link="probabilities"] {
+  background:linear-gradient(125deg,#dbb75a,#ae802e);
+  border-color:#f5d88c;
+  color:#171108;
+}
