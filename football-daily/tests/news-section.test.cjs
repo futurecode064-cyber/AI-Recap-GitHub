@@ -51,13 +51,30 @@ test("Colour journal PNG hides every photo caption while keeping source credits"
  assert.doesNotMatch(js,/const caption=s\.imageCaption/);
  assert.doesNotMatch(js,/card\.append\(node\("div",s\.imageCaption/);
  assert.match(css,/\.fc-news-attribution/);
- assert.match(read("index.html"),/news-section\.js\?v=journal-theme-20261102-v5/);
- assert.match(read("future-code-journal/index.html"),/news-section\.js\?v=journal-theme-20261102-v5/);
+ assert.match(read("index.html"),/news-section\.js\?v=journal-palette-20261102-v6/);
+ assert.match(read("future-code-journal/index.html"),/news-section\.js\?v=journal-palette-20261102-v6/);
 });
 
- test("News cover trim and metallic title follow the selected frame color",()=>{
- const js=read("news-section.js");
- assert.match(js,/trim=mix\(accent,255,\.42\)/);
- assert.match(js,/shine=mix\(accent,255,\.87\)/);
- assert.doesNotMatch(js,/#ffdb58|#fff4b3|#e9a917/i);
- });
+
+test("News palette uses readable white mastheads and sky-blue tints",()=>{
+ const palette=require("../news-palette.js");
+ for(const color of ["#2000ff","#132ab0","#eac020","#124d19","#ff0000"]){
+  const c=palette.resolve({color});
+  assert(palette.contrast(c.masthead,c.background)>=4.5);
+  assert(palette.contrast(c.bodyText,c.articlePanel)>=4.5);
+ }
+ const blue=palette.defaults("#2000ff");
+ const channels=[1,3,5].map(i=>parseInt(blue.glow.slice(i,i+2),16));
+ assert(channels[2]>channels[1]&&channels[1]>channels[0],"blue tint must not turn violet");
+});
+test("Custom news colors persist and reset when the main theme changes",()=>{
+ const palette=require("../news-palette.js"),frame={color:"#132ab0",newsPaletteTheme:"#132ab0",newsColors:{masthead:"#eeeeee",bodyText:"#123456"}};
+ assert.equal(palette.resolve(frame).bodyText,"#123456");
+ assert.equal(palette.resolve({...frame,color:"#ff0000"}).bodyText,palette.defaults("#ff0000").bodyText);
+ assert.equal(palette.resolve({color:"#132ab0",newsColors:{bodyText:"invalid"}}).bodyText,"#142c42");
+ const workspace=read("frame-workspace.js"),professional=read("main-professional-frame-studio.js");
+ assert.match(workspace,/item.newsColors=readNewsColors/);
+ assert.match(workspace,/newsColorsAuto/);
+ assert.match(workspace,/renderDraft/);
+ assert.match(professional,/newsColors:Object.fromEntries/);
+});

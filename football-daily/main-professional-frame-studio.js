@@ -21,7 +21,7 @@ function validate(v){
 if(!v||v.version!==2||!Array.isArray(v.frames)||v.frames.length>130)throw Error("Frame Backup v2 မမှန်ပါ");
 const out=empty(),used=new Set();
 out.frames=v.frames.filter(x=>x&&/^[a-z0-9-]{2,60}$/.test(x.id)&&!used.has(x.id)&&used.add(x.id)).map(x=>({
-id:x.id,name:trim(x.name)||"My Frame",color:color(x.color),top:number(x.top,110),bottom:number(x.bottom,75),
+id:x.id,name:trim(x.name)||"My Frame",color:color(x.color),newsPaletteTheme:/^#[0-9a-f]{6}$/i.test(x.newsPaletteTheme||"")?x.newsPaletteTheme:undefined,newsColors:Object.fromEntries(Object.entries(x.newsColors||{}).filter(([k,v])=>/^[a-zA-Z]+$/.test(k)&&/^#[0-9a-f]{6}$/i.test(v))),top:number(x.top,110),bottom:number(x.bottom,75),
 fit:["contain","cover","stretch"].includes(x.fit)?x.fit:"contain",downloadName:trim(x.downloadName||x.name,100),topImage:pic(x.topImage),bottomImage:pic(x.bottomImage),builtin:allTemplates.some(t=>t.id===x.id)}));
 for(const f of allTemplates)if(!out.frames.some(x=>x.id===f.id))out.frames.push({...f});
 for(const k of types){
@@ -95,7 +95,8 @@ c.strokeStyle=f.color;c.lineWidth=Math.max(3,Math.floor(pad/2));c.strokeRect(c.l
 return out;
 }
 // Render the same frame layout used by the real export (including native ribbon aspect ratio).
-async function renderSample(f){
+async function renderSample(f,sourceCanvas){
+ if(sourceCanvas)return composite(sourceCanvas,f);
  const width=600,source=document.createElement("canvas");source.width=width;source.height=270;
  const ctx=source.getContext("2d");ctx.fillStyle="#eef4f8";ctx.fillRect(0,0,width,270);
  ctx.fillStyle=shade(color(f.color),.48);ctx.fillRect(20,18,width-40,58);

@@ -103,7 +103,7 @@ function migrateAssignments(){
  localStorage.setItem("fc-workspace-assignments-v1","yes");return changed;
 }
 async function readyEngines(){
- await waitFor(()=>home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodePreviewV2?.render&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob&&home.contentWindow?.FutureCodeFrameZip?.Archive);
+ await waitFor(()=>home.contentWindow?.FutureCodeNewsPalette&&home.contentWindow?.FutureCodeNewsFrameExport?.renderDraft&&home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodePreviewV2?.render&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob&&home.contentWindow?.FutureCodeFrameZip?.Archive);
  await home.contentWindow.FutureCodeProfessionalFrames.ready;
  await waitFor(()=>odds.contentWindow?.FutureCodeProfessionalFrames?.ready&&odds.contentWindow?.FutureCodeTableOddsFrames?.draw&&odds.contentWindow?.FutureCodeBurmeseRedOddsFrame?.draw&&odds.contentWindow?.FutureCodeFrameEditor?.getOddsSheet);
  await odds.contentWindow.FutureCodeProfessionalFrames.ready;
@@ -144,6 +144,23 @@ function showList(){
  }
  $("frameCount").textContent=String(host.childElementCount);
 }
+function paletteApi(){return home.contentWindow.FutureCodeNewsPalette;}
+function readNewsColors(){return Object.fromEntries(Object.keys(paletteApi()?.fields||{}).map(k=>[k,$("newsColor-"+k).value]));}
+function fillNewsColors(colors){for(const k of Object.keys(paletteApi()?.fields||{}))if($("newsColor-"+k))$("newsColor-"+k).value=colors[k];updateColorContrast();}
+function updateColorContrast(){const api=paletteApi();if(!api||!$("newsColorContrast"))return;const c=readNewsColors(),ratios=[api.contrast(c.masthead,c.background),api.contrast(c.bodyText,c.leadPanel),api.contrast(c.bodyText,c.articlePanel),api.contrast(c.headline,c.glow)];$("newsColorContrast").textContent=ratios.every(r=>r>=4.5)?"စာသားနှင့် နောက်ခံ ကွဲပြားမှု ကောင်းသည်။":"ရွေးထားသော စာသား/နောက်ခံ အချို့ ရောနေပါသည်။ စာဖတ်ရလွယ်အောင် အရောင်ပြောင်းနိုင်ပါသည်။";}
+function initNewsColors(){
+ const api=paletteApi();if(!api||$("newsColorSettings"))return;
+ const group=document.createElement("fieldset");group.id="newsColorSettings";group.style.cssText="border:1px solid #638095;padding:16px;margin:18px 0;border-radius:10px";
+ const legend=document.createElement("legend");legend.textContent="ဘောလုံးသတင်း · အရောင် တစ်ခုချင်း ရွေးရန်";group.append(legend);
+ const grid=document.createElement("div");grid.className="field-grid";
+ for(const [key,title] of Object.entries(api.fields)){
+  const label=document.createElement("label"),input=document.createElement("input");input.type="color";input.id="newsColor-"+key;input.setAttribute("aria-label",title);input.addEventListener("input",()=>{updateColorContrast();schedulePreview();});label.textContent=title;label.append(input);grid.append(label);
+ }
+ const reset=document.createElement("button");reset.type="button";reset.id="newsColorsAuto";reset.textContent="Theme နှင့် လိုက်ဖက်သော အရောင်များ ပြန်ရွေးမယ်";reset.onclick=()=>{fillNewsColors(api.defaults(goodColor($("frameColor").value)));schedulePreview();};
+ const hint=document.createElement("p");hint.id="newsColorContrast";hint.style.fontSize="12px";
+ const note=document.createElement("p");note.textContent="အရောင်ရွေးတိုင်း သတင်းပုံနမူနာ ပြောင်းပါမည်။ Download တွင် အသုံးပြုရန် ပြင်ဆင်ချက် သိမ်းမယ် ကိုနှိပ်ပါ။";note.style.cssText="font-size:12px;color:#bcd1df";
+ group.append(grid,reset,hint,note);$("editorForm").querySelector(".field-grid").after(group);
+}
 let previewSequence=0,previewTimer=0;
 function realPreview(){
  const token=++previewSequence,prior=frame(currentId),id=currentId,creating=isNew;
@@ -152,13 +169,17 @@ function realPreview(){
  if(!api?.renderSample)return;
  const urls=[];
  const config={...(prior||{id:"draft-preview",name:"Frame အသစ်",topImage:"",bottomImage:"",builtin:false}),
-  color:goodColor($("frameColor").value),
+  name:str($("frameName").value)||prior?.name||"Frame",
+  color:goodColor($("frameColor").value),newsColors:readNewsColors(),newsPaletteTheme:goodColor($("frameColor").value),
   top:Number($("frameTop").value)||0,bottom:Number($("frameBottom").value)||0,
   fit:$("frameFit").value||"contain"};
  for(const [id,key] of [["frameTopFile","topImage"],["frameBottomFile","bottomImage"]]){
   const file=$(id).files[0];if(file){config[key]=URL.createObjectURL(file);urls.push(config[key]);}
  }
- api.renderSample(config).then(canvas=>{
+ const newsMode=assigned(currentId,"news")||$("librarySection").value==="news"||!!$("scopeChecks").querySelector('input[value="news"]:checked');
+ const story=news?.items?.find(s=>s.image&&!/crest|လိုဂို/i.test(s.imageAlt||""))||news?.items?.find(s=>s.image);
+ const render=newsMode&&story&&w.FutureCodeNewsFrameExport?.renderDraft?w.FutureCodeNewsFrameExport.renderDraft(story,config):api.renderSample(config);
+ render.then(canvas=>{
   if(token!==previewSequence||currentId!==id||isNew!==creating)return;
   $("previewImage").src=canvas.toDataURL("image/png");
   $("previewImage").hidden=false;$("previewMock").hidden=true;
@@ -177,6 +198,7 @@ function showEditor(){
  if(!f&&!isNew)return;
  const v=f||{name:"",color:"#194b75",top:110,bottom:75,fit:"contain",topImage:"",bottomImage:""};
  $("frameName").value=v.name;$("frameDownloadName").value=v.downloadName||v.name;$("frameDownloadName").dataset.customName=(v.downloadName&&v.downloadName!==v.name)?"1":"";$("frameColor").value=goodColor(v.color);
+ initNewsColors();fillNewsColors(paletteApi().resolve(v));
  $("frameTop").value=v.top;$("frameBottom").value=v.bottom;$("frameFit").value=v.fit;
  $("frameTopFile").value=$("frameBottomFile").value="";
  $("topFileState").textContent=v.topImage?"ကိုယ်ပိုင်ပုံ ရှိသည်":"မူရင်း Banner / အရောင်";
@@ -219,6 +241,7 @@ async function submit(){
  const id=fresh?"pro-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7):prior.id;
  const downloadName=str($("frameDownloadName").value).slice(0,100)||name;
   const item={...(prior||{id,builtin:false,topImage:"",bottomImage:""}),name,downloadName,color:goodColor($("frameColor").value),fit:["contain","cover","stretch"].includes($("frameFit").value)?$("frameFit").value:"contain",top:Math.round(top),bottom:Math.round(bottom)};
+ item.newsColors=readNewsColors();item.newsPaletteTheme=item.color;
  if(topImage!==null)item.topImage=topImage;if(bottomImage!==null)item.bottomImage=bottomImage;
  const scopes=[...$("scopeChecks").querySelectorAll("input:checked")].map(x=>x.value);
   if(fresh&&!scopes.length)throw Error("Frame အသစ်အတွက် Section အနည်းဆုံး ၁ ခု အမှန်ခြစ်ရွေးပါ။");
@@ -296,7 +319,7 @@ $("navLibrary").onclick=()=>tab("library");$("navDownloads").onclick=()=>tab("do
 $("search").oninput=renderList;$("librarySection").onchange=renderList;
  $("scopeAll").onclick=()=>{$("scopeChecks").querySelectorAll('input[type="checkbox"]').forEach(x=>x.checked=true);};
  $("scopeNone").onclick=()=>{$("scopeChecks").querySelectorAll('input[type="checkbox"]').forEach(x=>x.checked=false);};
- $("frameColor").oninput=()=>{$("previewMock").style.setProperty("--frame-color",goodColor($("frameColor").value));schedulePreview();};
+ $("frameColor").oninput=()=>{$("previewMock").style.setProperty("--frame-color",goodColor($("frameColor").value));fillNewsColors(paletteApi().defaults(goodColor($("frameColor").value)));schedulePreview();};
  for(const input of ["frameTop","frameBottom","frameFit"])$(input).addEventListener("input",schedulePreview);
  async function selectedBanner(side){
   const file=$(side==="top"?"frameTopFile":"frameBottomFile").files[0];

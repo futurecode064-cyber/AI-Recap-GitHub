@@ -76,7 +76,7 @@
   view.setUint32(8+data.length,(crc^0xffffffff)>>>0);
   return new Blob([bytes.subarray(0,bytes.length-12),chunk,bytes.subarray(bytes.length-12)],{type:"image/png"});
  }
- async function createNewsPoster(s,explicitFrameId){
+ async function createNewsPoster(s,explicitFrameId,draftFrame){
   await loadNewsFont();
   await document.fonts.ready;
   await window.FutureCodeProfessionalFrames?.ready;
@@ -86,12 +86,12 @@
   const select=document.getElementById("fcNewsCustomFrame");
   const frameId=explicitFrameId===undefined?(select?.value||await window.FutureCodeProfessionalFrames?.getSelected?.("news")||""):explicitFrameId;
   const chosen=select&&[...select.options].find(o=>o.value===frameId);
-  const proFrame=frameId?.startsWith("pro:")?window.FutureCodeProfessionalFrames?.getFrame?.(frameId):null;
+  const proFrame=draftFrame||(frameId?.startsWith("pro:")?window.FutureCodeProfessionalFrames?.getFrame?.(frameId):null);
   const customFrame=frameId&&!proFrame&&window.FutureCodeCustomFrames?
     (await window.FutureCodeCustomFrames.list()).find(f=>f.id===frameId):null;
   const selectedName=(proFrame?.name||customFrame?.name||chosen?.textContent||"")
     .replace(/\s*·\s*Professional\s*$/i,"").trim();
-  const masthead=frameId&&frameId!=="none"&&selectedName&&!/^(မူရင်းပုံစံ|မူရင်းပုံ)$/.test(selectedName)?selectedName:exportBrand;
+  const masthead=(draftFrame||frameId&&frameId!=="none")&&selectedName&&!/^(မူရင်းပုံစံ|မူရင်းပုံ)$/.test(selectedName)?selectedName:exportBrand;
   const accent=/^#[0-9a-f]{6}$/i.test(proFrame?.color||customFrame?.color||"")?
     (proFrame?.color||customFrame?.color):(isGoalZone?"#bb8e38":"#b84229");
   // Sports-cover composition: metallic masthead, floodlights, angled photo and layered type.
@@ -99,7 +99,8 @@
   const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");
   if(!ctx)throw new Error("Canvas unavailable");
   const mix=(hex,toward,amount)=>"#"+[0,2,4].map(i=>Math.round(parseInt(hex.slice(i+1,i+3),16)*(1-amount)+toward*amount).toString(16).padStart(2,"0")).join("");
-  const ink=mix(accent,0,.80),deep=mix(accent,0,.46),light=mix(accent,255,.78),trim=mix(accent,255,.42),shine=mix(accent,255,.87);
+  const palette=window.FutureCodeNewsPalette.resolve(proFrame||customFrame||{color:accent});
+  const ink=palette.headline,deep=palette.deep,light=palette.glow,trim=palette.border,shine=palette.border;
   const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs.filter(p=>typeof p==="string"&&p.trim()):[];
   const titleWidth=590,titleTop=356;
   let titleFont=58,titleLines=[];
@@ -139,24 +140,23 @@
   canvas.width=W*2;canvas.height=H*2;
   ctx.scale(2,2);ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality="high";
   const polygon=(points,fill)=>{ctx.beginPath();points.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.closePath();ctx.fillStyle=fill;ctx.fill();};
-  const bg=ctx.createLinearGradient(0,0,W,heroEnd);bg.addColorStop(0,deep);bg.addColorStop(.48,accent);bg.addColorStop(1,ink);ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  const bg=ctx.createLinearGradient(0,0,W,heroEnd);bg.addColorStop(0,deep);bg.addColorStop(.48,palette.background);bg.addColorStop(1,ink);ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
   // Fine vertical print texture and stadium-light rays, rather than a flat solid card.
-  ctx.save();ctx.globalAlpha=.12;ctx.strokeStyle="#fff";ctx.lineWidth=1;
+  ctx.save();ctx.globalAlpha=.12;ctx.strokeStyle=palette.texture;ctx.lineWidth=1;
   for(let x=25;x<W;x+=9){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
   ctx.restore();
-  polygon([[0,230],[580,0],[1000,0],[0,760]],"#ffffff12");
-  polygon([[W,190],[W,680],[440,heroEnd],[120,heroEnd]],"#ffffff0a");
-  const halo=ctx.createRadialGradient(180,670,10,180,670,850);halo.addColorStop(0,"#ffffff");halo.addColorStop(.5,light);halo.addColorStop(1,"#ffffff00");ctx.fillStyle=halo;ctx.fillRect(0,230,760,heroEnd-230);
+  polygon([[0,230],[580,0],[1000,0],[0,760]],palette.texture+"12");
+  polygon([[W,190],[W,680],[440,heroEnd],[120,heroEnd]],palette.texture+"0a");
+  const halo=ctx.createRadialGradient(180,670,10,180,670,850);halo.addColorStop(0,palette.glow);halo.addColorStop(.5,light);halo.addColorStop(1,"#ffffff00");ctx.fillStyle=halo;ctx.fillRect(0,230,760,heroEnd-230);
   // Metallic corner rails and angled yellow accents echo the supplied sports cover.
   polygon([[16,18],[W-16,18],[W-16,70],[W-36,51],[36,51],[16,70]],trim);
   polygon([[16,18],[62,18],[16,64]],shine);
-  ctx.strokeStyle="#070d17";ctx.lineWidth=18;ctx.strokeRect(17,17,W-34,H-34);
+  ctx.strokeStyle=palette.outerBorder;ctx.lineWidth=18;ctx.strokeRect(17,17,W-34,H-34);
   ctx.strokeStyle=trim;ctx.lineWidth=4;ctx.strokeRect(29,29,W-58,H-58);
   // Large dimensional brand masthead, fitted by measurement without distortion.
   let mastSize=120;
   do{ctx.font='900 '+mastSize+'px "FCNewsMyanmar",Arial,sans-serif';if(ctx.measureText(masthead).width<=contentW||mastSize<=30)break;mastSize-=2;}while(true);
-  const brandGradient=ctx.createLinearGradient(0,74,0,201);brandGradient.addColorStop(0,"#ffffff");brandGradient.addColorStop(.35,"#ffffff");brandGradient.addColorStop(.55,trim);brandGradient.addColorStop(1,mix(accent,0,.08));
-  ctx.save();ctx.shadowColor="#0009";ctx.shadowBlur=7;ctx.shadowOffsetY=9;ctx.lineJoin="round";ctx.strokeStyle=ink;ctx.lineWidth=13;ctx.strokeText(masthead,pad,186);ctx.strokeStyle="#ffffff";ctx.lineWidth=4;ctx.strokeText(masthead,pad,186);ctx.fillStyle=brandGradient;ctx.fillText(masthead,pad,186);ctx.restore();
+  ctx.save();ctx.shadowColor=palette.mastheadShadow;ctx.shadowBlur=7;ctx.shadowOffsetY=6;ctx.lineJoin="round";ctx.strokeStyle=palette.mastheadOutline;ctx.lineWidth=7;ctx.strokeText(masthead,pad,186);ctx.fillStyle=palette.masthead;ctx.fillText(masthead,pad,186);ctx.restore();
   polygon([[pad,214],[W-pad,214],[W-pad-35,228],[pad+35,228]],trim);
   // Full-height hero panel. Preserve the entire portrait when the feed requests contain.
   const {x,y,w,h}=photoBox,iw=photo.naturalWidth,ih=photo.naturalHeight;
@@ -164,7 +164,7 @@
   const cover=Math.max(w/iw,h/ih),sw=w/cover,sh=h/cover;
   ctx.drawImage(photo,(iw-sw)/2,Math.max(0,(ih-sh)*.26),sw,sh,x,y,w,h);
   if(s.imageFit==="contain"){
-   ctx.fillStyle=deep+"b8";ctx.fillRect(x,y,w,h);
+   ctx.fillStyle=palette.photoMat+"b8";ctx.fillRect(x,y,w,h);
    const fit=Math.min(w/iw,h/ih),fw=iw*fit,fh=ih*fit;
    ctx.drawImage(photo,x+(w-fw)/2,y+(h-fh)/2,fw,fh);
   }
@@ -175,21 +175,22 @@
   ctx.font='800 '+titleFont+'px "FCNewsMyanmar"';ctx.lineJoin="round";
   titleLines.forEach((line,i)=>{
    const yy=titleTop+i*titleLH;
-   ctx.save();ctx.shadowColor="#0004";ctx.shadowBlur=4;ctx.shadowOffsetY=5;ctx.strokeStyle="#ffffff";ctx.lineWidth=12;ctx.strokeText(line,pad,yy);ctx.fillStyle=i===titleLines.length-1?deep:i%2?accent:ink;ctx.fillText(line,pad,yy);ctx.restore();
+   ctx.save();ctx.shadowColor=palette.headlineShadow+"66";ctx.shadowBlur=4;ctx.shadowOffsetY=5;ctx.strokeStyle=palette.headlineOutline;ctx.lineWidth=12;ctx.strokeText(line,pad,yy);ctx.fillStyle=i%2?palette.headlineAccent:palette.headline;ctx.fillText(line,pad,yy);ctx.restore();
   });
   polygon([[pad,leadTop-50],[pad+150,leadTop-50],[pad+133,leadTop-40],[pad,leadTop-40]],deep);
   // The left article panel is translucent paper, keeping the cover texture underneath.
-  ctx.fillStyle="#ffffffed";ctx.fillRect(pad-14,leadTop-24,leadWidth+28,leadLines.length*lineHeight+42);
-  ctx.fillStyle=ink;ctx.font='500 '+bodyFont+'px "FCNewsMyanmar"';
+  ctx.fillStyle=palette.leadPanel;ctx.fillRect(pad-14,leadTop-24,leadWidth+28,leadLines.length*lineHeight+42);
+  ctx.fillStyle=palette.bodyText;ctx.font='500 '+bodyFont+'px "FCNewsMyanmar"';
   leadLines.forEach((line,i)=>ctx.fillText(line,pad,leadTop+22+i*lineHeight));
-  polygon([[42,heroEnd],[W-42,heroEnd-46],[W-42,H-48],[42,H-48]],"#fffffffa");
+  polygon([[42,heroEnd],[W-42,heroEnd-46],[W-42,H-48],[42,H-48]],palette.articlePanel);
   polygon([[42,heroEnd],[W-42,heroEnd-46],[W-42,heroEnd-35],[42,heroEnd+11]],trim);
-  ctx.fillStyle=ink;ctx.font='400 '+bodyFont+'px "FCNewsMyanmar"';
+  ctx.fillStyle=palette.bodyText;ctx.font='400 '+bodyFont+'px "FCNewsMyanmar"';
   columns.forEach((list,i)=>list.forEach(e=>{if(!e.gap)ctx.fillText(e.line,pad+i*(colW+space),bodyTop+30+e.row*lineHeight);}));
-  if(bodyRows){ctx.fillStyle=light;ctx.fillRect(W/2,bodyTop,1,bodyRows*lineHeight);}
+  if(bodyRows){ctx.fillStyle=palette.divider;ctx.fillRect(W/2,bodyTop,1,bodyRows*lineHeight);}
   // Decorative bottom rail only. No source, caption, credit or extra footer copy is painted.
   polygon([[42,H-48],[W-42,H-48],[W-74,H-30],[74,H-30]],trim);
   let output=canvas;
+  if(draftFrame)return window.FutureCodeProfessionalFrames.renderSample(draftFrame,canvas);
   if(customFrame)output=await window.FutureCodeCustomFrames.wrap(output,customFrame);
   if(window.FutureCodeProfessionalFrames){
    output=await window.FutureCodeProfessionalFrames.wrap(output,"news",frameId?.startsWith("pro:")?frameId:"none");
@@ -199,7 +200,7 @@
   const prefix=masthead.replace(/[^a-z0-9\u1000-\u109f_-]/gi,"-").slice(0,45)||exportBrand.replace(/\s+/g,"-");
   return {blob,width:output.width,height:output.height,filename:prefix+"-News-"+s.id.replace(/[^a-z0-9_-]/gi,"-")+".png"};
  }
- window.FutureCodeNewsFrameExport=Object.freeze({list:()=>stories.slice(),render:(story,frameId)=>createNewsPoster(story,frameId),metadata:newsPngMetadata});
+ window.FutureCodeNewsFrameExport=Object.freeze({list:()=>stories.slice(),render:(story,frameId)=>createNewsPoster(story,frameId),metadata:newsPngMetadata,renderDraft:(story,frame)=>createNewsPoster(story,"none",frame)});
  function posterFor(s){
   // Selected frames and their edited artwork can change without a new story ID.
   // Always build a fresh PNG to prevent exporting a stale masthead or banner.
