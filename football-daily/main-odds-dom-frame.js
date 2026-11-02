@@ -549,7 +549,7 @@
         // same-origin SVG club crests into explicit PNG data URLs at high
         // resolution, before DOM capture. This preserves original artwork and
         // makes the table export pixel-identical across Chromium/WebViews.
-        if(/\\.svg(?:[?#]|$)/i.test(img.currentSrc||img.src)){
+        if(/\.svg(?:[?#]|$)/i.test(img.currentSrc||img.src)){
           const pixels=Math.max(144,Math.min(480,Math.max(img.naturalWidth,img.naturalHeight)));
           const scale=pixels/Math.max(img.naturalWidth,img.naturalHeight);
           const layer=document.createElement("canvas");
