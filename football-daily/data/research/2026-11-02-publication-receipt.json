@@ -1,0 +1,373 @@
+{
+  "date": "2026-11-02",
+  "branchBase": "946295b67a37465f20bd5c2ffc18e03911c116a2",
+  "fixtureCount": 16,
+  "verifiedYesterday": 14,
+  "oddsSourcePdf": "2(1).pdf",
+  "sourceMarketDataRows": 15,
+  "independentTipCount": 11,
+  "currentPriceRows": 0,
+  "photoQA": "unverified",
+  "pngZipQA": "unverified",
+  "logoHD": 12,
+  "audit": [
+    {
+      "row": 1,
+      "teams": [
+        "Newcastle United",
+        "Everton"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        true,
+        true
+      ],
+      "logoSource": [
+        "frertommy/team-logos 512px original official crest",
+        "frertommy/team-logos 512px original official crest"
+      ],
+      "source": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687",
+      "tip": true
+    },
+    {
+      "row": 2,
+      "teams": [
+        "Sassuolo",
+        "Fiorentina"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        true,
+        true
+      ],
+      "logoSource": [
+        "frertommy/team-logos 512px original official crest",
+        "frertommy/team-logos 512px original official crest"
+      ],
+      "source": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689",
+      "tip": true
+    },
+    {
+      "row": 3,
+      "teams": [
+        "Atalanta",
+        "Parma"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        true,
+        true
+      ],
+      "logoSource": [
+        "frertommy/team-logos 512px original official crest",
+        "frertommy/team-logos 512px original official crest"
+      ],
+      "source": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690",
+      "tip": true
+    },
+    {
+      "row": 4,
+      "teams": [
+        "Deportivo La Coruna",
+        "Osasuna"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        true,
+        true
+      ],
+      "logoSource": [
+        "frertommy/team-logos 512px original official crest",
+        "frertommy/team-logos 512px original official crest"
+      ],
+      "source": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688",
+      "tip": true
+    },
+    {
+      "row": 5,
+      "teams": [
+        "Lorient",
+        "Brest"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        true,
+        true
+      ],
+      "logoSource": [
+        "frertommy/team-logos 512px original official crest",
+        "frertommy/team-logos 512px original official crest"
+      ],
+      "source": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691",
+      "tip": true
+    },
+    {
+      "row": 6,
+      "teams": [
+        "Inter Turku",
+        "Gnistan Helsinki"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "TipsterArea club crest small legacy GIF",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792",
+      "tip": false
+    },
+    {
+      "row": 7,
+      "teams": [
+        "VPS Vaasa",
+        "HJK Helsinki"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "TipsterArea club crest small legacy GIF",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791",
+      "tip": false
+    },
+    {
+      "row": 8,
+      "teams": [
+        "GAIS Goteborg",
+        "AIK Stockholm"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "TipsterArea club crest small legacy GIF",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715",
+      "tip": false
+    },
+    {
+      "row": 9,
+      "teams": [
+        "Mjallby",
+        "Kalmar"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "TipsterArea club crest small legacy GIF",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716",
+      "tip": false
+    },
+    {
+      "row": 10,
+      "teams": [
+        "Sonderjyske",
+        "FC Copenhagen"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "TipsterArea club crest small legacy GIF",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717",
+      "tip": false
+    },
+    {
+      "row": 11,
+      "teams": [
+        "Benfica",
+        "Alverca"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "TipsterArea club crest small legacy GIF",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698",
+      "tip": true
+    },
+    {
+      "row": 12,
+      "teams": [
+        "Gil Vicente",
+        "Vitoria Guimaraes"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "TipsterArea club crest small legacy GIF",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699",
+      "tip": true
+    },
+    {
+      "row": 13,
+      "teams": [
+        "Tenerife",
+        "FC Andorra"
+      ],
+      "last5": [
+        0,
+        0
+      ],
+      "odds": false,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "missing",
+        "missing"
+      ],
+      "source": "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo",
+      "tip": true
+    },
+    {
+      "row": 14,
+      "teams": [
+        "Real Oviedo",
+        "Las Palmas"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        true,
+        false
+      ],
+      "logoSource": [
+        "frertommy/team-logos 512px original official crest",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703",
+      "tip": true
+    },
+    {
+      "row": 15,
+      "teams": [
+        "Real Valladolid",
+        "Leganes"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        false,
+        false
+      ],
+      "logoSource": [
+        "TipsterArea club crest small legacy GIF",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704",
+      "tip": true
+    },
+    {
+      "row": 16,
+      "teams": [
+        "Mallorca",
+        "Cadiz"
+      ],
+      "last5": [
+        5,
+        5
+      ],
+      "odds": true,
+      "logoHD": [
+        true,
+        false
+      ],
+      "logoSource": [
+        "frertommy/team-logos 512px original official crest",
+        "TipsterArea club crest small legacy GIF"
+      ],
+      "source": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705",
+      "tip": true
+    }
+  ],
+  "note": "Partial morning release; no Bet City Family brand files changed",
+  "sourceUrls": [
+    "https://tipsterarea.com/matches/date-02-11-2026",
+    "https://forepitch.com/football/predictions/2026-11-02/",
+    "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "reportDate": "2026-11-02",
+  "timezone": "Asia/Yangon",
+  "items": [
+    {
+      "fixtureId": "fc-20261102-01",
+      "home": "Newcastle United",
+      "away": "Everton",
+      "score": "2-1",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-02",
+      "home": "Sassuolo",
+      "away": "Fiorentina",
+      "score": "1-2",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-03",
+      "home": "Atalanta",
+      "away": "Parma",
+      "score": "2-1",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-04",
+      "home": "Deportivo La Coruna",
+      "away": "Osasuna",
+      "score": "2-1",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-05",
+      "home": "Lorient",
+      "away": "Brest",
+      "score": "2-0",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-11",
+      "home": "Benfica",
+      "away": "Alverca",
+      "score": "4-0",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-12",
+      "home": "Gil Vicente",
+      "away": "Vitoria Guimaraes",
+      "score": "0-1",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-13",
+      "home": "Tenerife",
+      "away": "FC Andorra",
+      "score": "1-0",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-14",
+      "home": "Real Oviedo",
+      "away": "Las Palmas",
+      "score": "2-0",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-15",
+      "home": "Real Valladolid",
+      "away": "Leganes",
+      "score": "2-1",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    },
+    {
+      "fixtureId": "fc-20261102-16",
+      "home": "Mallorca",
+      "away": "Cadiz",
+      "score": "2-0",
+      "sourceName": "Forepitch — independent match-day exact-score model",
+      "sourceUrl": "https://forepitch.com/football/predictions/2026-11-02/",
+      "sourceDate": "2026-11-02",
+      "sourceVerifiedDate": "2026-11-02",
+      "fixtureDate": "2026-11-02",
+      "sourceType": "Dated independent external model; separate from owner PDF and local Bookies/AI model"
+    }
+  ]
+}
