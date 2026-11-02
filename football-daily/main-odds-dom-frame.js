@@ -527,6 +527,15 @@
       if(document.fonts?.load)await limited(document.fonts.load('900 31px "Noto Sans Myanmar"', "မြန်မာ ပေါက်ကြေး"),15000,"မြန်မာဖောင့်");
       await waitFonts();
       prepareOneLine(root);
+      // A previously failed on-screen image can already have been replaced by
+      // initials. Count the expected fixtures before attempting PNG capture.
+      const crestNodes=[...root.querySelectorAll(".odds-matchup img.team-logo")];
+      if(crestNodes.length!==rows.length*2||root.querySelector(".odds-matchup .logo-fallback")){
+        throw Error("PNG အသင်းလိုဂို မပြည့်စုံပါ — "+crestNodes.length+"/"+(rows.length*2)+" crests");
+      }
+      const leagueImages=[...root.querySelectorAll("img.league-crest")];
+      const expectedLeagues=new Set(rows.map(m=>m.league)).size;
+      if(leagueImages.length<expectedLeagues)throw Error("PNG လိဂ်လိုဂို မပြည့်စုံပါ — "+leagueImages.length+"/"+expectedLeagues);
       const images=[...root.querySelectorAll("img")];
       images.forEach(img=>{
         const local=(window.FutureCodeMainLogoAssets||window.FutureCodeBrandExportData)?.imageUrl(img.src);
