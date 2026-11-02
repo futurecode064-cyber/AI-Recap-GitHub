@@ -51,6 +51,13 @@ test("Colour journal PNG hides every photo caption while keeping source credits"
  assert.doesNotMatch(js,/const caption=s\.imageCaption/);
  assert.doesNotMatch(js,/card\.append\(node\("div",s\.imageCaption/);
  assert.match(css,/\.fc-news-attribution/);
- assert.match(read("index.html"),/news-section\.js\?v=journal-cover-20261102-v4/);
- assert.match(read("future-code-journal/index.html"),/news-section\.js\?v=journal-cover-20261102-v4/);
+ assert.match(read("index.html"),/news-section\.js\?v=journal-theme-20261102-v5/);
+ assert.match(read("future-code-journal/index.html"),/news-section\.js\?v=journal-theme-20261102-v5/);
 });
+
+ test("News cover trim and metallic title follow the selected frame color",()=>{
+ const js=read("news-section.js");
+ assert.match(js,/trim=mix\(accent,255,\.42\)/);
+ assert.match(js,/shine=mix\(accent,255,\.87\)/);
+ assert.doesNotMatch(js,/#ffdb58|#fff4b3|#e9a917/i);
+ });
