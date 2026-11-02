@@ -2,7 +2,7 @@
   "date": "2026-11-02",
   "branchBase": "946295b67a37465f20bd5c2ffc18e03911c116a2",
   "fixtureCount": 16,
-  "verifiedYesterday": 14,
+  "verifiedYesterday": 16,
   "oddsSourcePdf": "2(1).pdf",
   "sourceMarketDataRows": 15,
   "independentTipCount": 11,
@@ -372,5 +372,22 @@
   ],
   "logoLocallyCached": 32,
   "logoCrestSource": "https://github.com/JoseArroyave/football-logos",
-  "logoQA": "32 authentic SVGs cached in production branch; downloaded PNG/ZIP pixels not yet visually checked"
+  "logoQA": "32 authentic SVGs cached in production branch; downloaded PNG/ZIP pixels not yet visually checked",
+  "newsCount": 10,
+  "newsEditionDate": "2026-11-02",
+  "fullPreviewRows": 16,
+  "premiumSpecialChoiceRows": 2,
+  "liveJsonChecks": {
+    "today": "2026-11-02 16 fixtures",
+    "odds": "2026-11-02 16 original rows",
+    "vip": "2026-11-02 11 independent tips",
+    "news": "2026-11-02 10 articles",
+    "archive": "2026-11-01 16 verified FT rows",
+    "crestReferences": "32 local production SVG paths"
+  },
+  "currentPrices": "not supplied — all 16 current quote fields intentionally blank",
+  "browserPNGDownloadQA": "UNVERIFIED; connected browser automation unavailable due to insufficient TinyFish wallet funds",
+  "previewV2RealPhotoQA": "UNVERIFIED; text summaries and local team crests available, but per-match photographic image completeness untested",
+  "publicationStatus": "LIVE_DATA_PUBLISHED_PARTIAL_EXPORT_QA",
+  "betCityFamily": "No edits made to Bet City Family routes/files in this publication workflow."
 }
