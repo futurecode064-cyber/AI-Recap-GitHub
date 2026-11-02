@@ -22,7 +22,17 @@ jobs:
           godot --version
           ls -lah /root/.local/share/godot/export_templates/ || true
       - name: Static QA
-        run: python3 tests/static_check.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f main.tscn
+          test -f main.gd
+          test -f tests/mission_test.gd
+          test -f tests/network_test.gd
+          grep -q 'create_server(PORT,MAX_PLAYERS-1)' main.gd
+          grep -q 'func receive_snapshot' main.gd
+          grep -q 'func _apply_action' main.gd
+          echo "STATIC QA PASS"
       - name: Godot import and script parse
         shell: bash
         run: |
