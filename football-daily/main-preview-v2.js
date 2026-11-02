@@ -178,12 +178,23 @@
   c.fillStyle="#486176";c.font='500 14px "FCMyanmar",sans-serif';c.fillText(caption(m),238,600,435);
   c.textAlign="left";c.textBaseline="alphabetic";c.fillStyle="#174061";
   fitMyanmar(c,(m.homeDisplay||m.home)+" နှင့် "+(m.awayDisplay||m.away),482,126,690,25,800,15);
-  c.fillStyle="#293e4b";c.font='500 18px "FCMyanmar",sans-serif';c.textBaseline="middle";
-  const bodyLines=wrapMyanmar(summary(m),683,s=>c.measureText(s).width);let y=181,drawn=0;
+  // Four editorial sentences: both clubs, decisive matchup, then selection.
+  // Never silently cut off a downloaded Burmese paragraph.
+  c.fillStyle="#293e4b";c.textBaseline="middle";
+  const upperY=181,lowerY=492,descriptionWidth=683;
+  let bodyLines=[],lineHeight=0,descriptionHeight=Infinity;
+  for(const fontSize of [18,17,16,15,14]){
+   c.font='500 '+fontSize+'px "FCMyanmar",sans-serif';
+   const candidate=wrapMyanmar(summary(m),descriptionWidth,s=>c.measureText(s).width);
+   const candidateHeight=candidate.reduce((height,line)=>height+(line?Math.round(fontSize*1.72):8),0);
+   if(candidateHeight<=lowerY-upperY){bodyLines=candidate;lineHeight=Math.round(fontSize*1.72);descriptionHeight=candidateHeight;break;}
+  }
+  if(!bodyLines.length||descriptionHeight>lowerY-upperY)
+   throw Error("ပွဲကြိုစာသား အပြည့်အစုံကို PNG ထဲ ထည့်မရပါ — "+(m.homeDisplay||m.home)+" / "+(m.awayDisplay||m.away));
+  let y=upperY;
   for(const line of bodyLines){
-   if(!line){y+=9;continue;}
-   if(y>492)break;
-   c.fillText(line,482,y,683);y+=35;drawn++;
+   if(!line){y+=8;continue;}
+   c.fillText(line,482,y,descriptionWidth);y+=lineHeight;
   }
   c.fillStyle=col;c.fillRect(475,522,705,74);c.fillStyle="#fff";c.textAlign="left";c.textBaseline="middle";
   fitMyanmar(c,"ရွေးချယ်မှု",495,551,140,18,800,13);
