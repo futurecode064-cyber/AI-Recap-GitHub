@@ -49,7 +49,8 @@ jobs:
             assert.equal(await page.locator('#fcNewsGrid .fc-news-image-caption').count(),0,site+' contains photo-under-caption');
             const cards=page.locator('#fcNewsGrid .fc-news-card');
             let ok=false,lastStatus='';
-            for(let i=0;i<Math.min(10,await cards.count());i++){
+            // Skip crest-only first headline; prove a genuine person photograph can be embedded.
+            for(let i=1;i<Math.min(10,await cards.count());i++){
              const card=cards.nth(i);
              const preview=card.locator('.fc-news-export-secondary');
              if(!await preview.count())continue;
