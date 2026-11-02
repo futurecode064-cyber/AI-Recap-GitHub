@@ -1,9 +1,38 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "timezone": "Asia/Yangon",
-  "windowLabel": "၃၀ အောက်တိုဘာမှ ၁ နိုဝင်ဘာ ၂၀၂၆ — နောက်ဆုံးရ ကလပ်၊ ကစားသမား၊ နည်းပြ၊ ဒဏ်ရာနှင့် စည်းကမ်းသတင်းများ (ပွဲရလဒ်မပါ)",
-  "newsType": "Real football news: no match schedule or score reports",
+  "windowLabel": "၃၀ အောက်တိုဘာမှ ၂ နိုဝင်ဘာ ၂၀၂၆ — ကလပ်/နည်းပြ/ဒဏ်ရာ/တရားဝင်ပွဲရွှေ့ဆိုင်းခြင်း နောက်ဆုံးရသတင်းများ (ရင်းမြစ်ရက်စွဲကို သတင်းတစ်ပုဒ်ချင်း ဖော်ပြထားသည်)",
+  "newsType": "Verified latest club/manager/player news and official scheduling change; original item dates retained",
   "items": [
+    {
+      "id": "tenerife-andorra-official-rearrangement-20261102",
+      "category": "team-player",
+      "categoryLabel": "ကလပ် တရားဝင်သတင်း",
+      "title": "တင်နီရိုက်ဖ်–အန်ဒိုရာပွဲ မိုးကြောင့် ရွှေ့ဆိုင်းခဲ့ပြီး နိုဝင်ဘာ ၂ ရက်တွင် ပြန်ကစားမည်",
+      "paragraphs": [
+        "တင်နီရိုက်ဖ်နဲ့ အန်ဒိုရာတို့ရဲ့ လာလီဂါ ၂ ပွဲစဉ်ကို တနင်္ဂနွေည မိုးလေဝသအခြေအနေကြောင့် ရွှေ့ဆိုင်းခဲ့ရပြီး နိုဝင်ဘာ ၂ ရက် တနင်္လာနေ့တွင် ပြန်ကစားမယ်လို့ CD Tenerife က နိုဝင်ဘာ ၁ ရက်မှာ တရားဝင်ကြေညာပါတယ်။ မူလပွဲစဉ်အပေါ် မိုးသည်းထန်နိုင်ကြောင်း အန္တရာယ်သတိပေးချက်တွေ ထုတ်ပြန်ထားတာကြောင့် အစီအစဉ်ကို ပြောင်းလဲခဲ့တာ ဖြစ်ပါတယ်။",
+        "တရားဝင်ကြေညာချက်အရ Heliodoro Rodríguez López ကွင်းမှာ ကနေရီကျွန်းစုဒေသစံတော်ချိန် နေ့လယ် ၁ နာရီမှာ ကစားမယ်လို့ ပြင်ဆင်ထားပါတယ်။ မြန်မာစံတော်ချိန်က ည ၇ နာရီခွဲ ဖြစ်လို့ ဒီနေ့ပို့ထားတဲ့ မြန်မာပေါက်ကြေး PDF ထဲက ကစားချိန်နဲ့ ကိုက်ညီနေပါတယ်။",
+        "ပွဲစဉ်ရွှေ့ဆိုင်းမှုကို ပွဲဖျက်သိမ်းခြင်းနဲ့ မရောထွေးသင့်ပါဘူး။ ကလပ်ရဲ့ အတည်ပြုကြေညာချက်အတိုင်း ပြန်လည်စီစဉ်ထားတဲ့ ပွဲစဉ်အဖြစ်သာ ဖော်ပြထားပါတယ်။"
+      ],
+      "sourceName": "CD Tenerife (official club)",
+      "sourceUrl": "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo",
+      "sourceDateISO": "2026-11-01",
+      "sourcePublishedAt": null,
+      "eventDate": "2026-11-02",
+      "sourceDateLabel": "၁ နိုဝင်ဘာ ၂၀၂၆ · ပွဲပြန်စီစဉ်ရက် ၂ နိုဝင်ဘာ",
+      "image": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/tenerife.svg",
+      "imageFit": "contain",
+      "imageCaption": "CD Tenerife အသင်း၏တကယ့်အသင်းလိုဂို — သတင်းအကြောင်းအရာသရုပ်ပြရန်သာ။ ပွဲရက်အဖြစ်အပျက်ဓာတ်ပုံ မဟုတ်ပါ။",
+      "imageAlt": "CD Tenerife အသင်း၏ တကယ့်ကလပ်လိုဂို",
+      "imageContext": "Verified club identity illustration (logo), not event photo",
+      "photoVerification": "Club logo, not event-specific photograph. Same-origin locally cached SVG source.",
+      "imageSourceUrl": "https://github.com/JoseArroyave/football-logos",
+      "imageCredit": "CD Tenerife crest via JoseArroyave/football-logos",
+      "imageLicense": "Club identity mark (trademark; attribution, no claim of public-domain ownership)",
+      "imageLicenseUrl": null,
+      "imageLocalCached": true,
+      "photoDateISO": null
+    },
     {
       "id": "forest-glasner-rebuild-20261101",
       "category": "team-player",
@@ -264,35 +293,6 @@
       "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "imageLocalCached": false,
       "photoDateISO": "2026-06-27"
-    },
-    {
-      "id": "villa-wan-bissaka-injury-20261101",
-      "category": "team-player",
-      "categoryLabel": "အသင်းနှင့် ကစားသမားသတင်း",
-      "title": "အက်စတွန်ဗီလာမှာ ဝန်ဘစ်ဆာကာ အပါအဝင် အဓိကကစားသမားများ ဒဏ်ရာရှိနေ",
-      "paragraphs": [
-        "အက်စတွန်ဗီလာအသင်းရဲ့ အောက်တိုဘာ ၃၁ ရက် တရားဝင်လူစာရင်းအခြေအနေအရ အာရွန်ဝန်ဘစ်ဆာကာ၊ မက်တီယိုရူဂျယ်ရီနဲ့ အမာဒူအိုနာနာတို့ဟာ ဒဏ်ရာကြောင့် ဆက်လက်အနားယူနေရပါတယ်။ အသင်းနည်းပြ အူနိုင်းအမ်မရီအနေနဲ့ ခံစစ်နဲ့ ကွင်းလယ်ပိုင်း အစားထိုးရွေးချယ်စရာတွေကို ပြန်လည်စီမံရမှာပါ။",
-        "ဝန်ဘစ်ဆာကာဟာ အောက်တိုဘာလ ဒုတိယပိုင်းမှာ ဒဏ်ရာရရှိခဲ့ပြီး ကလပ်က အစပိုင်းမှာ ရက်သတ္တပတ်သုံးပတ်မှ လေးပတ်အထိ အနားယူရနိုင်ကြောင်း ဖော်ပြခဲ့ပါတယ်။ အောက်တိုဘာ ၃၁ ရက်အထိတော့ ပြိုင်ပွဲဝင်လူစာရင်းမှာ မပါဝင်နိုင်သေးပါဘူး။",
-        "သူပြန်လည်လေ့ကျင့်နိုင်မယ့်ရက်ကို ကလပ်က နောက်ဆုံးအခြေအနေအဖြစ် အတည်မပြုရသေးတဲ့အတွက် အမြန်ဆုံးပြန်ကစားမယ်ဆိုတဲ့ ခန့်မှန်းမှုတွေကို တရားဝင်ပြန်လာချိန်အဖြစ် မဖော်ပြသင့်ပါဘူး။"
-      ],
-      "sourceName": "Aston Villa FC official",
-      "sourceUrl": "https://www.avfc.co.uk/news/2026/october/31/prematch-saturday-night-at-villa-park/",
-      "sourceDateISO": "2026-10-31",
-      "sourcePublishedAt": null,
-      "eventDate": "2026-10-31",
-      "sourceDateLabel": "၃၁ အောက်တိုဘာ ၂၀၂၆",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Aaron_Wan-Bissaka_04032026_%281%29.jpg/960px-Aaron_Wan-Bissaka_04032026_%281%29.jpg",
-      "imageFit": "cover",
-      "imageCaption": "အာရွန် ဝန်ဘစ်ဆာကာ — 2026-03-04 က ရိုက်ကူးထားသော မူရင်းဓာတ်ပုံ။ ယနေ့သတင်းဖြစ်ရပ်ကို ရိုက်ကူးထားခြင်း မဟုတ်ပါ။",
-      "imageAlt": "အာရွန် ဝန်ဘစ်ဆာကာ ၏ တကယ့်ဓာတ်ပုံ — သတင်း အက်စတွန်ဗီလာမှာ ဝန်ဘစ်ဆာကာ အပါအဝင် အဓိကကစားသမားများ ဒဏ်ရာရှိနေ",
-      "imageContext": "Archival licensed photograph of named football subject; not the specific newly reported event",
-      "photoVerification": "Verified Wikimedia Commons file page and free reuse license. Photo is archival, never represented as the news-event scene.",
-      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Aaron_Wan-Bissaka_04032026_(1).jpg",
-      "imageCredit": "Timmy96",
-      "imageLicense": "CC0 1.0",
-      "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "imageLocalCached": false,
-      "photoDateISO": "2026-03-04"
     }
   ]
 }
