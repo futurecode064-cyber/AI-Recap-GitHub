@@ -372,7 +372,7 @@ func _rpc_join(nickname: String, token: String) -> void:
 	_broadcast()
 
 func _select_role(index: int) -> void:
-	var role := ROLES[clampi(index, 0, ROLES.size() - 1)]
+	var role: String = ROLES[clampi(index, 0, ROLES.size() - 1)]
 	if multiplayer.is_server():
 		_assign_role(1, role)
 	elif multiplayer.multiplayer_peer != null:
@@ -419,7 +419,7 @@ func _start_shift() -> void:
 func _spawn_ticket() -> void:
 	if spawned >= target or tickets.size() >= mini(5, 2 + int(level / 5)):
 		return
-	var kind := TYPES[randi_range(0, TYPES.size() - 1)]
+	var kind: String = TYPES[randi_range(0, TYPES.size() - 1)]
 	ticket_seq += 1
 	tickets.append({"id":ticket_seq, "type":kind, "stage":0, "age":0.0})
 	spawned += 1
