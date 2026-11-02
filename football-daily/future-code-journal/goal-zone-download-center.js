@@ -87,14 +87,40 @@
     if(mode==="pair"){const out=[];for(let i=0;i<array.length;i+=2)out.push(array.slice(i,i+2));return out;}
     return array.map(x=>[x]);
   }
+  // Compact multi-column journal contact sheet rather than stacking 48 long
+  // articles into an unexportable 50,000px-high image. Preserve each card's
+  // original aspect ratio; choose the largest safe readable scale.
   function stack(canvases){
+    if(!canvases.length)throw Error("PNG ဆွဲရန် ပုံမရှိပါ");
     if(canvases.length===1)return canvases[0];
-    const width=Math.max(...canvases.map(c=>c.width));
-    const heights=canvases.map(c=>Math.ceil(c.height*width/c.width));
-    const gap=12,height=heights.reduce((a,b)=>a+b,0)+(canvases.length-1)*gap;
+    const gap=16,maxTileWidth=Math.max(...canvases.map(c=>c.width));
+    let best=null;
+    for(let columns=1;columns<=Math.min(canvases.length,7);columns++){
+      const rowCount=Math.ceil(canvases.length/columns);
+      const rowHeights=Array.from({length:rowCount},(_,r)=>
+        Math.max(...canvases.slice(r*columns,(r+1)*columns).map(c=>Math.ceil(c.height*maxTileWidth/c.width))));
+      const naturalWidth=columns*maxTileWidth+(columns-1)*gap;
+      const naturalHeight=rowHeights.reduce((a,b)=>a+b,0)+(rowCount-1)*gap;
+      const scale=Math.min(1,8000/naturalWidth,13500/naturalHeight,Math.sqrt(39000000/(naturalWidth*naturalHeight)));
+      if(!best||scale>best.scale+0.000001||(Math.abs(scale-best.scale)<0.000001&&naturalHeight<best.naturalHeight)){
+        best={columns,rowHeights,naturalWidth,naturalHeight,scale};
+      }
+    }
+    const {columns,rowHeights,naturalWidth,naturalHeight,scale}=best;
+    const width=Math.max(1,Math.floor(naturalWidth*scale)),height=Math.max(1,Math.floor(naturalHeight*scale));
     const result=canvasOf(width,height),ctx=result.getContext("2d");
-    ctx.fillStyle="#13100b";ctx.fillRect(0,0,width,height);
-    let y=0;canvases.forEach((c,i)=>{ctx.drawImage(c,0,y,width,heights[i]);y+=heights[i]+gap;});
+    ctx.fillStyle="#151008";ctx.fillRect(0,0,width,height);
+    let y=0;
+    for(let i=0;i<canvases.length;i++){
+      const row=Math.floor(i/columns),col=i%columns,c=canvases[i];
+      if(col===0&&row>0)y+=rowHeights[row-1]+gap;
+      const tileHeight=c.height*maxTileWidth/c.width;
+      const xx=Math.round((col*(maxTileWidth+gap))*scale),yy=Math.round(y*scale);
+      const tileW=Math.floor(maxTileWidth*scale),tileH=Math.floor(tileHeight*scale);
+      ctx.drawImage(c,xx,yy,tileW,tileH);
+      ctx.strokeStyle="#bd944a";ctx.lineWidth=Math.max(1,Math.round(scale*2));
+      ctx.strokeRect(xx,yy,tileW,tileH);
+    }
     return result;
   }
   function download(blob,filename){
