@@ -34,6 +34,9 @@ function validateReport(report){
   const short=clean(m?.previewV2Summary),long=clean(m?.dailyPreviewText);
   if(short.length<CONFIG.content.summaryMinLength||short.length>CONFIG.content.summaryMaxLength)error(who,"V2 summary length outside readable card bounds");
   if((short.match(/။/gu)||[]).length<CONFIG.content.minSentences)error(who,"V2 summary lacks cohesive complete sentences");
+  if(!short.includes(m.homeDisplay)||!short.includes(m.awayDisplay))error(who,"V2 summary must cover both Myanmar teams");
+  if(!short.endsWith(m.previewV2Selection+"ကို ရွေးချယ်ပါတယ်။"))error(who,"V2 summary must end with the approved team choice");
+  if((short.match(/။/gu)||[]).length>6)warnings.push(who+": V2 summary may be too long for a readable four-point card");
   if(short&&long.startsWith(short.slice(0,Math.min(110,short.length))))error(who,"mechanically copied opening of full preview");
   if(seenSummaries.has(short))error(who,"duplicate generic summary");
   if(short)seenSummaries.add(short);
