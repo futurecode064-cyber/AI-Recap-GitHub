@@ -23,9 +23,7 @@
  };
  const isGoalZone=location.pathname.startsWith("/future-code-journal/");
  const exportBrand=isGoalZone?"GOAL ZONE":"FUTURE CODE";
- const exportAccent=isGoalZone?"#c5a257":"#ddaa7e";
  let newsFont;
- const exportCache=new Map();
  async function loadNewsFont(){
   if(!newsFont)newsFont=(async()=>{
    const face=new FontFace("FCNewsMyanmar",'url("/assets/fonts/NotoSansMyanmar-Variable.ttf")',{weight:"100 900"});
@@ -82,17 +80,17 @@
   const masthead=frameId&&frameId!=="none"&&selectedName&&!/^(မူရင်းပုံစံ|မူရင်းပုံ)$/.test(selectedName)?selectedName:exportBrand;
   const accent=/^#[0-9a-f]{6}$/i.test(proFrame?.color||customFrame?.color||"")?
     (proFrame?.color||customFrame?.color):(isGoalZone?"#bb8e38":"#b84229");
-  const W=1200,pad=56,space=25,contentW=W-pad*2,colW=(contentW-space*2)/3;
-  const photoBox={x:pad,y:254,w:510,h:620};
-  const heroBottom=925,bodyTop=1022;
+  const W=1200,pad=62,space=30,contentW=W-pad*2,colW=(contentW-space*2)/3;
+  const photoBox={x:pad,y:255,w:520,h:640};
+  const bodyTop=1044;
   const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");
   if(!ctx)throw new Error("Canvas unavailable");
   const titleMaxW=W-pad-photoBox.x-photoBox.w-36;
-  let titleFont=49,titleLines=[];
+  let titleFont=48,titleLines=[];
   do{
    ctx.font='800 '+titleFont+'px "FCNewsMyanmar"';
    titleLines=headlineLines(ctx,s.title,titleMaxW);
-   if(titleLines.length<=6||titleFont<=35)break;
+   if(titleLines.length<=7||titleFont<=32)break;
    titleFont-=2;
   }while(true);
   ctx.font='400 22px "FCNewsMyanmar"';
@@ -103,78 +101,78 @@
    if(i!==paragraphs.length-1)entries.push({gap:true});
   });
   const unitCount=entries.reduce((n,e)=>n+(e.gap?.45:1),0);
-  const linesPerColumn=Math.max(1,Math.ceil(unitCount/3)+1);
-  const lineHeight=39,bodyHeight=Math.max(175,Math.ceil(linesPerColumn*lineHeight)+34);
-  ctx.font='400 16px Arial,sans-serif';
-  const attribution=[
-    s.imageCredit&&"Photo: "+s.imageCredit,
-    s.imageLicense,s.imageLicenseUrl,s.imageSourceUrl
-  ].filter(Boolean).join(" · ");
-  const creditLines=attribution?headlineLines(ctx,attribution,contentW):[];
-  const footerHeight=Math.max(164,112+creditLines.length*24);
-  const H=Math.min(30000,Math.max(1680,bodyTop+bodyHeight+footerHeight));
-  if(bodyTop+bodyHeight+footerHeight>30000)throw new Error("Article is too long for PNG");
+  const linesPerColumn=Math.max(7,Math.ceil(unitCount/3)+4);
+  const lineHeight=43,bodyHeight=Math.max(280,Math.ceil(linesPerColumn*lineHeight)+55);
+  const photoCredit=[s.imageCredit,s.imageLicense].filter(Boolean).join(" · ");
+  const photoLicenseUrl=typeof s.imageLicenseUrl==="string"?s.imageLicenseUrl:"";
+  const sourceName=typeof s.sourceName==="string"?s.sourceName:"";
+  const footerHeight=170;
+  const H=Math.max(1750,bodyTop+bodyHeight+footerHeight+20);
+  if(H>30000)throw new Error("Article is too long for PNG");
   canvas.width=W;canvas.height=H;
   ctx.textBaseline="alphabetic";ctx.textAlign="left";
-  ctx.fillStyle="#faf8f3";ctx.fillRect(0,0,W,H);
-  ctx.fillStyle="#162d35";ctx.fillRect(0,0,W,202);
-  ctx.fillStyle=accent;ctx.fillRect(0,0,W,14);ctx.fillRect(pad,205,contentW,7);
+  // Print-white page, ink-blue masthead, and restrained banner-theme accents.
+  ctx.fillStyle="#fcfaf5";ctx.fillRect(0,0,W,H);
+  const topGradient=ctx.createLinearGradient(0,0,W,205);
+  topGradient.addColorStop(0,"#0d2333");
+  topGradient.addColorStop(0.66,"#153747");
+  topGradient.addColorStop(1,"#0c2638");
+  ctx.fillStyle=topGradient;ctx.fillRect(0,0,W,211);
+  ctx.fillStyle=accent;ctx.fillRect(0,0,W,14);
+  ctx.fillStyle="#e9e0d0";ctx.fillRect(pad,210,contentW,2);
   ctx.fillStyle="#ffffff";
   let mastSize=82;
   do{
    ctx.font='900 '+mastSize+'px "FCNewsMyanmar",Arial,sans-serif';
-   if(ctx.measureText(masthead).width<=contentW||mastSize<=42)break;
+   if(ctx.measureText(masthead).width<=contentW||mastSize<=40)break;
    mastSize-=3;
   }while(true);
-  ctx.fillText(masthead,pad,110,contentW);
-  ctx.font='700 20px Arial,sans-serif';
-  ctx.fillStyle="#f0dcc2";ctx.fillText("FOOTBALL NEWS  |  COLOUR JOURNAL EDITION",pad,157);
-  ctx.textAlign="right";ctx.fillStyle="#e6e6e1";ctx.font='600 22px "FCNewsMyanmar"';
-  ctx.fillText((s.sourceDateLabel||s.sourceDateISO||"").split(" · ")[0],W-pad,188,560);
+  ctx.fillText(masthead,pad,112,contentW);
+  ctx.fillStyle="#f2d9b0";ctx.font='700 19px Arial,sans-serif';
+  ctx.fillText("F O O T B A L L   |   C O L O U R   J O U R N A L",pad,162,760);
+  ctx.textAlign="right";ctx.fillStyle="#faf6e9";ctx.font='600 21px "FCNewsMyanmar"';
+  ctx.fillText((s.sourceDateLabel||s.sourceDateISO||"").split(" · ")[0],W-pad,194,560);
   ctx.textAlign="left";
+  ctx.fillStyle=accent;ctx.fillRect(pad,228,88,6);
+  ctx.fillStyle="#abb3b4";ctx.font="700 15px Arial,sans-serif";
+  ctx.fillText("DAILY FOOTBALL REPORT",pad+100,235,310);
   // Printed-photo panel: retain a whole portrait with a softened background, never stretch it.
   const {x,y,w,h}=photoBox;
   ctx.save();ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();
-  ctx.fillStyle="#24343c";ctx.fillRect(x,y,w,h);
+  ctx.fillStyle="#192f3d";ctx.fillRect(x,y,w,h);
   const iw=photo.naturalWidth,ih=photo.naturalHeight;
   const cover=Math.max(w/iw,h/ih),cropW=w/cover,cropH=h/cover;
   const cropX=Math.max(0,(iw-cropW)/2),cropY=Math.max(0,(ih-cropH)*.32);
   if(s.imageFit==="contain"){
-   ctx.save();ctx.filter="blur(25px) brightness(0.65)";
-   ctx.drawImage(photo,cropX,cropY,cropW,cropH,x-22,y-22,w+44,h+44);
-   ctx.restore();
-   const fit=Math.min((w-24)/iw,(h-24)/ih);
+   // A solid image mat is cleaner than a blurred duplicate photograph.
+   const fit=Math.min((w-16)/iw,(h-16)/ih);
    const fw=iw*fit,fh=ih*fit;
    ctx.drawImage(photo,x+(w-fw)/2,y+(h-fh)/2,fw,fh);
   }else ctx.drawImage(photo,cropX,cropY,cropW,cropH,x,y,w,h);
   ctx.restore();
   ctx.fillStyle=accent;ctx.fillRect(x,y+h-7,w,7);
-  ctx.fillStyle="#687078";ctx.font='500 16px "FCNewsMyanmar"';
-  const caption=s.imageCaption||s.imageAlt||"";
-  if(caption){
-   ctx.font='500 16px "FCNewsMyanmar"';
-   const capLines=headlineLines(ctx,caption,w);
-   capLines.slice(0,2).forEach((t,i)=>ctx.fillText(t,x,894+i*24,w));
-  }
+  // Image labels/captions never appear beneath the photo in downloaded PNGs.
   const tx=x+w+32;
-  ctx.fillStyle=accent;ctx.fillRect(tx,254,12,35);
-  ctx.font='800 22px "FCNewsMyanmar"';ctx.fillStyle="#42443e";
-  ctx.fillText(s.categoryLabel||"ဘောလုံးသတင်း",tx+22,279,titleMaxW-20);
+  ctx.fillStyle=accent;ctx.fillRect(tx,254,9,38);
+  ctx.font='800 21px "FCNewsMyanmar"';ctx.fillStyle="#815b37";
+  ctx.fillText(s.categoryLabel||"ဘောလုံးသတင်း",tx+24,284,titleMaxW-24);
   ctx.fillStyle="#152d35";ctx.font='800 '+titleFont+'px "FCNewsMyanmar"';
-  let titleY=350;
+  let titleY=355;
   titleLines.forEach(line=>{ctx.fillText(line,tx,titleY,titleMaxW);titleY+=Math.round(titleFont*1.45);});
-  const leadMaxY=865;
+  const leadMaxY=884;
   if(paragraphs.length&&titleY+62<leadMaxY){
-   ctx.fillStyle=accent;ctx.fillRect(tx,titleY+6,Math.min(titleMaxW,90),5);
+   ctx.fillStyle=accent;ctx.fillRect(tx,titleY+6,Math.min(titleMaxW,100),4);
    ctx.fillStyle="#34444a";ctx.font='500 22px "FCNewsMyanmar"';
    const lead=headlineLines(ctx,paragraphs[0],titleMaxW);
    const max=Math.floor((leadMaxY-titleY-35)/39);
    lead.slice(0,max).forEach((line,i)=>ctx.fillText(line,tx,titleY+65+i*39,titleMaxW));
    if(lead.length>max&&max>0)ctx.fillText("…",tx,titleY+65+max*39);
   }
-  ctx.fillStyle=accent;ctx.fillRect(pad,965,contentW,5);
-  ctx.fillStyle="#162d35";ctx.font='800 25px "FCNewsMyanmar"';
-  ctx.fillText("သတင်းအပြည့်အစုံ",pad,1005);
+  // Quiet editorial divider and section lead-in, never a photo caption.
+  ctx.fillStyle="#d9d4ca";ctx.fillRect(pad,963,contentW,2);
+  ctx.fillStyle=accent;ctx.fillRect(pad,963,110,6);
+  ctx.fillStyle="#183346";ctx.font='800 26px "FCNewsMyanmar"';
+  ctx.fillText("သတင်းအပြည့်အစုံ",pad,1019);
   ctx.strokeStyle="#d1cfc7";ctx.lineWidth=2;
   for(let c=1;c<3;c++){
    const xLine=pad+c*colW+(c-.5)*space;
@@ -190,15 +188,23 @@
    ctx.fillText(entry.line,xx,yy,colW-10);
    row+=advance;
   }
-  const footerY=H-footerHeight+16;
-  ctx.fillStyle="#162d35";ctx.fillRect(0,footerY,W,Math.max(0,H-footerY));
-  ctx.fillStyle=accent;ctx.fillRect(0,footerY,W,6);
-  ctx.fillStyle="#f3eee5";ctx.font='700 18px Arial,sans-serif';
-  ctx.fillText(masthead+"  /  FOOTBALL NEWS",pad,footerY+38,contentW);
-  ctx.fillStyle="#d0d9d8";ctx.font='400 16px Arial,sans-serif';
-  creditLines.forEach((line,i)=>ctx.fillText(line,pad,footerY+65+i*24,contentW));
-  ctx.fillStyle="#e9caa1";ctx.font='700 18px Arial,sans-serif';
-  ctx.textAlign="right";ctx.fillText("PAGE 01",W-pad,H-25);ctx.textAlign="left";
+  // Photo licences remain attributable in a compact end-of-page colophon.
+  // Never print a caption, note, photo date, or explanatory label under the image.
+  const footerY=H-footerHeight;
+  ctx.fillStyle="#102d40";ctx.fillRect(0,footerY,W,H-footerY);
+  ctx.fillStyle=accent;ctx.fillRect(0,footerY,W,7);
+  ctx.fillStyle="#f8f3ea";ctx.font='800 20px "FCNewsMyanmar"';
+  ctx.fillText(masthead,pad,footerY+43,contentW-200);
+  ctx.textAlign="right";ctx.fillStyle="#e9c8a0";ctx.font='700 17px Arial,sans-serif';
+  ctx.fillText("FOOTBALL JOURNAL  •  01",W-pad,footerY+43);
+  ctx.textAlign="left";
+  ctx.fillStyle="#d5e0dc";ctx.font='500 16px "FCNewsMyanmar"';
+  if(sourceName)ctx.fillText("SOURCE: "+sourceName,pad,footerY+82,contentW);
+  if(photoCredit)ctx.fillText("PHOTO CREDIT: "+photoCredit,pad,footerY+110,contentW);
+  if(photoLicenseUrl){
+   ctx.fillStyle="#abc2c3";ctx.font='400 13px Arial,sans-serif';
+   ctx.fillText(photoLicenseUrl,pad,footerY+133,contentW);
+  }
   let output=canvas;
   if(customFrame)output=await window.FutureCodeCustomFrames.wrap(output,customFrame);
   if(window.FutureCodeProfessionalFrames){
@@ -273,13 +279,6 @@
     if(s.imageFit==='contain'){img.style.objectFit='contain';img.style.background='#101b1c';}
     img.onerror=()=>wrap.remove();
     wrap.append(img);card.append(wrap);
-    if(s.imageCaption)card.append(node("div",s.imageCaption,"fc-news-image-caption"));
-    if(s.imageCredit){
-     const credit=node('div',undefined,'fc-news-image-caption');
-     const source=node('a',s.imageCredit);source.href=s.imageSourceUrl;source.target='_blank';source.rel='noopener noreferrer';credit.append(source);
-     if(s.imageLicense&&s.imageLicenseUrl){const license=node('a',s.imageLicense);license.href=s.imageLicenseUrl;license.target='_blank';license.rel='license noopener noreferrer';credit.append(document.createTextNode(' · '),license);}
-     card.append(credit);
-    }
    }
    const body=node("div",undefined,"fc-news-card-body");
    const meta=node("div",undefined,"fc-news-meta");
@@ -297,6 +296,19 @@
     link.href=s.sourceUrl;link.target="_blank";link.rel="noopener noreferrer";body.append(link);
    }else if(s.sourceName){
     body.append(node("span",s.sourceName,"fc-news-source"));
+   }
+   // Credit links belong with article sources, not underneath the photograph.
+   if(s.imageCredit){
+    const credit=node("div",undefined,"fc-news-attribution");
+    const source=s.imageSourceUrl&&/^https:\/\//i.test(s.imageSourceUrl)?node("a",s.imageCredit):node("span",s.imageCredit);
+    if(source.tagName==="A"){source.href=s.imageSourceUrl;source.target="_blank";source.rel="noopener noreferrer";}
+    credit.append(document.createTextNode("Photo: "),source);
+    if(s.imageLicense){
+     if(s.imageLicenseUrl&&/^https:\/\//i.test(s.imageLicenseUrl)){
+      const licence=node("a",s.imageLicense);licence.href=s.imageLicenseUrl;licence.target="_blank";licence.rel="license noopener noreferrer";credit.append(document.createTextNode(" · "),licence);
+     }else credit.append(document.createTextNode(" · "+s.imageLicense));
+    }
+    body.append(credit);
    }
    card.append(body);fragment.append(card);
   }
