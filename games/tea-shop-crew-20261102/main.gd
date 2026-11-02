@@ -614,7 +614,7 @@ func _broadcast() -> void:
 	if multiplayer.is_server() and multiplayer.multiplayer_peer != null:
 		_rpc_snapshot.rpc(_pack_state())
 
-@rpc("authority", "call_remote", "unreliable")
+@rpc("authority", "call_remote", "reliable")
 func _rpc_snapshot(data: Dictionary) -> void:
 	if multiplayer.is_server():
 		return
