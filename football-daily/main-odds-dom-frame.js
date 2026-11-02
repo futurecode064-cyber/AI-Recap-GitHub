@@ -533,11 +533,37 @@
         if(local&&local!==img.src){img.removeAttribute("srcset");img.src=local;}
         img.loading="eager";img.decoding="sync";
       });
-      // Keep every website logo in the actual cloned DOM.
-      await Promise.race([
-        Promise.allSettled(images.map(img=>img.decode?img.decode():Promise.resolve())),
-        new Promise(resolve=>setTimeout(resolve,4000))
-      ]);
+      // All badges (both clubs + competition) must be drawable before
+      // export. Legacy code used Promise.allSettled with a four-second race,
+      // silently continuing after SVG decode errors and producing blank logos.
+      await limited(Promise.all(images.map(async img=>{
+        if(img.decode)await img.decode();
+        else if(!img.complete||!img.naturalWidth){
+          await new Promise((resolve,reject)=>{
+            img.addEventListener("load",resolve,{once:true});
+            img.addEventListener("error",reject,{once:true});
+          });
+        }
+        if(!img.naturalWidth||!img.naturalHeight)throw Error("logo not decoded: "+img.src);
+        // html2canvas cannot consistently paint all SVG assets. Pre-rasterize
+        // same-origin SVG club crests into explicit PNG data URLs at high
+        // resolution, before DOM capture. This preserves original artwork and
+        // makes the table export pixel-identical across Chromium/WebViews.
+        if(/\\.svg(?:[?#]|$)/i.test(img.currentSrc||img.src)){
+          const pixels=Math.max(144,Math.min(480,Math.max(img.naturalWidth,img.naturalHeight)));
+          const scale=pixels/Math.max(img.naturalWidth,img.naturalHeight);
+          const layer=document.createElement("canvas");
+          layer.width=Math.max(1,Math.round(img.naturalWidth*scale));
+          layer.height=Math.max(1,Math.round(img.naturalHeight*scale));
+          const context=layer.getContext("2d");
+          if(!context)throw Error("PNG logo conversion unavailable");
+          context.drawImage(img,0,0,layer.width,layer.height);
+          img.removeAttribute("srcset");
+          img.src=layer.toDataURL("image/png");
+          if(img.decode)await img.decode();
+          if(!img.naturalWidth)throw Error("converted logo is blank");
+        }
+      })),20000,"အသင်း/လိဂ်လိုဂိုများ");
       await waitFrame();
       for(const label of root.querySelectorAll(".odds-league-heading span:last-child, th.main-league-name")){
         label.setAttribute("data-fc-native-league","");
