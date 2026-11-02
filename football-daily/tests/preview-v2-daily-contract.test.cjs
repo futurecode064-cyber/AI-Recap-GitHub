@@ -25,7 +25,7 @@ test("Main and Frame Editor combine unframed cards BEFORE exactly one outer bann
  assert.match(main,/for\(const m of chunk\)canvases\.push\(await render\(m,\{color:frame\?\.color\}\)\)/);
  assert.match(main,/api\.wrap\(out,"previewsV2","pro:"\+chosen\)/);
  assert.doesNotMatch(main,/api\.wrap\(x,"previewsV2"/);
- assert.match(frame,/const combined=await stackCanvases\(canvases\)/);
+ assert.match(frame,/const combined=await stackCanvases\(canvases,4\)/);
  assert.match(frame,/p\.wrap\(combined,k,"pro:"\+f\.id\)/);
  const v2Export=frame.slice(frame.indexOf('if(k==="previewsV2")'),frame.indexOf('}else if(k==="previews"'));
  assert.doesNotMatch(v2Export,/canvases\.push\(await p\.wrap\(src,k/);
