@@ -37,7 +37,7 @@
     "fontFallback": "Noto Sans Myanmar",
     "wordBreak": "Intl.Segmenter(my,word)",
     "cardWidthPx": 1200,
-    "cardHeightPx": 850,
+    "cardHeightPx": 690,
     "gapPx": 12,
     "oddsStripOrder": [
       "home crest/name",
@@ -46,7 +46,8 @@
       "body/handicap odds",
       "away name/crest"
     ],
-    "originalAndCurrentSeparate": true
+    "originalAndCurrentSeparate": true,
+    "designStyle": "compact fixed-grid green/gold journal layout, with selected frame color, gold accents, photo left, editorial right, selection strip and one-row odds"
   },
   "export": {
     "groupSizes": [
