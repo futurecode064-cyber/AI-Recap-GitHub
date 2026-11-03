@@ -53,7 +53,7 @@
   const original=new URL(src,location.href).href;
   const u=new URL(original);
   const fromCommons=(u.hostname==="upload.wikimedia.org"||u.hostname==="thumb.wikimedia.org");
-  const preferred=fromCommons?"/api/news-image?src="+encodeURIComponent(original):original;
+  const fallback=fromCommons?"/api/news-image?src="+encodeURIComponent(original):null;
   function attempt(href){
    return new Promise((resolve,reject)=>{
     const img=new Image();img.crossOrigin="anonymous";
@@ -63,7 +63,8 @@
     img.src=href;
    });
   }
-  return attempt(preferred).catch(error=>preferred===original?Promise.reject(error):attempt(original));
+  // Wikimedia provides cross-origin canvas access; use the actual photo first, avoid a failing proxy delaying downloads.
+  return attempt(original).catch(error=>fallback?attempt(fallback):Promise.reject(error));
  }
  async function newsPngMetadata(blob,items){
   const bytes=new Uint8Array(await blob.arrayBuffer()),enc=new TextEncoder();
