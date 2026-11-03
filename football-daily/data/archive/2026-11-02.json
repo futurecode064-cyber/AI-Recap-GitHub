@@ -1,0 +1,2995 @@
+{
+  "reportDate": "2026-11-02",
+  "published": true,
+  "matchDateTimezone": "Asia/Yangon",
+  "sourcePDF": "2(1).pdf",
+  "matches": [
+    {
+      "fixtureId": "fc-20261102-01",
+      "pdfRow": 1,
+      "league": "Premier League",
+      "leagueDisplay": "အင်္ဂလန် ပရီးမီးယားလိဂ်",
+      "home": "Newcastle United",
+      "away": "Everton",
+      "homeDisplay": "နယူးကာဆယ်",
+      "awayDisplay": "အဲဗာတန်",
+      "sourceKickoff": "02:30",
+      "kickoff": "02:30",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 2:30 AM",
+      "kickoffUtc": "2026-11-02T20:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "နယူးကာဆယ်",
+        "bodyOdds": "-45",
+        "goalTotalOdds": "3+40",
+        "currentBodyOdds": "-50",
+        "currentGoalTotalOdds": "3+45",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 1
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "EFL Cup",
+          "opponent": "Everton",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        },
+        {
+          "date": "2026-10-25",
+          "competition": "Premier League",
+          "opponent": "Crystal Palace",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Premier League",
+          "opponent": "Aston Villa",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Premier League",
+          "opponent": "Coventry",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Premier League",
+          "opponent": "Hull City",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "EFL Cup",
+          "opponent": "Newcastle",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Premier League",
+          "opponent": "Arsenal",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Premier League",
+          "opponent": "Chelsea",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Premier League",
+          "opponent": "Hull City",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Premier League",
+          "opponent": "Ipswich",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        }
+      ],
+      "homeStanding": {
+        "position": 12,
+        "played": 8,
+        "wins": 3,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 12,
+        "goalsAgainst": 14,
+        "points": 11,
+        "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+      },
+      "awayStanding": {
+        "position": 14,
+        "played": 8,
+        "wins": 2,
+        "draws": 4,
+        "losses": 2,
+        "goalsFor": 8,
+        "goalsAgainst": 9,
+        "points": 10,
+        "sourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/newcastle-united.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/everton.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.1.png",
+      "homeOdds": "2.38",
+      "drawOdds": "3.74",
+      "awayOdds": "3.05",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687",
+      "dailyPreviewText": "နယူးကာဆယ်အတွက် အိမ်ကွင်းမှာ အဲဗာတန်ကို ရင်ဆိုင်ရမယ့် ဒီပွဲက ရလဒ်တည်ငြိမ်မှု ပြန်ရှာရမယ့် အခွင့်အရေးဖြစ်နေပါတယ်။ ခရစ္စတယ်ပဲလေ့စ်ကို အနိုင်ယူနိုင်ခဲ့ပေမယ့် အဲဗာတန်နဲ့ ဖလားပွဲမှာတော့ ခံစစ်က အမှားတွေကြောင့် ဂိုးတွေ ပေးခဲ့ရပြီး တစ်ပွဲနဲ့တစ်ပွဲ ခြေစွမ်းကွာခြားနေတာ တွေ့ရပါတယ်။ အဲဗာတန်ကလည်း အာဆင်နယ်၊ ချဲလ်ဆီးတို့ကို ဂိုးမသွင်းနိုင်ဘဲ ရှုံးခဲ့ပြီး လိဂ်မှာ ဂိုးရဖို့ ရုန်းကန်နေရပေမယ့် နယူးကာဆယ်ကို မကြာသေးခင်က အနိုင်ယူခဲ့တဲ့အတွက် ယုံကြည်မှုအပြည့်နဲ့ လာနိုင်ပါတယ်။ ဒါကြောင့် နယူးကာဆယ်အနေနဲ့ ရှေ့တန်းက ဖိအားပေးရုံနဲ့မရဘဲ ဘောလုံးဆုံးရှုံးပြီးချိန် နောက်တန်းက နေရာလွတ်တွေကို ပိုကာကွယ်ဖို့ လိုပါတယ်။ အဲဗာတန်ရဲ့ တန်ပြန်တိုက်စစ်ကို ထိန်းထားနိုင်ပြီး ကိုယ့်ကွင်းမှာ ဂိုးအခွင့်အရေးတွေကို ပိုမိုအသုံးချနိုင်မယ်လို့ သုံးသပ်တာကြောင့် နယူးကာဆယ်ကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "2.22",
+        "over": "1.77"
+      },
+      "previewV2Summary": "နယူးကာဆယ်ဟာ ခရစ္စတယ်ပဲလေ့စ်ကို အနိုင်ယူခဲ့ပေမယ့် မကြာသေးခင်က အဲဗာတန်နဲ့ ဖလားပွဲမှာ ခံစစ်အမှားတွေကြောင့် ဂိုးပေးခဲ့ရပြီး ခြေစွမ်းတည်ငြိမ်မှု ပြန်ရှာဖို့ လိုနေပါတယ်။ အဲဗာတန်က နယူးကာဆယ်ကို အနိုင်ယူထားတဲ့ ယုံကြည်မှုရှိသော်လည်း အာဆင်နယ်နဲ့ ချဲလ်ဆီးတို့ကို ဂိုးမသွင်းနိုင်ဘဲ ရှုံးခဲ့တာကြောင့် လိဂ်တိုက်စစ်ပိုင်းမှာ အားနည်းချက်ရှိပါတယ်။ ဒီတွေ့ဆုံမှုမှာ အဲဗာတန်ရဲ့ တန်ပြန်တိုက်စစ်ကို နယူးကာဆယ်က ထိန်းချုပ်နိုင်မလားဆိုတာ အဆုံးအဖြတ်ဖြစ်ပြီး အိမ်ကွင်းဖိအားနဲ့ ဂိုးအခွင့်အရေးဖန်တီးနိုင်မှုက အိမ်ရှင်ဘက် အလေးသာစေပါတယ်။ ဒါကြောင့် နယူးကာဆယ်ကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "နယူးကာဆယ်",
+      "previewV2Media": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Wayne_Rooney_%282%29_-_Everton_Football_Club.jpg/960px-Wayne_Rooney_%282%29_-_Everton_Football_Club.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wayne_Rooney_(2)_-_Everton_Football_Club.jpg",
+        "credit": "Everton Football Club / Wikimedia Commons",
+        "license": "CC BY 3.0",
+        "caption": "နယူးကာဆယ်–အဲဗာတန် (၂၀၁၇) ယခင်တွေ့ဆုံမှုဓာတ်ပုံ",
+        "historical": true,
+        "mediaDate": "2017-12-13",
+        "photoType": "historic-head-to-head"
+      },
+      "finalScore": "0-1",
+      "resultSourceUrl": "https://tipsterarea.com/match/newcastle-everton-premier-league-england-953687",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-02",
+      "pdfRow": 2,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "Sassuolo",
+      "away": "Fiorentina",
+      "homeDisplay": "ဆက်ဆူအိုလို",
+      "awayDisplay": "ဖီအိုရင်တီးနား",
+      "sourceKickoff": "00:00",
+      "kickoff": "00:00",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 12:00 AM",
+      "kickoffUtc": "2026-11-02T17:30:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "ဖီအိုရင်တီးနား",
+        "bodyOdds": "-30",
+        "goalTotalOdds": "3-5",
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "3-10",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 2
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-27",
+          "competition": "Serie A",
+          "opponent": "Lazio",
+          "teamGoals": 2,
+          "opponentGoals": 6,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Serie A",
+          "opponent": "Como",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        },
+        {
+          "date": "2026-10-16",
+          "competition": "Serie A",
+          "opponent": "Frosinone",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Serie A",
+          "opponent": "Milan",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        },
+        {
+          "date": "2026-09-18",
+          "competition": "Serie A",
+          "opponent": "Monza",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Serie A",
+          "opponent": "Atalanta",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        },
+        {
+          "date": "2026-10-25",
+          "competition": "Serie A",
+          "opponent": "Inter",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Serie A",
+          "opponent": "Como",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Serie A",
+          "opponent": "Genoa",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Serie A",
+          "opponent": "Napoli",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        }
+      ],
+      "homeStanding": {
+        "position": 15,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 14,
+        "goalsAgainst": 22,
+        "points": 8,
+        "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 9,
+        "wins": 1,
+        "draws": 2,
+        "losses": 6,
+        "goalsFor": 11,
+        "goalsAgainst": 21,
+        "points": 5,
+        "sourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/sassuolo.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/fiorentina.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "homeOdds": "2.94",
+      "drawOdds": "3.79",
+      "awayOdds": "2.43",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689",
+      "dailyPreviewText": "ဆက်ဆူအိုလိုနဲ့ ဖီအိုရင်တီးနားတို့ရဲ့ ဒီပွဲက အမှတ်တွေ အလွန်လိုအပ်နေတဲ့ အသင်းနှစ်သင်း ထိပ်တိုက်တွေ့ဆုံမှုဖြစ်ပါတယ်။ ဆက်ဆူအိုလိုဟာ နောက်ဆုံးငါးပွဲမှာ အနိုင်မရခဲ့သလို လာဇီယိုနဲ့ ဖရိုဆီနိုနီတို့ကို ရင်ဆိုင်ရာမှာ ဂိုးတွေ အများကြီးပေးခဲ့ရတာက နောက်တန်းစုစည်းမှု လျော့ကျနေတယ်ဆိုတာ ပြသနေပါတယ်။ ဖီအိုရင်တီးနားရဲ့ လက်ရှိရလဒ်တွေလည်း မကောင်းပါဘူး။ အင်တာ၊ ဂျီနိုအာတို့ကို ရှုံးခဲ့ပေမယ့် အတ္တလန်တာနဲ့ သရေယူနိုင်ခဲ့တဲ့ တိုက်စစ်တုံ့ပြန်ပုံကတော့ ဒီပွဲအတွက် အားတစ်ခုဖြစ်နိုင်ပါတယ်။ ဆက်ဆူအိုလိုက အိမ်ကွင်းမှာ တိုက်စစ်ဖွင့်ကစားမယ်ဆိုရင် နောက်တန်းကို ချန်ခဲ့တဲ့ နေရာလွတ်တွေက ဖီအိုရင်တီးနားအတွက် အခွင့်အရေးဖြစ်လာနိုင်ပြီး၊ ဧည့်သည်အသင်းရဲ့ ကိုယ်ပိုင်ခံစစ်မတည်ငြိမ်မှုကလည်း သတိထားစရာပါ။ နှစ်သင်းစလုံးမှာ အန္တရာယ်ရှိပေမယ့် ဆက်ဆူအိုလိုရဲ့ ဆက်တိုက်ဂိုးပေးနေရမှုကို ပိုအလေးထားပြီး ဖီအိုရင်တီးနားကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "2.41",
+        "over": "1.56"
+      },
+      "previewV2Summary": "ဆက်ဆူအိုလိုဟာ နောက်ဆုံးငါးပွဲအတွင်း အနိုင်မရခဲ့သလို လာဇီယိုနဲ့ ဖရိုဆီနိုနီတို့ကို ရင်ဆိုင်ရာမှာ ဂိုးတွေများများပေးခဲ့ရတာကြောင့် နောက်တန်းစုစည်းမှုက အဓိကစိုးရိမ်စရာ ဖြစ်နေပါတယ်။ ဖီအိုရင်တီးနားက အင်တာနဲ့ ဂျီနိုအာတို့ကို ရှုံးထားပေမယ့် အတ္တလန်တာနဲ့ပွဲမှာ တိုက်စစ်ပြန်လည်တုံ့ပြန်နိုင်ခဲ့တာက ဒီပွဲအတွက် အားတစ်ခုဖြစ်ပါတယ်။ နှစ်သင်းစလုံး ခံစစ်မတည်ငြိမ်ချိန်မှာ ဆက်ဆူအိုလိုက အိမ်ကွင်းတိုက်စစ်ဖွင့်လာလေလေ နောက်တန်းနေရာလွတ်တွေကို ဖီအိုရင်တီးနားက အသုံးချနိုင်လေလေ ဖြစ်လာနိုင်ပါတယ်။ အဲဒီအချက်ကို ပိုအလေးထားပြီး ဖီအိုရင်တီးနားကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဖီအိုရင်တီးနား",
+      "previewV2Media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/US_Sassuolo_Calcio_v_Torino_FC%2C_22_December_2018_07.jpg",
+        "secondaryUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Cristiano_Biraghi_Fiorentina.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:US_Sassuolo_Calcio_v_Torino_FC,_22_December_2018_07.jpg",
+        "secondarySourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Biraghi_Fiorentina.jpg",
+        "credit": "grazypolis / Marzlee7, via Wikimedia Commons",
+        "license": "CC BY-SA 2.0 / CC BY-SA 4.0",
+        "caption": "ဆက်ဆူအိုလိုနှင့် ဖီအိုရင်တီးနား ယခင်ကစားသမားဓာတ်ပုံများ",
+        "historical": true,
+        "mediaDate": "2018 / 2022",
+        "photoType": "historic-player-pair"
+      },
+      "finalScore": "2-4",
+      "resultSourceUrl": "https://tipsterarea.com/match/sassuolo-fiorentina-serie-a-italy-953689",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-03",
+      "pdfRow": 3,
+      "league": "Serie A",
+      "leagueDisplay": "အီတလီ စီးရီးအေ",
+      "home": "Atalanta",
+      "away": "Parma",
+      "homeDisplay": "အတ္တလန်တာ",
+      "awayDisplay": "ပါးမား",
+      "sourceKickoff": "02:15",
+      "kickoff": "02:15",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 2:15 AM",
+      "kickoffUtc": "2026-11-02T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": true,
+      "myanmarOdds": {
+        "upperTeam": "အတ္တလန်တာ",
+        "bodyOdds": "1-20",
+        "goalTotalOdds": "3+5",
+        "currentBodyOdds": "1-15",
+        "currentGoalTotalOdds": "3+5",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 3
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Serie A",
+          "opponent": "Fiorentina",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        },
+        {
+          "date": "2026-10-25",
+          "competition": "Serie A",
+          "opponent": "Frosinone",
+          "teamGoals": 4,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        },
+        {
+          "date": "2026-10-22",
+          "competition": "CL Group",
+          "opponent": "Ajax Amsterdam",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Serie A",
+          "opponent": "Milan",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "CL Group",
+          "opponent": "Pafos FC",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-28",
+          "competition": "Serie A",
+          "opponent": "Udinese",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Serie A",
+          "opponent": "Lazio",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        },
+        {
+          "date": "2026-10-19",
+          "competition": "Serie A",
+          "opponent": "Torino",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Serie A",
+          "opponent": "Inter",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Serie A",
+          "opponent": "Genoa",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 9,
+        "wins": 3,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 16,
+        "goalsAgainst": 17,
+        "points": 11,
+        "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+      },
+      "awayStanding": {
+        "position": 18,
+        "played": 9,
+        "wins": 1,
+        "draws": 2,
+        "losses": 6,
+        "goalsFor": 5,
+        "goalsAgainst": 15,
+        "points": 5,
+        "sourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/atalanta.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/parma.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ita.1.png",
+      "homeOdds": "1.56",
+      "drawOdds": "4.68",
+      "awayOdds": "6.30",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690",
+      "dailyPreviewText": "အတ္တလန်တာဟာ အမှတ်ပေးဇယားအောက်ပိုင်းက ပါးမားကို အိမ်ကွင်းမှာ လက်ခံကစားရမှာဖြစ်ပေမယ့် အနိုင်ကို လွယ်လွယ်ကူကူ ရမယ့်အခြေအနေမျိုး မဟုတ်ပါဘူး။ ဖီအိုရင်တီးနား၊ ဖရိုဆီနိုနီတို့နဲ့ သရေကျခဲ့တဲ့ပွဲတွေမှာ တိုက်စစ်က ဂိုးသွင်းနိုင်သလောက် ခံစစ်က ပြန်ပေးနေရတာကြောင့် အသင်းရဲ့ဟန်ချက်ကို ပြန်ထိန်းဖို့ လိုအပ်နေပါတယ်။ ပါးမားဘက်မှာလည်း အူဒီးနီးစ်နဲ့ ဂိုးမရှိသရေယူနိုင်ခဲ့ပြီး နောက်တန်းမှာ တင်းကျပ်အောင် ကစားနိုင်တယ်ဆိုတာ ပြသထားပေမယ့် လိဂ်ပွဲတွေမှာ ဂိုးသွင်းအားနည်းမှုက အဓိကပြဿနာပါ။ အတ္တလန်တာရဲ့ နောက်တန်းမှာ ဒဏ်ရာပြဿနာတွေရှိတာကြောင့် ပါးမားရဲ့ တန်ပြန်တိုက်စစ်ကို အလွန်အကျွံ မပေါ့ဆသင့်ပါဘူး။ သို့သော် အတ္တလန်တာက အိမ်ကွင်းမှာ ဘောလုံးကို ထိန်းချုပ်ပြီး ရှေ့တန်းအခွင့်အရေးတွေကို ပိုဖန်တီးနိုင်ဖို့ အလားအလာရှိသလို ပါးမားရဲ့ ဂိုးသွင်းအားနည်းမှုကလည်း အိမ်ရှင်ဘက်ကို အသာပေးနေပါတယ်။ ဒီပွဲမှာ အတ္တလန်တာကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [
+        "ဒီရာသီ အတ္တလန်တာရဲ့ အခက်အခဲက တိုက်စစ်အခွင့်အရေးမဖန်တီးနိုင်တာထက် တိုက်စစ်နဲ့ခံစစ်ကြား ဟန်ချက်မညီတာမှာ ပိုထင်ရှားနေပါတယ်။ ဖီအိုရင်တီးနားနဲ့ ဖရိုဆီနိုနီတို့ကို ရင်ဆိုင်ရာမှာ ကိုယ်တိုင် ဂိုးတွေသွင်းနိုင်ခဲ့သော်လည်း ပြန်ပေးခဲ့ရတဲ့ဂိုးတွေကြောင့် အနိုင်ရလဒ် မရခဲ့ပါဘူး။ ဒီလိုအခြေအနေမှာ ခံစစ်က ဟီယန်၊ ကိုဆူနူတို့လို ကစားသမားတွေ မပါနိုင်ခြင်းက အတ္တလန်တာရဲ့ နောက်တန်းစုစည်းမှုကို ပိုမိုစမ်းသပ်နေပါတယ်။ အခြားတစ်ဖက်မှာ ပါးမားက နည်းပြပြောင်းလဲမှုနောက်ပိုင်း အူဒီးနီးစ်နဲ့ သရေယူနိုင်ခဲ့ပေမယ့် ဂိုးသွင်းခြေတွေ့ဖို့ ရုန်းကန်နေရဆဲပါ။ အထူးသဖြင့် ပါးမားက ခံစစ်ကို နိမ့်နိမ့်ထားပြီး အတ္တလန်တာရဲ့ ဘောလုံးဖြန့်ဝေမှုကို ဖြတ်တောက်ဖို့ ကြိုးစားလာနိုင်တာကြောင့် အတ္တလန်တာအတွက် အစောပိုင်းမှာ အခွင့်အရေးဖန်တီးရခက်နိုင်ပါတယ်။ ဒါပေမဲ့ အတ္တလန်တာရဲ့ ကွင်းလယ်ကနေ ရှေ့တန်းသို့ ဆက်သွယ်ကစားနိုင်မှုနဲ့ အိမ်ကွင်းဖိအားဟာ ပါးမားရဲ့ အကန့်အသတ်ရှိတဲ့ တိုက်စစ်ထက် ပိုအလေးသာပါတယ်။ ပါးမားက အချိန်ကြာကြာ ဂိုးမပေးဘဲ ထိန်းထားနိုင်ရင် သရေမျှော်လင့်ချက်ရှိပေမယ့် ပွဲတစ်လျှောက် အခွင့်အရေးဖန်တီးမှုအရ အတ္တလန်တာဘက်က ပိုမိုအားကောင်းမယ်လို့ မြင်တာကြောင့် အတ္တလန်တာကို ရွေးချယ်ပါတယ်။"
+      ],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690"
+        ],
+        "note": "Last-five and standings verified 2026-11-02; no unsupported player or injury claims",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "2.40",
+        "over": "1.67"
+      },
+      "previewV2Summary": "အတ္တလန်တာဟာ ဖီအိုရင်တီးနားနဲ့ ဖရိုဆီနိုနီတို့ကို သရေကျခဲ့တဲ့ပွဲတွေမှာ တိုက်စစ်က ဂိုးသွင်းနိုင်ပေမယ့် ခံစစ်က ပြန်ပေးနေရပြီး နောက်တန်းဒဏ်ရာပြဿနာကိုလည်း သတိထားရပါတယ်။ ပါးမားက အူဒီးနီးစ်နဲ့ ဂိုးမရှိသရေယူနိုင်ခဲ့လို့ ခံစစ်ပိတ်ကစားနိုင်စွမ်းရှိသော်လည်း လိဂ်ပွဲတွေမှာ ဂိုးအဆုံးသတ်အားနည်းနေပါတယ်။ ဒီတွေ့ဆုံမှုမှာ ပါးမားရဲ့ တန်ပြန်တိုက်စစ်ကို အတ္တလန်တာက မပေါ့ဆဘဲ ထိန်းနိုင်မယ်ဆိုရင် အိမ်ကွင်းဘောလုံးပိုင်ဆိုင်မှုနဲ့ ရှေ့တန်းအခွင့်အရေးဖန်တီးမှုက ပွဲအဆုံးအဖြတ်ပေးနိုင်ပါတယ်။ တိုက်စစ်ရွေးချယ်စရာ ပိုရှိတဲ့ အတ္တလန်တာကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "အတ္တလန်တာ",
+      "finalScore": "0-3",
+      "resultSourceUrl": "https://tipsterarea.com/match/atalanta-parma-serie-a-italy-953690",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-04",
+      "pdfRow": 4,
+      "league": "La Liga",
+      "leagueDisplay": "စပိန် လာလီဂါ",
+      "home": "Deportivo La Coruna",
+      "away": "Osasuna",
+      "homeDisplay": "ကော်ရူနာ",
+      "awayDisplay": "အိုဆာဆူနာ",
+      "sourceKickoff": "02:30",
+      "kickoff": "02:30",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 2:30 AM",
+      "kickoffUtc": "2026-11-02T20:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-0",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "ကော်ရူနာ",
+        "bodyOdds": "-60",
+        "goalTotalOdds": "2-40",
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "2-40",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 4
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "competition": "Primera Division",
+          "opponent": "Atletico Madrid",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        },
+        {
+          "date": "2026-10-16",
+          "competition": "Primera Division",
+          "opponent": "Levante",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Primera Division",
+          "opponent": "Real Sociedad",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        },
+        {
+          "date": "2026-10-02",
+          "competition": "Club Friendly",
+          "opponent": "Porto",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        },
+        {
+          "date": "2026-09-25",
+          "competition": "Club Friendly",
+          "opponent": "Penafiel",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-26",
+          "competition": "Primera Division",
+          "opponent": "Sevilla",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Primera Division",
+          "opponent": "Racing Santander",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Primera Division",
+          "opponent": "Real Betis",
+          "teamGoals": 2,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Primera Division",
+          "opponent": "Rayo Vallecano",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "Primera Division",
+          "opponent": "Atletico Madrid",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        }
+      ],
+      "homeStanding": {
+        "position": 13,
+        "played": 10,
+        "wins": 2,
+        "draws": 5,
+        "losses": 3,
+        "goalsFor": 13,
+        "goalsAgainst": 13,
+        "points": 11,
+        "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+      },
+      "awayStanding": {
+        "position": 15,
+        "played": 10,
+        "wins": 3,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 10,
+        "goalsAgainst": 20,
+        "points": 11,
+        "sourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/deportivo-la-coruna.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/osasuna.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.1.png",
+      "homeOdds": "2.28",
+      "drawOdds": "3.45",
+      "awayOdds": "3.49",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688",
+      "dailyPreviewText": "ကော်ရူနာနဲ့ အိုဆာဆူနာတို့ဟာ ရမှတ်ချင်းတူနေတဲ့အခြေအနေမှာ တွေ့ဆုံကြမှာဖြစ်လို့ ဒီပွဲရဲ့ အနိုင်သုံးမှတ်က ဇယားရပ်တည်မှုအတွက် အရေးပါပါတယ်။ ကော်ရူနာက အက်သလက်တီကိုမက်ဒရစ်၊ ဆိုစီဒက်တို့ကို ရင်ဆိုင်ရာမှာ အနိုင်မရခဲ့သလို နောက်ဆုံးပွဲတွေမှာ ပွဲပြီးခါနီးအထိ တည်ငြိမ်မှုမထိန်းနိုင်တာ မြင်ရပါတယ်။ အိုဆာဆူနာဘက်မှာလည်း ဆီဗီးလားနဲ့ ဘက်တစ်တို့ကို ရှုံးထားပြီး နောက်တန်းက ဂိုးတွေ လွယ်လွယ်ပေးနေရတာ စိုးရိမ်စရာပါ။ အိုဆာဆူနာက ဘောလုံးရချိန် တိုက်စစ်ကို မြန်မြန်တင်နိုင်ပေမယ့် ကော်ရူနာရဲ့ အိမ်ကွင်းဖိအားအောက်မှာ နောက်ပြန်ဆုတ်ကစားရရင် ဘောလုံးအဆက်အသွယ် ပြတ်တောက်သွားနိုင်ပါတယ်။ ကော်ရူနာကိုယ်တိုင်လည်း တိုက်စစ်အဆုံးသတ်ရာမှာ ပိုတိကျဖို့လိုပေမယ့် အိုဆာဆူနာရဲ့ ခံစစ်အပေါက်အပြဲကို အိမ်ကွင်းမှာ အခွင့်ကောင်းယူနိုင်မယ်လို့ ယူဆတာကြောင့် ကော်ရူနာကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "1.73",
+        "over": "2.28"
+      },
+      "previewV2Summary": "ကော်ရူနာဟာ အက်သလက်တီကိုမက်ဒရစ်နဲ့ ဆိုစီဒက်တို့ကို ရင်ဆိုင်ရာမှာ အနိုင်မရခဲ့သလို ပွဲပြီးခါနီးအထိ ခြေစွမ်းတည်ငြိမ်မှု မထိန်းနိုင်တာက ပြင်ဆင်ရမယ့်အချက်ပါ။ အိုဆာဆူနာက ဆီဗီးလားနဲ့ ဘက်တစ်တို့ကို ရှုံးထားပြီး ဂိုးပေးရမှုများနေသော်လည်း ဘောလုံးရချိန်မှာ တိုက်စစ်ကို မြန်မြန်တင်နိုင်ပါတယ်။ ရမှတ်ချင်းတူနေတဲ့ ဒီတွေ့ဆုံမှုမှာ အိုဆာဆူနာရဲ့ မြန်ဆန်တဲ့တိုက်စစ်နဲ့ ကော်ရူနာရဲ့ အိမ်ကွင်းဖိအား ဘယ်ဘက်က အသာရမလဲဆိုတာ အရေးကြီးပြီး ဧည့်သည်ခံစစ်ရဲ့ နေရာချထားမှုက စမ်းသပ်ခံရဖို့ များပါတယ်။ အိမ်ကွင်းမှာ ပိုဖိအားပေးနိုင်မယ့် ကော်ရူနာကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ကော်ရူနာ",
+      "previewV2Media": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Deporosasuna.JPG/960px-Deporosasuna.JPG",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deporosasuna.JPG",
+        "credit": "LopedeAguirre9 / Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "caption": "ကော်ရူနာ–အိုဆာဆူနာ (၂၀၁၂) ယခင်တွေ့ဆုံမှုဓာတ်ပုံ",
+        "historical": true,
+        "mediaDate": "2012-08-20",
+        "photoType": "historic-head-to-head"
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/match/deportivo-la-coruna-osasuna-primera-division-spain-953688",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-05",
+      "pdfRow": 5,
+      "league": "Ligue 1",
+      "leagueDisplay": "ပြင်သစ် လီဂူး ၁",
+      "home": "Lorient",
+      "away": "Brest",
+      "homeDisplay": "လိုရီယန့်",
+      "awayDisplay": "ဘရက်စ်",
+      "sourceKickoff": "02:15",
+      "kickoff": "02:15",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 2:15 AM",
+      "kickoffUtc": "2026-11-02T19:45:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-1",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "လိုရီယန့်",
+        "bodyOdds": "-10",
+        "goalTotalOdds": "2-60",
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2-60",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 5
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "competition": "Ligue 1",
+          "opponent": "Angers",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Ligue 1",
+          "opponent": "Monaco",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Ligue 1",
+          "opponent": "Paris FC",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Ligue 1",
+          "opponent": "Le Mans",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "Ligue 1",
+          "opponent": "Toulouse",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "competition": "Ligue 1",
+          "opponent": "Nice",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Ligue 1",
+          "opponent": "Lille",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Ligue 1",
+          "opponent": "Angers",
+          "teamGoals": 5,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        },
+        {
+          "date": "2026-10-03",
+          "competition": "Club Friendly",
+          "opponent": "Monza",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Ligue 1",
+          "opponent": "Auxerre",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        }
+      ],
+      "homeStanding": {
+        "position": 10,
+        "played": 8,
+        "wins": 3,
+        "draws": 3,
+        "losses": 2,
+        "goalsFor": 7,
+        "goalsAgainst": 6,
+        "points": 12,
+        "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+      },
+      "awayStanding": {
+        "position": 14,
+        "played": 8,
+        "wins": 2,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 14,
+        "goalsAgainst": 12,
+        "points": 9,
+        "sourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/lorient.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/brest.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.1.png",
+      "homeOdds": "2.56",
+      "drawOdds": "3.39",
+      "awayOdds": "3.03",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691",
+      "dailyPreviewText": "လိုရီယန့်က ဘရက်စ်ကို လက်ခံကစားမယ့် ဒီပွဲမှာ အိမ်ကွင်းခံစစ်တည်ငြိမ်မှုက အဓိကအားသာချက်ဖြစ်နိုင်ပါတယ်။ မိုနာကိုနဲ့ ပဲရစ်အက်ဖ်စီတို့ကို ဂိုးမပေးဘဲ အနိုင်ယူထားပြီး အန်ဂျေးနဲ့လည်း ဂိုးမရှိသရေကစားနိုင်ခဲ့တာကြောင့် လိုရီယန့်ရဲ့ နောက်တန်းက အလွယ်တကူ ဖြိုခွင်းလို့မရတဲ့ အခြေအနေကို ရောက်နေပါတယ်။ ဘရက်စ်မှာတော့ အန်ဂျေးကို ဂိုးပြတ်အနိုင်ရခဲ့တဲ့ တိုက်စစ်စွမ်းအားရှိပေမယ့် နိုက်စ်ကို ရှုံးခဲ့ပြီး လိုင်လီနဲ့ သရေကျခဲ့တာက ရလဒ်တည်ငြိမ်မှုမရှိသေးတာ ပြနေပါတယ်။ ဒီပွဲရဲ့ အဓိကတိုက်ပွဲက ဘရက်စ်ရဲ့ လှုပ်ရှားမှုမြန်တဲ့ ရှေ့တန်းကို လိုရီယန့်ခံစစ်က အခွင့်အရေးနည်းနည်းပဲ ပေးအောင် ထိန်းနိုင်မလားဆိုတာပါ။ ဘရက်စ်က ပထမဂိုးရသွားရင် ပွဲအနေအထား ပြောင်းနိုင်ပေမယ့် လိုရီယန့်ရဲ့ မကြာသေးခင်က ခံစစ်စွမ်းဆောင်ရည်နဲ့ အိမ်ကွင်းအားသာချက်ကို ပိုယုံကြည်တာကြောင့် လိုရီယန့်ကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "1.83",
+        "over": "2.14"
+      },
+      "previewV2Summary": "လိုရီယန့်ဟာ မိုနာကိုနဲ့ ပဲရစ်အက်ဖ်စီတို့ကို ဂိုးမပေးဘဲ အနိုင်ယူထားပြီး အန်ဂျေးနဲ့လည်း ဂိုးမရှိသရေကစားထားတာကြောင့် လတ်တလော ခံစစ်တည်ငြိမ်မှုက ထင်ရှားနေပါတယ်။ ဘရက်စ်က အန်ဂျေးကို ဂိုးပြတ်အနိုင်ရခဲ့တဲ့ တိုက်စစ်အင်အားရှိသော်လည်း နိုက်စ်ကို ရှုံး၊ လိုင်လီနဲ့ သရေကျခဲ့တာက ရလဒ်တည်ငြိမ်မှု မရှိသေးကြောင်း ပြသနေပါတယ်။ ဒီပွဲမှာ ဘရက်စ်ရဲ့ မြန်ဆန်တဲ့ရှေ့တန်းကို လိုရီယန့်ခံစစ်က အခွင့်အရေးနည်းနည်းပဲ ရအောင် ထိန်းနိုင်မလားဆိုတာ အဓိကဖြစ်ပြီး အိမ်ရှင်ရဲ့ မကြာသေးခင်က ခံစစ်ခြေစွမ်းကို ပိုယုံကြည်ရပါတယ်။ ဒါကြောင့် လိုရီယန့်ကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "လိုရီယန့်",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://tipsterarea.com/match/lorient-brest-ligue-1-france-953691",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-06",
+      "pdfRow": 6,
+      "league": "Veikkausliiga",
+      "leagueDisplay": "ဖင်လန် လိဂ်",
+      "home": "Inter Turku",
+      "away": "Gnistan Helsinki",
+      "homeDisplay": "အင်တာတာကူ",
+      "awayDisplay": "ဂနစ္စတန်",
+      "sourceKickoff": "22:30",
+      "kickoff": "22:30",
+      "kickoffCalendarDate": "2026-11-02",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-02 10:30 PM",
+      "kickoffUtc": "2026-11-02T16:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "အင်တာတာကူ",
+        "bodyOdds": "1-45",
+        "goalTotalOdds": "3+10",
+        "currentBodyOdds": "1-55",
+        "currentGoalTotalOdds": "3=",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 6
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Champ. Group",
+          "opponent": "HJK Helsinki",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Champ. Group",
+          "opponent": "VPS Vaasa",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Champ. Group",
+          "opponent": "AC Oulu",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Champ. Group",
+          "opponent": "KuPS Kuopio",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        },
+        {
+          "date": "2026-10-07",
+          "competition": "Champ. Group",
+          "opponent": "Gnistan Helsinki",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Champ. Group",
+          "opponent": "KuPS Kuopio",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Champ. Group",
+          "opponent": "AC Oulu",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Champ. Group",
+          "opponent": "HJK Helsinki",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Champ. Group",
+          "opponent": "VPS Vaasa",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        },
+        {
+          "date": "2026-10-07",
+          "competition": "Champ. Group",
+          "opponent": "Inter Turku",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        }
+      ],
+      "homeStanding": {
+        "position": 2,
+        "played": 30,
+        "wins": 15,
+        "draws": 10,
+        "losses": 5,
+        "goalsFor": 37,
+        "goalsAgainst": 24,
+        "points": 55,
+        "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+      },
+      "awayStanding": {
+        "position": 5,
+        "played": 30,
+        "wins": 11,
+        "draws": 10,
+        "losses": 9,
+        "goalsFor": 44,
+        "goalsAgainst": 42,
+        "points": 43,
+        "sourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/inter-turku.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/gnistan.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fin.1.png",
+      "homeOdds": "1.40",
+      "drawOdds": "4.75",
+      "awayOdds": "6.90",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792",
+      "dailyPreviewText": "ဖင်လန်လိဂ် ချန်ပီယံရှစ်အုပ်စုမှာ အင်တာတာကူအတွက် ဂနစ္စတန်ကို အိမ်ကွင်းမှာ အနိုင်ရဖို့က အမှတ်ပေးထိပ်ပိုင်းကို ဆက်လက်ဖိအားပေးနိုင်မယ့် အရေးကြီးတဲ့အခွင့်အရေးပါ။ အင်တာတာကူက ဟယ်လ်ဆင်ကီကို ရှုံးခဲ့ပေမယ့် ဗာဆာနဲ့ ကူပီအက်စ်တို့ကို အနိုင်ယူနိုင်ခဲ့တာကြောင့် ခက်ခဲတဲ့ပွဲတွေကို ခံစစ်စည်းကမ်းနဲ့ ဖြတ်ကျော်နိုင်စွမ်းရှိပါတယ်။ ဂနစ္စတန်မှာတော့ နောက်ဆုံးငါးပွဲအတွင်း အနိုင်မရခဲ့ဘဲ ဟယ်လ်ဆင်ကီနဲ့ အူလူတို့ကို ရင်ဆိုင်ချိန် ဂိုးတွေပေးခဲ့ရတာက အားနည်းချက်ပါ။ သို့သော် နှစ်သင်းတွေ့ခဲ့တဲ့ နောက်ဆုံးပွဲမှာ ဂနစ္စတန်က အင်တာတာကူကို ဂိုးမပေးဘဲ ထိန်းနိုင်ခဲ့တာကြောင့် အိမ်ရှင်က တိုက်စစ်ကို စိတ်ရှည်ရှည်ဖွင့်ရပါမယ်။ အင်တာတာကူရဲ့ ပိုမိုတည်ငြိမ်တဲ့ ခံစစ်နဲ့ ဂနစ္စတန်ရဲ့ လတ်တလောရှုံးပွဲများနေမှုကို နှိုင်းယှဉ်ပြီး အင်တာတာကူကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "2.27",
+        "over": "1.59"
+      },
+      "previewV2Summary": "အင်တာတာကူဟာ ဟယ်လ်ဆင်ကီကို ရှုံးခဲ့ပေမယ့် ဗာဆာနဲ့ ကူပီအက်စ်တို့ကို အနိုင်ယူထားပြီး ခံစစ်စည်းကမ်းနဲ့ အမှတ်ပေးထိပ်ပိုင်းကို ဖိအားဆက်ပေးနိုင်ဖို့ ကြိုးစားနေပါတယ်။ ဂနစ္စတန်က နောက်ဆုံးငါးပွဲအတွင်း အနိုင်မရဘဲ ဟယ်လ်ဆင်ကီနဲ့ အူလူတို့ကို ရင်ဆိုင်ရာမှာ ဂိုးပေးခဲ့ရသော်လည်း အင်တာတာကူကို နောက်ဆုံးတွေ့ဆုံမှုမှာ ဂိုးမပေးဘဲ ထိန်းထားနိုင်ဖူးပါတယ်။ အဲဒီကြောင့် ဒီတွေ့ဆုံမှုရဲ့ အရေးကြီးဆုံးအချက်က အိမ်ရှင်က ဧည့်သည်ရဲ့ ခံစစ်ပိတ်ကစားပုံကို စိတ်ရှည်ရှည် ဖောက်ထွက်နိုင်မလားဆိုတာပါ။ လတ်တလောခံစစ်တည်ငြိမ်မှုနဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် အင်တာတာကူကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "အင်တာတာကူ",
+      "finalScore": "4-3",
+      "resultSourceUrl": "https://tipsterarea.com/match/inter-turku-gnistan-helsinki-championship-group-finland-953792",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-07",
+      "pdfRow": 7,
+      "league": "Veikkausliiga",
+      "leagueDisplay": "ဖင်လန် လိဂ်",
+      "home": "VPS Vaasa",
+      "away": "HJK Helsinki",
+      "homeDisplay": "ဗာဆာ",
+      "awayDisplay": "ဟယ်လ်ဆင်ကီ",
+      "sourceKickoff": "22:30",
+      "kickoff": "22:30",
+      "kickoffCalendarDate": "2026-11-02",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-02 10:30 PM",
+      "kickoffUtc": "2026-11-02T16:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "ဟယ်လ်ဆင်ကီ",
+        "bodyOdds": "1+40",
+        "goalTotalOdds": "3-50",
+        "currentBodyOdds": "1-80",
+        "currentGoalTotalOdds": "3-40",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 7
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-28",
+          "competition": "Champ. Group",
+          "opponent": "AC Oulu",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Champ. Group",
+          "opponent": "Inter Turku",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Champ. Group",
+          "opponent": "KuPS Kuopio",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Champ. Group",
+          "opponent": "Gnistan Helsinki",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        },
+        {
+          "date": "2026-10-08",
+          "competition": "Champ. Group",
+          "opponent": "HJK Helsinki",
+          "teamGoals": 0,
+          "opponentGoals": 6,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Champ. Group",
+          "opponent": "Inter Turku",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        },
+        {
+          "date": "2026-10-25",
+          "competition": "Champ. Group",
+          "opponent": "KuPS Kuopio",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Champ. Group",
+          "opponent": "Gnistan Helsinki",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Champ. Group",
+          "opponent": "AC Oulu",
+          "teamGoals": 4,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        },
+        {
+          "date": "2026-10-08",
+          "competition": "Champ. Group",
+          "opponent": "VPS Vaasa",
+          "teamGoals": 6,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        }
+      ],
+      "homeStanding": {
+        "position": 6,
+        "played": 30,
+        "wins": 11,
+        "draws": 7,
+        "losses": 12,
+        "goalsFor": 31,
+        "goalsAgainst": 34,
+        "points": 40,
+        "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+      },
+      "awayStanding": {
+        "position": 1,
+        "played": 30,
+        "wins": 16,
+        "draws": 7,
+        "losses": 7,
+        "goalsFor": 59,
+        "goalsAgainst": 36,
+        "points": 55,
+        "sourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/vps-vaasa.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/hjk-helsinki.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fin.1.png",
+      "homeOdds": "7.38",
+      "drawOdds": "5.25",
+      "awayOdds": "1.34",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791",
+      "dailyPreviewText": "ဗာဆာဟာ အမှတ်ပေးဇယားထိပ်က ဟယ်လ်ဆင်ကီကို လက်ခံကစားရမှာဖြစ်လို့ ခံစစ်ပိုင်း စည်းကမ်းအလွန်ကောင်းဖို့ လိုအပ်နေပါတယ်။ ဗာဆာက နောက်ဆုံးပွဲမှာ အူလူနဲ့ သရေကျပြီး အင်တာတာကူ၊ ကူပီအက်စ်တို့ကို ဆက်တိုက်ရှုံးထားတာကြောင့် တိုက်စစ်က ဂိုးရှာရခက်နေပါတယ်။ ဟယ်လ်ဆင်ကီကတော့ အင်တာတာကူနဲ့ ဂနစ္စတန်တို့ကို ဂိုးများများသွင်းနိုင်ခဲ့သလို ဗာဆာကိုလည်း အရင်တွေ့ဆုံမှုမှာ ဂိုးပြတ်အနိုင်ရထားတာကြောင့် ရှေ့တန်းယုံကြည်မှု မြင့်နေမှာပါ။ ဟယ်လ်ဆင်ကီရဲ့ တိုက်စစ်ကို ဗာဆာက နောက်တန်းအနိမ့်ကစားပြီး ထိန်းချုပ်ဖို့ ကြိုးစားနိုင်ပေမယ့် တစ်ဖက်ကို ဖိအားမပေးနိုင်ရင် ဧည့်သည်က အခွင့်အရေးတွေ ဆက်တိုက်ဖန်တီးနိုင်ပါတယ်။ အမှတ်ပေးဇယား၊ လတ်တလောဂိုးသွင်းအားနဲ့ နှစ်သင်းရဲ့ ပွဲရလဒ်အရှိန်ကို ချိန်ကြည့်ပြီး ဟယ်လ်ဆင်ကီကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "2.59",
+        "over": "1.39"
+      },
+      "previewV2Summary": "ဗာဆာဟာ အူလူနဲ့ သရေကျခဲ့ပြီး အင်တာတာကူ၊ ကူပီအက်စ်တို့ကို ဆက်တိုက်ရှုံးထားတာကြောင့် ရှေ့တန်းဂိုးရှာရခက်မှုနဲ့ ပွဲအရှိန်ထိန်းနိုင်မှုက အဓိကပြဿနာဖြစ်နေပါတယ်။ ဟယ်လ်ဆင်ကီက အင်တာတာကူနဲ့ ဂနစ္စတန်တို့ကို ဂိုးများများသွင်းခဲ့သလို ဗာဆာကိုလည်း အရင်တွေ့ဆုံမှုမှာ ဂိုးပြတ်အနိုင်ရထားတာကြောင့် တိုက်စစ်ယုံကြည်မှု ပိုမြင့်နေပါတယ်။ ဒီပွဲမှာ ဗာဆာက နောက်တန်းအနိမ့်ကစားပြီး ဧည့်သည်တိုက်စစ်ကို တားဆီးနိုင်မလားဆိုတာ အဓိကဖြစ်ပေမယ့် ကိုယ်တိုင်ဖိအားပြန်မပေးနိုင်ရင် ဟယ်လ်ဆင်ကီအတွက် အခွင့်အရေးတွေ ဆက်တိုက်ပေါ်လာနိုင်ပါတယ်။ တိုက်စစ်ခြေစွမ်းအသာစီးရှိတဲ့ ဟယ်လ်ဆင်ကီကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဟယ်လ်ဆင်ကီ",
+      "finalScore": "0-4",
+      "resultSourceUrl": "https://tipsterarea.com/match/vps-vaasa-hjk-helsinki-championship-group-finland-953791",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-08",
+      "pdfRow": 8,
+      "league": "Allsvenskan",
+      "leagueDisplay": "ဆွီဒင် အောလ်ဆဗင်စ်ကန်",
+      "home": "GAIS Goteborg",
+      "away": "AIK Stockholm",
+      "homeDisplay": "ဂိုက်စ်ဘာ့ဂ်",
+      "awayDisplay": "အေအိုင်ကေ",
+      "sourceKickoff": "00:30",
+      "kickoff": "00:30",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 12:30 AM",
+      "kickoffUtc": "2026-11-02T18:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "ဂိုက်စ်ဘာ့ဂ်",
+        "bodyOdds": "1+80",
+        "goalTotalOdds": "3+10",
+        "currentBodyOdds": "1+90",
+        "currentGoalTotalOdds": "3+30",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 8
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Allsvenskan",
+          "opponent": "Kalmar",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        },
+        {
+          "date": "2026-10-25",
+          "competition": "Allsvenskan",
+          "opponent": "IFK Goteborg",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Allsvenskan",
+          "opponent": "Orgryte",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Allsvenskan",
+          "opponent": "Sirius",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Allsvenskan",
+          "opponent": "Mjallby",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-27",
+          "competition": "Allsvenskan",
+          "opponent": "Elfsborg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Allsvenskan",
+          "opponent": "Sirius",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Allsvenskan",
+          "opponent": "IFK Goteborg",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        },
+        {
+          "date": "2026-10-10",
+          "competition": "Allsvenskan",
+          "opponent": "Brommapojkarna",
+          "teamGoals": 5,
+          "opponentGoals": 6,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Allsvenskan",
+          "opponent": "Halmstads",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        }
+      ],
+      "homeStanding": {
+        "position": 10,
+        "played": 26,
+        "wins": 9,
+        "draws": 7,
+        "losses": 10,
+        "goalsFor": 32,
+        "goalsAgainst": 26,
+        "points": 34,
+        "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+      },
+      "awayStanding": {
+        "position": 8,
+        "played": 26,
+        "wins": 10,
+        "draws": 8,
+        "losses": 8,
+        "goalsFor": 42,
+        "goalsAgainst": 45,
+        "points": 38,
+        "sourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/gais.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/aik.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
+      "homeOdds": "1.78",
+      "drawOdds": "3.92",
+      "awayOdds": "3.94",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715",
+      "dailyPreviewText": "ဆွီဒင်လိဂ်မှာ ဂိုက်စ်ဘာ့ဂ်နဲ့ အေအိုင်ကေတို့ ထိပ်တိုက်တွေ့ဆုံမှုဟာ တစ်ဖက်ရဲ့ ခံစစ်အားနည်းချက်ကို တစ်ဖက်က ဘယ်လောက် အသုံးချနိုင်မလဲဆိုတာ စိတ်ဝင်စားစရာပါ။ ဂိုက်စ်ဘာ့ဂ်က ကယ်မာနဲ့ မျယ်လ်ဘီကို အနိုင်ယူခဲ့ပေမယ့် အော်ဂရီတေး၊ ဆီရီးယပ်စ်တို့ကို ရှုံးခဲ့တာကြောင့် တိုက်စစ်အခွင့်အရေးတွေကို အမြဲတမ်းအဆုံးသတ်နိုင်တာ မဟုတ်သေးပါဘူး။ အေအိုင်ကေဘက်မှာတော့ အဲလ်ဖ်စ်ဘော့ဂ်၊ ဂိုတန်ဘော့ဂ်တို့နဲ့ သရေကျခဲ့ပေမယ့် ဘရုန်းမာပိုဂျ်ကာနာကို ဂိုးများများပေးခဲ့ရတာက နောက်တန်းအတွက် သတိပေးချက်ပါ။ ဧည့်သည်အသင်းရဲ့ ဂိုးသွင်းအားက ဂိုက်စ်ဘာ့ဂ်ထက် မနည်းပေမယ့် ဂိုးပြန်ပေးရမှုလည်း ပိုများနေတာကြောင့် အိမ်ရှင်က ဖိအားပေးနိုင်မယ့် နေရာလွတ်တွေ ရှိပါတယ်။ အပြန်အလှန်တိုက်စစ်ဖြစ်နိုင်တဲ့ ဒီပွဲမှာ အိမ်ကွင်းစည်းချက်ကို ပိုအားကိုးပြီး ဂိုက်စ်ဘာ့ဂ်ကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "2.25",
+        "over": "1.60"
+      },
+      "previewV2Summary": "ဂိုက်စ်ဘာ့ဂ်ဟာ ကယ်မာနဲ့ မျယ်လ်ဘီကို အနိုင်ယူထားပေမယ့် အော်ဂရီတေး၊ ဆီရီးယပ်စ်တို့ကို ရှုံးခဲ့တာကြောင့် တိုက်စစ်အခွင့်အရေးအဆုံးသတ်မှုမှာ တည်ငြိမ်မှုလိုနေပါတယ်။ အေအိုင်ကေက အဲလ်ဖ်စ်ဘော့ဂ်နဲ့ ဂိုတန်ဘော့ဂ်တို့ကို သရေကျခဲ့ပြီး ဂိုးသွင်းနိုင်စွမ်းရှိပေမယ့် ဘရုန်းမာပိုဂျ်ကာနာနဲ့ပွဲမှာ ဂိုးများများပေးခဲ့ရတာက ခံစစ်အားနည်းချက်ကို ဖော်ပြနေပါတယ်။ နှစ်သင်းထိပ်တိုက်တွေ့ချိန်မှာ အေအိုင်ကေရဲ့ ရှေ့တန်းကို ထိန်းရင်း ဧည့်သည်နောက်တန်းက နေရာလွတ်တွေကို ဂိုက်စ်ဘာ့ဂ်က ဘယ်လောက်အသုံးချနိုင်မလဲဆိုတာ အရေးကြီးပါတယ်။ အိမ်ကွင်းစည်းချက်နဲ့ ဖိအားပေးနိုင်မှုကို ပိုအားကိုးပြီး ဂိုက်စ်ဘာ့ဂ်ကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဂိုက်စ်ဘာ့ဂ်",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/match/gais-goteborg-aik-stockholm-allsvenskan-sweden-953715",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-09",
+      "pdfRow": 9,
+      "league": "Allsvenskan",
+      "leagueDisplay": "ဆွီဒင် အောလ်ဆဗင်စ်ကန်",
+      "home": "Mjallby",
+      "away": "Kalmar",
+      "homeDisplay": "မျယ်လ်ဘီ",
+      "awayDisplay": "ကယ်မာ",
+      "sourceKickoff": "00:30",
+      "kickoff": "00:30",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 12:30 AM",
+      "kickoffUtc": "2026-11-02T18:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-1",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "မျယ်လ်ဘီ",
+        "bodyOdds": "-20",
+        "goalTotalOdds": "3+100",
+        "currentBodyOdds": "-20",
+        "currentGoalTotalOdds": "3+100",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 9
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Allsvenskan",
+          "opponent": "Orgryte",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        },
+        {
+          "date": "2026-10-25",
+          "competition": "Allsvenskan",
+          "opponent": "Hammarby",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        },
+        {
+          "date": "2026-10-22",
+          "competition": "CL Group",
+          "opponent": "Iberia 1999",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Allsvenskan",
+          "opponent": "Vasteras",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "CL Group",
+          "opponent": "Inter Escaldes",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Allsvenskan",
+          "opponent": "GAIS Goteborg",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Allsvenskan",
+          "opponent": "Brommapojkarna",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        },
+        {
+          "date": "2026-10-19",
+          "competition": "Allsvenskan",
+          "opponent": "Degerfors",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Allsvenskan",
+          "opponent": "Malmo",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        },
+        {
+          "date": "2026-10-06",
+          "competition": "Club Friendly",
+          "opponent": "Norrkoping",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        }
+      ],
+      "homeStanding": {
+        "position": 12,
+        "played": 26,
+        "wins": 6,
+        "draws": 8,
+        "losses": 12,
+        "goalsFor": 30,
+        "goalsAgainst": 43,
+        "points": 26,
+        "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+      },
+      "awayStanding": {
+        "position": 13,
+        "played": 26,
+        "wins": 6,
+        "draws": 4,
+        "losses": 16,
+        "goalsFor": 23,
+        "goalsAgainst": 42,
+        "points": 22,
+        "sourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/mjallby.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/kalmar.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
+      "homeOdds": "2.38",
+      "drawOdds": "3.35",
+      "awayOdds": "2.84",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716",
+      "dailyPreviewText": "မျယ်လ်ဘီနဲ့ ကယ်မာတို့က အမှတ်ပေးဇယားအောက်ပိုင်းက ဖိအားကို ခံနေရတဲ့အသင်းတွေဖြစ်လို့ တစ်မှတ်ထက် သုံးမှတ်ရဖို့ ပိုအရေးကြီးတဲ့ပွဲပါ။ မျယ်လ်ဘီက ဟမ်မာဘီကို ရှုံးခဲ့ပေမယ့် အော်ဂရီတေးကို အနိုင်ယူပြီး တိုက်စစ်ယုံကြည်မှု ပြန်ရလာနိုင်သလို ကယ်မာကတော့ ဂိုက်စ်ဘာ့ဂ်၊ ဘရုန်းမာပိုဂျ်ကာနာတို့နဲ့ နောက်ဆုံးပွဲတွေမှာ ရှုံးခဲ့တာကြောင့် တိုက်စစ်ရော ခံစစ်ပါ ဖိအားရှိနေပါတယ်။ ကယ်မာရဲ့ ပြဿနာက ဂိုးရဖို့ ရုန်းကန်နေရသလို ခံစစ်ကို ဖိအားပေးခံရတဲ့အခါ ချို့ယွင်းချက်တွေ ပေါ်လာနေတာပါ။ မျယ်လ်ဘီကလည်း အမှားမကင်းပေမယ့် အိမ်ကွင်းမှာ ဘောလုံးကို ပိုထိန်းပြီး ပွဲအရှိန်သတ်မှတ်နိုင်မယ့် အခွင့်အရေးရှိပါတယ်။ နှစ်သင်းစလုံး အလွန်ယုံကြည်စိတ်ချရတဲ့ ခြေစွမ်းမဟုတ်သော်လည်း ကယ်မာရဲ့ လတ်တလော ရလဒ်ပိုဆိုးနေမှုကြောင့် မျယ်လ်ဘီကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "1.87",
+        "over": "1.87"
+      },
+      "previewV2Summary": "မျယ်လ်ဘီဟာ ဟမ်မာဘီကို ရှုံးခဲ့ပေမယ့် အော်ဂရီတေးကို အနိုင်ယူနိုင်ခဲ့တာကြောင့် အမှတ်ပေးဇယားအောက်ပိုင်းက ဖိအားအောက်မှာ တိုက်စစ်ယုံကြည်မှု ပြန်တည်ဆောက်ဖို့ အခွင့်အရေးရှိနေပါတယ်။ ကယ်မာက ဂိုက်စ်ဘာ့ဂ်နဲ့ ဘရုန်းမာပိုဂျ်ကာနာတို့ကို ရှုံးခဲ့ပြီး ဂိုးသွင်းရခက်သလို ဖိအားခံရချိန်မှာ နောက်တန်းအမှားတွေ ပေါ်လာနေပါတယ်။ ဒီတွေ့ဆုံမှုမှာ နှစ်သင်းစလုံး အနိုင်သုံးမှတ်လိုအပ်နေပေမယ့် မျယ်လ်ဘီက အိမ်ကွင်းမှာ ဘောလုံးပိုထိန်းပြီး ကယ်မာရဲ့ အားနည်းနေတဲ့ခံစစ်ကို စောစောဖိအားပေးနိုင်မလားဆိုတာ ပွဲအဆုံးအဖြတ်ဖြစ်နိုင်ပါတယ်။ လတ်တလောပြန်လည်တုံ့ပြန်နိုင်မှုအရ မျယ်လ်ဘီကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "မျယ်လ်ဘီ",
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://tipsterarea.com/match/mjallby-kalmar-allsvenskan-sweden-953716",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-10",
+      "pdfRow": 10,
+      "league": "Danish Superliga",
+      "leagueDisplay": "ဒိန်းမတ် စူပါလိဂ်",
+      "home": "Sonderjyske",
+      "away": "FC Copenhagen",
+      "homeDisplay": "ဆွန်ဒါဂျစ်",
+      "awayDisplay": "ကိုပင်ဟေဂင်",
+      "sourceKickoff": "00:30",
+      "kickoff": "00:30",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 12:30 AM",
+      "kickoffUtc": "2026-11-02T18:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-2",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "ကိုပင်ဟေဂင်",
+        "bodyOdds": "1-50",
+        "goalTotalOdds": "3-40",
+        "currentBodyOdds": "1-30",
+        "currentGoalTotalOdds": "3-5",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 10
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-25",
+          "competition": "Superliga",
+          "opponent": "Horsens",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Superliga",
+          "opponent": "Silkeborg",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Superliga",
+          "opponent": "AGF Aarhus",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Superliga",
+          "opponent": "Randers FC",
+          "teamGoals": 4,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        },
+        {
+          "date": "2026-09-16",
+          "competition": "Danish Cup",
+          "opponent": "AB Gladsaxe",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Danish Cup",
+          "opponent": "Aarhus Fremad",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        },
+        {
+          "date": "2026-10-26",
+          "competition": "Superliga",
+          "opponent": "Odense",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        },
+        {
+          "date": "2026-10-22",
+          "competition": "CL Group",
+          "opponent": "Crvena zvezda Belgrade",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Superliga",
+          "opponent": "AGF Aarhus",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "CL Group",
+          "opponent": "SC Braga",
+          "teamGoals": 3,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        }
+      ],
+      "homeStanding": {
+        "position": 12,
+        "played": 12,
+        "wins": 2,
+        "draws": 2,
+        "losses": 8,
+        "goalsFor": 17,
+        "goalsAgainst": 29,
+        "points": 8,
+        "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+      },
+      "awayStanding": {
+        "position": 2,
+        "played": 12,
+        "wins": 8,
+        "draws": 2,
+        "losses": 2,
+        "goalsFor": 26,
+        "goalsAgainst": 12,
+        "points": 26,
+        "sourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/sonderjyske.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/fc-copenhagen.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/den.1.png",
+      "homeOdds": "6.51",
+      "drawOdds": "4.60",
+      "awayOdds": "1.43",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717",
+      "dailyPreviewText": "ဆွန်ဒါဂျစ်အတွက် အမှတ်ပေးထိပ်ပိုင်းက ကိုပင်ဟေဂင်ကို လက်ခံကစားရမယ့် ဒီပွဲဟာ လွယ်ကူမှာမဟုတ်ပါဘူး။ ဆွန်ဒါဂျစ်က ဆီလ်ကေဘော့ဂ်ကို ဂိုးပြတ်အနိုင်ရနိုင်ခဲ့သော်လည်း ဟော်ဆန်နဲ့ အာဟုစ်တို့ကို ရင်ဆိုင်ရာမှာ ဂိုးတွေများများပေးခဲ့ရတာကြောင့် နောက်တန်းရဲ့ ဖိအားခံနိုင်ရည်က မေးခွန်းထုတ်စရာဖြစ်နေပါတယ်။ ကိုပင်ဟေဂင်ကတော့ နောက်ဆုံးပွဲတွေမှာ အာဟုစ်နဲ့ သရေကျခဲ့ပေမယ့် ဘရာဂါကို ဂိုးမပေးဘဲ အနိုင်ယူနိုင်ခဲ့သလို တိုက်စစ်အခွင့်အရေးဖန်တီးရာမှာ စည်းချက်ရှိနေပါတယ်။ ဆွန်ဒါဂျစ်က အိမ်ကွင်းမှာ တိုက်စစ်မြှင့်လာရင် ကိုပင်ဟေဂင်အတွက် တန်ပြန်တိုက်စစ်သွားဖို့ နေရာလွတ်တွေ ပိုထွက်လာနိုင်ပါတယ်။ အိမ်ရှင်က ကစားပုံမပြေလည်တဲ့အချိန် ရုတ်တရက် ဂိုးသွင်းနိုင်စွမ်းရှိသော်လည်း နှစ်သင်းရဲ့ ခံစစ်တည်ငြိမ်မှုနဲ့ လိဂ်အရှိန်ကို ချိန်ဆပြီး ကိုပင်ဟေဂင်ကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "2.46",
+        "over": "1.43"
+      },
+      "previewV2Summary": "ဆွန်ဒါဂျစ်ဟာ ဆီလ်ကေဘော့ဂ်ကို ဂိုးပြတ်အနိုင်ယူခဲ့ပေမယ့် ဟော်ဆန်နဲ့ အာဟုစ်တို့ကို ရင်ဆိုင်ရာမှာ ဂိုးများများပေးခဲ့ရတာကြောင့် နောက်တန်းဖိအားခံနိုင်ရည်က အဓိကအားနည်းချက်ဖြစ်နေပါတယ်။ ကိုပင်ဟေဂင်က အာဟုစ်နဲ့ သရေကျခဲ့သော်လည်း ဘရာဂါကို ဂိုးမပေးဘဲ အနိုင်ယူခဲ့ပြီး ဘောလုံးလက်ဝယ်ရှိချိန် တိုက်စစ်အခွင့်အရေးဖန်တီးမှု ပိုစနစ်ကျနေပါတယ်။ ဆွန်ဒါဂျစ်က အိမ်ကွင်းမှာ တိုက်စစ်ဖွင့်လာမယ်ဆိုရင် နောက်တန်းချန်ခဲ့တဲ့ နေရာလွတ်တွေကို ကိုပင်ဟေဂင်က တန်ပြန်တိုက်စစ်နဲ့ အသုံးချနိုင်ခြင်းက ဒီပွဲရဲ့ အဓိကကွာခြားချက်ဖြစ်ပါတယ်။ ခံစစ်ဟန်ချက်နဲ့ အခွင့်အရေးဖန်တီးမှု ပိုကောင်းတဲ့ ကိုပင်ဟေဂင်ကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ကိုပင်ဟေဂင်",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://tipsterarea.com/match/sonderjyske-fc-copenhagen-superliga-denmark-953717",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-11",
+      "pdfRow": 11,
+      "league": "Primeira Liga",
+      "leagueDisplay": "ပေါ်တူဂီ ပရီးမီးယားလိဂ်",
+      "home": "Benfica",
+      "away": "Alverca",
+      "homeDisplay": "ဘင်ဖီကာ",
+      "awayDisplay": "အဲဗာကာ",
+      "sourceKickoff": "02:45",
+      "kickoff": "02:45",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 2:45 AM",
+      "kickoffUtc": "2026-11-02T20:15:00.000Z",
+      "status": "finished",
+      "internetPrediction": "3-0",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": true,
+      "myanmarOdds": {
+        "upperTeam": "ဘင်ဖီကာ",
+        "bodyOdds": "2-35",
+        "goalTotalOdds": "3-90",
+        "currentBodyOdds": "2-55",
+        "currentGoalTotalOdds": "4+95",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 11
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "League Cup",
+          "opponent": "Gil Vicente",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        },
+        {
+          "date": "2026-10-26",
+          "competition": "Primeira Liga",
+          "opponent": "Santa Clara",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        },
+        {
+          "date": "2026-10-22",
+          "competition": "EL Group",
+          "opponent": "Omonia Nicosia",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        },
+        {
+          "date": "2026-10-15",
+          "competition": "EL Group",
+          "opponent": "Celtic",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Primeira Liga",
+          "opponent": "Vitoria Guimaraes",
+          "teamGoals": 2,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "competition": "Primeira Liga",
+          "opponent": "Arouca",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Portuguese Cup",
+          "opponent": "Tondela",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Primeira Liga",
+          "opponent": "Famalicao",
+          "teamGoals": 4,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Primeira Liga",
+          "opponent": "Rio Ave",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "Primeira Liga",
+          "opponent": "Nacional",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        }
+      ],
+      "homeStanding": {
+        "position": 2,
+        "played": 9,
+        "wins": 7,
+        "draws": 1,
+        "losses": 1,
+        "goalsFor": 26,
+        "goalsAgainst": 8,
+        "points": 22,
+        "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+      },
+      "awayStanding": {
+        "position": 10,
+        "played": 9,
+        "wins": 3,
+        "draws": 2,
+        "losses": 4,
+        "goalsFor": 13,
+        "goalsAgainst": 13,
+        "points": 11,
+        "sourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/benfica.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/alverca.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/por.1.png",
+      "homeOdds": "1.18",
+      "drawOdds": "8.15",
+      "awayOdds": "16.50",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698",
+      "dailyPreviewText": "ပေါ်တူဂီလိဂ် အမှတ်ပေးထိပ်ပိုင်းကို ဆက်လက်လိုက်လံဖိအားပေးနေတဲ့ ဘင်ဖီကာဟာ အဲဗာကာကို အိမ်ကွင်းမှာ ရင်ဆိုင်ရမှာဖြစ်ပြီး လတ်တလော အရှိန်ကောင်းနေမှုကို ဆက်ထိန်းနိုင်ဖို့ မျှော်လင့်ထားပါတယ်။ ဘင်ဖီကာက နောက်ဆုံးငါးပွဲဆက် အနိုင်ရထားပြီး ဂိုးသွင်းအားလည်း ထင်ရှားနေသလို နည်းပြ မာကိုဆေးလ်ဗားက ဘောလုံးရှိချိန်၊ မရှိချိန် နှစ်မျိုးစလုံးမှာ ကစားဟန်ကို ထိန်းသိမ်းဖို့ အလေးထားနေပါတယ်။ အဲဗာကာက အာရိုကာကို ရှုံးခဲ့ပေမယ့် အစောပိုင်း လူလျော့ကစားခဲ့ရတဲ့ အခြေအနေရှိခဲ့တာကြောင့် အဲဒီရလဒ်တစ်ခုတည်းကိုကြည့်ပြီး အလွယ်တကူ လျှော့မတွက်သင့်ပါဘူး။ သို့သော် ဘင်ဖီကာရဲ့ ပိုမိုပြည့်စုံတဲ့ ကွင်းလယ်ထိန်းချုပ်မှုနဲ့ အိမ်ကွင်းတိုက်စစ်အရှိန်ကို ပွဲတစ်လျှောက် ထိန်းချုပ်ဖို့ အဲဗာကာအတွက် ခက်ခဲနိုင်ပါတယ်။ ဧည့်သည်အသင်းက စည်းကမ်းရှိတဲ့ ခံစစ်နဲ့ အချိန်ဆွဲထိန်းနိုင်သော်လည်း အခွင့်အရေးဖန်တီးမှုကွာဟချက်ကြောင့် ဘင်ဖီကာကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [
+        "ဘင်ဖီကာအတွက် အဲဗာကာကို အိမ်ကွင်းမှာ တွေ့ရမယ့်ပွဲက သုံးမှတ်ရဖို့သာမက အမှတ်ပေးထိပ်ဆုံးကို ဆက်လက်ဖိအားပေးနိုင်ဖို့လည်း အရေးကြီးနေပါတယ်။ နောက်ဆုံးငါးပွဲဆက် အနိုင်ရရှိထားတဲ့ ဘင်ဖီကာဟာ ရှေ့တန်းဂိုးသွင်းအားကောင်းနေပေမယ့် နည်းပြ မာကိုဆေးလ်ဗားက ပွဲကြိုမှာ ကွင်းလယ်ကနေ ဖိအားပေးချိန်နဲ့ ဘောလုံးမရှိချိန် အသင်းရဲ့ ပုံစံမပျက်ရေးကို အထူးအလေးပေး ပြောထားပါတယ်။ ဒါက အဲဗာကာနဲ့ပွဲအတွက် တကယ်သက်ဆိုင်ပါတယ်။ အဲဗာကာဟာ အာရိုကာနဲ့ပွဲမှာ စောစောလူလျော့သွားခဲ့ပေမယ့် စည်းကမ်းတကျ ပြန်ခံကစားနိုင်ခဲ့ပြီး အဲဒီလို သည်းခံနိုင်စွမ်းကို ဒီပွဲမှာလည်း အသုံးချလာနိုင်ပါတယ်။ သို့ပေမယ့် အဲဗာကာရဲ့ ခံစစ်မှာ ပွဲပယ်ကစားသမားတွေရှိနေတာက အိမ်ရှင်ရဲ့ တိုက်စစ်လှုပ်ရှားမှုတွေကို ထိန်းချုပ်ရာမှာ အခက်အခဲဖြစ်စေနိုင်ပါတယ်။ ဘင်ဖီကာဘက်မှာ လတ်တလောခြေစွမ်းကောင်းနေတဲ့ လူကာဘာကီယိုနဲ့ ရာဖာတို့လို ကစားသမားတွေရဲ့ မတူညီတဲ့ တိုက်စစ်လှုပ်ရှားမှုတွေက အဲဗာကာခံစစ်ကို ရှေ့တန်းတစ်နေရာတည်းမှာပဲ အာရုံမစိုက်နိုင်အောင် ဖိအားပေးလာနိုင်ပါတယ်။ အဲဗာကာက ပွဲအဖွင့်ပိုင်းကို ဂိုးမပေးဘဲ ကျော်ဖြတ်နိုင်ရင် ရလဒ်ကို နီးကပ်အောင် ထိန်းထားနိုင်သော်လည်း ဘင်ဖီကာရဲ့ လတ်တလောခြေစွမ်း၊ အိမ်ကွင်းထိန်းချုပ်မှုနဲ့ တိုက်စစ်ရွေးချယ်စရာများမှုတို့က ပိုမိုခိုင်မာနေတဲ့အတွက် ဘင်ဖီကာကို ရွေးချယ်ပါတယ်။"
+      ],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698"
+        ],
+        "note": "Last-five and standings verified 2026-11-02; no unsupported player or injury claims",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "2.95",
+        "over": "1.39"
+      },
+      "previewV2Summary": "ဘင်ဖီကာဟာ နောက်ဆုံးငါးပွဲဆက် အနိုင်ရထားပြီး ဂိုးသွင်းအားကောင်းသလို အိမ်ကွင်းမှာ ကွင်းလယ်ထိန်းချုပ်မှုနဲ့ တိုက်စစ်ဖိအားကို ပွဲတစ်လျှောက် ထိန်းသိမ်းနိုင်ဖို့ အခြေအနေကောင်းနေပါတယ်။ အဲဗာကာက အာရိုကာကို ရှုံးခဲ့ပေမယ့် အစောပိုင်းမှာ လူလျော့ကစားခဲ့ရတာရှိခဲ့လို့ အဲဒီရှုံးပွဲတစ်ခုတည်းနဲ့ သူတို့ရဲ့ ခံစစ်စွမ်းရည်ကို အပြည့်အဝမဆုံးဖြတ်သင့်ပါဘူး။ ဒီတွေ့ဆုံမှုမှာ အဲဗာကာက နောက်တန်းကို စုစည်းပြီး ပွဲအရှိန်လျှော့နိုင်မလားဆိုတာ အဓိကဖြစ်ပေမယ့် ဘင်ဖီကာရဲ့ ကွင်းလယ်ကနေ တိုက်စစ်အခွင့်အရေးဆက်တိုက်ဖန်တီးနိုင်မှုက ပွဲကို ပိုဦးဆောင်နိုင်စေပါတယ်။ တိုက်စစ်အရှိန်နဲ့ အိမ်ကွင်းအားသာချက်ကို အခြေခံပြီး ဘင်ဖီကာကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဘင်ဖီကာ",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://tipsterarea.com/match/benfica-alverca-primeira-liga-portugal-953698",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-12",
+      "pdfRow": 12,
+      "league": "Primeira Liga",
+      "leagueDisplay": "ပေါ်တူဂီ ပရီးမီးယားလိဂ်",
+      "home": "Gil Vicente",
+      "away": "Vitoria Guimaraes",
+      "homeDisplay": "ဂီလ်ဗစ်ဆန်တီ",
+      "awayDisplay": "ဂီမာရက်စ်",
+      "sourceKickoff": "02:45",
+      "kickoff": "02:45",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 2:45 AM",
+      "kickoffUtc": "2026-11-02T20:15:00.000Z",
+      "status": "finished",
+      "internetPrediction": "0-0",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "ဂီမာရက်စ်",
+        "bodyOdds": "-15",
+        "goalTotalOdds": "2-45",
+        "currentBodyOdds": "-15",
+        "currentGoalTotalOdds": "2-45",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 12
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "League Cup",
+          "opponent": "Benfica",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Primeira Liga",
+          "opponent": "Porto",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        },
+        {
+          "date": "2026-10-19",
+          "competition": "Primeira Liga",
+          "opponent": "SC Braga",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        },
+        {
+          "date": "2026-10-09",
+          "competition": "Primeira Liga",
+          "opponent": "Moreirense",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        },
+        {
+          "date": "2026-09-19",
+          "competition": "Primeira Liga",
+          "opponent": "Maritimo",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-23",
+          "competition": "Primeira Liga",
+          "opponent": "Maritimo",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Primeira Liga",
+          "opponent": "Benfica",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        },
+        {
+          "date": "2026-09-20",
+          "competition": "Primeira Liga",
+          "opponent": "Moreirense",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        },
+        {
+          "date": "2026-09-12",
+          "competition": "Primeira Liga",
+          "opponent": "Academico de Viseu",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        },
+        {
+          "date": "2026-09-06",
+          "competition": "Primeira Liga",
+          "opponent": "Casa Pia",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        }
+      ],
+      "homeStanding": {
+        "position": 8,
+        "played": 9,
+        "wins": 4,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 8,
+        "goalsAgainst": 7,
+        "points": 14,
+        "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+      },
+      "awayStanding": {
+        "position": 13,
+        "played": 9,
+        "wins": 2,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 10,
+        "goalsAgainst": 10,
+        "points": 8,
+        "sourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/gil-vicente.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/vitoria-guimaraes.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/por.1.png",
+      "homeOdds": "2.97",
+      "drawOdds": "3.26",
+      "awayOdds": "2.58",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699",
+      "dailyPreviewText": "ဂီလ်ဗစ်ဆန်တီနဲ့ ဂီမာရက်စ်တို့ရဲ့ပွဲမှာ အမှတ်ပေးဇယားအဆင့်ကိုပဲ ကြည့်ပြီး ဆုံးဖြတ်လို့မရပါဘူး။ ဂီလ်ဗစ်ဆန်တီက ဘင်ဖီကာနဲ့ ပေါ်တိုတို့ကို ဆက်တိုက်ရှုံးထားပေမယ့် ဘရာဂါနဲ့ မိုရေးရင်ဆေးကို အနိုင်ယူနိုင်ခဲ့တာကြောင့် အိမ်ကွင်းမှာ အားကောင်းတဲ့အသင်းတွေကို ခံနိုင်ရည်ရှိပါတယ်။ ဂီမာရက်စ်ကလည်း နောက်ဆုံးပွဲမှာ မာရီတီမိုကို ဂိုးပြတ်အနိုင်ယူနိုင်ခဲ့ပေမယ့် အရင်ပွဲတွေမှာ ဂိုးရှာရခက်တာရှိနေပါတယ်။ ဒီနှစ်သင်းအတွက် ကွင်းလယ်မှာ ဘောလုံးလုယူမှုနဲ့ အခွင့်အရေးနည်းတဲ့ပွဲမှာ ဂိုးရဖို့ တိကျမှုက အဓိကကျမယ်လို့ မြင်ပါတယ်။ ဂီလ်ဗစ်ဆန်တီက အိမ်ကွင်းကို အခွင့်ကောင်းယူနိုင်ပေမယ့် ဂီမာရက်စ်ရဲ့ နောက်ဆုံးပွဲက တိုက်စစ်ယုံကြည်မှု ပြန်တက်လာတဲ့ပုံကို ပိုအလေးထားပြီး ဂီမာရက်စ်ကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "1.70",
+        "over": "2.25"
+      },
+      "previewV2Summary": "ဂီလ်ဗစ်ဆန်တီဟာ ဘင်ဖီကာနဲ့ ပေါ်တိုတို့ကို ရှုံးထားပေမယ့် ဘရာဂါနဲ့ မိုရေးရင်ဆေးတို့ကို အနိုင်ယူနိုင်ခဲ့တာကြောင့် အင်အားကောင်းတဲ့အသင်းတွေကို ရင်ဆိုင်ရာမှာလည်း ပြန်လည်တုံ့ပြန်နိုင်စွမ်းရှိပါတယ်။ ဂီမာရက်စ်က မာရီတီမိုကို ဂိုးပြတ်အနိုင်ယူခဲ့ပေမယ့် အရင်ပွဲတွေမှာ ဂိုးရှာရခက်ခဲ့တာကြောင့် နောက်ဆုံးပွဲရဲ့ တိုက်စစ်အရှိန်ကို ဆက်ထိန်းနိုင်မလားဆိုတာ စောင့်ကြည့်ရပါမယ်။ ဒီတွေ့ဆုံမှုမှာ ကွင်းလယ်ဘောလုံးလုယူမှုနဲ့ အခွင့်အရေးနည်းတဲ့အချိန် ဂိုးအဆုံးသတ်တိကျမှုက အရေးကြီးလာပြီး ဧည့်သည်ရဲ့ နောက်ဆုံးပွဲက ပြန်တက်လာတဲ့ ခြေစွမ်းက အနည်းငယ်ပိုအားကောင်းပါတယ်။ ဒါကြောင့် ဂီမာရက်စ်ကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဂီမာရက်စ်",
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://tipsterarea.com/match/gil-vicente-vitoria-guimaraes-primeira-liga-portugal-953699",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-13",
+      "pdfRow": 13,
+      "league": "La Liga 2",
+      "leagueDisplay": "စပိန် လာလီဂါ ၂",
+      "home": "Tenerife",
+      "away": "FC Andorra",
+      "homeDisplay": "တင်နီရိုက်ဖ်",
+      "awayDisplay": "အန်ဒိုရာ",
+      "sourceKickoff": "19:30",
+      "kickoff": "19:30",
+      "kickoffCalendarDate": "2026-11-02",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-02 7:30 PM",
+      "kickoffUtc": "2026-11-02T13:00:00.000Z",
+      "status": "scheduled",
+      "internetPrediction": "1-0",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "တင်နီရိုက်ဖ်",
+        "bodyOdds": "-45",
+        "goalTotalOdds": "2-40",
+        "currentBodyOdds": "-45",
+        "currentGoalTotalOdds": "2-45",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 13
+      },
+      "homeLastFive": [],
+      "awayLastFive": [],
+      "homeStanding": {
+        "position": 12,
+        "played": 11,
+        "wins": 3,
+        "draws": 5,
+        "losses": 3,
+        "goalsFor": 13,
+        "goalsAgainst": 15,
+        "points": 14,
+        "sourceUrl": "https://www.laliga.com/en-US/match/temporada-2026-2027-laliga-hypermotion-cd-tenerife-fc-andorra-12"
+      },
+      "awayStanding": {
+        "position": 20,
+        "played": 11,
+        "wins": 3,
+        "draws": 1,
+        "losses": 7,
+        "goalsFor": 15,
+        "goalsAgainst": 20,
+        "points": 10,
+        "sourceUrl": "https://www.laliga.com/en-US/match/temporada-2026-2027-laliga-hypermotion-cd-tenerife-fc-andorra-12"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/tenerife.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/fc-andorra.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
+      "oddsVerifiedDate": "",
+      "oddsSourceUrl": "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo",
+      "oddsProvider": "Unavailable",
+      "standingsSourceUrl": "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo",
+      "dailyPreviewText": "တင်နီရိုက်ဖ်နဲ့ အန်ဒိုရာတို့ရဲ့ပွဲဟာ မိုးသည်းထန်မှုကြောင့် မူလသတ်မှတ်ထားတဲ့ရက်ကနေ နိုဝင်ဘာ ၂ ရက်ကို ရွှေ့ပြောင်းထားရပြီး အိမ်ရှင်အတွက် ပွဲပြင်ဆင်ချိန်နဲ့ စိတ်ပိုင်းဆိုင်ရာ တည်ငြိမ်မှုက အထူးအရေးပါလာပါတယ်။ တင်နီရိုက်ဖ်က လိဂ်ပွဲ ၁၁ ပွဲမှာ ၁၄ မှတ်ရထားပြီး အန်ဒိုရာက ၁၀ မှတ်သာ ရရှိထားတာကြောင့် ရလဒ်တည်ငြိမ်မှုအရ အိမ်ရှင်က အနည်းငယ်ပိုကောင်းပါတယ်။ ဒါပေမဲ့ တင်နီရိုက်ဖ်ကိုယ်တိုင် သရေပွဲများနေသလို အန်ဒိုရာကလည်း ဂိုးရဖို့ အခွင့်အရေးဖန်တီးနိုင်တဲ့အသင်းဖြစ်လို့ အလွယ်အနိုင်ရမယ့်ပွဲလို့ မယူဆသင့်ပါဘူး။ မိုးလေဝသကြောင့် အချိန်ပြောင်းခဲ့ရတဲ့ အခြေအနေမှာ ပွဲအစပိုင်းကို စည်းကမ်းရှိရှိ ထိန်းချုပ်ပြီး အိမ်ကွင်းအားသာချက်ကို အသုံးချနိုင်မယ့် တင်နီရိုက်ဖ်ကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://www.clubdeportivotenerife.es/noticias/aplazado-el-cd-tenerife-fc-andorra-de-este-domingo",
+          "https://www.clubdeportivotenerife.es/noticias/jugamos-este-lunes",
+          "https://www.laliga.com/en-US/match/temporada-2026-2027-laliga-hypermotion-cd-tenerife-fc-andorra-12",
+          "https://www.clubdeportivotenerife.es/noticias/jugamos-este-lunes"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": null,
+      "previewV2Summary": "တင်နီရိုက်ဖ်ဟာ လိဂ် ၁၁ ပွဲမှာ ၁၄ မှတ်ရထားပြီး သရေပွဲများနေသော်လည်း ရလဒ်တည်ငြိမ်မှုအရ အိမ်ကွင်းမှာ အနည်းငယ် အသာရနေပါတယ်။ အန်ဒိုရာက ၁၀ မှတ်သာ ရထားပေမယ့် တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်တဲ့အတွက် အိမ်ရှင်က အလွယ်တကူ အနိုင်ရမယ်လို့ မယူဆသင့်ပါဘူး။ ဒီပွဲဟာ မိုးသည်းထန်မှုကြောင့် နိုဝင်ဘာ ၂ ရက်ကို ရွှေ့ပြောင်းထားရတာဖြစ်လို့ ပြင်ဆင်ချိန်နဲ့ ပွဲအစပိုင်း စိတ်ပိုင်းဆိုင်ရာတည်ငြိမ်မှုက အဓိကအဆုံးအဖြတ်ဖြစ်နိုင်ပြီး ကိုယ့်ကွင်းမှာ ပွဲအရှိန်ကို စည်းကမ်းရှိရှိ ထိန်းနိုင်မှု ပိုအရေးပါပါတယ်။ အိမ်ကွင်းအသာစီးနဲ့ ရမှတ်ပိုကောင်းမှုကြောင့် တင်နီရိုက်ဖ်ကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "တင်နီရိုက်ဖ်",
+      "resultVerificationStatus": "not published as FT: explicit final score/status not confirmed"
+    },
+    {
+      "fixtureId": "fc-20261102-14",
+      "pdfRow": 14,
+      "league": "La Liga 2",
+      "leagueDisplay": "စပိန် လာလီဂါ ၂",
+      "home": "Real Oviedo",
+      "away": "Las Palmas",
+      "homeDisplay": "အိုဗီဒို",
+      "awayDisplay": "လက်စ်ပါမား",
+      "sourceKickoff": "21:45",
+      "kickoff": "21:45",
+      "kickoffCalendarDate": "2026-11-02",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-02 9:45 PM",
+      "kickoffUtc": "2026-11-02T15:15:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-0",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "အိုဗီဒို",
+        "bodyOdds": "1+55",
+        "goalTotalOdds": "2-90",
+        "currentBodyOdds": "1+50",
+        "currentGoalTotalOdds": "2-95",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 14
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Copa del Rey",
+          "opponent": "Numancia",
+          "teamGoals": 3,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Segunda Division",
+          "opponent": "Almeria",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Segunda Division",
+          "opponent": "Ceuta",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Segunda Division",
+          "opponent": "Eibar",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        },
+        {
+          "date": "2026-10-02",
+          "competition": "Segunda Division",
+          "opponent": "Eldense",
+          "teamGoals": 1,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-27",
+          "competition": "Copa del Rey",
+          "opponent": "RSD Alcala",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        },
+        {
+          "date": "2026-10-24",
+          "competition": "Segunda Division",
+          "opponent": "Real Sociedad B",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Segunda Division",
+          "opponent": "Castellon",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Segunda Division",
+          "opponent": "Mallorca",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        },
+        {
+          "date": "2026-10-04",
+          "competition": "Segunda Division",
+          "opponent": "Valladolid",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        }
+      ],
+      "homeStanding": {
+        "position": 9,
+        "played": 11,
+        "wins": 5,
+        "draws": 3,
+        "losses": 3,
+        "goalsFor": 15,
+        "goalsAgainst": 12,
+        "points": 18,
+        "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+      },
+      "awayStanding": {
+        "position": 14,
+        "played": 11,
+        "wins": 4,
+        "draws": 2,
+        "losses": 5,
+        "goalsFor": 14,
+        "goalsAgainst": 19,
+        "points": 14,
+        "sourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/real-oviedo.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/las-palmas.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
+      "homeOdds": "1.76",
+      "drawOdds": "3.86",
+      "awayOdds": "4.64",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703",
+      "dailyPreviewText": "အိုဗီဒိုက လက်စ်ပါမားကို လက်ခံကစားမယ့်ပွဲမှာ အိမ်ကွင်းခြေစွမ်းအပေါ် ယုံကြည်ချက်ရှိနိုင်ပါတယ်။ စီယူတာနဲ့ အိုင်ဘာတို့ကို အနိုင်ယူနိုင်ခဲ့ပြီး အယ်လ်မီးရီးယားနဲ့လည်း ဂိုးအပြန်အလှန် သရေကစားနိုင်ခဲ့တာကြောင့် အိုဗီဒိုရဲ့ ရှေ့တန်းက အခွင့်အရေးဖန်တီးတတ်လာပါတယ်။ လက်စ်ပါမားက ဆိုစီဒက်ဘီကို အနိုင်ရခဲ့ပေမယ့် ကာစတီလွန်နဲ့ မာယော့ကာတို့ကို ရှုံးခဲ့တဲ့ပွဲတွေမှာ နောက်တန်းက ဂိုးပေးရမှုများခဲ့တာက ဒီပွဲအတွက် စိုးရိမ်စရာဖြစ်ပါတယ်။ အိုဗီဒိုအနေနဲ့ ဘောလုံးကို ခပ်မြန်မြန် တင်ပြီး လက်စ်ပါမားနောက်တန်း နေရာချထားမှုကို ချိုးဖောက်နိုင်ရင် အခွင့်အရေး ပိုရလာနိုင်ပါတယ်။ လက်စ်ပါမားမှာလည်း တိုက်စစ်တုံ့ပြန်နိုင်မှုရှိပေမယ့် အမှတ်ပေးဇယားအရ ပိုမိုတည်ငြိမ်နေသလို အိမ်ကွင်းမှာ အဆုံးသတ်စွမ်းရည်ကောင်းလာတဲ့ အိုဗီဒိုကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "1.93",
+        "over": "1.91"
+      },
+      "previewV2Summary": "အိုဗီဒိုဟာ စီယူတာနဲ့ အိုင်ဘာတို့ကို အနိုင်ယူထားပြီး အယ်လ်မီးရီးယားနဲ့လည်း ဂိုးအပြန်အလှန်သရေကစားနိုင်ခဲ့တာကြောင့် ရှေ့တန်းအခွင့်အရေးဖန်တီးမှု ပိုတိုးတက်လာပါတယ်။ လက်စ်ပါမားက ဆိုစီဒက်ဘီကို အနိုင်ရထားပေမယ့် ကာစတီလွန်နဲ့ မာယော့ကာတို့ကို ရှုံးခဲ့တဲ့ပွဲတွေမှာ နောက်တန်းက ဂိုးများများပေးခဲ့ရတာက အဓိကစိုးရိမ်စရာပါ။ ဒီတွေ့ဆုံမှုမှာ အိုဗီဒိုက အိမ်ကွင်းကနေ ဘောလုံးကို မြန်မြန်တင်ပြီး ဧည့်သည်နောက်တန်းရဲ့ နေရာချထားမှုကို ဖောက်ထွက်နိုင်မလားဆိုတာ အရေးကြီးသလို လက်စ်ပါမားရဲ့ တန်ပြန်တိုက်စစ်ကိုလည်း သတိထားရပါမယ်။ တိုက်စစ်အခွင့်အရေးဖန်တီးမှုနဲ့ အိမ်ကွင်းစည်းချက်ကို ပိုယုံကြည်ပြီး အိုဗီဒိုကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "အိုဗီဒို",
+      "finalScore": "2-3",
+      "resultSourceUrl": "https://tipsterarea.com/match/real-oviedo-las-palmas-segunda-division-spain-953703",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-15",
+      "pdfRow": 15,
+      "league": "La Liga 2",
+      "leagueDisplay": "စပိန် လာလီဂါ ၂",
+      "home": "Real Valladolid",
+      "away": "Leganes",
+      "homeDisplay": "ဗယ်လာဒိုလစ်",
+      "awayDisplay": "လီဂန်နက်စ်",
+      "sourceKickoff": "00:00",
+      "kickoff": "00:00",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 12:00 AM",
+      "kickoffUtc": "2026-11-02T17:30:00.000Z",
+      "status": "finished",
+      "internetPrediction": "1-0",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "ဗယ်လာဒိုလစ်",
+        "bodyOdds": "-75",
+        "goalTotalOdds": "2-70",
+        "currentBodyOdds": "-80",
+        "currentGoalTotalOdds": "2-60",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 15
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Copa del Rey",
+          "opponent": "Covadonga",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        },
+        {
+          "date": "2026-10-23",
+          "competition": "Segunda Division",
+          "opponent": "Granada CF",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Segunda Division",
+          "opponent": "Eldense",
+          "teamGoals": 2,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        },
+        {
+          "date": "2026-10-12",
+          "competition": "Segunda Division",
+          "opponent": "Albacete",
+          "teamGoals": 5,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        },
+        {
+          "date": "2026-10-04",
+          "competition": "Segunda Division",
+          "opponent": "Las Palmas",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-24",
+          "competition": "Segunda Division",
+          "opponent": "Mallorca",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        },
+        {
+          "date": "2026-10-16",
+          "competition": "Segunda Division",
+          "opponent": "Cordoba",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Segunda Division",
+          "opponent": "Almeria",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        },
+        {
+          "date": "2026-10-03",
+          "competition": "Segunda Division",
+          "opponent": "Cadiz",
+          "teamGoals": 0,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        },
+        {
+          "date": "2026-09-28",
+          "competition": "Segunda Division",
+          "opponent": "Castellon",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        }
+      ],
+      "homeStanding": {
+        "position": 16,
+        "played": 11,
+        "wins": 3,
+        "draws": 3,
+        "losses": 5,
+        "goalsFor": 16,
+        "goalsAgainst": 16,
+        "points": 12,
+        "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+      },
+      "awayStanding": {
+        "position": 17,
+        "played": 11,
+        "wins": 3,
+        "draws": 3,
+        "losses": 5,
+        "goalsFor": 7,
+        "goalsAgainst": 16,
+        "points": 12,
+        "sourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/real-valladolid.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/leganes.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
+      "homeOdds": "2.00",
+      "drawOdds": "3.70",
+      "awayOdds": "3.68",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704",
+      "dailyPreviewText": "ဗယ်လာဒိုလစ်နဲ့ လီဂန်နက်စ်တို့က ရမှတ်တူနေကြပေမယ့် လတ်တလောခြေစွမ်းအရ မတူညီတဲ့လမ်းကြောင်းပေါ်မှာ ရှိနေပါတယ်။ ဗယ်လာဒိုလစ်က ဂရာနာဒါ၊ အယ်လ်ဒန်ဆေးတို့ကို ရှုံးခဲ့သော်လည်း အယ်လ်ဘာဆီတေးကို ဂိုးပြတ်အနိုင်ယူနိုင်ခဲ့သလို ဖလားပွဲမှာလည်း အနိုင်ရခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်စွမ်းရည်က မပျောက်သေးပါဘူး။ လီဂန်နက်စ်ကတော့ နောက်ဆုံးငါးပွဲအတွင်း အနိုင်မရခဲ့ဘဲ အယ်လ်မီးရီးယား၊ ကာဒစ်တို့နဲ့ပွဲတွေမှာ ဂိုးမသွင်းနိုင်ဘဲ ရှုံးခဲ့တာက ရှေ့တန်းပြဿနာကို ရှင်းရှင်းလင်းလင်းပြနေပါတယ်။ ဗယ်လာဒိုလစ်က ကိုယ့်ခံစစ်အမှားကို လျှော့နိုင်ရင် လီဂန်နက်စ်အပေါ် ပွဲအရှိန်ထိန်းနိုင်မယ်လို့ မြင်ပါတယ်။ နှစ်သင်းစလုံး နောက်တန်းက အပြစ်ကင်းတာမဟုတ်ပေမယ့် ဂိုးဖန်တီးနိုင်မှုကွာဟချက်ကို အဓိကထားပြီး ဗယ်လာဒိုလစ်ကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "1.86",
+        "over": "1.98"
+      },
+      "previewV2Summary": "ဗယ်လာဒိုလစ်ဟာ ဂရာနာဒါနဲ့ အယ်လ်ဒန်ဆေးတို့ကို ရှုံးခဲ့ပေမယ့် အယ်လ်ဘာဆီတေးကို ဂိုးပြတ်အနိုင်ယူထားသလို ဖလားပွဲမှာလည်း အနိုင်ရခဲ့တာကြောင့် တိုက်စစ်အဆုံးသတ်စွမ်းရည် ရှိနေဆဲဖြစ်ပါတယ်။ လီဂန်နက်စ်က နောက်ဆုံးငါးပွဲအတွင်း အနိုင်မရခဲ့ဘဲ အယ်လ်မီးရီးယားနဲ့ ကာဒစ်တို့ကို ဂိုးမသွင်းနိုင်ဘဲ ရှုံးထားတာကြောင့် ရှေ့တန်းဖန်တီးမှုနဲ့ အဆုံးသတ်မှုမှာ အားနည်းနေပါတယ်။ ရမှတ်ချင်းတူနေတဲ့ ဒီတွေ့ဆုံမှုမှာ ဗယ်လာဒိုလစ်က ကိုယ့်ခံစစ်အမှားကို လျှော့ချနိုင်ရင် ဂိုးရှာရခက်နေတဲ့ လီဂန်နက်စ်ကို ပွဲအရှိန်နဲ့ အခွင့်အရေးဖန်တီးမှုမှာ အသာယူနိုင်ပါတယ်။ တိုက်စစ်ပိုင်းကွာဟချက်ကို အခြေခံပြီး ဗယ်လာဒိုလစ်ကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "ဗယ်လာဒိုလစ်",
+      "previewV2Media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Real_Valladolid_-_CD_Legan%C3%A9s_2018-12-01_%2817%29.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Real_Valladolid_-_CD_Legan%C3%A9s_2018-12-01_(17).jpg",
+        "credit": "Real Valladolid / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "caption": "ဗယ်လာဒိုလစ်–လီဂန်နက်စ် (၂၀၁၈) ယခင်တွေ့ဆုံမှုဓာတ်ပုံ",
+        "historical": true,
+        "mediaDate": "2018-12-01",
+        "photoType": "historic-head-to-head"
+      },
+      "finalScore": "4-3",
+      "resultSourceUrl": "https://tipsterarea.com/match/valladolid-leganes-segunda-division-spain-953704",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    },
+    {
+      "fixtureId": "fc-20261102-16",
+      "pdfRow": 16,
+      "league": "La Liga 2",
+      "leagueDisplay": "စပိန် လာလီဂါ ၂",
+      "home": "Mallorca",
+      "away": "Cadiz",
+      "homeDisplay": "မာယော့ကာ",
+      "awayDisplay": "ကာဒစ်",
+      "sourceKickoff": "02:30",
+      "kickoff": "02:30",
+      "kickoffCalendarDate": "2026-11-03",
+      "nightEditorialDate": "2026-11-02",
+      "kickoffYangon": "2026-11-03 2:30 AM",
+      "kickoffUtc": "2026-11-02T20:00:00.000Z",
+      "status": "finished",
+      "internetPrediction": "2-0",
+      "sourcePredictionType": "Owner PDF last-column forecast, not independent VIP or final result",
+      "specialChoice": false,
+      "myanmarOdds": {
+        "upperTeam": "မာယော့ကာ",
+        "bodyOdds": "1-5",
+        "goalTotalOdds": "2-100",
+        "currentBodyOdds": "1-10",
+        "currentGoalTotalOdds": "2-95",
+        "currentPriceSourcePdf": "2 စျေး.pdf",
+        "currentPricePdfRow": 16
+      },
+      "homeLastFive": [
+        {
+          "date": "2026-10-24",
+          "competition": "Segunda Division",
+          "opponent": "Leganes",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        },
+        {
+          "date": "2026-10-17",
+          "competition": "Segunda Division",
+          "opponent": "Eibar",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Segunda Division",
+          "opponent": "Las Palmas",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        },
+        {
+          "date": "2026-10-04",
+          "competition": "Segunda Division",
+          "opponent": "Girona",
+          "teamGoals": 0,
+          "opponentGoals": 0,
+          "venueSide": "away",
+          "result": "D",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        },
+        {
+          "date": "2026-09-27",
+          "competition": "Segunda Division",
+          "opponent": "Almeria",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-29",
+          "competition": "Copa del Rey",
+          "opponent": "Xerez",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        },
+        {
+          "date": "2026-10-25",
+          "competition": "Segunda Division",
+          "opponent": "Ceuta",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        },
+        {
+          "date": "2026-10-18",
+          "competition": "Segunda Division",
+          "opponent": "Granada CF",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        },
+        {
+          "date": "2026-10-11",
+          "competition": "Segunda Division",
+          "opponent": "Sporting Gijon",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        },
+        {
+          "date": "2026-10-03",
+          "competition": "Segunda Division",
+          "opponent": "Leganes",
+          "teamGoals": 4,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        }
+      ],
+      "homeStanding": {
+        "position": 8,
+        "played": 11,
+        "wins": 5,
+        "draws": 4,
+        "losses": 2,
+        "goalsFor": 13,
+        "goalsAgainst": 6,
+        "points": 19,
+        "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+      },
+      "awayStanding": {
+        "position": 19,
+        "played": 11,
+        "wins": 2,
+        "draws": 4,
+        "losses": 5,
+        "goalsFor": 14,
+        "goalsAgainst": 14,
+        "points": 10,
+        "sourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+      },
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/mallorca.svg",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/cadiz.svg",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
+      "homeOdds": "1.51",
+      "drawOdds": "4.28",
+      "awayOdds": "6.91",
+      "oddsVerifiedDate": "2026-11-02",
+      "oddsSourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705",
+      "oddsProvider": "TipsterArea 1xbet 1X2 quote · 2026-11-02",
+      "standingsSourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705",
+      "dailyPreviewText": "မာယော့ကာနဲ့ ကာဒစ်တို့ရဲ့ပွဲမှာ အိမ်ရှင်ရဲ့ ခံစစ်တည်ငြိမ်မှုက အထူးအလေးထားရမယ့်အချက်ပါ။ မာယော့ကာက နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာရှုံးထားပြီး လက်စ်ပါမားကို အနိုင်ယူနိုင်ခဲ့သလို ဂျီရိုနာ၊ အိုင်ဘာတို့ကို ရင်ဆိုင်ရာမှာလည်း ဂိုးလွယ်လွယ်မပေးခဲ့ပါဘူး။ ကာဒစ်က ဆီယူတာနဲ့ ဟေရက်စ်တို့ကို အနိုင်ယူထားလို့ တိုက်စစ်ယုံကြည်မှုရှိလာနိုင်ပေမယ့် ဂရာနာဒါနဲ့ စပို့တင်းဂီဟွန်တို့ကို ဂိုးမသွင်းနိုင်ဘဲ ရှုံးခဲ့တာက အဆင့်မြင့်ခံစစ်ကို ဖြတ်ကျော်ဖို့ ခက်ခဲနိုင်ကြောင်း ပြသနေပါတယ်။ မာယော့ကာက ပွဲအရှိန်ကို ထိန်းချုပ်ပြီး နောက်တန်းတည်ငြိမ်မှုကို ဆက်လက်ထိန်းနိုင်ရင် ကာဒစ်ရဲ့ ပြန်လည်တုံ့ပြန်မှုကို ကန့်သတ်နိုင်ပါတယ်။ အမှတ်ပေးဇယားနဲ့ ဂိုးပေးရမှုကွာဟချက်ကို နှိုင်းယှဉ်ပြီး မာယော့ကာကို ရွေးချယ်ပါတယ်။",
+      "specialAnalysisParagraphs": [],
+      "previewJournalist": {
+        "status": "owner_prompt_professional_editorial_20261102",
+        "researchSources": [
+          "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705"
+        ],
+        "note": "Generated from verified last-five/1X2; player injuries not independently verified",
+        "sourceEditorialPath": "data/editorial/2026-11-02/journalist-previews.json"
+      },
+      "goalMarket25": {
+        "under": "1.97",
+        "over": "1.87"
+      },
+      "previewV2Summary": "မာယော့ကာဟာ နောက်ဆုံးငါးပွဲအတွင်း တစ်ပွဲသာရှုံးထားပြီး လက်စ်ပါမားကို အနိုင်ယူခဲ့သလို ဂျီရိုနာ၊ အိုင်ဘာတို့ကို ရင်ဆိုင်ရာမှာလည်း ဂိုးလွယ်လွယ်မပေးတဲ့ ခံစစ်တည်ငြိမ်မှုရှိပါတယ်။ ကာဒစ်က ဆီယူတာနဲ့ ဟေရက်စ်တို့ကို အနိုင်ယူထားလို့ တိုက်စစ်ယုံကြည်မှုရှိသော်လည်း ဂရာနာဒါနဲ့ စပို့တင်းဂီဟွန်တို့ကို ဂိုးမသွင်းနိုင်ဘဲ ရှုံးခဲ့တာက ခံစစ်ကောင်းတဲ့အသင်းကို ရင်ဆိုင်ရင် ဂိုးရှာရခက်နိုင်ကြောင်း ပြသနေပါတယ်။ ဒီတွေ့ဆုံမှုမှာ မာယော့ကာက ပွဲအရှိန်ကို ထိန်းပြီး ကာဒစ်ရဲ့ တန်ပြန်တိုက်စစ်ကို ကန့်သတ်နိုင်မလားဆိုတာ အဓိကဖြစ်ပြီး လတ်တလောဂိုးပေးရမှုနည်းတဲ့ အိမ်ရှင်ခံစစ်က ပိုအားသာပါတယ်။ ခံစစ်တည်ငြိမ်မှုနဲ့ အိမ်ကွင်းအားသာချက်ကြောင့် မာယော့ကာကို ရွေးချယ်ပါတယ်။",
+      "previewV2EditorialStatus": "reviewed 2026-11-02; editorial condensed from same-date approved full preview; owner four-point format",
+      "previewV2EditorialDate": "2026-11-02",
+      "previewV2SourcePreviewDate": "2026-11-02",
+      "previewV2FormatVersion": "2.1",
+      "previewV2Selection": "မာယော့ကာ",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/match/mallorca-cadiz-segunda-division-spain-953705",
+      "resultVerifiedDate": "2026-11-03",
+      "resultVerificationMethod": "Completed previous-night match source supplies final aggregate plus both first-half and second-half result breakdowns; crosschecked daily result listing"
+    }
+  ],
+  "updateStatus": "NOV 2 MORNING VERIFIED 16 ORIGINAL QUOTES, dated 1X2 for 15, lastfive 15, independent VIP 11, current blank until separate owner PDF; crest high-res partial, V2 photo pending; professionally rewritten 16 previews and two premium choices 2026-11-02",
+  "researchVerifiedDate": "2026-11-02",
+  "sourceManifest": {
+    "sourcePDF": "2(1).pdf",
+    "sourceRows": 16,
+    "confirmedOriginalOddsRows": 16,
+    "source1x2Rows": 15,
+    "completeFiveMatchLists": 30,
+    "clubCrestUrls": 32,
+    "hdClubCrests": 32,
+    "datedVipForecasts": 11,
+    "vipUnavailableExplicit": 5,
+    "previousNightFinished": 14,
+    "currentPriceStatus": "not received / all current blank",
+    "ownerEditorial": "original journalist-style 16 previews independently drafted and now published",
+    "newsStatus": "awaiting dated photo/news verification",
+    "locallyCachedClubCrests": 32,
+    "clubCrestSource": "JoseArroyave/football-logos authentic SVG identifiers, 2026-11-02",
+    "editorialDraftPath": "data/editorial/2026-11-02/journalist-previews.json",
+    "premiumSpecialChoices": 2,
+    "previewV2EditorialCount": 16,
+    "editorialVerifiedDay": "2026-11-02",
+    "currentPriceSourcePdf": "2 စျေး.pdf",
+    "currentPriceMatchedRows": 16
+  }
+}

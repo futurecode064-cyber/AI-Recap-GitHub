@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-03",
+  "status": "CANDIDATE_STRUCTURAL_PASS_WITH_UNAVAILABLE_SOURCE_GATES",
+  "baseCommit": "82816f242e05c2a3d11324f80798cde64cf80383",
+  "sourceMainHead": "572138a0410488bd71e190ee8529fa6f33b7787d",
+  "runtime": "existing static Pages JSON; FC_FOOTBALL_ENGINE.enabled=false",
+  "counts": {
+    "pdfPages": 1,
+    "pdfRows": 20,
+    "eligiblePreviews": 20,
+    "previewV2": 20,
+    "specialChoices": 2,
+    "lastFiveTeams": 40,
+    "verified1X2": 20,
+    "vipIndependentScores": 20,
+    "clubCrests": 40,
+    "news": 10,
+    "newsOriginalIllustrations": 10,
+    "verifiedYesterdayFT": 15,
+    "yesterdayNoFinalScore": 1
+  },
+  "unavailable": [
+    "20 licensed match-relevant Preview V2 photographs: media source access failed; current production renderer has text-only composition",
+    "Complete official squad/manager/injury verification unresolved for every club; specific secondary-source conflicts logged per row",
+    "Yesterday Tenerife fixture: no independently verified final score; not marked FT",
+    "Current Myanmar quotes: separate owner current-price PDF not supplied; all current fields blank"
+  ],
+  "regression": {
+    "baselineFailures": 60,
+    "candidateFailuresBeforeFinalClockPatch": 58,
+    "newFailures": [],
+    "focusedNewsV2TimeTests": "11 passed"
+  },
+  "candidateBrowser": {
+    "sixRoutes": 6,
+    "v2Cards": 20,
+    "twoMatchPNG": "1200x1066",
+    "threeMatchPNG": "1200x1625",
+    "oddsSamplePNG": "2160x660 with three selected fixture rows",
+    "liveVerified": false
+  }
+}
