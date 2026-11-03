@@ -123,3 +123,8 @@ body[data-fc-main-view]:not([data-fc-main-view="news"]) #fcNewsSection{display:n
 #fcNewsSection .fcp-mini{background:#061126b0;border-color:var(--cover-gold);border-radius:0}
 @media(max-width:800px){#fcNewsSection .fc-news-lead{grid-template-columns:1fr}#fcNewsSection .fc-news-lead .fc-news-image-wrap{height:auto;min-height:0;aspect-ratio:4/5}#fcNewsSection .fc-news-lead h3.fc-news-cover-title{font-size:29px}}
 @media(max-width:680px){#fcNewsSection{padding:17px}#fcNewsSection .fc-news-header{padding:18px 0 23px}#fcNewsSection .fc-news-header h2{font-size:28px}#fcNewsSection .fc-news-card-body,#fcNewsSection .fc-news-lead .fc-news-card-body{padding:21px}#fcNewsSection .fc-news-card h3.fc-news-cover-title{left:22px;right:22px;font-size:26px}}
+
+/* Editorial identification for genuine historical sports photographs. */
+#fcNewsSection .fc-news-photo-label{position:absolute;z-index:4;top:16px;left:17px;max-width:calc(100% - 34px);padding:9px 13px;background:rgba(7,21,43,.89);border-left:4px solid var(--cover-gold,#ffcf30);color:#fff;font:800 12px/1.65 "Noto Sans Myanmar",system-ui,sans-serif;box-shadow:0 3px 12px #0007;pointer-events:none}
+#fcNewsSection[data-news-brand="goal-zone"] .fc-news-photo-label{background:rgba(23,20,13,.93);border-left-color:#ffe073;color:#fff9e6}
+@media(max-width:680px){#fcNewsSection .fc-news-photo-label{top:12px;left:12px;padding:7px 10px;font-size:11px}}
