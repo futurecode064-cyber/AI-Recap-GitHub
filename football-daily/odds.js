@@ -224,7 +224,7 @@ function render(data){
  * Never erase valid current prices simply because the optional file is absent. */
 function mergeLatestOdds(morning,update){
  if(!morning||!Array.isArray(morning.matches))throw Error("Missing original odds");
- const validQuote=q=>typeof q==="string"&&/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(q.trim())?q.trim():"";
+ const validQuote=q=>typeof q==="string"&&/^(?:-\d+|\d+[+-]\d+|\d+=|ဒဲ့)$/.test(q.trim())?q.trim():"";
  const baseline=morning.matches.map(m=>({...m,
   currentBodyOdds:validQuote(m.currentBodyOdds),
   currentGoalTotalOdds:validQuote(m.currentGoalTotalOdds)

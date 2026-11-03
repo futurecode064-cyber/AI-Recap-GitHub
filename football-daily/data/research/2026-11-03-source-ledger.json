@@ -7,7 +7,7 @@
     "home": "ဂါလာတာစာရေး",
     "away": "စတုဂတ်",
     "researchUrl": "https://tipsterarea.com/match/galatasaray-stuttgart-champions-league-group-stage-953807",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 1",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -18,7 +18,10 @@
     "teamNewsResearchNote": "Reported: Buruk; Osimhen scored in last league win. Stuttgart Stiller/Sauer unavailable, other defensive injuries. Club-confirmation incomplete.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 1,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 2,
@@ -28,7 +31,7 @@
     "home": "ရှက်တာဒိုးနက်",
     "away": "စပို့တင်း",
     "researchUrl": "https://tipsterarea.com/match/shakhtar-donetsk-sporting-cp-champions-league-group-stage-953808",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 2",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -39,7 +42,10 @@
     "teamNewsResearchNote": "Reported: Arda Turan/Rui Borges; Pedrinho thigh surgery, Eguinaldo shoulder, Marlon muscle. Others require club confirmation.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 2,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 3,
@@ -49,7 +55,7 @@
     "home": "ဘာစီလိုနာ",
     "away": "အေဗီလာ",
     "researchUrl": "https://tipsterarea.com/match/barcelona-aston-villa-champions-league-group-stage-953810",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 3",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -62,7 +68,10 @@
     "teamNewsResearchNote": "Flick/Emery confirmed by Barcelona. Reported out: Espart, Christensen, Bardghji, Garcia, Olmo, Kounde; Villa Onana, Ruggeri, Wan-Bissaka. Official medical crosscheck incomplete.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 3,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 4,
@@ -72,7 +81,7 @@
     "home": "ဘိုဒိုဂလင့်",
     "away": "လိုင်လီ",
     "researchUrl": "https://tipsterarea.com/match/bodo-glimt-lille-champions-league-group-stage-953811",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 4",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -83,7 +92,10 @@
     "teamNewsResearchNote": "Reported: Knutsen; Bodo keeper absences and Evjen knee/Mikkelsen groin; Lille Ethan Mbappe suspension, Igamane knee, Ueda foot, Tiago Santos ACL. Primary crosscheck incomplete.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 4,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 5,
@@ -93,7 +105,7 @@
     "home": "ဖီယင်နု",
     "away": "အင်တာမီလန်",
     "researchUrl": "https://tipsterarea.com/match/feyenoord-inter-champions-league-group-stage-953812",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 5",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -104,7 +116,10 @@
     "teamNewsResearchNote": "Inter club report and Feyenoord confirm Van Bronckhorst. Feyenoord Nelson/Shaqueel van Persie in squad. Secondary reports Inter Lautaro/Luis Henrique/Pavard/Stones/Jones injured and Bastoni suspended; not asserted as club-confirmed.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 5,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 6,
@@ -114,7 +129,7 @@
     "home": "လက်လင့်",
     "away": "စလိုဗန်",
     "researchUrl": "https://tipsterarea.com/match/lask-linz-slovan-bratislava-champions-league-group-stage-953813",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 6",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -125,7 +140,10 @@
     "teamNewsResearchNote": "Reported: Kuhbauer; LASK Bello/Harakate unavailable, Usor returned. Slovan Cerepkai/Sporar doubtful, not confirmed absent.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 6,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 7,
@@ -135,7 +153,7 @@
     "home": "မန်ယူ",
     "away": "ရိုးမား",
     "researchUrl": "https://tipsterarea.com/match/manchester-united-roma-champions-league-group-stage-953814",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 7",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -149,7 +167,10 @@
     "teamNewsResearchNote": "Official Roma: Gasperini, Dybala/Pellegrini/Kone unavailable. Official United: Carrick, Dorgu back training; Martinez available, Yoro suspension served. Training return not asserted as starting.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 7,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 8,
@@ -159,7 +180,7 @@
     "home": "ဗီလာရီးရဲလ်",
     "away": "ပီအက်စ်ဂျီ",
     "researchUrl": "https://tipsterarea.com/match/villarreal-paris-saint-germain-champions-league-group-stage-953815",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 8",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -170,7 +191,10 @@
     "teamNewsResearchNote": "Secondary report: Villarreal Saliba/Diatta/Foyth/Akhomach doubts; PSG Marquinhos/Dembele hamstrings and other absences. Full official medical verification incomplete.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 8,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 9,
@@ -180,7 +204,7 @@
     "home": "အေတီကို",
     "away": "ဘိုင်ယန်",
     "researchUrl": "https://tipsterarea.com/match/atletico-madrid-bayern-munchen-champions-league-group-stage-953809",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 9",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -192,7 +216,10 @@
     "teamNewsResearchNote": "Official Bayern: Simeone; Kompany ill, Danks deputises; Musiala/Diaz/Gnabry/Saibari/Ndiaye out, Neuer/Olise trained/travelled. No guaranteed starts.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 9,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 10,
@@ -202,7 +229,7 @@
     "home": "ဘလက်ဘန်း",
     "away": "စတုတ်စီးတီး",
     "researchUrl": "https://tipsterarea.com/match/blackburn-stoke-championship-england-953816",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 10",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -213,7 +240,10 @@
     "teamNewsResearchNote": "Reported Mowbray/Robins; Pickering out, Forshaw/Morishita recovering; Stoke Bocat/Ampah/Gallagher/Cisse out. Source XI conflicts with Pickering absence; did not copy lineup.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 10,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 11,
@@ -223,7 +253,7 @@
     "home": "ချာလ်တန်",
     "away": "ဘော်တန်",
     "researchUrl": "https://tipsterarea.com/match/charlton-bolton-championship-england-953817",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 11",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -234,7 +264,10 @@
     "teamNewsResearchNote": "Reported Nathan Jones; Sichenje/Godden out, Bolton Forino injury/Erhahon/McAtee/Hardie out. Primary checks incomplete.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 11,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 12,
@@ -244,7 +277,7 @@
     "home": "ဒါဘီ",
     "away": "နော့ဝစ်",
     "researchUrl": "https://tipsterarea.com/match/derby-county-norwich-championship-england-953818",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 12",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -255,7 +288,10 @@
     "teamNewsResearchNote": "Reported Eustace/Clement; Derby Ozoh and defensive absences; Norwich Diallo/Ahmed/Toure out. Did not repeat source inconsistent summary of last wins.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 12,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 13,
@@ -265,7 +301,7 @@
     "home": "ပို့စ်မောက်",
     "away": "ဆွမ်ဆီး",
     "researchUrl": "https://tipsterarea.com/match/portsmouth-swansea-championship-england-953819",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 13",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -276,7 +312,10 @@
     "teamNewsResearchNote": "Reported Mousinho/Matos; Pompey Ogilvie/Anderson/Swift/Brooke-Smith/Bishop out, Swansea Eustaquio doubtful. Source weekend score conflicts with stats snapshot; not used in prose.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 13,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 14,
@@ -286,7 +325,7 @@
     "home": "ပရက်စတန်",
     "away": "ရှက်ဖီး ယူ",
     "researchUrl": "https://tipsterarea.com/match/preston-sheffield-united-championship-england-953820",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 14",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -297,7 +336,10 @@
     "teamNewsResearchNote": "Reported Graham Alexander; Sheffield Kitching suspended, Chong/Donovan potential injuries. No doubtful player promoted to confirmed absent.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 14,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 15,
@@ -307,7 +349,7 @@
     "home": "ကျူပီအာ",
     "away": "ဘန်လေ",
     "researchUrl": "https://tipsterarea.com/match/queens-park-rangers-burnley-championship-england-953821",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 15",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -318,7 +360,10 @@
     "teamNewsResearchNote": "Reported Julien Stephan/Fabio Celestini; Kone scoring form, Vardy reported striker. Predicted lineups not treated as confirmed.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 15,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 16,
@@ -328,7 +373,7 @@
     "home": "ဝက်ဖို့ဒ်",
     "away": "လင်ကွန်း",
     "researchUrl": "https://tipsterarea.com/match/watford-lincoln-championship-england-953822",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 16",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -339,7 +384,10 @@
     "teamNewsResearchNote": "Reported Dionisi/Chris Cohen; Boadu latest brace, Bayliss scored and Ladefoged attacking role. No verified fresh absence claimed.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 16,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 17,
@@ -349,7 +397,7 @@
     "home": "ဘာမင်ဂမ်",
     "away": "မီဝေါ",
     "researchUrl": "https://tipsterarea.com/match/birmingham-millwall-championship-england-953823",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 17",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -360,7 +408,10 @@
     "teamNewsResearchNote": "Reported Davies/Alex Neil; Beadle/Priske doubts, Metcalfe suspension. Conflicting secondary injuries retained only as reports.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 17,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 18,
@@ -370,7 +421,7 @@
     "home": "ဝက်ဘရွန်း",
     "away": "ဆောက်သမ်တန်",
     "researchUrl": "https://tipsterarea.com/match/west-bromwich-southampton-championship-england-953824",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 18",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -381,7 +432,10 @@
     "teamNewsResearchNote": "Reported Morrison/Eckert; Morgan doubtful, Johnston/Calves/Collyer out; Larin return uncertain. Southampton 4-point deduction verified.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 18,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 19,
@@ -391,7 +445,7 @@
     "home": "စီးရီးယပ်စ်",
     "away": "ဟမ်းစတက်",
     "researchUrl": "https://tipsterarea.com/match/sirius-halmstads-allsvenskan-sweden-953841",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 19",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -403,7 +457,10 @@
     "teamNewsResearchNote": "ScoreLiveToday/FotMob report Engelmark/Baxter; Sirius Soumah suspended, Liimatta/Uneken injured. Matchchase says no absentees: conflict unresolved; omitted from prose.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 19,
+    "currentSourcePage": 1
   },
   {
     "pdfRow": 20,
@@ -413,7 +470,7 @@
     "home": "လင်းဘိုင်",
     "away": "ရန်ဒါ",
     "researchUrl": "https://tipsterarea.com/match/lyngby-randers-fc-danish-cup-denmark-953847",
-    "currentPriceStatus": "not provided; blank",
+    "currentPriceStatus": "verified against owner-supplied current PDF, page 1, row 20",
     "photoStatus": "current production V2 renderer is text-only; licensed preview-photo gate unmet; Wikimedia API timed out and image download returned HTTP 403",
     "teamNewsStatus": "SEARCHED; official verification incomplete where noted",
     "teamNewsSourceUrls": [
@@ -424,6 +481,9 @@
     "teamNewsResearchNote": "Lyngby/Randers no reported absences on secondary match page is not proof of full availability. Current coaches not independently confirmed.",
     "standingsStatus": "verified applicable competition; Southampton reported points include sourced four-point deduction",
     "lastFiveStatus": "5 completed official matches per team; friendlies excluded",
-    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03"
+    "oddsStatus": "actual separate 1X2 snapshot read 2026-11-03",
+    "currentSourcePDF": "3 စျေး.pdf",
+    "currentPdfRow": 20,
+    "currentSourcePage": 1
   }
 ]

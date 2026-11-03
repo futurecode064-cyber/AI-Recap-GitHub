@@ -1,9 +1,9 @@
 {
   "reportDate": "2026-11-03",
-  "priceStatus": "morning-original-only",
+  "priceStatus": "original-and-current-verified-from-owner-pdf",
   "sourcePDF": "3.pdf",
   "sourceRows": 20,
-  "priceSheetType": "owner morning original PDF; current blank",
+  "priceSheetType": "owner morning original (3.pdf) plus owner-supplied 2026-11-03 current PDF (3 စျေး.pdf)",
   "matches": [
     {
       "fixtureId": "fc-20261103-01",
@@ -34,8 +34,8 @@
       "kickoffDisplay": "12:15 AM",
       "bodyOdds": "-50",
       "goalTotalOdds": "4+95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "4+70",
       "pdfLastColumn": "2-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -69,8 +69,8 @@
       "kickoffDisplay": "12:15 AM",
       "bodyOdds": "-80",
       "goalTotalOdds": "3+45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-80",
+      "currentGoalTotalOdds": "3+45",
       "pdfLastColumn": "1-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -104,8 +104,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "2+5",
       "goalTotalOdds": "4-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+40",
+      "currentGoalTotalOdds": "4-50",
       "pdfLastColumn": "5-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -139,8 +139,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "1+70",
       "goalTotalOdds": "3-50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+50",
+      "currentGoalTotalOdds": "3-45",
       "pdfLastColumn": "2-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -174,8 +174,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "1+90",
       "goalTotalOdds": "3-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+85",
+      "currentGoalTotalOdds": "3-65",
       "pdfLastColumn": "1-2",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -209,8 +209,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "1-80",
       "goalTotalOdds": "3-95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+95",
+      "currentGoalTotalOdds": "4+85",
       "pdfLastColumn": "3-0",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -244,8 +244,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "-40",
       "goalTotalOdds": "3-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-50",
+      "currentGoalTotalOdds": "3-30",
       "pdfLastColumn": "2-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -279,8 +279,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "1+15",
       "goalTotalOdds": "4+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+40",
+      "currentGoalTotalOdds": "4+90",
       "pdfLastColumn": "1-2",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -314,8 +314,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "-10",
       "goalTotalOdds": "3-65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "3-50",
       "pdfLastColumn": "1-2",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -349,8 +349,8 @@
       "kickoffDisplay": "2:15 AM",
       "bodyOdds": "-5",
       "goalTotalOdds": "2-65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-5",
+      "currentGoalTotalOdds": "2-75",
       "pdfLastColumn": "0-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -384,8 +384,8 @@
       "kickoffDisplay": "2:15 AM",
       "bodyOdds": "-35",
       "goalTotalOdds": "3+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-40",
+      "currentGoalTotalOdds": "3+55",
       "pdfLastColumn": "1-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -419,8 +419,8 @@
       "kickoffDisplay": "2:15 AM",
       "bodyOdds": "-75",
       "goalTotalOdds": "3+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-70",
+      "currentGoalTotalOdds": "3+50",
       "pdfLastColumn": "1-2",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -454,8 +454,8 @@
       "kickoffDisplay": "2:15 AM",
       "bodyOdds": "ဒဲ့",
       "goalTotalOdds": "2-60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "ဒဲ့",
+      "currentGoalTotalOdds": "2-45",
       "pdfLastColumn": "1-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -489,8 +489,8 @@
       "kickoffDisplay": "2:15 AM",
       "bodyOdds": "-70",
       "goalTotalOdds": "3+65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-90",
+      "currentGoalTotalOdds": "3+70",
       "pdfLastColumn": "1-2",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -524,8 +524,8 @@
       "kickoffDisplay": "2:15 AM",
       "bodyOdds": "-80",
       "goalTotalOdds": "3+45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-85",
+      "currentGoalTotalOdds": "3+50",
       "pdfLastColumn": "1-0",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -559,8 +559,8 @@
       "kickoffDisplay": "2:15 AM",
       "bodyOdds": "-15",
       "goalTotalOdds": "2-100",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-15",
+      "currentGoalTotalOdds": "3+90",
       "pdfLastColumn": "1-0",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -594,8 +594,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "-95",
       "goalTotalOdds": "3+75",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-95",
+      "currentGoalTotalOdds": "3+80",
       "pdfLastColumn": "2-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -629,8 +629,8 @@
       "kickoffDisplay": "2:30 AM",
       "bodyOdds": "-20",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-15",
+      "currentGoalTotalOdds": "3+50",
       "pdfLastColumn": "1-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -664,8 +664,8 @@
       "kickoffDisplay": "12:30 AM",
       "bodyOdds": "2+65",
       "goalTotalOdds": "3-95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+85",
+      "currentGoalTotalOdds": "3-90",
       "pdfLastColumn": "3-1",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
@@ -699,11 +699,14 @@
       "kickoffDisplay": "11:30 PM",
       "bodyOdds": "-60",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-60",
+      "currentGoalTotalOdds": "3-5",
       "pdfLastColumn": "2-2",
       "eligibleForPreview": true,
       "eligibilityReason": "owner senior first-team fixture with verified official-match last five"
     }
-  ]
+  ],
+  "currentSourcePDF": "3 စျေး.pdf",
+  "currentSourceSHA256": "28e7d324f8df9f62947f09dedb16f9efd6233b4fc31324fec270037c92cbb3a8",
+  "currentSourceRows": 20
 }
