@@ -171,6 +171,16 @@
   const shade=ctx.createLinearGradient(x,y,x,y+h);shade.addColorStop(0,"#00000000");shade.addColorStop(.7,"#00000000");shade.addColorStop(1,ink);ctx.fillStyle=shade;ctx.fillRect(x-50,y,w+50,h);
   ctx.restore();
   ctx.strokeStyle=trim;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(x+54,y);ctx.lineTo(x-8,y+180);ctx.lineTo(x-40,y+h);ctx.stroke();
+  // Verified archival imagery must never be presented as a photo of this news event.
+  if(s.photoVerification?.kind==="archive-photo"){
+   ctx.save();
+   const tagX=x+76,tagY=y+20,tagW=255,tagH=59;
+   ctx.fillStyle="rgba(6,16,26,.92)";ctx.fillRect(tagX,tagY,tagW,tagH);
+   ctx.fillStyle=trim;ctx.fillRect(tagX,tagY,7,tagH);
+   ctx.font='700 22px "FCNewsMyanmar"';
+   ctx.fillStyle="#ffffff";ctx.fillText("မှတ်တမ်းဓာတ်ပုံ",tagX+19,tagY+43);
+   ctx.restore();
+  }
   // Headline layers: safe white keyline, dark extrusion, alternating ink and accent.
   ctx.font='800 '+titleFont+'px "FCNewsMyanmar"';ctx.lineJoin="round";
   titleLines.forEach((line,i)=>{
@@ -266,6 +276,7 @@
     img.src=s.image;img.alt=s.imageAlt||s.title;img.title=[s.imageCredit,s.imageLicense,s.imageSourceUrl].filter(Boolean).join(" · ");img.loading="lazy";img.decoding="async";
     if(s.imageFit==='contain'){img.style.objectFit='contain';img.style.background='#101b1c';}
     img.onerror=()=>{img.hidden=true;wrap.classList.add("fc-news-photo-unavailable");};
+    if(s.photoVerification?.kind==="archive-photo")wrap.append(node("span","မှတ်တမ်းဓာတ်ပုံ","fc-news-photo-label"));
     wrap.append(img,node("h3",s.title,"fc-news-cover-title"));card.append(wrap);
    }
    const body=node("div",undefined,"fc-news-card-body");
