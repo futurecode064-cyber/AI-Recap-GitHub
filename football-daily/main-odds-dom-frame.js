@@ -255,7 +255,7 @@
         }
         // Prices (morning/current), predictions and kickoff time use Myanmar digits
         // in frame PNGs only. This never changes the on-screen table or JSON.
-        for(const cell of group.querySelectorAll("tbody td.price, tbody td.prediction, tbody td.time")){
+        for(const cell of group.querySelectorAll("tbody td.price, tbody td.prediction")){
           cell.textContent=toMyanmarDigits(cell.textContent);
         }
       }
