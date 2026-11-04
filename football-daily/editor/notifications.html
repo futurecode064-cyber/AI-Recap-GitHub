@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="my"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Future Code | Notification Admin</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0b1422;color:#edf6fa;font:15px/1.8 system-ui,"Noto Sans Myanmar","Myanmar Text",sans-serif}header{padding:22px max(20px,calc((100vw - 1020px)/2));background:#152739;border-bottom:1px solid #34485b}header small{color:#83d5ca;letter-spacing:2px}h1{font-size:clamp(22px,4vw,30px);margin:2px 0 10px}a{color:#a3e3f3}main{max-width:1050px;margin:auto;padding:26px 20px 55px}.layout{display:grid;grid-template-columns:1.6fr 1fr;gap:20px}.panel{background:#142337;border:1px solid #34495e;border-radius:16px;padding:23px;box-shadow:0 8px 32px #070e184a}h2{margin:0 0 15px;font-size:19px}label{display:block;font-weight:700;margin:18px 0 6px}input[type=text],input[type=url],textarea{background:#0c1928;color:#fff;border:1px solid #617389;border-radius:9px;width:100%;font:inherit;padding:11px 13px}textarea{min-height:132px;resize:vertical}.brands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.brand{display:flex;align-items:center;gap:8px;padding:12px;border:1px solid #48576c;border-radius:10px;cursor:pointer;font-weight:700;background:#1a2b40}.brand:has(:checked){background:#123f3b;border-color:#56dfbe}input[type=checkbox]{accent-color:#20ba95;width:18px;height:18px}.muted{color:#afc4d0;font-size:13px}.danger{color:#ffce8e}.check{display:flex;gap:10px;align-items:flex-start;font-weight:500}button{width:100%;margin-top:17px;border:none;border-radius:10px;background:#22b995;color:#06201b;padding:15px 20px;font:800 17px system-ui,sans-serif;cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}.status{white-space:pre-line;padding:13px;border:1px solid #446c7f;border-radius:10px;background:#0f1c2c;min-height:64px}.preview{background:#0b1e2d;padding:17px;border-radius:12px;border-left:5px solid #43cdb7;min-height:160px;white-space:pre-wrap;overflow-wrap:anywhere}.preview strong{display:block;margin-bottom:5px}.nav{margin-bottom:15px}.quick{display:flex;gap:7px;flex-wrap:wrap}.quick button{width:auto;margin:0;background:#294558;color:#d9f4f4;padding:7px 13px;font-size:12px}.tiny{font-size:12px;color:#9bb0bf}@media(max-width:760px){.layout{grid-template-columns:1fr}.brands{grid-template-columns:1fr 1fr}.panel{padding:17px}}@media(max-width:400px){.brands{grid-template-columns:1fr}}
+</style></head>
+<body><header><small>FUTURE CODE AI STUDIO · OWNER ONLY</small><h1>🔔 Notification Admin Panel</h1><div>APK ၅ ခု · Firebase Cloud Messaging · Manual Send</div></header>
+<main><div class="nav"><a href="/editor/">← Admin Editor</a>　<a href="/">Website</a></div>
+<div class="layout"><section class="panel"><h2>၁။ Notification လက်ခံမည့် APK များ</h2>
+<div class="brands" id="brands">
+<label class="brand"><input type="checkbox" value="goal" checked>Goal Zone</label>
+<label class="brand"><input type="checkbox" value="ykz">YKZ Family</label>
+<label class="brand"><input type="checkbox" value="bw">BW Sport</label>
+<label class="brand"><input type="checkbox" value="kothet">Ko Thet Family</label>
+<label class="brand"><input type="checkbox" value="kmm">KMM Sport Hub</label></div>
+<div class="quick"><button type="button" id="all">၅ ခုလုံးရွေးရန်</button><button type="button" id="none">ရှင်းရန်</button></div>
+<label for="title">၂။ ခေါင်းစဉ် (Notification Title)</label><input id="title" type="text" maxlength="100" placeholder="ဥပမာ — ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ" required>
+<label for="body">၃။ စာသား (Notification Body)</label><textarea id="body" maxlength="350" placeholder="အသစ်တင်ပြီးပါပြီ။ ဝင်ဖတ်ရှုနိုင်ပါပြီ။" required></textarea>
+<label for="link">၄။ ဖွင့်မည့် Link (optional)</label><input id="link" type="url" placeholder="https://future-code-football-daily.pages.dev/..." autocomplete="off">
+<p class="muted">APK တစ်ခုရွေးထားလျှင် ၎င်း Website ၏ Link ထည့်နိုင်သည်။ APK အများကြီးရွေးထားလျှင် Link အလွတ်ထားပါ — App အလိုက် Home Page ကို ဖွင့်ပေးမည်။</p>
+<label class="check"><input id="confirm" type="checkbox"> <span>ရွေးထားသော APK အသုံးပြုသူများထံ Notification တကယ်ပို့ရန် အတည်ပြုပါသည်။</span></label>
+<button type="button" id="send">🔔 Send Notification</button>
+<p class="tiny">Server Key များကို Browser ထဲမထည့်ပါ။ Github Actions က Firebase သို့ ပို့ပါမည်။</p>
+<div id="state" role="status" aria-live="polite" class="status">စာသားဖြည့်ပြီး Send နှိပ်နိုင်ပါပြီ။</div>
+<p id="run" hidden><a id="runLink" target="_blank" rel="noopener noreferrer">GitHub Workflow အခြေအနေကြည့်ရန် ↗</a></p>
+</section>
+<aside class="panel"><h2>ပို့မည့် Notification Preview</h2><div class="preview"><strong id="pTitle">Notification ခေါင်းစဉ်</strong><span id="pBody">Notification စာသား ဒီမှာပေါ်ပါမယ်။</span></div>
+<p id="pBrands" class="muted"></p>
+<h2>သတိပြုရန်</h2><p class="muted">GitHub Workflow SUCCESS ဆိုသည်မှာ Firebase က Message ကို လက်ခံထားခြင်းဖြစ်သည်။ ဖုန်းတိုင်းရောက်ကြောင်း မဆိုလိုပါ။</p>
+<p class="danger">4 Nov APK များသည် manual Notification ကို app ဖွင့်ထားစဉ် ပြနိုင်ရန် APK client ပြင်ဆင်မှု ထပ်လိုပါသည်။ နောက်ခံ၌ Firebase Notification ပြနိုင်သော်လည်း ဖုန်းစမ်းသပ်မှု မပြီးသေးပါ။</p>
+</aside></div></main>
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id),checks=[...document.querySelectorAll("#brands input")];
+let pending=false;
+const selected=()=>checks.filter(x=>x.checked).map(x=>x.value);
+const names={goal:"Goal Zone",ykz:"YKZ",bw:"BW",kothet:"Ko Thet",kmm:"KMM"};
+function preview(){ $("pTitle").textContent=$("title").value.trim()||"Notification ခေါင်းစဉ်";$("pBody").textContent=$("body").value.trim()||"Notification စာသား ဒီမှာပေါ်ပါမယ်။";$("pBrands").textContent="ပို့မည့် APK: "+selected().map(x=>names[x]).join(", ");}
+document.querySelectorAll("input,textarea").forEach(x=>x.addEventListener("input",preview));
+checks.forEach(x=>x.addEventListener("change",preview));
+$("all").onclick=()=>{checks.forEach(x=>x.checked=true);preview()};
+$("none").onclick=()=>{checks.forEach(x=>x.checked=false);preview()};
+preview();
+async function api(path,opts={}){let r=await fetch(path,{credentials:"same-origin",cache:"no-store",...opts});let data;try{data=await r.json()}catch{throw Error("Server Response မမှန်ပါ ("+r.status+")")};if(!r.ok)throw Error(data.error||"Error "+r.status);return data}
+function setStatus(s){$("state").textContent=s}
+function setBusy(b){pending=b;$("send").disabled=b}
+async function poll(id){for(let i=0;i<36;i++){await new Promise(ok=>setTimeout(ok,5000));try{const data=await api("/api/editor/notifications/status?id="+encodeURIComponent(id));setStatus(data.message||data.phase);if(data.workflowUrl){$("run").hidden=false;$("runLink").href=data.workflowUrl}if(data.phase==="acknowledged"||data.phase==="failed"){setBusy(false);return}}catch(e){setStatus("Status စစ်ဆေးခြင်း: "+e.message)}}setStatus("Workflow အခြေအနေကို GitHub မှ ပြန်စစ်ပါ။");setBusy(false)}
+$("send").onclick=async()=>{
+ if(pending)return;
+ const targets=selected(),title=$("title").value.trim(),body=$("body").value.trim(),link=$("link").value.trim();
+ if(!targets.length||title.length<2||body.length<2||!$("confirm").checked){setStatus("APK၊ ခေါင်းစဉ်၊ စာသား၊ အတည်ပြုချက် စစ်ပါ။");return}
+ if(targets.length>1&&link){setStatus("APK အများကြီးရွေးထားလျှင် Link အလွတ်ထားပါ");return}
+ if(!window.confirm(targets.map(x=>names[x]).join(", ")+" သို့ Notification တကယ်ပို့မှာ သေချာပါသလား?"))return;
+ setBusy(true);$("run").hidden=true;setStatus("Firebase သို့ပို့ရန် GitHub Actions စတင်နေသည်…");
+ try{const d=await api("/api/editor/notifications/send",{method:"POST",headers:{"Content-Type":"application/json","X-Football-Editor":"1"},body:JSON.stringify({targets,title,body,link,confirmed:true})});
+ setStatus(d.message);await poll(d.requestId);}catch(e){setStatus("မအောင်မြင်: "+e.message);setBusy(false)}
+};
+})();
+</script></body></html>

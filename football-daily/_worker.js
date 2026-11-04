@@ -189,7 +189,7 @@ function nextPage(raw) {
       raw.includes("\\") || raw.includes("\r") || raw.includes("\n")) return "/";
   try {
     const parsed = new URL(raw, "https://future-code-login.invalid");
-    if (parsed.origin !== "https://future-code-login.invalid" || !(MAIN_PATHS.has(parsed.pathname) || GZ_STATS_PATHS.has(parsed.pathname) || parsed.pathname === "/editor/" || parsed.pathname === "/editor/setup.html" || parsed.pathname === "/editor/engine.html")) return "/";
+    if (parsed.origin !== "https://future-code-login.invalid" || !(MAIN_PATHS.has(parsed.pathname) || GZ_STATS_PATHS.has(parsed.pathname) || parsed.pathname === "/editor/" || parsed.pathname === "/editor/setup.html" || parsed.pathname === "/editor/engine.html" || parsed.pathname === "/editor/notifications.html")) return "/";
     return parsed.pathname + parsed.search;
   } catch { return "/"; }
 }
@@ -368,6 +368,7 @@ export default {
 };
 async function handleRequest(request, env) {
     const path = new URL(request.url).pathname;
+    if (path === "/api/editor/notifications/send" || path === "/api/editor/notifications/status") return fcNotifyApi(request, env, path);
     if (path === "/api/news-image") return serveNewsImage(request);
     if (path === "/bet-city-family" || path.startsWith("/bet-city-family/")) return suspendedBetCity(request);
     if (path === "/api/editor/sites" || path.startsWith("/api/editor/sites/")) return sbApi(request, env, path);
@@ -874,4 +875,66 @@ async function sbApi(request,env,path){
   let dispatched=true;try{await sbDispatch(env)}catch{dispatched=false}
   return gzJson({slug:c.slug,url:url.origin+"/"+c.slug+"/",revision:c.revision,assets:c.assets,commit:commit.sha,dispatched},202);
  }catch(e){return gzJson({error:e.message||"Site Builder Error"},e.status||502)}
+}
+
+
+/* Future Code owner-only manual Firebase notifications.
+ * GitHub Actions holds FCM_SERVICE_ACCOUNT_JSON; the browser never sees any credential.
+ */
+const FC_NOTI_REPO="futurecode064-cyber/future-code-football-daily";
+const FC_NOTI_WORKFLOW="football-manual-notification.yml";
+const FC_NOTI_ROUTES=Object.freeze({
+  goal:"future-code-journal",ykz:"ykz-family",bw:"bw-sport",
+  kothet:"ko-thet-family",kmm:"kmm-sport-hub"
+});
+async function fcNotifyApi(request,env,path){
+  if(!ready(env)||!(await hasSession(request,env)))return gzJson({error:"Admin Login လိုအပ်ပါသည်"},401);
+  const url=new URL(request.url);
+  if(path==="/api/editor/notifications/status"){
+    if(request.method!=="GET")return gzJson({error:"GET only"},405);
+    const id=url.searchParams.get("id");
+    if(!/^[a-f0-9-]{36}$/.test(id||""))return gzJson({error:"Request ID မမှန်ပါ"},400);
+    try{
+      if(!env.FCD_EDITOR_GITHUB_TOKEN)return gzJson({error:"GitHub dispatch credential မရှိပါ"},503);
+      const data=await editorGithub(env,FC_NOTI_REPO,"actions/workflows/"+FC_NOTI_WORKFLOW+"/runs?per_page=35");
+      const run=data.workflow_runs?.find(v=>(v.display_title||"").includes(id));
+      if(!run)return gzJson({phase:"queued",message:"GitHub workflow စတင်ရန် Queue ထဲတွင်ရှိနေသည်"});
+      return gzJson({phase:run.status==="completed"?(run.conclusion==="success"?"acknowledged":"failed"):"running",
+        message:run.status==="completed"?(run.conclusion==="success"?"Firebase မှ လက်ခံအတည်ပြုထားသည်။ ဖုန်းပေါ် ရောက်ခြင်းကို သီးခြားစစ်ရန်လိုသည်":"GitHub/Firebase ပို့ခြင်း မအောင်မြင်ပါ။ Workflow Log စစ်ပါ"):"Firebase ပို့ခြင်း ဆောင်ရွက်နေသည်",
+        workflowUrl:run.html_url});
+    }catch(e){return gzJson({error:e.message||"Status စစ်မရပါ"},e.status||502);}
+  }
+  if(request.method!=="POST")return gzJson({error:"POST only"},405);
+  if(request.headers.get("Origin")!==url.origin || request.headers.get("X-Football-Editor")!=="1" ||
+      request.headers.get("Sec-Fetch-Site")==="cross-site")return gzJson({error:"Admin Page မှသာ ပို့နိုင်ပါသည်"},403);
+  if(!env.FCD_EDITOR_GITHUB_TOKEN)return gzJson({error:"Cloudflare Secret FCD_EDITOR_GITHUB_TOKEN မချိတ်ထားပါ"},503);
+  try{
+    if(Number(request.headers.get("Content-Length")||0)>5500)return gzJson({error:"Message အရွယ်အစားကြီးလွန်းသည်"},413);
+    const data=await editorBody(request);
+    if(!data||typeof data!=="object")return gzJson({error:"Invalid payload"},400);
+    const targets=data.targets,title=data.title?.trim(),body=data.body?.trim(),link=(data.link||"").trim();
+    if(!Array.isArray(targets)||targets.length<1||targets.length>5||
+       new Set(targets).size!==targets.length || targets.some(t=>!Object.hasOwn(FC_NOTI_ROUTES,t)))
+      return gzJson({error:"APK ၁ ခုမှ ၅ ခုအထိ ရွေးပါ"},422);
+    if(typeof title!=="string"||title.length<2||title.length>100||
+       typeof body!=="string"||body.length<2||body.length>350)
+      return gzJson({error:"ခေါင်းစဉ် (2–100) နှင့် စာသား (2–350) စာလုံး ဖြည့်ပါ"},422);
+    if(typeof link!=="string"||link.length>350 || /[\r\n\\]/.test(link))return gzJson({error:"Link မမှန်ပါ"},422);
+    if(link){
+      if(targets.length>1)return gzJson({error:"APK အများကြီးရွေးလျှင် Link ကို အလွတ်ထားပါ။ App တစ်ခုချင်း Home Page ဖွင့်ပေးပါမည်"},422);
+      let to;
+      try{to=new URL(link,url.origin)}catch{return gzJson({error:"Link မမှန်ပါ"},422)}
+      const prefix="/"+FC_NOTI_ROUTES[targets[0]]+"/";
+      if(to.origin!==url.origin||!to.pathname.startsWith(prefix)||to.username||to.password||to.hash)
+        return gzJson({error:"ရွေးထားသော APK Website ၏ HTTPS Link ကိုသာ အသုံးပြုပါ"},422);
+      if(!/^https:$/.test(to.protocol))return gzJson({error:"HTTPS Link သာ လက်ခံသည်"},422);
+      data.link=to.href;
+    }else data.link="";
+    if(data.confirmed!==true)return gzJson({error:"Send အတည်ပြုချက် ရွေးပါ"},400);
+    const id=crypto.randomUUID();
+    await editorGithub(env,FC_NOTI_REPO,"actions/workflows/"+FC_NOTI_WORKFLOW+"/dispatches","POST",{
+      ref:"main",inputs:{targets:targets.join(","),title,body,link:data.link,request_id:id,dry_run:"false"}
+    });
+    return gzJson({requestId:id,phase:"queued",message:"GitHub Actions သို့ ပို့ရန် အမိန့်ရောက်ရှိပါပြီ။ Firebase ACK မရသေးပါ။"},202);
+  }catch(e){return gzJson({error:e.message||"Notification မပို့နိုင်ပါ"},e.status||502);}
 }
