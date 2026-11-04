@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-04",
+  "status": "CANDIDATE_STRUCTURAL_PASS_PENDING_LIVE_QA",
+  "baseCommit": "9eaf2bdd5bef12ada8bf7f94f0b6ff6149d96b15",
+  "runtime": "existing static Pages JSON, engine disabled; no architecture change",
+  "counts": {
+    "pdfPages": 1,
+    "pdfRows": 15,
+    "eligiblePreviews": 15,
+    "previewV2": 15,
+    "specialChoices": 2,
+    "lastFiveTeams": 30,
+    "verified1X2": 15,
+    "vipIndependentScores": 15,
+    "clubCrests": 30,
+    "leagueCrests": 5,
+    "news": 10,
+    "authenticLicensedArchivedNewsPhotos": 10,
+    "verifiedYesterdayFT": 20
+  },
+  "sourceCheckedDate": "2026-11-04",
+  "kickoffCorrection": "Bristol City-Wolves source PDF prints 2:15 AM; actual 20:00 UTC / 2:30 AM Nov 5 verified separately",
+  "unavailable": [
+    "Complete official current injury/squad coverage for all 30 teams; omitted unsupported claims",
+    "Current-price PDF not supplied: current fields remain blank",
+    "Browser/download/live checks pending"
+  ],
+  "candidateChecks": {
+    "dailyPackageGuard": "PASS",
+    "previewV2Validator": "PASS",
+    "focusedTimeV2Tests": "7 passed",
+    "oddsClockLegacyTests": "two identical pre-existing failures on baseline and candidate; outdated asset query and suspended BCF page expectations"
+  },
+  "photoPolicy": "10 real licensed archived photos cached same origin with credit/date/context; no current-event photo claim",
+  "rollback": "baseCommit",
+  "sites": [
+    "/",
+    "/ykz-family/",
+    "/bw-sport/",
+    "/ko-thet-family/",
+    "/future-code-journal/",
+    "/kmm-sport-hub/"
+  ]
+}

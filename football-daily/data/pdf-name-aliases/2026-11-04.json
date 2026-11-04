@@ -1,0 +1,562 @@
+{
+  "reportDate": "2026-11-04",
+  "sourcePDF": "4.pdf",
+  "sourceRows": 15,
+  "rows": [
+    {
+      "pdfRow": 1,
+      "fixtureId": "fc-20261104-01",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "attD;au",
+      "legacyAway": "&D;&Jvfruf'&pf",
+      "home": "အေအီးကေ",
+      "away": "ရီးရဲလ်မက်ဒရစ်",
+      "researchUrl": "https://tipsterarea.com/match/aek-athens-real-madrid-champions-league-group-stage-953893",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "00:15",
+      "kickoffVerified": "00:15",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/aek-athens-real-madrid-champions-league-group-stage-953893",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/aek-athens.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/real-madrid.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 2,
+      "fixtureId": "fc-20261104-02",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "zDembmcsD",
+      "legacyAway": "vDAmyl;vf",
+      "home": "ဖီနာဘာချီ",
+      "away": "လီဗာပူးလ်",
+      "researchUrl": "https://tipsterarea.com/match/fenerbahce-liverpool-champions-league-group-stage-953894",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "00:15",
+      "kickoffVerified": "00:15",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/fenerbahce-liverpool-champions-league-group-stage-953894",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/fenerbahce.png",
+          "source": "https://cdn.footballnation.eu/cache/team/873.png",
+          "size": [
+            150,
+            150
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/liverpool.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 3,
+      "fixtureId": "fc-20261104-03",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "a'ghrGef",
+      "legacyAway": "bufwpf",
+      "home": "ဒေါ့မွန်",
+      "away": "ဘက်တစ်",
+      "researchUrl": "https://tipsterarea.com/match/borussia-dortmund-real-betis-champions-league-group-stage-953895",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:30",
+      "kickoffVerified": "02:30",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/borussia-dortmund-real-betis-champions-league-group-stage-953895",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/borussia-dortmund.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/real-betis.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 4,
+      "fixtureId": "fc-20261104-04",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "ay:wdk",
+      "legacyAway": "emydkvD",
+      "home": "ပေါ်တို",
+      "away": "နာပိုလီ",
+      "researchUrl": "https://tipsterarea.com/match/porto-napoli-champions-league-group-stage-953896",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:30",
+      "kickoffVerified": "02:30",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/porto-napoli-champions-league-group-stage-953896",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/porto.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/napoli.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 5,
+      "fixtureId": "fc-20261104-05",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "yDtufpfAGD",
+      "legacyAway": "uvyfb&k",
+      "home": "ပီအက်စ်ဗွီ",
+      "away": "ကလပ်ဘရု",
+      "researchUrl": "https://tipsterarea.com/match/psv-eindhoven-club-brugge-champions-league-group-stage-953898",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:30",
+      "kickoffVerified": "02:30",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/psv-eindhoven-club-brugge-champions-league-group-stage-953898",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/psv-eindhoven.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/club-brugge.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/570.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 6,
+      "fixtureId": "fc-20261104-06",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "vpfZpf",
+      "legacyAway": "refpD;wD;",
+      "home": "လစ်ဇစ်",
+      "away": "မန်စီးတီး",
+      "researchUrl": "https://tipsterarea.com/match/rb-leipzig-manchester-city-champions-league-group-stage-953899",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:30",
+      "kickoffVerified": "02:30",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/rb-leipzig-manchester-city-champions-league-group-stage-953899",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/rb-leipzig.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/manchester-city.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 7,
+      "fixtureId": "fc-20261104-07",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "pvm;AD;,m;",
+      "legacyAway": "tmqife,f",
+      "home": "စလားဗီးယား",
+      "away": "အာဆင်နယ်",
+      "researchUrl": "https://tipsterarea.com/match/slavia-prague-arsenal-champions-league-group-stage-953900",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:30",
+      "kickoffVerified": "02:30",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/slavia-prague-arsenal-champions-league-group-stage-953900",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/slavia-prague.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/arsenal.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 8,
+      "fixtureId": "fc-20261104-08",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "vef;pf",
+      "legacyAway": "udkrkd",
+      "home": "လန်းစ်",
+      "away": "ကိုမို",
+      "researchUrl": "https://tipsterarea.com/match/lens-como-champions-league-group-stage-953897",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:30",
+      "kickoffVerified": "02:30",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/lens-como-champions-league-group-stage-953897",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/lens.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/como.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 9,
+      "fixtureId": "fc-20261104-09",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "Apfuif;",
+      "legacyAway": "pm;bwfbmul",
+      "home": "ဗစ်ကင်း",
+      "away": "စားဘတ်ဘကူ",
+      "researchUrl": "https://tipsterarea.com/match/viking-stavanger-sabah-baku-champions-league-group-stage-953901",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:30",
+      "kickoffVerified": "02:30",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/viking-stavanger-sabah-baku-champions-league-group-stage-953901",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/viking-stavanger.png",
+          "source": "https://tipsterarea.com/images/teams/norway/viking-stavanger.gif",
+          "size": [
+            140,
+            140
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/sabah-baku.png",
+          "source": "https://tipsterarea.com/images/teams/azerbaijan/sabah-baku.gif",
+          "size": [
+            140,
+            140
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 10,
+      "fixtureId": "fc-20261104-10",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "&if;eufpf",
+      "legacyAway": "tdkvHyD,mudkpfh",
+      "home": "ရင်းနက်စ်",
+      "away": "အိုလံပီယာကိုစ့်",
+      "researchUrl": "https://tipsterarea.com/match/rennais-olympiacos-piraeus-europa-league-group-stage-953902",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "22:00",
+      "kickoffVerified": "22:00",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/rennais-olympiacos-piraeus-europa-league-group-stage-953902",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/rennais.png",
+          "source": "https://tipsterarea.com/images/teams/france/rennais.gif",
+          "size": [
+            140,
+            140
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/olympiacos-piraeus.png",
+          "source": "https://tipsterarea.com/images/teams/greece/olympiacos-piraeus.gif",
+          "size": [
+            140,
+            140
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 11,
+      "fixtureId": "fc-20261104-11",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "um'pf",
+      "legacyAway": "0ufpf[rf;",
+      "home": "ကာဒစ်",
+      "away": "ဝက်စ်ဟမ်း",
+      "researchUrl": "https://tipsterarea.com/match/cardiff-west-ham-championship-england-953906",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:15",
+      "kickoffVerified": "02:15",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/cardiff-west-ham-championship-england-953906",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/cardiff.png",
+          "source": "https://tipsterarea.com/images/teams/england/cardiff.gif",
+          "size": [
+            140,
+            140
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/west-ham.png",
+          "source": "https://tipsterarea.com/images/teams/england/west-ham.gif",
+          "size": [
+            140,
+            140
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 12,
+      "fixtureId": "fc-20261104-12",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "0&uf[rf;",
+      "legacyAway": "rpf',fba&mh",
+      "home": "ဝရက်ဟမ်း",
+      "away": "မစ်ဒယ်ဘရော့",
+      "researchUrl": "https://tipsterarea.com/match/wrexham-middlesbrough-championship-england-953907",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:15",
+      "kickoffVerified": "02:15",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/wrexham-middlesbrough-championship-england-953907",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/wrexham.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/middlesbrough.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 13,
+      "fixtureId": "fc-20261104-13",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "b&pfpwd;k",
+      "legacyAway": "0kAf",
+      "home": "ဘရစ်စတိုး",
+      "away": "ဝုဗ်",
+      "researchUrl": "https://tipsterarea.com/match/bristol-city-wolverhampton-championship-england-953908",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:15",
+      "kickoffVerified": "02:30",
+      "kickoffDiscrepancy": "Owner PDF prints 2:15 AM; independently verified actual Bristol City-Wolves kickoff is 20:00 UTC / 2:30 AM Asia/Yangon on 5 November.",
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/bristol-city-wolverhampton-championship-england-953908",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/bristol-city.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/wolverhampton.png",
+          "source": "https://tipsterarea.com/images/teams/england/wolverhampton.gif",
+          "size": [
+            140,
+            140
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 14,
+      "fixtureId": "fc-20261104-14",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "aumhw&pf",
+      "legacyAway": "rufcsJvef",
+      "home": "ကော့ထရစ်",
+      "away": "မက်ချဲလန်",
+      "researchUrl": "https://tipsterarea.com/match/kortrijk-mechelen-pro-league-belgium-953912",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:00",
+      "kickoffVerified": "02:00",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/kortrijk-mechelen-pro-league-belgium-953912",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/kortrijk.png",
+          "source": "https://tipsterarea.com/images/teams/belgium/kortrijk.gif",
+          "size": [
+            140,
+            140
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/mechelen.png",
+          "source": "https://tipsterarea.com/images/teams/belgium/mechelen.gif",
+          "size": [
+            140,
+            140
+          ]
+        }
+      }
+    },
+    {
+      "pdfRow": 15,
+      "fixtureId": "fc-20261104-15",
+      "sourcePage": 1,
+      "sourcePDF": "4.pdf",
+      "legacyHome": "atmufzkdhf",
+      "legacyAway": "&D'if;",
+      "home": "အောက်ဖို့ဒ်",
+      "away": "ရီးဒင်း",
+      "researchUrl": "https://tipsterarea.com/match/oxford-united-reading-league-one-england-953911",
+      "currentPriceStatus": "not supplied; fields blank",
+      "kickoffSource": "02:15",
+      "kickoffVerified": "02:15",
+      "kickoffDiscrepancy": null,
+      "lastFiveStatus": "five completed official matches per team; friendlies excluded",
+      "oddsSnapshotCheckedDate": "2026-11-04",
+      "oddsSourceUrl": "https://tipsterarea.com/match/oxford-united-reading-league-one-england-953911",
+      "teamNewsStatus": "Incomplete official coverage; no unsupported absence claimed",
+      "crestSources": {
+        "home": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/oxford-united.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png",
+          "size": [
+            500,
+            500
+          ]
+        },
+        "away": {
+          "url": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/reading.png",
+          "source": "https://a.espncdn.com/i/teamlogos/soccer/500/338.png",
+          "size": [
+            500,
+            500
+          ]
+        }
+      }
+    }
+  ]
+}
