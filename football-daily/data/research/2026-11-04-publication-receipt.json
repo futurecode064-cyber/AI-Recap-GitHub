@@ -55,7 +55,7 @@
     "probabilities": "15 rows, populated four percentage cells",
     "tips": "15 rows, three independent score columns",
     "news": "10 cards and 10 real archival photos; news PNG downloaded",
-    "videoStudio": "20 previous-night results loaded; current preview/odds data available; new video not rendered",
+    "videoStudio": "PASS: rendered 20 results / 20 slides, H264 MP4 720x1280, 78.93 seconds, 5988127 bytes; ffprobe PASS",
     "actualDownloads": {
       "mainPreviewPNG": "1200x993, visually inspected",
       "previewV2PNG": "1200x1066, two fixtures, visually inspected",
@@ -63,7 +63,8 @@
       "morningOddsPNG": "2160x660, 3 fixtures",
       "GoalZoneCombinedZIP": "UI generated 33 PNGs; combined 157 MB archive unavailable for byte inspection in browser transfer",
       "GoalZoneFootballZIP": "23 PNGs, 73653285 bytes, CRC and every PNG PASS",
-      "GoalZoneNewsZIP": "10 PNGs, 83579473 bytes, CRC and every PNG PASS"
+      "GoalZoneNewsZIP": "10 PNGs, 83579473 bytes, CRC and every PNG PASS",
+      "resultsVideoMP4": "Rendered and downloaded; ffprobe H264 720x1280 78.93s"
     },
     "fixes": [
       "AI UI clocks now use shared 12-hour helper",
@@ -72,8 +73,7 @@
     ],
     "limitations": [
       "Full combined ZIP was verified through its 23+10 section archive outputs, not by reading the combined archive",
-      "Existing integrity browser CI fails; exact remote log unavailable. One 364px original archival photo is below its 400px threshold; static score/data check passes",
-      "No new daily MP4/WebM was rendered; Video Studio current data checked"
+      "Existing integrity browser CI fails; exact remote log unavailable. One 364px original archival photo is below its 400px threshold; static score/data check passes"
     ]
   }
 }
