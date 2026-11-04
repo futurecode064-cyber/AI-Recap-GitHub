@@ -47,6 +47,14 @@
     nodes.status.classList.toggle("draw-error", !!error);
   }
   function invalidate() {
+    if (site === "bw") {
+      const send = byId("draw-recipient");
+      if (send) {
+        send.classList.add("is-locked");
+        send.setAttribute("aria-disabled", "true");
+        send.setAttribute("tabindex", "-1");
+      }
+    }
     if (imageUrl) URL.revokeObjectURL(imageUrl);
     imageUrl = "";
     imageBlob = null;
@@ -328,7 +336,14 @@
       nodes.download.href = imageUrl;
       nodes.download.download = imageName;
       nodes.result.hidden = false;
-      announce("PNG အစောင် ပြီးပါပြီ။ Telegram ကိုရွေးပြီး @" + config.recipient + " ဆီ ပုံပို့ပါ။");
+      if (site === "bw") {
+        // Step 1: initiate PNG download from the user-triggered generate action.
+        // Browsers may show a save prompt; only the visitor can confirm the file was saved.
+        nodes.download.click();
+        announce("ကံစမ်းအစောင် PNG ပုံ သိမ်းရန် စတင်ပြီးပါပြီ။ အဆင့် ၂ မှ Telegram Chat ကို ဖွင့်ပါ။");
+      } else {
+        announce("PNG အစောင် ပြီးပါပြီ။ Telegram ကိုရွေးပြီး @" + config.recipient + " ဆီ ပုံပို့ပါ။");
+      }
       nodes.result.scrollIntoView({ behavior: "smooth", block: "start" });
     } catch (error) {
       announce("PNG ဖန်တီးမအောင်မြင်ပါ — " + (error.message || "ပြန်စမ်းပါ။"), true);
@@ -352,11 +367,24 @@
   }
   function init() {
     nodes.recipient.href = "https://t.me/" + config.recipient;
-    nodes.recipient.textContent = "Telegram @" + config.recipient + " ကို ဖွင့်ရန်";
+    nodes.recipient.textContent = site === "bw" ? "Telegram @" + config.recipient + " သို့ ပို့ရန်" : "Telegram @" + config.recipient + " ကို ဖွင့်ရန်";
     const receiverText = byId("draw-receiver");
     if (receiverText) receiverText.textContent = "@" + config.recipient;
     nodes.generate.addEventListener("click", generate);
-    nodes.share.addEventListener("click", share);
+    if (nodes.share) nodes.share.addEventListener("click", share);
+    if (site === "bw") {
+      // The browser initiates a PNG save; Telegram chat opens separately after step 1.
+      nodes.download.addEventListener("click", () => {
+        if (!imageBlob) return;
+        nodes.recipient.classList.remove("is-locked");
+        nodes.recipient.removeAttribute("aria-disabled");
+        nodes.recipient.removeAttribute("tabindex");
+        announce("ကံစမ်းအစောင်ပုံ သိမ်းရန် စတင်ပြီးပါပြီ။ အဆင့် ၂ တွင် Telegram ကိုဖွင့်ပြီး ပုံတွဲပို့ပါ။");
+      });
+      nodes.recipient.addEventListener("click", event => {
+        if (!imageBlob || nodes.recipient.getAttribute("aria-disabled") === "true") event.preventDefault();
+      });
+    }
     for (const field of [nodes.name, nodes.telegram]) field.addEventListener("input", invalidate);
     loadMatches();
   }
