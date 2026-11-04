@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../lucky-draw.css?v=20261104-1">
-<script defer src="../lucky-draw.js?v=20261104-odds-crests-v3"></script>
+<script defer src="../lucky-draw.js?v=20261104-save-send-v4"></script>
 </head>
 <body>
 <header class="draw-header"><div class="draw-container draw-header-inner">
@@ -43,12 +43,17 @@
     <section id="draw-result" class="draw-result" hidden aria-label="ကံစမ်းအစောင် PNG">
       <h2 class="draw-result-title">PNG ကံစမ်းအစောင် အသင့်ဖြစ်ပါပြီ</h2>
       <img id="draw-preview" class="draw-ticket-preview" alt="ကံစမ်းအစောင် Preview">
-      <div class="draw-result-actions">
-        <button class="draw-action" id="draw-share" type="button">📤 Telegram မှာ ပုံ Share လုပ်မယ်</button>
-        <a class="draw-action secondary" id="draw-download" href="#" download>⬇ PNG ပုံ Download လုပ်မယ်</a>
+      <div class="draw-two-step" aria-label="အစောင်သိမ်းပြီး Telegram သို့ ပို့ရန်">
+        <div class="draw-transfer-step">
+          <strong>အဆင့် ၁ — ကံစမ်းရန် ရွေးထားသောအသင်းများကို အရင်သိမ်းပါ</strong>
+          <a class="draw-action" id="draw-download" href="#" download>⬇ ကံစမ်းအစောင် သိမ်းမယ်</a>
+        </div>
+        <div class="draw-transfer-step">
+          <strong>အဆင့် ၂ — သိမ်းထားသော ကံစမ်းအစောင်ကို ပို့ရန်</strong>
+          <a class="draw-action secondary is-locked" id="draw-recipient" href="https://t.me/ballwins" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Telegram @ballwins သို့ ပို့ရန်</a>
+        </div>
       </div>
-      <a id="draw-recipient" class="draw-recipient" href="https://t.me/ballwins" target="_blank" rel="noopener noreferrer">Telegram @ballwins ကို ဖွင့်ရန်</a>
-      <p class="draw-note">Telegram မှာ <strong id="draw-receiver">@ballwins</strong> ကိုရွေးပြီး ပုံပို့ပါ။</p>
+      <p class="draw-note">Telegram Chat ထဲမှာ သိမ်းထားတဲ့ ကံစမ်းအစောင်ပုံကို တွဲပြီး Send နှိပ်ပါ။</p>
     </section>
   </section>
 </main>
