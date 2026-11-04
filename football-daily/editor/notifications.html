@@ -19,15 +19,22 @@
 <label for="link">၄။ ဖွင့်မည့် Link (optional)</label><input id="link" type="url" placeholder="https://future-code-football-daily.pages.dev/..." autocomplete="off">
 <p class="muted">APK တစ်ခုရွေးထားလျှင် ၎င်း Website ၏ Link ထည့်နိုင်သည်။ APK အများကြီးရွေးထားလျှင် Link အလွတ်ထားပါ — App အလိုက် Home Page ကို ဖွင့်ပေးမည်။</p>
 <label class="check"><input id="confirm" type="checkbox"> <span>ရွေးထားသော APK အသုံးပြုသူများထံ Notification တကယ်ပို့ရန် အတည်ပြုပါသည်။</span></label>
-<button type="button" id="send">🔔 Send Notification</button>
-<p class="tiny">Server Key များကို Browser ထဲမထည့်ပါ။ Github Actions က Firebase သို့ ပို့ပါမည်။</p>
+<button type="button" id="send">🔔 Send Notification · ပို့ရန်</button>
+<p class="tiny">ခလုတ်နှိပ်ပြီးနောက် အောက်တွင် ပို့ခြင်းအခြေအနေ ပြပါမည်။</p>
 <div id="state" role="status" aria-live="polite" class="status">စာသားဖြည့်ပြီး Send နှိပ်နိုင်ပါပြီ။</div>
 <p id="run" hidden><a id="runLink" target="_blank" rel="noopener noreferrer">GitHub Workflow အခြေအနေကြည့်ရန် ↗</a></p>
 </section>
 <aside class="panel"><h2>ပို့မည့် Notification Preview</h2><div class="preview"><strong id="pTitle">Notification ခေါင်းစဉ်</strong><span id="pBody">Notification စာသား ဒီမှာပေါ်ပါမယ်။</span></div>
 <p id="pBrands" class="muted"></p>
-<h2>သတိပြုရန်</h2><p class="muted">GitHub Workflow SUCCESS ဆိုသည်မှာ Firebase က Message ကို လက်ခံထားခြင်းဖြစ်သည်။ ဖုန်းတိုင်းရောက်ကြောင်း မဆိုလိုပါ။</p>
-<p class="danger">4 Nov APK များသည် manual Notification ကို app ဖွင့်ထားစဉ် ပြနိုင်ရန် APK client ပြင်ဆင်မှု ထပ်လိုပါသည်။ နောက်ခံ၌ Firebase Notification ပြနိုင်သော်လည်း ဖုန်းစမ်းသပ်မှု မပြီးသေးပါ။</p>
+<h2>Notification ပို့ရန်</h2>
+<ol class="muted" style="padding-left:23px;margin:8px 0 16px">
+<li>APK များကို ရွေးပါ။</li>
+<li>ခေါင်းစဉ်၊ စာသား ဖြည့်ပါ။</li>
+<li>အတည်ပြုပြီး <strong>Send Notification</strong> နှိပ်ပါ။</li>
+</ol>
+<p class="muted">ပို့ခြင်းအခြေအနေကို Send ခလုတ်အောက်မှာ ပြပေးပါမည်။</p>
+<details class="muted" style="border-top:1px solid #34495e;padding-top:12px;margin-top:16px"><summary style="cursor:pointer;color:#a2d9e8">Notification မရောက်ပါက စစ်ရန်</summary>
+<p>APK အသစ်ကို Install လုပ်ပြီး ဖုန်း Settings တွင် Notification ကို Allow ဖွင့်ထားရန် လိုအပ်ပါသည်။ Firebase က ပို့ခြင်းကို လက်ခံထားသော်လည်း ဖုန်းတိုင်းဆီ ရောက်ကြောင်း အာမမခံနိုင်ပါ။ လက်ရှိ APK များတွင် App ဖွင့်ထားချိန် Manual Notification ပြသခြင်းကို ဖုန်းအစစ်ဖြင့် အတည်မပြုရသေးပါ။</p></details>
 </aside></div></main>
 <script>
 (()=>{"use strict";
