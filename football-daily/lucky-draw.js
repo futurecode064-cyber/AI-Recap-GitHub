@@ -47,6 +47,14 @@
     nodes.status.classList.toggle("draw-error", !!error);
   }
   function invalidate() {
+    if (site === "bw") {
+      const send = byId("draw-recipient");
+      if (send) {
+        send.classList.add("is-locked");
+        send.setAttribute("aria-disabled", "true");
+        send.setAttribute("tabindex", "-1");
+      }
+    }
     if (imageUrl) URL.revokeObjectURL(imageUrl);
     imageUrl = "";
     imageBlob = null;
@@ -352,11 +360,25 @@
   }
   function init() {
     nodes.recipient.href = "https://t.me/" + config.recipient;
-    nodes.recipient.textContent = "Telegram @" + config.recipient + " ကို ဖွင့်ရန်";
+    nodes.recipient.textContent = site === "bw" ? "Telegram @" + config.recipient + " သို့ ပို့ရန်" : "Telegram @" + config.recipient + " ကို ဖွင့်ရန်";
     const receiverText = byId("draw-receiver");
     if (receiverText) receiverText.textContent = "@" + config.recipient;
     nodes.generate.addEventListener("click", generate);
-    nodes.share.addEventListener("click", share);
+    if (nodes.share) nodes.share.addEventListener("click", share);
+    if (site === "bw") {
+      // The browser can initiate a PNG save; it cannot attest that it reached Gallery.
+      // Keep the direct @ballwins chat step gated behind the save/download click.
+      nodes.download.addEventListener("click", () => {
+        if (!imageBlob) return;
+        nodes.recipient.classList.remove("is-locked");
+        nodes.recipient.removeAttribute("aria-disabled");
+        nodes.recipient.removeAttribute("tabindex");
+        announce("ကံစမ်းအစောင်ပုံ သိမ်းရန် စတင်ပြီးပါပြီ။ အဆင့် ၂ တွင် Telegram ကိုဖွင့်ပြီး ပုံတွဲပို့ပါ။");
+      });
+      nodes.recipient.addEventListener("click", event => {
+        if (!imageBlob || nodes.recipient.getAttribute("aria-disabled") === "true") event.preventDefault();
+      });
+    }
     for (const field of [nodes.name, nodes.telegram]) field.addEventListener("input", invalidate);
     loadMatches();
   }
