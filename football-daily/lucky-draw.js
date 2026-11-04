@@ -3,7 +3,7 @@
   "use strict";
   const site = document.documentElement.dataset.drawSite === "bw" ? "bw" : "main";
   const config = site === "bw"
-    ? { brand: "BW SPORT ဘောလုံးဂျာနယ်", prefix: "BW", recipient: "ballwins", dataBase: "../data/odds/", logo: "./assets/logo.webp",
+    ? { brand: "BW ဂျာနယ်", prefix: "BW", recipient: "ballwins", dataBase: "../data/odds/", logo: "./assets/logo.webp",
         dark: "#06162d", panel: "#112947", accent: "#40c3ff", soft: "#e4f5ff" }
     : { brand: "FUTURE CODE FOOTBALL", prefix: "MAIN", recipient: "graphicdesignmm", dataBase: "./data/odds/", logo: null,
         dark: "#102625", panel: "#23403b", accent: "#f2c67d", soft: "#f6f7f1" };
@@ -207,7 +207,7 @@
     ctx.fillStyle = config.accent;
     ctx.fillRect(40, 965, 1000, 2);
     fitted(ctx, "Telegram @"+config.recipient+" သို့ ပို့ရန်", 45, 1001, 980, 24, config.accent);
-    fitted(ctx, "Developed by Future Code AI Studio", 45, 1040, 970, 21, config.soft, 600);
+    fitted(ctx, site === "bw" ? "BW ဂျာနယ်" : "Developed by Future Code AI Studio", 45, 1040, 970, 21, config.soft, 600);
     const blob = await new Promise((resolve, reject) => canvas.toBlob(
       file => file ? resolve(file) : reject(new Error("PNG ထုတ်မရပါ။")), "image/png"
     ));
