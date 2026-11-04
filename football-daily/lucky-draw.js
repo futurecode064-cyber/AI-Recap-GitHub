@@ -336,7 +336,14 @@
       nodes.download.href = imageUrl;
       nodes.download.download = imageName;
       nodes.result.hidden = false;
-      announce("PNG အစောင် ပြီးပါပြီ။ Telegram ကိုရွေးပြီး @" + config.recipient + " ဆီ ပုံပို့ပါ။");
+      if (site === "bw") {
+        // Step 1: initiate PNG download from the user-triggered generate action.
+        // Browsers may show a save prompt; only the visitor can confirm the file was saved.
+        nodes.download.click();
+        announce("ကံစမ်းအစောင် PNG ပုံ သိမ်းရန် စတင်ပြီးပါပြီ။ အဆင့် ၂ မှ Telegram Chat ကို ဖွင့်ပါ။");
+      } else {
+        announce("PNG အစောင် ပြီးပါပြီ။ Telegram ကိုရွေးပြီး @" + config.recipient + " ဆီ ပုံပို့ပါ။");
+      }
       nodes.result.scrollIntoView({ behavior: "smooth", block: "start" });
     } catch (error) {
       announce("PNG ဖန်တီးမအောင်မြင်ပါ — " + (error.message || "ပြန်စမ်းပါ။"), true);
@@ -366,8 +373,7 @@
     nodes.generate.addEventListener("click", generate);
     if (nodes.share) nodes.share.addEventListener("click", share);
     if (site === "bw") {
-      // The browser can initiate a PNG save; it cannot attest that it reached Gallery.
-      // Keep the direct @ballwins chat step gated behind the save/download click.
+      // The browser initiates a PNG save; Telegram chat opens separately after step 1.
       nodes.download.addEventListener("click", () => {
         if (!imageBlob) return;
         nodes.recipient.classList.remove("is-locked");
