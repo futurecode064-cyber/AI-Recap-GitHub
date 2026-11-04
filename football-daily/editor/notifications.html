@@ -20,7 +20,8 @@
 <p class="muted">APK တစ်ခုရွေးထားလျှင် ၎င်း Website ၏ Link ထည့်နိုင်သည်။ APK အများကြီးရွေးထားလျှင် Link အလွတ်ထားပါ — App အလိုက် Home Page ကို ဖွင့်ပေးမည်။</p>
 <label class="check"><input id="confirm" type="checkbox"> <span>ရွေးထားသော APK အသုံးပြုသူများထံ Notification တကယ်ပို့ရန် အတည်ပြုပါသည်။</span></label>
 <button type="button" id="send">🔔 Send Notification · ပို့ရန်</button>
-<p class="tiny">ခလုတ်နှိပ်ပြီးနောက် အောက်တွင် ပို့ခြင်းအခြေအနေ ပြပါမည်။</p>
+<p class="tiny">Firebase သို့ တိုက်ရိုက်ပို့ပေးပါမည်။ ဖုန်းရောက်ရှိမှုကို သီးခြားစစ်နိုင်ပါသည်။</p>
+<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:9px 0"><button id="check" type="button" style="width:auto;margin:0;padding:7px 13px;background:#294558;color:#d7f9ef;font-size:12px">ချိတ်ဆက်မှု စစ်ရန်</button><span class="muted" id="connection">Firebase ချိတ်ဆက်မှု စစ်ဆေးရန်</span></div>
 <div id="state" role="status" aria-live="polite" class="status">စာသားဖြည့်ပြီး Send နှိပ်နိုင်ပါပြီ။</div>
 <p id="run" hidden><a id="runLink" target="_blank" rel="noopener noreferrer">GitHub Workflow အခြေအနေကြည့်ရန် ↗</a></p>
 </section>
@@ -51,16 +52,18 @@ preview();
 async function api(path,opts={}){let r=await fetch(path,{credentials:"same-origin",cache:"no-store",...opts});let data;try{data=await r.json()}catch{throw Error("Server Response မမှန်ပါ ("+r.status+")")};if(!r.ok)throw Error(data.error||"Error "+r.status);return data}
 function setStatus(s){$("state").textContent=s}
 function setBusy(b){pending=b;$("send").disabled=b}
-async function poll(id){for(let i=0;i<36;i++){await new Promise(ok=>setTimeout(ok,5000));try{const data=await api("/api/editor/notifications/status?id="+encodeURIComponent(id));setStatus(data.message||data.phase);if(data.workflowUrl){$("run").hidden=false;$("runLink").href=data.workflowUrl}if(data.phase==="acknowledged"||data.phase==="failed"){setBusy(false);return}}catch(e){setStatus("Status စစ်ဆေးခြင်း: "+e.message)}}setStatus("Workflow အခြေအနေကို GitHub မှ ပြန်စစ်ပါ။");setBusy(false)}
+async function checkConnection(){const button=$("check");button.disabled=true;$("connection").textContent="Firebase ချိတ်ဆက်မှု စစ်နေသည်…";try{const d=await api("/api/editor/notifications/status");$("connection").textContent=d.message||"ချိတ်ဆက်မှု အောင်မြင်သည်";}catch(e){$("connection").textContent="ချိတ်ဆက်မှု မအောင်မြင်: "+e.message}finally{button.disabled=false}}
+$("check").onclick=checkConnection;checkConnection();
+
 $("send").onclick=async()=>{
  if(pending)return;
  const targets=selected(),title=$("title").value.trim(),body=$("body").value.trim(),link=$("link").value.trim();
  if(!targets.length||title.length<2||body.length<2||!$("confirm").checked){setStatus("APK၊ ခေါင်းစဉ်၊ စာသား၊ အတည်ပြုချက် စစ်ပါ။");return}
  if(targets.length>1&&link){setStatus("APK အများကြီးရွေးထားလျှင် Link အလွတ်ထားပါ");return}
  if(!window.confirm(targets.map(x=>names[x]).join(", ")+" သို့ Notification တကယ်ပို့မှာ သေချာပါသလား?"))return;
- setBusy(true);$("run").hidden=true;setStatus("Firebase သို့ပို့ရန် GitHub Actions စတင်နေသည်…");
+ setBusy(true);$("run").hidden=true;setStatus("Firebase သို့ Notification ပို့နေသည်…");
  try{const d=await api("/api/editor/notifications/send",{method:"POST",headers:{"Content-Type":"application/json","X-Football-Editor":"1"},body:JSON.stringify({targets,title,body,link,confirmed:true})});
- setStatus(d.message);await poll(d.requestId);}catch(e){setStatus("မအောင်မြင်: "+e.message);setBusy(false)}
+ setStatus((d.message||d.phase)+(d.failed?.length?"\nမအောင်မြင်သော APK: "+d.failed.join(", "):""));setBusy(false);}catch(e){setStatus("မအောင်မြင်: "+e.message);setBusy(false)}
 };
 })();
 </script></body></html>

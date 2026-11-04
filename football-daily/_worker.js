@@ -878,63 +878,141 @@ async function sbApi(request,env,path){
 }
 
 
-/* Future Code owner-only manual Firebase notifications.
- * GitHub Actions holds FCM_SERVICE_ACCOUNT_JSON; the browser never sees any credential.
+/* Direct owner-only Firebase Cloud Messaging sender.
+ * Cloudflare encrypted FCD_FCM_SERVICE_ACCOUNT_JSON is stored only on the server.
+ * Never expose the service account, OAuth token, or credential in an error response.
  */
-const FC_NOTI_REPO="futurecode064-cyber/future-code-football-daily";
-const FC_NOTI_WORKFLOW="football-manual-notification.yml";
+const FC_NOTI_PROJECT="future-code-football";
 const FC_NOTI_ROUTES=Object.freeze({
-  goal:"future-code-journal",ykz:"ykz-family",bw:"bw-sport",
-  kothet:"ko-thet-family",kmm:"kmm-sport-hub"
+  goal:["fc_goal","future-code-journal"],
+  ykz:["fc_ykz","ykz-family"],
+  bw:["fc_bw","bw-sport"],
+  kothet:["fc_kothet","ko-thet-family"],
+  kmm:["fc_kmm","kmm-sport-hub"]
 });
+let fcFcmAuthCache={token:"",expires:0};
+function fcFcmB64(value){
+  const bytes=value instanceof Uint8Array?value:new Uint8Array(value);
+  let text="";for(const byte of bytes)text+=String.fromCharCode(byte);
+  return btoa(text).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+}
+async function fcFcmToken(env){
+  const now=Math.floor(Date.now()/1000);
+  if(fcFcmAuthCache.token&&fcFcmAuthCache.expires>now+90)return fcFcmAuthCache.token;
+  if(!env.FCD_FCM_SERVICE_ACCOUNT_JSON)throw new Error("Firebase ချိတ်ဆက်မှု မပြည့်စုံပါ");
+  let account;
+  try{account=JSON.parse(env.FCD_FCM_SERVICE_ACCOUNT_JSON)}catch{throw new Error("Firebase ချိတ်ဆက်မှု မမှန်ပါ")}
+  if(account.project_id!==FC_NOTI_PROJECT||typeof account.client_email!=="string"||
+     !account.client_email.endsWith(".gserviceaccount.com")||
+     typeof account.private_key!=="string"||!account.private_key.includes("BEGIN PRIVATE KEY"))
+    throw new Error("Firebase Project မကိုက်ညီပါ");
+  const rawKey=account.private_key.replace(/-----BEGIN PRIVATE KEY-----|-----END PRIVATE KEY-----|\s/g,"");
+  const DER=Uint8Array.from(atob(rawKey),c=>c.charCodeAt(0));
+  const key=await crypto.subtle.importKey("pkcs8",DER,{name:"RSASSA-PKCS1-v1_5",hash:"SHA-256"},false,["sign"]);
+  const encode=text=>fcFcmB64(new TextEncoder().encode(text));
+  const jwtHead=encode(JSON.stringify({alg:"RS256",typ:"JWT"}));
+  const jwtBody=encode(JSON.stringify({iss:account.client_email,scope:"https://www.googleapis.com/auth/firebase.messaging",aud:"https://oauth2.googleapis.com/token",iat:now,exp:now+3600}));
+  const toSign=jwtHead+"."+jwtBody;
+  const signed=await crypto.subtle.sign("RSASSA-PKCS1-v1_5",key,new TextEncoder().encode(toSign));
+  const assertion=toSign+"."+fcFcmB64(signed);
+  const response=await fetch("https://oauth2.googleapis.com/token",{
+    method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},
+    body:new URLSearchParams({grant_type:"urn:ietf:params:oauth:grant-type:jwt-bearer",assertion}).toString()
+  });
+  if(!response.ok)throw new Error("Firebase Login မအောင်မြင်ပါ ("+response.status+")");
+  const payload=await response.json();
+  if(typeof payload.access_token!=="string"||payload.access_token.length<30)
+    throw new Error("Firebase Token မရရှိပါ");
+  fcFcmAuthCache={token:payload.access_token,expires:now+Math.min(Number(payload.expires_in)||3500,3500)};
+  return payload.access_token;
+}
+async function fcFcmSend(token,message,validateOnly){
+  const response=await fetch("https://fcm.googleapis.com/v1/projects/"+FC_NOTI_PROJECT+"/messages:send",{
+    method:"POST",
+    headers:{"Authorization":"Bearer "+token,"Content-Type":"application/json"},
+    body:JSON.stringify({message,validate_only:validateOnly})
+  });
+  if(!response.ok)throw new Error("Firebase ပို့ခြင်း မအောင်မြင်ပါ (HTTP "+response.status+")");
+  const data=await response.json();
+  if(typeof data.name!=="string"||!data.name.includes("/messages/"))
+    throw new Error("Firebase က Message ကို အတည်မပြုပါ");
+  return true;
+}
+function fcFcmMessage(key,title,body,route,id,date){
+  return {
+    topic:FC_NOTI_ROUTES[key][0],
+    notification:{title,body},
+    data:{slot:"manual",date,id,title,body,route},
+    android:{priority:"high"}
+  };
+}
 async function fcNotifyApi(request,env,path){
-  if(!ready(env)||!(await hasSession(request,env)))return gzJson({error:"Admin Login လိုအပ်ပါသည်"},401);
+  if(!ready(env)||!(await hasSession(request,env)))
+    return gzJson({error:"Owner Login လိုအပ်ပါသည်"},401);
   const url=new URL(request.url);
   if(path==="/api/editor/notifications/status"){
     if(request.method!=="GET")return gzJson({error:"GET only"},405);
-    const id=url.searchParams.get("id");
-    if(!/^[a-f0-9-]{36}$/.test(id||""))return gzJson({error:"Request ID မမှန်ပါ"},400);
     try{
-      if(!env.FCD_EDITOR_GITHUB_TOKEN)return gzJson({error:"GitHub dispatch credential မရှိပါ"},503);
-      const data=await editorGithub(env,FC_NOTI_REPO,"actions/workflows/"+FC_NOTI_WORKFLOW+"/runs?per_page=35");
-      const run=data.workflow_runs?.find(v=>(v.display_title||"").includes(id));
-      if(!run)return gzJson({phase:"queued",message:"GitHub workflow စတင်ရန် Queue ထဲတွင်ရှိနေသည်"});
-      return gzJson({phase:run.status==="completed"?(run.conclusion==="success"?"acknowledged":"failed"):"running",
-        message:run.status==="completed"?(run.conclusion==="success"?"Firebase မှ လက်ခံအတည်ပြုထားသည်။ ဖုန်းပေါ် ရောက်ခြင်းကို သီးခြားစစ်ရန်လိုသည်":"GitHub/Firebase ပို့ခြင်း မအောင်မြင်ပါ။ Workflow Log စစ်ပါ"):"Firebase ပို့ခြင်း ဆောင်ရွက်နေသည်",
-        workflowUrl:run.html_url});
-    }catch(e){return gzJson({error:e.message||"Status စစ်မရပါ"},e.status||502);}
+      const token=await fcFcmToken(env);
+      const message=fcFcmMessage("goal","Future Code FCM test","validate_only only",
+        url.origin+"/future-code-journal/",crypto.randomUUID(),gzDate());
+      await fcFcmSend(token,message,true);
+      return gzJson({phase:"ready",message:"Firebase ချိတ်ဆက်မှု အောင်မြင်ပါပြီ။ Notification ပို့နိုင်ပါပြီ။"});
+    }catch(error){return gzJson({phase:"failed",error:error.message||"Firebase ချိတ်ဆက်မှု စစ်ဆေးမရပါ"},503)}
   }
   if(request.method!=="POST")return gzJson({error:"POST only"},405);
-  if(request.headers.get("Origin")!==url.origin || request.headers.get("X-Football-Editor")!=="1" ||
-      request.headers.get("Sec-Fetch-Site")==="cross-site")return gzJson({error:"Admin Page မှသာ ပို့နိုင်ပါသည်"},403);
-  if(!env.FCD_EDITOR_GITHUB_TOKEN)return gzJson({error:"Cloudflare Secret FCD_EDITOR_GITHUB_TOKEN မချိတ်ထားပါ"},503);
+  if(request.headers.get("Origin")!==url.origin||
+     request.headers.get("X-Football-Editor")!=="1"||
+     request.headers.get("Sec-Fetch-Site")==="cross-site")
+    return gzJson({error:"Admin Panel မှသာ ပို့နိုင်ပါသည်"},403);
   try{
-    if(Number(request.headers.get("Content-Length")||0)>5500)return gzJson({error:"Message အရွယ်အစားကြီးလွန်းသည်"},413);
+    if(Number(request.headers.get("Content-Length")||0)>5500)
+      return gzJson({error:"Message အရွယ်အစားကြီးလွန်းသည်"},413);
     const data=await editorBody(request);
-    if(!data||typeof data!=="object")return gzJson({error:"Invalid payload"},400);
-    const targets=data.targets,title=data.title?.trim(),body=data.body?.trim(),link=(data.link||"").trim();
+    if(!data||typeof data!=="object"||Array.isArray(data))
+      return gzJson({error:"Invalid data"},400);
+    const targets=data.targets;
     if(!Array.isArray(targets)||targets.length<1||targets.length>5||
-       new Set(targets).size!==targets.length || targets.some(t=>!Object.hasOwn(FC_NOTI_ROUTES,t)))
-      return gzJson({error:"APK ၁ ခုမှ ၅ ခုအထိ ရွေးပါ"},422);
-    if(typeof title!=="string"||title.length<2||title.length>100||
-       typeof body!=="string"||body.length<2||body.length>350)
-      return gzJson({error:"ခေါင်းစဉ် (2–100) နှင့် စာသား (2–350) စာလုံး ဖြည့်ပါ"},422);
-    if(typeof link!=="string"||link.length>350 || /[\r\n\\]/.test(link))return gzJson({error:"Link မမှန်ပါ"},422);
+       new Set(targets).size!==targets.length||
+       targets.some(t=>typeof t!=="string"||!Object.hasOwn(FC_NOTI_ROUTES,t)))
+      return gzJson({error:"APK ၁ ခုမှ ၅ ခုအထိ ရွေးချယ်ပါ"},422);
+    if(typeof data.title!=="string"||typeof data.body!=="string"||
+       typeof data.link!=="string")
+      return gzJson({error:"ခေါင်းစဉ်၊ စာသားနှင့် Link ကို စစ်ပါ"},422);
+    const title=data.title.trim(),body=data.body.trim(),link=data.link.trim();
+    if(title.length<2||title.length>100||body.length<2||body.length>350)
+      return gzJson({error:"ခေါင်းစဉ် (၂–၁၀၀)၊ စာသား (၂–၃၅၀) ထည့်ပါ"},422);
+    if(link.length>350||/[\r\n\\]/.test(link))return gzJson({error:"Link မမှန်ပါ"},422);
+    let targetLink="";
     if(link){
-      if(targets.length>1)return gzJson({error:"APK အများကြီးရွေးလျှင် Link ကို အလွတ်ထားပါ။ App တစ်ခုချင်း Home Page ဖွင့်ပေးပါမည်"},422);
-      let to;
-      try{to=new URL(link,url.origin)}catch{return gzJson({error:"Link မမှန်ပါ"},422)}
-      const prefix="/"+FC_NOTI_ROUTES[targets[0]]+"/";
-      if(to.origin!==url.origin||!to.pathname.startsWith(prefix)||to.username||to.password||to.hash)
-        return gzJson({error:"ရွေးထားသော APK Website ၏ HTTPS Link ကိုသာ အသုံးပြုပါ"},422);
-      if(!/^https:$/.test(to.protocol))return gzJson({error:"HTTPS Link သာ လက်ခံသည်"},422);
-      data.link=to.href;
-    }else data.link="";
+      if(targets.length>1)return gzJson({error:"APK များစွာ ရွေးထားလျှင် Link အလွတ်ထားပါ"},422);
+      let page;try{page=new URL(link,url.origin)}catch{return gzJson({error:"Link မမှန်ပါ"},422)}
+      const prefix="/"+FC_NOTI_ROUTES[targets[0]][1]+"/";
+      if(page.protocol!=="https:"||page.origin!==url.origin||!page.pathname.startsWith(prefix)||
+         page.username||page.password||page.hash)
+        return gzJson({error:"ရွေးထားသော APK Website Link သာ အသုံးပြုပါ"},422);
+      targetLink=page.href;
+    }
     if(data.confirmed!==true)return gzJson({error:"Send အတည်ပြုချက် ရွေးပါ"},400);
-    const id=crypto.randomUUID();
-    await editorGithub(env,FC_NOTI_REPO,"actions/workflows/"+FC_NOTI_WORKFLOW+"/dispatches","POST",{
-      ref:"main",inputs:{targets:targets.join(","),title,body,link:data.link,request_id:id,dry_run:"false"}
-    });
-    return gzJson({requestId:id,phase:"queued",message:"GitHub Actions သို့ ပို့ရန် အမိန့်ရောက်ရှိပါပြီ။ Firebase ACK မရသေးပါ။"},202);
-  }catch(e){return gzJson({error:e.message||"Notification မပို့နိုင်ပါ"},e.status||502);}
+    const token=await fcFcmToken(env);
+    const id=crypto.randomUUID(),date=gzDate();
+    const messages=targets.map(key=>({
+      key,message:fcFcmMessage(key,title,body,targetLink||url.origin+"/"+FC_NOTI_ROUTES[key][1]+"/",id,date)
+    }));
+    // Validate ALL topics before any real push (never transmit a test message to phones).
+    await Promise.all(messages.map(m=>fcFcmSend(token,m.message,true)));
+    const results=await Promise.allSettled(messages.map(m=>fcFcmSend(token,m.message,false)));
+    const sent=messages.filter((m,i)=>results[i].status==="fulfilled").map(m=>m.key);
+    const failed=messages.filter((m,i)=>results[i].status!=="fulfilled").map(m=>m.key);
+    if(!sent.length)
+      return gzJson({phase:"failed",sent,failed,error:"Firebase Notification ပို့ခြင်း မအောင်မြင်ပါ။ ထပ်စစ်ရန် လိုအပ်သည်။"},502);
+    if(failed.length)
+      return gzJson({phase:"partial",sent,failed,requestId:id,message:
+        "Firebase လက်ခံမှု "+sent.length+"/"+targets.length+" ခု အောင်မြင်ပြီး "+failed.length+
+        " ခု မအောင်မြင်ပါ။ အောင်မြင်ခဲ့သော APK များကို ထပ်မံမပို့ခင် စစ်ဆေးပါ။"});
+    return gzJson({phase:"acknowledged",sent,failed,requestId:id,message:
+      "Firebase က APK "+sent.length+" ခုအတွက် Notification ကို လက်ခံပြီးပါပြီ။ ဖုန်းတွင် ရောက်ရှိမှုကို သီးခြား စမ်းသပ်ပါ။"});
+  }catch(error){
+    return gzJson({phase:"failed",error:error.message||"Notification ပို့ခြင်း မအောင်မြင်ပါ"},502);
+  }
 }
