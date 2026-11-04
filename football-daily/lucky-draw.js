@@ -137,7 +137,8 @@
   }
   const drawRound = (ctx, x, y, w, h, radius, fill) => {
     ctx.beginPath();
-    ctx.roundRect(x, y, w, h, radius);
+    if (typeof ctx.roundRect === "function") ctx.roundRect(x, y, w, h, radius);
+    else ctx.rect(x, y, w, h);
     ctx.fillStyle = fill;
     ctx.fill();
   };
@@ -282,7 +283,6 @@
     nodes.generate.addEventListener("click", generate);
     nodes.share.addEventListener("click", share);
     for (const field of [nodes.name, nodes.telegram]) field.addEventListener("input", invalidate);
-    window.addEventListener("pagehide", invalidate);
     loadMatches();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
