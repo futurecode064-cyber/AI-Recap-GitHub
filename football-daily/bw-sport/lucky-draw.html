@@ -38,20 +38,15 @@
     <div id="draw-matches" class="draw-matches" aria-label="ယနေ့ပွဲများ"></div>
     <div class="draw-submit-area">
       <p id="draw-status" class="draw-status" role="status" aria-live="polite">ယနေ့ ပေါက်ကြေးစာရင်း ဖွင့်နေပါသည်…</p>
-      <button id="draw-generate" class="draw-action" type="button" disabled>🎟 ကံစမ်းအစောင်ပုံ ဖန်တီးမယ်</button>
+      <button id="draw-generate" class="draw-action" type="button" disabled>အဆင့် ၁ — ရွေးထားသောအသင်းများကို PNG ပုံသိမ်းမယ်</button>
     </div>
     <section id="draw-result" class="draw-result" hidden aria-label="ကံစမ်းအစောင် PNG">
       <h2 class="draw-result-title">PNG ကံစမ်းအစောင် အသင့်ဖြစ်ပါပြီ</h2>
       <img id="draw-preview" class="draw-ticket-preview" alt="ကံစမ်းအစောင် Preview">
-      <div class="draw-two-step" aria-label="အစောင်သိမ်းပြီး Telegram သို့ ပို့ရန်">
-        <div class="draw-transfer-step">
-          <strong>အဆင့် ၁ — ကံစမ်းရန် ရွေးထားသောအသင်းများကို အရင်သိမ်းပါ</strong>
-          <a class="draw-action" id="draw-download" href="#" download>⬇ ကံစမ်းအစောင် သိမ်းမယ်</a>
-        </div>
-        <div class="draw-transfer-step">
-          <strong>အဆင့် ၂ — သိမ်းထားသော ကံစမ်းအစောင်ကို ပို့ရန်</strong>
-          <a class="draw-action secondary is-locked" id="draw-recipient" href="https://t.me/ballwins" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Telegram @ballwins သို့ ပို့ရန်</a>
-        </div>
+      <a id="draw-download" href="#" download hidden></a>
+      <div class="draw-transfer-step">
+        <strong>အဆင့် ၂ — သိမ်းထားသော ကံစမ်းအစောင်ကို ပို့ရန်</strong>
+        <a class="draw-action secondary is-locked" id="draw-recipient" href="https://t.me/ballwins" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Telegram @ballwins သို့ ပို့ရန်</a>
       </div>
       <p class="draw-note">Telegram Chat ထဲမှာ သိမ်းထားတဲ့ ကံစမ်းအစောင်ပုံကို တွဲပြီး Send နှိပ်ပါ။</p>
     </section>
