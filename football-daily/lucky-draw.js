@@ -3,7 +3,7 @@
   "use strict";
   const site = document.documentElement.dataset.drawSite === "bw" ? "bw" : "main";
   const config = site === "bw"
-    ? { brand: "BW SPORT ဘောလုံးဂျာနယ်", prefix: "BW", recipient: "ballwins", dataBase: "../data/odds/", logo: "./assets/logo.webp",
+    ? { brand: "BW ဂျာနယ်", prefix: "BW", recipient: "ballwins", dataBase: "../data/odds/", logo: "./assets/logo.webp",
         dark: "#06162d", panel: "#112947", accent: "#40c3ff", soft: "#e4f5ff" }
     : { brand: "FUTURE CODE FOOTBALL", prefix: "MAIN", recipient: "graphicdesignmm", dataBase: "./data/odds/", logo: null,
         dark: "#102625", panel: "#23403b", accent: "#f2c67d", soft: "#f6f7f1" };
@@ -81,6 +81,11 @@
       const detail = document.createElement("span");
       detail.textContent = m.league + " · " + m.clock + (available ? "" : " · ပွဲစပြီး/ပိတ်ပြီး");
       head.append(title, detail);
+      const original = document.createElement("span");
+      original.className = "draw-odds-original";
+      original.textContent = "မူလကြေး · " + (m.originalUpperTeam || "—") + " · ဘော်ဒီ " +
+        (m.originalBodyOdds || "—") + " · ဂိုးပေါင်း " + (m.originalGoalOdds || "—");
+      head.appendChild(original);
       const buttons = document.createElement("div");
       buttons.className = "draw-match-choices";
       for (const pick of ["home", "away"]) {
@@ -119,7 +124,10 @@
         id: text(m.fixtureId) || "row-" + i,
         home: text(m.home), away: text(m.away), league: text(m.leagueDisplay || m.league),
         clock: text(m.kickoffDisplay || m.sourceKickoff || m.kickoffYangon || ""),
-        kickoffUtc: m.kickoffUtc, status: m.status
+        kickoffUtc: m.kickoffUtc, status: m.status,
+        homeLogo: text(m.homeCrestUrl), awayLogo: text(m.awayCrestUrl),
+        originalBodyOdds: text(m.bodyOdds), originalGoalOdds: text(m.goalTotalOdds),
+        originalUpperTeam: text(m.upperTeam)
       })).filter(m => {
         if (!m.home || !m.away || seen.has(m.id)) return false;
         seen.add(m.id);
@@ -175,6 +183,48 @@
       fitted(ctx, "BW", 55, 87, 48, 26, config.dark, 900);
     }
   }
+  const logoCache = new Map();
+  function localLogoUrl(rawUrl) {
+    if (!rawUrl) return "";
+    try {
+      const u = new URL(rawUrl, document.baseURI);
+      if (!/^https?:$/.test(u.protocol)) return "";
+      // Use the ORIGINAL, deployed crest files on this site's own origin,
+      // including Cloudflare preview domains, without relying on remote CORS.
+      if (u.pathname.startsWith("/assets/team-logos/") &&
+          (u.hostname === location.hostname || u.hostname === "future-code-football-daily.pages.dev")) {
+        return u.pathname;
+      }
+      return u.origin === location.origin ? u.href : "";
+    } catch (_) {
+      return "";
+    }
+  }
+  async function loadCrest(rawUrl) {
+    const src = localLogoUrl(rawUrl);
+    if (!src) return null;
+    if (!logoCache.has(src)) {
+      logoCache.set(src, new Promise(resolve => {
+        const picture = new Image();
+        const timeout = setTimeout(() => resolve(null), 6000);
+        picture.onload = () => { clearTimeout(timeout); resolve(picture); };
+        picture.onerror = () => { clearTimeout(timeout); resolve(null); };
+        picture.src = src;
+      }));
+    }
+    return logoCache.get(src);
+  }
+  function crestInCircle(ctx, img, x, y, fallbackName) {
+    const d = 32;
+    drawRound(ctx, x, y, d, d, 9, "#e7f2f9");
+    if (img && img.naturalWidth > 0 && img.naturalHeight > 0) {
+      const scale = Math.min(28 / img.naturalWidth, 28 / img.naturalHeight);
+      const w = img.naturalWidth * scale, h = img.naturalHeight * scale;
+      ctx.drawImage(img, x + (d - w) / 2, y + (d - h) / 2, w, h);
+    } else {
+      fitted(ctx, text(fallbackName).slice(0, 1), x + 5, y + 23, 22, 16, config.dark, 800, 14);
+    }
+  }
   async function ticketToBlob(details) {
     if (document.fonts && document.fonts.ready) await document.fonts.ready;
     const canvas = document.createElement("canvas");
@@ -182,6 +232,12 @@
     canvas.height = 1080;
     const ctx = canvas.getContext("2d");
     if (!ctx) throw new Error("ပုံဖန်တီးရန် Canvas မရပါ။");
+    const allCrests = await Promise.all(details.selections.map(async pick => {
+      const [home, away] = await Promise.all([
+        loadCrest(pick.match.homeLogo), loadCrest(pick.match.awayLogo)
+      ]);
+      return {home, away};
+    }));
     ctx.fillStyle = config.dark;
     ctx.fillRect(0, 0, 1080, 1080);
     ctx.fillStyle = config.accent;
@@ -193,21 +249,40 @@
     fitted(ctx, "အမည်: " + details.name, 55, 196, 920, 24, config.soft);
     const extra = details.telegram ? " | TG: " + details.telegram : "";
     fitted(ctx, readableDate(reportDate) + "  |  " + ticketId + extra, 55, 228, 925, 22, config.accent, 700);
+
     details.selections.forEach((pick, i) => {
+      const m = pick.match, logos = allCrests[i];
       const y = 252 + i * 70;
-      drawRound(ctx, 40, y, 1000, 66, 12, i % 2 ? config.panel : "#193036");
-      if (site === "bw" && i % 2 === 0) {
-        drawRound(ctx, 40, y, 1000, 66, 12, "#102b4c");
-      }
+      drawRound(ctx, 40, y, 1000, 66, 12, site === "bw"
+        ? (i % 2 ? "#10233d" : "#102b4c")
+        : (i % 2 ? config.panel : "#193036"));
       drawRound(ctx, 51, y + 13, 48, 40, 10, config.accent);
       fitted(ctx, String(i + 1).padStart(2, "0"), 59, y + 42, 36, 20, config.dark, 800);
-      fitted(ctx, pick.match.home + "  VS  " + pick.match.away, 115, y + 27, 900, 24, config.soft, 700, 17);
-      fitted(ctx, "ရွေးချယ်မှု — " + pick.team, 115, y + 55, 900, 24, config.accent, 800, 17);
+
+      // Line 1: two team crests and names. Column width is fixed.
+      crestInCircle(ctx, logos.home, 114, y + 7, m.home);
+      fitted(ctx, m.home, 153, y + 31, 180, 20, config.soft, 700, 15);
+      fitted(ctx, "VS", 345, y + 30, 31, 17, config.accent, 900);
+      crestInCircle(ctx, logos.away, 386, y + 7, m.away);
+      fitted(ctx, m.away, 426, y + 31, 315, 20, config.soft, 700, 15);
+
+      // Line 2: exact ORIGINAL Myanmar body + goal odds, never "ယခု" prices.
+      const oddsText = "မူလကြေး  " + (m.originalUpperTeam || "—") +
+        "  ·  ဘော်ဒီ " + (m.originalBodyOdds || "—") +
+        "  ·  ဂိုးပေါင်း " + (m.originalGoalOdds || "—");
+      fitted(ctx, oddsText, 115, y + 56, 618, 15, "#bfcfdf", 650, 12);
+
+      // Selected team is an independent right-hand column (not a narrow lower line).
+      drawRound(ctx, 753, y + 6, 274, 54, 11, config.accent);
+      fitted(ctx, "ရွေးထားသောအသင်း", 767, y + 23, 240, 13, config.dark, 750, 12);
+      fitted(ctx, pick.team, 767, y + 50, 244, 22, config.dark, 900, 16);
     });
+
     ctx.fillStyle = config.accent;
     ctx.fillRect(40, 965, 1000, 2);
-    fitted(ctx, "Telegram @"+config.recipient+" သို့ ပို့ရန်", 45, 1001, 980, 24, config.accent);
-    fitted(ctx, "Developed by Future Code AI Studio", 45, 1040, 970, 21, config.soft, 600);
+    fitted(ctx, "Telegram @" + config.recipient + " သို့ ပို့ရန်", 45, 1001, 980, 24, config.accent);
+    fitted(ctx, site === "bw" ? "BW ဂျာနယ်" : "Developed by Future Code AI Studio",
+      45, 1040, 970, 21, config.soft, 600);
     const blob = await new Promise((resolve, reject) => canvas.toBlob(
       file => file ? resolve(file) : reject(new Error("PNG ထုတ်မရပါ။")), "image/png"
     ));
