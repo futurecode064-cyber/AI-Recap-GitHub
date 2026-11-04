@@ -2,7 +2,7 @@
 const assert=require("node:assert/strict"),test=require("node:test"),fs=require("node:fs"),path=require("node:path");
 const root=path.join(__dirname,".."),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
 const registry=read("data/pdf-name-aliases/2026-10-31.json");
-const today=read("data/today.json"),prices=read("data/odds/2026-10-31.json"),evening=read("data/odds/evening/2026-10-31.json");
+const today=read("data/archive/2026-10-31.json"),prices=read("data/odds/2026-10-31.json"),evening=read("data/odds/evening/2026-10-31.json");
 const priceValue=v=>/^(?:\d+[+-]\d+|\d+=|-\d+)$/.test(String(v||""));
 test("Owner 31 current-PDF: 33 distinct fixtures and four sourced quotes per fixture",()=>{
  assert.equal(registry.fixtures.length,33);

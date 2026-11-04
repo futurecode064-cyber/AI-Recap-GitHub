@@ -29,7 +29,7 @@ for(const [id,name] of Object.entries(brands)){
   const expected=[...m.homeLastFive,...m.awayLastFive].map(g=>x.window.FutureCodeBrandExportData.formResult(g));
   assert.deepEqual(x.labels.filter(l=>/^[WDL]$/.test(l)),expected);
   assert.ok(x.logos.some(u=>u.endsWith('/league-logos/fra.2.png')),'Ligue 2 crest drawn');
-  for(const value of [m.home,m.away,m.homeOdds,m.drawOdds,m.awayOdds])assert.ok(x.labels.includes(String(value)),String(value));
+  for(const value of [m.homeDisplay||m.home,m.awayDisplay||m.away,m.homeOdds,m.drawOdds,m.awayOdds])assert.ok(x.labels.includes(String(value)),String(value));
   for(const value of [m.myanmarOdds.bodyOdds,m.myanmarOdds.goalTotalOdds])assert.ok(x.labels.some(l=>l.includes(value)));
   assert.ok(x.labels.join('').includes(m.dailyPreviewText.replace(/\*\*/g,'').split(' ').at(-1)),'article reaches final words');
   assert.equal(x.canvases.at(-1).width,1200,'existing width preserved');
@@ -105,7 +105,7 @@ test('Current-day leagues resolve to bundled logos on all sub-brands',()=>{
 
 test('Current publication every team and competition crest is bundled for all six brands and main',()=>{
  const report=JSON.parse(read('data/today.json'));
- assert.match(report.reportDate,/^\\d{4}-\\d{2}-\\d{2}$/);
+ assert.match(report.reportDate,/^\d{4}-\d{2}-\d{2}$/);
  const sheet=JSON.parse(read('data/odds/'+report.reportDate+'.json'));
  assert.equal(sheet.reportDate,report.reportDate);
  assert.ok(sheet.matches.length,'daily odds cannot be empty');
