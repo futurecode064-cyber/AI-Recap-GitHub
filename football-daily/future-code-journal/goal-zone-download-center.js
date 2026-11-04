@@ -13,7 +13,7 @@
   ];
   const imageCache=new Map();
   const name=s=>String(s||"football").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,36)||"item";
-  const key=m=>[m.league||"",m.home||"",m.away||""].join("|");
+  const key=m=>m.fixtureId?"fixture:"+m.fixtureId:[m.league||"",m.home||"",m.away||""].join("|");
   const yesterday=date=>{const d=new Date(date+"T12:00:00Z");d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);};
   async function read(path){
     const loader=window.FootballData?.fetch||fetch;
@@ -378,7 +378,7 @@
       rows.filter(m=>m&&m.home&&m.away).forEach(m=>{if(!distinct.has(key(m)))distinct.set(key(m),m);});
       allMatches=[...distinct.values()];
       const leagues=[...new Set(allMatches.map(m=>m.league).filter(Boolean))].sort();
-      for(const l of leagues){const option=document.createElement("option");option.value=l;option.textContent=l;league.add(option);}
+      for(const l of leagues){const option=document.createElement("option");option.value=l;option.textContent=allMatches.find(m=>m.league===l)?.leagueDisplay||window.FutureCodeBrandExportData?.leagueName(l)||l;league.add(option);}
       for(const m of allMatches){
         const label=document.createElement("label"),input=document.createElement("input");
         input.type="checkbox";input.name="gzCenterMatch";input.value=key(m);input.checked=true;

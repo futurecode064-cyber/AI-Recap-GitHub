@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "status": "CANDIDATE_STRUCTURAL_PASS_PENDING_LIVE_QA",
+  "status": "PUBLISHED_LIVE_VERIFIED_WITH_LIMITATIONS",
   "baseCommit": "9eaf2bdd5bef12ada8bf7f94f0b6ff6149d96b15",
   "runtime": "existing static Pages JSON, engine disabled; no architecture change",
   "counts": {
@@ -22,14 +22,14 @@
   "kickoffCorrection": "Bristol City-Wolves source PDF prints 2:15 AM; actual 20:00 UTC / 2:30 AM Nov 5 verified separately",
   "unavailable": [
     "Complete official current injury/squad coverage for all 30 teams; omitted unsupported claims",
-    "Current-price PDF not supplied: current fields remain blank",
-    "Browser/download/live checks pending"
+    "Current-price PDF not supplied: current fields remain blank"
   ],
   "candidateChecks": {
     "dailyPackageGuard": "PASS",
     "previewV2Validator": "PASS",
     "focusedTimeV2Tests": "7 passed",
-    "oddsClockLegacyTests": "two identical pre-existing failures on baseline and candidate; outdated asset query and suspended BCF page expectations"
+    "oddsClockLegacyTests": "two identical pre-existing failures on baseline and candidate; outdated asset query and suspended BCF page expectations",
+    "additionalFocusedTests": "25 passed (brand exports/current logos/Oct31 immutable PDF archive/time); 9 AI bulk/time passed"
   },
   "photoPolicy": "10 real licensed archived photos cached same origin with credit/date/context; no current-event photo claim",
   "rollback": "baseCommit",
@@ -40,5 +40,40 @@
     "/ko-thet-family/",
     "/future-code-journal/",
     "/kmm-sport-hub/"
-  ]
+  ],
+  "publicationCommit": "4f27ebc8634e14b0d4355e8a117f6b328487177e",
+  "exportFixCommit": "e2cc0ec3e34f46bb75e21e3d4d2dbd18409f11e4",
+  "liveQA": {
+    "sites": {
+      "Main": "15 matches / 2 specials / published",
+      "YKZ": "15 matches / 2 specials / no broken displayed crests",
+      "BW": "15 matches / 2 specials / no broken displayed crests",
+      "Ko Thet": "15 matches / 2 specials / no broken displayed crests",
+      "KMM": "15 matches / 2 specials / no broken displayed crests",
+      "Goal Zone": "today publication, 15 previews; news and downloads loaded"
+    },
+    "probabilities": "15 rows, populated four percentage cells",
+    "tips": "15 rows, three independent score columns",
+    "news": "10 cards and 10 real archival photos; news PNG downloaded",
+    "videoStudio": "20 previous-night results loaded; current preview/odds data available; new video not rendered",
+    "actualDownloads": {
+      "mainPreviewPNG": "1200x993, visually inspected",
+      "previewV2PNG": "1200x1066, two fixtures, visually inspected",
+      "previewV2ZIP": "CRC PASS, selected 2 fixtures in one combined PNG",
+      "morningOddsPNG": "2160x660, 3 fixtures",
+      "GoalZoneCombinedZIP": "UI generated 33 PNGs; combined 157 MB archive unavailable for byte inspection in browser transfer",
+      "GoalZoneFootballZIP": "23 PNGs, 73653285 bytes, CRC and every PNG PASS",
+      "GoalZoneNewsZIP": "10 PNGs, 83579473 bytes, CRC and every PNG PASS"
+    },
+    "fixes": [
+      "AI UI clocks now use shared 12-hour helper",
+      "Fit long Myanmar league title to PNG header",
+      "Download Center fixture IDs deduplicate report/odds names; Myanmar league labels"
+    ],
+    "limitations": [
+      "Full combined ZIP was verified through its 23+10 section archive outputs, not by reading the combined archive",
+      "Existing integrity browser CI fails; exact remote log unavailable. One 364px original archival photo is below its 400px threshold; static score/data check passes",
+      "No new daily MP4/WebM was rendered; Video Studio current data checked"
+    ]
+  }
 }
