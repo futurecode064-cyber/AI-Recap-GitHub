@@ -27,8 +27,8 @@
         "upperTeam": "ရီးရဲလ်မက်ဒရစ်",
         "bodyOdds": "2-10",
         "goalTotalOdds": "4+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+5",
+        "currentGoalTotalOdds": "4+40"
       },
       "homeLastFive": [
         {
@@ -233,8 +233,8 @@
         "upperTeam": "လီဗာပူးလ်",
         "bodyOdds": "1-45",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-55",
+        "currentGoalTotalOdds": "3-90"
       },
       "homeLastFive": [
         {
@@ -437,8 +437,8 @@
         "upperTeam": "ဒေါ့မွန်",
         "bodyOdds": "1+55",
         "goalTotalOdds": "3-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+50",
+        "currentGoalTotalOdds": "3-40"
       },
       "homeLastFive": [
         {
@@ -641,8 +641,8 @@
         "upperTeam": "ပေါ်တို",
         "bodyOdds": "-85",
         "goalTotalOdds": "3+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+95",
+        "currentGoalTotalOdds": "3+40"
       },
       "homeLastFive": [
         {
@@ -844,8 +844,8 @@
         "upperTeam": "ပီအက်စ်ဗွီ",
         "bodyOdds": "-80",
         "goalTotalOdds": "4+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-90",
+        "currentGoalTotalOdds": "4+90"
       },
       "homeLastFive": [
         {
@@ -1047,8 +1047,8 @@
         "upperTeam": "မန်စီးတီး",
         "bodyOdds": "1-20",
         "goalTotalOdds": "4+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-15",
+        "currentGoalTotalOdds": "4+60"
       },
       "homeLastFive": [
         {
@@ -1251,8 +1251,8 @@
         "upperTeam": "အာဆင်နယ်",
         "bodyOdds": "2+40",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+75",
+        "currentGoalTotalOdds": "3+30"
       },
       "homeLastFive": [
         {
@@ -1454,8 +1454,8 @@
         "upperTeam": "ကိုမို",
         "bodyOdds": "-65",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-90",
+        "currentGoalTotalOdds": "3-10"
       },
       "homeLastFive": [
         {
@@ -1657,8 +1657,8 @@
         "upperTeam": "ဗစ်ကင်း",
         "bodyOdds": "1-80",
         "goalTotalOdds": "4+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-80",
+        "currentGoalTotalOdds": "4+80"
       },
       "homeLastFive": [
         {
@@ -1860,8 +1860,8 @@
         "upperTeam": "ရင်းနက်စ်",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-45",
+        "currentGoalTotalOdds": "3+60"
       },
       "homeLastFive": [
         {
@@ -2064,8 +2064,8 @@
         "upperTeam": "ဝက်စ်ဟမ်း",
         "bodyOdds": "-95",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-85",
+        "currentGoalTotalOdds": "3-90"
       },
       "homeLastFive": [
         {
@@ -2267,8 +2267,8 @@
         "upperTeam": "မစ်ဒယ်ဘရော့",
         "bodyOdds": "1+55",
         "goalTotalOdds": "3+10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+45",
+        "currentGoalTotalOdds": "3+5"
       },
       "homeLastFive": [
         {
@@ -2472,8 +2472,8 @@
         "upperTeam": "ဝုဗ်",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "2-90"
       },
       "homeLastFive": [
         {
@@ -2676,8 +2676,8 @@
         "upperTeam": "မက်ချဲလန်",
         "bodyOdds": "-5",
         "goalTotalOdds": "3+75",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "3+100"
       },
       "homeLastFive": [
         {
@@ -2879,8 +2879,8 @@
         "upperTeam": "ရီးဒင်း",
         "bodyOdds": "-15",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-5",
+        "currentGoalTotalOdds": "3+90"
       },
       "homeLastFive": [
         {
@@ -3059,5 +3059,7 @@
         }
       }
     }
-  ]
+  ],
+  "currentOddsSourcePDF": "4 စျေး.pdf",
+  "currentOddsSourceSha256": "02e55e77bb359797d477a0ff26f2b6bebe2b6924f34fc668766942f030d51755"
 }
