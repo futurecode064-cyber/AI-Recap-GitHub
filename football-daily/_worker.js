@@ -382,7 +382,7 @@ async function handleRequest(request, env) {
     if (path.startsWith("/api/editor/")) return editorApi(request, env, path);
     if (path === "/editor" || path.startsWith("/editor/")) {
       if (!ready(env)) return unavailable();
-      if (!(await hasSession(request, env))) return redirect("/login?next=/editor/", 302);
+      if (!(await hasSession(request, env))) return redirect("/login?next=" + encodeURIComponent(path === "/editor/notifications.html" ? path : "/editor/"), 302);
       if (path === "/editor") return redirect("/editor/", 302);
       const asset = await env.ASSETS.fetch(request);
       const headers = new Headers(asset.headers);
