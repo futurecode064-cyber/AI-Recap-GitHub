@@ -4,4 +4,7 @@
  <path android:fillColor="#FFFFFF" android:pathData="M23,61 L42,20 L85,20 L77,35 L52,35 L45,46 L71,46 L64,58 L39,58 L34,70 Z"/>
  <path android:fillColor="#00D8CD" android:pathData="M48,69 L57,50 L83,50 L70,70 L50,87 L35,87 Z"/>
  <path android:fillColor="#26B6DD" android:pathData="M22,83 L32,83 L32,91 L22,91 Z M39,83 L49,83 L49,91 L39,91 Z M56,83 L66,83 L66,91 L56,91 Z"/>
+ <path android:fillColor="#F3FFFF" android:pathData="M57,68h43v27h-43z"/>
+ <path android:fillColor="#073F54" android:pathData="M63,76h31v3h-31z M63,83h22v3h-22z M63,90h16v2h-16z"/>
+ <path android:fillColor="#24DCD0" android:pathData="M62,63a3,3 0,1 0,6 0a3,3 0,1 0,-6 0 M74,61a4,4 0,1 0,8 0a4,4 0,1 0,-8 0 M88,63a3,3 0,1 0,6 0a3,3 0,1 0,-6 0"/>
 </vector>
