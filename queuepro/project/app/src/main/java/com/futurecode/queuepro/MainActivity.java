@@ -1,6 +1,6 @@
 package com.futurecode.queuepro;
 import android.app.Activity;
-import android.app.PrintManager;
+import android.print.PrintManager;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
