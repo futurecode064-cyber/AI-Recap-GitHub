@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-05",
+  "status": "CANDIDATE_VALIDATED_AWAITING_LIVE_READBACK",
+  "baseCommit": "05fc3a61392357ea2b4d3e580c91a4daf5a3639b",
+  "runtime": "existing static Pages JSON; engine disabled; original production branch preserved",
+  "counts": {
+    "pdfPages": 1,
+    "pdfRows": 35,
+    "eligiblePreviews": 35,
+    "previewV2": 35,
+    "specialChoices": 2,
+    "lastFiveTeams": 70,
+    "verified1X2": 35,
+    "vipIndependentScores": 35,
+    "clubCrests": 70,
+    "leagueCrests": 2,
+    "news": 10,
+    "originalArticlePhotos": 10,
+    "verifiedYesterdayFT": 15
+  },
+  "checks": {
+    "dailyGuard": "PASS",
+    "dailyPackageGuard": "PASS",
+    "previewV2Validator": "PASS",
+    "focusedRegressions": "16/16 PASS",
+    "crests": "70 PNG assets opened and verified",
+    "newsPhotos": "10 real source-article photos, visually inspected contact sheet",
+    "models": "35 VIP sourced scores and independently computed Bookies / Poisson AI outputs"
+  },
+  "sourceExceptions": [
+    "Owner PDF prints KuPS in Latin; preserve exact official club name and allow it in Myanmar-name validators."
+  ],
+  "unavailable": [
+    "Full official current squad/injury evidence for all clubs: unsupported facts omitted; Palace returns verified.",
+    "Current-price source not supplied: current fields blank.",
+    "Independent republication rights for source-article photographs not verified; original image credit and ownership retained in metadata."
+  ],
+  "sourcePDFSHA256": "e283e910aa2bbae1c22b1cd7d63b750d681cd4445b9575af453bafeed27a38a0",
+  "sites": [
+    "/",
+    "/ykz-family/",
+    "/bw-sport/",
+    "/ko-thet-family/",
+    "/future-code-journal/",
+    "/kmm-sport-hub/"
+  ],
+  "rollbackCommit": "05fc3a61392357ea2b4d3e580c91a4daf5a3639b",
+  "publicationMethod": "One coherent Git tree and commit; compare expected production branch SHA before ref update",
+  "liveQA": "Not yet performed"
+}

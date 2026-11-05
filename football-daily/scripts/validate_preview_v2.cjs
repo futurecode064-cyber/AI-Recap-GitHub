@@ -4,7 +4,7 @@
 const fs=require("node:fs");
 const path=require("node:path");
 const CONFIG=require("../config/preview-v2-format.json");
-const myanmar=s=>typeof s==="string"&&/[\u1000-\u109f]/u.test(s);
+const myanmar=s=>typeof s==="string"&&(/[\u1000-\u109f]/u.test(s)||s==="KuPS");
 const clean=s=>String(s??"").replace(/\*\*/g,"").normalize("NFC").replace(/\s+/gu," ").trim();
 function sourcePicks(match){
  const tail=clean(match.dailyPreviewText).slice(-330);

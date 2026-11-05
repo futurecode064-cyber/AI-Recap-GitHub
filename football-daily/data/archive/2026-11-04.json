@@ -19,7 +19,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T17:45:00Z",
       "kickoffYangon": "2026-11-05 12:15 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "0-4",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": true,
@@ -27,8 +27,8 @@
         "upperTeam": "ရီးရဲလ်မက်ဒရစ်",
         "bodyOdds": "2-10",
         "goalTotalOdds": "4+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+5",
+        "currentGoalTotalOdds": "4+40"
       },
       "homeLastFive": [
         {
@@ -208,7 +208,11 @@
           "sourceEvidence": "AEK Athens FC L L W L L 1 4 Real Madrid W W W W W 17:45",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "2-3",
+      "resultSourceUrl": "https://tipsterarea.com/match/aek-athens-real-madrid-champions-league-group-stage-953893",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-02",
@@ -225,7 +229,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T17:45:00Z",
       "kickoffYangon": "2026-11-05 12:15 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -233,8 +237,8 @@
         "upperTeam": "လီဗာပူးလ်",
         "bodyOdds": "1-45",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-55",
+        "currentGoalTotalOdds": "3-90"
       },
       "homeLastFive": [
         {
@@ -412,7 +416,11 @@
           "sourceEvidence": "Fenerbahçe L L D W L 1 2 Liverpool L D W W W 17:45",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "3-2",
+      "resultSourceUrl": "https://tipsterarea.com/match/fenerbahce-liverpool-champions-league-group-stage-953894",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-03",
@@ -429,7 +437,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T20:00:00Z",
       "kickoffYangon": "2026-11-05 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -437,8 +445,8 @@
         "upperTeam": "ဒေါ့မွန်",
         "bodyOdds": "1+55",
         "goalTotalOdds": "3-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+50",
+        "currentGoalTotalOdds": "3-40"
       },
       "homeLastFive": [
         {
@@ -616,7 +624,11 @@
           "sourceEvidence": "Borussia Dortmund D W W W D 2 2 Real Betis W D W L W 20:00",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/match/borussia-dortmund-real-betis-champions-league-group-stage-953895",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-04",
@@ -633,7 +645,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T20:00:00Z",
       "kickoffYangon": "2026-11-05 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -641,8 +653,8 @@
         "upperTeam": "ပေါ်တို",
         "bodyOdds": "-85",
         "goalTotalOdds": "3+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+95",
+        "currentGoalTotalOdds": "3+40"
       },
       "homeLastFive": [
         {
@@ -819,7 +831,11 @@
           "sourceEvidence": "FC Porto W W W L L 2 2 Napoli L W D W L 20:00",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "4-1",
+      "resultSourceUrl": "https://tipsterarea.com/match/porto-napoli-champions-league-group-stage-953896",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-05",
@@ -836,7 +852,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T20:00:00Z",
       "kickoffYangon": "2026-11-05 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-3",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -844,8 +860,8 @@
         "upperTeam": "ပီအက်စ်ဗွီ",
         "bodyOdds": "-80",
         "goalTotalOdds": "4+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-90",
+        "currentGoalTotalOdds": "4+90"
       },
       "homeLastFive": [
         {
@@ -1022,7 +1038,11 @@
           "sourceEvidence": "PSV Eindhoven W D W L L 2 3 Club Brugge KV W W W W W 20:00",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://tipsterarea.com/match/psv-eindhoven-club-brugge-champions-league-group-stage-953898",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-06",
@@ -1039,7 +1059,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T20:00:00Z",
       "kickoffYangon": "2026-11-05 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -1047,8 +1067,8 @@
         "upperTeam": "မန်စီးတီး",
         "bodyOdds": "1-20",
         "goalTotalOdds": "4+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-15",
+        "currentGoalTotalOdds": "4+60"
       },
       "homeLastFive": [
         {
@@ -1226,7 +1246,11 @@
           "sourceEvidence": "RB Leipzig W W W L L 2 2 Manchester City L D L W W 20:00",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "2-3",
+      "resultSourceUrl": "https://tipsterarea.com/match/rb-leipzig-manchester-city-champions-league-group-stage-953899",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-07",
@@ -1243,7 +1267,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T20:00:00Z",
       "kickoffYangon": "2026-11-05 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "0-2",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -1251,8 +1275,8 @@
         "upperTeam": "အာဆင်နယ်",
         "bodyOdds": "2+40",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+75",
+        "currentGoalTotalOdds": "3+30"
       },
       "homeLastFive": [
         {
@@ -1429,7 +1453,11 @@
           "sourceEvidence": "Slavia Praha W W D D D 2 2 Arsenal W D W D W 20:00",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://tipsterarea.com/match/slavia-prague-arsenal-champions-league-group-stage-953900",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-08",
@@ -1446,7 +1474,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T20:00:00Z",
       "kickoffYangon": "2026-11-05 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -1454,8 +1482,8 @@
         "upperTeam": "ကိုမို",
         "bodyOdds": "-65",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-90",
+        "currentGoalTotalOdds": "3-10"
       },
       "homeLastFive": [
         {
@@ -1632,7 +1660,11 @@
           "sourceEvidence": "Lens L W L W L 1 3 Como W W W W W 20:00",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "1-9",
+      "resultSourceUrl": "https://tipsterarea.com/match/lens-como-champions-league-group-stage-953897",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-09",
@@ -1649,7 +1681,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T20:00:00Z",
       "kickoffYangon": "2026-11-05 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -1657,8 +1689,8 @@
         "upperTeam": "ဗစ်ကင်း",
         "bodyOdds": "1-80",
         "goalTotalOdds": "4+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-80",
+        "currentGoalTotalOdds": "4+80"
       },
       "homeLastFive": [
         {
@@ -1835,7 +1867,11 @@
           "sourceEvidence": "Viking L W L W D 2 2 Sabah FA L D L W W 20:00",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "4-1",
+      "resultSourceUrl": "https://tipsterarea.com/match/viking-stavanger-sabah-baku-champions-league-group-stage-953901",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page; Champions League scores corroborated against UEFA official results"
     },
     {
       "fixtureId": "fc-20261104-10",
@@ -1852,7 +1888,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T15:30:00Z",
       "kickoffYangon": "2026-11-04 10:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -1860,8 +1896,8 @@
         "upperTeam": "ရင်းနက်စ်",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-45",
+        "currentGoalTotalOdds": "3+60"
       },
       "homeLastFive": [
         {
@@ -2039,7 +2075,11 @@
           "sourceEvidence": "Rennes L W D L W 2 3 Olympiakos Piraeus W W W W W 15:30",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://tipsterarea.com/match/rennais-olympiacos-piraeus-europa-league-group-stage-953902",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page with half-time and second-half score"
     },
     {
       "fixtureId": "fc-20261104-11",
@@ -2056,7 +2096,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T19:45:00Z",
       "kickoffYangon": "2026-11-05 2:15 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-2",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -2064,8 +2104,8 @@
         "upperTeam": "ဝက်စ်ဟမ်း",
         "bodyOdds": "-95",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-85",
+        "currentGoalTotalOdds": "3-90"
       },
       "homeLastFive": [
         {
@@ -2242,7 +2282,11 @@
           "sourceEvidence": "Cardiff L W D W L 2 2 West Ham L L W W D 19:45",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "3-3",
+      "resultSourceUrl": "https://tipsterarea.com/match/cardiff-west-ham-championship-england-953906",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page with half-time and second-half score"
     },
     {
       "fixtureId": "fc-20261104-12",
@@ -2259,7 +2303,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T19:45:00Z",
       "kickoffYangon": "2026-11-05 2:15 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": true,
@@ -2267,8 +2311,8 @@
         "upperTeam": "မစ်ဒယ်ဘရော့",
         "bodyOdds": "1+55",
         "goalTotalOdds": "3+10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+45",
+        "currentGoalTotalOdds": "3+5"
       },
       "homeLastFive": [
         {
@@ -2447,7 +2491,11 @@
           "sourceEvidence": "Wrexham L L W L D 1 3 Middlesbrough W W D W W 19:45",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://tipsterarea.com/match/wrexham-middlesbrough-championship-england-953907",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page with half-time and second-half score"
     },
     {
       "fixtureId": "fc-20261104-13",
@@ -2464,7 +2512,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T20:00:00Z",
       "kickoffYangon": "2026-11-05 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -2472,8 +2520,8 @@
         "upperTeam": "ဝုဗ်",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "2-90"
       },
       "homeLastFive": [
         {
@@ -2651,7 +2699,11 @@
           "sourceEvidence": "Bristol City W D L L D 1 2 Wolves W W D W L 20:00",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://tipsterarea.com/match/bristol-city-wolverhampton-championship-england-953908",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page with half-time and second-half score"
     },
     {
       "fixtureId": "fc-20261104-14",
@@ -2668,7 +2720,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T19:30:00Z",
       "kickoffYangon": "2026-11-05 2:00 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -2676,8 +2728,8 @@
         "upperTeam": "မက်ချဲလန်",
         "bodyOdds": "-5",
         "goalTotalOdds": "3+75",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "3+100"
       },
       "homeLastFive": [
         {
@@ -2854,7 +2906,11 @@
           "sourceEvidence": "Kortrijk D L D W L 1 3 KV Mechelen W W W L D 19:30",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "1-3",
+      "resultSourceUrl": "https://tipsterarea.com/match/kortrijk-mechelen-pro-league-belgium-953912",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page with half-time and second-half score"
     },
     {
       "fixtureId": "fc-20261104-15",
@@ -2871,7 +2927,7 @@
       "nightEditorialDate": "2026-11-04",
       "kickoffUtc": "2026-11-04T19:45:00Z",
       "kickoffYangon": "2026-11-05 2:15 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not independent VIP/model/FT",
       "specialChoice": false,
@@ -2879,8 +2935,8 @@
         "upperTeam": "ရီးဒင်း",
         "bodyOdds": "-15",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-5",
+        "currentGoalTotalOdds": "3+90"
       },
       "homeLastFive": [
         {
@@ -3057,7 +3113,13 @@
           "sourceEvidence": "Oxford United D W D W D 1 1 Reading D W W L L 19:45",
           "sourceNote": "Exact fixture/date/orientation verified in daily table; individual detail page returned HTTP 403. Not owner PDF forecast."
         }
-      }
+      },
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://tipsterarea.com/match/oxford-united-reading-league-one-england-953911",
+      "resultVerifiedAt": "2026-11-05",
+      "resultVerification": "Independent completed-result page with half-time and second-half score"
     }
-  ]
+  ],
+  "currentOddsSourcePDF": "4 စျေး.pdf",
+  "currentOddsSourceSha256": "02e55e77bb359797d477a0ff26f2b6bebe2b6924f34fc668766942f030d51755"
 }

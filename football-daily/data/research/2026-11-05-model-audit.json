@@ -1,0 +1,1021 @@
+{
+  "date": "2026-11-05",
+  "independentModels": true,
+  "items": [
+    {
+      "fixtureId": "fc-20261105-01",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-3",
+        "2-0",
+        "1-2"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-3",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "2-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-2",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-02",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "0-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "0-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-03",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-04",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-3",
+        "0-1",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-3",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-05",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-06",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "3-1",
+        "1-0",
+        "2-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "3-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-07",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-3",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-3",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-08",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "1-3",
+        "0-1",
+        "0-2"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-3",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "0-2",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-09",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-1",
+        "0-1",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-10",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "1-0",
+        "2-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-0",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-11",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "3-3",
+        "2-1",
+        "3-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "3-3",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "2-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "3-0",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-12",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "1-3",
+        "1-0",
+        "0-2"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-3",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "0-2",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-13",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "0-1",
+        "1-2"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-2",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-14",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "3-1",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "3-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-15",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "0-2",
+        "1-0",
+        "2-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "0-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-16",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "1-0",
+        "1-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-0",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-17",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "1-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-18",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "1-2",
+        "0-1",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-19",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "1-2",
+        "2-0",
+        "2-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "2-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-20",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "4-1",
+        "2-1",
+        "2-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "4-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "2-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-21",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "1-2",
+        "0-1",
+        "0-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "0-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-22",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "0-1",
+        "1-2"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-2",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-23",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "0-1",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-24",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "0-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "0-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-25",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-1",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-26",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "3-1",
+        "1-0",
+        "2-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "3-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-27",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "1-2",
+        "1-0",
+        "2-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-0",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-28",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "3-2",
+        "1-0",
+        "1-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "3-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-0",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-29",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-1",
+        "2-0",
+        "2-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "2-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-0",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-30",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "0-1",
+        "0-2"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "0-2",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-31",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "4-1",
+        "2-1",
+        "3-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "4-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "2-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "3-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-32",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "3-1",
+        "1-0",
+        "2-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "3-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-0",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-33",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-1",
+        "1-0",
+        "1-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-0",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-34",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "2-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261105-35",
+      "labels": [
+        "VIP Internet",
+        "Bookies",
+        "AI Tips"
+      ],
+      "scores": [
+        "4-1",
+        "2-0",
+        "2-0"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "4-1",
+          "sourceName": "Football Score Predictor (external independent model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/correct-score-predictions/today",
+          "sourceDate": "2026-11-05"
+        },
+        "bookies": {
+          "score": "2-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "2-0",
+          "method": "Poisson form model"
+        }
+      }
+    }
+  ]
+}

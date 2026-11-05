@@ -11,7 +11,8 @@ def check(ok,msg):
 def read(path):
     try:return json.loads((a.root/path).read_text(encoding='utf-8'))
     except (OSError,ValueError) as e: errors.append(f'{path}: {e}');return {}
-def my(v):return isinstance(v,str) and bool(re.search('[\u1000-\u109f]',v))
+# KuPS is printed in Latin in the owner source sheet; preserve its official name.
+def my(v):return isinstance(v,str) and (bool(re.search('[\u1000-\u109f]',v)) or v=='KuPS')
 r=read('data/today.json');o=read(f'data/odds/{day}.json');t=read(f'data/tips/{day}.json');n=read('data/news/latest.json');y=read(f'data/archive/{day-timedelta(days=1)}.json')
 for label,obj in [('report',r),('odds',o),('tips',t)]:check(obj.get('reportDate')==str(day),f'{label}: wrong date')
 ms=r.get('matches',[]);rows=o.get('matches',[])
