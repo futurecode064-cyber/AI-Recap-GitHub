@@ -11,6 +11,9 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.WebResourceResponse;
+import android.webkit.WebResourceRequest;
+import androidx.webkit.WebViewAssetLoader;
 import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -30,17 +33,27 @@ public final class MainActivity extends Activity {
     settings.setJavaScriptEnabled(true);
     settings.setDomStorageEnabled(true);
     settings.setDatabaseEnabled(true);
-    settings.setAllowFileAccess(true);
+    settings.setAllowFileAccess(false);
+    settings.setAllowContentAccess(false);
     settings.setAllowFileAccessFromFileURLs(false);
     settings.setAllowUniversalAccessFromFileURLs(false);
     settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+    final WebViewAssetLoader assetLoader=new WebViewAssetLoader.Builder()
+      .addPathHandler("/assets/",new WebViewAssetLoader.AssetsPathHandler(this)).build();
     web.setWebViewClient(new WebViewClient() {
-      @Override public boolean shouldOverrideUrlLoading(WebView view,String url){return !url.startsWith("file:///android_asset/");}
-      @Override public boolean shouldOverrideUrlLoading(WebView view,android.webkit.WebResourceRequest request){return !request.getUrl().toString().startsWith("file:///android_asset/");}
+      @Override public boolean shouldOverrideUrlLoading(WebView view,String url){
+        return !url.startsWith("https://appassets.androidplatform.net/assets/");
+      }
+      @Override public boolean shouldOverrideUrlLoading(WebView view,WebResourceRequest request){
+        return !request.getUrl().toString().startsWith("https://appassets.androidplatform.net/assets/");
+      }
+      @Override public WebResourceResponse shouldInterceptRequest(WebView view,WebResourceRequest request){
+        return assetLoader.shouldInterceptRequest(request.getUrl());
+      }
     });
     web.addJavascriptInterface(new AppBridge(),"Android");
     setContentView(web);
-    web.loadUrl("file:///android_asset/index.html");
+    web.loadUrl("https://appassets.androidplatform.net/assets/index.html");
   }
   public final class AppBridge {
     @JavascriptInterface public void beep(){
