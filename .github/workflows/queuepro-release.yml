@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "queuepro/project/**"
+      - "queuepro/test/**"
       - ".github/workflows/queuepro-release.yml"
 permissions:
   contents: write
@@ -18,6 +19,14 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run offline QueuePro engine tests
+        working-directory: queuepro/test
+        run: |
+          npm install --no-save --no-audit --no-fund jsdom@25.0.1 fake-indexeddb@6.0.1
+          node smoke.cjs
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
