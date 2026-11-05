@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "status": "CANDIDATE_VALIDATED_AWAITING_LIVE_READBACK",
+  "status": "PUBLISHED_LIVE_VERIFIED",
   "baseCommit": "05fc3a61392357ea2b4d3e580c91a4daf5a3639b",
   "runtime": "existing static Pages JSON; engine disabled; original production branch preserved",
   "counts": {
@@ -25,7 +25,15 @@
     "focusedRegressions": "16/16 PASS",
     "crests": "70 PNG assets opened and verified",
     "newsPhotos": "10 real source-article photos, visually inspected contact sheet",
-    "models": "35 VIP sourced scores and independently computed Bookies / Poisson AI outputs"
+    "models": "35 VIP sourced scores and independently computed Bookies / Poisson AI outputs",
+    "baselineCIComparison": {
+      "previousFailures": 52,
+      "currentFailures": 49,
+      "newFailures": 0,
+      "resolvedFailures": 3,
+      "note": "Legacy full-suite failures reproduced in previous GitHub commit; source-dependent V2 and daily data checks pass."
+    },
+    "legacyBrowserQA": "Two historical jobs expect four crests per V2 instead of current two and require assets/brand-export-teams URL prefix despite other same-origin PNG paths; direct current-day exports checked independently."
   },
   "sourceExceptions": [
     "Owner PDF prints KuPS in Latin; preserve exact official club name and allow it in Myanmar-name validators."
@@ -46,5 +54,110 @@
   ],
   "rollbackCommit": "05fc3a61392357ea2b4d3e580c91a4daf5a3639b",
   "publicationMethod": "One coherent Git tree and commit; compare expected production branch SHA before ref update",
-  "liveQA": "Not yet performed"
+  "liveQA": {
+    "resources": [
+      {
+        "path": "data/today.json",
+        "status": 200,
+        "sha256": "857a15e1b176ce48ab8d16612c5746e15f6355a8877d64ed14436f237cdfae4a",
+        "date": "2026-11-05",
+        "count": 35
+      },
+      {
+        "path": "data/odds/2026-11-05.json",
+        "status": 200,
+        "sha256": "e939dc9591fb224ad29359620d403abbf1d445a38fba6e8f125ba1761d0d55b8",
+        "date": "2026-11-05",
+        "count": 35
+      },
+      {
+        "path": "data/tips/2026-11-05.json",
+        "status": 200,
+        "sha256": "b148f192e6d36d27297a990fa05e280293caca1c6886ecf575e15105eb18f24a",
+        "date": "2026-11-05",
+        "count": 35
+      },
+      {
+        "path": "data/archive/2026-11-04.json",
+        "status": 200,
+        "sha256": "5babd764fd81006c3904a271d9e002cc6e2216b85213ccd0fd512dde887da70d",
+        "date": "2026-11-04",
+        "count": 15
+      },
+      {
+        "path": "data/news/latest.json",
+        "status": 200,
+        "sha256": "6e61faddba9d2a8f65061bec5d41d039cdf14ef1d9bccb876696eccf1b80f6f4",
+        "date": "2026-11-05",
+        "count": 10
+      },
+      {
+        "path": "",
+        "status": 200,
+        "sha256": "805760094d156eb1499b5c061816b21367be302e5791c6cd1724b4f06f5daa27",
+        "htmlVerified": true
+      },
+      {
+        "path": "ykz-family/",
+        "status": 200,
+        "sha256": "f5476d49fbb4326bb900ba5bad53e9a7b23f20cfc22c84b1e7cc2116a68fd975",
+        "htmlVerified": true
+      },
+      {
+        "path": "bw-sport/",
+        "status": 200,
+        "sha256": "93f6fe5d959439f6db3f79408f2e77052cc1d621c68e5df1a374e2df9c5286ab",
+        "htmlVerified": true
+      },
+      {
+        "path": "ko-thet-family/",
+        "status": 200,
+        "sha256": "3a41a301cffdf0c3c0d9c3d9e25bf111a773da94e70f2e247cca44f0f12f98f1",
+        "htmlVerified": true
+      },
+      {
+        "path": "future-code-journal/",
+        "status": 200,
+        "sha256": "1d41ad14a61a1a62601cc8edf11b80ea49a087a39f472978328aed4e869755df",
+        "htmlVerified": true
+      },
+      {
+        "path": "kmm-sport-hub/",
+        "status": 200,
+        "sha256": "c5fdf6d05e9d5d96d92a34bc33558a72ee4d00c0c2705c208b8bda47d5df0855",
+        "htmlVerified": true
+      }
+    ],
+    "browserSixSites": "Main, YKZ, BW, Ko Thet, Goal Zone, KMM: 35 fixtures / published / 2026-11-05",
+    "png": "Main 35-row oddsCards PNG downloaded, opened and visually inspected: 2400x7856, complete logos and readable Myanmar text",
+    "partialChecks": "Remaining export QA in progress",
+    "pngZip": {
+      "pngCount": 70,
+      "sections": {
+        "ပေါက်ကြေး": 2,
+        "မြန်မာကြေးကတ်ပုံစံ": 1,
+        "ပွဲကြိုသုံးသပ်ချက်": 35,
+        "ပွဲကြိုသုံးသပ်ချက် Version 2": 18,
+        "Special Choice": 2,
+        "ဂိုးရလဒ်": 1,
+        "VIP Internet · Bookies · AI Tips": 1,
+        "ဘောလုံးသတင်း": 10
+      },
+      "crc": "PASS",
+      "all70PNGDecoded": true,
+      "representativeVisualQA": [
+        "35-row oddsCards complete",
+        "two-match V2 complete",
+        "last V2 fixture complete",
+        "15 finished results complete",
+        "35 independent tips complete",
+        "women football news photograph and text complete"
+      ]
+    },
+    "sixBrandPNGDownloads": "Main + YKZ + BW + Ko Thet + Goal Zone + KMM all produced browser download events for full original preview",
+    "remaining": "Browser-rendered video/navigation check and correction deployment readback"
+  },
+  "publicationCommit": "5ecd9b6df4e3974d258468a7b7db9db45652b073",
+  "deploymentId": "5b1e6e62-61c5-46d0-beec-45add17e450e",
+  "editorialCorrection": "Egnatia domestic cup match was a win; narrative corrected, last-five dataset was already accurate."
 }
