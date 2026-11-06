@@ -120,9 +120,17 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp portal/apps/FutureCodeRentTrack-v1.1.1.apk "$RUNNER_TEMP/rt-public.apk"
+          cp portal/apps/renttrack-update.json "$RUNNER_TEMP/rt-update.json"
+          cp renttrack/latest.json "$RUNNER_TEMP/rt-latest.json"
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p portal/apps renttrack
+          cp "$RUNNER_TEMP/rt-public.apk" portal/apps/FutureCodeRentTrack-v1.1.1.apk
+          cp "$RUNNER_TEMP/rt-update.json" portal/apps/renttrack-update.json
+          cp "$RUNNER_TEMP/rt-latest.json" renttrack/latest.json
           git add portal/apps/FutureCodeRentTrack-v1.1.1.apk portal/apps/renttrack-update.json renttrack/latest.json
           if ! git diff --cached --quiet; then
-            git commit -m "RentTrack verified signed release v1.1.0 [skip ci]"
-            git pull --rebase origin main
+            git commit -m "RentTrack verified signed release v1.1.1 [skip ci]"
             git push origin HEAD:main
           fi
