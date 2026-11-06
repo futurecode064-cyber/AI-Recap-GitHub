@@ -35,6 +35,18 @@
     const sw = w/s, sh = h/s;
     ctx.drawImage(img,(img.naturalWidth-sw)/2,(img.naturalHeight-sh)/2,sw,sh,x,y,w,h);
   }
+  function englishBannerWordmark(ctx,w,h){
+  const x=w*.17,y=h*.19,bw=w*.66,bh=h*.65;
+  ctx.fillStyle="rgba(16,13,10,.95)";ctx.fillRect(x,y,bw,bh);
+  ctx.strokeStyle="#e1c27d";ctx.lineWidth=Math.max(2,w*.0025);
+  ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+bw,y);ctx.moveTo(x,y+bh);ctx.lineTo(x+bw,y+bh);ctx.stroke();
+  ctx.textAlign="center";ctx.textBaseline="middle";
+  ctx.fillStyle="#f8e6be";ctx.font="900 "+Math.round(h*.24)+"px 'Barlow Condensed',Arial,sans-serif";
+  ctx.fillText("GOAL ZONE JOURNAL",w/2,y+bh*.43,bw*.94);
+  ctx.fillStyle="#dfbd6f";ctx.font="800 "+Math.round(h*.11)+"px Arial,sans-serif";
+  ctx.fillText("ENGLISH EDITION",w/2,y+bh*.76,bw*.85);
+}
+
   async function bannerCanvas(source){
     const w=source.width, h=Math.max(160,Math.round(w*270/988));
     const out=document.createElement("canvas");
@@ -58,6 +70,7 @@
         ctx.fillText("GOAL ZONE",w/2,h*.52);
       }
     }
+    englishBannerWordmark(ctx,w,h);
     ctx.drawImage(source,0,h);
     return out;
   }

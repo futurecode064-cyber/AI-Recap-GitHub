@@ -71,6 +71,18 @@
       const c=canvasOf(image.naturalWidth,image.naturalHeight);c.getContext("2d").drawImage(image,0,0);return c;
     }finally{URL.revokeObjectURL(url);}
   }
+  function englishBannerWordmark(ctx,w,h){
+  const x=w*.17,y=h*.19,bw=w*.66,bh=h*.65;
+  ctx.fillStyle="rgba(16,13,10,.95)";ctx.fillRect(x,y,bw,bh);
+  ctx.strokeStyle="#e1c27d";ctx.lineWidth=Math.max(2,w*.0025);
+  ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+bw,y);ctx.moveTo(x,y+bh);ctx.lineTo(x+bw,y+bh);ctx.stroke();
+  ctx.textAlign="center";ctx.textBaseline="middle";
+  ctx.fillStyle="#f8e6be";ctx.font="900 "+Math.round(h*.24)+"px 'Barlow Condensed',Arial,sans-serif";
+  ctx.fillText("GOAL ZONE JOURNAL",w/2,y+bh*.43,bw*.94);
+  ctx.fillStyle="#dfbd6f";ctx.font="800 "+Math.round(h*.11)+"px Arial,sans-serif";
+  ctx.fillText("ENGLISH EDITION",w/2,y+bh*.76,bw*.85);
+}
+
   async function withBanner(source){
     const w=source.width,h=Math.round(w*270/988),output=canvasOf(w,source.height+h);
     const ctx=output.getContext("2d");ctx.fillStyle="#0d0b07";ctx.fillRect(0,0,w,h);
@@ -81,6 +93,7 @@
       ctx.font="900 "+Math.round(h*.31)+'px "Noto Sans Myanmar",sans-serif';
       ctx.fillText("GOAL ZONE · GOAL ZONE JOURNAL",w/2,h*.63,w*.9);
     }
+    englishBannerWordmark(ctx,w,h);
     ctx.drawImage(source,0,h);
     return output;
   }
