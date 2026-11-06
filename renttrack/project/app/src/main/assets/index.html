@@ -21,10 +21,10 @@
 <label style="display:flex;align-items:center;gap:8px;margin:12px 0;color:#d9f2f9;font-size:12px"><input type="checkbox" id="renttrack-rent-reminders" style="width:18px;height:18px"/> ငှားခ/စာချုပ် သတိပေးချက် ဖွင့်ရန်</label>
 <div class="buttonrow">
 <button class="btn green" id="renttrack-allow-notifications" type="button">🔔 Notification ခွင့်ပြုရန်</button>
-<button class="btn" id="renttrack-disable-push" type="button">Notification ပိတ်ရန်</button>
+<button class="btn" id="renttrack-disable-push" type="button">Notification ပိတ်ရန်</button><button class="btn" id="renttrack-test-notification" type="button">🔔 Test Notification</button>
 </div>
-<p class="hint">Admin Push အသိပေးချက်များကို Firebase ချိတ်ဆက်ထားသည့် Android APK မှသာ လက်ခံနိုင်ပါတယ်။ ဖုန်းရဲ့ Notification Permission လိုအပ်ပါတယ်။ Tenant ကိုယ်ရေးအချက်အလက်များကို Push Server သို့ မပို့ပါ။</p>
-</section><section class="panel"><h2>Encrypted Backup / Restore</h2><p>အရေးကြီးတဲ့ငှားရမ်းသူအချက်အလက်တွေကို AES-GCM နဲ့ စာဝှက်ပြီး Backup ထုတ်နိုင်ပါတယ်။ Backup ကို ပြန်သွင်းဖို့ မူရင်း Passphrase လိုအပ်ပါတယ်။</p><div class="buttonrow"><button class="btn primary" id="backup">⬇ Backup ထုတ်ရန်</button><button class="btn" id="restore">⬆ Backup ပြန်သွင်းရန်</button><button class="btn" id="csv">⬇ CSV Report</button></div><input type="file" accept="application/json,.json" id="restore-file" hidden/><p class="hint">အကောင့် Login၊ Cloud Server၊ SMS Payment မလိုအပ်ပါ။ ဖုန်းတစ်လုံးအတွက်သာ စီမံခန့်ခွဲမှု ဖြစ်ပါတယ်။</p></section><section class="panel"><h2>Audit Log</h2><div id="audit-list" class="small"></div></section><p class="hint" style="text-align:center">Developed by Future Code AI Studio · RentTrack v1.1.0</p></section>
+<p class="hint">Future Code Website Announcement ကို နောက်ခံမှာ အချိန်အပိုင်းအခြားအလိုက် စစ်ပြီး Notification ပြပါမယ်။ Firebase စနစ်ချိတ်ဆက်ပါက တိုက်ရိုက် Push ကိုပါ ရနိုင်ပါတယ်။ ဖုန်းရဲ့ Notification Permission လိုအပ်ပါတယ်။ Tenant ကိုယ်ရေးအချက်အလက်များကို Push Server သို့ မပို့ပါ။</p>
+</section><section class="panel"><h2>Encrypted Backup / Restore</h2><p>အရေးကြီးတဲ့ငှားရမ်းသူအချက်အလက်တွေကို AES-GCM နဲ့ စာဝှက်ပြီး Backup ထုတ်နိုင်ပါတယ်။ Backup ကို ပြန်သွင်းဖို့ မူရင်း Passphrase လိုအပ်ပါတယ်။</p><div class="buttonrow"><button class="btn primary" id="backup">⬇ Backup ထုတ်ရန်</button><button class="btn" id="restore">⬆ Backup ပြန်သွင်းရန်</button><button class="btn" id="csv">⬇ CSV Report</button></div><input type="file" accept="application/json,.json" id="restore-file" hidden/><p class="hint">အကောင့် Login၊ Cloud Server၊ SMS Payment မလိုအပ်ပါ။ ဖုန်းတစ်လုံးအတွက်သာ စီမံခန့်ခွဲမှု ဖြစ်ပါတယ်။</p></section><section class="panel"><h2>Audit Log</h2><div id="audit-list" class="small"></div></section><p class="hint" style="text-align:center">Developed by Future Code AI Studio · RentTrack v1.1.1</p></section>
 </div>
 <nav class="nav"><div class="navinner"><button class="active" data-nav="home"><span>⌂</span>ပင်မ</button><button data-nav="rooms"><span>▦</span>အခန်း</button><button data-nav="invoices"><span>▤</span>ဘေလ်</button><button data-nav="payments"><span>▣</span>ငွေလက်ခံ</button><button data-nav="settings"><span>⚙</span>Setting</button></div></nav>
 <div class="overlay" id="overlay"><div class="dialog"><div class="dialoghead"><h2 id="form-title">အချက်အလက်</h2><button class="btn" id="close-modal" aria-label="ပိတ်ရန်">✕</button></div><form id="form"><div id="fields" class="formgrid"></div><div class="formactions"><button class="btn" id="cancel" type="button">မသိမ်းတော့ပါ</button><button class="btn primary" type="submit">သိမ်းမည်</button></div></form></div></div><div class="toast" role="status" aria-live="polite" id="toast"></div><div id="printout" class="printout"></div>
@@ -102,15 +102,15 @@ openDb().then(render).catch(e=>toast("Database ဖွင့်မရပါ: "+e.
   const native=window.Android&&typeof window.Android.systemStatus==="function";
   if(!native){
     status.textContent="Android APK မှသာ Update / Notification သုံးနိုင်ပါသည်";
-    for(const id of ["renttrack-check-update","renttrack-download-update","renttrack-install-update","renttrack-allow-notifications","renttrack-disable-push","renttrack-auto-download","renttrack-rent-reminders"])el(id).disabled=true;
+    for(const id of ["renttrack-check-update","renttrack-download-update","renttrack-install-update","renttrack-allow-notifications","renttrack-disable-push","renttrack-test-notification","renttrack-auto-download","renttrack-rent-reminders"])el(id).disabled=true;
     return;
   }
   try{
     const s=JSON.parse(window.Android.systemStatus());
     el("renttrack-auto-download").checked=!!s.autoDownload;
     el("renttrack-rent-reminders").checked=!!s.rentReminders;
-    noti.textContent=s.notificationPermission?"ဖုန်း Notification ခွင့်ပြုပြီး · Push "+(s.pushConfigured?"Configured":"Firebase ချိတ်ဆက်ရန်လို"): "Notification ခွင့်ပြုချက် မပေးရသေးပါ";
-    status.textContent="RentTrack v"+(s.version||"1.1.0")+" · Version အသစ် စစ်ဆေးနိုင်ပါပြီ";
+    noti.textContent=s.notificationPermission?"ဖုန်း Notification ခွင့်ပြုပြီး · Push "+(s.pushConfigured?"FCM Configured":"Website Announcement ရနိုင် · FCM Config မရှိသေး"): "Notification ခွင့်ပြုချက် မပေးရသေးပါ";
+    status.textContent="RentTrack v"+(s.version||"1.1.1")+" · Version အသစ် စစ်ဆေးနိုင်ပါပြီ";
   }catch(_){status.textContent="Native status ဖတ်မရပါ";}
   window.RentTrackNativeResult=function(payload){
     try{
@@ -139,6 +139,7 @@ openDb().then(render).catch(e=>toast("Database ဖွင့်မရပါ: "+e.
   el("renttrack-auto-download").onchange=e=>Android.setAutomaticDownloads(e.target.checked);
   el("renttrack-rent-reminders").onchange=e=>Android.setRentReminders(e.target.checked);
   el("renttrack-allow-notifications").onclick=()=>Android.requestNotificationPermission();
+  el("renttrack-test-notification").onclick=()=>Android.testNotification();
   el("renttrack-disable-push").onclick=()=>{Android.disablePush();el("renttrack-rent-reminders").checked=false};
 })();
 </script></body></html>
