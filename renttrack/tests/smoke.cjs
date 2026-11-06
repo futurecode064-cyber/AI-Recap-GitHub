@@ -3,6 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const {webcrypto}=require('node:crypto');
+const {TextEncoder,TextDecoder}=require('node:util');
 const {JSDOM,VirtualConsole}=require('jsdom');
 const {indexedDB,IDBKeyRange}=require('fake-indexeddb');
 
@@ -15,6 +16,8 @@ const dom=new JSDOM(html,{
   runScripts:'dangerously',pretendToBeVisual:true,virtualConsole,
   beforeParse(w){
     w.indexedDB=indexedDB;
+    w.TextEncoder=TextEncoder;
+    w.TextDecoder=TextDecoder;
     w.IDBKeyRange=IDBKeyRange;
     Object.defineProperty(w,'crypto',{value:webcrypto,configurable:true});
     w.confirm=()=>true;
