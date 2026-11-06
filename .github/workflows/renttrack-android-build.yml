@@ -7,7 +7,7 @@ on:
       - 'renttrack/project/**'
       - '.github/workflows/renttrack-android-build.yml'
 permissions:
-  contents: read
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -34,3 +34,39 @@ jobs:
           name: RentTrack-Unsigned-Release
           path: renttrack/project/app/build/outputs/apk/release/app-release-unsigned.apk
           if-no-files-found: error
+
+      - name: Verify and publish clearly labeled QA APK to Future Code download website
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOOLS="$ANDROID_HOME/build-tools/35.0.0"
+          SOURCE="renttrack/project/app/build/outputs/apk/debug/app-debug.apk"
+          test -s "$SOURCE"
+          "$TOOLS/apksigner" verify --verbose "$SOURCE"
+          "$TOOLS/aapt" dump badging "$SOURCE" | grep -E '^(package:|sdkVersion:|targetSdkVersion:)'
+          mkdir -p portal/apps
+          cp "$SOURCE" portal/apps/FutureCodeRentTrack-QA-v1.0.0.apk
+          python3 - <<'PY'
+          import pathlib,hashlib,json,datetime
+          file=pathlib.Path('portal/apps/FutureCodeRentTrack-QA-v1.0.0.apk')
+          info={
+            "packageName":"studio.futurecode.renttrack",
+            "versionName":"1.0.0-QA",
+            "versionCode":1,
+            "status":"QA debug build - NOT production signed, physical-device QA pending",
+            "apkUrl":"https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCodeRentTrack-QA-v1.0.0.apk",
+            "sha256":hashlib.sha256(file.read_bytes()).hexdigest(),
+            "size":file.stat().st_size,
+            "publishedAt":datetime.datetime.now(datetime.timezone.utc).isoformat()
+          }
+          pathlib.Path('renttrack/qa-latest.json').write_text(json.dumps(info,indent=2,ensure_ascii=False)+'\n')
+          print('QA APK SIZE',info['size'],'SHA256',info['sha256'])
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add portal/apps/FutureCodeRentTrack-QA-v1.0.0.apk renttrack/qa-latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish RentTrack QA APK for pilot testing [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
