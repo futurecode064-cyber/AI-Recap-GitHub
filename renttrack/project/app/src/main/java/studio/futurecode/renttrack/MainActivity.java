@@ -69,6 +69,7 @@ public final class MainActivity extends Activity {
     RentTrackMessagingService.refreshSubscription(this);
     RentTrackWorker.schedule(this);
     web.postDelayed(()->runUpdateCheck(false),1800);
+    updates.execute(()->RentTrackAnnouncements.check(this));
   }
   public final class NativeBridge {
     @JavascriptInterface public void saveFile(String name,String content,String type){
@@ -104,6 +105,10 @@ public final class MainActivity extends Activity {
       RentTrackMessagingService.setSubscribed(MainActivity.this,false);
       getSharedPreferences("renttrack_notify",MODE_PRIVATE).edit().putBoolean("rent_enabled",false).apply();
       postResult("notifications","disabled","အသိပေးချက်များ ပိတ်ထားပါပြီ");
+    }
+    @JavascriptInterface public void testNotification(){
+      RentTrackNotifications.post(MainActivity.this,RentTrackNotifications.ANNOUNCEMENTS,3999,"RentTrack Test Notification","Future Code အသိပေးချက်စနစ် စမ်းသပ်နေပါတယ်");
+      postResult("notifications","test_sent","Test Notification ပို့ရန် ကြိုးစားပြီးပါပြီ");
     }
     @JavascriptInterface public void setRentReminders(boolean enabled){
       getSharedPreferences("renttrack_notify",MODE_PRIVATE).edit().putBoolean("rent_enabled",enabled).apply();
@@ -164,8 +169,9 @@ public final class MainActivity extends Activity {
     if(granted){
       getSharedPreferences("renttrack_notify",MODE_PRIVATE).edit().putBoolean("rent_enabled",true).apply();
       RentTrackMessagingService.setSubscribed(this,true);
+      updates.execute(()->RentTrackAnnouncements.check(this));
       postResult("notifications","enabled",
-        RentTrackMessagingService.configure(this)?"Notification ဖွင့်ပြီးပါပြီ":"ဖုန်းသတိပေးချက်ဖွင့်ပြီးပါပြီ။ Push Server ချိတ်ဆက်ရန် Firebase Config လိုအပ်ပါတယ်");
+        RentTrackMessagingService.configure(this)?"Notification ဖွင့်ပြီးပါပြီ":"ဖုန်းသတိပေးချက်ဖွင့်ပြီးပါပြီ။ Website Announcement လက်ခံနိုင်ပြီး FCM Push အတွက် Firebase Config လိုပါတယ်");
     }else postResult("notifications","denied","Android Notification ခွင့်ပြုချက် မရသေးပါ");
   }
   @Override public void onRequestPermissionsResult(int requestCode,String[] permissions,int[] results){
