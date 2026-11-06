@@ -1,0 +1,1737 @@
+{
+  "reportDate": "2026-11-06",
+  "sourcePDF": "6.pdf",
+  "sourceRows": 13,
+  "sourceSha256": "3d0e8c72fb4f927feefb9e9d3ecfd208678bd70f571d991b4d866c65071d03bf",
+  "rows": [
+    {
+      "fixtureId": "fc-20261106-01",
+      "pdfRow": 1,
+      "home": "အဲဗာတန်",
+      "away": "ကိုဗင်ထရီ",
+      "canonicalHome": "Everton",
+      "canonicalAway": "Coventry",
+      "sourceUrl": "https://tipsterarea.com/match/everton-coventry-premier-league-england-954080",
+      "sourceSnapshot": {
+        "home": "Everton",
+        "away": "Coventry",
+        "url": "https://tipsterarea.com/match/everton-coventry-premier-league-england-954080",
+        "images": [
+          "/images/teams/england/everton.gif",
+          "/images/teams/england/coventry.gif"
+        ],
+        "odds": [
+          "1.74",
+          "4.22",
+          "4.93"
+        ],
+        "forms": [
+          [
+            [
+              "02.11.2026",
+              "Premier League",
+              "Newcastle",
+              "0 - 1",
+              "Everton"
+            ],
+            [
+              "29.10.2026",
+              "EFL Cup",
+              "Everton",
+              "3 - 1",
+              "Newcastle"
+            ],
+            [
+              "24.10.2026",
+              "Premier League",
+              "Arsenal",
+              "2 - 0",
+              "Everton"
+            ],
+            [
+              "17.10.2026",
+              "Premier League",
+              "Everton",
+              "0 - 2",
+              "Chelsea"
+            ],
+            [
+              "11.10.2026",
+              "Premier League",
+              "Hull City",
+              "2 - 2",
+              "Everton"
+            ]
+          ],
+          [
+            [
+              "31.10.2026",
+              "Premier League",
+              "Coventry",
+              "3 - 1",
+              "Sunderland"
+            ],
+            [
+              "24.10.2026",
+              "Premier League",
+              "Coventry",
+              "0 - 1",
+              "Fulham"
+            ],
+            [
+              "19.10.2026",
+              "Premier League",
+              "Tottenham",
+              "3 - 1",
+              "Coventry"
+            ],
+            [
+              "12.10.2026",
+              "Premier League",
+              "Coventry",
+              "4 - 1",
+              "Newcastle"
+            ],
+            [
+              "19.09.2026",
+              "Premier League",
+              "Nottingham",
+              "0 - 1",
+              "Coventry"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "7",
+            "Everton",
+            "9",
+            "3",
+            "4",
+            "2",
+            "9",
+            "9",
+            "0",
+            "13"
+          ],
+          [
+            "16",
+            "Coventry",
+            "9",
+            "3",
+            "0",
+            "6",
+            "9",
+            "16",
+            "-7",
+            "9"
+          ]
+        ],
+        "goal25": [
+          "2.16",
+          "1.81"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-02",
+      "pdfRow": 2,
+      "home": "ဘရစ္စတိုလ်ရိုဗာ",
+      "away": "ကမ်းဘရိုက်",
+      "canonicalHome": "Bristol Rovers",
+      "canonicalAway": "Cambridge United",
+      "sourceUrl": "https://tipsterarea.com/match/bristol-rovers-cambridge-united-fa-cup-england-954087",
+      "sourceSnapshot": {
+        "home": "Bristol Rovers",
+        "away": "Cambridge United",
+        "url": "https://tipsterarea.com/match/bristol-rovers-cambridge-united-fa-cup-england-954087",
+        "images": [
+          "/images/teams/england/bristol-rovers.gif",
+          "/images/teams/england/cambridge-united.gif"
+        ],
+        "odds": [
+          "3.03",
+          "3.64",
+          "2.15"
+        ],
+        "forms": [
+          [
+            [
+              "31.10.2026",
+              "League Two",
+              "Fleetwood",
+              "3 - 1",
+              "Bristol Rovers"
+            ],
+            [
+              "24.10.2026",
+              "League Two",
+              "Bristol Rovers",
+              "0 - 0",
+              "Swindon"
+            ],
+            [
+              "20.10.2026",
+              "League Two",
+              "Bristol Rovers",
+              "1 - 2",
+              "Salford City"
+            ],
+            [
+              "17.10.2026",
+              "League Two",
+              "Shrewsbury",
+              "1 - 0",
+              "Bristol Rovers"
+            ],
+            [
+              "10.10.2026",
+              "League Two",
+              "Bristol Rovers",
+              "1 - 3",
+              "Barnet"
+            ]
+          ],
+          [
+            [
+              "31.10.2026",
+              "League One",
+              "Leyton Orient",
+              "3 - 0",
+              "Cambridge United"
+            ],
+            [
+              "27.10.2026",
+              "League One",
+              "Sheffield Wednesday",
+              "1 - 1",
+              "Cambridge United"
+            ],
+            [
+              "24.10.2026",
+              "League One",
+              "Cambridge United",
+              "2 - 3",
+              "Plymouth"
+            ],
+            [
+              "20.10.2026",
+              "League One",
+              "Cambridge United",
+              "2 - 2",
+              "Wycombe"
+            ],
+            [
+              "17.10.2026",
+              "League One",
+              "Barnsley",
+              "1 - 2",
+              "Cambridge United"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "17",
+            "Bristol Rovers",
+            "14",
+            "5",
+            "1",
+            "8",
+            "17",
+            "23",
+            "-6",
+            "16"
+          ],
+          [
+            "8",
+            "Cambridge United",
+            "14",
+            "5",
+            "6",
+            "3",
+            "21",
+            "21",
+            "0",
+            "21"
+          ]
+        ],
+        "goal25": [
+          "2.23",
+          "1.61"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-03",
+      "pdfRow": 3,
+      "home": "ဗင်နီဇီးယား",
+      "away": "အူဒီးနီးစ်",
+      "canonicalHome": "Venezia",
+      "canonicalAway": "Udinese",
+      "sourceUrl": "https://tipsterarea.com/match/venezia-udinese-serie-a-italy-954083",
+      "sourceSnapshot": {
+        "home": "Venezia",
+        "away": "Udinese",
+        "url": "https://tipsterarea.com/match/venezia-udinese-serie-a-italy-954083",
+        "images": [
+          "/images/teams/italy/venezia.gif",
+          "/images/teams/italy/udinese.gif"
+        ],
+        "odds": [
+          "2.31",
+          "3.64",
+          "3.25"
+        ],
+        "forms": [
+          [
+            [
+              "01.11.2026",
+              "Serie A",
+              "Como",
+              "1 - 0",
+              "Venezia"
+            ],
+            [
+              "28.10.2026",
+              "Serie A",
+              "Venezia",
+              "0 - 2",
+              "Inter"
+            ],
+            [
+              "25.10.2026",
+              "Serie A",
+              "Genoa",
+              "1 - 0",
+              "Venezia"
+            ],
+            [
+              "17.10.2026",
+              "Serie A",
+              "Venezia",
+              "1 - 0",
+              "Napoli"
+            ],
+            [
+              "12.10.2026",
+              "Serie A",
+              "Atalanta",
+              "3 - 1",
+              "Venezia"
+            ]
+          ],
+          [
+            [
+              "31.10.2026",
+              "Serie A",
+              "Udinese",
+              "2 - 5",
+              "Roma"
+            ],
+            [
+              "28.10.2026",
+              "Serie A",
+              "Parma",
+              "0 - 0",
+              "Udinese"
+            ],
+            [
+              "25.10.2026",
+              "Serie A",
+              "Udinese",
+              "0 - 2",
+              "Milan"
+            ],
+            [
+              "18.10.2026",
+              "Serie A",
+              "Udinese",
+              "0 - 3",
+              "Lecce"
+            ],
+            [
+              "12.10.2026",
+              "Serie A",
+              "Torino",
+              "2 - 1",
+              "Udinese"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "19",
+            "Udinese",
+            "10",
+            "1",
+            "2",
+            "7",
+            "11",
+            "23",
+            "-12",
+            "5"
+          ],
+          [
+            "20",
+            "Venezia",
+            "10",
+            "1",
+            "0",
+            "9",
+            "6",
+            "20",
+            "-14",
+            "3"
+          ]
+        ],
+        "goal25": [
+          "2.13",
+          "1.84"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-04",
+      "pdfRow": 4,
+      "home": "ဆီဗီလာ",
+      "away": "အလာဗက်စ်",
+      "canonicalHome": "Sevilla",
+      "canonicalAway": "Deportivo Alaves",
+      "sourceUrl": "https://tipsterarea.com/match/sevilla-deportivo-alaves-primera-division-spain-954081",
+      "sourceSnapshot": {
+        "home": "Sevilla",
+        "away": "Deportivo Alaves",
+        "url": "https://tipsterarea.com/match/sevilla-deportivo-alaves-primera-division-spain-954081",
+        "images": [
+          "/images/teams/spain/sevilla.gif",
+          "/images/teams/spain/deportivo-alaves.gif"
+        ],
+        "odds": [
+          "2.05",
+          "3.47",
+          "4.17"
+        ],
+        "forms": [
+          [
+            [
+              "01.11.2026",
+              "Primera Division",
+              "Getafe",
+              "3 - 1",
+              "Sevilla"
+            ],
+            [
+              "26.10.2026",
+              "Primera Division",
+              "Sevilla",
+              "2 - 0",
+              "Osasuna"
+            ],
+            [
+              "18.10.2026",
+              "Primera Division",
+              "Real Madrid",
+              "4 - 1",
+              "Sevilla"
+            ],
+            [
+              "12.10.2026",
+              "Primera Division",
+              "Levante",
+              "3 - 3",
+              "Sevilla"
+            ],
+            [
+              "19.09.2026",
+              "Primera Division",
+              "Sevilla",
+              "1 - 3",
+              "Barcelona"
+            ]
+          ],
+          [
+            [
+              "31.10.2026",
+              "Primera Division",
+              "Barcelona",
+              "6 - 1",
+              "Deportivo Alaves"
+            ],
+            [
+              "23.10.2026",
+              "Primera Division",
+              "Deportivo Alaves",
+              "1 - 1",
+              "Malaga"
+            ],
+            [
+              "18.10.2026",
+              "Primera Division",
+              "Celta Vigo",
+              "2 - 1",
+              "Deportivo Alaves"
+            ],
+            [
+              "10.10.2026",
+              "Primera Division",
+              "Deportivo Alaves",
+              "1 - 2",
+              "Atletico Madrid"
+            ],
+            [
+              "19.09.2026",
+              "Primera Division",
+              "Athletic Bilbao",
+              "0 - 0",
+              "Deportivo Alaves"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "6",
+            "Sevilla",
+            "11",
+            "5",
+            "2",
+            "4",
+            "17",
+            "19",
+            "-2",
+            "17"
+          ],
+          [
+            "11",
+            "Deportivo Alaves",
+            "11",
+            "3",
+            "3",
+            "5",
+            "15",
+            "17",
+            "-2",
+            "12"
+          ]
+        ],
+        "goal25": [
+          "1.73",
+          "2.28"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-05",
+      "pdfRow": 5,
+      "home": "ဟမ်းဘတ်",
+      "away": "မိုချန်ဂလာဘတ်",
+      "canonicalHome": "Hamburger",
+      "canonicalAway": "Borussia M'gladbach",
+      "sourceUrl": "https://tipsterarea.com/match/hamburger-borussia-m-gladbach-bundesliga-germany-954082",
+      "sourceSnapshot": {
+        "home": "Hamburger",
+        "away": "Borussia M'gladbach",
+        "url": "https://tipsterarea.com/match/hamburger-borussia-m-gladbach-bundesliga-germany-954082",
+        "images": [
+          "/images/teams/germany/hamburger.gif",
+          "/images/teams/germany/borussia-m-gladbach.gif"
+        ],
+        "odds": [
+          "2.49",
+          "3.86",
+          "2.82"
+        ],
+        "forms": [
+          [
+            [
+              "01.11.2026",
+              "Bundesliga",
+              "Eintracht Frankfurt",
+              "3 - 1",
+              "Hamburger"
+            ],
+            [
+              "27.10.2026",
+              "Cup Germany",
+              "Hamburger",
+              "1 - 3",
+              "Eintracht Frankfurt"
+            ],
+            [
+              "24.10.2026",
+              "Bundesliga",
+              "Paderborn",
+              "1 - 0",
+              "Hamburger"
+            ],
+            [
+              "17.10.2026",
+              "Bundesliga",
+              "Hamburger",
+              "1 - 0",
+              "Stuttgart"
+            ],
+            [
+              "10.10.2026",
+              "Bundesliga",
+              "Hoffenheim",
+              "2 - 3",
+              "Hamburger"
+            ]
+          ],
+          [
+            [
+              "31.10.2026",
+              "Bundesliga",
+              "Borussia M'gladbach",
+              "0 - 0",
+              "Paderborn"
+            ],
+            [
+              "27.10.2026",
+              "Cup Germany",
+              "Borussia M'gladbach",
+              "2 - 0",
+              "Karlsruher"
+            ],
+            [
+              "23.10.2026",
+              "Bundesliga",
+              "Stuttgart",
+              "2 - 3",
+              "Borussia M'gladbach"
+            ],
+            [
+              "18.10.2026",
+              "Bundesliga",
+              "Borussia M'gladbach",
+              "1 - 2",
+              "Hoffenheim"
+            ],
+            [
+              "11.10.2026",
+              "Bundesliga",
+              "FC Koln",
+              "2 - 1",
+              "Borussia M'gladbach"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "15",
+            "Hamburger",
+            "8",
+            "3",
+            "0",
+            "5",
+            "7",
+            "19",
+            "-12",
+            "9"
+          ],
+          [
+            "18",
+            "Borussia M'gladbach",
+            "8",
+            "1",
+            "1",
+            "6",
+            "11",
+            "22",
+            "-11",
+            "4"
+          ]
+        ],
+        "goal25": [
+          "2.36",
+          "1.69"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-06",
+      "pdfRow": 6,
+      "home": "တူးလော့စ်",
+      "away": "စထရာဘော့",
+      "canonicalHome": "Toulouse",
+      "canonicalAway": "Strasbourg",
+      "sourceUrl": "https://tipsterarea.com/match/toulouse-strasbourg-ligue-1-france-954084",
+      "sourceSnapshot": {
+        "home": "Toulouse",
+        "away": "Strasbourg",
+        "url": "https://tipsterarea.com/match/toulouse-strasbourg-ligue-1-france-954084",
+        "images": [
+          "/images/teams/france/toulouse.gif",
+          "/images/teams/france/strasbourg.gif"
+        ],
+        "odds": [
+          "2.08",
+          "4.01",
+          "3.50"
+        ],
+        "forms": [
+          [
+            [
+              "01.11.2026",
+              "Ligue 1",
+              "Marseille",
+              "2 - 0",
+              "Toulouse"
+            ],
+            [
+              "25.10.2026",
+              "Ligue 1",
+              "Toulouse",
+              "0 - 0",
+              "Troyes"
+            ],
+            [
+              "16.10.2026",
+              "Ligue 1",
+              "Le Mans",
+              "0 - 3",
+              "Toulouse"
+            ],
+            [
+              "10.10.2026",
+              "Ligue 1",
+              "Monaco",
+              "2 - 2",
+              "Toulouse"
+            ],
+            [
+              "19.09.2026",
+              "Ligue 1",
+              "Toulouse",
+              "3 - 2",
+              "Le Havre"
+            ]
+          ],
+          [
+            [
+              "01.11.2026",
+              "Ligue 1",
+              "Strasbourg",
+              "5 - 1",
+              "Auxerre"
+            ],
+            [
+              "25.10.2026",
+              "Ligue 1",
+              "Rennais",
+              "3 - 0",
+              "Strasbourg"
+            ],
+            [
+              "17.10.2026",
+              "Ligue 1",
+              "Strasbourg",
+              "1 - 3",
+              "Paris Saint Germain"
+            ],
+            [
+              "11.10.2026",
+              "Ligue 1",
+              "Nice",
+              "2 - 1",
+              "Strasbourg"
+            ],
+            [
+              "19.09.2026",
+              "Ligue 1",
+              "Paris FC",
+              "2 - 1",
+              "Strasbourg"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "12",
+            "Toulouse",
+            "9",
+            "2",
+            "4",
+            "3",
+            "12",
+            "13",
+            "-1",
+            "10"
+          ],
+          [
+            "13",
+            "Strasbourg",
+            "9",
+            "3",
+            "1",
+            "5",
+            "17",
+            "19",
+            "-2",
+            "10"
+          ]
+        ],
+        "goal25": [
+          "2.42",
+          "1.66"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-07",
+      "pdfRow": 7,
+      "home": "ဒါဘီ",
+      "away": "ဘော်တန်",
+      "canonicalHome": "Derby County",
+      "canonicalAway": "Bolton",
+      "sourceUrl": "https://tipsterarea.com/match/derby-county-bolton-championship-england-954086",
+      "sourceSnapshot": {
+        "home": "Derby County",
+        "away": "Bolton",
+        "url": "https://tipsterarea.com/match/derby-county-bolton-championship-england-954086",
+        "images": [
+          "/images/teams/england/derby-county.gif",
+          "/images/teams/england/bolton.gif"
+        ],
+        "odds": [
+          "2.33",
+          "3.55",
+          "2.78"
+        ],
+        "forms": [
+          [
+            [
+              "03.11.2026",
+              "Championship",
+              "Derby County",
+              "0 - 4",
+              "Norwich"
+            ],
+            [
+              "31.10.2026",
+              "Championship",
+              "Millwall",
+              "4 - 1",
+              "Derby County"
+            ],
+            [
+              "24.10.2026",
+              "Championship",
+              "Sheffield United",
+              "1 - 1",
+              "Derby County"
+            ],
+            [
+              "17.10.2026",
+              "Championship",
+              "Derby County",
+              "0 - 1",
+              "Stoke"
+            ],
+            [
+              "14.10.2026",
+              "Championship",
+              "Queens Park Rangers",
+              "4 - 1",
+              "Derby County"
+            ]
+          ],
+          [
+            [
+              "03.11.2026",
+              "Championship",
+              "Charlton",
+              "0 - 1",
+              "Bolton"
+            ],
+            [
+              "31.10.2026",
+              "Championship",
+              "Bolton",
+              "2 - 3",
+              "Bristol City"
+            ],
+            [
+              "23.10.2026",
+              "Championship",
+              "Bolton",
+              "1 - 5",
+              "Middlesbrough"
+            ],
+            [
+              "17.10.2026",
+              "Championship",
+              "Southampton",
+              "0 - 0",
+              "Bolton"
+            ],
+            [
+              "13.10.2026",
+              "Championship",
+              "Wolverhampton",
+              "1 - 3",
+              "Bolton"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "17",
+            "Bolton",
+            "14",
+            "5",
+            "2",
+            "7",
+            "19",
+            "26",
+            "-7",
+            "17"
+          ],
+          [
+            "23",
+            "Derby County",
+            "14",
+            "1",
+            "4",
+            "9",
+            "11",
+            "29",
+            "-18",
+            "7"
+          ]
+        ],
+        "goal25": [
+          "2.15",
+          "1.65"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-08",
+      "pdfRow": 8,
+      "home": "ဒရက်စ်ဒန်း",
+      "away": "ဂရူသာဖတ်",
+      "canonicalHome": "Dynamo Dresden",
+      "canonicalAway": "Greuther Furth",
+      "sourceUrl": "https://tipsterarea.com/match/dynamo-dresden-greuther-furth-2-bundesliga-germany-954098",
+      "sourceSnapshot": {
+        "home": "Dynamo Dresden",
+        "away": "Greuther Furth",
+        "url": "https://tipsterarea.com/match/dynamo-dresden-greuther-furth-2-bundesliga-germany-954098",
+        "images": [
+          "/images/teams/germany/dynamo-dresden.gif",
+          "/images/teams/germany/greuther-furth.gif"
+        ],
+        "odds": [
+          "1.84",
+          "3.82",
+          "3.77"
+        ],
+        "forms": [
+          [
+            [
+              "01.11.2026",
+              "2. Bundesliga",
+              "Hannover",
+              "2 - 1",
+              "Dynamo Dresden"
+            ],
+            [
+              "28.10.2026",
+              "Cup Germany",
+              "Dynamo Dresden",
+              "2 - 0",
+              "Schalke 04"
+            ],
+            [
+              "25.10.2026",
+              "2. Bundesliga",
+              "Holstein Kiel",
+              "3 - 0",
+              "Dynamo Dresden"
+            ],
+            [
+              "18.10.2026",
+              "2. Bundesliga",
+              "Dynamo Dresden",
+              "2 - 0",
+              "Magdeburg"
+            ],
+            [
+              "10.10.2026",
+              "2. Bundesliga",
+              "Osnabruck",
+              "1 - 1",
+              "Dynamo Dresden"
+            ]
+          ],
+          [
+            [
+              "01.11.2026",
+              "2. Bundesliga",
+              "Greuther Furth",
+              "1 - 0",
+              "Holstein Kiel"
+            ],
+            [
+              "25.10.2026",
+              "2. Bundesliga",
+              "Osnabruck",
+              "3 - 0",
+              "Greuther Furth"
+            ],
+            [
+              "17.10.2026",
+              "2. Bundesliga",
+              "Greuther Furth",
+              "2 - 0",
+              "Eintracht Braunschweig"
+            ],
+            [
+              "11.10.2026",
+              "2. Bundesliga",
+              "Hertha Berlin",
+              "2 - 1",
+              "Greuther Furth"
+            ],
+            [
+              "18.09.2026",
+              "2. Bundesliga",
+              "Greuther Furth",
+              "1 - 1",
+              "Magdeburg"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "9",
+            "Greuther Furth",
+            "10",
+            "3",
+            "3",
+            "4",
+            "13",
+            "16",
+            "-3",
+            "12"
+          ],
+          [
+            "18",
+            "Dynamo Dresden",
+            "10",
+            "2",
+            "2",
+            "6",
+            "12",
+            "20",
+            "-8",
+            "8"
+          ]
+        ],
+        "goal25": [
+          "2.31",
+          "1.57"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-09",
+      "pdfRow": 9,
+      "home": "ဘရောင်ရှဝိုက်",
+      "away": "ကော့ဘတ်",
+      "canonicalHome": "Eintracht Braunschweig",
+      "canonicalAway": "Energie Cottbus",
+      "sourceUrl": "https://tipsterarea.com/match/eintracht-braunschweig-energie-cottbus-2-bundesliga-germany-954099",
+      "sourceSnapshot": {
+        "home": "Eintracht Braunschweig",
+        "away": "Energie Cottbus",
+        "url": "https://tipsterarea.com/match/eintracht-braunschweig-energie-cottbus-2-bundesliga-germany-954099",
+        "images": [
+          "/images/teams/germany/eintracht-braunschweig.gif",
+          "/images/teams/germany/energie-cottbus.gif"
+        ],
+        "odds": [
+          "1.86",
+          "4.00",
+          "3.54"
+        ],
+        "forms": [
+          [
+            [
+              "30.10.2026",
+              "2. Bundesliga",
+              "Arminia Bielefeld",
+              "3 - 1",
+              "Eintracht Braunschweig"
+            ],
+            [
+              "25.10.2026",
+              "2. Bundesliga",
+              "Eintracht Braunschweig",
+              "2 - 0",
+              "Hannover"
+            ],
+            [
+              "17.10.2026",
+              "2. Bundesliga",
+              "Greuther Furth",
+              "2 - 0",
+              "Eintracht Braunschweig"
+            ],
+            [
+              "09.10.2026",
+              "2. Bundesliga",
+              "Eintracht Braunschweig",
+              "1 - 0",
+              "Holstein Kiel"
+            ],
+            [
+              "19.09.2026",
+              "2. Bundesliga",
+              "Kaiserslautern",
+              "1 - 0",
+              "Eintracht Braunschweig"
+            ]
+          ],
+          [
+            [
+              "30.10.2026",
+              "2. Bundesliga",
+              "Energie Cottbus",
+              "1 - 2",
+              "Bochum"
+            ],
+            [
+              "24.10.2026",
+              "2. Bundesliga",
+              "Heidenheim",
+              "1 - 1",
+              "Energie Cottbus"
+            ],
+            [
+              "16.10.2026",
+              "2. Bundesliga",
+              "Energie Cottbus",
+              "1 - 1",
+              "Nurnberg"
+            ],
+            [
+              "10.10.2026",
+              "2. Bundesliga",
+              "Darmstadt",
+              "3 - 1",
+              "Energie Cottbus"
+            ],
+            [
+              "20.09.2026",
+              "2. Bundesliga",
+              "Energie Cottbus",
+              "1 - 1",
+              "Sankt Pauli"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "14",
+            "Energie Cottbus",
+            "10",
+            "2",
+            "4",
+            "4",
+            "18",
+            "20",
+            "-2",
+            "10"
+          ],
+          [
+            "15",
+            "Eintracht Braunschweig",
+            "10",
+            "3",
+            "1",
+            "6",
+            "16",
+            "18",
+            "-2",
+            "10"
+          ]
+        ],
+        "goal25": [
+          "2.66",
+          "1.37"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-10",
+      "pdfRow": 10,
+      "home": "ဟမ်းမားဘိုက်",
+      "away": "အဲလ်စ်ဘော့",
+      "canonicalHome": "Hammarby",
+      "canonicalAway": "Elfsborg",
+      "sourceUrl": "https://tipsterarea.com/match/hammarby-elfsborg-allsvenskan-sweden-954115",
+      "sourceSnapshot": {
+        "home": "Hammarby",
+        "away": "Elfsborg",
+        "url": "https://tipsterarea.com/match/hammarby-elfsborg-allsvenskan-sweden-954115",
+        "images": [
+          "/images/teams/sweden/hammarby.gif",
+          "/images/teams/sweden/elfsborg.gif"
+        ],
+        "odds": [
+          "1.40",
+          "4.80",
+          "6.80"
+        ],
+        "forms": [
+          [
+            [
+              "01.11.2026",
+              "Allsvenskan",
+              "Malmo",
+              "1 - 2",
+              "Hammarby"
+            ],
+            [
+              "29.10.2026",
+              "Allsvenskan",
+              "Hammarby",
+              "2 - 0",
+              "Sirius"
+            ],
+            [
+              "25.10.2026",
+              "Allsvenskan",
+              "Mjallby",
+              "0 - 2",
+              "Hammarby"
+            ],
+            [
+              "18.10.2026",
+              "Allsvenskan",
+              "Halmstads",
+              "0 - 1",
+              "Hammarby"
+            ],
+            [
+              "11.10.2026",
+              "Allsvenskan",
+              "Hammarby",
+              "0 - 1",
+              "Djurgardens"
+            ]
+          ],
+          [
+            [
+              "01.11.2026",
+              "Allsvenskan",
+              "Elfsborg",
+              "2 - 1",
+              "Orgryte"
+            ],
+            [
+              "27.10.2026",
+              "Allsvenskan",
+              "AIK Stockholm",
+              "2 - 2",
+              "Elfsborg"
+            ],
+            [
+              "23.10.2026",
+              "Allsvenskan",
+              "Elfsborg",
+              "0 - 0",
+              "Malmo"
+            ],
+            [
+              "18.10.2026",
+              "Allsvenskan",
+              "Sirius",
+              "2 - 2",
+              "Elfsborg"
+            ],
+            [
+              "12.10.2026",
+              "Allsvenskan",
+              "Elfsborg",
+              "4 - 0",
+              "Halmstads"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "2",
+            "Hammarby",
+            "27",
+            "17",
+            "4",
+            "6",
+            "56",
+            "22",
+            "+34",
+            "55"
+          ],
+          [
+            "5",
+            "Elfsborg",
+            "27",
+            "12",
+            "10",
+            "5",
+            "41",
+            "27",
+            "+14",
+            "46"
+          ]
+        ],
+        "goal25": [
+          "2.35",
+          "1.55"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-11",
+      "pdfRow": 11,
+      "home": "ဝီလင် ၂",
+      "away": "ဇွိုလဲ",
+      "canonicalHome": "Willem II Tilburg",
+      "canonicalAway": "FC Zwolle",
+      "sourceUrl": "https://tipsterarea.com/match/willem-ii-tilburg-fc-zwolle-eredivisie-netherlands-954085",
+      "sourceSnapshot": {
+        "home": "Willem II Tilburg",
+        "away": "FC Zwolle",
+        "url": "https://tipsterarea.com/match/willem-ii-tilburg-fc-zwolle-eredivisie-netherlands-954085",
+        "images": [
+          "/images/teams/netherlands/willem-ii-tilburg.gif",
+          "/images/teams/netherlands/fc-zwolle.gif"
+        ],
+        "odds": [
+          "2.80",
+          "3.70",
+          "2.42"
+        ],
+        "forms": [
+          [
+            [
+              "31.10.2026",
+              "Eredivisie",
+              "PSV Eindhoven",
+              "7 - 0",
+              "Willem II Tilburg"
+            ],
+            [
+              "27.10.2026",
+              "KNVB Cup",
+              "Helmond Sport",
+              "3 - 4",
+              "Willem II Tilburg"
+            ],
+            [
+              "24.10.2026",
+              "Eredivisie",
+              "Willem II Tilburg",
+              "1 - 6",
+              "SC Cambuur"
+            ],
+            [
+              "17.10.2026",
+              "Eredivisie",
+              "Sparta Rotterdam",
+              "3 - 2",
+              "Willem II Tilburg"
+            ],
+            [
+              "11.10.2026",
+              "Eredivisie",
+              "FC Utrecht",
+              "3 - 1",
+              "Willem II Tilburg"
+            ]
+          ],
+          [
+            [
+              "01.11.2026",
+              "Eredivisie",
+              "FC Zwolle",
+              "1 - 0",
+              "ADO Den Haag"
+            ],
+            [
+              "28.10.2026",
+              "KNVB Cup",
+              "FC Zwolle",
+              "1 - 2",
+              "TOP Oss"
+            ],
+            [
+              "24.10.2026",
+              "Eredivisie",
+              "FC Utrecht",
+              "1 - 1",
+              "FC Zwolle"
+            ],
+            [
+              "18.10.2026",
+              "Eredivisie",
+              "FC Zwolle",
+              "4 - 1",
+              "Go Ahead Eagles"
+            ],
+            [
+              "11.10.2026",
+              "Eredivisie",
+              "FC Zwolle",
+              "0 - 1",
+              "SC Cambuur"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "14",
+            "FC Zwolle",
+            "11",
+            "3",
+            "2",
+            "6",
+            "12",
+            "23",
+            "-11",
+            "11"
+          ],
+          [
+            "18",
+            "Willem II Tilburg",
+            "11",
+            "0",
+            "2",
+            "9",
+            "10",
+            "39",
+            "-29",
+            "2"
+          ]
+        ],
+        "goal25": [
+          "2.44",
+          "1.53"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-12",
+      "pdfRow": 12,
+      "home": "ဆီကီဘော့",
+      "away": "လင်းဘိုင်",
+      "canonicalHome": "Silkeborg",
+      "canonicalAway": "Lyngby",
+      "sourceUrl": "https://tipsterarea.com/match/silkeborg-lyngby-superliga-denmark-954116",
+      "sourceSnapshot": {
+        "home": "Silkeborg",
+        "away": "Lyngby",
+        "url": "https://tipsterarea.com/match/silkeborg-lyngby-superliga-denmark-954116",
+        "images": [
+          "/images/teams/denmark/silkeborg.gif",
+          "/images/teams/denmark/lyngby.gif"
+        ],
+        "odds": [
+          "2.34",
+          "3.72",
+          "2.64"
+        ],
+        "forms": [
+          [
+            [
+              "01.11.2026",
+              "Superliga",
+              "Odense",
+              "4 - 1",
+              "Silkeborg"
+            ],
+            [
+              "25.10.2026",
+              "Superliga",
+              "Silkeborg",
+              "1 - 1",
+              "FC Nordsjaelland"
+            ],
+            [
+              "18.10.2026",
+              "Superliga",
+              "Sonderjyske",
+              "4 - 0",
+              "Silkeborg"
+            ],
+            [
+              "11.10.2026",
+              "Superliga",
+              "Silkeborg",
+              "3 - 3",
+              "Horsens"
+            ],
+            [
+              "18.09.2026",
+              "Superliga",
+              "Lyngby",
+              "0 - 4",
+              "Silkeborg"
+            ]
+          ],
+          [
+            [
+              "03.11.2026",
+              "Danish Cup",
+              "Lyngby",
+              "1 - 0",
+              "Randers FC"
+            ],
+            [
+              "30.10.2026",
+              "Superliga",
+              "Lyngby",
+              "2 - 1",
+              "Randers FC"
+            ],
+            [
+              "25.10.2026",
+              "Superliga",
+              "FC Midtjylland",
+              "3 - 2",
+              "Lyngby"
+            ],
+            [
+              "18.10.2026",
+              "Superliga",
+              "Lyngby",
+              "3 - 3",
+              "FC Nordsjaelland"
+            ],
+            [
+              "11.10.2026",
+              "Superliga",
+              "Brondby",
+              "5 - 2",
+              "Lyngby"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "9",
+            "Silkeborg",
+            "13",
+            "2",
+            "6",
+            "5",
+            "17",
+            "24",
+            "-7",
+            "12"
+          ],
+          [
+            "11",
+            "Lyngby",
+            "13",
+            "2",
+            "5",
+            "6",
+            "19",
+            "28",
+            "-9",
+            "11"
+          ]
+        ],
+        "goal25": [
+          "2.39",
+          "1.53"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261106-13",
+      "pdfRow": 13,
+      "home": "ဖာမလီကာအို",
+      "away": "အာရိုကာ",
+      "canonicalHome": "Famalicao",
+      "canonicalAway": "Arouca",
+      "sourceUrl": "https://tipsterarea.com/match/famalicao-arouca-primeira-liga-portugal-954090",
+      "sourceSnapshot": {
+        "home": "Famalicao",
+        "away": "Arouca",
+        "url": "https://tipsterarea.com/match/famalicao-arouca-primeira-liga-portugal-954090",
+        "images": [
+          "/images/teams/portugal/famalicao.gif",
+          "/images/teams/portugal/arouca.gif"
+        ],
+        "odds": [
+          "2.15",
+          "3.49",
+          "3.59"
+        ],
+        "forms": [
+          [
+            [
+              "01.11.2026",
+              "Primeira Liga",
+              "SC Braga",
+              "3 - 0",
+              "Famalicao"
+            ],
+            [
+              "29.10.2026",
+              "League Cup",
+              "SC Braga",
+              "2 - 2",
+              "Famalicao"
+            ],
+            [
+              "25.10.2026",
+              "Primeira Liga",
+              "Rio Ave",
+              "0 - 4",
+              "Famalicao"
+            ],
+            [
+              "12.10.2026",
+              "Primeira Liga",
+              "Famalicao",
+              "1 - 4",
+              "Alverca"
+            ],
+            [
+              "19.09.2026",
+              "Primeira Liga",
+              "Nacional",
+              "0 - 4",
+              "Famalicao"
+            ]
+          ],
+          [
+            [
+              "01.11.2026",
+              "Primeira Liga",
+              "Arouca",
+              "1 - 0",
+              "Nacional"
+            ],
+            [
+              "24.10.2026",
+              "Primeira Liga",
+              "Alverca",
+              "0 - 1",
+              "Arouca"
+            ],
+            [
+              "18.10.2026",
+              "Portuguese Cup",
+              "Os Belenenses",
+              "3 - 3",
+              "Arouca"
+            ],
+            [
+              "11.10.2026",
+              "Primeira Liga",
+              "Arouca",
+              "1 - 0",
+              "Estrela Amadora"
+            ],
+            [
+              "19.09.2026",
+              "Primeira Liga",
+              "Sporting CP",
+              "2 - 2",
+              "Arouca"
+            ]
+          ]
+        ],
+        "standing": [
+          [
+            "5",
+            "Arouca",
+            "10",
+            "6",
+            "2",
+            "2",
+            "13",
+            "7",
+            "+6",
+            "20"
+          ],
+          [
+            "11",
+            "Famalicao",
+            "10",
+            "2",
+            "4",
+            "4",
+            "14",
+            "14",
+            "0",
+            "10"
+          ]
+        ],
+        "goal25": [
+          "1.84",
+          "2.06"
+        ]
+      },
+      "sourceCheckedDate": "2026-11-06",
+      "unavailableFields": [
+        "Full current injury, suspension and manager evidence unavailable for all clubs; unsupported names omitted"
+      ]
+    }
+  ]
+}

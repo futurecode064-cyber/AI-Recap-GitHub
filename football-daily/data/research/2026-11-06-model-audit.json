@@ -1,0 +1,318 @@
+{
+  "date": "2026-11-06",
+  "independentModels": true,
+  "items": [
+    {
+      "fixtureId": "fc-20261106-01",
+      "scores": [
+        "1-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-2",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/everton-vs-coventry-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-02",
+      "scores": [
+        "0-2",
+        "0-1",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "0-2",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/bristol-rovers-vs-cambridge-united-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-03",
+      "scores": [
+        "0-0",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "0-0",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/venezia-vs-udinese-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-04",
+      "scores": [
+        "2-1",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-1",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/sevilla-vs-alaves-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-05",
+      "scores": [
+        "1-1",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-1",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/hamburger-sv-vs-borussia-mönchengladbach-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-06",
+      "scores": [
+        "1-1",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-1",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/toulouse-vs-strasbourg-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-07",
+      "scores": [
+        "0-1",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "0-1",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/derby-vs-bolton-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-08",
+      "scores": [
+        "1-1",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-1",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/dynamo-dresden-vs-spvgg-greuther-fürth-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-09",
+      "scores": [
+        "1-1",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-1",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/eintracht-braunschweig-vs-energie-cottbus-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-10",
+      "scores": [
+        "2-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/hammarby-ff-vs-if-elfsborg-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-11",
+      "scores": [
+        "1-1",
+        "0-1",
+        "1-2"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-1",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/willem-ii-vs-pec-zwolle-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "0-1",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-2",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-12",
+      "scores": [
+        "2-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "2-2",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/silkeborg-vs-lyngby-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261106-13",
+      "scores": [
+        "1-2",
+        "1-0",
+        "1-1"
+      ],
+      "method": {
+        "vipInternet": {
+          "score": "1-2",
+          "sourceName": "Football Score Predictor (independent external model)",
+          "sourceUrl": "https://www.footballscorepredictor.com/famalicao-vs-arouca-correct-score-prediction-on-2026-11-06",
+          "sourceDate": "2026-11-06"
+        },
+        "bookies": {
+          "score": "1-0",
+          "method": "derived from published 1X2 implied probabilities and goal total; not an offered correct-score market"
+        },
+        "aiTips": {
+          "score": "1-1",
+          "method": "Poisson form model"
+        }
+      }
+    }
+  ]
+}

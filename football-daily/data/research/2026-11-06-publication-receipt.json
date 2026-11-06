@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-06",
+  "status": "VALIDATED_CANDIDATE_PENDING_LIVE_QA",
+  "baseCommit": "c770bdcfafcf5a0b3650d9d95deaf91c7b842e22",
+  "counts": {
+    "pdfRows": 13,
+    "previews": 13,
+    "previewV2": 13,
+    "specialChoices": 2,
+    "verifiedLastFiveTeams": 26,
+    "verified1X2": 13,
+    "vipIndependentSources": 13,
+    "verifiedYesterdayFT": 35,
+    "news": 10
+  },
+  "checks": {
+    "dailyGuard": "PASS",
+    "dailyPackageGuard": "PASS",
+    "previewV2": "PASS",
+    "12hTimeTests": "4 PASS; 2 legacy assertions fail on preexisting cache-version/BCF suspended page"
+  },
+  "sourceExceptions": [
+    "Women football award follow-up from Nov 2 before Nov 9 announcement, original date explicitly shown; newest verified relevant official women item located.",
+    "Current odds source absent; current prices blank.",
+    "Full squad/manager/injury confirmations unavailable for all clubs; unverified claims omitted.",
+    "Photograph rights remain with original owners; independent republication permission unverified."
+  ],
+  "runtime": "Existing static JSON; no architecture change; publish through original production branch",
+  "sites": [
+    "/",
+    "/future-code-journal/",
+    "/ykz-family/",
+    "/bw-sport/",
+    "/ko-thet-family/",
+    "/kmm-sport-hub/"
+  ]
+}
