@@ -75,6 +75,26 @@ jobs:
             try:
               data=fetch(url,55_000_000)
               z=zipfile.ZipFile(io.BytesIO(data))
+              # Extract the icon resource directly from Android manifest's aapt badging.
+              import subprocess,os,re
+              apkpath=dest/(name+".apk")
+              apkpath.write_bytes(data)
+              buildtools=pathlib.Path(os.environ.get('ANDROID_HOME','/opt/android-sdk'))/'build-tools'
+              aapts=sorted(buildtools.glob('*/aapt'))
+              if aapts:
+                info=subprocess.run([str(aapts[-1]),'dump','badging',str(apkpath)],capture_output=True,text=True)
+                matches=re.findall(r"application-icon-\\d+:'([^']+)'",info.stdout)
+                for item in reversed(matches):
+                  try:
+                    b=z.read(item)
+                    im=Image.open(io.BytesIO(b));im.verify()
+                    (dest/(name+".png")).write_bytes(b)
+                    status[name]={"status":"launcher icon extracted via Android AAPT","source":item,"bytes":len(b)}
+                    break
+                  except Exception: pass
+              if name in status and status[name]['status'].startswith('launcher icon extracted'):
+                apkpath.unlink(missing_ok=True)
+                continue
               options=[]
               for member in z.namelist():
                 if not member.lower().endswith((".png",".webp")):continue
@@ -91,6 +111,7 @@ jobs:
               _,src,b=options[0]
               (dest/(name+".png")).write_bytes(b)
               status[name]={"status":"launcher icon extracted from APK","source":src,"bytes":len(b)}
+              apkpath.unlink(missing_ok=True)
             except Exception as exc:
               status[name]={"status":"could not extract APK launcher icon","error":str(exc)[:200]}
           (dest/"manifest.json").write_text(json.dumps(status,ensure_ascii=False,indent=2))
