@@ -24,7 +24,7 @@ const dom=new JSDOM(html,{
   }
 });
 const w=dom.window,d=w.document,$=s=>d.querySelector(s),$$=s=>[...d.querySelectorAll(s)];
-const wait=async(cond,name)=>{const start=Date.now();while(Date.now()-start<7000){if(cond())return;await new Promise(r=>setTimeout(r,20))}throw Error('Timed out: '+name)};
+const wait=async(cond,name)=>{const start=Date.now();while(Date.now()-start<7000){if(cond())return;await new Promise(r=>setTimeout(r,20))}throw Error('Timed out: '+name+' ; toast='+($('#toast')?.textContent||'none'))};
 async function submit(){const f=$('#form');assert.ok(f);f.dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}))}
 async function setRoom(unit,tenant,rent,water,rate){
   $('[data-add="room"]').click();
