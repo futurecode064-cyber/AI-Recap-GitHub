@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "status": "VALIDATED_CANDIDATE_PENDING_LIVE_QA",
+  "status": "PUBLISHED_LIVE_VERIFIED",
   "baseCommit": "c770bdcfafcf5a0b3650d9d95deaf91c7b842e22",
   "counts": {
     "pdfRows": 13,
@@ -33,5 +33,108 @@
     "/bw-sport/",
     "/ko-thet-family/",
     "/kmm-sport-hub/"
+  ],
+  "publicationCommit": "633023f9c1cbff50210178770cf96cadb0cec5c9",
+  "liveQA": [
+    {
+      "path": "",
+      "status": 200,
+      "sha256": "805760094d156eb1499b5c061816b21367be302e5791c6cd1724b4f06f5daa27"
+    },
+    {
+      "path": "future-code-journal/",
+      "status": 200,
+      "sha256": "1d41ad14a61a1a62601cc8edf11b80ea49a087a39f472978328aed4e869755df"
+    },
+    {
+      "path": "ykz-family/",
+      "status": 200,
+      "sha256": "f5476d49fbb4326bb900ba5bad53e9a7b23f20cfc22c84b1e7cc2116a68fd975"
+    },
+    {
+      "path": "bw-sport/",
+      "status": 200,
+      "sha256": "93f6fe5d959439f6db3f79408f2e77052cc1d621c68e5df1a374e2df9c5286ab"
+    },
+    {
+      "path": "ko-thet-family/",
+      "status": 200,
+      "sha256": "3a41a301cffdf0c3c0d9c3d9e25bf111a773da94e70f2e247cca44f0f12f98f1"
+    },
+    {
+      "path": "kmm-sport-hub/",
+      "status": 200,
+      "sha256": "c5fdf6d05e9d5d96d92a34bc33558a72ee4d00c0c2705c208b8bda47d5df0855"
+    },
+    {
+      "path": "data/today.json",
+      "status": 200,
+      "sha256": "90284328a5da9d5114456b931c78350bf3f254628169a76efb4f4ccbd328ea75",
+      "date": "2026-11-06",
+      "count": 13,
+      "matchesLocal": true
+    },
+    {
+      "path": "data/archive/2026-11-05.json",
+      "status": 200,
+      "sha256": "1cebd03729932b9f0a4d0499dc5071222d76684ef8ace988b27092038fca5a22",
+      "date": "2026-11-05",
+      "count": 35,
+      "matchesLocal": true
+    },
+    {
+      "path": "data/news/latest.json",
+      "status": 200,
+      "sha256": "2214b54838a913356abbdc71b383a4fcbb33e1135b9a7e63883c548cd1bf8cf9",
+      "date": "2026-11-06",
+      "count": 10,
+      "matchesLocal": true
+    },
+    {
+      "path": "data/odds/2026-11-06.json",
+      "status": 200,
+      "sha256": "069674b2ac914aeed03ebdf7dab4615a9b819779a544dd3227aa6671c654f85e",
+      "date": "2026-11-06",
+      "count": 13,
+      "matchesLocal": true
+    },
+    {
+      "path": "data/tips/2026-11-06.json",
+      "status": 200,
+      "sha256": "eef3cc3f75e9d09914e7b7ce4959df045de3652a5b43aa2111fdb5a5898ecdf4",
+      "date": "2026-11-06",
+      "count": 13,
+      "matchesLocal": true
+    }
+  ],
+  "exports": {
+    "count": 37,
+    "sections": {
+      "ပေါက်ကြေး": 2,
+      "မြန်မာကြေးကတ်ပုံစံ": 1,
+      "ပွဲကြိုသုံးသပ်ချက်": 13,
+      "ပွဲကြိုသုံးသပ်ချက် Version 2": 7,
+      "Special Choice": 2,
+      "ဂိုးရလဒ်": 1,
+      "VIP Internet · Bookies · AI Tips": 1,
+      "ဘောလုံးသတင်း": 10
+    },
+    "crc": "PASS",
+    "allImagesDecoded": true
+  },
+  "browserSixSites": "Main, Goal Zone, YKZ, BW, Ko Thet, KMM: each displays 13 published fixtures, 2 choices; full preview PNG downloaded from each brand",
+  "video": {
+    "format": "MP4 / H.264",
+    "width": 1080,
+    "height": 1920,
+    "durationSeconds": 56.838167,
+    "slides": 13,
+    "visuallyInspected": true
+  },
+  "downloadQA": "8-section ZIP decoded all 37 PNGs and CRC passed; representative previews, V2, odds, tips, results, news visually checked; separate V2 ZIP 5 PNGs for 13 fixtures",
+  "remainingLimitations": [
+    "Mobile browser viewport not independently tested this run; current responsive code preserved.",
+    "Current source prices not provided; blank as required.",
+    "Full current injury/manager coverage and photo reuse permissions not independently verified for every club."
   ]
 }
