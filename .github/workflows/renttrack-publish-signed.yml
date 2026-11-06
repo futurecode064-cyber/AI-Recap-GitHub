@@ -87,18 +87,18 @@ jobs:
           TOOL="$ANDROID_HOME/build-tools/35.0.0"
           mkdir -p portal/apps
           "$TOOL/zipalign" -f -p 4 renttrack/project/app/build/outputs/apk/release/app-release-unsigned.apk "$RUNNER_TEMP/rt-aligned.apk"
-          "$TOOL/apksigner" sign --ks "$RT_KEYSTORE" --ks-key-alias renttrack --ks-pass env:RT_PASSWORD --key-pass env:RT_PASSWORD --out portal/apps/FutureCodeRentTrack-v1.1.0.apk "$RUNNER_TEMP/rt-aligned.apk"
-          "$TOOL/apksigner" verify --verbose --print-certs portal/apps/FutureCodeRentTrack-v1.1.0.apk | tee "$RUNNER_TEMP/rt-verify.txt"
-          "$TOOL/aapt" dump badging portal/apps/FutureCodeRentTrack-v1.1.0.apk | grep -E '^(package:|sdkVersion:|targetSdkVersion:)'
+          "$TOOL/apksigner" sign --ks "$RT_KEYSTORE" --ks-key-alias renttrack --ks-pass env:RT_PASSWORD --key-pass env:RT_PASSWORD --out portal/apps/FutureCodeRentTrack-v1.1.1.apk "$RUNNER_TEMP/rt-aligned.apk"
+          "$TOOL/apksigner" verify --verbose --print-certs portal/apps/FutureCodeRentTrack-v1.1.1.apk | tee "$RUNNER_TEMP/rt-verify.txt"
+          "$TOOL/aapt" dump badging portal/apps/FutureCodeRentTrack-v1.1.1.apk | grep -E '^(package:|sdkVersion:|targetSdkVersion:)'
           python3 - <<'PY'
           import pathlib,hashlib,json,re,datetime,os
-          p=pathlib.Path('portal/apps/FutureCodeRentTrack-v1.1.0.apk')
+          p=pathlib.Path('portal/apps/FutureCodeRentTrack-v1.1.1.apk')
           verify=pathlib.Path(os.environ['RUNNER_TEMP']+'/rt-verify.txt').read_text()
           cert=re.search(r'certificate SHA-256 digest:\s*([0-9a-fA-F]{64})',verify)
           assert cert, 'Missing verified certificate digest'
-          manifest={'packageName':'studio.futurecode.renttrack','versionCode':2,'versionName':'1.1.0',
+          manifest={'packageName':'studio.futurecode.renttrack','versionCode':3,'versionName':'1.1.1',
            'status':'production-signed',
-           'apkUrl':'https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCodeRentTrack-v1.1.0.apk',
+           'apkUrl':'https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCodeRentTrack-v1.1.1.apk',
            'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),
            'certificateSha256':cert.group(1).lower(),'size':p.stat().st_size,
            'publishedAt':datetime.datetime.now(datetime.timezone.utc).isoformat()}
@@ -108,9 +108,9 @@ jobs:
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: FutureCode-RentTrack-v1.1.0-production-signed
+          name: FutureCode-RentTrack-v1.1.1-production-signed
           path: |
-            portal/apps/FutureCodeRentTrack-v1.1.0.apk
+            portal/apps/FutureCodeRentTrack-v1.1.1.apk
             portal/apps/renttrack-update.json
             renttrack/latest.json
           if-no-files-found: error
@@ -120,7 +120,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add portal/apps/FutureCodeRentTrack-v1.1.0.apk portal/apps/renttrack-update.json renttrack/latest.json
+          git add portal/apps/FutureCodeRentTrack-v1.1.1.apk portal/apps/renttrack-update.json renttrack/latest.json
           if ! git diff --cached --quiet; then
             git commit -m "RentTrack verified signed release v1.1.0 [skip ci]"
             git pull --rebase origin main
