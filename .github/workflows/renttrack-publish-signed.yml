@@ -1,0 +1,128 @@
+name: RentTrack Official Signed APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'renttrack/project/**'
+      - '.github/workflows/renttrack-publish-signed.yml'
+permissions:
+  contents: write
+  id-token: write
+concurrency:
+  group: renttrack-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      FC_FIREBASE_API_KEY: ${{ secrets.FC_FIREBASE_API_KEY }}
+      FC_FIREBASE_APP_ID: ${{ secrets.FC_FIREBASE_APP_ID }}
+      FC_FIREBASE_PROJECT_ID: ${{ secrets.FC_FIREBASE_PROJECT_ID }}
+      FC_FIREBASE_SENDER_ID: ${{ secrets.FC_FIREBASE_SENDER_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify offline billing / secure backup
+        shell: bash
+        run: |
+          cd renttrack/tests
+          npm install --ignore-scripts --no-save --no-audit --no-fund --silent jsdom@27.0.1 fake-indexeddb@6.2.5
+          node smoke.cjs
+      - name: Confirm optional Firebase configuration
+        run: |
+          if [ -n "$FC_FIREBASE_API_KEY" ] && [ -n "$FC_FIREBASE_APP_ID" ] && [ -n "$FC_FIREBASE_PROJECT_ID" ] && [ -n "$FC_FIREBASE_SENDER_ID" ]; then
+            echo 'Firebase client configuration available'
+          else
+            echo '::warning::Firebase client config is not ready. Local notifications work; FCM remote push will not work.'
+          fi
+      - name: Prepare Android SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+      - name: Restore or initialize permanent RentTrack signing key
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          API='https://mxwervqihaqlxybghdak.supabase.co/functions/v1/fc-renttrack-signing'
+          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-renttrack-signing-v1" | jq -er '.value')"
+          echo "::add-mask::$OIDC"
+          curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o "$RUNNER_TEMP/rt-key.json"
+          if [ "$(jq -r '.ready' "$RUNNER_TEMP/rt-key.json")" != 'true' ]; then
+            PASS="$(openssl rand -hex 32)"
+            echo "::add-mask::$PASS"
+            keytool -genkeypair -storetype PKCS12 -keystore "$RUNNER_TEMP/rt-init.p12" -storepass "$PASS" -keypass "$PASS" -alias renttrack -keyalg RSA -keysize 3072 -validity 10000 -dname "CN=Future Code RentTrack, O=Future Code AI Studio, C=MM" -noprompt
+            jq -nc --arg p "$PASS" --arg k "$(base64 -w0 "$RUNNER_TEMP/rt-init.p12")" '{action:"initialize",store_password:$p,keystore_b64:$k}' > "$RUNNER_TEMP/rt-init.json"
+            curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data-binary @"$RUNNER_TEMP/rt-init.json" "$API" -o "$RUNNER_TEMP/rt-init-response.json"
+            jq -e '.ok == true' "$RUNNER_TEMP/rt-init-response.json" >/dev/null
+            curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o "$RUNNER_TEMP/rt-key.json"
+          fi
+          jq -e '.ready == true and .key_alias == "renttrack"' "$RUNNER_TEMP/rt-key.json" >/dev/null
+          jq -er '.keystore_b64' "$RUNNER_TEMP/rt-key.json" | base64 --decode > "$RUNNER_TEMP/rt-release.jks"
+          PASS="$(jq -er '.store_password' "$RUNNER_TEMP/rt-key.json")"
+          echo "::add-mask::$PASS"
+          echo "RT_PASSWORD=$PASS" >> "$GITHUB_ENV"
+          echo "RT_KEYSTORE=$RUNNER_TEMP/rt-release.jks" >> "$GITHUB_ENV"
+          rm -f "$RUNNER_TEMP/rt-key.json" "$RUNNER_TEMP/rt-init.p12" "$RUNNER_TEMP/rt-init.json" "$RUNNER_TEMP/rt-init-response.json"
+      - name: Compile Android production release
+        working-directory: renttrack/project
+        run: gradle --no-daemon :app:assembleRelease --stacktrace
+      - name: Sign and verify release, emit update manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOOL="$ANDROID_HOME/build-tools/35.0.0"
+          mkdir -p portal/apps
+          "$TOOL/zipalign" -f -p 4 renttrack/project/app/build/outputs/apk/release/app-release-unsigned.apk "$RUNNER_TEMP/rt-aligned.apk"
+          "$TOOL/apksigner" sign --ks "$RT_KEYSTORE" --ks-key-alias renttrack --ks-pass env:RT_PASSWORD --key-pass env:RT_PASSWORD --out portal/apps/FutureCodeRentTrack-v1.1.0.apk "$RUNNER_TEMP/rt-aligned.apk"
+          "$TOOL/apksigner" verify --verbose --print-certs portal/apps/FutureCodeRentTrack-v1.1.0.apk | tee "$RUNNER_TEMP/rt-verify.txt"
+          "$TOOL/aapt" dump badging portal/apps/FutureCodeRentTrack-v1.1.0.apk | grep -E '^(package:|sdkVersion:|targetSdkVersion:)'
+          python3 - <<'PY'
+          import pathlib,hashlib,json,re,datetime,os
+          p=pathlib.Path('portal/apps/FutureCodeRentTrack-v1.1.0.apk')
+          verify=pathlib.Path(os.environ['RUNNER_TEMP']+'/rt-verify.txt').read_text()
+          cert=re.search(r'certificate SHA-256 digest:\s*([0-9a-fA-F]{64})',verify)
+          assert cert, 'Missing verified certificate digest'
+          manifest={'packageName':'studio.futurecode.renttrack','versionCode':2,'versionName':'1.1.0',
+           'status':'production-signed',
+           'apkUrl':'https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCodeRentTrack-v1.1.0.apk',
+           'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),
+           'certificateSha256':cert.group(1).lower(),'size':p.stat().st_size,
+           'publishedAt':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+          for name in ['portal/apps/renttrack-update.json','renttrack/latest.json']:
+           pathlib.Path(name).write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+          print('SIGNED VERIFIED',manifest['versionName'],manifest['size'],manifest['sha256'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FutureCode-RentTrack-v1.1.0-production-signed
+          path: |
+            portal/apps/FutureCodeRentTrack-v1.1.0.apk
+            portal/apps/renttrack-update.json
+            renttrack/latest.json
+          if-no-files-found: error
+      - name: Publish to Future Code App Download Website
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add portal/apps/FutureCodeRentTrack-v1.1.0.apk portal/apps/renttrack-update.json renttrack/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "RentTrack verified signed release v1.1.0 [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
