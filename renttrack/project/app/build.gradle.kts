@@ -8,8 +8,8 @@ android {
   applicationId = "studio.futurecode.renttrack"
   minSdk = 28
   targetSdk = 35
-  versionCode = 2
-  versionName = "1.1.0"
+  versionCode = 3
+  versionName = "1.1.1"
   buildConfigField("String","FIREBASE_API_KEY",quoted(env("FC_FIREBASE_API_KEY")))
   buildConfigField("String","FIREBASE_APP_ID",quoted(env("FC_FIREBASE_APP_ID")))
   buildConfigField("String","FIREBASE_PROJECT_ID",quoted(env("FC_FIREBASE_PROJECT_ID")))
