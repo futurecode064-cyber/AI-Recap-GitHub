@@ -74,6 +74,7 @@ async function run(){
  nav('rooms');
  await wait(()=>$('#room-list').textContent.includes('A-101'),'restored room');
  console.log('PASS RentTrack: room creation, billing idempotency, meter arithmetic, partial/full payment, AES-256-GCM export and restore');
+ await new Promise(r=>setTimeout(r,500));
  dom.window.close();
 }
 run().catch(e=>{console.error(e);dom.window.close();process.exitCode=1});
