@@ -21,6 +21,6 @@ public final class RentTrackWorker extends Worker {
   public static void schedule(Context c){
     PeriodicWorkRequest task=new PeriodicWorkRequest.Builder(RentTrackWorker.class,30,TimeUnit.MINUTES)
       .setInitialDelay(10,TimeUnit.MINUTES).build();
-    WorkManager.getInstance(c).enqueueUniquePeriodicWork("renttrack-daily",ExistingPeriodicWorkPolicy.KEEP,task);
+    WorkManager.getInstance(c).enqueueUniquePeriodicWork("renttrack-daily",ExistingPeriodicWorkPolicy.UPDATE,task);
   }
 }
