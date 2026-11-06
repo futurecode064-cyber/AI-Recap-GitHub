@@ -5,7 +5,7 @@
 
   const ROOT = new URL("../data/", document.baseURI);
   const artwork = new URL("../future-code-journal/assets/goal-zone-download-banner.webp", document.baseURI).href;
-  const brandLogo = new URL("../future-code-journal/assets/logo.webp", document.baseURI).href;
+  const brandLogo = new URL("./logo.svg", document.baseURI).href;
   const imagePromises = new Map();
   const $ = id => document.getElementById(id);
   const day = () => {

@@ -322,7 +322,7 @@
       if(!exp?.save)throw Error("Preview exporter unavailable");
       const arts=[];
       for(const m of group)arts.push(await exp.save({...m,home:m.homeDisplay||m.home,away:m.awayDisplay||m.away},{
-        brandName:"GOAL ZONE JOURNAL",brandLogoUrl:new URL("../future-code-journal/assets/logo.webp",document.baseURI).href,
+        brandName:"GOAL ZONE JOURNAL",brandLogoUrl:new URL("./logo.svg",document.baseURI).href,
         leagueLabel:m.league,asCanvas:true,special:type==="special"
       }));
       return stack(arts);

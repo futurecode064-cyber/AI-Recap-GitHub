@@ -2,10 +2,10 @@
 (function(){
  const root=document.documentElement;
  root.classList.add("fcj-theme");
- const logo=new URL("../future-code-journal/assets/logo.webp",document.baseURI).href;
+ const logo=new URL("./logo.svg",document.baseURI).href;
  root.dataset.footballBrandName="GOAL ZONE JOURNAL";
  root.dataset.footballBrandLogoUrl=logo;
- root.dataset.footballBrandArtworkUrl=new URL("./assets/football-gold-stadium.webp",document.baseURI).href;
+ root.dataset.footballBrandArtworkUrl=new URL("../future-code-journal/assets/football-gold-stadium.webp",document.baseURI).href;
  window.FutureCodeBrandConfig=Object.freeze({
   id:"future-code-journal",name:"GOAL ZONE JOURNAL",slogan:"",
   logoUrl:logo,dataRoot:new URL("../data/",document.baseURI).href,
