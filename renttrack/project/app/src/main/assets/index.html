@@ -7,7 +7,24 @@
 <section class="page" id="page-rooms"><div class="toolbar"><h1>အခန်းများ</h1><button class="btn primary" data-add="room">＋ အခန်းထည့်ရန်</button></div><input class="input search" id="room-search" placeholder="အခန်းနံပါတ် / ငှားရမ်းသူရှာရန်" aria-label="အခန်းရှာရန်"/><p class="small muted" id="room-count"></p><div class="cards" id="room-list"></div></section>
 <section class="page" id="page-invoices"><div class="toolbar"><h1>လစဉ် ဘေလ်စာရင်း</h1><button class="btn primary" data-add="invoice">＋ ဘေလ်အသစ်</button></div><div class="panel"><div class="toolbar"><input type="month" id="invoice-month" class="input search" aria-label="ဘေလ်လ" /><button class="btn" id="show-all-invoices">အားလုံး</button></div><div id="invoice-list"></div></div></section>
 <section class="page" id="page-payments"><div class="toolbar"><h1>ငွေလက်ခံမှတ်တမ်း</h1><button class="btn primary" data-add="payment">＋ ငွေလက်ခံရန်</button></div><div class="panel"><p>ငွေလက်ခံမှုတိုင်းကို သီးခြား မှတ်တမ်းတင်ပြီး ပြေစာထုတ်နိုင်ပါတယ်။</p><div id="payment-list"></div></div></section>
-<section class="page" id="page-settings"><h1>Setting & Backup</h1><section class="panel"><h2>လုပ်ငန်းအချက်အလက်</h2><div class="formgrid"><div class="field"><label for="business">ဆိုင်/အဆောင်အမည်</label><input id="business" class="input" maxlength="70"/></div><div class="field"><label for="dued">လစဉ်ပေးချေရမည့်ရက် (၁–၂၈)</label><input id="dued" class="input" type="number" min="1" max="28"/></div></div><button class="btn primary" style="margin-top:13px" id="save-settings">Setting သိမ်းရန်</button></section><section class="panel"><h2>Encrypted Backup / Restore</h2><p>အရေးကြီးတဲ့ငှားရမ်းသူအချက်အလက်တွေကို AES-GCM နဲ့ စာဝှက်ပြီး Backup ထုတ်နိုင်ပါတယ်။ Backup ကို ပြန်သွင်းဖို့ မူရင်း Passphrase လိုအပ်ပါတယ်။</p><div class="buttonrow"><button class="btn primary" id="backup">⬇ Backup ထုတ်ရန်</button><button class="btn" id="restore">⬆ Backup ပြန်သွင်းရန်</button><button class="btn" id="csv">⬇ CSV Report</button></div><input type="file" accept="application/json,.json" id="restore-file" hidden/><p class="hint">အကောင့် Login၊ Cloud Server၊ SMS Payment မလိုအပ်ပါ။ ဖုန်းတစ်လုံးအတွက်သာ စီမံခန့်ခွဲမှု ဖြစ်ပါတယ်။</p></section><section class="panel"><h2>Audit Log</h2><div id="audit-list" class="small"></div></section><p class="hint" style="text-align:center">Developed by Future Code AI Studio · RentTrack v1.0.0</p></section>
+<section class="page" id="page-settings"><h1>Setting & Backup</h1><section class="panel"><h2>လုပ်ငန်းအချက်အလက်</h2><div class="formgrid"><div class="field"><label for="business">ဆိုင်/အဆောင်အမည်</label><input id="business" class="input" maxlength="70"/></div><div class="field"><label for="dued">လစဉ်ပေးချေရမည့်ရက် (၁–၂၈)</label><input id="dued" class="input" type="number" min="1" max="28"/></div></div><button class="btn primary" style="margin-top:13px" id="save-settings">Setting သိမ်းရန်</button></section><section class="panel" id="renttrack-updates-panel">
+<h2>APK Auto Update & Notification</h2>
+<p>Version အသစ်ထွက်တာကို အလိုအလျောက်စစ်ဆေးပြီး အသိပေးပါမယ်။ Wi-Fi ပေါ်တွင် Verified APK ကို အလိုအလျောက် Download လုပ်နိုင်ပြီး Android Install ကို ကိုယ်တိုင်အတည်ပြုရပါမယ်။</p>
+<div id="renttrack-update-status" class="pill open" role="status">Update စစ်ဆေးရန်</div>
+<div id="renttrack-notification-status" class="hint" style="margin:12px 0">Notification: စစ်ဆေးနေပါသည်</div>
+<div class="buttonrow">
+<button class="btn primary" id="renttrack-check-update" type="button">↻ Update စစ်ရန်</button>
+<button class="btn" id="renttrack-download-update" type="button">⬇ APK Download</button>
+<button class="btn green" id="renttrack-install-update" type="button">✓ APK Install</button>
+</div>
+<label style="display:flex;align-items:center;gap:8px;margin:14px 0;color:#d9f2f9;font-size:12px"><input type="checkbox" id="renttrack-auto-download" style="width:18px;height:18px"/> Wi-Fi ရှိချိန် Update Download အလိုအလျောက်လုပ်ရန်</label>
+<label style="display:flex;align-items:center;gap:8px;margin:12px 0;color:#d9f2f9;font-size:12px"><input type="checkbox" id="renttrack-rent-reminders" style="width:18px;height:18px"/> ငှားခ/စာချုပ် သတိပေးချက် ဖွင့်ရန်</label>
+<div class="buttonrow">
+<button class="btn green" id="renttrack-allow-notifications" type="button">🔔 Notification ခွင့်ပြုရန်</button>
+<button class="btn" id="renttrack-disable-push" type="button">Notification ပိတ်ရန်</button>
+</div>
+<p class="hint">Admin Push အသိပေးချက်များကို Firebase ချိတ်ဆက်ထားသည့် Android APK မှသာ လက်ခံနိုင်ပါတယ်။ ဖုန်းရဲ့ Notification Permission လိုအပ်ပါတယ်။ Tenant ကိုယ်ရေးအချက်အလက်များကို Push Server သို့ မပို့ပါ။</p>
+</section><section class="panel"><h2>Encrypted Backup / Restore</h2><p>အရေးကြီးတဲ့ငှားရမ်းသူအချက်အလက်တွေကို AES-GCM နဲ့ စာဝှက်ပြီး Backup ထုတ်နိုင်ပါတယ်။ Backup ကို ပြန်သွင်းဖို့ မူရင်း Passphrase လိုအပ်ပါတယ်။</p><div class="buttonrow"><button class="btn primary" id="backup">⬇ Backup ထုတ်ရန်</button><button class="btn" id="restore">⬆ Backup ပြန်သွင်းရန်</button><button class="btn" id="csv">⬇ CSV Report</button></div><input type="file" accept="application/json,.json" id="restore-file" hidden/><p class="hint">အကောင့် Login၊ Cloud Server၊ SMS Payment မလိုအပ်ပါ။ ဖုန်းတစ်လုံးအတွက်သာ စီမံခန့်ခွဲမှု ဖြစ်ပါတယ်။</p></section><section class="panel"><h2>Audit Log</h2><div id="audit-list" class="small"></div></section><p class="hint" style="text-align:center">Developed by Future Code AI Studio · RentTrack v1.1.0</p></section>
 </div>
 <nav class="nav"><div class="navinner"><button class="active" data-nav="home"><span>⌂</span>ပင်မ</button><button data-nav="rooms"><span>▦</span>အခန်း</button><button data-nav="invoices"><span>▤</span>ဘေလ်</button><button data-nav="payments"><span>▣</span>ငွေလက်ခံ</button><button data-nav="settings"><span>⚙</span>Setting</button></div></nav>
 <div class="overlay" id="overlay"><div class="dialog"><div class="dialoghead"><h2 id="form-title">အချက်အလက်</h2><button class="btn" id="close-modal" aria-label="ပိတ်ရန်">✕</button></div><form id="form"><div id="fields" class="formgrid"></div><div class="formactions"><button class="btn" id="cancel" type="button">မသိမ်းတော့ပါ</button><button class="btn primary" type="submit">သိမ်းမည်</button></div></form></div></div><div class="toast" role="status" aria-live="polite" id="toast"></div><div id="printout" class="printout"></div>
@@ -31,6 +48,11 @@ function totals(invoices,pays){const map=new Map();for(const p of pays)map.set(p
 const pill=i=>i.balance<=0?'<span class="pill paid">ငွေရှင်းပြီး</span>':i.dueDate<localDate()?'<span class="pill overdue">ရက်ကျော်</span>':'<span class="pill open">ကျန်ငွေရှိ</span>';
 function roomName(u){return esc(u?.unit||"—")+(u?.tenant?" · "+esc(u.tenant):"")}
 async function render(){const [rooms,allBills,pays]=await Promise.all(["rooms","invoices","payments"].map(records));const bills=totals(allBills,pays),outstanding=bills.reduce((s,i)=>s+i.balance,0),collected=pays.filter(p=>p.date?.slice(0,7)===currentPeriod()).reduce((s,p)=>s+p.amount,0);
+if(window.Android&&typeof window.Android.syncReminders==="function"){
+ try{const overdueCount=bills.filter(i=>i.balance>0&&i.dueDate<localDate()).length;
+ const dueSoonCount=bills.filter(i=>i.balance>0&&i.dueDate>=localDate()&&i.dueDate<=datePlus(3)).length;
+ const expiringCount=rooms.filter(r=>r.end&&r.end>=localDate()&&r.end<=datePlus(30)).length;
+ window.Android.syncReminders(overdueCount,dueSoonCount,expiringCount);}catch(_){}}
 $("#stats").innerHTML=[["အခန်းစုစုပေါင်း",rooms.length,""],["ငှားထားသည့်အခန်း",rooms.filter(r=>r.tenant).length,""],["ရရန်ရှိငွေ",Ks(outstanding),"due"],["ယခုလ လက်ခံငွေ",Ks(collected),"good"]].map(([title,value,tone])=>'<div class="stat" data-tone="'+tone+'"><small>'+title+'</small><strong>'+esc(value)+'</strong></div>').join("");
 if(active==="home"){const past=bills.filter(i=>i.balance>0&&i.dueDate<localDate());const expiring=rooms.filter(r=>r.end&&r.end>=localDate()&&r.end<=datePlus(30));$("#alerts").innerHTML='<div class="item">ရက်ကျော်ဘေလ် <strong class="warntext">'+past.length+' ခု</strong></div><div class="item">စာချုပ်ကုန်ခါနီး <strong class="warntext">'+expiring.length+' ခန်း</strong></div>'+expiring.slice(0,4).map(r=>'<div class="item">'+roomName(r)+' — '+esc(r.end)+'</div>').join("");$("#upcoming").innerHTML=billTable(bills.filter(i=>i.balance>0).sort((a,b)=>a.dueDate.localeCompare(b.dueDate)).slice(0,7),rooms,pays);}
 if(active==="rooms"){$("#room-count").textContent="စုစုပေါင်း "+rooms.length+" ခန်း";const filtered=rooms.filter(r=>(r.unit+" "+r.tenant).toLocaleLowerCase().includes(roomFilter.toLocaleLowerCase())).sort((a,b)=>a.unit.localeCompare(b.unit));$("#room-list").innerHTML=filtered.length?filtered.map(r=>'<article class="unit"><div class="unit-top"><div><h3>'+esc(r.unit)+'</h3><p>'+esc(r.tenant||"လက်ရှိငှားရမ်းသူ မရှိ")+'</p></div><span class="pill">'+(r.tenant?"ငှားထား":"လွတ်နေ")+'</span></div><div class="meta"><div>လစဉ်ငှားခ<b>'+Ks(r.rent)+'</b></div><div>စပေါ်ငွေ<b>'+Ks(r.deposit)+'</b></div><div>စာချုပ်ကုန်ဆုံး<b>'+esc(r.end||"—")+'</b></div><div>ဖုန်းနံပါတ်<b>'+esc(r.phone||"—")+'</b></div></div><div class="buttonrow"><button class="btn" data-edit="room:'+r.id+'">ပြင်ဆင်ရန်</button><button class="btn" data-add="invoice:'+r.id+'">ဘေလ်ထုတ်ရန်</button></div></article>').join(""):'<div class="empty">အခန်းမရှိသေးပါ။</div>'}
@@ -71,4 +93,52 @@ document.addEventListener("click",async e=>{const b=e.target.closest("button");i
 function showPage(p){active=p;$$(".page").forEach(x=>x.classList.toggle("active",x.id==="page-"+p));$$("[data-nav]").forEach(x=>x.classList.toggle("active",x.dataset.nav===p));render();window.scrollTo({top:0,behavior:"instant"})}
 $("#close-modal").onclick=hideForm;$("#cancel").onclick=hideForm;$("#form").onsubmit=saveForm;$("#overlay").onclick=e=>{if(e.target.id==="overlay")hideForm()};$("#generate").onclick=generate;$("#show-all-invoices").onclick=()=>{monthFilter="";$("#invoice-month").value="";render()};$("#invoice-month").onchange=e=>{monthFilter=e.target.value;render()};$("#room-search").oninput=e=>{roomFilter=e.target.value;render()};$("#save-settings").onclick=async()=>{try{const business=$("#business").value.trim(),due=Number($("#dued").value);if(!business||!Number.isInteger(due)||due<1||due>28)throw Error("အချက်အလက်မှန်ကန်စွာ ဖြည့်ပါ");config={business:business.slice(0,70),due};await set("meta",{id:"settings",value:config});toast("Setting သိမ်းပြီး");render()}catch(e){toast(e.message)}};$("#backup").onclick=backup;$("#restore").onclick=()=>window.Android?.openBackup?Android.openBackup():$("#restore-file").click();$("#restore-file").onchange=async e=>{if(e.target.files[0])await restoreBody(await e.target.files[0].text());e.target.value=""};$("#csv").onclick=csv;
 openDb().then(render).catch(e=>toast("Database ဖွင့်မရပါ: "+e.message));document.addEventListener("visibilitychange",()=>{if(!document.hidden)render()});
+</script>
+<script>
+(function(){
+  "use strict";
+  const el=id=>document.getElementById(id);
+  const status=el("renttrack-update-status"),noti=el("renttrack-notification-status");
+  const native=window.Android&&typeof window.Android.systemStatus==="function";
+  if(!native){
+    status.textContent="Android APK မှသာ Update / Notification သုံးနိုင်ပါသည်";
+    for(const id of ["renttrack-check-update","renttrack-download-update","renttrack-install-update","renttrack-allow-notifications","renttrack-disable-push","renttrack-auto-download","renttrack-rent-reminders"])el(id).disabled=true;
+    return;
+  }
+  try{
+    const s=JSON.parse(window.Android.systemStatus());
+    el("renttrack-auto-download").checked=!!s.autoDownload;
+    el("renttrack-rent-reminders").checked=!!s.rentReminders;
+    noti.textContent=s.notificationPermission?"ဖုန်း Notification ခွင့်ပြုပြီး · Push "+(s.pushConfigured?"Configured":"Firebase ချိတ်ဆက်ရန်လို"): "Notification ခွင့်ပြုချက် မပေးရသေးပါ";
+    status.textContent="RentTrack v"+(s.version||"1.1.0")+" · Version အသစ် စစ်ဆေးနိုင်ပါပြီ";
+  }catch(_){status.textContent="Native status ဖတ်မရပါ";}
+  window.RentTrackNativeResult=function(payload){
+    try{
+      const o=typeof payload==="string"?JSON.parse(payload):payload;
+      if(o.kind==="update"){
+        const labels={
+          current:"Version အသစ်မရှိသေးပါ",available:"Update အသစ် ရရှိပါပြီ v"+(o.versionName||""),
+          downloaded:"APK Download & Security စစ်ဆေးမှု အောင်မြင်ပါပြီ",
+          no_update:"လက်ရှိ Version သည် နောက်ဆုံးဖြစ်ပါတယ်",
+          unpublished:"Official Update မထုတ်သေးပါ",wifi_required:"Wi-Fi လိုအပ်ပါသည်",
+          cached:"Version စစ်ဆေးပြီးသား ဖြစ်ပါတယ်",signing_mismatch:"QA APK နှင့် Official APK လက်မှတ်မတူပါ",
+          error:"Update လုပ်ဆောင်ချက် မအောင်မြင်ပါ",installer_opened:"Android Installer ဖွင့်ထားပါပြီ",
+          install_permission:"Install Permission ပေးပြီး Install ပြန်နှိပ်ပါ",
+          not_downloaded:"Verified APK ကို အရင် Download လုပ်ပါ",
+          autodownload_on:"Wi-Fi Auto Download ဖွင့်ပြီး",autodownload_off:"Auto Download ပိတ်ပြီး"
+        };
+        status.textContent=o.message||labels[o.status]||"Update စစ်ဆေးပြီးပါပြီ";
+      }
+      if(o.kind==="notifications"||o.kind==="reminders")
+        noti.textContent=o.message||"Notification Setting ပြောင်းပြီး";
+    }catch(_){status.textContent="Update Response ကို ဖတ်မရပါ";}
+  };
+  el("renttrack-check-update").onclick=()=>{status.textContent="Version အသစ် စစ်ဆေးနေပါသည်…";Android.checkForUpdates()};
+  el("renttrack-download-update").onclick=()=>{status.textContent="APK Download နှင့် SHA-256 စစ်နေပါသည်…";Android.downloadUpdate()};
+  el("renttrack-install-update").onclick=()=>Android.installUpdate();
+  el("renttrack-auto-download").onchange=e=>Android.setAutomaticDownloads(e.target.checked);
+  el("renttrack-rent-reminders").onchange=e=>Android.setRentReminders(e.target.checked);
+  el("renttrack-allow-notifications").onclick=()=>Android.requestNotificationPermission();
+  el("renttrack-disable-push").onclick=()=>{Android.disablePush();el("renttrack-rent-reminders").checked=false};
+})();
 </script></body></html>
