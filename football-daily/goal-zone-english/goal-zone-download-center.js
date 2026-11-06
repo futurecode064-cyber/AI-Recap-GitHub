@@ -7,7 +7,7 @@
   const $=id=>document.getElementById(id);
   const items=[
     ["preview","Match Preview"],["special","Special Choice"],
-    ["odds","မြန်မာပေါက်ကြေး"],["results","Match Results"],
+    ["odds","Asian Handicap Odds"],["results","Match Results"],
     ["ai","AI Predictions"],["probability","Match Probabilities (%)"],
     ["news","Football News"]
   ];
@@ -55,9 +55,9 @@
     });
   }
   function canvasOf(w,h){
-    if(w<1||h<1||h>16384||w>8192)throw Error("PNG အရွယ်အစားကြီးလွန်းပါသည် — ၂ ပုံခွဲ သို့မဟုတ် ၁  matches/ပုံကို ရွေးပါ");
+    if(w<1||h<1||h>16384||w>8192)throw Error("PNG too large — select split or one match per image");
     const c=document.createElement("canvas");c.width=w;c.height=h;
-    if(!c.getContext("2d"))throw Error("Canvas 2D မရရှိပါ");
+    if(!c.getContext("2d"))throw Error("Canvas unavailable");
     return c;
   }
   async function decoded(blob){
@@ -97,7 +97,7 @@
   // articles into an unexportable 50,000px-high image. Preserve each card's
   // original aspect ratio; choose the largest safe readable scale.
   function stack(canvases){
-    if(!canvases.length)throw Error("PNG ဆွဲရန် ပုံမရှိပါ");
+    if(!canvases.length)throw Error("No PNG image to draw");
     if(canvases.length===1)return canvases[0];
     const gap=16,maxTileWidth=Math.max(...canvases.map(c=>c.width));
     const mobile=typeof navigator!=="undefined"&&/Android|iPhone|iPad/i.test(navigator.userAgent||"");
@@ -147,11 +147,11 @@
       title=home+"  VS  "+away;
       if(type==="preview")body=item.dailyPreviewText||item.preview||"";
       if(type==="special")body=(item.specialAnalysisParagraphs||[]).join("\n\n")||item.dailyPreviewText||"";
-      if(type==="results")detail=" matchesပြီး အတည်ပြုရလဒ်  "+String(item.finalScore||"—");
+      if(type==="results")detail="Confirmed Full-Time Result  "+String(item.finalScore||"—");
       if(type==="odds")detail="Opening Odds "+String(item.bodyOdds??item.morningBodyOdds??"—")+" · Goal Total "+String(item.goalTotalOdds??item.morningGoalTotalOdds??"—")+" · Current Odds "+String(item.currentBodyOdds||"—");
       if(type==="ai"){
         const numbers=window.FutureCodeAiScoreModel?.predict?.(item);
-        detail="AI Match Results ခန့်မှန်းချက်  "+(Array.isArray(numbers)?numbers.join(" · "):"Insufficient data");
+        detail="AI Score Prediction  "+(Array.isArray(numbers)?numbers.join(" · "):"Insufficient data");
       }
       if(type==="probability"){
         const p=window.FutureCodeProbabilityModel?.analyze?.(item,null,date);
@@ -238,7 +238,7 @@
   }
   async function aiCanvas(m,date){
     const k=window.FutureCodeCanvasKit;
-    if(!k)throw Error("AI Canvas exporter မရရှိပါ");
+    if(!k)throw Error("AI exporter unavailable");
     const {canvas,ctx}=k.create(1080,475);
     const logo=window.FutureCodeBrandExportData?.leagueCrest(m.league);
     await Promise.all([k.fonts(),k.preloadImages([m.homeCrestUrl,m.awayCrestUrl,logo].filter(Boolean))]);
@@ -255,12 +255,12 @@
     if(Array.isArray(scores)&&scores.length){
       k.text(ctx,"AI Predictions",540,319,22,k.C.pale,true,"center");
       scores.slice(0,3).forEach((s,i)=>{k.fill(ctx,252+i*196,345,180,58,i===0?"#745221":k.C.panelAlt,10);k.text(ctx,String(s),342+i*196,376,27,k.C.white,true,"center");});
-    }else k.text(ctx,"ခန့်မှန်းရန် အချက်အလက်Incomplete",540,351,22,k.C.muted,true,"center");
+    }else k.text(ctx,"Insufficient prediction data",540,351,22,k.C.muted,true,"center");
     k.text(ctx,date,540,441,16,k.C.muted,true,"center");return canvas;
   }
   async function probabilityCanvas(m,date,market){
     const k=window.FutureCodeCanvasKit,model=window.FutureCodeProbabilityModel;
-    if(!k||!model)throw Error("ဖြစ်နိုင်ခြေ တွက်ချက်မှု Module မရရှိသေးပါ");
+    if(!k||!model)throw Error("Probability module unavailable");
     const {canvas:c,ctx}=k.create(1080,480),p=model.analyze(m,market,date);
     await Promise.all([k.fonts(),k.preloadImages([m.homeCrestUrl,m.awayCrestUrl].filter(Boolean))]);
     k.fill(ctx,0,0,1080,480,"#11100d");k.fill(ctx,24,24,1032,420,"#262018",14);
@@ -276,19 +276,19 @@
       k.text(ctx,label,x+119,319,17,"#eec875",true,"center");
       k.text(ctx,Number.isInteger(v)?v+"%":"—",x+119,372,35,"#ffffff",true,"center");
     });
-    k.text(ctx,(m.leagueDisplay||m.league||"")+" · ၂.၅ ဂိုး · "+date,540,426,15,"#dcc99e",false,"center",980);
+    k.text(ctx,(m.leagueDisplay||m.league||"")+" · Over/Under 2.5 Goals · "+date,540,426,15,"#dcc99e",false,"center",980);
     return c;
   }
   async function newsCanvas(story){
     const exp=window.FutureCodeNewsFrameExport;
-    if(!exp?.render)throw Error("News exporter မရရှိပါ");
+    if(!exp?.render)throw Error("News exporter unavailable");
     const image=await exp.render(story);
     if(!image?.blob)throw Error("သတင်း PNG Incomplete");
     return decoded(image.blob);
   }
   async function resultCanvas(matches,date){
     const kit=window.FutureCodeCanvasKit,exp=window.FutureCodeDailyExport;
-    if(!kit?.download||!exp?.saveResults)throw Error("Match Results exporter မရရှိပါ");
+    if(!kit?.download||!exp?.saveResults)throw Error("Results exporter unavailable");
     const prior=kit.download;let captured=null;
     try{
       kit.download=async(c,filename)=>{captured=c;return {filename};};
@@ -299,14 +299,14 @@
   }
   async function oddsCanvas(data,matches){
     const exp=window.FutureCodeDailyExport;
-    if(!exp?.saveOdds)throw Error("ပေါက်ကြေး exporter မရရှိပါ");
+    if(!exp?.saveOdds)throw Error("Odds exporter unavailable");
     const output=await exp.saveOdds({...data,matches},{singleImage:true,asBlob:true});
     return decoded(output.blob);
   }
   async function exportGroup(type,group,ctx){
     if(type==="preview"||type==="special"){
       const exp=window.FutureCodeCardExport;
-      if(!exp?.save)throw Error(" matchesကြို PNG exporter မရရှိပါ");
+      if(!exp?.save)throw Error("Preview exporter unavailable");
       const arts=[];
       for(const m of group)arts.push(await exp.save({...m,home:m.homeDisplay||m.home,away:m.awayDisplay||m.away},{
         brandName:"GOAL ZONE JOURNAL",brandLogoUrl:new URL("../future-code-journal/assets/logo.webp",document.baseURI).href,
@@ -348,14 +348,14 @@
       checkbox.name="gzCenterCategory";checkbox.value=id;checkbox.checked=true;
       label.append(checkbox,document.createTextNode(labelText));
       const selectorLabel=document.createElement("label");selectorLabel.className="gz-section-mode-selector";
-      const caption=document.createElement("span");caption.textContent="Download ပုံစံ";
+      const caption=document.createElement("span");caption.textContent="Download Format";
       const select=document.createElement("select");select.id="gzMode_"+id;
-      select.setAttribute("aria-label",labelText+" PNG ပုံစံ");
+      select.setAttribute("aria-label",labelText+" PNG Format");
       const selections=[
-        ["single","ရွေးထားသော အားလုံး ၁ ပုံတည်း"],
-        ["two","ရွေးထားသော အားလုံး ၂ ပုံခွဲ"],
-        ["each",id==="news"?"သတင်း ၁ ပုဒ် ၁ ပုံစီ":"၁  matches ၁ ပုံစီ"],
-        ["pair",id==="news"?"သတင်း ၂ ပုဒ် ၁ ပုံ":"၂  matches ၁ ပုံ"]
+        ["single","All Selected in One Image"],
+        ["two","All Selected Split in Two"],
+        ["each",id==="news"?"One News Item per Image":"One Match per Image"],
+        ["pair",id==="news"?"Two News Items per Image":"Two Matches per Image"]
       ];
       for(const [value,title] of selections){
         const option=document.createElement("option");option.value=value;option.textContent=title;
@@ -370,7 +370,7 @@
     let report,odds,previous,news,day,previousDay,allMatches;
     try{
       report=await read("today.json");
-      if(report.published!==true||!Array.isArray(report.matches)||!report.reportDate)throw Error("ထုတ်ဝေထားသော  matchesစဉ်များ မရရှိပါ");
+      if(report.published!==true||!Array.isArray(report.matches)||!report.reportDate)throw Error("Published fixtures unavailable");
       day=report.reportDate;previousDay=yesterday(day);
       [odds,previous,news]=await Promise.all([getOdds(day),optional("archive/"+previousDay+".json"),optional("news/latest.json")]);
       const rows=[...report.matches,...(odds?.matches||[]),...(previous?.matches||[]).filter(m=>m.status==="finished")];
@@ -398,7 +398,7 @@
     btn.addEventListener("click",async()=>{
       if(btn.disabled)return;
       const chosen=[...panel.querySelectorAll('input[name="gzCenterCategory"]:checked')].map(el=>el.value);
-      if(!chosen.length){status.textContent="Section အနည်းဆုံးတစ်ခု ရွေးပါ";return;}
+      if(!chosen.length){status.textContent="Select at least one section";return;}
       const selected=new Set([...matchList.querySelectorAll('input[name="gzCenterMatch"]:checked')].map(el=>el.value));
       const want=m=>(league.value==="all"||m.league===league.value)&&selected.has(key(m));
       const matches=report.matches.filter(m=>m.home&&m.away&&m.status!=="finished"&&!m.fixtureOnly&&want(m));
@@ -410,9 +410,9 @@
       const source={preview:matches,special:matches.filter(m=>m.specialChoice===true),odds:oddsMatches,
         results:finals,ai:matches,probability:matches,news:stories};
       const ZIP=window.FutureCodeFrameZip?.Archive;
-      if(!ZIP){status.textContent="ZIP module မရရှိပါ";return;}
+      if(!ZIP){status.textContent="ZIP module unavailable";return;}
       btn.disabled=true;let count=0;const warnings=[];const archive=new ZIP();
-      const original=btn.textContent;btn.textContent="PNG ပုံများ စုစည်းနေသည်…";
+      const original=btn.textContent;btn.textContent="Preparing PNG images…";
       try{
         for(const type of chosen){
           const records=source[type]||[];

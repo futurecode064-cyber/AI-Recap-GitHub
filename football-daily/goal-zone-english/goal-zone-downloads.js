@@ -160,7 +160,7 @@
     {key:"special",label:"Special Choice"},
     {key:"odds",label:"Football Odds"},
     {key:"ai",label:"AI Predictions"},
-    {key:"results",label:"မနေ့က Match Resultsများ"}
+    {key:"results",label:"Yesterday's Match Results"}
   ];
   function makePanel(){
     const home=document.getElementById("matchList");
@@ -182,7 +182,7 @@
     league.innerHTML='<option value="all">All Competitions</option>';
     leaguelabel.appendChild(league);
     const btn=document.createElement("button");btn.type="button";btn.className="gz-bulk-download";btn.textContent="⬇ Download All Selected Images";
-    const status=document.createElement("p");status.id="gzBulkStatus";status.setAttribute("role","status");status.textContent="ZIP တစ်ဖိုင်တည်းဖြင့် Download ယူနိုင်ပါသည်။";
+    const status=document.createElement("p");status.id="gzBulkStatus";status.setAttribute("role","status");status.textContent="Download in one ZIP file.";
     footer.append(leaguelabel,btn);
     panel.append(controls,footer,status);target.parentNode.insertBefore(panel,target);
     getToday().then(report=>{
@@ -194,10 +194,10 @@
     btn.addEventListener("click",async()=>{
       if(btn.disabled)return;
       const selected=new Set([...panel.querySelectorAll("input[name=gzBulkCategory]:checked")].map(c=>c.value));
-      if(!selected.size){status.textContent="ပုံအမျိုးအစား အနည်းဆုံးတစ်ခု ရွေးပါ။";return;}
+      if(!selected.size){status.textContent="Select at least one image type.";return;}
       const selectedLeague=league.value;
       btn.disabled=true;const old=btn.textContent;
-      btn.textContent="PNG ပုံများ စုစည်းနေသည်…";
+      btn.textContent="Preparing PNG images…";
       let count=0;
       try{
         const ZIP=window.FutureCodeFrameZip?.Archive;
@@ -264,12 +264,12 @@
             }
           }
         }
-        if(!count)throw Error("ရွေးထားသော အမျိုးအစားအတွက် ထုတ်ဝေထားသော PNG မရှိသေးပါ။");
+        if(!count)throw Error("No published PNG images for this selection.");
         browserDownload(archive.finish(),"GOAL-ZONE-"+today+"-"+(selectedLeague==="all"?"all":safeName(selectedLeague))+"-"+count+"-images.zip");
         status.textContent="✓ PNG "+count+" ပုံ ပါဝင်သော ZIP Download စတင်ပြီးပါပြီ။";
       }catch(e){
         console.error("GOAL ZONE bulk export",e);
-        status.textContent="Download failed — "+(e.message||"ပြန်စမ်းကြည့်ပါ");
+        status.textContent="Download failed — "+(e.message||"please try again");
       }finally{btn.disabled=false;btn.textContent=old;}
     });
   }

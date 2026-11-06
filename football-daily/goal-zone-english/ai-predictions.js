@@ -21,7 +21,7 @@
         const group=make("div","fcj-ai-team");
         const crest=m[side+"CrestUrl"];
         if(typeof crest==="string"&&/^https:\/\//.test(crest)){
-          const img=make("img");img.src=crest;img.alt=text(m,side)+" လိုဂို";img.loading="lazy";
+          const img=make("img");img.src=crest;img.alt=text(m,side)+" crest";img.loading="lazy";
           img.onerror=()=>img.remove();group.append(img);
         }
         group.append(make("span","",text(m,side)));teams.append(group);
@@ -58,7 +58,7 @@
       card.append(button);
       cards.append(card);
     }
-    status.textContent="ပြသထားသော  matches "+matchList.length+"  matches • မော်ဒယ်တွက်ချက်နိုင်သော  matches "+ready+"  matches";
+    status.textContent="Displayed matches: "+matchList.length+"  matches • Modelled matches: "+ready+"  matches";
   }
   (window.FootballData?window.FootballData.fetch:fetch)(new URL("../data/today.json",document.baseURI),{cache:"no-store"})
     .then(r=>{if(!r.ok)throw Error("Data unavailable");return r.json();})
@@ -70,5 +70,5 @@
       const names=[...new Set(current.map(m=>m.league).filter(Boolean))].sort();
       for(const name of names){const opt=document.createElement("option");opt.value=name;opt.textContent=name;filter.append(opt)}
       filter.addEventListener("change",render);render();
-    }).catch(()=>{status.textContent="အတည်ပြုထားသော AI Predictions data မရရှိသေးပါ။"});
+    }).catch(()=>{status.textContent="Verified AI predictions are unavailable."});
 })();
