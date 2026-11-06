@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-label="GOAL ZONE JOURNAL English logo">
+<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0bb"/><stop offset=".43" stop-color="#e3b75c"/><stop offset="1" stop-color="#9c6f28"/></linearGradient><radialGradient id="inner"><stop stop-color="#303033"/><stop offset="1" stop-color="#0c0d0f"/></radialGradient></defs>
+<rect width="640" height="640" rx="110" fill="#0d0e11"/>
+<path d="M320 43 549 135v183c0 125-82 210-229 276C173 528 91 443 91 318V135Z" fill="url(#inner)" stroke="url(#gold)" stroke-width="17"/>
+<path d="m212 178 34 24 73-57 75 57 33-24-17 86H230Z" fill="url(#gold)"/>
+<circle cx="320" cy="331" r="83" fill="#e5cc91" stroke="#ffebbb" stroke-width="5"/>
+<path d="m320 279-34 25 13 41h43l13-41Zm-72-13-28 41 27 24 34-28Zm145 0 27 41-28 24-33-28Zm-106 80-26 33 34 27 25-22 25 22 35-27-26-33Z" fill="#18191c" stroke="#18191c" stroke-width="2"/>
+<path d="M242 440h156" stroke="url(#gold)" stroke-width="5"/>
+<text x="320" y="488" fill="url(#gold)" font-size="59" font-family="Arial, sans-serif" font-weight="900" text-anchor="middle" letter-spacing="5">GOAL ZONE</text>
+<text x="320" y="523" fill="#f5e4bb" font-size="25" font-family="Arial, sans-serif" font-weight="800" text-anchor="middle" letter-spacing="10">JOURNAL</text>
+</svg>
