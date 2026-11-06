@@ -5,6 +5,7 @@
   const publishableKey = "sb_publishable_JBcF0nEMbcFSSf7OlCCqmQ_lC1DEM0A";
   // Backward compatibility for older pages; all current APK buttons declare a stable data-app-key.
   const knownApps = Object.freeze({
+    "FutureCodeRentTrack-v1.1.1.apk": "renttrack",
     "FutureCodeRentTrack-v1.1.0.apk": "renttrack",
     "FutureCodeStockGuard-v1.1.0.apk": "stockguard",
     "FutureCodeSolarQuote-v1.0.1.apk": "solarquote",
