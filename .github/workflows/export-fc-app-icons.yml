@@ -1,0 +1,104 @@
+name: Future Code Original App Icons Export
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/export-fc-app-icons.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  icons:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow
+        run: python -m pip install --quiet Pillow==11.3.0
+      - name: Collect original app icon files from site and media CDN
+        run: |
+          python - <<'PY'
+          import urllib.request, pathlib, shutil, json, io, zipfile, sys
+          from PIL import Image
+          dest=pathlib.Path("fc-icon-originals");dest.mkdir(exist_ok=True)
+          local={
+            "01-renttrack.svg":"portal/apps/renttrack-icon.svg",
+            "02-queuepro.svg":"portal/apps/queuepro-icon.svg",
+            "03-stockguard.webp":"portal/apps/stockguard-icon.webp",
+            "04-solarquote.svg":"portal/apps/solarquote-icon.svg",
+            "05-english.svg":"portal/apps/english-academy-icon.svg",
+            "06-thai.svg":"portal/thai-course/thai-icon.svg",
+            "07-chinese.svg":"portal/apps/chinese-icon.svg",
+            "08-language.svg":"portal/apps/language-academy-icon.svg",
+            "10-ai-studio.svg":"portal/apps/ai-studio.svg",
+            "11-app-creator.png":"portal/apps/app-creator-icon-v1.5.1.png",
+            "12-goal-zone.webp":"portal/apps/goal-zone-icon.webp",
+            "13-myanmar-chess.png":"portal/apps/myanmar-kyar.png",
+          }
+          status={}
+          for name,src in local.items():
+            f=pathlib.Path(src)
+            if f.is_file():shutil.copy2(f,dest/name);status[name]={"source":src,"status":"original"}
+            else:status[name]={"source":src,"status":"not found"}
+          remote={
+            "09-mandalay.png":"https://futurecodeaistudio.floot.app/_cdn/static/ba053a15-fd86-4201-8055-15e79d52bb55-future-code-mandalay-icon.png",
+            "15-daily-money.webp":"https://futurecodeaistudio.floot.app/_cdn/static/ae8d989f-fa68-485d-a276-79a0bc979e7e-fc-daily-money-icon-20261015-web.webp",
+            "16-medicine.webp":"https://futurecodeaistudio.floot.app/_cdn/static/3e17d570-23b8-4869-9109-2e843d655ba5-fc-medicine-reminder-icon-20261015-web.webp",
+            "18-kids-learning.webp":"https://futurecodeaistudio.floot.app/_cdn/static/a2a13c23-1300-4ccf-999a-4416b3189dbe-fc-kids-learning-icon-20261015-web.webp",
+            "19-safety-guide.webp":"https://futurecodeaistudio.floot.app/_cdn/static/0dc24ef8-e648-4d40-84cc-789730a42103-fc-safety-guide-icon-20261015-web.webp",
+            "20-el-nino.webp":"https://futurecodeaistudio.floot.app/_cdn/static/8ddfcefd-61eb-4741-a950-1f3046cbdd54-fc-elnino-protection-icon-20261015-web.webp"
+          }
+          from urllib.error import URLError
+          def fetch(u,limit=15_000_000):
+            request=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0 (Future Code Image Assets QA)"})
+            with urllib.request.urlopen(request,timeout=25) as resp:
+              content=resp.read(limit+1)
+              if len(content)>limit: raise ValueError("too large")
+              return content
+          for name,url in remote.items():
+            try:
+              data=fetch(url)
+              Image.open(io.BytesIO(data)).verify()
+              (dest/name).write_bytes(data)
+              status[name]={"status":"original","source":url,"bytes":len(data)}
+            except Exception as exc:
+              status[name]={"status":"download failed","error":str(exc)[:200]}
+          # Two app cards do not contain icon images, so inspect actual APK package resources.
+          apk_urls={
+            "14-video-cutter":"https://futurecodeaistudio.floot.app/_cdn/static/e826724f-148c-4d3f-b076-2ed9900eb7cb-FutureCode-AutoVideoCutter-v2.0.2.apk",
+            "17-astrology":"https://futurecodeaistudio.floot.app/_cdn/static/002a6fcd-e381-435e-9613-bc59667cdaa2-FutureCode-ai-astrology-v1.2.apk"
+          }
+          for name,url in apk_urls.items():
+            try:
+              data=fetch(url,55_000_000)
+              z=zipfile.ZipFile(io.BytesIO(data))
+              options=[]
+              for member in z.namelist():
+                if not member.lower().endswith((".png",".webp")):continue
+                if not any(w in member.lower() for w in ("mipmap","ic_launcher","icon")):continue
+                try:
+                  b=z.read(member)
+                  im=Image.open(io.BytesIO(b));w,h=im.size
+                  if w>32 and h>32 and abs(w-h)<w*.22 and w<1400:
+                    score=w-abs(w-512)*.05 + (400 if "ic_launcher" in member.lower() else 0)
+                    options.append((score,member,b))
+                except Exception:pass
+              options.sort(reverse=True)
+              if not options: raise ValueError("No suitable launcher raster icon inside APK")
+              _,src,b=options[0]
+              (dest/(name+".png")).write_bytes(b)
+              status[name]={"status":"launcher icon extracted from APK","source":src,"bytes":len(b)}
+            except Exception as exc:
+              status[name]={"status":"could not extract APK launcher icon","error":str(exc)[:200]}
+          (dest/"manifest.json").write_text(json.dumps(status,ensure_ascii=False,indent=2))
+          print(json.dumps({k:v['status'] for k,v in status.items()},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FutureCodeOriginalAppIcons
+          path: fc-icon-originals/
+          if-no-files-found: error
+          retention-days: 7
