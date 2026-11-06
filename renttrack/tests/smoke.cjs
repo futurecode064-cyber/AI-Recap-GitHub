@@ -70,7 +70,7 @@ async function run(){
  assert.ok(!exportedFile.content.includes('Test Tenant'),'backup plaintext leak');
  const saved=exportedFile.content;
  await w.restoreRentTrack(saved);
- await wait(()=>$('#stats').textContent.includes('166,000')===false,'restore complete');
+ await wait(()=>$('#toast').textContent.includes('Restore အောင်မြင်'),'restore complete');
  nav('rooms');
  await wait(()=>$('#room-list').textContent.includes('A-101'),'restored room');
  console.log('PASS RentTrack: room creation, billing idempotency, meter arithmetic, partial/full payment, AES-256-GCM export and restore');
