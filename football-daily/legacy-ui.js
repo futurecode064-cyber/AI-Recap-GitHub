@@ -41,7 +41,7 @@ async function downloadImage(a){
 }
 function button(label,fn,secondaryButton){const b=mk("button",{type:"button",class:"btn"+(secondaryButton?" secondary":"")},label);b.onclick=async()=>{b.disabled=true;const text=b.textContent;b.textContent="ဖန်တီးနေသည်…";try{await fn()}catch(e){alert("Download မအောင်မြင်ပါ: "+e.message)}finally{b.disabled=false;b.textContent=text}};return b}
 function renderArticle(a){
- if(a.seriesId&&a.storyText){renderSeriesArticle(a);return;}
+ if(a.seriesId&&a.storyText){renderStoryArticle(a);return;}
  document.title=a.title+" | THE LEGACY";
  app.innerHTML="";
  const wrap=mk("article",{class:"reader"}),crumb=mk("a",{class:"crumb",href:"./"},"← THE LEGACY · ဆောင်းပါးအားလုံး");wrap.append(crumb);
