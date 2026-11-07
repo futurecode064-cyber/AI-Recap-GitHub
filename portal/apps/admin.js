@@ -135,7 +135,7 @@
             cell.append(small,value,hint);metrics.append(cell);
           }
         }
-        if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"].includes(site.key)) {
+        if (["goal-zone","bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"].includes(site.key)) {
           const col=document.createElement("div");col.className="site-metric release-metric";
           const small=document.createElement("small");small.textContent="GitHub Releases Downloads";
           const val=document.createElement("b");val.textContent="…";
@@ -143,7 +143,7 @@
           col.append(small,val);metrics.append(col);
         }
         card.append(metrics);
-        if (["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"].includes(site.key)) {
+        if (["goal-zone","bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"].includes(site.key)) {
           const info=document.createElement("div");info.className="release-info";
           info.dataset.releaseInfoSite=site.key;
           info.textContent="GitHub Releases Download စာရင်း ဖတ်နေပါသည်…";
@@ -235,13 +235,19 @@
     $("chartRange").textContent = timeline[0].day + " — " + timeline[timeline.length-1].day + " · Myanmar Time";
     $("lastUpdated").textContent = "နောက်ဆုံး Refresh — " + new Date(data.generatedAt || Date.now()).toLocaleString("en-GB",{timeZone:"Asia/Yangon",dateStyle:"medium",timeStyle:"short"}) + " MMT";
   }
-  const releaseSites=["bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"];
+  const releaseSites=["goal-zone","bw-sport","ykz-family","ko-thet-family","kmm-sport-hub","bet-city-family"];
   function siteForRelease(tag) {
     if(/^bw-sport-journal-v/i.test(tag))return "bw-sport";
     if(/^ykz-soccer-tips-v/i.test(tag))return "ykz-family";
     if(/^ko-thet-family-journal-v/i.test(tag))return "ko-thet-family";
     if(/^kmm-sport-hub-v/i.test(tag))return "kmm-sport-hub";
     if(/^bcf-journal-v/i.test(tag))return "bet-city-family";
+    // New notification-enabled APK releases use fc-* tags.
+    if(/^fc-goal-zone-v/i.test(tag))return "goal-zone";
+    if(/^fc-bw-v/i.test(tag))return "bw-sport";
+    if(/^fc-ykz-v/i.test(tag))return "ykz-family";
+    if(/^fc-ko-thet-v/i.test(tag))return "ko-thet-family";
+    if(/^fc-kmm-v/i.test(tag))return "kmm-sport-hub";
     return null;
   }
   function appForRelease(tag){
