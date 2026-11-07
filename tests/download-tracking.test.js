@@ -73,3 +73,41 @@ assert.match(academyHtml, /data-site-key="language-academy-web" data-app-key="la
 const migration = fs.readFileSync(path.join(root, 'supabase/migrations/20261027_portfolio_language_site_download_tracking.sql'), 'utf8');
 assert.match(migration, /'language-academy-web', 'language-academy'/);
 console.log('PASS: Language Academy website views are linked to the APK app key.');
+
+
+// Regression: Myanmar Kyar APK URL is /download (no .apk suffix), with a
+// download filename attribute. The actual APK click must be counted once.
+const kyarHtml = fs.readFileSync(path.join(root, 'portal/myanmar-kyar/index.html'), 'utf8');
+const kyarTag = kyarHtml.match(/<a\b[^>]*class="download"[^>]*>/)?.[0];
+assert.ok(kyarTag && kyarTag.includes('data-app-key="myanmar-kyar"'));
+const kyarUrl = kyarTag.match(/href="([^"]+)"/)?.[1];
+const kyarFilename = kyarTag.match(/download="([^"]+)"/)?.[1];
+assert.ok(kyarUrl?.endsWith('/download') && kyarFilename?.endsWith('.apk'));
+const kyarAnchor = {
+  href: kyarUrl,
+  dataset: {appKey:'myanmar-kyar'},
+  handlers: {},
+  hasAttribute(name){return name==='download';},
+  getAttribute(name){return name==='download'?kyarFilename:null;},
+  addEventListener(name, fn){this.handlers[name]=fn;}
+};
+const startKyar = events.length;
+vm.runInNewContext(tracker, {
+  URL,
+  location: {href:'https://example.test/AI-Recap-GitHub/myanmar-kyar/'},
+  crypto: {randomUUID:()=> '00000000-0000-4000-8000-'+String(++seq).padStart(12,'0')},
+  localStorage: {getItem:()=>null, setItem:()=>{}},
+  document: {querySelectorAll:()=>[kyarAnchor]},
+  fetch: async (url,options) => {events.push({url,options,body:JSON.parse(options.body)});return {ok:true};}
+});
+assert.equal(typeof kyarAnchor.handlers.click,'function', 'Kyar Worker /download must be tracked');
+kyarAnchor.handlers.click();
+const kyarClicks=events.slice(startKyar).filter(e=>e.body.p_event_kind==='download_click');
+assert.equal(kyarClicks.length,1);
+assert.equal(kyarClicks[0].body.p_app_key,'myanmar-kyar');
+console.log('PASS: Kyar Worker /download event correctly tracked.');
+
+for(const tag of ['fc-goal-zone-v','fc-bw-v','fc-ykz-v','fc-ko-thet-v','fc-kmm-v']){
+  assert.ok(adminJs.includes('^'+tag), 'Admin release dashboard missing '+tag);
+}
+console.log('PASS: Current football APK release tags are recognized by admin analytics.');
