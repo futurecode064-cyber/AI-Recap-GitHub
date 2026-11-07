@@ -84,26 +84,23 @@
       if (appKey) record('app_view', appKey);
     });
   }
-  // Track only actual APK downloads. A store link to a separate detail page
-  // (e.g. Myanmar Kyar) is navigation, NOT an APK download.
-  // Delegation also covers links added after the initial page load.
-  document.addEventListener('click', event => {
-    const anchor = event.target?.closest?.('a.download, a[data-fc-apk-download]');
-    if (!anchor) return;
+  // A navigation link is not an APK download. Also handle APK endpoints such
+  // as Myanmar Kyar /download where the filename comes from a download attr.
+  document.querySelectorAll('a.download').forEach(anchor => {
     let filename = '', pathname = '';
     try {
       const url = new URL(anchor.href, location.href);
       pathname = url.pathname;
       filename = decodeURIComponent(pathname.split('/').pop() || '');
     } catch (_) { return; }
-    // Some APK servers (Myanmar Kyar) use /download rather than an .apk URL.
-    // Those links explicitly declare the APK filename in the download attribute.
     const isApk = /\.apk$/i.test(pathname) ||
-      (anchor.hasAttribute('download') && /\.apk$/i.test(anchor.getAttribute('download') || '')) ||
-      anchor.hasAttribute('data-fc-apk-download');
+      (typeof anchor.hasAttribute === 'function' &&
+       anchor.hasAttribute('download') && /\.apk$/i.test(anchor.getAttribute('download') || '')) ||
+      (typeof anchor.hasAttribute === 'function' && anchor.hasAttribute('data-fc-apk-download'));
     if (!isApk) return;
     const app = anchor.dataset.appKey || knownApps[filename];
     if (!app || !/^[a-z0-9-]{2,40}$/.test(app)) return;
-    record('download_click', app);
-  }, { passive: true });
+    anchor.dataset.analyticsApp = app;
+    anchor.addEventListener('click', () => record('download_click', app), { passive: true });
+  });
 })();
