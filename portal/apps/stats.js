@@ -98,8 +98,8 @@
     } catch (_) { return; }
     // Some APK servers (Myanmar Kyar) use /download rather than an .apk URL.
     // Those links explicitly declare the APK filename in the download attribute.
-    const isApk = /\\.apk$/i.test(pathname) ||
-      (anchor.hasAttribute('download') && /\\.apk$/i.test(anchor.getAttribute('download') || '')) ||
+    const isApk = /\.apk$/i.test(pathname) ||
+      (anchor.hasAttribute('download') && /\.apk$/i.test(anchor.getAttribute('download') || '')) ||
       anchor.hasAttribute('data-fc-apk-download');
     if (!isApk) return;
     const app = anchor.dataset.appKey || knownApps[filename];
