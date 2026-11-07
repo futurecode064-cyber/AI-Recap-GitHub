@@ -3,6 +3,22 @@
   "publicationTimeZone": "Asia/Yangon",
   "articles": [
     {
+      "id": "the-two-kings-episode-01",
+      "path": "articles/2026-11-07-the-two-kings-episode-01.json",
+      "date": "2026-11-07",
+      "category": "အခန်းဆက်ဝတ္ထုရှည်",
+      "seriesId": "the-two-kings",
+      "seriesTitle": "THE TWO KINGS — ရာဇပလ္လင်တစ်ခု၊ ဘုရင်နှစ်ပါး",
+      "episode": 1,
+      "plannedEpisodes": 24,
+      "title": "THE TWO KINGS — အပိုင်း (၁) : ကံကြမ္မာက ဆုံစည်းပေးခဲ့တဲ့ ညတစ်ည",
+      "subtitle": "CRISTIANO RONALDO × LIONEL MESSI | THE LEGACY",
+      "summary": "မာဒေးရားကျွန်းနဲ့ ရိုဆာရီယိုမြို့က အိပ်မက်နှစ်ခုဟာ ၂၀၀၈ ခုနှစ် ကမ့်နူးကွင်းထဲမှာ ပထမဆုံး ဆုံစည်းလာခဲ့တယ်။",
+      "photo": "https://cdn.openart.ai/openart-uploads/production/attachment-transfers/1ea0e648eee7de94a0bf04c57eea5056150cfae8590804f806777550c84e4aa4.png",
+      "posterMain": "https://cdn.openart.ai/openart-uploads/production/attachment-transfers/1ea0e648eee7de94a0bf04c57eea5056150cfae8590804f806777550c84e4aa4.png",
+      "posterGoal": "https://cdn.openart.ai/openart-uploads/production/attachment-transfers/1ea0e648eee7de94a0bf04c57eea5056150cfae8590804f806777550c84e4aa4.png"
+    },
+    {
       "id": "cristiano-ronaldo-portugal-farewell-2026",
       "path": "articles/2026-11-07-cristiano-ronaldo-portugal-farewell.json",
       "date": "2026-11-07",
