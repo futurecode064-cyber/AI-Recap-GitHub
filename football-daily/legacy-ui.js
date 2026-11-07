@@ -11,7 +11,7 @@ function formatDate(date){return date+" · Asia/Yangon"}
 function mk(tag,attrs={},content){const n=document.createElement(tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));if(content!==undefined)n.textContent=content;return n}
 function linkTo(id){return "?article="+encodeURIComponent(id)}
 function downloadText(a){
- const full=[a.title,a.subtitle,a.date,"ဂိုးဇုံ / FUTURE CODE | THE LEGACY",...a.intro,...a.sections.flatMap(s=>["",s.heading,...s.paragraphs]),"",...a.sources.map(s=>s.title+" — "+s.url)].join("\n\n");
+ const full=[a.title,a.subtitle,a.date,...a.intro,...a.sections.flatMap(s=>["",s.heading,...s.paragraphs])].join("\n\n");
  const blob=new Blob(["\uFEFF"+full],{type:"text/plain;charset=utf-8"}),url=URL.createObjectURL(blob),x=mk("a",{href:url,download:a.date+"-"+a.id+".txt"});document.body.append(x);x.click();x.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
 }
 async function downloadImage(a){
