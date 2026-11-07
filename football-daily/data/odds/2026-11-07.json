@@ -80,12 +80,13 @@
         {
           "date": "2026-10-10",
           "competition": "Premier League",
-          "opponent": "Arsenal",
+          "opponent": "အာဆင်နယ်",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/leeds-tottenham-premier-league-england-954221"
+          "sourceUrl": "https://tipsterarea.com/match/leeds-tottenham-premier-league-england-954221",
+          "opponentCanonical": "Arsenal"
         },
         {
           "date": "2026-09-20",
@@ -176,7 +177,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/369e54f9761c1ee1.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/Tottenham_Hotspur.png",
-      "dailyPreviewText": "လိဒ်အတွက် အဲလန်းရုဒ်မှာ ရှုံးပွဲမရှိသေးတာက အားကိုးစရာဖြစ်ပေမယ့် နောက်ဆုံးငါးပွဲလုံး အနိုင်မရဘဲ နှစ်ဂိုးသာသွင်းနိုင်တဲ့ တိုက်စစ်က ဒီပွဲရဲ့ အဓိကမေးခွန်းပါ။ စပါးက ပဲလေ့စ်နဲ့ ချဲလ်ဆီးကို ဂိုးမပေးဘဲ ဆက်တိုက်နိုင်ထားပြီး ကိုဗင်ထရီကိုပါ အနိုင်ယူထားလို့ ကစားပုံရဲ့ ယုံကြည်မှုချင်း မတူနေပါတယ်။ ဒါပေမယ့် လိဒ်က အိမ်ကွင်းလိဂ် လေးပွဲမှာ သုံးပွဲသရေကျထားတာကြောင့် စပါးအတွက် အလွယ်တကူ လွတ်ထွက်နိုင်မယ့်ပွဲမျိုးတော့ မဟုတ်ပါဘူး။ ဒီဇာဘီရဲ့အသင်းက လိဒ်ကို တစ်ခါတည်းအရှိန်မြှင့်ဖိတာထက် အခွင့်အရေးရချိန် ထိရောက်အောင်သုံးဖို့လိုပြီး လိဒ်ဘက်ကလည်း ရရှိတဲ့အခွင့်အရေးကို လွဲချော်နေရင် ခံစစ်အပေါ်ဝန်ပိလာနိုင်ပါတယ်။ ၁၂ မှတ်နဲ့ အဆင့် ၉ ရှိနေတဲ့အသင်းရဲ့ လတ်တလောတည်ငြိမ်မှုကို အလေးထားပြီး စပါးကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "လိဒ်အတွက် အဲလန်းရုဒ်မှာ ရှုံးပွဲမရှိသေးတာက အားကိုးစရာဖြစ်ပေမယ့် နောက်ဆုံးငါးပွဲလုံး အနိုင်မရဘဲ နှစ်ဂိုးသာသွင်းနိုင်တဲ့ တိုက်စစ်က ဒီပွဲရဲ့ အဓိကမေးခွန်းပါ။ စပါးက ပဲလေ့စ်နဲ့ ချဲလ်ဆီးကို ဂိုးမပေးဘဲ ဆက်တိုက်နိုင်ထားပြီး ကိုဗင်ထရီကိုပါ အနိုင်ယူထားလို့ ကစားပုံရဲ့ ယုံကြည်မှုချင်း မတူနေပါတယ်။ ဒါပေမယ့် လိဒ်က အိမ်ကွင်းလိဂ် လေးပွဲမှာ သုံးပွဲသရေကျထားတာကြောင့် စပါးအတွက် အလွယ်တကူ လွတ်ထွက်နိုင်မယ့်ပွဲမျိုးတော့ မဟုတ်ပါဘူး။ ဒီဇာဘီရဲ့အသင်းက လိဒ်ကို တစ်ခါတည်းအရှိန်မြှင့်ဖိတာထက် အခွင့်အရေးရချိန် ထိရောက်အောင်သုံးဖို့လိုပြီး လိဒ်ဘက်ကလည်း ရရှိတဲ့အခွင့်အရေးကို လွဲချော်နေရင် ခံစစ်အပေါ်ဝန်ပိလာနိုင်ပါတယ်။ **၁၂ မှတ်နဲ့ အဆင့် ၉ ရှိနေတဲ့အသင်းရဲ့ လတ်တလောတည်ငြိမ်မှုကို အလေးထားပြီး စပါးကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "အိမ်ကွင်းလိဂ်ရှုံးပွဲမရှိသေးတဲ့ လိဒ်က ပွဲကိုကပ်ထားနိုင်ပါတယ်။ ဒါပေမယ့် နောက်ဆုံးငါးပွဲ နှစ်ဂိုးသာရတဲ့တိုက်စစ်နဲ့ စပါးရဲ့ သုံးပွဲဆက်နိုင်မှုကို နှိုင်းယှဉ်ရင် ဧည့်သည်ရဲ့ အဆုံးသတ်နိုင်မှုက ပိုအားကိုးရပါတယ်။လိဒ်အတွက် ပထမဂိုးမပေးရဖို့ အရေးကြီးပါတယ်။ စပါးက ပွဲကိုကပ်ထားခံရရင်တောင် စိတ်ရှည်ဖို့လိုပါတယ်။ စပါးကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "စပါး",
       "previewV2FormatVersion": "2.1",
@@ -185,7 +186,7 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/leeds-tottenham-premier-league-england-954221",
@@ -193,7 +194,9 @@
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/leeds-tottenham-premier-league-england-954221",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -306,12 +309,13 @@
         {
           "date": "2026-10-21",
           "competition": "ChL Group",
-          "opponent": "Bayern Munchen",
+          "opponent": "ဘိုင်ယန်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222"
+          "sourceUrl": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
+          "opponentCanonical": "Bayern Munchen"
         }
       ],
       "awayLastFive": [
@@ -338,12 +342,13 @@
         {
           "date": "2026-10-17",
           "competition": "Premier League",
-          "opponent": "Fulham",
+          "opponent": "ဖူလ်ဟမ်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222"
+          "sourceUrl": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
+          "opponentCanonical": "Fulham"
         },
         {
           "date": "2026-10-11",
@@ -358,12 +363,13 @@
         {
           "date": "2026-09-19",
           "competition": "Premier League",
-          "opponent": "Newcastle",
+          "opponent": "နယူးကာဆယ်",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222"
+          "sourceUrl": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
+          "opponentCanonical": "Newcastle"
         }
       ],
       "homeStanding": {
@@ -392,7 +398,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/arsenal.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/Hull_City.png",
-      "dailyPreviewText": "အာဆင်နယ်က လီဗာပူးလ်ကွင်းမှာ အနိုင်ယူပြီး ပရက်ဂ်ခရီးကိုလည်း နိုင်ပွဲနဲ့အဆုံးသတ်ထားတာကြောင့် ထိပ်ဆုံးနေရာကို ဆက်ထိန်းဖို့ အရှိန်ကောင်းနေပါတယ်။ လိဂ်ကိုးပွဲ ရှစ်ပွဲနိုင်ထားတဲ့ အာတီတာရဲ့အသင်းနဲ့ ယှဉ်ရင် ဟူးစီးတီးက နောက်ဆုံးငါးပွဲမှာ သုံးပွဲသရေ၊ နှစ်ပွဲရှုံးထားပြီး ခက်ခဲတဲ့အချိန်ကို ဖြတ်နေရတာပါ။ ဟူးစီးတီးက အဲဗာတန်၊ ဘရန့်ဖို့ဒ်နဲ့ အစ်ပ်ဆွစ်ချ်ကို သရေကစားနိုင်ထားလို့ ခံစစ်ကို အချိန်အတော်ကြာ စုစည်းထားနိုင်တဲ့အချက်တော့ ရှိပါတယ်။ ဒါပေမယ့် Crooks ပွဲပယ်နဲ့ ကွင်းလယ်ရွေးချယ်စရာနည်းလာမှုက အာဆင်နယ်ရဲ့ ဘောလုံးပြန်လုနိုင်မှုအောက်မှာ ပိုပင်ပန်းစေနိုင်ပါတယ်။ အာဆင်နယ်အတွက်လည်း ဥရောပခရီးပြီးချိန် လူစာရင်းလှည့်သုံးနိုင်တာကို ထည့်တွက်ဖို့လိုပေမယ့် ပွဲထိန်းချုပ်နိုင်မှု၊ အိမ်ကွင်းအားနဲ့ အခွင့်အရေးရှာဖွေနိုင်မှုကို ပေါင်းကြည့်ပြီး အာဆင်နယ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "အာဆင်နယ်က လီဗာပူးလ်ကွင်းမှာ အနိုင်ယူပြီး ပရက်ဂ်ခရီးကိုလည်း နိုင်ပွဲနဲ့အဆုံးသတ်ထားတာကြောင့် ထိပ်ဆုံးနေရာကို ဆက်ထိန်းဖို့ အရှိန်ကောင်းနေပါတယ်။ လိဂ်ကိုးပွဲ ရှစ်ပွဲနိုင်ထားတဲ့ အာတီတာရဲ့အသင်းနဲ့ ယှဉ်ရင် ဟူးစီးတီးက နောက်ဆုံးငါးပွဲမှာ သုံးပွဲသရေ၊ နှစ်ပွဲရှုံးထားပြီး ခက်ခဲတဲ့အချိန်ကို ဖြတ်နေရတာပါ။ ဟူးစီးတီးက အဲဗာတန်၊ ဘရန့်ဖို့ဒ်နဲ့ အစ်ပ်ဆွစ်ချ်ကို သရေကစားနိုင်ထားလို့ ခံစစ်ကို အချိန်အတော်ကြာ စုစည်းထားနိုင်တဲ့အချက်တော့ ရှိပါတယ်။ ဒါပေမယ့် Crooks ပွဲပယ်နဲ့ ကွင်းလယ်ရွေးချယ်စရာနည်းလာမှုက အာဆင်နယ်ရဲ့ ဘောလုံးပြန်လုနိုင်မှုအောက်မှာ ပိုပင်ပန်းစေနိုင်ပါတယ်။ **အာဆင်နယ်အတွက်လည်း ဥရောပခရီးပြီးချိန် လူစာရင်းလှည့်သုံးနိုင်တာကို ထည့်တွက်ဖို့လိုပေမယ့် ပွဲထိန်းချုပ်နိုင်မှု၊ အိမ်ကွင်းအားနဲ့ အခွင့်အရေးရှာဖွေနိုင်မှုကို ပေါင်းကြည့်ပြီး အာဆင်နယ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဟူးစီးတီးက သရေပွဲတွေကနေ ရမှတ်စုနေသော်လည်း Crooks ပွဲပယ်က ကွင်းလယ်အားကို လျော့စေပါတယ်။ လိဂ်ကိုးပွဲ ရှစ်နိုင်ထားတဲ့ အာဆင်နယ်က အိမ်ကွင်းမှာ ဘောလုံးပြန်ရယူပြီး ဖိအားပေးနိုင်ဖို့ ပိုအလေးသာပါတယ်။ဥရောပခရီးပြီး လူလှည့်သုံးနိုင်မှုကိုလည်း စောင့်ကြည့်ရပါမယ်။ ဟူးစီးတီးအတွက်တော့ ဧရိယာရှေ့ကို တစ်ပွဲလုံးစုစည်းထားနိုင်ဖို့ လိုပါတယ်။ အာဆင်နယ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "အာဆင်နယ်",
       "previewV2FormatVersion": "2.1",
@@ -401,7 +407,7 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
@@ -409,7 +415,9 @@
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -438,7 +446,13 @@
       "currentGoalTotalOdds": "",
       "pdfLastColumn": "3-1",
       "eligibleForPreview": true,
-      "eligibilityReason": "Exact senior fixture, home/away and local kickoff matched to dated match source"
+      "eligibilityReason": "Exact senior fixture, home/away and local kickoff matched to dated match source",
+      "specialChoiceRank": 1,
+      "specialPreparedDate": "2026-11-07",
+      "specialResearchSources": [
+        "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
+        "https://www.premierleague.com/en/news/4756862/predicted-line-ups-for-premier-league-teams-in-matchweek-10"
+      ]
     },
     {
       "fixtureId": "fc-20261107-03",
@@ -515,12 +529,13 @@
         {
           "date": "2026-10-17",
           "competition": "Premier League",
-          "opponent": "Hull City",
+          "opponent": "ဟူးစီးတီး",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/fulham-newcastle-premier-league-england-954223"
+          "sourceUrl": "https://tipsterarea.com/match/fulham-newcastle-premier-league-england-954223",
+          "opponentCanonical": "Hull City"
         },
         {
           "date": "2026-10-10",
@@ -611,7 +626,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/dd4bf81d56f200e3.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/newcastle-united.svg",
-      "dailyPreviewText": "ဖူလ်ဟမ်အတွက် အမှတ်ပေးဇယားမှာ နယူးကာဆယ်အောက် နှစ်မှတ်လျော့နေတာထက် နောက်ဆုံးရလဒ်တွေက ပိုကောင်းတဲ့အကြောင်းပြချက်ပေးနေပါတယ်။ ဟူးစီးတီးနဲ့ ကိုဗင်ထရီကို ဂိုးမပေးဘဲနိုင်ပြီး ဗီလာကွင်းကနေပါ တစ်မှတ်ယူလာနိုင်တာက အာဘယ်လိုအာရဲ့အသင်းကို တည်ငြိမ်မှုပြန်ပေးပါတယ်။ နယူးကာဆယ်ကတော့ အဲဗာတန်ကို လိဂ်နဲ့ ဖလားနှစ်ပွဲဆက်ရှုံးထားပြီး နောက်ဆုံးငါးပွဲ လေးပွဲရှုံးထားတာကြောင့် ဖိအားများနေပါတယ်။ Joelinton မပါနိုင်သလို Ramsey ပွဲပယ်ခံထားရတာက ဧည့်သည်ကွင်းလယ်ရဲ့ လူအားနဲ့ ဘောလုံးပြန်ယူနိုင်မှုကို ထိခိုက်စေနိုင်ပါတယ်။ ဖူလ်ဟမ်က အခွင့်အရေးတိုင်းဂိုးဖြစ်တဲ့အသင်းတော့ မဟုတ်လို့ ပွဲကိုကပ်ထားခံရနိုင်ပေမယ့် ကိုယ့်ကွင်းမှာ စိတ်ရှည်ရှည်ကစားပြီး နယူးကာဆယ်ရဲ့ အမှားကို အသုံးချနိုင်ဖို့ ပိုမြင်ထားကာ ဖူလ်ဟမ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဖူလ်ဟမ်အတွက် အမှတ်ပေးဇယားမှာ နယူးကာဆယ်အောက် နှစ်မှတ်လျော့နေတာထက် နောက်ဆုံးရလဒ်တွေက ပိုကောင်းတဲ့အကြောင်းပြချက်ပေးနေပါတယ်။ ဟူးစီးတီးနဲ့ ကိုဗင်ထရီကို ဂိုးမပေးဘဲနိုင်ပြီး ဗီလာကွင်းကနေပါ တစ်မှတ်ယူလာနိုင်တာက အာဘယ်လိုအာရဲ့အသင်းကို တည်ငြိမ်မှုပြန်ပေးပါတယ်။ နယူးကာဆယ်ကတော့ အဲဗာတန်ကို လိဂ်နဲ့ ဖလားနှစ်ပွဲဆက်ရှုံးထားပြီး နောက်ဆုံးငါးပွဲ လေးပွဲရှုံးထားတာကြောင့် ဖိအားများနေပါတယ်။ Joelinton မပါနိုင်သလို Ramsey ပွဲပယ်ခံထားရတာက ဧည့်သည်ကွင်းလယ်ရဲ့ လူအားနဲ့ ဘောလုံးပြန်ယူနိုင်မှုကို ထိခိုက်စေနိုင်ပါတယ်။ **ဖူလ်ဟမ်က အခွင့်အရေးတိုင်းဂိုးဖြစ်တဲ့အသင်းတော့ မဟုတ်လို့ ပွဲကိုကပ်ထားခံရနိုင်ပေမယ့် ကိုယ့်ကွင်းမှာ စိတ်ရှည်ရှည်ကစားပြီး နယူးကာဆယ်ရဲ့ အမှားကို အသုံးချနိုင်ဖို့ ပိုမြင်ထားကာ ဖူလ်ဟမ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "နယူးကာဆယ်က နောက်ဆုံးငါးပွဲ လေးပွဲရှုံးထားတဲ့အပြင် ကွင်းလယ်လူမစုံမှုပါ ရှိနေပါတယ်။နယူးကာဆယ်က အဲဗာတန်ကို နှစ်ပွဲဆက်ရှုံးလာတာပါ။ ဖူလ်ဟမ်ကတော့ ဗီလာကွင်းက တစ်မှတ်ကြောင့် ယုံကြည်မှုပိုရှိနိုင်ပါတယ်။ ဖူလ်ဟမ်ရဲ့ လတ်တလော ဂိုးနည်းပွဲတွေမှာ ရမှတ်စုနိုင်မှုက ဒီလိုကပ်နိုင်တဲ့ပွဲမှာ အသုံးဝင်နိုင်တာကြောင့် အိမ်ကွင်းဖူလ်ဟမ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဖူလ်ဟမ်",
       "previewV2FormatVersion": "2.1",
@@ -620,7 +635,7 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/fulham-newcastle-premier-league-england-954223",
@@ -628,7 +643,9 @@
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/fulham-newcastle-premier-league-england-954223",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -721,12 +738,13 @@
         {
           "date": "2026-10-18",
           "competition": "Premier League",
-          "opponent": "Arsenal",
+          "opponent": "အာဆင်နယ်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224"
+          "sourceUrl": "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224",
+          "opponentCanonical": "Arsenal"
         },
         {
           "date": "2026-10-11",
@@ -753,12 +771,13 @@
         {
           "date": "2026-11-04",
           "competition": "ChL Group",
-          "opponent": "RB Leipzig",
+          "opponent": "လစ်ဇစ်",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224"
+          "sourceUrl": "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224",
+          "opponentCanonical": "RB Leipzig"
         },
         {
           "date": "2026-10-31",
@@ -827,7 +846,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/52828a7365f3d2f8.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/manchester-city.png",
-      "dailyPreviewText": "မန်စီးတီးက လစ်ဇစ်ကို ဥရောပပွဲမှာ အနိုင်ရထားပေမယ့် လိဂ်မှာ ဗီလာနဲ့ ဘရိုက်တန်ကို နှစ်ပွဲဆက်ရှုံးထားတာကြောင့် ဒီခရီးမှာ ရမှတ်အပြည့်ပြန်ယူဖို့ လိုနေပါတယ်။ နော်တင်ဟမ်ကလည်း ခြောက်မှတ်နဲ့ အဆင့် ၁၉ အထိကျနေပြီး နောက်ဆုံးငါးပွဲမှာ တစ်မှတ်ပဲယူနိုင်ထားတာပါ။ စီးတီးကို တိုက်စစ်ဖွင့်ကစားလိုက်တာထက် ဧရိယာရှေ့နေရာကို ပိတ်ပြီး ဘောလုံးပြန်ရချိန်မှာ ထိရောက်အောင်ထွက်နိုင်ဖို့ နော်တင်ဟမ်က မျှော်လင့်ရမှာဖြစ်ပါတယ်။ သို့ပေမယ့် ကိုယ်တိုင်ဂိုးရှာရခက်နေချိန် ခံစစ်ကိုပဲ အချိန်ကြာကြာအားကိုးရတာက စီးတီးရဲ့ တိုက်စစ်ဖိအားအောက်မှာ မလွယ်ပါဘူး။ စီးတီးရဲ့ မကြာသေးခင်ကခံစစ်အမှားတွေကြောင့် လုံးဝတစ်ဖက်သတ်လို့ မမြင်ပေမယ့် အရည်အသွေးကွာဟမှုနဲ့ နိုင်ပွဲလိုအပ်ချက်ကို ထည့်တွက်ပြီး မန်စီးတီးကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "မန်စီးတီးက လစ်ဇစ်ကို ဥရောပပွဲမှာ အနိုင်ရထားပေမယ့် လိဂ်မှာ ဗီလာနဲ့ ဘရိုက်တန်ကို နှစ်ပွဲဆက်ရှုံးထားတာကြောင့် ဒီခရီးမှာ ရမှတ်အပြည့်ပြန်ယူဖို့ လိုနေပါတယ်။ နော်တင်ဟမ်ကလည်း ခြောက်မှတ်နဲ့ အဆင့် ၁၉ အထိကျနေပြီး နောက်ဆုံးငါးပွဲမှာ တစ်မှတ်ပဲယူနိုင်ထားတာပါ။ စီးတီးကို တိုက်စစ်ဖွင့်ကစားလိုက်တာထက် ဧရိယာရှေ့နေရာကို ပိတ်ပြီး ဘောလုံးပြန်ရချိန်မှာ ထိရောက်အောင်ထွက်နိုင်ဖို့ နော်တင်ဟမ်က မျှော်လင့်ရမှာဖြစ်ပါတယ်။ သို့ပေမယ့် ကိုယ်တိုင်ဂိုးရှာရခက်နေချိန် ခံစစ်ကိုပဲ အချိန်ကြာကြာအားကိုးရတာက စီးတီးရဲ့ တိုက်စစ်ဖိအားအောက်မှာ မလွယ်ပါဘူး။ **စီးတီးရဲ့ မကြာသေးခင်ကခံစစ်အမှားတွေကြောင့် လုံးဝတစ်ဖက်သတ်လို့ မမြင်ပေမယ့် အရည်အသွေးကွာဟမှုနဲ့ နိုင်ပွဲလိုအပ်ချက်ကို ထည့်တွက်ပြီး မန်စီးတီးကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "လိဂ်နှစ်ပွဲဆက်ရှုံးထားတဲ့ စီးတီးအတွက် အမှတ်ပြန်ယူဖို့ လိုအပ်နေပါတယ်။နော်တင်ဟမ်က စောစောဂိုးမပေးရအောင် ကြိုးစားလာနိုင်ပါတယ်။ စီးတီးဘက်ကလည်း နောက်တန်းအမှားတွေကို လျှော့ဖို့လိုနေပါတယ်။ နော်တင်ဟမ်ကလည်း နောက်ဆုံးငါးပွဲ တစ်မှတ်သာရထားပြီး တိုက်စစ်မထိရောက်မှုက ခံစစ်အပေါ်ဝန်ပိစေနိုင်တာကြောင့် မန်စီးတီးကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "မန်စီးတီး",
       "previewV2FormatVersion": "2.1",
@@ -836,14 +855,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -926,22 +947,24 @@
         {
           "date": "2026-10-27",
           "competition": "Serie A",
-          "opponent": "Roma",
+          "opponent": "ရိုးမား",
           "teamGoals": 2,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234"
+          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234",
+          "opponentCanonical": "Roma"
         },
         {
           "date": "2026-10-24",
           "competition": "Serie A",
-          "opponent": "Bologna",
+          "opponent": "ဘိုလော့နာ",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234"
+          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234",
+          "opponentCanonical": "Bologna"
         },
         {
           "date": "2026-10-19",
@@ -968,22 +991,24 @@
         {
           "date": "2026-11-01",
           "competition": "Serie A",
-          "opponent": "Torino",
+          "opponent": "တိုရီနို",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234"
+          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234",
+          "opponentCanonical": "Torino"
         },
         {
           "date": "2026-10-29",
           "competition": "Serie A",
-          "opponent": "Lecce",
+          "opponent": "လက်ချီ",
           "teamGoals": 5,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234"
+          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234",
+          "opponentCanonical": "Lecce"
         },
         {
           "date": "2026-10-25",
@@ -998,12 +1023,13 @@
         {
           "date": "2026-10-16",
           "competition": "Serie A",
-          "opponent": "Sassuolo",
+          "opponent": "ဆက်စူအိုလို",
           "teamGoals": 4,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234"
+          "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234",
+          "opponentCanonical": "Sassuolo"
         },
         {
           "date": "2026-10-10",
@@ -1042,7 +1068,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/cagliari.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/frosinone.svg",
-      "dailyPreviewText": "ဖရိုစင်ဝမ်းရဲ့ နောက်ဆုံးလေးပွဲ ၁၅ ဂိုးဆိုတာက ဒီပွဲကိုဆုံးဖြတ်နိုင်တဲ့ အဓိကအချက်ပါ။ တိုရီနို၊ လက်ချီနဲ့ ဆက်စူအိုလိုတို့ကို အနိုင်ယူပြီး အတ္တလန်တာကွင်းမှာပါ ဂိုးအပြိုင်သွင်းကစားနိုင်တာကြောင့် ရမှတ် ၂၀ နဲ့ အဆင့် ၆ ရောက်နေတာက တိုက်စစ်ခြေစွမ်းအပေါ် အခြေခံထားတာပါ။ ကတ်ဂလီယာရီကတော့ နောက်ဆုံးငါးပွဲ လေးပွဲရှုံးပြီး ၁၃ ဂိုးပေးထားလို့ ဖရိုစင်ဝမ်းရဲ့ ဆက်တိုက်ဖိအားပေးမှုကို ထိန်းနိုင်ဖို့ စိုးရိမ်စရာရှိပါတယ်။ အိမ်ကွင်းအားက ကတ်ဂလီယာရီကို ပွဲထဲမှာဆက်ရှိနေစေနိုင်ပေမယ့် ရှေ့တန်းက အခွင့်အရေးကို မြန်မြန်အသုံးမချနိုင်ရင် ခံစစ်ဘက်ကပဲ ပိုအလုပ်များလာနိုင်ပါတယ်။ ဖရိုစင်ဝမ်းကလည်း ပေးဂိုးလုံးဝကင်းတဲ့အသင်းမဟုတ်ပေမယ့် လက်ရှိဂိုးသွင်းအားချင်းယှဉ်ပြီး ဖရိုစင်ဝမ်းကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဖရိုစင်ဝမ်းရဲ့ နောက်ဆုံးလေးပွဲ ၁၅ ဂိုးဆိုတာက ဒီပွဲကိုဆုံးဖြတ်နိုင်တဲ့ အဓိကအချက်ပါ။ တိုရီနို၊ လက်ချီနဲ့ ဆက်စူအိုလိုတို့ကို အနိုင်ယူပြီး အတ္တလန်တာကွင်းမှာပါ ဂိုးအပြိုင်သွင်းကစားနိုင်တာကြောင့် ရမှတ် ၂၀ နဲ့ အဆင့် ၆ ရောက်နေတာက တိုက်စစ်ခြေစွမ်းအပေါ် အခြေခံထားတာပါ။ ကတ်ဂလီယာရီကတော့ နောက်ဆုံးငါးပွဲ လေးပွဲရှုံးပြီး ၁၃ ဂိုးပေးထားလို့ ဖရိုစင်ဝမ်းရဲ့ ဆက်တိုက်ဖိအားပေးမှုကို ထိန်းနိုင်ဖို့ စိုးရိမ်စရာရှိပါတယ်။ အိမ်ကွင်းအားက ကတ်ဂလီယာရီကို ပွဲထဲမှာဆက်ရှိနေစေနိုင်ပေမယ့် ရှေ့တန်းက အခွင့်အရေးကို မြန်မြန်အသုံးမချနိုင်ရင် ခံစစ်ဘက်ကပဲ ပိုအလုပ်များလာနိုင်ပါတယ်။ **ဖရိုစင်ဝမ်းကလည်း ပေးဂိုးလုံးဝကင်းတဲ့အသင်းမဟုတ်ပေမယ့် လက်ရှိဂိုးသွင်းအားချင်းယှဉ်ပြီး ဖရိုစင်ဝမ်းကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ကတ်ဂလီယာရီက နောက်ဆုံးငါးပွဲ လေးရှုံးနဲ့ ၁၃ ဂိုးပေးထားချိန် ဖရိုစင်ဝမ်းက နောက်ဆုံးလေးပွဲ ၁၅ ဂိုးသွင်းထားပါတယ်။ဖရိုစင်ဝမ်းက တိုရီနိုနဲ့ လက်ချီကို ဆက်တိုက်အနိုင်ယူလာတာပါ။ ကတ်ဂလီယာရီအတွက် အစောပိုင်းခံစစ်ပုံစံမပျက်ဖို့ လိုပါတယ်။ အိမ်ကွင်းအားရှိပေမယ့် တိုက်စစ်ခြေစွမ်းကွာဟမှုက ဧည့်သည်ဘက်ကို ပိုညွှန်နေတာကြောင့် ဖရိုစင်ဝမ်းကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဖရိုစင်ဝမ်း",
       "previewV2FormatVersion": "2.1",
@@ -1051,14 +1077,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -1131,12 +1159,13 @@
         {
           "date": "2026-11-01",
           "competition": "Serie A",
-          "opponent": "Frosinone",
+          "opponent": "ဖရိုစင်ဝမ်း",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235"
+          "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235",
+          "opponentCanonical": "Frosinone"
         },
         {
           "date": "2026-10-27",
@@ -1161,12 +1190,13 @@
         {
           "date": "2026-10-19",
           "competition": "Serie A",
-          "opponent": "Parma",
+          "opponent": "ပါးမား",
           "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235"
+          "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235",
+          "opponentCanonical": "Parma"
         },
         {
           "date": "2026-10-12",
@@ -1193,12 +1223,13 @@
         {
           "date": "2026-10-29",
           "competition": "Serie A",
-          "opponent": "Frosinone",
+          "opponent": "ဖရိုစင်ဝမ်း",
           "teamGoals": 1,
           "opponentGoals": 5,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235"
+          "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235",
+          "opponentCanonical": "Frosinone"
         },
         {
           "date": "2026-10-25",
@@ -1223,12 +1254,13 @@
         {
           "date": "2026-10-11",
           "competition": "Serie A",
-          "opponent": "Bologna",
+          "opponent": "ဘိုလော့နာ",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235"
+          "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235",
+          "opponentCanonical": "Bologna"
         }
       ],
       "homeStanding": {
@@ -1257,7 +1289,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/torino.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/lecce.svg",
-      "dailyPreviewText": "တိုရီနိုရဲ့ နောက်ဆုံးနှစ်ပွဲဆက်ရှုံးမှုကို ကြည့်ပြီး အလျင်စလိုပယ်လိုက်လို့မရပါဘူး။ အဲဒီမတိုင်ခင် ဥဒီနီးစ်၊ ပါးမားနဲ့ မွန်ဇာတို့ကို ဆက်တိုက်အနိုင်ယူထားပြီး အခွင့်အရေးရချိန် ဂိုးအဖြစ်ပြောင်းနိုင်တဲ့ အရည်အသွေးရှိထားပါတယ်။ လက်ချီကတော့ နောက်ဆုံးလိဂ်သုံးပွဲလုံးရှုံးထားပြီး ဖရိုစင်ဝမ်းကို ငါးဂိုးအထိပေးထားရတာကြောင့် ခံစစ်ယုံကြည်မှုကို ပြန်တည်ဆောက်ရမယ့်အချိန်ပါ။ တိုရီနိုက နောက်ဆုံးနှစ်ပွဲ တစ်ဂိုးပဲရထားတာကြောင့် လက်ချီခံစစ်ရဲ့ မတည်ငြိမ်မှုကို တွေ့တာနဲ့ အလွယ်တကူဖောက်နိုင်မယ်လို့ ယူဆလို့တော့မရပါဘူး။ ပထမဂိုးရဖို့ စိတ်ရှည်ရှည်ဖန်တီးနိုင်မှုက အရေးပါပြီး လက်ချီရဲ့ လက်ရှိခံစစ်အခက်အခဲနဲ့ အိမ်ကွင်းအားကို တွဲကြည့်ကာ တိုရီနိုကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "တိုရီနိုရဲ့ နောက်ဆုံးနှစ်ပွဲဆက်ရှုံးမှုကို ကြည့်ပြီး အလျင်စလိုပယ်လိုက်လို့မရပါဘူး။ အဲဒီမတိုင်ခင် ဥဒီနီးစ်၊ ပါးမားနဲ့ မွန်ဇာတို့ကို ဆက်တိုက်အနိုင်ယူထားပြီး အခွင့်အရေးရချိန် ဂိုးအဖြစ်ပြောင်းနိုင်တဲ့ အရည်အသွေးရှိထားပါတယ်။ လက်ချီကတော့ နောက်ဆုံးလိဂ်သုံးပွဲလုံးရှုံးထားပြီး ဖရိုစင်ဝမ်းကို ငါးဂိုးအထိပေးထားရတာကြောင့် ခံစစ်ယုံကြည်မှုကို ပြန်တည်ဆောက်ရမယ့်အချိန်ပါ။ တိုရီနိုက နောက်ဆုံးနှစ်ပွဲ တစ်ဂိုးပဲရထားတာကြောင့် လက်ချီခံစစ်ရဲ့ မတည်ငြိမ်မှုကို တွေ့တာနဲ့ အလွယ်တကူဖောက်နိုင်မယ်လို့ ယူဆလို့တော့မရပါဘူး။ **ပထမဂိုးရဖို့ စိတ်ရှည်ရှည်ဖန်တီးနိုင်မှုက အရေးပါပြီး လက်ချီရဲ့ လက်ရှိခံစစ်အခက်အခဲနဲ့ အိမ်ကွင်းအားကို တွဲကြည့်ကာ တိုရီနိုကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "လက်ချီက လိဂ်သုံးပွဲဆက်ရှုံးထားလို့ ခံစစ်ကို အရင်ပြန်စုစည်းရမယ့်အချိန်ပါ။တိုရီနိုလည်း တိုက်စစ်ပြန်ဖွင့်ရမယ့်ပွဲပါ။ လက်ချီက ပထမဂိုးပေးလိုက်ရင် အနိုင်ရှာဖို့ ပိုဖွင့်ကစားရနိုင်ပါတယ်။ တိုရီနိုလည်း နှစ်ပွဲဆက်ရှုံးထားပေမယ့် အဲဒီမတိုင်ခင် သုံးပွဲဆက်နိုင်တဲ့ တိုက်စစ်အခြေခံရှိနေပြီး ကိုယ့်ကွင်းမှာ ပြန်တုံ့ပြန်နိုင်ဖို့ တိုရီနိုကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "တိုရီနို",
       "previewV2FormatVersion": "2.1",
@@ -1266,14 +1298,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -1376,12 +1410,13 @@
         {
           "date": "2026-10-19",
           "competition": "Serie A",
-          "opponent": "Torino",
+          "opponent": "တိုရီနို",
           "teamGoals": 0,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236"
+          "sourceUrl": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236",
+          "opponentCanonical": "Torino"
         },
         {
           "date": "2026-10-10",
@@ -1418,12 +1453,13 @@
         {
           "date": "2026-10-24",
           "competition": "Serie A",
-          "opponent": "Cagliari",
+          "opponent": "ကတ်ဂလီယာရီ",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236"
+          "sourceUrl": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236",
+          "opponentCanonical": "Cagliari"
         },
         {
           "date": "2026-10-17",
@@ -1438,12 +1474,13 @@
         {
           "date": "2026-10-11",
           "competition": "Serie A",
-          "opponent": "Lecce",
+          "opponent": "လက်ချီ",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236"
+          "sourceUrl": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236",
+          "opponentCanonical": "Lecce"
         }
       ],
       "homeStanding": {
@@ -1472,7 +1509,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/parma.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/dbb0b1107a115ed7.png",
-      "dailyPreviewText": "အတ္တလန်တာကွင်းမှာ သုံးဂိုးပြတ်နိုင်ခဲ့တဲ့ ပါးမားကို ဒီပွဲမှာ လွယ်လွယ်နဲ့ လျှော့တွက်လို့မရတော့ပါဘူး။ အဲဒီနိုင်ပွဲက အရင်လေးပွဲအတွင်း အနိုင်မရခဲ့တဲ့အခြေအနေကနေ ယုံကြည်မှုပြန်ပေးပါတယ်။ ဒါပေမယ့် ဘိုလော့နာရဲ့ ရလဒ်တည်ငြိမ်မှုက ပိုကောင်းနေပြီး နောက်ဆုံးသုံးပွဲလုံးနိုင်ထားသလို မီလန်ကို ဖလားပွဲမှာ လေးဂိုးသွင်းအနိုင်ယူထားတာပါ။ ပါးမားက ဥဒီနီးစ်နဲ့ သရေ၊ အတ္တလန်တာနဲ့ နိုင်ပွဲတွေမှာ ဂိုးမပေးထားပေမယ့် ဒီတစ်ကြိမ် ဘိုလော့နာရဲ့ အခွင့်အရေးဖန်တီးနိုင်မှုကို အချိန်ကြာကြာရင်ဆိုင်ရနိုင်ပါတယ်။ အိမ်ရှင်က တန်ပြန်ထိုးဖောက်နိုင်ရင် ပွဲအခြေအနေပြောင်းသွားနိုင်ပေမယ့် နောက်ဆုံးငါးပွဲ လေးပွဲနိုင်ထားတဲ့ အသင်းရဲ့ အဆုံးသတ်ပိုင်းကို ပိုယုံကြည်ပြီး ဘိုလော့နာကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "အတ္တလန်တာကွင်းမှာ သုံးဂိုးပြတ်နိုင်ခဲ့တဲ့ ပါးမားကို ဒီပွဲမှာ လွယ်လွယ်နဲ့ လျှော့တွက်လို့မရတော့ပါဘူး။ အဲဒီနိုင်ပွဲက အရင်လေးပွဲအတွင်း အနိုင်မရခဲ့တဲ့အခြေအနေကနေ ယုံကြည်မှုပြန်ပေးပါတယ်။ ဒါပေမယ့် ဘိုလော့နာရဲ့ ရလဒ်တည်ငြိမ်မှုက ပိုကောင်းနေပြီး နောက်ဆုံးသုံးပွဲလုံးနိုင်ထားသလို မီလန်ကို ဖလားပွဲမှာ လေးဂိုးသွင်းအနိုင်ယူထားတာပါ။ ပါးမားက ဥဒီနီးစ်နဲ့ သရေ၊ အတ္တလန်တာနဲ့ နိုင်ပွဲတွေမှာ ဂိုးမပေးထားပေမယ့် ဒီတစ်ကြိမ် ဘိုလော့နာရဲ့ အခွင့်အရေးဖန်တီးနိုင်မှုကို အချိန်ကြာကြာရင်ဆိုင်ရနိုင်ပါတယ်။ **အိမ်ရှင်က တန်ပြန်ထိုးဖောက်နိုင်ရင် ပွဲအခြေအနေပြောင်းသွားနိုင်ပေမယ့် နောက်ဆုံးငါးပွဲ လေးပွဲနိုင်ထားတဲ့ အသင်းရဲ့ အဆုံးသတ်ပိုင်းကို ပိုယုံကြည်ပြီး ဘိုလော့နာကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ပါးမားရဲ့ အတ္တလန်တာကွင်းက နိုင်ပွဲက ဒီပွဲကို ပိုစိတ်ဝင်စားစေပါတယ်။ပါးမားရဲ့ နောက်ဆုံးနိုင်ပွဲကို လျှော့တွက်လို့မရပါဘူး။ ဘိုလော့နာကတော့ မီလန်ကို လေးဂိုးသွင်းနိုင်ခဲ့တဲ့ အဆုံးသတ်စွမ်းရည်ရှိပါတယ်။ သို့သော် ဘိုလော့နာကလည်း သုံးပွဲဆက်နိုင်ပြီး နောက်ဆုံးငါးပွဲ လေးနိုင်ထားတာကြောင့် တစ်ပွဲတည်းကခြေစွမ်းထက် ဆက်တိုက်တည်ငြိမ်မှုကို အလေးထားကာ ဘိုလော့နာကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဘိုလော့နာ",
       "previewV2FormatVersion": "2.1",
@@ -1481,14 +1518,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -1581,12 +1620,13 @@
         {
           "date": "2026-10-27",
           "competition": "Serie A",
-          "opponent": "Cagliari",
+          "opponent": "ကတ်ဂလီယာရီ",
           "teamGoals": 4,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237"
+          "sourceUrl": "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237",
+          "opponentCanonical": "Cagliari"
         },
         {
           "date": "2026-10-24",
@@ -1643,12 +1683,13 @@
         {
           "date": "2026-10-16",
           "competition": "Serie A",
-          "opponent": "Frosinone",
+          "opponent": "ဖရိုစင်ဝမ်း",
           "teamGoals": 2,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237"
+          "sourceUrl": "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237",
+          "opponentCanonical": "Frosinone"
         },
         {
           "date": "2026-10-11",
@@ -1687,7 +1728,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/roma.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/sassuolo.svg",
-      "dailyPreviewText": "ရိုးမားအတွက် မန်ယူကွင်းမှာ ဦးဆောင်ပြီးမှ ရှုံးလာရတာက ခံစစ်ပိုင်းကို ပြန်စဉ်းစားစရာဖြစ်ပေမယ့် လိဂ်တိုက်စစ်အရှိန်ကတော့ ကောင်းနေဆဲပါ။ ကတ်ဂလီယာရီကို လေးဂိုး၊ ဥဒီနီးစ်ကို ငါးဂိုးသွင်းနိုင်ထားပြီး ၂၄ မှတ်နဲ့ အဆင့် ၃ မှာရှိနေတာကြောင့် အိမ်ကွင်းပြန်ရောက်ချိန် ဖိအားပေးကစားဖို့ အခြေခံရှိပါတယ်။ ဆက်စူအိုလိုက နောက်ဆုံးလေးပွဲလုံးရှုံးထားသလို အဲဒီပွဲတွေမှာ ၁၆ ဂိုးပေးထားတာက ရိုးမားတိုက်စစ်အတွက် ပိုသင့်တော်တဲ့အခြေအနေပါ။ သို့ပေမယ့် ရိုးမားကိုယ်တိုင်လည်း နောက်ဆုံးလေးပွဲ ၁၀ ဂိုးပေးထားလို့ လူအများကြီးရှေ့တက်ချိန် နောက်တန်းနေရာလွတ်ကို သတိထားရမှာပါ။ ဆက်စူအိုလိုအတွက် ပွဲထဲပြန်ဝင်နိုင်မယ့်လမ်းရှိပေမယ့် တစ်ပွဲလုံးဖိအားအောက်မှာ ဂိုးမပေးအောင်ထိန်းနိုင်ဖို့ ပိုခက်နိုင်တာကြောင့် ရိုးမားကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ရိုးမားအတွက် မန်ယူကွင်းမှာ ဦးဆောင်ပြီးမှ ရှုံးလာရတာက ခံစစ်ပိုင်းကို ပြန်စဉ်းစားစရာဖြစ်ပေမယ့် လိဂ်တိုက်စစ်အရှိန်ကတော့ ကောင်းနေဆဲပါ။ ကတ်ဂလီယာရီကို လေးဂိုး၊ ဥဒီနီးစ်ကို ငါးဂိုးသွင်းနိုင်ထားပြီး ၂၄ မှတ်နဲ့ အဆင့် ၃ မှာရှိနေတာကြောင့် အိမ်ကွင်းပြန်ရောက်ချိန် ဖိအားပေးကစားဖို့ အခြေခံရှိပါတယ်။ ဆက်စူအိုလိုက နောက်ဆုံးလေးပွဲလုံးရှုံးထားသလို အဲဒီပွဲတွေမှာ ၁၆ ဂိုးပေးထားတာက ရိုးမားတိုက်စစ်အတွက် ပိုသင့်တော်တဲ့အခြေအနေပါ။ သို့ပေမယ့် ရိုးမားကိုယ်တိုင်လည်း နောက်ဆုံးလေးပွဲ ၁၀ ဂိုးပေးထားလို့ လူအများကြီးရှေ့တက်ချိန် နောက်တန်းနေရာလွတ်ကို သတိထားရမှာပါ။ **ဆက်စူအိုလိုအတွက် ပွဲထဲပြန်ဝင်နိုင်မယ့်လမ်းရှိပေမယ့် တစ်ပွဲလုံးဖိအားအောက်မှာ ဂိုးမပေးအောင်ထိန်းနိုင်ဖို့ ပိုခက်နိုင်တာကြောင့် ရိုးမားကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ရိုးမားရဲ့ တိုက်စစ်က ဂိုးသွင်းအားကောင်းနေချိန် ဆက်စူအိုလိုက လေးပွဲဆက်ရှုံးပြီး ၁၆ ဂိုးပေးထားပါတယ်။ဥရောပပွဲက ခံစစ်အမှားတွေကို ရိုးမားက လျှော့ရပါမယ်။ ဆက်စူအိုလိုအတွက် ဂိုးမပေးအောင် တစ်ပွဲလုံးထိန်းဖို့ ခက်နိုင်ပါတယ်။ ရိုးမားခံစစ်ကို လုံးဝစိတ်ချလို့မရပေမယ့် ဂိုးဖန်တီးနိုင်မှုချင်းယှဉ်ရင် အိမ်ရှင်ဘက်က ပိုရှင်းလင်းတာကြောင့် ရိုးမားကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ရိုးမား",
       "previewV2FormatVersion": "2.1",
@@ -1696,14 +1737,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -1806,12 +1849,13 @@
         {
           "date": "2026-10-09",
           "competition": "Primera Division",
-          "opponent": "Espanyol",
+          "opponent": "အက်စ်ပန်ညို",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225"
+          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225",
+          "opponentCanonical": "Espanyol"
         },
         {
           "date": "2026-09-20",
@@ -1828,42 +1872,46 @@
         {
           "date": "2026-11-01",
           "competition": "Primera Division",
-          "opponent": "Real Madrid",
+          "opponent": "ရီးရဲလ်မက်ဒရစ်",
           "teamGoals": 0,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225"
+          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225",
+          "opponentCanonical": "Real Madrid"
         },
         {
           "date": "2026-10-24",
           "competition": "Primera Division",
-          "opponent": "Espanyol",
+          "opponent": "အက်စ်ပန်ညို",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225"
+          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225",
+          "opponentCanonical": "Espanyol"
         },
         {
           "date": "2026-10-18",
           "competition": "Primera Division",
-          "opponent": "Osasuna",
+          "opponent": "အိုဆာစူနာ",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225"
+          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225",
+          "opponentCanonical": "Osasuna"
         },
         {
           "date": "2026-10-11",
           "competition": "Primera Division",
-          "opponent": "Valencia",
+          "opponent": "ဗလင်စီယာ",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225"
+          "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225",
+          "opponentCanonical": "Valencia"
         },
         {
           "date": "2026-09-19",
@@ -1902,7 +1950,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/M_laga_CF.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/racing-santander.svg",
-      "dailyPreviewText": "မာလာဂာက အောက်ဆုံးနေရာကနေ လွတ်မြောက်ဖို့ အိမ်ကွင်းအမှတ်တွေ အရေးတကြီးလိုနေပါတယ်။ ဒါပေမယ့် လိဂ် ၁၁ ပွဲမှာ ငါးမှတ်ပဲရထားပြီး နောက်ဆုံးငါးပွဲလည်း အနိုင်မရှိတာကြောင့် ပွဲကိုစတင်ဖိအားပေးနိုင်ရုံနဲ့ စိတ်ချလို့မရပါဘူး။ ရေဆင်းကလည်း ရီးရဲလ်ကို ရှုံးလာပေမယ့် အက်စ်ပန်ညိုကို မကြာသေးခင်က အနိုင်ယူထားပြီး မာလာဂာထက် ရမှတ်ပိုစုနိုင်ထားပါတယ်။ နှစ်သင်းစလုံး ပေးဂိုးများနေတဲ့အတွက် ဒီပွဲက ဘယ်သူဘောလုံးပိုကိုင်မလဲဆိုတာထက် အမှားလုပ်ပြီးနောက် ဘယ်သူပြန်ထိန်းနိုင်မလဲဆိုတာ ပိုအရေးပါနိုင်ပါတယ်။ မာလာဂာရဲ့ အိမ်ကွင်းအားကြောင့် ကပ်နိုင်ပေမယ့် လက်ရှိရလဒ်နဲ့ ဂိုးရှာနိုင်မှုအပေါ် အလေးပေးပြီး ရေဆင်းကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "မာလာဂာက အောက်ဆုံးနေရာကနေ လွတ်မြောက်ဖို့ အိမ်ကွင်းအမှတ်တွေ အရေးတကြီးလိုနေပါတယ်။ ဒါပေမယ့် လိဂ် ၁၁ ပွဲမှာ ငါးမှတ်ပဲရထားပြီး နောက်ဆုံးငါးပွဲလည်း အနိုင်မရှိတာကြောင့် ပွဲကိုစတင်ဖိအားပေးနိုင်ရုံနဲ့ စိတ်ချလို့မရပါဘူး။ ရေဆင်းကလည်း ရီးရဲလ်ကို ရှုံးလာပေမယ့် အက်စ်ပန်ညိုကို မကြာသေးခင်က အနိုင်ယူထားပြီး မာလာဂာထက် ရမှတ်ပိုစုနိုင်ထားပါတယ်။ နှစ်သင်းစလုံး ပေးဂိုးများနေတဲ့အတွက် ဒီပွဲက ဘယ်သူဘောလုံးပိုကိုင်မလဲဆိုတာထက် အမှားလုပ်ပြီးနောက် ဘယ်သူပြန်ထိန်းနိုင်မလဲဆိုတာ ပိုအရေးပါနိုင်ပါတယ်။ **မာလာဂာရဲ့ အိမ်ကွင်းအားကြောင့် ကပ်နိုင်ပေမယ့် လက်ရှိရလဒ်နဲ့ ဂိုးရှာနိုင်မှုအပေါ် အလေးပေးပြီး ရေဆင်းကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "အောက်ဆုံး မာလာဂာက အိမ်ကွင်းမှာ ဖိအားပေးဖို့လိုပေမယ့် လိဂ် ၁၁ ပွဲ ငါးမှတ်သာရထားပါတယ်။ရေဆင်းရဲ့ အဝေးကွင်းခံစစ်လည်း စိတ်ချရတာမဟုတ်ပါဘူး။ မာလာဂာက ပွဲကိုဖွင့်လာရင် နှစ်ဖက်စလုံးအတွက် နေရာလွတ်ပိုပေါ်လာနိုင်ပါတယ်။ ရေဆင်းလည်း ခံစစ်မတည်ငြိမ်သော်လည်း အက်စ်ပန်ညိုကို အနိုင်ယူထားတဲ့ တိုက်စစ်တုံ့ပြန်မှုကို အလေးထားပြီး ရေဆင်းကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ရေဆင်း",
       "previewV2FormatVersion": "2.1",
@@ -1911,14 +1959,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -2011,12 +2061,13 @@
         {
           "date": "2026-10-24",
           "competition": "Primera Division",
-          "opponent": "Racing Santander",
+          "opponent": "ရေဆင်း",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226"
+          "sourceUrl": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226",
+          "opponentCanonical": "Racing Santander"
         },
         {
           "date": "2026-10-17",
@@ -2031,24 +2082,26 @@
         {
           "date": "2026-10-09",
           "competition": "Primera Division",
-          "opponent": "Malaga",
+          "opponent": "မာလာဂာ",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226"
+          "sourceUrl": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226",
+          "opponentCanonical": "Malaga"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-02",
           "competition": "Primera Division",
-          "opponent": "Osasuna",
+          "opponent": "အိုဆာစူနာ",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226"
+          "sourceUrl": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226",
+          "opponentCanonical": "Osasuna"
         },
         {
           "date": "2026-10-24",
@@ -2117,7 +2170,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/RCD_Espanyol_Barcelona.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/deportivo-la-coruna.svg",
-      "dailyPreviewText": "ဗီလာရီးရဲလ်ကို ဂိုးမပေးဘဲ အနိုင်ယူလာနိုင်တာက အက်စ်ပန်ညိုအတွက် ဒီပွဲမတိုင်ခင် အရေးကြီးတဲ့အပြောင်းအလဲပါ။ ရေဆင်းနဲ့ အက်သလက်တီကိုကို ဆက်တိုက်ရှုံးထားချိန်ကနေ ပြန်တုံ့ပြန်နိုင်တာကြောင့် ကိုယ့်ကွင်းပြန်ရောက်တဲ့ပွဲမှာ ယုံကြည်မှုပိုရှိနိုင်ပါတယ်။ ကော်ရူနာကလည်း အိုဆာစူနာကို အနိုင်ယူလာပြီး ၁၄ မှတ်နဲ့ အဆင့် ၈ ရှိနေတာကြောင့် ရလဒ်အရ သာမန်ဧည့်သည်မဟုတ်ပါဘူး။ ဒါပေမယ့် နောက်ဆုံးငါးပွဲမှာ သုံးပွဲရှုံးထားတဲ့အတွက် တစ်ပွဲတည်းနိုင်ရုံနဲ့ အဝေးကွင်းကစားပုံ တည်ငြိမ်သွားပြီလို့ ပြောလို့မရသေးပါဘူး။ နှစ်သင်းစလုံး နိုင်ပွဲအရှိန်ကို ဆက်ယူချင်တဲ့ပွဲဖြစ်ပေမယ့် အက်စ်ပန်ညိုရဲ့ နောက်ဆုံးခံစစ်တုံ့ပြန်မှုနဲ့ အိမ်ကွင်းအားကို ထည့်တွက်ပြီး အက်စ်ပန်ညိုကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဗီလာရီးရဲလ်ကို ဂိုးမပေးဘဲ အနိုင်ယူလာနိုင်တာက အက်စ်ပန်ညိုအတွက် ဒီပွဲမတိုင်ခင် အရေးကြီးတဲ့အပြောင်းအလဲပါ။ ရေဆင်းနဲ့ အက်သလက်တီကိုကို ဆက်တိုက်ရှုံးထားချိန်ကနေ ပြန်တုံ့ပြန်နိုင်တာကြောင့် ကိုယ့်ကွင်းပြန်ရောက်တဲ့ပွဲမှာ ယုံကြည်မှုပိုရှိနိုင်ပါတယ်။ ကော်ရူနာကလည်း အိုဆာစူနာကို အနိုင်ယူလာပြီး ၁၄ မှတ်နဲ့ အဆင့် ၈ ရှိနေတာကြောင့် ရလဒ်အရ သာမန်ဧည့်သည်မဟုတ်ပါဘူး။ ဒါပေမယ့် နောက်ဆုံးငါးပွဲမှာ သုံးပွဲရှုံးထားတဲ့အတွက် တစ်ပွဲတည်းနိုင်ရုံနဲ့ အဝေးကွင်းကစားပုံ တည်ငြိမ်သွားပြီလို့ ပြောလို့မရသေးပါဘူး။ **နှစ်သင်းစလုံး နိုင်ပွဲအရှိန်ကို ဆက်ယူချင်တဲ့ပွဲဖြစ်ပေမယ့် အက်စ်ပန်ညိုရဲ့ နောက်ဆုံးခံစစ်တုံ့ပြန်မှုနဲ့ အိမ်ကွင်းအားကို ထည့်တွက်ပြီး အက်စ်ပန်ညိုကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "နှစ်သင်းစလုံး နောက်ဆုံးလိဂ်ပွဲကို အနိုင်ရထားလို့ ယုံကြည်မှုရှိကြပါတယ်။ကော်ရူနာက အိုဆာစူနာကို ကပ်နိုင်လာတာပါ။ ဒီပွဲမှာတော့ အက်စ်ပန်ညိုရဲ့ ဂိုးမပေးဘဲထိန်းနိုင်မှုက အဓိကအချက်ဖြစ်လာနိုင်ပါတယ်။ ကော်ရူနာက ရမှတ်ပိုရထားပေမယ့် အက်စ်ပန်ညိုရဲ့ ဗီလာရီးရဲလ်ကို ဂိုးမပေးဘဲနိုင်ခဲ့တဲ့ တုံ့ပြန်မှုနဲ့ အိမ်ကွင်းအားကို ပိုအလေးထားပြီး အက်စ်ပန်ညိုကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "အက်စ်ပန်ညို",
       "previewV2FormatVersion": "2.1",
@@ -2126,14 +2179,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -2206,12 +2261,13 @@
         {
           "date": "2026-11-02",
           "competition": "Primera Division",
-          "opponent": "Deportivo La Coruna",
+          "opponent": "ကော်ရူနာ",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227"
+          "sourceUrl": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227",
+          "opponentCanonical": "Deportivo La Coruna"
         },
         {
           "date": "2026-10-26",
@@ -2226,12 +2282,13 @@
         {
           "date": "2026-10-18",
           "competition": "Primera Division",
-          "opponent": "Racing Santander",
+          "opponent": "ရေဆင်း",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227"
+          "sourceUrl": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227",
+          "opponentCanonical": "Racing Santander"
         },
         {
           "date": "2026-10-11",
@@ -2298,12 +2355,13 @@
         {
           "date": "2026-10-17",
           "competition": "Primera Division",
-          "opponent": "Valencia",
+          "opponent": "ဗလင်စီယာ",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227"
+          "sourceUrl": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227",
+          "opponentCanonical": "Valencia"
         }
       ],
       "homeStanding": {
@@ -2332,7 +2390,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-02/osasuna.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/athletic-bilbao.svg",
-      "dailyPreviewText": "ဘီဘာအိုလ်က ဂီတာဖေး၊ ပရတ်နဲ့ ဆိုစီဒက်တို့ကို သုံးပွဲဆက်အနိုင်ရပြီး ဒီခရီးကိုလာတာကြောင့် တိုက်စစ်ယုံကြည်မှုက အိုဆာစူနာထက် ပိုကောင်းနေပါတယ်။ အိုဆာစူနာကတော့ နောက်ဆုံးနှစ်ပွဲ ဂိုးတစ်ဂိုးသာရပြီး ရှုံးထားသလို နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲပဲနိုင်ထားတာပါ။ အဆင့် ၇ က ဘီဘာအိုလ်နဲ့ အဆင့် ၁၅ က အိုဆာစူနာတို့ကြား ရမှတ်ကွာဟမှု လေးမှတ်သာရှိလို့ ဇယားတစ်ခုတည်းအရ အလွန်ကွာတယ်လို့တော့ မဆိုနိုင်ပါဘူး။ ဒါပေမယ့် ဂိုးရဖို့ခက်နေတဲ့အိမ်ရှင်က ပထမဂိုးပေးလိုက်ရင် ပွဲကိုပိုဖွင့်ကစားရနိုင်ပြီး လက်ရှိအဆုံးသတ်ကောင်းနေတဲ့ ဧည့်သည်အတွက် အခွင့်အရေးပိုဖြစ်လာနိုင်ပါတယ်။ အိမ်ကွင်းဖိအားကို ခံနိုင်မယ်ဆိုရင် ပိုတည်ငြိမ်တဲ့ရွေးချယ်မှုအဖြစ် ဘီဘာအိုလ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဘီဘာအိုလ်က ဂီတာဖေး၊ ပရတ်နဲ့ ဆိုစီဒက်တို့ကို သုံးပွဲဆက်အနိုင်ရပြီး ဒီခရီးကိုလာတာကြောင့် တိုက်စစ်ယုံကြည်မှုက အိုဆာစူနာထက် ပိုကောင်းနေပါတယ်။ အိုဆာစူနာကတော့ နောက်ဆုံးနှစ်ပွဲ ဂိုးတစ်ဂိုးသာရပြီး ရှုံးထားသလို နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲပဲနိုင်ထားတာပါ။ အဆင့် ၇ က ဘီဘာအိုလ်နဲ့ အဆင့် ၁၅ က အိုဆာစူနာတို့ကြား ရမှတ်ကွာဟမှု လေးမှတ်သာရှိလို့ ဇယားတစ်ခုတည်းအရ အလွန်ကွာတယ်လို့တော့ မဆိုနိုင်ပါဘူး။ ဒါပေမယ့် ဂိုးရဖို့ခက်နေတဲ့အိမ်ရှင်က ပထမဂိုးပေးလိုက်ရင် ပွဲကိုပိုဖွင့်ကစားရနိုင်ပြီး လက်ရှိအဆုံးသတ်ကောင်းနေတဲ့ ဧည့်သည်အတွက် အခွင့်အရေးပိုဖြစ်လာနိုင်ပါတယ်။ **အိမ်ကွင်းဖိအားကို ခံနိုင်မယ်ဆိုရင် ပိုတည်ငြိမ်တဲ့ရွေးချယ်မှုအဖြစ် ဘီဘာအိုလ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "အိုဆာစူနာက နှစ်ပွဲဆက်ရှုံးထားချိန် ဘီဘာအိုလ်က သုံးပွဲဆက်နိုင်ထားပါတယ်။အိုဆာစူနာရဲ့ အိမ်ကွင်းအားကိုတော့ သတိထားရပါမယ်။ ဘီဘာအိုလ်က အစောပိုင်းဖိအားကို ကျော်ဖြတ်နိုင်ရင် ပွဲကြာလာချိန် ပိုအခွင့်အရေးရနိုင်ပါတယ်။ ဇယားရမှတ်က အလွန်မကွာပေမယ့် လတ်တလောတိုက်စစ်ယုံကြည်မှုက ပိုကောင်းတဲ့ဘက်ကို ညွှန်နေတာကြောင့် ဘီဘာအိုလ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဘီဘာအိုလ်",
       "previewV2FormatVersion": "2.1",
@@ -2341,14 +2399,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -2441,22 +2501,24 @@
         {
           "date": "2026-10-17",
           "competition": "Primera Division",
-          "opponent": "Athletic Bilbao",
+          "opponent": "ဘီဘာအိုလ်",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228"
+          "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228",
+          "opponentCanonical": "Athletic Bilbao"
         },
         {
           "date": "2026-10-11",
           "competition": "Primera Division",
-          "opponent": "Racing Santander",
+          "opponent": "ရေဆင်း",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228"
+          "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228",
+          "opponentCanonical": "Racing Santander"
         },
         {
           "date": "2026-09-20",
@@ -2483,12 +2545,13 @@
         {
           "date": "2026-11-01",
           "competition": "Primera Division",
-          "opponent": "Racing Santander",
+          "opponent": "ရေဆင်း",
           "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228"
+          "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228",
+          "opponentCanonical": "Racing Santander"
         },
         {
           "date": "2026-10-25",
@@ -2503,12 +2566,13 @@
         {
           "date": "2026-10-21",
           "competition": "ChL Group",
-          "opponent": "RB Leipzig",
+          "opponent": "လစ်ဇစ်",
           "teamGoals": 4,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228"
+          "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228",
+          "opponentCanonical": "RB Leipzig"
         },
         {
           "date": "2026-10-18",
@@ -2547,7 +2611,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/valencia.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/real-madrid.png",
-      "dailyPreviewText": "ရီးရဲလ်မက်ဒရစ်က နောက်ဆုံးငါးပွဲလုံးနိုင်ပြီး အနည်းဆုံးတစ်ပွဲ နှစ်ဂိုးစီသွင်းနိုင်ထားတာကြောင့် မက်စတယ်လာခရီးမှာ တိုက်စစ်အင်အားက အကြီးဆုံးအားသာချက်ပါ။ ဗလင်စီယာက အယ်လ်ချီကို ဂိုးမပေးဘဲ နိုင်လာတာကြောင့် ယုံကြည်မှုပြန်ရနိုင်ပေမယ့် ၁၁ ပွဲ ကိုးမှတ်နဲ့ အဆင့် ၁၉ မှာရှိနေတာက တစ်ပွဲကောင်းရုံနဲ့ မဖြေရှင်းနိုင်သေးတဲ့ အခက်အခဲကို ပြပါတယ်။ အိမ်ရှင်က အစောပိုင်းကို ကပ်ထားပြီး ကွင်းလယ်လုယူချိန် ထိရောက်အောင်တက်နိုင်ရင် ရီးရဲလ်ကို အလုပ်ပေးနိုင်ပါတယ်။ မော်ရင်ဟိုကိုယ်တိုင်လည်း ခက်ခဲတဲ့ပွဲလို့ သတိပေးထားသလို ဥရောပခရီးပြီး လူစာရင်းအပြောင်းအလဲကို စောင့်ကြည့်ရမှာပါ။ ဒါပေမယ့် ဗလင်စီယာခံစစ်အတွက် တစ်ပွဲလုံး ထိန်းချုပ်ရမယ့်တိုက်စစ်အန္တရာယ်က ပိုများနေတာကြောင့် ရီးရဲလ်မက်ဒရစ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ရီးရဲလ်မက်ဒရစ်က နောက်ဆုံးငါးပွဲလုံးနိုင်ပြီး အနည်းဆုံးတစ်ပွဲ နှစ်ဂိုးစီသွင်းနိုင်ထားတာကြောင့် မက်စတယ်လာခရီးမှာ တိုက်စစ်အင်အားက အကြီးဆုံးအားသာချက်ပါ။ ဗလင်စီယာက အယ်လ်ချီကို ဂိုးမပေးဘဲ နိုင်လာတာကြောင့် ယုံကြည်မှုပြန်ရနိုင်ပေမယ့် ၁၁ ပွဲ ကိုးမှတ်နဲ့ အဆင့် ၁၉ မှာရှိနေတာက တစ်ပွဲကောင်းရုံနဲ့ မဖြေရှင်းနိုင်သေးတဲ့ အခက်အခဲကို ပြပါတယ်။ အိမ်ရှင်က အစောပိုင်းကို ကပ်ထားပြီး ကွင်းလယ်လုယူချိန် ထိရောက်အောင်တက်နိုင်ရင် ရီးရဲလ်ကို အလုပ်ပေးနိုင်ပါတယ်။ မော်ရင်ဟိုကိုယ်တိုင်လည်း ခက်ခဲတဲ့ပွဲလို့ သတိပေးထားသလို ဥရောပခရီးပြီး လူစာရင်းအပြောင်းအလဲကို စောင့်ကြည့်ရမှာပါ။ **ဒါပေမယ့် ဗလင်စီယာခံစစ်အတွက် တစ်ပွဲလုံး ထိန်းချုပ်ရမယ့်တိုက်စစ်အန္တရာယ်က ပိုများနေတာကြောင့် ရီးရဲလ်မက်ဒရစ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဗလင်စီယာရဲ့ နောက်ဆုံးနိုင်ပွဲက အိမ်ကွင်းခံစစ်ယုံကြည်မှုကို ပြန်ပေးနိုင်ပါတယ်။ဗလင်စီယာက ပွဲကိုကပ်ထားဖို့ ကြိုးစားလာနိုင်ပါတယ်။ ရီးရဲလ်ဘက်ကလည်း ဥရောပခရီးအပြီး လူအားခွဲသုံးဖို့လိုနေပါတယ်။ သို့သော် ရီးရဲလ်က နောက်ဆုံးငါးပွဲလုံးနိုင်ပြီး ဂိုးသွင်းအားပါကောင်းနေတာကြောင့် ပွဲကြာလာတာနဲ့ အခွင့်အရေးပိုရှာနိုင်မယ့် ရီးရဲလ်မက်ဒရစ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ရီးရဲလ်မက်ဒရစ်",
       "previewV2FormatVersion": "2.1",
@@ -2556,7 +2620,7 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228",
@@ -2564,7 +2628,9 @@
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -2647,32 +2713,35 @@
         {
           "date": "2026-10-31",
           "competition": "Bundesliga",
-          "opponent": "Bayern Munchen",
+          "opponent": "ဘိုင်ယန်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229"
+          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+          "opponentCanonical": "Bayern Munchen"
         },
         {
           "date": "2026-10-27",
           "competition": "Cup Germany",
-          "opponent": "Werder Bremen",
+          "opponent": "ဝါဒါဘရီမင်",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229"
+          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+          "opponentCanonical": "Werder Bremen"
         },
         {
           "date": "2026-10-24",
           "competition": "Bundesliga",
-          "opponent": "Eintracht Frankfurt",
+          "opponent": "ဖရန့်ဖတ်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229"
+          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+          "opponentCanonical": "Eintracht Frankfurt"
         },
         {
           "date": "2026-10-20",
@@ -2689,12 +2758,13 @@
         {
           "date": "2026-10-30",
           "competition": "Bundesliga",
-          "opponent": "Mainz",
+          "opponent": "မိန့်ဇ်",
           "teamGoals": 4,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229"
+          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+          "opponentCanonical": "Mainz"
         },
         {
           "date": "2026-10-27",
@@ -2709,22 +2779,24 @@
         {
           "date": "2026-10-24",
           "competition": "Bundesliga",
-          "opponent": "RB Leipzig",
+          "opponent": "လစ်ဇစ်",
           "teamGoals": 0,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229"
+          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+          "opponentCanonical": "RB Leipzig"
         },
         {
           "date": "2026-10-17",
           "competition": "Bundesliga",
-          "opponent": "Augsburg",
+          "opponent": "အော့ဘတ်",
           "teamGoals": 4,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229"
+          "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+          "opponentCanonical": "Augsburg"
         },
         {
           "date": "2026-10-10",
@@ -2763,7 +2835,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/borussia-dortmund.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/SV_07_Elversberg.png",
-      "dailyPreviewText": "အဲဗားဘတ်က မိန့်ဇ်ကို လေးဂိုးသွင်းနိုင်လာတာကြောင့် ဒေါ့မွန်အတွက် တန်းတက်အသင်းဆိုပြီး လျှော့တွက်လို့မရပါဘူး။ အဆင့် ၇ နဲ့ ၁၃ မှတ်ရထားတဲ့ ဧည့်သည်က ဂိုးသွင်းအားရှိပေမယ့် လစ်ဇစ်ကို ဂိုးပြတ်ရှုံးတာနဲ့ ဖလားပွဲမှာ ဂိုးမရတာတွေက တိုက်စစ်ကောင်းချိန်တိုင်း ခံစစ်ပါစိတ်ချရတာမဟုတ်ကြောင်း ပြပါတယ်။ ဒေါ့မွန်က နောက်ဆုံးငါးပွဲ ရှုံးပွဲမရှိဘဲ လေးပွဲနိုင်ထားသလို ဘိုင်ယန်ကွင်းကနေပါ တစ်မှတ်ယူလာနိုင်တာကြောင့် အခြေခံတည်ငြိမ်မှုက ပိုကောင်းနေပါတယ်။ ဂီရာဆီ မပါနိုင်တာက ဧရိယာအတွင်း အဆုံးသတ်နဲ့ တည်ကန်ဘောအားကို လျော့စေပေမယ့် ဆာဘစ်ဇာ ပြန်ရလာတာက လူရွေးချယ်စရာကို တိုးပေးပါတယ်။ အဲဗားဘတ်ရဲ့ အမြန်တိုက်စစ်ကို ထိန်းဖို့လိုသော်လည်း အိမ်ကွင်းနဲ့ လက်ရှိပွဲထိန်းနိုင်မှုကို ယုံကြည်ပြီး ဒေါ့မွန်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "အဲဗားဘတ်က မိန့်ဇ်ကို လေးဂိုးသွင်းနိုင်လာတာကြောင့် ဒေါ့မွန်အတွက် တန်းတက်အသင်းဆိုပြီး လျှော့တွက်လို့မရပါဘူး။ အဆင့် ၇ နဲ့ ၁၃ မှတ်ရထားတဲ့ ဧည့်သည်က ဂိုးသွင်းအားရှိပေမယ့် လစ်ဇစ်ကို ဂိုးပြတ်ရှုံးတာနဲ့ ဖလားပွဲမှာ ဂိုးမရတာတွေက တိုက်စစ်ကောင်းချိန်တိုင်း ခံစစ်ပါစိတ်ချရတာမဟုတ်ကြောင်း ပြပါတယ်။ ဒေါ့မွန်က နောက်ဆုံးငါးပွဲ ရှုံးပွဲမရှိဘဲ လေးပွဲနိုင်ထားသလို ဘိုင်ယန်ကွင်းကနေပါ တစ်မှတ်ယူလာနိုင်တာကြောင့် အခြေခံတည်ငြိမ်မှုက ပိုကောင်းနေပါတယ်။ ဂီရာဆီ မပါနိုင်တာက ဧရိယာအတွင်း အဆုံးသတ်နဲ့ တည်ကန်ဘောအားကို လျော့စေပေမယ့် ဆာဘစ်ဇာ ပြန်ရလာတာက လူရွေးချယ်စရာကို တိုးပေးပါတယ်။ **အဲဗားဘတ်ရဲ့ အမြန်တိုက်စစ်ကို ထိန်းဖို့လိုသော်လည်း အိမ်ကွင်းနဲ့ လက်ရှိပွဲထိန်းနိုင်မှုကို ယုံကြည်ပြီး ဒေါ့မွန်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "အဲဗားဘတ်က ဂိုးသွင်းအားရှိသော်လည်း လစ်ဇစ်နဲ့ဖလားပွဲမှာ ခံစစ်မတည်ငြိမ်မှု ပြထားပါတယ်။အဲဗားဘတ်ရဲ့ မိန့်ဇ်အပေါ် နိုင်ပွဲကို သတိထားရပါမယ်။ ဒေါ့မွန်က ဘောလုံးဆုံးရှုံးချိန် အမြန်ပြန်စုစည်းဖို့ လိုပါတယ်။ ဂီရာဆီမပါနိုင်တဲ့ အခက်အခဲရှိပေမယ့် ဒေါ့မွန်က နောက်ဆုံးငါးပွဲ လေးနိုင်၊ တစ်သရေနဲ့ အိမ်ကွင်းပြန်ကစားရမှာဖြစ်လို့ ဒေါ့မွန်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဒေါ့မွန်",
       "previewV2FormatVersion": "2.1",
@@ -2772,7 +2844,7 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
@@ -2780,7 +2852,9 @@
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -2853,12 +2927,13 @@
         {
           "date": "2026-10-30",
           "competition": "Bundesliga",
-          "opponent": "Elversberg",
+          "opponent": "အဲဗားဘတ်",
           "teamGoals": 1,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230"
+          "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230",
+          "opponentCanonical": "Elversberg"
         },
         {
           "date": "2026-10-27",
@@ -2873,12 +2948,13 @@
         {
           "date": "2026-10-24",
           "competition": "Bundesliga",
-          "opponent": "Werder Bremen",
+          "opponent": "ဝါဒါဘရီမင်",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230"
+          "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230",
+          "opponentCanonical": "Werder Bremen"
         },
         {
           "date": "2026-10-17",
@@ -2915,12 +2991,13 @@
         {
           "date": "2026-10-31",
           "competition": "Bundesliga",
-          "opponent": "Borussia Dortmund",
+          "opponent": "ဒေါ့မွန်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230"
+          "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230",
+          "opponentCanonical": "Borussia Dortmund"
         },
         {
           "date": "2026-10-28",
@@ -2945,12 +3022,13 @@
         {
           "date": "2026-10-21",
           "competition": "ChL Group",
-          "opponent": "Arsenal",
+          "opponent": "အာဆင်နယ်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230"
+          "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230",
+          "opponentCanonical": "Arsenal"
         }
       ],
       "homeStanding": {
@@ -2979,7 +3057,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/1.FSV_Mainz_05.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/bayern-munchen.png",
-      "dailyPreviewText": "ဘိုင်ယန်က ဒေါ့မွန်နဲ့ ရမှတ်တူနေချိန်ဖြစ်လို့ မိန့်ဇ်ခရီးမှာ အမှတ်လျော့ခံဖို့ မသင့်တဲ့အခြေအနေပါ။ အက်သလက်တီကိုကို ဂိုးမပေးဘဲနိုင်လာပြီး နောက်ဆုံးငါးပွဲ ရှုံးပွဲမရှိထားတာက ယုံကြည်မှုပေးနိုင်ပါတယ်။ မိန့်ဇ်ကတော့ အဲဗားဘတ်၊ ဘိုဟုမ်နဲ့ ဘရီမင်ကို သုံးပွဲဆက်ရှုံးထားပြီး ခံစစ်ပိုင်းက ဖိအားအောက်မှာ အမှားများနေပါတယ်။ သို့သော် ဘိုင်ယန်အတွက် ဒီကွင်းဟာ အစဉ်အလာအရ ခက်ခဲတဲ့ခရီးဖြစ်သလို မူစီယာလာနဲ့ တိုက်စစ်ရွေးချယ်စရာတချို့ မပါနိုင်တာကိုလည်း ထည့်တွက်ရမှာပါ။ အိမ်ရှင်က အစောပိုင်းဂိုးမပေးဘဲ ကပ်ထားနိုင်ရင် ပွဲကိုခက်အောင်လုပ်နိုင်ပေမယ့် လက်ရှိခံစစ်ပေးဂိုးနဲ့ ဘိုင်ယန်ရဲ့ အခွင့်အရေးကို ဆက်တိုက်ရှာနိုင်မှုကို နှိုင်းယှဉ်ပြီး ဘိုင်ယန်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဘိုင်ယန်က ဒေါ့မွန်နဲ့ ရမှတ်တူနေချိန်ဖြစ်လို့ မိန့်ဇ်ခရီးမှာ အမှတ်လျော့ခံဖို့ မသင့်တဲ့အခြေအနေပါ။ အက်သလက်တီကိုကို ဂိုးမပေးဘဲနိုင်လာပြီး နောက်ဆုံးငါးပွဲ ရှုံးပွဲမရှိထားတာက ယုံကြည်မှုပေးနိုင်ပါတယ်။ မိန့်ဇ်ကတော့ အဲဗားဘတ်၊ ဘိုဟုမ်နဲ့ ဘရီမင်ကို သုံးပွဲဆက်ရှုံးထားပြီး ခံစစ်ပိုင်းက ဖိအားအောက်မှာ အမှားများနေပါတယ်။ သို့သော် ဘိုင်ယန်အတွက် ဒီကွင်းဟာ အစဉ်အလာအရ ခက်ခဲတဲ့ခရီးဖြစ်သလို မူစီယာလာနဲ့ တိုက်စစ်ရွေးချယ်စရာတချို့ မပါနိုင်တာကိုလည်း ထည့်တွက်ရမှာပါ။ **အိမ်ရှင်က အစောပိုင်းဂိုးမပေးဘဲ ကပ်ထားနိုင်ရင် ပွဲကိုခက်အောင်လုပ်နိုင်ပေမယ့် လက်ရှိခံစစ်ပေးဂိုးနဲ့ ဘိုင်ယန်ရဲ့ အခွင့်အရေးကို ဆက်တိုက်ရှာနိုင်မှုကို နှိုင်းယှဉ်ပြီး ဘိုင်ယန်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "မိန့်ဇ်က သုံးပွဲဆက်ရှုံးထားပြီး နောက်ဆုံးငါးပွဲ ခံစစ်အမှားတွေများနေပါတယ်။ဘိုင်ယန်အတွက် ဒီကွင်းမှာ ပေါ့ဆလို့မရပါဘူး။ မိန့်ဇ်က စောစောဂိုးမပေးရင် ပွဲကိုခက်အောင်လုပ်နိုင်တဲ့လမ်း ရှိနေပါတယ်။ ဘိုင်ယန်မှာ တိုက်စစ်လူမစုံမှုရှိပေမယ့် အက်သလက်တီကိုကို ဂိုးမပေးဘဲနိုင်လာတဲ့ တည်ငြိမ်မှုနဲ့ ထိပ်ဆုံးနေရာလိုအပ်ချက်ကို ထည့်တွက်ကာ ဘိုင်ယန်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဘိုင်ယန်",
       "previewV2FormatVersion": "2.1",
@@ -2988,7 +3066,7 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230",
@@ -2996,7 +3074,9 @@
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -3069,12 +3149,13 @@
         {
           "date": "2026-11-04",
           "competition": "ChL Group",
-          "opponent": "Manchester City",
+          "opponent": "မန်စီးတီး",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232"
+          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
+          "opponentCanonical": "Manchester City"
         },
         {
           "date": "2026-10-31",
@@ -3099,22 +3180,24 @@
         {
           "date": "2026-10-24",
           "competition": "Bundesliga",
-          "opponent": "Elversberg",
+          "opponent": "အဲဗားဘတ်",
           "teamGoals": 4,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232"
+          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
+          "opponentCanonical": "Elversberg"
         },
         {
           "date": "2026-10-21",
           "competition": "ChL Group",
-          "opponent": "Real Madrid",
+          "opponent": "ရီးရဲလ်မက်ဒရစ်",
           "teamGoals": 1,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232"
+          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
+          "opponentCanonical": "Real Madrid"
         }
       ],
       "awayLastFive": [
@@ -3151,22 +3234,24 @@
         {
           "date": "2026-10-17",
           "competition": "Bundesliga",
-          "opponent": "Elversberg",
+          "opponent": "အဲဗားဘတ်",
           "teamGoals": 3,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232"
+          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
+          "opponentCanonical": "Elversberg"
         },
         {
           "date": "2026-10-10",
           "competition": "Bundesliga",
-          "opponent": "Bayern Munchen",
+          "opponent": "ဘိုင်ယန်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232"
+          "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
+          "opponentCanonical": "Bayern Munchen"
         }
       ],
       "homeStanding": {
@@ -3195,7 +3280,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/rb-leipzig.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/FC_Augsburg.png",
-      "dailyPreviewText": "မန်စီးတီးကွင်းမှာ ကပ်ရှုံးလာတာက လစ်ဇစ်ရဲ့ ဥရောပရလဒ်ကို ထိခိုက်စေပေမယ့် လိဂ်နောက်ဆုံးနှစ်ပွဲ ခြောက်ဂိုးသွင်းပြီး ဂိုးမပေးထားတဲ့ ခြေစွမ်းက ဒီပွဲမှာ ပိုသက်ဆိုင်ပါတယ်။ အော့ဘတ်က ဘိုင်ယန်ကို သရေကစားနိုင်တဲ့ အန္တရာယ်ရှိပေမယ့် လက်ရှိခံစစ်လူမစုံမှုက လစ်ဇစ်ရဲ့ အမြန်ထိုးဖောက်မှုကို ရင်ဆိုင်ရာမှာ စိုးရိမ်စရာဖြစ်နေပါတယ်။ Juma Bah ပွဲပယ်ခံထားရသလို Brackelmann နဲ့ Banks တို့လည်း မပါနိုင်တာကြောင့် တစ်ဖက်ချင်းရင်ဆိုင်ရတဲ့နေရာတွေကို အိမ်ရှင်က ဖိအားပေးနိုင်ပါတယ်။ လစ်ဇစ်ကိုယ်တိုင် ပွဲဆက်များနေတာကြောင့် အားအင်ခွဲသုံးဖို့လိုပြီး အော့ဘတ်ရဲ့ တိုက်စစ်ကို ပေါ့ဆလို့တော့ မရပါဘူး။ ဒါပေမယ့် နေရာလွတ်ကို အသုံးချနိုင်မှုနဲ့ အိမ်ကွင်းအားသာချက်ကို ပိုအလေးထားပြီး လစ်ဇစ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "မန်စီးတီးကွင်းမှာ ကပ်ရှုံးလာတာက လစ်ဇစ်ရဲ့ ဥရောပရလဒ်ကို ထိခိုက်စေပေမယ့် လိဂ်နောက်ဆုံးနှစ်ပွဲ ခြောက်ဂိုးသွင်းပြီး ဂိုးမပေးထားတဲ့ ခြေစွမ်းက ဒီပွဲမှာ ပိုသက်ဆိုင်ပါတယ်။ အော့ဘတ်က ဘိုင်ယန်ကို သရေကစားနိုင်တဲ့ အန္တရာယ်ရှိပေမယ့် လက်ရှိခံစစ်လူမစုံမှုက လစ်ဇစ်ရဲ့ အမြန်ထိုးဖောက်မှုကို ရင်ဆိုင်ရာမှာ စိုးရိမ်စရာဖြစ်နေပါတယ်။ Juma Bah ပွဲပယ်ခံထားရသလို Brackelmann နဲ့ Banks တို့လည်း မပါနိုင်တာကြောင့် တစ်ဖက်ချင်းရင်ဆိုင်ရတဲ့နေရာတွေကို အိမ်ရှင်က ဖိအားပေးနိုင်ပါတယ်။ လစ်ဇစ်ကိုယ်တိုင် ပွဲဆက်များနေတာကြောင့် အားအင်ခွဲသုံးဖို့လိုပြီး အော့ဘတ်ရဲ့ တိုက်စစ်ကို ပေါ့ဆလို့တော့ မရပါဘူး။ **ဒါပေမယ့် နေရာလွတ်ကို အသုံးချနိုင်မှုနဲ့ အိမ်ကွင်းအားသာချက်ကို ပိုအလေးထားပြီး လစ်ဇစ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "အော့ဘတ်ရဲ့ ခံစစ်သုံးဦး မပါနိုင်မှုက လစ်ဇစ်ရဲ့ အမြန်တိုက်စစ်ကို ထိန်းရာမှာ အခက်အခဲဖြစ်နိုင်ပါတယ်။လစ်ဇစ်ရဲ့ ဥရောပပွဲအပြီး အားအင်ခွဲသုံးမှုက အရေးကြီးပါတယ်။ အော့ဘတ်က ဘောလုံးပြန်ရချိန် တိုက်စစ်ကို ထိရောက်အောင်ထွက်ဖို့လိုပါတယ်။ လိဂ်နောက်ဆုံးနှစ်ပွဲ ဂိုးမပေးဘဲနိုင်ထားတဲ့ အိမ်ရှင်အတွက် ပွဲဆက်ပင်ပန်းမှုရှိပေမယ့် ကိုယ့်ကွင်းအားကို ထည့်တွက်ပြီး လစ်ဇစ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "လစ်ဇစ်",
       "previewV2FormatVersion": "2.1",
@@ -3204,7 +3289,7 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
@@ -3212,7 +3297,9 @@
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -3295,12 +3382,13 @@
         {
           "date": "2026-10-28",
           "competition": "Cup Germany",
-          "opponent": "Stuttgart",
+          "opponent": "စတုဂတ်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231"
+          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231",
+          "opponentCanonical": "Stuttgart"
         },
         {
           "date": "2026-10-24",
@@ -3315,22 +3403,24 @@
         {
           "date": "2026-10-17",
           "competition": "Bundesliga",
-          "opponent": "Werder Bremen",
+          "opponent": "ဝါဒါဘရီမင်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231"
+          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231",
+          "opponentCanonical": "Werder Bremen"
         },
         {
           "date": "2026-10-10",
           "competition": "Bundesliga",
-          "opponent": "Stuttgart",
+          "opponent": "စတုဂတ်",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231"
+          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231",
+          "opponentCanonical": "Stuttgart"
         }
       ],
       "awayLastFive": [
@@ -3357,12 +3447,13 @@
         {
           "date": "2026-10-24",
           "competition": "Bundesliga",
-          "opponent": "Borussia Dortmund",
+          "opponent": "ဒေါ့မွန်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231"
+          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231",
+          "opponentCanonical": "Borussia Dortmund"
         },
         {
           "date": "2026-10-16",
@@ -3377,12 +3468,13 @@
         {
           "date": "2026-10-10",
           "competition": "Bundesliga",
-          "opponent": "RB Leipzig",
+          "opponent": "လစ်ဇစ်",
           "teamGoals": 0,
           "opponentGoals": 6,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231"
+          "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231",
+          "opponentCanonical": "RB Leipzig"
         }
       ],
       "homeStanding": {
@@ -3411,7 +3503,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/48f66a3909d16b6b.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/eintracht-frankfurt.svg",
-      "dailyPreviewText": "ဖရန့်ဖတ်က ဟမ်းဘတ်ကို လိဂ်နဲ့ဖလား နှစ်ပွဲဆက် သုံးဂိုးစီသွင်းနိုင်လာတာကြောင့် လစ်ဇစ်ကို ဂိုးပြတ်ရှုံးခဲ့ချိန်ကထက် တိုက်စစ်ယုံကြည်မှုပြန်တက်လာပါတယ်။ ပတ်ဒါဘွန်းက နောက်ဆုံးငါးပွဲမှာ သုံးဂိုးပဲရထားပြီး ဟမ်းဘတ်ကို တစ်ပွဲသာနိုင်ထားတာကြောင့် အိမ်ကွင်းမှာ ပွဲကိုထိန်းထားနိုင်ရင်တောင် အနိုင်ဂိုးရှာနိုင်ဖို့က မေးခွန်းဖြစ်နေပါတယ်။ ဖရန့်ဖတ်ဘက်ကလည်း ခံစစ်အမှားမကင်းသေးလို့ အလွန်ဖွင့်ကစားပြီး နေရာလွတ်ပေးမိရင် အိမ်ရှင်အတွက် အခွင့်အရေးရှိနိုင်ပါတယ်။ ဇယားမှာ နှစ်မှတ်ပဲကွာတာကြောင့် အဆင့်ကွာဟမှုထက် နောက်ဆုံးနှစ်ပွဲ တိုက်စစ်အဆုံးသတ်ပြန်တွေ့လာမှုကို ပိုအလေးပေးသင့်တဲ့ပွဲပါ။ ဒီအချက်ကိုအခြေခံပြီး ဖရန့်ဖတ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဖရန့်ဖတ်က ဟမ်းဘတ်ကို လိဂ်နဲ့ဖလား နှစ်ပွဲဆက် သုံးဂိုးစီသွင်းနိုင်လာတာကြောင့် လစ်ဇစ်ကို ဂိုးပြတ်ရှုံးခဲ့ချိန်ကထက် တိုက်စစ်ယုံကြည်မှုပြန်တက်လာပါတယ်။ ပတ်ဒါဘွန်းက နောက်ဆုံးငါးပွဲမှာ သုံးဂိုးပဲရထားပြီး ဟမ်းဘတ်ကို တစ်ပွဲသာနိုင်ထားတာကြောင့် အိမ်ကွင်းမှာ ပွဲကိုထိန်းထားနိုင်ရင်တောင် အနိုင်ဂိုးရှာနိုင်ဖို့က မေးခွန်းဖြစ်နေပါတယ်။ ဖရန့်ဖတ်ဘက်ကလည်း ခံစစ်အမှားမကင်းသေးလို့ အလွန်ဖွင့်ကစားပြီး နေရာလွတ်ပေးမိရင် အိမ်ရှင်အတွက် အခွင့်အရေးရှိနိုင်ပါတယ်။ ဇယားမှာ နှစ်မှတ်ပဲကွာတာကြောင့် အဆင့်ကွာဟမှုထက် နောက်ဆုံးနှစ်ပွဲ တိုက်စစ်အဆုံးသတ်ပြန်တွေ့လာမှုကို ပိုအလေးပေးသင့်တဲ့ပွဲပါ။ **ဒီအချက်ကိုအခြေခံပြီး ဖရန့်ဖတ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ပတ်ဒါဘွန်းက နောက်ဆုံးငါးပွဲ သုံးဂိုးသာရထားချိန် ဖရန့်ဖတ်က ဟမ်းဘတ်ကို နှစ်ပွဲဆက် သုံးဂိုးစီသွင်းထားပါတယ်။ပတ်ဒါဘွန်းက အိမ်ကွင်းမှာ ခံစစ်ကိုကျစ်လျစ်အောင်ထားနိုင်ပါတယ်။ ဖရန့်ဖတ်အတွက်တော့ ဟမ်းဘတ်ပွဲက အဆုံးသတ်ခြေစွမ်းကို ဆက်ထိန်းဖို့ အရေးကြီးပါတယ်။ ရမှတ်မကွာလှပေမယ့် လက်ရှိအခွင့်အရေးအသုံးချနိုင်မှုက ပိုကောင်းတဲ့ ဖရန့်ဖတ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဖရန့်ဖတ်",
       "previewV2FormatVersion": "2.1",
@@ -3420,14 +3512,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -3520,12 +3614,13 @@
         {
           "date": "2026-10-28",
           "competition": "Cup Germany",
-          "opponent": "Paderborn",
+          "opponent": "ပတ်ဒါဘွန်း",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233"
+          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233",
+          "opponentCanonical": "Paderborn"
         },
         {
           "date": "2026-10-23",
@@ -3562,42 +3657,46 @@
         {
           "date": "2026-10-27",
           "competition": "Cup Germany",
-          "opponent": "Borussia Dortmund",
+          "opponent": "ဒေါ့မွန်",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233"
+          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233",
+          "opponentCanonical": "Borussia Dortmund"
         },
         {
           "date": "2026-10-24",
           "competition": "Bundesliga",
-          "opponent": "Mainz",
+          "opponent": "မိန့်ဇ်",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233"
+          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233",
+          "opponentCanonical": "Mainz"
         },
         {
           "date": "2026-10-17",
           "competition": "Bundesliga",
-          "opponent": "Paderborn",
+          "opponent": "ပတ်ဒါဘွန်း",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233"
+          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233",
+          "opponentCanonical": "Paderborn"
         },
         {
           "date": "2026-10-09",
           "competition": "Bundesliga",
-          "opponent": "Borussia Dortmund",
+          "opponent": "ဒေါ့မွန်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233"
+          "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233",
+          "opponentCanonical": "Borussia Dortmund"
         }
       ],
       "homeStanding": {
@@ -3626,7 +3725,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/stuttgart.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/SV_Werder_Bremen.png",
-      "dailyPreviewText": "စတုဂတ်က လေဗာကူဆင်ကို လေးဂိုးသွင်းနိုင်ထားပေမယ့် ဥရောပခရီးမှာ ဂါလာတာဆာရေးကို ဂိုးမရဘဲရှုံးလာတာကြောင့် အိမ်ကွင်းပြန်ရောက်ချိန် တိုက်စစ်အရှိန်ကို ပြန်ဖွင့်ရမှာပါ။ ဘရီမင်က အဆင့် ၅ နဲ့ ၁၅ မှတ်ရှိပြီး လိဂ်နောက်ဆုံးလေးပွဲမှာ နှစ်နိုင်၊ နှစ်သရေထားနိုင်တာက ဧည့်သည်ဘက်ရဲ့ အားသာချက်ဖြစ်ပါတယ်။ ဒေါ့မွန်နဲ့ ဖလားပွဲမှာ ရှုံးခဲ့ပေမယ့် သုံးဂိုးပေးရချိန် နှစ်ဂိုးပြန်သွင်းနိုင်တာက တိုက်စစ်မပြတ်တောက်သေးကြောင်း ပြပါတယ်။ စတုဂတ်က ပွဲကိုဖွင့်ပြီး အနိုင်ရှာလာရင် နှစ်သင်းစလုံး အခွင့်အရေးရနိုင်တဲ့ပွဲမျိုးဖြစ်လို့ အိမ်ကွင်းတစ်ခုတည်းနဲ့ ဆုံးဖြတ်ဖို့မသင့်ပါဘူး။ လိဂ်ရလဒ်တည်ငြိမ်မှုနဲ့ ဂိုးပြန်ရှာနိုင်မှုကို အလေးထားပြီး ဝါဒါဘရီမင်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "စတုဂတ်က လေဗာကူဆင်ကို လေးဂိုးသွင်းနိုင်ထားပေမယ့် ဥရောပခရီးမှာ ဂါလာတာဆာရေးကို ဂိုးမရဘဲရှုံးလာတာကြောင့် အိမ်ကွင်းပြန်ရောက်ချိန် တိုက်စစ်အရှိန်ကို ပြန်ဖွင့်ရမှာပါ။ ဘရီမင်က အဆင့် ၅ နဲ့ ၁၅ မှတ်ရှိပြီး လိဂ်နောက်ဆုံးလေးပွဲမှာ နှစ်နိုင်၊ နှစ်သရေထားနိုင်တာက ဧည့်သည်ဘက်ရဲ့ အားသာချက်ဖြစ်ပါတယ်။ ဒေါ့မွန်နဲ့ ဖလားပွဲမှာ ရှုံးခဲ့ပေမယ့် သုံးဂိုးပေးရချိန် နှစ်ဂိုးပြန်သွင်းနိုင်တာက တိုက်စစ်မပြတ်တောက်သေးကြောင်း ပြပါတယ်။ စတုဂတ်က ပွဲကိုဖွင့်ပြီး အနိုင်ရှာလာရင် နှစ်သင်းစလုံး အခွင့်အရေးရနိုင်တဲ့ပွဲမျိုးဖြစ်လို့ အိမ်ကွင်းတစ်ခုတည်းနဲ့ ဆုံးဖြတ်ဖို့မသင့်ပါဘူး။ **လိဂ်ရလဒ်တည်ငြိမ်မှုနဲ့ ဂိုးပြန်ရှာနိုင်မှုကို အလေးထားပြီး ဝါဒါဘရီမင်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "စတုဂတ်မှာ အိမ်ကွင်းနဲ့ တိုက်စစ်အားရှိပေမယ့် ဥရောပခရီးအပြီး ပြန်တုံ့ပြန်ရမယ့်ပွဲပါ။ဘရီမင်ကိုယ်တိုင်လည်း ပေးဂိုးမကင်းသေးပါဘူး။ စတုဂတ်က ပွဲဖွင့်လာရင် ဧည့်သည်တိုက်စစ်အတွက် နေရာလွတ်ပိုရလာနိုင်ပါတယ်။ ဘရီမင်က လိဂ်နောက်ဆုံးလေးပွဲ မရှုံးဘဲ အဆင့် ၅ ရောက်နေတဲ့ တည်ငြိမ်မှုရှိလို့ ကပ်နိုင်မယ့်အသင်းအဖြစ် ဝါဒါဘရီမင်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဝါဒါဘရီမင်",
       "previewV2FormatVersion": "2.1",
@@ -3635,14 +3734,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -3841,7 +3942,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/auxerre.svg",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-01/paris-fc.svg",
-      "dailyPreviewText": "အော်ဇေးရဲ့ စထရာဘိုးကွင်းက ငါးဂိုးပေးရှုံးပွဲက ဒီနေ့ခံစစ်ကို အရင်ပြန်စုစည်းဖို့လိုကြောင်း ပြပါတယ်။ နောက်ဆုံးလိဂ်လေးပွဲမှာ တစ်ပွဲသာနိုင်ပြီး အဆင့် ၁၄ မှာရှိနေတဲ့အိမ်ရှင်အတွက် ပဲရစ်ရဲ့ လျင်မြန်တဲ့ တိုက်စစ်တုံ့ပြန်မှုကို ထိန်းဖို့ အရေးကြီးပါတယ်။ ပဲရစ်က မိုနာကိုကို သုံးဂိုးသွင်းနိုင်လာပြီး ၁၇ မှတ်နဲ့ အဆင့် ၄ ရောက်နေပေမယ့် လန်းစ်နဲ့ လော်ရီယန့်အဝေးကွင်းတွေမှာ ရှုံးထားတာကြောင့် ခရီးထွက်တိုင်း စိတ်ချရတဲ့အသင်းတော့မဟုတ်ပါဘူး။ အော်ဇေးက ကစားကွက်မပျက်ဘဲ ပွဲကိုကပ်ထားနိုင်ရင် သရေနဲ့ရပ်နိုင်တဲ့အခွင့်အရေးရှိပါတယ်။ ဒါပေမယ့် လက်ရှိအိမ်ရှင်ခံစစ်ရဲ့ ပေးဂိုးနဲ့ ပဲရစ်တိုက်စစ် ပြန်ထက်လာမှုကို နှိုင်းယှဉ်ပြီး ပဲရစ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "အော်ဇေးရဲ့ စထရာဘိုးကွင်းက ငါးဂိုးပေးရှုံးပွဲက ဒီနေ့ခံစစ်ကို အရင်ပြန်စုစည်းဖို့လိုကြောင်း ပြပါတယ်။ နောက်ဆုံးလိဂ်လေးပွဲမှာ တစ်ပွဲသာနိုင်ပြီး အဆင့် ၁၄ မှာရှိနေတဲ့အိမ်ရှင်အတွက် ပဲရစ်ရဲ့ လျင်မြန်တဲ့ တိုက်စစ်တုံ့ပြန်မှုကို ထိန်းဖို့ အရေးကြီးပါတယ်။ ပဲရစ်က မိုနာကိုကို သုံးဂိုးသွင်းနိုင်လာပြီး ၁၇ မှတ်နဲ့ အဆင့် ၄ ရောက်နေပေမယ့် လန်းစ်နဲ့ လော်ရီယန့်အဝေးကွင်းတွေမှာ ရှုံးထားတာကြောင့် ခရီးထွက်တိုင်း စိတ်ချရတဲ့အသင်းတော့မဟုတ်ပါဘူး။ အော်ဇေးက ကစားကွက်မပျက်ဘဲ ပွဲကိုကပ်ထားနိုင်ရင် သရေနဲ့ရပ်နိုင်တဲ့အခွင့်အရေးရှိပါတယ်။ **ဒါပေမယ့် လက်ရှိအိမ်ရှင်ခံစစ်ရဲ့ ပေးဂိုးနဲ့ ပဲရစ်တိုက်စစ် ပြန်ထက်လာမှုကို နှိုင်းယှဉ်ပြီး ပဲရစ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "အော်ဇေးက နောက်ဆုံးပွဲ ငါးဂိုးပေးထားလို့ ခံစစ်ပြန်စုစည်းရမှာပါ။ပဲရစ်ရဲ့ အဝေးကွင်းရလဒ်ကို အလွန်ယုံကြည်လို့တော့မရပါဘူး။ အော်ဇေးက ဂိုးမပေးဘဲ ကပ်ထားနိုင်ရင် သရေလမ်းလည်း ရှိပါတယ်။ ပဲရစ်ရဲ့ အဝေးကွင်းမတည်ငြိမ်မှုကို သတိထားရပေမယ့် မိုနာကိုကို အနိုင်ယူလာတဲ့ တိုက်စစ်တုံ့ပြန်မှုနဲ့ အဆင့် ၄ ရဲ့ အားသာချက်ကို ထည့်တွက်ပြီး ပဲရစ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ပဲရစ်",
       "previewV2FormatVersion": "2.1",
@@ -3850,14 +3951,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/auxerre-paris-fc-ligue-1-france-954238"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/auxerre-paris-fc-ligue-1-france-954238",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -4056,7 +4159,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/paris-saint-germain.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-07/ESTAC_Troyes.png",
-      "dailyPreviewText": "ပီအက်စ်ဂျီက နောက်ဆုံးငါးပွဲလုံးနိုင်ပြီး အဲဒီကာလမှာ ဂိုး ၂၀ အထိသွင်းထားတာကြောင့် ထရွိုင်းအတွက် ပဲရစ်ခရီးက တိုက်စစ်အရှိန်မြင့်တဲ့အသင်းကို ရင်ဆိုင်ရမယ့်ပွဲပါ။ ထရွိုင်းက နောက်ဆုံးလိဂ်နှစ်ပွဲ ဂိုးမပေးဘဲ လေးမှတ်ရထားလို့ ခံစစ်ယုံကြည်မှု ပြန်ရလာပေမယ့် တူးလူးစ်နဲ့ လီမန်းကို ထိန်းနိုင်တာနဲ့ ပီအက်စ်ဂျီကို ထိန်းနိုင်တာက အဆင့်မတူပါဘူး။ အိမ်ရှင်မှာ အဓိကကစားသမားတချို့ တစ်ဦးချင်းလေ့ကျင့်မှုသာလုပ်နိုင်သေးတဲ့ အခြေအနေရှိတာကြောင့် လူစာရင်းအပြည့်ကို ကြိုတင်ယူဆလို့မရပေမယ့် မကြာသေးခင်က ရလဒ်တွေက လူအပြောင်းအလဲကို ခံနိုင်တဲ့တိုက်စစ်အားကို ပြထားပါတယ်။ ထရွိုင်းက အစောပိုင်းကပ်ထားနိုင်သော်လည်း တစ်ပွဲလုံးဖိအားကို ခံနိုင်ဖို့ ပိုခက်ခဲလာနိုင်တာကြောင့် ပီအက်စ်ဂျီကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ပီအက်စ်ဂျီက နောက်ဆုံးငါးပွဲလုံးနိုင်ပြီး အဲဒီကာလမှာ ဂိုး ၂၀ အထိသွင်းထားတာကြောင့် ထရွိုင်းအတွက် ပဲရစ်ခရီးက တိုက်စစ်အရှိန်မြင့်တဲ့အသင်းကို ရင်ဆိုင်ရမယ့်ပွဲပါ။ ထရွိုင်းက နောက်ဆုံးလိဂ်နှစ်ပွဲ ဂိုးမပေးဘဲ လေးမှတ်ရထားလို့ ခံစစ်ယုံကြည်မှု ပြန်ရလာပေမယ့် တူးလူးစ်နဲ့ လီမန်းကို ထိန်းနိုင်တာနဲ့ ပီအက်စ်ဂျီကို ထိန်းနိုင်တာက အဆင့်မတူပါဘူး။ အိမ်ရှင်မှာ အဓိကကစားသမားတချို့ တစ်ဦးချင်းလေ့ကျင့်မှုသာလုပ်နိုင်သေးတဲ့ အခြေအနေရှိတာကြောင့် လူစာရင်းအပြည့်ကို ကြိုတင်ယူဆလို့မရပေမယ့် မကြာသေးခင်က ရလဒ်တွေက လူအပြောင်းအလဲကို ခံနိုင်တဲ့တိုက်စစ်အားကို ပြထားပါတယ်။ **ထရွိုင်းက အစောပိုင်းကပ်ထားနိုင်သော်လည်း တစ်ပွဲလုံးဖိအားကို ခံနိုင်ဖို့ ပိုခက်ခဲလာနိုင်တာကြောင့် ပီအက်စ်ဂျီကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ထရွိုင်းက လိဂ်နှစ်ပွဲဆက် ဂိုးမပေးထားပေမယ့် ဒီတစ်ခါ နောက်ဆုံးငါးပွဲ ဂိုး ၂၀ သွင်းထားတဲ့ ပီအက်စ်ဂျီကို ရင်ဆိုင်ရမှာပါ။ထရွိုင်းက တူးလူးစ်နဲ့ပွဲမှာ သရေ၊ လီမန်းကို နိုင်ထားတာပါ။ ပဲရစ်ရဲ့ တိုက်စစ်ကိုတော့ အချိန်ကြာကြာခံရနိုင်လို့ ပိုခက်လာနိုင်ပါတယ်။ အိမ်ရှင်ရဲ့ လူစာရင်းအချို့မသေချာမှုရှိသော်လည်း တိုက်စစ်အင်အားကို အလေးထားပြီး ပီအက်စ်ဂျီကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ပီအက်စ်ဂျီ",
       "previewV2FormatVersion": "2.1",
@@ -4065,7 +4168,7 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/paris-saint-germain-troyes-ligue-1-france-954239",
@@ -4074,7 +4177,9 @@
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/paris-saint-germain-troyes-ligue-1-france-954239",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -4103,7 +4208,14 @@
       "currentGoalTotalOdds": "",
       "pdfLastColumn": "3-1",
       "eligibleForPreview": true,
-      "eligibilityReason": "Exact senior fixture, home/away and local kickoff matched to dated match source"
+      "eligibilityReason": "Exact senior fixture, home/away and local kickoff matched to dated match source",
+      "specialChoiceRank": 2,
+      "specialPreparedDate": "2026-11-07",
+      "specialResearchSources": [
+        "https://tipsterarea.com/match/paris-saint-germain-troyes-ligue-1-france-954239",
+        "https://www.psg.fr/content/point-medical-avant-paris-saint-germain-estac-troyes-ligue-1-2026-2027",
+        "https://www.psg.fr/content/paris-saint-germain-estac-troyes-la-preview-ligue-1-20262027"
+      ]
     },
     {
       "fixtureId": "fc-20261107-20",
@@ -4150,12 +4262,13 @@
         {
           "date": "2026-11-04",
           "competition": "Championship",
-          "opponent": "Wolverhampton",
+          "opponent": "ဝုဗ်",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "opponentCanonical": "Wolverhampton"
         },
         {
           "date": "2026-10-31",
@@ -4170,32 +4283,35 @@
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Stoke",
+          "opponent": "စတုတ်စီးတီး",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "opponentCanonical": "Stoke"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Sheffield United",
+          "opponent": "ရှက်ဖီးလ်ယူ",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "opponentCanonical": "Sheffield United"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Blackburn",
+          "opponent": "ဘလက်ဘန်း",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "opponentCanonical": "Blackburn"
         }
       ],
       "awayLastFive": [
@@ -4212,42 +4328,46 @@
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Watford",
+          "opponent": "ဝက်ဖို့ဒ်",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "opponentCanonical": "Watford"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Charlton",
+          "opponent": "ချာတန်",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "opponentCanonical": "Charlton"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Portsmouth",
+          "opponent": "ပို့စ်မောက်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "opponentCanonical": "Portsmouth"
         },
         {
           "date": "2026-10-14",
           "competition": "Championship",
-          "opponent": "Southampton",
+          "opponent": "ဆောက်သမ်တန်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+          "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "opponentCanonical": "Southampton"
         }
       ],
       "homeStanding": {
@@ -4276,7 +4396,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/bristol-city.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/norwich.png",
-      "dailyPreviewText": "နော်ဝှစ်က ဒါဘီကို လေးဂိုးပြတ်အနိုင်ရပြီး ဝက်ဖို့ဒ်နဲ့ ချာတန်ကိုပါ သုံးပွဲဆက်အနိုင်ယူထားတာကြောင့် ဘရစ်စတိုးခရီးမှာ တိုက်စစ်ယုံကြည်မှုမြင့်နေပါတယ်။ နှစ်သင်းစလုံး ၁၈ မှတ်စီဖြစ်ပေမယ့် ဘရစ်စတိုးက နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲပဲနိုင်ပြီး ဂိုးရှာမရတဲ့ပွဲတွေ များထားပါတယ်။ အိမ်ကွင်းအားကြောင့် နော်ဝှစ်ကို ဖိအားပေးနိုင်သော်လည်း တိုက်စစ်အခွင့်အရေးရချိန် အသုံးမချနိုင်ရင် ဧည့်သည်ရဲ့ လတ်တလောဂိုးသွင်းခြေက ပွဲကိုလှည့်ပေးနိုင်ပါတယ်။ နော်ဝှစ်ကလည်း ဝက်ဖို့ဒ်နဲ့ပွဲမှာ နှစ်ဂိုးပေးထားလို့ ခံစစ်လုံးဝစိတ်ချရတာမဟုတ်ပါဘူး။ သို့ပေမယ့် တူညီတဲ့ရမှတ်အောက်မှာ လက်ရှိခြေစွမ်းအရှိန်ကွာဟမှုကို ပိုအလေးပေးပြီး နော်ဝှစ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "နော်ဝှစ်က ဒါဘီကို လေးဂိုးပြတ်အနိုင်ရပြီး ဝက်ဖို့ဒ်နဲ့ ချာတန်ကိုပါ သုံးပွဲဆက်အနိုင်ယူထားတာကြောင့် ဘရစ်စတိုးခရီးမှာ တိုက်စစ်ယုံကြည်မှုမြင့်နေပါတယ်။ နှစ်သင်းစလုံး ၁၈ မှတ်စီဖြစ်ပေမယ့် ဘရစ်စတိုးက နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲပဲနိုင်ပြီး ဂိုးရှာမရတဲ့ပွဲတွေ များထားပါတယ်။ အိမ်ကွင်းအားကြောင့် နော်ဝှစ်ကို ဖိအားပေးနိုင်သော်လည်း တိုက်စစ်အခွင့်အရေးရချိန် အသုံးမချနိုင်ရင် ဧည့်သည်ရဲ့ လတ်တလောဂိုးသွင်းခြေက ပွဲကိုလှည့်ပေးနိုင်ပါတယ်။ နော်ဝှစ်ကလည်း ဝက်ဖို့ဒ်နဲ့ပွဲမှာ နှစ်ဂိုးပေးထားလို့ ခံစစ်လုံးဝစိတ်ချရတာမဟုတ်ပါဘူး။ **သို့ပေမယ့် တူညီတဲ့ရမှတ်အောက်မှာ လက်ရှိခြေစွမ်းအရှိန်ကွာဟမှုကို ပိုအလေးပေးပြီး နော်ဝှစ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ရမှတ်တူနေတဲ့နှစ်သင်းကြားမှာ နော်ဝှစ်ရဲ့ သုံးပွဲဆက်နိုင်မှုက ပိုထင်ရှားပါတယ်။ဘရစ်စတိုးက နောက်ဆုံးငါးပွဲ တစ်ပွဲပဲနိုင်ထားပါတယ်။ နော်ဝှစ်ကတော့ ဒါဘီပွဲက ဂိုးသွင်းခြေစွမ်းကို ဆက်ယူနိုင်ဖို့ရှိပါတယ်။ ဘရစ်စတိုးက အိမ်ကွင်းမှာ ကပ်နိုင်ပေမယ့် လတ်တလော ဂိုးရှာရခက်နေမှုနဲ့ နော်ဝှစ်တိုက်စစ်အရှိန်ကို နှိုင်းယှဉ်ပြီး နော်ဝှစ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "နော်ဝှစ်",
       "previewV2FormatVersion": "2.1",
@@ -4285,14 +4405,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -4365,84 +4487,92 @@
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Swansea",
+          "opponent": "ဆွမ်ဆီး",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Swansea"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Burnley",
+          "opponent": "ဘန်လေ",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Burnley"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Millwall",
+          "opponent": "မီဝေါ",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Millwall"
         },
         {
           "date": "2026-10-20",
           "competition": "Championship",
-          "opponent": "Wolverhampton",
+          "opponent": "ဝုဗ်",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Wolverhampton"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Norwich",
+          "opponent": "နော်ဝှစ်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Norwich"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Blackburn",
+          "opponent": "ဘလက်ဘန်း",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Blackburn"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Preston",
+          "opponent": "ပရက်စတန်",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Preston"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Bristol City",
+          "opponent": "ဘရစ်စတိုး",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Bristol City"
         },
         {
           "date": "2026-10-17",
@@ -4457,12 +4587,13 @@
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Middlesbrough",
+          "opponent": "မစ်ဒယ်ဘရော့",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+          "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "opponentCanonical": "Middlesbrough"
         }
       ],
       "homeStanding": {
@@ -4491,7 +4622,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/portsmouth.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/stoke.png",
-      "dailyPreviewText": "ပို့စ်မောက်နဲ့ စတုတ်စီးတီးပွဲက နှစ်ဖက်လုံး နောက်ဆုံးငါးပွဲ လေးပွဲအထိ ရှုံးပွဲရှောင်ထားနိုင်တာကြောင့် အလွယ်တကူခွဲလို့မရတဲ့ပွဲပါ။ အဆင့် ၄ က စတုတ်စီးတီးဟာ နောက်ဆုံးလေးပွဲ သုံးနိုင်၊ တစ်သရေနဲ့ တည်ငြိမ်နေသလို ပို့စ်မောက်ကလည်း ဆွမ်ဆီးကို သုံးဂိုးသွင်းနိုင်ပြီး ကိုယ့်ကွင်းပြန်ကစားရမှာဖြစ်ပါတယ်။ အိမ်ရှင်အတွက် နော်ဝှစ်နဲ့ မီဝေါကို ကပ်နိုင်ထားတဲ့ အတွေ့အကြုံက ဒီလိုတစ်ဂိုးကွာဟမှုဖြစ်နိုင်တဲ့ပွဲမှာ အသုံးဝင်နိုင်ပါတယ်။ စတုတ်စီးတီးက ပွဲကိုတဖြည်းဖြည်းထိန်းပြီး ရမှတ်ယူနိုင်တဲ့အသင်းဖြစ်လို့ အိမ်ရှင်က အလောတကြီးဖွင့်မကစားဖို့လိုပါတယ်။ နှစ်သင်းစလုံးအတွက် သရေလမ်းရှိပေမယ့် နောက်ဆုံးပွဲတိုက်စစ်အရှိန်နဲ့ အိမ်ကွင်းအားကို အလေးပေးပြီး ပို့စ်မောက်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ပို့စ်မောက်နဲ့ စတုတ်စီးတီးပွဲက နှစ်ဖက်လုံး နောက်ဆုံးငါးပွဲ လေးပွဲအထိ ရှုံးပွဲရှောင်ထားနိုင်တာကြောင့် အလွယ်တကူခွဲလို့မရတဲ့ပွဲပါ။ အဆင့် ၄ က စတုတ်စီးတီးဟာ နောက်ဆုံးလေးပွဲ သုံးနိုင်၊ တစ်သရေနဲ့ တည်ငြိမ်နေသလို ပို့စ်မောက်ကလည်း ဆွမ်ဆီးကို သုံးဂိုးသွင်းနိုင်ပြီး ကိုယ့်ကွင်းပြန်ကစားရမှာဖြစ်ပါတယ်။ အိမ်ရှင်အတွက် နော်ဝှစ်နဲ့ မီဝေါကို ကပ်နိုင်ထားတဲ့ အတွေ့အကြုံက ဒီလိုတစ်ဂိုးကွာဟမှုဖြစ်နိုင်တဲ့ပွဲမှာ အသုံးဝင်နိုင်ပါတယ်။ စတုတ်စီးတီးက ပွဲကိုတဖြည်းဖြည်းထိန်းပြီး ရမှတ်ယူနိုင်တဲ့အသင်းဖြစ်လို့ အိမ်ရှင်က အလောတကြီးဖွင့်မကစားဖို့လိုပါတယ်။ **နှစ်သင်းစလုံးအတွက် သရေလမ်းရှိပေမယ့် နောက်ဆုံးပွဲတိုက်စစ်အရှိန်နဲ့ အိမ်ကွင်းအားကို အလေးပေးပြီး ပို့စ်မောက်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "စတုတ်စီးတီးက အဆင့် ၄ နဲ့ ရလဒ်တည်ငြိမ်နေသလို ပို့စ်မောက်လည်း နောက်ဆုံးငါးပွဲ မရှုံးထားပါဘူး။ ပွဲကပ်နိုင်ပြီး သရေလမ်းရှိပါတယ်။စတုတ်စီးတီးက နောက်ဆုံးလေးပွဲ မရှုံးထားတာပါ။ ပို့စ်မောက်အတွက် အစောပိုင်းပွဲကို အလောတကြီးမဖွင့်မိဖို့ အရေးကြီးပါတယ်။ ဆွမ်ဆီးကို သုံးဂိုးသွင်းနိုင်လာတဲ့ အိမ်ရှင်ရဲ့ တိုက်စစ်အရှိန်ကို အလေးထားပြီး ပို့စ်မောက်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ပို့စ်မောက်",
       "previewV2FormatVersion": "2.1",
@@ -4500,14 +4631,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -4580,104 +4713,114 @@
         {
           "date": "2026-11-04",
           "competition": "Championship",
-          "opponent": "Middlesbrough",
+          "opponent": "မစ်ဒယ်ဘရော့",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Middlesbrough"
         },
         {
           "date": "2026-10-30",
           "competition": "Championship",
-          "opponent": "Sheffield United",
+          "opponent": "ရှက်ဖီးလ်ယူ",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Sheffield United"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Blackburn",
+          "opponent": "ဘလက်ဘန်း",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Blackburn"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Preston",
+          "opponent": "ပရက်စတန်",
           "teamGoals": 4,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Preston"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "West Bromwich",
+          "opponent": "ဝက်ဘရွန်း",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "West Bromwich"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-04",
           "competition": "Championship",
-          "opponent": "Bristol City",
+          "opponent": "ဘရစ်စတိုး",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Bristol City"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Cardiff",
+          "opponent": "ကာဒစ်",
           "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Cardiff"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Watford",
+          "opponent": "ဝက်ဖို့ဒ်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Watford"
         },
         {
           "date": "2026-10-20",
           "competition": "Championship",
-          "opponent": "Portsmouth",
+          "opponent": "ပို့စ်မောက်",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Portsmouth"
         },
         {
           "date": "2026-10-16",
           "competition": "Championship",
-          "opponent": "Burnley",
+          "opponent": "ဘန်လေ",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+          "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "opponentCanonical": "Burnley"
         }
       ],
       "homeStanding": {
@@ -4706,7 +4849,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/wrexham.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/wolverhampton.png",
-      "dailyPreviewText": "ဝရက်ဟမ်က ထိပ်ဆုံးမစ်ဒယ်ဘရော့ကို ဂိုးမပေးဘဲနိုင်လာတာကြောင့် ဝုဗ်အတွက် ဒီခရီးကို လျှော့တွက်ဖို့ အကြောင်းမရှိပါဘူး။ ဒါပေမယ့် အိမ်ရှင်က အဲဒီမတိုင်ခင် ရှက်ဖီးလ်ယူနဲ့ ဘလက်ဘန်းကို ဂိုးမရဘဲရှုံးထားပြီး ရလဒ်အတက်အကျရှိနေပါတယ်။ ဝုဗ်ကတော့ နောက်ဆုံးငါးပွဲ လေးနိုင်၊ တစ်သရေနဲ့ ဒုတိယနေရာကို ထိန်းထားပြီး ခံစစ်တည်ငြိမ်မှုနဲ့ အခွင့်အရေးအသုံးချနိုင်မှု နှစ်မျိုးစလုံးရှိပါတယ်။ ဝရက်ဟမ်ရဲ့ အိမ်ကွင်းတက်ကြွမှုကို ပထမပိုင်းမှာခံနိုင်ရင် ပွဲကြာလာတာနဲ့ ဝုဗ်ရဲ့ တည်ငြိမ်မှုက ပိုအရေးပါလာနိုင်ပါတယ်။ အိမ်ရှင်ရဲ့ နောက်ဆုံးနိုင်ပွဲကို အသိအမှတ်ပြုပေမယ့် ဆက်တိုက်ရလဒ်ကို ဦးစားပေးပြီး ဝုဗ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဝရက်ဟမ်က ထိပ်ဆုံးမစ်ဒယ်ဘရော့ကို ဂိုးမပေးဘဲနိုင်လာတာကြောင့် ဝုဗ်အတွက် ဒီခရီးကို လျှော့တွက်ဖို့ အကြောင်းမရှိပါဘူး။ ဒါပေမယ့် အိမ်ရှင်က အဲဒီမတိုင်ခင် ရှက်ဖီးလ်ယူနဲ့ ဘလက်ဘန်းကို ဂိုးမရဘဲရှုံးထားပြီး ရလဒ်အတက်အကျရှိနေပါတယ်။ ဝုဗ်ကတော့ နောက်ဆုံးငါးပွဲ လေးနိုင်၊ တစ်သရေနဲ့ ဒုတိယနေရာကို ထိန်းထားပြီး ခံစစ်တည်ငြိမ်မှုနဲ့ အခွင့်အရေးအသုံးချနိုင်မှု နှစ်မျိုးစလုံးရှိပါတယ်။ ဝရက်ဟမ်ရဲ့ အိမ်ကွင်းတက်ကြွမှုကို ပထမပိုင်းမှာခံနိုင်ရင် ပွဲကြာလာတာနဲ့ ဝုဗ်ရဲ့ တည်ငြိမ်မှုက ပိုအရေးပါလာနိုင်ပါတယ်။ **အိမ်ရှင်ရဲ့ နောက်ဆုံးနိုင်ပွဲကို အသိအမှတ်ပြုပေမယ့် ဆက်တိုက်ရလဒ်ကို ဦးစားပေးပြီး ဝုဗ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဝရက်ဟမ်ရဲ့ မစ်ဒယ်ဘရော့အပေါ် နိုင်ပွဲက ဒီပွဲကို ခက်ခဲစေပါတယ်။ဝရက်ဟမ်က အိမ်ကွင်းမှာ တက်ကြွစွာစတင်လာနိုင်ပါတယ်။ ဝုဗ်အတွက်တော့ အဲဒီဖိအားကို ကျော်ဖြတ်ပြီး ပွဲကြာလာချိန် ထိန်းနိုင်ဖို့လိုပါတယ်။ သို့သော် ဝုဗ်က နောက်ဆုံးငါးပွဲ မရှုံးဘဲ လေးပွဲနိုင်ထားပြီး ထိပ်တန်းနှစ်နေရာကို ဖိအားပေးနေတဲ့ တည်ငြိမ်မှုရှိလို့ ဝုဗ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဝုဗ်",
       "previewV2FormatVersion": "2.1",
@@ -4715,14 +4858,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -4795,104 +4940,114 @@
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Millwall",
+          "opponent": "မီဝေါ",
           "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Millwall"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Lincoln",
+          "opponent": "လင်ကွန်း",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Lincoln"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Cardiff",
+          "opponent": "ကာဒစ်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Cardiff"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Queens Park Rangers",
+          "opponent": "ကျူပီအာ",
           "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Queens Park Rangers"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Preston",
+          "opponent": "ပရက်စတန်",
           "teamGoals": 4,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Preston"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Portsmouth",
+          "opponent": "ပို့စ်မောက်",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Portsmouth"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Blackburn",
+          "opponent": "ဘလက်ဘန်း",
           "teamGoals": 4,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Blackburn"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Queens Park Rangers",
+          "opponent": "ကျူပီအာ",
           "teamGoals": 0,
           "opponentGoals": 5,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Queens Park Rangers"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "West Ham",
+          "opponent": "ဝက်စ်ဟမ်း",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "West Ham"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Millwall",
+          "opponent": "မီဝေါ",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+          "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "opponentCanonical": "Millwall"
         }
       ],
       "homeStanding": {
@@ -4921,7 +5076,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/birmingham.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/swansea.png",
-      "dailyPreviewText": "ဘာမင်ဂမ်က ကာဒစ်ကို တစ်ဂိုးနဲ့ရှုံးခဲ့တာကလွဲရင် နောက်ဆုံးငါးပွဲ လေးပွဲနိုင်ပြီး တိုက်စစ်အင်အားကို ဆက်ပြနေပါတယ်။ ဆွမ်ဆီးနဲ့ ရမှတ် ၂၆ မှတ်စီတူနေတာကြောင့် ဒီပွဲက ထိပ်ပိုင်းနေရာအတွက် တိုက်ရိုက်သက်ရောက်နိုင်တဲ့ပွဲပါ။ ဒါပေမယ့် ဆွမ်ဆီးက ဘလက်ဘန်းကို ဂိုးပြတ်နိုင်ပြီးနောက် ပို့စ်မောက်ကို ပြန်ရှုံးလာသလို ကျူပီအာကွင်းမှာလည်း ငါးဂိုးပေးထားတာကြောင့် အဝေးကွင်းခံစစ်ကို စိတ်ချလို့မရသေးပါဘူး။ ဘာမင်ဂမ်က နောက်ဆုံးနှစ်ပွဲ ခြောက်ဂိုးသွင်းထားတဲ့အရှိန်ကို အသုံးချပြီး ဆွမ်ဆီးနောက်တန်းကို မရပ်မနားဖိအားပေးနိုင်ဖို့ရှိပါတယ်။ ဧည့်သည်ရဲ့ တိုက်စစ်ပြန်ထိုးနိုင်မှုကို သတိထားရပေမယ့် လက်ရှိတည်ငြိမ်မှုနဲ့ အိမ်ကွင်းအားကို ပေါင်းပြီး ဘာမင်ဂမ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဘာမင်ဂမ်က ကာဒစ်ကို တစ်ဂိုးနဲ့ရှုံးခဲ့တာကလွဲရင် နောက်ဆုံးငါးပွဲ လေးပွဲနိုင်ပြီး တိုက်စစ်အင်အားကို ဆက်ပြနေပါတယ်။ ဆွမ်ဆီးနဲ့ ရမှတ် ၂၆ မှတ်စီတူနေတာကြောင့် ဒီပွဲက ထိပ်ပိုင်းနေရာအတွက် တိုက်ရိုက်သက်ရောက်နိုင်တဲ့ပွဲပါ။ ဒါပေမယ့် ဆွမ်ဆီးက ဘလက်ဘန်းကို ဂိုးပြတ်နိုင်ပြီးနောက် ပို့စ်မောက်ကို ပြန်ရှုံးလာသလို ကျူပီအာကွင်းမှာလည်း ငါးဂိုးပေးထားတာကြောင့် အဝေးကွင်းခံစစ်ကို စိတ်ချလို့မရသေးပါဘူး။ ဘာမင်ဂမ်က နောက်ဆုံးနှစ်ပွဲ ခြောက်ဂိုးသွင်းထားတဲ့အရှိန်ကို အသုံးချပြီး ဆွမ်ဆီးနောက်တန်းကို မရပ်မနားဖိအားပေးနိုင်ဖို့ရှိပါတယ်။ **ဧည့်သည်ရဲ့ တိုက်စစ်ပြန်ထိုးနိုင်မှုကို သတိထားရပေမယ့် လက်ရှိတည်ငြိမ်မှုနဲ့ အိမ်ကွင်းအားကို ပေါင်းပြီး ဘာမင်ဂမ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ရမှတ်တူပေမယ့် လက်ရှိရလဒ်အရှိန်က ဘာမင်ဂမ်ဘက်မှာ ပိုကောင်းနေပါတယ်။ဆွမ်ဆီးက ဂိုးပြတ်နိုင်ပွဲရပြီးတိုင်း တည်ငြိမ်မှုမဆက်နိုင်သေးပါဘူး။ ဘာမင်ဂမ်ကတော့ နောက်ဆုံးနှစ်ပွဲ ခြောက်ဂိုးသွင်းထားတဲ့ အရှိန်ရှိပါတယ်။ ဆွမ်ဆီးရဲ့ အဝေးကွင်းခံစစ်အတက်အကျကို နောက်ဆုံးငါးပွဲ လေးနိုင်ထားတဲ့ အိမ်ရှင်က အသုံးချနိုင်ဖို့ရှိတာကြောင့် ဘာမင်ဂမ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဘာမင်ဂမ်",
       "previewV2FormatVersion": "2.1",
@@ -4930,14 +5085,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -5010,104 +5167,114 @@
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Stoke",
+          "opponent": "စတုတ်စီးတီး",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "Stoke"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Swansea",
+          "opponent": "ဆွမ်ဆီး",
           "teamGoals": 0,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "Swansea"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Wrexham",
+          "opponent": "ဝရက်ဟမ်",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "Wrexham"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "West Bromwich",
+          "opponent": "ဝက်ဘရွန်း",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "West Bromwich"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Bristol City",
+          "opponent": "ဘရစ်စတိုး",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "Bristol City"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-04",
           "competition": "Championship",
-          "opponent": "Cardiff",
+          "opponent": "ကာဒစ်",
           "teamGoals": 3,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "Cardiff"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "West Bromwich",
+          "opponent": "ဝက်ဘရွန်း",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "West Bromwich"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Southampton",
+          "opponent": "ဆောက်သမ်တန်",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "Southampton"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Swansea",
+          "opponent": "ဆွမ်ဆီး",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "Swansea"
         },
         {
           "date": "2026-10-14",
           "competition": "Championship",
-          "opponent": "Lincoln",
+          "opponent": "လင်ကွန်း",
           "teamGoals": 6,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+          "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "opponentCanonical": "Lincoln"
         }
       ],
       "homeStanding": {
@@ -5136,7 +5303,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/blackburn.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/west-ham.png",
-      "dailyPreviewText": "ဝက်စ်ဟမ်းက နောက်ဆုံးသုံးပွဲ အနိုင်မရသေးတာကြောင့် ဈေးကွက်အသာပေးမှုတစ်ခုတည်းနဲ့ အလွန်ယုံကြည်ဖို့မသင့်ပါဘူး။ ဒါပေမယ့် ကာဒစ်နဲ့ သရေပွဲမှာ သုံးဂိုးသွင်းနိုင်တာနဲ့ လင်ကွန်းကို ခြောက်ဂိုးသွင်းနိုင်ခဲ့တဲ့ တိုက်စစ်အခြေခံက ဘလက်ဘန်းခံစစ်အတွက် စိုးရိမ်စရာပါ။ အိမ်ရှင်က စတုတ်စီးတီးနဲ့ ဆွမ်ဆီးကို နှစ်ပွဲဆက်ရှုံးပြီး ခြောက်ဂိုးပေးထားလို့ ကိုယ့်ကွင်းမှာ ပွဲအစကို အရင်တည်ငြိမ်အောင်လုပ်ရမှာဖြစ်ပါတယ်။ ဝက်စ်ဟမ်းကိုယ်တိုင်လည်း ပေးဂိုးများနေတာကြောင့် ဘလက်ဘန်းက ဂိုးရနိုင်တဲ့လမ်းရှိပါတယ်။ သို့ပေမယ့် တိုက်စစ်အခွင့်အရေးပိုထွက်လာနိုင်တဲ့ပွဲအဖြစ် မြင်ထားပြီး ပိုကောင်းတဲ့ဂိုးသွင်းအားကို အလေးပေးကာ ဝက်စ်ဟမ်းကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဝက်စ်ဟမ်းက နောက်ဆုံးသုံးပွဲ အနိုင်မရသေးတာကြောင့် ဈေးကွက်အသာပေးမှုတစ်ခုတည်းနဲ့ အလွန်ယုံကြည်ဖို့မသင့်ပါဘူး။ ဒါပေမယ့် ကာဒစ်နဲ့ သရေပွဲမှာ သုံးဂိုးသွင်းနိုင်တာနဲ့ လင်ကွန်းကို ခြောက်ဂိုးသွင်းနိုင်ခဲ့တဲ့ တိုက်စစ်အခြေခံက ဘလက်ဘန်းခံစစ်အတွက် စိုးရိမ်စရာပါ။ အိမ်ရှင်က စတုတ်စီးတီးနဲ့ ဆွမ်ဆီးကို နှစ်ပွဲဆက်ရှုံးပြီး ခြောက်ဂိုးပေးထားလို့ ကိုယ့်ကွင်းမှာ ပွဲအစကို အရင်တည်ငြိမ်အောင်လုပ်ရမှာဖြစ်ပါတယ်။ ဝက်စ်ဟမ်းကိုယ်တိုင်လည်း ပေးဂိုးများနေတာကြောင့် ဘလက်ဘန်းက ဂိုးရနိုင်တဲ့လမ်းရှိပါတယ်။ **သို့ပေမယ့် တိုက်စစ်အခွင့်အရေးပိုထွက်လာနိုင်တဲ့ပွဲအဖြစ် မြင်ထားပြီး ပိုကောင်းတဲ့ဂိုးသွင်းအားကို အလေးပေးကာ ဝက်စ်ဟမ်းကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "နှစ်သင်းစလုံး ခံစစ်မတည်ငြိမ်တဲ့အတွက် ပွဲဖွင့်သွားနိုင်ပါတယ်။ဘလက်ဘန်းက ကိုယ့်ကွင်းမှာ ဂိုးပြန်ရှာနိုင်တဲ့လမ်းရှိပါတယ်။ ဝက်စ်ဟမ်းအတွက်လည်း အနိုင်ရှာရင်း နောက်တန်းကိုမလွတ်ဖို့ လိုပါတယ်။ ဝက်စ်ဟမ်းက သုံးပွဲဆက်နိုင်ပွဲပျောက်နေပေမယ့် ဘလက်ဘန်းရဲ့ နှစ်ပွဲဆက်ရှုံးမှုနဲ့ ဂိုးပေးရမှုကို အသုံးချနိုင်တဲ့ တိုက်စစ်အားရှိလို့ ဝက်စ်ဟမ်းကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဝက်စ်ဟမ်း",
       "previewV2FormatVersion": "2.1",
@@ -5145,14 +5312,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -5225,104 +5394,114 @@
         {
           "date": "2026-11-04",
           "competition": "Championship",
-          "opponent": "West Ham",
+          "opponent": "ဝက်စ်ဟမ်း",
           "teamGoals": 3,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "West Ham"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Wolverhampton",
+          "opponent": "ဝုဗ်",
           "teamGoals": 0,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Wolverhampton"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Birmingham",
+          "opponent": "ဘာမင်ဂမ်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Birmingham"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Middlesbrough",
+          "opponent": "မစ်ဒယ်ဘရော့",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Middlesbrough"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Watford",
+          "opponent": "ဝက်ဖို့ဒ်",
           "teamGoals": 5,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Watford"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Queens Park Rangers",
+          "opponent": "ကျူပီအာ",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Queens Park Rangers"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Portsmouth",
+          "opponent": "ပို့စ်မောက်",
           "teamGoals": 0,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Portsmouth"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Lincoln",
+          "opponent": "လင်ကွန်း",
           "teamGoals": 1,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Lincoln"
         },
         {
           "date": "2026-10-16",
           "competition": "Championship",
-          "opponent": "Wolverhampton",
+          "opponent": "ဝုဗ်",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Wolverhampton"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Charlton",
+          "opponent": "ချာတန်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+          "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "opponentCanonical": "Charlton"
         }
       ],
       "homeStanding": {
@@ -5351,7 +5530,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/cardiff.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/burnley.png",
-      "dailyPreviewText": "ကာဒစ်က ဝက်စ်ဟမ်းကွင်းမှာ သုံးဂိုးသွင်းပြီး တစ်မှတ်ပြန်ယူနိုင်တာကြောင့် ဝုဗ်ကို ဂိုးပြတ်ရှုံးခဲ့တဲ့ပွဲအပြီး တိုက်စစ်ဘက်က တုံ့ပြန်နိုင်ခဲ့ပါတယ်။ ဘန်လေကတော့ နောက်ဆုံးငါးပွဲမှာ အနိုင်မရှိသေးဘဲ သုံးပွဲသရေကနေ ရမှတ်စုနေရတာပါ။ အဆင့် ၂၂ မှာရှိနေတဲ့ ဧည့်သည်အတွက် ဂိုးမပေးအောင်အရင်ထိန်းနိုင်ဖို့လိုပေမယ့် လင်ကွန်းကွင်းမှာ လေးဂိုးပေးခဲ့တာက အဝေးကွင်းခံစစ်ရဲ့ အခက်အခဲကို ပြပါတယ်။ ကာဒစ်ကလည်း ပေးဂိုးမနည်းသေးတာကြောင့် စိတ်ချရတဲ့အသင်းမဟုတ်ပေမယ့် ဘာမင်ဂမ်ကိုနိုင်၊ ဝက်ဖို့ဒ်ကို ဂိုးပြတ်သွင်းနိုင်ထားတဲ့ အိမ်ကွင်းတုံ့ပြန်မှုရှိပါတယ်။ နိုင်ပွဲရဖို့ လိုအပ်ချက်ချင်းတူပေမယ့် အခွင့်အရေးဖန်တီးနိုင်မှုကို အလေးထားပြီး ကာဒစ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ကာဒစ်က ဝက်စ်ဟမ်းကွင်းမှာ သုံးဂိုးသွင်းပြီး တစ်မှတ်ပြန်ယူနိုင်တာကြောင့် ဝုဗ်ကို ဂိုးပြတ်ရှုံးခဲ့တဲ့ပွဲအပြီး တိုက်စစ်ဘက်က တုံ့ပြန်နိုင်ခဲ့ပါတယ်။ ဘန်လေကတော့ နောက်ဆုံးငါးပွဲမှာ အနိုင်မရှိသေးဘဲ သုံးပွဲသရေကနေ ရမှတ်စုနေရတာပါ။ အဆင့် ၂၂ မှာရှိနေတဲ့ ဧည့်သည်အတွက် ဂိုးမပေးအောင်အရင်ထိန်းနိုင်ဖို့လိုပေမယ့် လင်ကွန်းကွင်းမှာ လေးဂိုးပေးခဲ့တာက အဝေးကွင်းခံစစ်ရဲ့ အခက်အခဲကို ပြပါတယ်။ ကာဒစ်ကလည်း ပေးဂိုးမနည်းသေးတာကြောင့် စိတ်ချရတဲ့အသင်းမဟုတ်ပေမယ့် ဘာမင်ဂမ်ကိုနိုင်၊ ဝက်ဖို့ဒ်ကို ဂိုးပြတ်သွင်းနိုင်ထားတဲ့ အိမ်ကွင်းတုံ့ပြန်မှုရှိပါတယ်။ **နိုင်ပွဲရဖို့ လိုအပ်ချက်ချင်းတူပေမယ့် အခွင့်အရေးဖန်တီးနိုင်မှုကို အလေးထားပြီး ကာဒစ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဘန်လေက နောက်ဆုံးငါးပွဲ အနိုင်မရှိသေးလို့ ရမှတ်ဖိအားကြီးနေပါတယ်။ဘန်လေက သရေပွဲတွေကနေ ရမှတ်စုနေရတာပါ။ ကာဒစ်အတွက် အနိုင်ရဖို့ဆိုရင် အရင်ပွဲတွေလို လွယ်လွယ်ဂိုးမပေးမိဖို့ လိုပါတယ်။ ကာဒစ်လည်း ခံစစ်အားနည်းမှုရှိပေမယ့် ဝက်စ်ဟမ်းကွင်းမှာ ဂိုးပြန်သွင်းနိုင်တဲ့ တုံ့ပြန်မှုနဲ့ အိမ်ကွင်းအားကို ထည့်တွက်ပြီး ကာဒစ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ကာဒစ်",
       "previewV2FormatVersion": "2.1",
@@ -5360,14 +5539,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -5450,64 +5631,70 @@
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Middlesbrough",
+          "opponent": "မစ်ဒယ်ဘရော့",
           "teamGoals": 0,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "opponentCanonical": "Middlesbrough"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Norwich",
+          "opponent": "နော်ဝှစ်",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "opponentCanonical": "Norwich"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Watford",
+          "opponent": "ဝက်ဖို့ဒ်",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "opponentCanonical": "Watford"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Burnley",
+          "opponent": "ဘန်လေ",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "opponentCanonical": "Burnley"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Preston",
+          "opponent": "ပရက်စတန်",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "opponentCanonical": "Preston"
         },
         {
           "date": "2026-10-30",
           "competition": "Championship",
-          "opponent": "Wrexham",
+          "opponent": "ဝရက်ဟမ်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "opponentCanonical": "Wrexham"
         },
         {
           "date": "2026-10-24",
@@ -5522,22 +5709,24 @@
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Bristol City",
+          "opponent": "ဘရစ်စတိုး",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "opponentCanonical": "Bristol City"
         },
         {
           "date": "2026-10-14",
           "competition": "Championship",
-          "opponent": "Portsmouth",
+          "opponent": "ပို့စ်မောက်",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+          "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "opponentCanonical": "Portsmouth"
         }
       ],
       "homeStanding": {
@@ -5566,7 +5755,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/charlton.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/sheffield-united.png",
-      "dailyPreviewText": "ချာတန်က လေးပွဲဆက်ရှုံးထားပြီး အဲဒီကာလမှာ တစ်ဂိုးသာသွင်းနိုင်တာက ဒီပွဲရဲ့ အခက်အခဲကို ရှင်းရှင်းလင်းလင်းပြပါတယ်။ အဆင့် ၂၁ ရောက်နေတဲ့အိမ်ရှင်အတွက် ဂိုးမပေးဖို့အရင်ကစားရင်တောင် ရှက်ဖီးလ်ယူရဲ့ ဆက်တိုက်ဖိအားကို ခံရနိုင်ပါတယ်။ ဧည့်သည်က နောက်ဆုံးလေးပွဲ သုံးနိုင်၊ တစ်သရေထားနိုင်ပြီး ပရက်စတန်နဲ့ ဂိုးအပြိုင်သွင်းပွဲမှာလည်း နိုင်ပွဲရအောင် ပြန်ထိန်းနိုင်ခဲ့ပါတယ်။ သို့ပေမယ့် သုံးဂိုးသွင်းတဲ့ပွဲမှာ နှစ်ဂိုးပေးထားရတဲ့အချက်ကြောင့် ချာတန်ကို အခွင့်အရေးလုံးဝမပေးဘူးလို့ မဆိုနိုင်ပါဘူး။ အိမ်ကွင်းတက်ကြွမှုကို ကျော်ဖြတ်နိုင်ရင် ပိုတည်ငြိမ်တဲ့အသင်းက ရမှတ်ယူနိုင်ဖို့ရှိပြီး ရှက်ဖီးလ်ယူကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ချာတန်က လေးပွဲဆက်ရှုံးထားပြီး အဲဒီကာလမှာ တစ်ဂိုးသာသွင်းနိုင်တာက ဒီပွဲရဲ့ အခက်အခဲကို ရှင်းရှင်းလင်းလင်းပြပါတယ်။ အဆင့် ၂၁ ရောက်နေတဲ့အိမ်ရှင်အတွက် ဂိုးမပေးဖို့အရင်ကစားရင်တောင် ရှက်ဖီးလ်ယူရဲ့ ဆက်တိုက်ဖိအားကို ခံရနိုင်ပါတယ်။ ဧည့်သည်က နောက်ဆုံးလေးပွဲ သုံးနိုင်၊ တစ်သရေထားနိုင်ပြီး ပရက်စတန်နဲ့ ဂိုးအပြိုင်သွင်းပွဲမှာလည်း နိုင်ပွဲရအောင် ပြန်ထိန်းနိုင်ခဲ့ပါတယ်။ သို့ပေမယ့် သုံးဂိုးသွင်းတဲ့ပွဲမှာ နှစ်ဂိုးပေးထားရတဲ့အချက်ကြောင့် ချာတန်ကို အခွင့်အရေးလုံးဝမပေးဘူးလို့ မဆိုနိုင်ပါဘူး။ **အိမ်ကွင်းတက်ကြွမှုကို ကျော်ဖြတ်နိုင်ရင် ပိုတည်ငြိမ်တဲ့အသင်းက ရမှတ်ယူနိုင်ဖို့ရှိပြီး ရှက်ဖီးလ်ယူကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ချာတန်က လေးပွဲဆက်ရှုံးပြီး တိုက်စစ်တစ်ဂိုးသာရထားပါတယ်။ချာတန်က ကိုယ့်ကွင်းမှာ စောစောဂိုးမပေးရအောင် ကစားလာနိုင်ပါတယ်။ ရှက်ဖီးလ်ယူအတွက်တော့ စိတ်ရှည်ရှည်ဖိအားပေးဖို့လိုပါတယ်။ ရှက်ဖီးလ်ယူက နောက်ဆုံးလေးပွဲ မရှုံးဘဲ ရမှတ်စုနိုင်တာကြောင့် အိမ်ရှင်ရဲ့ ယုံကြည်မှုပျောက်နေမှုကို အသုံးချနိုင်ဖို့ရှိပြီး ရှက်ဖီးလ်ယူကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ရှက်ဖီးလ်ယူ",
       "previewV2FormatVersion": "2.1",
@@ -5575,14 +5764,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -5655,84 +5846,92 @@
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Sheffield United",
+          "opponent": "ရှက်ဖီးလ်ယူ",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "Sheffield United"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Stoke",
+          "opponent": "စတုတ်စီးတီး",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "Stoke"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "West Bromwich",
+          "opponent": "ဝက်ဘရွန်း",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "West Bromwich"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Wrexham",
+          "opponent": "ဝရက်ဟမ်",
           "teamGoals": 1,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "Wrexham"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Birmingham",
+          "opponent": "ဘာမင်ဂမ်",
           "teamGoals": 0,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "Birmingham"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "West Bromwich",
+          "opponent": "ဝက်ဘရွန်း",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "West Bromwich"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Queens Park Rangers",
+          "opponent": "ကျူပီအာ",
           "teamGoals": 4,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "Queens Park Rangers"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "West Ham",
+          "opponent": "ဝက်စ်ဟမ်း",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "West Ham"
         },
         {
           "date": "2026-10-17",
@@ -5747,12 +5946,13 @@
         {
           "date": "2026-10-14",
           "competition": "Championship",
-          "opponent": "Norwich",
+          "opponent": "နော်ဝှစ်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+          "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "opponentCanonical": "Norwich"
         }
       ],
       "homeStanding": {
@@ -5783,7 +5983,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/preston.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/southampton.png",
-      "dailyPreviewText": "ပရက်စတန်အတွက် ငါးမှတ်နဲ့ အောက်ဆုံးရောက်နေမှုက အိမ်ကွင်းမှာ ပွဲကိုဖွင့်အနိုင်ရှာချင်စိတ် ပိုများစေနိုင်ပါတယ်။ ဒါပေမယ့် နောက်ဆုံးငါးပွဲမှာ ၁၄ ဂိုးပေးထားတဲ့ခံစစ်နဲ့ ပွဲဖွင့်လိုက်ရင် ဆောက်သမ်တန်အတွက် နေရာလွတ်ပိုရသွားနိုင်ပါတယ်။ ဧည့်သည်က နောက်ဆုံးငါးပွဲ မရှုံးဘဲ ကျူပီအာနဲ့ ဝက်စ်ဟမ်းကို ဂိုးများများသွင်းနိုင်ထားပြီး ထိပ်ပိုင်းနဲ့ကွာဟမှုကို လျှော့ချချင်နေတာပါ။ ပရက်စတန်က ရှက်ဖီးလ်ယူကွင်းမှာ နှစ်ဂိုးပြန်သွင်းနိုင်ခဲ့လို့ တိုက်စစ်ဘက် အခွင့်အရေးမရှိဘူးဆိုတာမဟုတ်ပေမယ့် ရမှတ်အဖြစ် မပြောင်းနိုင်သေးတာက ပြဿနာဖြစ်နေပါတယ်။ ခံစစ်တည်ငြိမ်မှုနဲ့ ပွဲအဆုံးထိ အမှားနည်းနိုင်တဲ့ဘက်ကို အလေးထားပြီး ဆောက်သမ်တန်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ပရက်စတန်အတွက် ငါးမှတ်နဲ့ အောက်ဆုံးရောက်နေမှုက အိမ်ကွင်းမှာ ပွဲကိုဖွင့်အနိုင်ရှာချင်စိတ် ပိုများစေနိုင်ပါတယ်။ ဒါပေမယ့် နောက်ဆုံးငါးပွဲမှာ ၁၄ ဂိုးပေးထားတဲ့ခံစစ်နဲ့ ပွဲဖွင့်လိုက်ရင် ဆောက်သမ်တန်အတွက် နေရာလွတ်ပိုရသွားနိုင်ပါတယ်။ ဧည့်သည်က နောက်ဆုံးငါးပွဲ မရှုံးဘဲ ကျူပီအာနဲ့ ဝက်စ်ဟမ်းကို ဂိုးများများသွင်းနိုင်ထားပြီး ထိပ်ပိုင်းနဲ့ကွာဟမှုကို လျှော့ချချင်နေတာပါ။ ပရက်စတန်က ရှက်ဖီးလ်ယူကွင်းမှာ နှစ်ဂိုးပြန်သွင်းနိုင်ခဲ့လို့ တိုက်စစ်ဘက် အခွင့်အရေးမရှိဘူးဆိုတာမဟုတ်ပေမယ့် ရမှတ်အဖြစ် မပြောင်းနိုင်သေးတာက ပြဿနာဖြစ်နေပါတယ်။ **ခံစစ်တည်ငြိမ်မှုနဲ့ ပွဲအဆုံးထိ အမှားနည်းနိုင်တဲ့ဘက်ကို အလေးထားပြီး ဆောက်သမ်တန်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "အောက်ဆုံးပရက်စတန်က နောက်ဆုံးငါးပွဲ ၁၄ ဂိုးပေးထားလို့ တိုက်စစ်ဖွင့်ရချိန် ပိုအန္တရာယ်ရှိနိုင်ပါတယ်။ပရက်စတန်က အနိုင်ရှာဖို့ ပွဲဖွင့်လာရနိုင်ပါတယ်။ အဲဒီအခါ ဆောက်သမ်တန်အတွက် နေရာလွတ်ပိုရလာနိုင်တာက အိမ်ရှင်ရဲ့ စိုးရိမ်စရာပါ။ ဆောက်သမ်တန်ကတော့ ငါးပွဲဆက်မရှုံးဘဲ ရမှတ်စုနေတာကြောင့် ပိုတည်ငြိမ်တဲ့ရွေးချယ်မှုအဖြစ် ဆောက်သမ်တန်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဆောက်သမ်တန်",
       "previewV2FormatVersion": "2.1",
@@ -5792,14 +5992,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -5872,42 +6074,46 @@
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Burnley",
+          "opponent": "ဘန်လေ",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "Burnley"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Southampton",
+          "opponent": "ဆောက်သမ်တန်",
           "teamGoals": 1,
           "opponentGoals": 4,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "Southampton"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Swansea",
+          "opponent": "ဆွမ်ဆီး",
           "teamGoals": 5,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "Swansea"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Birmingham",
+          "opponent": "ဘာမင်ဂမ်",
           "teamGoals": 0,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "Birmingham"
         },
         {
           "date": "2026-10-14",
@@ -5924,52 +6130,57 @@
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Watford",
+          "opponent": "ဝက်ဖို့ဒ်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "Watford"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Birmingham",
+          "opponent": "ဘာမင်ဂမ်",
           "teamGoals": 1,
           "opponentGoals": 3,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "Birmingham"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Burnley",
+          "opponent": "ဘန်လေ",
           "teamGoals": 4,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "Burnley"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Millwall",
+          "opponent": "မီဝေါ",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "Millwall"
         },
         {
           "date": "2026-10-14",
           "competition": "Championship",
-          "opponent": "West Ham",
+          "opponent": "ဝက်စ်ဟမ်း",
           "teamGoals": 0,
           "opponentGoals": 6,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+          "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "opponentCanonical": "West Ham"
         }
       ],
       "homeStanding": {
@@ -5998,7 +6209,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/queens-park-rangers.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/lincoln.png",
-      "dailyPreviewText": "ကျူပီအာက နောက်ဆုံးငါးပွဲထဲမှာ ဆွမ်ဆီးကို ငါးဂိုးပြတ်နိုင်သလို ဆောက်သမ်တန်ကို လေးဂိုးပေးရှုံးထားတာကြောင့် အတက်အကျကြီးနေပါတယ်။ ဒါပေမယ့် လင်ကွန်းကလည်း နောက်ဆုံးနှစ်ပွဲဆက်ရှုံးပြီး ဘောလုံးပြန်ရချိန် အခွင့်အရေးကို အသုံးချဖို့ခက်နေတဲ့အချိန်ပါ။ အိမ်ရှင်အတွက် တိုက်စစ်အားကို အစကတည်းကပြနိုင်ရင် လင်ကွန်းရဲ့ ခံစစ်ကို နောက်ဆုတ်ကစားစေနိုင်ပါတယ်။ ဧည့်သည်က ဘန်လေကို လေးဂိုးသွင်းနိုင်ခဲ့တာကြောင့် လွယ်လွယ်ဂိုးမပေးဘူးလို့ ယူဆလို့မရသလို ကျူပီအာကိုယ်တိုင်လည်း ဘောလုံးဆုံးရှုံးချိန် ပြန်နေရာယူမှုကို သတိထားရမှာပါ။ သို့သော် အိမ်ကွင်းမှာ ဂိုးအခွင့်အရေးပိုရှာနိုင်တဲ့ တိုက်စစ်အခြေခံကို အလေးထားပြီး ကျူပီအာကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ကျူပီအာက နောက်ဆုံးငါးပွဲထဲမှာ ဆွမ်ဆီးကို ငါးဂိုးပြတ်နိုင်သလို ဆောက်သမ်တန်ကို လေးဂိုးပေးရှုံးထားတာကြောင့် အတက်အကျကြီးနေပါတယ်။ ဒါပေမယ့် လင်ကွန်းကလည်း နောက်ဆုံးနှစ်ပွဲဆက်ရှုံးပြီး ဘောလုံးပြန်ရချိန် အခွင့်အရေးကို အသုံးချဖို့ခက်နေတဲ့အချိန်ပါ။ အိမ်ရှင်အတွက် တိုက်စစ်အားကို အစကတည်းကပြနိုင်ရင် လင်ကွန်းရဲ့ ခံစစ်ကို နောက်ဆုတ်ကစားစေနိုင်ပါတယ်။ ဧည့်သည်က ဘန်လေကို လေးဂိုးသွင်းနိုင်ခဲ့တာကြောင့် လွယ်လွယ်ဂိုးမပေးဘူးလို့ ယူဆလို့မရသလို ကျူပီအာကိုယ်တိုင်လည်း ဘောလုံးဆုံးရှုံးချိန် ပြန်နေရာယူမှုကို သတိထားရမှာပါ။ **သို့သော် အိမ်ကွင်းမှာ ဂိုးအခွင့်အရေးပိုရှာနိုင်တဲ့ တိုက်စစ်အခြေခံကို အလေးထားပြီး ကျူပီအာကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ကျူပီအာရဲ့ ရလဒ်အတက်အကျက သတိထားစရာဖြစ်ပေမယ့် လင်ကွန်းလည်း နှစ်ပွဲဆက်ရှုံးထားပါတယ်။လင်ကွန်းက ဘန်လေကို ဂိုးပြတ်နိုင်ခဲ့လို့ လျှော့တွက်လို့မရပါဘူး။ ကျူပီအာဘက်က ဘောလုံးဆုံးရှုံးချိန် ပြန်နေရာယူမှုကို သတိထားရပါမယ်။ အိမ်ရှင်က အခွင့်အရေးဖန်တီးနိုင်ရင် ဧည့်သည်ခံစစ်ကို နောက်ဆုတ်စေနိုင်တာကြောင့် ကိုယ့်ကွင်းကစားရမယ့် ကျူပီအာကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ကျူပီအာ",
       "previewV2FormatVersion": "2.1",
@@ -6007,14 +6218,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -6087,74 +6300,81 @@
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Lincoln",
+          "opponent": "လင်ကွန်း",
           "teamGoals": 1,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Lincoln"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Norwich",
+          "opponent": "နော်ဝှစ်",
           "teamGoals": 2,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Norwich"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Wolverhampton",
+          "opponent": "ဝုဗ်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Wolverhampton"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Charlton",
+          "opponent": "ချာတန်",
           "teamGoals": 2,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Charlton"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Cardiff",
+          "opponent": "ကာဒစ်",
           "teamGoals": 1,
           "opponentGoals": 5,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Cardiff"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-04",
           "competition": "Championship",
-          "opponent": "Wrexham",
+          "opponent": "ဝရက်ဟမ်",
           "teamGoals": 0,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Wrexham"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "Charlton",
+          "opponent": "ချာတန်",
           "teamGoals": 3,
           "opponentGoals": 0,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Charlton"
         },
         {
           "date": "2026-10-23",
@@ -6169,22 +6389,24 @@
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Cardiff",
+          "opponent": "ကာဒစ်",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Cardiff"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Stoke",
+          "opponent": "စတုတ်စီးတီး",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+          "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "opponentCanonical": "Stoke"
         }
       ],
       "homeStanding": {
@@ -6213,7 +6435,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/watford.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-04/middlesbrough.png",
-      "dailyPreviewText": "ထိပ်ဆုံးမစ်ဒယ်ဘရော့က ဝရက်ဟမ်ကို ဂိုးမရဘဲရှုံးလာတာကြောင့် ဒီပွဲမှာ တိုက်စစ်ပြန်ဖွင့်နိုင်ဖို့ လိုနေပါတယ်။ ရှုံးပွဲမတိုင်ခင် ချာတန်နဲ့ ဘော်လ်တန်ကို ဂိုးများများသွင်းနိုင်ထားတာကြောင့် တစ်ပွဲတည်းကရလဒ်နဲ့ တိုက်စစ်အရည်အသွေးပျောက်သွားပြီလို့ မဆိုနိုင်ပါဘူး။ ဝက်ဖို့ဒ်က လင်ကွန်းကို ကပ်နိုင်လာပြီး ယုံကြည်မှုပြန်ရပေမယ့် နောက်ဆုံးငါးပွဲမှာ သုံးပွဲရှုံးထားပြီး ကာဒစ်ကို ငါးဂိုးပေးခဲ့တဲ့ခံစစ်အခက်အခဲလည်း ရှိပါတယ်။ အိမ်ရှင်က စောစောဂိုးမပေးရင် ပွဲကိုကပ်ထားနိုင်တဲ့လမ်းရှိသော်လည်း ဧည့်သည်ရဲ့ အခွင့်အရေးဖန်တီးနိုင်မှုကို ကြာကြာခံရရင် နေရာလွတ်ပေါ်လာနိုင်ပါတယ်။ ထိပ်ဆုံးကို ဆက်ထိန်းချင်တဲ့လိုအပ်ချက်နဲ့ တိုက်စစ်အင်အားကို ထည့်တွက်ပြီး မစ်ဒယ်ဘရော့ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ထိပ်ဆုံးမစ်ဒယ်ဘရော့က ဝရက်ဟမ်ကို ဂိုးမရဘဲရှုံးလာတာကြောင့် ဒီပွဲမှာ တိုက်စစ်ပြန်ဖွင့်နိုင်ဖို့ လိုနေပါတယ်။ ရှုံးပွဲမတိုင်ခင် ချာတန်နဲ့ ဘော်လ်တန်ကို ဂိုးများများသွင်းနိုင်ထားတာကြောင့် တစ်ပွဲတည်းကရလဒ်နဲ့ တိုက်စစ်အရည်အသွေးပျောက်သွားပြီလို့ မဆိုနိုင်ပါဘူး။ ဝက်ဖို့ဒ်က လင်ကွန်းကို ကပ်နိုင်လာပြီး ယုံကြည်မှုပြန်ရပေမယ့် နောက်ဆုံးငါးပွဲမှာ သုံးပွဲရှုံးထားပြီး ကာဒစ်ကို ငါးဂိုးပေးခဲ့တဲ့ခံစစ်အခက်အခဲလည်း ရှိပါတယ်။ အိမ်ရှင်က စောစောဂိုးမပေးရင် ပွဲကိုကပ်ထားနိုင်တဲ့လမ်းရှိသော်လည်း ဧည့်သည်ရဲ့ အခွင့်အရေးဖန်တီးနိုင်မှုကို ကြာကြာခံရရင် နေရာလွတ်ပေါ်လာနိုင်ပါတယ်။ **ထိပ်ဆုံးကို ဆက်ထိန်းချင်တဲ့လိုအပ်ချက်နဲ့ တိုက်စစ်အင်အားကို ထည့်တွက်ပြီး မစ်ဒယ်ဘရော့ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "မစ်ဒယ်ဘရော့ရဲ့ နောက်ဆုံးရှုံးပွဲက ရမှတ်ပြန်ယူဖို့ ဖိအားဖြစ်နေပါတယ်။မစ်ဒယ်ဘရော့က ဂိုးမရဘဲရှုံးလာတဲ့ပွဲအပြီး ပြန်တုံ့ပြန်ဖို့လိုပါတယ်။ ဝက်ဖို့ဒ်အတွက် ပထမဂိုးပေးပြီးနောက် ပွဲကိုမထိန်းနိုင်တော့တာမျိုး ရှောင်ရပါမယ်။ ဝက်ဖို့ဒ်က နိုင်ပွဲရလာပေမယ့် ခံစစ်အတက်အကျမပျောက်သေးတာကြောင့် ဂိုးအခွင့်အရေးပိုဖန်တီးနိုင်မယ့် ထိပ်ဆုံးမစ်ဒယ်ဘရော့ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "မစ်ဒယ်ဘရော့",
       "previewV2FormatVersion": "2.1",
@@ -6222,14 +6444,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
@@ -6302,64 +6526,70 @@
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Southampton",
+          "opponent": "ဆောက်သမ်တန်",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "Southampton"
         },
         {
           "date": "2026-10-31",
           "competition": "Championship",
-          "opponent": "West Ham",
+          "opponent": "ဝက်စ်ဟမ်း",
           "teamGoals": 3,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "West Ham"
         },
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Preston",
+          "opponent": "ပရက်စတန်",
           "teamGoals": 1,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "Preston"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Blackburn",
+          "opponent": "ဘလက်ဘန်း",
           "teamGoals": 3,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "Blackburn"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Wrexham",
+          "opponent": "ဝရက်ဟမ်",
           "teamGoals": 2,
           "opponentGoals": 1,
           "venueSide": "away",
           "result": "W",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "Wrexham"
         }
       ],
       "awayLastFive": [
         {
           "date": "2026-11-03",
           "competition": "Championship",
-          "opponent": "Birmingham",
+          "opponent": "ဘာမင်ဂမ်",
           "teamGoals": 0,
           "opponentGoals": 3,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "Birmingham"
         },
         {
           "date": "2026-10-31",
@@ -6374,32 +6604,35 @@
         {
           "date": "2026-10-24",
           "competition": "Championship",
-          "opponent": "Portsmouth",
+          "opponent": "ပို့စ်မောက်",
           "teamGoals": 1,
           "opponentGoals": 2,
           "venueSide": "away",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "Portsmouth"
         },
         {
           "date": "2026-10-17",
           "competition": "Championship",
-          "opponent": "Lincoln",
+          "opponent": "လင်ကွန်း",
           "teamGoals": 2,
           "opponentGoals": 2,
           "venueSide": "home",
           "result": "D",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "Lincoln"
         },
         {
           "date": "2026-10-13",
           "competition": "Championship",
-          "opponent": "Swansea",
+          "opponent": "ဆွမ်ဆီး",
           "teamGoals": 0,
           "opponentGoals": 1,
           "venueSide": "home",
           "result": "L",
-          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+          "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "opponentCanonical": "Swansea"
         }
       ],
       "homeStanding": {
@@ -6428,7 +6661,7 @@
       },
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/west-bromwich.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-03/millwall.png",
-      "dailyPreviewText": "ဝက်ဘရွန်းက နောက်ဆုံးငါးပွဲ သုံးနိုင်၊ နှစ်သရေနဲ့ ထိပ်တန်းခြောက်နေရာထဲ ဆက်ရှိနေပြီး အိမ်ကွင်းမှာ ရမှတ်အပြည့်ယူချင်နေပါတယ်။ ဆောက်သမ်တန်ကွင်းက သရေရလဒ်နဲ့ ဝက်စ်ဟမ်းကို သုံးဂိုးသွင်းနိုင်မှုက ပွဲအခြေအနေမတူသော်လည်း တုံ့ပြန်နိုင်တဲ့အခြေခံရှိကြောင်း ပြပါတယ်။ မီဝေါကတော့ ဒါဘီကို ဂိုးပြတ်နိုင်ပြီးနောက် ဘာမင်ဂမ်ကို ဂိုးမရဘဲရှုံးလာလို့ တည်ငြိမ်မှုမရှိသေးပါဘူး။ ဧည့်သည်က ပွဲကိုကပ်ထားနိုင်ပေမယ့် ဝက်ဘရွန်းရဲ့ ဂိုးရဖို့ဆက်ကြိုးစားနိုင်မှုအောက်မှာ အမှားမလုပ်အောင် တစ်ပွဲလုံးထိန်းဖို့လိုပါတယ်။ အိမ်ရှင်ကိုယ်တိုင်လည်း နောက်ဆုံးငါးပွဲလုံး ဂိုးပေးထားတာကြောင့် သတိမလွတ်ဖို့လိုပေမယ့် ရလဒ်ဆက်တိုက်ထိန်းနိုင်မှုကို အလေးထားပြီး ဝက်ဘရွန်းကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဝက်ဘရွန်းက နောက်ဆုံးငါးပွဲ သုံးနိုင်၊ နှစ်သရေနဲ့ ထိပ်တန်းခြောက်နေရာထဲ ဆက်ရှိနေပြီး အိမ်ကွင်းမှာ ရမှတ်အပြည့်ယူချင်နေပါတယ်။ ဆောက်သမ်တန်ကွင်းက သရေရလဒ်နဲ့ ဝက်စ်ဟမ်းကို သုံးဂိုးသွင်းနိုင်မှုက ပွဲအခြေအနေမတူသော်လည်း တုံ့ပြန်နိုင်တဲ့အခြေခံရှိကြောင်း ပြပါတယ်။ မီဝေါကတော့ ဒါဘီကို ဂိုးပြတ်နိုင်ပြီးနောက် ဘာမင်ဂမ်ကို ဂိုးမရဘဲရှုံးလာလို့ တည်ငြိမ်မှုမရှိသေးပါဘူး။ ဧည့်သည်က ပွဲကိုကပ်ထားနိုင်ပေမယ့် ဝက်ဘရွန်းရဲ့ ဂိုးရဖို့ဆက်ကြိုးစားနိုင်မှုအောက်မှာ အမှားမလုပ်အောင် တစ်ပွဲလုံးထိန်းဖို့လိုပါတယ်။ **အိမ်ရှင်ကိုယ်တိုင်လည်း နောက်ဆုံးငါးပွဲလုံး ဂိုးပေးထားတာကြောင့် သတိမလွတ်ဖို့လိုပေမယ့် ရလဒ်ဆက်တိုက်ထိန်းနိုင်မှုကို အလေးထားပြီး ဝက်ဘရွန်းကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "မီဝေါက နိုင်ပွဲနောက်မှာ ရှုံးပွဲပြန်လိုက်နေချိန် ဝက်ဘရွန်းက ငါးပွဲဆက်မရှုံးထားပါဘူး။မီဝေါရဲ့ ဒါဘီအပေါ် ဂိုးပြတ်နိုင်ပွဲကို လျှော့တွက်မထားသင့်ပါဘူး။ ဝက်ဘရွန်းကတော့ နောက်တန်းကို အရင်တည်ငြိမ်အောင်ထားဖို့ လိုပါတယ်။ အိမ်ရှင်ခံစစ်က ဂိုးပေးနေသေးပေမယ့် အဆုံးထိ ရမှတ်ရှာနိုင်တဲ့ တည်ငြိမ်မှုကို အလေးထားပြီး ဝက်ဘရွန်းကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဝက်ဘရွန်း",
       "previewV2FormatVersion": "2.1",
@@ -6437,14 +6670,16 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and original editorial",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "owner_authorized_daily_publication",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-07",
         "researchSources": [
           "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
         ],
         "unverifiedFields": [
           "Unconfirmed player/injury detail omitted; no unsupported player claim added"
-        ]
+        ],
+        "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+        "masterPrompt": "PROFESSIONAL_MYANMAR_FOOTBALL_JOURNALIST_MASTER_PROMPT.md"
       },
       "tipPredictions": {
         "vipInternet": {
