@@ -111,35 +111,9 @@
     return model&&typeof model.predict==="function"?model.predict(m):null;
   }
   async function aiCard(m,reportDate){
-    const kit=window.FutureCodeCanvasKit;
-    if(!kit)throw Error("Canvas kit missing");
-    const {canvas,ctx}=kit.create(1080,470);
-    const C=kit.C;
-    const leagueLogo=window.FutureCodeBrandExportData?.leagueCrest(m.league);
-    await Promise.all([kit.fonts(),kit.preloadImages([m.homeCrestUrl,m.awayCrestUrl,leagueLogo].filter(Boolean))]);
-    kit.fill(ctx,0,0,1080,470,C.bg);
-    kit.fill(ctx,32,24,1016,415,C.panel,16);
-    kit.fill(ctx,32,24,1016,74,C.head,12);
-    if(leagueLogo)kit.crest(ctx,leagueLogo,49,35,50,"");
-    kit.text(ctx,window.FutureCodeBrandExportData?.leagueName(m.league)||String(m.league||"FOOTBALL"),leagueLogo?115:55,60,23,C.orange,true,"left",leagueLogo?885:950);
-    const hn=String(m.homeDisplay||m.home||""),an=String(m.awayDisplay||m.away||"");
-    kit.crest(ctx,m.homeCrestUrl,180,131,94,hn);
-    kit.crest(ctx,m.awayCrestUrl,805,131,94,an);
-    kit.text(ctx,hn,227,264,kit.fit(ctx,hn,390,26,17),C.white,true,"center",390);
-    kit.text(ctx,"VS",540,186,30,C.orange,true,"center");
-    kit.text(ctx,an,852,264,kit.fit(ctx,an,390,26,17),C.white,true,"center",390);
-    const scores=predictionFor(m);
-    if(scores&&scores.length){
-      kit.text(ctx,"ဖြစ်နိုင်ခြေမြင့်သော ဂိုးရလဒ် ၃ မျိုး",540,315,20,C.pale,true,"center");
-      scores.slice(0,3).forEach((score,i)=>{
-        kit.fill(ctx,259+i*192,350,176,55,i===0?"#815b24":C.panelAlt,10);
-        kit.text(ctx,String(score),347+i*192,378,28,C.white,true,"center");
-      });
-    }else{
-      kit.text(ctx,"အတည်ပြုနိုင်သော စာရင်းအချက်အလက် မလုံလောက်သေးပါ။",540,361,21,C.muted,true,"center",950);
-    }
-    kit.text(ctx,"DATA-ASSISTED OUTLOOK  ·  "+reportDate,540,450,14,C.muted,false,"center");
-    return canvas;
+    // Individual PNG and legacy ZIP buttons use the exact same Goal Zone table.
+    if(!window.GoalZoneTableExport?.render)throw Error("Goal Zone table renderer missing");
+    return window.GoalZoneTableExport.render("ai",[m],{day:reportDate});
   }
   async function downloadAI(m,reportDate){
     const date=reportDate||day();

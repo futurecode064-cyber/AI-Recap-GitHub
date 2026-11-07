@@ -206,6 +206,8 @@
         throw Error("PNG Canvas အချက်အလက် မပြည့်စုံပါ");
       return original;
     }catch(originalError){
+      // Table sections must never silently downgrade to non-tabular cards.
+      if(type==="ai"||type==="probability")throw originalError;
       console.warn("GOAL ZONE original exporter fallback",type,originalError);
       notes.push(type+" — "+(originalError?.message||String(originalError)));
       const pages=[];
@@ -314,8 +316,8 @@
       }));
       return stack(arts);
     }
-    if(type==="ai"){const arts=[];for(const m of group)arts.push(await aiCanvas(m,ctx.day));return stack(arts);}
-    if(type==="probability"){const arts=[];for(const m of group)arts.push(await probabilityCanvas(m,ctx.day,ctx.oddsById.get(m.fixtureId)||ctx.oddsByKey.get(key(m))));return stack(arts);}
+    if(type==="ai")return window.GoalZoneTableExport.render("ai",group,ctx);
+    if(type==="probability")return window.GoalZoneTableExport.render("probability",group,ctx);
     if(type==="news"){const arts=[];for(const s of group)arts.push(await newsCanvas(s));return stack(arts);}
     if(type==="odds")return oddsCanvas(ctx.odds,group);
     if(type==="results")return resultCanvas(group,ctx.previousDay);
@@ -429,6 +431,8 @@
               try{
                 output=await pngWithRetry(branded);
               }catch(encodeError){
+                // Never return the former loose card layout for AI/probability.
+                if(type==="ai"||type==="probability")throw encodeError;
                 // Canvas export may fail on mobile due to cross-origin crests,
                 // photos, or memory. Retry with accurate text-only cards.
                 warnings.push(type+" PNG encoding — "+(encodeError?.message||String(encodeError)));

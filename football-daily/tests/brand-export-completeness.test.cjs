@@ -11,7 +11,7 @@ function harness(id,failOnce=false){
  createElement(type){
   if(type==='a')return {click(){},remove(){}};
   const canvas={width:0,height:0,toBlob(cb){cb(new Blob(['png'],{type:'image/png'}));}};
-  const ctx={fillRect(){},beginPath(){},roundRect(){},fill(){},save(){},restore(){},clip(){},rect(){},scale(){},
+  const ctx={fillRect(){},strokeRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},roundRect(){},fill(){},save(){},restore(){},clip(){},rect(){},scale(){},
     createLinearGradient(){return {addColorStop(){}}},createRadialGradient(){return {addColorStop(){}}},
     measureText(t){return {width:String(t).length*11}},fillText(t){labels.push(String(t))},drawImage(img){logos.push(img.url)}};
   canvas.getContext=()=>ctx;canvases.push(canvas);return canvas;
@@ -80,15 +80,39 @@ test('A failed crest request can be retried on the next export',async()=>{
  assert.equal(x.requested.filter(u=>u===url).length,2);
  assert.ok(x.logos.includes(url));
 });
-test('Goal Zone AI PNG retains the league crest, Myanmar name and model predictions',async()=>{
+test('Goal Zone individual AI PNG keeps Main-style table columns and sourced scores',async()=>{
  const x=harness('future-code-journal');x.document.addEventListener=()=>{};
- x.window.FutureCodeAiScoreModel={predict:()=>['1-0','1-1','2-0']};
+ x.window.FutureCodeTime={clock:()=> '7:30 PM'};
+ x.window.FutureCodeAiScoreModel={predict:()=>['2-0','1-0','1-1']};
+ x.window.FutureCodeTipScores={load:async()=>1,predict:()=>['1-0','1-1','2-0']};
+ vm.runInNewContext(fs.readFileSync(path.join(root,'future-code-journal/goal-zone-table-export.js'),'utf8'),x);
  vm.runInNewContext(fs.readFileSync(path.join(root,'future-code-journal/goal-zone-downloads.js'),'utf8'),x);
  const m=report.matches.find(m=>m.league==='Ligue 2');
  await x.window.GoalZoneDownloads.downloadAI(m,report.reportDate);
  assert.ok(x.logos.includes(x.window.FutureCodeBrandExportData.leagueCrest(m.league)));
  assert.ok(x.labels.includes('ပြင်သစ် လိဂ် ၂'));
- for(const score of ['1-0','1-1','2-0'])assert.ok(x.labels.includes(score));
+ for(const label of ['VIP Internet','Bookies','AI Tips','7:30 PM','1-0','1-1','2-0'])
+  assert.ok(x.labels.includes(label),'AI table cell '+label);
+ assert.ok(x.canvases.some(c=>c.width===1280),'single PNG uses a wide table, not a 1080px card');
+});
+
+test('Goal Zone probability ZIP table aligns all four values and every selected row',async()=>{
+ const x=harness('future-code-journal');x.window.FutureCodeTime={clock:()=> '7:30 PM'};
+ x.window.FutureCodeProbabilityModel={analyze:()=>({win:{home:60,away:40},goals:{over:55,under:45}})};
+ vm.runInNewContext(fs.readFileSync(path.join(root,'future-code-journal/goal-zone-table-export.js'),'utf8'),x);
+ const matches=report.matches.slice(0,3);
+ const table=await x.window.GoalZoneTableExport.render('probability',matches,{day:report.reportDate});
+ assert.equal(table.width,1280);
+ for(const value of ['အိမ်ရှင်','ဧည့်သည်','ဂိုးပေါ်','ဂိုးအောက်','60%','40%','55%','45%'])
+  assert.ok(x.labels.includes(value),'probability table cell '+value);
+ for(const m of matches){
+  assert.ok(x.labels.includes(m.homeDisplay||m.home),m.home);
+  assert.ok(x.labels.includes(m.awayDisplay||m.away),m.away);
+ }
+ const center=fs.readFileSync(path.join(root,'future-code-journal/goal-zone-download-center.js'),'utf8');
+ assert.match(center,/if\(type==="ai"\)return window\.GoalZoneTableExport\.render/);
+ assert.match(center,/if\(type==="probability"\)return window\.GoalZoneTableExport\.render/);
+ assert.match(center,/if\(type==="ai"\|\|type==="probability"\)throw originalError/);
 });
 
 test('Current-day leagues resolve to bundled logos on all sub-brands',()=>{
