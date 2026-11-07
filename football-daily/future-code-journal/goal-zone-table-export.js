@@ -48,7 +48,7 @@
   }
   function marketFor(m,options){
     return options.oddsById?.get(m.fixtureId)
-      ||options.oddsByKey?.get((m.fixtureId||"")+"|"+(m.home||"")+"|"+(m.away||""))
+      ||options.oddsByKey?.get(m.fixtureId?"fixture:"+m.fixtureId:[m.league||"",m.home||"",m.away||""].join("|"))
       ||null;
   }
   function drawTeams(k,ctx,m,y,xMax){
