@@ -77,10 +77,7 @@
       ]
     }
   ],
-  "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristiano_Ronaldo_2018.jpg",
-  "photoAttribution": "© Анна Нэсси / soccer.ru · CC BY-SA 3.0 · Wikimedia Commons (2018 photograph; not 2026 event)",
-  "photoSource": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_2018.jpg",
-  "photoLicense": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "photo": "https://cdn.openart.ai/openart-uploads/production/attachment-transfers/68f9db618337fa737a62b653a65a9bc214bdf8bbe2b0185521743114ee19944d.png",
   "sources": [
     {
       "title": "FIFA — Ronaldo calls time on Portugal career",
@@ -94,5 +91,8 @@
       "title": "Reuters — Portugal retirement",
       "url": "https://www.reuters.com/sports/soccer/cristiano-ronaldo-announces-retirement-portuguese-national-team-2026-11-05/"
     }
-  ]
+  ],
+  "poster": "https://cdn.openart.ai/openart-uploads/production/attachment-transfers/68f9db618337fa737a62b653a65a9bc214bdf8bbe2b0185521743114ee19944d.png",
+  "posterType": "single-editorial-graphic",
+  "posterBranding": "Goal Zone Journal"
 }
