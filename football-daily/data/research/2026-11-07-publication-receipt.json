@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-07",
+  "status": "CANDIDATE_VERIFIED_LIVE_QA_PENDING",
+  "rollbackCommit": "54cf449d9a60fcedef0a2cfaa35870c43a18b129",
+  "counts": {
+    "oddsRows": 30,
+    "previews": 30,
+    "special": 2,
+    "ft": 13,
+    "vip": 30,
+    "bookies": 30,
+    "ai": 30,
+    "probabilities": 30,
+    "news": 10,
+    "teamCrests": 60
+  },
+  "checks": {
+    "dailyPackageGuard": "PASS",
+    "previewV2Editorial": "PASS_WITH_NO_PHOTO_WARNINGS_CURRENT_TEXT_ONLY_RENDERER",
+    "timeFormat": "PASS",
+    "assetBytesAndVisualMontage": "PASS",
+    "standingArithmetic": "PASS; Southampton -4 verified",
+    "legacyAllBrandsClockTest": "Obsolete hard-coded asset version and BCF pre-suspension design assertions fail on unchanged production; actual shared clock test passes"
+  },
+  "limitations": [
+    "No evening/current PDF: current prices blank",
+    "Current crest/text Preview V2 layout, no event photo claimed",
+    "News uses clearly labelled original data illustrations",
+    "Browser exports and six live routes pending verification"
+  ]
+}

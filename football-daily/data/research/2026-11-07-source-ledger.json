@@ -1,0 +1,729 @@
+{
+  "reportDate": "2026-11-07",
+  "sourcePDF": "7.pdf",
+  "sourceSha256": "e1258fae081319ea15abb5475a761e7c3f35c41250c3a5bde132a4e6f0c4b474",
+  "sourceRows": 30,
+  "rows": [
+    {
+      "fixtureId": "fc-20261107-01",
+      "pdfRow": 1,
+      "sourcePage": 1,
+      "home": "လိဒ်",
+      "away": "စပါး",
+      "canonicalHome": "Leeds",
+      "canonicalAway": "Tottenham",
+      "kickoff": "19:00",
+      "bodyOdds": "-15",
+      "goalTotalOdds": "2-90",
+      "upperTeam": "စပါး",
+      "ownerForecast": "1-1",
+      "sourceUrl": "https://tipsterarea.com/match/leeds-tottenham-premier-league-england-954221",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Leeds, away team is from London.\nDistance between them is 271.9 km.\nCoach of home team is Daniel Farke (Ger) and coach of away team is Roberto De Zerbi (Ita).\nMatch will take place on stadium\nElland Road,\nwhich has capacity\n37 914 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Elland Road.\nMatch will start in 12:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/leeds.gif",
+        "https://tipsterarea.com/images/teams/england/tottenham.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-02",
+      "pdfRow": 2,
+      "sourcePage": 1,
+      "home": "အာဆင်နယ်",
+      "away": "ဟူးစီးတီး",
+      "canonicalHome": "Arsenal",
+      "canonicalAway": "Hull City",
+      "kickoff": "21:30",
+      "bodyOdds": "2-5",
+      "goalTotalOdds": "3-10",
+      "upperTeam": "အာဆင်နယ်",
+      "ownerForecast": "3-1",
+      "sourceUrl": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from London, away team is from Hull.\nDistance between them is 249.0 km.\nCoach of home team is Mikel Arteta (Esp) and coach of away team is Sergej Jakirovic (Bih).\nMatch will take place on stadium\nEmirates Stadium,\nwhich has capacity\n60 361 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Emirates Stadium.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/arsenal.gif",
+        "https://tipsterarea.com/images/teams/england/hull-city.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-03",
+      "pdfRow": 3,
+      "sourcePage": 1,
+      "home": "ဖူလ်ဟမ်",
+      "away": "နယူးကာဆယ်",
+      "canonicalHome": "Fulham",
+      "canonicalAway": "Newcastle",
+      "kickoff": "21:30",
+      "bodyOdds": "-80",
+      "goalTotalOdds": "3+35",
+      "upperTeam": "ဖူလ်ဟမ်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/fulham-newcastle-premier-league-england-954223",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from London, away team is from Newcastle.\nDistance between them is 397.8 km.\nCoach of home team is Alvaro Arbeloa (Esp) and coach of away team is Matthias Jaissle (Ger).\nMatch will take place on stadium\nCraven Cottage,\nwhich has capacity\n25 700 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Craven Cottage.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/fulham.gif",
+        "https://tipsterarea.com/images/teams/england/newcastle.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-04",
+      "pdfRow": 4,
+      "sourcePage": 1,
+      "home": "နော်တင်ဟမ်",
+      "away": "မန်စီးတီး",
+      "canonicalHome": "Nottingham",
+      "canonicalAway": "Manchester City",
+      "kickoff": "00:00",
+      "bodyOdds": "1+45",
+      "goalTotalOdds": "3+30",
+      "upperTeam": "မန်စီးတီး",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Nottingham, away team is from Manchester.\nDistance between them is 93.1 km.\nCoach of home team is Oliver Glasner (Aut) and coach of away team is Enzo Maresca (Ita).\nMatch will take place on stadium\nCity Ground,\nwhich has capacity\n30 576 seats.\nDimension of the field is 105 x 71 m.\nPictures from Google maps\nstadium City Ground.\nMatch will start in 17:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/nottingham.gif",
+        "https://tipsterarea.com/images/teams/england/manchester-city.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-05",
+      "pdfRow": 5,
+      "sourcePage": 1,
+      "home": "ကတ်ဂလီယာရီ",
+      "away": "ဖရိုစင်ဝမ်း",
+      "canonicalHome": "Cagliari",
+      "canonicalAway": "Frosinone",
+      "kickoff": "20:30",
+      "bodyOdds": "-15",
+      "goalTotalOdds": "3-20",
+      "upperTeam": "ဖရိုစင်ဝမ်း",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Cagliari, away team is from Frosinone.\nDistance between them is 447.0 km.\nCoach of home team is Fabio Pisacane (Ita) and coach of away team is Massimiliano Alvini (Ita).\nMatch will take place on stadium\nSardegna Arena,\nwhich has capacity\n16 233 seats.\nDimension of the field is 105 x 65 m.\nPictures from Google maps\nstadium Sardegna Arena.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/cagliari.gif",
+        "https://tipsterarea.com/images/teams/italy/frosinone.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-06",
+      "pdfRow": 6,
+      "sourcePage": 1,
+      "home": "တိုရီနို",
+      "away": "လက်ချီ",
+      "canonicalHome": "Torino",
+      "canonicalAway": "Lecce",
+      "kickoff": "20:30",
+      "bodyOdds": "1+75",
+      "goalTotalOdds": "3+90",
+      "upperTeam": "တိုရီနို",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Turin, away team is from Lecce.\nDistance between them is 1 003.1 km.\nCoach of home team is Ignazio Abate (Ita) and coach of away team is Eusebio Di Francesco (Ita).\nMatch will take place on stadium\nOlimpico di Torino,\nwhich has capacity\n28 140 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Olimpico di Torino.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/torino.gif",
+        "https://tipsterarea.com/images/teams/italy/lecce.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-07",
+      "pdfRow": 7,
+      "sourcePage": 1,
+      "home": "ပါးမား",
+      "away": "ဘိုလော့နာ",
+      "canonicalHome": "Parma",
+      "canonicalAway": "Bologna",
+      "kickoff": "23:30",
+      "bodyOdds": "1+80",
+      "goalTotalOdds": "2-65",
+      "upperTeam": "ဘိုလော့နာ",
+      "ownerForecast": "1-1",
+      "sourceUrl": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Parma, away team is from Bologna.\nDistance between them is 86.9 km.\nCoach of home team is Alberto Gilardino (Ita) and coach of away team is Raffaele Palladino (Ita).\nMatch will take place on stadium\nEnnio Tardini,\nwhich has capacity\n27 906 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Ennio Tardini.\nMatch will start in 18:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/parma.gif",
+        "https://tipsterarea.com/images/teams/italy/bologna.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-08",
+      "pdfRow": 8,
+      "sourcePage": 1,
+      "home": "ရိုးမား",
+      "away": "ဆက်စူအိုလို",
+      "canonicalHome": "Roma",
+      "canonicalAway": "Sassuolo",
+      "kickoff": "02:15",
+      "bodyOdds": "2+65",
+      "goalTotalOdds": "3-100",
+      "upperTeam": "ရိုးမား",
+      "ownerForecast": "3-0",
+      "sourceUrl": "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Roma, away team is from Sassuolo.\nDistance between them is 325.8 km.\nCoach of home team is Gian Piero Gasperini (Ita) and coach of away team is Alberto Aquilani (Ita).\nMatch will take place on stadium\nStadio Olimpico,\nwhich has capacity\n73 261 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Stadio Olimpico.\nMatch will start in 20:45 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/roma.gif",
+        "https://tipsterarea.com/images/teams/italy/sassuolo.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-09",
+      "pdfRow": 9,
+      "sourcePage": 1,
+      "home": "မာလာဂာ",
+      "away": "ရေဆင်း",
+      "canonicalHome": "Malaga",
+      "canonicalAway": "Racing Santander",
+      "kickoff": "19:30",
+      "bodyOdds": "-10",
+      "goalTotalOdds": "3+40",
+      "upperTeam": "မာလာဂာ",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Malaga, away team is from Santander.\nDistance between them is 751.8 km.\nCoach of home team is Juan Francisco Funes (Esp) and coach of away team is Jose Alberto (Esp).\nMatch will take place on stadium\nEstadio La Rosaleda,\nwhich has capacity\n30 044 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Estadio La Rosaleda.\nMatch will start in 14:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/malaga.gif",
+        "https://tipsterarea.com/images/teams/spain/racing-santander.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-10",
+      "pdfRow": 10,
+      "sourcePage": 1,
+      "home": "အက်စ်ပန်ညို",
+      "away": "ကော်ရူနာ",
+      "canonicalHome": "Espanyol",
+      "canonicalAway": "Deportivo La Coruna",
+      "kickoff": "21:45",
+      "bodyOdds": "-30",
+      "goalTotalOdds": "2-75",
+      "upperTeam": "အက်စ်ပန်ညို",
+      "ownerForecast": "1-0",
+      "sourceUrl": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Barcelona, away team is from La Coruna.\nDistance between them is 893.9 km.\nCoach of home team is Eder Sarabia (Esp) and coach of away team is Antonio Hidalgo (Esp).\nMatch will take place on stadium\nEstadio Cornella-El Prat,\nwhich has capacity\n40 500 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Estadio Cornella-El Prat.\nMatch will start in 16:15 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/espanyol.gif",
+        "https://tipsterarea.com/images/teams/spain/deportivo-la-coruna.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-11",
+      "pdfRow": 11,
+      "sourcePage": 1,
+      "home": "အိုဆာစူနာ",
+      "away": "ဘီဘာအိုလ်",
+      "canonicalHome": "Osasuna",
+      "canonicalAway": "Athletic Bilbao",
+      "kickoff": "00:00",
+      "bodyOdds": "-75",
+      "goalTotalOdds": "2-60",
+      "upperTeam": "ဘီဘာအိုလ်",
+      "ownerForecast": "0-1",
+      "sourceUrl": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Pamplona, away team is from Bilbao.\nDistance between them is 115.4 km.\nCoach of home team is Jagoba Arrasate (Esp) and coach of away team is Edin Terzic (Ger).\nMatch will take place on stadium\nEstadio El Sadar,\nwhich has capacity\n20 000 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Estadio El Sadar.\nMatch will start in 18:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/osasuna.gif",
+        "https://tipsterarea.com/images/teams/spain/athletic-bilbao.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-12",
+      "pdfRow": 12,
+      "sourcePage": 1,
+      "home": "ဗလင်စီယာ",
+      "away": "ရီးရဲလ်မက်ဒရစ်",
+      "canonicalHome": "Valencia",
+      "canonicalAway": "Real Madrid",
+      "kickoff": "02:30",
+      "bodyOdds": "2+45",
+      "goalTotalOdds": "3-45",
+      "upperTeam": "ရီးရဲလ်မက်ဒရစ်",
+      "ownerForecast": "1-3",
+      "sourceUrl": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Valencia, away team is from Madrid.\nDistance between them is 302.4 km.\nCoach of home team is Javier Aguirre (Mex) and coach of away team is Jose Mourinho (Por).\nMatch will take place on stadium\nMestalla Stadium,\nwhich has capacity\n52 600 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Mestalla Stadium.\nMatch will start in 21:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/valencia.gif",
+        "https://tipsterarea.com/images/teams/spain/real-madrid.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-13",
+      "pdfRow": 13,
+      "sourcePage": 1,
+      "home": "ဒေါ့မွန်",
+      "away": "အဲဗားဘတ်",
+      "canonicalHome": "Borussia Dortmund",
+      "canonicalAway": "Elversberg",
+      "kickoff": "21:00",
+      "bodyOdds": "2+85",
+      "goalTotalOdds": "3-90",
+      "upperTeam": "ဒေါ့မွန်",
+      "ownerForecast": "3-0",
+      "sourceUrl": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Dortmund, away team is from Spiesen-Elversberg.\nDistance between them is 245.6 km.\nCoach of home team is Niko Kovac (Cro) and coach of away team is Vincent Wagner (Ger).\nMatch will take place on stadium\nSignal Iduna Park,\nwhich has capacity\n80 645 persons and seats capacity 65 829.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Signal Iduna Park.\nMatch will start in 15:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/borussia-dortmund.gif",
+        "https://tipsterarea.com/images/teams/germany/elversberg.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-14",
+      "pdfRow": 14,
+      "sourcePage": 1,
+      "home": "မိန့်ဇ်",
+      "away": "ဘိုင်ယန်",
+      "canonicalHome": "Mainz",
+      "canonicalAway": "Bayern Munchen",
+      "kickoff": "21:00",
+      "bodyOdds": "2+70",
+      "goalTotalOdds": "4+25",
+      "upperTeam": "ဘိုင်ယန်",
+      "ownerForecast": "1-4",
+      "sourceUrl": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Mainz, away team is from Munich.\nDistance between them is 315.9 km.\nCoach of home team is Urs Fischer (Sui) and coach of away team is Vincent Kompany (Bel).\nMatch will take place on stadium\nOpel Arena,\nwhich has capacity\n34 034 persons and seats capacity 26 600.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Opel Arena.\nMatch will start in 15:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/mainz.gif",
+        "https://tipsterarea.com/images/teams/germany/bayern-munchen.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-15",
+      "pdfRow": 15,
+      "sourcePage": 1,
+      "home": "လစ်ဇစ်",
+      "away": "အော့ဘတ်",
+      "canonicalHome": "RB Leipzig",
+      "canonicalAway": "Augsburg",
+      "kickoff": "21:00",
+      "bodyOdds": "1-60",
+      "goalTotalOdds": "4+40",
+      "upperTeam": "လစ်ဇစ်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Leipzig, away team is from Augsburg.\nDistance between them is 347.3 km.\nCoach of home team is Martin Demichelis (Arg) and coach of away team is Manuel Baum (Ger).\nMatch will take place on stadium\nRed Bull Arena,\nwhich has capacity\n44 345 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Red Bull Arena.\nMatch will start in 15:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/rb-leipzig.gif",
+        "https://tipsterarea.com/images/teams/germany/augsburg.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-16",
+      "pdfRow": 16,
+      "sourcePage": 1,
+      "home": "ပတ်ဒါဘွန်း",
+      "away": "ဖရန့်ဖတ်",
+      "canonicalHome": "Paderborn",
+      "canonicalAway": "Eintracht Frankfurt",
+      "kickoff": "21:00",
+      "bodyOdds": "-60",
+      "goalTotalOdds": "3-20",
+      "upperTeam": "ဖရန့်ဖတ်",
+      "ownerForecast": "2-2",
+      "sourceUrl": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Paderborn, away team is from Frankfurt am Main.\nDistance between them is 178.4 km.\nCoach of home team is Ralf Kettemann (Ger) and coach of away team is Adi Hutter (Aut).\nMatch will take place on stadium\nBenteler-Arena,\nwhich has capacity\n15 000 persons and seats capacity 5 800.\nPictures from Google maps\nstadium Benteler-Arena.\nMatch will start in 15:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/paderborn.gif",
+        "https://tipsterarea.com/images/teams/germany/eintracht-frankfurt.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-17",
+      "pdfRow": 17,
+      "sourcePage": 1,
+      "home": "စတုဂတ်",
+      "away": "ဝါဒါဘရီမင်",
+      "canonicalHome": "Stuttgart",
+      "canonicalAway": "Werder Bremen",
+      "kickoff": "00:00",
+      "bodyOdds": "1+35",
+      "goalTotalOdds": "4+80",
+      "upperTeam": "စတုဂတ်",
+      "ownerForecast": "3-2",
+      "sourceUrl": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Stuttgart, away team is from Bremen.\nDistance between them is 478.0 km.\nCoach of home team is Sebastian Hoenes (Ger) and coach of away team is Daniel Thioune (Ger).\nMatch will take place on stadium\nMercedes-Benz Arena,\nwhich has capacity\n60 449 persons and seats capacity 54 812.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Mercedes-Benz Arena.\nMatch will start in 18:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/stuttgart.gif",
+        "https://tipsterarea.com/images/teams/germany/werder-bremen.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-18",
+      "pdfRow": 18,
+      "sourcePage": 1,
+      "home": "အော်ဇေး",
+      "away": "ပဲရစ်",
+      "canonicalHome": "Auxerre",
+      "canonicalAway": "Paris FC",
+      "kickoff": "00:30",
+      "bodyOdds": "1+65",
+      "goalTotalOdds": "3+50",
+      "upperTeam": "ပဲရစ်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/auxerre-paris-fc-ligue-1-france-954238",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Auxerre, away team is from Paris.\nDistance between them is 147.7 km.\nCoach of home team is William Still (Bel) and coach of away team is Liam Rosenior (Eng).\nMatch will take place on stadium\nStade de l'Abbe-Deschamps,\nwhich has capacity\n21 379 seats.\nDimension of the field is 110 x 60 m.\nPictures from Google maps\nstadium Stade de l'Abbe-Deschamps.\nMatch will start in 19:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/france/auxerre.gif",
+        "https://tipsterarea.com/images/teams/france/paris-fc.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-19",
+      "pdfRow": 19,
+      "sourcePage": 1,
+      "home": "ပီအက်စ်ဂျီ",
+      "away": "ထရွိုင်း",
+      "canonicalHome": "Paris Saint Germain",
+      "canonicalAway": "Troyes",
+      "kickoff": "02:35",
+      "bodyOdds": "2-95",
+      "goalTotalOdds": "4+50",
+      "upperTeam": "ပီအက်စ်ဂျီ",
+      "ownerForecast": "3-1",
+      "sourceUrl": "https://tipsterarea.com/match/paris-saint-germain-troyes-ligue-1-france-954239",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Paris, away team is from Troyes.\nDistance between them is 141.7 km.\nCoach of home team is Luis Enrique (Esp) and coach of away team is Stephane Dumont (Fra).\nMatch will take place on stadium\nParc des Princes,\nwhich has capacity\n48 712 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Parc des Princes.\nMatch will start in 21:05 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/france/paris-saint-germain.gif",
+        "https://tipsterarea.com/images/teams/france/troyes.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-20",
+      "pdfRow": 20,
+      "sourcePage": 1,
+      "home": "ဘရစ်စတိုး",
+      "away": "နော်ဝှစ်",
+      "canonicalHome": "Bristol City",
+      "canonicalAway": "Norwich",
+      "kickoff": "19:00",
+      "bodyOdds": "-10",
+      "goalTotalOdds": "3+60",
+      "upperTeam": "နော်ဝှစ်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Bristol, away team is from Norwich.\nDistance between them is 296.5 km.\nMatch will take place on stadium\nAshton Gate Stadium,\nwhich has capacity\n21 497 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Ashton Gate Stadium.\nMatch will start in 12:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/bristol-city.gif",
+        "https://tipsterarea.com/images/teams/england/norwich.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-21",
+      "pdfRow": 21,
+      "sourcePage": 1,
+      "home": "ပို့စ်မောက်",
+      "away": "စတုတ်စီးတီး",
+      "canonicalHome": "Portsmouth",
+      "canonicalAway": "Stoke",
+      "kickoff": "19:00",
+      "bodyOdds": "-55",
+      "goalTotalOdds": "2-50",
+      "upperTeam": "ပို့စ်မောက်",
+      "ownerForecast": "1-0",
+      "sourceUrl": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Portsmouth, away team is from Stoke-on-Trent.\nDistance between them is 256.4 km.\nMatch will take place on stadium\nFratton Park,\nwhich has capacity\n21 100 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Fratton Park.\nMatch will start in 12:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/portsmouth.gif",
+        "https://tipsterarea.com/images/teams/england/stoke.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-22",
+      "pdfRow": 22,
+      "sourcePage": 1,
+      "home": "ဝရက်ဟမ်",
+      "away": "ဝုဗ်",
+      "canonicalHome": "Wrexham",
+      "canonicalAway": "Wolverhampton",
+      "kickoff": "19:00",
+      "bodyOdds": "-55",
+      "goalTotalOdds": "3+100",
+      "upperTeam": "ဝုဗ်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Wrexham, away team is from Wolverhampton.\nDistance between them is 77.7 km.\nMatch will take place on stadium\nRacecourse Ground,\nwhich has capacity\n10 500 persons and seats capacity 10 000.\nDimension of the field is 102 x 68 m.\nPictures from Google maps\nstadium Racecourse Ground.\nMatch will start in 12:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/wrexham.gif",
+        "https://tipsterarea.com/images/teams/england/wolverhampton.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-23",
+      "pdfRow": 23,
+      "sourcePage": 1,
+      "home": "ဘာမင်ဂမ်",
+      "away": "ဆွမ်ဆီး",
+      "canonicalHome": "Birmingham",
+      "canonicalAway": "Swansea",
+      "kickoff": "21:30",
+      "bodyOdds": "1+90",
+      "goalTotalOdds": "3+90",
+      "upperTeam": "ဘာမင်ဂမ်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Birmingham (England), away team is from Swansea (Wales).\nDistance between them is 169.3 km.\nMatch will take place on stadium\nSt Andrew's,\nwhich has capacity\n30 016 seats.\nDimension of the field is 100 x 66 m.\nPictures from Google maps\nstadium St Andrew's.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/birmingham.gif",
+        "https://tipsterarea.com/images/teams/england/swansea.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-24",
+      "pdfRow": 24,
+      "sourcePage": 1,
+      "home": "ဘလက်ဘန်း",
+      "away": "ဝက်စ်ဟမ်း",
+      "canonicalHome": "Blackburn",
+      "canonicalAway": "West Ham",
+      "kickoff": "21:30",
+      "bodyOdds": "1+15",
+      "goalTotalOdds": "3=",
+      "upperTeam": "ဝက်စ်ဟမ်း",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Blackburn, away team is from London.\nDistance between them is 295.7 km.\nMatch will take place on stadium\nEwood Park,\nwhich has capacity\n31 367 seats.\nDimension of the field is 105 x 69 m.\nPictures from Google maps\nstadium Ewood Park.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/blackburn.gif",
+        "https://tipsterarea.com/images/teams/england/west-ham.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-25",
+      "pdfRow": 25,
+      "sourcePage": 1,
+      "home": "ကာဒစ်",
+      "away": "ဘန်လေ",
+      "canonicalHome": "Cardiff",
+      "canonicalAway": "Burnley",
+      "kickoff": "21:30",
+      "bodyOdds": "-70",
+      "goalTotalOdds": "3-25",
+      "upperTeam": "ကာဒစ်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Cardiff (Wales), away team is from Burnley (England).\nDistance between them is 265.8 km.\nMatch will take place on stadium\nCardiff City Stadium,\nwhich has capacity\n33 000 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Cardiff City Stadium.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/cardiff.gif",
+        "https://tipsterarea.com/images/teams/england/burnley.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-26",
+      "pdfRow": 26,
+      "sourcePage": 1,
+      "home": "ချာတန်",
+      "away": "ရှက်ဖီးလ်ယူ",
+      "canonicalHome": "Charlton",
+      "canonicalAway": "Sheffield United",
+      "kickoff": "21:30",
+      "bodyOdds": "-60",
+      "goalTotalOdds": "3+100",
+      "upperTeam": "ရှက်ဖီးလ်ယူ",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from London, away team is from Sheffield.\nDistance between them is 227.3 km.\nMatch will take place on stadium\nThe Valley,\nwhich has capacity\n27 111 seats.\nDimension of the field is 102 x 66 m.\nPictures from Google maps\nstadium The Valley.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/charlton.gif",
+        "https://tipsterarea.com/images/teams/england/sheffield-united.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-27",
+      "pdfRow": 27,
+      "sourcePage": 1,
+      "home": "ပရက်စတန်",
+      "away": "ဆောက်သမ်တန်",
+      "canonicalHome": "Preston",
+      "canonicalAway": "Southampton",
+      "kickoff": "21:30",
+      "bodyOdds": "1+15",
+      "goalTotalOdds": "3=",
+      "upperTeam": "ဆောက်သမ်တန်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Preston, away team is from Southampton.\nDistance between them is 330.6 km.\nMatch will take place on stadium\nDeepdale,\nwhich has capacity\n24 500 seats.\nDimension of the field is 100 x 68 m.\nPictures from Google maps\nstadium Deepdale.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/preston.gif",
+        "https://tipsterarea.com/images/teams/england/southampton.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-28",
+      "pdfRow": 28,
+      "sourcePage": 1,
+      "home": "ကျူပီအာ",
+      "away": "လင်ကွန်း",
+      "canonicalHome": "Queens Park Rangers",
+      "canonicalAway": "Lincoln",
+      "kickoff": "21:30",
+      "bodyOdds": "1+35",
+      "goalTotalOdds": "3+60",
+      "upperTeam": "ကျူပီအာ",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from London, away team is from Lincoln.\nDistance between them is 193.1 km.\nMatch will take place on stadium\nLoftus Road,\nwhich has capacity\n18 439 seats.\nDimension of the field is 102 x 66 m.\nPictures from Google maps\nstadium Loftus Road.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/queens-park-rangers.gif",
+        "https://tipsterarea.com/images/teams/england/lincoln.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-29",
+      "pdfRow": 29,
+      "sourcePage": 1,
+      "home": "ဝက်ဖို့ဒ်",
+      "away": "မစ်ဒယ်ဘရော့",
+      "canonicalHome": "Watford",
+      "canonicalAway": "Middlesbrough",
+      "kickoff": "21:30",
+      "bodyOdds": "1-5",
+      "goalTotalOdds": "3-40",
+      "upperTeam": "မစ်ဒယ်ဘရော့",
+      "ownerForecast": "1-3",
+      "sourceUrl": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from Watford, away team is from Middlesbrough.\nDistance between them is 329.6 km.\nMatch will take place on stadium\nVicarage Road,\nwhich has capacity\n17 477 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium Vicarage Road.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/watford.gif",
+        "https://tipsterarea.com/images/teams/england/middlesbrough.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261107-30",
+      "pdfRow": 30,
+      "sourcePage": 1,
+      "home": "ဝက်ဘရွန်း",
+      "away": "မီဝေါ",
+      "canonicalHome": "West Bromwich",
+      "canonicalAway": "Millwall",
+      "kickoff": "21:30",
+      "bodyOdds": "-70",
+      "goalTotalOdds": "3+80",
+      "upperTeam": "ဝက်ဘရွန်း",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+      "snapshot": "07.11.2026 00:00",
+      "clubDetails": "Home team is from West Bromwich, away team is from London.\nDistance between them is 170.2 km.\nMatch will take place on stadium\nThe Hawthorns,\nwhich has capacity\n26 272 seats.\nDimension of the field is 105 x 68 m.\nPictures from Google maps\nstadium The Hawthorns.\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/west-bromwich.gif",
+        "https://tipsterarea.com/images/teams/england/millwall.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed player/injury detail omitted; no unsupported player claim added"
+      ]
+    }
+  ],
+  "status": "candidate"
+}

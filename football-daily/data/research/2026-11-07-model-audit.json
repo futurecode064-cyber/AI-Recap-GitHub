@@ -1,0 +1,636 @@
+{
+  "date": "2026-11-07",
+  "rows": [
+    {
+      "fixtureId": "fc-20261107-01",
+      "ai": "1-1",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 49,
+          "away": 51,
+          "source": "https://tipsterarea.com/match/leeds-tottenham-premier-league-england-954221",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 38,
+          "under": 62,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/leeds-tottenham-premier-league-england-954221"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-02",
+      "ai": "1-0",
+      "bookies": "2-0",
+      "probabilities": {
+        "win": {
+          "home": 94,
+          "away": 6,
+          "source": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 48,
+          "under": 52,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-03",
+      "ai": "1-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 63,
+          "away": 37,
+          "source": "https://tipsterarea.com/match/fulham-newcastle-premier-league-england-954223",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 35,
+          "under": 65,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/fulham-newcastle-premier-league-england-954223"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-04",
+      "ai": "0-2",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 28,
+          "away": 72,
+          "source": "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 55,
+          "under": 45,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/nottingham-manchester-city-premier-league-england-954224"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-05",
+      "ai": "1-2",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 47,
+          "away": 53,
+          "source": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 79,
+          "under": 21,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/cagliari-frosinone-serie-a-italy-954234"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-06",
+      "ai": "1-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 71,
+          "away": 29,
+          "source": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 66,
+          "under": 34,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/torino-lecce-serie-a-italy-954235"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-07",
+      "ai": "1-1",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 29,
+          "away": 71,
+          "source": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 58,
+          "under": 42,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/parma-bologna-serie-a-italy-954236"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-08",
+      "ai": "3-1",
+      "bookies": "2-0",
+      "probabilities": {
+        "win": {
+          "home": 88,
+          "away": 12,
+          "source": "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 89,
+          "under": 11,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/roma-sassuolo-serie-a-italy-954237"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-09",
+      "ai": "1-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 54,
+          "away": 46,
+          "source": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 62,
+          "under": 38,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/malaga-racing-santander-primera-division-spain-954225"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-10",
+      "ai": "1-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 57,
+          "away": 43,
+          "source": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 48,
+          "under": 52,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/espanyol-deportivo-la-coruna-primera-division-spain-954226"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-11",
+      "ai": "1-1",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 37,
+          "away": 63,
+          "source": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 66,
+          "under": 34,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/osasuna-athletic-bilbao-primera-division-spain-954227"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-12",
+      "ai": "0-2",
+      "bookies": "0-2",
+      "probabilities": {
+        "win": {
+          "home": 11,
+          "away": 89,
+          "source": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 66,
+          "under": 34,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/valencia-real-madrid-primera-division-spain-954228"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-13",
+      "ai": "2-1",
+      "bookies": "2-0",
+      "probabilities": {
+        "win": {
+          "home": 88,
+          "away": 12,
+          "source": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 68,
+          "under": 32,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/borussia-dortmund-elversberg-bundesliga-germany-954229"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-14",
+      "ai": "1-2",
+      "bookies": "1-2",
+      "probabilities": {
+        "win": {
+          "home": 14,
+          "away": 86,
+          "source": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 78,
+          "under": 22,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/mainz-bayern-munchen-bundesliga-germany-954230"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-15",
+      "ai": "2-1",
+      "bookies": "2-1",
+      "probabilities": {
+        "win": {
+          "home": 80,
+          "away": 20,
+          "source": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 78,
+          "under": 22,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/rb-leipzig-augsburg-bundesliga-germany-954232"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-16",
+      "ai": "1-1",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 43,
+          "away": 57,
+          "source": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 43,
+          "under": 57,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/paderborn-eintracht-frankfurt-bundesliga-germany-954231"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-17",
+      "ai": "1-2",
+      "bookies": "2-1",
+      "probabilities": {
+        "win": {
+          "home": 73,
+          "away": 27,
+          "source": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 70,
+          "under": 30,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/stuttgart-werder-bremen-bundesliga-germany-954233"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-18",
+      "ai": "1-2",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 30,
+          "away": 70,
+          "source": "https://tipsterarea.com/match/auxerre-paris-fc-ligue-1-france-954238",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 79,
+          "under": 21,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/auxerre-paris-fc-ligue-1-france-954238"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-19",
+      "ai": "2-0",
+      "bookies": "2-1",
+      "probabilities": {
+        "win": {
+          "home": 95,
+          "away": 5,
+          "source": "https://tipsterarea.com/match/paris-saint-germain-troyes-ligue-1-france-954239",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 70,
+          "under": 30,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/paris-saint-germain-troyes-ligue-1-france-954239"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-20",
+      "ai": "1-1",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 48,
+          "away": 52,
+          "source": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 46,
+          "under": 54,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/bristol-city-norwich-championship-england-954243"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-21",
+      "ai": "1-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 58,
+          "away": 42,
+          "source": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 35,
+          "under": 65,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/portsmouth-stoke-championship-england-954244"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-22",
+      "ai": "1-1",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 39,
+          "away": 61,
+          "source": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 46,
+          "under": 54,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/wrexham-wolverhampton-championship-england-954245"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-23",
+      "ai": "1-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 69,
+          "away": 31,
+          "source": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 58,
+          "under": 42,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/birmingham-swansea-championship-england-954246"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-24",
+      "ai": "1-2",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 25,
+          "away": 75,
+          "source": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 71,
+          "under": 29,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/blackburn-west-ham-championship-england-954247"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-25",
+      "ai": "1-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 59,
+          "away": 41,
+          "source": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 66,
+          "under": 34,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/cardiff-burnley-championship-england-954248"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-26",
+      "ai": "1-1",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 38,
+          "away": 62,
+          "source": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 53,
+          "under": 47,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/charlton-sheffield-united-championship-england-954249"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-27",
+      "ai": "0-2",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 27,
+          "away": 73,
+          "source": "https://tipsterarea.com/match/preston-southampton-championship-england-954250",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 60,
+          "under": 40,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/preston-southampton-championship-england-954250"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-28",
+      "ai": "2-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 75,
+          "away": 25,
+          "source": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 76,
+          "under": 24,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/queens-park-rangers-lincoln-championship-england-954251"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-29",
+      "ai": "1-2",
+      "bookies": "0-1",
+      "probabilities": {
+        "win": {
+          "home": 23,
+          "away": 77,
+          "source": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 68,
+          "under": 32,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/watford-middlesbrough-championship-england-954252"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261107-30",
+      "ai": "1-1",
+      "bookies": "1-0",
+      "probabilities": {
+        "win": {
+          "home": 63,
+          "away": 37,
+          "source": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253",
+          "provider": "TipsterArea displayed first bookmaker / 1xbet; snapshot 07.11.2026 00:00",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 62,
+          "under": 38,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/west-bromwich-millwall-championship-england-954253"
+        }
+      }
+    }
+  ],
+  "source": "existing unchanged project models"
+}
