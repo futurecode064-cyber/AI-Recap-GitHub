@@ -3,6 +3,23 @@
   "publicationTimeZone": "Asia/Yangon",
   "articles": [
     {
+      "id": "the-two-kings-episode-02",
+      "path": "articles/2026-11-08-the-two-kings-episode-02.json",
+      "date": "2026-11-08",
+      "category": "အခန်းဆက်ဝတ္ထုရှည်",
+      "seriesId": "the-two-kings",
+      "seriesTitle": "THE TWO KINGS — ရာဇပလ္လင်တစ်ခု၊ ဘုရင်နှစ်ပါး",
+      "episode": 2,
+      "plannedEpisodes": 24,
+      "episodeTitle": "ကမ့်နူးရဲ့ တတိယမိနစ်၊ လွဲချော်သွားတဲ့ အခွင့်အရေးနဲ့ Old Trafford ရဲ့ အဆုံးအဖြတ်",
+      "title": "THE TWO KINGS — အပိုင်း (၂) : ကမ့်နူးရဲ့ တတိယမိနစ်၊ လွဲချော်သွားတဲ့ အခွင့်အရေးနဲ့ Old Trafford ရဲ့ အဆုံးအဖြတ်",
+      "subtitle": "CRISTIANO RONALDO × LIONEL MESSI | THE LEGACY",
+      "summary": "၂၀၀၈ ကမ့်နူးပင်နယ်တီလွဲချော်မှုမှ Old Trafford ရဲ့ အဆုံးအဖြတ်ဂိုး၊ မော်စကိုချန်ပီယံလိဂ်အောင်ပွဲနဲ့ ရောမမြို့ဆီ လမ်းဖွင့်လာခဲ့တဲ့ သမိုင်း။",
+      "photo": "https://cdn.openart.ai/openart-uploads/production/attachment-transfers/7a67a5ea136254f587f81bbb10e968a2aa5dde74f1b776f195168f56a6f3cc1a.png",
+      "posterMain": "https://cdn.openart.ai/openart-uploads/production/attachment-transfers/1663935d13529d6e99665851728fae7f77a291b535090cb4b96beddb66c779ef.png",
+      "posterGoal": "https://cdn.openart.ai/openart-uploads/production/attachment-transfers/7a67a5ea136254f587f81bbb10e968a2aa5dde74f1b776f195168f56a6f3cc1a.png"
+    },
+    {
       "id": "the-two-kings-episode-01",
       "path": "articles/2026-11-07-the-two-kings-episode-01.json",
       "date": "2026-11-07",
