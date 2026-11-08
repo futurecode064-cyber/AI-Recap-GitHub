@@ -49,15 +49,15 @@
       "id": "myanmar-kyar",
       "name": "မြန်မာ ကျားကွက်",
       "packageName": "mm.futurecode.myanmarkyar",
-      "versionName": "4.2.16",
-      "versionCode": 40216,
+      "versionName": "4.2.18",
+      "versionCode": 40218,
       "minSdk": 26,
-      "file": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/portal/apps/Myanmar-Kyar-v4.2.16.apk",
-      "sizeBytes": 1709513,
-      "sha256": "92bced354a1230f1178778cbb3e8c0f167b799a95698b55eecddae5730fea76a",
+      "file": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/portal/apps/Myanmar-Kyar-v4.2.18.apk",
+      "sizeBytes": 1717035,
+      "sha256": "f9b788577c922d8994422b2cce1cffffc4f18bdbd42e6e13b364154fbf30866b",
       "certificateSha256": "f92280389bda918d496d604172baf2b3febd8dcd2b9a48f84e540a8acb6e1e5d",
       "releasedAt": "2026-11-08",
-      "releaseNotes": "Puzzle အသစ် ၂၀၊ ကျားဘုရင်ပြိုင်ပွဲ ဝင်ရောက်ရန်၊ အနက်နှင့်ရွှေ Theme၊ ပွဲဖွင့် Token ကြေး ထည့်နိုင်ခြင်း။ မူလ Signing Certificate တူညီသော Update။ အနက်ရောင်ကွက်ပေါ်က အနက်ရုပ်ကို ပိုမြင်သာစေရန် Contrast ပြင်ထားသည်။"
+      "releaseNotes": "Puzzle ကို ပွဲအဆုံးထိကစားပြီး ကစားသူနိုင်မှသာ အောင်မြင်အဖြစ် မှတ်တမ်းတင်သည်။ Puzzle မှ Back နှိပ်လျှင် လေ့ကျင့်ခန်းသို့ ပြန်ရောက်သည်။ အနက်ရောင်အရုပ် contrast နှင့် မြန်မာနံပါတ်ရွှေ့ကွက်များ ပြင်ဆင်ထားသည်။"
     },
     {
       "id": "daily-money",
