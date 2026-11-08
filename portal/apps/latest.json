@@ -49,15 +49,15 @@
       "id": "myanmar-kyar",
       "name": "မြန်မာ ကျားကွက်",
       "packageName": "mm.futurecode.myanmarkyar",
-      "versionName": "4.2.15",
-      "versionCode": 40215,
+      "versionName": "4.2.16",
+      "versionCode": 40216,
       "minSdk": 26,
-      "file": "https://myanmar-kyar.futurecode-dubai-86851bf2.workers.dev/download",
-      "sizeBytes": 1717063,
-      "sha256": "0814625f844d9964143e9d411a9e31791a763f25b6ce082b2f3c019e72993074",
+      "file": "https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/portal/apps/Myanmar-Kyar-v4.2.16.apk",
+      "sizeBytes": 1709513,
+      "sha256": "92bced354a1230f1178778cbb3e8c0f167b799a95698b55eecddae5730fea76a",
       "certificateSha256": "f92280389bda918d496d604172baf2b3febd8dcd2b9a48f84e540a8acb6e1e5d",
       "releasedAt": "2026-11-08",
-      "releaseNotes": "Puzzle အသစ် ၂၀၊ ကျားဘုရင်ပြိုင်ပွဲ ဝင်ရောက်ရန်၊ အနက်နှင့်ရွှေ Theme၊ ပွဲဖွင့် Token ကြေး ထည့်နိုင်ခြင်း။ မူလ Signing Certificate တူညီသော Update။"
+      "releaseNotes": "Puzzle အသစ် ၂၀၊ ကျားဘုရင်ပြိုင်ပွဲ ဝင်ရောက်ရန်၊ အနက်နှင့်ရွှေ Theme၊ ပွဲဖွင့် Token ကြေး ထည့်နိုင်ခြင်း။ မူလ Signing Certificate တူညီသော Update။ အနက်ရောင်ကွက်ပေါ်က အနက်ရုပ်ကို ပိုမြင်သာစေရန် Contrast ပြင်ထားသည်။"
     },
     {
       "id": "daily-money",
