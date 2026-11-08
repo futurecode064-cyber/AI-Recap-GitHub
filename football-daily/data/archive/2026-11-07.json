@@ -21,7 +21,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T12:30:00Z",
       "kickoffYangon": "2026-11-07 7:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -209,7 +209,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Leeds / Tottenham 0-2"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-02",
@@ -228,7 +231,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -427,7 +430,10 @@
       "specialResearchSources": [
         "https://tipsterarea.com/match/arsenal-hull-city-premier-league-england-954222",
         "https://www.premierleague.com/en/news/4756862/predicted-line-ups-for-premier-league-teams-in-matchweek-10"
-      ]
+      ],
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-03",
@@ -446,7 +452,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -634,7 +640,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Fulham / Newcastle 1-1"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-04",
@@ -653,7 +662,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T17:30:00Z",
       "kickoffYangon": "2026-11-08 12:00 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -841,7 +850,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Nottingham Forest / Manchester City 0-2"
         }
-      }
+      },
+      "finalScore": "3-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-05",
@@ -860,7 +872,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T14:00:00Z",
       "kickoffYangon": "2026-11-07 8:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1051,7 +1063,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Cagliari / Frosinone 1-3"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-06",
@@ -1070,7 +1085,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T14:00:00Z",
       "kickoffYangon": "2026-11-07 8:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1260,7 +1275,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Torino / Lecce 2-1"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-07",
@@ -1279,7 +1297,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T17:00:00Z",
       "kickoffYangon": "2026-11-07 11:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1468,7 +1486,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Parma / Bologna 1-2"
         }
-      }
+      },
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-08",
@@ -1487,7 +1508,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T19:45:00Z",
       "kickoffYangon": "2026-11-08 2:15 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1675,7 +1696,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "AS Roma / Sassuolo 4-1"
         }
-      }
+      },
+      "finalScore": "3-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-09",
@@ -1694,7 +1718,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T13:00:00Z",
       "kickoffYangon": "2026-11-07 7:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1885,7 +1909,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Malaga / Racing Santander 2-1"
         }
-      }
+      },
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-10",
@@ -1904,7 +1931,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:15:00Z",
       "kickoffYangon": "2026-11-07 9:45 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -2093,7 +2120,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Espanyol / Deportivo La Coruna 1-2"
         }
-      }
+      },
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-11",
@@ -2112,7 +2142,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T17:30:00Z",
       "kickoffYangon": "2026-11-08 12:00 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -2301,7 +2331,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Osasuna / Athletic Club 2-3"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-12",
@@ -2320,7 +2353,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T20:00:00Z",
       "kickoffYangon": "2026-11-08 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-3",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -2511,7 +2544,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Valencia / Real Madrid 1-4"
         }
-      }
+      },
+      "finalScore": "0-3",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-13",
@@ -2530,7 +2566,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T14:30:00Z",
       "kickoffYangon": "2026-11-07 9:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -2723,7 +2759,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Borussia Dortmund / SV Elversberg 2-2"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-14",
@@ -2742,7 +2781,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T14:30:00Z",
       "kickoffYangon": "2026-11-07 9:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-4",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -2933,7 +2972,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "FSV Mainz 05 / Bayern München 1-3"
         }
-      }
+      },
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-15",
@@ -2952,7 +2994,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T14:30:00Z",
       "kickoffYangon": "2026-11-07 9:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -3144,7 +3186,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "RB Leipzig / FC Augsburg 2-2"
         }
-      }
+      },
+      "finalScore": "5-2",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-16",
@@ -3163,7 +3208,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T14:30:00Z",
       "kickoffYangon": "2026-11-07 9:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -3354,7 +3399,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "SC Paderborn 07 / Eintracht Frankfurt 0-1"
         }
-      }
+      },
+      "finalScore": "2-2",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-17",
@@ -3373,7 +3421,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T17:30:00Z",
       "kickoffYangon": "2026-11-08 12:00 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "3-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -3564,7 +3612,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "VfB Stuttgart / Werder Bremen 2-2"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-18",
@@ -3583,7 +3634,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T18:00:00Z",
       "kickoffYangon": "2026-11-08 12:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -3769,7 +3820,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Auxerre / Paris FC 2-2"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-19",
@@ -3788,7 +3842,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T20:05:00Z",
       "kickoffYangon": "2026-11-08 2:35 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -3986,7 +4040,10 @@
         "https://tipsterarea.com/match/paris-saint-germain-troyes-ligue-1-france-954239",
         "https://www.psg.fr/content/point-medical-avant-paris-saint-germain-estac-troyes-ligue-1-2026-2027",
         "https://www.psg.fr/content/paris-saint-germain-estac-troyes-la-preview-ligue-1-20262027"
-      ]
+      ],
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-20",
@@ -4005,7 +4062,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T12:30:00Z",
       "kickoffYangon": "2026-11-07 7:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -4199,7 +4256,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Bristol City / Norwich 1-2"
         }
-      }
+      },
+      "finalScore": "0-5",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-21",
@@ -4218,7 +4278,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T12:30:00Z",
       "kickoffYangon": "2026-11-07 7:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -4413,7 +4473,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Portsmouth / Stoke City 2-1"
         }
-      }
+      },
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-22",
@@ -4432,7 +4495,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T12:30:00Z",
       "kickoffYangon": "2026-11-07 7:00 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -4628,7 +4691,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Wrexham / Wolves 1-2"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-23",
@@ -4647,7 +4713,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -4843,7 +4909,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Birmingham / Swansea 3-1"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-24",
@@ -4862,7 +4931,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -5058,7 +5127,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Blackburn / West Ham 1-3"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-25",
@@ -5077,7 +5149,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -5273,7 +5345,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Cardiff / Burnley 2-1"
         }
-      }
+      },
+      "finalScore": "5-4",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-26",
@@ -5292,7 +5367,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -5486,7 +5561,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Charlton / Sheffield Utd 0-2"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-27",
@@ -5505,7 +5583,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -5702,7 +5780,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Preston / Southampton 1-2"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-28",
@@ -5721,7 +5802,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -5916,7 +5997,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "QPR / Lincoln 2-1"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-29",
@@ -5935,7 +6019,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-3",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -6130,7 +6214,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "Watford / Middlesbrough 1-3"
         }
-      }
+      },
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     },
     {
       "fixtureId": "fc-20261107-30",
@@ -6149,7 +6236,7 @@
       "nightEditorialDate": "2026-11-07",
       "kickoffUtc": "2026-11-07T15:00:00Z",
       "kickoffYangon": "2026-11-07 9:30 PM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -6344,7 +6431,10 @@
           "sourceCheckedDate": "2026-11-07",
           "sourceEvidence": "West Brom / Millwall 2-1"
         }
-      }
+      },
+      "finalScore": "3-0",
+      "resultSourceUrl": "https://tipsterarea.com/matches/date-07-11-2026",
+      "resultVerifiedDate": "2026-11-08"
     }
   ],
   "noFixturesLeagues": []

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-08",
+  "status": "CANDIDATE_VERIFIED_LIVE_QA_PENDING",
+  "rollbackCommit": "2dabb1e9e40c7ee25f72a97aba0d9e206642ec3f",
+  "counts": {
+    "oddsRows": 26,
+    "previews": 26,
+    "special": 2,
+    "ft": 30,
+    "vip": 26,
+    "bookies": 26,
+    "ai": 26,
+    "probabilities": 26,
+    "news": 10,
+    "newsPhotos": 10,
+    "teamCrests": 52
+  },
+  "checks": {
+    "dailyPackageGuard": "PASS",
+    "previewV2Editorial": "PASS; current text-only crest layout",
+    "timeFormat": "PASS; historical cache-version/BCF assertions remain obsolete",
+    "modelCoverage": "26/26 source-separated outputs",
+    "newsPhotos": "10 distinct reusable archive photos; subject visually inspected"
+  },
+  "limitations": [
+    "No separate current-price PDF, current fields blank",
+    "Local browser launch blocked by runtime socket restriction; live browser/download QA pending"
+  ]
+}

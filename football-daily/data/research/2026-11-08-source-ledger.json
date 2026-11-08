@@ -1,0 +1,632 @@
+{
+  "reportDate": "2026-11-08",
+  "sourcePDF": "8.pdf",
+  "sourceSha256": "31199ad952e77cec036d8eabe3f4396e93731235d83d8bb5301c8b63a19bedff",
+  "sourceRows": 26,
+  "rows": [
+    {
+      "fixtureId": "fc-20261108-01",
+      "pdfRow": 1,
+      "sourcePage": 1,
+      "home": "ဘရိုက်တန်",
+      "away": "ဘရန့်ဖို့ဒ်",
+      "canonicalHome": "Brighton",
+      "canonicalAway": "Brentford",
+      "kickoff": "20:30",
+      "bodyOdds": "1+90",
+      "goalTotalOdds": "3=",
+      "upperTeam": "ဘရိုက်တန်",
+      "ownerForecast": "2-2",
+      "sourceUrl": "https://tipsterarea.com/match/brighton-brentford-premier-league-england-954677",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Brighton, away team is from London.\n\nDistance between them is 75.6 km.\n\nCoach of home team is Fabian Hurzeler (Ger) and coach of away team is Keith Andrews (Irl).\n\nMatch will take place on stadium\nFalmer Stadium,\nwhich has capacity\n30 750 seats.\n\nDimension of the field is 105 x 69 m.\n\nPictures from Google maps\nstadium Falmer Stadium.\n\nMatch will start in 14:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/brighton.gif",
+        "https://tipsterarea.com/images/teams/england/brentford.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-02",
+      "pdfRow": 2,
+      "sourcePage": 1,
+      "home": "ပဲလေ့စ်",
+      "away": "လီဗာပူးလ်",
+      "canonicalHome": "Crystal Palace",
+      "canonicalAway": "Liverpool",
+      "kickoff": "20:30",
+      "bodyOdds": "1=",
+      "goalTotalOdds": "3-5",
+      "upperTeam": "လီဗာပူးလ်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/crystal-palace-liverpool-premier-league-england-954678",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from London, away team is from Liverpool.\n\nDistance between them is 286.4 km.\n\nCoach of home team is Pierre Sage (Fra) and coach of away team is Andoni Iraola (Esp).\n\nMatch will take place on stadium\nSelhurst Park,\nwhich has capacity\n26 309 seats.\n\nDimension of the field is 100 x 68 m.\n\nPictures from Google maps\nstadium Selhurst Park.\n\nMatch will start in 14:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/crystal-palace.gif",
+        "https://tipsterarea.com/images/teams/england/liverpool.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-03",
+      "pdfRow": 3,
+      "sourcePage": 1,
+      "home": "အစ်ဝှစ်",
+      "away": "ဘုန်းမောက်",
+      "canonicalHome": "Ipswich",
+      "canonicalAway": "Bournemouth",
+      "kickoff": "20:30",
+      "bodyOdds": "1+90",
+      "goalTotalOdds": "3+50",
+      "upperTeam": "ဘုန်းမောက်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Ipswich, away team is from Bournemouth.\n\nDistance between them is 257.9 km.\n\nCoach of home team is Gary O&#039;Neil (Eng) and coach of away team is Marco Rose (Ger).\n\nMatch will take place on stadium\nPortman Road,\nwhich has capacity\n30 311 seats.\n\nDimension of the field is 102 x 75 m.\n\nPictures from Google maps\nstadium Portman Road.\n\nMatch will start in 14:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/ipswich.gif",
+        "https://tipsterarea.com/images/teams/england/bournemouth.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-04",
+      "pdfRow": 4,
+      "sourcePage": 1,
+      "home": "ဆန်းဒါးလန်း",
+      "away": "ချဲလ်ဆီး",
+      "canonicalHome": "Sunderland",
+      "canonicalAway": "Chelsea",
+      "kickoff": "20:30",
+      "bodyOdds": "1+100",
+      "goalTotalOdds": "3+70",
+      "upperTeam": "ချဲလ်ဆီး",
+      "ownerForecast": "1-1",
+      "sourceUrl": "https://tipsterarea.com/match/sunderland-chelsea-premier-league-england-954680",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Sunderland, away team is from London.\n\nDistance between them is 386.8 km.\n\nCoach of home team is Regis Le Bris (Fra) and coach of away team is Xabi Alonso (Esp).\n\nMatch will take place on stadium\nStadium of Light,\nwhich has capacity\n49 000 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Stadium of Light.\n\nMatch will start in 14:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/sunderland.gif",
+        "https://tipsterarea.com/images/teams/england/chelsea.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-05",
+      "pdfRow": 5,
+      "sourcePage": 1,
+      "home": "မန်ယူ",
+      "away": "အေဗီလာ",
+      "canonicalHome": "Manchester United",
+      "canonicalAway": "Aston Villa",
+      "kickoff": "23:00",
+      "bodyOdds": "-60",
+      "goalTotalOdds": "3-10",
+      "upperTeam": "မန်ယူ",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/manchester-united-aston-villa-premier-league-england-954681",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Manchester, away team is from Birmingham.\n\nDistance between them is 113.4 km.\n\nCoach of home team is Michael Carrick (Eng) and coach of away team is Unai Emery (Esp).\n\nMatch will take place on stadium\nOld Trafford,\nwhich has capacity\n75 765 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Old Trafford.\n\nMatch will start in 16:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/england/manchester-united.gif",
+        "https://tipsterarea.com/images/teams/england/aston-villa.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-06",
+      "pdfRow": 6,
+      "sourcePage": 1,
+      "home": "နာပိုလီ",
+      "away": "လာဇီယို",
+      "canonicalHome": "Napoli",
+      "canonicalAway": "Lazio",
+      "kickoff": "18:00",
+      "bodyOdds": "-30",
+      "goalTotalOdds": "3+30",
+      "upperTeam": "နာပိုလီ",
+      "ownerForecast": "2-2",
+      "sourceUrl": "https://tipsterarea.com/match/napoli-lazio-serie-a-italy-954690",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Naples, away team is from Roma.\n\nDistance between them is 188.8 km.\n\nCoach of home team is Massimiliano Allegri (Ita) and coach of away team is Gennaro Gattuso (Ita).\n\nMatch will take place on stadium\nDiego Armando Maradona,\nwhich has capacity\n54 726 seats.\n\nDimension of the field is 110 x 68 m.\n\nPictures from Google maps\nstadium Diego Armando Maradona.\n\nMatch will start in 12:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/napoli.gif",
+        "https://tipsterarea.com/images/teams/italy/lazio.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-07",
+      "pdfRow": 7,
+      "sourcePage": 1,
+      "home": "ဂျီနိုအာ",
+      "away": "အေစီမီလန်",
+      "canonicalHome": "Genoa",
+      "canonicalAway": "Milan",
+      "kickoff": "20:30",
+      "bodyOdds": "1+85",
+      "goalTotalOdds": "2-60",
+      "upperTeam": "အေစီမီလန်",
+      "ownerForecast": "0-1",
+      "sourceUrl": "https://tipsterarea.com/match/genoa-milan-serie-a-italy-954691",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Genoa, away team is from Milan.\n\nDistance between them is 119.6 km.\n\nCoach of home team is Daniele De Rossi (Ita) and coach of away team is Ruben Amorim (Por).\n\nMatch will take place on stadium\nLuigi Ferraris,\nwhich has capacity\n36 569 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Luigi Ferraris.\n\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/genoa.gif",
+        "https://tipsterarea.com/images/teams/italy/milan.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-08",
+      "pdfRow": 8,
+      "sourcePage": 1,
+      "home": "မွန်ဇာ",
+      "away": "အတ္တလန်တာ",
+      "canonicalHome": "Monza",
+      "canonicalAway": "Atalanta",
+      "kickoff": "20:30",
+      "bodyOdds": "-70",
+      "goalTotalOdds": "3-40",
+      "upperTeam": "အတ္တလန်တာ",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/monza-atalanta-serie-a-italy-954692",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Monza, away team is from Bergamo.\n\nDistance between them is 33.2 km.\n\nCoach of home team is Ivan Juric (Cro) and coach of away team is Maurizio Sarri (Ita).\n\nMatch will take place on stadium\nStadio Brianteo,\nwhich has capacity\n18 568 persons and seats capacity 8 000.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Stadio Brianteo.\n\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/monza.gif",
+        "https://tipsterarea.com/images/teams/italy/atalanta.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-09",
+      "pdfRow": 9,
+      "sourcePage": 1,
+      "home": "အင်တာမီလန်",
+      "away": "ကိုမို",
+      "canonicalHome": "Inter",
+      "canonicalAway": "Como",
+      "kickoff": "23:30",
+      "bodyOdds": "-90",
+      "goalTotalOdds": "3-40",
+      "upperTeam": "အင်တာမီလန်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/inter-como-serie-a-italy-954693",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Milan, away team is from Como.\n\nDistance between them is 39.0 km.\n\nCoach of home team is Cristian Chivu (Rou) and coach of away team is Cesc Fabregas (Esp).\n\nMatch will take place on stadium\nGiuseppe Meazza,\nwhich has capacity\n80 018 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Giuseppe Meazza.\n\nMatch will start in 18:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/inter.gif",
+        "https://tipsterarea.com/images/teams/italy/como.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-10",
+      "pdfRow": 10,
+      "sourcePage": 1,
+      "home": "ဖီအိုရင်တီးနား",
+      "away": "ဂျူဗင်တပ်",
+      "canonicalHome": "Fiorentina",
+      "canonicalAway": "Juventus",
+      "kickoff": "02:15",
+      "bodyOdds": "-60",
+      "goalTotalOdds": "3+70",
+      "upperTeam": "ဂျူဗင်တပ်",
+      "ownerForecast": "1-1",
+      "sourceUrl": "https://tipsterarea.com/match/fiorentina-juventus-serie-a-italy-954694",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Florence, away team is from Turin.\n\nDistance between them is 317.9 km.\n\nCoach of home team is Paolo Vanoli (Ita) and coach of away team is Luciano Spalletti (Ita).\n\nMatch will take place on stadium\nArtemio Franchi,\nwhich has capacity\n47 282 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Artemio Franchi.\n\nMatch will start in 20:45 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/italy/fiorentina.gif",
+        "https://tipsterarea.com/images/teams/italy/juventus.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-11",
+      "pdfRow": 11,
+      "sourcePage": 1,
+      "home": "အဲလ်ချီ",
+      "away": "ဘက်တစ်",
+      "canonicalHome": "Elche",
+      "canonicalAway": "Real Betis",
+      "kickoff": "19:30",
+      "bodyOdds": "-80",
+      "goalTotalOdds": "3+35",
+      "upperTeam": "ဘက်တစ်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/elche-real-betis-primera-division-spain-954682",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Elche, away team is from Sevilla.\n\nDistance between them is 473.5 km.\n\nCoach of home team is Martin Anselmi (Arg) and coach of away team is Manuel Pellegrini (Chi).\n\nMatch will take place on stadium\nManuel Martinez Valero,\nwhich has capacity\n36 017 seats.\n\nDimension of the field is 108 x 70 m.\n\nPictures from Google maps\nstadium Manuel Martinez Valero.\n\nMatch will start in 14:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/elche.gif",
+        "https://tipsterarea.com/images/teams/spain/real-betis.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-12",
+      "pdfRow": 12,
+      "sourcePage": 1,
+      "home": "ဆိုစီဒက်",
+      "away": "ဗယ်လီကာနို",
+      "canonicalHome": "Real Sociedad",
+      "canonicalAway": "Rayo Vallecano",
+      "kickoff": "21:45",
+      "bodyOdds": "1+60",
+      "goalTotalOdds": "3=",
+      "upperTeam": "ဆိုစီဒက်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/real-sociedad-rayo-vallecano-primera-division-spain-954683",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from San Sebastian, away team is from Madrid.\n\nDistance between them is 352.9 km.\n\nCoach of home team is Pellegrino Matarazzo (Usa) and coach of away team is Benat San Jose (Esp).\n\nMatch will take place on stadium\nAnoeta,\nwhich has capacity\n32 076 seats.\n\nDimension of the field is 105 x 70 m.\n\nPictures from Google maps\nstadium Anoeta.\n\nMatch will start in 16:15 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/real-sociedad.gif",
+        "https://tipsterarea.com/images/teams/spain/rayo-vallecano.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-13",
+      "pdfRow": 13,
+      "sourcePage": 1,
+      "home": "ဆဲလ်တာဗီဂို",
+      "away": "လီဗန်တေး",
+      "canonicalHome": "Celta Vigo",
+      "canonicalAway": "Levante",
+      "kickoff": "00:00",
+      "bodyOdds": "1+90",
+      "goalTotalOdds": "2-95",
+      "upperTeam": "ဆဲလ်တာဗီဂို",
+      "ownerForecast": "1-0",
+      "sourceUrl": "https://tipsterarea.com/match/celta-vigo-levante-primera-division-spain-954684",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Vigo, away team is from Valencia.\n\nDistance between them is 765.8 km.\n\nCoach of home team is Claudio Giraldez (Esp) and coach of away team is Luis Castro (Por).\n\nMatch will take place on stadium\nBalaidos,\nwhich has capacity\n31 800 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Balaidos.\n\nMatch will start in 18:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/celta-vigo.gif",
+        "https://tipsterarea.com/images/teams/spain/levante.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-14",
+      "pdfRow": 14,
+      "sourcePage": 1,
+      "home": "ဗီလာရီးရဲလ်",
+      "away": "ဂီတာဖေး",
+      "canonicalHome": "Villarreal",
+      "canonicalAway": "Getafe",
+      "kickoff": "00:00",
+      "bodyOdds": "1-35",
+      "goalTotalOdds": "3+80",
+      "upperTeam": "ဗီလာရီးရဲလ်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/villarreal-getafe-primera-division-spain-954685",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Villarreal, away team is from Getafe.\n\nDistance between them is 311.7 km.\n\nCoach of home team is Inigo Perez (Esp) and coach of away team is Jose Bordalas (Esp).\n\nMatch will take place on stadium\nEl Madrigal,\nwhich has capacity\n22 000 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium El Madrigal.\n\nMatch will start in 18:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/villarreal.gif",
+        "https://tipsterarea.com/images/teams/spain/getafe.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-15",
+      "pdfRow": 15,
+      "sourcePage": 1,
+      "home": "အက်တီကို",
+      "away": "ဘာစီလိုနာ",
+      "canonicalHome": "Atletico Madrid",
+      "canonicalAway": "Barcelona",
+      "kickoff": "02:30",
+      "bodyOdds": "1+95",
+      "goalTotalOdds": "4+70",
+      "upperTeam": "ဘာစီလိုနာ",
+      "ownerForecast": "1-3",
+      "sourceUrl": "https://tipsterarea.com/match/atletico-madrid-barcelona-primera-division-spain-954686",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Madrid, away team is from Barcelona.\n\nDistance between them is 504.2 km.\n\nCoach of home team is Diego Simeone (Arg) and coach of away team is Hans-Dieter Flick (Ger).\n\nMatch will take place on stadium\nEstadio Metropolitano,\nwhich has capacity\n67 703 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Estadio Metropolitano.\n\nMatch will start in 21:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/atletico-madrid.gif",
+        "https://tipsterarea.com/images/teams/spain/barcelona.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-16",
+      "pdfRow": 16,
+      "sourcePage": 1,
+      "home": "ကိုလုံး",
+      "away": "လေဗာကူဆင်",
+      "canonicalHome": "FC Koln",
+      "canonicalAway": "Bayer Leverkusen",
+      "kickoff": "21:00",
+      "bodyOdds": "1+90",
+      "goalTotalOdds": "3-60",
+      "upperTeam": "လေဗာကူဆင်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/fc-koln-bayer-leverkusen-bundesliga-germany-954687",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Cologne, away team is from Leverkusen.\n\nDistance between them is 11.0 km.\n\nCoach of home team is Rene Wagner (Ger) and coach of away team is Carles Martinez Novell (Esp).\n\nMatch will take place on stadium\nRheinEnergieStadion,\nwhich has capacity\n49 968 persons and seats capacity 46 253.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium RheinEnergieStadion.\n\nMatch will start in 15:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/fc-koln.gif",
+        "https://tipsterarea.com/images/teams/germany/bayer-leverkusen.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-17",
+      "pdfRow": 17,
+      "sourcePage": 1,
+      "home": "ဖရိုင်းဘတ်",
+      "away": "ယူနီယံဘာလင်",
+      "canonicalHome": "Freiburg",
+      "canonicalAway": "Union Berlin",
+      "kickoff": "23:00",
+      "bodyOdds": "1-25",
+      "goalTotalOdds": "3+25",
+      "upperTeam": "ဖရိုင်းဘတ်",
+      "ownerForecast": "3-0",
+      "sourceUrl": "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Freiburg, away team is from Berlin.\n\nDistance between them is 639.7 km.\n\nCoach of home team is Julian Schuster (Ger) and coach of away team is Mauro Lustrinelli (Sui).\n\nMatch will take place on stadium\nEuropa-Park Stadion,\nwhich has capacity\n34 700 seats.\n\nPictures from Google maps\nstadium Europa-Park Stadion.\n\nMatch will start in 17:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/freiburg.gif",
+        "https://tipsterarea.com/images/teams/germany/union-berlin.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-18",
+      "pdfRow": 18,
+      "sourcePage": 1,
+      "home": "ဟော့ဖန်ဟိမ်း",
+      "away": "ရှော်လ်ကေး",
+      "canonicalHome": "Hoffenheim",
+      "canonicalAway": "Schalke 04",
+      "kickoff": "01:00",
+      "bodyOdds": "1+5",
+      "goalTotalOdds": "3-25",
+      "upperTeam": "ဟော့ဖန်ဟိမ်း",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/hoffenheim-schalke-04-bundesliga-germany-954689",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Sinsheim, away team is from Gelsenkirchen.\n\nDistance between them is 279.9 km.\n\nCoach of home team is Christian Ilzer (Aut) and coach of away team is Miron Muslic (Aut).\n\nMatch will take place on stadium\nRhein-Neckar Arena,\nwhich has capacity\n30 150 persons and seats capacity 25 641.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Rhein-Neckar Arena.\n\nMatch will start in 19:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/hoffenheim.gif",
+        "https://tipsterarea.com/images/teams/germany/schalke-04.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-19",
+      "pdfRow": 19,
+      "sourcePage": 1,
+      "home": "ရင်းနက်စ်",
+      "away": "လိုင်လီ",
+      "canonicalHome": "Rennais",
+      "canonicalAway": "Lille",
+      "kickoff": "20:30",
+      "bodyOdds": "-50",
+      "goalTotalOdds": "3+50",
+      "upperTeam": "ရင်းနက်စ်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/rennais-lille-ligue-1-france-954695",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Rennes, away team is from Lille.\n\nDistance between them is 442.6 km.\n\nCoach of home team is Franck Haise (Fra) and coach of away team is Davide Ancelotti (Ita).\n\nMatch will take place on stadium\nRoazhon Park,\nwhich has capacity\n29 778 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Roazhon Park.\n\nMatch will start in 15:00 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/france/rennais.gif",
+        "https://tipsterarea.com/images/teams/france/lille.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-20",
+      "pdfRow": 20,
+      "sourcePage": 1,
+      "home": "အန်းဂါး",
+      "away": "နိုက်စ်",
+      "canonicalHome": "Angers",
+      "canonicalAway": "Nice",
+      "kickoff": "22:45",
+      "bodyOdds": "-80",
+      "goalTotalOdds": "3+60",
+      "upperTeam": "နိုက်စ်",
+      "ownerForecast": "1-2",
+      "sourceUrl": "https://tipsterarea.com/match/angers-nice-ligue-1-france-954696",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Angers, away team is from Nice.\n\nDistance between them is 737.7 km.\n\nCoach of home team is Stephane Gilli (Fra) and coach of away team is Olivier Pantaloni (Fra).\n\nMatch will take place on stadium\nStade Raymond-Kopa,\nwhich has capacity\n18 000 seats.\n\nPictures from Google maps\nstadium Stade Raymond-Kopa.\n\nMatch will start in 17:15 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/france/angers.gif",
+        "https://tipsterarea.com/images/teams/france/nice.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-21",
+      "pdfRow": 21,
+      "sourcePage": 1,
+      "home": "လီဟာဗေး",
+      "away": "လိုရီယန့်",
+      "canonicalHome": "Le Havre",
+      "canonicalAway": "Lorient",
+      "kickoff": "22:45",
+      "bodyOdds": "-30",
+      "goalTotalOdds": "2-75",
+      "upperTeam": "လိုရီယန့်",
+      "ownerForecast": "1-1",
+      "sourceUrl": "https://tipsterarea.com/match/le-havre-lorient-ligue-1-france-954698",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Le Havre, away team is from Lorient.\n\nDistance between them is 320.6 km.\n\nCoach of away team is Alexandre Dujeux (Fra).\n\nMatch will take place on stadium\nStade Oceane,\nwhich has capacity\n25 178 seats.\n\nPictures from Google maps\nstadium Stade Oceane.\n\nMatch will start in 17:15 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/france/le-havre.gif",
+        "https://tipsterarea.com/images/teams/france/lorient.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-22",
+      "pdfRow": 22,
+      "sourcePage": 1,
+      "home": "ဘရက်စ်",
+      "away": "လိုင်ယွန်",
+      "canonicalHome": "Brest",
+      "canonicalAway": "Lyonnais",
+      "kickoff": "22:45",
+      "bodyOdds": "-15",
+      "goalTotalOdds": "2-100",
+      "upperTeam": "လိုင်ယွန်",
+      "ownerForecast": "0-1",
+      "sourceUrl": "https://tipsterarea.com/match/brest-lyonnais-ligue-1-france-954697",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Brest, away team is from Lyon.\n\nDistance between them is 765.0 km.\n\nCoach of home team is Julien Lachuer (Fra) and coach of away team is Paulo Fonseca (Por).\n\nMatch will take place on stadium\nStade Francis-Le Ble,\nwhich has capacity\n15 305 seats.\n\nPictures from Google maps\nstadium Stade Francis-Le Ble.\n\nMatch will start in 17:15 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/france/brest.gif",
+        "https://tipsterarea.com/images/teams/france/lyonnais.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-23",
+      "pdfRow": 23,
+      "sourcePage": 1,
+      "home": "လန်းစ်",
+      "away": "မာဆေးလ်",
+      "canonicalHome": "Lens",
+      "canonicalAway": "Marseille",
+      "kickoff": "02:15",
+      "bodyOdds": "-30",
+      "goalTotalOdds": "3-40",
+      "upperTeam": "လန်းစ်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/lens-marseille-ligue-1-france-954700",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Lens, away team is from Marseille.\n\nDistance between them is 816.8 km.\n\nCoach of home team is Yannick Cahuzac (Fra) and coach of away team is Bruno Genesio (Fra).\n\nMatch will take place on stadium\nStade Bollaert-Delelis,\nwhich has capacity\n38 223 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Stade Bollaert-Delelis.\n\nMatch will start in 20:45 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/france/lens.gif",
+        "https://tipsterarea.com/images/teams/france/marseille.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-24",
+      "pdfRow": 24,
+      "sourcePage": 1,
+      "home": "ဟိုက်ဒန်ဟိမ်း",
+      "away": "ဟန်နိုဗာ",
+      "canonicalHome": "Heidenheim",
+      "canonicalAway": "Hannover",
+      "kickoff": "19:00",
+      "bodyOdds": "-70",
+      "goalTotalOdds": "3-45",
+      "upperTeam": "ဟိုက်ဒန်ဟိမ်း",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/heidenheim-hannover-2-bundesliga-germany-954735",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Heidenheim an der Brenz, away team is from Hannover.\n\nDistance between them is 411.7 km.\n\nMatch will take place on stadium\nVoith-Arena,\nwhich has capacity\n10 000 persons and seats capacity 3 000.\n\nPictures from Google maps\nstadium Voith-Arena.\n\nMatch will start in 13:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/heidenheim.gif",
+        "https://tipsterarea.com/images/teams/germany/hannover.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-25",
+      "pdfRow": 25,
+      "sourcePage": 1,
+      "home": "မတ်ဒီဘတ်",
+      "away": "စိန့်ပေါ်လီ",
+      "canonicalHome": "Magdeburg",
+      "canonicalAway": "Sankt Pauli",
+      "kickoff": "19:00",
+      "bodyOdds": "-25",
+      "goalTotalOdds": "3+25",
+      "upperTeam": "မတ်ဒီဘတ်",
+      "ownerForecast": "1-0",
+      "sourceUrl": "https://tipsterarea.com/match/magdeburg-sankt-pauli-2-bundesliga-germany-954736",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Magdeburg, away team is from Hamburg.\n\nDistance between them is 193.0 km.\n\nMatch will take place on stadium\nMDCC-Arena,\nwhich has capacity\n27 250 persons and seats capacity 25 000.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium MDCC-Arena.\n\nMatch will start in 13:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/magdeburg.gif",
+        "https://tipsterarea.com/images/teams/germany/sankt-pauli.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261108-26",
+      "pdfRow": 26,
+      "sourcePage": 1,
+      "home": "ဘိုချမ်",
+      "away": "ကာလ်စ်ဟာ",
+      "canonicalHome": "Bochum",
+      "canonicalAway": "Karlsruher",
+      "kickoff": "19:00",
+      "bodyOdds": "1+80",
+      "goalTotalOdds": "3-5",
+      "upperTeam": "ဘိုချမ်",
+      "ownerForecast": "2-1",
+      "sourceUrl": "https://tipsterarea.com/match/bochum-karlsruher-2-bundesliga-germany-954737",
+      "snapshot": "08.11.2026 00:01.\nThey may vary at this moment",
+      "clubDetails": "Home team is from Bochum, away team is from Karlsruhe.\n\nDistance between them is 287.7 km.\n\nMatch will take place on stadium\nRewirpowerstadion,\nwhich has capacity\n29 299 seats.\n\nDimension of the field is 105 x 68 m.\n\nPictures from Google maps\nstadium Rewirpowerstadion.\n\nMatch will start in 13:30 local time.",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/germany/bochum.gif",
+        "https://tipsterarea.com/images/teams/germany/karlsruher.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed injury/player claims omitted; details retained in source ledger"
+      ]
+    }
+  ]
+}

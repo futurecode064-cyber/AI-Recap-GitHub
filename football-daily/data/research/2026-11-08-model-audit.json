@@ -1,0 +1,655 @@
+{
+  "reportDate": "2026-11-08",
+  "rows": [
+    {
+      "id": "fc-20261108-01",
+      "ai": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 66,
+          "away": 34,
+          "source": "https://tipsterarea.com/match/brighton-brentford-premier-league-england-954677",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 43,
+          "under": 57,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/brighton-brentford-premier-league-england-954677"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-02",
+      "ai": [
+        "1-1",
+        "1-2",
+        "0-1"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 23,
+          "away": 77,
+          "source": "https://tipsterarea.com/match/crystal-palace-liverpool-premier-league-england-954678",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 53,
+          "under": 47,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/crystal-palace-liverpool-premier-league-england-954678"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-03",
+      "ai": [
+        "1-1",
+        "1-2",
+        "2-1"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 34,
+          "away": 66,
+          "source": "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 58,
+          "under": 42,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-04",
+      "ai": [
+        "1-2",
+        "1-1",
+        "0-2"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 35,
+          "away": 65,
+          "source": "https://tipsterarea.com/match/sunderland-chelsea-premier-league-england-954680",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 51,
+          "under": 49,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/sunderland-chelsea-premier-league-england-954680"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-05",
+      "ai": [
+        "1-1",
+        "1-2",
+        "0-1"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 59,
+          "away": 41,
+          "source": "https://tipsterarea.com/match/manchester-united-aston-villa-premier-league-england-954681",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 62,
+          "under": 38,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/manchester-united-aston-villa-premier-league-england-954681"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-06",
+      "ai": [
+        "1-2",
+        "1-1",
+        "1-3"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 57,
+          "away": 43,
+          "source": "https://tipsterarea.com/match/napoli-lazio-serie-a-italy-954690",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 84,
+          "under": 16,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/napoli-lazio-serie-a-italy-954690"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-07",
+      "ai": [
+        "1-1",
+        "1-2",
+        "0-1"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 28,
+          "away": 72,
+          "source": "https://tipsterarea.com/match/genoa-milan-serie-a-italy-954691",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 53,
+          "under": 47,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/genoa-milan-serie-a-italy-954691"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-08",
+      "ai": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 38,
+          "away": 62,
+          "source": "https://tipsterarea.com/match/monza-atalanta-serie-a-italy-954692",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 76,
+          "under": 24,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/monza-atalanta-serie-a-italy-954692"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-09",
+      "ai": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 66,
+          "away": 34,
+          "source": "https://tipsterarea.com/match/inter-como-serie-a-italy-954693",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 68,
+          "under": 32,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/inter-como-serie-a-italy-954693"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-10",
+      "ai": [
+        "1-1",
+        "1-2",
+        "0-1"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 36,
+          "away": 64,
+          "source": "https://tipsterarea.com/match/fiorentina-juventus-serie-a-italy-954694",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 64,
+          "under": 36,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/fiorentina-juventus-serie-a-italy-954694"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-11",
+      "ai": [
+        "1-1",
+        "1-2",
+        "0-1"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 37,
+          "away": 63,
+          "source": "https://tipsterarea.com/match/elche-real-betis-primera-division-spain-954682",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 38,
+          "under": 62,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/elche-real-betis-primera-division-spain-954682"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-12",
+      "ai": [
+        "2-1",
+        "1-1",
+        "3-1"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 73,
+          "away": 27,
+          "source": "https://tipsterarea.com/match/real-sociedad-rayo-vallecano-primera-division-spain-954683",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 64,
+          "under": 36,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/real-sociedad-rayo-vallecano-primera-division-spain-954683"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-13",
+      "ai": [
+        "1-1",
+        "1-0",
+        "2-1"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 68,
+          "away": 32,
+          "source": "https://tipsterarea.com/match/celta-vigo-levante-primera-division-spain-954684",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 55,
+          "under": 45,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/celta-vigo-levante-primera-division-spain-954684"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-14",
+      "ai": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 83,
+          "away": 17,
+          "source": "https://tipsterarea.com/match/villarreal-getafe-primera-division-spain-954685",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 68,
+          "under": 32,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/villarreal-getafe-primera-division-spain-954685"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-15",
+      "ai": [
+        "1-2",
+        "1-1",
+        "2-2"
+      ],
+      "bookies": "1-2",
+      "probability": {
+        "win": {
+          "home": 31,
+          "away": 69,
+          "source": "https://tipsterarea.com/match/atletico-madrid-barcelona-primera-division-spain-954686",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 66,
+          "under": 34,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/atletico-madrid-barcelona-primera-division-spain-954686"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-16",
+      "ai": [
+        "1-1",
+        "1-2",
+        "2-1"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 32,
+          "away": 68,
+          "source": "https://tipsterarea.com/match/fc-koln-bayer-leverkusen-bundesliga-germany-954687",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 58,
+          "under": 42,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/fc-koln-bayer-leverkusen-bundesliga-germany-954687"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-17",
+      "ai": [
+        "2-0",
+        "2-1",
+        "1-0"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 80,
+          "away": 20,
+          "source": "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 48,
+          "under": 52,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-18",
+      "ai": [
+        "1-0",
+        "1-1",
+        "2-0"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 76,
+          "away": 24,
+          "source": "https://tipsterarea.com/match/hoffenheim-schalke-04-bundesliga-germany-954689",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 32,
+          "under": 68,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/hoffenheim-schalke-04-bundesliga-germany-954689"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-19",
+      "ai": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 59,
+          "away": 41,
+          "source": "https://tipsterarea.com/match/rennais-lille-ligue-1-france-954695",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 62,
+          "under": 38,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/rennais-lille-ligue-1-france-954695"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-20",
+      "ai": [
+        "1-1",
+        "1-2",
+        "0-1"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 37,
+          "away": 63,
+          "source": "https://tipsterarea.com/match/angers-nice-ligue-1-france-954696",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 70,
+          "under": 30,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/angers-nice-ligue-1-france-954696"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-21",
+      "ai": [
+        "1-1",
+        "0-1",
+        "1-2"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 48,
+          "away": 52,
+          "source": "https://tipsterarea.com/match/le-havre-lorient-ligue-1-france-954698",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 58,
+          "under": 42,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/le-havre-lorient-ligue-1-france-954698"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-22",
+      "ai": [
+        "1-1",
+        "2-1",
+        "1-2"
+      ],
+      "bookies": "0-1",
+      "probability": {
+        "win": {
+          "home": 46,
+          "away": 54,
+          "source": "https://tipsterarea.com/match/brest-lyonnais-ligue-1-france-954697",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 53,
+          "under": 47,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/brest-lyonnais-ligue-1-france-954697"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-23",
+      "ai": [
+        "1-2",
+        "1-1",
+        "2-2"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 57,
+          "away": 43,
+          "source": "https://tipsterarea.com/match/lens-marseille-ligue-1-france-954700",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 75,
+          "under": 25,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/lens-marseille-ligue-1-france-954700"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-24",
+      "ai": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 61,
+          "away": 39,
+          "source": "https://tipsterarea.com/match/heidenheim-hannover-2-bundesliga-germany-954735",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 46,
+          "under": 54,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/heidenheim-hannover-2-bundesliga-germany-954735"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-25",
+      "ai": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 54,
+          "away": 46,
+          "source": "https://tipsterarea.com/match/magdeburg-sankt-pauli-2-bundesliga-germany-954736",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 60,
+          "under": 40,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/magdeburg-sankt-pauli-2-bundesliga-germany-954736"
+        }
+      }
+    },
+    {
+      "id": "fc-20261108-26",
+      "ai": [
+        "1-1",
+        "1-0",
+        "2-1"
+      ],
+      "bookies": "1-0",
+      "probability": {
+        "win": {
+          "home": 70,
+          "away": 30,
+          "source": "https://tipsterarea.com/match/bochum-karlsruher-2-bundesliga-germany-954737",
+          "provider": "TipsterArea / 1xbet first displayed row; publisher snapshot retained separately",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 53,
+          "under": 47,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://tipsterarea.com/match/bochum-karlsruher-2-bundesliga-germany-954737"
+        }
+      }
+    }
+  ]
+}
