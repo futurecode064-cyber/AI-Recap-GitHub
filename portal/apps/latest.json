@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-08",
   "apps": [
     {
       "id": "stockguard",
@@ -49,14 +49,15 @@
       "id": "myanmar-kyar",
       "name": "မြန်မာ ကျားကွက်",
       "packageName": "mm.futurecode.myanmarkyar",
-      "versionName": "4.2.10",
-      "versionCode": 40210,
+      "versionName": "4.2.15",
+      "versionCode": 40215,
       "minSdk": 26,
-      "file": "https://myanmar-kyar.futurecode-dubai-86851bf2.workers.dev/updates/Myanmar-Kyar-v4.2.10.apk",
-      "sizeBytes": 1692459,
-      "sha256": "45b02e6f15ebd695056ca2a7933619acbc07c4aac0693129ff3b0ad15127bfdb",
+      "file": "https://myanmar-kyar.futurecode-dubai-86851bf2.workers.dev/download",
+      "sizeBytes": 1717063,
+      "sha256": "0814625f844d9964143e9d411a9e31791a763f25b6ce082b2f3c019e72993074",
       "certificateSha256": "f92280389bda918d496d604172baf2b3febd8dcd2b9a48f84e540a8acb6e1e5d",
-      "releasedAt": "2026-11-05"
+      "releasedAt": "2026-11-08",
+      "releaseNotes": "Puzzle အသစ် ၂၀၊ ကျားဘုရင်ပြိုင်ပွဲ ဝင်ရောက်ရန်၊ အနက်နှင့်ရွှေ Theme၊ ပွဲဖွင့် Token ကြေး ထည့်နိုင်ခြင်း။ မူလ Signing Certificate တူညီသော Update။"
     },
     {
       "id": "daily-money",
