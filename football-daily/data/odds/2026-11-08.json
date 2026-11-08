@@ -632,10 +632,11 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and fixture source",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "reviewed",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-08",
         "researchSources": [
-          "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679"
+          "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
+          "https://www.afcb.co.uk/matches/first-team/2026/g2645290"
         ],
         "sourceUrl": "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
         "masterPrompt": "docs/master-prompts/MYANMAR_MATCH_PREVIEW_MASTER.md",
@@ -660,7 +661,13 @@
       "currentGoalTotalOdds": "",
       "pdfLastColumn": "1-2",
       "eligibleForPreview": true,
-      "eligibilityReason": "Exact senior fixture/date/home-away/kickoff matched to dated source"
+      "eligibilityReason": "Exact senior fixture/date/home-away/kickoff matched to dated source",
+      "specialChoiceRank": 1,
+      "specialPreparedDate": "2026-11-08",
+      "specialResearchSources": [
+        "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
+        "https://www.afcb.co.uk/matches/first-team/2026/g2645290"
+      ]
     },
     {
       "fixtureId": "fc-20261108-04",
@@ -3674,10 +3681,11 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and fixture source",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "reviewed",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-08",
         "researchSources": [
-          "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688"
+          "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
+          "https://www.scfreiburg.com/aktuell/nachrichten/maenner/vorberichte/2026/27/letzter-kraftakt-vor-der-pause/"
         ],
         "sourceUrl": "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
         "masterPrompt": "docs/master-prompts/MYANMAR_MATCH_PREVIEW_MASTER.md",
@@ -3702,7 +3710,13 @@
       "currentGoalTotalOdds": "",
       "pdfLastColumn": "3-0",
       "eligibleForPreview": true,
-      "eligibilityReason": "Exact senior fixture/date/home-away/kickoff matched to dated source"
+      "eligibilityReason": "Exact senior fixture/date/home-away/kickoff matched to dated source",
+      "specialChoiceRank": 2,
+      "specialPreparedDate": "2026-11-08",
+      "specialResearchSources": [
+        "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
+        "https://www.scfreiburg.com/aktuell/nachrichten/maenner/vorberichte/2026/27/letzter-kraftakt-vor-der-pause/"
+      ]
     },
     {
       "fixtureId": "fc-20261108-18",

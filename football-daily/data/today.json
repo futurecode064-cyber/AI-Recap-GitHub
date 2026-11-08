@@ -607,10 +607,11 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and fixture source",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "reviewed",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-08",
         "researchSources": [
-          "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679"
+          "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
+          "https://www.afcb.co.uk/matches/first-team/2026/g2645290"
         ],
         "sourceUrl": "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
         "masterPrompt": "docs/master-prompts/MYANMAR_MATCH_PREVIEW_MASTER.md",
@@ -623,6 +624,12 @@
       "previewV2Selection": "ဘုန်းမောက်",
       "specialAnalysisParagraphs": [
         "ဘုန်းမောက်ရဲ့ အခုအရှိန်ကို ငါးပွဲဆက်နိုင်တယ်ဆိုတဲ့ စကားတစ်ခွန်းနဲ့ပဲ ရှင်းလို့မရပါဘူး။ အဲဒီငါးပွဲမှာ ၁၄ ဂိုးသွင်း၊ တစ်ဂိုးသာပေးပြီး မန်ယူ၊ အေဗီလာနဲ့ အေစီမီလန်တို့ကိုပါ ဂိုးမပေးဘဲနိုင်ထားတာကြောင့် တိုက်စစ်ကောင်းလာသလောက် ခံစစ်ကလည်း အခွင့်အရေးလျှော့ပေးနိုင်လာတာပါ။ လိဂ်မှာတော့ ကိုးပွဲ သုံးနိုင်၊ သုံးသရေ၊ သုံးရှုံး၊ ၁၂ မှတ်နဲ့ အဆင့် ၉ သာရှိသေးလို့ လတ်တလောတိုးတက်မှုကို အမှတ်ပေးဇယားအပေါ် ပိုထင်ဟပ်အောင်လုပ်ဖို့ လိုနေပါတယ်။ အစ်ဝှစ်က ၁၁ မှတ်နဲ့ တစ်မှတ်သာနောက်ကျပြီး အိမ်ကွင်းမှာ တိုက်စစ်အခွင့်အရေးရှာနိုင်တာကို လျှော့တွက်လို့မရပါဘူး။ ဟူးစီးတီးနဲ့ ဖောရက်စ်တို့ကို နှစ်ပွဲဆက်သရေကျထားသလို မန်စီးတီးကွင်းမှာလည်း နှစ်ဂိုးရထားတာကြောင့် ပွဲကိုခံကစားရင်းကနေ ဂိုးပြန်ရှာနိုင်ပါတယ်။ ဒါပေမယ့် နောက်ဆုံးငါးပွဲလုံး ဂိုးပေးထားပြီး ကိုးပွဲမှာ ၁၈ ဂိုးပေးထားတဲ့ အိမ်ရှင်အတွက် ဘုန်းမောက်ရဲ့ အရှိန်ပြောင်းဝင်ရောက်မှုတွေကို ပွဲတစ်ပွဲလုံးထိန်းဖို့က ခက်ခဲတဲ့အလုပ်ပါ။ ဧည့်သည်က ပရာ့ဂ်ခရီးပြန်လာရလို့ ခြေထောက်လေးသွားနိုင်တာ၊ အစ်ဝှစ်က အစောပိုင်းဂိုးရပြီး ပွဲအရှိန်ကိုချနိုင်တာတို့က ရွေးချယ်မှုကို စမ်းသပ်နိုင်တဲ့အချက်တွေပါ။ ဒါကြောင့် အဝေးကွင်းမှာ အစကတည်းက အလွန်အကျွံဖွင့်ဖိတာထက် ဘောလုံးဆုံးရှုံးမှုကိုလျှော့ပြီး အိမ်ရှင်ရဲ့ခံစစ်ရှေ့နဲ့ နောက်တန်းကြားက နေရာလွတ်တွေကို စောင့်သုံးနိုင်ဖို့လိုပါတယ်။ အစ်ဝှစ်မှာ ဂိုးရနိုင်တဲ့အလားအလာရှိပေမယ့် ဂိုးရပြီးနောက် ဦးဆောင်မှုကိုကာကွယ်နိုင်တဲ့အခြေခံက ဘုန်းမောက်ဘက်မှာ ပိုကောင်းနေပြီး မတူညီတဲ့ကစားပုံအသင်းတွေကို ဆက်တိုက်အနိုင်ယူထားတဲ့ ယုံကြည်မှုပါရှိတာကြောင့် ဒီပွဲအတွက် ဘုန်းမောက်ကို ရွေးချယ်ပါတယ်။"
+      ],
+      "specialChoiceRank": 1,
+      "specialPreparedDate": "2026-11-08",
+      "specialResearchSources": [
+        "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
+        "https://www.afcb.co.uk/matches/first-team/2026/g2645290"
       ]
     },
     {
@@ -3481,10 +3488,11 @@
       "previewV2EditorialStatus": "reviewed against same-date form, standings and fixture source",
       "previewV2PhotoStatus": "text-only current owner-approved renderer",
       "previewJournalist": {
-        "status": "reviewed",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-08",
         "researchSources": [
-          "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688"
+          "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
+          "https://www.scfreiburg.com/aktuell/nachrichten/maenner/vorberichte/2026/27/letzter-kraftakt-vor-der-pause/"
         ],
         "sourceUrl": "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
         "masterPrompt": "docs/master-prompts/MYANMAR_MATCH_PREVIEW_MASTER.md",
@@ -3497,6 +3505,12 @@
       "previewV2Selection": "ဖရိုင်းဘတ်",
       "specialAnalysisParagraphs": [
         "ဖရိုင်းဘတ်အတွက် ဒီပွဲက ဥရောပနိုင်ပွဲအရှိန်ကို လိဂ်ထိပ်ပိုင်းရပ်တည်မှုအဖြစ် ဆက်ထိန်းနိုင်မလားဆိုတဲ့ စမ်းသပ်မှုပါ။ ရှစ်ပွဲမှာ ငါးနိုင်၊ တစ်သရေ၊ နှစ်ရှုံး၊ ၁၆ မှတ်နဲ့ အဆင့် ၄ ရှိပြီး ၁၈ ဂိုးသွင်း၊ ဆယ်ဂိုးပေးထားတာကြောင့် ယူနီယံဘာလင်ထက် အခွင့်အရေးဖန်တီးပြီး အဆုံးသတ်နိုင်မှု ပိုကောင်းပါတယ်။ နောက်ဆုံးငါးပွဲမှာ သုံးနိုင်၊ နှစ်ရှုံးဖြစ်ပေမယ့် ဘိုင်ယန်နဲ့ မိုနာကိုတို့ဆီက ရှုံးပွဲနှစ်ပွဲနောက် ဝုလ်ဖ်ဘတ်၊ အော့စ်ဘတ်၊ ထရပ်ဇွန်စပေါ်တို့ကို ဆက်တိုက်ပြန်နိုင်ထားတာက ပွဲတစ်ပွဲရှုံးရုံနဲ့ ကစားပုံမပြိုသွားတဲ့ လက္ခဏာပါ။ ယူနီယံဘာလင်ကတော့ ရှစ်ပွဲ တစ်နိုင်၊ လေးသရေ၊ သုံးရှုံး၊ ခုနစ်မှတ်နဲ့ အဆင့် ၁၆ မှာရှိပြီး ဂိုးသွင်းခုနစ်ဂိုးနဲ့ ပေးဂိုး၁၉ဂိုးက နှစ်ဖက်စလုံးမှာ အခက်အခဲရှိကြောင်း ပြနေပါတယ်။ သို့သော် ဒေါ့မွန်ကို ဂိုးမပေးဘဲသရေခံထားနိုင်မှုနဲ့ လတ်တလော လိဂ်သရေပွဲတွေက ဧည့်သည်ကို လွယ်လွယ်ဂိုးပြတ်နိုင်မယ်လို့ သတ်မှတ်လို့မရစေပါဘူး။ ဧည့်သည်က အလယ်တန်းနဲ့ နောက်တန်းအကွာအဝေးကိုချုံ့ထားပြီး အိမ်ရှင်ကို အပြင်ဘက်ကပဲ လှည့်ကစားစေဖို့ ကြိုးစားနိုင်ပါတယ်။ အဲဒီအချိန် ဖရိုင်းဘတ်အတွက် အရေးကြီးတာက ဘောလုံးပိုင်ဆိုင်မှုကိုသာ အသာရနေတာနဲ့ ကျေနပ်မနေဘဲ ဧရိယာအနီးမှာ အဆုံးသတ်အခွင့်အရေးအဖြစ် ပြောင်းနိုင်ဖို့ပါ။ တူရကီခရီးပန်းမှုကြောင့် အိမ်ရှင်ဖိအား လျော့သွားရင် ယူနီယံဘာလင်က သရေကိုထိန်းနိုင်သေးတာကြောင့် ပထမဂိုးမရခင် စိတ်ရှည်ခြင်းနဲ့ လူအင်အားစီမံခြင်းက အဆုံးအဖြတ်ဖြစ်နိုင်ပါတယ်။ ဒါပေမယ့် ဖိအားကြာလာချိန် ကိုလုံးကွင်းမှာ ငါးဂိုးပေးရသလို ပြိုကွဲနိုင်တဲ့ ဧည့်သည်ခံစစ်ကို လတ်တလောနိုင်ပွဲဆက်ယူထားတဲ့ အိမ်ရှင်က ပိုစမ်းသပ်နိုင်ပါတယ်။ သုံးပွဲဆက်နိုင်ထားတဲ့ ရလဒ်အရှိန်၊ လိဂ်တိုက်စစ်ကွာဟမှုနဲ့ အိမ်ကွင်းပွဲထိန်းနိုင်မယ့် အခြေခံတို့ကို ချိန်ပြီး ဖရိုင်းဘတ်ကို ရွေးချယ်ပါတယ်။"
+      ],
+      "specialChoiceRank": 2,
+      "specialPreparedDate": "2026-11-08",
+      "specialResearchSources": [
+        "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
+        "https://www.scfreiburg.com/aktuell/nachrichten/maenner/vorberichte/2026/27/letzter-kraftakt-vor-der-pause/"
       ]
     },
     {

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-08",
-  "status": "CANDIDATE_VERIFIED_LIVE_QA_PENDING",
+  "status": "LIVE_PUBLISHED_QA_PARTIAL",
   "rollbackCommit": "2dabb1e9e40c7ee25f72a97aba0d9e206642ec3f",
   "counts": {
     "oddsRows": 26,
@@ -20,10 +20,15 @@
     "previewV2Editorial": "PASS; current text-only crest layout",
     "timeFormat": "PASS; historical cache-version/BCF assertions remain obsolete",
     "modelCoverage": "26/26 source-separated outputs",
-    "newsPhotos": "10 distinct reusable archive photos; subject visually inspected"
+    "newsPhotos": "10 distinct reusable archive photos; subject visually inspected",
+    "liveResources": "PASS: all five JSON packages match published bytes, six brand routes HTTP200",
+    "automatedCanvas": "PASS: 26 tips rows, 26 probability rows; three AI PNGs and one news PNG generated in existing CI"
   },
   "limitations": [
-    "No separate current-price PDF, current fields blank",
-    "Local browser launch blocked by runtime socket restriction; live browser/download QA pending"
-  ]
+    "Current-price PDF not supplied; current fields blank",
+    "Two authentic archive photographs have original widths below 400px (Hossam Hassan 280px, Christensen 317px); alternate high-resolution sources inaccessible",
+    "Preview V2 browser test expects four crests per card from older design; current approved text-only layout has two",
+    "Manual PNG/ZIP layout inspection unavailable in this environment"
+  ],
+  "liveCommit": "793d4a1e8f5d54c7eff8c64df919b3bc70962c00"
 }

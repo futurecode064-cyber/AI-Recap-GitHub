@@ -46,10 +46,11 @@
       "previewV2Summary": "အစ်ဝှစ်က ဂိုးရနိုင်ပေမယ့် ခံစစ်မှာ ဂိုးမပေးအောင် ထိန်းဖို့ခက်နေပါတယ်။ ဘုန်းမောက်ရဲ့ ငါးပွဲဆက်နိုင်မှုက တိုက်စစ်ဂိုးရတာအပြင် ခံစစ်ပါ တစ်ပြိုင်နက်တိုးတက်နေတဲ့ လက္ခဏာပါ။ ဥရောပခရီးပန်းမှုကို ထည့်တွက်ထားသော်လည်း အစ်ဝှစ်ရဲ့ ပွဲဖွင့်ချိန်အမှားတွေကို အပြစ်ပေးနိုင်မယ့် ဧည့်သည်ကို ပိုယုံကြည်ပါတယ်။ ဘုန်းမောက်က နောက်ဆုံးငါးပွဲမှာ တစ်ဂိုးသာပေးထားလို့ ဦးဆောင်မှုကိုထိန်းနိုင်တဲ့အခြေခံရှိပါတယ်။ ဘုန်းမောက်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဘုန်းမောက်",
       "previewJournalist": {
-        "status": "reviewed",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-08",
         "researchSources": [
-          "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679"
+          "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
+          "https://www.afcb.co.uk/matches/first-team/2026/g2645290"
         ],
         "sourceUrl": "https://tipsterarea.com/match/ipswich-bournemouth-premier-league-england-954679",
         "masterPrompt": "docs/master-prompts/MYANMAR_MATCH_PREVIEW_MASTER.md",
@@ -299,10 +300,11 @@
       "previewV2Summary": "ယူနီယံဘာလင်က သရေရလဒ်တွေကို ဆွဲယူနိုင်ပေမယ့် ဖရိုင်းဘတ်ရဲ့ သုံးပွဲဆက်နိုင်မှုကို ရပ်တန့်ဖို့ ဂိုးရှာနိုင်မှုပါလိုပါတယ်။ အိမ်ရှင်က ဥရောပခရီးကပြန်လာသော်လည်း လိဂ်ဂိုးသွင်းအားနဲ့ ရလဒ်က ပိုကောင်းပါတယ်။ ပွဲအစမှာစိတ်ရှည်ပြီး ဧည့်သည်ခံစစ်ကို ဆက်တိုက်စမ်းသပ်နိုင်မယ့် ဖရိုင်းဘတ်ကို အလေးပေးပါတယ်။ ယူနီယံဘာလင်က လိဂ်ရှစ်ပွဲမှာ ခုနစ်ဂိုးသာရထားလို့ အိမ်ရှင်အတွက် ဂိုးမပေးအောင်ထိန်းဖို့ အခြေခံရှိပါတယ်။ ဖရိုင်းဘတ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဖရိုင်းဘတ်",
       "previewJournalist": {
-        "status": "reviewed",
+        "status": "revised_to_owner_master",
         "reportDate": "2026-11-08",
         "researchSources": [
-          "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688"
+          "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
+          "https://www.scfreiburg.com/aktuell/nachrichten/maenner/vorberichte/2026/27/letzter-kraftakt-vor-der-pause/"
         ],
         "sourceUrl": "https://tipsterarea.com/match/freiburg-union-berlin-bundesliga-germany-954688",
         "masterPrompt": "docs/master-prompts/MYANMAR_MATCH_PREVIEW_MASTER.md",
