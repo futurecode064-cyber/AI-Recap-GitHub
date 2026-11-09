@@ -198,7 +198,8 @@
       "eligibleForPreview": true,
       "priceStatus": "original-and-current-verified-from-owner-pdfs",
       "previewV2Summary": "ပလိုင်းမောက်က လိဂ်အဆင့် ၄ မှာ ရပ်တည်နေပြီး နောက်ဆုံးအိမ်ကွင်းနှစ်ပွဲဆက် အနိုင်ရထားတာကြောင့် FA ဖလားပွဲအတွက် အားရှိနေပါတယ်။ ဘာခမ်စတက်က နောက်ဆုံးနှစ်ပွဲ သရေယူနိုင်ပေမယ့် ခံစစ်ဂိုးပေးရမှုကို မဖြေရှင်းနိုင်သေးပါဘူး။ နှစ်သင်းလုံးရဲ့ ခံစစ်မှာ အခွင့်အရေးရှိနေပေမယ့် အိမ်ရှင်ရဲ့ တိုက်စစ်နဲ့ ရာသီတစ်လျှောက် တည်ငြိမ်မှုက ပိုအားသာပါတယ်။ ပလိုင်းမောက်အသင်းကို ရွေးချယ်ပါတယ်။",
-      "previewV2Selection": "ပလိုင်းမောက်"
+      "previewV2Selection": "ပလိုင်းမောက်",
+      "pdfLastColumn": "1-0"
     },
     {
       "home": "ကရစ်စတီရန်စန်း",
@@ -406,7 +407,8 @@
       "previewV2Selection": "ဗယ်လာရန်ဂာ",
       "totalGoalsLine": 2.5,
       "overOdds": "1.37",
-      "underOdds": "2.98"
+      "underOdds": "2.98",
+      "pdfLastColumn": "1-2"
     },
     {
       "home": "စာဘတ်ဒယ်",
@@ -612,7 +614,8 @@
       "previewV2Selection": "စာဘတ်ဒယ်",
       "totalGoalsLine": 2.5,
       "overOdds": "1.94",
-      "underOdds": "1.90"
+      "underOdds": "1.90",
+      "pdfLastColumn": "1-0"
     },
     {
       "home": "လပ်စ်ပါးမက်",
@@ -819,7 +822,8 @@
       "previewV2Selection": "လပ်စ်ပါးမက်",
       "totalGoalsLine": 2.5,
       "overOdds": "1.81",
-      "underOdds": "2.17"
+      "underOdds": "2.17",
+      "pdfLastColumn": "1-0"
     },
     {
       "home": "ဟီဒိုဗာ",
@@ -1025,7 +1029,8 @@
       "previewV2Selection": "ဟီဒိုဗာ",
       "totalGoalsLine": 2.5,
       "overOdds": "1.72",
-      "underOdds": "2.03"
+      "underOdds": "2.03",
+      "pdfLastColumn": "2-1"
     },
     {
       "home": "ဘိုတိုစန်နီ",
@@ -1231,7 +1236,8 @@
       "previewV2Selection": "ဘိုတိုစန်နီ",
       "totalGoalsLine": 2.5,
       "overOdds": "1.76",
-      "underOdds": "1.98"
+      "underOdds": "1.98",
+      "pdfLastColumn": "1-0"
     },
     {
       "home": "တော်ရန်စီ",
@@ -1437,7 +1443,8 @@
       "previewV2Selection": "တော်ရန်စီ",
       "totalGoalsLine": 2.5,
       "overOdds": "1.76",
-      "underOdds": "1.98"
+      "underOdds": "1.98",
+      "pdfLastColumn": "2-1"
     },
     {
       "home": "လိုရန်ဇို",
@@ -1643,7 +1650,8 @@
       "previewV2Selection": "လိုရန်ဇို",
       "totalGoalsLine": 2.5,
       "overOdds": "1.94",
-      "underOdds": "1.81"
+      "underOdds": "1.81",
+      "pdfLastColumn": "1-2"
     }
   ],
   "currentPriceSourcePDF": "9 စျေး.pdf",
