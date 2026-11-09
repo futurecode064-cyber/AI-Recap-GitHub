@@ -157,8 +157,8 @@
         "upperTeam": "ပလိုင်းမောက်",
         "bodyOdds": "-75",
         "goalTotalOdds": "3-5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "3+20"
       },
       "oddsSourceUrl": "https://www.soccerstats.ie/match/plymouth-parkway-berkhamsted-2026-11-09/",
       "oddsVerifiedDate": "2026-11-09",
@@ -202,7 +202,9 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "currentBodyOdds": "-60",
+      "currentGoalTotalOdds": "3+20"
     },
     {
       "home": "Kristiansund",
@@ -365,8 +367,8 @@
         "upperTeam": "ဗယ်လာရန်ဂာ",
         "bodyOdds": "-30",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-40",
+        "currentGoalTotalOdds": "3-90"
       },
       "oddsSourceUrl": "https://tipsterarea.com/match/kristiansund-valerenga-oslo-eliteserien-norway-955100",
       "oddsVerifiedDate": "2026-11-09",
@@ -415,7 +417,9 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "currentBodyOdds": "-40",
+      "currentGoalTotalOdds": "3-90"
     },
     {
       "home": "Sabadell",
@@ -578,8 +582,8 @@
         "upperTeam": "စာဘတ်ဒယ်",
         "bodyOdds": "1+70",
         "goalTotalOdds": "2-65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+70",
+        "currentGoalTotalOdds": "2-60"
       },
       "oddsSourceUrl": "https://tipsterarea.com/match/sabadell-real-sociedad-b-segunda-division-spain-955056",
       "oddsVerifiedDate": "2026-11-09",
@@ -629,7 +633,9 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "currentBodyOdds": "1+70",
+      "currentGoalTotalOdds": "2-60"
     },
     {
       "home": "Las Palmas",
@@ -792,8 +798,8 @@
         "upperTeam": "လပ်စ်ပါးမက်",
         "bodyOdds": "-75",
         "goalTotalOdds": "3+55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "3+60"
       },
       "oddsSourceUrl": "https://www.oddstorm.com/odds/league/910-spain-segunda-division",
       "oddsVerifiedDate": "2026-11-09",
@@ -841,7 +847,9 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "currentBodyOdds": "-75",
+      "currentGoalTotalOdds": "3+60"
     },
     {
       "home": "Hvidovre",
@@ -1004,8 +1012,8 @@
         "upperTeam": "ဟီဒိုဗာ",
         "bodyOdds": "1+100",
         "goalTotalOdds": "3+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+100",
+        "currentGoalTotalOdds": "3+45"
       },
       "oddsSourceUrl": "https://tipsterarea.com/match/hvidovre-aarhus-fremad-1st-division-denmark-955071",
       "oddsVerifiedDate": "2026-11-09",
@@ -1055,7 +1063,9 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "currentBodyOdds": "1+100",
+      "currentGoalTotalOdds": "3+45"
     },
     {
       "home": "FC Botosani",
@@ -1218,8 +1228,8 @@
         "upperTeam": "ဘိုတိုစန်နီ",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3+80"
       },
       "oddsSourceUrl": "https://tipsterarea.com/match/fc-botosani-otelul-galati-liga-i-romania-955059",
       "oddsVerifiedDate": "2026-11-09",
@@ -1266,7 +1276,9 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3+80"
     },
     {
       "home": "Torreense",
@@ -1429,8 +1441,8 @@
         "upperTeam": "တော်ရန်စီ",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-70",
+        "currentGoalTotalOdds": "3+50"
       },
       "oddsSourceUrl": "https://tipsterarea.com/match/torreense-uniao-leiria-liga-portugal-2-955094",
       "oddsVerifiedDate": "2026-11-09",
@@ -1477,7 +1489,9 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "currentBodyOdds": "-70",
+      "currentGoalTotalOdds": "3+50"
     },
     {
       "home": "Sportivo San Lorenzo",
@@ -1640,8 +1654,8 @@
         "upperTeam": "ရူဘီအို",
         "bodyOdds": "1+70",
         "goalTotalOdds": "2-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+100",
+        "currentGoalTotalOdds": "2-85"
       },
       "oddsSourceUrl": "https://tipsterarea.com/match/sportivo-san-lorenzo-rubio-nu-primera-division-paraguay-955091",
       "oddsVerifiedDate": "2026-11-09",
@@ -1688,7 +1702,9 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "currentBodyOdds": "1+100",
+      "currentGoalTotalOdds": "2-85"
     }
   ],
   "noFixturesLeagues": []
