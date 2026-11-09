@@ -75,15 +75,15 @@ assert.match(migration, /'language-academy-web', 'language-academy'/);
 console.log('PASS: Language Academy website views are linked to the APK app key.');
 
 
-// Regression: Myanmar Kyar v4.2.16 APK is hosted as a direct .apk file,
+// Regression: Myanmar Kyar v4.2.18 APK is hosted as a direct .apk file,
 // has the expected download filename, and records exactly one download click.
 const kyarHtml = fs.readFileSync(path.join(root, 'portal/myanmar-kyar/index.html'), 'utf8');
 const kyarTag = kyarHtml.match(/<a\b[^>]*class="download"[^>]*>/)?.[0];
 assert.ok(kyarTag && kyarTag.includes('data-app-key="myanmar-kyar"'));
 const kyarUrl = kyarTag.match(/href="([^"]+)"/)?.[1];
 const kyarFilename = kyarTag.match(/download="([^"]+)"/)?.[1];
-assert.equal(kyarUrl, 'https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/portal/apps/Myanmar-Kyar-v4.2.16.apk');
-assert.equal(kyarFilename, 'Myanmar-Kyar-v4.2.16.apk');
+assert.equal(kyarUrl, 'https://raw.githubusercontent.com/futurecode064-cyber/AI-Recap-GitHub/main/portal/apps/Myanmar-Kyar-v4.2.18.apk');
+assert.equal(kyarFilename, 'Myanmar-Kyar-v4.2.18.apk');
 const kyarAnchor = {
   href: kyarUrl,
   dataset: {appKey:'myanmar-kyar'},
@@ -106,7 +106,7 @@ kyarAnchor.handlers.click();
 const kyarClicks=events.slice(startKyar).filter(e=>e.body.p_event_kind==='download_click');
 assert.equal(kyarClicks.length,1);
 assert.equal(kyarClicks[0].body.p_app_key,'myanmar-kyar');
-console.log('PASS: Kyar v4.2.16 direct APK download event correctly tracked.');
+console.log('PASS: Kyar v4.2.18 direct APK download event correctly tracked.');
 
 for(const tag of ['fc-goal-zone-v','fc-bw-v','fc-ykz-v','fc-ko-thet-v','fc-kmm-v']){
   assert.ok(adminJs.includes('^'+tag), 'Admin release dashboard missing '+tag);
