@@ -1,0 +1,94 @@
+{
+  "reportDate": "2026-11-09",
+  "timezone": "Asia/Yangon",
+  "items": [
+    {
+      "fixtureId": "fc-20261109-01",
+      "home": "Plymouth Parkway",
+      "away": "Berkhamsted",
+      "score": "1-1",
+      "sourceName": "Soccerstats.ie",
+      "sourceUrl": "https://www.soccerstats.ie/match/plymouth-parkway-berkhamsted-2026-11-09/",
+      "sourceDate": "2026-11-09",
+      "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
+      "checkedDate": "2026-11-09"
+    },
+    {
+      "fixtureId": "fc-20261109-02",
+      "home": "Kristiansund",
+      "away": "Valerenga Oslo",
+      "score": "1-2",
+      "sourceName": "ESKape Predictions",
+      "sourceUrl": "https://eskape.pro/en/predictions",
+      "sourceDate": "2026-11-09",
+      "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
+      "checkedDate": "2026-11-09"
+    },
+    {
+      "fixtureId": "fc-20261109-03",
+      "home": "Sabadell",
+      "away": "Real Sociedad B",
+      "score": "2-1",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/segunda-division-predictions/ce-sabadell-fc-vs-real-sociedad-ii-prediction-09-11-2026/",
+      "sourceDate": "2026-11-09",
+      "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
+      "checkedDate": "2026-11-09"
+    },
+    {
+      "fixtureId": "fc-20261109-04",
+      "home": "Las Palmas",
+      "away": "Eldense",
+      "score": "1-1",
+      "sourceName": "Sport Predict",
+      "sourceUrl": "https://sportsoddsbet.com/predictions/ud-las-palmas-vs-club-deportivo-eldense-prediction-2026-11-09/",
+      "sourceDate": "2026-11-09",
+      "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
+      "checkedDate": "2026-11-09"
+    },
+    {
+      "fixtureId": "fc-20261109-05",
+      "home": "Hvidovre",
+      "away": "Aarhus Fremad",
+      "score": "1-1",
+      "sourceName": "Vecta Score",
+      "sourceUrl": "https://vectascore.com/football/match/hvidovre-vs-aarhus-fremad-88535/",
+      "sourceDate": "2026-11-09",
+      "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
+      "checkedDate": "2026-11-09"
+    },
+    {
+      "fixtureId": "fc-20261109-06",
+      "home": "FC Botosani",
+      "away": "Otelul Galati",
+      "score": "1-1",
+      "sourceName": "Vecta Score",
+      "sourceUrl": "https://vectascore.com/football/match/fc-botosani-vs-otelul-88534/",
+      "sourceDate": "2026-11-09",
+      "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
+      "checkedDate": "2026-11-09"
+    },
+    {
+      "fixtureId": "fc-20261109-07",
+      "home": "Torreense",
+      "away": "Uniao Leiria",
+      "score": "1-0",
+      "sourceName": "Vecta Score",
+      "sourceUrl": "https://vectascore.com/football/match/torreense-vs-uniao-de-leiria-88525/",
+      "sourceDate": "2026-11-09",
+      "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
+      "checkedDate": "2026-11-09"
+    },
+    {
+      "fixtureId": "fc-20261109-08",
+      "home": "Sportivo San Lorenzo",
+      "away": "Rubio Nu",
+      "score": "1-1",
+      "sourceName": "TipStadium",
+      "sourceUrl": "https://tipstadium.com/football/matches/club-sp-san-lorenzo-rubio-nu-af-1632059",
+      "sourceDate": "2026-11-09",
+      "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
+      "checkedDate": "2026-11-09"
+    }
+  ]
+}

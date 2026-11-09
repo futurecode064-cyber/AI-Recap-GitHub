@@ -1,0 +1,214 @@
+{
+  "reportDate": "2026-11-09",
+  "models": "existing unchanged production JS; independently sourced form and 1X2 inputs",
+  "rows": [
+    {
+      "fixtureId": "fc-20261109-01",
+      "AI": [
+        "2-1",
+        "1-1",
+        "2-0"
+      ],
+      "Bookies": "1-0",
+      "VIP": "1-1",
+      "probability": {
+        "win": {
+          "home": 60,
+          "away": 40,
+          "source": "https://www.soccerstats.ie/match/plymouth-parkway-berkhamsted-2026-11-09/",
+          "provider": "Soccerstats.ie displayed top-odds snapshot",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 60,
+          "under": 40,
+          "line": "2.5",
+          "method": "နောက်ဆုံး ၅ ပွဲ ဂိုးပျမ်းမျှ · Poisson",
+          "source": "https://www.footballwebpages.co.uk/plymouth-parkway/fixtures-results"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261109-02",
+      "AI": [
+        "1-2",
+        "1-1",
+        "2-2"
+      ],
+      "Bookies": "0-1",
+      "VIP": "1-2",
+      "probability": {
+        "win": {
+          "home": 47,
+          "away": 53,
+          "source": "https://tipsterarea.com/match/kristiansund-valerenga-oslo-eliteserien-norway-955100",
+          "provider": "TipsterArea / 1xbet first displayed row",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 69,
+          "under": 31,
+          "line": "2.5",
+          "method": "ဂိုးပေါ်/အောက် ကြေး",
+          "source": "https://tipsterarea.com/match/kristiansund-valerenga-oslo-eliteserien-norway-955100"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261109-03",
+      "AI": [
+        "1-1",
+        "1-0",
+        "2-1"
+      ],
+      "Bookies": "1-0",
+      "VIP": "2-1",
+      "probability": {
+        "win": {
+          "home": 75,
+          "away": 25,
+          "source": "https://tipsterarea.com/match/sabadell-real-sociedad-b-segunda-division-spain-955056",
+          "provider": "TipsterArea / 1xbet first displayed row",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 49,
+          "under": 51,
+          "line": "2.5",
+          "method": "ဂိုးပေါ်/အောက် ကြေး",
+          "source": "https://tipsterarea.com/match/sabadell-real-sociedad-b-segunda-division-spain-955056"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261109-04",
+      "AI": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "Bookies": "1-0",
+      "VIP": "1-1",
+      "probability": {
+        "win": {
+          "home": 63,
+          "away": 37,
+          "source": "https://www.oddstorm.com/odds/league/910-spain-segunda-division",
+          "provider": "OddStorm actual displayed bookmaker comparison snapshot",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 55,
+          "under": 45,
+          "line": "2.5",
+          "method": "ဂိုးပေါ်/အောက် ကြေး",
+          "source": "https://www.oddstorm.com/odds/league/910-spain-segunda-division"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261109-05",
+      "AI": [
+        "1-0",
+        "2-0",
+        "1-1"
+      ],
+      "Bookies": "1-0",
+      "VIP": "1-1",
+      "probability": {
+        "win": {
+          "home": 65,
+          "away": 35,
+          "source": "https://tipsterarea.com/match/hvidovre-aarhus-fremad-1st-division-denmark-955071",
+          "provider": "TipsterArea / 1xbet first displayed row",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 54,
+          "under": 46,
+          "line": "2.5",
+          "method": "ဂိုးပေါ်/အောက် ကြေး",
+          "source": "https://tipsterarea.com/match/hvidovre-aarhus-fremad-1st-division-denmark-955071"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261109-06",
+      "AI": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "Bookies": "1-0",
+      "VIP": "1-1",
+      "probability": {
+        "win": {
+          "home": 61,
+          "away": 39,
+          "source": "https://tipsterarea.com/match/fc-botosani-otelul-galati-liga-i-romania-955059",
+          "provider": "TipsterArea / 1xbet first displayed row",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 53,
+          "under": 47,
+          "line": "2.5",
+          "method": "ဂိုးပေါ်/အောက် ကြေး",
+          "source": "https://tipsterarea.com/match/fc-botosani-otelul-galati-liga-i-romania-955059"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261109-07",
+      "AI": [
+        "1-1",
+        "0-1",
+        "1-0"
+      ],
+      "Bookies": "1-0",
+      "VIP": "1-0",
+      "probability": {
+        "win": {
+          "home": 60,
+          "away": 40,
+          "source": "https://tipsterarea.com/match/torreense-uniao-leiria-liga-portugal-2-955094",
+          "provider": "TipsterArea / 1xbet first displayed row",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 53,
+          "under": 47,
+          "line": "2.5",
+          "method": "ဂိုးပေါ်/အောက် ကြေး",
+          "source": "https://tipsterarea.com/match/torreense-uniao-leiria-liga-portugal-2-955094"
+        }
+      }
+    },
+    {
+      "fixtureId": "fc-20261109-08",
+      "AI": [
+        "1-1",
+        "2-1",
+        "1-0"
+      ],
+      "Bookies": "0-1",
+      "VIP": "1-1",
+      "probability": {
+        "win": {
+          "home": 30,
+          "away": 70,
+          "source": "https://tipsterarea.com/match/sportivo-san-lorenzo-rubio-nu-primera-division-paraguay-955091",
+          "provider": "TipsterArea / 1xbet first displayed row",
+          "basis": "သရေမပါသော နှစ်ဖက်အလေးသာမှု (1X2 ကြေးမှ)"
+        },
+        "goals": {
+          "over": 48,
+          "under": 52,
+          "line": "2.5",
+          "method": "ဂိုးပေါ်/အောက် ကြေး",
+          "source": "https://tipsterarea.com/match/sportivo-san-lorenzo-rubio-nu-primera-division-paraguay-955091"
+        }
+      }
+    }
+  ]
+}

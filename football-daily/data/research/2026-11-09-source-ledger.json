@@ -1,0 +1,217 @@
+{
+  "reportDate": "2026-11-09",
+  "sourcePDF": "9.pdf",
+  "sourceSha256": "261fc65003ded8d16beb1f26d0ddd26ec0a295a7eacaa5c7a4724e1dca2a3fde",
+  "sourceRows": 8,
+  "rows": [
+    {
+      "home": "ပလိုင်းမောက်",
+      "away": "ဘာခမ်စတက်",
+      "upperTeam": "ပလိုင်းမောက်",
+      "bodyOdds": "-75",
+      "goalTotalOdds": "3-5",
+      "internetPrediction": "1-0",
+      "fixtureId": "fc-20261109-01",
+      "pdfRow": 1,
+      "sourcePage": 1,
+      "canonicalHome": "Plymouth Parkway",
+      "canonicalAway": "Berkhamsted",
+      "sourceUrl": "https://www.thefa.com/competitions/thefacup/fixtures?stream=top",
+      "sourceKickoff": "02:00",
+      "clubDetails": "",
+      "sourceImages": [
+        "https://www.footballwebpages.co.uk/graphics/teams/24/plymouth-parkway.png",
+        "https://www.footballwebpages.co.uk/graphics/teams/24/berkhamsted.png"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed current manager/player/injury details omitted rather than invented"
+      ],
+      "oddsSourceUrl": "https://www.soccerstats.ie/match/plymouth-parkway-berkhamsted-2026-11-09/",
+      "oddsSnapshotAt": "8 November 2026 20:53; checked 9 November 2026"
+    },
+    {
+      "home": "ကရစ်စတီရန်စန်း",
+      "away": "ဗယ်လာရန်ဂာ",
+      "upperTeam": "ဗယ်လာရန်ဂာ",
+      "bodyOdds": "-30",
+      "goalTotalOdds": "3-90",
+      "internetPrediction": "1-2",
+      "fixtureId": "fc-20261109-02",
+      "pdfRow": 2,
+      "sourcePage": 1,
+      "canonicalHome": "Kristiansund",
+      "canonicalAway": "Valerenga Oslo",
+      "sourceUrl": "https://tipsterarea.com/match/kristiansund-valerenga-oslo-eliteserien-norway-955100",
+      "sourceKickoff": "00:30",
+      "clubDetails": "",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/norway/kristiansund.gif",
+        "https://tipsterarea.com/images/teams/norway/valerenga-oslo.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed current manager/player/injury details omitted rather than invented"
+      ],
+      "oddsSourceUrl": "https://tipsterarea.com/match/kristiansund-valerenga-oslo-eliteserien-norway-955100",
+      "oddsSnapshotAt": "*** Odds are pre-match odds and they are accurate at last update 09.11.2026 00:02.\nThey may vary at this moment."
+    },
+    {
+      "home": "စာဘတ်ဒယ်",
+      "away": "ဆိုစီဒက်ဘီ",
+      "upperTeam": "စာဘတ်ဒယ်",
+      "bodyOdds": "1+70",
+      "goalTotalOdds": "2-65",
+      "internetPrediction": "1-0",
+      "fixtureId": "fc-20261109-03",
+      "pdfRow": 3,
+      "sourcePage": 1,
+      "canonicalHome": "Sabadell",
+      "canonicalAway": "Real Sociedad B",
+      "sourceUrl": "https://tipsterarea.com/match/sabadell-real-sociedad-b-segunda-division-spain-955056",
+      "sourceKickoff": "02:00",
+      "clubDetails": "",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/sabadell.gif",
+        "https://tipsterarea.com/images/teams/spain/real-sociedad-b.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed current manager/player/injury details omitted rather than invented"
+      ],
+      "oddsSourceUrl": "https://tipsterarea.com/match/sabadell-real-sociedad-b-segunda-division-spain-955056",
+      "oddsSnapshotAt": "*** Odds are pre-match odds and they are accurate at last update 09.11.2026 00:02.\nThey may vary at this moment."
+    },
+    {
+      "home": "လပ်စ်ပါးမက်",
+      "away": "အဲဒန်စီ",
+      "upperTeam": "လပ်စ်ပါးမက်",
+      "bodyOdds": "-75",
+      "goalTotalOdds": "3+55",
+      "internetPrediction": "1-0",
+      "fixtureId": "fc-20261109-04",
+      "pdfRow": 4,
+      "sourcePage": 1,
+      "canonicalHome": "Las Palmas",
+      "canonicalAway": "Eldense",
+      "sourceUrl": "https://tipsterarea.com/match/las-palmas-eldense-segunda-division-spain-954730",
+      "sourceKickoff": "02:00",
+      "clubDetails": "",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/spain/las-palmas.gif",
+        "https://tipsterarea.com/images/teams/spain/eldense.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed current manager/player/injury details omitted rather than invented"
+      ],
+      "oddsSourceUrl": "https://www.oddstorm.com/odds/league/910-spain-segunda-division",
+      "oddsSnapshotAt": "read 2026-11-09; publisher tick time unavailable"
+    },
+    {
+      "home": "ဟီဒိုဗာ",
+      "away": "အာဟပ်စ်",
+      "upperTeam": "ဟီဒိုဗာ",
+      "bodyOdds": "1+100",
+      "goalTotalOdds": "3+70",
+      "internetPrediction": "2-1",
+      "fixtureId": "fc-20261109-05",
+      "pdfRow": 5,
+      "sourcePage": 1,
+      "canonicalHome": "Hvidovre",
+      "canonicalAway": "Aarhus Fremad",
+      "sourceUrl": "https://tipsterarea.com/match/hvidovre-aarhus-fremad-1st-division-denmark-955071",
+      "sourceKickoff": "00:30",
+      "clubDetails": "",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/denmark/hvidovre.gif",
+        "https://tipsterarea.com/images/teams/denmark/aarhus-fremad.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed current manager/player/injury details omitted rather than invented"
+      ],
+      "oddsSourceUrl": "https://tipsterarea.com/match/hvidovre-aarhus-fremad-1st-division-denmark-955071",
+      "oddsSnapshotAt": "*** Odds are pre-match odds and they are accurate at last update 09.11.2026 00:02.\nThey may vary at this moment."
+    },
+    {
+      "home": "ဘိုတိုစန်နီ",
+      "away": "ဂယ်လာတီ",
+      "upperTeam": "ဘိုတိုစန်နီ",
+      "bodyOdds": "-60",
+      "goalTotalOdds": "3+65",
+      "internetPrediction": "1-0",
+      "fixtureId": "fc-20261109-06",
+      "pdfRow": 6,
+      "sourcePage": 1,
+      "canonicalHome": "FC Botosani",
+      "canonicalAway": "Otelul Galati",
+      "sourceUrl": "https://tipsterarea.com/match/fc-botosani-otelul-galati-liga-i-romania-955059",
+      "sourceKickoff": "00:30",
+      "clubDetails": "",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/romania/fc-botosani.gif",
+        "https://tipsterarea.com/images/teams/romania/otelul-galati.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed current manager/player/injury details omitted rather than invented"
+      ],
+      "oddsSourceUrl": "https://tipsterarea.com/match/fc-botosani-otelul-galati-liga-i-romania-955059",
+      "oddsSnapshotAt": "*** Odds are pre-match odds and they are accurate at last update 09.11.2026 00:02.\nThey may vary at this moment."
+    },
+    {
+      "home": "တော်ရန်စီ",
+      "away": "လိုင်ရီယာ",
+      "upperTeam": "တော်ရန်စီ",
+      "bodyOdds": "-60",
+      "goalTotalOdds": "3+60",
+      "internetPrediction": "2-1",
+      "fixtureId": "fc-20261109-07",
+      "pdfRow": 7,
+      "sourcePage": 1,
+      "canonicalHome": "Torreense",
+      "canonicalAway": "Uniao Leiria",
+      "sourceUrl": "https://tipsterarea.com/match/torreense-uniao-leiria-liga-portugal-2-955094",
+      "sourceKickoff": "02:45",
+      "clubDetails": "",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/portugal/torreense.gif",
+        "https://tipsterarea.com/images/teams/portugal/uniao-leiria.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed current manager/player/injury details omitted rather than invented"
+      ],
+      "oddsSourceUrl": "https://tipsterarea.com/match/torreense-uniao-leiria-liga-portugal-2-955094",
+      "oddsSnapshotAt": "*** Odds are pre-match odds and they are accurate at last update 09.11.2026 00:02.\nThey may vary at this moment."
+    },
+    {
+      "home": "လိုရန်ဇို",
+      "away": "ရူဘီအို",
+      "upperTeam": "ရူဘီအို",
+      "bodyOdds": "1+70",
+      "goalTotalOdds": "2-90",
+      "internetPrediction": "1-2",
+      "fixtureId": "fc-20261109-08",
+      "pdfRow": 8,
+      "sourcePage": 1,
+      "canonicalHome": "Sportivo San Lorenzo",
+      "canonicalAway": "Rubio Nu",
+      "sourceUrl": "https://tipsterarea.com/match/sportivo-san-lorenzo-rubio-nu-primera-division-paraguay-955091",
+      "sourceKickoff": "02:30",
+      "clubDetails": "",
+      "sourceImages": [
+        "https://tipsterarea.com/images/teams/paraguay/sportivo-san-lorenzo.gif",
+        "https://tipsterarea.com/images/teams/paraguay/rubio-nu.gif"
+      ],
+      "unverifiedFields": [
+        "Unconfirmed current manager/player/injury details omitted rather than invented"
+      ],
+      "oddsSourceUrl": "https://tipsterarea.com/match/sportivo-san-lorenzo-rubio-nu-primera-division-paraguay-955091",
+      "oddsSnapshotAt": "*** Odds are pre-match odds and they are accurate at last update 09.11.2026 00:02.\nThey may vary at this moment."
+    }
+  ],
+  "publicationStatus": "validated source ledger; live/browser QA pending",
+  "previewCount": 8,
+  "specialChoiceCount": 2,
+  "FTCount": 26,
+  "newsCount": 10,
+  "unavailable": [
+    "Preview V2 authentic fixture photo rights not verified; honest photo-pending panel",
+    "Unconfirmed current player/manager/injury details omitted except sourced Norway illness context"
+  ]
+}
