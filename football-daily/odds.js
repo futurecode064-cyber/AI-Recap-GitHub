@@ -24,6 +24,14 @@ function badge(name,url,cls="team-badge"){
 }
 const groups={"Copa del Rey":"စပိန် ဘုရင့်ဖလား","EFL Cup":"အင်္ဂလန် ကာရာဘောင်း ဖလား","DFB-Pokal":"ဂျာမန် ပိုကယ်ဖလား","Serie B":"အီတလီ စီးရီးဘီ","UEFA Champions League":"ချန်ပီယံလိဂ်","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","Swedish Superettan":"ဆွီဒင် စူပါတန် လိဂ်","German 3. Liga":"ဂျာမန် ဘွန်ဒစ်လီဂါ ၃","Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","Veikkausliiga":"ဖင်လန် လိဂ်","Eliteserien":"နော်ဝေး လိဂ်","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Turkish Super Lig":"တူရကီ စူပါလိဂ်","Italian Serie C":"အီတလီ စီးရီးစီ","Danish Cup":"ဒိန်းမတ် ဖလား","Norwegian 1. Division":"နော်ဝေးလိဂ် ၁","Veikkausliiga Playoffs":"ဖင်လန် လိဂ် ပလေးအော့"};
 const leagueLogos={"Premier League":"https://crests.football-data.org/PL.png","Serie A":"https://crests.football-data.org/SA.png","La Liga":"https://crests.football-data.org/PD.png","La Liga 2":"https://commons.wikimedia.org/wiki/Special:FilePath/LaLiga%20Hypermotion%202023%20Vertical%20Logo.svg","Primeira Liga":"https://crests.football-data.org/PPL.png","Bundesliga":"https://crests.football-data.org/BL1.png","Ligue 1":"https://crests.football-data.org/FL1.png","Championship":"https://crests.football-data.org/ELC.png","Allsvenskan":"https://commons.wikimedia.org/wiki/Special:FilePath/Allsvenskan%20logo.svg","Danish Superliga":"https://commons.wikimedia.org/wiki/Special:FilePath/3F%20Superliga%20Logo%202024.png","Ligue 2":"https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20Ligue%202%20BKT%202024.svg","Turkish Super Lig":"https://commons.wikimedia.org/wiki/Special:FilePath/Trendyol%20S%C3%BCper%20Lig%20logo%20dikey.svg","Swedish Superettan":"https://commons.wikimedia.org/wiki/Special:FilePath/Superettan%20logo%20%282024%29.webp"};
+// Preserve the owner's Internet forecast column across daily PDF schema versions.
+// Owner PDF predictions are never substituted with VIP Internet / Bookies / AI Tips.
+function pdfInternetPrediction(m){
+ const fromPdf=String(m.pdfLastColumn??"").trim();
+ const fallback=String(m.internetPrediction??"").trim();
+ const score=fromPdf||fallback;
+ return /^\d{1,2}-\d{1,2}$/.test(score)?score:"";
+}
 function matchCell(m){
  const div=element("div","odds-matchup");
  append(div,element("span","club-label",m.home),badge(m.home,m.homeCrestUrl),element("span","mini-vs","VS"),badge(m.away,m.awayCrestUrl),element("span","club-label",m.away));
@@ -148,7 +156,7 @@ function brandMobileOdds(matches){
   const markets=element("div","bmo-markets");
   append(markets,market("ဘော်ဒီကြေး",m.bodyOdds,m.currentBodyOdds),market("ဂိုးပေါင်းကြေး",m.goalTotalOdds,m.currentGoalTotalOdds));
   append(card,timeNode,teams,element("div","bmo-upper","ကြေးပေးအသင်း — "+String(m.upperTeam||"—")),markets);
-  if(String(m.pdfLastColumn??"").trim())card.appendChild(element("div","bmo-prediction","အင်တာနက်ခန့်မှန်းချက် — "+m.pdfLastColumn));
+  const predicted=pdfInternetPrediction(m);if(predicted)card.appendChild(element("div","bmo-prediction","အင်တာနက်ခန့်မှန်းချက် — "+predicted));
   list.appendChild(card);
  }
  return list;
@@ -210,7 +218,7 @@ function render(data){
    append(row,t,pair,element("td","upper",m.upperTeam),
     element("td","price odds-original",m.bodyOdds??""),bodyLatest,
     element("td","price odds-original",m.goalTotalOdds??""),goalLatest,
-    element("td","prediction",m.pdfLastColumn));
+    element("td","prediction",pdfInternetPrediction(m)));
    tbody.appendChild(row);
   }
   table.appendChild(tbody);wrap.appendChild(table);section.appendChild(wrap);
