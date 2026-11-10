@@ -150,7 +150,7 @@
       "nightEditorialDate": "2026-11-09",
       "kickoffUtc": "2026-11-09T19:30:00Z",
       "kickoffYangon": "2026-11-10 2:00 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -202,7 +202,12 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.thefa.com/news/2026/nov/09/emirates-fa-cup-first-round-plymouth-parkway-berkhamsted-20261109",
+      "resultVerifiedDate": "2026-11-10",
+      "resultPeriod": "AET",
+      "regulationScore": "1-1"
     },
     {
       "home": "Kristiansund",
@@ -358,7 +363,7 @@
       "nightEditorialDate": "2026-11-09",
       "kickoffUtc": "2026-11-09T18:00:00Z",
       "kickoffYangon": "2026-11-10 12:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -415,7 +420,11 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.goal.com/en/results/2026-11-09",
+      "resultVerifiedDate": "2026-11-10",
+      "resultPeriod": "FT"
     },
     {
       "home": "Sabadell",
@@ -571,7 +580,7 @@
       "nightEditorialDate": "2026-11-09",
       "kickoffUtc": "2026-11-09T19:30:00Z",
       "kickoffYangon": "2026-11-10 2:00 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -629,7 +638,11 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://www.goal.com/en/results/2026-11-09",
+      "resultVerifiedDate": "2026-11-10",
+      "resultPeriod": "FT"
     },
     {
       "home": "Las Palmas",
@@ -785,7 +798,7 @@
       "nightEditorialDate": "2026-11-09",
       "kickoffUtc": "2026-11-09T19:30:00Z",
       "kickoffYangon": "2026-11-10 2:00 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -841,7 +854,11 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.goal.com/en/results/2026-11-09",
+      "resultVerifiedDate": "2026-11-10",
+      "resultPeriod": "FT"
     },
     {
       "home": "Hvidovre",
@@ -997,7 +1014,7 @@
       "nightEditorialDate": "2026-11-09",
       "kickoffUtc": "2026-11-09T18:00:00Z",
       "kickoffYangon": "2026-11-10 12:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1055,7 +1072,11 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "finalScore": "3-0",
+      "resultSourceUrl": "https://www.goal.com/en/results/2026-11-09",
+      "resultVerifiedDate": "2026-11-10",
+      "resultPeriod": "FT"
     },
     {
       "home": "FC Botosani",
@@ -1211,7 +1232,7 @@
       "nightEditorialDate": "2026-11-09",
       "kickoffUtc": "2026-11-09T18:00:00Z",
       "kickoffYangon": "2026-11-10 12:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1266,7 +1287,11 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.goal.com/en/results/2026-11-09",
+      "resultVerifiedDate": "2026-11-10",
+      "resultPeriod": "FT"
     },
     {
       "home": "Torreense",
@@ -1422,7 +1447,7 @@
       "nightEditorialDate": "2026-11-09",
       "kickoffUtc": "2026-11-09T20:15:00Z",
       "kickoffYangon": "2026-11-10 2:45 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1477,7 +1502,11 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "finalScore": "2-3",
+      "resultSourceUrl": "https://uniquescores.com/football/scores/2026-11-09/",
+      "resultVerifiedDate": "2026-11-10",
+      "resultPeriod": "FT"
     },
     {
       "home": "Sportivo San Lorenzo",
@@ -1633,7 +1662,7 @@
       "nightEditorialDate": "2026-11-09",
       "kickoffUtc": "2026-11-09T20:00:00Z",
       "kickoffYangon": "2026-11-10 2:30 AM",
-      "status": "scheduled",
+      "status": "finished",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; separate from external VIP, Bookies, AI and FT",
       "myanmarOdds": {
@@ -1688,8 +1717,13 @@
           "sourceDateType": "dated fixture tip for 9 November 2026; publication timestamp separately unavailable unless source states it",
           "checkedDate": "2026-11-09"
         }
-      }
+      },
+      "finalScore": "2-2",
+      "resultSourceUrl": "https://www.apf.org.py/noticias/culmina-en-paridad",
+      "resultVerifiedDate": "2026-11-10",
+      "resultPeriod": "FT"
     }
   ],
-  "noFixturesLeagues": []
+  "noFixturesLeagues": [],
+  "resultVerificationStatus": "8 of 8 independently checked against named result sites as of 2026-11-10; Plymouth 2-1 after extra time, 90-minute score 1-1; original editorial and odds preserved."
 }
