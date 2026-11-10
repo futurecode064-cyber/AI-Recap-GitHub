@@ -1,0 +1,286 @@
+{
+  "reportDate": "2026-11-10",
+  "dateSource": "independent official/public fixture lists",
+  "competitionCounts": {
+    "Copa del Rey": 6,
+    "EFL Trophy": 17,
+    "UEFA Women's Champions League": 5
+  },
+  "sources": [
+    {
+      "competition": "Copa del Rey",
+      "url": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa"
+    },
+    {
+      "competition": "EFL Trophy",
+      "url": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "competition": "UEFA Women's Champions League",
+      "url": "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-womens-champions-league-all-the-league-phase-fixtures-and-results/"
+    }
+  ],
+  "kickoff": "English GMT; Spanish and UEFA CET; all normalized to Asia/Yangon 2026-11-11 early AM, editorial night Nov 10",
+  "uncertainties": [
+    "Owner November 10 Myanmar price PDF not supplied, originals and current deliberately blank",
+    "17 sourced internet predictions described in expired Work unavailable; do not substitute made-up score",
+    "No verified current last five, season table or 1X2, so probability and model fields unavailable",
+    "Genuine crest mapping and PNG/ZIP tests incomplete; no fake logos",
+    "Prior-day archive 2026-11-09 lists all eight as scheduled; do not invent full-time results",
+    "Ten current news stories mentioned in Work not recovered; leave pre-existing news unchanged"
+  ],
+  "matchIdentity": [
+    {
+      "fixtureId": "fc-20261110-01",
+      "league": "Copa del Rey",
+      "home": "CD Pamplona",
+      "away": "SD Eibar",
+      "kickoffUtc": "2026-11-10T18:00:00Z",
+      "kickoffMMT": "2026-11-11 12:30 AM",
+      "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa"
+    },
+    {
+      "fixtureId": "fc-20261110-02",
+      "league": "Copa del Rey",
+      "home": "CD Anaitasuna",
+      "away": "Deportivo Alavés",
+      "kickoffUtc": "2026-11-10T18:00:00Z",
+      "kickoffMMT": "2026-11-11 12:30 AM",
+      "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa"
+    },
+    {
+      "fixtureId": "fc-20261110-03",
+      "league": "Copa del Rey",
+      "home": "CP Mijas Las Lagunas",
+      "away": "Real Jaén CF",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa"
+    },
+    {
+      "fixtureId": "fc-20261110-04",
+      "league": "Copa del Rey",
+      "home": "CF Trival Valderas Alcorcón",
+      "away": "CD Leganés",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa"
+    },
+    {
+      "fixtureId": "fc-20261110-05",
+      "league": "Copa del Rey",
+      "home": "SD Amorebieta",
+      "away": "UD Logroñés",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa"
+    },
+    {
+      "fixtureId": "fc-20261110-06",
+      "league": "Copa del Rey",
+      "home": "CFUE Tavernes de la Valldigna",
+      "away": "Valencia CF",
+      "kickoffUtc": "2026-11-10T20:00:00Z",
+      "kickoffMMT": "2026-11-11 2:30 AM",
+      "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa"
+    },
+    {
+      "fixtureId": "fc-20261110-07",
+      "league": "EFL Trophy",
+      "home": "Barnet",
+      "away": "Leyton Orient",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-08",
+      "league": "EFL Trophy",
+      "home": "Bristol Rovers",
+      "away": "Reading",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-09",
+      "league": "EFL Trophy",
+      "home": "Burton Albion",
+      "away": "Notts County",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-10",
+      "league": "EFL Trophy",
+      "home": "Crewe Alexandra",
+      "away": "Wigan Athletic",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-11",
+      "league": "EFL Trophy",
+      "home": "Grimsby Town",
+      "away": "Nottingham Forest U21",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-12",
+      "league": "EFL Trophy",
+      "home": "Huddersfield Town",
+      "away": "Liverpool U21",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-13",
+      "league": "EFL Trophy",
+      "home": "Leicester City",
+      "away": "Walsall",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-14",
+      "league": "EFL Trophy",
+      "home": "Mansfield Town",
+      "away": "Chesterfield",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-15",
+      "league": "EFL Trophy",
+      "home": "Northampton Town",
+      "away": "Gillingham",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-16",
+      "league": "EFL Trophy",
+      "home": "Oxford United",
+      "away": "Cheltenham Town",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-17",
+      "league": "EFL Trophy",
+      "home": "Plymouth Argyle",
+      "away": "Swindon Town",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-18",
+      "league": "EFL Trophy",
+      "home": "Stevenage",
+      "away": "Fulham U21",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-19",
+      "league": "EFL Trophy",
+      "home": "Stockport County",
+      "away": "Tranmere Rovers",
+      "kickoffUtc": "2026-11-10T19:00:00Z",
+      "kickoffMMT": "2026-11-11 1:30 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-20",
+      "league": "EFL Trophy",
+      "home": "Bradford City",
+      "away": "York City",
+      "kickoffUtc": "2026-11-10T19:30:00Z",
+      "kickoffMMT": "2026-11-11 2:00 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-21",
+      "league": "EFL Trophy",
+      "home": "Bromley",
+      "away": "Milton Keynes Dons",
+      "kickoffUtc": "2026-11-10T19:30:00Z",
+      "kickoffMMT": "2026-11-11 2:00 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-22",
+      "league": "EFL Trophy",
+      "home": "Crawley Town",
+      "away": "Brentford U21",
+      "kickoffUtc": "2026-11-10T19:30:00Z",
+      "kickoffMMT": "2026-11-11 2:00 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-23",
+      "league": "EFL Trophy",
+      "home": "Colchester United",
+      "away": "Ipswich Town U21",
+      "kickoffUtc": "2026-11-10T19:45:00Z",
+      "kickoffMMT": "2026-11-11 2:15 AM",
+      "fixtureSourceUrl": "https://www.skysports.com/efl-trophy-scores-fixtures"
+    },
+    {
+      "fixtureId": "fc-20261110-24",
+      "league": "UEFA Women's Champions League",
+      "home": "BK Häcken Women",
+      "away": "Chelsea Women",
+      "kickoffUtc": "2026-11-10T17:45:00Z",
+      "kickoffMMT": "2026-11-11 12:15 AM",
+      "fixtureSourceUrl": "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-womens-champions-league-all-the-league-phase-fixtures-and-results/"
+    },
+    {
+      "fixtureId": "fc-20261110-25",
+      "league": "UEFA Women's Champions League",
+      "home": "Real Madrid Women",
+      "away": "Paris FC Women",
+      "kickoffUtc": "2026-11-10T17:45:00Z",
+      "kickoffMMT": "2026-11-11 12:15 AM",
+      "fixtureSourceUrl": "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-womens-champions-league-all-the-league-phase-fixtures-and-results/"
+    },
+    {
+      "fixtureId": "fc-20261110-26",
+      "league": "UEFA Women's Champions League",
+      "home": "AS Roma Women",
+      "away": "Servette Chênois Women",
+      "kickoffUtc": "2026-11-10T20:00:00Z",
+      "kickoffMMT": "2026-11-11 2:30 AM",
+      "fixtureSourceUrl": "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-womens-champions-league-all-the-league-phase-fixtures-and-results/"
+    },
+    {
+      "fixtureId": "fc-20261110-27",
+      "league": "UEFA Women's Champions League",
+      "home": "Inter Women",
+      "away": "Manchester City Women",
+      "kickoffUtc": "2026-11-10T20:00:00Z",
+      "kickoffMMT": "2026-11-11 2:30 AM",
+      "fixtureSourceUrl": "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-womens-champions-league-all-the-league-phase-fixtures-and-results/"
+    },
+    {
+      "fixtureId": "fc-20261110-28",
+      "league": "UEFA Women's Champions League",
+      "home": "Paris Saint-Germain Women",
+      "away": "Bayern Munich Women",
+      "kickoffUtc": "2026-11-10T20:00:00Z",
+      "kickoffMMT": "2026-11-11 2:30 AM",
+      "fixtureSourceUrl": "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-womens-champions-league-all-the-league-phase-fixtures-and-results/"
+    }
+  ]
+}
