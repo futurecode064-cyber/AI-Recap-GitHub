@@ -152,8 +152,9 @@
   // 5-match W/D/L, 1X2, bookmaker lines and the complete original analysis.
   let preview=await renderer.render(m);
   preview=window.FutureCodeEditorialChoice?.appendPng(preview,m)||preview;
-  const W=preview.width,headH=295,topH=topBanner&&options.includeUploadedBanners!==false?180:0,bottomH=bottomBanner&&options.includeUploadedBanners!==false?180:0;
-  const H=topH+headH+preview.height+bottomH;
+  const W=preview.width,headH=295,cutY=508,compactH=184,captionH=48,topH=topBanner&&options.includeUploadedBanners!==false?180:0,bottomH=bottomBanner&&options.includeUploadedBanners!==false?180:0;
+  if(preview.height<=cutY+30)throw Error("မူလသုံးသပ်ချက် Canvas အမြင့် မမှန်ပါ");
+  const H=topH+headH+compactH+captionH+(preview.height-cutY)+bottomH;
   if(H>32000||W*H>110000000)throw Error("PNG အမြင့်/အရွယ်အစား များလွန်းနေပါသည်");
   const out=document.createElement("canvas");out.width=W;out.height=H;
   const c=out.getContext("2d");if(!c)throw Error("Canvas မရပါ");
@@ -181,11 +182,33 @@
   }else{
    c.fillStyle="#fff";c.font="800 19px Arial,sans-serif";c.fillText("Finished",W/2,yy+268,260);
   }
-  c.drawImage(preview,0,yy+headH);
+  // Replace only the repeated pre-match block, keeping the original article and footer.
+  // The first 508px contain kickoff, VS, 1X2, last-five and Myanmar odds.
+  const compactY=yy+headH;
+  const bg=c.createLinearGradient(0,compactY,W,compactY+compactH);
+  bg.addColorStop(0,"#0a233b");bg.addColorStop(.5,"#174e74");bg.addColorStop(1,"#0a233b");
+  c.fillStyle=bg;c.fillRect(0,compactY,W,compactH);
+  c.strokeStyle="#d7ad62";c.lineWidth=3;c.strokeRect(12,compactY+10,W-24,compactH-20);
+  if(m.homeCrestUrl)kit.crest(c,m.homeCrestUrl,68,compactY+25,120,team(m,"home"),true);
+  if(m.awayCrestUrl)kit.crest(c,m.awayCrestUrl,W-188,compactY+25,120,team(m,"away"),true);
+  c.textAlign="center";c.textBaseline="middle";
+  c.fillStyle="#ffe4b2";c.font="900 22px Arial,sans-serif";
+  c.fillText(m.resultPeriod==="AET"?"AFTER EXTRA TIME":"FULL TIME",W/2,compactY+38,365);
+  c.fillStyle="#ffe088";c.font="900 82px Arial,sans-serif";
+  c.fillText(clean(m.finalScore).replace(":"," - "),W/2,compactY+103,360);
+  c.fillStyle="#fff";c.font='900 25px "Noto Sans Myanmar",sans-serif';
+  c.fillText(team(m,"home"),292,compactY+149,325);
+  c.fillText(team(m,"away"),W-292,compactY+149,325);
+  const captionY=compactY+compactH;
+  c.fillStyle="#0c3049";c.fillRect(0,captionY,W,captionH);
+  c.fillStyle="#ffda91";c.font='900 21px "Noto Sans Myanmar",sans-serif';
+  c.fillText("မူလ ပွဲကြိုသုံးသပ်ချက်",W/2,captionY+captionH/2,W-70);
+  const articleTop=captionY+captionH;
+  c.drawImage(preview,0,cutY,W,preview.height-cutY,0,articleTop,W,preview.height-cutY);
   // The V1 canvas already appends an explicit original-selection footer.
   // Circle exactly that footer; do NOT infer that a handicap bet won.
   const extra=Math.max(100,Math.round(W*.085));
-  ring(c,W/2,yy+headH+preview.height-extra/2,Math.min(470,W*.39),Math.min(extra*.43,49));
+  ring(c,W/2,articleTop+(preview.height-cutY)-extra/2,Math.min(470,W*.39),Math.min(extra*.43,49));
   if(bottomH)cover(c,bottomBanner,W,H-bottomH,bottomH);
   return out;
  }
