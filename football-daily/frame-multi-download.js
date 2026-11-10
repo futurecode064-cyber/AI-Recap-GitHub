@@ -116,7 +116,8 @@
    summary.append(toggle,text("strong",studio.SECTION[k]),text("small",available.length+" Frame · "+selected.length+" ပွဲ/သတင်း"));
    details.append(summary);
    const columns=text("div",undefined,"multi-columns");
-   const frameOpts=allFrames.map(f=>({id:f.id,name:f.name}));
+   // Show the actual saved watermark state next to each downloadable frame.
+   const frameOpts=allFrames.map(f=>({id:f.id,name:f.name+(f.watermark?.enabled&&f.watermark?.image?" · Watermark ✓":" · Watermark OFF")}));
    const leagueOpts=labels(k,allRows);
    const fixtureOpts=allRows.filter(m=>contains(p.leagues,category(m))).map(m=>({id:identity(m),name:matchLabel(m)}));
    const allFixtureOpts=allRows.map(m=>({id:identity(m),name:matchLabel(m)}));
