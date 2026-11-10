@@ -144,7 +144,7 @@
    c.beginPath();c.ellipse(x,y,rx+i*7,ry+i*4,-0.05,0,Math.PI*2);c.stroke();
   }c.restore();
  }
- async function png(m){
+ async function renderCanvas(m,options={}){
   const renderer=window.FutureCodeFramePreview,kit=window.FutureCodeCanvasKit;
   if(!renderer?.render||!kit)throw Error("V1 Original Canvas Renderer မရသေးပါ");
   await kit.fonts();await document.fonts?.ready;
@@ -152,20 +152,20 @@
   // 5-match W/D/L, 1X2, bookmaker lines and the complete original analysis.
   let preview=await renderer.render(m);
   preview=window.FutureCodeEditorialChoice?.appendPng(preview,m)||preview;
-  const W=preview.width,headH=295,topH=topBanner?180:0,bottomH=bottomBanner?180:0;
+  const W=preview.width,headH=295,topH=topBanner&&options.includeUploadedBanners!==false?180:0,bottomH=bottomBanner&&options.includeUploadedBanners!==false?180:0;
   const H=topH+headH+preview.height+bottomH;
   if(H>32000||W*H>110000000)throw Error("PNG အမြင့်/အရွယ်အစား များလွန်းနေပါသည်");
   const out=document.createElement("canvas");out.width=W;out.height=H;
   const c=out.getContext("2d");if(!c)throw Error("Canvas မရပါ");
   c.fillStyle="#06192d";c.fillRect(0,0,W,H);
-  if(topBanner)cover(c,topBanner,W,0,topH);
+  if(topH)cover(c,topBanner,W,0,topH);
   const yy=topH;
   const grd=c.createLinearGradient(0,yy,W,yy+headH);grd.addColorStop(0,"#06213b");grd.addColorStop(.5,"#15517e");grd.addColorStop(1,"#06213b");
   c.fillStyle=grd;c.fillRect(0,yy,W,headH);
   c.strokeStyle="#d7ad62";c.lineWidth=4;c.strokeRect(12,yy+11,W-24,headH-20);
   c.textAlign="center";c.textBaseline="middle";c.fillStyle="#ffe2a5";
   c.font='800 24px "Noto Sans Myanmar",sans-serif';
-  c.fillText((m.leagueDisplay||m.league||"")+" · "+selectedDate+" · "+period(m),W/2,yy+43,W-95);
+  c.fillText((m.leagueDisplay||m.league||"")+" · "+(options.date||selectedDate)+" · "+period(m),W/2,yy+43,W-95);
   const logos=[m.homeCrestUrl,m.awayCrestUrl].filter(Boolean);
   await kit.preloadImages(logos);
   if(m.homeCrestUrl)kit.crest(c,m.homeCrestUrl,65,yy+80,120,team(m,"home"),true);
@@ -186,11 +186,16 @@
   // Circle exactly that footer; do NOT infer that a handicap bet won.
   const extra=Math.max(100,Math.round(W*.085));
   ring(c,W/2,yy+headH+preview.height-extra/2,Math.min(470,W*.39),Math.min(extra*.43,49));
-  if(bottomBanner)cover(c,bottomBanner,W,H-bottomH,bottomH);
+  if(bottomH)cover(c,bottomBanner,W,H-bottomH,bottomH);
+  return out;
+ }
+ async function png(m){
+  const out=await renderCanvas(m,{includeUploadedBanners:true});
   const blob=await new Promise((resolve,reject)=>out.toBlob(b=>b?.size?resolve(b):reject(Error("PNG encoding failed")),"image/png"));
   const url=URL.createObjectURL(blob),a=document.createElement("a");
   a.href=url;a.download="results-v2-"+selectedDate+"-"+clean(m.fixtureId||m.home||"match").replace(/[^a-z0-9_-]/gi,"-")+".png";
   document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
  }
+ window.FutureCodeResultsV2=Object.freeze({renderCanvas});
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",setup,{once:true});else setup();
 })();
