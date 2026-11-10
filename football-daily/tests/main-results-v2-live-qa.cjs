@@ -21,17 +21,20 @@ async function run(){
   assert.equal(await page.locator("body").getAttribute("data-fc-main-view"),"resultsV2");
   const first=page.locator("#fcR2List .fc-r2-card").first();
   assert.equal(await page.locator("#fcR2List .fc-r2-card").count(),games.length);
-  assert.equal(await first.locator(".fc-r2-original .match-hero").count(),1,"V1 original match hero missing");
-  assert.equal(await first.locator(".fc-r2-original .myanmar-market").count(),1,"V1 original Myanmar prices missing");
-  assert.equal(await first.locator(".fc-r2-original .market-center .odds-grid").count(),1,"V1 1X2 triplet missing");
-  assert.equal(await first.locator(".fc-r2-original .wdl-strip").count(),2,"V1 home/away last-five strips missing");
+  assert.equal(await first.locator(".fc-r2-original .match-hero").count(),0,"Old VS hero still visible");
+  assert.equal(await first.locator(".fc-r2-original .myanmar-market").count(),0,"Old Myanmar odds still visible");
+  assert.equal(await first.locator(".fc-r2-original .market-center .odds-grid").count(),0,"Old 1X2 prices still visible");
+  assert.equal(await first.locator(".fc-r2-original .wdl-strip").count(),0,"Old last-five rows still visible");
+  assert.equal(await first.locator(".fc-r2-compact").count(),1,"Compact second result block missing");
+  assert.equal(await first.locator(".fc-r2-compact .fc-r2-club img").count(),2,"Both club logos must appear");
+  assert((await first.locator(".fc-r2-compact-middle").innerText()).includes("FULL TIME")||
+         (await first.locator(".fc-r2-compact-middle").innerText()).includes("AFTER EXTRA TIME"),"Compact FT label missing");
+  assert((await first.locator(".fc-r2-compact-middle strong").innerText()).includes(games[0].finalScore.replace("-", " - ")),"Compact FT score missing");
   assert.equal(await first.locator(".fc-r2-original .analysis-body .daily-preview-verbatim").count(),1,"Original full preview missing");
   assert.equal(await first.locator(".fc-r2-original .fc-editorial-selection").count(),1,"Original pick missing");
   const original=await first.locator(".fc-r2-original .daily-preview-verbatim").innerText();
   assert(original.includes(games[0].dailyPreviewText.slice(0,35)), "Preview was rewritten or abbreviated");
   const text=await first.innerText();
-  assert(text.includes(games[0].homeOdds)&&text.includes(games[0].drawOdds)&&text.includes(games[0].awayOdds),"Archived original 1X2 missing");
-  assert(text.includes(games[0].myanmarOdds.bodyOdds)&&text.includes(games[0].myanmarOdds.goalTotalOdds),"Archived Myanmar markets missing");
   assert(text.includes(games[0].previewV2Selection),"Original selected team missing");
   assert(text.includes(games[0].finalScore.replace("-", " - ")),"Verified result missing");
   assert(text.includes("မိနစ် ၉၀")&&text.includes(games[0].regulationScore),"Extra time result incorrectly reported");
@@ -49,7 +52,9 @@ async function run(){
   const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);
   assert(result.suggestedFilename().startsWith("results-v2-2026-11-09-"));
   assert.equal(bytes.subarray(1,4).toString(),"PNG");
-  assert(width===1200&&height>=originalCanvas.height+295,"PNG cropped or not full original V1 preview: "+JSON.stringify({width,height,originalCanvas}));
+  // The first 508px of the prematch hero, odds and W/D/L are intentionally removed.
+  // Original article and selection remain unchanged; 295px result header + 184px compact score + 48px label replace 508px.
+  assert(width===1200&&height===originalCanvas.height+295+184+48-508,"Compact Results V2 PNG dimensions incorrect: "+JSON.stringify({width,height,originalCanvas}));
   assert(bytes.length>60000,"Unexpectedly empty downloaded poster");
   await first.screenshot({path:"results-v2-live-first-match.png",timeout:30000});
   console.log(JSON.stringify({ok:true,date:archive.reportDate,games:games.length,first:games[0].home+" vs "+games[0].away,score:games[0].finalScore,originalCanvas,resultPng:{width,height,bytes:bytes.length},redRings:border}));
