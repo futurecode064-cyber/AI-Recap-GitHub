@@ -2,6 +2,9 @@
 /* Main channel only. Permanent source-of-truth selection label for V1 and exports. */
 (function(){
   if(document.documentElement.dataset.footballBrandName)return;
+  const style=document.createElement("style");
+  style.textContent=".fc-editorial-selection{margin:18px auto 8px;padding:14px 22px;max-width:95%;width:fit-content;text-align:center;background:#092a39;border:2px solid #e8bd64;border-radius:8px;box-shadow:0 7px 20px #0003;color:#ffe082;font:900 22px/1.8 'Noto Sans Myanmar',sans-serif;overflow-wrap:anywhere}";
+  document.head.appendChild(style);
   const clean=s=>String(s??"").replace(/\*\*/g,"").normalize("NFC").trim();
   function pick(m){
     if(!m)return "";
