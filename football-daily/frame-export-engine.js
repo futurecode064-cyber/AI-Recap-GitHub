@@ -143,10 +143,12 @@ async function exportAll(previewOnly){
    if(!rows.length){warnings.push(label+" (ပွဲ/သတင်း မရှိ)");continue;}
    try{
     for await(const result of forSection(section,f,rows,studio.getSectionLayout(section))){
+     // Watermark the final PNG for every section, including Preview and ZIP output.
+     const finalBlob=await window.FCWatermark.applyBlob(result.blob,f);
      if(previewOnly){
       const prev=$("downPreviewImage");
       if(prev.dataset.url)URL.revokeObjectURL(prev.dataset.url);
-      const url=URL.createObjectURL(result.blob);
+      const url=URL.createObjectURL(finalBlob);
       prev.dataset.url=url;prev.src=url;prev.hidden=false;$("previewExportPlaceholder").hidden=true;
       // The sample is also downloadable, but preview does not trigger a download.
       const a=$("downloadLink");a.hidden=false;a.href=url;a.download=result.name;a.textContent="⬇ Preview PNG Download";
@@ -160,7 +162,7 @@ async function exportAll(previewOnly){
       uniqueName=result.name.replace(/\.png$/i,"")+"-"+inc+++".png";
      }
      usedNames.add(section+"/"+uniqueName.toLocaleLowerCase());
-     await zip.add(folder+"/"+uniqueName,result.blob);files++;
+     await zip.add(folder+"/"+uniqueName,finalBlob);files++;
      if(files%4===0)await wait(0);
     }
    }catch(err){warnings.push(label+" — "+err.message);console.warn("Section PNG failed",section,f.id,err);}
