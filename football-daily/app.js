@@ -72,6 +72,8 @@ const NO_PREVIEW_TEXT="ပွဲကြိုသုံးသပ်ချက်မ
 let loadSequence=0,loading=false;
 const $=id=>document.getElementById(id);
 function dateParts(){
+ const hold=document.documentElement?.dataset?.footballBrandName && document.documentElement.dataset.footballHoldDate;
+ if(/^\d{4}-\d{2}-\d{2}$/.test(hold||"")){const [year,month,date]=hold.split("-");return {key:hold,day:date+"/"+month+"/"+year};}
  const preview=typeof location==='undefined'?null:new URLSearchParams(location.search),day=preview?.get('date');
  if(preview?.get('fcDraft')&&/^\d{4}-\d{2}-\d{2}$/.test(day||'')){const [year,month,date]=day.split('-');return {key:day,day:`${date}/${month}/${year}`};}
  const pieces=new Intl.DateTimeFormat("en-GB",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());

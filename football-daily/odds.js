@@ -336,7 +336,8 @@ function setupLeagueFilter(data){
 
 async function load(){
  const query=new URLSearchParams(location.search).get("date");
- const day=/^\d{4}-\d{2}-\d{2}$/.test(query||"")?query:dateKey();
+ const hold=document.documentElement.dataset.footballBrandName?document.documentElement.dataset.footballHoldDate:"";
+ const day=/^\d{4}-\d{2}-\d{2}$/.test(hold||"")?hold:(/^\d{4}-\d{2}-\d{2}$/.test(query||"")?query:dateKey());
  try{
   const base=new URL(document.documentElement.dataset.footballOddsDataUrl||"./data/odds/",document.baseURI);
   const source=new URL(day+".json",base);
