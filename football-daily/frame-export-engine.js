@@ -31,7 +31,27 @@ async function stackBlobs(blobs){
 }
 async function* forSection(k,f,rows,mode){
  const W=s().getHome(),p=W.FutureCodeProfessionalFrames,color=f.color||"#16486c";
- if(k==="previewsV2"){
+ if(k==="resultsV2"){
+   const archive=s().getArchive(),render=W.FutureCodeResultsV2?.renderCanvas;
+   if(typeof render!=="function")throw Error("ဂိုးရလဒ် V2 Export Engine မရရှိပါ");
+   const chunks=mode==="one"?rows.map(m=>[m]):splitRows(rows,mode);
+   for(let i=0;i<chunks.length;i++){
+    const originals=[];
+    for(const match of chunks[i])originals.push(await render(match,{includeUploadedBanners:false,date:archive?.reportDate||s().getDate()}));
+    const source=await stackCanvases(originals,12);
+    const framed=await p.wrap(source,"resultsV2","pro:"+f.id);
+    yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(framed)};
+   }
+  }else if(k==="oddsV2"){
+   const O=s().getOdds(),sheet=s().getOddsData(),render=O.FutureCodeOddsV2?.renderCanvas;
+   if(!sheet?.reportDate||typeof render!=="function")throw Error("ပေါက်ကြေး V2 ဇယား Export Engine မရရှိပါ");
+   const parts=splitRows(rows,mode);
+   for(let i=0;i<parts.length;i++){
+    const native=await render(parts[i],{date:sheet.reportDate});
+    const framed=await p.wrap(native,"oddsV2","pro:"+f.id);
+    yield {name:outputName(f,i,parts.length),blob:await blobCanvas(framed)};
+   }
+  }else if(k==="previewsV2"){
    const render=W.FutureCodePreviewV2?.render;if(!render)throw Error("Preview Version 2 PNG Engine မရရှိပါ");
    const size=mode==="triple"?3:mode==="pair"?2:1;
    const chunks=Array.from({length:Math.ceil(rows.length/size)},(_,i)=>rows.slice(i*size,i*size+size));
