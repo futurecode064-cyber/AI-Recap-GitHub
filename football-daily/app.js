@@ -293,6 +293,8 @@ function renderFinished(match){
  append(banner,teamSide(match,"home"),centre,teamSide(match,"away"));
  card.appendChild(banner);
  if(match.penaltyScore)card.appendChild(node("div","result-meta","ပင်နယ်တီအဆုံးအဖြတ် "+match.penaltyScore));
+ if(match.resultPeriod==="AET")card.appendChild(node("div","result-meta","အချိန်ပိုပြီးရလဒ် "+match.finalScore+" · ပုံမှန်မိနစ် ၉၀ ရလဒ် "+(match.regulationScore||"—")));
+ if(match.previewV2Selection)card.appendChild(node("div","result-meta","မူလ ရွေးချယ်မှု - "+match.previewV2Selection));
  card.appendChild(node("div","result-meta",teamLabel(match,"home")+"  ·  "+teamLabel(match,"away")+"  |  ပွဲပြီး · "+(window.FutureCodeTime?.clock(match)||match.kickoffYangon||"")));
  return card;
 }
