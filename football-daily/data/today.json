@@ -133,7 +133,13 @@
         }
       ],
       "homeStanding": null,
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 4,
+        "points": 23,
+        "played": 12,
+        "league": "LaLiga Hypermotion",
+        "source": "https://www.laliga.com/laliga-hypermotion/clasificacion"
+      },
       "formStatus": "Both sides last five result records source-checked",
       "standingsStatus": "unavailable; no consistent current source",
       "myanmarOdds": {
@@ -158,13 +164,13 @@
       "awayCrestSourceUrl": "",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.cup.png",
       "crestStatus": "pending: club identity validated but genuine crest image not yet mapped",
-      "dailyPreviewText": "စပိန် ဘုရင့်ဖလား ပြိုင်ပွဲမှာ ပမ်ပလိုနာနဲ့ အိုင်ဘာတို့ တွေ့ဆုံကြမှာဖြစ်ပြီး မြန်မာစံတော်ချိန် နိုဝင်ဘာ ၁၁ ရက် 12:30 AM မှာ စတင်ဖို့ စီစဉ်ထားပါတယ်။ အသင်းကြီးတစ်သင်းအနေနဲ့ အိုင်ဘာက ကစားကွက်ကို အစောပိုင်းကတည်းက စည်းရုံးပြီး ဘောလုံးပိုင်ဆိုင်မှုကို ဦးစားပေးနိုင်သလို ပမ်ပလိုနာက နောက်တန်းတင်းကျပ်စွာ ကာကွယ်ကာ တန်ပြန်တိုက်စစ်ကနေ အခွင့်အရေးရှာနိုင်ပါတယ်။ အိမ်ရှင်က ပထမပိုင်းမှာ ဂိုးမပေးရဘဲ ခံနိုင်ရင် တစ်ပွဲလုံးရဲ့ ဖိအားဟာ ဧည့်သည်ဘက်ကို ပြောင်းသွားနိုင်ပါတယ်။ လက်ရှိအတည်ပြုစာရင်းမှာ နောက်ဆုံးငါးပွဲရလဒ်နဲ့ အဖွင့်မြန်မာကြေးအပြည့်အစုံကို မရသေးတာကြောင့် အဲဒီကိန်းဂဏန်းတွေကို အခြေခံချက်အဖြစ် မသုံးထားပါဘူး။ လက်တွေ့ကစားကွက်ရဲ့ ဖြစ်နိုင်ခြေနဲ့ အိမ်ကွင်း/ဧည့်ကွင်းတာဝန်ကို ချိန်ဆပြီး အိုင်ဘာကို ရွေးချယ်ပါတယ်။",
-      "previewV2Summary": "ပမ်ပလိုနာက နောက်ဆုံး ၅ ပွဲ ၁ နိုင် ၄ ရှုံးဖြစ်ပြီး အိုင်ဘာက ၁ နိုင် ၂ သရေ ၂ ရှုံးဖြစ်ပါတယ်။ 1X2 ကြေးမှာ အိမ်ရှင် 11.00၊ သရေ 7.00၊ ဧည့်သည် 1.20 ဖြစ်လို့ အိုင်ဘာကို ဈေးကွက်က အားပေးထားပါတယ်။ ဖလားပွဲမှာ အိမ်ရှင်စိတ်ဓာတ် အရေးပါနိုင်ပေမယ့် အဆင့်မြင့်ပွဲအတွေ့အကြုံနဲ့ နောက်တန်းတည်ငြိမ်မှုကို ချိန်ပြီး အိုင်ဘာကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "စပိန်ဘုရင့်ဖလား ဒီညရဲ့ အဆင့်မတူအသင်းနှစ်သင်းတွေ့ဆုံမှုမှာ ပမ်ပလိုနာက အိုင်ဘာကို Beitikuntzea ကွင်းမှာ ဧည့်ခံရမှာပါ။ မြန်မာစံတော်ချိန် နိုဝင်ဘာ ၁၁ ရက် မနက် ၁၂:၃၀ နာရီ စတင်မယ့် ဒီပွဲမှာ အဆင့်မြင့်လိဂ်ကစားသမားအတွေ့အကြုံနဲ့ အိမ်ကွင်းဖလားပွဲစိတ်ဓာတ် ဘယ်ဟာပိုအရေးပါမလဲဆိုတာ စောင့်ကြည့်ရမှာဖြစ်ပါတယ်။\n\nအိမ်ရှင် ပမ်ပလိုနာရဲ့ ပြိုင်ပွဲစုံ နောက်ဆုံး ၅ ပွဲဟာ ၁ နိုင် ၄ ရှုံးဖြစ်ပြီး Beti Onak ကို ၀-၁၊ Valle de Egüés ကို ၂-၄၊ Txantrea ကို ၁-၅ နဲ့ ရှုံးခဲ့တာတွေက ခံစစ်လိုင်းပေါက်ကွဲလွယ်တဲ့ပြဿနာကို ပြနေပါတယ်။ Gazte Berriak ကို ၁-၀ နဲ့နိုင်ခဲ့တဲ့ပွဲသာ အားတက်စရာပါ။ နည်းပြ Miguel Ángel Sierra Paredes အတွက် အဓိကတာဝန်က ဧည့်သည်ရဲ့ဘေးတောင်ပံဖြတ်တင်ချက်တွေကို ခံစစ်နောက်ဆုံးလိုင်းနဲ့ အလယ်တန်းကြား မကွာအောင် ပိတ်ဆို့နိုင်ဖို့ ဖြစ်ပါတယ်။\n\nဧည့်သည် အိုင်ဘာကတော့ LaLiga Hypermotion မှာ အဆင့် ၄ နေရာ၊ ၂၃ မှတ်နဲ့ ရပ်တည်နေတဲ့အသင်းပါ။ နည်းပြ Jokin Aranbarri ရဲ့အသင်းဟာ ပြိုင်ပွဲစုံ နောက်ဆုံး ၅ ပွဲမှာ ၁ နိုင် ၂ သရေ ၂ ရှုံးသာ ရရှိထားပေမယ့် Albacete ကို အဝေးကွင်း ၃-၁ နဲ့နိုင်ခဲ့တဲ့ကစားဟန်ကို ပြန်ထုတ်ပြနိုင်ရင် အလယ်တန်းကစားကွက်နဲ့ တိုက်စစ်အချိတ်အဆက်မှာ အိမ်ရှင်ထက် အသာစီးရနိုင်ပါတယ်။ ထို့အပြင် အိုင်ဘာက နောက်ဆုံးပွဲမှာ Almería နဲ့ ၁-၁ သရေကျထားတာမို့ ဂိုးရှေ့ဆုံးဖြတ်ချက်ကို တိုးမြှင့်ဖို့လိုပါတယ်။\n\nပွဲမစမီ ကိုးကားထားတဲ့ 1X2 ကြေးက ပမ်ပလိုနာ 11.00၊ သရေ 7.00၊ အိုင်ဘာ 1.20 ဖြစ်ပါတယ်။ မင်းပို့ထားတဲ့ မူလမြန်မာကြေးမှာ အိုင်ဘာဘော်ဒီ ၂+၃၀၊ ဂိုးပေါင်း ၃-၁၅ လို့ ဖော်ပြထားပါတယ်။ အဆိုပါကြေးတွေက ဈေးကွက်ရဲ့ထင်မြင်ချက်သာဖြစ်ပြီး အနိုင်ရမယ်ဆိုတဲ့ အာမခံချက်တော့ မဟုတ်ပါဘူး။ လူစာရင်းအပြောင်းအလဲနဲ့ ဒဏ်ရာအခြေအနေကို အတည်မပြုနိုင်သေးတဲ့အတွက် ထင်မြင်ချက်နဲ့ မဖြည့်ထားပါဘူး။\n\nပမ်ပလိုနာရဲ့ အိမ်ကွင်းစိတ်အားက ပွဲကိုတင်းမာစေနိုင်ပေမယ့် အိုင်ဘာရဲ့ အဆင့်မြင့်ပွဲအတွေ့အကြုံ၊ အလယ်တန်းထိန်းချုပ်မှုနဲ့ အခွင့်အရေးဖန်တီးနိုင်စွမ်းကို အလေးထားပြီး အိုင်ဘာကို ရွေးချယ်ပါတယ်။",
+      "previewV2Summary": "ပမ်ပလိုနာက နောက်ဆုံး ၅ ပွဲ ၁ နိုင် ၄ ရှုံး၊ အိုင်ဘာက ၁ နိုင် ၂ သရေ ၂ ရှုံး ဖြစ်ပါတယ်။ အိုင်ဘာဟာ LaLiga Hypermotion အဆင့် ၄၊ ၂၃ မှတ်နဲ့ ရပ်တည်နေပြီး 1X2 ကြေး 11.00 / 7.00 / 1.20 က ဧည့်သည်ဘက်ကို အလေးပေးထားပါတယ်။ ပမ်ပလိုနာရဲ့ တန်ပြန်တိုက်စစ်ကို သတိထားရပေမယ့် အလယ်တန်းအတွေ့အကြုံ၊ နေရာယူမှုနဲ့ တိုက်စစ်အခွင့်အရေးဖန်တီးနိုင်မှုကို ချိန်ဆပြီး အိုင်ဘာကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "အိုင်ဘာ",
       "previewV2FormatVersion": "2.1",
       "previewV2EditorialDate": "2026-11-10",
       "previewV2SourcePreviewDate": "2026-11-10",
-      "previewV2EditorialStatus": "owner-selected Copa del Rey fixture, last-five and 1X2 source-checked",
+      "previewV2EditorialStatus": "Written full Burmese journalist-style match-by-match analysis, current standings/points, five results, bookmaker 1X2, original owner Myanmar odds, tactical matchups, unavailable confirmed team news explicitly noted.",
       "previewV2PhotoStatus": "unavailable: match-specific licensed photo not verified; do not substitute unrelated image",
       "specialChoice": false,
       "specialChoiceRank": null,
@@ -174,7 +180,19 @@
         "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa",
         "https://oddsrun.com/match/football/es/425/13412567/spain-copa-del-rey/cd-pamplona-vs-eibar/",
         "https://www.besoccer.com/team/matches/pamplona",
-        "https://www.laliga.com/en-US/clubs/sd-eibar/results"
+        "https://www.laliga.com/en-US/clubs/sd-eibar/results",
+        "https://www.laliga.com/laliga-hypermotion/clasificacion"
+      ],
+      "homeManager": "Miguel Ángel Sierra Paredes",
+      "awayManager": "Jokin Aranbarri",
+      "reportFormatSections": [
+        "ပွဲစဉ်နှင့် ကွင်း",
+        "လက်ရှိအမှတ်ပေးဇယား",
+        "ပြိုင်ပွဲစုံ နောက်ဆုံး ၅ ပွဲ",
+        "နည်းပြနှင့် ကစားဟန်",
+        "1X2 / မြန်မာကြေး",
+        "အတည်ပြုလူစာရင်းအခြေအနေ",
+        "ရွေးချယ်မှု"
       ]
     },
     {
@@ -305,7 +323,13 @@
         }
       ],
       "homeStanding": null,
-      "awayStanding": null,
+      "awayStanding": {
+        "position": 18,
+        "points": 12,
+        "played": 13,
+        "league": "LaLiga Hypermotion",
+        "source": "https://www.laliga.com/laliga-hypermotion/clasificacion"
+      },
       "formStatus": "Both sides last five result records source-checked",
       "standingsStatus": "unavailable; no consistent current source",
       "myanmarOdds": {
@@ -330,13 +354,13 @@
       "awayCrestSourceUrl": "",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.cup.png",
       "crestStatus": "pending: club identity validated but genuine crest image not yet mapped",
-      "dailyPreviewText": "စပိန် ဘုရင့်ဖလား ပြိုင်ပွဲမှာ ထရီဗယ် ဗယ်လ်ဒေရက်စ်နဲ့ လီဂါနက်စ်တို့ တွေ့ဆုံကြမှာဖြစ်ပြီး မြန်မာစံတော်ချိန် နိုဝင်ဘာ ၁၁ ရက် 1:30 AM မှာ စတင်ဖို့ စီစဉ်ထားပါတယ်။ လီဂါနက်စ်ရဲ့ အဆင့်မြင့်ဘောလုံးပတ်ဝန်းကျင်အတွေ့အကြုံက ဒီပွဲမှာ အားသာချက်တစ်ခုဖြစ်နိုင်ပေမယ့် ထရီဗယ် ဗယ်လ်ဒေရက်စ်က တိုက်ရိုက်ဘောလုံးနဲ့ ရပ်တည်ချက်တည်ဆောက်ပြီး လုံခြုံတဲ့နေရာကနေ ပြန်ထိုးလာနိုင်ပါတယ်။ အဝေးကွင်းမှာ ဖလားပွဲကစားရတာကြောင့် လီဂါနက်စ်အတွက် အပိုင်အခွင့်အရေးတွေကို အလဟဿမဖြုန်းဖို့ အထူးလိုအပ်ပါတယ်။ လက်ရှိအတည်ပြုစာရင်းမှာ နောက်ဆုံးငါးပွဲရလဒ်နဲ့ အဖွင့်မြန်မာကြေးအပြည့်အစုံကို မရသေးတာကြောင့် အဲဒီကိန်းဂဏန်းတွေကို အခြေခံချက်အဖြစ် မသုံးထားပါဘူး။ လက်တွေ့ကစားကွက်ရဲ့ ဖြစ်နိုင်ခြေနဲ့ အိမ်ကွင်း/ဧည့်ကွင်းတာဝန်ကို ချိန်ဆပြီး လီဂါနက်စ်ကို ရွေးချယ်ပါတယ်။",
-      "previewV2Summary": "ထရီဗယ် ဗယ်လ်ဒေရက်စ်ရဲ့ နောက်ဆုံး ၅ ပွဲဟာ ၄ သရေ ၁ ရှုံး၊ လီဂါနက်စ်က ၁ သရေ ၄ ရှုံးဖြစ်နေပါတယ်။ 1X2 ကြေးက တရားဝင် အိမ်ရှင်အစီအစဉ်အရ 23.00 / 8.50 / 1.13 ဖြစ်ပြီး လီဂါနက်စ်ကို အသာပေးထားပါတယ်။ ထရီဗယ်က သရေရလဒ်များနေသော်လည်း အဆင့်မြင့်အတွေ့အကြုံရှိတဲ့ လီဂါနက်စ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "စပိန်ဘုရင့်ဖလားပြိုင်ပွဲမှာ ထရီဗယ် ဗယ်လ်ဒေရက်စ်က လီဂါနက်စ်ကို Alcorcón မြို့ La Canaleja ကွင်းမှာ ရင်ဆိုင်မယ့် ပွဲစဉ်ပါ။ မြန်မာစံတော်ချိန် နိုဝင်ဘာ ၁၁ ရက် မနက် ၁:၃၀ နာရီမှာ ကန်မယ့် ဒီပွဲက လိဂ်အဆင့်ချင်းကွာဟနေပေမယ့် ဖလားပြိုင်ပွဲရဲ့ အံ့အားသင့်ဖွယ်ရလဒ်ထွက်လာနိုင်ခြေကို အာရုံစိုက်ရမယ့်ပွဲဖြစ်ပါတယ်။\n\nအိမ်ရှင် ထရီဗယ် ဗယ်လ်ဒေရက်စ်ဟာ Tercera Federación က အသင်းဖြစ်ပြီး ပြိုင်ပွဲစုံ နောက်ဆုံး ၅ ပွဲမှာ ၄ သရေ ၁ ရှုံး၊ နိုင်ပွဲမရှိသေးပါဘူး။ Ciudad Alcobendas နဲ့ ၁-၁၊ Galapagar၊ Leganés B၊ Cala Pozuelo တို့ကို ၂-၂ စီ သရေကျခဲ့သလို Rayo Vallecano B ကို ၀-၁ ရှုံးခဲ့ပါတယ်။ ဒီရလဒ်တွေက ရှုံးဖို့ခက်တဲ့ခံစစ်တည်ငြိမ်မှု အတိုင်းအတာတစ်ခုရှိသလို ဦးဆောင်ဂိုးကို ထိန်းသိမ်းခြင်းနဲ့ နောက်တန်းပိတ်ဆို့ခြင်းမှာ လိုအပ်ချက်ကျန်နေသေးတာကို ပြနေပါတယ်။ နည်းပြ Juan José González အတွက် အဓိကက အလယ်ပိုင်းကို စုစည်းထားပြီး ဧည့်သည်လူငယ်စွမ်းအားနဲ့ အမြန်နှုန်းကို ကန့်သတ်နိုင်ဖို့ပါ။\n\nလီဂါနက်စ်က LaLiga Hypermotion အဆင့် ၁၈၊ ၁၂ မှတ်နဲ့ အတော်လေးခက်ခဲတဲ့ လိဂ်ရာသီကို ဖြတ်သန်းနေရပါတယ်။ နည်းပြ Luis Miguel Carrión ရဲ့အသင်းဟာ နောက်ဆုံး ၅ ပွဲမှာ Albacete ကို ၁-၃၊ Valladolid ကို ၃-၄၊ Mallorca နဲ့ ၁-၁၊ Córdoba ကို ၀-၁၊ Almería ကို ၀-၃ ရလဒ်တွေနဲ့ ၁ သရေ ၄ ရှုံးထားတာကြောင့် ရလဒ်ပိုင်းယုံကြည်မှုမမြင့်ပါဘူး။ သို့သော် တစ်ဦးချင်းနည်းစနစ်၊ ရုပ်ပိုင်းဆိုင်ရာအင်အားနဲ့ အဆင့်မြင့်ပြိုင်ပွဲအတွေ့အကြုံကတော့ အိမ်ရှင်ထက် သာနေဆဲပါ။\n\n1X2 ကြေးကို တကယ့်အိမ်ရှင် ထရီဗယ်အရင်အစဉ်နဲ့ ဖော်ပြရင် 23.00 / 8.50 / 1.13 ဖြစ်ပြီး လီဂါနက်စ်ကို အလေးပေးထားပါတယ်။ မင်းပို့ထားတဲ့ပုံထဲမှာ လီဂါနက်စ်အရင်ရေးထားလို့ မူလမြန်မာကြေးကို လီဂါနက်စ်ဘော်ဒီ ၂-၁၀၊ ဂိုးပေါင်း ၃-= အတိုင်းပဲ မပြောင်းဘဲ ထားပါတယ်။ ဒဏ်ရာရကစားသမား၊ ပွဲထွက် ၁၁ ဦးစာရင်းကို အတည်မပြုနိုင်သေးလို့ နာမည်တပ်ကာ မခန့်မှန်းထားပါဘူး။\n\nထရီဗယ် ဗယ်လ်ဒေရက်စ်က အချိန်ကြာကြာ သရေနဲ့ထိန်းထားနိုင်ခဲ့ရင် ဧည့်သည်ဘက် ဖိအားများလာနိုင်ပေမယ့် တိုက်စစ်ဘက် အခွင့်အရေးအရေအတွက်နဲ့ အတွေ့အကြုံကွာခြားချက်ကြောင့် လီဂါနက်စ်ကို ရွေးချယ်ပါတယ်။",
+      "previewV2Summary": "ထရီဗယ် ဗယ်လ်ဒေရက်စ်က နောက်ဆုံး ၅ ပွဲ ၄ သရေ ၁ ရှုံး၊ လီဂါနက်စ်က ၁ သရေ ၄ ရှုံးဖြစ်နေပါတယ်။ လီဂါနက်စ်ဟာ LaLiga Hypermotion အဆင့် ၁၈၊ ၁၂ မှတ်နဲ့ အဆင်မပြေပေမယ့် ဖလားပွဲမှာ အဆင့်မြင့်အသင်းအဖြစ် အတွေ့အကြုံ အားသာချက်ရှိနေပါတယ်။ 1X2 ကြေးကို ထရီဗယ်အရင်စဉ်ရင် 23.00 / 8.50 / 1.13 ဖြစ်ပြီး လီဂါနက်စ်ဘက်ကို အလေးပေးထားပါတယ်။ အသင်းအင်အားခြားနားချက်နဲ့ ပွဲအခွင့်အရေးဖန်တီးမှုကို ချိန်ဆပြီး လီဂါနက်စ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "လီဂါနက်စ်",
       "previewV2FormatVersion": "2.1",
       "previewV2EditorialDate": "2026-11-10",
       "previewV2SourcePreviewDate": "2026-11-10",
-      "previewV2EditorialStatus": "owner-selected Copa del Rey fixture, last-five and 1X2 source-checked",
+      "previewV2EditorialStatus": "Written full Burmese journalist-style match-by-match analysis, current standings/points, five results, bookmaker 1X2, original owner Myanmar odds, tactical matchups, unavailable confirmed team news explicitly noted.",
       "previewV2PhotoStatus": "unavailable: match-specific licensed photo not verified; do not substitute unrelated image",
       "specialChoice": false,
       "specialChoiceRank": null,
@@ -346,9 +370,22 @@
         "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa",
         "https://oddsrun.com/match/football/es/425/13374060/spain-copa-del-rey/trival-valderas-vs-leganes/",
         "https://www.besoccer.com/team/matches/trival-valderas",
-        "https://www.laliga.com/en-GB/clubs/cd-leganes/results"
+        "https://www.laliga.com/en-GB/clubs/cd-leganes/results",
+        "https://www.laliga.com/laliga-hypermotion/clasificacion",
+        "https://oddsrun.com/match/football/es/425/13412567/spain-copa-del-rey/cd-pamplona-vs-eibar/"
       ],
-      "sourceOriginalTeamOrder": "owner screenshot: Leganés vs Trival; official source: Trival vs Leganés"
+      "sourceOriginalTeamOrder": "owner screenshot: Leganés vs Trival; official source: Trival vs Leganés",
+      "homeManager": "Juan José González",
+      "awayManager": "Luis Miguel Carrión",
+      "reportFormatSections": [
+        "ပွဲစဉ်နှင့် ကွင်း",
+        "လက်ရှိအမှတ်ပေးဇယား",
+        "ပြိုင်ပွဲစုံ နောက်ဆုံး ၅ ပွဲ",
+        "နည်းပြနှင့် ကစားဟန်",
+        "1X2 / မြန်မာကြေး",
+        "အတည်ပြုလူစာရင်းအခြေအနေ",
+        "ရွေးချယ်မှု"
+      ]
     },
     {
       "fixtureId": "fc-20261110-05",
@@ -477,8 +514,20 @@
           "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
         }
       ],
-      "homeStanding": null,
-      "awayStanding": null,
+      "homeStanding": {
+        "position": 7,
+        "points": 16,
+        "played": 10,
+        "league": "Segunda Federación Group 1",
+        "source": "https://sdamorebieta.eus/es/"
+      },
+      "awayStanding": {
+        "position": 2,
+        "points": 23,
+        "played": 11,
+        "league": "Primera Federación Group 1",
+        "source": "https://www.resultadosrfef.es/equipo/ud-logrones-336/clasificacion"
+      },
       "formStatus": "Both sides last five result records source-checked",
       "standingsStatus": "unavailable; no consistent current source",
       "myanmarOdds": {
@@ -503,13 +552,13 @@
       "awayCrestSourceUrl": "",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.cup.png",
       "crestStatus": "pending: club identity validated but genuine crest image not yet mapped",
-      "dailyPreviewText": "စပိန် ဘုရင့်ဖလား ပြိုင်ပွဲမှာ အာမိုရီဘီတာနဲ့ လိုဂရိုးညက်စ်တို့ တွေ့ဆုံကြမှာဖြစ်ပြီး မြန်မာစံတော်ချိန် နိုဝင်ဘာ ၁၁ ရက် 1:30 AM မှာ စတင်ဖို့ စီစဉ်ထားပါတယ်။ အာမိုရီဘီတာနဲ့ လိုဂရိုးညက်စ်ဟာ အဖွဲ့လိုက်ဖိအားပေးမှု၊ ဘောလုံးဒုတိယအကြိမ်ရယူမှုတို့ကနေ စီးဆင်းမှုကို ထိန်းချုပ်ဖို့ ယှဉ်ပြိုင်ရမယ့် ပွဲမျိုးပါ။ အိမ်ရှင်က ကွင်းအလယ်မှာ နေရာယူပုံကို တည်ငြိမ်စွာထိန်းထားနိုင်ရင် အကျိုးရှိပါမယ်။ နှစ်သင်းအကြား ခြားနားချက်မကြီးနိုင်တဲ့အတွက် သတ်မှတ်ချိန်အတွင်း တစ်ချက်မှားတာကပဲ အဆုံးအဖြတ်ဖြစ်သွားနိုင်ပါတယ်။ လက်ရှိအတည်ပြုစာရင်းမှာ နောက်ဆုံးငါးပွဲရလဒ်နဲ့ အဖွင့်မြန်မာကြေးအပြည့်အစုံကို မရသေးတာကြောင့် အဲဒီကိန်းဂဏန်းတွေကို အခြေခံချက်အဖြစ် မသုံးထားပါဘူး။ လက်တွေ့ကစားကွက်ရဲ့ ဖြစ်နိုင်ခြေနဲ့ အိမ်ကွင်း/ဧည့်ကွင်းတာဝန်ကို ချိန်ဆပြီး အာမိုရီဘီတာကို ရွေးချယ်ပါတယ်။",
-      "previewV2Summary": "အာမိုရီဘီတာရဲ့ နောက်ဆုံး ၅ ပွဲ ၃ နိုင် ၂ ရှုံး၊ လိုဂရိုးညက်စ်က ၂ နိုင် ၁ သရေ ၂ ရှုံးဖြစ်ပါတယ်။ 1X2 ကြေး 3.30 / 3.50 / 2.10 မှာ လိုဂရိုးညက်စ်ကို အနည်းငယ်အသာပေးထားပေမယ့် အာမိုရီဘီတာရဲ့ အိမ်ကွင်းနောက်ဆုံး နှစ်ပွဲဆက်အနိုင်ကိုလည်း ထည့်တွက်ရပါမယ်။ အာမိုရီဘီတာကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "စပိန်ဘုရင့်ဖလားပွဲစဉ်မှာ အာမိုရီဘီတာနဲ့ UD လိုဂရိုးညက်စ်တို့ဟာ Urritxe ကွင်းမှာ တွေ့ဆုံကြမှာဖြစ်ပြီး မြန်မာစံတော်ချိန် နိုဝင်ဘာ ၁၁ ရက် မနက် ၁:၃၀ နာရီ စတင်ဖို့ စီစဉ်ထားပါတယ်။ ဥရောပဖလားပွဲအတွက် လူအင်အားအလွန်ကွာတဲ့အသင်းတွေမဟုတ်ဘဲ လက်ရှိအိမ်ကွင်းခြေစွမ်းက ဘယ်လောက်အရေးပါလာမလဲဆိုတာ စောင့်ကြည့်ရမယ့်ပွဲပါ။\n\nအိမ်ရှင် အာမိုရီဘီတာဟာ Segunda Federación Group 1 အဆင့် ၇၊ ၁၆ မှတ်နဲ့ ရပ်တည်နေပါတယ်။ နောက်ဆုံး ၅ ပွဲမှာ Basconia ကို ၁-၂ ရှုံး၊ Gimnástica Torrelavega ကို ၁-၀ နိုင်၊ Coruxo ကို ၂-၁ နိုင်၊ Gernika ကို ၂-၁ နိုင်၊ Portugalete ကို ၁-၂ ရှုံးခဲ့လို့ ၃ နိုင် ၂ ရှုံး ဖြစ်ပါတယ်။ နောက်ဆုံးအိမ်ကွင်းအနိုင်တွေက တိုက်စစ်ကို ပိုသွက်လက်အောင် ပြောင်းနိုင်တဲ့အပြင် ပရိသတ်ရဲ့အင်အားက နောက်တန်းချိတ်ဆက်မှုကို ကူညီပေးနိုင်ပါတယ်။ ဒါပေမယ့် Basconia နဲ့ကစားတဲ့နောက်ဆုံးပွဲမှာ ဂိုးနှစ်ဂိုး ပေးခဲ့ရတာက တိုက်စစ်ပြန်ခံရချိန် သတိထားရမယ့်အချက်ပါ။\n\nဧည့်သည် UD လိုဂရိုးညက်စ်ဟာ Primera Federación Group 1 အဆင့် ၂၊ ၂၃ မှတ်နဲ့ အထက်တန်းမှာ ရပ်တည်နေပြီး နောက်ဆုံး ၅ ပွဲမှာ ၂ နိုင် ၁ သရေ ၂ ရှုံးဖြစ်ပါတယ်။ Racing Ferrol ကို ၂-၁ နဲ့ အဝေးကွင်းနိုင်ခဲ့သလို Real Avilés ကို ၃-၁ နဲ့နိုင်ခဲ့ပေမယ့် Mirandés ကို ၀-၁၊ Lugo ကို ၁-၃ ရှုံးခဲ့ပြီး Cultural Leonesa နဲ့ ၁-၁ သရေကျထားပါတယ်။ ကွင်းအလယ်ကနေ ဘောလုံးကို ရှေ့သို့အလျင်အမြန်ပို့နိုင်တဲ့ကစားပုံက ဧည့်သည်အတွက် အဓိက အားသာချက်ဖြစ်နိုင်ပါတယ်။ အိမ်ရှင်ရဲ့ ဖိအားပေးနိုင်စွမ်းကို ကျော်လွှားနိုင်မလားဆိုတာက အဆုံးအဖြတ်ရှိနိုင်ပါတယ်။\n\n1X2 ကြေးမှာ အာမိုရီဘီတာ 3.30၊ သရေ 3.50၊ လိုဂရိုးညက်စ် 2.10 ဖြစ်တာကြောင့် ဧည့်သည်ကို အနည်းငယ်အသာပေးထားပါတယ်။ မင်းပို့ထားတဲ့ မူလမြန်မာကြေးမှာ လိုဂရိုးညက်စ် ဘော်ဒီ -၇၅၊ ဂိုးပေါင်း ၃+၈၀ ဖြစ်ပါတယ်။ ဈေးကွက်က ဧည့်သည်ဘက်ရှိပေမယ့် ဒီဖလားပွဲအတွက် လူစာရင်းအတည်ပြုချက်မရှိသေးတဲ့ ကစားသမားတွေနဲ့ ဒဏ်ရာသတင်းတွေကို ထင်မြင်ချက်နဲ့ မဖြည့်ထားပါဘူး။\n\nနောက်ဆုံး ၅ ပွဲအတွင်း အိမ်ကွင်းမှာ တည်ငြိမ်တဲ့ကစားဟန်နဲ့ အသင်းလိုက်ဖိအားပေးနိုင်စွမ်းကို ပိုတန်ဖိုးထားပြီး အာမိုရီဘီတာကို ရွေးချယ်ပါတယ်။",
+      "previewV2Summary": "အာမိုရီဘီတာက Segunda Federación အဆင့် ၇၊ ၁၆ မှတ်၊ လိုဂရိုးညက်စ်က Primera Federación အဆင့် ၂၊ ၂၃ မှတ်ရှိပါတယ်။ နောက်ဆုံး ၅ ပွဲမှာ အိမ်ရှင် ၃ နိုင် ၂ ရှုံး၊ ဧည့်သည် ၂ နိုင် ၁ သရေ ၂ ရှုံး ဖြစ်နေပါတယ်။ 1X2 ကြေး 3.30 / 3.50 / 2.10 က လိုဂရိုးညက်စ်ကို အသာပေးပေမယ့် အာမိုရီဘီတာရဲ့ အိမ်ကွင်းနောက်ဆုံးအနိုင်တွေနဲ့ တန်ပြန်တိုက်စစ်အခွင့်အရေးကို ပိုတန်ဖိုးထားပြီး အာမိုရီဘီတာကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "အာမိုရီဘီတာ",
       "previewV2FormatVersion": "2.1",
       "previewV2EditorialDate": "2026-11-10",
       "previewV2SourcePreviewDate": "2026-11-10",
-      "previewV2EditorialStatus": "owner-selected Copa del Rey fixture, last-five and 1X2 source-checked",
+      "previewV2EditorialStatus": "Written full Burmese journalist-style match-by-match analysis, current standings/points, five results, bookmaker 1X2, original owner Myanmar odds, tactical matchups, unavailable confirmed team news explicitly noted.",
       "previewV2PhotoStatus": "unavailable: match-specific licensed photo not verified; do not substitute unrelated image",
       "specialChoice": false,
       "specialChoiceRank": null,
@@ -518,7 +567,20 @@
       "researchSources": [
         "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa",
         "https://oddsrun.com/match/football/es/425/13412963/spain-copa-del-rey/amorebieta-vs-ud-logrones/",
-        "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml",
+        "https://sdamorebieta.eus/es/",
+        "https://www.resultadosrfef.es/equipo/ud-logrones-336/clasificacion",
+        "https://www.laliga.com/laliga-hypermotion/clasificacion",
+        "https://oddsrun.com/match/football/es/425/13412567/spain-copa-del-rey/cd-pamplona-vs-eibar/"
+      ],
+      "reportFormatSections": [
+        "ပွဲစဉ်နှင့် ကွင်း",
+        "လက်ရှိအမှတ်ပေးဇယား",
+        "ပြိုင်ပွဲစုံ နောက်ဆုံး ၅ ပွဲ",
+        "နည်းပြနှင့် ကစားဟန်",
+        "1X2 / မြန်မာကြေး",
+        "အတည်ပြုလူစာရင်းအခြေအနေ",
+        "ရွေးချယ်မှု"
       ]
     }
   ],
