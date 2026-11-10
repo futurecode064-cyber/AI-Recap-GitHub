@@ -348,6 +348,9 @@ function renderMatch(match,i){
  }
 
  expand.addEventListener("click",()=>{let visible=!body.hidden;body.hidden=visible;expand.setAttribute("aria-expanded",String(!visible))});
+ if(!document.documentElement.dataset.footballBrandName && window.FutureCodeEditorialChoice){
+   body.appendChild(window.FutureCodeEditorialChoice.element(match));
+ }
  append(card,expand,body);
  const actions=node("div","match-actions");
  // One action, one complete PNG: no format dropdown or truncated social poster.
