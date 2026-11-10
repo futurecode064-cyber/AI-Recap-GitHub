@@ -69,7 +69,7 @@
   text('မြန်မာကြေး: '+safe(odds.upperTeam)+' · '+safe(odds.bodyOdds)+' · ဂိုးပေါင်း '+safe(odds.goalTotalOdds),M+373,484,21,'#fff',false,'left',W-2*M-390);
   box(M,articleY,W-2*M,H-articleY,panel,18);
   let y=articleY+38;for(const row of rows){let x=M+24;for(const run of row){text(run.str,x,y,px,run.bold?t.accent:'#f7faff',run.bold);ctx.font=(run.bold?'800 ':'500 ')+px+'px "Noto Sans Myanmar",sans-serif';x+=ctx.measureText(run.str).width;}y+=gap;}
-  return canvas;
+  return window.FutureCodeEditorialChoice?.appendPng(canvas,m)||canvas;
  }
  window.FutureCodeFramePreview={render,result,wrap,defaultTheme,highlight};
 })();
