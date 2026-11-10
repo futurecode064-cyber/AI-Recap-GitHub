@@ -1,0 +1,52 @@
+name: Main three Copa previews — verified club crest refresh
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/main-copa-crest-sync.yml'
+      - 'football-daily/scripts/refresh_nov10_crests.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image validation libraries
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Download and validate original crests, keep report date and three-match scope
+        run: python football-daily/scripts/refresh_nov10_crests.py
+      - name: Validate main report and images
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,pathlib
+          root=pathlib.Path("football-daily")
+          d=json.loads((root/"data/today.json").read_text())
+          assert d["reportDate"]=="2026-11-10" and len(d["matches"])==3
+          for m in d["matches"]:
+              for side in ("home","away"):
+                  uri=m[side+"CrestUrl"]
+                  assert uri.startswith("./assets/team-logos/")
+                  assert (root/uri[2:]).is_file(),uri
+          print("Verified six local crest references")
+          PY
+      - name: Commit original club artwork to production source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "future-code-football-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add football-daily/assets/team-logos/2026-11-10 football-daily/data/today.json football-daily/data/odds/2026-11-10.json
+          if git diff --cached --quiet; then echo "Already current"; exit 0; fi
+          git commit -m "Main only: bundle genuine six club crests for three Copa previews and PNG"
+          git push origin HEAD:football-daily-render
