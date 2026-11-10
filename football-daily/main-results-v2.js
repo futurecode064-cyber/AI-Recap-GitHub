@@ -35,6 +35,14 @@
  '.fc-r2-score{border:7px solid #ef3631;border-radius:50%;padding:19px 12px;min-width:202px;min-height:113px;display:grid;place-items:center;color:#ffdf91;font:900 52px/1.15 Arial,sans-serif;transform:rotate(-4deg);box-shadow:0 0 0 4px #e83c2c30}',
  '.fc-r2-state{color:#e5f1ff;font:800 14px/1.7 "Noto Sans Myanmar",sans-serif}',
  '.fc-r2-original{margin:14px!important;max-width:none!important;box-sizing:border-box}',
+  '.fc-r2-original :is(.match-topline,.match-hero,.match-market-layout){display:none!important}',
+  '.fc-r2-compact{display:grid;grid-template-columns:minmax(0,1fr) 215px minmax(0,1fr);align-items:center;gap:10px;padding:14px 18px;margin-bottom:11px;border:2px solid #d7ad62;border-radius:12px;background:linear-gradient(110deg,#0a233b,#174e74,#0a233b)}',
+  '.fc-r2-compact .fc-r2-club{font-size:20px;gap:9px}',
+  '.fc-r2-compact .fc-r2-club img{width:68px;height:68px}',
+  '.fc-r2-compact-middle{text-align:center;min-width:0}',
+  '.fc-r2-compact-middle small{display:block;color:#ffe4b2;font:900 16px/1.4 Arial,sans-serif;letter-spacing:.1em}',
+  '.fc-r2-compact-middle strong{display:block;color:#ffe088;font:900 50px/1.3 Arial,sans-serif;white-space:nowrap}',
+  '@media(max-width:850px){.fc-r2-compact{grid-template-columns:minmax(0,1fr) 112px minmax(0,1fr);gap:3px;padding:8px 5px}.fc-r2-compact-middle strong{font-size:30px}.fc-r2-compact-middle small{font-size:10px}.fc-r2-compact .fc-r2-club{font-size:12px;gap:4px}.fc-r2-compact .fc-r2-club img{width:45px;height:45px}}',
  '.fc-r2-original .analysis-body{display:block!important;overflow:visible!important;max-height:none!important}',
  '.fc-r2-original .fc-editorial-selection{border:6px solid #ec362e!important;outline:4px solid #ee483480;border-radius:50%!important;padding:12px 28px!important;transform:rotate(-2deg);max-width:91%;box-shadow:none!important}',
  '.fc-r2-download{display:block;margin:15px auto 22px}',
@@ -48,7 +56,7 @@
  function setup(){
   const target=$("fcPreviewV2");if(!target)return;
   const el=document.createElement("section");el.id="fcResultsV2";el.className="fc-result-v2";
-  el.innerHTML='<h2>ဂိုးရလဒ် Version 2 · မူရင်းပွဲကြိုကတ်အပြည့်အစုံ</h2><div class="fc-r2-tools">'+
+  el.innerHTML='<h2>ဂိုးရလဒ် Version 2 · FULL TIME + မူလသုံးသပ်ချက်</h2><div class="fc-r2-tools">'+
    '<label>ပွဲနေ့စွဲ<input id="fcR2Date" type="date"></label>'+
    '<label>လိဂ်ရွေးရန်<select id="fcR2League"><option value="all">လိဂ်အားလုံး</option></select></label>'+
    '<label>မိမိအပေါ် Banner<input id="fcR2Top" type="file" accept="image/*"></label>'+
@@ -91,20 +99,28 @@
   for(const m of list){
    const item=document.createElement("article");item.className="fc-r2-card";
    item.append(resultHeader(m));
-   // This is the real V1 card generator. No rebuilding, shortening or replacing
-   // the archived pre-match club crests, last-five, 1X2, Myanmar odds or prose.
+   // Keep the archived original article and pick; remove duplicate prematch odds/form.
    const original=window.FutureCodeMainPreviewCard?.renderOriginal(m);
    if(!original){
     const error=document.createElement("p");error.textContent="မူရင်း ပွဲကြိုကတ် module မရရှိပါ";item.append(error);
    }else{
     original.classList.add("fc-r2-original");
+    for(const selector of [".match-topline",".match-hero",".match-market-layout"])
+      original.querySelector(selector)?.remove();
+    const compact=document.createElement("div");compact.className="fc-r2-compact";
+    const middle=document.createElement("div");middle.className="fc-r2-compact-middle";
+    const label=document.createElement("small");label.textContent=m.resultPeriod==="AET"?"AFTER EXTRA TIME":"FULL TIME";
+    const score=document.createElement("strong");score.textContent=clean(m.finalScore).replace(":"," - ");
+    middle.append(label,score);
+    compact.append(logo(m.homeCrestUrl,team(m,"home")),middle,logo(m.awayCrestUrl,team(m,"away")));
+    original.prepend(compact);
     original.querySelector(".analysis-toggle")?.remove();
     original.querySelector(".match-actions")?.remove();
     const body=original.querySelector(".analysis-body");if(body){body.hidden=false;body.style.display="block";}
     item.append(original);
    }
    const save=document.createElement("button");save.className="fc-r2-save fc-r2-download";save.type="button";
-   save.textContent="⬇ မူရင်းပွဲကြိုကတ် + အနီဝိုင်းရလဒ် PNG Download";
+   save.textContent="⬇ FULL TIME ဂိုးရလဒ် + မူလသုံးသပ်ချက် PNG Download";
    save.disabled=!original;
    save.onclick=async()=>{
     save.disabled=true;
@@ -114,7 +130,7 @@
    };
    item.append(save);root.append(item);
   }
-  $("fcR2Status").textContent=list.length+" ပွဲ · မူရင်း V1 ကတ်အပြည့်အစုံ + အတည်ပြုဂိုးရလဒ်။ အနီဝိုင်းသည် ဂိုးရလဒ်နှင့် ရွေးချယ်ထားသောအသင်းကို ဖော်ပြခြင်းသာဖြစ်ပြီး Handicap ကြေးအနိုင်/အရှုံးကို မဆုံးဖြတ်ပါ။";
+  $("fcR2Status").textContent=list.length+" ပွဲ · FULL TIME ဂိုးရလဒ် + မူလသုံးသပ်ချက် + မူလရွေးချယ်မှု။ VS၊ 1X2 ကြေးနှင့် နောက်ဆုံး ၅ ပွဲကို Results V2 မှ ဖယ်ထားပါသည်။";
  }
  async function load(){
   const n=++loadId,root=$("fcR2List");root.replaceChildren();$("fcR2Status").textContent=selectedDate+" ရလဒ်များ ရယူနေသည်…";
