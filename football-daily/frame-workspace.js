@@ -475,6 +475,7 @@ function beginNewFrame(){
   $("addFrame").onclick=beginNewFrame;
   $("addFrameFromList").onclick=beginNewFrame;
 $("saveFrame").onclick=async()=>{try{await submit();}catch(e){status("Save မရပါ — "+e.message,true);}};
+ $("wmApply").onclick=async()=>{try{await submit();status("Watermark နှင့် Frame Setting သိမ်းပြီး · PNG/ZIP Download မှာ သုံးနိုင်ပါပြီ။");}catch(e){status("Watermark Save မရပါ — "+e.message,true);}};
 $("unassignFrame").onclick=async()=>{if(!currentId)return;try{for(const k of TYPES){state.placements[k]=state.placements[k].filter(x=>x!==currentId);if(state.selected[k]===currentId)state.selected[k]="none";}await save("Frame ကို Section အားလုံးမှ ဖြုတ်ထားပြီး။ မူရင်းပုံ မဖျက်ထားပါ။");}catch(e){status(e.message,true);}};
 $("deleteFrame").onclick=async()=>{const f=frame(currentId);if(!f||f.builtin||!confirm(f.name+" ကို အပြီးဖျက်မလား?"))return;
  try{state.frames=state.frames.filter(x=>x.id!==f.id);for(const k of TYPES){state.placements[k]=state.placements[k].filter(x=>x!==f.id);if(state.selected[k]===f.id)state.selected[k]="none";}currentId=state.frames[0]?.id||"";await save("ကိုယ်ပိုင် Frame ဖျက်ပြီး");}catch(e){status(e.message,true);}};
