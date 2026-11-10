@@ -1,6 +1,7 @@
 "use strict";
-/* MAIN only. Results V2 = exact archived PRE-MATCH V1 card plus verified FT header.
-   No rewriting of yesterday's odds, W/D/L, crests or full article. */
+/* MAIN only. Results V2 = verified FT header + compact logo/score row, then
+   the unchanged archived article and original selection. Prematch market panels
+   are intentionally omitted from this Results-only presentation. */
 (function(){
  if(document.documentElement.dataset.footballBrandName||!["/","/index.html"].includes(location.pathname))return;
  const $=id=>document.getElementById(id);
@@ -110,7 +111,7 @@
     const compact=document.createElement("div");compact.className="fc-r2-compact";
     const middle=document.createElement("div");middle.className="fc-r2-compact-middle";
     const label=document.createElement("small");label.textContent=m.resultPeriod==="AET"?"AFTER EXTRA TIME":"FULL TIME";
-    const score=document.createElement("strong");score.textContent=clean(m.finalScore).replace(":"," - ");
+    const score=document.createElement("strong");score.textContent=clean(m.finalScore).replace(/\s*[-:]\s*/," - ");
     middle.append(label,score);
     compact.append(logo(m.homeCrestUrl,team(m,"home")),middle,logo(m.awayCrestUrl,team(m,"away")));
     original.prepend(compact);
@@ -190,7 +191,7 @@
   c.fillStyle="#fff";c.font='900 29px "Noto Sans Myanmar",sans-serif';
   c.fillText(team(m,"home"),265,yy+218,310);c.fillText(team(m,"away"),W-265,yy+218,310);
   c.fillStyle="#ffecb0";c.font="900 72px Arial,sans-serif";
-  c.fillText(clean(m.finalScore).replace(":"," - "),W/2,yy+157,280);
+  c.fillText(clean(m.finalScore).replace(/\s*[-:]\s*/," - "),W/2,yy+157,280);
   ring(c,W/2,yy+160,158,75);
   if(m.resultPeriod==="AET"){
    c.fillStyle="#fff";c.font='700 18px "Noto Sans Myanmar",sans-serif';
@@ -211,7 +212,7 @@
   c.fillStyle="#ffe4b2";c.font="900 22px Arial,sans-serif";
   c.fillText(m.resultPeriod==="AET"?"AFTER EXTRA TIME":"FULL TIME",W/2,compactY+38,365);
   c.fillStyle="#ffe088";c.font="900 82px Arial,sans-serif";
-  c.fillText(clean(m.finalScore).replace(":"," - "),W/2,compactY+103,360);
+  c.fillText(clean(m.finalScore).replace(/\s*[-:]\s*/," - "),W/2,compactY+103,360);
   c.fillStyle="#fff";c.font='900 25px "Noto Sans Myanmar",sans-serif';
   c.fillText(team(m,"home"),292,compactY+149,325);
   c.fillText(team(m,"away"),W-292,compactY+149,325);
