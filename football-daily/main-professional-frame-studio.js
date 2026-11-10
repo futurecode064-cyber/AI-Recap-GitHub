@@ -25,7 +25,16 @@ if(!v||v.version!==2||!Array.isArray(v.frames)||v.frames.length>130)throw Error(
 const out=empty(),used=new Set();
 out.frames=v.frames.filter(x=>x&&/^[a-z0-9-]{2,60}$/.test(x.id)&&!used.has(x.id)&&used.add(x.id)).map(x=>({
 id:x.id,name:trim(x.name)||"My Frame",color:color(x.color),newsPaletteTheme:/^#[0-9a-f]{6}$/i.test(x.newsPaletteTheme||"")?x.newsPaletteTheme:undefined,newsColors:Object.fromEntries(Object.entries(x.newsColors||{}).filter(([k,v])=>/^[a-zA-Z]+$/.test(k)&&/^#[0-9a-f]{6}$/i.test(v))),top:number(x.top,110),bottom:number(x.bottom,75),
-fit:["contain","cover","stretch"].includes(x.fit)?x.fit:"contain",downloadName:trim(x.downloadName||x.name,100),topImage:pic(x.topImage),bottomImage:pic(x.bottomImage),builtin:allTemplates.some(t=>t.id===x.id)}));
+fit:["contain","cover","stretch"].includes(x.fit)?x.fit:"contain",downloadName:trim(x.downloadName||x.name,100),topImage:pic(x.topImage),bottomImage:pic(x.bottomImage),builtin:allTemplates.some(t=>t.id===x.id),
+ watermark:x.watermark&&typeof x.watermark==="object"?{
+  enabled:x.watermark.enabled===true,image:pic(x.watermark.image),
+  position:["top-left","top-center","top-right","middle-left","center","middle-right","bottom-left","bottom-center","bottom-right","custom"].includes(x.watermark.position)?x.watermark.position:"center",
+  x:Number.isFinite(+x.watermark.x)?Math.max(0,Math.min(100,+x.watermark.x)):50,
+  y:Number.isFinite(+x.watermark.y)?Math.max(0,Math.min(100,+x.watermark.y)):50,
+  opacity:Number.isFinite(+x.watermark.opacity)?Math.max(0,Math.min(100,+x.watermark.opacity)):12,
+  size:Number.isFinite(+x.watermark.size)?Math.max(5,Math.min(80,+x.watermark.size)):34,
+  blur:Number.isFinite(+x.watermark.blur)?Math.max(0,Math.min(12,+x.watermark.blur)):1
+ }:undefined}));
 for(const f of allTemplates)if(!out.frames.some(x=>x.id===f.id))out.frames.push({...f});
 for(const k of types){
  const id=v.selected?.[k];out.selected[k]=getId(id,out.frames)?id:"none";
@@ -69,8 +78,11 @@ const [a,b,full,originalTop,originalBottom]=await Promise.all([
  f.topImage?image(f.topImage):null,f.bottomImage?image(f.bottomImage):null,
  original?.full?image(original.full):null,original?.top?image(original.top):null,original?.bottom?image(original.bottom):null]);
 // Built-in artwork always uses its source aspect ratio, independently of daily row count.
-const top=a?Math.round(f.top*w/1200):full?Math.floor(full.height*original.t)*w/full.width:originalTop?originalTop.height*w/originalTop.width:Math.round(f.top*w/1200);
-const bottom=b?Math.round(f.bottom*w/1200):full?Math.floor(full.height*original.b)*w/full.width:originalBottom?originalBottom.height*w/originalBottom.width:Math.round(f.bottom*w/1200);
+// Keep user-uploaded "contain" banners full-width at their original aspect ratio.
+ // The old forced ribbon height caused blank bars and a shrunken centered banner.
+ const fullWidthHeight=img=>Math.round(w*img.naturalHeight/img.naturalWidth);
+ const top=a?(f.fit==="contain"?fullWidthHeight(a):Math.round(f.top*w/1200)):full?Math.floor(full.height*original.t)*w/full.width:originalTop?originalTop.height*w/originalTop.width:Math.round(f.top*w/1200);
+ const bottom=b?(f.fit==="contain"?fullWidthHeight(b):Math.round(f.bottom*w/1200)):full?Math.floor(full.height*original.b)*w/full.width:originalBottom?originalBottom.height*w/originalBottom.width:Math.round(f.bottom*w/1200);
 const pad=Math.max(10,Math.round(w*.012)),h=top+source.height+bottom+pad*2;
 if(h>32767||h*w>110000000)throw Error("PNG ပုံအမြင့်များလွန်းပါသည်။ Banner အမြင့်လျှော့ပါ။");
 const out=document.createElement("canvas");out.width=w;out.height=h;
@@ -160,9 +172,15 @@ function attach(section,select){
  ready.then(syncNative);
 }
 function refresh(){syncNative();syncMini();}
-const getFrame=id=>{const f=get(String(id||"").replace(/^pro:/,""));return f?{...f}:null;};
+ async function reloadWorkspace(){
+  await ready;
+  const latest=await load();
+  if(latest)state=validate(latest);
+  refresh();return true;
+ }
+ const getFrame=id=>{const f=get(String(id||"").replace(/^pro:/,""));return f?{...f}:null;};
 window.FutureCodeProfessionalFrames=Object.freeze({
- wrap,ready,attach,refresh,getFrame,renderSample,
+ wrap,ready,attach,refresh,reloadWorkspace,getFrame,renderSample,
  list:async section=>(await ready,available(section).map(f=>({...f}))),
  getSelected:async name=>(await ready,state.selected[name]||"none"),sections:labels
 });
