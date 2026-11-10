@@ -26,7 +26,14 @@
   return {upper:v(p.upperTeam),body:v(p.bodyOdds),goal:v(p.goalTotalOdds),currentBody:v(p.currentBodyOdds),currentGoal:v(p.currentGoalTotalOdds)};
  }
  function crest(m,side){
-  const i=create("img","fc-v2-logo");i.src=m[side+"CrestUrl"]||"";i.alt=m[side+"Display"]||m[side];i.loading="lazy";i.onerror=()=>i.style.visibility="hidden";return i;
+  const src=m[side+"CrestUrl"];
+  if(!src){
+   const missing=create("span","fc-v2-logo fc-v2-logo-unavailable","—");
+   missing.title="အတည်ပြုအသင်းလိုဂို မရသေးပါ";missing.setAttribute("aria-label",missing.title);
+   return missing;
+  }
+  const i=create("img","fc-v2-logo");i.src=src;i.alt=m[side+"Display"]||m[side];i.loading="lazy";
+  i.onerror=()=>{const missing=create("span","fc-v2-logo fc-v2-logo-unavailable","—");missing.title="အသင်းလိုဂိုပုံ မရနိုင်ပါ";i.replaceWith(missing);};return i;
  }
  function quoteBox(kind,label,value,current){
   const box=create("div","fc-v2-quote fc-v2-"+kind);
@@ -181,12 +188,20 @@
    image(m.homeCrestUrl),image(m.awayCrestUrl),
    image(window.FutureCodeMainLogoAssets?.leagueCrest(m.league)||window.FutureCodeBrandExportData?.leagueCrest?.(m.league)||"")
   ]);
-  if(!home||!away||!league)throw Error("အသင်း/လိဂ်လိုဂို မပြည့်စုံပါ — "+(m.homeDisplay||m.home)+" / "+(m.awayDisplay||m.away));
+  // Owner intentionally has no verified Nov 10 crest pack. Never silently reuse
+  // another club's logo or prevent the source-backed written report downloading.
+  // A clearly marked neutral "—" placeholder is used only when logo unverified.
+  const missingCrest=(x,y,w,h)=>{
+   box(x,y,w,h,8,"#e1e7e9","#bfcbd2",2);
+   c.fillStyle="#586b78";c.textAlign="center";c.textBaseline="middle";
+   c.font='700 16px "FCMyanmar",sans-serif';
+   c.fillText("လိုဂို မရသေး",x+w/2,y+h/2,w-8);
+  };
 
   c.fillStyle=dark;c.fillRect(0,0,W,cardH);
   c.strokeStyle=gold;c.lineWidth=3;c.beginPath();c.moveTo(13,29);c.lineTo(1187,29);c.stroke();
   box(272,5,660,56,14,dark,gold,3);
-  box(24,6,176,52,10,"#ffffff",gold,2);contain(c,league,34,9,156,45);
+  box(24,6,176,52,10,"#ffffff",gold,2);if(league)contain(c,league,34,9,156,45);else missingCrest(34,9,156,45);
   centered(m.leagueDisplay||m.league,601,33,615,29,900);
 
   // One full-width editorial panel; all other card elements remain unchanged.
@@ -228,7 +243,7 @@
    if(s.side){
     const im=s.side==="home"?home:away,label=s.side==="home"?(m.homeDisplay||m.home):(m.awayDisplay||m.away);
     const ix=s.side==="home"?s.x+8:s.x+s.w-80;
-    contain(c,im,ix,rowY+13,72,89);
+    if(im)contain(c,im,ix,rowY+13,72,89);else missingCrest(ix,rowY+13,72,89);
     centered(label,s.side==="home"?s.x+187:s.x+92,rowY+61,175,23,900,ink);
    }else if(s.kind==="time"){
     centered("ပွဲစတင်ချိန်",center,rowY+29,s.w-18,19,800,ink);
