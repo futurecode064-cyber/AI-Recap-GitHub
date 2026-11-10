@@ -36,6 +36,16 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 .multi-bottom{padding:8px 13px 16px;display:flex;gap:14px;flex-wrap:wrap}
 .multi-layout{min-width:225px;max-width:350px;flex:1 1 225px}
 @media(max-width:940px){.multi-columns{grid-template-columns:1fr}.multi-options{max-height:185px}.multi-summary{flex-wrap:wrap}}
+</style><style>
+.wm-panel{margin-top:14px;border:1px solid #c3994a!important;background:#173745!important;border-radius:11px;padding:16px}
+.wm-panel h3{margin:0 0 8px;color:#f7cf78}.wm-panel .hint{line-height:1.75}
+.wm-panel .wm-toggle{display:flex;flex-direction:row;align-items:center;gap:9px;font-weight:800;margin:12px 0}
+.wm-panel .wm-toggle input{width:20px;height:20px;accent-color:#eab85a}
+.wm-panel .wm-fields{margin-top:14px;gap:12px}
+.wm-panel input[type=range]{display:block;width:100%;min-height:32px;accent-color:#e9bd68;cursor:pointer}
+.wm-panel output{display:inline-block;margin-left:6px;color:#f9d77a;font-weight:800}
+.wm-panel select,.wm-panel input[type=file]{width:100%}
+.wm-panel [hidden]{display:none!important}
 </style></head><body>
 <header><div><small>FUTURE CODE · FOOTBALL DAILY</small><b>Frame Editor Studio</b></div><a href="./">← Main Website</a></header>
 <div class="shell"><aside><button id="navLibrary" class="active">▦ Frame Library</button><button id="navDownloads">↓ Download Center</button><p>တစ်နေရာတည်းမှာ Frame ပြင်၊ Section ရွေး၊ PNG / ZIP ထုတ်ပါ။</p></aside>
@@ -47,7 +57,31 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 <div class="field-grid"><label class="wide">Frame နာမည် (မဖြစ်မနေ ဖြည့်ရန်)<input id="frameName" maxlength="70" placeholder="ဥပမာ - BCF ပွဲကြို"></label><label class="wide">Download PNG ဖိုင်နာမည် (မိမိပေးထားသည့်နာမည်အတိုင်း ထွက်မည်)<input id="frameDownloadName" maxlength="100" placeholder="ဥပမာ - BCF-မြန်မာကြေး"></label><label>Theme Color<input id="frameColor" type="color"></label><label>Banner Fit<select id="frameFit"><option value="contain">မဖြတ်ဘဲ အပြည့်</option><option value="cover">အပြည့်ဖြည့် (အနားဖြတ်)</option><option value="stretch">အကျယ်/အမြင့် အပြည့် (မဖြတ်)</option></select></label><label>Top Banner အမြင့် (1200 px အကျယ်အတွက်)<input id="frameTop" type="number" min="0" max="360" step="1"></label><label>Bottom Banner အမြင့် (1200 px အကျယ်အတွက်)<input id="frameBottom" type="number" min="0" max="360" step="1"></label></div>
 <p class="hint">Top Banner သည် အပေါ်ဆုံး၊ Bottom Banner သည် အောက်ဆုံးတွင် အလိုအလျောက်ကပ်မည်။ ပုံအသစ်ထည့်လျှင် မူရင်းအချိုးအစားအတိုင်း အမြင့်သတ်မှတ်ပေးပြီး ကိုယ်တိုင်လည်း ပြင်နိုင်သည်။ မူရင်း PNG/JPG/WEBP ကို resolution မလျှော့ဘဲ သိမ်းဆည်းမည်။</p><div class="upload"><label>အပေါ် Banner ပုံ<input id="frameTopFile" type="file" accept="image/png,image/jpeg,image/webp"></label><p id="topFileState"></p><button class="secondary" id="removeTop">Top ပုံဖြုတ်</button></div>
 <div class="upload"><label>အောက် Banner ပုံ<input id="frameBottomFile" type="file" accept="image/png,image/jpeg,image/webp"></label><p id="bottomFileState"></p><button class="secondary" id="removeBottom">Bottom ပုံဖြုတ်</button></div>
-<div class="line"></div><h3>ဒီ Frame အသုံးပြုမည့် Section များ</h3><div class="actions"><button type="button" class="secondary" id="scopeAll">Section အားလုံးရွေး</button><button type="button" class="secondary" id="scopeNone">Section အားလုံးဖြုတ်</button></div><div id="scopeChecks" class="scope-list"></div><p class="hint">အမှန်ခြစ်ထားသည့် Section များထဲမှာသာ ZIP ထုတ်မယ်။ Frame ပုံကို မဖျက်ပါ။</p>
+<div class="upload wm-panel" aria-label="Logo Watermark Settings">
+ <h3>Logo Watermark · Download PNG / ZIP</h3>
+ <p class="hint">ပုံထဲကလို စာသားနောက်ခံပေါ် Logo ကို ပါးပါးဝါးဝါး ထည့်နိုင်ပါသည်။ Frame တစ်ခုချင်းစီအတွက် သီးခြားသိမ်းမည်။</p>
+ <label class="wm-toggle"><input id="wmEnabled" type="checkbox"> Watermark ဖွင့်မယ် (ON / OFF)</label>
+ <label>Watermark Logo Upload (PNG transparency ရှိသောပုံ အကြံပြု)<input id="wmFile" type="file" accept="image/png,image/jpeg,image/webp"></label>
+ <p id="wmFileState" class="hint">Watermark Logo မတင်ရသေးပါ။</p>
+ <button type="button" class="secondary" id="wmRemove">Watermark Logo ဖြုတ်မယ်</button>
+ <div class="field-grid wm-fields">
+  <label>Watermark Position<select id="wmPosition">
+   <option value="center">အလယ်တည့်တည့် · Center</option>
+   <option value="top-left">ဘယ်အပေါ်</option><option value="top-center">အပေါ်အလယ်</option><option value="top-right">ညာအပေါ်</option>
+   <option value="middle-left">ဘယ်အလယ်</option><option value="middle-right">ညာအလယ်</option>
+   <option value="bottom-left">ဘယ်အောက်</option><option value="bottom-center">အောက်အလယ်</option><option value="bottom-right">ညာအောက်</option>
+   <option value="custom">X / Y စိတ်ကြိုက်</option>
+  </select></label>
+  <label>Opacity · ဖျော့အား <output id="wmOpacityValue">12%</output><input id="wmOpacity" type="range" min="0" max="100" step="1" value="12"></label>
+  <label>Logo Size · အရွယ်အစား <output id="wmSizeValue">34%</output><input id="wmSize" type="range" min="5" max="80" step="1" value="34"></label>
+  <label>Blur · ဝါးအား <output id="wmBlurValue">1 px</output><input id="wmBlur" type="range" min="0" max="12" step="1" value="1"></label>
+ </div>
+ <div class="field-grid wm-fields" id="wmCustomXY" hidden>
+  <label>ဘယ်/ညာ X <output id="wmXValue">50%</output><input id="wmX" type="range" min="0" max="100" value="50"></label>
+  <label>အပေါ်/အောက် Y <output id="wmYValue">50%</output><input id="wmY" type="range" min="0" max="100" value="50"></label>
+ </div>
+ <p class="hint">Opacity 10–15% နှင့် Center ကို ရွေးလျှင် နမူနာပုံလို ဖျော့ဖျော့ Watermark ဖြစ်မည်။ PNG Preview ကြည့်ပြီး အောက်မှ <b>ပြင်ဆင်ချက် သိမ်းမယ်</b> ကိုနှိပ်ပါ။</p>
+</div><div class="line"></div><h3>ဒီ Frame အသုံးပြုမည့် Section များ</h3><div class="actions"><button type="button" class="secondary" id="scopeAll">Section အားလုံးရွေး</button><button type="button" class="secondary" id="scopeNone">Section အားလုံးဖြုတ်</button></div><div id="scopeChecks" class="scope-list"></div><p class="hint">အမှန်ခြစ်ထားသည့် Section များထဲမှာသာ ZIP ထုတ်မယ်။ Frame ပုံကို မဖျက်ပါ။</p>
 <div class="actions frame-save-actions"><button class="gold" id="saveFrame">ပြင်ဆင်ချက် သိမ်းမယ်</button><button class="secondary" id="unassignFrame">Section အားလုံးမှ ဖြုတ်</button><button class="danger" id="deleteFrame">ကိုယ်ပိုင် Frame ဖျက်</button></div></div>
 <div class="line"></div><div class="actions"><button class="secondary" id="backup">Settings Backup</button><label>Backup Import<input id="importBackup" type="file" accept=".json,application/json"></label></div></div>
 <div class="panel"><h2>Frame Preview</h2><div class="preview-area"><div id="previewMock" class="mock"><em class="sample-name">FRAME</em><strong>MATCH PREVIEW</strong><span>HOME 1 - 1 AWAY</span><span>FUTURE CODE · FOOTBALL</span></div><img id="previewImage" hidden alt="Frame နမူနာ"></div><p class="hint">အရောင်၊ အမြင့်၊ Fit နဲ့ Banner အသစ်ရွေးချယ်မှုများကို မသိမ်းမီ Live Preview ကြည့်နိုင်သည်။ PNG Download တွင် အသုံးပြုရန် ပြင်ဆင်ချက် သိမ်းမယ် ကိုနှိပ်ပါ။ အရင်တင်ထားပြီးသား ဝါးနေသောပုံများကို ကြည်လင်စေဖို့ မူရင်း Banner ပြန် Upload လုပ်ပါ။</p><button class="secondary" id="toDownloads">Download Center သို့</button></div>
@@ -66,7 +100,8 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 </main></div>
 <iframe class="engine" id="engineHome" title="Main site image engine" aria-hidden="true" tabindex="-1" src="./?frame-engine=1&tipEngine=20261028-local-crest-v6"></iframe>
 <iframe class="engine" id="engineOdds" title="Odds image engine" aria-hidden="true" tabindex="-1" src="./odds.html?frame-engine=1&tipEngine=20261028-local-crest-v6"></iframe>
-<script defer src="./frame-workspace.js?v=news-palette-20261102-v6"></script>
+<script defer src="./frame-watermark.js?v=20261110-watermark-v1"></script>
+<script defer src="./frame-workspace.js?v=20261110-watermark-v1"></script>
 <script defer src="./frame-multi-download.js?v=20261028-multi-select-v2"></script>
-<script defer src="./frame-export-engine.js?v=news-cover-20261102-v4"></script>
+<script defer src="./frame-export-engine.js?v=20261110-watermark-v1"></script>
 </body></html>
