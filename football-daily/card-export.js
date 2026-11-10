@@ -69,6 +69,7 @@
    const c=brand?.colors||{};
    const brandTheme=brand?{bg:c.background||c.black||'#080b10',head:c.darkRed||c.navy||c.primary||'#082c54',panel:c.panel||'#061726',alt:c.primary||c.gold||'#12518a',accent:c.electric||c.gold||c.silver||c.primary||'#43b9f0',gold:c.gold||c.electric||c.silver||c.primary||'#edc45b'}:undefined;
    let canvas=await window.FutureCodeFramePreview.render(match,brandTheme||opts.frameTheme,opts);
+   if(window.FutureCodeEditorialChoice)canvas=window.FutureCodeEditorialChoice.appendPng(canvas,match);
    if(!opts.asCanvas&&window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews",document.getElementById(opts.special?"fcSpecialCustomFrame":"fcMatchCustomFrame")?.value?.startsWith("pro:")?document.getElementById(opts.special?"fcSpecialCustomFrame":"fcMatchCustomFrame").value:"none");
    const filename=opts.downloadFilename||filePart(match.home)+'-vs-'+filePart(match.away)+'.png';
    if(opts.asCanvas)return canvas;
@@ -234,6 +235,7 @@
    line(ctx,M,H-55,fullWidth);
    text(ctx,opts.brandName||"FUTURE CODE FOOTBALL",M+10,H-31,20,C.orange,true);
   }
+  if(window.FutureCodeEditorialChoice)canvas=window.FutureCodeEditorialChoice.appendPng(canvas,match);
   const filename=opts.mainScreenshot===true&&typeof opts.downloadFilename==="string"
    ?opts.downloadFilename
    :filePart(opts.brandName||"future-code")+"-"+filePart(home)+"-vs-"+filePart(away)+".png";
