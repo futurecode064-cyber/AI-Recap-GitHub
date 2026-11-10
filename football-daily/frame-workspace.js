@@ -76,7 +76,50 @@ function normalize(){
  for(const k of TYPES){state.placements[k]=[...new Set((Array.isArray(state.placements[k])?state.placements[k]:[]).filter(id=>!!frame(id)))];
   if(!assigned(state.selected[k],k))state.selected[k]="none";}
 }
-function assignNewV2(){
+// One-time non-destructive section restoration from saved frames and download preferences.
+ function restoreMissingPlacements(){
+  const key="fc-frame-recover-assignments-20261110-v2";
+  if(localStorage.getItem(key))return false;
+  let chosen={};try{chosen=JSON.parse(localStorage.getItem("fc-frame-download-multi-v1")||"{}")||{};}catch{}
+  const defaults={
+   odds:frames().filter(f=>f.builtin&&f.id.startsWith("odds-")&&f.id!=="odds-v2-classic").map(f=>f.id),
+   oddsCards:frames().filter(f=>f.builtin&&f.id.startsWith("odds-")&&f.id!=="odds-v2-classic").map(f=>f.id),
+   previews:frames().filter(f=>f.builtin&&f.id.startsWith("preview-")&&f.id!=="preview-v2-blue").map(f=>f.id),
+   previewsV2:["preview-v2-blue"],resultsV2:["results-v2-classic"],oddsV2:["odds-v2-classic"],
+   results:frames().filter(f=>f.builtin&&f.id.startsWith("results-")&&f.id!=="results-v2-classic").map(f=>f.id),
+   ai:frames().filter(f=>f.builtin&&f.id.startsWith("ai-")).map(f=>f.id),
+   news:["news-journal"],specials:["special-choice"]
+  };
+  let changed=false;
+  for(const k of TYPES){
+   const listed=Array.isArray(chosen[k]?.frames)?chosen[k].frames:[];
+   for(const id of [...(defaults[k]||[]),...listed])if(frame(id)&&!state.placements[k].includes(id)){
+    state.placements[k].push(id);changed=true;
+   }
+   if(state.selected[k]==="none"&&state.placements[k].length){
+    state.selected[k]=state.placements[k][0];changed=true;
+   }
+  }
+  const hints={odds:/ပေါက်ကြေး|odds/i,previews:/ပွဲကြို|preview/i,results:/ဂိုးရလဒ်|result/i,
+   ai:/AI\s*(?:tips|score)|ခန့်မှန်း/i,specials:/special\s*choice|အထူးရွေးချယ်/i,news:/ဘောလုံးသတင်း|journal|news/i};
+  for(const f of frames())if(!f.builtin&&!TYPES.some(k=>assigned(f.id,k))){
+   for(const [k,re] of Object.entries(hints))if(re.test(f.name||"")||re.test(f.downloadName||"")){
+    state.placements[k].push(f.id);changed=true;
+   }
+  }
+  try{localStorage.setItem(key,"1");}catch{}
+  return changed;
+ }
+ async function restoreCustomerFrames(){
+  const k=$("restoreSection").value,all=frames().filter(f=>!f.builtin&&(f.topImage||f.bottomImage));
+  if(!all.length){status("Browser ထဲမှာ ပြန်ချိတ်နိုင်သည့် Custom Banner Frame မတွေ့ပါ။ Backup Import ရှိလျှင် သုံးပါ။",true);return;}
+  const missing=all.filter(f=>!assigned(f.id,k));
+  if(!missing.length){status(SECTION[k]+" ထဲမှာ သိမ်းထားသော Customer Banner အားလုံး ရှိပြီးသားပါ။");return;}
+  if(!confirm(SECTION[k]+" Section သို့ Customer Banner "+missing.length+" ခု ပြန်ချိတ်မလား? မူရင်းပုံ/Frame မဖျက်ပါ။"))return;
+  for(const f of missing)state.placements[k].push(f.id);
+  await save(SECTION[k]+" အတွက် Custom Banner "+missing.length+" ခု ပြန်ချိတ်ပြီးပါပြီ။");
+ }
+ function assignNewV2(){
  if(localStorage.getItem("fc-new-v2-sections-assigned-v1"))return false;
  let changed=false;
  for(const [key,id] of [["resultsV2","results-v2-classic"],["oddsV2","odds-v2-classic"]]){
@@ -136,9 +179,15 @@ async function readyEngines(){
  await odds.contentWindow.FutureCodeProfessionalFrames.ready;
 }
 function reloadOne(el){return new Promise(ok=>{el.addEventListener("load",ok,{once:true});const u=new URL(el.src,location.href);u.searchParams.set("workspaceReload",String(Date.now()));el.src=u.href;});}
-async function save(message){if(working)throw Error("Download ဆောင်ရွက်နေချိန် Frame မပြင်ပါနှင့်။");normalize();await dbWrite(state);
- await Promise.all([reloadOne(home),reloadOne(odds)]);await readyEngines();
- state=await dbRead();normalize();renderList();renderEditor();renderExportControls();status(message||"Frame Settings သိမ်းပြီးပါပြီ။");}
+async function save(message){
+  if(working)throw Error("Download ဆောင်ရွက်နေချိန် Frame မပြင်ပါနှင့်။");
+  normalize();await dbWrite(state);
+  // Refresh renderer state from IndexedDB without reloading an iframe with stale data.
+  await Promise.all([home.contentWindow.FutureCodeProfessionalFrames.reloadWorkspace(),
+                     odds.contentWindow.FutureCodeProfessionalFrames.reloadWorkspace()]);
+  state=await dbRead();normalize();renderList();renderEditor();renderExportControls();
+  status(message||"Frame Settings သိမ်းပြီးပါပြီ။");
+}
 async function dataFetch(url){
  const w=home.contentWindow,reader=w.FootballData?.fetch||w.fetch.bind(w);
  const r=await reader(new URL(url,w.document.baseURI).href,{cache:"no-store"});if(!r.ok)throw Error(url+" HTTP "+r.status);return r.json();
@@ -430,14 +479,23 @@ $("unassignFrame").onclick=async()=>{if(!currentId)return;try{for(const k of TYP
 $("deleteFrame").onclick=async()=>{const f=frame(currentId);if(!f||f.builtin||!confirm(f.name+" ကို အပြီးဖျက်မလား?"))return;
  try{state.frames=state.frames.filter(x=>x.id!==f.id);for(const k of TYPES){state.placements[k]=state.placements[k].filter(x=>x!==f.id);if(state.selected[k]===f.id)state.selected[k]="none";}currentId=state.frames[0]?.id||"";await save("ကိုယ်ပိုင် Frame ဖျက်ပြီး");}catch(e){status(e.message,true);}};
 $("removeTop").onclick=()=>resetBanner("topImage");$("removeBottom").onclick=()=>resetBanner("bottomImage");
-$("backup").onclick=exportState;$("importBackup").onchange=async e=>{try{await importState(e.target.files[0]);}catch(x){status(x.message,true);}e.target.value="";};
+$("restoreCustomerFrames").onclick=async()=>{try{await restoreCustomerFrames();}catch(e){status("Frame ပြန်ချိတ်မရပါ — "+e.message,true);}};
+ $("backup").onclick=exportState;$("importBackup").onchange=async e=>{try{await importState(e.target.files[0]);}catch(x){status(x.message,true);}e.target.value="";};
 $("downSection").onchange=()=>{$("oddsModeWrap").hidden=!("all"===$("downSection").value||"odds"===$("downSection").value||"oddsCards"===$("downSection").value);renderExportControls();};$("oddsMode").onchange=clearExportPreview;$("leagueFilter").onchange=renderMatchFilter;
 $("downFrame").onchange=clearExportPreview;$("matchFilter").onchange=clearExportPreview;
 $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();status("Published Data ပြန်ရယူပြီး။");}catch(e){status(e.message,true);}};
 (async()=>{try{
  initSectionLayouts();
  status("မူလ Website Export Engine နှစ်ခု ဖွင့်နေသည်…");await readyEngines();
- state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed(),cardUpgrade=migrateOddsCardsAssignment(),bannerUpgrade=upgradeOddsBanners(),previewV2Added=assignPreviewV2(),newV2Added=assignNewV2();if(migrated||added||cardUpgrade||bannerUpgrade||previewV2Added||newV2Added)await dbWrite(state);
+ state=await dbRead();normalize();
+ const migrated=migrateAssignments(),added=assignReferenceRed(),cardUpgrade=migrateOddsCardsAssignment(),
+ bannerUpgrade=upgradeOddsBanners(),previewV2Added=assignPreviewV2(),newV2Added=assignNewV2(),
+ recovered=restoreMissingPlacements();
+ if(migrated||added||cardUpgrade||bannerUpgrade||previewV2Added||newV2Added||recovered){
+  await dbWrite(state);
+  await Promise.all([home.contentWindow.FutureCodeProfessionalFrames.reloadWorkspace(),
+                     odds.contentWindow.FutureCodeProfessionalFrames.reloadWorkspace()]);
+ }
  let loadFailure=null;try{await loadData();}catch(e){loadFailure=e;}
  currentId=state.frames[0]?.id||"";$("oddsModeWrap").hidden=false;renderList();renderEditor();renderExportControls();
  status(loadFailure?"Frame Editor ဖွင့်ပြီး၊ Published Data မရသေးပါ — "+loadFailure.message:"Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။",!!loadFailure);
