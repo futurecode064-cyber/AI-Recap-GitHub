@@ -28,7 +28,7 @@
     return box;
   }
   function appendPng(source,m){
-    if(!source||typeof source.getContext!=="function")return source;
+    if(!source||typeof source.getContext!=="function"||source.__fcEditorialChoiceAdded)return source;
     const width=source.width,height=source.height,extra=Math.max(100,Math.round(width*.085));
     const out=document.createElement("canvas");
     out.width=width;out.height=height+extra;
@@ -43,6 +43,7 @@
     ctx.fillStyle="#f9cd67";ctx.textBaseline="middle";ctx.textAlign="center";
     ctx.font="900 "+Math.round(width*.028)+'px "Noto Sans Myanmar",sans-serif';
     ctx.fillText(line(m),width/2,top+boxHeight/2,width-2*margin-24);
+    out.__fcEditorialChoiceAdded=true;
     return out;
   }
   window.FutureCodeEditorialChoice=Object.freeze({pick,line,element,appendPng});
