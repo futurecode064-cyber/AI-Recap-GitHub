@@ -36,7 +36,7 @@
   const list=matches.filter(m=>league==="all"||m.league===league);
   for(const m of list){
    const item=document.createElement("article");item.className="fc-r2-card";
-   const meta=document.createElement("div");meta.className="fc-r2-meta";meta.textContent=(m.leagueDisplay||m.league||"")+" · "+date+" · Finished";
+   const meta=document.createElement("div");meta.className="fc-r2-meta";meta.textContent=(m.leagueDisplay||m.league||"")+" · "+date+" · "+(m.resultPeriod==="AET"?"AET / အချိန်ပို":"FT / ပွဲပြီး")+(m.resultPeriod==="AET"?" · ပုံမှန်မိနစ် ၉၀ "+(m.regulationScore||"—"):"");
    const head=document.createElement("div");head.className="fc-r2-head";
    const home=document.createElement("strong"),away=document.createElement("strong"),score=document.createElement("span");score.className="fc-r2-score";
    home.textContent=team(m,"home");away.textContent=team(m,"away");score.textContent=plain(m.finalScore).replace(":"," - ");head.append(home,score,away);
@@ -77,7 +77,7 @@
   c.fillStyle="#081c2d";c.fillRect(0,0,W,H);if(topBanner)cover(c,topBanner,W,0,t);
   c.fillStyle="#174363";c.fillRect(15,t+9,W-30,302);
   c.textAlign="center";c.textBaseline="middle";c.fillStyle="#ffda89";c.font='800 23px "Noto Sans Myanmar",sans-serif';
-  c.fillText((m.leagueDisplay||m.league||"")+" · "+date+" · Finished",600,t+47,1130);
+  c.fillText((m.leagueDisplay||m.league||"")+" · "+date+" · "+(m.resultPeriod==="AET"?"AET (90 min "+(m.regulationScore||"—")+")":"FT"),600,t+47,1130);
   c.fillStyle="white";c.font='900 30px "Noto Sans Myanmar",sans-serif';c.fillText(team(m,"home"),245,t+160,420);c.fillText(team(m,"away"),955,t+160,420);
   c.font="900 63px Arial,sans-serif";c.fillStyle="#ffe19e";c.fillText(plain(m.finalScore).replace(":"," - "),600,t+163,235);ring(c,600,t+162,140,79);
   const y=t+330;c.fillStyle="#fff";c.fillRect(19,y,W-38,bodyH);
