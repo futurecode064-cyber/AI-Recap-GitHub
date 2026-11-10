@@ -7,6 +7,19 @@ const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odd
 let state=null,currentId="",isNew=false,working=false,published=null,oddsData=null,archive=null,news=null,date="",savedURL=null;
 const copy=o=>JSON.parse(JSON.stringify(o)),str=x=>String(x??"").trim();
 const goodColor=x=>/^#[\da-f]{6}$/i.test(x||"")?x:"#16486c";
+ let watermarkRemoved=false;
+ function watermarkDraft(image){
+  const old=frame(currentId)?.watermark||{};
+  return window.FCWatermark.settings({watermark:{...old,enabled:$("wmEnabled").checked,position:$("wmPosition").value,
+   x:Number($("wmX").value),y:Number($("wmY").value),opacity:Number($("wmOpacity").value),
+   size:Number($("wmSize").value),blur:Number($("wmBlur").value),
+   image:image===undefined?(watermarkRemoved?"":old.image||""):image}});
+ }
+ function watermarkValues(){
+  for(const id of ["Opacity","Size","Blur","X","Y"])$("wm"+id+"Value").textContent=$("wm"+id).value+(id==="Blur"?" px":"%");
+  $("wmCustomXY").hidden=$("wmPosition").value!=="custom";
+ }
+
 
 const layoutOptions={
  oddsCards:[["one","ပွဲအားလုံး PNG တစ်ပုံတည်း"],["two","ပွဲအားလုံး ၂ ပုံခွဲ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
@@ -53,7 +66,10 @@ function normalize(){
  if(!state||state.version!==2||!Array.isArray(state.frames))state={version:2,frames:[],selected:{},placements:{}};
  const w=home.contentWindow;
  for(const id of IDS)if(!frame(id)){const original=w.FutureCodeProfessionalFrames.getFrame(id);if(original)state.frames.push(original);}
- for(const f of state.frames)if(typeof f.downloadName!=="string")f.downloadName=f.name||"Frame";
+ for(const f of state.frames){
+  if(typeof f.downloadName!=="string")f.downloadName=f.name||"Frame";
+  f.watermark=window.FCWatermark.settings(f);
+ }
   if(state.frames.length>130)throw Error("Frame အရေအတွက် ၁၃၀ ကျော်ပါသည်။");
  for(const k of TYPES){state.placements[k]=[...new Set((Array.isArray(state.placements[k])?state.placements[k]:[]).filter(id=>!!frame(id)))];
   if(!assigned(state.selected[k],k))state.selected[k]="none";}
@@ -173,13 +189,18 @@ function realPreview(){
   color:goodColor($("frameColor").value),newsColors:readNewsColors(),newsPaletteTheme:goodColor($("frameColor").value),
   top:Number($("frameTop").value)||0,bottom:Number($("frameBottom").value)||0,
   fit:$("frameFit").value||"contain"};
+ config.watermark=watermarkDraft();
+ const logoFile=$("wmFile").files[0];
+ if(logoFile&&!watermarkRemoved){config.watermark.image=URL.createObjectURL(logoFile);urls.push(config.watermark.image);}
  for(const [id,key] of [["frameTopFile","topImage"],["frameBottomFile","bottomImage"]]){
   const file=$(id).files[0];if(file){config[key]=URL.createObjectURL(file);urls.push(config[key]);}
  }
  const newsMode=assigned(currentId,"news")||$("librarySection").value==="news"||!!$("scopeChecks").querySelector('input[value="news"]:checked');
  const story=news?.items?.find(s=>s.image&&!/crest|လိုဂို/i.test(s.imageAlt||""))||news?.items?.find(s=>s.image);
  const render=newsMode&&story&&w.FutureCodeNewsFrameExport?.renderDraft?w.FutureCodeNewsFrameExport.renderDraft(story,config):api.renderSample(config);
- render.then(canvas=>{
+ render.then(async canvas=>{
+  if(token!==previewSequence||currentId!==id||isNew!==creating)return;
+  await window.FCWatermark.draw(canvas,config);
   if(token!==previewSequence||currentId!==id||isNew!==creating)return;
   $("previewImage").src=canvas.toDataURL("image/png");
   $("previewImage").hidden=false;$("previewMock").hidden=true;
@@ -196,11 +217,17 @@ function showEditor(){
   if(isNew){const section=$("librarySection").value;
    $("frameCreateHelp").textContent="အဆင့် ၁ — Frame နာမည်ရေးပါ။ အဆင့် ၂ — Top/Bottom Banner တင်ပါ။ အဆင့် ၃ — အောက်မှာ အသုံးပြုမည့် Section ကို ရွေးပါ"+(section!=="all"?" ("+SECTION[section]+" ကို ကြိုရွေးထားပါတယ်)":"")+"။ အဆင့် ၄ — ‘＋ Frame အသစ် ထည့်သွင်းမယ်’ ကိုနှိပ်ပါ။";}
  if(!f&&!isNew)return;
- const v=f||{name:"",color:"#194b75",top:110,bottom:75,fit:"contain",topImage:"",bottomImage:""};
+ const v=f||{name:"",color:"#194b75",top:110,bottom:75,fit:"contain",topImage:"",bottomImage:""};watermarkRemoved=false;
  $("frameName").value=v.name;$("frameDownloadName").value=v.downloadName||v.name;$("frameDownloadName").dataset.customName=(v.downloadName&&v.downloadName!==v.name)?"1":"";$("frameColor").value=goodColor(v.color);
  initNewsColors();fillNewsColors(paletteApi().resolve(v));
  $("frameTop").value=v.top;$("frameBottom").value=v.bottom;$("frameFit").value=v.fit;
- $("frameTopFile").value=$("frameBottomFile").value="";
+ $("frameTopFile").value=$("frameBottomFile").value=$("wmFile").value="";
+ const wm=window.FCWatermark.settings(v);
+ $("wmEnabled").checked=wm.enabled;$("wmPosition").value=wm.position;
+ $("wmOpacity").value=String(wm.opacity);$("wmSize").value=String(wm.size);
+ $("wmBlur").value=String(wm.blur);$("wmX").value=String(wm.x);$("wmY").value=String(wm.y);
+ $("wmFileState").textContent=wm.image?"Logo သိမ်းထားပြီး · PNG/ZIP တွင် ထည့်နိုင်ပါသည်။":"Watermark Logo မတင်ရသေးပါ။";
+ watermarkValues();
  $("topFileState").textContent=v.topImage?"ကိုယ်ပိုင်ပုံ ရှိသည်":"မူရင်း Banner / အရောင်";
  $("bottomFileState").textContent=v.bottomImage?"ကိုယ်ပိုင်ပုံ ရှိသည်":"မူရင်း Banner / အရောင်";
  $("scopeChecks").replaceChildren();
@@ -229,6 +256,16 @@ async function compress(file){
  if(data.length>=12000000)throw Error("Banner data 12MB ကျော်နေပါသည်။");
  return data;
 }
+async function readLogo(file){
+ if(!file)return null;
+ if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>8000000)throw Error("Watermark Logo အတွက် PNG/JPG/WebP 8 MB အောက်သာ ရွေးပါ။");
+ const bitmap=await createImageBitmap(file);
+ try{if(bitmap.width<32||bitmap.height<32)throw Error("Watermark Logo အနည်းဆုံး 32×32 px လိုအပ်ပါသည်။");}
+ finally{bitmap.close();}
+ const data=await new Promise((ok,bad)=>{const reader=new FileReader();reader.onload=()=>ok(reader.result);reader.onerror=()=>bad(reader.error||Error("Watermark Logo ဖတ်မရပါ"));reader.readAsDataURL(file);});
+ if(data.length>=12000000)throw Error("Watermark Logo ဖိုင် ကြီးလွန်းပါသည်။");
+ return data;
+}
 async function submit(){
  if(working)return;
  const prior=frame(currentId),fresh=isNew;
@@ -238,10 +275,13 @@ async function submit(){
  if(!Number.isFinite(top)||!Number.isFinite(bottom)||top<0||bottom<0||top>360||bottom>360||top+bottom>650)throw Error("Banner အမြင့် မမှန်ပါ။");
  if(fresh&&frames().length>=130)throw Error("Frame ၁၃၀ မျိုး ပြည့်နေပါပြီ။");
  const topImage=await compress($("frameTopFile").files[0]),bottomImage=await compress($("frameBottomFile").files[0]);
+ const logo=await readLogo($("wmFile").files[0]);
  const id=fresh?"pro-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7):prior.id;
  const downloadName=str($("frameDownloadName").value).slice(0,100)||name;
   const item={...(prior||{id,builtin:false,topImage:"",bottomImage:""}),name,downloadName,color:goodColor($("frameColor").value),fit:["contain","cover","stretch"].includes($("frameFit").value)?$("frameFit").value:"contain",top:Math.round(top),bottom:Math.round(bottom)};
  item.newsColors=readNewsColors();item.newsPaletteTheme=item.color;
+ item.watermark=watermarkDraft(logo!==null?logo:undefined);
+ if(item.watermark.enabled&&!item.watermark.image)throw Error("Watermark ON ထားလျှင် Logo Upload လုပ်ပါ။");
  if(topImage!==null)item.topImage=topImage;if(bottomImage!==null)item.bottomImage=bottomImage;
  const scopes=[...$("scopeChecks").querySelectorAll("input:checked")].map(x=>x.value);
   if(fresh&&!scopes.length)throw Error("Frame အသစ်အတွက် Section အနည်းဆုံး ၁ ခု အမှန်ခြစ်ရွေးပါ။");
@@ -261,7 +301,8 @@ async function importState(file){
  if(!file||file.size>100000000)throw Error("JSON Backup 100MB အောက်လိုပါသည်။");
  const v=JSON.parse(await file.text());if(v?.version!==2||!Array.isArray(v.frames)||v.frames.length>130||!v.placements||!v.selected)throw Error("Frame Studio Backup v2 မဟုတ်ပါ။");
  const seen=new Set();
- for(const f of v.frames){if(!f||!(/^[a-z0-9-]{2,60}$/.test(f.id))||seen.has(f.id)||!/^#[\da-f]{6}$/i.test(f.color||"")||String(f.topImage||"").length>=12000000||String(f.bottomImage||"").length>=12000000)throw Error("Frame Backup မမှန်ပါ");seen.add(f.id);}
+ for(const f of v.frames){if(!f||!(/^[a-z0-9-]{2,60}$/.test(f.id))||seen.has(f.id)||!/^#[\da-f]{6}$/i.test(f.color||"")||String(f.topImage||"").length>=12000000||String(f.bottomImage||"").length>=12000000||
+  (f.watermark?.image&&(!/^data:image\/(png|jpeg|webp);base64,/i.test(f.watermark.image)||f.watermark.image.length>=12000000)))throw Error("Frame Backup မမှန်ပါ");seen.add(f.id);}
  state=v;normalize();currentId=state.frames[0]?.id||"";await save("Backup Import ပြီးပါပြီ။");
 }
 function renderExportControls(){
@@ -321,6 +362,25 @@ $("search").oninput=renderList;$("librarySection").onchange=renderList;
  $("scopeNone").onclick=()=>{$("scopeChecks").querySelectorAll('input[type="checkbox"]').forEach(x=>x.checked=false);};
  $("frameColor").oninput=()=>{$("previewMock").style.setProperty("--frame-color",goodColor($("frameColor").value));fillNewsColors(paletteApi().defaults(goodColor($("frameColor").value)));schedulePreview();};
  for(const input of ["frameTop","frameBottom","frameFit"])$(input).addEventListener("input",schedulePreview);
+ for(const input of ["wmEnabled","wmPosition","wmOpacity","wmSize","wmBlur","wmX","wmY"]){
+  $(input).addEventListener("input",()=>{watermarkValues();schedulePreview();});
+ }
+ $("wmFile").addEventListener("change",async()=>{
+  const file=$("wmFile").files[0];
+  if(!file){schedulePreview();return;}
+  try{
+   if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>8000000)throw Error("Logo PNG/JPG/WebP 8MB အောက်သာ ရွေးပါ။");
+   const bmp=await createImageBitmap(file);const w=bmp.width,h=bmp.height;bmp.close();
+   if(w<32||h<32)throw Error("Watermark Logo အနည်းဆုံး 32×32 px လိုအပ်ပါသည်။");
+   watermarkRemoved=false;$("wmEnabled").checked=true;
+   $("wmFileState").textContent="Logo "+w+"×"+h+" px ရွေးပြီး · Save နှိပ်လျှင် သိမ်းမည်။";
+   schedulePreview();
+  }catch(err){$("wmFile").value="";status(err.message,true);schedulePreview();}
+ });
+ $("wmRemove").onclick=()=>{
+  watermarkRemoved=true;$("wmFile").value="";$("wmEnabled").checked=false;
+  $("wmFileState").textContent="Logo ဖြုတ်ရန် ရွေးထားပြီး · Save နှိပ်ပါ။";schedulePreview();
+ };
  async function selectedBanner(side){
   const file=$(side==="top"?"frameTopFile":"frameBottomFile").files[0];
   if(!file){schedulePreview();return;}
