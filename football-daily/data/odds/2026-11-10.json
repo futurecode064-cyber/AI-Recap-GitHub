@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-11-10",
-  "priceStatus": "unavailable: owner PDF not supplied; blank intentionally",
+  "priceStatus": "Owner three selected Copa del Rey fixtures priced from screenshot; all other entries retain blank prices",
   "sourcePDF": null,
   "sourceRows": 28,
   "priceSheetType": "unpriced verified fixtures; no fabricated prices",
@@ -25,19 +25,121 @@
       "status": "scheduled",
       "sourceFixtureKickoffUTC": "2026-11-10T18:00:00Z",
       "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa",
-      "homeOdds": "",
-      "drawOdds": "",
-      "awayOdds": "",
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeOdds": "11.00",
+      "drawOdds": "7.00",
+      "awayOdds": "1.20",
+      "homeLastFive": [
+        {
+          "date": "2026-11-07",
+          "opponent": "CD Beti Onak",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/pamplona"
+        },
+        {
+          "date": "2026-10-31",
+          "opponent": "CD Valle de Egüés",
+          "teamGoals": 2,
+          "opponentGoals": 4,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/pamplona"
+        },
+        {
+          "date": "2026-10-24",
+          "opponent": "UDC Txantrea",
+          "teamGoals": 1,
+          "opponentGoals": 5,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/pamplona"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Gazte Berriak",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/pamplona"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "CD Izarra",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/pamplona"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-10-31",
+          "opponent": "UD Almería",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-US/clubs/sd-eibar/results"
+        },
+        {
+          "date": "2026-10-24",
+          "opponent": "Córdoba CF",
+          "teamGoals": 0,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-US/clubs/sd-eibar/results"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "RCD Mallorca",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-US/clubs/sd-eibar/results"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "Real Oviedo",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-US/clubs/sd-eibar/results"
+        },
+        {
+          "date": "2026-10-03",
+          "opponent": "Albacete BP",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-US/clubs/sd-eibar/results"
+        }
+      ],
       "homeStanding": null,
       "awayStanding": null,
       "formStatus": "unavailable; no date-scoped verified last-five for both clubs, including U21",
       "standingsStatus": "unavailable; no consistent current source",
       "myanmarOdds": {
-        "upperTeam": "",
-        "bodyOdds": "",
-        "goalTotalOdds": "",
+        "upperTeam": "အိုင်ဘာ",
+        "bodyOdds": "၂+၃၀",
+        "goalTotalOdds": "၃-၁၅",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
@@ -45,9 +147,9 @@
       "currentGoalTotalOdds": "",
       "internetPrediction": "",
       "sourcePredictionType": "not supplied, not inferred",
-      "oddsSourceUrl": "",
+      "oddsSourceUrl": "https://oddsrun.com/match/football/es/425/13412567/spain-copa-del-rey/cd-pamplona-vs-eibar/",
       "oddsVerifiedDate": null,
-      "oddsProvider": null,
+      "oddsProvider": "Bet365 1X2 via OddsRun comparison (snapshot Nov 10); 3rd match official Trival home orientation",
       "priceStatus": "blank: owner did not provide 10 November bookmaker PDF",
       "sourcePDF": null,
       "homeCrestUrl": "",
@@ -73,11 +175,12 @@
       ],
       "canonicalHome": "CD Pamplona",
       "canonicalAway": "SD Eibar",
-      "upperTeam": "",
-      "bodyOdds": "",
-      "goalTotalOdds": "",
-      "pdfLastColumn": "",
-      "eligibleForPreview": true
+      "upperTeam": "အိုင်ဘာ",
+      "bodyOdds": "၂+၃၀",
+      "goalTotalOdds": "၃-၁၅",
+      "pdfLastColumn": "၁-၃",
+      "eligibleForPreview": true,
+      "priceSource": "2026-11-10 user screenshot; original opening Myanmar odds only"
     },
     {
       "fixtureId": "fc-20261110-02",
@@ -247,19 +350,121 @@
       "status": "scheduled",
       "sourceFixtureKickoffUTC": "2026-11-10T19:00:00Z",
       "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa",
-      "homeOdds": "",
-      "drawOdds": "",
-      "awayOdds": "",
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeOdds": "23.00",
+      "drawOdds": "8.50",
+      "awayOdds": "1.13",
+      "homeLastFive": [
+        {
+          "date": "2026-11-08",
+          "opponent": "Rayo Ciudad Alcobendas",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/trival-valderas"
+        },
+        {
+          "date": "2026-11-01",
+          "opponent": "CD Galapagar",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/trival-valderas"
+        },
+        {
+          "date": "2026-10-25",
+          "opponent": "CD Leganés B",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "D",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/trival-valderas"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Cala Pozuelo",
+          "teamGoals": 2,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/trival-valderas"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "Rayo Vallecano B",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "Tercera Federación",
+          "sourceUrl": "https://www.besoccer.com/team/matches/trival-valderas"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-11-07",
+          "opponent": "Albacete BP",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-GB/clubs/cd-leganes/results"
+        },
+        {
+          "date": "2026-11-02",
+          "opponent": "Real Valladolid",
+          "teamGoals": 3,
+          "opponentGoals": 4,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-GB/clubs/cd-leganes/results"
+        },
+        {
+          "date": "2026-10-24",
+          "opponent": "RCD Mallorca",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-GB/clubs/cd-leganes/results"
+        },
+        {
+          "date": "2026-10-16",
+          "opponent": "Córdoba CF",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-GB/clubs/cd-leganes/results"
+        },
+        {
+          "date": "2026-10-11",
+          "opponent": "UD Almería",
+          "teamGoals": 0,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "LaLiga Hypermotion",
+          "sourceUrl": "https://www.laliga.com/en-GB/clubs/cd-leganes/results"
+        }
+      ],
       "homeStanding": null,
       "awayStanding": null,
       "formStatus": "unavailable; no date-scoped verified last-five for both clubs, including U21",
       "standingsStatus": "unavailable; no consistent current source",
       "myanmarOdds": {
-        "upperTeam": "",
-        "bodyOdds": "",
-        "goalTotalOdds": "",
+        "upperTeam": "လီဂါနက်စ်",
+        "bodyOdds": "၂-၁၀",
+        "goalTotalOdds": "၃-=",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
@@ -267,9 +472,9 @@
       "currentGoalTotalOdds": "",
       "internetPrediction": "",
       "sourcePredictionType": "not supplied, not inferred",
-      "oddsSourceUrl": "",
+      "oddsSourceUrl": "https://oddsrun.com/match/football/es/425/13374060/spain-copa-del-rey/trival-valderas-vs-leganes/",
       "oddsVerifiedDate": null,
-      "oddsProvider": null,
+      "oddsProvider": "Bet365 1X2 via OddsRun comparison (snapshot Nov 10); 3rd match official Trival home orientation",
       "priceStatus": "blank: owner did not provide 10 November bookmaker PDF",
       "sourcePDF": null,
       "homeCrestUrl": "",
@@ -295,11 +500,13 @@
       ],
       "canonicalHome": "CF Trival Valderas Alcorcón",
       "canonicalAway": "CD Leganés",
-      "upperTeam": "",
-      "bodyOdds": "",
-      "goalTotalOdds": "",
-      "pdfLastColumn": "",
-      "eligibleForPreview": true
+      "upperTeam": "လီဂါနက်စ်",
+      "bodyOdds": "၂-၁၀",
+      "goalTotalOdds": "၃-=",
+      "pdfLastColumn": "၀-၃",
+      "eligibleForPreview": true,
+      "priceSource": "2026-11-10 user screenshot; original opening Myanmar odds only",
+      "pdfForecastOrderNote": "Original screenshot shows Leganés first and ၃-၀; official home Trival first, equivalent ၀-၃; handicap still quoted on Leganés"
     },
     {
       "fixtureId": "fc-20261110-05",
@@ -321,19 +528,121 @@
       "status": "scheduled",
       "sourceFixtureKickoffUTC": "2026-11-10T19:00:00Z",
       "fixtureSourceUrl": "https://rfef.es/es/noticias/actualizado-el-calendario-de-los-partidos-aplazados-de-la-copa-del-rey-mapfre-y-de-la-copa",
-      "homeOdds": "",
-      "drawOdds": "",
-      "awayOdds": "",
-      "homeLastFive": [],
-      "awayLastFive": [],
+      "homeOdds": "3.30",
+      "drawOdds": "3.50",
+      "awayOdds": "2.10",
+      "homeLastFive": [
+        {
+          "date": "2026-11-07",
+          "opponent": "CD Basconia",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        },
+        {
+          "date": "2026-11-01",
+          "opponent": "Gimnástica Torrelavega",
+          "teamGoals": 1,
+          "opponentGoals": 0,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-24",
+          "opponent": "Coruxo FC",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "W",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-17",
+          "opponent": "SD Gernika",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-10",
+          "opponent": "Portugalete",
+          "teamGoals": 1,
+          "opponentGoals": 2,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        }
+      ],
+      "awayLastFive": [
+        {
+          "date": "2026-11-07",
+          "opponent": "Racing Ferrol",
+          "teamGoals": 2,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-31",
+          "opponent": "CD Mirandés",
+          "teamGoals": 0,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "L",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-24",
+          "opponent": "Real Avilés CF",
+          "teamGoals": 3,
+          "opponentGoals": 1,
+          "venueSide": "away",
+          "result": "W",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-18",
+          "opponent": "Cultural Leonesa",
+          "teamGoals": 1,
+          "opponentGoals": 1,
+          "venueSide": "home",
+          "result": "D",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        },
+        {
+          "date": "2026-10-12",
+          "opponent": "CD Lugo",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "venueSide": "away",
+          "result": "L",
+          "competition": "Segunda / Primera Federación",
+          "sourceUrl": "https://www.tntsports.co.uk/football/copa-del-rey-mapfre/2026-2027/live-sd-amorebieta-ud-logrones_mtc22013011/live-stats.shtml"
+        }
+      ],
       "homeStanding": null,
       "awayStanding": null,
       "formStatus": "unavailable; no date-scoped verified last-five for both clubs, including U21",
       "standingsStatus": "unavailable; no consistent current source",
       "myanmarOdds": {
-        "upperTeam": "",
-        "bodyOdds": "",
-        "goalTotalOdds": "",
+        "upperTeam": "လိုဂရိုးညက်စ်",
+        "bodyOdds": "-၇၅",
+        "goalTotalOdds": "၃+၈၀",
         "currentBodyOdds": "",
         "currentGoalTotalOdds": ""
       },
@@ -341,9 +650,9 @@
       "currentGoalTotalOdds": "",
       "internetPrediction": "",
       "sourcePredictionType": "not supplied, not inferred",
-      "oddsSourceUrl": "",
+      "oddsSourceUrl": "https://oddsrun.com/match/football/es/425/13412963/spain-copa-del-rey/amorebieta-vs-ud-logrones/",
       "oddsVerifiedDate": null,
-      "oddsProvider": null,
+      "oddsProvider": "Bet365 1X2 via OddsRun comparison (snapshot Nov 10); 3rd match official Trival home orientation",
       "priceStatus": "blank: owner did not provide 10 November bookmaker PDF",
       "sourcePDF": null,
       "homeCrestUrl": "",
@@ -369,11 +678,12 @@
       ],
       "canonicalHome": "SD Amorebieta",
       "canonicalAway": "UD Logroñés",
-      "upperTeam": "",
-      "bodyOdds": "",
-      "goalTotalOdds": "",
-      "pdfLastColumn": "",
-      "eligibleForPreview": true
+      "upperTeam": "လိုဂရိုးညက်စ်",
+      "bodyOdds": "-၇၅",
+      "goalTotalOdds": "၃+၈၀",
+      "pdfLastColumn": "၁-၂",
+      "eligibleForPreview": true,
+      "priceSource": "2026-11-10 user screenshot; original opening Myanmar odds only"
     },
     {
       "fixtureId": "fc-20261110-06",
