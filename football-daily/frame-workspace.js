@@ -1,9 +1,9 @@
 "use strict";
 (function(){
 const $=id=>document.getElementById(id);
-const SECTION={odds:"ပေါက်ကြေး",oddsCards:"မြန်မာကြေးကတ်ပုံစံ",previews:"ပွဲကြိုသုံးသပ်ချက်",previewsV2:"ပွဲကြိုသုံးသပ်ချက် Version 2",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"VIP Internet · Bookies · AI Tips",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
+const SECTION={odds:"ပေါက်ကြေး",oddsV2:"ပေါက်ကြေး Version 2",oddsCards:"မြန်မာကြေးကတ်ပုံစံ",resultsV2:"ဂိုးရလဒ် Version 2",previews:"ပွဲကြိုသုံးသပ်ချက်",previewsV2:"ပွဲကြိုသုံးသပ်ချက် Version 2",specials:"Special Choice",results:"ဂိုးရလဒ်",ai:"VIP Internet · Bookies · AI Tips",news:"ဘောလုံးသတင်း"},TYPES=Object.keys(SECTION);
 const home=$("engineHome"),odds=$("engineOdds"),DB="future-code-professional-frame-studio-v2";
-const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odds-hyper-goal","odds-kmm","odds-special-one","odds-the-freedom","odds-bcf","odds-final-goal","odds-ko-chan","odds-team-pmm","odds-thuta","odds-ymc","odds-ko-tut-pi","odds-khin-khin-htar","odds-burmese-red","preview-v2-blue","preview-bcf","preview-daily","preview-final","preview-ggoal","preview-ko","preview-pmm","preview-htet","results-best","results-htet","results-kotwat","ai-best","ai-final","ai-special","news-journal","special-choice"];
+const IDS=["navy","gold","red","green","odds-best","odds-htet","odds-ggoal","odds-hyper-goal","odds-kmm","odds-special-one","odds-the-freedom","odds-bcf","odds-final-goal","odds-ko-chan","odds-team-pmm","odds-thuta","odds-ymc","odds-ko-tut-pi","odds-khin-khin-htar","odds-burmese-red","odds-v2-classic","results-v2-classic","preview-v2-blue","preview-bcf","preview-daily","preview-final","preview-ggoal","preview-ko","preview-pmm","preview-htet","results-best","results-htet","results-kotwat","ai-best","ai-final","ai-special","news-journal","special-choice"];
 let state=null,currentId="",isNew=false,working=false,published=null,oddsData=null,archive=null,news=null,date="",savedURL=null;
 const copy=o=>JSON.parse(JSON.stringify(o)),str=x=>String(x??"").trim();
 const goodColor=x=>/^#[\da-f]{6}$/i.test(x||"")?x:"#16486c";
@@ -24,6 +24,8 @@ const goodColor=x=>/^#[\da-f]{6}$/i.test(x||"")?x:"#16486c";
 const layoutOptions={
  oddsCards:[["one","ပွဲအားလုံး PNG တစ်ပုံတည်း"],["two","ပွဲအားလုံး ၂ ပုံခွဲ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  odds:[["two","ပွဲအားလုံးကို PNG ၂ ပုံခွဲ"],["one","ပွဲအားလုံး PNG တစ်ပုံတည်း"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
+ oddsV2:[["two","Logo-free ဇယား PNG ၂ ပုံခွဲ"],["one","Logo-free ဇယား ၁ ပုံ"],["pair","၂ ပွဲစီ ဇယားတစ်ပုံ"],["league","လိဂ်တစ်ခုစီ ဇယားတစ်ပုံ"]],
+ resultsV2:[["one","မူရင်းကတ် + ဂိုးရလဒ် တစ်ပွဲတစ်ပုံ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  previews:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
   previewsV2:[["one","တစ်ပွဲတစ်ပုံ"],["pair","၂ ပွဲ တစ်ပုံ"],["triple","၃ ပွဲ တစ်ပုံ"]],
  specials:[["one","တစ်ပွဲတစ်ပုံ"],["two","၂ ပွဲ တစ်ပုံ"]],
@@ -31,7 +33,7 @@ const layoutOptions={
  ai:[["one","VIP / Bookies / AI ဇယား တစ်ပုံ"],["two","ဇယားကို PNG ၂ ပုံခွဲ"],["pair","၂ ပွဲကို PNG တစ်ပုံ"],["league","လိဂ်တစ်ခုလျှင် တစ်ပုံ"]],
  news:[["one","တစ်ပုဒ်တစ်ပုံ"],["two","သတင်း ၂ ပုဒ် တစ်ပုံ"]]
 };
-const layoutDefaults={odds:"two",oddsCards:"one",previews:"one",previewsV2:"pair",specials:"one",results:"one",ai:"one",news:"one"};
+const layoutDefaults={odds:"two",oddsV2:"two",oddsCards:"one",previews:"one",previewsV2:"pair",specials:"one",results:"one",resultsV2:"one",ai:"one",news:"one"};
 let sectionLayouts={...layoutDefaults};
 try{const from=JSON.parse(localStorage.getItem("fc-frame-section-layout-v1")||"{}");for(const k of TYPES)if(layoutOptions[k].some(opt=>opt[0]===from[k]))sectionLayouts[k]=from[k];}catch(e){console.warn("Frame layouts read",e);}
 function initSectionLayouts(){
@@ -74,6 +76,15 @@ function normalize(){
  for(const k of TYPES){state.placements[k]=[...new Set((Array.isArray(state.placements[k])?state.placements[k]:[]).filter(id=>!!frame(id)))];
   if(!assigned(state.selected[k],k))state.selected[k]="none";}
 }
+function assignNewV2(){
+ if(localStorage.getItem("fc-new-v2-sections-assigned-v1"))return false;
+ let changed=false;
+ for(const [key,id] of [["resultsV2","results-v2-classic"],["oddsV2","odds-v2-classic"]]){
+  if(frame(id)&&!state.placements[key].length){state.placements[key].push(id);state.selected[key]=id;changed=true;}
+ }
+ localStorage.setItem("fc-new-v2-sections-assigned-v1","1");
+ return changed;
+}
 function assignPreviewV2(){
  if(localStorage.getItem("fc-preview-v2-assignment-v1"))return false;
  const id="preview-v2-blue";if(!frame(id))return false;
@@ -114,14 +125,14 @@ function migrateOddsCardsAssignment(){
 function migrateAssignments(){
  if(localStorage.getItem("fc-workspace-assignments-v1"))return false;
  let changed=false;
- for(const f of frames()){const k=f.id.startsWith("odds-")?"odds":f.id.startsWith("preview-")?"previews":f.id.startsWith("results-")?"results":f.id.startsWith("ai-")?"ai":f.id==="news-journal"?"news":f.id==="special-choice"?"specials":null;
+ for(const f of frames()){const k=f.id==="odds-v2-classic"?"oddsV2":f.id==="results-v2-classic"?"resultsV2":f.id.startsWith("odds-")?"odds":f.id.startsWith("preview-")?"previews":f.id.startsWith("results-")?"results":f.id.startsWith("ai-")?"ai":f.id==="news-journal"?"news":f.id==="special-choice"?"specials":null;
   if(k&&!assigned(f.id,k)){state.placements[k].push(f.id);changed=true;}}
  localStorage.setItem("fc-workspace-assignments-v1","yes");return changed;
 }
 async function readyEngines(){
- await waitFor(()=>home.contentWindow?.FutureCodeNewsPalette&&home.contentWindow?.FutureCodeNewsFrameExport?.renderDraft&&home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodePreviewV2?.render&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob&&home.contentWindow?.FutureCodeFrameZip?.Archive);
+ await waitFor(()=>home.contentWindow?.FutureCodeNewsPalette&&home.contentWindow?.FutureCodeNewsFrameExport?.renderDraft&&home.contentWindow?.FutureCodeProfessionalFrames?.ready&&home.contentWindow?.FutureCodeFramePreview?.render&&home.contentWindow?.FutureCodePreviewV2?.render&&home.contentWindow?.FutureCodeResultsV2?.renderCanvas&&home.contentWindow?.FutureCodeResultsFrames?.makePng&&home.contentWindow?.FutureCodeAiBulkExport?.renderBlob&&home.contentWindow?.FutureCodeFrameZip?.Archive);
  await home.contentWindow.FutureCodeProfessionalFrames.ready;
- await waitFor(()=>odds.contentWindow?.FutureCodeProfessionalFrames?.ready&&odds.contentWindow?.FutureCodeTableOddsFrames?.draw&&odds.contentWindow?.FutureCodeBurmeseRedOddsFrame?.draw&&odds.contentWindow?.FutureCodeFrameEditor?.getOddsSheet);
+ await waitFor(()=>odds.contentWindow?.FutureCodeProfessionalFrames?.ready&&odds.contentWindow?.FutureCodeTableOddsFrames?.draw&&odds.contentWindow?.FutureCodeOddsV2?.renderCanvas&&odds.contentWindow?.FutureCodeBurmeseRedOddsFrame?.draw&&odds.contentWindow?.FutureCodeFrameEditor?.getOddsSheet);
  await odds.contentWindow.FutureCodeProfessionalFrames.ready;
 }
 function reloadOne(el){return new Promise(ok=>{el.addEventListener("load",ok,{once:true});const u=new URL(el.src,location.href);u.searchParams.set("workspaceReload",String(Date.now()));el.src=u.href;});}
@@ -146,7 +157,7 @@ async function loadData(){
  ]);
  $("reportDate").textContent=date+" · ပွဲ "+data.matches.length;
 }
-const rawData=k=>(k==="odds"||k==="oddsCards")?(oddsData?.matches||[]):k==="results"?(archive?.matches||[]).filter(m=>m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(m.finalScore||"")):k==="news"?(news?.items||[]):k==="specials"?(published?.matches||[]).filter(m=>m.specialChoice===true||m.specialAnalysisParagraphs?.length):(published?.matches||[]);
+const rawData=k=>(k==="odds"||k==="oddsCards"||k==="oddsV2")?(oddsData?.matches||[]):k==="results"||k==="resultsV2"?(archive?.matches||[]).filter(m=>m.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(m.finalScore||"")):k==="news"?(news?.items||[]):k==="specials"?(published?.matches||[]).filter(m=>m.specialChoice===true||m.specialAnalysisParagraphs?.length):(published?.matches||[]);
 const matchId=m=>m.fixtureId||m.id||m.home+"-"+m.away;
 const matchLabel=m=>m.title||((m.homeDisplay||m.home||"")+" VS "+(m.awayDisplay||m.away||""));
 function showList(){
@@ -426,7 +437,7 @@ $("refreshData").onclick=async()=>{try{await loadData();renderExportControls();s
 (async()=>{try{
  initSectionLayouts();
  status("မူလ Website Export Engine နှစ်ခု ဖွင့်နေသည်…");await readyEngines();
- state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed(),cardUpgrade=migrateOddsCardsAssignment(),bannerUpgrade=upgradeOddsBanners(),previewV2Added=assignPreviewV2();if(migrated||added||cardUpgrade||bannerUpgrade||previewV2Added)await dbWrite(state);
+ state=await dbRead();normalize();const migrated=migrateAssignments(),added=assignReferenceRed(),cardUpgrade=migrateOddsCardsAssignment(),bannerUpgrade=upgradeOddsBanners(),previewV2Added=assignPreviewV2(),newV2Added=assignNewV2();if(migrated||added||cardUpgrade||bannerUpgrade||previewV2Added||newV2Added)await dbWrite(state);
  let loadFailure=null;try{await loadData();}catch(e){loadFailure=e;}
  currentId=state.frames[0]?.id||"";$("oddsModeWrap").hidden=false;renderList();renderEditor();renderExportControls();
  status(loadFailure?"Frame Editor ဖွင့်ပြီး၊ Published Data မရသေးပါ — "+loadFailure.message:"Frame Editor အဆင်သင့် — မူရင်း Frame နှင့် Data မဖျက်ထားပါ။",!!loadFailure);
