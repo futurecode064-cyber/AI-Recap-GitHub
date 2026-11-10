@@ -1,95 +1,195 @@
 "use strict";
-/* Main-channel Results V2: only verified FT scores and archived pre-match prose. */
+/* MAIN only. Results V2 = exact archived PRE-MATCH V1 card plus verified FT header.
+   No rewriting of yesterday's odds, W/D/L, crests or full article. */
 (function(){
  if(document.documentElement.dataset.footballBrandName||!["/","/index.html"].includes(location.pathname))return;
- const $=s=>document.getElementById(s),plain=v=>String(v??"").replace(/\*\*/g,"").normalize("NFC").trim();
- const team=(m,s)=>plain(m[s+"Display"]||m[s]||"—");
+ const $=id=>document.getElementById(id);
+ const clean=v=>String(v??"").replace(/\*\*/g,"").normalize("NFC").trim();
+ const team=(m,side)=>clean(m[side+"Display"]||m[side]||"—");
  const choice=m=>window.FutureCodeEditorialChoice?.pick(m)||"အတည်မပြုရသေး";
- const verified=m=>m?.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(String(m.finalScore||""));
- const article=m=>plain(m.dailyPreviewText)||"မနေ့က ရေးသားထားသော ပွဲကြိုသုံးသပ်ချက် မရရှိပါ။";
+ const valid=m=>m?.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(clean(m.finalScore||""));
  const yesterday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Yangon",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).map(x=>[x.type,x.value]));const d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);};
- let date=yesterday(),matches=[],topBanner=null,bottomBanner=null,serial=0;
+ const period=m=>m.resultPeriod==="AET"?"AET · အချိန်ပိုပြီး":"FT · ပွဲပြီး";
+ const timeNote=m=>m.resultPeriod==="AET"?" · မိနစ် ၉၀ "+(m.regulationScore||"—"):"";
+ let selectedDate=yesterday(),matches=[],topBanner=null,bottomBanner=null,loadId=0;
  const css=document.createElement("style");
- css.textContent='.fc-result-v2{display:none;margin:22px 0;color:#eef6fc;font-family:"Noto Sans Myanmar",sans-serif}body[data-fc-main-view="resultsV2"] .fc-result-v2{display:block}'+
- 'body[data-fc-main-view="resultsV2"] :is(.content>.section-heading,.dashboard-bar,#filters,#sectionNote,#resultsDownloadBar,#matchList,#fcPreviewV2,#fcProbSection,#fcNewsSection,#fcAiScoreSection,#fcVideoStudio,#brandPreviewStudio,#brandOddsStudio){display:none!important}'+
- '.fc-result-v2 h2{color:#ffd071;font-size:27px}.fc-r2-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:end;padding:17px;background:#153448;border:1px solid #517d97;border-radius:13px}.fc-r2-tools label{display:grid;gap:5px;font-weight:750}.fc-r2-tools input,.fc-r2-tools select{font:700 13px "Noto Sans Myanmar",sans-serif;background:white;color:#143044;padding:10px;border-radius:7px;max-width:260px}.fc-r2-tools button,.fc-r2-save{padding:12px 17px;background:#e9bf66;color:#14283b;border:1px solid #ffe1a4;border-radius:8px;font:800 14px "Noto Sans Myanmar",sans-serif;cursor:pointer}.fc-r2-status{color:#ffe3a2;padding:14px 0}.fc-r2-list{display:grid;gap:22px}'+
- '.fc-r2-card{background:#092131;border:2px solid #bb9956;border-radius:12px;overflow:hidden}.fc-r2-meta{padding:12px;color:#f8d489}.fc-r2-head{display:grid;grid-template-columns:1fr 200px 1fr;gap:8px;align-items:center;padding:26px 12px;background:#134263;text-align:center}.fc-r2-head strong{font-size:23px;line-height:1.8;overflow-wrap:anywhere}.fc-r2-score{font:900 42px Arial,sans-serif;border:6px double #f03b39;border-radius:55%;padding:17px 8px;color:#ffe09b}'+
- '.fc-r2-text{margin:13px;padding:20px;background:#fff;color:#163346;border-radius:10px}.fc-r2-text h3{font-size:24px}.fc-r2-text p{font-size:20px;line-height:2;white-space:pre-line;overflow-wrap:anywhere}.fc-r2-pick{margin:12px auto;width:fit-content;max-width:95%;padding:13px 30px;border:6px double #fa3c35;border-radius:55%;font-size:23px;font-weight:900;color:#ffe096}.fc-r2-save{display:block;margin:16px auto}';
+ css.textContent=[
+ '.fc-result-v2{display:none;margin:22px 0 34px;color:#f0f6ff;font-family:"Noto Sans Myanmar",sans-serif}',
+ 'body[data-fc-main-view="resultsV2"] .fc-result-v2{display:block}',
+ 'body[data-fc-main-view="resultsV2"] :is(.content>.section-heading,.dashboard-bar,#filters,#sectionNote,#resultsDownloadBar,#matchList,#fcPreviewV2,#fcProbSection,#fcNewsSection,#fcAiScoreSection,#fcVideoStudio,#brandPreviewStudio,#brandOddsStudio){display:none!important}',
+ '.fc-result-v2 h2{font:900 26px/1.8 "Noto Sans Myanmar",sans-serif;color:#ffcf70}',
+ '.fc-r2-tools{display:flex;flex-wrap:wrap;align-items:end;gap:12px;background:#142e43;border:1px solid #5d8195;border-radius:12px;padding:16px}',
+ '.fc-r2-tools label{display:grid;gap:5px;font-size:13px;font-weight:800}',
+ '.fc-r2-tools input,.fc-r2-tools select{padding:10px;border:1px solid #90acb8;border-radius:7px;background:#fff;color:#17334a;font:700 13px "Noto Sans Myanmar",sans-serif;max-width:260px}',
+ '.fc-r2-tools button,.fc-r2-save{padding:12px 17px;background:#ebbf66;border:1px solid #ffe2a6;border-radius:8px;color:#162a3e;font:800 14px "Noto Sans Myanmar",sans-serif;cursor:pointer}',
+ '.fc-r2-save:disabled{opacity:.55;cursor:wait}.fc-r2-status{padding:13px 0;color:#ffe3a2;line-height:1.9}',
+ '.fc-r2-list{display:grid;gap:30px}',
+ '.fc-r2-card{background:#0a2032;border:2px solid #bf9855;border-radius:14px;overflow:hidden}',
+ '.fc-r2-scorehead{position:relative;background:linear-gradient(115deg,#06223c,#185179,#06223c);border-bottom:4px solid #edbd60;padding:14px 26px 23px;text-align:center}',
+ '.fc-r2-meta{color:#fff1cb;font-size:17px;font-weight:800;margin:5px 0 11px}',
+ '.fc-r2-scoreline{display:grid;grid-template-columns:minmax(0,1fr) 270px minmax(0,1fr);align-items:center;gap:12px}',
+ '.fc-r2-club{display:flex;align-items:center;justify-content:center;gap:12px;min-width:0;color:white;font:900 25px/1.6 "Noto Sans Myanmar",sans-serif}',
+ '.fc-r2-club img{height:83px;width:83px;object-fit:contain;flex-shrink:0}',
+ '.fc-r2-club strong{min-width:0;overflow-wrap:anywhere}',
+ '.fc-r2-score-wrap{display:flex;align-items:center;flex-direction:column;justify-content:center;gap:4px}',
+ '.fc-r2-score{border:7px solid #ef3631;border-radius:50%;padding:19px 12px;min-width:202px;min-height:113px;display:grid;place-items:center;color:#ffdf91;font:900 52px/1.15 Arial,sans-serif;transform:rotate(-4deg);box-shadow:0 0 0 4px #e83c2c30}',
+ '.fc-r2-state{color:#e5f1ff;font:800 14px/1.7 "Noto Sans Myanmar",sans-serif}',
+ '.fc-r2-original{margin:14px!important;max-width:none!important;box-sizing:border-box}',
+ '.fc-r2-original .analysis-body{display:block!important;overflow:visible!important;max-height:none!important}',
+ '.fc-r2-original .fc-editorial-selection{border:6px solid #ec362e!important;outline:4px solid #ee483480;border-radius:50%!important;padding:12px 28px!important;transform:rotate(-2deg);max-width:91%;box-shadow:none!important}',
+ '.fc-r2-download{display:block;margin:15px auto 22px}',
+ '@media(max-width:850px){.fc-r2-scoreline{grid-template-columns:1fr 165px 1fr;gap:3px}.fc-r2-score{min-width:144px;min-height:90px;font-size:32px;padding:9px}.fc-r2-club{font-size:15px;flex-direction:column}.fc-r2-club img{height:50px;width:50px}}'
+ ].join("\n");
  document.head.append(css);
- function readBanner(f){if(!f)return Promise.resolve(null);return new Promise(ok=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>ok(im);im.onerror=()=>ok(null);im.src=r.result;};r.onerror=()=>ok(null);r.readAsDataURL(f);});}
+ function readBanner(file){
+  if(!file)return Promise.resolve(null);
+  return new Promise(resolve=>{const reader=new FileReader();reader.onerror=()=>resolve(null);reader.onload=()=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=reader.result;};reader.readAsDataURL(file);});
+ }
  function setup(){
-  const home=$("fcPreviewV2");if(!home)return;
-  const s=document.createElement("section");s.className="fc-result-v2";s.id="fcResultsV2";
-  s.innerHTML='<h2>ဂိုးရလဒ် Version 2 · ပွဲကြိုသုံးသပ်ချက်နှင့် ရွေးချယ်မှု</h2><div class="fc-r2-tools">'+
-   '<label>ပွဲနေ့စွဲ<input type="date" id="fcR2Date"></label><label>လိဂ်ရွေးရန်<select id="fcR2League"><option value="all">လိဂ်အားလုံး</option></select></label>'+
-   '<label>အပေါ် Banner<input type="file" id="fcR2Top" accept="image/*"></label><label>အောက် Banner<input type="file" id="fcR2Bottom" accept="image/*"></label><button type="button" id="fcR2Refresh">↻ Refresh</button></div>'+
-   '<p class="fc-r2-status" role="status" id="fcR2Status">အတည်ပြုဂိုးရလဒ်များ ရယူနေပါသည်…</p><div class="fc-r2-list" id="fcR2List"></div>';
-  home.insertAdjacentElement("afterend",s);$("fcR2Date").value=date;
-  $("fcR2Date").onchange=()=>{date=$("fcR2Date").value||yesterday();load();};
-  $("fcR2League").onchange=render;$("fcR2Refresh").onclick=load;
-  $("fcR2Top").onchange=async e=>{topBanner=await readBanner(e.target.files?.[0]);};
-  $("fcR2Bottom").onchange=async e=>{bottomBanner=await readBanner(e.target.files?.[0]);};
+  const target=$("fcPreviewV2");if(!target)return;
+  const el=document.createElement("section");el.id="fcResultsV2";el.className="fc-result-v2";
+  el.innerHTML='<h2>ဂိုးရလဒ် Version 2 · မူရင်းပွဲကြိုကတ်အပြည့်အစုံ</h2><div class="fc-r2-tools">'+
+   '<label>ပွဲနေ့စွဲ<input id="fcR2Date" type="date"></label>'+
+   '<label>လိဂ်ရွေးရန်<select id="fcR2League"><option value="all">လိဂ်အားလုံး</option></select></label>'+
+   '<label>မိမိအပေါ် Banner<input id="fcR2Top" type="file" accept="image/*"></label>'+
+   '<label>မိမိအောက် Banner<input id="fcR2Bottom" type="file" accept="image/*"></label>'+
+   '<button id="fcR2Refresh" type="button">↻ Refresh</button></div>'+
+   '<p id="fcR2Status" class="fc-r2-status" role="status">မနေ့က ပွဲကြိုကတ်နှင့် အတည်ပြုဂိုးရလဒ် ရယူနေသည်…</p>'+
+   '<div id="fcR2List" class="fc-r2-list" aria-live="polite"></div>';
+  target.insertAdjacentElement("afterend",el);$("fcR2Date").value=selectedDate;
+  $("fcR2Date").onchange=()=>{selectedDate=$("fcR2Date").value||yesterday();load();};
+  $("fcR2League").onchange=render;
+  $("fcR2Refresh").onclick=load;
+  $("fcR2Top").onchange=async e=>topBanner=await readBanner(e.target.files?.[0]);
+  $("fcR2Bottom").onchange=async e=>bottomBanner=await readBanner(e.target.files?.[0]);
   load();
  }
+ function logo(src,name){
+  const frame=document.createElement("div");frame.className="fc-r2-club";
+  if(src){
+   const img=document.createElement("img");img.src=src;img.alt=name+" အသင်းလိုဂို";img.loading="lazy";
+   img.onerror=()=>img.remove();frame.append(img);
+  }
+  const label=document.createElement("strong");label.textContent=name;frame.append(label);
+  return frame;
+ }
+ function resultHeader(m){
+  const h=document.createElement("header");h.className="fc-r2-scorehead";
+  const meta=document.createElement("div");meta.className="fc-r2-meta";
+  meta.textContent=(m.leagueDisplay||m.league||"")+" · "+selectedDate+" · "+period(m)+timeNote(m);
+  const line=document.createElement("div");line.className="fc-r2-scoreline";
+  const middle=document.createElement("div");middle.className="fc-r2-score-wrap";
+  const score=document.createElement("strong");score.className="fc-r2-score";score.textContent=clean(m.finalScore).replace(":", " - ");
+  const state=document.createElement("small");state.className="fc-r2-state";state.textContent=period(m);
+  middle.append(score,state);
+  line.append(logo(m.homeCrestUrl,team(m,"home")),middle,logo(m.awayCrestUrl,team(m,"away")));
+  h.append(meta,line);return h;
+ }
  function render(){
-  const out=$("fcR2List"),league=$("fcR2League").value;out.replaceChildren();
-  const list=matches.filter(m=>league==="all"||m.league===league);
+  const root=$("fcR2List");if(!root)return;root.replaceChildren();
+  const group=$("fcR2League").value,list=matches.filter(m=>group==="all"||m.league===group);
   for(const m of list){
    const item=document.createElement("article");item.className="fc-r2-card";
-   const meta=document.createElement("div");meta.className="fc-r2-meta";meta.textContent=(m.leagueDisplay||m.league||"")+" · "+date+" · "+(m.resultPeriod==="AET"?"AET / အချိန်ပို":"FT / ပွဲပြီး")+(m.resultPeriod==="AET"?" · ပုံမှန်မိနစ် ၉၀ "+(m.regulationScore||"—"):"");
-   const head=document.createElement("div");head.className="fc-r2-head";
-   const home=document.createElement("strong"),away=document.createElement("strong"),score=document.createElement("span");score.className="fc-r2-score";
-   home.textContent=team(m,"home");away.textContent=team(m,"away");score.textContent=plain(m.finalScore).replace(":"," - ");head.append(home,score,away);
-   const txt=document.createElement("div");txt.className="fc-r2-text";
-   const h=document.createElement("h3");h.textContent="မနေ့က ပွဲကြိုသုံးသပ်ချက်";
-   const p=document.createElement("p");p.textContent=article(m);txt.append(h,p);
-   const selected=document.createElement("div");selected.className="fc-r2-pick";selected.textContent="ရွေးချယ်မှု - "+choice(m);
-   const btn=document.createElement("button");btn.className="fc-r2-save";btn.textContent="⬇ ဒီပွဲ Version 2 PNG Download";
-   btn.onclick=async()=>{btn.disabled=true;try{await png(m);$("fcR2Status").textContent="PNG Download စတင်ပြီးပါပြီ။";}catch(e){$("fcR2Status").textContent="PNG မထွက်ပါ — "+e.message;}finally{btn.disabled=false;}};
-   item.append(meta,head,txt,selected,btn);out.append(item);
+   item.append(resultHeader(m));
+   // This is the real V1 card generator. No rebuilding, shortening or replacing
+   // the archived pre-match club crests, last-five, 1X2, Myanmar odds or prose.
+   const original=window.FutureCodeMainPreviewCard?.renderOriginal(m);
+   if(!original){
+    const error=document.createElement("p");error.textContent="မူရင်း ပွဲကြိုကတ် module မရရှိပါ";item.append(error);
+   }else{
+    original.classList.add("fc-r2-original");
+    original.querySelector(".analysis-toggle")?.remove();
+    original.querySelector(".match-actions")?.remove();
+    const body=original.querySelector(".analysis-body");if(body){body.hidden=false;body.style.display="block";}
+    item.append(original);
+   }
+   const save=document.createElement("button");save.className="fc-r2-save fc-r2-download";save.type="button";
+   save.textContent="⬇ မူရင်းပွဲကြိုကတ် + အနီဝိုင်းရလဒ် PNG Download";
+   save.disabled=!original;
+   save.onclick=async()=>{
+    save.disabled=true;
+    try{await png(m);$("fcR2Status").textContent="PNG Download စတင်ပြီးပါပြီ။";}
+    catch(err){$("fcR2Status").textContent="PNG Download မအောင်မြင်ပါ — "+err.message;}
+    finally{save.disabled=false;}
+   };
+   item.append(save);root.append(item);
   }
-  $("fcR2Status").textContent=list.length+" ပွဲ · ဂိုးရလဒ်နှင့် မူရင်းရွေးချယ်မှုကို ဝိုင်းပြထားပါသည်။ Handicap/ကြေးအနိုင်အရှုံးကို ရလဒ်တစ်ခုတည်းမှ မဆုံးဖြတ်ပါ။";
+  $("fcR2Status").textContent=list.length+" ပွဲ · မူရင်း V1 ကတ်အပြည့်အစုံ + အတည်ပြုဂိုးရလဒ်။ အနီဝိုင်းသည် ဂိုးရလဒ်နှင့် ရွေးချယ်ထားသောအသင်းကို ဖော်ပြခြင်းသာဖြစ်ပြီး Handicap ကြေးအနိုင်/အရှုံးကို မဆုံးဖြတ်ပါ။";
  }
  async function load(){
-  const n=++serial;$("fcR2Status").textContent=date+" အတည်ပြုရလဒ်များ ရယူနေသည်…";$("fcR2List").replaceChildren();
+  const n=++loadId,root=$("fcR2List");root.replaceChildren();$("fcR2Status").textContent=selectedDate+" ရလဒ်များ ရယူနေသည်…";
   try{
-   const url=new URL("./data/archive/"+date+".json",document.baseURI);url.searchParams.set("v",Date.now());
-   const res=await (window.FootballData?.fetch||fetch)(url,{cache:"no-store"});
-   if(!res.ok)throw Error("Archive မရပါ");const j=await res.json();if(n!==serial)return;
-   if(!j.published||j.reportDate!==date||!Array.isArray(j.matches))throw Error("ရက်စွဲအတွက် အတည်ပြု Archive မရှိပါ။");
-   matches=j.matches.filter(verified);const sel=$("fcR2League"),old=sel.value;sel.replaceChildren(new Option("လိဂ်အားလုံး","all"));
-   [...new Set(matches.map(m=>m.league))].forEach(l=>sel.add(new Option(matches.find(m=>m.league===l).leagueDisplay||l,l)));
-   if([...sel.options].some(x=>x.value===old))sel.value=old;render();
-  }catch(e){if(n!==serial)return;matches=[];$("fcR2Status").textContent=e.message;}
+   const url=new URL("./data/archive/"+selectedDate+".json",document.baseURI);
+   url.searchParams.set("v",Date.now());
+   const response=await (window.FootballData?.fetch||fetch)(url,{cache:"no-store"});
+   if(!response.ok)throw Error("Archive မရပါ");
+   const d=await response.json();if(n!==loadId)return;
+   if(d.reportDate!==selectedDate||d.published!==true||!Array.isArray(d.matches))throw Error("အတည်ပြု Archive မရှိပါ");
+   matches=d.matches.filter(valid);
+   const sel=$("fcR2League"),prev=sel.value;
+   sel.replaceChildren(new Option("လိဂ်အားလုံး","all"));
+   [...new Set(matches.map(m=>m.league))].forEach(l=>sel.add(new Option(matches.find(x=>x.league===l).leagueDisplay||l,l)));
+   if([...sel.options].some(o=>o.value===prev))sel.value=prev;
+   render();
+  }catch(e){if(n!==loadId)return;matches=[];root.replaceChildren();$("fcR2Status").textContent="ဂိုးရလဒ် V2 Data မရပါ — "+e.message;}
  }
- function wrap(ctx,value,width){
-  const words=typeof Intl.Segmenter==="function"?Array.from(new Intl.Segmenter("my",{granularity:"word"}).segment(value),x=>x.segment):Array.from(value);
-  const lines=[];let line="";for(const w of words){if(ctx.measureText(line+w).width<=width){line+=w;continue;}if(line.trim())lines.push(line.trim());line=w.trimStart();if(ctx.measureText(line).width>width){const gs=typeof Intl.Segmenter==="function"?Array.from(new Intl.Segmenter("my",{granularity:"grapheme"}).segment(line),x=>x.segment):Array.from(line);line="";for(const g of gs){if(line&&ctx.measureText(line+g).width>width){lines.push(line);line="";}line+=g;}}}if(line.trim())lines.push(line.trim());return lines;
+ function cover(c,img,w,y,h){
+  if(!img)return;
+  const k=Math.max(w/img.naturalWidth,h/img.naturalHeight),sw=w/k,sh=h/k;
+  c.drawImage(img,(img.naturalWidth-sw)/2,(img.naturalHeight-sh)/2,sw,sh,0,y,w,h);
  }
- function ring(c,x,y,rx,ry){c.save();c.strokeStyle="#ea3537";c.lineWidth=8;for(let i=0;i<2;i++){c.beginPath();c.ellipse(x,y,rx+i*7,ry+i*6,-.04,0,Math.PI*2);c.stroke();}c.restore();}
- function cover(c,img,w,y,h){if(!img)return;const scale=Math.max(w/img.width,h/img.height),sw=w/scale,sh=h/scale;c.drawImage(img,(img.width-sw)/2,(img.height-sh)/2,sw,sh,0,y,w,h);}
+ function ring(c,x,y,rx,ry){
+  c.save();c.strokeStyle="#f1322c";c.lineWidth=9;c.lineCap="round";
+  for(let i=0;i<2;i++){
+   c.beginPath();c.ellipse(x,y,rx+i*7,ry+i*4,-0.05,0,Math.PI*2);c.stroke();
+  }c.restore();
+ }
  async function png(m){
-  await document.fonts?.ready;const W=1200,measure=document.createElement("canvas").getContext("2d");
-  measure.font='500 23px "Noto Sans Myanmar",sans-serif';
-  const lines=wrap(measure,article(m),1100),bodyH=Math.max(220,lines.length*42+115),t=topBanner?175:0,b=bottomBanner?160:0,H=t+330+bodyH+140+b;
-  if(H>32000)throw Error("စာသား ရှည်လွန်းနေပါသည်");
-  const out=document.createElement("canvas");out.width=W;out.height=H;const c=out.getContext("2d");
-  c.fillStyle="#081c2d";c.fillRect(0,0,W,H);if(topBanner)cover(c,topBanner,W,0,t);
-  c.fillStyle="#174363";c.fillRect(15,t+9,W-30,302);
-  c.textAlign="center";c.textBaseline="middle";c.fillStyle="#ffda89";c.font='800 23px "Noto Sans Myanmar",sans-serif';
-  c.fillText((m.leagueDisplay||m.league||"")+" · "+date+" · "+(m.resultPeriod==="AET"?"AET (90 min "+(m.regulationScore||"—")+")":"FT"),600,t+47,1130);
-  c.fillStyle="white";c.font='900 30px "Noto Sans Myanmar",sans-serif';c.fillText(team(m,"home"),245,t+160,420);c.fillText(team(m,"away"),955,t+160,420);
-  c.font="900 63px Arial,sans-serif";c.fillStyle="#ffe19e";c.fillText(plain(m.finalScore).replace(":"," - "),600,t+163,235);ring(c,600,t+162,140,79);
-  const y=t+330;c.fillStyle="#fff";c.fillRect(19,y,W-38,bodyH);
-  c.fillStyle="#173b5a";c.font='900 28px "Noto Sans Myanmar",sans-serif';c.fillText("မနေ့က ပွဲကြိုသုံးသပ်ချက်",600,y+38,1110);
-  c.textAlign="left";c.textBaseline="top";c.font='500 23px "Noto Sans Myanmar",sans-serif';c.fillStyle="#183247";
-  for(let i=0;i<lines.length;i++)c.fillText(lines[i],50,y+84+i*42,1100);
-  const cy=y+bodyH+69;c.fillStyle="#12354d";c.fillRect(15,y+bodyH+9,W-30,125);
-  c.textAlign="center";c.textBaseline="middle";c.fillStyle="#fdd075";c.font='900 30px "Noto Sans Myanmar",sans-serif';c.fillText("ရွေးချယ်မှု - "+choice(m),600,cy,1040);ring(c,600,cy,460,52);
-  if(bottomBanner)cover(c,bottomBanner,W,H-b,b);
-  const blob=await new Promise((ok,no)=>out.toBlob(x=>x?.size?ok(x):no(Error("encoding failed")),"image/png"));
-  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;
-  a.download="results-v2-"+date+"-"+plain(m.fixtureId||m.home||"match").replace(/[^a-z0-9_-]/gi,"-")+".png";
+  const renderer=window.FutureCodeFramePreview,kit=window.FutureCodeCanvasKit;
+  if(!renderer?.render||!kit)throw Error("V1 Original Canvas Renderer မရသေးပါ");
+  await kit.fonts();await document.fonts?.ready;
+  // Reuse the *unmodified* source match: identical V1 artwork, team crests,
+  // 5-match W/D/L, 1X2, bookmaker lines and the complete original analysis.
+  let preview=await renderer.render(m);
+  preview=window.FutureCodeEditorialChoice?.appendPng(preview,m)||preview;
+  const W=preview.width,headH=295,topH=topBanner?180:0,bottomH=bottomBanner?180:0;
+  const H=topH+headH+preview.height+bottomH;
+  if(H>32000||W*H>110000000)throw Error("PNG အမြင့်/အရွယ်အစား များလွန်းနေပါသည်");
+  const out=document.createElement("canvas");out.width=W;out.height=H;
+  const c=out.getContext("2d");if(!c)throw Error("Canvas မရပါ");
+  c.fillStyle="#06192d";c.fillRect(0,0,W,H);
+  if(topBanner)cover(c,topBanner,W,0,topH);
+  const yy=topH;
+  const grd=c.createLinearGradient(0,yy,W,yy+headH);grd.addColorStop(0,"#06213b");grd.addColorStop(.5,"#15517e");grd.addColorStop(1,"#06213b");
+  c.fillStyle=grd;c.fillRect(0,yy,W,headH);
+  c.strokeStyle="#d7ad62";c.lineWidth=4;c.strokeRect(12,yy+11,W-24,headH-20);
+  c.textAlign="center";c.textBaseline="middle";c.fillStyle="#ffe2a5";
+  c.font='800 24px "Noto Sans Myanmar",sans-serif';
+  c.fillText((m.leagueDisplay||m.league||"")+" · "+selectedDate+" · "+period(m),W/2,yy+43,W-95);
+  const logos=[m.homeCrestUrl,m.awayCrestUrl].filter(Boolean);
+  await kit.preloadImages(logos);
+  if(m.homeCrestUrl)kit.crest(c,m.homeCrestUrl,65,yy+80,120,team(m,"home"),true);
+  if(m.awayCrestUrl)kit.crest(c,m.awayCrestUrl,W-185,yy+80,120,team(m,"away"),true);
+  c.fillStyle="#fff";c.font='900 29px "Noto Sans Myanmar",sans-serif';
+  c.fillText(team(m,"home"),265,yy+218,310);c.fillText(team(m,"away"),W-265,yy+218,310);
+  c.fillStyle="#ffecb0";c.font="900 72px Arial,sans-serif";
+  c.fillText(clean(m.finalScore).replace(":"," - "),W/2,yy+157,280);
+  ring(c,W/2,yy+160,158,75);
+  if(m.resultPeriod==="AET"){
+   c.fillStyle="#fff";c.font='700 18px "Noto Sans Myanmar",sans-serif';
+   c.fillText("မိနစ် ၉၀: "+(m.regulationScore||"—")+" · အချိန်ပိုပြီး "+m.finalScore,W/2,yy+268,650);
+  }else{
+   c.fillStyle="#fff";c.font="800 19px Arial,sans-serif";c.fillText("Finished",W/2,yy+268,260);
+  }
+  c.drawImage(preview,0,yy+headH);
+  // The V1 canvas already appends an explicit original-selection footer.
+  // Circle exactly that footer; do NOT infer that a handicap bet won.
+  const extra=Math.max(100,Math.round(W*.085));
+  ring(c,W/2,yy+headH+preview.height-extra/2,Math.min(470,W*.39),Math.min(extra*.43,49));
+  if(bottomBanner)cover(c,bottomBanner,W,H-bottomH,bottomH);
+  const blob=await new Promise((resolve,reject)=>out.toBlob(b=>b?.size?resolve(b):reject(Error("PNG encoding failed")),"image/png"));
+  const url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download="results-v2-"+selectedDate+"-"+clean(m.fixtureId||m.home||"match").replace(/[^a-z0-9_-]/gi,"-")+".png";
   document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
  }
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",setup,{once:true});else setup();
