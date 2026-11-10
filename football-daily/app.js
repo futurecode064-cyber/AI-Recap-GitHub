@@ -316,7 +316,7 @@ function renderFixtureOnly(match){
  card.appendChild(node("p","section-note",NO_PREVIEW_TEXT));
  return card;
 }
-function renderMatch(match,i){
+function renderMatch(match,i,forceOriginalPreview=false){
  const card=node("article","match-card"+(match.specialChoice?" is-special":""));
  const headline=node("div","match-topline");
  const league=leagueBadge(match.league);
@@ -327,7 +327,7 @@ function renderMatch(match,i){
  card.appendChild(renderQuoteAndForm(match));
  const expand=node("button","analysis-toggle","▾ သုံးသပ်ချက်ကို ဖတ်မည် / ခေါက်မည်");expand.type="button";expand.setAttribute("aria-expanded","true");
  const body=node("div","analysis-body");
- const isSpecialView=selectedLeague==="special"&&match.specialChoice===true;
+ const isSpecialView=!forceOriginalPreview&&selectedLeague==="special"&&match.specialChoice===true;
  if(isSpecialView){
    // Special Choice: show ONLY the research-grade extended assessment.
    // The standard article must not appear here a second time.
@@ -386,6 +386,11 @@ function renderMatch(match,i){
  actions.appendChild(button);
  card.appendChild(actions);
  return card;
+}
+// The Results V2 section reuses the exact original V1 match card without duplicating its data fields.
+// The function is exposed only on the MAIN website; brand sites are unchanged.
+if(!document.documentElement.dataset.footballBrandName){
+ window.FutureCodeMainPreviewCard=Object.freeze({renderOriginal:match=>renderMatch(match,0,true)});
 }
 function renderLeagueFilters(all){
  const available=new Set(all.filter(m=>selectedDay!==-1||validFinal(m)).map(m=>canonicalLeague(m.league)));
