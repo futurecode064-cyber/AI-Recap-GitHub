@@ -84,11 +84,24 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 </div><div class="line"></div><h3>ဒီ Frame အသုံးပြုမည့် Section များ</h3><div class="actions"><button type="button" class="secondary" id="scopeAll">Section အားလုံးရွေး</button><button type="button" class="secondary" id="scopeNone">Section အားလုံးဖြုတ်</button></div><div id="scopeChecks" class="scope-list"></div><p class="hint">အမှန်ခြစ်ထားသည့် Section များထဲမှာသာ ZIP ထုတ်မယ်။ Frame ပုံကို မဖျက်ပါ။</p>
 <div class="actions frame-save-actions"><button class="gold" id="saveFrame">ပြင်ဆင်ချက် သိမ်းမယ်</button><button class="secondary" id="unassignFrame">Section အားလုံးမှ ဖြုတ်</button><button class="danger" id="deleteFrame">ကိုယ်ပိုင် Frame ဖျက်</button></div></div>
 <div class="line"></div><div class="actions"><button class="secondary" id="backup">Settings Backup</button><label>Backup Import<input id="importBackup" type="file" accept=".json,application/json"></label></div></div>
-<div class="panel"><h2>Frame Preview</h2><div class="preview-area"><div id="previewMock" class="mock"><em class="sample-name">FRAME</em><strong>MATCH PREVIEW</strong><span>HOME 1 - 1 AWAY</span><span>FUTURE CODE · FOOTBALL</span></div><img id="previewImage" hidden alt="Frame နမူနာ"></div><p class="hint">အရောင်၊ အမြင့်၊ Fit နဲ့ Banner အသစ်ရွေးချယ်မှုများကို မသိမ်းမီ Live Preview ကြည့်နိုင်သည်။ PNG Download တွင် အသုံးပြုရန် ပြင်ဆင်ချက် သိမ်းမယ် ကိုနှိပ်ပါ။ အရင်တင်ထားပြီးသား ဝါးနေသောပုံများကို ကြည်လင်စေဖို့ မူရင်း Banner ပြန် Upload လုပ်ပါ။</p><button class="secondary" id="toDownloads">Download Center သို့</button></div>
+<div class="panel"><h2>Frame Preview</h2><div class="preview-area"><div id="previewMock" class="mock"><em class="sample-name">FRAME</em><strong>MATCH PREVIEW</strong><span>HOME 1 - 1 AWAY</span><span>FUTURE CODE · FOOTBALL</span></div><img id="previewImage" hidden alt="Frame နမူနာ"></div><p class="hint">Banner Fit = “မဖြတ်ဘဲ အပြည့်” ရွေးလျှင် ပုံ၏ မူရင်းအချိုးအစားအတိုင်း Frame အကျယ်အပြည့် ပြမည်။ “Cover” နှင့် “Stretch” ရွေးမှ သတ်မှတ်ထားသည့် Banner အမြင့်ကို သုံးမည်။ မသိမ်းမီ Live Preview ကြည့်နိုင်သည်။ PNG Download တွင် အသုံးပြုရန် ပြင်ဆင်ချက် သိမ်းမယ် ကိုနှိပ်ပါ။ အရင်တင်ထားပြီးသား ဝါးနေသောပုံများကို ကြည်လင်စေဖို့ မူရင်း Banner ပြန် Upload လုပ်ပါ။</p><button class="secondary" id="toDownloads">Download Center သို့</button></div>
 </div></section>
 <section id="downloadsView" hidden><div class="heading"><div><div class="eyebrow">FILTER · PREVIEW · EXPORT</div><h1>Frame Download Center</h1><p>မြန်မာကြေးကတ်ပုံစံ Section တွင် BCF၊ Best Your Choice နှင့် အခြား Frame များ၏ Banner/Theme တူညီစွာ သုံးပါ။ PNG/ZIP အားလုံးကို တစ်နေရာတည်းမှ ထုတ်ပါ။</p></div><button class="secondary" id="refreshData">↻ Published Data ပြန်ယူ</button></div>
 <div class="download-grid">
-<div class="panel"><h2>Section တစ်ခုချင်း Multi-Selection</h2><p class="hint">Section ၁၀ ခုစလုံးမှာ Frame / လိဂ် / ပွဲ/သတင်း များကို သီးခြား Multi-Select လုပ်ပြီး PNG/ZIP ထုတ်နိုင်ပါတယ်။</p><div id="legacyDownloadFilters" hidden><label>Section<select id="downSection"><option value="all">Section အားလုံး</option><option value="odds">ပေါက်ကြေး</option><option value="oddsV2">ပေါက်ကြေး Version 2 · Logo-free ဇယား</option><option value="oddsCards">မြန်မာကြေးကတ်ပုံစံ (BCF စသည်)</option><option value="previewsV2">ပွဲကြိုသုံးသပ်ချက် Version 2</option><option value="previews">ပွဲကြိုသုံးသပ်ချက်</option><option value="specials">Special Choice</option><option value="results">ဂိုးရလဒ်</option><option value="resultsV2">ဂိုးရလဒ် Version 2 · ပွဲကြိုကတ်အပြည့်အစုံ</option><option value="ai">VIP Internet · Bookies · AI Tips</option><option value="news">ဘောလုံးသတင်း</option></select></label>
+<div class="panel"><h2>Section တစ်ခုချင်း Multi-Selection</h2><p class="hint">Section ၁၀ ခုစလုံးမှာ Frame / လိဂ် / ပွဲ/သတင်း များကို သီးခြား Multi-Select လုပ်ပြီး PNG/ZIP ထုတ်နိုင်ပါတယ်။</p><div class="upload" id="recoverCustomerPanel">
+ <h3>အရင်သိမ်းထားသော Customer Banner များ ပြန်ချိတ်ရန်</h3>
+ <p class="hint">Frame Library ထဲမှာ ပုံတွေရှိပြီး Download Section ထဲမှာ မပေါ်တော့ရင် သုံးပါ။ Browser ထဲတွင် ရှိပြီးသား Logo/Banner ဖိုင်များကို မဖျက်ဘဲ ရွေးထားသော Section သို့ ပြန်ချိတ်ပေးမည်။ အရင်ဆုံး Settings Backup ယူထားရန် အကြံပြုပါသည်။</p>
+ <div class="field-grid">
+ <label>ပြန်ချိတ်မည့် Section<select id="restoreSection">
+ <option value="previews">ပွဲကြိုသုံးသပ်ချက်</option><option value="odds">ပေါက်ကြေး</option>
+ <option value="oddsCards">မြန်မာကြေးကတ်ပုံစံ</option><option value="previewsV2">ပွဲကြို Version 2</option>
+ <option value="results">ဂိုးရလဒ်</option><option value="resultsV2">ဂိုးရလဒ် Version 2</option>
+ <option value="oddsV2">ပေါက်ကြေး Version 2</option><option value="specials">Special Choice</option>
+ <option value="ai">VIP / Bookies / AI</option><option value="news">ဘောလုံးသတင်း</option>
+ </select></label>
+ <label>ပြန်ချိတ်ခြင်း<button type="button" class="secondary" id="restoreCustomerFrames">သိမ်းထားသော Customer Banner များ ပြန်ချိတ်မယ်</button></label>
+ </div>
+ </div><div id="legacyDownloadFilters" hidden><label>Section<select id="downSection"><option value="all">Section အားလုံး</option><option value="odds">ပေါက်ကြေး</option><option value="oddsV2">ပေါက်ကြေး Version 2 · Logo-free ဇယား</option><option value="oddsCards">မြန်မာကြေးကတ်ပုံစံ (BCF စသည်)</option><option value="previewsV2">ပွဲကြိုသုံးသပ်ချက် Version 2</option><option value="previews">ပွဲကြိုသုံးသပ်ချက်</option><option value="specials">Special Choice</option><option value="results">ဂိုးရလဒ်</option><option value="resultsV2">ဂိုးရလဒ် Version 2 · ပွဲကြိုကတ်အပြည့်အစုံ</option><option value="ai">VIP Internet · Bookies · AI Tips</option><option value="news">ဘောလုံးသတင်း</option></select></label>
 <label style="margin-top:14px">Frame<select id="downFrame"><option value="all">သတ်မှတ်ထားသော Frame အားလုံး</option></select></label>
 <label style="margin-top:14px" id="oddsModeWrap">မြန်မာကြေး အမျိုးအစား (ကတ်ပုံစံ)<select id="oddsMode"><option value="original">မူလကြေး</option><option value="current">ယခုကြေး</option></select></label>
 <label style="margin-top:14px">လိဂ် / သတင်းအမျိုးအစား<select id="leagueFilter"><option value="all">အားလုံး</option></select></label>
@@ -101,7 +114,7 @@ input:not([type=color]):not([type=file]):not([type=checkbox]),select{width:100%;
 <iframe class="engine" id="engineHome" title="Main site image engine" aria-hidden="true" tabindex="-1" src="./?frame-engine=1&tipEngine=20261028-local-crest-v6"></iframe>
 <iframe class="engine" id="engineOdds" title="Odds image engine" aria-hidden="true" tabindex="-1" src="./odds.html?frame-engine=1&tipEngine=20261028-local-crest-v6"></iframe>
 <script defer src="./frame-watermark.js?v=20261110-watermark-v1"></script>
-<script defer src="./frame-workspace.js?v=20261110-watermark-v1"></script>
+<script defer src="./frame-workspace.js?v=20261110-frame-repair-v2"></script>
 <script defer src="./frame-multi-download.js?v=20261028-multi-select-v2"></script>
-<script defer src="./frame-export-engine.js?v=20261110-watermark-v1"></script>
+<script defer src="./frame-export-engine.js?v=20261110-frame-repair-v2"></script>
 </body></html>
