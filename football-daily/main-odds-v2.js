@@ -32,10 +32,10 @@
  }
  function readFile(file){if(!file)return Promise.resolve("");return new Promise(ok=>{const reader=new FileReader();reader.onload=()=>ok(String(reader.result||""));reader.onerror=()=>ok("");reader.readAsDataURL(file);});}
  function groupsFor(rows){const map=new Map();for(const m of rows){const k=str(m.league)||"အခြားလိဂ်";if(!map.has(k))map.set(k,[]);map.get(k).push(m);}return [...map];}
- function makeSheet(rows){
+ function makeSheet(rows,options={}){
   const root=document.createElement("div");root.className="fc-ov2-sheet";
-  if(topBanner){const img=document.createElement("img");img.src=topBanner;img.style.cssText="width:100%;height:auto;max-height:260px;object-fit:contain;display:block";root.append(img);}
-  const title=document.createElement("div");title.className="fc-ov2-title";title.textContent=date+" ရက်နေ့ · ပေါက်ကြေး Version 2";root.append(title);
+  if(topBanner&&options.includeUploadedBanners!==false){const img=document.createElement("img");img.src=topBanner;img.style.cssText="width:100%;height:auto;max-height:260px;object-fit:contain;display:block";root.append(img);}
+  const title=document.createElement("div");title.className="fc-ov2-title";title.textContent=(options.date||date)+" ရက်နေ့ · ပေါက်ကြေး Version 2";root.append(title);
   const table=document.createElement("table");table.className="fc-ov2-table";
   table.innerHTML='<colgroup><col style="width:8%"><col style="width:17%"><col style="width:3%"><col style="width:17%"><col style="width:14%"><col style="width:8%"><col style="width:8%"><col style="width:8%"><col style="width:8%"><col style="width:9%"></colgroup>'+
    '<thead><tr><th rowspan="2">အချိန်</th><th colspan="3" rowspan="2">တွေ့ဆုံသည့်အသင်း</th><th rowspan="2">အထက်အသင်း</th><th colspan="2">ဘော်ဒီကြေး</th><th colspan="2">ဂိုးပေါင်းကြေး</th><th rowspan="2">အင်တာနက်<br>ခန့်မှန်းချက်</th></tr><tr><th>မူလ</th><th>ယခု</th><th>မူလ</th><th>ယခု</th></tr></thead>';
@@ -52,7 +52,7 @@
    }
   }
   table.append(body);root.append(table);
-  if(bottomBanner){const img=document.createElement("img");img.src=bottomBanner;img.style.cssText="width:100%;height:auto;max-height:260px;object-fit:contain;display:block";root.append(img);}
+  if(bottomBanner&&options.includeUploadedBanners!==false){const img=document.createElement("img");img.src=bottomBanner;img.style.cssText="width:100%;height:auto;max-height:260px;object-fit:contain;display:block";root.append(img);}
   return root;
  }
  function selected(){if(!sheet)return [];const league=$("fcOV2League").value;return sheet.matches.filter(m=>league==="all"||m.league===league);}
@@ -69,6 +69,19 @@
    [...new Set(sheet.matches.map(m=>m.league))].forEach(l=>s.add(new Option(sheet.matches.find(m=>m.league===l).leagueDisplay||l,l)));if([...s.options].some(o=>o.value===old))s.value=old;
    render();
   }catch(e){if(id!==serial)return;sheet=null;$("fcOV2Preview").replaceChildren();$("fcOV2Status").textContent=e.message;}
+ }
+ async function renderCanvas(rows,options={}){
+  if(!Array.isArray(rows)||!rows.length)throw Error("ပေါက်ကြေး Version 2 ပွဲစဉ်မရှိပါ");
+  if(typeof html2canvas!=="function")throw Error("Logo-free PNG module မရရှိပါ");
+  await document.fonts?.ready;
+  const sheet=makeSheet(rows,{includeUploadedBanners:false,date:options.date||date});
+  sheet.style.cssText+=";position:fixed;left:-20000px;top:0;width:1200px;";
+  document.body.append(sheet);
+  try{
+   const canvas=await html2canvas(sheet,{scale:1,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:1400});
+   if(canvas.width!==1200)throw Error("ပေါက်ကြေးဇယား PNG အကျယ်မမှန်ပါ");
+   return canvas;
+  }finally{sheet.remove();}
  }
  async function exportPng(count){
   const rows=selected(),out=$("fcOV2Output");out.replaceChildren();urls.forEach(u=>URL.revokeObjectURL(u));urls=[];
@@ -90,5 +103,6 @@
   }
   if(urls.length==groups.length)$("fcOV2Status").textContent=urls.length+" ပုံ ထုတ်ပြီးပါပြီ။ PNG လင့်ခ်များကို နှိပ်ယူနိုင်ပါသည်။";
  }
+ window.FutureCodeOddsV2=Object.freeze({renderCanvas});
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",setup,{once:true});else setup();
 })();
