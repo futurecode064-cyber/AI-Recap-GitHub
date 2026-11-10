@@ -10,6 +10,7 @@ DST=ROOT/"assets/team-logos/2026-11-10"
 DST.mkdir(parents=True,exist_ok=True)
 SOURCES={
  "pamplona":[
+  "https://www.escudosdefutbolyequipaciones.com/images_esc3/ESPA/NAVARRA/escudos/ESC_C.D.%20PAMPLONA.png",
   "https://cdpamplona.com/wp-content/uploads/2010/06/ESCUDO_datosgenerales.jpg.gif",
   "https://www.cdpamplona.com/wp-content/uploads/2010/06/ESCUDO_datosgenerales.jpg.gif"],
  "eibar":["https://www.eurofotbal.cz/res/img/team-logo/MJReW3Y2-SveDDUW1.png"],
