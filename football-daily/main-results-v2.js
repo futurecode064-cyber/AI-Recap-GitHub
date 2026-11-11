@@ -28,26 +28,20 @@
  '.fc-r2-card{background:#0a2032;border:2px solid #bf9855;border-radius:14px;overflow:hidden}',
  '.fc-r2-scorehead{position:relative;background:linear-gradient(115deg,#06223c,#185179,#06223c);border-bottom:4px solid #edbd60;padding:14px 26px 23px;text-align:center}',
  '.fc-r2-meta{color:#fff1cb;font-size:17px;font-weight:800;margin:5px 0 11px}',
- '.fc-r2-scoreline{display:grid;grid-template-columns:minmax(0,1fr) 270px minmax(0,1fr);align-items:center;gap:12px}',
- '.fc-r2-club{display:flex;align-items:center;justify-content:center;gap:12px;min-width:0;color:white;font:900 25px/1.6 "Noto Sans Myanmar",sans-serif}',
- '.fc-r2-club img{height:83px;width:83px;object-fit:contain;flex-shrink:0}',
+ '.fc-r2-scoreline{display:grid;grid-template-columns:minmax(0,1fr) 340px minmax(0,1fr);align-items:center;gap:12px}',
+ '.fc-r2-club{display:flex;align-items:center;justify-content:center;gap:12px;min-width:0;color:white;font:900 28px/1.6 "Noto Sans Myanmar",sans-serif}',
+ '.fc-r2-club img{height:106px;width:106px;object-fit:contain;flex-shrink:0}',
  '.fc-r2-club strong{min-width:0;overflow-wrap:anywhere}',
  '.fc-r2-score-wrap{display:flex;align-items:center;flex-direction:column;justify-content:center;gap:4px}',
- '.fc-r2-score{border:7px solid #ef3631;border-radius:50%;padding:19px 12px;min-width:202px;min-height:113px;display:grid;place-items:center;color:#ffdf91;font:900 52px/1.15 Arial,sans-serif;transform:rotate(-4deg);box-shadow:0 0 0 4px #e83c2c30}',
+ '.fc-r2-score{border:9px solid #ef3631;border-radius:50%;padding:18px 15px;min-width:285px;min-height:155px;display:grid;place-items:center;color:#ffdf91;font:900 82px/1.15 Arial,sans-serif;transform:rotate(-4deg);box-shadow:0 0 0 4px #e83c2c30}',
  '.fc-r2-state{color:#e5f1ff;font:800 14px/1.7 "Noto Sans Myanmar",sans-serif}',
- '.fc-r2-original{margin:14px!important;max-width:none!important;box-sizing:border-box}',
+ '.fc-r2-original{margin:0 14px 14px!important;max-width:none!important;box-sizing:border-box}',
   '.fc-r2-original :is(.match-topline,.match-hero,.match-market-layout){display:none!important}',
-  '.fc-r2-compact{display:grid;grid-template-columns:minmax(0,1fr) 215px minmax(0,1fr);align-items:center;gap:10px;padding:14px 18px;margin-bottom:11px;border:2px solid #d7ad62;border-radius:12px;background:linear-gradient(110deg,#0a233b,#174e74,#0a233b)}',
-  '.fc-r2-compact .fc-r2-club{font-size:20px;gap:9px}',
-  '.fc-r2-compact .fc-r2-club img{width:68px;height:68px}',
-  '.fc-r2-compact-middle{text-align:center;min-width:0}',
-  '.fc-r2-compact-middle small{display:block;color:#ffe4b2;font:900 16px/1.4 Arial,sans-serif;letter-spacing:.1em}',
-  '.fc-r2-compact-middle strong{display:block;color:#ffe088;font:900 50px/1.3 Arial,sans-serif;white-space:nowrap}',
-  '@media(max-width:850px){.fc-r2-compact{grid-template-columns:minmax(0,1fr) 112px minmax(0,1fr);gap:3px;padding:8px 5px}.fc-r2-compact-middle strong{font-size:30px}.fc-r2-compact-middle small{font-size:10px}.fc-r2-compact .fc-r2-club{font-size:12px;gap:4px}.fc-r2-compact .fc-r2-club img{width:45px;height:45px}}',
+  '.fc-r2-caption{background:#0c3049;padding:12px;color:#ffda91;text-align:center;font:900 20px/1.6 "Noto Sans Myanmar",sans-serif}',
  '.fc-r2-original .analysis-body{display:block!important;overflow:visible!important;max-height:none!important}',
  '.fc-r2-original .fc-editorial-selection{border:6px solid #ec362e!important;outline:4px solid #ee483480;border-radius:50%!important;padding:12px 28px!important;transform:rotate(-2deg);max-width:91%;box-shadow:none!important}',
  '.fc-r2-download{display:block;margin:15px auto 22px}',
- '@media(max-width:850px){.fc-r2-scoreline{grid-template-columns:1fr 165px 1fr;gap:3px}.fc-r2-score{min-width:144px;min-height:90px;font-size:32px;padding:9px}.fc-r2-club{font-size:15px;flex-direction:column}.fc-r2-club img{height:50px;width:50px}}'
+ '@media(max-width:850px){.fc-r2-scoreline{grid-template-columns:minmax(0,1fr) 170px minmax(0,1fr);gap:3px}.fc-r2-score{min-width:150px;min-height:104px;font-size:46px;padding:9px;border-width:6px}.fc-r2-club{font-size:15px;flex-direction:column}.fc-r2-club img{height:55px;width:55px}}'
  ].join("\n");
  document.head.append(css);
  function readBanner(file){
@@ -108,13 +102,8 @@
     original.classList.add("fc-r2-original");
     for(const selector of [".match-topline",".match-hero",".match-market-layout"])
       original.querySelector(selector)?.remove();
-    const compact=document.createElement("div");compact.className="fc-r2-compact";
-    const middle=document.createElement("div");middle.className="fc-r2-compact-middle";
-    const label=document.createElement("small");label.textContent=m.resultPeriod==="AET"?"AFTER EXTRA TIME":"FULL TIME";
-    const score=document.createElement("strong");score.textContent=clean(m.finalScore).replace(/\s*[-:]\s*/," - ");
-    middle.append(label,score);
-    compact.append(logo(m.homeCrestUrl,team(m,"home")),middle,logo(m.awayCrestUrl,team(m,"away")));
-    original.prepend(compact);
+    const caption=document.createElement("div");caption.className="fc-r2-caption";caption.textContent="မူလ ပွဲကြိုသုံးသပ်ချက်";
+    item.append(caption);
     original.querySelector(".analysis-toggle")?.remove();
     original.querySelector(".match-actions")?.remove();
     const body=original.querySelector(".analysis-body");if(body){body.hidden=false;body.style.display="block";}
@@ -169,9 +158,9 @@
   // 5-match W/D/L, 1X2, bookmaker lines and the complete original analysis.
   let preview=await renderer.render(m);
   preview=window.FutureCodeEditorialChoice?.appendPng(preview,m)||preview;
-  const W=preview.width,headH=295,cutY=508,compactH=184,captionH=48,topH=topBanner&&options.includeUploadedBanners!==false?180:0,bottomH=bottomBanner&&options.includeUploadedBanners!==false?180:0;
+  const W=preview.width,headH=360,cutY=508,captionH=60,topH=topBanner&&options.includeUploadedBanners!==false?180:0,bottomH=bottomBanner&&options.includeUploadedBanners!==false?180:0;
   if(preview.height<=cutY+30)throw Error("မူလသုံးသပ်ချက် Canvas အမြင့် မမှန်ပါ");
-  const H=topH+headH+compactH+captionH+(preview.height-cutY)+bottomH;
+  const H=topH+headH+captionH+(preview.height-cutY)+bottomH;
   if(H>32000||W*H>110000000)throw Error("PNG အမြင့်/အရွယ်အစား များလွန်းနေပါသည်");
   const out=document.createElement("canvas");out.width=W;out.height=H;
   const c=out.getContext("2d");if(!c)throw Error("Canvas မရပါ");
@@ -186,37 +175,21 @@
   c.fillText((m.leagueDisplay||m.league||"")+" · "+(options.date||selectedDate)+" · "+period(m),W/2,yy+43,W-95);
   const logos=[m.homeCrestUrl,m.awayCrestUrl].filter(Boolean);
   await kit.preloadImages(logos);
-  if(m.homeCrestUrl)kit.crest(c,m.homeCrestUrl,65,yy+80,120,team(m,"home"),true);
-  if(m.awayCrestUrl)kit.crest(c,m.awayCrestUrl,W-185,yy+80,120,team(m,"away"),true);
+  if(m.homeCrestUrl)kit.crest(c,m.homeCrestUrl,55,yy+95,140,team(m,"home"),true);
+  if(m.awayCrestUrl)kit.crest(c,m.awayCrestUrl,W-195,yy+95,140,team(m,"away"),true);
   c.fillStyle="#fff";c.font='900 29px "Noto Sans Myanmar",sans-serif';
-  c.fillText(team(m,"home"),265,yy+218,310);c.fillText(team(m,"away"),W-265,yy+218,310);
-  c.fillStyle="#ffecb0";c.font="900 72px Arial,sans-serif";
-  c.fillText(clean(m.finalScore).replace(/\s*[-:]\s*/," - "),W/2,yy+157,280);
-  ring(c,W/2,yy+160,158,75);
+  c.fillText(team(m,"home"),265,yy+282,310);c.fillText(team(m,"away"),W-265,yy+282,310);
+  c.fillStyle="#ffecb0";c.font="900 112px Arial,sans-serif";
+  c.fillText(clean(m.finalScore).replace(/\s*[-:]\s*/," - "),W/2,yy+184,420);
+  ring(c,W/2,yy+186,214,94);
   if(m.resultPeriod==="AET"){
    c.fillStyle="#fff";c.font='700 18px "Noto Sans Myanmar",sans-serif';
-   c.fillText("မိနစ် ၉၀: "+(m.regulationScore||"—")+" · အချိန်ပိုပြီး "+m.finalScore,W/2,yy+268,650);
+   c.fillText("မိနစ် ၉၀: "+(m.regulationScore||"—")+" · အချိန်ပိုပြီး "+m.finalScore,W/2,yy+333,650);
   }else{
-   c.fillStyle="#fff";c.font="800 19px Arial,sans-serif";c.fillText("Finished",W/2,yy+268,260);
+   c.fillStyle="#fff";c.font="800 19px Arial,sans-serif";c.fillText("Finished",W/2,yy+333,260);
   }
-  // Replace only the repeated pre-match block, keeping the original article and footer.
-  // The first 508px contain kickoff, VS, 1X2, last-five and Myanmar odds.
-  const compactY=yy+headH;
-  const bg=c.createLinearGradient(0,compactY,W,compactY+compactH);
-  bg.addColorStop(0,"#0a233b");bg.addColorStop(.5,"#174e74");bg.addColorStop(1,"#0a233b");
-  c.fillStyle=bg;c.fillRect(0,compactY,W,compactH);
-  c.strokeStyle="#d7ad62";c.lineWidth=3;c.strokeRect(12,compactY+10,W-24,compactH-20);
-  if(m.homeCrestUrl)kit.crest(c,m.homeCrestUrl,68,compactY+25,120,team(m,"home"),true);
-  if(m.awayCrestUrl)kit.crest(c,m.awayCrestUrl,W-188,compactY+25,120,team(m,"away"),true);
-  c.textAlign="center";c.textBaseline="middle";
-  c.fillStyle="#ffe4b2";c.font="900 22px Arial,sans-serif";
-  c.fillText(m.resultPeriod==="AET"?"AFTER EXTRA TIME":"FULL TIME",W/2,compactY+38,365);
-  c.fillStyle="#ffe088";c.font="900 82px Arial,sans-serif";
-  c.fillText(clean(m.finalScore).replace(/\s*[-:]\s*/," - "),W/2,compactY+103,360);
-  c.fillStyle="#fff";c.font='900 25px "Noto Sans Myanmar",sans-serif';
-  c.fillText(team(m,"home"),292,compactY+149,325);
-  c.fillText(team(m,"away"),W-292,compactY+149,325);
-  const captionY=compactY+compactH;
+  // Draw the full-time score once. Original Myanmar analysis and chosen club follow.
+  const captionY=yy+headH;
   c.fillStyle="#0c3049";c.fillRect(0,captionY,W,captionH);
   c.fillStyle="#ffda91";c.font='900 21px "Noto Sans Myanmar",sans-serif';
   c.fillText("မူလ ပွဲကြိုသုံးသပ်ချက်",W/2,captionY+captionH/2,W-70);
