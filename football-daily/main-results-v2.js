@@ -184,7 +184,7 @@
   ring(c,W/2,yy+186,214,94);
   if(m.resultPeriod==="AET"){
    c.fillStyle="#fff";c.font='700 18px "Noto Sans Myanmar",sans-serif';
-   c.fillText("မိနစ် ၉၀: "+(m.regulationScore||"—")+" · အချိန်ပိုပြီး "+m.finalScore,W/2,yy+333,650);
+   c.fillText("မိနစ် ၉၀: "+(m.regulationScore||"—")+" · အချိန်ပိုပြီး",W/2,yy+333,650);
   }else{
    c.fillStyle="#fff";c.font="800 19px Arial,sans-serif";c.fillText("Finished",W/2,yy+333,260);
   }
