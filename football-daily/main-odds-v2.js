@@ -51,7 +51,7 @@
   if(topBanner&&options.includeUploadedBanners!==false){const img=document.createElement("img");img.src=topBanner;img.style.cssText="width:100%;height:auto;max-height:260px;object-fit:contain;display:block";root.append(img);}
   const title=document.createElement("div");title.className="fc-ov2-title";title.textContent=(options.date||date)+" ရက်နေ့ · ပေါက်ကြေး Version 2";root.append(title);
   const table=document.createElement("table");table.className="fc-ov2-table";
-  table.innerHTML='<colgroup><col style="width:9%"><col style="width:18%"><col style="width:3%"><col style="width:18%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:11%"></colgroup>'+
+  table.innerHTML='<colgroup><col style="width:9%"><col style="width:18%"><col style="width:4%"><col style="width:18%"><col style="width:12%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:11%"></colgroup>'+
    '<thead><tr><th rowspan="2">အချိန်</th><th colspan="3" rowspan="2">တွေ့ဆုံသည့်အသင်း</th><th rowspan="2">အထက်အသင်း</th><th colspan="2">ဘော်ဒီကြေး</th><th colspan="2">ဂိုးပေါင်းကြေး</th><th rowspan="2">အင်တာနက်<br>ခန့်မှန်းချက်</th></tr><tr><th>မူလ</th><th>ယခု</th><th>မူလ</th><th>ယခု</th></tr></thead>';
   const body=document.createElement("tbody");
   for(const [league,list] of groupsFor(rows)){
