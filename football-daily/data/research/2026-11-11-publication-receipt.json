@@ -57,5 +57,23 @@
     "Main current owner layout is full-width text with club crests; player photographs are not reintroduced",
     "Corrected archived Amorebieta auxiliary selection to agree with unchanged full approved Logrones preview; original V2 choice retained for audit"
   ],
-  "liveQA": "Pending read-back, all six brands, main V1/V2, results, tips/probability, news, video and real PNG/ZIP"
+  "liveQA": "Verified publication with explicit source gaps; see liveVerification",
+  "liveVerification": {
+    "date": "2026-11-11",
+    "contentCommit": "15479f19aa9a54b6a74887bfc81dfa39f62df5af",
+    "mainPreviewCards": 16,
+    "specialChoices": 2,
+    "sixRouteDateChecks": "PASS",
+    "fiveLiveJSONByteComparisons": "PASS",
+    "goalZoneBrowserCards": 16,
+    "previewTwoMatchPNG": "PASS visually inspected",
+    "previewThreeMatchPNG": "PASS 1200x1587",
+    "previewSelectedZIP": "PASS CRC; grouped two-match PNG",
+    "resultsV2": "PASS 3 FT cards; PNG download 1200x1390",
+    "newsPNG": "PASS downloaded and visually inspected after retry with exact accessible button name",
+    "loadedLogoErrors": 0,
+    "videoStudio": "3 yesterday results available; video render not tested",
+    "allSectionsAllBrandsExportRegression": "NOT FULLY TESTED"
+  }
 }
+
