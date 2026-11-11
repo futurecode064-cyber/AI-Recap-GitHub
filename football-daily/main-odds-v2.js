@@ -5,11 +5,11 @@
  const $=s=>document.getElementById(s),str=v=>String(v??"").normalize("NFC").trim(),num=v=>str(v)||"—";
  const today=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Yangon",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).map(x=>[x.type,x.value]));return p.year+"-"+p.month+"-"+p.day;};
  let date=new URLSearchParams(location.search).get("date")||today(),sheet=null,topBanner="",bottomBanner="",serial=0,urls=[],themeColor="#123b87";
- const SHEET_WIDTH=900;
+ const SHEET_WIDTH=1020;
  const css=document.createElement("style");
  css.textContent='.fc-odds-v2{display:none;margin:20px 0;font-family:"Noto Sans Myanmar",sans-serif}body[data-fc-odds-view="v2"] .fc-odds-v2{display:block}'+
  'body[data-fc-odds-view="v2"] .odds-content>:not(.fc-odds-v2){display:none!important}.fc-ov2-tools{display:flex;flex-wrap:wrap;gap:12px;padding:18px;border-radius:12px;background:#1a3854;color:#fff;align-items:end}.fc-ov2-tools label{display:grid;gap:6px;font-size:13px}.fc-ov2-tools input,.fc-ov2-tools select{max-width:245px;font:700 13px "Noto Sans Myanmar",sans-serif;padding:10px;background:#fff;color:#123}.fc-ov2-tools button{padding:11px 15px;border:1px solid #e4ca8d;border-radius:7px;color:#061b37;background:#f0d189;font:900 13px "Noto Sans Myanmar",sans-serif;cursor:pointer}'+
- ".fc-ov2-sheet{width:900px;max-width:none;background:#fff;color:#071e44;padding:10px;margin:12px auto;box-sizing:border-box;--ov2-brand:#123b87;--ov2-ink:#fff;--ov2-border:#afbdd2}.fc-ov2-title{padding:8px 6px;background:var(--ov2-brand);color:var(--ov2-ink);text-align:center;border:1px solid var(--ov2-border);font:900 22px/1.7 \"Noto Sans Myanmar\",sans-serif}.fc-ov2-table{width:100%;table-layout:fixed;border-collapse:collapse;font:800 18px/1.5 \"Noto Sans Myanmar\",sans-serif;text-align:center}.fc-ov2-table th{background:var(--ov2-brand);color:var(--ov2-ink);padding:7px 3px;border:1px solid var(--ov2-border);font-size:16px;line-height:1.6}.fc-ov2-table td{padding:6px 3px;border:1px solid var(--ov2-border);overflow-wrap:anywhere;vertical-align:middle}.fc-ov2-table .fc-ov2-league td{color:var(--ov2-brand);background:#f8fafc;font-size:19px;font-weight:900;padding:6px}.fc-ov2-table .fc-ov2-upper,.fc-ov2-table .fc-ov2-time{background:var(--ov2-brand);color:var(--ov2-ink)}.fc-ov2-table .fc-ov2-match{font-size:18px;line-height:1.55;font-weight:900}.fc-ov2-table .fc-ov2-price{font:900 19px/1.5 Arial,\"Noto Sans Myanmar\",sans-serif;white-space:nowrap}.fc-ov2-table .fc-ov2-forecast{font:900 19px/1.5 Arial,sans-serif;white-space:nowrap}.fc-ov2-status{color:#ffda89;line-height:2}.fc-ov2-preview{overflow-x:auto}.fc-ov2-output{display:flex;flex-wrap:wrap;gap:16px;margin:18px 0}.fc-ov2-output a{color:#102a42;background:#f7d98c;padding:10px;border-radius:6px}.fc-ov2-output img{max-width:230px;display:block}";
+ ".fc-ov2-sheet{width:1020px;max-width:none;background:#fff;color:#071e44;padding:10px;margin:12px auto;box-sizing:border-box;--ov2-brand:#123b87;--ov2-ink:#fff;--ov2-border:#afbdd2}.fc-ov2-title{padding:8px 6px;background:var(--ov2-brand);color:var(--ov2-ink);text-align:center;border:1px solid var(--ov2-border);font:900 22px/1.7 \"Noto Sans Myanmar\",sans-serif}.fc-ov2-table{width:100%;table-layout:fixed;border-collapse:collapse;font:800 18px/1.5 \"Noto Sans Myanmar\",sans-serif;text-align:center}.fc-ov2-table th{background:var(--ov2-brand);color:var(--ov2-ink);padding:7px 3px;border:1px solid var(--ov2-border);font-size:16px;line-height:1.6}.fc-ov2-table td{padding:6px 3px;border:1px solid var(--ov2-border);overflow-wrap:anywhere;vertical-align:middle}.fc-ov2-table .fc-ov2-league td{color:var(--ov2-brand);background:#f8fafc;font-size:19px;font-weight:900;padding:6px}.fc-ov2-table .fc-ov2-upper,.fc-ov2-table .fc-ov2-time{background:var(--ov2-brand);color:var(--ov2-ink)}.fc-ov2-table .fc-ov2-home,.fc-ov2-table .fc-ov2-away{font-size:18px;line-height:1.5;font-weight:900;overflow-wrap:anywhere}.fc-ov2-table .fc-ov2-versus{font-size:15px;font-weight:900;color:var(--ov2-brand);padding:5px 0;white-space:nowrap}.fc-ov2-table .fc-ov2-price{font:900 19px/1.5 Arial,\"Noto Sans Myanmar\",sans-serif;white-space:nowrap}.fc-ov2-table .fc-ov2-forecast{font:900 19px/1.5 Arial,sans-serif;white-space:nowrap}.fc-ov2-status{color:#ffda89;line-height:2}.fc-ov2-preview{overflow-x:auto}.fc-ov2-output{display:flex;flex-wrap:wrap;gap:16px;margin:18px 0}.fc-ov2-output a{color:#102a42;background:#f7d98c;padding:10px;border-radius:6px}.fc-ov2-output img{max-width:230px;display:block}";
  document.head.append(css);
  function setup(){
   const nav=document.querySelector(".odds-nav"),main=document.querySelector(".odds-content");if(!nav||!main)return;
@@ -51,17 +51,17 @@
   if(topBanner&&options.includeUploadedBanners!==false){const img=document.createElement("img");img.src=topBanner;img.style.cssText="width:100%;height:auto;max-height:260px;object-fit:contain;display:block";root.append(img);}
   const title=document.createElement("div");title.className="fc-ov2-title";title.textContent=(options.date||date)+" ရက်နေ့ · ပေါက်ကြေး Version 2";root.append(title);
   const table=document.createElement("table");table.className="fc-ov2-table";
-  table.innerHTML='<colgroup><col style="width:10%"><col style="width:35%"><col style="width:15%"><col style="width:8%"><col style="width:8%"><col style="width:8%"><col style="width:8%"><col style="width:8%"></colgroup>'+
-   '<thead><tr><th rowspan="2">အချိန်</th><th rowspan="2">တွေ့ဆုံသည့်အသင်း</th><th rowspan="2">အထက်အသင်း</th><th colspan="2">ဘော်ဒီကြေး</th><th colspan="2">ဂိုးပေါင်းကြေး</th><th rowspan="2">အင်တာနက်<br>ခန့်မှန်းချက်</th></tr><tr><th>မူလ</th><th>ယခု</th><th>မူလ</th><th>ယခု</th></tr></thead>';
+  table.innerHTML='<colgroup><col style="width:9%"><col style="width:18%"><col style="width:3%"><col style="width:18%"><col style="width:13%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:11%"></colgroup>'+
+   '<thead><tr><th rowspan="2">အချိန်</th><th colspan="3" rowspan="2">တွေ့ဆုံသည့်အသင်း</th><th rowspan="2">အထက်အသင်း</th><th colspan="2">ဘော်ဒီကြေး</th><th colspan="2">ဂိုးပေါင်းကြေး</th><th rowspan="2">အင်တာနက်<br>ခန့်မှန်းချက်</th></tr><tr><th>မူလ</th><th>ယခု</th><th>မူလ</th><th>ယခု</th></tr></thead>';
   const body=document.createElement("tbody");
   for(const [league,list] of groupsFor(rows)){
-   const tr=document.createElement("tr");tr.className="fc-ov2-league";const cell=document.createElement("td");cell.colSpan=8;cell.textContent=str(list[0].leagueDisplay||window.groups?.[league]||league);tr.append(cell);body.append(tr);
+   const tr=document.createElement("tr");tr.className="fc-ov2-league";const cell=document.createElement("td");cell.colSpan=10;cell.textContent=str(list[0].leagueDisplay||window.groups?.[league]||league);tr.append(cell);body.append(tr);
    for(const m of list){
     const row=document.createElement("tr");
     const clock=window.FutureCodeOddsClock?.short(m)||str(m.kickoffDisplay||m.kickoff||"—");
     const forecast=str(m.pdfLastColumn)||str(m.internetPrediction);
-    const values=[clock,str(m.home)+" နှင့် "+str(m.away),m.upperTeam,m.bodyOdds,m.currentBodyOdds,m.goalTotalOdds,m.currentGoalTotalOdds,/^\d{1,2}-\d{1,2}$/.test(forecast)?forecast:""];
-    values.forEach((value,index)=>{const cell=document.createElement("td");cell.textContent=[4,6,7].includes(index)?str(value):num(value);if(index===0)cell.className="fc-ov2-time";if(index===1)cell.className="fc-ov2-match";if(index===2)cell.className="fc-ov2-upper";if(index>=3&&index<=6)cell.classList.add("fc-ov2-price");if(index===7)cell.className="fc-ov2-forecast";row.append(cell);});
+    const values=[clock,m.home,"နှင့်",m.away,m.upperTeam,m.bodyOdds,m.currentBodyOdds,m.goalTotalOdds,m.currentGoalTotalOdds,/^\d{1,2}-\d{1,2}$/.test(forecast)?forecast:""];
+    values.forEach((value,index)=>{const cell=document.createElement("td");cell.textContent=[6,8,9].includes(index)?str(value):num(value);if(index===0)cell.className="fc-ov2-time";if(index===1)cell.className="fc-ov2-home";if(index===2)cell.className="fc-ov2-versus";if(index===3)cell.className="fc-ov2-away";if(index===4)cell.className="fc-ov2-upper";if(index>=5&&index<=8)cell.classList.add("fc-ov2-price");if(index===9)cell.className="fc-ov2-forecast";row.append(cell);});
     body.append(row);
    }
   }
@@ -92,7 +92,7 @@
   sheet.style.cssText+=";position:fixed;left:-20000px;top:0;width:"+SHEET_WIDTH+"px;";
   document.body.append(sheet);
   try{
-   const canvas=await html2canvas(sheet,{scale:1,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:1100});
+   const canvas=await html2canvas(sheet,{scale:1,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:1200});
    if(canvas.width!==SHEET_WIDTH)throw Error("ပေါက်ကြေးဇယား PNG အကျယ်မမှန်ပါ");
    return canvas;
   }finally{sheet.remove();}
@@ -107,7 +107,7 @@
    try{
     $("fcOV2Status").textContent="PNG "+(i+1)+"/"+groups.length+" ပြင်ဆင်နေသည်…";
     await Promise.all([...source.querySelectorAll("img")].map(img=>img.decode().catch(()=>{})));
-    const canvas=await html2canvas(source,{scale:2,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:1100});
+    const canvas=await html2canvas(source,{scale:2,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:1200});
     const blob=await new Promise((ok,bad)=>canvas.toBlob(b=>b?.size?ok(b):bad(Error("PNG မထွက်ပါ")),"image/png"));
     const url=URL.createObjectURL(blob);urls.push(url);
     const holder=document.createElement("div"),a=document.createElement("a");a.href=url;a.download="odds-v2-"+date+"-"+(i+1)+"-of-"+groups.length+".png";a.textContent="⬇ PNG "+(i+1)+"/"+groups.length+" Download";
