@@ -44,6 +44,8 @@
   return p;
  }
  function predict(match){
+  // A dated publisher can explicitly withhold rows without verified model inputs.
+  if(match?.aiModelDataStatus==="unavailable")return ["—","—","—"];
   const means=estimate(match), h=probabilities(means.home),a=probabilities(means.away),list=[];
   for(let i=0;i<=6;i++)for(let j=0;j<=6;j++){
    list.push({score:i+"-"+j,prob:h[i]*a[j],home:i,away:j});

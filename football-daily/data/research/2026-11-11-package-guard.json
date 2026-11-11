@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-11",
+  "status": "FAIL",
+  "counts": {
+    "previews": 16,
+    "odds": 16,
+    "special": 2,
+    "tips": 16,
+    "news": 10
+  },
+  "errors": [
+    "fc-20261111-01: away last five incomplete",
+    "fc-20261111-02: away last five incomplete",
+    "fc-20261111-04: home last five incomplete",
+    "fc-20261111-05: home last five incomplete",
+    "fc-20261111-05: away last five incomplete",
+    "fc-20261111-06: home last five incomplete",
+    "fc-20261111-06: away last five incomplete",
+    "fc-20261111-07: home last five incomplete",
+    "fc-20261111-07: away last five incomplete",
+    "fc-20261111-08: home last five incomplete",
+    "fc-20261111-08: away last five incomplete",
+    "fc-20261111-09: home last five incomplete",
+    "fc-20261111-09: away last five incomplete",
+    "fc-20261111-10: home last five incomplete",
+    "fc-20261111-10: away last five incomplete",
+    "fc-20261111-11: home last five incomplete",
+    "fc-20261111-11: away last five incomplete",
+    "fc-20261111-12: home last five incomplete",
+    "fc-20261111-12: away last five incomplete",
+    "fc-20261111-13: home last five incomplete",
+    "fc-20261111-13: away last five incomplete",
+    "fc-20261111-14: home last five incomplete",
+    "fc-20261111-14: away last five incomplete",
+    "fc-20261111-15: home last five incomplete",
+    "fc-20261111-15: away last five incomplete",
+    "fc-20261111-16: home last five incomplete",
+    "fc-20261111-16: away last five incomplete"
+  ],
+  "requires": "Independent source audit plus actual live section/PNG/ZIP/video verification"
+}

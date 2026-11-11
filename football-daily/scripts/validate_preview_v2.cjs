@@ -11,7 +11,7 @@ function sourcePicks(match){
  const names=[match.homeDisplay,match.awayDisplay].filter(Boolean);
  return names.filter(name=>{
   const short=name.split(/\s+/u).at(-1);
-  const variants=[name,short].filter(Boolean);
+  const variants=[name,short].filter(v=>v&&!/^\d+$/u.test(v));
   return variants.some(n=>tail.includes(n+"ကို ရွေး")||tail.includes(n+"အား ရွေး")||tail.includes(n+"ကို ရွေးချယ်"));
  });
 }

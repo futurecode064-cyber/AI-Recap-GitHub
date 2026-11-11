@@ -15,6 +15,7 @@
 
  Object.assign(local,{"Segunda Division": "esp.2", "1st Division": "den.2", "Liga I": "rom.1", "Liga Portugal 2": "por.2", "Primera Division": "par.1"});
  Object.assign(names,{"FA Cup": "အင်္ဂလန် FA ဖလား", "Eliteserien": "နော်ဝေး လိဂ်", "Segunda Division": "စပိန် လာလီဂါ ၂", "1st Division": "ဒိန်းမတ် လိဂ် ၁", "Liga I": "ရိုမေနီးယားလိဂ် ၁", "Liga Portugal 2": "ပေါ်တူဂီ လိဂ် ၂", "Primera Division": "ပါရာဂွေး ပရီးမီးယားလိဂ်"});
+ Object.assign(local,{"J.League Cup": "jpn.cup", "UEFA U19 Championship Qualification": "uefa.u19"});
  function leagueCrest(league){
   if(local[league])return new URL(local[league]+".png",root).href;
   return remote[league]?"https://crests.football-data.org/"+remote[league]+".png":"";

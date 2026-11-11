@@ -26,6 +26,10 @@ test("Every dated fixture gets three distinct score-only outputs",()=>{
  for(const [idx,match] of day.matches.entries()){
   const scores=model.predict(match);
   assert.equal(scores.length,3,"match "+(idx+1));
+  if(match.aiModelDataStatus==="unavailable"){
+   assert.deepEqual(scores,["—","—","—"],"explicit missing inputs must not produce invented scores");
+   continue;
+  }
   assert.equal(new Set(scores).size,3,"duplicate score "+(idx+1));
   scores.forEach(s=>assert.match(s,/^[0-6]-[0-6]$/,"score-only prediction "+(idx+1)));
   const nums=model.estimate(match);

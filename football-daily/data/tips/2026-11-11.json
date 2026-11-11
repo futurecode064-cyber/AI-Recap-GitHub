@@ -1,0 +1,182 @@
+{
+  "reportDate": "2026-11-11",
+  "timezone": "Asia/Yangon",
+  "items": [
+    {
+      "fixtureId": "fc-20261111-01",
+      "home": "Kawasaki Frontale",
+      "away": "Kashiwa Reysol",
+      "score": "1-2",
+      "sourceName": "Forebet",
+      "sourceUrl": "https://www.forebet.com/en/football/matches/kawasaki-frontale-kashiwa-reysol-2564574",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-02",
+      "home": "Vissel Kobe",
+      "away": "FC Machida Zelvia",
+      "score": "0-0",
+      "sourceName": "Forebet",
+      "sourceUrl": "https://www.forebet.com/en/football/matches/vissel-kobe-machida-zelvia-2564572",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-03",
+      "home": "Yokohama F. Marinos",
+      "away": "Kashima Antlers",
+      "score": "",
+      "sourceName": "Forebet",
+      "sourceUrl": "",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "unavailableReason": "Fixture-specific external exact score not verified; PDF prediction is not substituted"
+    },
+    {
+      "fixtureId": "fc-20261111-04",
+      "home": "Urawa Reds",
+      "away": "Cerezo Osaka",
+      "score": "2-2",
+      "sourceName": "Forebet",
+      "sourceUrl": "https://www.forebet.com/en/football/matches/urawa-red-diamonds-cerezo-osaka-2564575",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-05",
+      "home": "Croatia U19",
+      "away": "Hungary U19",
+      "score": "2-1",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/croatia-u19-vs-hungary-u19-1635786",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-06",
+      "home": "Ukraine U19",
+      "away": "Israel U19",
+      "score": "1-2",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/ukraine-u19-vs-israel-u19-1635789",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-07",
+      "home": "Belgium U19",
+      "away": "Kosovo U19",
+      "score": "3-0",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/belgium-u19-vs-kosovo-u19-1635757",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-08",
+      "home": "Slovenia U19",
+      "away": "England U19",
+      "score": "0-3",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/slovenia-u19-vs-england-u19-1635772",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-09",
+      "home": "Czechia U19",
+      "away": "Netherlands U19",
+      "score": "1-2",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/czechia-u19-vs-netherlands-u19-1635769",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-10",
+      "home": "Republic of Ireland U19",
+      "away": "Greece U19",
+      "score": "2-1",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/republic-of-ireland-u19-vs-greece-u19-1635784",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-11",
+      "home": "Italy U19",
+      "away": "Romania U19",
+      "score": "3-0",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/italy-u19-vs-romania-u19-1635793",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-12",
+      "home": "Spain U19",
+      "away": "Iceland U19",
+      "score": "3-0",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/spain-u19-vs-iceland-u19-1635819",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-13",
+      "home": "Scotland U19",
+      "away": "Kazakhstan U19",
+      "score": "2-1",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/kazakhstan-u19-vs-scotland-u19-1635809",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-14",
+      "home": "Austria U19",
+      "away": "Belarus U19",
+      "score": "3-0",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/austria-u19-vs-belarus-u19-1635753",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-15",
+      "home": "France U19",
+      "away": "Norway U19",
+      "score": "1-0",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/france-u19-vs-norway-u19-1635781",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    },
+    {
+      "fixtureId": "fc-20261111-16",
+      "home": "Wales U19",
+      "away": "Finland U19",
+      "score": "1-2",
+      "sourceName": "SUPATIPS",
+      "sourceUrl": "https://www.supatips.com/match/wales-u19-vs-finland-u19-1635777",
+      "sourceDate": "2026-11-11",
+      "checkedDate": "2026-11-11",
+      "sourceDateKind": "fixture date shown on prediction; exact publication timestamp not supplied"
+    }
+  ]
+}

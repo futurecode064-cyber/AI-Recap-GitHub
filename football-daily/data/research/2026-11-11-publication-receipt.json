@@ -1,37 +1,61 @@
 {
   "reportDate": "2026-11-11",
-  "status": "PARTIAL",
-  "sourcePDF": "11.pdf",
-  "pdfPages": 1,
-  "pdfRows": 16,
-  "published": {
-    "originalOdds": 16,
-    "currentOdds": 0,
-    "newPreviews": 0,
-    "specialChoices": 0,
-    "newFT": 0,
-    "newNews": 0
+  "status": "PARTIAL_VERIFIED_PUBLICATION",
+  "rollbackCommit": "657d33c6cfb1ad4514af72307afe6de493019e61",
+  "counts": {
+    "pdfRows": 16,
+    "previews": 16,
+    "specialChoices": 2,
+    "verifiedPreviousFT": 3,
+    "news": 10,
+    "creditedNewsPhotos": 10,
+    "teamIdentityAssets": 32,
+    "sourcedVIPTips": 15,
+    "bookieMarketInputs": 16,
+    "aiVerifiedSeasonInputs": 4
   },
-  "dataCommit": "77a3d4a53ce5ee3ef2d140d607f7f67cb72207ad",
-  "brandOddsDateCommit": "3a59af24f9078864a4308108f37480abad47fb93",
-  "verified": [
-    "Live dated JSON returns 16 rows",
-    "Main odds V1/V2 visibly show 11 November and all 16 rows",
-    "Main V2 single PNG browser download succeeded",
-    "All five brand odds HTML responses now hold 2026-11-11"
+  "validated": [
+    "V2 format 16/16 PASS",
+    "7 focused model/editorial/12-hour tests PASS",
+    "All market/name joins and same-origin assets validated",
+    "Ten source-matched licensed archival photographs visually inspected"
   ],
-  "pending": [
-    "Independent form,1X2,crests,team news for all eligible previews",
-    "Two independently researched premium Special Choice articles",
-    "Yesterday final-score verification and archive",
-    "Fresh VIP source ledger and independent model inputs",
-    "Ten fresh sourced news items and licensed photographs",
-    "Video,full PNG/ZIP and all-brand rendered QA"
+  "unavailable": [
+    "fc-20261111-01: away last five incomplete",
+    "fc-20261111-02: away last five incomplete",
+    "fc-20261111-04: home last five incomplete",
+    "fc-20261111-05: home last five incomplete",
+    "fc-20261111-05: away last five incomplete",
+    "fc-20261111-06: home last five incomplete",
+    "fc-20261111-06: away last five incomplete",
+    "fc-20261111-07: home last five incomplete",
+    "fc-20261111-07: away last five incomplete",
+    "fc-20261111-08: home last five incomplete",
+    "fc-20261111-08: away last five incomplete",
+    "fc-20261111-09: home last five incomplete",
+    "fc-20261111-09: away last five incomplete",
+    "fc-20261111-10: home last five incomplete",
+    "fc-20261111-10: away last five incomplete",
+    "fc-20261111-11: home last five incomplete",
+    "fc-20261111-11: away last five incomplete",
+    "fc-20261111-12: home last five incomplete",
+    "fc-20261111-12: away last five incomplete",
+    "fc-20261111-13: home last five incomplete",
+    "fc-20261111-13: away last five incomplete",
+    "fc-20261111-14: home last five incomplete",
+    "fc-20261111-14: away last five incomplete",
+    "fc-20261111-15: home last five incomplete",
+    "fc-20261111-15: away last five incomplete",
+    "fc-20261111-16: home last five incomplete",
+    "fc-20261111-16: away last five incomplete"
   ],
-  "guard": "FAIL: other daily sections remain unprepared; do not call COMPLETE",
-  "regression": {
-    "time12h": "PASS",
-    "oddsAllBrands": "2 existing BCF assertions fail against suspended BCF page"
-  },
-  "rollbackCommit": "477efa7250ba772db5a5457fcd41e5745b6d3642"
+  "notes": [
+    "Twenty-seven team last-five sets incomplete: source gaps are retained explicitly, not filled with fabricated results",
+    "Twelve U19 AI rows explicitly withheld because verified goal inputs absent",
+    "One externally sourced VIP score unverified",
+    "Current owner odds PDF not supplied; current prices remain blank",
+    "Main current owner layout is full-width text with club crests; player photographs are not reintroduced",
+    "Corrected archived Amorebieta auxiliary selection to agree with unchanged full approved Logrones preview; original V2 choice retained for audit"
+  ],
+  "liveQA": "Pending read-back, all six brands, main V1/V2, results, tips/probability, news, video and real PNG/ZIP"
 }
