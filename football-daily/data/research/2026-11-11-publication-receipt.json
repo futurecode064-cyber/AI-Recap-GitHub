@@ -1,0 +1,37 @@
+{
+  "reportDate": "2026-11-11",
+  "status": "PARTIAL",
+  "sourcePDF": "11.pdf",
+  "pdfPages": 1,
+  "pdfRows": 16,
+  "published": {
+    "originalOdds": 16,
+    "currentOdds": 0,
+    "newPreviews": 0,
+    "specialChoices": 0,
+    "newFT": 0,
+    "newNews": 0
+  },
+  "dataCommit": "77a3d4a53ce5ee3ef2d140d607f7f67cb72207ad",
+  "brandOddsDateCommit": "3a59af24f9078864a4308108f37480abad47fb93",
+  "verified": [
+    "Live dated JSON returns 16 rows",
+    "Main odds V1/V2 visibly show 11 November and all 16 rows",
+    "Main V2 single PNG browser download succeeded",
+    "All five brand odds HTML responses now hold 2026-11-11"
+  ],
+  "pending": [
+    "Independent form,1X2,crests,team news for all eligible previews",
+    "Two independently researched premium Special Choice articles",
+    "Yesterday final-score verification and archive",
+    "Fresh VIP source ledger and independent model inputs",
+    "Ten fresh sourced news items and licensed photographs",
+    "Video,full PNG/ZIP and all-brand rendered QA"
+  ],
+  "guard": "FAIL: other daily sections remain unprepared; do not call COMPLETE",
+  "regression": {
+    "time12h": "PASS",
+    "oddsAllBrands": "2 existing BCF assertions fail against suspended BCF page"
+  },
+  "rollbackCommit": "477efa7250ba772db5a5457fcd41e5745b6d3642"
+}
