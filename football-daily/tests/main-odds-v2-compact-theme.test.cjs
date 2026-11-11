@@ -12,7 +12,7 @@ test("Main Odds V2 keeps every market, uses eight readable columns and a 900px P
  assert.match(src,/root\.style\.setProperty\("--ov2-brand",themeColor\)/,"Theme must be applied inside the exported sheet");
  const made=[];
  function element(type){
-  const el={type,children:[],className:"",innerHTML:"",textContent:"",style:{cssText:"",vars:{},setProperty(k,v){this.vars[k]=v;}},
+  const el={type,children:[],className:"",classList:{add(){}},innerHTML:"",textContent:"",style:{cssText:"",vars:{},setProperty(k,v){this.vars[k]=v;}},
    append(...children){this.children.push(...children);},remove(){this.removed=true;}};
   made.push(el);return el;
  }
