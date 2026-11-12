@@ -2,7 +2,8 @@
 /* MAIN only. Results V2 uses the V4 square poster with verified FT score,
    archived V2 editorial and original pick. Page and PNG share one renderer. */
 (function(){
- if(document.documentElement.dataset.footballBrandName||!["/","/index.html"].includes(location.pathname))return;
+ const isGoal=/^\/future-code-journal(?:\/|$)/.test(location.pathname);
+ if(!isGoal&&(document.documentElement.dataset.footballBrandName||!["/","/index.html"].includes(location.pathname)))return;
  const $=id=>document.getElementById(id);
  const clean=v=>String(v??"").replace(/\*\*/g,"").normalize("NFC").trim();
  const team=(m,side)=>clean(m[side+"Display"]||m[side]||"—");
@@ -48,7 +49,7 @@
   return new Promise(resolve=>{const reader=new FileReader();reader.onerror=()=>resolve(null);reader.onload=()=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=reader.result;};reader.readAsDataURL(file);});
  }
  function setup(){
-  const target=$("fcPreviewV2");if(!target)return;
+  const target=$(isGoal?"fcPreviewV4":"fcPreviewV2");if(!target)return;
   const el=document.createElement("section");el.id="fcResultsV2";el.className="fc-result-v2";
   el.innerHTML='<h2>ဂိုးရလဒ် Version 2 · V4 ဒီဇိုင်း + မူလရွေးချယ်မှု</h2><div class="fc-r2-tools">'+
    '<label>ပွဲနေ့စွဲ<input id="fcR2Date" type="date"></label>'+
@@ -68,6 +69,7 @@
  }
  let renderId=0;
  async function render(){
+  if(isGoal&&document.documentElement.dataset.gzSection!=="resultsV2")return;
   const generation=++renderId,root=$("fcR2List");if(!root)return;root.replaceChildren();
   const group=$("fcR2League").value,list=matches.filter(m=>group==="all"||m.league===group);
   for(const m of list){
@@ -91,7 +93,7 @@
   ++renderId;
   const n=++loadId,root=$("fcR2List");root.replaceChildren();$("fcR2Status").textContent=selectedDate+" ရလဒ်များ ရယူနေသည်…";
   try{
-   const url=new URL("./data/archive/"+selectedDate+".json",document.baseURI);
+   const url=new URL((isGoal?"../data/archive/":"./data/archive/")+selectedDate+".json",document.baseURI);
    url.searchParams.set("v",Date.now());
    const response=await (window.FootballData?.fetch||fetch)(url,{cache:"no-store"});
    if(!response.ok)throw Error("Archive မရပါ");
@@ -110,7 +112,7 @@
   const renderer=window.FutureCodePreviewV4;
   if(!renderer?.render)throw Error("V4 ဒီဇိုင်း Renderer မရသေးပါ");
   // Archived V2 prose and pick are retained; never read today's editorial into an old result.
-  const canvas=await renderer.render(m,{result:true,color:options.color});
+  const canvas=await renderer.render(m,{result:true,color:options.color,includeBrandBanner:options.includeBrandBanner});
   const top=options.includeUploadedBanners!==false?topBanner:null,bottom=options.includeUploadedBanners!==false?bottomBanner:null;
   if(!top&&!bottom)return canvas;
   const w=canvas.width,topH=top?Math.round(w*top.naturalHeight/top.naturalWidth):0,bottomH=bottom?Math.round(w*bottom.naturalHeight/bottom.naturalWidth):0;
@@ -122,10 +124,12 @@
  async function png(m){
   const out=await renderCanvas(m,{includeUploadedBanners:true});
   const blob=await new Promise((resolve,reject)=>out.toBlob(b=>b?.size?resolve(b):reject(Error("PNG encoding failed")),"image/png"));
-  const url=URL.createObjectURL(blob),a=document.createElement("a");
-  a.href=url;a.download="results-v2-"+selectedDate+"-"+clean(m.fixtureId||m.home||"match").replace(/[^a-z0-9_-]/gi,"-")+".png";
+  const filename="results-v2-"+selectedDate+"-"+clean(m.fixtureId||m.home||"match").replace(/[^a-z0-9_-]/gi,"-")+".png";
+  if(window.FutureCodeImageSave)return window.FutureCodeImageSave.saveBlob(blob,filename);
+  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=filename;
   document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
  }
+ if(isGoal)window.addEventListener?.("goalzone:sectionchange",()=>{if(document.documentElement.dataset.gzSection==="resultsV2")render();else{++renderId;$("fcR2List")?.replaceChildren();}});
  window.FutureCodeResultsV2=Object.freeze({renderCanvas});
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",setup,{once:true});else setup();
 })();

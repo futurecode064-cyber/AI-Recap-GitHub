@@ -11,7 +11,7 @@
     const empty = document.getElementById("gzSpecialEmpty");
     if (!nav || !filters || !list || !heading || !pill || !empty) return;
 
-    const sections = ["previews", "news", "ai", "special", "results", "probabilities", "downloads"];
+    const sections = ["previews", "news", "ai", "special", "results", "probabilities", "downloads", "previewV4", "resultsV2"];
     const known = new Set(sections);
     let active = "previews";
     let resetFilter = true;
@@ -41,7 +41,7 @@
     }
 
     function synchronizeMatches() {
-      if (active === "news" || active === "ai" || active === "downloads" || active === "probabilities") return;
+      if (active === "previewV4" || active === "resultsV2" || active === "news" || active === "ai" || active === "downloads" || active === "probabilities") return;
       const desiredDay = active === "results" ? "-1" : "0";
       const day = document.querySelector('#dateTabs button[data-day="' + desiredDay + '"]');
       if (day && !day.classList.contains("active")) {
@@ -90,6 +90,8 @@
       if (active !== next) resetFilter = true;
       active = next;
       root.dataset.gzSection = next;
+      document.body.dataset.fcMainView=(next==="previewV4"||next==="resultsV2")?next:"";
+      window.dispatchEvent(new CustomEvent("goalzone:sectionchange",{detail:next}));
       nav.querySelectorAll("[data-gz-section-link]").forEach(function (link) {
         const chosen = link.dataset.gzSectionLink === next;
         link.classList.toggle("active", chosen);

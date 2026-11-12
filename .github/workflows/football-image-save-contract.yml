@@ -16,4 +16,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test football-daily/tests/ykz-native-image-save.test.cjs football-daily/tests/ykz-brand.test.cjs
+      - run: node --test football-daily/tests/ykz-native-image-save.test.cjs football-daily/tests/ykz-brand.test.cjs football-daily/tests/goal-zone-v4.test.cjs football-daily/tests/v4-content-fit.test.cjs football-daily/tests/results-v2-compact.test.cjs

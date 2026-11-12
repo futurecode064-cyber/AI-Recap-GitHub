@@ -6,7 +6,7 @@
   const base=new URL("../data/",document.baseURI),bannerUrl=new URL("./assets/goal-zone-download-banner.webp",document.baseURI).href;
   const $=id=>document.getElementById(id);
   const items=[
-    ["preview","ပွဲကြိုသုံးသပ်ချက်"],["special","Special Choice"],
+    ["preview","ပွဲကြိုသုံးသပ်ချက်"],["previewV4","ပွဲကြိုသုံးသပ်ချက် V4"],["resultsV2","ဂိုးရလဒ် V2"],["special","Special Choice"],
     ["odds","မြန်မာပေါက်ကြေး"],["results","ဂိုးရလဒ်"],
     ["ai","AI ခန့်မှန်းချက်"],["probability","ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)"],
     ["news","ဘောလုံးသတင်း"]
@@ -207,7 +207,7 @@
       return original;
     }catch(originalError){
       // Table sections must never silently downgrade to non-tabular cards.
-      if(type==="ai"||type==="probability")throw originalError;
+      if(type==="ai"||type==="probability"||type==="previewV4"||type==="resultsV2")throw originalError;
       console.warn("GOAL ZONE original exporter fallback",type,originalError);
       notes.push(type+" — "+(originalError?.message||String(originalError)));
       const pages=[];
@@ -306,6 +306,11 @@
     return decoded(output.blob);
   }
   async function exportGroup(type,group,ctx){
+    if(type==="previewV4"||type==="resultsV2"){
+      const arts=[];
+      for(const m of group)arts.push(type==="previewV4"?await window.FutureCodePreviewV4.render(m,{includeBrandBanner:false}):await window.FutureCodeResultsV2.renderCanvas(m,{includeUploadedBanners:false,includeBrandBanner:false}));
+      return stack(arts);
+    }
     if(type==="preview"||type==="special"){
       const exp=window.FutureCodeCardExport;
       if(!exp?.save)throw Error("ပွဲကြို PNG exporter မရရှိပါ");
@@ -341,9 +346,10 @@
     anchor.insertAdjacentElement("afterend",panel);
     const categories=$("gzBulkCategories"),league=$("gzBulkLeague"),matchList=$("gzBulkMatchList"),status=$("gzBulkStatus"),btn=$("gzBulkDownload");
     // Layout is intentionally SECTION-SPECIFIC. No global PNG layout switch.
-    const initialModes={preview:"each",special:"each",odds:"single",results:"two",ai:"two",probability:"single",news:"each"};
+    const initialModes={previewV4:"each",resultsV2:"each",preview:"each",special:"each",odds:"single",results:"two",ai:"two",probability:"single",news:"each"};
     const sectionModeControls=new Map();
     for(const [id,labelText] of items){
+      if(id==="previewV4"&&!window.FutureCodePreviewV4?.render||id==="resultsV2"&&!window.FutureCodeResultsV2?.renderCanvas)continue;
       const row=document.createElement("div");row.className="gz-section-mode-row";row.dataset.section=id;
       const label=document.createElement("label");label.className="gz-section-mode-label";
       const checkbox=document.createElement("input");checkbox.type="checkbox";
@@ -410,7 +416,7 @@
       const context={day,previousDay,odds,oddsById:new Map(oddsMatches.filter(m=>m.fixtureId).map(m=>[m.fixtureId,m])),
         oddsByKey:new Map(oddsMatches.map(m=>[key(m),m]))};
       const source={preview:matches,special:matches.filter(m=>m.specialChoice===true),odds:oddsMatches,
-        results:finals,ai:matches,probability:matches,news:stories};
+        results:finals,previewV4:matches.filter(m=>window.FutureCodePreviewV4?.eligible(m)),resultsV2:finals,ai:matches,probability:matches,news:stories};
       const ZIP=window.FutureCodeFrameZip?.Archive;
       if(!ZIP){status.textContent="ZIP module မရရှိပါ";return;}
       btn.disabled=true;let count=0;const warnings=[];const archive=new ZIP();
