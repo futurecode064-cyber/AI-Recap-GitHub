@@ -37,9 +37,11 @@ async function* forSection(k,f,rows,mode){
    const chunks=mode==="one"?rows.map(m=>[m]):splitRows(rows,mode);
    for(let i=0;i<chunks.length;i++){
     const originals=[];
-    for(const match of chunks[i])originals.push(await render(match,{includeUploadedBanners:false,date:archive?.reportDate||s().getDate()}));
+    for(const match of chunks[i])originals.push(await render(match,{includeUploadedBanners:false,color:window.FCStudioMulti?.color?.(k)||f.color,date:archive?.reportDate||s().getDate()}));
     const source=await stackCanvases(originals,12);
-    const framed=await p.wrap(source,"resultsV2","pro:"+f.id);
+    let framed=await p.wrap(source,"resultsV2","pro:"+f.id);
+    const banner=window.FCStudioMulti?.banner?.(k);
+    if(banner)framed=await p.renderSample({id:"result-v4-banner",color:window.FCStudioMulti.color(k)||f.color,topImage:banner,bottomImage:"",top:0,bottom:0,fit:"contain"},framed);
     yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(framed)};
    }
   }else if(k==="oddsV2"){

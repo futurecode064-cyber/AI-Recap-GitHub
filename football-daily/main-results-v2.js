@@ -1,13 +1,12 @@
 "use strict";
-/* MAIN only. Results V2 = verified FT header + compact logo/score row, then
-   the unchanged archived article and original selection. Prematch market panels
-   are intentionally omitted from this Results-only presentation. */
+/* MAIN only. Results V2 uses the V4 square poster with verified FT score,
+   archived V2 editorial and original pick. Page and PNG share one renderer. */
 (function(){
  if(document.documentElement.dataset.footballBrandName||!["/","/index.html"].includes(location.pathname))return;
  const $=id=>document.getElementById(id);
  const clean=v=>String(v??"").replace(/\*\*/g,"").normalize("NFC").trim();
  const team=(m,side)=>clean(m[side+"Display"]||m[side]||"—");
- const choice=m=>window.FutureCodeEditorialChoice?.pick(m)||"အတည်မပြုရသေး";
+ const choice=m=>m.previewV2Selection||window.FutureCodeEditorialChoice?.pick(m)||"အတည်မပြုရသေး";
  const valid=m=>m?.status==="finished"&&/^\d+\s*[-:]\s*\d+$/.test(clean(m.finalScore||""));
  const yesterday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Yangon",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).map(x=>[x.type,x.value]));const d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);};
  const period=m=>m.resultPeriod==="AET"?"AET · အချိန်ပိုပြီး":"FT · ပွဲပြီး";
@@ -51,7 +50,7 @@
  function setup(){
   const target=$("fcPreviewV2");if(!target)return;
   const el=document.createElement("section");el.id="fcResultsV2";el.className="fc-result-v2";
-  el.innerHTML='<h2>ဂိုးရလဒ် Version 2 · FULL TIME + မူလသုံးသပ်ချက်</h2><div class="fc-r2-tools">'+
+  el.innerHTML='<h2>ဂိုးရလဒ် Version 2 · V4 ဒီဇိုင်း + မူလရွေးချယ်မှု</h2><div class="fc-r2-tools">'+
    '<label>ပွဲနေ့စွဲ<input id="fcR2Date" type="date"></label>'+
    '<label>လိဂ်ရွေးရန်<select id="fcR2League"><option value="all">လိဂ်အားလုံး</option></select></label>'+
    '<label>မိမိအပေါ် Banner<input id="fcR2Top" type="file" accept="image/*"></label>'+
@@ -63,66 +62,33 @@
   $("fcR2Date").onchange=()=>{selectedDate=$("fcR2Date").value||yesterday();load();};
   $("fcR2League").onchange=render;
   $("fcR2Refresh").onclick=load;
-  $("fcR2Top").onchange=async e=>topBanner=await readBanner(e.target.files?.[0]);
-  $("fcR2Bottom").onchange=async e=>bottomBanner=await readBanner(e.target.files?.[0]);
+  $("fcR2Top").onchange=async e=>{topBanner=await readBanner(e.target.files?.[0]);render();};
+  $("fcR2Bottom").onchange=async e=>{bottomBanner=await readBanner(e.target.files?.[0]);render();};
   load();
  }
- function logo(src,name){
-  const frame=document.createElement("div");frame.className="fc-r2-club";
-  if(src){
-   const img=document.createElement("img");img.src=src;img.alt=name+" အသင်းလိုဂို";img.loading="lazy";
-   img.onerror=()=>img.remove();frame.append(img);
-  }
-  const label=document.createElement("strong");label.textContent=name;frame.append(label);
-  return frame;
- }
- function resultHeader(m){
-  const h=document.createElement("header");h.className="fc-r2-scorehead";
-  const meta=document.createElement("div");meta.className="fc-r2-meta";
-  meta.textContent=(m.leagueDisplay||m.league||"")+" · "+selectedDate+" · "+period(m)+timeNote(m);
-  const line=document.createElement("div");line.className="fc-r2-scoreline";
-  const middle=document.createElement("div");middle.className="fc-r2-score-wrap";
-  const score=document.createElement("strong");score.className="fc-r2-score";score.textContent=clean(m.finalScore).replace(":", " - ");
-  const state=document.createElement("small");state.className="fc-r2-state";state.textContent=period(m);
-  middle.append(score,state);
-  line.append(logo(m.homeCrestUrl,team(m,"home")),middle,logo(m.awayCrestUrl,team(m,"away")));
-  h.append(meta,line);return h;
- }
- function render(){
-  const root=$("fcR2List");if(!root)return;root.replaceChildren();
+ let renderId=0;
+ async function render(){
+  const generation=++renderId,root=$("fcR2List");if(!root)return;root.replaceChildren();
   const group=$("fcR2League").value,list=matches.filter(m=>group==="all"||m.league===group);
   for(const m of list){
+   if(generation!==renderId)return;
    const item=document.createElement("article");item.className="fc-r2-card";
-   item.append(resultHeader(m));
-   // Keep the archived original article and pick; remove duplicate prematch odds/form.
-   const original=window.FutureCodeMainPreviewCard?.renderOriginal(m);
-   if(!original){
-    const error=document.createElement("p");error.textContent="မူရင်း ပွဲကြိုကတ် module မရရှိပါ";item.append(error);
-   }else{
-    original.classList.add("fc-r2-original");
-    for(const selector of [".match-topline",".match-hero",".match-market-layout"])
-      original.querySelector(selector)?.remove();
-    const caption=document.createElement("div");caption.className="fc-r2-caption";caption.textContent="မူလ ပွဲကြိုသုံးသပ်ချက်";
-    item.append(caption);
-    original.querySelector(".analysis-toggle")?.remove();
-    original.querySelector(".match-actions")?.remove();
-    const body=original.querySelector(".analysis-body");if(body){body.hidden=false;body.style.display="block";}
-    item.append(original);
-   }
    const save=document.createElement("button");save.className="fc-r2-save fc-r2-download";save.type="button";
-   save.textContent="⬇ FULL TIME ဂိုးရလဒ် + မူလသုံးသပ်ချက် PNG Download";
-   save.disabled=!original;
-   save.onclick=async()=>{
-    save.disabled=true;
-    try{await png(m);$("fcR2Status").textContent="PNG Download စတင်ပြီးပါပြီ။";}
-    catch(err){$("fcR2Status").textContent="PNG Download မအောင်မြင်ပါ — "+err.message;}
-    finally{save.disabled=false;}
-   };
-   item.append(save);root.append(item);
+   save.textContent="⬇ ဂိုးရလဒ် V2 · V4 ဒီဇိုင်း PNG Download";
+   save.onclick=async()=>{save.disabled=true;try{await png(m);$("fcR2Status").textContent="PNG Download စတင်ပြီးပါပြီ။";}catch(e){$("fcR2Status").textContent="PNG Download မအောင်မြင်ပါ — "+e.message;}finally{save.disabled=false;}};
+   root.append(item);
+   try{
+    const canvas=await renderCanvas(m,{includeUploadedBanners:true});
+    if(generation!==renderId)return;
+    canvas.style.cssText="display:block;width:100%;height:auto";
+    canvas.setAttribute("role","img");canvas.setAttribute("aria-label",team(m,"home")+" "+m.finalScore+" "+team(m,"away")+" · မူလရွေးချယ်မှု "+choice(m));
+    item.append(canvas,save);
+   }catch(e){const error=document.createElement("p");error.textContent=team(m,"home")+" — "+e.message;item.append(error);}
   }
-  $("fcR2Status").textContent=list.length+" ပွဲ · FULL TIME ဂိုးရလဒ် + မူလသုံးသပ်ချက် + မူလရွေးချယ်မှု။ VS၊ 1X2 ကြေးနှင့် နောက်ဆုံး ၅ ပွဲကို Results V2 မှ ဖယ်ထားပါသည်။";
+  if(generation===renderId)$("fcR2Status").textContent=list.length+" ပွဲ · V4 ဒီဇိုင်း · ပွဲပြီးဂိုးရလဒ်နှင့် မူလအထူးရွေးချယ်မှုကို ဝိုင်းပြထားသည်။";
  }
  async function load(){
+  ++renderId;
   const n=++loadId,root=$("fcR2List");root.replaceChildren();$("fcR2Status").textContent=selectedDate+" ရလဒ်များ ရယူနေသည်…";
   try{
    const url=new URL("./data/archive/"+selectedDate+".json",document.baseURI);
@@ -136,70 +102,21 @@
    sel.replaceChildren(new Option("လိဂ်အားလုံး","all"));
    [...new Set(matches.map(m=>m.league))].forEach(l=>sel.add(new Option(matches.find(x=>x.league===l).leagueDisplay||l,l)));
    if([...sel.options].some(o=>o.value===prev))sel.value=prev;
-   render();
+   await render();
   }catch(e){if(n!==loadId)return;matches=[];root.replaceChildren();$("fcR2Status").textContent="ဂိုးရလဒ် V2 Data မရပါ — "+e.message;}
  }
- function cover(c,img,w,y,h){
-  if(!img)return;
-  const k=Math.max(w/img.naturalWidth,h/img.naturalHeight),sw=w/k,sh=h/k;
-  c.drawImage(img,(img.naturalWidth-sw)/2,(img.naturalHeight-sh)/2,sw,sh,0,y,w,h);
- }
- function ring(c,x,y,rx,ry){
-  c.save();c.strokeStyle="#f1322c";c.lineWidth=9;c.lineCap="round";
-  for(let i=0;i<2;i++){
-   c.beginPath();c.ellipse(x,y,rx+i*7,ry+i*4,-0.05,0,Math.PI*2);c.stroke();
-  }c.restore();
- }
  async function renderCanvas(m,options={}){
-  const renderer=window.FutureCodeFramePreview,kit=window.FutureCodeCanvasKit;
-  if(!renderer?.render||!kit)throw Error("V1 Original Canvas Renderer မရသေးပါ");
-  await kit.fonts();await document.fonts?.ready;
-  // Reuse the *unmodified* source match: identical V1 artwork, team crests,
-  // 5-match W/D/L, 1X2, bookmaker lines and the complete original analysis.
-  let preview=await renderer.render(m);
-  preview=window.FutureCodeEditorialChoice?.appendPng(preview,m)||preview;
-  const W=preview.width,headH=360,cutY=508,captionH=60,topH=topBanner&&options.includeUploadedBanners!==false?180:0,bottomH=bottomBanner&&options.includeUploadedBanners!==false?180:0;
-  if(preview.height<=cutY+30)throw Error("မူလသုံးသပ်ချက် Canvas အမြင့် မမှန်ပါ");
-  const H=topH+headH+captionH+(preview.height-cutY)+bottomH;
-  if(H>32000||W*H>110000000)throw Error("PNG အမြင့်/အရွယ်အစား များလွန်းနေပါသည်");
-  const out=document.createElement("canvas");out.width=W;out.height=H;
-  const c=out.getContext("2d");if(!c)throw Error("Canvas မရပါ");
-  c.fillStyle="#06192d";c.fillRect(0,0,W,H);
-  if(topH)cover(c,topBanner,W,0,topH);
-  const yy=topH;
-  const grd=c.createLinearGradient(0,yy,W,yy+headH);grd.addColorStop(0,"#06213b");grd.addColorStop(.5,"#15517e");grd.addColorStop(1,"#06213b");
-  c.fillStyle=grd;c.fillRect(0,yy,W,headH);
-  c.strokeStyle="#d7ad62";c.lineWidth=4;c.strokeRect(12,yy+11,W-24,headH-20);
-  c.textAlign="center";c.textBaseline="middle";c.fillStyle="#ffe2a5";
-  c.font='800 24px "Noto Sans Myanmar",sans-serif';
-  c.fillText((m.leagueDisplay||m.league||"")+" · "+(options.date||selectedDate)+" · "+period(m),W/2,yy+43,W-95);
-  const logos=[m.homeCrestUrl,m.awayCrestUrl].filter(Boolean);
-  await kit.preloadImages(logos);
-  if(m.homeCrestUrl)kit.crest(c,m.homeCrestUrl,55,yy+95,140,team(m,"home"),true);
-  if(m.awayCrestUrl)kit.crest(c,m.awayCrestUrl,W-195,yy+95,140,team(m,"away"),true);
-  c.fillStyle="#fff";c.font='900 29px "Noto Sans Myanmar",sans-serif';
-  c.fillText(team(m,"home"),265,yy+282,310);c.fillText(team(m,"away"),W-265,yy+282,310);
-  c.fillStyle="#ffecb0";c.font="900 112px Arial,sans-serif";
-  c.fillText(clean(m.finalScore).replace(/\s*[-:]\s*/," - "),W/2,yy+184,420);
-  ring(c,W/2,yy+186,214,94);
-  if(m.resultPeriod==="AET"){
-   c.fillStyle="#fff";c.font='700 18px "Noto Sans Myanmar",sans-serif';
-   c.fillText("မိနစ် ၉၀: "+(m.regulationScore||"—")+" · အချိန်ပိုပြီး",W/2,yy+333,650);
-  }else{
-   c.fillStyle="#fff";c.font="800 19px Arial,sans-serif";c.fillText("Finished",W/2,yy+333,260);
-  }
-  // Draw the full-time score once. Original Myanmar analysis and chosen club follow.
-  const captionY=yy+headH;
-  c.fillStyle="#0c3049";c.fillRect(0,captionY,W,captionH);
-  c.fillStyle="#ffda91";c.font='900 21px "Noto Sans Myanmar",sans-serif';
-  c.fillText("မူလ ပွဲကြိုသုံးသပ်ချက်",W/2,captionY+captionH/2,W-70);
-  const articleTop=captionY+captionH;
-  c.drawImage(preview,0,cutY,W,preview.height-cutY,0,articleTop,W,preview.height-cutY);
-  // The V1 canvas already appends an explicit original-selection footer.
-  // Circle exactly that footer; do NOT infer that a handicap bet won.
-  const extra=Math.max(100,Math.round(W*.085));
-  ring(c,W/2,articleTop+(preview.height-cutY)-extra/2,Math.min(470,W*.39),Math.min(extra*.43,49));
-  if(bottomH)cover(c,bottomBanner,W,H-bottomH,bottomH);
+  if(!valid(m))throw Error("အတည်ပြု ပွဲပြီးရလဒ် မရှိသေးပါ");
+  const renderer=window.FutureCodePreviewV4;
+  if(!renderer?.render)throw Error("V4 ဒီဇိုင်း Renderer မရသေးပါ");
+  // Archived V2 prose and pick are retained; never read today's editorial into an old result.
+  const canvas=await renderer.render(m,{result:true,color:options.color});
+  const top=options.includeUploadedBanners!==false?topBanner:null,bottom=options.includeUploadedBanners!==false?bottomBanner:null;
+  if(!top&&!bottom)return canvas;
+  const w=canvas.width,topH=top?Math.round(w*top.naturalHeight/top.naturalWidth):0,bottomH=bottom?Math.round(w*bottom.naturalHeight/bottom.naturalWidth):0;
+  if(topH+canvas.height+bottomH>32767||w*(topH+canvas.height+bottomH)>108000000)throw Error("Banner အရွယ်အစား များလွန်းပါသည်");
+  const out=document.createElement("canvas");out.width=w;out.height=topH+canvas.height+bottomH;
+  const c=out.getContext("2d");if(top)c.drawImage(top,0,0,w,topH);c.drawImage(canvas,0,topH);if(bottom)c.drawImage(bottom,0,topH+canvas.height,w,bottomH);
   return out;
  }
  async function png(m){

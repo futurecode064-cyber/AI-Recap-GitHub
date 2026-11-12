@@ -130,7 +130,6 @@ function normalize(){
  localStorage.setItem("fc-new-v2-sections-assigned-v1","1");
  return changed;
 }
-function assignPreviewV3(){
 // V4 uses a separate default frame and does not modify V3 or its saved assignments.
 function assignPreviewV4(){
  if(localStorage.getItem("fc-preview-v4-assignment-v1"))return false;
@@ -140,6 +139,7 @@ function assignPreviewV4(){
  localStorage.setItem("fc-preview-v4-assignment-v1","yes");return true;
 }
 
+function assignPreviewV3(){
  if(localStorage.getItem("fc-preview-v3-assignment-v1"))return false;
  const id="preview-v3-gold";if(!frame(id))return false;
  if(!assigned(id,"previewsV3"))state.placements.previewsV3.push(id);
