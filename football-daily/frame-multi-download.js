@@ -10,7 +10,7 @@
  const valid=x=>Array.isArray(x)?[...new Set(x.filter(v=>typeof v==="string"&&v.length<250))].slice(0,500):null;
  for(const k of KEYS){
   const v=saved[k]||{};
-  prefs[k]={enabled:typeof v.enabled==="boolean"?v.enabled:k==="oddsCards",frames:valid(v.frames),leagues:valid(v.leagues),matches:valid(v.matches),oddsMode:v.oddsMode==="current"?"current":"original",color:/^#[0-9a-f]{6}$/i.test(v.color||"")?v.color:null};
+  prefs[k]={enabled:typeof v.enabled==="boolean"?v.enabled:k==="oddsCards",frames:valid(v.frames),leagues:valid(v.leagues),matches:valid(v.matches),oddsMode:v.oddsMode==="current"?"current":"original",banner:typeof v.banner==="string"&&v.banner.startsWith("data:image/")&&v.banner.length<4000000?v.banner:"",color:/^#[0-9a-f]{6}$/i.test(v.color||"")?v.color:null};
  }
  let openSections=new Set(["oddsCards"]),rendered=false;
  const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(prefs));}catch(e){studio.status("Multi-Selection သိမ်းမရပါ — Browser Storage ပြန်စစ်ပါ",true);}};
@@ -138,6 +138,12 @@
     picker.onchange=()=>{p.color=picker.value;persist();studio.clearExportPreview();studio.status("V4 အရောင်ရွေးပြီးပါပြီ။ Preview သို့မဟုတ် ZIP Download နှိပ်ပါ။");};
     line.append(picker,text("span","PNG ထုတ်သည့်အခါ အပေါ်ခေါင်းစည်း၊ ဇယားနောက်ခံနှင့် အထူးရွေးချယ်မှုအရောင် ပြောင်းပါမည်။","hint"));
     bottom.append(line);
+    const banner=text("label","V4 · အပေါ် Banner ထည့်ရန်","multi-layout"),upload=document.createElement("input");
+    upload.type="file";upload.accept="image/png,image/jpeg,image/webp";
+    upload.onchange=async()=>{const file=upload.files[0];if(!file)return;if(file.size>2800000){studio.status("Banner ကို 2.8 MB အောက် ရွေးပါ",true);return;}
+     try{const url=await new Promise((ok,bad)=>{const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=bad;r.readAsDataURL(file);});p.banner=url;persist();studio.clearExportPreview();studio.status("V4 Banner ထည့်ပြီးပါပြီ — Preview / Download တွင် ပါဝင်မည်");}catch(e){studio.status("Banner ဖတ်မရပါ",true);}};
+    const remove=text("button","Banner ဖြုတ်ရန်");remove.type="button";remove.onclick=()=>{p.banner="";persist();studio.clearExportPreview();render();};
+    banner.append(upload,text("span",p.banner?"Banner ✓ · မူရင်းအချိုးအတိုင်း ထုတ်မည်":"Banner မရှိပါ","hint"),remove);bottom.append(banner);
    }
    if(k==="odds"||k==="oddsCards"){
     const line=text("label","ကြေးအမျိုးအစား","multi-layout");
@@ -151,6 +157,6 @@
   const total=plans(),info=document.getElementById("multiSelectionSummary");
   if(info)info.textContent="ရွေးထားသော Section "+KEYS.filter(k=>prefs[k].enabled).length+" ခု · Frame × Section "+total.length+" ခု · ZIP တစ်ခုတည်းတွင် PNG များစုစည်းမည်";
  }
- window.FCStudioMulti=Object.freeze({plans,refresh:render,oddsMode:k=>prefs[k]?.oddsMode||"original",getPreferences:()=>JSON.parse(JSON.stringify(prefs)),color:k=>prefs[k]?.color||null});
+ window.FCStudioMulti=Object.freeze({plans,refresh:render,oddsMode:k=>prefs[k]?.oddsMode||"original",getPreferences:()=>JSON.parse(JSON.stringify(prefs)),color:k=>prefs[k]?.color||null,banner:k=>prefs[k]?.banner||""});
  render();
 })();

@@ -60,7 +60,9 @@ async function* forSection(k,f,rows,mode){
     const originals=[];
     for(const m of chunks[i])originals.push(await render(m,{color:window.FCStudioMulti?.color?.("previewsV4")||f.color||"#b3192c"}));
     const combined=await stackCanvases(originals,4);
-    const framed=await p.wrap(combined,"previewsV4","pro:"+f.id);
+    let framed=await p.wrap(combined,"previewsV4","pro:"+f.id);
+    const banner=window.FCStudioMulti?.banner?.("previewsV4");
+    if(banner)framed=await p.renderSample({id:"v4-download-banner",color:window.FCStudioMulti.color("previewsV4")||f.color,topImage:banner,bottomImage:"",top:0,bottom:0,fit:"contain"},framed);
     yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(framed)};
    }
   }else if(k==="previewsV3"){
