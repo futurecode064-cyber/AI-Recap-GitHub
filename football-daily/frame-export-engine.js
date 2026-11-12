@@ -58,7 +58,7 @@ async function* forSection(k,f,rows,mode){
    const chunks=Array.from({length:Math.ceil(rows.length/size)},(_,i)=>rows.slice(i*size,i*size+size));
    for(let i=0;i<chunks.length;i++){
     const originals=[];
-    for(const m of chunks[i])originals.push(await render(m));
+    for(const m of chunks[i])originals.push(await render(m,{color:window.FCStudioMulti?.color?.("previewsV4")||f.color||"#b3192c"}));
     const combined=await stackCanvases(originals,4);
     const framed=await p.wrap(combined,"previewsV4","pro:"+f.id);
     yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(framed)};

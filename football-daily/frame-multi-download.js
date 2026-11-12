@@ -10,7 +10,7 @@
  const valid=x=>Array.isArray(x)?[...new Set(x.filter(v=>typeof v==="string"&&v.length<250))].slice(0,500):null;
  for(const k of KEYS){
   const v=saved[k]||{};
-  prefs[k]={enabled:typeof v.enabled==="boolean"?v.enabled:k==="oddsCards",frames:valid(v.frames),leagues:valid(v.leagues),matches:valid(v.matches),oddsMode:v.oddsMode==="current"?"current":"original"};
+  prefs[k]={enabled:typeof v.enabled==="boolean"?v.enabled:k==="oddsCards",frames:valid(v.frames),leagues:valid(v.leagues),matches:valid(v.matches),oddsMode:v.oddsMode==="current"?"current":"original",color:/^#[0-9a-f]{6}$/i.test(v.color||"")?v.color:null};
  }
  let openSections=new Set(["oddsCards"]),rendered=false;
  const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(prefs));}catch(e){studio.status("Multi-Selection သိမ်းမရပါ — Browser Storage ပြန်စစ်ပါ",true);}};
@@ -127,6 +127,18 @@
    details.append(columns);
    const bottom=text("div",undefined,"multi-bottom");
    bottom.append(layoutEditor(k));
+   if(k==="previewsV4"){
+    const line=text("label","Version 4 · PNG Theme Color","multi-layout");
+    line.classList.add("v4-theme-row");
+    const picker=document.createElement("input");
+    picker.type="color";picker.setAttribute("aria-label","Version 4 အရောင်ရွေးရန်");
+    picker.dataset.colorSection=k;
+    picker.value=p.color||allFrames[0]?.color||"#b3192c";
+    picker.style.cssText="width:100%;height:46px;border:2px solid #e4c17d;border-radius:8px;cursor:pointer;background:#fff;padding:3px";
+    picker.onchange=()=>{p.color=picker.value;persist();studio.clearExportPreview();studio.status("V4 အရောင်ရွေးပြီးပါပြီ။ Preview သို့မဟုတ် ZIP Download နှိပ်ပါ။");};
+    line.append(picker,text("span","PNG ထုတ်သည့်အခါ အပေါ်ခေါင်းစည်း၊ ဇယားနောက်ခံနှင့် အထူးရွေးချယ်မှုအရောင် ပြောင်းပါမည်။","hint"));
+    bottom.append(line);
+   }
    if(k==="odds"||k==="oddsCards"){
     const line=text("label","ကြေးအမျိုးအစား","multi-layout");
     const sel=document.createElement("select");sel.dataset.oddsSection=k;
@@ -139,6 +151,6 @@
   const total=plans(),info=document.getElementById("multiSelectionSummary");
   if(info)info.textContent="ရွေးထားသော Section "+KEYS.filter(k=>prefs[k].enabled).length+" ခု · Frame × Section "+total.length+" ခု · ZIP တစ်ခုတည်းတွင် PNG များစုစည်းမည်";
  }
- window.FCStudioMulti=Object.freeze({plans,refresh:render,oddsMode:k=>prefs[k]?.oddsMode||"original",getPreferences:()=>JSON.parse(JSON.stringify(prefs))});
+ window.FCStudioMulti=Object.freeze({plans,refresh:render,oddsMode:k=>prefs[k]?.oddsMode||"original",getPreferences:()=>JSON.parse(JSON.stringify(prefs)),color:k=>prefs[k]?.color||null});
  render();
 })();

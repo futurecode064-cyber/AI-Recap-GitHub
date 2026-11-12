@@ -230,7 +230,9 @@
    button.onclick=async()=>{if(busy)return;busy=true;try{setStatus("PNG ပြင်ဆင်နေပါသည်…");save(await blob(await framed(match,el("fcV4Frame").value)),"Preview-V4-"+date+"-"+match.fixtureId+".png");setStatus("PNG Download အဆင်သင့်");}catch(e){setStatus("Download မရပါ — "+e.message);}finally{busy=false;}};
    bar.append(check,button);article.append(picture,bar);host.append(article);
    try{
-    const canvas=await render(match);
+    const selectedFrame=el("fcV4Frame").value;
+    const frameColor=selectedFrame!=="none"?window.FutureCodeProfessionalFrames?.getFrame?.(selectedFrame)?.color:null;
+    const canvas=await render(match,{color:frameColor});
     if(gen!==renderGeneration)return;
     const b=await blob(canvas),url=URL.createObjectURL(b);
     urls.push(url);picture.src=url;
@@ -260,6 +262,7 @@
  }
  window.FutureCodePreviewV4=Object.freeze({render,eligible,editorial,selection,load});
  el("fcV4League").onchange=show;
+ el("fcV4Frame").onchange=show;
  el("fcV4One").onclick=()=>exportMatches("one");
  el("fcV4Pair").onclick=()=>exportMatches("pair");
  el("fcV4Zip").onclick=()=>exportMatches("zip");
