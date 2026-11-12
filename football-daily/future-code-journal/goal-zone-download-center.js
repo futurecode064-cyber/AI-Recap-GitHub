@@ -4,6 +4,8 @@
   const root=document.documentElement;
   if(root.dataset.footballBrandName!=="ဂိုးဇုံ အားကစား ဂျာနယ်")return;
   const base=new URL("../data/",document.baseURI),bannerUrl=new URL("./assets/goal-zone-download-banner.webp",document.baseURI).href;
+  const previewBannerUrl=new URL("./assets/goal-zone-preview-special-analysis.png",document.baseURI).href;
+  const resultsV2BannerUrl=new URL("./assets/goal-zone-results-v2-correct-predictions.png",document.baseURI).href;
   const $=id=>document.getElementById(id);
   const items=[
     ["preview","ပွဲကြိုသုံးသပ်ချက်"],["previewV4","ပွဲကြိုသုံးသပ်ချက် V4"],["resultsV2","ဂိုးရလဒ် V2"],["special","Special Choice"],
@@ -72,12 +74,15 @@
     }finally{URL.revokeObjectURL(url);}
   }
   async function withBanner(source,type){
-    // V4 uses the same titled Goal Zone masthead for singles, pairs and ZIPs.
-    if(type==="previewV4"&&window.FutureCodePreviewV4?.brandCanvas)
-      return window.FutureCodePreviewV4.brandCanvas(source);
-    const w=source.width,h=Math.round(w*270/988),output=canvasOf(w,source.height+h);
-    const ctx=output.getContext("2d");ctx.fillStyle="#0d0b07";ctx.fillRect(0,0,w,h);
-    const img=await loadImage(bannerUrl).catch(()=>null);
+    // Section-specific, owner-approved source PNGs; never redraw either banner.
+    const chosen=(type==="preview"||type==="previewV4")?previewBannerUrl:
+      type==="resultsV2"?resultsV2BannerUrl:bannerUrl;
+    const img=await loadImage(chosen).catch(()=>null);
+    if(!img&&(type==="preview"||type==="previewV4"||type==="resultsV2"))
+      throw Error("ရွေးထားသည့် ဂိုးဇုံ Banner မရရှိပါ");
+    const w=source.width,h=img?Math.round(w*img.naturalHeight/img.naturalWidth):Math.round(w*270/988);
+    const output=canvasOf(w,source.height+h),ctx=output.getContext("2d");
+    ctx.fillStyle="#0d0b07";ctx.fillRect(0,0,w,h);
     if(img)ctx.drawImage(img,0,0,w,h);
     else{
       ctx.fillStyle="#cba456";ctx.textAlign="center";

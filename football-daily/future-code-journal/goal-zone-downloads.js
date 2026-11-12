@@ -5,6 +5,7 @@
 
   const ROOT = new URL("../data/", document.baseURI);
   const artwork = new URL("./assets/goal-zone-download-banner.webp", document.baseURI).href;
+  const previewArtwork = new URL("./assets/goal-zone-preview-special-analysis.png", document.baseURI).href;
   const brandLogo = new URL("./assets/logo.webp", document.baseURI).href;
   const imagePromises = new Map();
   const $ = id => document.getElementById(id);
@@ -35,14 +36,15 @@
     const sw = w/s, sh = h/s;
     ctx.drawImage(img,(img.naturalWidth-sw)/2,(img.naturalHeight-sh)/2,sw,sh,x,y,w,h);
   }
-  async function bannerCanvas(source){
+  async function bannerCanvas(source,type="default"){
     const w=source.width, h=Math.max(160,Math.round(w*270/988));
     const out=document.createElement("canvas");
     out.width=w;out.height=source.height+h;
     const ctx=out.getContext("2d");
     if (!ctx) throw Error("Canvas 2D unavailable");
     ctx.fillStyle="#080808";ctx.fillRect(0,0,w,h);
-    const banner=await loadImage(artwork);
+    const banner=await loadImage(type==="preview"?previewArtwork:artwork);
+    if(type==="preview"&&!banner)throw Error("ဂိုးဇုံ ပွဲကြိုအထူးသုံးသပ်ချက် Banner မရရှိပါ");
     if(banner){
       ctx.drawImage(banner,0,0,w,h);
     }else{
@@ -68,8 +70,8 @@
       catch(e){clearTimeout(timer);reject(e);}
     });
   }
-  async function prepared(canvas,filename) {
-    return {filename,blob:await toBlob(await bannerCanvas(canvas))};
+  async function prepared(canvas,filename,type="default") {
+    return {filename,blob:await toBlob(await bannerCanvas(canvas,type))};
   }
   function browserDownload(blob,name){
     if(blob.type.startsWith("image/")&&window.FutureCodeImageSave)return window.FutureCodeImageSave.saveBlob(blob,name);
@@ -127,7 +129,11 @@
   const kit=window.FutureCodeCanvasKit;
   if(kit && !kit._goalZoneBrandedDownload){
     const original=kit.download;
-    kit.download=async function(canvas,filename){return original(await bannerCanvas(canvas),filename);};
+    kit.download=async function(canvas,filename){
+      // Normal preview and special-choice PNGs use the approved preview masthead.
+      const isPreview=/^preview-/i.test(String(filename||""));
+      return original(await bannerCanvas(canvas,isPreview?"preview":"default"),filename);
+    };
     kit._goalZoneBrandedDownload=true;
   }
   const options=[
@@ -194,7 +200,7 @@
           for(const m of matches){
             if(selected.has("preview")){
               const canvas=await window.FutureCodeCardExport.save({...m,home:m.homeDisplay||m.home,away:m.awayDisplay||m.away},{...brand,leagueLabel:m.league,asCanvas:true,special:false});
-              await add(await prepared(canvas,"preview/goal-zone-preview-"+today+"-"+safeName(m.home)+"-"+safeName(m.away)+".png"));
+              await add(await prepared(canvas,"preview/goal-zone-preview-"+today+"-"+safeName(m.home)+"-"+safeName(m.away)+".png","preview"));
             }
             if(selected.has("special")&&m.specialChoice===true){
               const canvas=await window.FutureCodeCardExport.save({...m,home:m.homeDisplay||m.home,away:m.awayDisplay||m.away},{...brand,leagueLabel:m.league,asCanvas:true,special:true});
