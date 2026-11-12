@@ -1,0 +1,93 @@
+name: Preview V4 — Live PNG and Download Center QA
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/preview-v4-live-qa.yml'
+      - 'football-daily/main-preview-v4.js'
+      - 'football-daily/main-preview-v4.css'
+      - 'football-daily/main-section-tabs.js'
+      - 'football-daily/main-professional-frame-studio.js'
+      - 'football-daily/frame-workspace.js'
+      - 'football-daily/frame-export-engine.js'
+      - 'football-daily/frame-editor.html'
+      - 'football-daily/index.html'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Preview V4 JavaScript syntax
+        run: |
+          node --check football-daily/main-preview-v4.js
+          node --check football-daily/main-section-tabs.js
+          node --check football-daily/frame-workspace.js
+          node --check football-daily/frame-export-engine.js
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Test V4 main section and Frame Download Center PNG
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          import assert from 'node:assert/strict';
+          import {readFile} from 'node:fs/promises';
+          const base='https://future-code-football-daily.pages.dev/';
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          try{
+            const context=await browser.newContext({viewport:{width:1440,height:1080},acceptDownloads:true});
+            const page=await context.newPage(),errors=[];
+            page.on('pageerror',e=>errors.push(e.message));
+            await page.goto(base+'#fcPreviewV4',{waitUntil:'domcontentloaded',timeout:45000});
+            await page.waitForFunction(()=>{
+              const count=Number.parseInt(document.querySelector('#fcV4Count')?.textContent||'',10);
+              return document.body.dataset.fcMainView==='previewV4'&&count>0;
+            },null,{timeout:95000});
+            const picture=page.locator('#fcV4Cards img.fc-v4-picture').first();
+            await picture.waitFor({state:'visible',timeout:95000});
+            await page.waitForFunction(()=>{
+              const p=document.querySelector('#fcV4Cards img.fc-v4-picture');
+              return !!p&&p.complete&&p.naturalWidth===1080&&p.naturalHeight===1920;
+            },null,{timeout:95000});
+            const section=await page.locator('#fcPreviewV4').textContent();
+            assert(!/1x2.*(?:3\.|2\.)/i.test(section),'Market fields unexpectedly in V4');
+            const single=page.waitForEvent('download',{timeout:85000});
+            await page.locator('#fcV4Cards .fc-v4-card-actions button').first().click();
+            const download=await single;
+            assert(/^Preview-V4-.*\.png$/.test(download.suggestedFilename()),download.suggestedFilename());
+            const png=await readFile(await download.path());
+            assert.equal(png.toString('hex',0,8),'89504e470d0a1a0a');
+            console.log('V4 MAIN PNG PASS',{file:download.suggestedFilename(),bytes:png.length,errors});
+
+            const editor=await context.newPage(),editorErrors=[];
+            editor.on('pageerror',e=>editorErrors.push(e.message));
+            await editor.goto(base+'frame-editor.html',{waitUntil:'domcontentloaded',timeout:45000});
+            await editor.waitForFunction(()=>window.FCStudio?.getState()?.frames?.length>0&&window.FCStudioMulti?.plans,null,{timeout:90000});
+            await editor.locator('#navDownloads').click();
+            let card=editor.locator('details[data-section="previewsV4"]');
+            await card.waitFor({state:'attached',timeout:15000});
+            if(!(await card.evaluate(el=>el.open)))await card.locator('summary').click();
+            await card.locator('input[data-enable-section="previewsV4"]').check();
+            card=editor.locator('details[data-section="previewsV4"]');
+            const frameCount=await card.locator('.multi-group').first().locator('.multi-option').count();
+            const records=await editor.evaluate(()=>window.FCStudio.getRows('previewsV4').length);
+            assert(frameCount>=1&&records>=1,JSON.stringify({frameCount,records}));
+            await editor.locator('#multiSelectionCenter button[data-sections="none"]').click();
+            card=editor.locator('details[data-section="previewsV4"]');
+            await card.locator('input[data-enable-section="previewsV4"]').check();
+            await editor.locator('#downPreview').click();
+            await editor.locator('#downPreviewImage').waitFor({state:'visible',timeout:100000});
+            const actual=await editor.locator('#downPreviewImage').evaluate(img=>({w:img.naturalWidth,h:img.naturalHeight}));
+            assert(actual.w>=1080&&actual.h>=1920,JSON.stringify(actual));
+            console.log('V4 DOWNLOAD CENTER PASS',{frameCount,records,actual,editorErrors});
+            await context.close();
+          }finally{await browser.close();}
+          NODE
