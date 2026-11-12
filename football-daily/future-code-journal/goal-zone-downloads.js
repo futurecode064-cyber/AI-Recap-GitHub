@@ -37,14 +37,19 @@
     ctx.drawImage(img,(img.naturalWidth-sw)/2,(img.naturalHeight-sh)/2,sw,sh,x,y,w,h);
   }
   async function bannerCanvas(source,type="default"){
-    const w=source.width, h=Math.max(160,Math.round(w*270/988));
+    const banner=await loadImage(type==="preview"?previewArtwork:artwork);
+    if(type==="preview"&&!banner)throw Error("ဂိုးဇုံ ပွဲကြိုအထူးသုံးသပ်ချက် Banner မရရှိပါ");
+    const w=source.width;
+    const h=banner&&type==="preview"
+      ?Math.round(w*banner.naturalHeight/banner.naturalWidth)
+      :Math.max(160,Math.round(w*270/988));
+    if(h+source.height>32767||w*(h+source.height)>108000000)
+      throw Error("ဂိုးဇုံ Banner နှင့် PNG အရွယ်အစားကြီးလွန်းပါသည်");
     const out=document.createElement("canvas");
     out.width=w;out.height=source.height+h;
     const ctx=out.getContext("2d");
     if (!ctx) throw Error("Canvas 2D unavailable");
     ctx.fillStyle="#080808";ctx.fillRect(0,0,w,h);
-    const banner=await loadImage(type==="preview"?previewArtwork:artwork);
-    if(type==="preview"&&!banner)throw Error("ဂိုးဇုံ ပွဲကြိုအထူးသုံးသပ်ချက် Banner မရရှိပါ");
     if(banner){
       ctx.drawImage(banner,0,0,w,h);
     }else{
