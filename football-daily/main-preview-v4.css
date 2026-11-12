@@ -1,0 +1,31 @@
+@font-face{font-family:FCMyanmar;src:url("./assets/fonts/NotoSansMyanmar-Variable.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap}
+.fc-v4-section{display:none;margin:24px 0 36px;color:#f5f7fa;font-family:FCMyanmar,"Noto Sans Myanmar",sans-serif;scroll-margin-top:24px}
+body[data-fc-main-view="previewV4"] .fc-v4-section{display:block}
+body[data-fc-main-view="previewV4"] :is(#fcProbSection,#fcNewsSection,#fcAiScoreSection,#fcVideoStudio,#brandPreviewStudio,#brandOddsStudio,#filters,#sectionNote,#resultsDownloadBar,#matchList,.content>.section-heading){display:none!important}
+.date-tabs.fc-main-five-nav .fc-main-preview-v4-tab{border:2px solid #efc35d;background:linear-gradient(125deg,#5b0717,#15050c);color:#ffe1a1}
+.fc-v4-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:15px}
+.fc-v4-heading h2{font:900 27px/1.8 FCMyanmar,sans-serif;margin:0;color:#ffe098}
+.fc-v4-heading p{font-size:13px;color:#d0dfeb;margin:0}
+.fc-v4-count{background:#350f20;border:1px solid #d6ae56;border-radius:25px;padding:10px 16px;color:#ffe19e;font-weight:900}
+.fc-v4-tools{display:flex;flex-wrap:wrap;align-items:end;gap:10px;padding:17px;background:#1a0d19;border:1px solid #d4a958;border-radius:13px;margin-bottom:14px}
+.fc-v4-tools label{display:grid;gap:5px;min-width:185px;color:#e6e9ea;font-weight:800;font-size:12px}
+.fc-v4-tools select{width:100%;background:#fff;color:#102c44;border:1px solid #d7af55;border-radius:8px;padding:10px;min-height:43px;font:700 13px/1.8 FCMyanmar,sans-serif}
+.fc-v4-tools button,.fc-v4-card-actions button{background:#efc46a;color:#09273d;border:1px solid #ffdc97;border-radius:9px;padding:12px 15px;min-height:43px;font:900 13px/1.6 FCMyanmar,sans-serif;cursor:pointer}
+.fc-v4-tools button:hover,.fc-v4-card-actions button:hover{background:#ffe1a0}
+.fc-v4-status{padding:7px 0;font:700 13px/1.9 FCMyanmar,sans-serif;color:#ffdaa0}
+.fc-v4-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,450px),1fr));gap:22px;align-items:start}
+.fc-v4-card{background:#100812;border:2px solid #ebba63;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px #0009}
+.fc-v4-picture{width:100%;display:block;height:auto;object-fit:contain}
+.fc-v4-card-actions{display:flex;justify-content:space-between;align-items:center;gap:9px;padding:12px 13px;background:#2a0a17}
+.fc-v4-select{display:flex;align-items:center;gap:8px;font-weight:750;font-size:12px}
+.fc-v4-select input{width:19px;height:19px;accent-color:#eab85c}
+.fc-v4-note{padding:15px;color:#f5cd8b}
+@media(max-width:660px){.fc-v4-heading h2{font-size:23px}.fc-v4-tools>*{flex:1 1 100%}.fc-v4-cards{grid-template-columns:1fr}}
+
+/* Keep the full-length Myanmar editorials readable on desktop and downloads. */
+.fc-v4-cards{grid-template-columns:minmax(0,1fr);max-width:960px;margin-inline:auto}
+
+/* The V4 poster uses a 1080 x 1920 vertical canvas; show at full safe readable width. */
+.fc-v4-cards{grid-template-columns:minmax(0,1fr);max-width:720px;margin-inline:auto}
+.fc-v4-picture{aspect-ratio:9/16;background:linear-gradient(145deg,#410516,#090910 55%,#1f070a)}
+.fc-v4-card{border-width:3px;border-color:#edc566}
