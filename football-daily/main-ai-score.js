@@ -442,8 +442,9 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
   const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
   if(!blob)throw new Error("PNG encode failed");
   const slug=s=>String(s||"fixture").normalize("NFKD").replace(/[^a-zA-Z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,35);
-  const href=URL.createObjectURL(blob),link=document.createElement("a");
-  link.href=href;link.download="future-code-ai-"+date+"-"+slug(match.home)+"-"+slug(match.away)+".png";
+  const filename="future-code-ai-"+date+"-"+slug(match.home)+"-"+slug(match.away)+".png";
+  if(window.FutureCodeImageSave)return window.FutureCodeImageSave.saveBlob(blob,filename);
+  const href=URL.createObjectURL(blob),link=document.createElement("a");link.href=href;link.download=filename;
   document.body.appendChild(link);link.click();link.remove();
   setTimeout(()=>URL.revokeObjectURL(href),5000);
  }

@@ -1,0 +1,19 @@
+name: Football APK image save contract
+on:
+  push:
+    branches: [football-daily-render]
+    paths: ['football-daily/**', '.github/workflows/football-image-save-contract.yml']
+  pull_request:
+    paths: ['football-daily/**', '.github/workflows/football-image-save-contract.yml']
+permissions:
+  contents: read
+jobs:
+  image-save:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test football-daily/tests/ykz-native-image-save.test.cjs football-daily/tests/ykz-brand.test.cjs

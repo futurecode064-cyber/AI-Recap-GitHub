@@ -71,7 +71,7 @@
    let canvas=await window.FutureCodeFramePreview.render(match,brandTheme||opts.frameTheme,opts);
    if(window.FutureCodeEditorialChoice)canvas=window.FutureCodeEditorialChoice.appendPng(canvas,match);
    if(!opts.asCanvas&&window.FutureCodeProfessionalFrames)canvas=await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews",document.getElementById(opts.special?"fcSpecialCustomFrame":"fcMatchCustomFrame")?.value?.startsWith("pro:")?document.getElementById(opts.special?"fcSpecialCustomFrame":"fcMatchCustomFrame").value:"none");
-   const filename=opts.downloadFilename||filePart(match.home)+'-vs-'+filePart(match.away)+'.png';
+   const filename=opts.downloadFilename||'preview-'+filePart(match.fixtureId||match.id||match.home+'-vs-'+match.away)+'.png';
    if(opts.asCanvas)return canvas;
    if(opts.asBlob){const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));return {filename,blob};}
    return k.download(canvas,filename);

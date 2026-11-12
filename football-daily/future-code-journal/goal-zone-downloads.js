@@ -72,6 +72,7 @@
     return {filename,blob:await toBlob(await bannerCanvas(canvas))};
   }
   function browserDownload(blob,name){
+    if(blob.type.startsWith("image/")&&window.FutureCodeImageSave)return window.FutureCodeImageSave.saveBlob(blob,name);
     const url=URL.createObjectURL(blob),a=document.createElement("a");
     a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
     setTimeout(()=>URL.revokeObjectURL(url),60000);
@@ -119,7 +120,7 @@
     const date=reportDate||day();
     const canvas=await aiCard(m,date);
     const item=await prepared(canvas,"goal-zone-ai-"+date+"-"+safeName(m.home)+"-vs-"+safeName(m.away)+".png");
-    browserDownload(item.blob,item.filename);
+    return browserDownload(item.blob,item.filename);
   }
   // This journal's normal single-PNG buttons share the Canvas kit. Replace only
   // this page's download implementation, leaving other websites untouched.

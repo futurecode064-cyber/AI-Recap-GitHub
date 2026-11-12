@@ -46,8 +46,8 @@
         button.textContent="PNG ပြင်ဆင်နေသည်…";
         try{
           if(!window.GoalZoneDownloads?.downloadAI)throw Error("AI PNG exporter missing");
-          await window.GoalZoneDownloads.downloadAI(m,reportDate);
-          button.textContent="✓ PNG Download စတင်ပြီး";
+          const saved=await window.GoalZoneDownloads.downloadAI(m,reportDate);
+          button.textContent=saved?.nativeImageSave?"Gallery သိမ်းဆည်းရန် ပို့ပြီး":"✓ PNG Download စတင်ပြီး";
         }catch(err){
           console.error("Goal Zone AI PNG",err);
           button.textContent="Download မအောင်မြင်ပါ — ပြန်စမ်းပါ";

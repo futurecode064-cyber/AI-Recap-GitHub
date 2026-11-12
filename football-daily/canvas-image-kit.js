@@ -139,6 +139,7 @@
    new Promise((resolve,reject)=>{try{canvas.toBlob(v=>v&&v.size?resolve(v):reject(Error("PNG encoding failed")),"image/png")}catch(e){reject(e)}}),
    sleep(12000).then(()=>{throw Error("PNG encoding timed out")})
   ]);
+  if(window.FutureCodeImageSave)return window.FutureCodeImageSave.saveBlob(blob,filename);
   const url=URL.createObjectURL(blob),link=document.createElement("a");
   link.href=url;link.download=filename;document.body.appendChild(link);link.click();link.remove();
   setTimeout(()=>URL.revokeObjectURL(url),30000);

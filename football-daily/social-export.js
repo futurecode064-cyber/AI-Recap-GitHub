@@ -172,9 +172,10 @@
   draw(ctx,match,opts,imgs,s[0],s[1]);
   const framed=window.FutureCodeProfessionalFrames?await window.FutureCodeProfessionalFrames.wrap(canvas,opts.special?"specials":"previews",document.getElementById(opts.special?"fcSpecialCustomFrame":"fcMatchCustomFrame")?.value?.startsWith("pro:")?document.getElementById(opts.special?"fcSpecialCustomFrame":"fcMatchCustomFrame").value:"none"):canvas;
   const blob=await new Promise((resolve,reject)=>framed.toBlob(v=>v?resolve(v):reject(Error("PNG encoding failed")),"image/png"));
-  const url=URL.createObjectURL(blob),link=document.createElement("a");
   const slug=t=>String(t||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
-  link.href=url;link.download=[slug(opts.brandName||"football"),slug(match.home),slug(match.away),s[2]].join("-")+".png";
+  const filename=[slug(opts.brandName||"football"),slug(match.home),slug(match.away),s[2]].join("-")+".png";
+  if(window.FutureCodeImageSave)return window.FutureCodeImageSave.saveBlob(blob,filename);
+  const url=URL.createObjectURL(blob),link=document.createElement("a");link.href=url;link.download=filename;
   document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
  }
  window.FutureCodeSocialExport={save};
