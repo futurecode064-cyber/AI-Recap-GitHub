@@ -24,8 +24,8 @@
       "upperTeam": "ဘယ်လ်ဂျီယံ",
       "bodyOdds": "1+75",
       "goalTotalOdds": "3-20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+80",
+      "currentGoalTotalOdds": "3-30",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -38,8 +38,8 @@
         "upperTeam": "ဘယ်လ်ဂျီယံ",
         "bodyOdds": "1+75",
         "goalTotalOdds": "3-20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+80",
+        "currentGoalTotalOdds": "3-30"
       },
       "homeLastFive": [
         {
@@ -226,8 +226,8 @@
       "upperTeam": "စပိန်",
       "bodyOdds": "2+10",
       "goalTotalOdds": "3-50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+50",
+      "currentGoalTotalOdds": "3-40",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -240,8 +240,8 @@
         "upperTeam": "စပိန်",
         "bodyOdds": "2+10",
         "goalTotalOdds": "3-50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+50",
+        "currentGoalTotalOdds": "3-40"
       },
       "homeLastFive": [
         {
@@ -377,7 +377,7 @@
       "formStatus": "verified-last-five",
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
-      "homeOdds": 11.0,
+      "homeOdds": 11,
       "drawOdds": 6.5,
       "awayOdds": 1.1905,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861148",
@@ -432,8 +432,8 @@
       "upperTeam": "အင်္ဂလန်",
       "bodyOdds": "2+50",
       "goalTotalOdds": "3-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+70",
+      "currentGoalTotalOdds": "3-50",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -446,8 +446,8 @@
         "upperTeam": "အင်္ဂလန်",
         "bodyOdds": "2+50",
         "goalTotalOdds": "3-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+70",
+        "currentGoalTotalOdds": "3-50"
       },
       "homeLastFive": [
         {
@@ -585,7 +585,7 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 1.2353,
       "drawOdds": 5.75,
-      "awayOdds": 10.0,
+      "awayOdds": 10,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861150",
       "oddsVerifiedDate": "2026-11-12",
       "oddsProvider": "DraftKings via ESPN, checked 2026-11-12",
@@ -638,8 +638,8 @@
       "upperTeam": "ပြင်သစ်",
       "bodyOdds": "1+90",
       "goalTotalOdds": "3+35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-75",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -652,8 +652,8 @@
         "upperTeam": "ပြင်သစ်",
         "bodyOdds": "1+90",
         "goalTotalOdds": "3+35",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "3+40"
       },
       "homeLastFive": [
         {
@@ -840,8 +840,8 @@
       "upperTeam": "အာမေးနီးယား",
       "bodyOdds": "-35",
       "goalTotalOdds": "2-70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "ဒဲ့",
+      "currentGoalTotalOdds": "2-65",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -854,8 +854,8 @@
         "upperTeam": "အာမေးနီးယား",
         "bodyOdds": "-35",
         "goalTotalOdds": "2-70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "ဒဲ့",
+        "currentGoalTotalOdds": "2-65"
       },
       "homeLastFive": [
         {
@@ -1042,8 +1042,8 @@
       "upperTeam": "အယ်ဘေးနီးယား",
       "bodyOdds": "-95",
       "goalTotalOdds": "2-5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-50",
+      "currentGoalTotalOdds": "2-5",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -1056,8 +1056,8 @@
         "upperTeam": "အယ်ဘေးနီးယား",
         "bodyOdds": "-95",
         "goalTotalOdds": "2-5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-50",
+        "currentGoalTotalOdds": "2-5"
       },
       "homeLastFive": [
         {
@@ -1193,8 +1193,8 @@
       "formStatus": "verified-last-five",
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
-      "homeOdds": 2.0,
-      "drawOdds": 3.0,
+      "homeOdds": 2,
+      "drawOdds": 3,
       "awayOdds": 4.1,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861147",
       "oddsVerifiedDate": "2026-11-12",
@@ -1244,8 +1244,8 @@
       "upperTeam": "မွန်တီနီဂရိုး",
       "bodyOdds": "2+85",
       "goalTotalOdds": "3+75",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+95",
+      "currentGoalTotalOdds": "3+85",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -1258,8 +1258,8 @@
         "upperTeam": "မွန်တီနီဂရိုး",
         "bodyOdds": "2+85",
         "goalTotalOdds": "3+75",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+95",
+        "currentGoalTotalOdds": "3+85"
       },
       "homeLastFive": [
         {
@@ -1402,7 +1402,7 @@
       "oddsVerifiedDate": "2026-11-12",
       "oddsProvider": "DraftKings via ESPN, checked 2026-11-12",
       "overOdds": 1.8,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "totalGoalsLine": 2.5,
       "researchSources": [
         "https://www.espn.com/soccer/match/_/gameId/401861152"
@@ -1446,8 +1446,8 @@
       "upperTeam": "ဘီလာရုစ်",
       "bodyOdds": "2-25",
       "goalTotalOdds": "3+20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-25",
+      "currentGoalTotalOdds": "3+25",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -1460,8 +1460,8 @@
         "upperTeam": "ဘီလာရုစ်",
         "bodyOdds": "2-25",
         "goalTotalOdds": "3+20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-25",
+        "currentGoalTotalOdds": "3+25"
       },
       "homeLastFive": [
         {
@@ -1645,8 +1645,8 @@
       "upperTeam": "ဘလံပူစီ",
       "bodyOdds": "1+5",
       "goalTotalOdds": "3+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1=",
+      "currentGoalTotalOdds": "3+20",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -1659,8 +1659,8 @@
         "upperTeam": "ဘလံပူစီ",
         "bodyOdds": "1+5",
         "goalTotalOdds": "3+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1=",
+        "currentGoalTotalOdds": "3+20"
       },
       "homeLastFive": [
         {
@@ -1838,8 +1838,8 @@
       "upperTeam": "ဘက်တစ်",
       "bodyOdds": "2-50",
       "goalTotalOdds": "3-85",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-50",
+      "currentGoalTotalOdds": "3-85",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -1852,8 +1852,8 @@
         "upperTeam": "ဘက်တစ်",
         "bodyOdds": "2-50",
         "goalTotalOdds": "3-85",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-50",
+        "currentGoalTotalOdds": "3-85"
       },
       "homeLastFive": [
         {
@@ -1967,7 +1967,7 @@
       "formStatus": "verified-last-five",
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
-      "homeOdds": 15.0,
+      "homeOdds": 15,
       "drawOdds": 10.5,
       "awayOdds": 1.1333,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928551",
@@ -2029,8 +2029,8 @@
       "upperTeam": "လီဗန်တေး",
       "bodyOdds": "2-95",
       "goalTotalOdds": "4+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "3+95",
+      "currentGoalTotalOdds": "4+90",
       "internetPrediction": "1-4",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -2043,8 +2043,8 @@
         "upperTeam": "လီဗန်တေး",
         "bodyOdds": "2-95",
         "goalTotalOdds": "4+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "3+95",
+        "currentGoalTotalOdds": "4+90"
       },
       "homeLastFive": [
         {
@@ -2158,8 +2158,8 @@
       "formStatus": "verified-last-five",
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
-      "homeOdds": 21.0,
-      "drawOdds": 11.0,
+      "homeOdds": 21,
+      "drawOdds": 11,
       "awayOdds": 1.1,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928527",
       "oddsVerifiedDate": "2026-11-12",
@@ -2222,8 +2222,8 @@
       "upperTeam": "ရုရှား",
       "bodyOdds": "-100",
       "goalTotalOdds": "2-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+90",
+      "currentGoalTotalOdds": "2-60",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -2236,8 +2236,8 @@
         "upperTeam": "ရုရှား",
         "bodyOdds": "-100",
         "goalTotalOdds": "2-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+90",
+        "currentGoalTotalOdds": "2-60"
       },
       "homeLastFive": [
         {
@@ -2400,8 +2400,8 @@
       "upperTeam": "ဆူရီနမ်",
       "bodyOdds": "-20",
       "goalTotalOdds": "2-20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-10",
+      "currentGoalTotalOdds": "2-15",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -2414,8 +2414,8 @@
         "upperTeam": "ဆူရီနမ်",
         "bodyOdds": "-20",
         "goalTotalOdds": "2-20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "2-15"
       },
       "homeLastFive": [
         {
@@ -2581,8 +2581,8 @@
       "upperTeam": "မော်လ်တာ",
       "bodyOdds": "1+20",
       "goalTotalOdds": "2-50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+20",
+      "currentGoalTotalOdds": "2-50",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "12(1).pdf",
@@ -2595,8 +2595,8 @@
         "upperTeam": "မော်လ်တာ",
         "bodyOdds": "1+20",
         "goalTotalOdds": "2-50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+20",
+        "currentGoalTotalOdds": "2-50"
       },
       "homeLastFive": [
         {
