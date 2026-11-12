@@ -95,7 +95,7 @@
     return report;
   }
   function mergeOdds(base,latest){
-    const blank=base.matches.map(m=>({...m,currentBodyOdds:"",currentGoalTotalOdds:""}));
+    const blank=base.matches.map(m=>({...m,currentBodyOdds:m.currentBodyOdds||"",currentGoalTotalOdds:m.currentGoalTotalOdds||""}));
     if(!latest||base.reportDate!==latest.reportDate||!Array.isArray(latest.matches))return {...base,matches:blank};
     const byRow=new Map();
     for(const x of latest.matches){const row=Number(x.row);if(Number.isSafeInteger(row)&&row>0&&!byRow.has(row))byRow.set(row,x);}
@@ -104,7 +104,7 @@
       if(!x||["league","home","away","upperTeam","kickoffDisplay"].some(k=>String(x[k]??"")!==String(m[k]??""))||
          String(x.morningBodyOdds)!==String(m.bodyOdds)||String(x.morningGoalTotalOdds)!==String(m.goalTotalOdds))return m;
       const b=String(x.eveningBodyOdds||"").trim(),g=String(x.eveningGoalTotalOdds||"").trim();
-      return {...m,currentBodyOdds:/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(b)?b:"",currentGoalTotalOdds:/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(g)?g:""};
+      return {...m,currentBodyOdds:/^(?:-\d+|\d+[+-]\d+|\d+=|ဒဲ့)$/.test(b)?b:(m.currentBodyOdds||""),currentGoalTotalOdds:/^(?:-\d+|\d+[+-]\d+|\d+=|ဒဲ့)$/.test(g)?g:(m.currentGoalTotalOdds||"")};
     })};
   }
   async function getOdds(reportDate){

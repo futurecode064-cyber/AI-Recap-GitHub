@@ -15,3 +15,11 @@ test("Goal Zone two-PNG default keeps the single-PNG choice",()=>{
  assert(center.includes('["single","ရွေးထားသော အားလုံး ၁ ပုံတည်း"]'));
  assert(read("future-code-journal/odds.html").includes("20261112-goalzone-odds-readable-v1"));
 });
+test("Goal Zone odds downloads retain published current quotes including the Myanmar level-price glyph",()=>{
+ for(const file of ["future-code-journal/goal-zone-download-center.js","future-code-journal/goal-zone-downloads.js"]){
+   const source=read(file);
+   assert(source.includes("|ဒဲ့)$/.test(b)"),file+" must preserve the straight price");
+   assert(source.includes("m.currentBodyOdds||"),file+" must preserve already published current body");
+   assert(source.includes("m.currentGoalTotalOdds||"),file+" must preserve already published current total");
+ }
+});

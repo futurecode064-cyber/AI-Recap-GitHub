@@ -36,8 +36,8 @@
         String(next.morningBodyOdds)!==String(m.bodyOdds)||
         String(next.morningGoalTotalOdds)!==String(m.goalTotalOdds))return m;
       const b=String(next.eveningBodyOdds||"").trim(),g=String(next.eveningGoalTotalOdds||"").trim();
-      return {...m,currentBodyOdds:/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(b)?b:"",
-        currentGoalTotalOdds:/^(?:-\d+|\d+[+-]\d+|\d+=)$/.test(g)?g:""};
+      return {...m,currentBodyOdds:/^(?:-\d+|\d+[+-]\d+|\d+=|ဒဲ့)$/.test(b)?b:(m.currentBodyOdds||""),
+        currentGoalTotalOdds:/^(?:-\d+|\d+[+-]\d+|\d+=|ဒဲ့)$/.test(g)?g:(m.currentGoalTotalOdds||"")};
     })};
   }
   function loadImage(url){
