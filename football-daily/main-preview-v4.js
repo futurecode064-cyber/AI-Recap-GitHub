@@ -187,7 +187,7 @@
   c.shadowColor="#000";c.shadowBlur=h*.035;c.shadowOffsetY=h*.012;
   for(let i=0;i<words.length;i++){
    const y=h*(i===0?.355:.672);
-   c.strokeText(words[i],centerX,y,available);
+   if(typeof c.strokeText==="function")c.strokeText(words[i],centerX,y,available);
    c.fillText(words[i],centerX,y,available);
   }
   c.shadowColor="transparent";c.shadowBlur=0;c.shadowOffsetY=0;
