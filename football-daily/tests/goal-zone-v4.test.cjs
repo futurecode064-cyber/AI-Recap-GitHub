@@ -18,7 +18,7 @@ test('Goal Zone reuses V4 editorial and adds its actual banner once at the origi
   "Preview V4 must use the existing, approved preview PNG exactly");
  const resultOnly=boot();const result=await resultOnly.win.FutureCodeResultsV2.renderCanvas(m);
  const rawResult=await resultOnly.win.FutureCodeResultsV2.renderCanvas(m,{includeBrandBanner:false});
- assert.equal(result.height,rawResult.height+360);assert(texts.includes('1 - 2'));
+ assert.equal(result.height,rawResult.height+360);assert(resultOnly.texts.includes('1 - 2'));
  assert(resultOnly.draws.some(args=>args[0]?.url?.includes("goal-zone-results-v2-correct-predictions.png")),
   "Results V2 must use the existing, approved correct-predictions PNG");
  assert(!resultOnly.draws.some(args=>args[0]?.url?.includes("goal-zone-preview-special-analysis.png")),
