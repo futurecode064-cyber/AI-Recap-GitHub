@@ -368,14 +368,14 @@ function renderMatch(match,i,forceOriginalPreview=false){
   button.disabled=true;button.textContent="PNG အပြည့်အစုံ ပြင်ဆင်နေသည်…";
   try{
    if(!window.FutureCodeCardExport)throw Error("Full export module missing");
-   await window.FutureCodeCardExport.save({...match,home:teamLabel(match,"home"),away:teamLabel(match,"away")},{
+   const savedImage=await window.FutureCodeCardExport.save({...match,home:teamLabel(match,"home"),away:teamLabel(match,"away")},{
     leagueLabel:leagueName(match.league),
     brandName:document.documentElement.dataset.footballBrandName||"FUTURE CODE FOOTBALL",
     brandLogoUrl:document.documentElement.dataset.footballBrandLogoUrl||"",
     special:selectedLeague==="special"&&match.specialChoice===true,
     cardNode:card
    });
-   button.textContent="✓ PNG Download စတင်ပြီး";
+   button.textContent=savedImage?.nativeImageSave?"Gallery သိမ်းဆည်းရန် ပို့ပြီး":"✓ PNG Download စတင်ပြီး";
   }catch(err){
    console.error("Match PNG download error",err);
    button.textContent="Download မအောင်မြင်ပါ — ပြန်နှိပ်ရန်";
