@@ -248,5 +248,24 @@
         "https://www.espn.com/soccer/match/_/gameId/401931296"
       ]
     }
-  ]
+  ],
+  "liveQA": {
+    "date": "2026-11-12",
+    "state": "LIVE_VERIFIED",
+    "sites": 6,
+    "fixtures": 14,
+    "specials": 2,
+    "results": 16,
+    "news": 10,
+    "downloadsVerified": [
+      "preview two-match PNG",
+      "preview three-match PNG",
+      "odds V2 red theme PNG",
+      "result V2 PNG",
+      "news PNG with embedded attribution",
+      "preview ZIP unicode folder"
+    ],
+    "leagueFilters": "Nations League A and C separated",
+    "currentOdds": "blank; no afternoon source provided"
+  }
 }
