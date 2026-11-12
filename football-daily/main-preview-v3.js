@@ -168,6 +168,7 @@
   }catch(error){setStatus("Download မရပါ — "+error.message);}finally{busy=false;}
  }
  async function show(){
+  if(new URLSearchParams(location.search).has("frame-engine"))return;
   const gen=++renderGeneration,host=el("fcV3Cards");host.replaceChildren();
   const rows=shown();el("fcV3Count").textContent=rows.length+" ပွဲ";
   if(!rows.length){host.append(node("p","fc-v3-note","ရွေးထားသော လိဂ်တွင် ပွဲမရှိပါ"));return;}
