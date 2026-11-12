@@ -11,7 +11,8 @@
     const empty = document.getElementById("gzSpecialEmpty");
     if (!nav || !filters || !list || !heading || !pill || !empty) return;
 
-    const sections = ["previews", "news", "ai", "special", "results", "probabilities", "downloads", "previewV4", "resultsV2"];
+    // Preview V4 and Results V2 are export-only categories inside Download Center.
+    const sections = ["previews", "news", "ai", "special", "results", "probabilities", "downloads"];
     const known = new Set(sections);
     let active = "previews";
     let resetFilter = true;
@@ -21,6 +22,14 @@
       const query = new URLSearchParams(location.search).get("section");
       if (location.hash === "#gzDownloadCenter") return "downloads";
       if (location.hash === "#fcProbSection") return "probabilities";
+      if (query === "previewV4" || query === "resultsV2") {
+        // Redirect old bookmarks to the Download Center without exposing hidden sections.
+        const url = new URL(location.href);
+        url.searchParams.set("section", "downloads");
+        url.hash = "";
+        history.replaceState({goalZoneSection:"downloads"}, "", url.pathname + url.search);
+        return "downloads";
+      }
       if (known.has(query)) return query;
       if (location.hash === "#fcNewsSection") return "news";
       if (location.hash === "#fcj-ai") return "ai";
@@ -90,7 +99,7 @@
       if (active !== next) resetFilter = true;
       active = next;
       root.dataset.gzSection = next;
-      document.body.dataset.fcMainView=(next==="previewV4"||next==="resultsV2")?next:"";
+      document.body.dataset.fcMainView=""; // Export-only sections remain mounted, never visible.
       window.dispatchEvent(new CustomEvent("goalzone:sectionchange",{detail:next}));
       nav.querySelectorAll("[data-gz-section-link]").forEach(function (link) {
         const chosen = link.dataset.gzSectionLink === next;

@@ -1,9 +1,7 @@
-/* Goal Zone variants retain the original journal navigation and native image saver. */
-:root.fcj-theme:not([data-gz-section="previewV4"]) #fcPreviewV4,
-:root.fcj-theme:not([data-gz-section="resultsV2"]) #fcResultsV2{display:none!important}
-:root.fcj-theme[data-gz-section="previewV4"] #fcPreviewV4,
-:root.fcj-theme[data-gz-section="resultsV2"] #fcResultsV2{display:block!important}
-:root.fcj-theme:is([data-gz-section="previewV4"],[data-gz-section="resultsV2"]) :is(.dashboard-bar,.section-heading,#dateTabs,#filters,#sectionNote,#resultsDownloadBar,#gzSpecialEmpty,#matchList,#fcNewsSection,.fcj-ai,#gzDownloadCenter,.gz-prob-wrap){display:none!important}
+/* Download-only V4 analysis and Results V2: keep renderers mounted for the ZIP
+   Download Center, but never display either section on the public page. */
+:root.fcj-theme #fcPreviewV4,
+:root.fcj-theme #fcResultsV2{display:none!important}
 .fcj-theme :is(.fc-v4-tools,.fc-r2-tools,.fc-v4-card-actions){background:#19160f;border-color:#725d30}
 .fcj-theme :is(.fc-v4-card,.fc-r2-card){border:1px solid #725d30;background:#0d0b08}
 .fcj-theme :is(.fc-v4-heading h2,.fc-result-v2 h2){color:#e1c781}
