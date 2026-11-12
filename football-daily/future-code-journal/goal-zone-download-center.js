@@ -354,7 +354,7 @@
     anchor.insertAdjacentElement("afterend",panel);
     const categories=$("gzBulkCategories"),league=$("gzBulkLeague"),matchList=$("gzBulkMatchList"),status=$("gzBulkStatus"),btn=$("gzBulkDownload");
     // Layout is intentionally SECTION-SPECIFIC. No global PNG layout switch.
-    const initialModes={previewV4:"each",resultsV2:"each",preview:"each",special:"each",odds:"single",results:"two",ai:"two",probability:"single",news:"each"};
+    const initialModes={previewV4:"each",resultsV2:"each",preview:"each",special:"each",odds:"two",results:"two",ai:"two",probability:"single",news:"each"};
     const sectionModeControls=new Map();
     for(const [id,labelText] of items){
       if((id==="previewV4"||id==="resultsV2")&&!$("fcPreviewV4"))continue;

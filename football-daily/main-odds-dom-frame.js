@@ -7,6 +7,8 @@
   // screenshot of 12–16px type. All other brand pages remain untouched.
   const SCALE = 2;
   const EXPORT_WIDTH = 1280;
+  const goalZone=()=>window.FutureCodeBrandConfig?.id==="future-code-journal"
+    ||document.documentElement?.dataset?.footballBrandName==="ဂိုးဇုံ အားကစား ဂျာနယ်";
 
   // Convert only the copied PNG table text; source odds JSON and page remain ASCII.
   function toMyanmarDigits(value) {
@@ -81,7 +83,7 @@
   function getTableWidth() {
     // Export typography is measured against a fixed editorial width, independent
     // of a phone's scroll width or a desktop monitor's viewport.
-    return EXPORT_WIDTH;
+    return goalZone()?1400:EXPORT_WIDTH;
   }
 
   // The main odds table uses ONE uniform team-name font size for the whole
@@ -102,6 +104,7 @@
   }
   function prepareOneLine(root) {
     const mainOnly=!document.documentElement?.dataset?.footballBrandName;
+    const goalPrint=goalZone();
     const allTeamLabels=[];
     for (const group of root.querySelectorAll(".odds-group")) {
       // No new league heading: keep the cloned on-screen logo and title.
@@ -126,7 +129,15 @@
           name.style.setProperty("flex","1 1 auto","important");
           name.style.setProperty("min-width","0","important");
           name.style.setProperty("overflow","hidden","important");
-          if(mainOnly){
+          if(goalPrint){
+            // Two lines for long Myanmar names instead of shrinking below legibility.
+            name.style.setProperty("white-space","normal","important");
+            name.style.setProperty("overflow","visible","important");
+            name.style.setProperty("overflow-wrap","anywhere","important");
+            name.style.setProperty("word-break","normal","important");
+            name.style.setProperty("font-size","27px","important");
+            name.style.setProperty("line-height","1.4","important");
+          }else if(mainOnly){
             // Compute one shared size after all rows have been laid out.
             allTeamLabels.push(name);
           }else{
@@ -182,6 +193,7 @@
     root.className="odds-content fc-odds-direct-export"+(window.FutureCodeBrandConfig?" brand-odds-export":"");
     root.style.cssText="box-sizing:border-box;width:"+width+
       "px;max-width:none;margin:0;padding:8px;background:"+(window.FutureCodeBrandConfig?.colors?.background||"#10191d")+";";
+    if(goalZone())root.classList.add("fc-gz-odds-print");
     root.style.setProperty("--sheet-brand",theme);
     root.style.setProperty("--sheet-deep",shade(theme,.7));
     root.style.setProperty("--sheet-title","#fff");
@@ -201,6 +213,13 @@
       const wanted=new Set(included.map(m=>originals.indexOf(m)));
       if(wanted.has(-1)) throw Error("ပွဲစဉ်အချက်အလက် မကိုက်ညီပါ။");
       const group=source.cloneNode(true);
+      if(goalZone()){
+        // The eight tracks must be exactly identical in every league table.
+        const cols=[...group.querySelectorAll(".odds-table colgroup col")];
+        const fixed=["9%","33%","13%","8.5%","8.5%","8.5%","8.5%","11%"];
+        if(cols.length!==fixed.length)throw Error("Goal Zone PNG column count incorrect");
+        cols.forEach((col,i)=>col.style.setProperty("width",fixed[i],"important"));
+      }
       group.querySelectorAll(".odds-league-png-parts,button").forEach(n=>n.remove());
       const trs=[...group.querySelectorAll("tbody tr")];
       if(trs.length!==originals.length)throw Error("Website ပွဲအရေအတွက် မကိုက်ညီပါ။");
@@ -433,6 +452,74 @@
       }
       body .fc-odds-direct-export td::before {display:none!important}
     `;
+
+    // Goal Zone ONLY: the hidden PNG sheet is wider, typographically larger,
+    // and uses a single eight-column grid for every competition.
+    if(goalZone()){
+      readable.textContent+=`
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-group{
+          margin:0 0 10px!important;border-radius:5px!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table{
+          display:table!important;width:100%!important;min-width:0!important;
+          table-layout:fixed!important;border-collapse:collapse!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table col:nth-child(1){width:9%!important}
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table col:nth-child(2){width:33%!important}
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table col:nth-child(3){width:13%!important}
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table col:nth-child(4),
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table col:nth-child(5),
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table col:nth-child(6),
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table col:nth-child(7){width:8.5%!important}
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table col:nth-child(8){width:11%!important}
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table th,
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table td{
+          box-sizing:border-box!important;min-width:0!important;
+          max-width:none!important;vertical-align:middle!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table thead th{
+          font:900 24px/1.5 "Noto Sans Myanmar",sans-serif!important;
+          white-space:normal!important;overflow-wrap:anywhere!important;
+          padding:9px 3px!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table thead th:last-child{
+          font-size:21px!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table tbody td{
+          height:100px!important;padding:8px 4px!important;
+          font:800 26px/1.35 "Noto Sans Myanmar",sans-serif!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table td.team-pair{
+          min-width:0!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-matchup{
+          min-width:0!important;width:100%!important;
+          grid-template-columns:minmax(0,1fr) 46px 29px 46px minmax(0,1fr)!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-matchup .club-label{
+          font:900 27px/1.4 "Noto Sans Myanmar",sans-serif!important;
+          white-space:normal!important;overflow:visible!important;
+          overflow-wrap:anywhere!important;word-break:normal!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-matchup .team-badge{
+          width:46px!important;height:46px!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table td.time{
+          font-size:24px!important;white-space:nowrap!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table td.upper{
+          font-size:26px!important;overflow-wrap:anywhere!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table td.price{
+          font:900 33px/1.4 "Barlow Condensed","Noto Sans Myanmar",sans-serif!important;
+          white-space:nowrap!important;padding:8px 1px!important;
+          font-variant-numeric:tabular-nums!important;
+        }
+        body .fc-odds-direct-export.fc-gz-odds-print .odds-table td.prediction{
+          font-size:28px!important;white-space:nowrap!important;
+        }
+      `;
+    }
     // Main odds frame PNG only: remove empty space above/below each fixture.
     // Keep the 47px team crests, all 8 columns, headers and brand sites intact.
     if(!document.documentElement?.dataset?.footballBrandName){
