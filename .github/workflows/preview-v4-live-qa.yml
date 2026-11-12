@@ -55,7 +55,7 @@ jobs:
             await picture.waitFor({state:'visible',timeout:95000});
             await page.waitForFunction(()=>{
               const p=document.querySelector('#fcV4Cards img.fc-v4-picture');
-              return !!p&&p.complete&&p.naturalWidth===1080&&p.naturalHeight===1920;
+              return !!p&&p.complete&&p.naturalWidth===1080&&p.naturalHeight===1080;
             },null,{timeout:95000});
             const section=await page.locator('#fcPreviewV4').textContent();
             assert(!/1x2.*(?:3\.|2\.)/i.test(section),'Market fields unexpectedly in V4');
@@ -87,7 +87,7 @@ jobs:
             await editor.locator('#downPreview').click();
             await editor.locator('#downPreviewImage').waitFor({state:'visible',timeout:100000});
             const actual=await editor.locator('#downPreviewImage').evaluate(img=>({w:img.naturalWidth,h:img.naturalHeight}));
-            assert(actual.w>=1080&&actual.h>=1920,JSON.stringify(actual));
+            assert(actual.w>=1080&&actual.h>=1080,JSON.stringify(actual));
             console.log('V4 DOWNLOAD CENTER PASS',{frameCount,records,actual,editorErrors});
             await context.close();
           }finally{await browser.close();}
