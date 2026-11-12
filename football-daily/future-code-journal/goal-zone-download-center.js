@@ -349,7 +349,7 @@
     const initialModes={previewV4:"each",resultsV2:"each",preview:"each",special:"each",odds:"single",results:"two",ai:"two",probability:"single",news:"each"};
     const sectionModeControls=new Map();
     for(const [id,labelText] of items){
-      if(id==="previewV4"&&!window.FutureCodePreviewV4?.render||id==="resultsV2"&&!window.FutureCodeResultsV2?.renderCanvas)continue;
+      if((id==="previewV4"||id==="resultsV2")&&!$("fcPreviewV4"))continue;
       const row=document.createElement("div");row.className="gz-section-mode-row";row.dataset.section=id;
       const label=document.createElement("label");label.className="gz-section-mode-label";
       const checkbox=document.createElement("input");checkbox.type="checkbox";
