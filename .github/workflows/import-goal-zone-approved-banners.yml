@@ -1,0 +1,40 @@
+name: Import approved Goal Zone banner assets
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - .github/workflows/import-goal-zone-approved-banners.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the production branch
+        uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+          persist-credentials: true
+      - name: Import the two existing, owner-approved ChatGPT-generated images
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p football-daily/future-code-journal/assets
+          curl -fSL --retry 3 --max-time 90 \
+            'https://cdn.openart.ai/openart-uploads/production/attachment-transfers/c216247d3c761fd41472d878ccf94755e99aac08e89a77484bfa193afc03cbd8.png' \
+            -o football-daily/future-code-journal/assets/goal-zone-preview-special-analysis.png
+          curl -fSL --retry 3 --max-time 90 \
+            'https://cdn.openart.ai/openart-uploads/production/attachment-transfers/c9c6c40a2c72cc4f767b70f3eefc341e2e6567fd04c6aedc79145598e28276e4.png' \
+            -o football-daily/future-code-journal/assets/goal-zone-results-v2-correct-predictions.png
+          echo '49740324cb048ed6779618c4735b1cd2f3d9efccca45e571640609fb4908dbf8  football-daily/future-code-journal/assets/goal-zone-preview-special-analysis.png' | sha256sum --check
+          echo 'f2d4a28afde12c2623b82ba1eb7e6e7ee422fb75150a2f722de8c2df349873f7  football-daily/future-code-journal/assets/goal-zone-results-v2-correct-predictions.png' | sha256sum --check
+      - name: Save original image bytes in the site repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add football-daily/future-code-journal/assets/goal-zone-preview-special-analysis.png football-daily/future-code-journal/assets/goal-zone-results-v2-correct-predictions.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Store approved original Goal Zone preview and results banners"
+            git push origin HEAD:football-daily-render
+          fi
