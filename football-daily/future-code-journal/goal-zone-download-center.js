@@ -71,7 +71,10 @@
       const c=canvasOf(image.naturalWidth,image.naturalHeight);c.getContext("2d").drawImage(image,0,0);return c;
     }finally{URL.revokeObjectURL(url);}
   }
-  async function withBanner(source){
+  async function withBanner(source,type){
+    // V4 uses the same titled Goal Zone masthead for singles, pairs and ZIPs.
+    if(type==="previewV4"&&window.FutureCodePreviewV4?.brandCanvas)
+      return window.FutureCodePreviewV4.brandCanvas(source);
     const w=source.width,h=Math.round(w*270/988),output=canvasOf(w,source.height+h);
     const ctx=output.getContext("2d");ctx.fillStyle="#0d0b07";ctx.fillRect(0,0,w,h);
     const img=await loadImage(bannerUrl).catch(()=>null);
@@ -431,7 +434,7 @@
             status.textContent=type+" · "+(i+1)+"/"+groups.length+" ပုံ ဖန်တီးနေသည်…";
             try{
               const art=await exportWithFallback(type,groups[i],context,warnings);
-              const branded=await withBanner(art);
+              const branded=await withBanner(art,type);
               const filename=type+"/GOAL-ZONE-"+day+"-"+type+"-"+mode+"-"+String(i+1).padStart(2,"0")+"-of-"+String(groups.length).padStart(2,"0")+".png";
               let output;
               try{
@@ -444,7 +447,7 @@
                 warnings.push(type+" PNG encoding — "+(encodeError?.message||String(encodeError)));
                 const originals=[];
                 for(const record of groups[i])originals.push(await fallbackCard(type,record,day));
-                output=await pngWithRetry(await withBanner(stack(originals)));
+                output=await pngWithRetry(await withBanner(stack(originals),type));
               }
               await archive.add(filename,output);count++;
             }catch(pieceError){

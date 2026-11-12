@@ -132,10 +132,69 @@
  }
  async function brandCanvas(canvas){
   if(!isGoal||canvas.__fcGoalZoneBanner)return canvas;
-  const banner=await image("./assets/goal-zone-download-banner.webp");
+  const [banner,brandLogo]=await Promise.all([
+   image("./assets/goal-zone-download-banner.webp"),
+   image("./assets/logo.webp")
+  ]);
   if(!banner)throw Error("ဂိုးဇုံ Banner ပုံ ဖတ်မရပါ");
-  const h=Math.round(canvas.width*banner.naturalHeight/banner.naturalWidth),out=document.createElement("canvas");
-  out.width=canvas.width;out.height=canvas.height+h;const c=out.getContext("2d");c.fillStyle="#0b0906";c.fillRect(0,0,out.width,out.height);c.drawImage(banner,0,0,out.width,h);c.drawImage(canvas,0,h);out.__fcGoalZoneBanner=true;return out;
+  const w=canvas.width,h=Math.round(w*banner.naturalHeight/banner.naturalWidth);
+  const out=document.createElement("canvas");out.width=w;out.height=canvas.height+h;
+  const c=out.getContext("2d");if(!c)throw Error("ဂိုးဇုံ Banner Canvas မရပါ");
+  c.imageSmoothingEnabled=true;c.imageSmoothingQuality="high";
+  c.drawImage(banner,0,0,w,h);
+  // Cover the logo baked into the original center, retaining the stadium and
+  // players at either edge. The separate official logo moves to the left.
+  const veil=c.createLinearGradient(w*.16,0,w*.98,0);
+  veil.addColorStop(0,"rgba(4,3,2,0)");
+  veil.addColorStop(.23,"rgba(4,3,2,.96)");
+  veil.addColorStop(.70,"rgba(4,3,2,.97)");
+  veil.addColorStop(1,"rgba(4,3,2,.52)");
+  c.fillStyle=veil;c.fillRect(w*.16,0,w*.84,h);
+  if(brandLogo){
+   const size=Math.min(w*.285,h*.94);
+   const s=Math.min(size/brandLogo.naturalWidth,size/brandLogo.naturalHeight);
+   const lw=brandLogo.naturalWidth*s,lh=brandLogo.naturalHeight*s;
+   c.save();c.globalCompositeOperation="screen";
+   c.shadowColor="#e5b34d";c.shadowBlur=h*.035;
+   c.drawImage(brandLogo,w*.255-lw/2,h*.50-lh/2,lw,lh);
+   c.restore();
+  }else{
+   // Asset fallback still displays a recognizable Goal Zone brand.
+   c.font='900 '+Math.round(h*.27)+'px "FCMyanmar",sans-serif';
+   c.fillStyle="#f4d47b";c.textAlign="center";c.textBaseline="middle";
+   c.fillText("ဂိုးဇုံ",w*.255,h*.5,w*.26);
+  }
+  const ruleX=w*.426;
+  const rule=c.createLinearGradient(0,h*.14,0,h*.88);
+  rule.addColorStop(0,"rgba(250,218,130,0)");
+  rule.addColorStop(.45,"#f4cb68");
+  rule.addColorStop(1,"rgba(250,218,130,0)");
+  c.fillStyle=rule;c.fillRect(ruleX,h*.14,Math.max(2,w*.0025),h*.74);
+  await document.fonts?.load('800 66px "FCMyanmar"').catch(()=>{});
+  const words=["ပွဲကြိုအထူး","သုံးသပ်ချက်"];
+  const centerX=w*.71,available=w*.53;
+  let fontSize=Math.round(h*.25);
+  do{
+   c.font='900 '+fontSize+'px "FCMyanmar","Noto Sans Myanmar",sans-serif';
+   if(words.every(word=>c.measureText(word).width<=available)||fontSize<=40)break;
+   fontSize-=2;
+  }while(true);
+  const gold=c.createLinearGradient(0,h*.28,0,h*.75);
+  gold.addColorStop(0,"#fff3b7");gold.addColorStop(.32,"#f6d177");
+  gold.addColorStop(.72,"#bd862c");gold.addColorStop(1,"#ffe49b");
+  c.textAlign="center";c.textBaseline="middle";c.lineJoin="round";
+  c.fillStyle=gold;c.strokeStyle="#180e02";c.lineWidth=Math.max(3,h*.012);
+  c.shadowColor="#000";c.shadowBlur=h*.035;c.shadowOffsetY=h*.012;
+  for(let i=0;i<words.length;i++){
+   const y=h*(i===0?.355:.672);
+   c.strokeText(words[i],centerX,y,available);
+   c.fillText(words[i],centerX,y,available);
+  }
+  c.shadowColor="transparent";c.shadowBlur=0;c.shadowOffsetY=0;
+  c.fillStyle="#d9af53";c.fillRect(w*.55,h*.855,w*.32,Math.max(2,h*.008));
+  c.drawImage(canvas,0,h);
+  out.__fcGoalZoneBanner=true;
+  return out;
  }
  const blob=canvas=>new Promise((resolve,reject)=>canvas.toBlob(b=>b?.size?resolve(b):reject(Error("PNG မထွက်ပါ")),"image/png"));
  async function save(b,name){
