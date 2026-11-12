@@ -21,3 +21,6 @@ body[data-fc-main-view="previewV3"] :is(#fcProbSection,#fcNewsSection,#fcAiScore
 .fc-v3-select input{width:19px;height:19px;accent-color:#eab85c}
 .fc-v3-note{padding:15px;color:#f5cd8b}
 @media(max-width:660px){.fc-v3-heading h2{font-size:23px}.fc-v3-tools>*{flex:1 1 100%}.fc-v3-cards{grid-template-columns:1fr}}
+
+/* Keep the full-length Myanmar editorials readable on desktop and downloads. */
+.fc-v3-cards{grid-template-columns:minmax(0,1fr);max-width:960px;margin-inline:auto}
