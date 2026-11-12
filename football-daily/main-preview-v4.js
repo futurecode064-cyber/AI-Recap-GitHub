@@ -128,7 +128,22 @@
   const nameY=pickY+(isResult?99:79);
   txt(pick,pickCenter,nameY,730,isResult?44:38,WHITE,900);
   if(isResult){c.font='900 44px "FCMyanmar",sans-serif';const textWidth=Math.min(620,c.measureText(pick).width);circle(pickCenter,nameY,Math.max(210,textWidth/2+60),43);}
-  return options.includeBrandBanner===false?canvas:brandCanvas(canvas);
+  return options.includeBrandBanner===false?canvas:(isResult?originalGoalBanner(canvas):brandCanvas(canvas));
+ }
+ // Results V2 retains the original, untitled uploaded Goal Zone banner.
+ async function originalGoalBanner(canvas){
+  if(!isGoal||canvas.__fcGoalZoneBanner)return canvas;
+  const banner=await image("./assets/goal-zone-download-banner.webp");
+  if(!banner)throw Error("ဂိုးဇုံ Banner ပုံ ဖတ်မရပါ");
+  const h=Math.round(canvas.width*banner.naturalHeight/banner.naturalWidth);
+  const out=document.createElement("canvas");
+  out.width=canvas.width;out.height=canvas.height+h;
+  const c=out.getContext("2d");if(!c)throw Error("ဂိုးဇုံ Banner Canvas မရပါ");
+  c.fillStyle="#0b0906";c.fillRect(0,0,out.width,out.height);
+  c.drawImage(banner,0,0,out.width,h);
+  c.drawImage(canvas,0,h);
+  out.__fcGoalZoneBanner=true;
+  return out;
  }
  async function brandCanvas(canvas){
   if(!isGoal||canvas.__fcGoalZoneBanner)return canvas;

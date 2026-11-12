@@ -14,8 +14,14 @@ test('Goal Zone reuses V4 editorial and adds its actual banner once at the origi
  const {win,texts}=boot(),api=win.FutureCodePreviewV4,plain=await api.render(m,{includeBrandBanner:false}),branded=await api.render(m);
  assert.equal(branded.width,1080);assert.equal(branded.height,plain.height+Math.round(1080*270/988));assert(texts.includes(m.previewV2Summary));
  assert.equal(await api.brandCanvas(branded),branded);
+ assert(texts.includes("ပွဲကြိုအထူး")&&texts.includes("သုံးသပ်ချက်"),
+  "Preview V4 must draw the new, large gold Burmese masthead");
+ assert.equal(boot().win.FutureCodePreviewV4!==undefined,true);
+
  const result=await win.FutureCodeResultsV2.renderCanvas(m),rawResult=await win.FutureCodeResultsV2.renderCanvas(m,{includeBrandBanner:false});
  assert.equal(result.height,rawResult.height+Math.round(1080*270/988));assert(texts.includes('1 - 2'));
+ const resultOnly=boot();await resultOnly.win.FutureCodeResultsV2.renderCanvas(m);
+ assert(!resultOnly.texts.includes("ပွဲကြိုအထူး"),"Results V2 must keep its original untitled banner");
 });
 test('missing Goal Zone banner fails explicitly; unrelated brands do not get these sections',async()=>{
  await assert.rejects(boot('/future-code-journal/',true).win.FutureCodePreviewV4.render(m),/Banner/);
