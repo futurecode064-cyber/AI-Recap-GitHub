@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-12",
+  "sourcePDF": "12(1).pdf",
+  "sha256": "7d5d57e58d88187cdf53645510b8321e9eedac06f7a2aa0e652779d60da90052",
+  "pdfRows": 14,
+  "previousHead": "001beff2e741fe14ed6b9d168e9de874f113a567",
+  "publicationRoute": "existing GitHub football-daily-render branch and Cloudflare Pages",
+  "sites": [
+    "main",
+    "future-code-journal",
+    "ykz-family",
+    "bw-sport",
+    "ko-thet-family",
+    "kmm-sport-hub"
+  ],
+  "currentPriceSource": null,
+  "checks": {
+    "packageGuard": "STRUCTURAL_PASS",
+    "previewV2": "PASS",
+    "timeFormat": "PASS",
+    "legacyAllBrandsTest": "BCF suspension conflicts with historical test expectation; BCF not modified",
+    "localBrowser": "Chromium process socket unavailable in local runtime; cloud live QA required"
+  },
+  "sourceLedger": [
+    {
+      "fixtureId": "fc-20261112-01",
+      "pdfRow": 1,
+      "home": "Türkiye",
+      "away": "Belgium",
+      "homeDisplay": "တူရကီ",
+      "awayDisplay": "ဘယ်လ်ဂျီယံ",
+      "kickoffUtc": "2026-11-12T17:00Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861145",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401861145"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-02",
+      "pdfRow": 2,
+      "home": "Czechia",
+      "away": "Spain",
+      "homeDisplay": "ချက်",
+      "awayDisplay": "စပိန်",
+      "kickoffUtc": "2026-11-12T19:45Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861148",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401861148"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-03",
+      "pdfRow": 3,
+      "home": "England",
+      "away": "Croatia",
+      "homeDisplay": "အင်္ဂလန်",
+      "awayDisplay": "ခရိုအေးရှား",
+      "kickoffUtc": "2026-11-12T19:45Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/cro.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861150",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401861150"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-04",
+      "pdfRow": 4,
+      "home": "Italy",
+      "away": "France",
+      "homeDisplay": "အီတလီ",
+      "awayDisplay": "ပြင်သစ်",
+      "kickoffUtc": "2026-11-12T19:45Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ita.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861151",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401861151"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-05",
+      "pdfRow": 5,
+      "home": "Armenia",
+      "away": "Cyprus",
+      "homeDisplay": "အာမေးနီးယား",
+      "awayDisplay": "ဆိုက်ပရပ်",
+      "kickoffUtc": "2026-11-12T17:00Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/fifa.armenia.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/cyp.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861146",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401861146"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-06",
+      "pdfRow": 6,
+      "home": "Albania",
+      "away": "Finland",
+      "homeDisplay": "အယ်ဘေးနီးယား",
+      "awayDisplay": "ဖင်လန်",
+      "kickoffUtc": "2026-11-12T19:45Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/alb.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/fin.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861147",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401861147"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-07",
+      "pdfRow": 7,
+      "home": "Montenegro",
+      "away": "Latvia",
+      "homeDisplay": "မွန်တီနီဂရိုး",
+      "awayDisplay": "လတ်ဗီးယား",
+      "kickoffUtc": "2026-11-12T19:45Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/mtg.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/lva.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861152",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401861152"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-08",
+      "pdfRow": 8,
+      "home": "San Marino",
+      "away": "Belarus",
+      "homeDisplay": "ဆန်မာရီနို",
+      "awayDisplay": "ဘီလာရုစ်",
+      "kickoffUtc": "2026-11-12T19:45Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/smr.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/blr.png",
+      "oddsSourceUrl": "https://www.bettingtipsters.org/?date=2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401861149"
+      ],
+      "oddsVerifiedDate": "2026-11-12"
+    },
+    {
+      "fixtureId": "fc-20261112-09",
+      "pdfRow": 9,
+      "home": "CS Puertollano",
+      "away": "Albacete",
+      "homeDisplay": "ကယ်ဗို",
+      "awayDisplay": "ဘလံပူစီ",
+      "kickoffUtc": "2026-11-12T17:30Z",
+      "homeCrestSourceUrl": "https://calvosotelopuertollano.es/wp-content/uploads/cropped-288929881_141313588497247_4853883804856674029_n.webp",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928506",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401928506",
+        "https://www.envivo24.com/equipo/Spain/Calvo-Sotelo-Puertollano/"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-10",
+      "pdfRow": 10,
+      "home": "CD Artistico Navalcarnero",
+      "away": "Real Betis",
+      "homeDisplay": "နာဗယ်ကာနာရို",
+      "awayDisplay": "ဘက်တစ်",
+      "kickoffUtc": "2026-11-12T18:00Z",
+      "homeCrestSourceUrl": "https://cdanavalcarnero.es/wp-content/uploads/2022/02/cropped-escudo-navalcarnero.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928551",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401928551"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-11",
+      "pdfRow": 11,
+      "home": "CD Tarancon",
+      "away": "Levante",
+      "homeDisplay": "တာရန်ကွန်",
+      "awayDisplay": "လီဗန်တေး",
+      "kickoffUtc": "2026-11-12T18:00Z",
+      "homeCrestSourceUrl": "https://tessirve.com/imagenes/79fd1f8b5bf054beac7193ee.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928527",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401928527",
+        "https://www.envivo24.com/equipo/Spain/CD-Tarancon/"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-12",
+      "pdfRow": 12,
+      "home": "Uzbekistan",
+      "away": "Russia",
+      "homeDisplay": "ဥဇဘက်ကစ္စတန်",
+      "awayDisplay": "ရုရှား",
+      "kickoffUtc": "2026-11-12T15:00Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
+      "oddsSourceUrl": "https://www.bettingtipsters.org/?date=2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401930962"
+      ],
+      "oddsVerifiedDate": "2026-11-12"
+    },
+    {
+      "fixtureId": "fc-20261112-13",
+      "pdfRow": 13,
+      "home": "Lithuania",
+      "away": "Suriname",
+      "homeDisplay": "လစ်သူရေးနီးယား",
+      "awayDisplay": "ဆူရီနမ်",
+      "kickoffUtc": "2026-11-12T17:00Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ltu.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/sur.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401933115",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401933115"
+      ]
+    },
+    {
+      "fixtureId": "fc-20261112-14",
+      "pdfRow": 14,
+      "home": "Malta",
+      "away": "Eswatini",
+      "homeDisplay": "မော်လ်တာ",
+      "awayDisplay": "အက်စ်ဝါတီနီ",
+      "kickoffUtc": "2026-11-12T17:30Z",
+      "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/mlt.png",
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/swz.png",
+      "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401931296",
+      "oddsVerifiedDate": "2026-11-12",
+      "researchSources": [
+        "https://www.espn.com/soccer/match/_/gameId/401931296"
+      ]
+    }
+  ]
+}
