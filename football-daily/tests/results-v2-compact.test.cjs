@@ -7,7 +7,7 @@ function boot(){
  vm.runInNewContext(fs.readFileSync(path.join(__dirname,"..","main-results-v2.js"),"utf8"),{window:win,document:doc,location:{pathname:"/"},console,Intl,Date});
  return {api:win.FutureCodeResultsV2,calls,poster};
 }
-test("Results V2 retains the archived V2 prose and pick in the shared V4 square poster",async()=>{
+test("Results V2 retains the archived V2 prose and pick in the shared V4 poster",async()=>{
  const {api,calls,poster}=boot();
  const match=Object.freeze({fixtureId:"archived-match",status:"finished",finalScore:"1-2",previewV2Summary:"Original archived V2 paragraph",previewV2Selection:"Away",homeDisplay:"Home",awayDisplay:"Away"});
  assert.equal(await api.renderCanvas(match,{color:"#16486c",includeUploadedBanners:false}),poster);

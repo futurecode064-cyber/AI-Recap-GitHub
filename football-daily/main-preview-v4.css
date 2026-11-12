@@ -25,7 +25,10 @@ body[data-fc-main-view="previewV4"] :is(#fcProbSection,#fcNewsSection,#fcAiScore
 /* Keep the full-length Myanmar editorials readable on desktop and downloads. */
 .fc-v4-cards{grid-template-columns:minmax(0,1fr);max-width:960px;margin-inline:auto}
 
-/* The V4 poster uses a 1080 x 1080 square canvas; show at full safe readable width. */
-.fc-v4-cards{grid-template-columns:minmax(0,1fr);max-width:720px;margin-inline:auto}
-.fc-v4-picture{aspect-ratio:1/1;background:linear-gradient(145deg,#410516,#090910 55%,#1f070a)}
-.fc-v4-card{border-width:3px;border-color:#edc566}
+/* Poster height follows its full editorial text, including custom banners. */
+.fc-v4-cards{max-width:760px}
+.fc-v4-picture{aspect-ratio:auto;background:#0c1420}
+.fc-v4-card{border:1px solid #334455;background:#101a27;box-shadow:0 8px 28px #0005}
+.fc-v4-card-actions{background:#111e2c;border-top:1px solid #ffffff12}
+.fc-v4-tools{background:#111e2c;border-color:#334455}
+.date-tabs.fc-main-five-nav .fc-main-preview-v4-tab{background:#142536;border-color:#58798d;color:#eef4fa}

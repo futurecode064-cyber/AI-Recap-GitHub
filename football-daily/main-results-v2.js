@@ -24,7 +24,7 @@
  '.fc-r2-tools button,.fc-r2-save{padding:12px 17px;background:#ebbf66;border:1px solid #ffe2a6;border-radius:8px;color:#162a3e;font:800 14px "Noto Sans Myanmar",sans-serif;cursor:pointer}',
  '.fc-r2-save:disabled{opacity:.55;cursor:wait}.fc-r2-status{padding:13px 0;color:#ffe3a2;line-height:1.9}',
  '.fc-r2-list{display:grid;gap:30px}',
- '.fc-r2-card{background:#0a2032;border:2px solid #bf9855;border-radius:14px;overflow:hidden}',
+ '.fc-r2-card{background:#101a27;border:1px solid #334455;border-radius:14px;overflow:hidden}',
  '.fc-r2-scorehead{position:relative;background:linear-gradient(115deg,#06223c,#185179,#06223c);border-bottom:4px solid #edbd60;padding:14px 26px 23px;text-align:center}',
  '.fc-r2-meta{color:#fff1cb;font-size:17px;font-weight:800;margin:5px 0 11px}',
  '.fc-r2-scoreline{display:grid;grid-template-columns:minmax(0,1fr) 340px minmax(0,1fr);align-items:center;gap:12px}',

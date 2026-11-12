@@ -72,75 +72,61 @@
   await window.FutureCodeCanvasKit?.fonts?.();
   await document.fonts?.load('600 24px "FCMyanmar"');
   await document.fonts?.ready;
-  const W=1080,H=1080,prose=editorial(m),pick=selection(m);
+  const W=1080,prose=editorial(m),pick=selection(m),isResult=options.result===true;
   const homeName=m.homeDisplay||m.home,awayName=m.awayDisplay||m.away;
-  const currentColor=/^#[0-9a-f]{6}$/i.test(options.color||"")?options.color:"#b3192c";
-  const tint=(hex,factor)=>"#"+hex.slice(1).match(/../g).map(v=>Math.max(0,Math.min(255,Math.round(parseInt(v,16)*factor))).toString(16).padStart(2,"0")).join("");
-  const GOLD="#f2c66e",WHITE="#fff9ed",INK="#080b14";
+  const currentColor=/^#[0-9a-f]{6}$/i.test(options.color||"")?options.color:"#236886";
+  const mix=(a,b,t)=>"#"+a.slice(1).match(/../g).map((v,i)=>Math.round(parseInt(v,16)*(1-t)+parseInt(b.slice(1+i*2,3+i*2),16)*t).toString(16).padStart(2,"0")).join("");
+  const WHITE="#f4f6fa",MUTED="#a6b4c5",ACCENT=mix(currentColor,"#ffffff",.48);
+  const metric=document.createElement("canvas").getContext("2d");
+  const font=30,leading=49;
+  metric.font='600 '+font+'px "FCMyanmar",sans-serif';
+  const lines=wrap(metric,prose,932);
+  if(!lines.length)throw Error("V2 သုံးသပ်ချက်စာသား မရှိပါ");
+  // Content drives the height; there is no square spacer or vertically centred article.
+  const articleY=isResult?(m.resultPeriod==="AET"?370:334):350;
+  const articleH=lines.length*leading+48,pickY=articleY+articleH+18,pickH=isResult?156:118,H=pickY+pickH+28;
+  if(H>32767||H*W>108000000)throw Error("စာသားအရွယ်အစား များလွန်းပါသည်");
   const [homeLogo,awayLogo,leagueLogo,stadium]=await Promise.all([
    image(m.homeCrestUrl),image(m.awayCrestUrl),image(m.leagueLogoUrl),image("./assets/preview-stadium-night.jpg")
   ]);
   const canvas=document.createElement("canvas");canvas.width=W;canvas.height=H;
   const c=canvas.getContext("2d");if(!c)throw Error("PNG Canvas မရပါ");
   c.imageSmoothingEnabled=true;c.imageSmoothingQuality="high";
-  const fillBox=(x,y,w,h,r,first,second,stroke=GOLD,weight=3)=>{
-   const gradient=c.createLinearGradient(x,y,x,y+h);
-   gradient.addColorStop(0,first);gradient.addColorStop(1,second);
-   panel(c,x,y,w,h,r,gradient,stroke,weight);
-  };
-  const txt=(s,x,y,w,px,col=WHITE,weight=900)=>label(c,s,x,y,w,px,col,weight);
-  const line=(x,y,w)=>{c.beginPath();c.moveTo(x,y);c.lineTo(x+w,y);c.lineWidth=2;c.strokeStyle=GOLD;c.stroke();};
-  const form=(arr,x,y)=>{
-   fillBox(x,y,499,97,14,"#111b2a","#070b14",GOLD,2);
-   txt("နောက်ဆုံး ၅ ပွဲရလဒ်",x+249,y+23,470,21,WHITE,850);
-   for(let i=0;i<5;i++){
-    const s=arr[i]||"—",cx=x+105+i*72;
-    c.beginPath();c.arc(cx,y+66,21,0,Math.PI*2);
-    c.fillStyle=formColor[s]||formColor["—"];c.fill();
-    txt(s,cx,y+66,40,21,"#fff",900);
-   }
-  };
-  // Fixed editorial layout: the identical approved V2 paragraph, never truncated.
-  const metric=document.createElement("canvas").getContext("2d");
-  let body=null;
-  for(let font=30;font>=19;font--){
-   metric.font='600 '+font+'px "FCMyanmar",sans-serif';
-   const lines=wrap(metric,prose,932),leading=Math.ceil(font*1.62);
-   if(lines.length*leading<=414){body={font,lines,leading};break;}
-  }
-  if(!body?.lines.length)throw Error("V2 သုံးသပ်ချက်စာသား အပြည့်အစုံ မဆံ့ပါ");
+  const txt=(s,x,y,w,px,col=WHITE,weight=800)=>label(c,s,x,y,w,px,col,weight);
   const bg=c.createLinearGradient(0,0,W,H);
-  bg.addColorStop(0,tint(currentColor,.32));bg.addColorStop(.55,INK);bg.addColorStop(1,tint(currentColor,.18));
-  c.fillStyle=bg;c.fillRect(0,0,W,H);
-  if(stadium){c.save();c.globalAlpha=.13;const scale=Math.max(W/stadium.naturalWidth,390/stadium.naturalHeight);c.drawImage(stadium,0,0,stadium.naturalWidth*scale,stadium.naturalHeight*scale);c.restore();}
-  // One quiet perimeter, generous spacing, no repeated boxed headings.
-  panel(c,18,18,1044,1044,32,"#080d1688",GOLD+"66",1.5);
-  c.fillStyle=currentColor;c.fillRect(64,48,6,36);
-  if(leagueLogo)crest(c,leagueLogo,86,44,44,m.leagueDisplay);
-  c.textAlign="left";c.textBaseline="middle";c.font='800 25px "FCMyanmar",sans-serif';c.fillStyle=GOLD;
-  c.fillText(m.leagueDisplay||m.league,148,67,850);
-  txt(String(m.kickoffCalendarDate||date||"").slice(0,10)+"   •   "+clock(m)+" MMT",540,115,920,22,"#c4ccd8",600);
-  crest(c,homeLogo,203,155,116,homeName);crest(c,awayLogo,761,155,116,awayName);
-  txt(homeName,262,310,402,34);txt(awayName,818,310,402,34);
-  const circle=(x,y,rx,ry)=>{c.save();c.strokeStyle="#ff514b";c.lineWidth=6;c.lineCap="round";for(let i=0;i<2;i++){c.beginPath();c.ellipse(x,y,rx+i*5,ry+i*3,-.035,0,Math.PI*2);c.stroke();}c.restore();};
-  if(options.result){
-   txt(clean(m.finalScore).replace(/\s*[-:]\s*/," - "),540,225,226,76,WHITE,900);
-   circle(540,225,127,64);
-   txt(m.resultPeriod==="AET"?"AET":"FULL TIME",540,315,150,15,GOLD,800);
-   if(m.resultPeriod==="AET"&&m.regulationScore)txt("90′ "+m.regulationScore,540,349,150,17,"#c4ccd8",700);
-  }else txt("VS",540,225,100,38,GOLD,800);
-  const formRow=(arr,center)=>{for(let i=0;i<5;i++){const v=arr[i]||"—",x=center-96+i*48;panel(c,x-18,351,36,34,11,formColor[v]||formColor["—"],null);txt(v,x,369,32,19,"#fff",800);}};
-  if(!options.result){formRow(resultForm(m,"home"),262);formRow(resultForm(m,"away"),818);}
-  c.globalAlpha=.35;line(66,414,948);c.globalAlpha=1;
-  panel(c,48,442,984,456,24,"#ffffff08",null);
-  c.fillStyle=WHITE;c.font='600 '+body.font+'px "FCMyanmar",sans-serif';c.textAlign="left";c.textBaseline="top";
-  let ty=465+Math.max(0,(410-body.lines.length*body.leading)/2);for(const str of body.lines){c.fillText(str,74,ty);ty+=body.leading;}
-  const pickY=930;
-  fillBox(48,pickY,984,110,24,tint(currentColor,.86),tint(currentColor,.42),GOLD+"88",1.5);
-  crest(c,pick===homeName?homeLogo:awayLogo,76,pickY+23,64,pick);
-  c.textAlign="left";c.textBaseline="middle";c.fillStyle=GOLD;c.font='800 22px "FCMyanmar",sans-serif';c.fillText("အထူး ရွေးချယ်မှု",166,pickY+30,800);
-  c.fillStyle=WHITE;c.font='900 36px "FCMyanmar",sans-serif';c.fillText(pick,166,pickY+76,options.result?790:824);
-  if(options.result){const textWidth=Math.min(790,c.measureText(pick).width);circle(166+textWidth/2,pickY+77,textWidth/2+26,29);}
+  bg.addColorStop(0,mix("#0c1420",currentColor,.09));bg.addColorStop(1,"#0b111b");c.fillStyle=bg;c.fillRect(0,0,W,H);
+  if(stadium){c.save();c.globalAlpha=.075;const scale=Math.max(W/stadium.naturalWidth,300/stadium.naturalHeight);c.drawImage(stadium,0,0,stadium.naturalWidth*scale,stadium.naturalHeight*scale);c.restore();}
+  panel(c,16,16,1048,H-32,24,"#0b142044","#ffffff18",1.5);
+  c.fillStyle=currentColor;c.fillRect(48,38,5,32);
+  if(leagueLogo)crest(c,leagueLogo,70,32,44,m.leagueDisplay);
+  c.textAlign="left";c.textBaseline="middle";c.font='800 24px "FCMyanmar",sans-serif';c.fillStyle=WHITE;c.fillText(m.leagueDisplay||m.league,132,55,880);
+  txt(String(m.kickoffCalendarDate||date||"").slice(0,10)+"   •   "+clock(m)+" MMT",540,94,920,21,MUTED,600);
+  crest(c,homeLogo,210,126,104,homeName);crest(c,awayLogo,766,126,104,awayName);
+  txt(homeName,262,259,402,33);txt(awayName,818,259,402,33);
+  const circle=(x,y,rx,ry)=>{c.save();c.strokeStyle="#ff514b";c.lineWidth=9;c.lineCap="round";for(let i=0;i<2;i++){c.beginPath();c.ellipse(x,y,rx+i*6,ry+i*4,-.012,0,Math.PI*2);c.stroke();}c.restore();};
+  if(isResult){
+   txt(clean(m.finalScore).replace(/\s*[-:]\s*/," - "),540,200,252,94,WHITE,900);
+   circle(540,200,150,76);
+   txt(m.resultPeriod==="AET"?"AET":"FULL TIME",540,304,190,16,MUTED,800);
+   if(m.resultPeriod==="AET"&&m.regulationScore)txt("90′ "+m.regulationScore,540,336,190,18,MUTED,700);
+  }else{
+   txt("VS",540,178,100,35,ACCENT,800);
+   for(const [side,center]of [["home",262],["away",818]]){
+    const arr=resultForm(m,side);for(let i=0;i<5;i++){const v=arr[i]||"—",x=center-96+i*48;panel(c,x-18,290,36,32,10,formColor[v]||formColor["—"],null);txt(v,x,307,32,18,"#fff",800);}
+   }
+  }
+  // One paragraph panel, with equal padding above and below its actual lines.
+  panel(c,48,articleY,984,articleH,20,"#ffffff06",null);
+  c.fillStyle=WHITE;c.font='600 '+font+'px "FCMyanmar",sans-serif';c.textAlign="left";c.textBaseline="top";
+  let ty=articleY+24;for(const str of lines){c.fillText(str,74,ty);ty+=leading;}
+  panel(c,48,pickY,984,pickH,20,mix("#111c2b",currentColor,.12),mix("#263344",currentColor,.3),1.5);
+  c.fillStyle=currentColor;c.fillRect(69,pickY+24,4,pickH-48);
+  crest(c,pick===homeName?homeLogo:awayLogo,92,pickY+(pickH-76)/2,76,pick);
+  const pickCenter=610;
+  txt("အထူး ရွေးချယ်မှု",pickCenter,pickY+29,730,22,ACCENT,800);
+  const nameY=pickY+(isResult?99:79);
+  txt(pick,pickCenter,nameY,730,isResult?44:38,WHITE,900);
+  if(isResult){c.font='900 44px "FCMyanmar",sans-serif';const textWidth=Math.min(620,c.measureText(pick).width);circle(pickCenter,nameY,Math.max(210,textWidth/2+60),43);}
   return canvas;
  }
  const blob=canvas=>new Promise((resolve,reject)=>canvas.toBlob(b=>b?.size?resolve(b):reject(Error("PNG မထွက်ပါ")),"image/png"));
