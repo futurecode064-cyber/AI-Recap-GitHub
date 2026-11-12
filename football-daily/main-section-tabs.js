@@ -5,7 +5,7 @@
 (function(){
   if(!["/","/index.html"].includes(location.pathname))return;
   const TODAY_TITLE="ယနေ့ ပွဲကြိုသုံးသပ်ချက်များ";
-  const MODE_TO_HASH={probabilities:"#fcProbSection",ai:"#fcAiScoreSection",video:"#fcVideoStudio",previewFrame:"#brandPreviewStudio",oddsFrame:"#brandOddsStudio",news:"#fcNewsSection",previewV2:"#fcPreviewV2",resultsV2:"#fcResultsV2"};
+  const MODE_TO_HASH={probabilities:"#fcProbSection",ai:"#fcAiScoreSection",video:"#fcVideoStudio",previewFrame:"#brandPreviewStudio",oddsFrame:"#brandOddsStudio",news:"#fcNewsSection",previewV2:"#fcPreviewV2",previewV3:"#fcPreviewV3",resultsV2:"#fcResultsV2"};
   const HASH_TO_MODE=Object.fromEntries(Object.entries(MODE_TO_HASH).map(([mode,hash])=>[hash,mode]));
 
   function init(){
@@ -23,8 +23,9 @@
     const newsTab=nav.querySelector(".fc-main-news-tab");
     const probTab=nav.querySelector(".fc-main-prob-tab");
     const previewV2Tab=nav.querySelector(".fc-main-preview-v2-tab");
+    const previewV3Tab=nav.querySelector(".fc-main-preview-v3-tab");
     const resultsV2Tab=nav.querySelector(".fc-main-results-v2-tab");
-    if(!previous||!today||!videoTab||!aiTab||!news||!newsTab||!probabilities||!probTab||!previewV2Tab||!resultsV2Tab)return;
+    if(!previous||!today||!videoTab||!aiTab||!news||!newsTab||!probabilities||!probTab||!previewV2Tab||!previewV3Tab||!resultsV2Tab)return;
 
     const frameTabs=[[nav.querySelector(".fc-main-preview-frame-tab"),"previewFrame","brandPreviewStudio"],[nav.querySelector(".fc-main-odds-frame-tab"),"oddsFrame","brandOddsStudio"]];
     // Both frame studios finish their synchronous setup before DOMContentLoaded.
@@ -39,9 +40,9 @@
     headingObserver.observe(title,{childList:true});
 
     function show(mode){
-      view=["yesterday","today","probabilities","ai","video","previewFrame","oddsFrame","news","previewV2","resultsV2"].includes(mode)?mode:"today";
+      view=["yesterday","today","probabilities","ai","video","previewFrame","oddsFrame","news","previewV2","previewV3","resultsV2"].includes(mode)?mode:"today";
       document.body.dataset.fcMainView=view;
-      const selection=[[previous,view==="yesterday"],[today,view==="today"],[probTab,view==="probabilities"],[videoTab,view==="video"],[aiTab,view==="ai"],[newsTab,view==="news"],[previewV2Tab,view==="previewV2"],[resultsV2Tab,view==="resultsV2"],...frameTabs.filter(([tab])=>tab).map(([tab,mode])=>[tab,view===mode])];
+      const selection=[[previous,view==="yesterday"],[today,view==="today"],[probTab,view==="probabilities"],[videoTab,view==="video"],[aiTab,view==="ai"],[newsTab,view==="news"],[previewV2Tab,view==="previewV2"],[previewV3Tab,view==="previewV3"],[resultsV2Tab,view==="resultsV2"],...frameTabs.filter(([tab])=>tab).map(([tab,mode])=>[tab,view===mode])];
       for(const [control,on] of selection){
         control.classList.toggle("active",on);
         if(on)control.setAttribute("aria-current",control.tagName==="BUTTON"?"date":"page");
@@ -81,6 +82,7 @@
     });
     probTab.addEventListener("click",event=>{event.preventDefault();navigate("probabilities",true);});
     previewV2Tab.addEventListener("click",event=>{event.preventDefault();navigate("previewV2",true);});
+    previewV3Tab.addEventListener("click",event=>{event.preventDefault();navigate("previewV3",true);});
     resultsV2Tab.addEventListener("click",event=>{event.preventDefault();navigate("resultsV2",true);});
     newsTab.addEventListener("click",event=>{
       event.preventDefault();navigate("news",true);

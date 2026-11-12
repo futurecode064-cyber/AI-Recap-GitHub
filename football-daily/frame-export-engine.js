@@ -51,6 +51,16 @@ async function* forSection(k,f,rows,mode){
     const framed=await p.wrap(native,"oddsV2","pro:"+f.id);
     yield {name:outputName(f,i,parts.length),blob:await blobCanvas(framed)};
    }
+  }else if(k==="previewsV3"){
+   const render=W.FutureCodePreviewV3?.render;if(typeof render!=="function")throw Error("Preview Version 3 PNG Engine မရရှိပါ");
+   const size=mode==="triple"?3:mode==="pair"?2:1;
+   const chunks=Array.from({length:Math.ceil(rows.length/size)},(_,i)=>rows.slice(i*size,i*size+size));
+   for(let i=0;i<chunks.length;i++){
+    const original=[];for(const m of chunks[i])original.push(await render(m));
+    const combined=await stackCanvases(original,4);
+    const framed=await p.wrap(combined,"previewsV3","pro:"+f.id);
+    yield {name:outputName(f,i,chunks.length),blob:await blobCanvas(framed)};
+   }
   }else if(k==="previewsV2"){
    const render=W.FutureCodePreviewV2?.render;if(!render)throw Error("Preview Version 2 PNG Engine မရရှိပါ");
    const size=mode==="triple"?3:mode==="pair"?2:1;
