@@ -71,6 +71,7 @@ jobs:
             editor.on('pageerror',e=>editorErrors.push(e.message));
             await editor.goto(base+'frame-editor.html',{waitUntil:'domcontentloaded',timeout:45000});
             await editor.waitForFunction(()=>window.FCStudio?.getState()?.frames?.length>0&&window.FCStudioMulti?.plans,null,{timeout:90000});
+            await editor.waitForFunction(()=>window.FCStudio?.getRows('previewsV4')?.length>0,null,{timeout:90000});
             await editor.locator('#navDownloads').click();
             let card=editor.locator('details[data-section="previewsV4"]');
             await card.waitFor({state:'attached',timeout:15000});
