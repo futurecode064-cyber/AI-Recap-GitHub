@@ -17,6 +17,7 @@ const LEAGUE_NAMES={
 };
 Object.assign(LEAGUE_NAMES,{"Danish Cup":"ဒိန်းမတ် ဖလား","Norwegian 1. Division":"နော်ဝေးလိဂ် ၁","Veikkausliiga Playoffs":"ဖင်လန် လိဂ် ပလေးအော့","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Liga Portugal":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","Turkish Super Lig":"တူရကီ စူပါလိဂ်","Super Lig":"တူရကီ စူပါလိဂ်","Superettan":"ဆွီဒင် စူပါရက်တန်လိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga":"စပိန်လာလီဂါ","La Liga 2":"စပိန်လာလီဂါ ၂","Ligue 1":"ပြင်သစ်လီဂူးဝမ်း","Ligue 2":"ပြင်သစ်လီဂူး ၂"});
 Object.assign(LEAGUE_NAMES,{"La Liga":"စပိန် လာလီဂါ","Bundesliga":"ဂျာမန် ဘွန်ဒက်စ်လီဂါ","Ligue 1":"ပြင်သစ် လီဂူး ၁","Championship":"အင်္ဂလန် ချန်ပီယံရှစ်","2. Bundesliga":"ဂျာမန် ဘွန်ဒက်စ်လီဂါ ၂","Eliteserien":"နော်ဝေ လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီမီယာလိဂ်","Belgian Pro League":"ဘယ်လ်ဂျီယံ အေလိဂ်","EFL Cup":"အင်္ဂလန် ကာရာဘောင်းဖလား","Serie A":"အီတလီ စီးရီးအေ","Veikkausliiga":"ဖင်လန် ဗိုက်ကာအက်စ်လီဂါ","Allsvenskan":"ဆွီဒင် အော်လ်ဆွင်စကန်","DBU Pokalen":"ဒိန်းမတ် ဖလား","Saudi Pro League":"ဆော်ဒီ ပရိုလိဂ်","Taça da Liga":"ပေါ်တူဂီ လိဂ်ဖလား"});
+Object.assign(LEAGUE_NAMES,{"UEFA Nations League A":"ယူအီးအက်ဖ်အေ နေးရှင်းလိဂ် အေ","UEFA Nations League C":"ယူအီးအက်ဖ်အေ နေးရှင်းလိဂ် စီ","International Friendly":"နိုင်ငံတကာ ခြေစမ်းပွဲ"});
 const LEAGUE_ALIASES={
  "England League 1":"League One","EFL League One":"League One",
  "League 1":"League One","English League One":"League One",
