@@ -56,9 +56,10 @@ jobs:
               !!window.FCStudio.getHome().FutureCodeFramePreview,
               !!window.FCStudio.getOdds().FutureCodeTableOddsFrames
             ]}));
-            assert(initial.count>=30&&initial.scopes===11&&initial.versions.every(Boolean),JSON.stringify(initial));
+            assert(initial.count>=30&&initial.scopes===12&&initial.versions.every(Boolean),JSON.stringify(initial));
             assert(await page.locator('#downSection option[value="oddsCards"]').count()===1,'Missing new Burmese odds cards download section');
             assert(await page.locator('#downSection option[value="previewsV3"]').count()===1,'Preview V3 section missing from Download Center');
+            assert(await page.locator('#downSection option[value="previewsV4"]').count()===1,'Preview V4 section missing from Download Center');
             assert(await page.locator('#librarySection option[value="oddsCards"]').count()===1,'Missing new card section library filter');
             await page.locator('#librarySection').selectOption('odds');
             await page.locator('#frameList .frame-row').filter({hasText:'BCF · ပေါက်ကြေး'}).first().click();

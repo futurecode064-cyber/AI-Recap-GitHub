@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="./styles.css?v=20261029-nonblocking-fonts">
 <link rel="stylesheet" href="./video-studio.css?v=20261016-video2">
 <link rel="stylesheet" href="./main-preview-design.css?v=stadium-compact-20261020">
-<link rel="stylesheet" href="./main-preview-v2.css?v=20261102-balanced-type-v4"><link rel="stylesheet" href="./main-preview-v3.css?v=20261112-navy-gold-v2">
+<link rel="stylesheet" href="./main-preview-v2.css?v=20261102-balanced-type-v4"><link rel="stylesheet" href="./main-preview-v3.css?v=20261112-navy-gold-v2"><link rel="stylesheet" href="./main-preview-v4.css?v=20261112-red-gold-v1">
 <link rel="stylesheet" href="./main-ai-score.css?v=20261028-vip-bookie-ai-v1">
 <link rel="stylesheet" href="./main-probability.css?v=20261024-v2">
 <script defer src="./main-professional-frame-studio.js?v=20261110-watermark-banner-repair-v3"></script>
@@ -35,6 +35,7 @@
 <script defer src="./main-probability.js?v=20261029-static-json-fix-v2"></script>
 <script defer src="./main-preview-v2.js?v=20261103-daily-content-v1"></script>
 <script defer src="./main-preview-v3.js?v=20261112-navy-gold-v2"></script>
+<script defer src="./main-preview-v4.js?v=20261112-red-gold-v1"></script>
 <script defer src="./main-results-v2.js?v=20261111-single-large-score-v6"></script>
 <script defer src="./main-section-tabs.js?v=preview-v2-20261101"></script>
 <link rel="stylesheet" href="./news-section.css?v=journal-theme-20261102-v5">
@@ -69,6 +70,7 @@
      <a class="fc-main-results-v2-tab" href="#fcResultsV2">ဂိုးရလဒ် Version 2<small>ပွဲပြီးရလဒ် · မနေ့ကသုံးသပ်ချက် · ရွေးချယ်မှု · PNG</small></a>
      <a class="fc-main-preview-v2-tab" href="#fcPreviewV2">ပွဲကြိုသုံးသပ်ချက် Version 2<small>ပွဲပုံ · နှစ်သင်းအရေးကြီးချက် · သုံးသပ်ချက် · ရွေးချယ်မှု · မြန်မာကြေး</small></a>
 <a class="fc-main-preview-v3-tab" href="#fcPreviewV3">ပွဲကြိုသုံးသပ်ချက် Version 3<small>အသင်းလိုဂို · နောက်ဆုံး ၅ ပွဲ · V2 သုံးသပ်ချက် · ရွေးချယ်မှု · ကြေးမပါ</small></a>
+<a class="fc-main-preview-v4-tab" href="#fcPreviewV4">ပွဲကြိုသုံးသပ်ချက် Version 4<small>အနီ–အနက်–ရွှေရောင် · TikTok 9:16 · အယ်ဒီတာရွေးချယ်မှုအကြီး</small></a>
      <a class="date-tab-odds" href="./odds.html">ယနေ့ ပေါက်ကြေးများ<small>ပွဲအားလုံး၏ ကြေးစာရင်း ↗</small></a>
       <a class="date-tab-odds" href="./lucky-draw.html" aria-label="နေ့စဉ် ၁၀ ပွဲ ကံစမ်းဖောင်">🏆 ၁၀ ပွဲ ကံစမ်းမယ်<small>ပေါက်ကြေးမှ ၁၀ ပွဲရွေး · PNG အစောင် · Telegram Share ↗</small></a>
      <a class="fc-main-prob-tab" href="#fcProbSection">ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)<small>အိမ်ရှင် · ဧည့်သည် · ဂိုးပေါ်/အောက်</small></a>
@@ -109,6 +111,20 @@
  </div>
  <p class="fc-v3-status">ရက်စွဲ: <span id="fcV3Date">—</span> · <span id="fcV3Status" role="status">V2 သုံးသပ်ချက်နှင့် ပွဲဒေတာကို ဖတ်ယူနေသည်…</span></p>
  <div class="fc-v3-cards" id="fcV3Cards" aria-live="polite"></div>
+</section>
+<section class="fc-v4-section" id="fcPreviewV4" aria-labelledby="fcV4Heading">
+ <div class="fc-v4-heading"><div><h2 id="fcV4Heading">ပွဲကြိုသုံးသပ်ချက် Version 4</h2><p>Red & Gold · အသင်းလိုဂို · နောက်ဆုံး ၅ ပွဲ · V2 သုံးသပ်ချက် · ကြေးမပါသော ရွေးချယ်မှုအကြီး</p></div><span class="fc-v4-count" id="fcV4Count">—</span></div>
+ <div class="fc-v4-tools">
+  <label>လိဂ်ရွေးရန်<select id="fcV4League"><option value="all">လိဂ်အားလုံး</option></select></label>
+  <label>Frame ရွေးရန်<select id="fcV4Frame"><option value="none">မူရင်း Red & Gold V4</option></select></label>
+  <button type="button" id="fcV4One">⬇ တစ်ပွဲ PNG</button>
+  <button type="button" id="fcV4Pair">⬇ ၂ ပွဲ PNG</button>
+  <button type="button" id="fcV4Zip">⬇ ရွေးထားသောပွဲ ZIP</button>
+  <button type="button" id="fcV4Reload">↻ Refresh</button>
+  <span class="fc-v4-status" id="fcV4Selected">0 ပွဲရွေးထားသည်</span>
+ </div>
+ <p class="fc-v4-status">ရက်စွဲ: <span id="fcV4Date">—</span> · <span id="fcV4Status" role="status">V2 သုံးသပ်ချက်နှင့် ပွဲဒေတာကို ဖတ်ယူနေသည်…</span></p>
+ <div class="fc-v4-cards" id="fcV4Cards" aria-live="polite"></div>
 </section>
 <section class="fc-prob-section" id="fcProbSection" aria-labelledby="fcProbTitle">
   <div class="fc-prob-intro"><h2 id="fcProbTitle">ပွဲစဉ် ဖြစ်နိုင်ခြေ (%)</h2><span id="fcProbDate" class="fc-prob-status"></span></div>
