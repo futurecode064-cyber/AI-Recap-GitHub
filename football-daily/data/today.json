@@ -107,7 +107,9 @@
         "won": 2,
         "drawn": 2,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 7,
+        "goalsAgainst": 5
       },
       "away": "Greece",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/gre.png",
@@ -176,7 +178,9 @@
         "won": 2,
         "drawn": 2,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 5,
+        "goalsAgainst": 3
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -300,7 +304,7 @@
         },
         {
           "date": "2026-06-05",
-          "opponent": "Mexico",
+          "opponent": "မက္ကဆီကို",
           "teamGoals": 1,
           "opponentGoals": 5,
           "result": "L",
@@ -317,7 +321,9 @@
         "won": 0,
         "drawn": 0,
         "lost": 4,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 3,
+        "goalsAgainst": 8
       },
       "away": "Germany",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
@@ -369,7 +375,7 @@
         },
         {
           "date": "2026-06-30",
-          "opponent": "Paraguay",
+          "opponent": "ပါရာဂွေး",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "L",
@@ -386,7 +392,9 @@
         "won": 1,
         "drawn": 2,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 3,
+        "goalsAgainst": 2
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -514,7 +522,7 @@
         },
         {
           "date": "2026-06-25",
-          "opponent": "Brazil",
+          "opponent": "ဘရာဇီး",
           "teamGoals": 0,
           "opponentGoals": 3,
           "result": "L",
@@ -531,7 +539,9 @@
         "won": 1,
         "drawn": 1,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 3,
+        "goalsAgainst": 5
       },
       "away": "North Macedonia",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/mkd.png",
@@ -600,7 +610,9 @@
         "won": 0,
         "drawn": 0,
         "lost": 4,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 0,
+        "goalsAgainst": 10
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -741,7 +753,9 @@
         "won": 2,
         "drawn": 1,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 5,
+        "goalsAgainst": 3
       },
       "away": "Switzerland",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
@@ -793,7 +807,7 @@
         },
         {
           "date": "2026-07-12",
-          "opponent": "Argentina",
+          "opponent": "အာဂျင်တီးနား",
           "teamGoals": 1,
           "opponentGoals": 3,
           "result": "L",
@@ -810,7 +824,9 @@
         "won": 4,
         "drawn": 0,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 11,
+        "goalsAgainst": 1
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -951,7 +967,9 @@
         "won": 1,
         "drawn": 1,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 3,
+        "goalsAgainst": 8
       },
       "away": "Kazakhstan",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/kaz.png",
@@ -1003,7 +1021,7 @@
         },
         {
           "date": "2026-06-09",
-          "opponent": "Hungary",
+          "opponent": "ဟန်ဂေရီ",
           "teamGoals": 1,
           "opponentGoals": 3,
           "result": "L",
@@ -1020,7 +1038,9 @@
         "won": 0,
         "drawn": 2,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 5,
+        "goalsAgainst": 7
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -1161,7 +1181,9 @@
         "won": 1,
         "drawn": 1,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 3,
+        "goalsAgainst": 5
       },
       "away": "Iceland",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/isl.png",
@@ -1213,7 +1235,7 @@
         },
         {
           "date": "2026-06-10",
-          "opponent": "Argentina",
+          "opponent": "အာဂျင်တီးနား",
           "teamGoals": 0,
           "opponentGoals": 3,
           "result": "L",
@@ -1230,7 +1252,9 @@
         "won": 2,
         "drawn": 2,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 7,
+        "goalsAgainst": 1
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -1371,7 +1395,9 @@
         "won": 1,
         "drawn": 0,
         "lost": 3,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 2,
+        "goalsAgainst": 7
       },
       "away": "Estonia",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/est.png",
@@ -1423,7 +1449,7 @@
         },
         {
           "date": "2026-03-31",
-          "opponent": "Rwanda",
+          "opponent": "ရဝမ်ဒါ",
           "teamGoals": 0,
           "opponentGoals": 2,
           "result": "L",
@@ -1440,7 +1466,9 @@
         "won": 1,
         "drawn": 3,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 2,
+        "goalsAgainst": 1
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -1581,7 +1609,9 @@
         "won": 3,
         "drawn": 1,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 9,
+        "goalsAgainst": 2
       },
       "away": "Faroe Islands",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/fro.png",
@@ -1650,7 +1680,9 @@
         "won": 0,
         "drawn": 4,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 5,
+        "goalsAgainst": 5
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -1774,7 +1806,7 @@
         },
         {
           "date": "2026-06-08",
-          "opponent": "Kosovo",
+          "opponent": "ကိုဆိုဗို",
           "teamGoals": 0,
           "opponentGoals": 3,
           "result": "L",
@@ -1791,7 +1823,9 @@
         "won": 0,
         "drawn": 1,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 1,
+        "goalsAgainst": 3
       },
       "away": "Gibraltar",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/gib.png",
@@ -1832,7 +1866,7 @@
         },
         {
           "date": "2026-09-23",
-          "opponent": "Sao Tome and Principe",
+          "opponent": "ဆောင်တိုမေနှင့်ပရင်စီပီ",
           "teamGoals": 0,
           "opponentGoals": 0,
           "result": "D",
@@ -1843,7 +1877,7 @@
         },
         {
           "date": "2026-06-06",
-          "opponent": "Cayman Islands",
+          "opponent": "ကေမန်ကျွန်းစု",
           "teamGoals": 4,
           "opponentGoals": 1,
           "result": "W",
@@ -1860,7 +1894,9 @@
         "won": 0,
         "drawn": 2,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 1,
+        "goalsAgainst": 1
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -2001,7 +2037,9 @@
         "won": 0,
         "drawn": 1,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 0,
+        "goalsAgainst": 2
       },
       "away": "Azerbaijan",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/aze.png",
@@ -2042,7 +2080,7 @@
         },
         {
           "date": "2026-09-23",
-          "opponent": "Tajikistan",
+          "opponent": "တာဂျစ်ကစ္စတန်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "result": "W",
@@ -2070,7 +2108,9 @@
         "won": 1,
         "drawn": 2,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
+        "source": "https://www.espn.com/soccer/table/_/league/uefa.nations",
+        "goalsFor": 2,
+        "goalsAgainst": 1
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "formStatus": "verified-last-five",
@@ -2189,14 +2229,16 @@
           "sourceUrl": "https://www.goal.com/en/team/salamanca-cf-uds/fixtures-results/LIMvvRdEM9Pwh8FFiNVoB"
         },
         {
-          "date": "2026-10-10",
-          "opponent": "ဆန်ဆီဘက်စတီယန်ဒီလော့စ်ရေးယက်စ်",
-          "teamGoals": 3,
-          "opponentGoals": 2,
-          "result": "W",
-          "venueSide": "home",
-          "competition": "Segunda Federación Group 5",
-          "sourceUrl": "https://www.goal.com/en/team/salamanca-cf-uds/fixtures-results/LIMvvRdEM9Pwh8FFiNVoB"
+          "date": "2026-10-15",
+          "opponent": "ဆက်စတာအိုရစ်ဗာ",
+          "teamGoals": 1,
+          "opponentGoals": 3,
+          "result": "L",
+          "venueSide": "away",
+          "competition": "Copa Federación",
+          "sourceUrl": "https://rfef.es/es/noticias/sestao-river-club-y-rc-recreativo-de-huelva-protagonizaran-la-gran-final-de-la-copa",
+          "sourceDate": "2026-10-14",
+          "sourceKickoffUtc": "2026-10-14T17:30:00Z"
         }
       ],
       "away": "Celta Vigo",
@@ -2216,7 +2258,7 @@
         },
         {
           "date": "2026-11-06",
-          "opponent": "Union St.-Gilloise",
+          "opponent": "ယူနီယံစိန့်ဂီလိုအစ်",
           "teamGoals": 1,
           "opponentGoals": 2,
           "result": "L",
@@ -2260,9 +2302,9 @@
         }
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.cup.png",
-      "formStatus": "verified-last-five-league-only",
-      "aiModelDataStatus": "unavailable",
-      "aiModelUnavailableReason": "ဆယ်လာမန်ကာ၏ နောက်ဆုံးလိဂ် ၅ ပွဲကိုသာ စစ်နိုင်သေးသဖြင့် ပြိုင်ပွဲစုံ AI တွက်ချက်မှု မဖော်ပြထားပါ။",
+      "formStatus": "verified-last-five",
+      "aiModelDataStatus": "verified-recent-form",
+      "aiModelUnavailableReason": "",
       "homeOdds": 9.0,
       "drawOdds": 5.75,
       "awayOdds": 1.303,
@@ -2275,7 +2317,8 @@
       "researchSources": [
         "https://www.espn.com/soccer/match/_/gameId/401928487",
         "https://www.goal.com/en/team/salamanca-cf-uds/fixtures-results/LIMvvRdEM9Pwh8FFiNVoB",
-        "https://www.sportsmole.co.uk/football/celta-vigo/copa-del-rey/preview/salamanca-cf-uds-vs-celta-vigo-prediction-team-news-lineups_608933.html"
+        "https://www.sportsmole.co.uk/football/celta-vigo/copa-del-rey/preview/salamanca-cf-uds-vs-celta-vigo-prediction-team-news-lineups_608933.html",
+        "https://rfef.es/es/noticias/sestao-river-club-y-rc-recreativo-de-huelva-protagonizaran-la-gran-final-de-la-copa"
       ],
       "crestStatus": "Official ESPN team identity image; same-origin bundled asset",
       "dailyPreviewText": "ဘုရင့်ဖလားလို တစ်ပွဲတည်းအဆုံးအဖြတ်မှာ လိဂ်အဆင့်ကွာခြားမှုကိုပဲကြည့်ပြီး ဆုံးဖြတ်လို့မရပေမယ့် ဆဲလ်တာဗီဂိုအတွက် ဒီပွဲက လတ်တလောရလဒ်တွေကို ပြန်ပြင်ဖို့ အခွင့်အရေးပါ။ နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာနိုင်ထားပြီး လာလီဂါနောက်ဆုံးနှစ်ပွဲမှာ ဂိုးမရခဲ့တာကြောင့် တိုက်စစ်ကို စောစောအသက်သွင်းနိုင်ဖို့ လိုပါတယ်။ ဆယ်လာမန်ကာက စတုတ္ထတန်းအသင်းဖြစ်ပေမယ့် နောက်ဆုံးလိဂ်ပွဲကို အနိုင်ရထားလို့ အိမ်ကွင်းယုံကြည်မှု ရှိနေပါတယ်။ ဆဲလ်တာအတွက် စိန်ခေါ်မှုက အိမ်ရှင်ရဲ့ အစောပိုင်းတက်ကြွမှုကို ဖြတ်ပြီး ပွဲကို ကိုယ့်အရှိန်ထဲ ယူလာနိုင်ဖို့ပါ။ အခွင့်အရေးတွေ ဖြုန်းမိရင် ဖလားပွဲဖိအားက ပိုတက်လာနိုင်ပေမယ့် တန်းမြင့်ပြိုင်ပွဲတွေမှာ အပတ်စဉ်စမ်းသပ်ခံနေရတဲ့ အတွေ့အကြုံနဲ့ ဘောလုံးအရည်အသွေးက ဧည့်သည်အတွက် ကွာခြားချက် ဖြစ်လာနိုင်ပါတယ်။ လက်ရှိတိုက်စစ်ကို အလွန်အကျွံအကဲမဖြတ်ဘဲ အဆင့်ကွာခြားမှုအပေါ် အခြေခံပြီး ဆဲလ်တာဗီဂိုကို ရွေးချယ်ပါတယ်။",
@@ -2296,7 +2339,7 @@
           "orientation": "home-away"
         }
       },
-      "homeFormScope": "Last five completed league matches; Copa Federación not included, date coverage incomplete"
+      "homeFormScope": "Last five completed competitive fixtures, including Copa Federación"
     },
     {
       "fixtureId": "fc-20261113-12",
@@ -2345,7 +2388,7 @@
       "homeLastFive": [
         {
           "date": "2026-11-11",
-          "opponent": "Trival Valderas",
+          "opponent": "ထရီဗယ်ဗယ်ဒါရက်စ်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "result": "W",
@@ -2356,7 +2399,7 @@
         },
         {
           "date": "2026-11-08",
-          "opponent": "ဘလံပူစီ",
+          "opponent": "အယ်လ်ဘာစီတီ",
           "teamGoals": 1,
           "opponentGoals": 3,
           "result": "L",
@@ -2406,7 +2449,9 @@
         "won": 3,
         "drawn": 3,
         "lost": 7,
-        "source": "https://www.espn.com/soccer/table/_/league/esp.2"
+        "source": "https://www.espn.com/soccer/table/_/league/esp.2",
+        "goalsFor": 11,
+        "goalsAgainst": 23
       },
       "away": "Burgos",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png",
@@ -2414,7 +2459,7 @@
       "awayLastFive": [
         {
           "date": "2026-11-07",
-          "opponent": "RC Celta Fortuna",
+          "opponent": "ဆဲလ်တာဖော်ကျူနာ",
           "teamGoals": 2,
           "opponentGoals": 1,
           "result": "W",
@@ -2425,7 +2470,7 @@
         },
         {
           "date": "2026-11-02",
-          "opponent": "Castellón",
+          "opponent": "ကက်စတယ်လွန်",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -2436,7 +2481,7 @@
         },
         {
           "date": "2026-10-30",
-          "opponent": "CD Laredo",
+          "opponent": "လာရီဒို",
           "teamGoals": 4,
           "opponentGoals": 2,
           "result": "W",
@@ -2458,7 +2503,7 @@
         },
         {
           "date": "2026-10-19",
-          "opponent": "CD Sabadell",
+          "opponent": "ဆာဘာဒဲလ်",
           "teamGoals": 1,
           "opponentGoals": 0,
           "result": "W",
@@ -2475,7 +2520,9 @@
         "won": 7,
         "drawn": 3,
         "lost": 3,
-        "source": "https://www.espn.com/soccer/table/_/league/esp.2"
+        "source": "https://www.espn.com/soccer/table/_/league/esp.2",
+        "goalsFor": 19,
+        "goalsAgainst": 14
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
       "formStatus": "verified-last-five",
@@ -2555,7 +2602,7 @@
       "homeLastFive": [
         {
           "date": "2026-10-04",
-          "opponent": "Senegal",
+          "opponent": "ဆီနီဂေါ",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -2566,7 +2613,7 @@
         },
         {
           "date": "2026-09-29",
-          "opponent": "Namibia",
+          "opponent": "နာမီးဘီးယား",
           "teamGoals": 1,
           "opponentGoals": 0,
           "result": "W",
@@ -2577,7 +2624,7 @@
         },
         {
           "date": "2026-09-25",
-          "opponent": "Cameroon",
+          "opponent": "ကင်မရွန်း",
           "teamGoals": 1,
           "opponentGoals": 3,
           "result": "L",
@@ -2588,7 +2635,7 @@
         },
         {
           "date": "2026-06-09",
-          "opponent": "Equatorial Guinea",
+          "opponent": "အီကွေတိုရီရယ်ဂီနီ",
           "teamGoals": 1,
           "opponentGoals": 0,
           "result": "W",
@@ -2616,7 +2663,9 @@
         "won": 1,
         "drawn": 0,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 2,
+        "goalsAgainst": 3
       },
       "away": "Congo",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/cgo.png",
@@ -2624,7 +2673,7 @@
       "awayLastFive": [
         {
           "date": "2026-09-30",
-          "opponent": "Cameroon",
+          "opponent": "ကင်မရွန်း",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -2635,7 +2684,7 @@
         },
         {
           "date": "2026-09-24",
-          "opponent": "Namibia",
+          "opponent": "နာမီးဘီးယား",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -2668,7 +2717,7 @@
         },
         {
           "date": "2025-09-05",
-          "opponent": "Tanzania",
+          "opponent": "တန်ဇန်းနီးယား",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -2685,7 +2734,9 @@
         "won": 0,
         "drawn": 1,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 1,
+        "goalsAgainst": 2
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "formStatus": "verified-last-five",
@@ -2765,7 +2816,7 @@
       "homeLastFive": [
         {
           "date": "2026-09-30",
-          "opponent": "Botswana",
+          "opponent": "ဘော့ဆွာနာ",
           "teamGoals": 2,
           "opponentGoals": 0,
           "result": "W",
@@ -2776,7 +2827,7 @@
         },
         {
           "date": "2026-09-29",
-          "opponent": "Sudan",
+          "opponent": "ဆူဒန်",
           "teamGoals": 4,
           "opponentGoals": 1,
           "result": "W",
@@ -2787,7 +2838,7 @@
         },
         {
           "date": "2026-09-25",
-          "opponent": "Senegal",
+          "opponent": "ဆီနီဂေါ",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -2798,7 +2849,7 @@
         },
         {
           "date": "2026-06-09",
-          "opponent": "Indonesia",
+          "opponent": "အင်ဒိုနီးရှား",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -2809,7 +2860,7 @@
         },
         {
           "date": "2026-06-07",
-          "opponent": "Oman",
+          "opponent": "အိုမန်",
           "teamGoals": 1,
           "opponentGoals": 4,
           "result": "L",
@@ -2826,7 +2877,9 @@
         "won": 1,
         "drawn": 1,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 5,
+        "goalsAgainst": 2
       },
       "away": "Ethiopia",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/eth.png",
@@ -2834,7 +2887,7 @@
       "awayLastFive": [
         {
           "date": "2026-09-29",
-          "opponent": "Senegal",
+          "opponent": "ဆီနီဂေါ",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -2845,7 +2898,7 @@
         },
         {
           "date": "2026-09-25",
-          "opponent": "Sudan",
+          "opponent": "ဆူဒန်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -2878,7 +2931,7 @@
         },
         {
           "date": "2026-03-31",
-          "opponent": "Sao Tome and Principe",
+          "opponent": "ဆောင်တိုမေနှင့်ပရင်စီပီ",
           "teamGoals": 1,
           "opponentGoals": 0,
           "result": "W",
@@ -2895,7 +2948,9 @@
         "won": 0,
         "drawn": 0,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 0,
+        "goalsAgainst": 2
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "formStatus": "verified-last-five",
@@ -2975,7 +3030,7 @@
       "homeLastFive": [
         {
           "date": "2026-09-29",
-          "opponent": "Togo",
+          "opponent": "တိုဂို",
           "teamGoals": 2,
           "opponentGoals": 0,
           "result": "W",
@@ -2986,7 +3041,7 @@
         },
         {
           "date": "2026-09-26",
-          "opponent": "Algeria",
+          "opponent": "အယ်လ်ဂျီးရီးယား",
           "teamGoals": 1,
           "opponentGoals": 3,
           "result": "L",
@@ -2997,7 +3052,7 @@
         },
         {
           "date": "2026-04-01",
-          "opponent": "Argentina",
+          "opponent": "အာဂျင်တီးနား",
           "teamGoals": 0,
           "opponentGoals": 5,
           "result": "L",
@@ -3008,7 +3063,7 @@
         },
         {
           "date": "2026-03-31",
-          "opponent": "Zimbabwe",
+          "opponent": "ဇင်ဘာဘွေ",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -3036,7 +3091,9 @@
         "won": 1,
         "drawn": 0,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 3,
+        "goalsAgainst": 3
       },
       "away": "Burundi",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/bdi.png",
@@ -3044,7 +3101,7 @@
       "awayLastFive": [
         {
           "date": "2026-09-29",
-          "opponent": "Algeria",
+          "opponent": "အယ်လ်ဂျီးရီးယား",
           "teamGoals": 2,
           "opponentGoals": 2,
           "result": "D",
@@ -3055,7 +3112,7 @@
         },
         {
           "date": "2026-09-25",
-          "opponent": "Togo",
+          "opponent": "တိုဂို",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -3077,7 +3134,7 @@
         },
         {
           "date": "2026-03-31",
-          "opponent": "Chad",
+          "opponent": "ချဒ်",
           "teamGoals": 4,
           "opponentGoals": 0,
           "result": "W",
@@ -3088,7 +3145,7 @@
         },
         {
           "date": "2026-03-27",
-          "opponent": "Chad",
+          "opponent": "ချဒ်",
           "teamGoals": 4,
           "opponentGoals": 0,
           "result": "W",
@@ -3105,7 +3162,9 @@
         "won": 0,
         "drawn": 1,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 2,
+        "goalsAgainst": 3
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "formStatus": "verified-last-five",
@@ -3185,7 +3244,7 @@
       "homeLastFive": [
         {
           "date": "2026-10-04",
-          "opponent": "Argentina",
+          "opponent": "အာဂျင်တီးနား",
           "teamGoals": 0,
           "opponentGoals": 7,
           "result": "L",
@@ -3196,7 +3255,7 @@
         },
         {
           "date": "2026-09-28",
-          "opponent": "Central African Republic",
+          "opponent": "ဗဟိုအာဖရိက",
           "teamGoals": 1,
           "opponentGoals": 0,
           "result": "W",
@@ -3207,7 +3266,7 @@
         },
         {
           "date": "2026-09-26",
-          "opponent": "Benin",
+          "opponent": "ဘီနင်",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -3246,7 +3305,9 @@
         "won": 1,
         "drawn": 1,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 2,
+        "goalsAgainst": 1
       },
       "away": "Mauritania",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/mtn.png",
@@ -3254,7 +3315,7 @@
       "awayLastFive": [
         {
           "date": "2026-09-30",
-          "opponent": "Benin",
+          "opponent": "ဘီနင်",
           "teamGoals": 1,
           "opponentGoals": 2,
           "result": "L",
@@ -3265,7 +3326,7 @@
         },
         {
           "date": "2026-09-24",
-          "opponent": "Central African Republic",
+          "opponent": "ဗဟိုအာဖရိက",
           "teamGoals": 3,
           "opponentGoals": 1,
           "result": "W",
@@ -3276,7 +3337,7 @@
         },
         {
           "date": "2026-03-28",
-          "opponent": "Argentina",
+          "opponent": "အာဂျင်တီးနား",
           "teamGoals": 1,
           "opponentGoals": 2,
           "result": "L",
@@ -3287,7 +3348,7 @@
         },
         {
           "date": "2025-11-15",
-          "opponent": "Libya",
+          "opponent": "လစ်ဗျား",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -3298,7 +3359,7 @@
         },
         {
           "date": "2025-11-12",
-          "opponent": "Tunisia",
+          "opponent": "တူနီးရှား",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -3315,7 +3376,9 @@
         "won": 1,
         "drawn": 0,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 4,
+        "goalsAgainst": 3
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "formStatus": "verified-last-five",
@@ -3400,7 +3463,7 @@
       "homeLastFive": [
         {
           "date": "2026-09-29",
-          "opponent": "Rwanda",
+          "opponent": "ရဝမ်ဒါ",
           "teamGoals": 1,
           "opponentGoals": 2,
           "result": "L",
@@ -3411,7 +3474,7 @@
         },
         {
           "date": "2026-09-26",
-          "opponent": "Mali",
+          "opponent": "မာလီ",
           "teamGoals": 1,
           "opponentGoals": 3,
           "result": "L",
@@ -3422,7 +3485,7 @@
         },
         {
           "date": "2026-07-04",
-          "opponent": "Argentina",
+          "opponent": "အာဂျင်တီးနား",
           "teamGoals": 2,
           "opponentGoals": 3,
           "result": "L",
@@ -3433,7 +3496,7 @@
         },
         {
           "date": "2026-06-27",
-          "opponent": "Saudi Arabia",
+          "opponent": "ဆော်ဒီအာရေဗျ",
           "teamGoals": 0,
           "opponentGoals": 0,
           "result": "D",
@@ -3444,7 +3507,7 @@
         },
         {
           "date": "2026-06-22",
-          "opponent": "Uruguay",
+          "opponent": "ဥရုဂွေး",
           "teamGoals": 2,
           "opponentGoals": 2,
           "result": "D",
@@ -3461,7 +3524,9 @@
         "won": 0,
         "drawn": 0,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 2,
+        "goalsAgainst": 5
       },
       "away": "Liberia",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/lbr.png",
@@ -3469,7 +3534,7 @@
       "awayLastFive": [
         {
           "date": "2026-09-30",
-          "opponent": "Mali",
+          "opponent": "မာလီ",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -3480,7 +3545,7 @@
         },
         {
           "date": "2026-09-25",
-          "opponent": "Rwanda",
+          "opponent": "ရဝမ်ဒါ",
           "teamGoals": 1,
           "opponentGoals": 3,
           "result": "L",
@@ -3491,7 +3556,7 @@
         },
         {
           "date": "2026-06-10",
-          "opponent": "Sierra Leone",
+          "opponent": "ဆီယာရာလီယွန်",
           "teamGoals": 3,
           "opponentGoals": 1,
           "result": "W",
@@ -3502,7 +3567,7 @@
         },
         {
           "date": "2026-03-31",
-          "opponent": "Libya",
+          "opponent": "လစ်ဗျား",
           "teamGoals": 2,
           "opponentGoals": 2,
           "result": "D",
@@ -3513,7 +3578,7 @@
         },
         {
           "date": "2026-03-27",
-          "opponent": "Benin",
+          "opponent": "ဘီနင်",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -3530,7 +3595,9 @@
         "won": 0,
         "drawn": 0,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 1,
+        "goalsAgainst": 4
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "formStatus": "verified-last-five",
@@ -3632,7 +3699,7 @@
         },
         {
           "date": "2026-03-30",
-          "opponent": "Trinidad and Tobago",
+          "opponent": "ထရီနီဒက်နှင့်တိုဘာဂို",
           "teamGoals": 2,
           "opponentGoals": 2,
           "result": "W",
@@ -3654,7 +3721,7 @@
         },
         {
           "date": "2026-01-01",
-          "opponent": "Ivory Coast",
+          "opponent": "အိုင်ဗရီကို့စ်",
           "teamGoals": 2,
           "opponentGoals": 3,
           "result": "L",
@@ -3671,7 +3738,9 @@
         "won": 1,
         "drawn": 0,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 2,
+        "goalsAgainst": 2
       },
       "away": "Lesotho",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/les.png",
@@ -3701,7 +3770,7 @@
         },
         {
           "date": "2026-06-07",
-          "opponent": "Kenya",
+          "opponent": "ကင်ညာ",
           "teamGoals": 0,
           "opponentGoals": 4,
           "result": "L",
@@ -3712,7 +3781,7 @@
         },
         {
           "date": "2026-06-04",
-          "opponent": "Kenya",
+          "opponent": "ကင်ညာ",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -3723,7 +3792,7 @@
         },
         {
           "date": "2026-03-29",
-          "opponent": "Seychelles",
+          "opponent": "ဆေးရှဲလ်",
           "teamGoals": 2,
           "opponentGoals": 1,
           "result": "W",
@@ -3740,7 +3809,9 @@
         "won": 0,
         "drawn": 0,
         "lost": 2,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 1,
+        "goalsAgainst": 4
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "formStatus": "verified-last-five",
@@ -3820,7 +3891,7 @@
       "homeLastFive": [
         {
           "date": "2026-10-05",
-          "opponent": "South Africa",
+          "opponent": "တောင်အာဖရိက",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -3831,7 +3902,7 @@
         },
         {
           "date": "2026-09-29",
-          "opponent": "South Sudan",
+          "opponent": "တောင်ဆူဒန်",
           "teamGoals": 5,
           "opponentGoals": 0,
           "result": "W",
@@ -3842,7 +3913,7 @@
         },
         {
           "date": "2026-09-26",
-          "opponent": "Angola",
+          "opponent": "အန်ဂိုလာ",
           "teamGoals": 0,
           "opponentGoals": 0,
           "result": "D",
@@ -3853,7 +3924,7 @@
         },
         {
           "date": "2026-07-07",
-          "opponent": "Argentina",
+          "opponent": "အာဂျင်တီးနား",
           "teamGoals": 2,
           "opponentGoals": 3,
           "result": "L",
@@ -3864,7 +3935,7 @@
         },
         {
           "date": "2026-07-04",
-          "opponent": "Australia",
+          "opponent": "ဩစတြေးလျ",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "W",
@@ -3881,7 +3952,9 @@
         "won": 1,
         "drawn": 1,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 5,
+        "goalsAgainst": 0
       },
       "away": "Malawi",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/mwi.png",
@@ -3889,7 +3962,7 @@
       "awayLastFive": [
         {
           "date": "2026-10-07",
-          "opponent": "Angola",
+          "opponent": "အန်ဂိုလာ",
           "teamGoals": 1,
           "opponentGoals": 3,
           "result": "L",
@@ -3900,7 +3973,7 @@
         },
         {
           "date": "2026-09-25",
-          "opponent": "South Sudan",
+          "opponent": "တောင်ဆူဒန်",
           "teamGoals": 2,
           "opponentGoals": 1,
           "result": "W",
@@ -3950,7 +4023,9 @@
         "won": 1,
         "drawn": 0,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 3,
+        "goalsAgainst": 4
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "formStatus": "verified-last-five",
@@ -4034,7 +4109,7 @@
       "homeLastFive": [
         {
           "date": "2026-10-05",
-          "opponent": "Mali",
+          "opponent": "မာလီ",
           "teamGoals": 1,
           "opponentGoals": 1,
           "result": "D",
@@ -4078,7 +4153,7 @@
         },
         {
           "date": "2026-07-04",
-          "opponent": "Canada",
+          "opponent": "ကနေဒါ",
           "teamGoals": 3,
           "opponentGoals": 0,
           "result": "W",
@@ -4095,7 +4170,9 @@
         "won": 2,
         "drawn": 0,
         "lost": 0,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 4,
+        "goalsAgainst": 0
       },
       "away": "Niger",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/nig.png",
@@ -4103,7 +4180,7 @@
       "awayLastFive": [
         {
           "date": "2026-10-06",
-          "opponent": "Algeria",
+          "opponent": "အယ်လ်ဂျီးရီးယား",
           "teamGoals": 1,
           "opponentGoals": 2,
           "result": "L",
@@ -4136,7 +4213,7 @@
         },
         {
           "date": "2026-03-31",
-          "opponent": "Togo",
+          "opponent": "တိုဂို",
           "teamGoals": 0,
           "opponentGoals": 1,
           "result": "L",
@@ -4147,7 +4224,7 @@
         },
         {
           "date": "2026-03-28",
-          "opponent": "Libya",
+          "opponent": "လစ်ဗျား",
           "teamGoals": 0,
           "opponentGoals": 0,
           "result": "D",
@@ -4164,7 +4241,9 @@
         "won": 1,
         "drawn": 0,
         "lost": 1,
-        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual"
+        "source": "https://www.espn.com/soccer/table/_/league/caf.nations_qual",
+        "goalsFor": 2,
+        "goalsAgainst": 3
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "formStatus": "verified-last-five",
@@ -4214,9 +4293,9 @@
     "odds": "20 owner PDF morning rows; current prices intentionally blank",
     "previews": "20 original current-day articles and V2/V4 summaries",
     "specialChoices": 2,
-    "forms": "19 all-competition last-five sets, Salamanca league-only explicitly scoped",
-    "tips": "20 independent Forebet score tips; market model calculated separately; Salamanca form model withheld",
+    "forms": "20 fixtures have both verified all-competition last-five lists",
+    "tips": "20 sourced Forebet forecasts; 20 independently calculated Bookies/AI results",
     "news": "10 distinct dated stories; ten authentic licensed archival subject photographs",
-    "downloads": "pending real live PNG/ZIP tests"
+    "downloads": "Live V4 PNG opened and visually inspected; further sections being checked"
   }
 }

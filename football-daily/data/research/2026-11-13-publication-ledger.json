@@ -425,9 +425,10 @@
     "packageGuard": "STRUCTURAL_PASS: 20 odds/previews/tips, 2 special choices, 14 FT, 10 news",
     "previewV2": "PASS 20/20 canonical V2 editorial metadata and source-choice match",
     "regression": "23 focused tests PASS: 12-hour clocks, shared APK save transport, YKZ brand, Goal Zone V4",
-    "localBrowser": "Chromium socket denied; use cloud browser for live QA"
+    "localBrowser": "Chromium socket denied; use cloud browser for live QA",
+    "additionalFormResearch": "Salamanca missing Copa Federación fixture verified from RFEF; complete all-competition last five and AI restored",
+    "livePublication": "Confirmed live 20 matches / 2 special choices on Main",
+    "knownCIFailure": "Legacy V2 browser test still expects four logos per card; active owner layout has two. Actual download QA used."
   },
-  "limitations": [
-    "Salamanca all-competition last-five unavailable; verified league-only form labelled and AI withheld"
-  ]
+  "limitations": []
 }
