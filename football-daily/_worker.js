@@ -369,7 +369,8 @@ export default {
 async function handleRequest(request, env) {
     const path = new URL(request.url).pathname;
     if (path === "/api/editor/notifications/send" || path === "/api/editor/notifications/status") return fcNotifyApi(request, env, path);
-    if (path === "/api/news-image") return serveNewsImage(request);
+    if (path === "/api/maung-sheet") return maungSheetApi(request, env);
+     if (path === "/api/news-image") return serveNewsImage(request);
     if (path === "/bet-city-family" || path.startsWith("/bet-city-family/")) return suspendedBetCity(request);
     if (path === "/api/editor/sites" || path.startsWith("/api/editor/sites/")) return sbApi(request, env, path);
     if (path.startsWith("/api/editor/engine/")) return engineProxy(request, env, path);
@@ -419,6 +420,37 @@ async function handleRequest(request, env) {
     if (GZ_JOURNAL_PAGES.has(path)) return gzJournalPage(request, env, GZ_JOURNAL_PAGES.get(path));
     // Shared data, scripts, brand routes and assets are publicly accessible.
     return env.ASSETS.fetch(request);
+}
+
+
+/* Owner-editable MAIN football Maung Sheet. Public read, signed-session write.
+ * Independent from the daily report and from the disabled legacy editor routes. */
+async function maungSheetApi(request,env){
+ const url=new URL(request.url),date=url.searchParams.get("date")||gzDate();
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||Number.isNaN(Date.parse(date+"T00:00:00Z")))return gzJson({error:"ရက်စွဲ မမှန်ပါ"},400);
+ if(!["GET","POST"].includes(request.method))return gzJson({error:"Method Not Allowed"},405);
+ const db=env.GOALZONE_ANALYTICS_DB;
+ if(!db)return gzJson({error:"မောင်းစာရွက် Database ချိတ်ဆက်မှု မရှိသေးပါ"},503);
+ const authenticated=ready(env)&&await hasSession(request,env);
+ if(request.method==="POST"){
+  if(!authenticated)return gzJson({error:"Owner Login ဝင်ရန် လိုအပ်သည်"},401);
+  if(request.headers.get("Origin")!==url.origin||request.headers.get("X-Football-Editor")!=="1"||request.headers.get("Sec-Fetch-Site")==="cross-site")return gzJson({error:"မူရင်း Website Editor မှသာ သိမ်းနိုင်သည်"},403);
+ }
+ try{
+  await db.prepare("CREATE TABLE IF NOT EXISTS fc_main_maung_sheets (sheet_date TEXT PRIMARY KEY, payload TEXT NOT NULL, updated_at TEXT NOT NULL)").run();
+  if(request.method==="GET"){
+   const saved=await db.prepare("SELECT payload, updated_at FROM fc_main_maung_sheets WHERE sheet_date=?").bind(date).first();
+   let sheet=null;
+   if(saved){try{sheet=JSON.parse(saved.payload);}catch{return gzJson({error:"သိမ်းထားသော မောင်းစာရွက် ဖတ်မရပါ"},500);}}
+   return gzJson({sheet,canEdit:authenticated,updatedAt:saved?.updated_at||null});
+  }
+  const body=await editorBody(request),rows=body?.rows;
+  if(body?.date!==date||!Array.isArray(rows)||rows.length>150||rows.some(r=>!r||typeof r!=="object"||["time","body","upper","lower","total","league","result"].some(k=>typeof r[k]!=="string"||r[k].length>180)||typeof r.upperIsAway!=="boolean"))return gzJson({error:"မောင်းစာရွက် Row Data မမှန်ပါ (အများဆုံး ၁၅၀ ပွဲ)"},422);
+  const clean=rows.map(r=>Object.fromEntries(["time","body","upper","lower","total","league","result","upperIsAway"].map(k=>[k,typeof r[k]==="string"?r[k].trim():r[k]])));
+  const sheet={date,rows:clean},updatedAt=new Date().toISOString();
+  await db.prepare("INSERT INTO fc_main_maung_sheets(sheet_date,payload,updated_at) VALUES(?,?,?) ON CONFLICT(sheet_date) DO UPDATE SET payload=excluded.payload,updated_at=excluded.updated_at").bind(date,JSON.stringify(sheet),updatedAt).run();
+  return gzJson({ok:true,updatedAt,rows:clean.length});
+ }catch(e){return gzJson({error:"မောင်းစာရွက် သိမ်းဆည်းမှု မအောင်မြင်ပါ",detail:String(e?.message||"Database error").slice(0,160)},503);}
 }
 
 // Same-origin licensed-image gateway for newspaper PNG canvas exports.
