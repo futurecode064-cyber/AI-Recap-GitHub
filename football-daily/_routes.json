@@ -30,7 +30,8 @@
     "/future-code-journal/odds/",
     "/bet-city-family",
     "/bet-city-family/*",
-    "/api/news-image"
+    "/api/news-image",
+    "/api/maung-sheet"
   ],
   "exclude": []
 }
