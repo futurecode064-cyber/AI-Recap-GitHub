@@ -1,0 +1,11 @@
+{
+  "packageName": "com.futurecode.ykzsoccertips",
+  "versionCode": 6,
+  "versionName": "1.2.3",
+  "sha256": "0bfe73423f4c6e54c0a5a81bf8028c9f752feed8a75909247533848d25bdf852",
+  "certificateSha256": "98407044295dba61390bf38c452aa2d8dc8bcfc7390261680bbccbf30d6a66a4",
+  "apkUrl": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/football-noti-gallery-20261104/FC-ykz-v1.2.3-Noti-Gallery.apk",
+  "publishedAt": "2026-11-04",
+  "releaseNotes": "Notification နှင့် Gallery ပြင်ဆင်ချက်များ။ လက်ရှိ App နှင့် signing certificate တူမှသာ အပေါ်မှ Update တင်နိုင်ပါသည်။",
+  "minSdkVersion": 26
+}
