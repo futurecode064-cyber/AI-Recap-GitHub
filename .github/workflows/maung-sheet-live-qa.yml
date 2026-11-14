@@ -48,7 +48,13 @@ jobs:
             assert.equal((await page.locator('#msRows tr').first().locator('td').allTextContents()).length,8);
             assert.equal(await page.locator('#msRows tr').filter({hasText:'( H )'}).count(),7);
             const widths=await page.locator('.ms-table th').evaluateAll(cells=>cells.map(e=>Math.round(e.getBoundingClientRect().width)));
-            assert.deepEqual(widths,[50,104,106,275,82,275,114,234]);
+            assert.deepEqual(widths,[49,100,104,300,78,300,109,200]);
+            const textSize=await page.locator('#msRows tr:first-child td:nth-child(4)').evaluate(el=>Number.parseFloat(getComputedStyle(el).fontSize));
+            const rowHeight=await page.locator('#msRows tr:first-child').evaluate(el=>Math.round(el.getBoundingClientRect().height));
+            assert(textSize>=21,'Myanmar team names need to be readable');
+            assert(rowHeight>=63,'Rows need sufficient Myanmar glyph height');
+            const leagueFont=await page.locator('#msRows tr:first-child td:nth-child(8)').evaluate(el=>Number.parseFloat(getComputedStyle(el).fontSize));
+            assert(leagueFont>=17,'Leagues must stay readable');
             const league=page.locator('#msRows tr td:nth-child(8)');
             assert(await league.count()>20);
             const allOneLine=await league.evaluateAll(xs=>xs.every(x=>getComputedStyle(x).whiteSpace==='nowrap'));
@@ -76,11 +82,22 @@ jobs:
             const bytes=readFileSync(await download.path());
             assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
             const pngWidth=bytes.readUInt32BE(16),pngHeight=bytes.readUInt32BE(20);
-            assert(pngWidth>=2400&&pngHeight>=1100,JSON.stringify({pngWidth,pngHeight}));
+            assert(pngWidth>=3200&&pngHeight>=4500,JSON.stringify({pngWidth,pngHeight}));
+            const pendingHalf=page.waitForEvent('download',{timeout:110000});
+            await page.locator('#msPart1').click();
+            const half=await pendingHalf;
+            assert(half.suggestedFilename().endsWith('-Part-1.png'));
+            const halfBytes=readFileSync(await half.path());
+            const halfWidth=halfBytes.readUInt32BE(16),halfHeight=halfBytes.readUInt32BE(20);
+            assert(halfWidth>=3700&&halfHeight<pngHeight,JSON.stringify({halfWidth,halfHeight,pngHeight}));
+            const pendingLast=page.waitForEvent('download',{timeout:110000});
+            await page.locator('#msPart2').click();
+            const second=await pendingLast;
+            assert(second.suggestedFilename().endsWith('-Part-2.png'));
             assert(!errors.length,'JavaScript errors: '+errors.join('; '));
             const source=readFileSync('football-daily/frame-editor.html','utf8');
             assert(source.includes('id="maungDownloadPanel"')&&source.includes('maung-sheet.html?download-center=1'));
-            console.log('MAUNG SHEET LIVE PASS',{rows:29,widths,pngWidth,pngHeight,bytes:bytes.length,errors});
+            console.log('MAUNG SHEET LIVE PASS',{rows:29,widths,pngWidth,pngHeight,halfWidth,halfHeight,textSize,rowHeight,leagueFont,bytes:bytes.length,errors});
             await context.close();
           }finally{await browser.close();}
           NODE
