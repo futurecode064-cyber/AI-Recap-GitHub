@@ -23,22 +23,22 @@
       "upperTeam": "နယ်သာလန်",
       "bodyOdds": "1=",
       "goalTotalOdds": "3+25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+15",
+      "currentGoalTotalOdds": "3+30",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861159",
       "espnEventId": "401861159",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "နယ်သာလန်",
         "bodyOdds": "1=",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+15",
+        "currentGoalTotalOdds": "3+30"
       },
       "home": "Netherlands",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
@@ -216,7 +216,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "7-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861159",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-02",
@@ -237,22 +240,22 @@
       "upperTeam": "ဂျာမနီ",
       "bodyOdds": "2+50",
       "goalTotalOdds": "3-60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+90",
+      "currentGoalTotalOdds": "3-55",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861158",
       "espnEventId": "401861158",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "myanmarOdds": {
         "upperTeam": "ဂျာမနီ",
         "bodyOdds": "2+50",
         "goalTotalOdds": "3-60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+90",
+        "currentGoalTotalOdds": "3-55"
       },
       "home": "Serbia",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/sba.png",
@@ -401,7 +404,7 @@
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
       "homeOdds": 8.5,
-      "drawOdds": 6.0,
+      "drawOdds": 6,
       "awayOdds": 1.2564,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861158",
       "oddsVerifiedDate": "2026-11-13",
@@ -434,7 +437,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "1-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861158",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-03",
@@ -455,22 +461,22 @@
       "upperTeam": "စကော့တလန်",
       "bodyOdds": "2+10",
       "goalTotalOdds": "3+45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+15",
+      "currentGoalTotalOdds": "3+5",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861161",
       "espnEventId": "401861161",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "စကော့တလန်",
         "bodyOdds": "2+10",
         "goalTotalOdds": "3+45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+15",
+        "currentGoalTotalOdds": "3+5"
       },
       "home": "Scotland",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
@@ -619,8 +625,8 @@
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
       "homeOdds": 1.1739,
-      "drawOdds": 6.0,
-      "awayOdds": 14.0,
+      "drawOdds": 6,
+      "awayOdds": 14,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861161",
       "oddsVerifiedDate": "2026-11-13",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-13",
@@ -648,7 +654,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861161",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-04",
@@ -669,22 +678,22 @@
       "upperTeam": "ဆွစ်ဇာလန်",
       "bodyOdds": "1+60",
       "goalTotalOdds": "2-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+55",
+      "currentGoalTotalOdds": "2=",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861156",
       "espnEventId": "401861156",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ဆွစ်ဇာလန်",
         "bodyOdds": "1+60",
         "goalTotalOdds": "2-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+55",
+        "currentGoalTotalOdds": "2="
       },
       "home": "Slovenia",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/svn.png",
@@ -832,7 +841,7 @@
       "formStatus": "verified-last-five",
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
-      "homeOdds": 5.0,
+      "homeOdds": 5,
       "drawOdds": 3.35,
       "awayOdds": 1.7143,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861156",
@@ -862,7 +871,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861156",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-05",
@@ -883,22 +895,22 @@
       "upperTeam": "မော်လ်ဒိုဗာ",
       "bodyOdds": "-10",
       "goalTotalOdds": "2=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-15",
+      "currentGoalTotalOdds": "2-20",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861162",
       "espnEventId": "401861162",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "မော်လ်ဒိုဗာ",
         "bodyOdds": "-10",
         "goalTotalOdds": "2=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-15",
+        "currentGoalTotalOdds": "2-20"
       },
       "home": "Moldova",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/mda.png",
@@ -1076,7 +1088,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861162",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-06",
@@ -1097,22 +1112,22 @@
       "upperTeam": "အိုက်စ်လန်",
       "bodyOdds": "1+90",
       "goalTotalOdds": "2-65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+75",
+      "currentGoalTotalOdds": "2-60",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861157",
       "espnEventId": "401861157",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "အိုက်စ်လန်",
         "bodyOdds": "1+90",
         "goalTotalOdds": "2-65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+75",
+        "currentGoalTotalOdds": "2-60"
       },
       "home": "Bulgaria",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/bul.png",
@@ -1290,7 +1305,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "0-5",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861157",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-07",
@@ -1311,22 +1329,22 @@
       "upperTeam": "လူဇင်ဘတ်",
       "bodyOdds": "-25",
       "goalTotalOdds": "2-5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "2+5",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861154",
       "espnEventId": "401861154",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "လူဇင်ဘတ်",
         "bodyOdds": "-25",
         "goalTotalOdds": "2-5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "2+5"
       },
       "home": "Luxembourg",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/lux.png",
@@ -1504,7 +1522,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861154",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-08",
@@ -1525,22 +1546,22 @@
       "upperTeam": "စလိုဗက်ကီးယား",
       "bodyOdds": "1-85",
       "goalTotalOdds": "3+75",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-60",
+      "currentGoalTotalOdds": "3+100",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861160",
       "espnEventId": "401861160",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "စလိုဗက်ကီးယား",
         "bodyOdds": "1-85",
         "goalTotalOdds": "3+75",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-60",
+        "currentGoalTotalOdds": "3+100"
       },
       "home": "Slovakia",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/svk.png",
@@ -1718,7 +1739,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "2-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861160",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-09",
@@ -1739,22 +1763,22 @@
       "upperTeam": "အန်ဒိုရာ",
       "bodyOdds": "1+50",
       "goalTotalOdds": "2+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+50",
+      "currentGoalTotalOdds": "2+65",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861155",
       "espnEventId": "401861155",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "အန်ဒိုရာ",
         "bodyOdds": "1+50",
         "goalTotalOdds": "2+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+50",
+        "currentGoalTotalOdds": "2+65"
       },
       "home": "Andorra",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/and.png",
@@ -1904,7 +1928,7 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 1.6667,
       "drawOdds": 3.25,
-      "awayOdds": 6.0,
+      "awayOdds": 6,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861155",
       "oddsVerifiedDate": "2026-11-13",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-13",
@@ -1932,7 +1956,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861155",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-10",
@@ -1953,22 +1980,22 @@
       "upperTeam": "အဇာဘိုင်ဂျန်",
       "bodyOdds": "1-100",
       "goalTotalOdds": "2-60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+90",
+      "currentGoalTotalOdds": "2-50",
       "internetPrediction": "0-2",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861153",
       "espnEventId": "401861153",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "အဇာဘိုင်ဂျန်",
         "bodyOdds": "1-100",
         "goalTotalOdds": "2-60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+90",
+        "currentGoalTotalOdds": "2-50"
       },
       "home": "Liechtenstein",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/lie.png",
@@ -2116,7 +2143,7 @@
       "formStatus": "verified-last-five",
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
-      "homeOdds": 11.0,
+      "homeOdds": 11,
       "drawOdds": 4.9,
       "awayOdds": 1.2703,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861153",
@@ -2146,7 +2173,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861153",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-11",
@@ -2167,22 +2197,22 @@
       "upperTeam": "ဆဲလ်တာဗီဂို",
       "bodyOdds": "2+80",
       "goalTotalOdds": "3-30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+35",
+      "currentGoalTotalOdds": "3-65",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928487",
       "espnEventId": "401928487",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ဆဲလ်တာဗီဂို",
         "bodyOdds": "2+80",
         "goalTotalOdds": "3-30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+35",
+        "currentGoalTotalOdds": "3-65"
       },
       "home": "Salamanca UDS",
       "homeCrestSourceUrl": "https://salamancacfuds.es/wp-content/uploads/2024/11/escudo-salamanca-cf-uds-1.png",
@@ -2305,7 +2335,7 @@
       "formStatus": "verified-last-five",
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
-      "homeOdds": 9.0,
+      "homeOdds": 9,
       "drawOdds": 5.75,
       "awayOdds": 1.303,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928487",
@@ -2339,7 +2369,10 @@
           "orientation": "home-away"
         }
       },
-      "homeFormScope": "Last five completed competitive fixtures, including Copa Federación"
+      "homeFormScope": "Last five completed competitive fixtures, including Copa Federación",
+      "finalScore": "0-5",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928487",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-12",
@@ -2360,15 +2393,15 @@
       "upperTeam": "လီဂန်းနက်စ်",
       "bodyOdds": "-30",
       "goalTotalOdds": "2-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "2-40",
       "internetPrediction": "0-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883136",
       "espnEventId": "401883136",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "kickoffSourceConflict": {
         "pdf": "11:30 PM",
@@ -2379,8 +2412,8 @@
         "upperTeam": "လီဂန်းနက်စ်",
         "bodyOdds": "-30",
         "goalTotalOdds": "2-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2-40"
       },
       "home": "Leganés",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/17534.png",
@@ -2530,7 +2563,7 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 2.45,
       "drawOdds": 3.1,
-      "awayOdds": 3.0,
+      "awayOdds": 3,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883136",
       "oddsVerifiedDate": "2026-11-13",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-13",
@@ -2558,7 +2591,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "3-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883136",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-13",
@@ -2579,22 +2615,22 @@
       "upperTeam": "ကိုမိုရိုစ်",
       "bodyOdds": "1+75",
       "goalTotalOdds": "2-5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+70",
+      "currentGoalTotalOdds": "2=",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927206",
       "espnEventId": "401927206",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ကိုမိုရိုစ်",
         "bodyOdds": "1+75",
         "goalTotalOdds": "2-5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+70",
+        "currentGoalTotalOdds": "2="
       },
       "home": "Comoros",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/com.png",
@@ -2772,7 +2808,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927206",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-14",
@@ -2793,22 +2832,22 @@
       "upperTeam": "မိုဇမ်ဘစ်ကျူ",
       "bodyOdds": "1+20",
       "goalTotalOdds": "2-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+30",
+      "currentGoalTotalOdds": "2-45",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927187",
       "espnEventId": "401927187",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "မိုဇမ်ဘစ်ကျူ",
         "bodyOdds": "1+20",
         "goalTotalOdds": "2-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+30",
+        "currentGoalTotalOdds": "2-45"
       },
       "home": "Mozambique",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/moz.png",
@@ -2986,7 +3025,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927187",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-15",
@@ -3007,22 +3049,22 @@
       "upperTeam": "ဇမ်ဘီယာ",
       "bodyOdds": "1+30",
       "goalTotalOdds": "2-30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+30",
+      "currentGoalTotalOdds": "2-20",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927203",
       "espnEventId": "401927203",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ဇမ်ဘီယာ",
         "bodyOdds": "1+30",
         "goalTotalOdds": "2-30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+30",
+        "currentGoalTotalOdds": "2-20"
       },
       "home": "Zambia",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/zam.png",
@@ -3200,7 +3242,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927203",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-16",
@@ -3221,22 +3266,22 @@
       "upperTeam": "ဘာကီနာ",
       "bodyOdds": "1+20",
       "goalTotalOdds": "2-25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+15",
+      "currentGoalTotalOdds": "2-20",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927208",
       "espnEventId": "401927208",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ဘာကီနာ",
         "bodyOdds": "1+20",
         "goalTotalOdds": "2-25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+15",
+        "currentGoalTotalOdds": "2-20"
       },
       "home": "Burkina Faso",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/bka.png",
@@ -3386,7 +3431,7 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 1.5556,
       "drawOdds": 3.45,
-      "awayOdds": 6.0,
+      "awayOdds": 6,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927208",
       "oddsVerifiedDate": "2026-11-13",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-13",
@@ -3414,7 +3459,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927208",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-17",
@@ -3435,15 +3483,15 @@
       "upperTeam": "ကိတ်ဗာဒီ",
       "bodyOdds": "2+80",
       "goalTotalOdds": "2-100",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+75",
+      "currentGoalTotalOdds": "3+95",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927186",
       "espnEventId": "401927186",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "pdfNameCorrection": {
         "printedAway": "လစ်ဗျား",
@@ -3454,8 +3502,8 @@
         "upperTeam": "ကိတ်ဗာဒီ",
         "bodyOdds": "2+80",
         "goalTotalOdds": "2-100",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+75",
+        "currentGoalTotalOdds": "3+95"
       },
       "home": "Cape Verde",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/cpv.png",
@@ -3605,7 +3653,7 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 1.2105,
       "drawOdds": 5.25,
-      "awayOdds": 12.0,
+      "awayOdds": 12,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927186",
       "oddsVerifiedDate": "2026-11-13",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-13",
@@ -3633,7 +3681,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "4-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927186",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-18",
@@ -3654,22 +3705,22 @@
       "upperTeam": "ဂါဘွန်",
       "bodyOdds": "2+70",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+65",
+      "currentGoalTotalOdds": "3+95",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927192",
       "espnEventId": "401927192",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ဂါဘွန်",
         "bodyOdds": "2+70",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+65",
+        "currentGoalTotalOdds": "3+95"
       },
       "home": "Gabon",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/gab.png",
@@ -3818,8 +3869,8 @@
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
       "homeOdds": 1.2353,
-      "drawOdds": 5.0,
-      "awayOdds": 11.0,
+      "drawOdds": 5,
+      "awayOdds": 11,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927192",
       "oddsVerifiedDate": "2026-11-13",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-13",
@@ -3847,7 +3898,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927192",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-19",
@@ -3868,22 +3922,22 @@
       "upperTeam": "အီဂျစ်",
       "bodyOdds": "2-60",
       "goalTotalOdds": "3+30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-50",
+      "currentGoalTotalOdds": "3+25",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927190",
       "espnEventId": "401927190",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "myanmarOdds": {
         "upperTeam": "အီဂျစ်",
         "bodyOdds": "2-60",
         "goalTotalOdds": "3+30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-50",
+        "currentGoalTotalOdds": "3+25"
       },
       "home": "Egypt",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
@@ -4033,7 +4087,7 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 1.1,
       "drawOdds": 7.5,
-      "awayOdds": 18.0,
+      "awayOdds": 18,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927190",
       "oddsVerifiedDate": "2026-11-13",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-13",
@@ -4065,7 +4119,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "5-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927190",
+      "resultVerifiedDate": "2026-11-14"
     },
     {
       "fixtureId": "fc-20261113-20",
@@ -4086,22 +4143,22 @@
       "upperTeam": "မော်ရိုကို",
       "bodyOdds": "2-100",
       "goalTotalOdds": "3-20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-100",
+      "currentGoalTotalOdds": "3-20",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "13(2).pdf",
       "eligibleForPreview": true,
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927191",
       "espnEventId": "401927191",
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "မော်ရိုကို",
         "bodyOdds": "2-100",
         "goalTotalOdds": "3-20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-100",
+        "currentGoalTotalOdds": "3-20"
       },
       "home": "Morocco",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
@@ -4251,7 +4308,7 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 1.0556,
       "drawOdds": 9.5,
-      "awayOdds": 21.0,
+      "awayOdds": 21,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927191",
       "oddsVerifiedDate": "2026-11-13",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-13",
@@ -4279,7 +4336,10 @@
           "checkedDate": "2026-11-13",
           "orientation": "home-away"
         }
-      }
+      },
+      "finalScore": "5-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927191",
+      "resultVerifiedDate": "2026-11-14"
     }
   ],
   "noFixturesLeagues": [],
