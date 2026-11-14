@@ -1,0 +1,86 @@
+name: Maung Sheet — Live Table, Editor, Banner and PNG QA
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - '.github/workflows/maung-sheet-live-qa.yml'
+      - 'football-daily/maung-sheet.html'
+      - 'football-daily/maung-sheet.css'
+      - 'football-daily/maung-sheet.js'
+      - 'football-daily/frame-editor.html'
+      - 'football-daily/_worker.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax
+        run: |
+          node --check football-daily/maung-sheet.js
+          node --check football-daily/_worker.js
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Check live table, filter, draft and downloaded PNG banner
+        run: |
+          node --input-type=module <<'NODE'
+          import {chromium} from 'playwright';
+          import assert from 'node:assert/strict';
+          import {readFileSync} from 'node:fs';
+          const base='https://future-code-football-daily.pages.dev/';
+          const browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+          try{
+            const context=await browser.newContext({viewport:{width:1440,height:1040},acceptDownloads:true});
+            const page=await context.newPage();
+            const errors=[];page.on('pageerror',e=>errors.push(e.message));
+            await page.goto(base+'maung-sheet.html?date=2026-11-13',{waitUntil:'domcontentloaded',timeout:45000});
+            await page.waitForFunction(()=>document.querySelectorAll('#msRows tr').length===29,null,{timeout:90000});
+            assert.equal(await page.locator('#msRows tr').count(),29);
+            assert.equal(await page.locator('.ms-footnote,.ms-gratitude').count(),0);
+            assert.equal((await page.locator('#msRows tr').first().locator('td').allTextContents()).length,8);
+            assert.equal(await page.locator('#msRows tr').filter({hasText:'( H )'}).count(),7);
+            const widths=await page.locator('.ms-table th').evaluateAll(cells=>cells.map(e=>Math.round(e.getBoundingClientRect().width)));
+            assert.deepEqual(widths,[50,104,106,275,82,275,114,234]);
+            const league=page.locator('#msRows tr td:nth-child(8)');
+            assert(await league.count()>20);
+            const allOneLine=await league.evaluateAll(xs=>xs.every(x=>getComputedStyle(x).whiteSpace==='nowrap'));
+            assert(allOneLine,'League cells must be single line');
+            await page.locator('#msLeague').selectOption('Africa Cup');
+            assert(await page.locator('#msRows tr').count()>6,'Ditto leagues excluded by filter');
+            await page.locator('#msLeague').selectOption('');
+            await page.locator('#msEdit').click();
+            assert(await page.locator('#msRows tr:first-child td:nth-child(4) input').isVisible());
+            await page.locator('#msRows tr:first-child td:nth-child(4) input').fill('စမ်းသပ်အသင်း');
+            page.once('dialog',d=>d.accept());
+            await page.locator('#msCancel').click();
+            assert((await page.locator('#msRows tr').first().textContent()).includes('ကိုမိုရိုစ်'));
+            const pngBase64=await page.evaluate(()=>{
+              const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=140;
+              const g=canvas.getContext('2d');g.fillStyle='#164d91';g.fillRect(0,0,1200,140);g.fillStyle='#f7cf72';g.fillRect(15,15,1170,110);
+              return canvas.toDataURL('image/png').split(',')[1];
+            });
+            await page.locator('#msTopUpload').setInputFiles({name:'banner.png',mimeType:'image/png',buffer:Buffer.from(pngBase64,'base64')});
+            await page.waitForFunction(()=>{const i=document.querySelector('#msTopBanner');return !i.hidden&&i.complete&&i.naturalWidth===1200;});
+            const pending=page.waitForEvent('download',{timeout:110000});
+            await page.locator('#msDownload').click();
+            const download=await pending;
+            assert.equal(download.suggestedFilename(),'Future-Code-Maung-Sheet-2026-11-13.png');
+            const bytes=readFileSync(await download.path());
+            assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
+            const pngWidth=bytes.readUInt32BE(16),pngHeight=bytes.readUInt32BE(20);
+            assert(pngWidth>=2400&&pngHeight>=1100,JSON.stringify({pngWidth,pngHeight}));
+            assert(!errors.length,'JavaScript errors: '+errors.join('; '));
+            const source=readFileSync('football-daily/frame-editor.html','utf8');
+            assert(source.includes('id="maungDownloadPanel"')&&source.includes('maung-sheet.html?download-center=1'));
+            console.log('MAUNG SHEET LIVE PASS',{rows:29,widths,pngWidth,pngHeight,bytes:bytes.length,errors});
+            await context.close();
+          }finally{await browser.close();}
+          NODE
