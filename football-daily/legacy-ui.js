@@ -64,11 +64,11 @@ function renderStoryArticle(a){
  app.innerHTML="";
  const wrap=mk("article",{class:"reader series-reader"});
  const crumb=mk("div",{class:"series-crumbs"});
- crumb.append(mk("a",{href:"./",class:"crumb"},"← THE LEGACY"),mk("a",{href:"?series="+encodeURIComponent(a.seriesId),class:"crumb"},"THE TWO KINGS · အပိုင်းအားလုံး"));
+ crumb.append(mk("a",{href:"./",class:"crumb"},"← THE LEGACY"),mk("a",{href:"?series="+encodeURIComponent(a.seriesId),class:"crumb"},a.seriesTitle+" · အပိုင်းအားလုံး"));
  wrap.append(crumb);
- wrap.append(mk("div",{class:"article-kicker"},"THE LEGACY · အခန်းဆက်ဝတ္ထုရှည် · "+formatDate(a.date)));
+ wrap.append(mk("div",{class:"article-kicker"},"THE LEGACY · "+a.category+" · "+formatDate(a.date)));
  const mast=mk("div",{class:"series-masthead"});
- mast.append(mk("span",{class:"series-label"},"THE TWO KINGS"),mk("h1",{},a.seriesMyanmarTitle||a.seriesTitle),mk("p",{class:"series-episode-title"},"အပိုင်း ("+a.episode+") — "+a.episodeTitle),mk("p",{class:"series-small"},"Cristiano Ronaldo × Lionel Messi · အပိုင်း "+a.episode+"/"+(a.plannedEpisodes||"—")));
+ mast.append(mk("span",{class:"series-label"},a.seriesEnglishTitle||a.seriesTitle),mk("h1",{},a.seriesMyanmarTitle||a.seriesTitle),mk("p",{class:"series-episode-title"},"အပိုင်း ("+a.episode+") — "+a.episodeTitle),mk("p",{class:"series-small"},(a.seriesSubtitle||"Cristiano Ronaldo × Lionel Messi")+" · အပိုင်း "+a.episode+"/"+(a.plannedEpisodes||"—")));
  wrap.append(mast);
  const figure=mk("figure",{class:"photo series-poster"});figure.append(mk("img",{src:posterFor(a),alt:a.title,loading:"eager"}));wrap.append(figure);
  const actions=mk("div",{class:"actions"});
@@ -106,7 +106,7 @@ function renderSeriesIndex(seriesId){
  const header=mk("div",{class:"series-collection-hero"});
  const photo=mk("img",{src:posterFor(first),alt:first.seriesTitle,loading:"eager"});
  const copy=mk("div",{class:"series-collection-copy"});
- copy.append(mk("span",{class:"series-label"},"THE LEGACY · SPECIAL SERIES"),mk("h1",{},first.seriesTitle),mk("p",{},"Cristiano Ronaldo × Lionel Messi — သမိုင်းဖြစ်ရပ်မှန်ပေါ်အခြေခံတဲ့ အခန်းဆက် ဘောလုံးဝတ္ထုရှည်။"),mk("p",{class:"series-small"},"တင်ထားပြီးသောအပိုင်း "+episodes.length+" · အပိုင်းအရေအတွက် "+(first.plannedEpisodes||"—")+" ပိုင်း ရည်ရွယ်ထားသည်"));
+ copy.append(mk("span",{class:"series-label"},"THE LEGACY · SPECIAL SERIES"),mk("h1",{},first.seriesTitle),mk("p",{},first.seriesDescription||"သမိုင်းဖြစ်ရပ်မှန်ပေါ်အခြေခံတဲ့ အခန်းဆက် ဆောင်းပါးရှည်။"),mk("p",{class:"series-small"},"တင်ထားပြီးသောအပိုင်း "+episodes.length+" · အပိုင်းအရေအတွက် "+(first.plannedEpisodes||"—")+" ပိုင်း ရည်ရွယ်ထားသည်"));
  header.append(photo,copy);container.append(header);
  container.append(mk("h2",{},"အခန်းဆက် အပိုင်းများ"));
  const list=mk("div",{class:"series-episode-grid"});
@@ -119,12 +119,20 @@ function renderSeriesIndex(seriesId){
 function renderArchive(){
  document.title="THE LEGACY | ဘောလုံးသမိုင်း";
  app.innerHTML='<div class="container"><div class="archive-top"><h2>ဆောင်းပါးမှတ်တမ်း</h2><span id="legacyCount" class="count"></span></div><div class="filters"><input id="legacySearch" aria-label="ခေါင်းစဉ်ရှာရန်" placeholder="ခေါင်းစဉ်၊ ကစားသမား၊ အသင်း ရှာရန်"><select id="legacyCategory" aria-label="အမျိုးအစား"><option value="">အမျိုးအစားအားလုံး</option></select><select id="legacyDate" aria-label="နေ့စွဲ"><option value="">နေ့စွဲအားလုံး</option></select></div><div class="grid" id="legacyGrid"></div></div>';
- const series=index.filter(a=>a.seriesId).sort((a,b)=>Number(a.episode)-Number(b.episode));
- if(series.length){
-  const feature=mk("a",{class:"series-featured",href:"?series="+encodeURIComponent(series[0].seriesId)});
-  const cover=mk("img",{src:posterFor(series[0]),alt:series[0].seriesTitle,loading:"lazy"});
+
+ const seriesGroups=new Map();
+ for(const article of index.filter(a=>a.seriesId)){
+   if(!seriesGroups.has(article.seriesId))seriesGroups.set(article.seriesId,[]);
+   seriesGroups.get(article.seriesId).push(article);
+ }
+ const seriesSets=[...seriesGroups.values()].sort((a,b)=>b[0].date.localeCompare(a[0].date));
+ for(const episodes of seriesSets){
+  episodes.sort((a,b)=>Number(a.episode)-Number(b.episode));
+  const first=episodes[0];
+  const feature=mk("a",{class:"series-featured",href:"?series="+encodeURIComponent(first.seriesId)});
+  const cover=mk("img",{src:posterFor(first),alt:first.seriesTitle,loading:"lazy"});
   const copy=mk("div",{class:"series-featured-copy"});
-  copy.append(mk("span",{class:"series-label"},"THE LEGACY · အခန်းဆက်ဝတ္ထုရှည်"),mk("h3",{},series[0].seriesTitle),mk("p",{},"အပိုင်းတစ်ပိုင်းပြီးတိုင်း နောက်တစ်ပိုင်းဖတ်ချင်စေမယ့် ရော်နယ်ဒို × မက်ဆီ အားပြိုင်မှုဇာတ်လမ်း။"),mk("strong",{},"အပိုင်း "+series.length+" ပိုင်း တင်ထားပြီး · အားလုံးဖတ်ရန် →"));
+  copy.append(mk("span",{class:"series-label"},"THE LEGACY · "+first.category),mk("h3",{},first.seriesTitle),mk("p",{},first.seriesDescription||first.summary),mk("strong",{},"အပိုင်း "+episodes.length+" ပိုင်း တင်ထားပြီး · အားလုံးဖတ်ရန် →"));
   feature.append(cover,copy);
   app.querySelector(".archive-top").before(feature);
  }
