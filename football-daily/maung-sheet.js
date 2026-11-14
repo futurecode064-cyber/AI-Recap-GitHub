@@ -197,9 +197,17 @@ async function exportSheet(part="all"){
    windowWidth:Math.max(1440,document.documentElement.clientWidth),
    onclone:doc=>{
     const p=doc.getElementById("msExport");
-    p.style.width="1280px";p.style.maxWidth="none";p.style.overflow="visible";
-    const scroll=p.querySelector(".ms-scroll");scroll.style.overflow="visible";scroll.style.width="1240px";
-    p.querySelector(".ms-table").style.minWidth="1240px";
+    p.style.setProperty("width","1280px","important");
+    p.style.setProperty("max-width","none","important");
+    p.style.setProperty("overflow","visible","important");
+    const scroll=p.querySelector(".ms-scroll");
+    scroll.style.setProperty("overflow","visible","important");
+    scroll.style.setProperty("overflow-x","visible","important");
+    scroll.style.setProperty("overflow-y","visible","important");
+    scroll.style.setProperty("width","1240px","important");
+    const table=p.querySelector(".ms-table");
+    table.style.setProperty("width","1240px","important");
+    table.style.setProperty("min-width","1240px","important");
     if(part!=="all"){
      const trs=Array.from(doc.querySelectorAll("#msRows tr"));
      trs.forEach((tr,i)=>{if(i<start||i>=end)tr.remove();});
