@@ -24,7 +24,7 @@ const sample=[
 ["2:15 AM","2+80","ဂျာမနီ","ဆားဘီးယား","3-50","〃",true],
 ["2:15 AM","2+30","စကော့တလန်","မြောက်မက်ဆီဒိုးနီးယား","3+60","〃",false],
 ["2:15 AM","1+60","ဆွစ်ဇာလန်","ဆလိုဗေးနီးယား","2-10","〃",true],
-["2:15 AM","1-70","ဆလိုဗက်ကီးယား","မော်ရိုကိုကျနို","3+90","〃",false],
+["2:15 AM","1-70","ဆလိုဗက်ကီးယား","ဖာရိုးကျွန်းစု","3+90","〃",false],
 ["2:15 AM","-30","လူဇင်ဘတ်","အက်စ်တိုးနီးယား","CLOSE","〃",false],
 ["2:15 AM","1+80","အိုက်စ်လန်","ဘူဂေးရီးယား","2-70","〃",true],
 ["2:15 AM","1+50","အန်ဒိုရာ","ဂျီဘရော်တာ","2+60","〃",false],
@@ -105,7 +105,8 @@ async function load(){
  $("msLeague").value="";$("msSearch").value="";$("msMarket").value="all";options();render();
  if(!canEdit&&!warning)status($("msStatus").textContent+" · Owner ပြင်ဆင်ရန် Login ဝင်ပါ။");
 }
-$("msDate").value=day();
+const requestedDate=new URLSearchParams(location.search).get("date");
+$("msDate").value=/^\\d{4}-\\d{2}-\\d{2}$/.test(requestedDate||"")?requestedDate:day();
 $("msDate").addEventListener("change",load);
 ["msLeague","msMarket","msSearch"].forEach(id=>$(id).addEventListener(id==="msSearch"?"input":"change",render));
 $("msEdit").addEventListener("click",()=>{editing=true;render();status("အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် သိမ်းပါ။");});
