@@ -69,7 +69,7 @@ function render(){
  const view=visible();$("msCount").textContent=view.length+" ပွဲ";$("msRows").replaceChildren();
  if(!view.length){const tr=make("tr"),td=make("td","ms-empty","ရွေးထားသည့် Filter နှင့် ကိုက်ညီသော ပွဲမရှိပါ");td.colSpan=8;tr.append(td);$("msRows").append(tr);}
  for(let i=0;i<view.length;i++){
-  const r=view[i],tr=make("tr");tr.append(make("td","",i+1));
+  const r=view[i],tr=make("tr",editing?"ms-edit-row":"");tr.append(make("td","",i+1));
   if(editing){
    for(const field of ["time","body","upper","result","lower","total","league"])addEditorCell(tr,r,field);
    const side=tr.children[5],lab=make("label","", "(H) → ညာဘက်");const check=make("input");check.type="checkbox";check.checked=r.upperIsAway;check.addEventListener("change",()=>{updateField(r,"upperIsAway",check.checked);});lab.prepend(check);side.append(lab);
@@ -156,6 +156,7 @@ $("msDownload").addEventListener("click",async()=>{
   if(typeof html2canvas!=="function")throw Error("PNG Engine မရနိုင်ပါ");
   if(wasEditing){editing=false;render();}
   await document.fonts?.ready;
+   await Promise.all(["msTopBanner","msBottomBanner"].map(id=>{const img=$(id);return img.hidden?Promise.resolve():img.decode?.().catch(()=>{})||Promise.resolve();}));
   const paper=$("msExport");const rect=paper.getBoundingClientRect();
   if(rect.height>12000)throw Error("စာရွက် အလွန်ရှည်နေပါသည်");
   const canvas=await html2canvas(paper,{backgroundColor:"#ffffff",scale:2,useCORS:false,logging:false,windowWidth:Math.max(1200,document.documentElement.clientWidth),onclone:doc=>{const p=doc.getElementById("msExport");p.style.width="1280px";p.style.maxWidth="none";p.querySelector(".ms-scroll").style.overflow="visible";p.querySelector(".ms-table").style.minWidth="1240px";}});
