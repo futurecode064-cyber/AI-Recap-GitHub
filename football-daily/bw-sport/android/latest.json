@@ -1,0 +1,11 @@
+{
+  "packageName": "com.futurecode.bwsportjournal",
+  "versionCode": 5,
+  "versionName": "1.0.4",
+  "sha256": "bdb9094b1ac10c102b830b21c165dcdcc30d0141d4c0e635c8b3537b5e398b85",
+  "certificateSha256": "98407044295dba61390bf38c452aa2d8dc8bcfc7390261680bbccbf30d6a66a4",
+  "apkUrl": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/football-noti-gallery-20261104/FC-bw-v1.0.4-Noti-Gallery.apk",
+  "publishedAt": "2026-11-04",
+  "releaseNotes": "Notification နှင့် Gallery ပြင်ဆင်ချက်များ။ လက်ရှိ App နှင့် signing certificate တူမှသာ အပေါ်မှ Update တင်နိုင်ပါသည်။",
+  "minSdkVersion": 26
+}
