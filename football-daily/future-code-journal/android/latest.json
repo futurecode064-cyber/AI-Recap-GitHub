@@ -1,10 +1,11 @@
 {
   "packageName": "mm.futurecode.sportsjournal",
-  "versionCode": 2,
-  "versionName": "1.0.1",
-  "apkUrl": "https://future-code-football-daily.pages.dev/future-code-journal/android/GoalZone_Sports_Journal_v1.0.1.apk",
-  "sha256": "a94a4c96512424794062f1b292d77a8458154d48fc21021fd05c659d83c94e4f",
+  "versionCode": 6,
+  "versionName": "1.0.5",
+  "sha256": "dbf9359e729e7f7af4435cf664ed250a65cce9998e7665100425333de52e80d2",
   "certificateSha256": "98407044295dba61390bf38c452aa2d8dc8bcfc7390261680bbccbf30d6a66a4",
-  "releaseNotes": "ဂိုးဇုံ အားကစား ဂျာနယ် နာမည်နှင့် လိုဂိုအသစ်၊ ပွဲကြိုနှင့် ပေါက်ကြေး Noti၊ Gallery ပုံ Download။",
-  "publishedAt": "2026-10-18"
+  "apkUrl": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/football-noti-gallery-20261104/FC-goal-v1.0.5-Noti-Gallery.apk",
+  "publishedAt": "2026-11-04",
+  "releaseNotes": "Notification နှင့် Gallery ပြင်ဆင်ချက်များ။ လက်ရှိ App နှင့် signing certificate တူမှသာ အပေါ်မှ Update တင်နိုင်ပါသည်။",
+  "minSdkVersion": 26
 }
