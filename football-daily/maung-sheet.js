@@ -76,12 +76,38 @@ function render(){
    const btn=make("button","ms-delete","×");btn.type="button";btn.title="ဤပွဲကို ဖယ်ရန်";btn.addEventListener("click",()=>{if(confirm("ဤပွဲကို ဖယ်မည်လား?")){rows=rows.filter(x=>x!==r);draft();options();render();}});tr.children[0].append(btn);
   }else{
    const ordered=[r.time,r.body,r.upper,r.result,r.lower,r.total,r.league];
-   ordered.forEach((v,k)=>{let display=v;if(k===0&&i&&r.time===view[i-1].time)display="〃";if(k===4&&r.upperIsAway)display=v+" ( H )";let td=make("td",k===5&&/^CLOSE$/i.test(v)?"closed":"",display);tr.append(td);});
+   ordered.forEach((v,k)=>{
+    let display=v;if(k===0&&i&&r.time===view[i-1].time)display="〃";
+    if(k===4&&r.upperIsAway)display=v+" ( H )";
+    const td=make("td",k===5&&/^CLOSE$/i.test(v)?"closed":"");
+    if(k===2||k===4||k===6){
+      const span=make("span","ms-fit-label",display);
+      td.append(span);td.title=String(display||"");
+    }else td.textContent=String(display||"");
+    tr.append(td);
+   });
   }
   $("msRows").append(tr);
  }
  $("msEdit").hidden=editing;$("msLogin").hidden=canEdit;$("msAdd").hidden=!editing;$("msSave").hidden=!editing;$("msCancel").hidden=!editing;
+ if(!editing)requestAnimationFrame(fitSheetText);
 }
+function fitSheetText(){
+ // Adjust only genuinely long labels; keep Myanmar text bold and highly legible.
+ const cells=Array.from(document.querySelectorAll("#msRows td:nth-child(4),#msRows td:nth-child(6),#msRows td:nth-child(8)"));
+ for(const td of cells){
+   const span=td.querySelector(".ms-fit-label");if(!span)continue;
+   td.classList.remove("ms-wrap-team");span.style.fontSize="";
+   const isLeague=td.cellIndex===7,isTeam=!isLeague;
+   const minimum=isLeague?14:16,maxWidth=td.clientWidth-12;
+   let current=parseFloat(getComputedStyle(td).fontSize)||20;
+   while(current>minimum&&span.getBoundingClientRect().width>maxWidth){
+     current--;span.style.fontSize=current+"px";
+   }
+   if(isTeam&&span.getBoundingClientRect().width>maxWidth)td.classList.add("ms-wrap-team");
+ }
+}
+document.fonts?.ready.then(()=>requestAnimationFrame(fitSheetText)).catch(()=>{});
 function status(msg,isError=false){$("msStatus").textContent=msg;$("msStatus").style.color=isError?"#ffac91":"#d2e1ff";}
 function importOdds(data){return (Array.isArray(data.matches)?data.matches:[]).map((m,i)=>{
  const home=String(m.homeDisplay||m.home||""),away=String(m.awayDisplay||m.away||""),upper=String(m.upperTeam||home);
@@ -150,19 +176,51 @@ renderBanners();
 if(new URLSearchParams(location.search).has("download-center"))document.body.classList.add("ms-embedded");
 
 $("msPrint").addEventListener("click",()=>window.print());
-$("msDownload").addEventListener("click",async()=>{
- const btn=$("msDownload"),original=btn.textContent,wasEditing=editing;btn.disabled=true;btn.textContent="PNG ပြုလုပ်နေသည်…";
+
+async function exportSheet(part="all"){
+ const buttonId=part==="first"?"msPart1":part==="second"?"msPart2":"msDownload";
+ const btn=$(buttonId),original=btn.textContent,wasEditing=editing;
+ btn.disabled=true;btn.textContent="HD PNG ပြုလုပ်နေသည်…";
  try{
   if(typeof html2canvas!=="function")throw Error("PNG Engine မရနိုင်ပါ");
   if(wasEditing){editing=false;render();}
   await document.fonts?.ready;
-   await Promise.all(["msTopBanner","msBottomBanner"].map(id=>{const img=$(id);return img.hidden?Promise.resolve():img.decode?.().catch(()=>{})||Promise.resolve();}));
-  const paper=$("msExport");const rect=paper.getBoundingClientRect();
-  if(rect.height>12000)throw Error("စာရွက် အလွန်ရှည်နေပါသည်");
-  const canvas=await html2canvas(paper,{backgroundColor:"#ffffff",scale:2,useCORS:false,logging:false,windowWidth:Math.max(1200,document.documentElement.clientWidth),onclone:doc=>{const p=doc.getElementById("msExport");p.style.width="1280px";p.style.maxWidth="none";p.querySelector(".ms-scroll").style.overflow="visible";p.querySelector(".ms-table").style.minWidth="1240px";}});
-  const blob=await new Promise(ok=>canvas.toBlob(ok,"image/png"));if(!blob||!blob.size)throw Error("PNG မရပါ");
-  const a=document.createElement("a"),url=URL.createObjectURL(blob);a.href=url;a.download="Future-Code-Maung-Sheet-"+loadedDate+".png";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status("PNG ဖိုင် ထုတ်ပြီးပါပြီ။");
- }catch(e){status("PNG မရပါ။ "+e.message,true);}finally{if(wasEditing){editing=true;render();}btn.disabled=false;btn.textContent=original;}
-});
+  await document.fonts?.load('850 22px "FC Myanmar"');
+  fitSheetText();
+  await Promise.all(["msTopBanner","msBottomBanner"].map(id=>{const img=$(id);return img.hidden?Promise.resolve():img.decode?.().catch(()=>{})||Promise.resolve();}));
+  const selected=visible(),split=Math.ceil(selected.length/2);
+  const start=part==="second"?split:0,end=part==="first"?split:selected.length;
+  if(!selected.length||end<=start)throw Error("ရွေးထားသော ပွဲမရှိပါ");
+  const paper=$("msExport");if(paper.getBoundingClientRect().height>12000)throw Error("စာရွက် အလွန်ရှည်နေပါသည်");
+  const canvas=await html2canvas(paper,{
+   backgroundColor:"#ffffff",scale:part==="all"?2.5:3,useCORS:false,logging:false,
+   windowWidth:Math.max(1440,document.documentElement.clientWidth),
+   onclone:doc=>{
+    const p=doc.getElementById("msExport");
+    p.style.width="1280px";p.style.maxWidth="none";p.style.overflow="visible";
+    const scroll=p.querySelector(".ms-scroll");scroll.style.overflow="visible";scroll.style.width="1240px";
+    p.querySelector(".ms-table").style.minWidth="1240px";
+    if(part!=="all"){
+     const trs=Array.from(doc.querySelectorAll("#msRows tr"));
+     trs.forEach((tr,i)=>{if(i<start||i>=end)tr.remove();});
+     const first=doc.querySelector("#msRows tr");
+     if(first&&first.children[1])first.children[1].textContent=selected[start].time;
+    }
+   }
+  });
+  const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
+  if(!blob||blob.size===0)throw Error("HD PNG ဖိုင်မရပါ");
+  const a=document.createElement("a"),url=URL.createObjectURL(blob);
+  a.href=url;a.download="Future-Code-Maung-Sheet-"+loadedDate+(part==="all"?"":part==="first"?"-Part-1":"-Part-2")+".png";
+  document.body.append(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+  status("✓ "+(part==="all"?"ဇယားအပြည့်":part==="first"?"အပေါ်ပိုင်း":"အောက်ပိုင်း")+" HD PNG ပြုလုပ်ပြီးပါပြီ။");
+ }catch(e){status("HD PNG ထုတ်မရပါ။ "+e.message,true);}
+ finally{if(wasEditing){editing=true;render();}btn.disabled=false;btn.textContent=original;}
+}
+$("msDownload").addEventListener("click",()=>exportSheet("all"));
+$("msPart1").addEventListener("click",()=>exportSheet("first"));
+$("msPart2").addEventListener("click",()=>exportSheet("second"));
+
 load();
 })();
