@@ -51,7 +51,10 @@ function options(){
 }
 function visible(){
  const q=$("msSearch").value.trim().toLowerCase(),league=$("msLeague").value,market=$("msMarket").value;
- return sortRows(rows).filter(r=>(!league||r.league===league)&&(!q||[r.upper,r.lower,r.body,r.total,r.league].some(x=>String(x||"").toLowerCase().includes(q)))&&(market==="all"||(market==="close")===(/^CLOSE$/i.test(r.total))));
+ // The sample uses ditto marks for repeated league labels. Filtering must include every row in the same league.
+ const actualLeague=new Map();let previousLeague="";
+ for(const r of rows){if(r.league&&!isDitto(r.league))previousLeague=r.league;actualLeague.set(r,previousLeague);}
+ return sortRows(rows).filter(r=>(!league||actualLeague.get(r)===league)&&(!q||[r.upper,r.lower,r.body,r.total,r.league,actualLeague.get(r)].some(x=>String(x||"").toLowerCase().includes(q)))&&(market==="all"||(market==="close")===(/^CLOSE$/i.test(r.total))));
 }
 function make(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=String(txt);return n;}
 function draft(){if(!editing)return;try{localStorage.setItem(draftKey(loadedDate),JSON.stringify({date:loadedDate,rows,savedAt:new Date().toISOString()}));}catch{}}
@@ -106,7 +109,7 @@ $("msDate").value=day();
 $("msDate").addEventListener("change",load);
 ["msLeague","msMarket","msSearch"].forEach(id=>$(id).addEventListener(id==="msSearch"?"input":"change",render));
 $("msEdit").addEventListener("click",()=>{editing=true;render();status("အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် သိမ်းပါ။");});
-$("msAdd").addEventListener("click",()=>{rows.push({id:"new-"+Date.now(),time:"11:30 PM",body:"",upper:"",lower:"",total:"",result:"",league:"",upperIsAway:false});options();render();draft();});
+$("msAdd").addEventListener("click",()=>{$("msLeague").value="";$("msMarket").value="all";$("msSearch").value="";rows.push({id:"new-"+Date.now(),time:"11:30 PM",body:"",upper:"",lower:"",total:"",result:"",league:"",upperIsAway:false});options();render();draft();});
 $("msCancel").addEventListener("click",()=>{if(!confirm("မထုတ်ဝေရသေးသော ပြင်ဆင်မှုများကို ပယ်ဖျက်မည်လား?"))return;rows=clone(savedRows);editing=false;localStorage.removeItem(draftKey(loadedDate));options();render();status("ပြင်ဆင်မှု မသိမ်းဘဲ မူလစာရင်းသို့ ပြန်ထားပါသည်။");});
 $("msSave").addEventListener("click",async()=>{
  if(!canEdit)return status("Owner Login လိုအပ်ပါသည်",true);
