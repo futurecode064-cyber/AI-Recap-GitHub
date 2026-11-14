@@ -106,7 +106,7 @@ async function load(){
  if(!canEdit&&!warning)status($("msStatus").textContent+" · Owner ပြင်ဆင်ရန် Login ဝင်ပါ။");
 }
 const requestedDate=new URLSearchParams(location.search).get("date");
-$("msDate").value=/^\\d{4}-\\d{2}-\\d{2}$/.test(requestedDate||"")?requestedDate:day();
+$("msDate").value=/^\d{4}-\d{2}-\d{2}$/.test(requestedDate||"")?requestedDate:day();
 $("msDate").addEventListener("change",load);
 ["msLeague","msMarket","msSearch"].forEach(id=>$(id).addEventListener(id==="msSearch"?"input":"change",render));
 $("msEdit").addEventListener("click",()=>{editing=true;render();status("အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် သိမ်းပါ။");});
