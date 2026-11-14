@@ -1,0 +1,11 @@
+{
+  "packageName": "com.futurecode.kothetfamilyjournal",
+  "versionCode": 6,
+  "versionName": "1.0.5",
+  "sha256": "14039b5893fa4068f2a0e84721754e583aa8b6ae9bf144b5eed55c35204a8e78",
+  "certificateSha256": "98407044295dba61390bf38c452aa2d8dc8bcfc7390261680bbccbf30d6a66a4",
+  "apkUrl": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/football-noti-gallery-20261104/FC-kothet-v1.0.5-Noti-Gallery.apk",
+  "publishedAt": "2026-11-04",
+  "releaseNotes": "Notification နှင့် Gallery ပြင်ဆင်ချက်များ။ လက်ရှိ App နှင့် signing certificate တူမှသာ အပေါ်မှ Update တင်နိုင်ပါသည်။",
+  "minSdkVersion": 26
+}
