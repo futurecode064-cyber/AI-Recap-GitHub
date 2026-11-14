@@ -23,8 +23,8 @@
       "upperTeam": "နော်ဝေး",
       "bodyOdds": "2+5",
       "goalTotalOdds": "3-85",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+30",
+      "currentGoalTotalOdds": "3-90",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -37,8 +37,8 @@
         "upperTeam": "နော်ဝေး",
         "bodyOdds": "2+5",
         "goalTotalOdds": "3-85",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+30",
+        "currentGoalTotalOdds": "3-90"
       },
       "home": "Norway",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
@@ -188,12 +188,12 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 1.2105,
       "drawOdds": 6.5,
-      "awayOdds": 10.0,
+      "awayOdds": 10,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861165",
       "oddsVerifiedDate": "2026-11-14",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-14",
       "totalGoalsLine": 3.5,
-      "overOdds": 2.0,
+      "overOdds": 2,
       "underOdds": 1.8,
       "researchSources": [
         "https://www.espn.com/soccer/match/_/gameId/401861165"
@@ -216,7 +216,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-02",
@@ -237,8 +238,8 @@
       "upperTeam": "ပေါ်တူဂီ",
       "bodyOdds": "1-30",
       "goalTotalOdds": "3-15",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-20",
+      "currentGoalTotalOdds": "3-20",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -251,8 +252,8 @@
         "upperTeam": "ပေါ်တူဂီ",
         "bodyOdds": "1-30",
         "goalTotalOdds": "3-15",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-20",
+        "currentGoalTotalOdds": "3-20"
       },
       "home": "Portugal",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
@@ -433,7 +434,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-03",
@@ -454,8 +456,8 @@
       "upperTeam": "ကိုဆိုဗို",
       "bodyOdds": "1+75",
       "goalTotalOdds": "3+100",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+65",
+      "currentGoalTotalOdds": "2-90",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -468,8 +470,8 @@
         "upperTeam": "ကိုဆိုဗို",
         "bodyOdds": "1+75",
         "goalTotalOdds": "3+100",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+65",
+        "currentGoalTotalOdds": "2-90"
       },
       "home": "Kosovo",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/kosovo.png",
@@ -647,7 +649,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-04",
@@ -668,8 +671,8 @@
       "upperTeam": "ဟန်ဂေရီ",
       "bodyOdds": "-30",
       "goalTotalOdds": "2-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-10",
+      "currentGoalTotalOdds": "2-15",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -682,8 +685,8 @@
         "upperTeam": "ဟန်ဂေရီ",
         "bodyOdds": "-30",
         "goalTotalOdds": "2-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "2-15"
       },
       "home": "Georgia",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/geo.png",
@@ -832,7 +835,7 @@
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
       "homeOdds": 2.95,
-      "drawOdds": 3.0,
+      "drawOdds": 3,
       "awayOdds": 2.45,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861164",
       "oddsVerifiedDate": "2026-11-14",
@@ -861,7 +864,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-05",
@@ -882,8 +886,8 @@
       "upperTeam": "ဩစတြီးယား",
       "bodyOdds": "1+5",
       "goalTotalOdds": "3+70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+30",
+      "currentGoalTotalOdds": "3+95",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -896,8 +900,8 @@
         "upperTeam": "ဩစတြီးယား",
         "bodyOdds": "1+5",
         "goalTotalOdds": "3+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+30",
+        "currentGoalTotalOdds": "3+95"
       },
       "home": "Austria",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
@@ -1053,7 +1057,7 @@
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-14",
       "totalGoalsLine": 2.5,
       "overOdds": 1.8,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "researchSources": [
         "https://www.espn.com/soccer/match/_/gameId/401861170"
       ],
@@ -1075,7 +1079,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-06",
@@ -1096,8 +1101,8 @@
       "upperTeam": "မ.အိုင်ယာလန်",
       "bodyOdds": "-10",
       "goalTotalOdds": "2+20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "2+10",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -1110,8 +1115,8 @@
         "upperTeam": "မ.အိုင်ယာလန်",
         "bodyOdds": "-10",
         "goalTotalOdds": "2+20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2+10"
       },
       "home": "Northern Ireland",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/nir.png",
@@ -1289,7 +1294,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-07",
@@ -1310,8 +1316,8 @@
       "upperTeam": "ပိုလန်",
       "bodyOdds": "1+90",
       "goalTotalOdds": "3+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+90",
+      "currentGoalTotalOdds": "3+65",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -1324,8 +1330,8 @@
         "upperTeam": "ပိုလန်",
         "bodyOdds": "1+90",
         "goalTotalOdds": "3+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+90",
+        "currentGoalTotalOdds": "3+65"
       },
       "home": "Romania",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/rom.png",
@@ -1503,7 +1509,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-08",
@@ -1524,8 +1531,8 @@
       "upperTeam": "ဆွီဒင်",
       "bodyOdds": "1-25",
       "goalTotalOdds": "3+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-35",
+      "currentGoalTotalOdds": "3+70",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -1538,8 +1545,8 @@
         "upperTeam": "ဆွီဒင်",
         "bodyOdds": "1-25",
         "goalTotalOdds": "3+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-35",
+        "currentGoalTotalOdds": "3+70"
       },
       "home": "Sweden",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
@@ -1717,7 +1724,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-09",
@@ -1738,8 +1746,8 @@
       "upperTeam": "ကက်စ်တယ်လုံ",
       "bodyOdds": "-40",
       "goalTotalOdds": "3+45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-35",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -1752,8 +1760,8 @@
         "upperTeam": "ကက်စ်တယ်လုံ",
         "bodyOdds": "-40",
         "goalTotalOdds": "3+45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "3+40"
       },
       "home": "Real Valladolid",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/95.png",
@@ -1927,7 +1935,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-10",
@@ -1948,8 +1957,8 @@
       "upperTeam": "ဆိုစီဒက်ဘီ",
       "bodyOdds": "-10",
       "goalTotalOdds": "2-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-10",
+      "currentGoalTotalOdds": "2-85",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -1962,8 +1971,8 @@
         "upperTeam": "ဆိုစီဒက်ဘီ",
         "bodyOdds": "-10",
         "goalTotalOdds": "2-80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "2-85"
       },
       "home": "Real Sociedad II",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/20983.png",
@@ -2109,7 +2118,7 @@
       "aiModelUnavailableReason": "",
       "homeOdds": 2.45,
       "drawOdds": 3.1,
-      "awayOdds": 3.0,
+      "awayOdds": 3,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883134",
       "oddsVerifiedDate": "2026-11-14",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-14",
@@ -2137,7 +2146,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-11",
@@ -2158,8 +2168,8 @@
       "upperTeam": "မာယော့ကာ",
       "bodyOdds": "-90",
       "goalTotalOdds": "3=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-95",
+      "currentGoalTotalOdds": "3=",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -2172,8 +2182,8 @@
         "upperTeam": "မာယော့ကာ",
         "bodyOdds": "-90",
         "goalTotalOdds": "3=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-95",
+        "currentGoalTotalOdds": "3="
       },
       "home": "Mallorca",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/84.png",
@@ -2347,7 +2357,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-12",
@@ -2368,8 +2379,8 @@
       "upperTeam": "အယ်မာရီယား",
       "bodyOdds": "1+55",
       "goalTotalOdds": "3+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+65",
+      "currentGoalTotalOdds": "3+10",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -2382,8 +2393,8 @@
         "upperTeam": "အယ်မာရီယား",
         "bodyOdds": "1+55",
         "goalTotalOdds": "3+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+65",
+        "currentGoalTotalOdds": "3+10"
       },
       "home": "Almería",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6832.png",
@@ -2560,7 +2571,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-13",
@@ -2581,8 +2593,8 @@
       "upperTeam": "အိုဗီဒို",
       "bodyOdds": "-15",
       "goalTotalOdds": "2-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-40",
+      "currentGoalTotalOdds": "2-85",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -2595,8 +2607,8 @@
         "upperTeam": "အိုဗီဒို",
         "bodyOdds": "-15",
         "goalTotalOdds": "2-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-40",
+        "currentGoalTotalOdds": "2-85"
       },
       "home": "Real Oviedo",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
@@ -2770,7 +2782,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-14",
@@ -2791,8 +2804,8 @@
       "upperTeam": "ဘရီဒါ",
       "bodyOdds": "1-5",
       "goalTotalOdds": "3-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-25",
+      "currentGoalTotalOdds": "3-45",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -2805,8 +2818,8 @@
         "upperTeam": "ဘရီဒါ",
         "bodyOdds": "1-5",
         "goalTotalOdds": "3-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-25",
+        "currentGoalTotalOdds": "3-45"
       },
       "home": "NAC Breda",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/141.png",
@@ -2980,7 +2993,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-15",
@@ -3001,8 +3015,8 @@
       "upperTeam": "အယ်မာစီးတီး",
       "bodyOdds": "1-50",
       "goalTotalOdds": "3-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-55",
+      "currentGoalTotalOdds": "3-90",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -3015,8 +3029,8 @@
         "upperTeam": "အယ်မာစီးတီး",
         "bodyOdds": "1-50",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-55",
+        "currentGoalTotalOdds": "3-90"
       },
       "home": "Almere City",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/5291.png",
@@ -3161,8 +3175,8 @@
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
       "homeOdds": 1.4348,
-      "drawOdds": 5.0,
-      "awayOdds": 6.0,
+      "drawOdds": 5,
+      "awayOdds": 6,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875853",
       "oddsVerifiedDate": "2026-11-14",
       "oddsProvider": "DraftKings via ESPN; checked 2026-11-14",
@@ -3190,7 +3204,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-16",
@@ -3211,8 +3226,8 @@
       "upperTeam": "ဂရက်ချက်",
       "bodyOdds": "1+20",
       "goalTotalOdds": "3-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+10",
+      "currentGoalTotalOdds": "3-85",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -3225,8 +3240,8 @@
         "upperTeam": "ဂရက်ချက်",
         "bodyOdds": "1+20",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+10",
+        "currentGoalTotalOdds": "3-85"
       },
       "home": "De Graafschap",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/144.png",
@@ -3405,7 +3420,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-17",
@@ -3426,8 +3442,8 @@
       "upperTeam": "အယ်မာလို",
       "bodyOdds": "1-65",
       "goalTotalOdds": "3-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-90",
+      "currentGoalTotalOdds": "3-85",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -3440,8 +3456,8 @@
         "upperTeam": "အယ်မာလို",
         "bodyOdds": "1-65",
         "goalTotalOdds": "3-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-90",
+        "currentGoalTotalOdds": "3-85"
       },
       "home": "FC Dordrecht",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4426.png",
@@ -3615,7 +3631,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-18",
@@ -3636,8 +3653,8 @@
       "upperTeam": "ဝဲဝစ်ခ်",
       "bodyOdds": "1+95",
       "goalTotalOdds": "3-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-70",
+      "currentGoalTotalOdds": "3-85",
       "internetPrediction": "2-2",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -3650,8 +3667,8 @@
         "upperTeam": "ဝဲဝစ်ခ်",
         "bodyOdds": "1+95",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-70",
+        "currentGoalTotalOdds": "3-85"
       },
       "home": "RKC Waalwijk",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/155.png",
@@ -3825,7 +3842,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-19",
@@ -3846,8 +3864,8 @@
       "upperTeam": "ရိုဒါ",
       "bodyOdds": "1+100",
       "goalTotalOdds": "3-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-90",
+      "currentGoalTotalOdds": "3-50",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -3860,8 +3878,8 @@
         "upperTeam": "ရိုဒါ",
         "bodyOdds": "1+100",
         "goalTotalOdds": "3-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-90",
+        "currentGoalTotalOdds": "3-50"
       },
       "home": "Roda JC Kerkrade",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/149.png",
@@ -4006,7 +4024,7 @@
       "aiModelDataStatus": "verified-recent-form",
       "aiModelUnavailableReason": "",
       "homeOdds": 1.9524,
-      "drawOdds": 4.0,
+      "drawOdds": 4,
       "awayOdds": 3.35,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875849",
       "oddsVerifiedDate": "2026-11-14",
@@ -4035,7 +4053,8 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261114-20",
@@ -4056,8 +4075,8 @@
       "upperTeam": "ဗန်လို",
       "bodyOdds": "1+10",
       "goalTotalOdds": "3-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1=",
+      "currentGoalTotalOdds": "3-50",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast, not external VIP or model",
       "sourcePDF": "14(1).pdf",
@@ -4070,8 +4089,8 @@
         "upperTeam": "ဗန်လို",
         "bodyOdds": "1+10",
         "goalTotalOdds": "3-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1=",
+        "currentGoalTotalOdds": "3-50"
       },
       "home": "VVV-Venlo",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3731.png",
@@ -4245,12 +4264,13 @@
           "checkedDate": "2026-11-14",
           "orientation": "home-away"
         }
-      }
+      },
+      "currentSourcePDF": "14 စျေး(1).pdf"
     }
   ],
   "noFixturesLeagues": [],
   "reportNotes": [
-    "မူလမနက်ကြေးများကို 14(1).pdf မှ ကူးယူထားသည်။ ယခုကြေးအတွက် သီးခြားရင်းမြစ် မရရှိသေးသဖြင့် ကွက်လပ်ထားသည်။",
+    "ယခုကြေးများကို 14 စျေး(1).pdf မှ ယနေ့ပွဲစဉ် ၂၀ ပွဲအတွက် ကိုက်ညီစစ်ဆေးပြီး ဖြည့်သွင်းထားသည်။",
     "ဂရက်ချက်–တော့အော့ ပွဲတွင် PDF ၏ အပေါ်အသင်းအမည်လွဲခြင်းကို ပွဲစဉ်အမှန်နှင့် တိုက်စစ်ပြင်ဆင်ထားသည်။"
   ],
   "publicationCompleteness": {
@@ -4262,5 +4282,6 @@
     "yesterdayFT": 20,
     "news": 10,
     "downloads": "pending actual live browser QA"
-  }
+  },
+  "currentSourcePDF": "14 စျေး(1).pdf"
 }
