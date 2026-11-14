@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="my"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#071e61"><title>မောင်းစာရွက် | Future Code Football</title>
-<link rel="stylesheet" href="./maung-sheet.css?v=20261114-1">
+<link rel="stylesheet" href="./maung-sheet.css?v=20261114-5">
 <script defer src="./vendor/html2canvas.min.js"></script>
-<script defer src="./maung-sheet.js?v=20261114-3"></script>
+<script defer src="./maung-sheet.js?v=20261114-5"></script>
 </head><body>
 <header class="ms-site-head"><div><a href="./" class="ms-brand"><strong>FC<span>+</span></strong><b>FUTURE CODE FOOTBALL</b></a><nav><a href="./">ပွဲကြိုသုံးသပ်ချက်များ</a><a href="./odds.html">ပေါက်ကြေးများ</a><a href="./maung-sheet.html" aria-current="page">မောင်းစာရွက်</a><a href="./frame-editor.html">Frame Editor</a></nav></div></header>
 <main class="ms-layout">
@@ -15,16 +15,17 @@
   <label>ကြေးအခြေအနေ <select id="msMarket"><option value="all">အားလုံး</option><option value="open">ဂိုးပေါင်း ဖွင့်</option><option value="close">CLOSE</option></select></label>
   <label>အသင်းရှာရန် <input id="msSearch" type="search" placeholder="အသင်း / ကြေး / လိဂ်"></label>
  </div>
- <div class="ms-actions"><button id="msDownload" type="button">⬇ PNG Download</button><button id="msPrint" type="button">Print / PDF</button><a href="./odds.html">ယနေ့ ပေါက်ကြေးများ</a><button id="msEdit" type="button" hidden>✎ အသင်း / ကြေး ပြင်ရန်</button><button id="msAdd" type="button" hidden>＋ ပွဲထည့်ရန်</button><button id="msSave" type="button" hidden>✓ Website ပေါ် သိမ်းရန်</button><button id="msCancel" type="button" hidden>ပြင်ဆင်မှု ရပ်ရန်</button></div>
+ <div class="ms-actions"><button id="msDownload" type="button">⬇ PNG Download</button><button id="msPrint" type="button">Print / PDF</button><a href="./odds.html">ယနေ့ ပေါက်ကြေးများ</a><a id="msLogin" class="ms-login" href="/login?next=%2Fmaung-sheet.html" hidden>🔐 Owner Login ဝင်ရန်</a><button id="msEdit" type="button">✎ အသင်း / ကြေး ပြင်ရန်</button><button id="msAdd" type="button" hidden>＋ ပွဲထည့်ရန်</button><button id="msSave" type="button" hidden>✓ Website ပေါ် သိမ်းရန်</button><button id="msCancel" type="button" hidden>ပြင်ဆင်မှု ရပ်ရန်</button></div>
+ <div class="ms-banner-tools" aria-label="Banner Settings"><label>အပေါ် Banner ပုံရွေးရန် <input id="msTopUpload" type="file" accept="image/png,image/jpeg,image/webp"></label><button type="button" id="msTopRemove" class="ms-secondary">အပေါ် Banner ဖြုတ်ရန်</button><label>အောက် Banner ပုံရွေးရန် <input id="msBottomUpload" type="file" accept="image/png,image/jpeg,image/webp"></label><button type="button" id="msBottomRemove" class="ms-secondary">အောက် Banner ဖြုတ်ရန်</button><small>Banner ပုံများကို ယခု Browser ထဲတွင်သာ သိမ်းထားမည်။ PNG ထုတ်ရာတွင် မူရင်းပုံအချိုးအစားအတိုင်း ပါဝင်မည်။</small></div>
  <div class="ms-status" id="msStatus" role="status" aria-live="polite">မောင်းစာရွက် ဖွင့်နေသည်…</div>
 </section>
 <article id="msExport" class="ms-paper" aria-labelledby="msTitle">
- <div class="ms-paper-heading" id="msTitle">( 13.11.26 ) သောကြာနေ့ပွဲစဉ်များ</div>
+ <img id="msTopBanner" class="ms-banner-img" alt="အပေါ် Banner" hidden>
+<div class="ms-paper-heading" id="msTitle">( 13.11.26 ) သောကြာနေ့ပွဲစဉ်များ</div>
  <div class="ms-scroll"><table class="ms-table"><colgroup><col class="ms-no"><col class="ms-time"><col class="ms-body"><col class="ms-upper"><col class="ms-result"><col class="ms-lower"><col class="ms-total"><col class="ms-league"></colgroup><thead><tr>
  <th>No.</th><th class="hot">အချိန်</th><th>ဘော်ဒီ</th><th>အပေါ်အသင်း</th><th class="hot">ရလဒ်</th><th>အောက်အသင်း</th><th class="hot">ဂိုးပေါင်း</th><th>လိဂ်</th>
  </tr></thead><tbody id="msRows"></tbody></table></div>
- <div class="ms-gratitude">အားပေးသူတစ်ယောက်ချင်းစီတိုင်းကို အထူးပင်ကျေးဇူးတင်ရှိပါသည်။</div>
- <footer class="ms-footnote"><h2>● ပွဲချိန်သတိပြုပါ ●</h2><p>ပွဲစဉ်၊ အသင်းအမည်၊ ဘော်ဒီကြေးနှင့် ဂိုးပေါင်းကြေးတို့ကို မူလစာရင်းအတိုင်း ဖော်ပြထားပါသည်။ အချိန်များမှာ မြန်မာစံတော်ချိန် ဖြစ်ပါသည်။ ကြေးပြောင်းလဲမှုရှိနိုင်သဖြင့် နောက်ဆုံးထုတ်ပြန်ချက်ကို စစ်ဆေးပါ။</p><h2>● ပိတ်ချိန် ည (၁၀)နာရီ ●</h2><p>Group Admin ၏ ထုတ်ပြန်ချက်သာ အတည်ဖြစ်ပါသည်။</p></footer>
+ <img id="msBottomBanner" class="ms-banner-img" alt="အောက် Banner" hidden>
 </article>
 </main>
 </body></html>
