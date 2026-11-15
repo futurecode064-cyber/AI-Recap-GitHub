@@ -44,7 +44,7 @@ try {
     const download=await started;
     if(download.failure&&await download.failure())throw Error('Download cancelled: '+await download.failure());
     const filename=download.suggestedFilename();
-    if(!/\\.png$/i.test(filename))throw Error('Non-PNG file '+filename);
+    if(!/\.png$/i.test(filename))throw Error('Non-PNG file '+filename);
     const filepath=await download.path();
     if(!filepath)throw Error('No saved file path');
     const info=await stat(filepath),bytes=await readFile(filepath);
