@@ -1,0 +1,45 @@
+name: "AI Tool Submission"
+description: "Suggest an AI service/tool for the Future Code AI Tools Directory"
+title: "[AI Tool Submission] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your suggestion! This submission is PUBLIC.
+        Please share only official product websites or source repositories.
+        Submissions are reviewed; they are never auto-published.
+  - type: input
+    id: name
+    attributes:
+      label: AI Tool name
+      placeholder: "e.g. Example AI"
+    validations:
+      required: true
+  - type: input
+    id: official
+    attributes:
+      label: Official HTTPS URL
+      placeholder: "https://example.com"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Tool type
+      options: ["Web AI Service","Open-source Project","Mobile App","Desktop App","Other"]
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What does it do and who is it useful for?
+    validations:
+      required: true
+  - type: checkboxes
+    id: affiliation
+    attributes:
+      label: Disclosure
+      options:
+        - label: "I disclosed any affiliation or conflict of interest in the description."
+          required: true
