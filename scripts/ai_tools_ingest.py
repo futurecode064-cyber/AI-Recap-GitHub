@@ -100,7 +100,7 @@ def import_source(count=1200):
   score=ent.get("score")
   facts=ent.get("facts") if isinstance(ent.get("facts"),dict) else {}
   item={
-   "id":"oss-"+repo.lower().replace("/","-").replace(".","-"),
+   "id":"oss-"+re.sub(r"[^a-z0-9-]","-",repo.lower().replace("/","-")),
    "name":name,
    "url":"https://github.com/"+repo,
    "categories":tags,
