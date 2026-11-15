@@ -1,0 +1,82 @@
+{
+  "Amarante": {
+    "path": "assets/team-logos/2026-11-15/amarante.png",
+    "sourceUrl": "https://leixoessc.pt/wp-content/uploads/2026/07/EuilUvFa-KIDsdv3J.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Amarante",
+    "width": 100,
+    "height": 100
+  },
+  "Felgueiras": {
+    "path": "assets/team-logos/2026-11-15/felgueiras.png",
+    "sourceUrl": "https://media.api-sports.io/football/teams/4744.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Felgueiras 1932",
+    "width": 150,
+    "height": 150
+  },
+  "Tondela": {
+    "path": "assets/team-logos/2026-11-15/tondela.png",
+    "sourceUrl": "https://leixoessc.pt/wp-content/uploads/2026/07/xQuc8ZYg-tz55u9dQ.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Tondela",
+    "width": 100,
+    "height": 100
+  },
+  "Farense": {
+    "path": "assets/team-logos/2026-11-15/farense.png",
+    "sourceUrl": "https://media.api-sports.io/football/teams/231.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Farense",
+    "width": 150,
+    "height": 150
+  },
+  "Portimonense": {
+    "path": "assets/team-logos/2026-11-15/portimonense.png",
+    "sourceUrl": "https://media.api-sports.io/football/teams/216.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Portimonense",
+    "width": 150,
+    "height": 150
+  },
+  "Académica": {
+    "path": "assets/team-logos/2026-11-15/academica.png",
+    "sourceUrl": "https://leixoessc.pt/wp-content/uploads/2026/07/boSY9DXg-jXCM4Mcr.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Academica",
+    "width": 100,
+    "height": 100
+  },
+  "Penafiel": {
+    "path": "assets/team-logos/2026-11-15/penafiel.png",
+    "sourceUrl": "https://leixoessc.pt/wp-content/uploads/2026/07/penafiel-1.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Penafiel",
+    "width": 500,
+    "height": 500
+  },
+  "Lusitânia Lourosa": {
+    "path": "assets/team-logos/2026-11-15/lourosa.png",
+    "sourceUrl": "https://leixoessc.pt/wp-content/uploads/2026/07/lusitania.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Lusitânia Lourosa",
+    "width": 500,
+    "height": 500
+  },
+  "Leixões": {
+    "path": "assets/team-logos/2026-11-15/leixoes.png",
+    "sourceUrl": "https://media.api-sports.io/football/teams/244.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Leixoes SC",
+    "width": 150,
+    "height": 150
+  },
+  "Chaves": {
+    "path": "assets/team-logos/2026-11-15/chaves.png",
+    "sourceUrl": "https://leixoessc.pt/wp-content/uploads/2026/07/chaves.png",
+    "sourcePage": "https://leixoessc.pt/futebol/",
+    "identityLabel": "Chaves",
+    "width": 500,
+    "height": 500
+  }
+}
