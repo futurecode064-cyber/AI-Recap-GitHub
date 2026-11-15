@@ -79,3 +79,21 @@ button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-deco
  .ms-table{width:1240px!important}
  .ms-table td{font-size:19px!important;height:64px!important}
 }
+
+/* 2026-11-15: Adjustable grid lines, row heights and column widths. */
+.ms-line-tools{margin:14px 0 4px;padding:14px;background:#10294b;border:1px solid #587092;border-radius:10px;color:#f2f5ff}
+.ms-line-head{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:16px;color:#ffda87}
+.ms-line-head button{padding:7px 12px;border:1px solid #7190b3;border-radius:7px;background:#23476c;color:#fff;font-weight:700}
+.ms-line-main{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:12px;margin-top:15px}
+.ms-line-main label,.ms-column-grid label{display:flex;align-items:center;gap:9px;flex-wrap:wrap;color:#e9f0ff;font-size:12px;font-weight:700}
+.ms-line-main input[type=color]{width:48px;height:36px;cursor:pointer;background:transparent;border:1px solid #92a7c5;border-radius:5px;padding:2px}
+.ms-line-main input[type=range],.ms-column-grid input[type=range]{min-width:80px;flex:1;accent-color:#e6bb63;cursor:pointer}
+.ms-line-tools output{font:700 12px Arial,sans-serif;min-width:43px;text-align:right;color:#ffde96}
+.ms-column-grid{display:grid;grid-template-columns:repeat(4,minmax(160px,1fr));gap:12px 16px;margin:14px 0 10px;padding-top:14px;border-top:1px solid #456480}
+.ms-column-grid label{display:grid;grid-template-columns:minmax(65px,auto) minmax(55px,1fr) auto;gap:6px}
+.ms-line-tools small{font-size:11px;color:#b9d3eb;line-height:1.75}
+.ms-paper .ms-table th,.ms-paper .ms-table td{border-style:solid!important;border-color:var(--ms-grid-color,#a2aaba)!important;border-width:var(--ms-grid-weight,1px)!important}
+.ms-paper .ms-table tbody tr:not(.ms-edit-row){height:var(--ms-row-height,64px)!important}
+.ms-paper .ms-table tbody tr:not(.ms-edit-row) td{height:var(--ms-row-height,64px)!important;min-height:var(--ms-row-height,64px)!important;max-height:var(--ms-row-height,64px)!important}
+@media(max-width:900px){.ms-line-main{grid-template-columns:1fr 1fr}.ms-column-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:530px){.ms-line-main,.ms-column-grid{grid-template-columns:1fr}.ms-line-head{font-size:14px}}
