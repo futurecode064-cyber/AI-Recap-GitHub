@@ -1,6 +1,9 @@
 name: Future Code AI Tools Sync + Link Health
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/ai-tools-sync.yml']
   schedule:
     - cron: '20 20 * * *'
 permissions:
