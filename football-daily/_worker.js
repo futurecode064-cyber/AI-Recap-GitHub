@@ -508,7 +508,25 @@ async function maungSheetApi(request,env){
       !Array.isArray(g.widths)||g.widths.length!==8||
       g.widths.some((v,i)=>!range(v,limits[i][0],limits[i][1])))
     return gzJson({error:"မောင်းစာရွက် ဒီဇိုင်း Setting မမှန်ပါ"},422);
-   gridStyle={color:g.color,border:g.border,rowHeight:g.rowHeight,widths:g.widths};
+   // Optional theme palette: old Maung sheets still save with the original defaults.
+   const hex=v=>typeof v==="string"&&/^#[0-9a-fA-F]{6}$/.test(v);
+   const defaultHeaderBg=["#062979","#e6171e","#062979","#062979","#e6171e","#062979","#e6171e","#062979"];
+   const defaultHeaderFg=Array(8).fill("#ffffff");
+   const defaultPalette={paper:"#ffffff",titleBackground:"#ffffff",titleText:"#101010",
+    oddRow:"#ffffff",evenRow:"#f8f9fc",bodyText:"#111111",timeText:"#124d7b",
+    oddsText:"#d41421",resultText:"#111111"};
+   const validEight=arr=>Array.isArray(arr)&&arr.length===8&&arr.every(hex);
+   if(g.headerBackgrounds!==undefined&&!validEight(g.headerBackgrounds))
+    return gzJson({error:"ခေါင်းစည်း နောက်ခံအရောင် Setting မမှန်ပါ"},422);
+   if(g.headerTextColors!==undefined&&!validEight(g.headerTextColors))
+    return gzJson({error:"ခေါင်းစည်း စာလုံးအရောင် Setting မမှန်ပါ"},422);
+   if(g.palette!==undefined&&(!g.palette||typeof g.palette!=="object"||Array.isArray(g.palette)||
+      Object.keys(defaultPalette).some(key=>!hex(g.palette[key]))))
+    return gzJson({error:"ဇယားအရောင် Setting မမှန်ပါ"},422);
+   gridStyle={color:g.color,border:g.border,rowHeight:g.rowHeight,widths:g.widths,
+    headerBackgrounds:g.headerBackgrounds||defaultHeaderBg,
+    headerTextColors:g.headerTextColors||defaultHeaderFg,
+    palette:g.palette||defaultPalette};
   }
   // Keep the canonical fixture identity when the owner edits display names or odds.
   // This links the next-morning results to the originally saved fixture, not the edited label.
