@@ -31,26 +31,31 @@ try {
     throw Error('Missing common PNG pipeline: '+JSON.stringify(scriptHealth));
    const odds=pageName==='odds.html';
    const selector=odds?'#oddsPngPages button.odds-part-download':'button.match-download';
-   const target=page.locator(selector).first();
-   await target.waitFor({state:'visible',timeout:50000});
-   if(await target.isDisabled())throw Error('PNG download disabled');
-   // The button has to result in an actual browser download, not only a success label.
-   const started=page.waitForEvent('download',{timeout:90000});
-   await target.click({timeout:30000});
-   const download=await started;
-   if(download.failure&&await download.failure())throw Error('Download cancelled: '+await download.failure());
-   const filename=download.suggestedFilename();
-   if(!/\.png$/i.test(filename))throw Error('Non-PNG file '+filename);
-   const filepath=await download.path();
-   if(!filepath)throw Error('No saved file path');
-   const info=await stat(filepath),bytes=await readFile(filepath);
-   const isPNG=bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]));
-   if(!isPNG||bytes.length<12000)throw Error('PNG content missing or too small: '+info.size);
-   const w=bytes.readUInt32BE(16),h=bytes.readUInt32BE(20);
-   if(w<500||h<300)throw Error('PNG dimensions '+w+'x'+h);
-   const result={brand,page:pageName,filename,bytes:info.size,width:w,height:h};
-   results.push(result);
-   console.log('BRAND PNG DOWNLOAD PASS '+JSON.stringify(result));
+   const targets=page.locator(selector);
+   await targets.first().waitFor({state:'visible',timeout:50000});
+   const partCount=odds?await targets.count():1;
+   if(partCount<1||partCount>2)throw Error('Unexpected PNG part count '+partCount);
+   for(let part=0;part<partCount;part++){
+    const target=targets.nth(part);
+    if(await target.isDisabled())throw Error('PNG download disabled for part '+(part+1));
+    // Verify *each* default odds image; the second half may contain different crests.
+    const started=page.waitForEvent('download',{timeout:90000});
+    await target.click({timeout:30000});
+    const download=await started;
+    if(download.failure&&await download.failure())throw Error('Download cancelled: '+await download.failure());
+    const filename=download.suggestedFilename();
+    if(!/\\.png$/i.test(filename))throw Error('Non-PNG file '+filename);
+    const filepath=await download.path();
+    if(!filepath)throw Error('No saved file path');
+    const info=await stat(filepath),bytes=await readFile(filepath);
+    const isPNG=bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]));
+    if(!isPNG||bytes.length<12000)throw Error('PNG content missing or too small: '+info.size);
+    const w=bytes.readUInt32BE(16),h=bytes.readUInt32BE(20);
+    if(w<500||h<300)throw Error('PNG dimensions '+w+'x'+h);
+    const result={brand,page:pageName,part:part+1,parts:partCount,filename,bytes:info.size,width:w,height:h};
+    results.push(result);
+    console.log('BRAND PNG DOWNLOAD PASS '+JSON.stringify(result));
+   }
   }catch(e){
    const status=await page.evaluate(()=>document.querySelector('#oddsExportStatus')?.textContent||document.querySelector('.match-download')?.textContent||'').catch(()=>null);
    const message=brand+'/'+pageName+': '+String(e?.message||e)+'; status='+status+'; JS='+errors.slice(0,3).join(' | ');
