@@ -132,3 +132,6 @@ button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-deco
 @media(max-width:950px){.ms-palette-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ms-header-color-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.ms-palette-grid,.ms-header-color-grid{grid-template-columns:1fr}}
 .ms-results-page .ms-color-tools{display:none}
+
+.ms-color-save{display:block;width:min(100%,390px);margin:17px 0 0;padding:12px 15px;border:1px solid #ffe2a2;border-radius:8px;background:#ebbd62;color:#152b43;font:850 14px "FC Myanmar","Myanmar Text",sans-serif;cursor:pointer}
+.ms-color-save:hover,.ms-color-save:focus-visible{background:#ffe1a0}
