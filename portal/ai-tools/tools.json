@@ -1,0 +1,873 @@
+{
+  "schemaVersion": 1,
+  "revision": "2026.11.15.1",
+  "updatedAt": "2026-11-15",
+  "categories": [
+    {
+      "id": "all",
+      "en": "All Tools",
+      "my": "အားလုံး",
+      "icon": "✦"
+    },
+    {
+      "id": "chat",
+      "en": "AI Chat",
+      "my": "AI Chat",
+      "icon": "💬"
+    },
+    {
+      "id": "image",
+      "en": "AI Images",
+      "my": "AI ပုံ",
+      "icon": "🎨"
+    },
+    {
+      "id": "video",
+      "en": "AI Video",
+      "my": "AI ဗီဒီယို",
+      "icon": "🎬"
+    },
+    {
+      "id": "coding",
+      "en": "Coding",
+      "my": "Coding",
+      "icon": "💻"
+    },
+    {
+      "id": "websites",
+      "en": "Apps / Web",
+      "my": "App / Website",
+      "icon": "🧩"
+    },
+    {
+      "id": "voice",
+      "en": "Voice & Music",
+      "my": "အသံ / Music",
+      "icon": "🎧"
+    },
+    {
+      "id": "writing",
+      "en": "Writing",
+      "my": "စာရေး",
+      "icon": "✍️"
+    },
+    {
+      "id": "research",
+      "en": "Research",
+      "my": "Research",
+      "icon": "🔎"
+    },
+    {
+      "id": "design",
+      "en": "Design",
+      "my": "Design",
+      "icon": "🖌️"
+    },
+    {
+      "id": "automation",
+      "en": "Automation",
+      "my": "Automation",
+      "icon": "⚡"
+    },
+    {
+      "id": "business",
+      "en": "Business",
+      "my": "Business",
+      "icon": "📈"
+    },
+    {
+      "id": "presentation",
+      "en": "Presentation",
+      "my": "Slide / Presentation",
+      "icon": "📊"
+    },
+    {
+      "id": "education",
+      "en": "Education",
+      "my": "ပညာရေး",
+      "icon": "🎓"
+    }
+  ],
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "categories": [
+        "chat",
+        "image",
+        "writing",
+        "coding",
+        "research",
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "Chat၊ စာရေး၊ Coding နှင့် AI ပုံ",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini",
+      "url": "https://gemini.google.com",
+      "categories": [
+        "chat",
+        "image",
+        "coding",
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Google AI Assistant၊ Research နှင့် ပုံ",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "categories": [
+        "chat",
+        "writing",
+        "coding",
+        "research"
+      ],
+      "plan": "freemium",
+      "description": "စာရေး၊ သုံးသပ်ချက်နှင့် Coding",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai",
+      "categories": [
+        "chat",
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "အရင်းအမြစ်ပါသော AI Search",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "copilot",
+      "name": "Microsoft Copilot",
+      "url": "https://copilot.microsoft.com",
+      "categories": [
+        "chat",
+        "writing",
+        "business",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "Office နှင့် AI Assistant",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "url": "https://chat.deepseek.com",
+      "categories": [
+        "chat",
+        "coding",
+        "research"
+      ],
+      "plan": "freemium",
+      "description": "Coding နှင့် အတွေးအခေါ် AI",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "url": "https://grok.com",
+      "categories": [
+        "chat",
+        "image",
+        "research"
+      ],
+      "plan": "freemium",
+      "description": "AI Chat နှင့် Research",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "poe",
+      "name": "Poe",
+      "url": "https://poe.com",
+      "categories": [
+        "chat",
+        "writing",
+        "image"
+      ],
+      "plan": "freemium",
+      "description": "AI Model အမျိုးမျိုးကို တစ်နေရာတည်း",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "mistral",
+      "name": "Le Chat",
+      "url": "https://chat.mistral.ai",
+      "categories": [
+        "chat",
+        "writing",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "AI Chat နှင့် Coding",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "notebooklm",
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com",
+      "categories": [
+        "research",
+        "education",
+        "writing",
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "PDF နှင့် မှတ်စုများပေါ် အခြေခံ သင်ယူ",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "elicit",
+      "name": "Elicit",
+      "url": "https://elicit.com",
+      "categories": [
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "သုတေသနစာတမ်း AI Search",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "url": "https://consensus.app",
+      "categories": [
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "သိပ္ပံအထောက်အထား AI Search",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "chatpdf",
+      "name": "ChatPDF",
+      "url": "https://www.chatpdf.com",
+      "categories": [
+        "research",
+        "education",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "PDF ဖိုင်များကို AI နဲ့ မေးမြန်း",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "url": "https://openrouter.ai",
+      "categories": [
+        "chat",
+        "coding",
+        "research"
+      ],
+      "plan": "paid",
+      "description": "AI Model API အမျိုးမျိုး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "paid",
+      "description": "AI အနုပညာပုံများ ဖန်တီး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "firefly",
+      "name": "Adobe Firefly",
+      "url": "https://firefly.adobe.com",
+      "categories": [
+        "image",
+        "design",
+        "video"
+      ],
+      "plan": "freemium",
+      "description": "AI ပုံနှင့် Design ဖန်တီး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo AI",
+      "url": "https://leonardo.ai",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI Image ဖန်တီး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "url": "https://ideogram.ai",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "စာသားပါ Poster / Image",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "recraft",
+      "name": "Recraft",
+      "url": "https://www.recraft.ai",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Vector၊ Logo၊ Graphic Design",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "krea",
+      "name": "Krea AI",
+      "url": "https://www.krea.ai",
+      "categories": [
+        "image",
+        "design",
+        "video"
+      ],
+      "plan": "freemium",
+      "description": "AI ပုံဖန်တီးနှင့် Enhance",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "url": "https://www.canva.com",
+      "categories": [
+        "design",
+        "image",
+        "video",
+        "presentation",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Poster၊ Slide၊ Video၊ Logo",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "freepik",
+      "name": "Freepik AI",
+      "url": "https://www.freepik.com",
+      "categories": [
+        "image",
+        "design",
+        "video"
+      ],
+      "plan": "freemium",
+      "description": "Design Asset နှင့် AI ပုံ",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "openart",
+      "name": "OpenArt",
+      "url": "https://openart.ai",
+      "categories": [
+        "image",
+        "video",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI Image၊ Video ဖန်တီး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "url": "https://runwayml.com",
+      "categories": [
+        "video",
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI Video Generation နှင့် Edit",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "url": "https://pika.art",
+      "categories": [
+        "video",
+        "image"
+      ],
+      "plan": "freemium",
+      "description": "Short AI Video ဖန်တီး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "kling",
+      "name": "Kling AI",
+      "url": "https://klingai.com",
+      "categories": [
+        "video",
+        "image"
+      ],
+      "plan": "freemium",
+      "description": "Image to Video နှင့် AI Video",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "luma",
+      "name": "Luma AI",
+      "url": "https://lumalabs.ai",
+      "categories": [
+        "video",
+        "image"
+      ],
+      "plan": "freemium",
+      "description": "Cinematic AI Video",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "url": "https://www.heygen.com",
+      "categories": [
+        "video",
+        "voice",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "AI Presenter နှင့် Avatar Video",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "url": "https://www.synthesia.io",
+      "categories": [
+        "video",
+        "voice",
+        "business",
+        "education"
+      ],
+      "plan": "paid",
+      "description": "Avatar သင်တန်း Video",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "capcut",
+      "name": "CapCut",
+      "url": "https://www.capcut.com",
+      "categories": [
+        "video",
+        "design",
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "Video Edit၊ Effect၊ Caption",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "invideo",
+      "name": "InVideo AI",
+      "url": "https://invideo.io",
+      "categories": [
+        "video",
+        "voice",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "Prompt မှ Video ဖန်တီး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "veed",
+      "name": "VEED",
+      "url": "https://www.veed.io",
+      "categories": [
+        "video",
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "Online Video Editing",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "url": "https://elevenlabs.io",
+      "categories": [
+        "voice",
+        "video"
+      ],
+      "plan": "freemium",
+      "description": "AI အသံ၊ Voiceover",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "url": "https://suno.com",
+      "categories": [
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "AI သီချင်း ဖန်တီး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "udio",
+      "name": "Udio",
+      "url": "https://udio.com",
+      "categories": [
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "AI Music ဖန်တီး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "url": "https://www.descript.com",
+      "categories": [
+        "voice",
+        "video",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "Audio၊ Video၊ Transcription",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "adobepodcast",
+      "name": "Adobe Podcast",
+      "url": "https://podcast.adobe.com",
+      "categories": [
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "အသံသန့်စင်၊ Podcast",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "otter",
+      "name": "Otter.ai",
+      "url": "https://otter.ai",
+      "categories": [
+        "voice",
+        "business",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "Meeting အသံမှ စာသားနှင့် မှတ်စု",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "categories": [
+        "coding",
+        "websites"
+      ],
+      "plan": "freemium",
+      "description": "AI Code Editor",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "githubcopilot",
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "categories": [
+        "coding",
+        "websites"
+      ],
+      "plan": "freemium",
+      "description": "Coding Assistant",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "url": "https://replit.com",
+      "categories": [
+        "coding",
+        "websites",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "AI App Builder နှင့် Hosting",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "bolt",
+      "name": "Bolt.new",
+      "url": "https://bolt.new",
+      "categories": [
+        "websites",
+        "coding",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Prompt ဖြင့် Web App",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "url": "https://lovable.dev",
+      "categories": [
+        "websites",
+        "coding",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Prompt ဖြင့် Full-stack Website",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "v0",
+      "name": "v0",
+      "url": "https://v0.app",
+      "categories": [
+        "websites",
+        "coding",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI UI / Website Generation",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "googleaistudio",
+      "name": "Google AI Studio",
+      "url": "https://aistudio.google.com",
+      "categories": [
+        "coding",
+        "chat",
+        "websites"
+      ],
+      "plan": "freemium",
+      "description": "Gemini API / AI Prototype",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face",
+      "url": "https://huggingface.co",
+      "categories": [
+        "coding",
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "AI Models နှင့် Datasets",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "lmstudio",
+      "name": "LM Studio",
+      "url": "https://lmstudio.ai",
+      "categories": [
+        "coding",
+        "chat"
+      ],
+      "plan": "free",
+      "description": "Local AI Model",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "url": "https://n8n.io",
+      "categories": [
+        "automation",
+        "business",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "AI Automation Workflow",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "url": "https://zapier.com",
+      "categories": [
+        "automation",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "App Integration / Automation",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "url": "https://www.make.com",
+      "categories": [
+        "automation",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Visual Automation",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "bardeen",
+      "name": "Bardeen",
+      "url": "https://www.bardeen.ai",
+      "categories": [
+        "automation",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Browser Automation",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "url": "https://gamma.app",
+      "categories": [
+        "presentation",
+        "design",
+        "writing",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "AI Presentation နှင့် Slides",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "beautifulai",
+      "name": "Beautiful.ai",
+      "url": "https://www.beautiful.ai",
+      "categories": [
+        "presentation",
+        "design",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "Professional Slides",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "napkin",
+      "name": "Napkin AI",
+      "url": "https://www.napkin.ai",
+      "categories": [
+        "presentation",
+        "design",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "စာသားမှ Diagram / Visual",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "notion",
+      "name": "Notion AI",
+      "url": "https://www.notion.so/product/ai",
+      "categories": [
+        "writing",
+        "business",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Note၊ Task၊ AI စာရေး",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "url": "https://www.grammarly.com",
+      "categories": [
+        "writing",
+        "education",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "English Writing Assistant",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "quillbot",
+      "name": "QuillBot",
+      "url": "https://quillbot.com",
+      "categories": [
+        "writing",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "စာပြန်ရေး၊ အကျဉ်းချုပ်",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "deepl",
+      "name": "DeepL",
+      "url": "https://www.deepl.com",
+      "categories": [
+        "writing",
+        "education",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "ဘာသာပြန် AI",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "wordtune",
+      "name": "Wordtune",
+      "url": "https://www.wordtune.com",
+      "categories": [
+        "writing",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Sentence Rewrite",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "fathom",
+      "name": "Fathom",
+      "url": "https://fathom.video",
+      "categories": [
+        "business",
+        "voice",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "AI Meeting Summary",
+      "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "tactiq",
+      "name": "Tactiq",
+      "url": "https://tactiq.io",
+      "categories": [
+        "business",
+        "voice",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "Meeting Transcription",
+      "updatedAt": "2026-11-15"
+    }
+  ]
+}
