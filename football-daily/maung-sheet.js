@@ -347,6 +347,7 @@ $("msDate").addEventListener("change",load);
 $("msEdit").addEventListener("click",()=>{editing=true;render();status("အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် တိုက်ရိုက် သိမ်းနိုင်ပါသည်။");});
 $("msAdd").addEventListener("click",()=>{$("msLeague").value="";$("msMarket").value="all";$("msSearch").value="";rows.push({id:"new-"+Date.now(),time:"11:30 PM",body:"",upper:"",lower:"",total:"",result:"",league:"",upperIsAway:false});options();render();draft();});
 $("msCancel").addEventListener("click",()=>{if(!confirm("မထုတ်ဝေရသေးသော ပြင်ဆင်မှုများကို ပယ်ဖျက်မည်လား?"))return;rows=clone(savedRows);editing=false;localStorage.removeItem(draftKey(loadedDate));options();render();status("ပြင်ဆင်မှု မသိမ်းဘဲ မူလစာရင်းသို့ ပြန်ထားပါသည်။");});
+$("msSaveColors").addEventListener("click",()=>{if(!$("msSave").disabled)$("msSave").click();});
 $("msSave").addEventListener("click",async()=>{
  if(rows.some(r=>!r.time||!r.upper||!r.lower))return status("အချိန်နှင့် အသင်းနှစ်သင်းအမည် ဖြည့်ပါ။",true);
  const btn=$("msSave");btn.disabled=true;status("Website ပေါ် သိမ်းနေသည်…");
