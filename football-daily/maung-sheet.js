@@ -16,8 +16,31 @@ const gridColumns=[
  {name:"ဂိုးပေါင်း",cls:"ms-total",min:85,max:200,defaultWidth:109},
  {name:"လိဂ်",cls:"ms-league",min:140,max:380,defaultWidth:200}
 ];
+const headBgDefaults=["#062979","#e6171e","#062979","#062979","#e6171e","#062979","#e6171e","#062979"];
+const headFgDefaults=Array(8).fill("#ffffff");
+const paletteLabels=[
+ ["paper","စာရွက် နောက်ခံ"],
+ ["titleBackground","ရက်စွဲခေါင်းစဉ် နောက်ခံ"],
+ ["titleText","ရက်စွဲခေါင်းစဉ် စာလုံး"],
+ ["oddRow","ပွဲစဉ် အတန်း (၁၊ ၃၊ ၅...)"],
+ ["evenRow","ပွဲစဉ် အတန်း (၂၊ ၄၊ ၆...)"],
+ ["bodyText","ဇယား စာလုံးများ"],
+ ["timeText","အချိန် စာလုံး"],
+ ["oddsText","ဘော်ဒီ / ဂိုးပေါင်းကြေး"],
+ ["resultText","FT ဂိုးရလဒ် စာလုံး"]
+];
+const originalPalette={
+ paper:"#ffffff",titleBackground:"#ffffff",titleText:"#101010",
+ oddRow:"#ffffff",evenRow:"#f8f9fc",bodyText:"#111111",
+ timeText:"#124d7b",oddsText:"#d41421",resultText:"#111111"
+};
+const isHex=v=>typeof v==="string"&&/^#[0-9a-f]{6}$/i.test(v);
 const gridStorageKey="fc-main-maung-grid-style-v1";
-const defaultGridStyle=()=>({color:"#a2aaba",border:1,rowHeight:64,widths:gridColumns.map(x=>x.defaultWidth)});
+const defaultGridStyle=()=>({
+ color:"#a2aaba",border:1,rowHeight:64,widths:gridColumns.map(x=>x.defaultWidth),
+ headerBackgrounds:headBgDefaults.slice(),headerTextColors:headFgDefaults.slice(),
+ palette:{...originalPalette}
+});
 const boundNumber=(v,min,max,fallback)=>Number.isFinite(Number(v))?Math.max(min,Math.min(max,Math.round(Number(v)))):fallback;
 function cleanGridStyle(input){
  const s=defaultGridStyle();
@@ -26,6 +49,10 @@ function cleanGridStyle(input){
  s.border=boundNumber(input.border,1,6,1);
  s.rowHeight=boundNumber(input.rowHeight,52,100,64);
  if(Array.isArray(input.widths))s.widths=gridColumns.map((x,i)=>boundNumber(input.widths[i],x.min,x.max,x.defaultWidth));
+ if(Array.isArray(input.headerBackgrounds))s.headerBackgrounds=headBgDefaults.map((def,i)=>isHex(input.headerBackgrounds[i])?input.headerBackgrounds[i]:def);
+ if(Array.isArray(input.headerTextColors))s.headerTextColors=headFgDefaults.map((def,i)=>isHex(input.headerTextColors[i])?input.headerTextColors[i]:def);
+ if(input.palette&&typeof input.palette==="object"&&!Array.isArray(input.palette))
+  for(const key of Object.keys(originalPalette))if(isHex(input.palette[key]))s.palette[key]=input.palette[key];
  return s;
 }
 let gridStyle=defaultGridStyle();
@@ -35,6 +62,21 @@ function applyGridStyle(){
  paper.style.setProperty("--ms-grid-color",gridStyle.color);
  paper.style.setProperty("--ms-grid-weight",gridStyle.border+"px");
  paper.style.setProperty("--ms-row-height",gridStyle.rowHeight+"px");
+ const p=gridStyle.palette;
+ paper.style.setProperty("--ms-paper-bg",p.paper);
+ paper.style.setProperty("--ms-title-bg",p.titleBackground);
+ paper.style.setProperty("--ms-title-fg",p.titleText);
+ paper.style.setProperty("--ms-row-odd",p.oddRow);
+ paper.style.setProperty("--ms-row-even",p.evenRow);
+ paper.style.setProperty("--ms-body-fg",p.bodyText);
+ paper.style.setProperty("--ms-time-fg",p.timeText);
+ paper.style.setProperty("--ms-odds-fg",p.oddsText);
+ paper.style.setProperty("--ms-result-fg",p.resultText);
+ table.querySelectorAll("thead th").forEach((th,i)=>{
+  if(i>=gridColumns.length)return;
+  th.style.setProperty("--ms-header-bg",gridStyle.headerBackgrounds[i]);
+  th.style.setProperty("--ms-header-fg",gridStyle.headerTextColors[i]);
+ });
  table.querySelectorAll("colgroup col").forEach((col,i)=>col.style.setProperty("width",gridStyle.widths[i]+"px","important"));
  const total=gridStyle.widths.reduce((sum,w)=>sum+w,0);
  paper.style.setProperty("--ms-inner-width",total+"px");
@@ -53,7 +95,12 @@ function updateGridReadouts(){
   const input=$("msColumn"+i),out=$("msColumnValue"+i);
   if(input)input.value=String(gridStyle.widths[i]);
   if(out)out.textContent=gridStyle.widths[i]+" px";
+  const bg=$("msHeadBg"+i),fg=$("msHeadFg"+i),preview=$("msHeadPreview"+i);
+  if(bg)bg.value=gridStyle.headerBackgrounds[i];
+  if(fg)fg.value=gridStyle.headerTextColors[i];
+  if(preview){preview.style.backgroundColor=gridStyle.headerBackgrounds[i];preview.style.color=gridStyle.headerTextColors[i];}
  });
+ for(const [key] of paletteLabels){const picker=$("msPalette"+key);if(picker)picker.value=gridStyle.palette[key];}
 }
 function initGridControls(){
  const holder=$("msColumnWidths");
@@ -62,6 +109,34 @@ function initGridControls(){
   title.textContent=x.name;slider.type="range";slider.id="msColumn"+i;slider.min=x.min;slider.max=x.max;slider.step="1";
   out.id="msColumnValue"+i;label.append(title,slider,out);holder.append(label);
   slider.addEventListener("input",()=>{gridStyle.widths[i]=boundNumber(slider.value,x.min,x.max,x.defaultWidth);updateGridReadouts();saveGridStyle();});
+ });
+ const paletteGrid=$("msPaletteGrid"),headerGrid=$("msHeaderColorGrid");
+ for(const [key,name] of paletteLabels){
+  const label=document.createElement("label"),txt=document.createElement("span"),picker=document.createElement("input");
+  label.className="ms-color-choice";txt.textContent=name;
+  picker.type="color";picker.id="msPalette"+key;picker.value=gridStyle.palette[key];
+  label.append(txt,picker);paletteGrid.append(label);
+  picker.addEventListener("input",()=>{
+   gridStyle.palette[key]=picker.value;saveGridStyle();
+  });
+ }
+ gridColumns.forEach((col,i)=>{
+  const cell=document.createElement("div");cell.className="ms-header-color-choice";
+  const preview=document.createElement("span");preview.className="ms-color-preview";preview.id="msHeadPreview"+i;preview.textContent=col.name;
+  cell.append(preview);
+  for(const [type,labelText] of [["Bg","နောက်ခံ"],["Fg","စာလုံး"]]){
+   const label=document.createElement("label"),picker=document.createElement("input");
+   label.textContent=labelText;
+   picker.id="msHead"+type+i;picker.type="color";
+   picker.value=type==="Bg"?gridStyle.headerBackgrounds[i]:gridStyle.headerTextColors[i];
+   label.append(picker);cell.append(label);
+   picker.addEventListener("input",()=>{
+    if(type==="Bg")gridStyle.headerBackgrounds[i]=picker.value;
+    else gridStyle.headerTextColors[i]=picker.value;
+    updateGridReadouts();saveGridStyle();
+   });
+  }
+  headerGrid.append(cell);
  });
  $("msGridColor").addEventListener("input",e=>{gridStyle.color=e.target.value;updateGridReadouts();saveGridStyle();});
  $("msGridWeight").addEventListener("input",e=>{gridStyle.border=boundNumber(e.target.value,1,6,1);updateGridReadouts();saveGridStyle();});
