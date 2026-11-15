@@ -454,6 +454,13 @@
                 for(const record of groups[i])originals.push(await fallbackCard(type,record,day));
                 output=await pngWithRetry(await withBanner(stack(originals),type));
               }
+              // Branding decodes/re-encodes the source PNG; restore each story's
+              // CC author, source and license metadata on the final ZIP image.
+              if(type==="news"){
+                const metadata=window.FutureCodeNewsFrameExport?.metadata;
+                if(typeof metadata!=="function")throw Error("News attribution metadata မရရှိပါ");
+                output=await metadata(output,groups[i]);
+              }
               await archive.add(filename,output);count++;
             }catch(pieceError){
               console.error("GOAL ZONE PNG failed",type,i+1,pieceError);
