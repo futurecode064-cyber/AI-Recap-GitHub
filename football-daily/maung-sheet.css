@@ -97,3 +97,12 @@ button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-deco
 .ms-paper .ms-table tbody tr:not(.ms-edit-row) td{height:var(--ms-row-height,64px)!important;min-height:var(--ms-row-height,64px)!important;max-height:var(--ms-row-height,64px)!important}
 @media(max-width:900px){.ms-line-main{grid-template-columns:1fr 1fr}.ms-column-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:530px){.ms-line-main,.ms-column-grid{grid-template-columns:1fr}.ms-line-head{font-size:14px}}
+
+/* Maung sheet single-width layout: banners, heading and table share one physical width. */
+.ms-paper .ms-sheet-content{display:block;width:var(--ms-inner-width,1240px)!important;min-width:var(--ms-inner-width,1240px)!important;max-width:var(--ms-inner-width,1240px)!important;margin:0 auto!important}
+.ms-paper .ms-sheet-content > .ms-table{width:100%!important;min-width:100%!important;max-width:100%!important;margin:0!important}
+.ms-paper .ms-sheet-content > .ms-banner-img{display:block!important;width:100%!important;min-width:100%!important;max-width:100%!important;height:auto!important;object-fit:fill!important;margin:0!important}
+.ms-paper .ms-sheet-content > .ms-banner-img[hidden]{display:none!important}
+.ms-paper .ms-sheet-content > .ms-paper-heading{box-sizing:border-box;width:100%!important}
+.ms-paper .ms-scroll{width:100%!important;margin:0!important;overflow-x:auto!important;overflow-y:hidden!important}
+@media print{.ms-paper .ms-scroll{overflow:visible!important}.ms-paper .ms-sheet-content{width:var(--ms-inner-width,1240px)!important}}
