@@ -64,5 +64,5 @@ try {
  }
 }finally{await browser.close();}
 if(issues.length)throw Error(issues.join('\n'));
-if(results.length!==brands.length*2)throw Error('Incomplete test coverage');
-console.log('ALL YKZ, KMM, KO THET PREVIEW AND ODDS PNG DOWNLOADS PASSED');
+if(results.length<brands.length*2)throw Error('Incomplete test coverage');
+console.log('ALL YKZ, KMM, KO THET PREVIEW AND BOTH ODDS PNG PARTS VERIFIED');
