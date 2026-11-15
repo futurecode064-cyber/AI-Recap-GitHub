@@ -184,7 +184,7 @@ async function load(){
  const date=$("msDate").value;if(!/^\d{4}-\d{2}-\d{2}$/.test(date))return;
  loadedDate=date;editing=false;canEdit=false;status("စာရင်းဖွင့်နေသည်…");
  let server=null,warning="";
- try{const r=await fetch("/api/maung-sheet?date="+encodeURIComponent(date),{cache:"no-store",credentials:"same-origin"});const j=await r.json();if(!r.ok)throw Error(j.error||"Server မရပါ");server=j.sheet;canEdit=Boolean(j.canEdit);}
+ try{const r=await fetch("/api/maung-sheet?date="+encodeURIComponent(date),{cache:"no-store",credentials:"same-origin"});const j=await r.json();if(!r.ok)throw Error(j.error||"Server မရပါ");server=j.sheet;canEdit=Boolean(j.canEdit);if(j.warning)warning=j.warning;}
  catch(e){warning=e.message;}
  if(server?.rows){rows=clone(server.rows);status("Website ပေါ်တွင် သိမ်းထားသော မောင်းစာရွက်ကို ဖွင့်ပြီးပါပြီ။");}
  else if(date===firstDate){rows=clone(sample);status("၁၃.၁၁.၂၀၂၆ နမူနာ ၂၉ ပွဲ ဖွင့်ပြီးပါပြီ။"+(warning?" Database: "+warning:""));}
@@ -211,7 +211,7 @@ $("msSave").addEventListener("click",async()=>{
   const r=await fetch("/api/maung-sheet?date="+encodeURIComponent(loadedDate),{method:"POST",headers:{"Content-Type":"application/json","X-Football-Editor":"1"},credentials:"same-origin",body:JSON.stringify({date:loadedDate,rows})});
   const raw=await r.text();let j;try{j=JSON.parse(raw);}catch{throw Error("Server မှ JSON မပြန်ပါ (HTTP "+r.status+")");}
   if(!r.ok){const err=Error(j.error||"သိမ်းမရပါ (HTTP "+r.status+")");err.status=r.status;throw err;}
-  localStorage.removeItem(draftKey(loadedDate));savedRows=clone(rows);editing=false;options();render();status("✓ Website ပေါ် အတည်တကျ သိမ်းပြီးပါပြီ။ "+rows.length+" ပွဲ");
+  localStorage.removeItem(draftKey(loadedDate));savedRows=clone(rows);editing=false;options();render();status(j.storage==="github"?"✓ Production GitHub ထဲမှာ သိမ်းပြီးပါပြီ။ Live Website Update အလိုအလျောက် ရောက်လာပါမည်။ "+rows.length+" ပွဲ":"✓ Website Database ပေါ် သိမ်းပြီးပါပြီ။ "+rows.length+" ပွဲ");
  }catch(e){draft();
    if(e.status===401){status("Main Website Login Session သက်တမ်းကုန်သွားပါပြီ။ ပြင်ဆင်မှု Draft ကို မပျောက်အောင် သိမ်းထားပြီး Main Login သို့ ပြန်ခေါ်နေပါသည်။",true);
     const back="/maung-sheet.html?date="+encodeURIComponent(loadedDate);window.location.assign("/login?next="+encodeURIComponent(back));
