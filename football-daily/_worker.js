@@ -423,34 +423,97 @@ async function handleRequest(request, env) {
 }
 
 
-/* Owner-editable MAIN football Maung Sheet. Public read, signed-session write.
- * Independent from the daily report and from the disabled legacy editor routes. */
+/* Main Maung Sheet: signed Main-site session writes.
+ * Use D1 when bound. If D1 is absent or fails, persist in the existing owner
+ * GitHub publication repository and trigger the existing production sync.
+ * No unauthenticated writes; never expose GitHub credentials to the browser.
+ */
+const MAUNG_GITHUB_DIR="football-daily/data/maung-sheets/";
+async function maungGithubRead(env,date){
+ if(!env.FCD_EDITOR_GITHUB_TOKEN)return null;
+ return editorFile(env,EDITOR_SOURCE,MAUNG_GITHUB_DIR+date+".json","main",true);
+}
+async function maungGithubSave(env,date,sheet){
+ if(!env.FCD_EDITOR_GITHUB_TOKEN)throw new Error("Cloudflare မှာ D1 Database သို့မဟုတ် GitHub Editor Token ချိတ်ထားရန် လိုအပ်ပါသည်");
+ const headRef=await editorGithub(env,EDITOR_SOURCE,"git/ref/heads/main");
+ const head=await editorGithub(env,EDITOR_SOURCE,"git/commits/"+headRef.object.sha);
+ const tree=await editorGithub(env,EDITOR_SOURCE,"git/trees","POST",{
+  base_tree:head.tree.sha,
+  tree:[{path:MAUNG_GITHUB_DIR+date+".json",mode:"100644",type:"blob",content:JSON.stringify(sheet,null,2)+"\n"}]
+ });
+ const commit=await editorGithub(env,EDITOR_SOURCE,"git/commits","POST",{
+  message:"Save Maung sheet "+date,tree:tree.sha,parents:[headRef.object.sha]
+ });
+ await editorGithub(env,EDITOR_SOURCE,"git/refs/heads/main","PATCH",{sha:commit.sha,force:false});
+ let dispatched=true;
+ try{await editorDispatch(env);}catch{dispatched=false;}
+ return {commit:commit.sha,dispatched};
+}
 async function maungSheetApi(request,env){
  const url=new URL(request.url),date=url.searchParams.get("date")||gzDate();
- if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||Number.isNaN(Date.parse(date+"T00:00:00Z")))return gzJson({error:"ရက်စွဲ မမှန်ပါ"},400);
- if(!["GET","POST"].includes(request.method))return gzJson({error:"Method Not Allowed"},405);
- const db=env.GOALZONE_ANALYTICS_DB;
- if(!db)return gzJson({error:"မောင်းစာရွက် Database ချိတ်ဆက်မှု မရှိသေးပါ"},503);
+ if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(date)||Number.isNaN(Date.parse(date+"T00:00:00Z")))
+  return gzJson({error:"ရက်စွဲ မမှန်ပါ"},400);
+ if(!["GET","POST"].includes(request.method))
+  return gzJson({error:"Method Not Allowed"},405);
  const authenticated=ready(env)&&await hasSession(request,env);
  if(request.method==="POST"){
-  if(!authenticated)return gzJson({error:"Owner Login ဝင်ရန် လိုအပ်သည်"},401);
-  if(request.headers.get("Origin")!==url.origin||request.headers.get("X-Football-Editor")!=="1"||request.headers.get("Sec-Fetch-Site")==="cross-site")return gzJson({error:"မူရင်း Website Editor မှသာ သိမ်းနိုင်သည်"},403);
+  if(!authenticated)return gzJson({error:"Main Website Login Session မရှိပါ / သက်တမ်းကုန်ပါပြီ"},401);
+  if(request.headers.get("Origin")!==url.origin||
+     request.headers.get("X-Football-Editor")!=="1"||
+     request.headers.get("Sec-Fetch-Site")==="cross-site")
+   return gzJson({error:"မူရင်း Website Editor မှသာ သိမ်းနိုင်သည်"},403);
+ }
+ const db=env.GOALZONE_ANALYTICS_DB?.prepare?env.GOALZONE_ANALYTICS_DB:null;
+ const maungSchema="CREATE TABLE IF NOT EXISTS fc_main_maung_sheets (sheet_date TEXT PRIMARY KEY, payload TEXT NOT NULL, updated_at TEXT NOT NULL)";
+ if(request.method==="GET"){
+  let warning="";
+  if(db)try{
+   await db.prepare(maungSchema).run();
+   const saved=await db.prepare("SELECT payload, updated_at FROM fc_main_maung_sheets WHERE sheet_date=?").bind(date).first();
+   if(saved){
+    try{return gzJson({sheet:JSON.parse(saved.payload),canEdit:authenticated,updatedAt:saved.updated_at,storage:"d1"});}
+    catch{return gzJson({error:"သိမ်းထားသော မောင်းစာရွက် ဖတ်မရပါ"},500);}
+   }
+  }catch{warning="Database ချိတ်ဆက်မှု မအောင်မြင်ပါ။";}
+  try{
+   const fromGithub=await maungGithubRead(env,date);
+   if(fromGithub&&Array.isArray(fromGithub.rows))
+    return gzJson({sheet:fromGithub,canEdit:authenticated,updatedAt:fromGithub.updatedAt||null,storage:"github"});
+  }catch(e){warning=e.message||"GitHub backup ဖတ်မရပါ";}
+  if(!db&&!env.FCD_EDITOR_GITHUB_TOKEN)
+   return gzJson({sheet:null,canEdit:authenticated,warning:"Server တွင် D1 သို့မဟုတ် GitHub Save credential မချိတ်ရသေးပါ",storage:"unavailable"});
+  return gzJson({sheet:null,canEdit:authenticated,warning,storage:db?"d1":"github"});
  }
  try{
-  await db.prepare("CREATE TABLE IF NOT EXISTS fc_main_maung_sheets (sheet_date TEXT PRIMARY KEY, payload TEXT NOT NULL, updated_at TEXT NOT NULL)").run();
-  if(request.method==="GET"){
-   const saved=await db.prepare("SELECT payload, updated_at FROM fc_main_maung_sheets WHERE sheet_date=?").bind(date).first();
-   let sheet=null;
-   if(saved){try{sheet=JSON.parse(saved.payload);}catch{return gzJson({error:"သိမ်းထားသော မောင်းစာရွက် ဖတ်မရပါ"},500);}}
-   return gzJson({sheet,canEdit:authenticated,updatedAt:saved?.updated_at||null});
-  }
   const body=await editorBody(request),rows=body?.rows;
-  if(body?.date!==date||!Array.isArray(rows)||rows.length>150||rows.some(r=>!r||typeof r!=="object"||["time","body","upper","lower","total","league","result"].some(k=>typeof r[k]!=="string"||r[k].length>180)||typeof r.upperIsAway!=="boolean"))return gzJson({error:"မောင်းစာရွက် Row Data မမှန်ပါ (အများဆုံး ၁၅၀ ပွဲ)"},422);
-  const clean=rows.map(r=>Object.fromEntries(["time","body","upper","lower","total","league","result","upperIsAway"].map(k=>[k,typeof r[k]==="string"?r[k].trim():r[k]])));
-  const sheet={date,rows:clean},updatedAt=new Date().toISOString();
-  await db.prepare("INSERT INTO fc_main_maung_sheets(sheet_date,payload,updated_at) VALUES(?,?,?) ON CONFLICT(sheet_date) DO UPDATE SET payload=excluded.payload,updated_at=excluded.updated_at").bind(date,JSON.stringify(sheet),updatedAt).run();
-  return gzJson({ok:true,updatedAt,rows:clean.length});
- }catch(e){return gzJson({error:"မောင်းစာရွက် သိမ်းဆည်းမှု မအောင်မြင်ပါ",detail:String(e?.message||"Database error").slice(0,160)},503);}
+  if(body?.date!==date||!Array.isArray(rows)||rows.length>150||
+    rows.some(r=>!r||typeof r!=="object"||
+      ["time","body","upper","lower","total","league","result"].some(k=>typeof r[k]!=="string"||r[k].length>180)||
+      typeof r.upperIsAway!=="boolean"))
+   return gzJson({error:"မောင်းစာရွက် Row Data မမှန်ပါ (အများဆုံး ၁၅၀ ပွဲ)"},422);
+  const clean=rows.map(r=>Object.fromEntries(
+   ["time","body","upper","lower","total","league","result","upperIsAway"].map(k=>[k,typeof r[k]==="string"?r[k].trim():r[k]])));
+  const updatedAt=new Date().toISOString(),sheet={date,rows:clean,updatedAt};
+  if(db){
+   try{
+    await db.prepare(maungSchema).run();
+    await db.prepare("INSERT INTO fc_main_maung_sheets(sheet_date,payload,updated_at) VALUES(?,?,?) ON CONFLICT(sheet_date) DO UPDATE SET payload=excluded.payload,updated_at=excluded.updated_at")
+      .bind(date,JSON.stringify(sheet),updatedAt).run();
+    return gzJson({ok:true,updatedAt,rows:clean.length,storage:"d1"});
+   }catch(e){
+    // If this D1 binding is stale, continue to the authenticated GitHub fallback.
+    if(!env.FCD_EDITOR_GITHUB_TOKEN)
+     return gzJson({error:"Database သိမ်းမရပါ။ Cloudflare D1 Binding ကို ပြန်စစ်ရန် လိုပါသည်",detail:String(e?.message||"").slice(0,120)},503);
+   }
+  }
+  if(!env.FCD_EDITOR_GITHUB_TOKEN)
+   return gzJson({error:"Website Save အတွက် Cloudflare D1 Database သို့မဟုတ် GitHub Editor Token တစ်ခု လိုအပ်ပါသည်"},503);
+  const saved=await maungGithubSave(env,date,sheet);
+  return gzJson({ok:true,updatedAt,rows:clean.length,storage:"github",syncQueued:saved.dispatched,commit:saved.commit,
+    message:saved.dispatched?"GitHub တွင် သိမ်းပြီး Production Sync ခေါ်ထားပါပြီ။":"GitHub တွင် သိမ်းပြီးပါပြီ။ Production Sync ခေါ်မရသေးပါ။"},202);
+ }catch(e){
+  return gzJson({error:e.status===409||e.status===422?"တစ်ချိန်တည်း ပြိုင်ပြင်နေပါသည်။ ပြန်စမ်းပါ။":"မောင်းစာရွက် Website Save မအောင်မြင်ပါ။ "+String(e?.message||"").slice(0,160)},e.status===409||e.status===422?409:503);
+ }
 }
 
 // Same-origin licensed-image gateway for newspaper PNG canvas exports.
