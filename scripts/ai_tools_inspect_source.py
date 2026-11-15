@@ -19,3 +19,12 @@ elif isinstance(data,list):
  print('LENGTH',len(data))
  print('FIRST',json.dumps(data[0],ensure_ascii=False,default=str)[:5000] if data else '')
  print('SECOND',json.dumps(data[1],ensure_ascii=False,default=str)[:2000] if len(data)>1 else '')
+
+from collections import Counter
+if isinstance(data,dict) and isinstance(data.get('entries'),list):
+ entries=data['entries']
+ print('CATEGORY DISTRIBUTION:',dict(Counter(cat for e in entries for cat in (e.get('categories') or []))))
+ print('STATUS DISTRIBUTION:',dict(Counter(e.get('status') for e in entries)))
+ print('REPO PRESENCE:',sum(bool(e.get('repo')) for e in entries))
+ print('SCORED:',sum(e.get('score') is not None for e in entries))
+ print('SAMPLE CATEGORIES:',[(e.get('id'),e.get('categories')) for e in entries[:25]])
