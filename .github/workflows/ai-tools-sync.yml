@@ -1,0 +1,66 @@
+name: Future Code AI Tools Sync + Link Health
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 20 * * *'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: future-code-pages
+  cancel-in-progress: false
+jobs:
+  ingest-test-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned YAML parser
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+      - name: Ingest licensed source and preserve 61 hand-curated tools
+        run: python scripts/ai_tools_ingest.py --count 1200
+      - name: Check bounded set of public official links
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AI_LINK_CHECK_BATCH: '125'
+        run: python scripts/ai_tools_link_monitor.py
+      - name: Check all staged release gates
+        run: |
+          node tests/ai-tools-v2.test.js
+          python scripts/build_portal.py
+          python tests/validate_assets.py
+          node tests/studio.test.js
+          node tests/access.test.js
+          node tests/portal.test.js
+          node tests/download-tracking.test.js
+          node tests/language-apps.test.js
+      - name: Save verified generated catalog and link status to GitHub
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add portal/ai-tools/tools.json portal/ai-tools/updates.json portal/ai-tools/link-health.json
+          if git diff --cached --quiet; then
+            echo "No catalog or link-health changes"
+          else
+            git commit -m "chore(ai-tools): sync curated catalog and link health [skip ci]"
+            git push origin "HEAD:main"
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: portal
+      - name: Deploy Future Code AI Tools with existing student site preserved
+        id: deployment
+        uses: actions/deploy-pages@v4
