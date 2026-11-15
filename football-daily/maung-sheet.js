@@ -34,6 +34,8 @@ function applyGridStyle(){
  paper.style.setProperty("--ms-row-height",gridStyle.rowHeight+"px");
  table.querySelectorAll("colgroup col").forEach((col,i)=>col.style.setProperty("width",gridStyle.widths[i]+"px","important"));
  const total=gridStyle.widths.reduce((sum,w)=>sum+w,0);
+ paper.style.setProperty("--ms-inner-width",total+"px");
+ paper.style.setProperty("width",(total+40)+"px","important");
  for(const prop of ["width","min-width","max-width"])table.style.setProperty(prop,total+"px","important");
  if(typeof editing!=="undefined"&&!editing)requestAnimationFrame(fitSheetText);
 }
@@ -207,9 +209,14 @@ $("msSave").addEventListener("click",async()=>{
  const btn=$("msSave");btn.disabled=true;status("Website ပေါ် သိမ်းနေသည်…");
  try{
   const r=await fetch("/api/maung-sheet?date="+encodeURIComponent(loadedDate),{method:"POST",headers:{"Content-Type":"application/json","X-Football-Editor":"1"},credentials:"same-origin",body:JSON.stringify({date:loadedDate,rows})});
-  const j=await r.json();if(!r.ok)throw Error(j.error||"သိမ်းမရပါ");
+  const raw=await r.text();let j;try{j=JSON.parse(raw);}catch{throw Error("Server မှ JSON မပြန်ပါ (HTTP "+r.status+")");}
+  if(!r.ok){const err=Error(j.error||"သိမ်းမရပါ (HTTP "+r.status+")");err.status=r.status;throw err;}
   localStorage.removeItem(draftKey(loadedDate));savedRows=clone(rows);editing=false;options();render();status("✓ Website ပေါ် အတည်တကျ သိမ်းပြီးပါပြီ။ "+rows.length+" ပွဲ");
- }catch(e){draft();status("Website ပေါ် မသိမ်းနိုင်သေးပါ။ "+(String(e.message).includes("Login")?"Main Website Login Session သက်တမ်းကုန်နိုင်ပါသည်။ ":e.message+" ")+ "ပြင်ဆင်မှုကို ဤ Browser ထဲ အလိုအလျောက် Draft သိမ်းထားပါသည်။",true);}finally{btn.disabled=false;}
+ }catch(e){draft();
+   if(e.status===401){status("Main Website Login Session သက်တမ်းကုန်သွားပါပြီ။ ပြင်ဆင်မှု Draft ကို မပျောက်အောင် သိမ်းထားပြီး Main Login သို့ ပြန်ခေါ်နေပါသည်။",true);
+    const back="/maung-sheet.html?date="+encodeURIComponent(loadedDate);window.location.assign("/login?next="+encodeURIComponent(back));
+   }else status("Website ပေါ် မသိမ်းနိုင်သေးပါ။ "+e.message+" · ပြင်ဆင်မှုကို ဤ Browser ထဲ အလိုအလျောက် Draft သိမ်းထားပါသည်။",true);
+  }finally{btn.disabled=false;}
 });
 
 const bannerStorageKey="fc-main-maung-artwork-v1";
@@ -261,18 +268,25 @@ async function exportSheet(part="all"){
    windowWidth:Math.max(1440,document.documentElement.clientWidth),
    onclone:doc=>{
     const p=doc.getElementById("msExport");
-    p.style.setProperty("width",Math.max(1280,gridStyle.widths.reduce((sum,w)=>sum+w,0)+40)+"px","important");
+    const totalWidth=gridStyle.widths.reduce((sum,w)=>sum+w,0);
+    p.style.setProperty("--ms-inner-width",totalWidth+"px");
+    p.style.setProperty("width",(totalWidth+40)+"px","important");
     p.style.setProperty("max-width","none","important");
     p.style.setProperty("overflow","visible","important");
     const scroll=p.querySelector(".ms-scroll");
     scroll.style.setProperty("overflow","visible","important");
     scroll.style.setProperty("overflow-x","visible","important");
     scroll.style.setProperty("overflow-y","visible","important");
-    scroll.style.setProperty("width",gridStyle.widths.reduce((sum,w)=>sum+w,0)+"px","important");
+    scroll.style.setProperty("width",totalWidth+"px","important");
+    const inner=p.querySelector("#msSheetContent");
+    inner.style.setProperty("width",totalWidth+"px","important");
+    inner.style.setProperty("min-width",totalWidth+"px","important");
+    inner.style.setProperty("max-width",totalWidth+"px","important");
+    p.querySelectorAll(".ms-banner-img").forEach(img=>img.style.setProperty("width",totalWidth+"px","important"));
     const table=p.querySelector(".ms-table");
-    table.style.setProperty("width",gridStyle.widths.reduce((sum,w)=>sum+w,0)+"px","important");
-    table.style.setProperty("min-width",gridStyle.widths.reduce((sum,w)=>sum+w,0)+"px","important");
-    table.style.setProperty("max-width",gridStyle.widths.reduce((sum,w)=>sum+w,0)+"px","important");
+    table.style.setProperty("width",totalWidth+"px","important");
+    table.style.setProperty("min-width",totalWidth+"px","important");
+    table.style.setProperty("max-width",totalWidth+"px","important");
     if(part!=="all"){
      const trs=Array.from(doc.querySelectorAll("#msRows tr"));
      trs.forEach((tr,i)=>{if(i<start||i>=end)tr.remove();});
