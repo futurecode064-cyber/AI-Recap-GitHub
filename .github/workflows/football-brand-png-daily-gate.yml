@@ -1,0 +1,46 @@
+name: Brand PNG Daily Download Gate
+on:
+  push:
+    branches: [football-daily-render]
+    paths:
+      - 'football-daily/data/today.json'
+      - 'football-daily/data/odds/**'
+      - 'football-daily/assets/team-logos/**'
+      - 'football-daily/assets/league-logos/**'
+      - 'football-daily/brand-export-data.js'
+      - 'football-daily/canvas-image-kit.js'
+      - 'football-daily/native-image-save.js'
+      - 'football-daily/ykz-family/**'
+      - 'football-daily/kmm-sport-hub/**'
+      - 'football-daily/ko-thet-family/**'
+      - 'football-daily/tests/brand-png-daily-contract.test.cjs'
+      - 'football-daily/scripts/qa-brand-png-live.mjs'
+      - '.github/workflows/football-brand-png-daily-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: football-brand-png-daily-gate
+  cancel-in-progress: true
+jobs:
+  verify-png:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: football-daily-render
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check shared PNG source and production file paths
+        run: |
+          node --check football-daily/brand-export-data.js
+          node --check football-daily/scripts/qa-brand-png-live.mjs
+          node --test football-daily/tests/brand-png-daily-contract.test.cjs
+      - name: Install browser for real downloads
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Verify downloaded PNG bytes from YKZ, KMM and Ko Thet live pages
+        run: node football-daily/scripts/qa-brand-png-live.mjs
