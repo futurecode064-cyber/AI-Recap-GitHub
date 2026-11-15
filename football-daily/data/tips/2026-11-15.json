@@ -1,0 +1,146 @@
+{
+  "reportDate": "2026-11-15",
+  "timezone": "Asia/Yangon",
+  "items": [
+    {
+      "fixtureId": "fc-20261115-01",
+      "home": "Belgium",
+      "away": "Italy",
+      "checkedDate": "2026-11-15",
+      "score": "2-1",
+      "sourceName": "Betimate",
+      "sourceUrl": "https://betimate.com/en/news/previews/belgium-vs-italy-prediction-odds-betting-tips-11152026-2995285",
+      "sourceDate": "2026-11-13",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-02",
+      "home": "Croatia",
+      "away": "Czechia",
+      "checkedDate": "2026-11-15",
+      "score": "2-1",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/nations-league-predictions/croatia-vs-czech-republic-prediction-15-11-2026/",
+      "sourceDate": "2026-11-13"
+    },
+    {
+      "fixtureId": "fc-20261115-03",
+      "home": "France",
+      "away": "Türkiye",
+      "checkedDate": "2026-11-15",
+      "score": "3-1",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/nations-league-predictions/france-vs-turkey-prediction-15-11-2026/",
+      "sourceDate": "2026-11-13"
+    },
+    {
+      "fixtureId": "fc-20261115-04",
+      "home": "Spain",
+      "away": "England",
+      "checkedDate": "2026-11-15",
+      "score": "3-2",
+      "sourceName": "TNT Sports",
+      "sourceUrl": "https://www.tntsports.co.uk/betting/tips/spain-vs-england-prediction-tips-and-odds-15-11-26/",
+      "sourceDate": "2026-11-13",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-05",
+      "home": "Cyprus",
+      "away": "Montenegro",
+      "checkedDate": "2026-11-15",
+      "score": "0-2",
+      "sourceName": "Forebet",
+      "sourceUrl": "https://www.forebet.com/en/football/matches/cyprus-montenegro-2552363",
+      "sourceDate": "2026-11-14",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-06",
+      "home": "Latvia",
+      "away": "Armenia",
+      "checkedDate": "2026-11-15",
+      "score": "0-1",
+      "sourceName": "FootyMind",
+      "sourceUrl": "https://www.footymind.com/match/1545616-latvia-vs-armenia",
+      "sourceDate": "2026-11-15",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-07",
+      "home": "Belarus",
+      "away": "Albania",
+      "checkedDate": "2026-11-15",
+      "score": "0-1",
+      "sourceName": "Squawka",
+      "sourceUrl": "https://www.squawka.com/en/news/previews/belarus-vs-albania-predictions-betting-tips-15-11-26/",
+      "sourceDate": "2026-11-14",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-08",
+      "home": "Finland",
+      "away": "San Marino",
+      "checkedDate": "2026-11-15",
+      "score": "4-0",
+      "sourceName": "Sports Mole",
+      "sourceUrl": "https://www.sportsmole.co.uk/football/finland/uefa-nations-league/preview/finland-vs-san-marino-prediction-team-news-lineups_609027.html",
+      "sourceDate": "2026-11-13"
+    },
+    {
+      "fixtureId": "fc-20261115-09",
+      "home": "Tenerife",
+      "away": "Ceuta",
+      "checkedDate": "2026-11-15",
+      "score": "1-0",
+      "sourceName": "Soccerstat",
+      "sourceUrl": "https://soccerstat.co.uk/match/tenerife-ad-ceuta-fc-2026-11-15/",
+      "sourceDate": "2026-11-15",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-10",
+      "home": "Granada",
+      "away": "Las Palmas",
+      "checkedDate": "2026-11-15",
+      "score": "1-0",
+      "sourceName": "Football Stats",
+      "sourceUrl": "https://football-stats.co.uk/match/granada-cf-las-palmas-2026-11-15/",
+      "sourceDate": "2026-11-15",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-11",
+      "home": "Eibar",
+      "away": "Cádiz",
+      "checkedDate": "2026-11-15",
+      "score": "1-0",
+      "sourceName": "FBPredict",
+      "sourceUrl": "https://www.fbpredict.com/match/1570016-eibar-vs-cadiz",
+      "sourceDate": "2026-11-15",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-12",
+      "home": "Eldense",
+      "away": "CD Sabadell",
+      "checkedDate": "2026-11-15",
+      "score": "1-1",
+      "sourceName": "Soccerstats",
+      "sourceUrl": "https://soccerstats.ie/match/eldense-sabadell-2026-11-15/",
+      "sourceDate": "2026-11-15",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    },
+    {
+      "fixtureId": "fc-20261115-13",
+      "home": "MVV Maastricht",
+      "away": "Vitesse",
+      "checkedDate": "2026-11-15",
+      "score": "1-1",
+      "sourceName": "PeakyBet",
+      "sourceUrl": "https://peakybet.com/soccer/prediction/mvv-vs-vitesse-1551884",
+      "sourceDate": "2026-11-15",
+      "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
+    }
+  ]
+}

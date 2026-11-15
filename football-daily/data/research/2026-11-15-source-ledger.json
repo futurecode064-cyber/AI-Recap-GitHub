@@ -1,0 +1,204 @@
+{
+  "reportDate": "2026-11-15",
+  "sourcePDF": "15(1).pdf",
+  "rows": [
+    {
+      "pdfRow": 1,
+      "fixtureId": "fc-20261115-01",
+      "home": "ဘယ်ဂျီယံ",
+      "away": "အီတလီ",
+      "bodyOdds": "-35",
+      "goalTotalOdds": "3+20",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 2,
+      "fixtureId": "fc-20261115-02",
+      "home": "ခရိုအေးရှား",
+      "away": "ချက်",
+      "bodyOdds": "1=",
+      "goalTotalOdds": "3+45",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 3,
+      "fixtureId": "fc-20261115-03",
+      "home": "ပြင်သစ်",
+      "away": "တူရကီ",
+      "bodyOdds": "2-15",
+      "goalTotalOdds": "4+70",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 4,
+      "fixtureId": "fc-20261115-04",
+      "home": "စပိန်",
+      "away": "အင်္ဂလန်",
+      "bodyOdds": "1+60",
+      "goalTotalOdds": "3+20",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 5,
+      "fixtureId": "fc-20261115-05",
+      "home": "ဆိုက်ပရပ်",
+      "away": "မွန်တီနီဂရိုး",
+      "bodyOdds": "-55",
+      "goalTotalOdds": "2-95",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 6,
+      "fixtureId": "fc-20261115-06",
+      "home": "လတ်ဗီးယား",
+      "away": "အာမေးနီးယား",
+      "bodyOdds": "-40",
+      "goalTotalOdds": "2-30",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 7,
+      "fixtureId": "fc-20261115-07",
+      "home": "ဘီလာရုစ်",
+      "away": "အယ်ဘေးနီးယား",
+      "bodyOdds": "1+90",
+      "goalTotalOdds": "2-30",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 8,
+      "fixtureId": "fc-20261115-08",
+      "home": "ဖင်လန်",
+      "away": "ဆန်မာရီနို",
+      "bodyOdds": "3-70",
+      "goalTotalOdds": "4+20",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 9,
+      "fixtureId": "fc-20261115-09",
+      "home": "တီနီရိုက်",
+      "away": "စူတာ",
+      "bodyOdds": "1+70",
+      "goalTotalOdds": "2-90",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 10,
+      "fixtureId": "fc-20261115-10",
+      "home": "ဂရန်နာဒါ",
+      "away": "လက်စ်ပါးမက်စ်",
+      "bodyOdds": "-80",
+      "goalTotalOdds": "3+90",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 11,
+      "fixtureId": "fc-20261115-11",
+      "home": "အီဘာ",
+      "away": "ကာဒစ်",
+      "bodyOdds": "1+25",
+      "goalTotalOdds": "3+65",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 12,
+      "fixtureId": "fc-20261115-12",
+      "home": "အဲဒန်စီ",
+      "away": "စာဘတ်ဒယ်",
+      "bodyOdds": "-35",
+      "goalTotalOdds": "2-25",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 13,
+      "fixtureId": "fc-20261115-13",
+      "home": "မက်စ်ထရစ်",
+      "away": "ဗစ်တက်စ်",
+      "bodyOdds": "-55",
+      "goalTotalOdds": "3+25",
+      "previewStatus": "Original current-day verified-form editorial",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 14,
+      "fixtureId": "fc-20261115-14",
+      "home": "အာမာရန်တီ",
+      "away": "ဖယ်ဂူရက်စ်",
+      "bodyOdds": "-35",
+      "goalTotalOdds": "2-20",
+      "previewStatus": "pending-source-verification",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 15,
+      "fixtureId": "fc-20261115-15",
+      "home": "တွန်ဒီလာ",
+      "away": "ဖာရန်စီ",
+      "bodyOdds": "-80",
+      "goalTotalOdds": "2-65",
+      "previewStatus": "pending-source-verification",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 16,
+      "fixtureId": "fc-20261115-16",
+      "home": "ပေါ်တီမိုနန်စီ",
+      "away": "အကိုတ်ဒယ်မီရာ",
+      "bodyOdds": "-40",
+      "goalTotalOdds": "2-65",
+      "previewStatus": "pending-source-verification",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 17,
+      "fixtureId": "fc-20261115-17",
+      "home": "ပန်နာဖီးလ်",
+      "away": "လူစစ်တန်နီးယာ",
+      "bodyOdds": "-55",
+      "goalTotalOdds": "2-70",
+      "previewStatus": "pending-source-verification",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 18,
+      "fixtureId": "fc-20261115-18",
+      "home": "လိုင်ဇို",
+      "away": "ချဗက်စ်",
+      "bodyOdds": "-90",
+      "goalTotalOdds": "2-100",
+      "previewStatus": "pending-source-verification",
+      "sourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 19,
+      "fixtureId": "fc-20261115-19",
+      "home": "ဗန်လို",
+      "away": "အိမ့်ဟိုဗင်",
+      "bodyOdds": "1+10",
+      "goalTotalOdds": "3-55",
+      "previewStatus": null,
+      "sourceDiscrepancy": "PDF prints Portugal league and 1:30 AM; KNVB and ESPN verify Netherlands and 2026-11-15 1:30 AM, already finished"
+    }
+  ],
+  "rollbackCommit": "9630d980f2e3af4a3199b53bfdb895ca4d964fe7",
+  "status": "PARTIAL candidate",
+  "publicationGaps": [
+    "Five Portugal previews: official fixture verified, detailed recent form/standings disagree between accessible sources or access denied; pending fact audit",
+    "Belarus-Albania 1X2 unavailable from selected source; fields left null with explicit reason",
+    "Browser PNG/ZIP verification pending; local Chromium launch denied socket permission",
+    "Existing BCF suspension causes two historical seven-brand regression assertions to fail; service preserved suspended"
+  ]
+}
