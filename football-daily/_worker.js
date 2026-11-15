@@ -492,7 +492,20 @@ async function maungSheetApi(request,env){
    return gzJson({error:"မောင်းစာရွက် Row Data မမှန်ပါ (အများဆုံး ၁၅၀ ပွဲ)"},422);
   const clean=rows.map(r=>Object.fromEntries(
    ["time","body","upper","lower","total","league","result","upperIsAway"].map(k=>[k,typeof r[k]==="string"?r[k].trim():r[k]])));
-  const updatedAt=new Date().toISOString(),sheet={date,rows:clean,updatedAt};
+  let gridStyle=null;
+  if(body?.gridStyle!==undefined){
+   const g=body.gridStyle;
+   const range=(v,min,max)=>Number.isSafeInteger(v)&&v>=min&&v<=max;
+   const limits=[[38,90],[80,170],[80,190],[180,480],[65,150],[180,480],[85,200],[140,380]];
+   if(!g||typeof g!=="object"||Array.isArray(g)||
+      typeof g.color!=="string"||!/^#[a-fA-F0-9]{6}$/.test(g.color)||
+      !range(g.border,1,6)||!range(g.rowHeight,52,100)||
+      !Array.isArray(g.widths)||g.widths.length!==8||
+      g.widths.some((v,i)=>!range(v,limits[i][0],limits[i][1])))
+    return gzJson({error:"မောင်းစာရွက် ဒီဇိုင်း Setting မမှန်ပါ"},422);
+   gridStyle={color:g.color,border:g.border,rowHeight:g.rowHeight,widths:g.widths};
+  }
+  const updatedAt=new Date().toISOString(),sheet={date,rows:clean,updatedAt,...(gridStyle?{gridStyle}:{})};
   if(db){
    try{
     await db.prepare(maungSchema).run();
