@@ -450,7 +450,7 @@ async function maungGithubSave(env,date,sheet){
 }
 async function maungSheetApi(request,env){
  const url=new URL(request.url),date=url.searchParams.get("date")||gzDate();
- if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(date)||Number.isNaN(Date.parse(date+"T00:00:00Z")))
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||Number.isNaN(Date.parse(date+"T00:00:00Z")))
   return gzJson({error:"ရက်စွဲ မမှန်ပါ"},400);
  if(!["GET","POST"].includes(request.method))
   return gzJson({error:"Method Not Allowed"},405);
