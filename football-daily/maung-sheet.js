@@ -1,6 +1,9 @@
 "use strict";
 (()=>{
 const $=id=>document.getElementById(id);
+const resultMode=/\/maung-results(?:\.html)?$/.test(location.pathname);
+if(resultMode)document.body.classList.add("ms-results-page");
+let verifiedCount=0;
 
 // Per-browser visual settings. Do not change the secure server-side edit permission.
 const gridColumns=[
@@ -131,7 +134,7 @@ function addEditorCell(tr,r,key,type){const td=make("td"),inp=make(type==="selec
  td.append(inp);tr.append(td);return td;}
 function render(){
  document.getElementById("msExport").classList.toggle("ms-editing",editing);
- $("msTitle").textContent=titleDate(loadedDate);
+ $("msTitle").textContent=resultMode?titleDate(loadedDate).replace("နေ့ပွဲစဉ်များ","နေ့ မောင်းရလဒ် (FT 90′)"):titleDate(loadedDate);
  const view=visible();$("msCount").textContent=view.length+" ပွဲ";$("msRows").replaceChildren();
  if(!view.length){const tr=make("tr"),td=make("td","ms-empty","ရွေးထားသည့် Filter နှင့် ကိုက်ညီသော ပွဲမရှိပါ");td.colSpan=8;tr.append(td);$("msRows").append(tr);}
  for(let i=0;i<view.length;i++){
@@ -155,7 +158,7 @@ function render(){
   }
   $("msRows").append(tr);
  }
- $("msEdit").hidden=editing;$("msAdd").hidden=!editing;$("msSave").hidden=!editing;$("msCancel").hidden=!editing;$("msSave").textContent="✓ Website ပေါ် သိမ်းရန်";
+ $("msEdit").hidden=resultMode||editing;$("msAdd").hidden=resultMode||!editing;$("msSave").hidden=resultMode||!editing;$("msCancel").hidden=resultMode||!editing;$("msSave").textContent="✓ Website ပေါ် သိမ်းရန်";
  if(!editing)requestAnimationFrame(fitSheetText);
 }
 function fitSheetText(){
@@ -178,8 +181,68 @@ function status(msg,isError=false){$("msStatus").textContent=msg;$("msStatus").s
 function importOdds(data){return (Array.isArray(data.matches)?data.matches:[]).map((m,i)=>{
  const home=String(m.homeDisplay||m.home||""),away=String(m.awayDisplay||m.away||""),upper=String(m.upperTeam||home);
  const upperIsAway=upper===away||upper!==home&&upper.toLowerCase()===String(m.away||"").toLowerCase();
- return {id:"odds-"+i,time:timeFrom24(m.kickoff||m.sourceKickoff||m.kickoffDisplay),body:String(m.bodyOdds||""),upper:upperIsAway?away:home,lower:upperIsAway?home:away,total:String(m.goalTotalOdds||""),result:"",league:String(m.leagueDisplay||m.league||""),upperIsAway};
+ return {id:"odds-"+i,fixtureId:String(m.fixtureId||"").slice(0,90),time:timeFrom24(m.kickoff||m.sourceKickoff||m.kickoffDisplay),body:String(m.bodyOdds||""),upper:upperIsAway?away:home,lower:upperIsAway?home:away,total:String(m.goalTotalOdds||""),result:"",league:String(m.leagueDisplay||m.league||""),upperIsAway};
  });}
+
+/* Verified 90-minute results for the owner's saved Maung rows.
+ * Never generate scores, never use a draft, and do not alter the saved original rows.
+ * The archived result must be published, FT, sourced and verification-dated.
+ */
+const resultName=value=>String(value||"").normalize("NFC").toLowerCase()
+ .replace(/\(\s*h\s*\)/gi,"").replace(/[＊*]/g,"")
+ .replace(/[\s\u200b\u200c\u200d\ufeff]+/g,"").trim();
+function reliableFT(match){
+ if(!match||match.status!=="finished"||!match.resultSourceUrl||!match.resultVerifiedDate)return "";
+ const raw=match.resultPeriod==="AET"||match.resultPeriod==="PEN"||match.resultPeriod==="penalties"
+   ?match.regulationScore:match.finalScore;
+ const score=String(raw||"").trim().match(/^(\d{1,2})\s*[-:]\s*(\d{1,2})$/);
+ return score?score[1]+"-"+score[2]:"";
+}
+function findVerifiedMatch(row,archive){
+ const exactId=String(row.fixtureId||"");
+ if(exactId){
+  const idMatches=archive.filter(m=>m.fixtureId===exactId);
+  return idMatches.length===1?idMatches[0]:null;
+ }
+ // Backward-compatible fallback for sheets saved before fixtureId was retained.
+ // Exact pair of team display names only. Do not infer by table position.
+ const upper=resultName(row.upper),lower=resultName(row.lower);
+ if(!upper||!lower)return null;
+ const candidates=archive.filter(m=>{
+  const home=resultName(m.homeDisplay||m.home),away=resultName(m.awayDisplay||m.away);
+  return (home===upper&&away===lower)||(home===lower&&away===upper);
+ });
+ if(candidates.length===1)return candidates[0];
+ const byClock=candidates.filter(m=>String(m.kickoffDisplay||"").trim().toUpperCase()===String(row.time||"").trim().toUpperCase());
+ return byClock.length===1?byClock[0]:null;
+}
+async function populateVerifiedResults(date){
+ verifiedCount=0;
+ if(!rows.length)return status("ဤရက်စွဲအတွက် Website ပေါ် သိမ်းထားသော မောင်းစာရွက် မရှိသေးပါ။ မူရင်း မောင်းစာရွက်ကို အရင် Save လုပ်ပါ။",true);
+ let archive;
+ try{
+  const response=await fetch("./data/archive/"+encodeURIComponent(date)+".json",{cache:"no-store"});
+  if(!response.ok)throw Error("အတည်ပြု ဂိုးရလဒ်ဖိုင် မရသေးပါ");
+  archive=await response.json();
+  if(archive.reportDate!==date||archive.published!==true||!Array.isArray(archive.matches))throw Error("ဤရက်စွဲအတွက် အတည်ပြုပြီး Archive မရှိသေးပါ");
+ }catch(e){
+  rows=rows.map(r=>({...r,result:"—"}));
+  return status("မောင်းစာရွက်၏ ပွဲ/ကြေး/အစီအစဉ်ကို သိမ်းထားသည့်အတိုင်း ပြထားပါတယ်။ "+e.message+"။ FT ဂိုးရလဒ်ကို မခန့်မှန်းပါ။",true);
+ }
+ rows=rows.map(r=>{
+  const m=findVerifiedMatch(r,archive.matches),score=reliableFT(m);
+  if(!score)return {...r,result:"—"};
+  const [home,away]=score.split("-");
+  let awayFirst=Boolean(r.upperIsAway);
+  if(!r.fixtureId&&m){
+   awayFirst=resultName(r.upper)===resultName(m.awayDisplay||m.away);
+  }
+  verifiedCount++;
+  return {...r,result:awayFirst?away+"-"+home:home+"-"+away};
+ });
+ status("✓ "+verifiedCount+"/"+rows.length+" ပွဲ · အတည်ပြုထားသော မိနစ် ၉၀ FT ရလဒ်များ ဖြည့်ထားပါသည်။ မပြီးသေး/အတည်မပြုရသေးသောပွဲ = —");
+}
+
 async function load(){
  const date=$("msDate").value;if(!/^\d{4}-\d{2}-\d{2}$/.test(date))return;
  loadedDate=date;editing=false;canEdit=false;status("စာရင်းဖွင့်နေသည်…");
@@ -187,6 +250,7 @@ async function load(){
  try{const r=await fetch("/api/maung-sheet?date="+encodeURIComponent(date),{cache:"no-store",credentials:"same-origin"});const j=await r.json();if(!r.ok)throw Error(j.error||"Server မရပါ");server=j.sheet;canEdit=Boolean(j.canEdit);if(j.warning)warning=j.warning;}
  catch(e){warning=e.message;}
  if(server?.rows){rows=clone(server.rows);status("Website ပေါ်တွင် သိမ်းထားသော မောင်းစာရွက်ကို ဖွင့်ပြီးပါပြီ။");}
+ else if(resultMode){rows=[];status("မူရင်း မောင်းစာရွက်ကို Website ပေါ် အရင် Save လုပ်ရန်လိုပါသည်။",true);}
  else if(date===firstDate){rows=clone(sample);status("၁၃.၁၁.၂၀၂၆ နမူနာ ၂၉ ပွဲ ဖွင့်ပြီးပါပြီ။"+(warning?" Database: "+warning:""));}
  else{
   try{const res=await fetch("./data/odds/"+date+".json",{cache:"no-store"});if(!res.ok)throw Error("စာရင်းမရှိ");rows=importOdds(await res.json());status("လက်ရှိ ပေါက်ကြေးဖိုင်မှ စတင်ဖွင့်ထားပါသည်။ သိမ်းပြီးမှ သီးခြား မောင်းစာရွက် ဖြစ်ပါမည်။"+(warning?" Server: "+warning:""));}
@@ -194,12 +258,15 @@ async function load(){
  }
  savedRows=clone(rows);showingDraft=false;
  if(server?.gridStyle){gridStyle=cleanGridStyle(server.gridStyle);updateGridReadouts();applyGridStyle();try{localStorage.setItem(gridStorageKey,JSON.stringify(gridStyle));}catch{}}
- const local=localStorage.getItem(draftKey(date));if(local){try{let d=JSON.parse(local);if(Array.isArray(d.rows)&&confirm("ဤစက်တွင် သိမ်းထားသော မောင်းစာရွက် Draft ကို ဆက်ပြင်မည်လား?")){rows=d.rows;editing=true;showingDraft=true;status("မထုတ်ဝေရသေးသော Draft ကို ဖွင့်ထားပါသည်။");}}catch{}}
+ const local=resultMode?null:localStorage.getItem(draftKey(date));if(local){try{let d=JSON.parse(local);if(Array.isArray(d.rows)&&confirm("ဤစက်တွင် သိမ်းထားသော မောင်းစာရွက် Draft ကို ဆက်ပြင်မည်လား?")){rows=d.rows;editing=true;showingDraft=true;status("မထုတ်ဝေရသေးသော Draft ကို ဖွင့်ထားပါသည်။");}}catch{}}
+ if(resultMode)await populateVerifiedResults(date);
  $("msLeague").value="";$("msSearch").value="";$("msMarket").value="all";options();render();
  
 }
 const requestedDate=new URLSearchParams(location.search).get("date");
-$("msDate").value=/^\d{4}-\d{2}-\d{2}$/.test(requestedDate||"")?requestedDate:day();
+const previousDay=()=>{const d=dd(day());d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);};
+$("msDate").value=/^\d{4}-\d{2}-\d{2}$/.test(requestedDate||"")?requestedDate:(resultMode?previousDay():day());
+if(resultMode&&$("msRefreshResults"))$("msRefreshResults").addEventListener("click",load);
 $("msDate").addEventListener("change",load);
 ["msLeague","msMarket","msSearch"].forEach(id=>$(id).addEventListener(id==="msSearch"?"input":"change",render));
 $("msEdit").addEventListener("click",()=>{editing=true;render();status("အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် တိုက်ရိုက် သိမ်းနိုင်ပါသည်။");});
@@ -263,6 +330,7 @@ async function exportSheet(part="all"){
   const selected=visible(),split=Math.ceil(selected.length/2);
   const start=part==="second"?split:0,end=part==="first"?split:selected.length;
   if(!selected.length||end<=start)throw Error("ရွေးထားသော ပွဲမရှိပါ");
+  if(resultMode&&verifiedCount===0)throw Error("အတည်ပြု FT ဂိုးရလဒ် မရသေးပါ။ ရလဒ်အတည်ပြုပြီးမှ Download လုပ်ပါ။");
   const paper=$("msExport");if(paper.getBoundingClientRect().height>12000)throw Error("စာရွက် အလွန်ရှည်နေပါသည်");
   const canvas=await html2canvas(paper,{
    backgroundColor:"#ffffff",scale:part==="all"?2.5:3,useCORS:false,logging:false,
@@ -299,7 +367,7 @@ async function exportSheet(part="all"){
   const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
   if(!blob||blob.size===0)throw Error("HD PNG ဖိုင်မရပါ");
   const a=document.createElement("a"),url=URL.createObjectURL(blob);
-  a.href=url;a.download="Future-Code-Maung-Sheet-"+loadedDate+(part==="all"?"":part==="first"?"-Part-1":"-Part-2")+".png";
+  a.href=url;a.download=(resultMode?"Future-Code-Maung-Results-":"Future-Code-Maung-Sheet-")+loadedDate+(part==="all"?"":part==="first"?"-Part-1":"-Part-2")+".png";
   document.body.append(a);a.click();a.remove();
   setTimeout(()=>URL.revokeObjectURL(url),1000);
   status("✓ "+(part==="all"?"ဇယားအပြည့်":part==="first"?"အပေါ်ပိုင်း":"အောက်ပိုင်း")+" HD PNG ပြုလုပ်ပြီးပါပြီ။");
