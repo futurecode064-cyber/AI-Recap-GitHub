@@ -106,3 +106,29 @@ button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-deco
 .ms-paper .ms-sheet-content > .ms-paper-heading{box-sizing:border-box;width:100%!important}
 .ms-paper .ms-scroll{width:100%!important;margin:0!important;overflow-x:auto!important;overflow-y:hidden!important}
 @media print{.ms-paper .ms-scroll{overflow:visible!important}.ms-paper .ms-sheet-content{width:var(--ms-inner-width,1240px)!important}}
+
+/* User-editable sheet colors: shared across daily sheet, FT results, print and PNG. */
+.ms-color-tools{margin:14px 0 4px;padding:15px;background:#102a4a;border:1px solid #718aad;border-radius:11px}
+.ms-color-tools h2{font-size:16px;font-weight:850;color:#f8d17d;margin:0 0 8px}
+.ms-color-tools h3{font-size:14px;color:#f9dfae;margin:16px 0 9px}
+.ms-color-tools p{font-size:12px;line-height:1.8;color:#d2e5fb;margin:0}
+.ms-palette-grid{display:grid;grid-template-columns:repeat(3,minmax(170px,1fr));gap:10px}
+.ms-color-choice{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 11px;background:#183c62;border:1px solid #4b7093;border-radius:7px;font-size:12px;color:#fff;font-weight:700}
+.ms-color-choice span{flex:1}
+.ms-color-choice input[type=color],.ms-header-color-choice input[type=color]{width:48px;height:36px;border:1px solid #aac3e2;border-radius:6px;padding:2px;background:#f3f6fa;cursor:pointer;flex-shrink:0}
+.ms-header-color-grid{display:grid;grid-template-columns:repeat(4,minmax(160px,1fr));gap:11px}
+.ms-header-color-choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;background:#183c62;border:1px solid #4b7093;border-radius:9px;padding:10px}
+.ms-color-preview{grid-column:1/-1;text-align:center;min-height:39px;display:grid;place-items:center;font-weight:850;border:1px solid #9baed0;border-radius:4px;font-size:13px}
+.ms-header-color-choice label{display:grid;justify-items:center;gap:5px;color:#e8f2fb;font-size:11px;font-weight:700}
+.ms-paper{background:var(--ms-paper-bg,#ffffff)!important}
+.ms-paper .ms-paper-heading{background:var(--ms-title-bg,#ffffff)!important;color:var(--ms-title-fg,#101010)!important}
+.ms-paper .ms-table thead th,.ms-paper .ms-table thead th.hot{background:var(--ms-header-bg,#062979)!important;color:var(--ms-header-fg,#ffffff)!important}
+.ms-paper .ms-table tbody tr:nth-child(odd) td{background:var(--ms-row-odd,#ffffff)!important}
+.ms-paper .ms-table tbody tr:nth-child(even) td{background:var(--ms-row-even,#f8f9fc)!important}
+.ms-paper .ms-table tbody tr td{color:var(--ms-body-fg,#111111)!important}
+.ms-paper .ms-table tbody tr td:nth-child(2){color:var(--ms-time-fg,#124d7b)!important}
+.ms-paper .ms-table tbody tr td:nth-child(3),.ms-paper .ms-table tbody tr td:nth-child(7){color:var(--ms-odds-fg,#d41421)!important}
+.ms-paper .ms-table tbody tr td:nth-child(5){color:var(--ms-result-fg,#111111)!important}
+@media(max-width:950px){.ms-palette-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ms-header-color-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.ms-palette-grid,.ms-header-color-grid{grid-template-columns:1fr}}
+.ms-results-page .ms-color-tools{display:none}
