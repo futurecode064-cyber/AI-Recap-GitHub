@@ -193,6 +193,7 @@ async function load(){
   catch{rows=[];status("ဤရက်စွဲအတွက် မောင်းစာရွက် မရှိသေးပါ။"+(warning?" "+warning:""));}
  }
  savedRows=clone(rows);showingDraft=false;
+ if(server?.gridStyle){gridStyle=cleanGridStyle(server.gridStyle);updateGridReadouts();applyGridStyle();try{localStorage.setItem(gridStorageKey,JSON.stringify(gridStyle));}catch{}}
  const local=localStorage.getItem(draftKey(date));if(local){try{let d=JSON.parse(local);if(Array.isArray(d.rows)&&confirm("ဤစက်တွင် သိမ်းထားသော မောင်းစာရွက် Draft ကို ဆက်ပြင်မည်လား?")){rows=d.rows;editing=true;showingDraft=true;status("မထုတ်ဝေရသေးသော Draft ကို ဖွင့်ထားပါသည်။");}}catch{}}
  $("msLeague").value="";$("msSearch").value="";$("msMarket").value="all";options();render();
  
@@ -208,7 +209,7 @@ $("msSave").addEventListener("click",async()=>{
  if(rows.some(r=>!r.time||!r.upper||!r.lower))return status("အချိန်နှင့် အသင်းနှစ်သင်းအမည် ဖြည့်ပါ။",true);
  const btn=$("msSave");btn.disabled=true;status("Website ပေါ် သိမ်းနေသည်…");
  try{
-  const r=await fetch("/api/maung-sheet?date="+encodeURIComponent(loadedDate),{method:"POST",headers:{"Content-Type":"application/json","X-Football-Editor":"1"},credentials:"same-origin",body:JSON.stringify({date:loadedDate,rows})});
+  const r=await fetch("/api/maung-sheet?date="+encodeURIComponent(loadedDate),{method:"POST",headers:{"Content-Type":"application/json","X-Football-Editor":"1"},credentials:"same-origin",body:JSON.stringify({date:loadedDate,rows,gridStyle})});
   const raw=await r.text();let j;try{j=JSON.parse(raw);}catch{throw Error("Server မှ JSON မပြန်ပါ (HTTP "+r.status+")");}
   if(!r.ok){const err=Error(j.error||"သိမ်းမရပါ (HTTP "+r.status+")");err.status=r.status;throw err;}
   localStorage.removeItem(draftKey(loadedDate));savedRows=clone(rows);editing=false;options();render();status(j.storage==="github"?"✓ Production GitHub ထဲမှာ သိမ်းပြီးပါပြီ။ Live Website Update အလိုအလျောက် ရောက်လာပါမည်။ "+rows.length+" ပွဲ":"✓ Website Database ပေါ် သိမ်းပြီးပါပြီ။ "+rows.length+" ပွဲ");
