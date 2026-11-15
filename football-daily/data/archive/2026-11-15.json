@@ -25,8 +25,8 @@
       "upperTeam": "ဘယ်ဂျီယံ",
       "bodyOdds": "-35",
       "goalTotalOdds": "3+20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-50",
+      "currentGoalTotalOdds": "3+50",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -37,8 +37,8 @@
         "upperTeam": "ဘယ်ဂျီယံ",
         "bodyOdds": "-35",
         "goalTotalOdds": "3+20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-50",
+        "currentGoalTotalOdds": "3+50"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "espnEventId": "401861176",
@@ -204,7 +204,8 @@
           "sourceDate": "2026-11-13",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-02",
@@ -227,8 +228,8 @@
       "upperTeam": "ခရိုအေးရှား",
       "bodyOdds": "1=",
       "goalTotalOdds": "3+45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+5",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -239,8 +240,8 @@
         "upperTeam": "ခရိုအေးရှား",
         "bodyOdds": "1=",
         "goalTotalOdds": "3+45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+5",
+        "currentGoalTotalOdds": "3+40"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "espnEventId": "401861178",
@@ -376,7 +377,7 @@
       },
       "homeOdds": 1.5714,
       "drawOdds": 4.1,
-      "awayOdds": 5.0,
+      "awayOdds": 5,
       "totalGoalsLine": 2.5,
       "overOdds": 1.6667,
       "underOdds": 2.15,
@@ -405,7 +406,8 @@
           "sourceUrl": "https://footballpredictions.com/footballpredictions/nations-league-predictions/croatia-vs-czech-republic-prediction-15-11-2026/",
           "sourceDate": "2026-11-13"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-03",
@@ -428,8 +430,8 @@
       "upperTeam": "ပြင်သစ်",
       "bodyOdds": "2-15",
       "goalTotalOdds": "4+70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-30",
+      "currentGoalTotalOdds": "4+70",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -440,8 +442,8 @@
         "upperTeam": "ပြင်သစ်",
         "bodyOdds": "2-15",
         "goalTotalOdds": "4+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-30",
+        "currentGoalTotalOdds": "4+70"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "espnEventId": "401861177",
@@ -606,7 +608,8 @@
           "sourceUrl": "https://footballpredictions.com/footballpredictions/nations-league-predictions/france-vs-turkey-prediction-15-11-2026/",
           "sourceDate": "2026-11-13"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-04",
@@ -629,8 +632,8 @@
       "upperTeam": "စပိန်",
       "bodyOdds": "1+60",
       "goalTotalOdds": "3+20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-90",
+      "currentGoalTotalOdds": "3+35",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -641,8 +644,8 @@
         "upperTeam": "စပိန်",
         "bodyOdds": "1+60",
         "goalTotalOdds": "3+20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-90",
+        "currentGoalTotalOdds": "3+35"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "espnEventId": "401861175",
@@ -778,7 +781,7 @@
       },
       "homeOdds": 1.7407,
       "drawOdds": 3.85,
-      "awayOdds": 4.0,
+      "awayOdds": 4,
       "totalGoalsLine": 2.5,
       "overOdds": 1.6061,
       "underOdds": 2.3,
@@ -811,7 +814,8 @@
           "sourceDate": "2026-11-13",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-05",
@@ -834,8 +838,8 @@
       "upperTeam": "မွန်တီနီဂရိုး",
       "bodyOdds": "-55",
       "goalTotalOdds": "2-95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "2-90",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -846,8 +850,8 @@
         "upperTeam": "မွန်တီနီဂရိုး",
         "bodyOdds": "-55",
         "goalTotalOdds": "2-95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "2-90"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "espnEventId": "401861172",
@@ -1013,7 +1017,8 @@
           "sourceDate": "2026-11-14",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-06",
@@ -1036,8 +1041,8 @@
       "upperTeam": "အာမေးနီးယား",
       "bodyOdds": "-40",
       "goalTotalOdds": "2-30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "2-20",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -1048,8 +1053,8 @@
         "upperTeam": "အာမေးနီးယား",
         "bodyOdds": "-40",
         "goalTotalOdds": "2-30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "2-20"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "espnEventId": "401861171",
@@ -1183,7 +1188,7 @@
         "lost": 2,
         "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
       },
-      "homeOdds": 3.0,
+      "homeOdds": 3,
       "drawOdds": 3.15,
       "awayOdds": 2.35,
       "totalGoalsLine": 2.5,
@@ -1215,7 +1220,8 @@
           "sourceDate": "2026-11-15",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-07",
@@ -1238,8 +1244,8 @@
       "upperTeam": "အယ်ဘေးနီးယား",
       "bodyOdds": "1+90",
       "goalTotalOdds": "2-30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-90",
+      "currentGoalTotalOdds": "2-10",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -1250,8 +1256,8 @@
         "upperTeam": "အယ်ဘေးနီးယား",
         "bodyOdds": "1+90",
         "goalTotalOdds": "2-30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-90",
+        "currentGoalTotalOdds": "2-10"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "espnEventId": "401861173",
@@ -1419,7 +1425,8 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "venueNote": "Neutral venue, Budapest; Belarus is designated home team"
+      "venueNote": "Neutral venue, Budapest; Belarus is designated home team",
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-08",
@@ -1442,8 +1449,8 @@
       "upperTeam": "ဖင်လန်",
       "bodyOdds": "3-70",
       "goalTotalOdds": "4+20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "4+90",
+      "currentGoalTotalOdds": "4-5",
       "internetPrediction": "4-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -1454,8 +1461,8 @@
         "upperTeam": "ဖင်လန်",
         "bodyOdds": "3-70",
         "goalTotalOdds": "4+20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "4+90",
+        "currentGoalTotalOdds": "4-5"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.nations.png",
       "espnEventId": "401861174",
@@ -1590,8 +1597,8 @@
         "source": "https://www.espn.com/soccer/table/_/league/uefa.nations"
       },
       "homeOdds": 1.025,
-      "drawOdds": 14.0,
-      "awayOdds": 31.0,
+      "drawOdds": 14,
+      "awayOdds": 31,
       "totalGoalsLine": 4.5,
       "overOdds": 2.35,
       "underOdds": 1.5714,
@@ -1620,7 +1627,8 @@
           "sourceUrl": "https://www.sportsmole.co.uk/football/finland/uefa-nations-league/preview/finland-vs-san-marino-prediction-team-news-lineups_609027.html",
           "sourceDate": "2026-11-13"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-09",
@@ -1643,8 +1651,8 @@
       "upperTeam": "တီနီရိုက်",
       "bodyOdds": "1+70",
       "goalTotalOdds": "2-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+65",
+      "currentGoalTotalOdds": "2-90",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -1655,8 +1663,8 @@
         "upperTeam": "တီနီရိုက်",
         "bodyOdds": "1+70",
         "goalTotalOdds": "2-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+65",
+        "currentGoalTotalOdds": "2-90"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
       "espnEventId": "401883113",
@@ -1822,7 +1830,8 @@
           "sourceDate": "2026-11-15",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-10",
@@ -1845,8 +1854,8 @@
       "upperTeam": "ဂရန်နာဒါ",
       "bodyOdds": "-80",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-75",
+      "currentGoalTotalOdds": "2-95",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -1857,8 +1866,8 @@
         "upperTeam": "ဂရန်နာဒါ",
         "bodyOdds": "-80",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "2-95"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
       "espnEventId": "401883116",
@@ -1992,7 +2001,7 @@
         "lost": 5,
         "source": "https://www.espn.com/soccer/table/_/league/esp.2"
       },
-      "homeOdds": 2.0,
+      "homeOdds": 2,
       "drawOdds": 3.4,
       "awayOdds": 3.7,
       "totalGoalsLine": 2.5,
@@ -2027,7 +2036,8 @@
           "sourceDate": "2026-11-15",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-11",
@@ -2050,8 +2060,8 @@
       "upperTeam": "အီဘာ",
       "bodyOdds": "1+25",
       "goalTotalOdds": "3+65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+10",
+      "currentGoalTotalOdds": "3+60",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -2062,8 +2072,8 @@
         "upperTeam": "အီဘာ",
         "bodyOdds": "1+25",
         "goalTotalOdds": "3+65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+10",
+        "currentGoalTotalOdds": "3+60"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
       "espnEventId": "401883117",
@@ -2199,10 +2209,10 @@
       },
       "homeOdds": 1.625,
       "drawOdds": 4.1,
-      "awayOdds": 5.0,
+      "awayOdds": 5,
       "totalGoalsLine": 2.5,
       "overOdds": 1.7407,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883117",
       "oddsVerifiedDate": "2026-11-15",
       "oddsProvider": "DraftKings via ESPN; actual snapshot 2026-11-15",
@@ -2229,7 +2239,8 @@
           "sourceDate": "2026-11-15",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-12",
@@ -2252,8 +2263,8 @@
       "upperTeam": "အဲဒန်စီ",
       "bodyOdds": "-35",
       "goalTotalOdds": "2-25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "2+5",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -2264,8 +2275,8 @@
         "upperTeam": "အဲဒန်စီ",
         "bodyOdds": "-35",
         "goalTotalOdds": "2-25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "2+5"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
       "espnEventId": "401883137",
@@ -2431,7 +2442,8 @@
           "sourceDate": "2026-11-15",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     },
     {
       "fixtureId": "fc-20261115-13",
@@ -2454,8 +2466,8 @@
       "upperTeam": "ဗစ်တက်စ်",
       "bodyOdds": "-55",
       "goalTotalOdds": "3+25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3+20",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
@@ -2466,8 +2478,8 @@
         "upperTeam": "ဗစ်တက်စ်",
         "bodyOdds": "-55",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3+20"
       },
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ned.2.png",
       "espnEventId": "401875847",
@@ -2633,13 +2645,14 @@
           "sourceDate": "2026-11-15",
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
-      }
+      },
+      "currentSourcePDF": "15 စျေး(1).pdf"
     }
   ],
   "noFixturesLeagues": [],
   "reportNotes": [
     "PDF contains 19 rows; 13 sourced previews prepared, five Portugal previews pending. Final PDF row duplicates yesterday completed VVV-Venlo fixture.",
-    "Current odds remain blank; morning PDF only."
+    "Current Myanmar odds updated for 18 source-matched fixtures from 15 စျေး(1).pdf; completed previous-day duplicate stays unchanged."
   ],
   "publicationCompleteness": {
     "status": "PARTIAL",
@@ -2653,5 +2666,8 @@
     "vipTips": 13,
     "oneXtwo": 12,
     "browserDownloads": "pending"
-  }
+  },
+  "currentSourcePDF": "15 စျေး(1).pdf",
+  "currentPricesAvailable": true,
+  "currentSourceRows": 18
 }
