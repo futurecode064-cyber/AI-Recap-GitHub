@@ -465,20 +465,25 @@ async function maungSheetApi(request,env){
  const db=env.GOALZONE_ANALYTICS_DB?.prepare?env.GOALZONE_ANALYTICS_DB:null;
  const maungSchema="CREATE TABLE IF NOT EXISTS fc_main_maung_sheets (sheet_date TEXT PRIMARY KEY, payload TEXT NOT NULL, updated_at TEXT NOT NULL)";
  if(request.method==="GET"){
-  let warning="";
+  let warning="",d1Sheet=null,d1Time=null,githubSheet=null;
   if(db)try{
    await db.prepare(maungSchema).run();
    const saved=await db.prepare("SELECT payload, updated_at FROM fc_main_maung_sheets WHERE sheet_date=?").bind(date).first();
    if(saved){
-    try{return gzJson({sheet:JSON.parse(saved.payload),canEdit:authenticated,updatedAt:saved.updated_at,storage:"d1"});}
-    catch{return gzJson({error:"သိမ်းထားသော မောင်းစာရွက် ဖတ်မရပါ"},500);}
+    const value=JSON.parse(saved.payload);
+    if(!value||!Array.isArray(value.rows))throw Error("Saved Maung sheet is invalid");
+    d1Sheet=value;d1Time=saved.updated_at;
    }
-  }catch{warning="Database ချိတ်ဆက်မှု မအောင်မြင်ပါ။";}
-  try{
-   const fromGithub=await maungGithubRead(env,date);
-   if(fromGithub&&Array.isArray(fromGithub.rows))
-    return gzJson({sheet:fromGithub,canEdit:authenticated,updatedAt:fromGithub.updatedAt||null,storage:"github"});
-  }catch(e){warning=e.message||"GitHub backup ဖတ်မရပါ";}
+  }catch{warning="Database ချိတ်ဆက်မှု/ဖတ်ရှုမှု မအောင်မြင်ပါ။";}
+  // The authenticated owner may have saved to GitHub when the D1 write failed.
+  // Pick the newer persisted revision instead of silently showing stale D1.
+  if(env.FCD_EDITOR_GITHUB_TOKEN)try{
+   const value=await maungGithubRead(env,date);
+   if(value&&Array.isArray(value.rows))githubSheet=value;
+  }catch(e){if(!d1Sheet)warning=e.message||"GitHub backup ဖတ်မရပါ";}
+  if(githubSheet&&(!d1Sheet||String(githubSheet.updatedAt||"")>String(d1Time||"")))
+   return gzJson({sheet:githubSheet,canEdit:authenticated,updatedAt:githubSheet.updatedAt||null,storage:"github"});
+  if(d1Sheet)return gzJson({sheet:d1Sheet,canEdit:authenticated,updatedAt:d1Time,storage:"d1"});
   if(!db&&!env.FCD_EDITOR_GITHUB_TOKEN)
    return gzJson({sheet:null,canEdit:authenticated,warning:"Server တွင် D1 သို့မဟုတ် GitHub Save credential မချိတ်ရသေးပါ",storage:"unavailable"});
   return gzJson({sheet:null,canEdit:authenticated,warning,storage:db?"d1":"github"});
