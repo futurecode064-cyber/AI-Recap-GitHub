@@ -1,6 +1,70 @@
 "use strict";
 (()=>{
 const $=id=>document.getElementById(id);
+
+// Per-browser visual settings. Do not change the secure server-side edit permission.
+const gridColumns=[
+ {name:"No.",cls:"ms-no",min:38,max:90,defaultWidth:49},
+ {name:"အချိန်",cls:"ms-time",min:80,max:170,defaultWidth:100},
+ {name:"ဘော်ဒီ",cls:"ms-body",min:80,max:190,defaultWidth:104},
+ {name:"အပေါ်အသင်း",cls:"ms-upper",min:180,max:480,defaultWidth:300},
+ {name:"ရလဒ်",cls:"ms-result",min:65,max:150,defaultWidth:78},
+ {name:"အောက်အသင်း",cls:"ms-lower",min:180,max:480,defaultWidth:300},
+ {name:"ဂိုးပေါင်း",cls:"ms-total",min:85,max:200,defaultWidth:109},
+ {name:"လိဂ်",cls:"ms-league",min:140,max:380,defaultWidth:200}
+];
+const gridStorageKey="fc-main-maung-grid-style-v1";
+const defaultGridStyle=()=>({color:"#a2aaba",border:1,rowHeight:64,widths:gridColumns.map(x=>x.defaultWidth)});
+const boundNumber=(v,min,max,fallback)=>Number.isFinite(Number(v))?Math.max(min,Math.min(max,Math.round(Number(v)))):fallback;
+function cleanGridStyle(input){
+ const s=defaultGridStyle();
+ if(!input||typeof input!=="object")return s;
+ if(/^#[0-9a-f]{6}$/i.test(String(input.color||"")))s.color=input.color;
+ s.border=boundNumber(input.border,1,6,1);
+ s.rowHeight=boundNumber(input.rowHeight,52,100,64);
+ if(Array.isArray(input.widths))s.widths=gridColumns.map((x,i)=>boundNumber(input.widths[i],x.min,x.max,x.defaultWidth));
+ return s;
+}
+let gridStyle=defaultGridStyle();
+try{gridStyle=cleanGridStyle(JSON.parse(localStorage.getItem(gridStorageKey)||"null"));}catch{}
+function applyGridStyle(){
+ const paper=$("msExport"),table=paper.querySelector(".ms-table");
+ paper.style.setProperty("--ms-grid-color",gridStyle.color);
+ paper.style.setProperty("--ms-grid-weight",gridStyle.border+"px");
+ paper.style.setProperty("--ms-row-height",gridStyle.rowHeight+"px");
+ table.querySelectorAll("colgroup col").forEach((col,i)=>col.style.setProperty("width",gridStyle.widths[i]+"px","important"));
+ const total=gridStyle.widths.reduce((sum,w)=>sum+w,0);
+ for(const prop of ["width","min-width","max-width"])table.style.setProperty(prop,total+"px","important");
+ if(typeof editing!=="undefined"&&!editing)requestAnimationFrame(fitSheetText);
+}
+function saveGridStyle(){try{localStorage.setItem(gridStorageKey,JSON.stringify(gridStyle));}catch{}applyGridStyle();}
+function updateGridReadouts(){
+ $("msGridColor").value=gridStyle.color;
+ $("msGridWeight").value=String(gridStyle.border);
+ $("msGridWeightValue").textContent=gridStyle.border+" px";
+ $("msRowHeight").value=String(gridStyle.rowHeight);
+ $("msRowHeightValue").textContent=gridStyle.rowHeight+" px";
+ gridColumns.forEach((x,i)=>{
+  const input=$("msColumn"+i),out=$("msColumnValue"+i);
+  if(input)input.value=String(gridStyle.widths[i]);
+  if(out)out.textContent=gridStyle.widths[i]+" px";
+ });
+}
+function initGridControls(){
+ const holder=$("msColumnWidths");
+ gridColumns.forEach((x,i)=>{
+  const label=document.createElement("label"),title=document.createElement("span"),slider=document.createElement("input"),out=document.createElement("output");
+  title.textContent=x.name;slider.type="range";slider.id="msColumn"+i;slider.min=x.min;slider.max=x.max;slider.step="1";
+  out.id="msColumnValue"+i;label.append(title,slider,out);holder.append(label);
+  slider.addEventListener("input",()=>{gridStyle.widths[i]=boundNumber(slider.value,x.min,x.max,x.defaultWidth);updateGridReadouts();saveGridStyle();});
+ });
+ $("msGridColor").addEventListener("input",e=>{gridStyle.color=e.target.value;updateGridReadouts();saveGridStyle();});
+ $("msGridWeight").addEventListener("input",e=>{gridStyle.border=boundNumber(e.target.value,1,6,1);updateGridReadouts();saveGridStyle();});
+ $("msRowHeight").addEventListener("input",e=>{gridStyle.rowHeight=boundNumber(e.target.value,52,100,64);updateGridReadouts();saveGridStyle();});
+ $("msStyleReset").addEventListener("click",()=>{gridStyle=defaultGridStyle();updateGridReadouts();saveGridStyle();});
+ updateGridReadouts();applyGridStyle();
+}
+
 const firstDate="2026-11-13";
 const sample=[
 ["7:30 PM","1+70","ကိုမိုရိုစ်","ကွန်ဂို","2=","Africa Cup",false],
@@ -89,7 +153,7 @@ function render(){
   }
   $("msRows").append(tr);
  }
- $("msEdit").hidden=editing;$("msLogin").hidden=canEdit;$("msAdd").hidden=!editing;$("msSave").hidden=!editing;$("msCancel").hidden=!editing;
+ $("msEdit").hidden=editing;$("msAdd").hidden=!editing;$("msSave").hidden=!editing;$("msCancel").hidden=!editing;$("msSave").textContent=canEdit?"✓ Website ပေါ် သိမ်းရန်":"✓ Draft သိမ်းရန်";
  if(!editing)requestAnimationFrame(fitSheetText);
 }
 function fitSheetText(){
@@ -129,17 +193,17 @@ async function load(){
  savedRows=clone(rows);showingDraft=false;
  const local=localStorage.getItem(draftKey(date));if(local){try{let d=JSON.parse(local);if(Array.isArray(d.rows)&&confirm("ဤစက်တွင် သိမ်းထားသော မောင်းစာရွက် Draft ကို ဆက်ပြင်မည်လား?")){rows=d.rows;editing=true;showingDraft=true;status("မထုတ်ဝေရသေးသော Draft ကို ဖွင့်ထားပါသည်။");}}catch{}}
  $("msLeague").value="";$("msSearch").value="";$("msMarket").value="all";options();render();
- if(!canEdit&&!warning)status($("msStatus").textContent+" · Owner ပြင်ဆင်ရန် Login ဝင်ပါ။");
+ if(!canEdit&&!warning)status($("msStatus").textContent+" · ပြင်ဆင်မှုကို ဤ Browser ထဲ Draft သိမ်းပြီး PNG ထုတ်နိုင်ပါသည်။");
 }
 const requestedDate=new URLSearchParams(location.search).get("date");
 $("msDate").value=/^\d{4}-\d{2}-\d{2}$/.test(requestedDate||"")?requestedDate:day();
 $("msDate").addEventListener("change",load);
 ["msLeague","msMarket","msSearch"].forEach(id=>$(id).addEventListener(id==="msSearch"?"input":"change",render));
-$("msEdit").addEventListener("click",()=>{editing=true;render();status(canEdit?"အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် သိမ်းပါ။":"Draft အနေနဲ့ ပြင်နိုင်ပါပြီ။ Website ပေါ် အတည်သိမ်းရန် Owner Login လိုအပ်ပါသည်။");});
+$("msEdit").addEventListener("click",()=>{editing=true;render();status(canEdit?"အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် သိမ်းပါ။":"Draft အနေနဲ့ ပြင်နိုင်ပါပြီ။ Website ပေါ် အတည်သိမ်းရန် သီးသန့်ခွင့်ပြုချက်ရှိရန် လိုအပ်ပါသည်။");});
 $("msAdd").addEventListener("click",()=>{$("msLeague").value="";$("msMarket").value="all";$("msSearch").value="";rows.push({id:"new-"+Date.now(),time:"11:30 PM",body:"",upper:"",lower:"",total:"",result:"",league:"",upperIsAway:false});options();render();draft();});
 $("msCancel").addEventListener("click",()=>{if(!confirm("မထုတ်ဝေရသေးသော ပြင်ဆင်မှုများကို ပယ်ဖျက်မည်လား?"))return;rows=clone(savedRows);editing=false;localStorage.removeItem(draftKey(loadedDate));options();render();status("ပြင်ဆင်မှု မသိမ်းဘဲ မူလစာရင်းသို့ ပြန်ထားပါသည်။");});
 $("msSave").addEventListener("click",async()=>{
- if(!canEdit){draft();$("msLogin").hidden=false;return status("Draft ကို ယခု Browser ထဲ သိမ်းထားပြီးပါပြီ။ Website ပေါ် အတည်သိမ်းရန် Owner Login ဝင်ပါ။",true);}
+ if(!canEdit){draft();return status("✓ Draft ကို ဤ Browser ထဲ သိမ်းထားပြီးပါပြီ။ HD PNG ထုတ်နိုင်ပါသည်။ Website ပေါ် အတည်သိမ်းခြင်းကို လုံခြုံရေးအတွက် ကန့်သတ်ထားပါသည်။");}
  if(rows.some(r=>!r.time||!r.upper||!r.lower))return status("အချိန်နှင့် အသင်းနှစ်သင်းအမည် ဖြည့်ပါ။",true);
  const btn=$("msSave");btn.disabled=true;status("Website ပေါ် သိမ်းနေသည်…");
  try{
@@ -174,6 +238,7 @@ for(const [place,id,removeId] of [["top","msTopUpload","msTopRemove"],["bottom",
 }
 renderBanners();
 if(new URLSearchParams(location.search).has("download-center"))document.body.classList.add("ms-embedded");
+initGridControls();
 
 $("msPrint").addEventListener("click",()=>window.print());
 
@@ -197,17 +262,18 @@ async function exportSheet(part="all"){
    windowWidth:Math.max(1440,document.documentElement.clientWidth),
    onclone:doc=>{
     const p=doc.getElementById("msExport");
-    p.style.setProperty("width","1280px","important");
+    p.style.setProperty("width",Math.max(1280,gridStyle.widths.reduce((sum,w)=>sum+w,0)+40)+"px","important");
     p.style.setProperty("max-width","none","important");
     p.style.setProperty("overflow","visible","important");
     const scroll=p.querySelector(".ms-scroll");
     scroll.style.setProperty("overflow","visible","important");
     scroll.style.setProperty("overflow-x","visible","important");
     scroll.style.setProperty("overflow-y","visible","important");
-    scroll.style.setProperty("width","1240px","important");
+    scroll.style.setProperty("width",gridStyle.widths.reduce((sum,w)=>sum+w,0)+"px","important");
     const table=p.querySelector(".ms-table");
-    table.style.setProperty("width","1240px","important");
-    table.style.setProperty("min-width","1240px","important");
+    table.style.setProperty("width",gridStyle.widths.reduce((sum,w)=>sum+w,0)+"px","important");
+    table.style.setProperty("min-width",gridStyle.widths.reduce((sum,w)=>sum+w,0)+"px","important");
+    table.style.setProperty("max-width",gridStyle.widths.reduce((sum,w)=>sum+w,0)+"px","important");
     if(part!=="all"){
      const trs=Array.from(doc.querySelectorAll("#msRows tr"));
      trs.forEach((tr,i)=>{if(i<start||i>=end)tr.remove();});
