@@ -425,29 +425,28 @@ async function handleRequest(request, env) {
 
 /* Main Maung Sheet: signed Main-site session writes.
  * Use D1 when bound. If D1 is absent or fails, persist in the existing owner
- * GitHub publication repository and trigger the existing production sync.
+ * production GitHub branch; the guarded UI-only sync is not used.
  * No unauthenticated writes; never expose GitHub credentials to the browser.
  */
 const MAUNG_GITHUB_DIR="football-daily/data/maung-sheets/";
+const MAUNG_PRODUCTION_BRANCH="football-daily-render";
 async function maungGithubRead(env,date){
  if(!env.FCD_EDITOR_GITHUB_TOKEN)return null;
- return editorFile(env,EDITOR_SOURCE,MAUNG_GITHUB_DIR+date+".json","main",true);
+ return editorFile(env,EDITOR_DELIVERY,MAUNG_GITHUB_DIR+date+".json",MAUNG_PRODUCTION_BRANCH,true);
 }
 async function maungGithubSave(env,date,sheet){
  if(!env.FCD_EDITOR_GITHUB_TOKEN)throw new Error("Cloudflare မှာ D1 Database သို့မဟုတ် GitHub Editor Token ချိတ်ထားရန် လိုအပ်ပါသည်");
- const headRef=await editorGithub(env,EDITOR_SOURCE,"git/ref/heads/main");
- const head=await editorGithub(env,EDITOR_SOURCE,"git/commits/"+headRef.object.sha);
- const tree=await editorGithub(env,EDITOR_SOURCE,"git/trees","POST",{
+ const headRef=await editorGithub(env,EDITOR_DELIVERY,"git/ref/heads/"+MAUNG_PRODUCTION_BRANCH);
+ const head=await editorGithub(env,EDITOR_DELIVERY,"git/commits/"+headRef.object.sha);
+ const tree=await editorGithub(env,EDITOR_DELIVERY,"git/trees","POST",{
   base_tree:head.tree.sha,
   tree:[{path:MAUNG_GITHUB_DIR+date+".json",mode:"100644",type:"blob",content:JSON.stringify(sheet,null,2)+"\n"}]
  });
- const commit=await editorGithub(env,EDITOR_SOURCE,"git/commits","POST",{
+ const commit=await editorGithub(env,EDITOR_DELIVERY,"git/commits","POST",{
   message:"Save Maung sheet "+date,tree:tree.sha,parents:[headRef.object.sha]
  });
- await editorGithub(env,EDITOR_SOURCE,"git/refs/heads/main","PATCH",{sha:commit.sha,force:false});
- let dispatched=true;
- try{await editorDispatch(env);}catch{dispatched=false;}
- return {commit:commit.sha,dispatched};
+ await editorGithub(env,EDITOR_DELIVERY,"git/refs/heads/"+MAUNG_PRODUCTION_BRANCH,"PATCH",{sha:commit.sha,force:false});
+ return {commit:commit.sha};
 }
 async function maungSheetApi(request,env){
  const url=new URL(request.url),date=url.searchParams.get("date")||gzDate();
@@ -509,8 +508,8 @@ async function maungSheetApi(request,env){
   if(!env.FCD_EDITOR_GITHUB_TOKEN)
    return gzJson({error:"Website Save အတွက် Cloudflare D1 Database သို့မဟုတ် GitHub Editor Token တစ်ခု လိုအပ်ပါသည်"},503);
   const saved=await maungGithubSave(env,date,sheet);
-  return gzJson({ok:true,updatedAt,rows:clean.length,storage:"github",syncQueued:saved.dispatched,commit:saved.commit,
-    message:saved.dispatched?"GitHub တွင် သိမ်းပြီး Production Sync ခေါ်ထားပါပြီ။":"GitHub တွင် သိမ်းပြီးပါပြီ။ Production Sync ခေါ်မရသေးပါ။"},202);
+  return gzJson({ok:true,updatedAt,rows:clean.length,storage:"github",commit:saved.commit,
+    message:"Production GitHub Branch တွင် သိမ်းပြီးပါပြီ။ Cloudflare Pages update ဆက်လက်လုပ်ဆောင်ပါမည်။"},202);
  }catch(e){
   return gzJson({error:e.status===409||e.status===422?"တစ်ချိန်တည်း ပြိုင်ပြင်နေပါသည်။ ပြန်စမ်းပါ။":"မောင်းစာရွက် Website Save မအောင်မြင်ပါ။ "+String(e?.message||"").slice(0,160)},e.status===409||e.status===422?409:503);
  }
