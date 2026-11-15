@@ -505,6 +505,11 @@ async function maungSheetApi(request,env){
     return gzJson({error:"မောင်းစာရွက် ဒီဇိုင်း Setting မမှန်ပါ"},422);
    gridStyle={color:g.color,border:g.border,rowHeight:g.rowHeight,widths:g.widths};
   }
+  // Keep the canonical fixture identity when the owner edits display names or odds.
+  // This links the next-morning results to the originally saved fixture, not the edited label.
+  clean.forEach((row,i)=>{const id=rows[i].fixtureId;
+   if(typeof id==="string"&&/^[A-Za-z0-9_.:-]{1,90}$/.test(id))row.fixtureId=id;
+  });
   const updatedAt=new Date().toISOString(),sheet={date,rows:clean,updatedAt,...(gridStyle?{gridStyle}:{})};
   if(db){
    try{
