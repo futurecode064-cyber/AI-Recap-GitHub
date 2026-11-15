@@ -1,5 +1,6 @@
 plugins { id("com.android.application") }
 android {
+    buildFeatures { buildConfig = true }
     namespace = "mm.futurecode.aitools"
     compileSdk = 35
     defaultConfig { applicationId = "mm.futurecode.aitools"; minSdk = 26; targetSdk = 35; versionCode = 1; versionName = "1.0.0" }
