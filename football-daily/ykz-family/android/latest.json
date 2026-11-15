@@ -1,11 +1,11 @@
 {
   "packageName": "com.futurecode.ykzsoccertips",
-  "versionCode": 6,
-  "versionName": "1.2.3",
-  "sha256": "0bfe73423f4c6e54c0a5a81bf8028c9f752feed8a75909247533848d25bdf852",
+  "versionCode": 7,
+  "versionName": "1.2.4",
+  "sha256": "4f94af825e271d75afd389a4f60bbf3132c1abc9d24bb5edf230738f307ce514",
   "certificateSha256": "98407044295dba61390bf38c452aa2d8dc8bcfc7390261680bbccbf30d6a66a4",
-  "apkUrl": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/football-noti-gallery-20261104/FC-ykz-v1.2.3-Noti-Gallery.apk",
-  "publishedAt": "2026-11-04",
-  "releaseNotes": "Notification နှင့် Gallery ပြင်ဆင်ချက်များ။ လက်ရှိ App နှင့် signing certificate တူမှသာ အပေါ်မှ Update တင်နိုင်ပါသည်။",
+  "apkUrl": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/journal-compatible-update-20261115/FC-ykz-v1.2.4-UPDATE.apk",
+  "publishedAt": "2026-11-15",
+  "releaseNotes": "APK Update download နှင့် install ပြင်ဆင်ချက်၊ version မှန်ကန်စွာပြခြင်း၊ မလိုအပ်သော boot polling ရပ်ခြင်း။",
   "minSdkVersion": 26
 }

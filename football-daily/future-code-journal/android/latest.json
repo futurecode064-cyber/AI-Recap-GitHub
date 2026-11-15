@@ -1,11 +1,11 @@
 {
   "packageName": "mm.futurecode.sportsjournal",
-  "versionCode": 6,
-  "versionName": "1.0.5",
-  "sha256": "dbf9359e729e7f7af4435cf664ed250a65cce9998e7665100425333de52e80d2",
+  "versionCode": 7,
+  "versionName": "1.0.6",
+  "sha256": "d8ef9a00c3dc21c3b5b7490b211e86fe68d5f530e9ad6e4c1f59f4f03f5fb761",
   "certificateSha256": "98407044295dba61390bf38c452aa2d8dc8bcfc7390261680bbccbf30d6a66a4",
-  "apkUrl": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/football-noti-gallery-20261104/FC-goal-v1.0.5-Noti-Gallery.apk",
-  "publishedAt": "2026-11-04",
-  "releaseNotes": "Notification နှင့် Gallery ပြင်ဆင်ချက်များ။ လက်ရှိ App နှင့် signing certificate တူမှသာ အပေါ်မှ Update တင်နိုင်ပါသည်။",
+  "apkUrl": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/journal-compatible-update-20261115/FC-goal-v1.0.6-UPDATE.apk",
+  "publishedAt": "2026-11-15",
+  "releaseNotes": "APK Update download နှင့် install ပြင်ဆင်ချက်၊ version မှန်ကန်စွာပြခြင်း၊ မလိုအပ်သော boot polling ရပ်ခြင်း။",
   "minSdkVersion": 26
 }
