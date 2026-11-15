@@ -153,7 +153,7 @@ function render(){
   }
   $("msRows").append(tr);
  }
- $("msEdit").hidden=editing;$("msAdd").hidden=!editing;$("msSave").hidden=!editing;$("msCancel").hidden=!editing;$("msSave").textContent=canEdit?"✓ Website ပေါ် သိမ်းရန်":"✓ Draft သိမ်းရန်";
+ $("msEdit").hidden=editing;$("msAdd").hidden=!editing;$("msSave").hidden=!editing;$("msCancel").hidden=!editing;$("msSave").textContent="✓ Website ပေါ် သိမ်းရန်";
  if(!editing)requestAnimationFrame(fitSheetText);
 }
 function fitSheetText(){
@@ -193,24 +193,23 @@ async function load(){
  savedRows=clone(rows);showingDraft=false;
  const local=localStorage.getItem(draftKey(date));if(local){try{let d=JSON.parse(local);if(Array.isArray(d.rows)&&confirm("ဤစက်တွင် သိမ်းထားသော မောင်းစာရွက် Draft ကို ဆက်ပြင်မည်လား?")){rows=d.rows;editing=true;showingDraft=true;status("မထုတ်ဝေရသေးသော Draft ကို ဖွင့်ထားပါသည်။");}}catch{}}
  $("msLeague").value="";$("msSearch").value="";$("msMarket").value="all";options();render();
- if(!canEdit&&!warning)status($("msStatus").textContent+" · ပြင်ဆင်မှုကို ဤ Browser ထဲ Draft သိမ်းပြီး PNG ထုတ်နိုင်ပါသည်။");
+ 
 }
 const requestedDate=new URLSearchParams(location.search).get("date");
 $("msDate").value=/^\d{4}-\d{2}-\d{2}$/.test(requestedDate||"")?requestedDate:day();
 $("msDate").addEventListener("change",load);
 ["msLeague","msMarket","msSearch"].forEach(id=>$(id).addEventListener(id==="msSearch"?"input":"change",render));
-$("msEdit").addEventListener("click",()=>{editing=true;render();status(canEdit?"အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် သိမ်းပါ။":"Draft အနေနဲ့ ပြင်နိုင်ပါပြီ။ Website ပေါ် အတည်သိမ်းရန် သီးသန့်ခွင့်ပြုချက်ရှိရန် လိုအပ်ပါသည်။");});
+$("msEdit").addEventListener("click",()=>{editing=true;render();status("အသင်း၊ အချိန်၊ ဘော်ဒီ၊ ဂိုးပေါင်း၊ လိဂ်၊ (H) ကို ပြင်ပြီး Website ပေါ် တိုက်ရိုက် သိမ်းနိုင်ပါသည်။");});
 $("msAdd").addEventListener("click",()=>{$("msLeague").value="";$("msMarket").value="all";$("msSearch").value="";rows.push({id:"new-"+Date.now(),time:"11:30 PM",body:"",upper:"",lower:"",total:"",result:"",league:"",upperIsAway:false});options();render();draft();});
 $("msCancel").addEventListener("click",()=>{if(!confirm("မထုတ်ဝေရသေးသော ပြင်ဆင်မှုများကို ပယ်ဖျက်မည်လား?"))return;rows=clone(savedRows);editing=false;localStorage.removeItem(draftKey(loadedDate));options();render();status("ပြင်ဆင်မှု မသိမ်းဘဲ မူလစာရင်းသို့ ပြန်ထားပါသည်။");});
 $("msSave").addEventListener("click",async()=>{
- if(!canEdit){draft();return status("✓ Draft ကို ဤ Browser ထဲ သိမ်းထားပြီးပါပြီ။ HD PNG ထုတ်နိုင်ပါသည်။ Website ပေါ် အတည်သိမ်းခြင်းကို လုံခြုံရေးအတွက် ကန့်သတ်ထားပါသည်။");}
  if(rows.some(r=>!r.time||!r.upper||!r.lower))return status("အချိန်နှင့် အသင်းနှစ်သင်းအမည် ဖြည့်ပါ။",true);
  const btn=$("msSave");btn.disabled=true;status("Website ပေါ် သိမ်းနေသည်…");
  try{
   const r=await fetch("/api/maung-sheet?date="+encodeURIComponent(loadedDate),{method:"POST",headers:{"Content-Type":"application/json","X-Football-Editor":"1"},credentials:"same-origin",body:JSON.stringify({date:loadedDate,rows})});
   const j=await r.json();if(!r.ok)throw Error(j.error||"သိမ်းမရပါ");
   localStorage.removeItem(draftKey(loadedDate));savedRows=clone(rows);editing=false;options();render();status("✓ Website ပေါ် အတည်တကျ သိမ်းပြီးပါပြီ။ "+rows.length+" ပွဲ");
- }catch(e){draft();status("မသိမ်းနိုင်သေးပါ။ Draft ကို ဒီစက်တွင် ထိန်းထားပါတယ်။ "+e.message,true);}finally{btn.disabled=false;}
+ }catch(e){draft();status("Website ပေါ် မသိမ်းနိုင်သေးပါ။ "+(String(e.message).includes("Login")?"Main Website Login Session သက်တမ်းကုန်နိုင်ပါသည်။ ":e.message+" ")+ "ပြင်ဆင်မှုကို ဤ Browser ထဲ အလိုအလျောက် Draft သိမ်းထားပါသည်။",true);}finally{btn.disabled=false;}
 });
 
 const bannerStorageKey="fc-main-maung-artwork-v1";
