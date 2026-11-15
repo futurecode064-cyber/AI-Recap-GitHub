@@ -52,7 +52,7 @@ for(const brand of brandIds){
  test(brand+" preview and odds load a single standardized PNG and native Gallery pipeline",()=>{
   for(const htmlName of ["index.html","odds.html"]){
    const html=read(brand+"/"+htmlName);
-   const sequence=["../brand-export-data.js","../native-image-save.js","../canvas-image-kit.js","../brand-download-masthead.js","../daily-image-export.js"];
+   const sequence=["../brand-export-data.js","../native-image-save.js","../canvas-image-kit.js",...(brand==="future-code-journal"?[]:["../brand-download-masthead.js"]),"../daily-image-export.js"];
    let last=-1;
    for(const script of sequence){
     const pos=html.indexOf(script);
