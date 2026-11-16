@@ -3,6 +3,7 @@ android {
     buildFeatures { buildConfig = true }
     namespace = "mm.futurecode.aitools"
     compileSdk = 35
+    buildFeatures { buildConfig = true }
     defaultConfig { applicationId = "mm.futurecode.aitools"; minSdk = 26; targetSdk = 35; versionCode = 1; versionName = "1.0.0" }
     buildTypes { release { isMinifyEnabled = false } }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
