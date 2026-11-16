@@ -3,7 +3,12 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/ai-tools-sync.yml', 'scripts/ai_tools_ingest.py', 'scripts/ai_tools_link_monitor.py']
+    paths:
+      - '.github/workflows/ai-tools-sync.yml'
+      - 'scripts/ai_tools_ingest.py'
+      - 'scripts/ai_tools_link_monitor.py'
+      - 'portal/ai-tools/core-tools.json'
+      - 'tests/ai-tools-v2.test.js'
   schedule:
     - cron: '20 20 * * *'
 permissions:
@@ -11,14 +16,11 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: future-code-pages
+  group: ai-tools-catalog-sync
   cancel-in-progress: false
 jobs:
-  ingest-test-deploy:
+  ingest:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     timeout-minutes: 18
     steps:
       - uses: actions/checkout@v4
@@ -32,14 +34,14 @@ jobs:
           node-version: '22'
       - name: Install pinned YAML parser
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
-      - name: Ingest licensed source and preserve 61 hand-curated tools
+      - name: Ingest curated source and licensed open-source index
         run: python scripts/ai_tools_ingest.py --count 1200
-      - name: Check bounded set of public official links
+      - name: Check bounded daily sample of external links
         env:
           GITHUB_TOKEN: ${{ github.token }}
           AI_LINK_CHECK_BATCH: '125'
         run: python scripts/ai_tools_link_monitor.py
-      - name: Check all staged release gates
+      - name: Verify AI directory milestones and baseline portal tests
         run: |
           node tests/ai-tools-v2.test.js
           python scripts/build_portal.py
@@ -49,21 +51,41 @@ jobs:
           node tests/portal.test.js
           node tests/download-tracking.test.js
           node tests/language-apps.test.js
-      - name: Save verified generated catalog and link status to GitHub
+      - name: Save verified generated catalog and link health
         run: |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git add portal/ai-tools/tools.json portal/ai-tools/updates.json portal/ai-tools/link-health.json
           if git diff --cached --quiet; then
-            echo "No catalog or link-health changes"
+            echo "No catalog / link-health changes"
           else
-            git commit -m "chore(ai-tools): sync curated catalog and link health [skip ci]"
+            git commit -m "chore(ai-tools): sync catalog and link health [skip ci]"
             git push origin "HEAD:main"
           fi
+  deploy:
+    needs: ingest
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    timeout-minutes: 15
+    concurrency:
+      group: future-code-pages
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Build portal without disturbing existing apps
+        run: python3 scripts/build_portal.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: portal
-      - name: Deploy Future Code AI Tools with existing student site preserved
-        id: deployment
+      - name: Deploy site after protected environment permits it
         uses: actions/deploy-pages@v4
+        id: deployment
