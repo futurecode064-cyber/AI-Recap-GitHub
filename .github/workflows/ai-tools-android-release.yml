@@ -1,0 +1,67 @@
+name: Future Code AI Tools — Stable Signed Android Release
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  signed-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+      - name: Android SDK
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+      - name: Build unsigned release
+        working-directory: ai-tools-android
+        run: gradle :app:assembleRelease --no-daemon
+      - name: Sign with OWNER-HELD stable signing keystore
+        env:
+          FC_AI_TOOLS_KEYSTORE_B64: ${{ secrets.FC_AI_TOOLS_KEYSTORE_B64 }}
+          FC_AI_TOOLS_STORE_PASSWORD: ${{ secrets.FC_AI_TOOLS_STORE_PASSWORD }}
+          FC_AI_TOOLS_KEY_PASSWORD: ${{ secrets.FC_AI_TOOLS_KEY_PASSWORD }}
+          FC_AI_TOOLS_KEY_ALIAS: ${{ secrets.FC_AI_TOOLS_KEY_ALIAS }}
+        run: |
+          set -euo pipefail
+          for key in FC_AI_TOOLS_KEYSTORE_B64 FC_AI_TOOLS_STORE_PASSWORD FC_AI_TOOLS_KEY_PASSWORD FC_AI_TOOLS_KEY_ALIAS; do
+            if [[ -z "${!key}" ]]; then
+              echo "::error::Stable release signing secrets are not configured. Do not publish debug APKs as production."
+              exit 1
+            fi
+          done
+          umask 077
+          trap 'rm -f /tmp/fc-ai-tools-release.jks' EXIT
+          printf '%s' "$FC_AI_TOOLS_KEYSTORE_B64" | base64 -d > /tmp/fc-ai-tools-release.jks
+          mkdir -p build/signed
+          unsigned="ai-tools-android/app/build/outputs/apk/release/app-release-unsigned.apk"
+          test -s "$unsigned"
+          "$ANDROID_HOME/build-tools/35.0.0/zipalign" -f -p 4 "$unsigned" build/signed/aligned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign \
+            --ks /tmp/fc-ai-tools-release.jks \
+            --ks-key-alias "$FC_AI_TOOLS_KEY_ALIAS" \
+            --ks-pass env:FC_AI_TOOLS_STORE_PASSWORD \
+            --key-pass env:FC_AI_TOOLS_KEY_PASSWORD \
+            --out build/signed/Future-Code-AI-Tools-v1.0.2-release.apk \
+            build/signed/aligned.apk
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify \
+            --verbose --print-certs build/signed/Future-Code-AI-Tools-v1.0.2-release.apk
+          sha256sum build/signed/Future-Code-AI-Tools-v1.0.2-release.apk \
+            | tee build/signed/SHA256SUMS.txt
+          rm -f build/signed/aligned.apk
+      - name: Upload signed APK for EXISTING site publication
+        uses: actions/upload-artifact@v4
+        with:
+          name: Future-Code-AI-Tools-v1.0.2-RELEASE-owner-signed
+          path: |
+            build/signed/Future-Code-AI-Tools-v1.0.2-release.apk
+            build/signed/SHA256SUMS.txt
+          retention-days: 30
