@@ -69,6 +69,42 @@ for item in t.get('items',[]):
     check(item.get('fixtureId') in byid,'Tips contain unknown fixture')
     check(bool(item.get('unavailableReason')) or all(item.get(f) for f in ['score','sourceUrl','sourceName','sourceDate']),'VIP tip lacks provenance')
 check(n.get('date')==str(day),'News is stale');check(len(n.get('items',[]))==10,'News must contain ten items')
+# Goal Zone English mirror: owner's required seventh daily publication route (2026-11-16).
+if day >= date(2026, 11, 16):
+    english_root = a.root / 'goal-zone-english'
+    translation = english_root / 'english-data.js'
+    try:
+        translation_js = translation.read_text(encoding='utf-8')
+        check(f'E.date="{day}"' in translation_js,
+              'Goal Zone English: translations dated differently from main publication')
+        for section, ids in [
+            ('E.preview', [m.get('fixtureId') for m in ms]),
+            ('E.summary', [m.get('fixtureId') for m in ms]),
+            ('E.special', [m.get('fixtureId') for m in choices]),
+            ('ENGLISH_NEWS', [x.get('id') for x in n.get('items', [])]),
+        ]:
+            match = re.search(r'Object\\.assign\\(' + re.escape(section) + r',({.*?})\\);',
+                              translation_js, re.DOTALL)
+            if not match:
+                errors.append(f'Goal Zone English: missing translation section {section}')
+                continue
+            try:
+                records = json.loads(match.group(1))
+                missing = [key for key in ids if key not in records]
+                check(not missing, f'Goal Zone English: {section} missing {missing}')
+                check(not re.search('[\\u1000-\\u109f]', json.dumps(records, ensure_ascii=False)),
+                      f'Goal Zone English: Burmese remains in {section} translations')
+            except ValueError as exc:
+                errors.append(f'Goal Zone English: malformed {section}: {exc}')
+    except OSError as exc:
+        errors.append(f'Goal Zone English: translation file unreadable: {exc}')
+    for english_html in ('index.html', 'odds.html'):
+        try:
+            html = (english_root / english_html).read_text(encoding='utf-8')
+            check('data-football-hold-date' not in html,
+                  f'Goal Zone English: {english_html} still frozen to a historical date')
+        except OSError as exc:
+            errors.append(f'Goal Zone English: {english_html} unreadable: {exc}')
 for item in n.get('items',[]):
     check(bool(item.get('sourceUrl')),'News source missing')
     check(all(item.get(f) for f in ['image','imageCredit','imageCaption','imageSourceUrl','imageLicense']),
