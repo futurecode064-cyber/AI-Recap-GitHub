@@ -1,0 +1,38 @@
+name: AI Tools Existing VPN-Free Gateway Package
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/package_ai_tools_gateway.py'
+      - '.github/workflows/ai-tools-gateway-package.yml'
+      - 'portal/ai-tools/**'
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Package static AI Tools route without GitHub Pages redirects
+        run: python scripts/package_ai_tools_gateway.py
+      - name: Verify ZIP contents and paths
+        run: |
+          python - <<'PY'
+          import zipfile, json
+          z=zipfile.ZipFile('build/future-code-ai-tools-gateway.zip')
+          names=z.namelist()
+          for n in ('ai-tools/index.html','ai-tools/tools.json','ai-tools/app-v2.js','ai-tools/updates.json'):
+              assert n in names, n
+          data=json.loads(z.read('ai-tools/tools.json'))
+          print('ZIP route OK —',len(data['tools']),'tools')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Future-Code-AI-Tools-Existing-Gateway-Package
+          path: build/future-code-ai-tools-gateway.zip
+          retention-days: 30
