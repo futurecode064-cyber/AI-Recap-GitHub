@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": "2026.11.15.1",
-  "updatedAt": "2026-11-15",
+  "revision": "2026.11.16.2",
+  "updatedAt": "2026-11-16",
   "categories": [
     {
       "id": "all",
@@ -12,19 +12,19 @@
     {
       "id": "chat",
       "en": "AI Chat",
-      "my": "AI Chat",
+      "my": "AI Assistant",
       "icon": "💬"
     },
     {
       "id": "image",
-      "en": "AI Images",
+      "en": "Image AI",
       "my": "AI ပုံ",
       "icon": "🎨"
     },
     {
       "id": "video",
-      "en": "AI Video",
-      "my": "AI ဗီဒီယို",
+      "en": "Video AI",
+      "my": "AI Video",
       "icon": "🎬"
     },
     {
@@ -35,15 +35,15 @@
     },
     {
       "id": "websites",
-      "en": "Apps / Web",
+      "en": "Web / Apps",
       "my": "App / Website",
       "icon": "🧩"
     },
     {
       "id": "voice",
-      "en": "Voice & Music",
-      "my": "အသံ / Music",
-      "icon": "🎧"
+      "en": "Voice / Speech",
+      "my": "AI အသံ",
+      "icon": "🎙️"
     },
     {
       "id": "writing",
@@ -72,13 +72,13 @@
     {
       "id": "business",
       "en": "Business",
-      "my": "Business",
+      "my": "စီးပွားရေး",
       "icon": "📈"
     },
     {
       "id": "presentation",
-      "en": "Presentation",
-      "my": "Slide / Presentation",
+      "en": "Presentations",
+      "my": "Presentation",
       "icon": "📊"
     },
     {
@@ -86,6 +86,108 @@
       "en": "Education",
       "my": "ပညာရေး",
       "icon": "🎓"
+    },
+    {
+      "id": "translation",
+      "en": "Translation",
+      "my": "ဘာသာပြန်",
+      "icon": "🌐"
+    },
+    {
+      "id": "marketing",
+      "en": "Marketing",
+      "my": "Marketing",
+      "icon": "📢"
+    },
+    {
+      "id": "social",
+      "en": "Social Media",
+      "my": "Social Media",
+      "icon": "📱"
+    },
+    {
+      "id": "seo",
+      "en": "SEO",
+      "my": "SEO",
+      "icon": "📣"
+    },
+    {
+      "id": "data",
+      "en": "Data / Analytics",
+      "my": "Data / Analytics",
+      "icon": "📉"
+    },
+    {
+      "id": "productivity",
+      "en": "Productivity",
+      "my": "အလုပ်ထိရောက်မှု",
+      "icon": "⏱️"
+    },
+    {
+      "id": "customer",
+      "en": "Customer Support",
+      "my": "Customer Service",
+      "icon": "🎧"
+    },
+    {
+      "id": "sales",
+      "en": "Sales",
+      "my": "အရောင်း",
+      "icon": "🛍️"
+    },
+    {
+      "id": "hr",
+      "en": "HR / Careers",
+      "my": "အလုပ်အကိုင်",
+      "icon": "👥"
+    },
+    {
+      "id": "legal",
+      "en": "Legal Tech",
+      "my": "ဥပဒေရေးရာ",
+      "icon": "⚖️"
+    },
+    {
+      "id": "finance",
+      "en": "Finance",
+      "my": "ငွေကြေးစီမံ",
+      "icon": "💳"
+    },
+    {
+      "id": "audio",
+      "en": "Audio Editing",
+      "my": "Audio Editing",
+      "icon": "🔊"
+    },
+    {
+      "id": "music",
+      "en": "Music",
+      "my": "AI Music",
+      "icon": "🎵"
+    },
+    {
+      "id": "3d",
+      "en": "3D / Gaming",
+      "my": "3D / Game",
+      "icon": "🧊"
+    },
+    {
+      "id": "animation",
+      "en": "Animation",
+      "my": "Animation",
+      "icon": "🎞️"
+    },
+    {
+      "id": "security",
+      "en": "Security",
+      "my": "လုံခြုံရေး",
+      "icon": "🛡️"
+    },
+    {
+      "id": "opensource",
+      "en": "Local / Open AI",
+      "my": "Open Source AI",
+      "icon": "🧠"
     }
   ],
   "tools": [
@@ -868,6 +970,2352 @@
       "plan": "freemium",
       "description": "Meeting Transcription",
       "updatedAt": "2026-11-15"
+    },
+    {
+      "id": "characterai",
+      "name": "Character.AI",
+      "url": "https://character.ai",
+      "categories": [
+        "chat",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "AI Character နဲ့ စကားပြော",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "youcom",
+      "name": "You.com",
+      "url": "https://you.com",
+      "categories": [
+        "chat",
+        "research"
+      ],
+      "plan": "freemium",
+      "description": "AI Search Engine",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "phind",
+      "name": "Phind",
+      "url": "https://www.phind.com",
+      "categories": [
+        "chat",
+        "coding",
+        "research"
+      ],
+      "plan": "freemium",
+      "description": "Developer အတွက် AI Search",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen Chat",
+      "url": "https://chat.qwen.ai",
+      "categories": [
+        "chat",
+        "coding",
+        "research"
+      ],
+      "plan": "free",
+      "description": "Qwen AI Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "url": "https://www.kimi.com",
+      "categories": [
+        "chat",
+        "research",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "AI Assistant နှင့် Research",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "metaai",
+      "name": "Meta AI",
+      "url": "https://www.meta.ai",
+      "categories": [
+        "chat",
+        "image",
+        "research"
+      ],
+      "plan": "free",
+      "description": "Meta ရဲ့ AI Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "huggingchat",
+      "name": "HuggingChat",
+      "url": "https://huggingface.co/chat",
+      "categories": [
+        "chat",
+        "opensource"
+      ],
+      "plan": "free",
+      "description": "Open Model AI Chat",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "typingmind",
+      "name": "TypingMind",
+      "url": "https://www.typingmind.com",
+      "categories": [
+        "chat",
+        "productivity"
+      ],
+      "plan": "paid",
+      "description": "Multi-model Chat Workspace",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "jan",
+      "name": "Jan",
+      "url": "https://jan.ai",
+      "categories": [
+        "chat",
+        "opensource"
+      ],
+      "plan": "free",
+      "description": "Local AI ကို Computer မှာ အသုံးပြု",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "anythingllm",
+      "name": "AnythingLLM",
+      "url": "https://anythingllm.com",
+      "categories": [
+        "chat",
+        "research",
+        "opensource"
+      ],
+      "plan": "free",
+      "description": "Document နှင့် Local AI Workspace",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "microsoftdesigner",
+      "name": "Microsoft Designer",
+      "url": "https://designer.microsoft.com",
+      "categories": [
+        "image",
+        "design",
+        "social"
+      ],
+      "plan": "freemium",
+      "description": "Social Graphic နှင့် AI Image",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "clipdrop",
+      "name": "Clipdrop",
+      "url": "https://clipdrop.co",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI ပုံပြုပြင်ခြင်းနှင့် Cleanup",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "removebg",
+      "name": "remove.bg",
+      "url": "https://www.remove.bg",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Background အလိုအလျောက်ဖယ်ရှား",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "cleanup",
+      "name": "Cleanup.pictures",
+      "url": "https://cleanup.pictures",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "ပုံထဲက မလိုသောအရာ ဖယ်ရှား",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "photoroom",
+      "name": "Photoroom",
+      "url": "https://www.photoroom.com",
+      "categories": [
+        "image",
+        "design",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Product Photo ပြုပြင်",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "pixlr",
+      "name": "Pixlr",
+      "url": "https://pixlr.com",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Online AI Photo Editor",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "fotor",
+      "name": "Fotor",
+      "url": "https://www.fotor.com",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI Photo Editing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "picwish",
+      "name": "PicWish",
+      "url": "https://picwish.com",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Background / Image Enhance",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "upscayl",
+      "name": "Upscayl",
+      "url": "https://upscayl.org",
+      "categories": [
+        "image",
+        "opensource"
+      ],
+      "plan": "free",
+      "description": "Open Source Image Upscaler",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "topaz",
+      "name": "Topaz Labs",
+      "url": "https://www.topazlabs.com",
+      "categories": [
+        "image",
+        "video"
+      ],
+      "plan": "paid",
+      "description": "Photo / Video Quality Enhance",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "dreamstudio",
+      "name": "DreamStudio",
+      "url": "https://dreamstudio.ai",
+      "categories": [
+        "image"
+      ],
+      "plan": "paid",
+      "description": "Stability AI Image Generator",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "blackforest",
+      "name": "Black Forest Labs",
+      "url": "https://blackforestlabs.ai",
+      "categories": [
+        "image",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "FLUX Image Models",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "getimg",
+      "name": "Getimg.ai",
+      "url": "https://getimg.ai",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI Image Creation နှင့် Editor",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "civitai",
+      "name": "Civitai",
+      "url": "https://civitai.com",
+      "categories": [
+        "image",
+        "opensource"
+      ],
+      "plan": "freemium",
+      "description": "Community Image Models",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "tensorart",
+      "name": "Tensor.Art",
+      "url": "https://tensor.art",
+      "categories": [
+        "image",
+        "opensource"
+      ],
+      "plan": "freemium",
+      "description": "AI Image Generation Community",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "mage",
+      "name": "Mage.space",
+      "url": "https://www.mage.space",
+      "categories": [
+        "image"
+      ],
+      "plan": "freemium",
+      "description": "AI ပုံများဖန်တီးရန်",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "nightcafe",
+      "name": "NightCafe",
+      "url": "https://creator.nightcafe.studio",
+      "categories": [
+        "image"
+      ],
+      "plan": "freemium",
+      "description": "AI Art Community",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "artbreeder",
+      "name": "Artbreeder",
+      "url": "https://www.artbreeder.com",
+      "categories": [
+        "image",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI ပုံရောစပ်ဖန်တီးရန်",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "adobeexpress",
+      "name": "Adobe Express",
+      "url": "https://www.adobe.com/express",
+      "categories": [
+        "design",
+        "social",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Poster၊ Social Design နှင့် Video",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "picsart",
+      "name": "Picsart",
+      "url": "https://picsart.com",
+      "categories": [
+        "image",
+        "design",
+        "social"
+      ],
+      "plan": "freemium",
+      "description": "AI Image နှင့် Social Editing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "hailuo",
+      "name": "Hailuo AI",
+      "url": "https://hailuoai.video",
+      "categories": [
+        "video",
+        "animation"
+      ],
+      "plan": "freemium",
+      "description": "Image မှ Video Animation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "vidu",
+      "name": "Vidu AI",
+      "url": "https://www.vidu.com",
+      "categories": [
+        "video",
+        "animation"
+      ],
+      "plan": "freemium",
+      "description": "AI Video Generator",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "pixverse",
+      "name": "PixVerse",
+      "url": "https://pixverse.ai",
+      "categories": [
+        "video",
+        "animation"
+      ],
+      "plan": "freemium",
+      "description": "AI Short Video Effects",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "kaiber",
+      "name": "Kaiber",
+      "url": "https://kaiber.ai",
+      "categories": [
+        "video",
+        "music",
+        "animation"
+      ],
+      "plan": "paid",
+      "description": "Music Video နှင့် Visual Creation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "genmo",
+      "name": "Genmo",
+      "url": "https://www.genmo.ai",
+      "categories": [
+        "video",
+        "opensource"
+      ],
+      "plan": "freemium",
+      "description": "AI Video Generation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "did",
+      "name": "D-ID",
+      "url": "https://www.d-id.com",
+      "categories": [
+        "video",
+        "voice",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "Talking Avatar Video",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "colossyan",
+      "name": "Colossyan",
+      "url": "https://www.colossyan.com",
+      "categories": [
+        "video",
+        "education",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "AI Training Video",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "opusclip",
+      "name": "OpusClip",
+      "url": "https://www.opus.pro",
+      "categories": [
+        "video",
+        "social",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Long Video မှ Short Clips",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "captions",
+      "name": "Captions",
+      "url": "https://www.captions.ai",
+      "categories": [
+        "video",
+        "voice",
+        "social"
+      ],
+      "plan": "freemium",
+      "description": "Video Captions နှင့် AI Editing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "submagic",
+      "name": "Submagic",
+      "url": "https://www.submagic.co",
+      "categories": [
+        "video",
+        "social"
+      ],
+      "plan": "paid",
+      "description": "Short Video Subtitles",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "wisecut",
+      "name": "Wisecut",
+      "url": "https://www.wisecut.video",
+      "categories": [
+        "video",
+        "audio"
+      ],
+      "plan": "freemium",
+      "description": "Auto Video Editing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "url": "https://windsurf.com",
+      "categories": [
+        "coding",
+        "websites"
+      ],
+      "plan": "freemium",
+      "description": "AI Coding IDE",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "tabnine",
+      "name": "Tabnine",
+      "url": "https://www.tabnine.com",
+      "categories": [
+        "coding",
+        "security"
+      ],
+      "plan": "freemium",
+      "description": "Code Completion Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "qodo",
+      "name": "Qodo",
+      "url": "https://www.qodo.ai",
+      "categories": [
+        "coding",
+        "security"
+      ],
+      "plan": "freemium",
+      "description": "AI Code Quality နှင့် Review",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "sourcegraph",
+      "name": "Sourcegraph",
+      "url": "https://sourcegraph.com",
+      "categories": [
+        "coding",
+        "research"
+      ],
+      "plan": "freemium",
+      "description": "Codebase Search နှင့် AI",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "amazonq",
+      "name": "Amazon Q Developer",
+      "url": "https://aws.amazon.com/q/developer/",
+      "categories": [
+        "coding",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "AWS Developer Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "jetbrains",
+      "name": "JetBrains AI",
+      "url": "https://www.jetbrains.com/ai/",
+      "categories": [
+        "coding"
+      ],
+      "plan": "paid",
+      "description": "JetBrains IDE AI",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "continue",
+      "name": "Continue",
+      "url": "https://www.continue.dev",
+      "categories": [
+        "coding",
+        "opensource"
+      ],
+      "plan": "free",
+      "description": "Open Source AI Coding",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "url": "https://aider.chat",
+      "categories": [
+        "coding",
+        "opensource"
+      ],
+      "plan": "free",
+      "description": "AI Pair Programming",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "blackbox",
+      "name": "BLACKBOX AI",
+      "url": "https://www.blackbox.ai",
+      "categories": [
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "AI Code Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "coderabbit",
+      "name": "CodeRabbit",
+      "url": "https://www.coderabbit.ai",
+      "categories": [
+        "coding",
+        "security"
+      ],
+      "plan": "freemium",
+      "description": "AI Pull Request Review",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "pieces",
+      "name": "Pieces",
+      "url": "https://pieces.app",
+      "categories": [
+        "coding",
+        "productivity"
+      ],
+      "plan": "freemium",
+      "description": "Coding Memory နှင့် Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "stackblitz",
+      "name": "StackBlitz",
+      "url": "https://stackblitz.com",
+      "categories": [
+        "websites",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "Browser IDE နှင့် Projects",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "flutterflow",
+      "name": "FlutterFlow",
+      "url": "https://flutterflow.io",
+      "categories": [
+        "websites",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "Mobile App Visual Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "bubble",
+      "name": "Bubble",
+      "url": "https://bubble.io",
+      "categories": [
+        "websites",
+        "automation"
+      ],
+      "plan": "freemium",
+      "description": "No-code Web App",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "glide",
+      "name": "Glide",
+      "url": "https://www.glideapps.com",
+      "categories": [
+        "websites",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Business App No Code",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "softr",
+      "name": "Softr",
+      "url": "https://www.softr.io",
+      "categories": [
+        "websites",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Client Portal / Website",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "adalo",
+      "name": "Adalo",
+      "url": "https://www.adalo.com",
+      "categories": [
+        "websites"
+      ],
+      "plan": "freemium",
+      "description": "No-code Mobile App Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "framer",
+      "name": "Framer",
+      "url": "https://www.framer.com",
+      "categories": [
+        "websites",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Interactive Website Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "durable",
+      "name": "Durable",
+      "url": "https://durable.co",
+      "categories": [
+        "websites",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "AI Business Website",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "webflow",
+      "name": "Webflow",
+      "url": "https://webflow.com",
+      "categories": [
+        "websites",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Professional Website Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "uizard",
+      "name": "Uizard",
+      "url": "https://uizard.io",
+      "categories": [
+        "websites",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "AI UI Prototype",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "url": "https://www.figma.com",
+      "categories": [
+        "design",
+        "websites"
+      ],
+      "plan": "freemium",
+      "description": "Design / Prototype Platform",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "speechify",
+      "name": "Speechify",
+      "url": "https://speechify.com",
+      "categories": [
+        "voice",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Text to Speech",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "murf",
+      "name": "Murf",
+      "url": "https://murf.ai",
+      "categories": [
+        "voice",
+        "audio"
+      ],
+      "plan": "freemium",
+      "description": "AI Voice Over",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "playht",
+      "name": "PlayHT",
+      "url": "https://play.ht",
+      "categories": [
+        "voice",
+        "audio"
+      ],
+      "plan": "paid",
+      "description": "Voice Synthesis Platform",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "resemble",
+      "name": "Resemble AI",
+      "url": "https://www.resemble.ai",
+      "categories": [
+        "voice",
+        "audio",
+        "security"
+      ],
+      "plan": "paid",
+      "description": "Voice Generation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "lovo",
+      "name": "LOVO",
+      "url": "https://lovo.ai",
+      "categories": [
+        "voice",
+        "audio"
+      ],
+      "plan": "freemium",
+      "description": "AI Voiceover Studio",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "kits",
+      "name": "Kits AI",
+      "url": "https://www.kits.ai",
+      "categories": [
+        "voice",
+        "music"
+      ],
+      "plan": "freemium",
+      "description": "AI Music Vocals",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "aiva",
+      "name": "AIVA",
+      "url": "https://www.aiva.ai",
+      "categories": [
+        "music"
+      ],
+      "plan": "freemium",
+      "description": "AI Music Composer",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "soundraw",
+      "name": "Soundraw",
+      "url": "https://soundraw.io",
+      "categories": [
+        "music",
+        "video"
+      ],
+      "plan": "paid",
+      "description": "Royalty-licensed Music Creation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "beatoven",
+      "name": "Beatoven.ai",
+      "url": "https://www.beatoven.ai",
+      "categories": [
+        "music",
+        "video"
+      ],
+      "plan": "freemium",
+      "description": "AI Background Music",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "mubert",
+      "name": "Mubert",
+      "url": "https://mubert.com",
+      "categories": [
+        "music"
+      ],
+      "plan": "freemium",
+      "description": "Generative AI Music",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "lalalai",
+      "name": "LALAL.AI",
+      "url": "https://www.lalal.ai",
+      "categories": [
+        "audio",
+        "music"
+      ],
+      "plan": "freemium",
+      "description": "Vocal / Instrument Separation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "krisp",
+      "name": "Krisp",
+      "url": "https://krisp.ai",
+      "categories": [
+        "audio",
+        "voice",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Noise Cancellation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "riverside",
+      "name": "Riverside",
+      "url": "https://riverside.fm",
+      "categories": [
+        "audio",
+        "video",
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "Recording နှင့် Podcast",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "turboscribe",
+      "name": "TurboScribe",
+      "url": "https://turboscribe.ai",
+      "categories": [
+        "audio",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "Audio to Text",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "url": "https://www.jasper.ai",
+      "categories": [
+        "writing",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "Marketing AI Writer",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "copyai",
+      "name": "Copy.ai",
+      "url": "https://www.copy.ai",
+      "categories": [
+        "writing",
+        "marketing",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Business / Marketing Content",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "writesonic",
+      "name": "Writesonic",
+      "url": "https://writesonic.com",
+      "categories": [
+        "writing",
+        "marketing",
+        "seo"
+      ],
+      "plan": "freemium",
+      "description": "AI Content နှင့် SEO",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "rytr",
+      "name": "Rytr",
+      "url": "https://rytr.me",
+      "categories": [
+        "writing",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Short Marketing Copy",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "sudowrite",
+      "name": "Sudowrite",
+      "url": "https://www.sudowrite.com",
+      "categories": [
+        "writing"
+      ],
+      "plan": "paid",
+      "description": "Creative Story Writing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "novelai",
+      "name": "NovelAI",
+      "url": "https://novelai.net",
+      "categories": [
+        "writing",
+        "image"
+      ],
+      "plan": "paid",
+      "description": "AI Story နှင့် Character",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "hyperwrite",
+      "name": "HyperWrite",
+      "url": "https://www.hyperwriteai.com",
+      "categories": [
+        "writing",
+        "productivity"
+      ],
+      "plan": "freemium",
+      "description": "AI Writing Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "jenni",
+      "name": "Jenni AI",
+      "url": "https://jenni.ai",
+      "categories": [
+        "writing",
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Academic Writing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "paperpal",
+      "name": "Paperpal",
+      "url": "https://paperpal.com",
+      "categories": [
+        "writing",
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Academic English Writing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "scite",
+      "name": "Scite",
+      "url": "https://scite.ai",
+      "categories": [
+        "research",
+        "education"
+      ],
+      "plan": "paid",
+      "description": "Scientific Citation Research",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "semanticscholar",
+      "name": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org",
+      "categories": [
+        "research",
+        "education"
+      ],
+      "plan": "free",
+      "description": "Academic Paper Search",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "researchrabbit",
+      "name": "ResearchRabbit",
+      "url": "https://www.researchrabbit.ai",
+      "categories": [
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Research Papers Map",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "litmaps",
+      "name": "Litmaps",
+      "url": "https://www.litmaps.com",
+      "categories": [
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Literature Review Mapping",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "scispace",
+      "name": "SciSpace",
+      "url": "https://typeset.io",
+      "categories": [
+        "research",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Scientific PDF Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "scholarcy",
+      "name": "Scholarcy",
+      "url": "https://www.scholarcy.com",
+      "categories": [
+        "research",
+        "education"
+      ],
+      "plan": "paid",
+      "description": "Research Summary",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "humata",
+      "name": "Humata",
+      "url": "https://www.humata.ai",
+      "categories": [
+        "research",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "PDF Question Answering",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "pdfgear",
+      "name": "PDFgear",
+      "url": "https://www.pdfgear.com",
+      "categories": [
+        "research",
+        "writing",
+        "education"
+      ],
+      "plan": "free",
+      "description": "AI PDF Reader / Editor",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "ifttt",
+      "name": "IFTTT",
+      "url": "https://ifttt.com",
+      "categories": [
+        "automation",
+        "productivity"
+      ],
+      "plan": "freemium",
+      "description": "Simple Automation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "pipedream",
+      "name": "Pipedream",
+      "url": "https://pipedream.com",
+      "categories": [
+        "automation",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "Workflow / API Automation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "activepieces",
+      "name": "Activepieces",
+      "url": "https://www.activepieces.com",
+      "categories": [
+        "automation",
+        "opensource"
+      ],
+      "plan": "freemium",
+      "description": "Open-source Workflow Automation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "gumloop",
+      "name": "Gumloop",
+      "url": "https://www.gumloop.com",
+      "categories": [
+        "automation",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "AI Automation Workflows",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "lindy",
+      "name": "Lindy",
+      "url": "https://www.lindy.ai",
+      "categories": [
+        "automation",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "AI Assistant / Automations",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "relay",
+      "name": "Relay.app",
+      "url": "https://www.relay.app",
+      "categories": [
+        "automation",
+        "productivity"
+      ],
+      "plan": "freemium",
+      "description": "Team Workflow Automation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "relevance",
+      "name": "Relevance AI",
+      "url": "https://relevanceai.com",
+      "categories": [
+        "automation",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "AI Agent Operations",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "crewai",
+      "name": "CrewAI",
+      "url": "https://www.crewai.com",
+      "categories": [
+        "automation",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "Multi-agent Workflow",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "flowise",
+      "name": "Flowise",
+      "url": "https://flowiseai.com",
+      "categories": [
+        "automation",
+        "coding",
+        "opensource"
+      ],
+      "plan": "free",
+      "description": "AI Agent Flow Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "langflow",
+      "name": "Langflow",
+      "url": "https://www.langflow.org",
+      "categories": [
+        "automation",
+        "coding",
+        "opensource"
+      ],
+      "plan": "free",
+      "description": "Visual AI Workflow",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "url": "https://dify.ai",
+      "categories": [
+        "automation",
+        "coding",
+        "opensource"
+      ],
+      "plan": "freemium",
+      "description": "AI App Backend Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "botpress",
+      "name": "Botpress",
+      "url": "https://botpress.com",
+      "categories": [
+        "customer",
+        "automation",
+        "chat"
+      ],
+      "plan": "freemium",
+      "description": "AI Chatbot Platform",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "voiceflow",
+      "name": "Voiceflow",
+      "url": "https://www.voiceflow.com",
+      "categories": [
+        "customer",
+        "automation",
+        "voice"
+      ],
+      "plan": "freemium",
+      "description": "Voice & Chat Agent Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "manychat",
+      "name": "Manychat",
+      "url": "https://manychat.com",
+      "categories": [
+        "customer",
+        "social",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Social DM Chatbot",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "tidio",
+      "name": "Tidio",
+      "url": "https://www.tidio.com",
+      "categories": [
+        "customer",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "AI Live Chat",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "url": "https://www.hubspot.com",
+      "categories": [
+        "business",
+        "sales",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "CRM / Marketing AI",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "pitch",
+      "name": "Pitch",
+      "url": "https://pitch.com",
+      "categories": [
+        "presentation",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Presentation Collaboration",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "slidesai",
+      "name": "SlidesAI",
+      "url": "https://www.slidesai.io",
+      "categories": [
+        "presentation",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "AI Google Slides",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "plusai",
+      "name": "Plus AI",
+      "url": "https://www.plusdocs.com",
+      "categories": [
+        "presentation",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "AI Slide Generation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "decktopus",
+      "name": "Decktopus",
+      "url": "https://www.decktopus.com",
+      "categories": [
+        "presentation"
+      ],
+      "plan": "freemium",
+      "description": "AI Presentation Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "presentationsai",
+      "name": "Presentations.AI",
+      "url": "https://www.presentations.ai",
+      "categories": [
+        "presentation"
+      ],
+      "plan": "freemium",
+      "description": "AI Presentation Design",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "magicslides",
+      "name": "MagicSlides",
+      "url": "https://www.magicslides.app",
+      "categories": [
+        "presentation",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Slide Decks From Text",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "prezi",
+      "name": "Prezi",
+      "url": "https://prezi.com",
+      "categories": [
+        "presentation"
+      ],
+      "plan": "freemium",
+      "description": "Visual Presentations",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "visme",
+      "name": "Visme",
+      "url": "https://www.visme.co",
+      "categories": [
+        "presentation",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Business Visual Design",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "piktochart",
+      "name": "Piktochart",
+      "url": "https://piktochart.com",
+      "categories": [
+        "presentation",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "Infographic Design",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "googletranslate",
+      "name": "Google Translate",
+      "url": "https://translate.google.com",
+      "categories": [
+        "translation",
+        "education"
+      ],
+      "plan": "free",
+      "description": "Translation Assistant",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "papago",
+      "name": "Papago",
+      "url": "https://papago.naver.com",
+      "categories": [
+        "translation",
+        "education"
+      ],
+      "plan": "free",
+      "description": "Asian Languages Translation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "reverso",
+      "name": "Reverso",
+      "url": "https://www.reverso.net",
+      "categories": [
+        "translation",
+        "education"
+      ],
+      "plan": "freemium",
+      "description": "Translation in Context",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "smartcat",
+      "name": "Smartcat",
+      "url": "https://www.smartcat.com",
+      "categories": [
+        "translation",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "Business Localization",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "lokalise",
+      "name": "Lokalise",
+      "url": "https://lokalise.com",
+      "categories": [
+        "translation",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "Software Localization",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "weglot",
+      "name": "Weglot",
+      "url": "https://www.weglot.com",
+      "categories": [
+        "translation",
+        "websites"
+      ],
+      "plan": "paid",
+      "description": "Website Translation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "rask",
+      "name": "Rask AI",
+      "url": "https://www.rask.ai",
+      "categories": [
+        "translation",
+        "video"
+      ],
+      "plan": "paid",
+      "description": "Video Language Dubbing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "meshy",
+      "name": "Meshy",
+      "url": "https://www.meshy.ai",
+      "categories": [
+        "3d",
+        "animation"
+      ],
+      "plan": "freemium",
+      "description": "AI 3D Object Generation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "tripo",
+      "name": "Tripo AI",
+      "url": "https://www.tripo3d.ai",
+      "categories": [
+        "3d",
+        "animation"
+      ],
+      "plan": "freemium",
+      "description": "3D Model Generator",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "spline",
+      "name": "Spline",
+      "url": "https://spline.design",
+      "categories": [
+        "3d",
+        "design"
+      ],
+      "plan": "freemium",
+      "description": "3D Design Tool",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "scenario",
+      "name": "Scenario",
+      "url": "https://www.scenario.com",
+      "categories": [
+        "3d",
+        "animation",
+        "image"
+      ],
+      "plan": "freemium",
+      "description": "Game Asset Creation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "julius",
+      "name": "Julius AI",
+      "url": "https://julius.ai",
+      "categories": [
+        "data",
+        "finance",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "AI Data Analysis",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "rows",
+      "name": "Rows",
+      "url": "https://rows.com",
+      "categories": [
+        "data",
+        "productivity"
+      ],
+      "plan": "freemium",
+      "description": "AI Spreadsheets",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "hex",
+      "name": "Hex",
+      "url": "https://hex.tech",
+      "categories": [
+        "data",
+        "coding",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "Data Workspace",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "akkio",
+      "name": "Akkio",
+      "url": "https://www.akkio.com",
+      "categories": [
+        "data",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "Marketing Analytics AI",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "datarobot",
+      "name": "DataRobot",
+      "url": "https://www.datarobot.com",
+      "categories": [
+        "data",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "Predictive AI Platform",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "h2o",
+      "name": "H2O.ai",
+      "url": "https://h2o.ai",
+      "categories": [
+        "data",
+        "opensource"
+      ],
+      "plan": "freemium",
+      "description": "AutoML Platform",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "surfer",
+      "name": "Surfer SEO",
+      "url": "https://surferseo.com",
+      "categories": [
+        "seo",
+        "writing",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "SEO Content Optimization",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "frase",
+      "name": "Frase",
+      "url": "https://www.frase.io",
+      "categories": [
+        "seo",
+        "writing"
+      ],
+      "plan": "paid",
+      "description": "SEO Research / Writing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "clearscope",
+      "name": "Clearscope",
+      "url": "https://www.clearscope.io",
+      "categories": [
+        "seo",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "SEO Content Optimization",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "marketmuse",
+      "name": "MarketMuse",
+      "url": "https://www.marketmuse.com",
+      "categories": [
+        "seo",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Content Planning AI",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "semrush",
+      "name": "Semrush",
+      "url": "https://www.semrush.com",
+      "categories": [
+        "seo",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "SEO / Marketing Insights",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "ahrefs",
+      "name": "Ahrefs",
+      "url": "https://ahrefs.com",
+      "categories": [
+        "seo",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "SEO Analysis",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "buffer",
+      "name": "Buffer",
+      "url": "https://buffer.com",
+      "categories": [
+        "social",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Social Publishing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "hootsuite",
+      "name": "Hootsuite",
+      "url": "https://www.hootsuite.com",
+      "categories": [
+        "social",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "Social Media Management",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "predis",
+      "name": "Predis.ai",
+      "url": "https://predis.ai",
+      "categories": [
+        "social",
+        "marketing",
+        "image"
+      ],
+      "plan": "freemium",
+      "description": "AI Social Media Posts",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "ocoya",
+      "name": "Ocoya",
+      "url": "https://www.ocoya.com",
+      "categories": [
+        "social",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "Social Post Automation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "publer",
+      "name": "Publer",
+      "url": "https://publer.com",
+      "categories": [
+        "social",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Social Post Scheduler",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "metricool",
+      "name": "Metricool",
+      "url": "https://metricool.com",
+      "categories": [
+        "social",
+        "marketing",
+        "data"
+      ],
+      "plan": "freemium",
+      "description": "Social Analytics / Scheduler",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "later",
+      "name": "Later",
+      "url": "https://later.com",
+      "categories": [
+        "social",
+        "marketing"
+      ],
+      "plan": "freemium",
+      "description": "Social Publishing",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "socialbee",
+      "name": "SocialBee",
+      "url": "https://socialbee.com",
+      "categories": [
+        "social",
+        "marketing"
+      ],
+      "plan": "paid",
+      "description": "Content Scheduling",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "fathomvideo",
+      "name": "Fathom Analytics",
+      "url": "https://usefathom.com",
+      "categories": [
+        "data",
+        "productivity"
+      ],
+      "plan": "paid",
+      "description": "Privacy Analytics",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "shortwave",
+      "name": "Shortwave",
+      "url": "https://www.shortwave.com",
+      "categories": [
+        "productivity",
+        "business"
+      ],
+      "plan": "freemium",
+      "description": "AI Email Inbox",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "superhuman",
+      "name": "Superhuman",
+      "url": "https://superhuman.com",
+      "categories": [
+        "productivity",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "Email Productivity",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "sanebox",
+      "name": "SaneBox",
+      "url": "https://www.sanebox.com",
+      "categories": [
+        "productivity"
+      ],
+      "plan": "paid",
+      "description": "Smart Inbox Sorting",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "textio",
+      "name": "Textio",
+      "url": "https://textio.com",
+      "categories": [
+        "hr",
+        "writing"
+      ],
+      "plan": "paid",
+      "description": "HR Writing Assistance",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "teal",
+      "name": "Teal",
+      "url": "https://www.tealhq.com",
+      "categories": [
+        "hr",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "Career / Resume Builder",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "kickresume",
+      "name": "Kickresume",
+      "url": "https://www.kickresume.com",
+      "categories": [
+        "hr",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "Resume Generator",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "rezi",
+      "name": "Rezi",
+      "url": "https://www.rezi.ai",
+      "categories": [
+        "hr",
+        "writing"
+      ],
+      "plan": "freemium",
+      "description": "Resume Optimization",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "harvey",
+      "name": "Harvey",
+      "url": "https://www.harvey.ai",
+      "categories": [
+        "legal",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "Legal Workflow AI",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "spellbook",
+      "name": "Spellbook",
+      "url": "https://www.spellbook.legal",
+      "categories": [
+        "legal",
+        "writing"
+      ],
+      "plan": "paid",
+      "description": "AI Contract Drafting",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "luminance",
+      "name": "Luminance",
+      "url": "https://www.luminance.com",
+      "categories": [
+        "legal",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "Legal Document Review",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "robinai",
+      "name": "Robin AI",
+      "url": "https://www.robinai.com",
+      "categories": [
+        "legal",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "AI Contract Review",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "fortinet",
+      "name": "Fortinet FortiAI",
+      "url": "https://www.fortinet.com",
+      "categories": [
+        "security",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "AI Security Operation",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "crowdstrike",
+      "name": "CrowdStrike",
+      "url": "https://www.crowdstrike.com",
+      "categories": [
+        "security",
+        "business"
+      ],
+      "plan": "paid",
+      "description": "Cybersecurity AI",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "snyk",
+      "name": "Snyk",
+      "url": "https://snyk.io",
+      "categories": [
+        "security",
+        "coding"
+      ],
+      "plan": "freemium",
+      "description": "Code Security Scanning",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
+    },
+    {
+      "id": "screamingfrog",
+      "name": "Screaming Frog SEO Spider",
+      "url": "https://www.screamingfrog.co.uk/seo-spider/",
+      "categories": [
+        "seo",
+        "data"
+      ],
+      "plan": "freemium",
+      "description": "Technical SEO Analysis",
+      "updatedAt": "2026-11-16",
+      "reviewStatus": "candidate",
+      "source": "official-site-to-verify"
     }
   ]
 }
