@@ -63,9 +63,12 @@ function renderCards(){
   '<div class="tagline-meta">'+(t.kind==="open-source"?"Open-source • ":"")+(t.plan==="freemium"?"Free + Paid":safe(t.plan))+' '+healthBadge(t)+'</div>'+
   '<div class="cardbottom"><button data-detail="'+safe(t.id)+'">Details ↗</button><a href="'+safe(t.url)+'" target="_blank" rel="noopener noreferrer">Official link ↗</a></div><button class="comparebtn" data-compare="'+safe(t.id)+'">'+(state.compare.has(t.id)?"✓ Compare selected":"＋ Compare")+'</button></article>'
  }).join(""):'<div class="empty">ဒီ Filter နဲ့ ကိုက်ညီတဲ့ Tool မတွေ့ပါ။ Keyword / Category ပြောင်းကြည့်ပါ။</div>';
- const more=document.createElement("div");more.className="loadmore";
- if(pageRows.length<count){more.innerHTML='<button class="primary" data-more="1">Load more ('+(count-pageRows.length).toLocaleString()+' remaining) ↓</button>';grid.after(more)}
- document.querySelectorAll(".loadmore").forEach((e,i)=>{if(i>0)e.remove()});
+ document.querySelectorAll(".loadmore").forEach(e=>e.remove());
+ if(pageRows.length<count){
+  const more=document.createElement("div");more.className="loadmore";
+  more.innerHTML='<button class="primary" data-more="1">Load more ('+(count-pageRows.length).toLocaleString()+' remaining) ↓</button>';
+  grid.after(more);
+ }
  $("favCount").textContent=state.favorites.size.toLocaleString();
  $("comparebar").style.display=state.compare.size?"flex":"none";
  $("comparecount").textContent=state.compare.size+" / 3 selected";

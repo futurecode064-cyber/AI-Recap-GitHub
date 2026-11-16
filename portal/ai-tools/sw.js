@@ -1,1 +1,33 @@
-const cacheName="fc-ai-tools-v1";const core=["./","./index.html","./styles.css","./app.js","./tools.json","./updates.json","./icon.svg","./manifest.json"];self.addEventListener("install",e=>e.waitUntil(caches.open(cacheName).then(c=>c.addAll(core)).then(()=>self.skipWaiting())));self.addEventListener("activate",e=>e.waitUntil(self.clients.claim()));self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method!=="GET"||u.origin!==self.location.origin)return;if(u.pathname.endsWith("/tools.json")||u.pathname.endsWith("/updates.json")){e.respondWith(fetch(e.request,{cache:"no-store"}).then(r=>{if(r.ok){const x=r.clone();caches.open(cacheName).then(c=>c.put(e.request,x))}return r}).catch(()=>caches.match(e.request)));return}e.respondWith(caches.match(e.request).then(c=>c||fetch(e.request).then(r=>{if(r.ok){const x=r.clone();caches.open(cacheName).then(z=>z.put(e.request,x))}return r})))});self.addEventListener("push",e=>{let v={};try{v=e.data?e.data.json():{}}catch{}e.waitUntil(self.registration.showNotification(v.title||"Future Code AI Tools",{body:v.body||"Update အသစ် ရပါပြီ",icon:"./icon.svg",tag:"future-code-ai-tools",data:{url:v.url||"./"}}))});self.addEventListener("notificationclick",e=>{e.notification.close();e.waitUntil(clients.openWindow(e.notification.data?.url||"./"))})
+/* Future Code AI Tools: browser-safe online-first shell, offline fallback, revisioned cache.
+   JSON catalog uses network-first so updates are not stuck behind stale service worker assets. */
+const CACHE="fc-ai-tools-v2-20261116";
+const CORE=["./","./index.html","./styles.css","./styles-v2.css","./app-v2.js","./tools.json","./updates.json","./icon.svg","./manifest.json"];
+self.addEventListener("install",event=>{
+  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));
+});
+self.addEventListener("activate",event=>{
+  event.waitUntil(caches.keys().then(names=>Promise.all(names.filter(name=>name.startsWith("fc-ai-tools-")&&name!==CACHE).map(name=>caches.delete(name)))).then(()=>self.clients.claim()));
+});
+self.addEventListener("fetch",event=>{
+  const request=event.request;
+  const u=new URL(request.url);
+  if(request.method!=="GET"||u.origin!==self.location.origin)return;
+  if(!u.pathname.includes("/ai-tools/"))return;
+  event.respondWith(fetch(request,{cache:"no-store"}).then(response=>{
+    if(response.ok && response.type==="basic"){
+      const copy=response.clone();
+      event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)));
+    }
+    return response;
+  }).catch(()=>caches.match(request).then(cached=>cached||caches.match("./index.html"))));
+});
+self.addEventListener("push",event=>{
+  let body={};try{body=event.data?event.data.json():{}}catch{}
+  event.waitUntil(self.registration.showNotification(body.title||"Future Code AI Tools",{body:body.body||"AI Tools အသစ်တွေ ရရှိပါပြီ",icon:"./icon.svg",tag:body.tag||"fc-ai-tools",data:{url:body.url||"./"}}));
+});
+self.addEventListener("notificationclick",event=>{
+  event.notification.close();
+  const url=new URL(event.notification.data?.url||"./",self.registration.scope);
+  if(url.origin!==self.location.origin) return;
+  event.waitUntil(clients.openWindow(url.href));
+});
