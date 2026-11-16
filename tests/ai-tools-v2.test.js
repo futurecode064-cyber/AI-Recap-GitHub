@@ -6,7 +6,7 @@ assert(raw.categories.length===31,"Need exactly 30 functional categories plus Al
 const valid=new Set(raw.categories.map(c=>c.id)),ids=new Set();
 for(const t of raw.tools){
  assert(/^[a-z0-9-]+$/.test(t.id));assert(!ids.has(t.id),"duplicate ID "+t.id);ids.add(t.id);
- assert(typeof t.name==="string"&&t.name.length>1);
+ assert(typeof t.name==="string"&&t.name.trim().length>1,"invalid tool name: "+t.id);
  assert(t.url.startsWith("https://"),"non-https official URL");
  assert(t.categories.length>0&&t.categories.every(x=>valid.has(x)));
  assert(!t.verification||typeof t.verification==="string");

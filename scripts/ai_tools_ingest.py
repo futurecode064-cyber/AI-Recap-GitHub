@@ -11,44 +11,59 @@ LICENSE_URL="https://creativecommons.org/licenses/by/4.0/"
 CORE=SITE/"core-tools.json"
 OUTPUT=SITE/"tools.json"
 CATEGORIES=[
- ("chat","AI Chat","AI Chat","💬"),("research","Research","သုတေသန","🔎"),
- ("writing","Writing","စာရေး","✍️"),("translation","Translation","ဘာသာပြန်","🌐"),
- ("education","Education","ပညာရေး","🎓"),("documents","Documents & OCR","PDF / Document","📄"),
- ("coding","Coding","Coding","💻"),("websites","Website & App Builders","Website / App","🧩"),
- ("agents","AI Agents","AI Agents","🤖"),("automation","Automation","Automation","⚡"),
- ("models","AI Models","AI Models","🧠"),("local","Local AI","Offline / Local AI","🖥️"),
- ("serving","Model Serving","Model Server","☁️"),("ml","Machine Learning","Machine Learning","📐"),
- ("training","Model Training","AI Training","🏋️"),("memory","Agent Memory","AI မှတ်ဉာဏ်","🧠"),
- ("rag","RAG & Knowledge","RAG / Knowledge","📚"),("vector","Vector Databases","Vector Database","🔢"),
- ("gateways","API Gateways","AI API","🔗"),("mcp","MCP Tools","MCP / Tools","🛠️"),
- ("evaluation","Testing & Evaluation","AI စမ်းသပ်စစ်ဆေး","🧪"),("security","AI Security","AI Security","🛡️"),
- ("sandboxes","Sandboxes","Code Sandbox","📦"),("image","AI Image","AI ပုံ","🎨"),
- ("video","AI Video","AI ဗီဒီယို","🎬"),("design","Graphic Design","ဒီဇိုင်း","🖌️"),
- ("voice","Voice & Music","အသံ / Music","🎧"),("business","Business","လုပ်ငန်းသုံး","📊"),
- ("presentation","Presentation","Slides","📈"),("desktop","Desktop AI","Desktop App","🖱️")
+ ("chat","AI Chat","AI Assistant","💬"),
+ ("image","Image AI","AI ပုံ","🎨"),
+ ("video","Video AI","AI Video","🎬"),
+ ("coding","Coding","Coding","💻"),
+ ("websites","Web / Apps","App / Website","🧩"),
+ ("voice","Voice / Speech","AI အသံ","🎙️"),
+ ("writing","Writing","စာရေး","✍️"),
+ ("research","Research","Research","🔎"),
+ ("design","Design","Design","🖌️"),
+ ("automation","Automation","Automation","⚡"),
+ ("business","Business","စီးပွားရေး","📈"),
+ ("presentation","Presentations","Presentation","📊"),
+ ("education","Education","ပညာရေး","🎓"),
+ ("translation","Translation","ဘာသာပြန်","🌐"),
+ ("marketing","Marketing","Marketing","📢"),
+ ("social","Social Media","Social Media","📱"),
+ ("seo","SEO","SEO","📣"),
+ ("data","Data / Analytics","Data / Analytics","📉"),
+ ("productivity","Productivity","အလုပ်ထိရောက်မှု","⏱️"),
+ ("customer","Customer Support","Customer Service","🎧"),
+ ("sales","Sales","အရောင်း","🛍️"),
+ ("hr","HR / Careers","အလုပ်အကိုင်","👥"),
+ ("legal","Legal Tech","ဥပဒေရေးရာ","⚖️"),
+ ("finance","Finance","ငွေကြေးစီမံ","💳"),
+ ("audio","Audio Editing","Audio Editing","🔊"),
+ ("music","Music","AI Music","🎵"),
+ ("3d","3D / Gaming","3D / Game","🧊"),
+ ("animation","Animation","Animation","🎞️"),
+ ("security","Security","လုံခြုံရေး","🛡️"),
+ ("opensource","Local / Open AI","Open Source AI","🧠")
 ]
 SOURCE_CATEGORY={
- "assistants":["chat"],"chat-ui":["chat"],"agent-platforms":["agents"],"agent-frameworks":["agents","coding"],
- "automation":["automation"],"models":["models"],"model-serving":["serving","local"],
- "ml-frameworks":["ml","coding"],"training":["training","ml"],"memory":["memory","agents"],
- "rag-knowledge":["rag","research"],"data-tools":["documents"],"vector-db":["vector","rag"],
- "gateways":["gateways"],"mcp-servers":["mcp"],"sandboxes":["sandboxes","coding"],
- "security":["security"],"desktop-apps":["desktop","local"],"image-video":["image","video"],
- "voice":["voice"],"learning":["education"]
+ "assistants":["chat"],"chat-ui":["chat"],"agent-platforms":["automation"],"agent-frameworks":["automation","coding"],
+ "automation":["automation"],"models":["opensource"],"model-serving":["opensource","coding"],
+ "ml-frameworks":["data","coding"],"training":["education","coding"],"memory":["data","automation"],
+ "rag-knowledge":["research","data"],"data-tools":["data"],"vector-db":["data","research"],
+ "gateways":["coding","automation"],"mcp-servers":["automation","coding"],"sandboxes":["security","coding"],
+ "security":["security"],"desktop-apps":["productivity","opensource"],"image-video":["image","video"],
+ "voice":["voice","audio"],"learning":["education"]
 }
 WORD_MAP={
- "research":["search","research","paper","browser","citations"],
+ "research":["search","research","paper","browser","citation"],
  "writing":["writing","writer","document editing"],
  "translation":["translat","multilingual","localization"],
  "websites":["website","webapp","web-app","site builder","app builder"],
- "evaluation":["eval","observability","trace","benchmark","test llm","llm testing","monitoring"],
+ "data":["eval","observability","benchmark","monitoring","database","analytics","vector"],
  "video":["video","animation","camera"],
  "image":["image","vision","visual","diffusion"],
  "design":["design","diagram","graphic"],
  "business":["business","productivity","customer","sales"],
  "presentation":["slides","presentation","powerpoint"],
- "documents":["pdf","ocr","documents","parsing"],
- "local":["offline","local-first","run locally"],
+ "opensource":["open source","offline","local-first","run locally"],
+ "security":["security","sandbox","safety"],
 }
 ALLOWED=set(t[0] for t in CATEGORIES)
 PATTERN=re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
@@ -61,7 +76,7 @@ def normalize_tool(tool):
  if not isinstance(tool,dict):return None
  name=str(tool.get("name") or "").strip()[:120]
  url=str(tool.get("url") or "").strip()
- if not name or not valid_url(url):return None
+ if len(name)<2 or not valid_url(url):return None
  cats=[c for c in (tool.get("categories") or []) if c in ALLOWED]
  if not cats:return None
  out=dict(tool)
@@ -71,7 +86,7 @@ def normalize_tool(tool):
  out["id"]=re.sub(r"[^a-z0-9-]","-",str(tool.get("id") or name).lower())[:110]
  out.setdefault("source","future-code-curated")
  out.setdefault("kind","web-service")
- out.setdefault("verification","curated-directory")
+ out.setdefault("verification","manual-candidate-not-live-checked")
  return out
 def import_source(count=1200):
  import yaml
@@ -97,6 +112,7 @@ def import_source(count=1200):
   if not tags:tags=["coding"]
   raw=ent.get("tagline") or ent.get("summary") or ""
   name=str(ent.get("name") or repo.split("/")[-1]).strip()[:120]
+  if len(name)<2:continue
   score=ent.get("score")
   facts=ent.get("facts") if isinstance(ent.get("facts"),dict) else {}
   item={
@@ -105,14 +121,14 @@ def import_source(count=1200):
    "url":"https://github.com/"+repo,
    "categories":tags,
    "plan":"open-source",
-   "description":str(raw).strip()[:400],
+   "description":str(raw).strip()[:400] or ("Open-source AI project: "+name),
    "descriptionMy":"",
    "kind":"open-source",
    "source":"archestack",
    "sourceUrl":CREDIT_URL,
    "sourceLicense":"CC BY 4.0",
    "sourceReviewedAt":source_date,
-   "verification":"source-reviewed-not-individually-rechecked",
+   "verification":"third-party-listed-not-individually-rechecked",
    "score":int(score) if isinstance(score,(int,float)) else 0,
    "stars":facts.get("stars") if isinstance(facts.get("stars"),int) else None,
    "repo":repo,
@@ -149,7 +165,7 @@ def main():
   ids.add(item["id"]);names.add(normalized_name);urls.add(canonical)
   result.append(item)
   if len(result)>=args.count:break
- if len(result)<args.count:raise SystemExit(f"Not enough quality entries: {len(result)} / {args.count}")
+ if len(result)<args.count:raise SystemExit(f"Not enough valid source entries: {len(result)} / {args.count}")
  if len({x["id"] for x in result})!=len(result):raise SystemExit("Duplicate ids")
  payload={ "schemaVersion":2,
    "version":"2.0.0" if len(result)>=1000 else ("1.2.0" if len(result)>=500 else "1.0.0"),
