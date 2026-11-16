@@ -1,18 +1,25 @@
-# Future Code AI Tools Android Beta
+# Future Code AI Tools Android (version 1.0.2, versionCode 3)
 
-Standalone package: `mm.futurecode.aitools`, version 1.0.0 (versionCode 1), min Android 8.0.
+Original package: mm.futurecode.aitools. The previous v1.0.1-offline was versionCode 2. This project still builds a DEBUG beta unless a stable production signing certificate is configured. Debug builds created on different GitHub runners may NOT share signing certificates. Do not claim an in-place install is possible until certificates match.
 
-Displays the **live** AI Tools web catalog via Android WebView. External AI services open in the device browser. UpdateWorker checks `tools.json` and `android-version.json` approximately every six hours when network connectivity is available. On a *new catalog revision* it sends an Android local notification, even if the UI is closed, subject to OS background scheduling and Android 13+ notification permission. Also signals a higher APK version if `apkUrl` is populated.
+## VPN-free core
+The UI, 1,200-tool catalogue, 30 categories, favorites, compare, collections and search are bundled within the APK. The third-party AI service links may require connectivity independently.
 
-- Tool catalog text updates automatically without reinstalling APK.
-- **Not** instant server push; background checks can be delayed by Android power management.
-- **Not** unattended APK installation. Android version updates still require a signed APK with same signing certificate + higher versionCode + user install consent, or managed Play update.
-- GitHub Actions produces a **debug-signed beta** APK for testing only. A fresh production release-signing keystore and persistent secure GitHub secrets are required before distributing an upgradable release APK. Do not use a different debug APK as an in-place update.
+## Catalog auto-update / notices
+WorkManager runs a network-connected check about every six hours, subject to Android Doze/battery optimization. It does not reset the schedule every app launch. The floating ↻ button also starts a user-directed manual check.
 
-## VPN-off core architecture (2026-11-16)
-- VersionCode 2: MainActivity loads full site bundle + 1,200-tool catalogue from Android packaged assets with WebViewAssetLoader, not github.io, workers.dev or pages.dev.
-- Search, filters, detail pages, favorites, collections and comparisons work without Internet or VPN. Official third-party websites still require their own connectivity.
-- UpdateWorker attempts https://future-code-app-downloads-064.cheeky-elf-5504.chatgpt.site/ai-tools/ every ~6h when connected. This /ai-tools/ route is ONLY a planned extension of the existing user's gateway, not a verified/deployed URL yet.
-- Once that route serves matching tools.json and updates.json with JSON content type, checks cache new JSON under private internal storage, keeping offline features and notifying version changes. Until then, everything uses bundled catalogue and the poll is harmless.
-- A debug APK is not the signed production release; use release keystore and keep a stable certificate for update installs. Android cannot silently replace installed APKs without platform-managed update.
-- The hosted browser website still needs a separately published gateway mirror. An existing chatgpt.site gateway cannot be mutated through the GitHub connector.
+The gateway must serve these files on the EXISTING host under /ai-tools/ with application/json:
+- tools.json and updates.json (same revision) — refresh offline cache and show a local notification on revision change.
+- android-version.json — when versionCode is higher than installed AND apkUrl is an https URL under the exact current Future Code App Downloads host /ai-tools/ or /apps/ path ending .apk, a notification offers a Download APK action. The user must explicitly approve Android installation.
+- announcements.json — owner can edit id/title/body to send a notice at the NEXT periodic or manual check. This is POLLING not instant Firebase Cloud Messaging. User grants POST_NOTIFICATIONS on Android 13+.
+
+The present chatgpt.site /ai-tools/ route is **NOT verified published**. Until deployed, offline app stays functional; remote check/notifications cannot reach the update feed. No in-place APK update guarantee until stable release signing is configured.
+
+## Icon
+The selected user's text-free neon Future Code AI chip image is bundled as launcher icon @drawable/fc_ai_icon (compressed WebP); original full-resolution artwork stays with the user.
+
+## Release
+1. Configure a stable owner-controlled signing certificate as GitHub Secrets, never commit private keys.
+2. Build a signed release, verify package/version/sha/certificate. Compare with prior installed certificate before claiming upgradable.
+3. Upload APK and matching android-version.json, tools.json, updates.json, announcements.json to the existing Future Code download site /ai-tools/ path.
+4. Test VPN off from Myanmar in Android and browser, including notices and old site routes.

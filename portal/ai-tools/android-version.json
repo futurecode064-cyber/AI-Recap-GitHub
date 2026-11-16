@@ -1,8 +1,10 @@
 {
   "schemaVersion": 1,
-  "versionCode": 1,
-  "versionName": "1.0.0",
+  "versionCode": 3,
+  "versionName": "1.0.2",
   "apkUrl": "",
-  "releaseNotes": "Android v1 Beta build is not a signed production release.",
-  "publishedAt": "2026-11-15"
+  "apkSha256": "",
+  "releaseNotes": "Future Code AI Tools v1.0.2: selected FC+AI icon, offline catalog, periodic update checks and notifications. Production-signed APK not yet published.",
+  "publishedAt": "2026-11-16",
+  "releaseState": "beta-build-pending"
 }
