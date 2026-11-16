@@ -1,4 +1,4 @@
-name: Future Code AI Tools Android Beta Build
+name: Future Code AI Tools Android Beta Build + Site Handoff
 on:
   push:
     branches: [main]
@@ -31,8 +31,24 @@ jobs:
         run: |
           test -s ai-tools-android/app/build/outputs/apk/debug/app-debug.apk
           sha256sum ai-tools-android/app/build/outputs/apk/debug/app-debug.apk
+      - name: Package the APK and catalog for EXISTING App Downloads site
+        run: python scripts/package_ai_tools_gateway.py --beta-apk ai-tools-android/app/build/outputs/apk/debug/app-debug.apk
+      - name: Verify website package contains the beta APK and icon
+        run: |
+          python - <<'PY'
+          import zipfile, json
+          z=zipfile.ZipFile('build/future-code-ai-tools-gateway.zip')
+          for path in ('ai-tools/download.html', 'ai-tools/icon.webp', 'ai-tools/downloads/future-code-ai-tools-v1.0.2-beta.apk','ai-tools/announcements.json'):
+              assert path in z.namelist(), path
+          print("Site package verified",len(z.read('ai-tools/downloads/future-code-ai-tools-v1.0.2-beta.apk')))
+          PY
       - uses: actions/upload-artifact@v4
         with:
-          name: Future-Code-AI-Tools-v1.0.0-BETA-debug
+          name: Future-Code-AI-Tools-v1.0.2-APP-DOWNLOADS-Website-Package
+          path: build/future-code-ai-tools-gateway.zip
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Future-Code-AI-Tools-v1.0.2-BETA-debug
           path: ai-tools-android/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30

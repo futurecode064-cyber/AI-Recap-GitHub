@@ -1,0 +1,27 @@
+{
+  "id": "future-code-ai-tools",
+  "name": "Future Code AI Tools",
+  "subtitle": "AI Tools ၁,၂၀၀ • အမျိုးအစား ၃၀ • VPN-free Offline Catalog",
+  "versionName": "1.0.2",
+  "versionCode": 3,
+  "platform": "Android",
+  "status": "beta-debug-signed",
+  "apkPath": "/ai-tools/downloads/future-code-ai-tools-v1.0.2-beta.apk",
+  "landingPath": "/ai-tools/download.html",
+  "iconPath": "/ai-tools/icon.webp",
+  "updatesFeedPath": "/ai-tools/android-version.json",
+  "tags": [
+    "AI",
+    "Tools",
+    "Offline"
+  ],
+  "features": [
+    "Offline AI Tool Directory",
+    "Search / Filter",
+    "Favorites / Compare",
+    "Background Catalog Update Check",
+    "Opt-in Update Notifications"
+  ],
+  "privacyNotice": "External AI service links may require internet/VPN independently",
+  "installNotice": "Beta APK uses debug certificate. It cannot guarantee an in-place update over previous test builds. Android prompts before APK installation."
+}

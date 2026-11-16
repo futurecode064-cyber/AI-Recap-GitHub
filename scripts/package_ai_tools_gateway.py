@@ -4,14 +4,18 @@ No GitHub Pages, Pages.dev or workers.dev runtime redirects. Deploy assets under
 the *existing* chatgpt.site host at /ai-tools/; this command does NOT publish it.
 """
 from pathlib import Path
-import json, shutil, zipfile
+import json, shutil, zipfile, argparse
+parser=argparse.ArgumentParser() 
+parser.add_argument("--beta-apk",default="",help="Optional locally built DEBUG beta APK to bundle (never auto-publish)")
+args=parser.parse_args()
 root=Path(__file__).resolve().parents[1]
 source=root/"portal"/"ai-tools"
 out=root/"build"/"ai-tools-gateway"
 if out.exists(): shutil.rmtree(out)
 out.mkdir(parents=True)
 required=("index.html","app-v2.js","styles.css","styles-v2.css","tools.json",
-          "updates.json","link-health.json","manifest.json","icon.svg","android-version.json")
+          "updates.json","link-health.json","manifest.json","icon.svg","icon.webp",
+          "announcements.json","download.html","download-card.json","android-version.json")
 for name in required:
     origin=source/name
     if not origin.is_file(): raise SystemExit(f"Missing {origin}")
@@ -26,6 +30,12 @@ page=(out/"index.html").read_text(encoding="utf-8")
 if "./app-v2.js" not in page:raise SystemExit("V2 page script missing")
 if any(x in page for x in ("http-equiv=\"refresh\"","window.location.href=")):
     raise SystemExit("Refuse a cross-host redirect instead of native gateway")
+if args.beta_apk:
+    binary=root/args.beta_apk
+    if not binary.is_file() or binary.stat().st_size<100000: raise SystemExit("Missing beta APK")
+    destination=out/"downloads"/"future-code-ai-tools-v1.0.2-beta.apk"
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copy2(binary,destination)
 (out/"gateway-info.json").write_text(json.dumps({
     "name":"Future Code AI Tools existing gateway mirror",
     "expectedPath":"/ai-tools/",
@@ -33,13 +43,15 @@ if any(x in page for x in ("http-equiv=\"refresh\"","window.location.href=")):
     "tools":len(catalog["tools"]),
     "categories":len(catalog["categories"])-1,
     "status":"PACKAGE_ONLY_NOT_LIVE",
+    "betaApkIncluded":bool(args.beta_apk),
+    "betaApkReleaseSigned":False,
     "ownership":"Deploy into the owner's existing future-code-app-downloads-064.chatgpt.site project",
     "important":"Do not replace existing /myanmar-kyar/; add this route only."
 },ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 zipPath=root/"build"/"future-code-ai-tools-gateway.zip"
 with zipfile.ZipFile(zipPath,"w",zipfile.ZIP_DEFLATED,compresslevel=7) as z:
-    for f in sorted(out.iterdir()):
-        z.write(f,arcname="ai-tools/"+f.name)
+    for f in sorted(out.rglob("*")):
+        if f.is_file(): z.write(f,arcname="ai-tools/"+f.relative_to(out).as_posix())
 print(f"PACKAGE OK: {catalog['revision']} tools={len(catalog['tools'])} categories={len(catalog['categories'])-1}")
 print(f"ZIP: {zipPath}")
 print("No change to existing chatgpt.site gateway; upload/deploy remains pending.")
