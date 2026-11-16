@@ -161,3 +161,10 @@ For each future daily publication, update football data without rewriting APK im
 
 ### Goal Zone V4 / Results V2 — 2026-11-12
 Goal Zone reuses the Main V4 renderer and verified Results V2 renderer, with its isolated black/gold palette and original `goal-zone-download-banner.webp` at native aspect ratio. Keep both Goal Zone navigation tabs and ZIP categories. PNGs must include the banner exactly once, retain archived V2 prose and original choice, and use the shared APK image saver. New-format render failures must not silently fall back to an old layout. Run `goal-zone-v4.test.cjs` along with the common image-save tests after changes.
+
+## Owner correction — fresh hot news every day (2026-11-16)
+- Research and replace the Main + Goal Zone ten-story shared news edition on every invoked daily publication. Select genuinely new consequential developments, not the same award/appointment stories with new IDs or dates.
+- Preserve source publication/event dates; prefer the newest 24 hours, then 48 hours. A previously published event requires a verified newer development, explicitly recorded. Rank by novelty, consequence and Myanmar audience relevance; never invent popularity metrics.
+- `scripts/validate_daily_news.py` is part of the daily package guard: ten original articles, distinct source/event keys, fresh sources, and photo attribution. Compare the previous seven editions before release.
+- `news-freshness.js` uses Asia/Yangon midnight. Yesterday's feed must show a clear update-pending message, not old stories presented as today's hot news. This is a freshness safeguard, not an automatic research service.
+- Read back latest.json and the dated archive, verify ten new live titles and actual licensed photographs on both sites, and download a real news PNG.

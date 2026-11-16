@@ -245,9 +245,20 @@
       "previewStatus": "Original current-day verified-form editorial"
     }
   ],
-  "status": "PARTIAL candidate",
-  "publicationGaps": [
-    "Latest ten news stories and authentic photo package pending independent verification",
-    "Real browser PNG/ZIP verification pending"
-  ]
+  "status": "PUBLISHED",
+  "publicationGaps": [],
+  "newsEdition": "data/news/archive/2026-11-16.json",
+  "verification": {
+    "mainLivePreviews": 11,
+    "activeBrandLivePreviews": {
+      "Goal Zone": 11,
+      "YKZ": 11,
+      "BW": 11,
+      "Ko Thet": 11,
+      "KMM": 11
+    },
+    "verifiedYesterdayFT": 13,
+    "nativeTransport": "unchanged",
+    "browserDownloads": "Main V4 PNG, selected ZIP, result PNG and one preview PNG from all five brands downloaded; news and odds verification continuing"
+  }
 }

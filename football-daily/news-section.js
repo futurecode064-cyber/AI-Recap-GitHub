@@ -302,8 +302,15 @@
    const response=await (window.FootballData?window.FootballData.fetch:fetch)(section.dataset.newsUrl,{cache:"no-store"});
    if(!response.ok)throw new Error("News feed unavailable");
    const data=await response.json();
+   const edition=window.FutureCodeNewsFreshness.inspect(data);
+   if(!edition.current){
+    stories=[];countNode.textContent="0";filters.replaceChildren();
+    windowNode.textContent="ယနေ့သတင်းအသစ်များ မတင်ရသေးပါ။ နောက်ဆုံးထုတ်ဝေသည့်ရက် — "+(edition.feedDate||"—");
+    grid.replaceChildren(node("p","ယနေ့အတွက် သတင်းအသစ်များကို စိစစ်ပြင်ဆင်နေပါသည်။","fc-news-status"));
+    return;
+   }
    stories=Array.isArray(data.items)?data.items:[];
-   windowNode.textContent=data.windowLabel||"နောက်ဆုံး ဘောလုံးသတင်းများ";
+   windowNode.textContent=(data.windowLabel||"နောက်ဆုံး ဘောလုံးသတင်းများ")+" · ထုတ်ဝေရက် "+data.date;
    renderFilters();renderStories();
   }catch{
    grid.replaceChildren(node("p","သတင်းများကို ယာယီဖွင့်မရပါ။ နောက်မှ ပြန်ကြည့်ပါ။","fc-news-status"));

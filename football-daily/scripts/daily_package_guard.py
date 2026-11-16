@@ -79,5 +79,12 @@ for item in n.get('items',[]):
 check(y.get('reportDate')==str(day-timedelta(days=1)),'Yesterday archive date mismatch')
 for m in y.get('matches',[]):
     if m.get('status')=='finished':check(bool(re.fullmatch(r'\d+-\d+',str(m.get('finalScore','')))) and bool(m.get('resultSourceUrl')),f"{m.get('fixtureId')}: FT lacks score/source")
+if day >= date(2026,11,16):
+    from validate_daily_news import validate as validate_news_freshness
+    previous_news=[]
+    for age in range(1,8):
+        past=a.root/f'data/news/archive/{day-timedelta(days=age)}.json'
+        if past.exists():previous_news.append(json.loads(past.read_text(encoding='utf-8')))
+    errors.extend(validate_news_freshness(n,day,previous_news))
 print(json.dumps({'date':str(day),'status':'FAIL' if errors else 'STRUCTURAL_PASS','counts':{'previews':len(ms),'odds':len(rows),'special':len(choices),'tips':len(tids),'news':len(n.get('items',[]))},'errors':errors,'requires':'Independent source audit plus actual live section/PNG/ZIP/video verification'},ensure_ascii=False,indent=2))
 raise SystemExit(bool(errors))

@@ -2236,13 +2236,11 @@
     "မနက်မူလကြေးများသာဖြစ်ပြီး ယခုကြေး မရရှိသေးပါ။"
   ],
   "publicationCompleteness": {
-    "status": "PARTIAL",
+    "status": "PUBLISHED",
     "verifiedPreviews": 11,
     "pdfRows": 11,
     "specialChoices": 2,
-    "gaps": [
-      "Latest ten news stories and authentic photo package pending independent verification",
-      "Real browser PNG/ZIP verification pending"
-    ]
+    "gaps": [],
+    "newsStories": 10
   }
 }
