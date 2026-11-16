@@ -1,9 +1,10 @@
 {
-  "schemaVersion": 1,
-  "revision": "2026.11.15.1",
-  "date": "2026-11-15",
-  "title": "Future Code AI Tools v1.0",
-  "message": "AI Tool ၆၁ ခု၊ Category၊ Search၊ Favorites နဲ့ Compare စနစ် အသုံးပြုနိုင်ပါပြီ။",
+  "schemaVersion": 2,
+  "version": "2.0.0",
+  "revision": "d0f4e4ac86d72e4b",
+  "date": "2026-11-16",
+  "title": "Future Code AI Tools 2.0.0",
+  "message": "AI Tools စာရင်း 1200 ခု ရရှိပြီးပါပြီ။ Search, Favorites, Comparison, Collections နှင့် Link Health စနစ် အသုံးပြုနိုင်ပါပြီ။",
   "type": "catalog-update",
   "important": true
 }
