@@ -13,13 +13,14 @@ self.addEventListener("fetch",event=>{
   const u=new URL(request.url);
   if(request.method!=="GET"||u.origin!==self.location.origin)return;
   if(!u.pathname.includes("/ai-tools/"))return;
+  const canonical=new Request(u.origin+u.pathname,{method:"GET"});
   event.respondWith(fetch(request,{cache:"no-store"}).then(response=>{
     if(response.ok && response.type==="basic"){
       const copy=response.clone();
-      event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)));
+      event.waitUntil(caches.open(CACHE).then(cache=>cache.put(canonical,copy)));
     }
     return response;
-  }).catch(()=>caches.match(request).then(cached=>cached||caches.match("./index.html"))));
+  }).catch(()=>caches.match(canonical).then(cached=>cached||(request.mode==="navigate"?caches.match("./index.html"):Response.error()))));
 });
 self.addEventListener("push",event=>{
   let body={};try{body=event.data?event.data.json():{}}catch{}
