@@ -83,7 +83,7 @@ if day >= date(2026, 11, 16):
             ('E.special', [m.get('fixtureId') for m in choices]),
             ('ENGLISH_NEWS', [x.get('id') for x in n.get('items', [])]),
         ]:
-            match = re.search(r'Object\\.assign\\(' + re.escape(section) + r',({.*?})\\);',
+            match = re.search(r'Object\.assign\(' + re.escape(section) + r',({.*?})\);',
                               translation_js, re.DOTALL)
             if not match:
                 errors.append(f'Goal Zone English: missing translation section {section}')
