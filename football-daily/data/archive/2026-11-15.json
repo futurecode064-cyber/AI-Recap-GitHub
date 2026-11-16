@@ -31,7 +31,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ဘယ်ဂျီယံ",
@@ -205,7 +205,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "4-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861176",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-02",
@@ -234,7 +237,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ခရိုအေးရှား",
@@ -407,7 +410,10 @@
           "sourceDate": "2026-11-13"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861178",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-03",
@@ -436,7 +442,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ပြင်သစ်",
@@ -609,7 +615,10 @@
           "sourceDate": "2026-11-13"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861177",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-04",
@@ -638,7 +647,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "myanmarOdds": {
         "upperTeam": "စပိန်",
@@ -815,7 +824,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "2-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861175",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-05",
@@ -844,7 +856,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "မွန်တီနီဂရိုး",
@@ -1018,7 +1030,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "1-4",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861172",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-06",
@@ -1047,7 +1062,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "အာမေးနီးယား",
@@ -1221,7 +1236,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861171",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-07",
@@ -1250,7 +1268,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "အယ်ဘေးနီးယား",
@@ -1426,7 +1444,10 @@
         }
       },
       "venueNote": "Neutral venue, Budapest; Belarus is designated home team",
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861173",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-08",
@@ -1455,7 +1476,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ဖင်လန်",
@@ -1628,7 +1649,10 @@
           "sourceDate": "2026-11-13"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "7-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861174",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-09",
@@ -1657,7 +1681,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "တီနီရိုက်",
@@ -1831,7 +1855,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883113",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-10",
@@ -1860,7 +1887,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "myanmarOdds": {
         "upperTeam": "ဂရန်နာဒါ",
@@ -2037,7 +2064,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883116",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-11",
@@ -2066,7 +2096,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "အီဘာ",
@@ -2240,7 +2270,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883117",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-12",
@@ -2269,7 +2302,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "အဲဒန်စီ",
@@ -2443,7 +2476,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883137",
+      "resultVerifiedDate": "2026-11-16"
     },
     {
       "fixtureId": "fc-20261115-13",
@@ -2472,7 +2508,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "15(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "myanmarOdds": {
         "upperTeam": "ဗစ်တက်စ်",
@@ -2646,7 +2682,10 @@
           "sourceDateSemantics": "Publisher date where displayed; otherwise fixture-target publication date; checkedDate is actual retrieval day"
         }
       },
-      "currentSourcePDF": "15 စျေး(1).pdf"
+      "currentSourcePDF": "15 စျေး(1).pdf",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875847",
+      "resultVerifiedDate": "2026-11-16"
     }
   ],
   "noFixturesLeagues": [],
