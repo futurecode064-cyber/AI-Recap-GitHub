@@ -37,7 +37,9 @@ jobs:
         with:
           gradle-version: '8.9'
       - name: Unpack the real Kotlin source project
-        run: mkdir -p rt-build && unzip -q renttrack/RentTrack-Android-v1.0.1-source.zip -d rt-build
+        run: |
+          mkdir -p rt-build && unzip -q renttrack/RentTrack-Android-v1.0.1-source.zip -d rt-build
+          printf 'android.useAndroidX=true\norg.gradle.jvmargs=-Xmx3072m -Dfile.encoding=UTF-8\n' > rt-build/RentTrack/gradle.properties
       - name: Build debug and unsigned release APKs
         working-directory: rt-build/RentTrack
         run: gradle --no-daemon --stacktrace assembleDebug assembleRelease
