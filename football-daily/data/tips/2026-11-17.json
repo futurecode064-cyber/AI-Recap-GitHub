@@ -1,6 +1,12 @@
 {
   "reportDate": "2026-11-17",
   "timezone": "Asia/Yangon",
+  "coverage": {
+    "fixtures": 8,
+    "verifiedExternal": 8,
+    "editorialFallback": 0,
+    "missing": 0
+  },
   "items": [
     {
       "fixtureId": "fc-20261117-01",
@@ -9,7 +15,14 @@
       "score": "2-1",
       "sourceName": "Forebet",
       "sourceUrl": "https://www.forebet.com/en/football/matches/denmark-norway-2552381",
-      "sourceDate": "2026-11-16"
+      "sourceDate": "2026-11-17",
+      "sourceDateKind": "retrieval snapshot date; publisher timestamp not supplied",
+      "sourcePublishedDate": null,
+      "verifiedDate": "2026-11-17",
+      "fixtureDate": "2026-11-17",
+      "kickoffUtc": "2026-11-17T19:45:00Z",
+      "predictionType": "external-published-exact-score",
+      "sourceEvidence": "Correct-score table: Denmark 2-1 Norway"
     },
     {
       "fixtureId": "fc-20261117-02",
@@ -18,43 +31,110 @@
       "score": "1-2",
       "sourceName": "FootballPredictions.com",
       "sourceUrl": "https://footballpredictions.com/footballpredictions/nations-league-predictions/wales-vs-portugal-prediction-17-11-2026/",
-      "sourceDate": "2026-11-16"
+      "sourceDate": "2026-11-16",
+      "sourceDateKind": "publisher date",
+      "sourcePublishedDate": "2026-11-16",
+      "verifiedDate": "2026-11-17",
+      "fixtureDate": "2026-11-17",
+      "kickoffUtc": "2026-11-17T19:45:00Z",
+      "predictionType": "external-published-exact-score",
+      "sourceEvidence": "Our prediction: Wales 1-2 Portugal"
     },
     {
       "fixtureId": "fc-20261117-03",
       "home": "Bosnia-Herzegovina",
       "away": "Romania",
-      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+      "score": "2-2",
+      "sourceName": "Forebet",
+      "sourceUrl": "https://www.forebet.com/en/football/matches/bosnia-and-herzegovina-romania-2552383",
+      "sourceDate": "2026-11-17",
+      "sourceDateKind": "retrieval snapshot date; publisher timestamp not supplied",
+      "sourcePublishedDate": null,
+      "verifiedDate": "2026-11-17",
+      "fixtureDate": "2026-11-17",
+      "kickoffUtc": "2026-11-17T19:45:00Z",
+      "predictionType": "external-published-exact-score",
+      "sourceEvidence": "Published algorithm prediction: Bosnia and Herzegovina and Romania draw 2-2"
     },
     {
       "fixtureId": "fc-20261117-04",
       "home": "Hungary",
       "away": "Northern Ireland",
-      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+      "score": "1-0",
+      "sourceName": "TipOracle",
+      "sourceUrl": "https://www.tiporacle.com/match/1528995-hungary-vs-northern-ireland",
+      "sourceDate": "2026-11-16",
+      "sourceDateKind": "publisher date",
+      "sourcePublishedDate": "2026-11-16",
+      "verifiedDate": "2026-11-17",
+      "fixtureDate": "2026-11-17",
+      "kickoffUtc": "2026-11-17T19:45:00Z",
+      "predictionType": "external-published-exact-score",
+      "sourceEvidence": "Headline, correct-score market and verdict explicitly predict Hungary 1-0 Northern Ireland"
     },
     {
       "fixtureId": "fc-20261117-05",
       "home": "Republic of Ireland",
       "away": "Kosovo",
-      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+      "score": "1-0",
+      "sourceName": "AccurateTip",
+      "sourceUrl": "https://www.accuratetip.com/match/1528997-rep-of-ireland-vs-kosovo",
+      "sourceDate": "2026-11-17",
+      "sourceDateKind": "retrieval snapshot date; publisher timestamp not supplied",
+      "sourcePublishedDate": null,
+      "verifiedDate": "2026-11-17",
+      "fixtureDate": "2026-11-17",
+      "kickoffUtc": "2026-11-17T19:45:00Z",
+      "predictionType": "external-published-exact-score",
+      "sourceEvidence": "Correct-score FAQ explicitly predicts Republic of Ireland 1-0 Kosovo"
     },
     {
       "fixtureId": "fc-20261117-06",
       "home": "Israel",
       "away": "Austria",
-      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+      "score": "0-1",
+      "sourceName": "Balonario",
+      "sourceUrl": "https://balonario.com/en/match/2026-11-17-israel-austria/",
+      "sourceDate": "2026-11-17",
+      "sourceDateKind": "retrieval snapshot date; publisher timestamp not supplied",
+      "sourcePublishedDate": null,
+      "verifiedDate": "2026-11-17",
+      "fixtureDate": "2026-11-17",
+      "kickoffUtc": "2026-11-17T19:45:00Z",
+      "predictionType": "external-published-exact-score",
+      "sourceEvidence": "Opening forecast and preview consistently predict Israel 0-1 Austria; rejected inconsistent FootyMind snapshot"
     },
     {
       "fixtureId": "fc-20261117-07",
       "home": "Poland",
       "away": "Sweden",
-      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+      "score": "1-2",
+      "sourceName": "FootyMind",
+      "sourceUrl": "https://www.footymind.com/match/1528998-poland-vs-sweden",
+      "sourceDate": "2026-11-17",
+      "sourceDateKind": "retrieval snapshot date; publisher timestamp not supplied",
+      "sourcePublishedDate": null,
+      "verifiedDate": "2026-11-17",
+      "fixtureDate": "2026-11-17",
+      "kickoffUtc": "2026-11-17T19:45:00Z",
+      "predictionType": "external-published-exact-score",
+      "sourceEvidence": "Headline score, verdict and FAQ consistently predict Poland 1-2 Sweden"
     },
     {
       "fixtureId": "fc-20261117-08",
       "home": "Ukraine",
       "away": "Georgia",
-      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+      "score": "1-0",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/nations-league-predictions/ukraine-vs-georgia-prediction-17-11-2026/",
+      "sourceDate": "2026-11-16",
+      "sourceDateKind": "publisher date",
+      "sourcePublishedDate": "2026-11-16",
+      "verifiedDate": "2026-11-17",
+      "fixtureDate": "2026-11-17",
+      "kickoffUtc": "2026-11-17T19:45:00Z",
+      "predictionType": "external-published-exact-score",
+      "sourceEvidence": "Explicit correct-score forecast Ukraine 1-0 Georgia"
     }
   ]
 }
