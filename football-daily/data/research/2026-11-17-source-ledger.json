@@ -1,0 +1,511 @@
+{
+  "reportDate": "2026-11-17",
+  "sourcePDF": "17.pdf",
+  "previewScope": "UEFA Nations League A/B only, owner request",
+  "rows": [
+    {
+      "pdfRow": 1,
+      "fixtureId": "fc-20261117-01",
+      "home": "ဒိန်းမတ်",
+      "away": "နော်ဝေး",
+      "upperTeam": "ဒိန်းမတ်",
+      "bodyOdds": "-40",
+      "goalTotalOdds": "3-55",
+      "forecast": "2-2",
+      "kickoff": "2:15 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": true,
+      "exclusionReason": null,
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [
+        "https://www.espn.com/soccer/match/_/gameId/401861194",
+        "https://www.espn.com/soccer/table/_/league/uefa.nations"
+      ],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 2,
+      "fixtureId": "fc-20261117-02",
+      "home": "ဝေးလ်",
+      "away": "ပေါ်တူဂီ",
+      "upperTeam": "ပေါ်တူဂီ",
+      "bodyOdds": "1-50",
+      "goalTotalOdds": "3-15",
+      "forecast": "1-2",
+      "kickoff": "2:15 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": true,
+      "exclusionReason": null,
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [
+        "https://www.espn.com/soccer/match/_/gameId/401861189",
+        "https://www.espn.com/soccer/table/_/league/uefa.nations"
+      ],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 3,
+      "fixtureId": "fc-20261117-03",
+      "home": "ဘော့စနီးယား",
+      "away": "ရိုမေးနီးယား",
+      "upperTeam": "ဘော့စနီးယား",
+      "bodyOdds": "1+90",
+      "goalTotalOdds": "3+80",
+      "forecast": "2-1",
+      "kickoff": "2:15 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": true,
+      "exclusionReason": null,
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [
+        "https://www.espn.com/soccer/match/_/gameId/401861196",
+        "https://www.espn.com/soccer/table/_/league/uefa.nations"
+      ],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 4,
+      "fixtureId": "fc-20261117-04",
+      "home": "ဟန်ဂေရီ",
+      "away": "မြောက်အိုင်ယာလန်",
+      "upperTeam": "ဟန်ဂေရီ",
+      "bodyOdds": "-90",
+      "goalTotalOdds": "2-10",
+      "forecast": "1-0",
+      "kickoff": "2:15 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": true,
+      "exclusionReason": null,
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [
+        "https://www.espn.com/soccer/match/_/gameId/401861191",
+        "https://www.espn.com/soccer/table/_/league/uefa.nations"
+      ],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 5,
+      "fixtureId": "fc-20261117-05",
+      "home": "အိုင်ယာလန်",
+      "away": "ကိုဆိုဗို",
+      "upperTeam": "အိုင်ယာလန်",
+      "bodyOdds": "-75",
+      "goalTotalOdds": "2-25",
+      "forecast": "1-0",
+      "kickoff": "2:15 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": true,
+      "exclusionReason": null,
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [
+        "https://www.espn.com/soccer/match/_/gameId/401861192",
+        "https://www.espn.com/soccer/table/_/league/uefa.nations"
+      ],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 6,
+      "fixtureId": "fc-20261117-06",
+      "home": "အစ္စရေး",
+      "away": "ဩစတြီးယား",
+      "upperTeam": "ဩစတြီးယား",
+      "bodyOdds": "1+75",
+      "goalTotalOdds": "3+40",
+      "forecast": "1-2",
+      "kickoff": "2:15 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": true,
+      "exclusionReason": null,
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [
+        "https://www.espn.com/soccer/match/_/gameId/401861193",
+        "https://www.espn.com/soccer/table/_/league/uefa.nations"
+      ],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 7,
+      "fixtureId": "fc-20261117-07",
+      "home": "ပိုလန်",
+      "away": "ဆွီဒင်",
+      "upperTeam": "ပိုလန်",
+      "bodyOdds": "-40",
+      "goalTotalOdds": "3+25",
+      "forecast": "1-1",
+      "kickoff": "2:15 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": true,
+      "exclusionReason": null,
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [
+        "https://www.espn.com/soccer/match/_/gameId/401861195",
+        "https://www.espn.com/soccer/table/_/league/uefa.nations"
+      ],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 8,
+      "fixtureId": "fc-20261117-08",
+      "home": "ယူကရိန်း",
+      "away": "ဂျော်ဂျီယာ",
+      "upperTeam": "ယူကရိန်း",
+      "bodyOdds": "-70",
+      "goalTotalOdds": "2-45",
+      "forecast": "1-0",
+      "kickoff": "2:15 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": true,
+      "exclusionReason": null,
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [
+        "https://www.espn.com/soccer/match/_/gameId/401861190",
+        "https://www.espn.com/soccer/table/_/league/uefa.nations"
+      ],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 9,
+      "fixtureId": "fc-20261117-09",
+      "home": "ကာတာ",
+      "away": "တောင်ကိုရီးယား",
+      "upperTeam": "တောင်ကိုရီးယား",
+      "bodyOdds": "1-20",
+      "goalTotalOdds": "3+90",
+      "forecast": "1-2",
+      "kickoff": "8:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 10,
+      "fixtureId": "fc-20261117-10",
+      "home": "ယူအေအီး",
+      "away": "ဆီးရီးယား",
+      "upperTeam": "ယူအေအီး",
+      "bodyOdds": "1-65",
+      "goalTotalOdds": "3+90",
+      "forecast": "2-0",
+      "kickoff": "8:40 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 11,
+      "fixtureId": "fc-20261117-11",
+      "home": "ဆော်ဒီ",
+      "away": "ဥဇဘက်ကစ္စတန်",
+      "upperTeam": "ဆော်ဒီ",
+      "bodyOdds": "-30",
+      "goalTotalOdds": "2-55",
+      "forecast": "1-0",
+      "kickoff": "10:00 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 12,
+      "fixtureId": "fc-20261117-12",
+      "home": "ဂျော်ဒန်",
+      "away": "ဩစတြေးလျ",
+      "upperTeam": "ဩစတြေးလျ",
+      "bodyOdds": "1+80",
+      "goalTotalOdds": "2-90",
+      "forecast": "1-2",
+      "kickoff": "10:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 13,
+      "fixtureId": "fc-20261117-13",
+      "home": "ရုရှား",
+      "away": "ဗင်နီဇွဲလား",
+      "upperTeam": "ရုရှား",
+      "bodyOdds": "1+5",
+      "goalTotalOdds": "3+80",
+      "forecast": "2-0",
+      "kickoff": "10:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 14,
+      "fixtureId": "fc-20261117-14",
+      "home": "ကူဝိတ်",
+      "away": "ဟွန်ဒူးရပ်စ်",
+      "upperTeam": "ဟွန်ဒူးရပ်စ်",
+      "bodyOdds": "1+95",
+      "goalTotalOdds": "2-75",
+      "forecast": "0-1",
+      "kickoff": "11:00 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 15,
+      "fixtureId": "fc-20261117-15",
+      "home": "အာဂျင်တီးနား",
+      "away": "ကော်စတာရီကာ",
+      "upperTeam": "အာဂျင်တီးနား",
+      "bodyOdds": "2-100",
+      "goalTotalOdds": "3-50",
+      "forecast": "3-0",
+      "kickoff": "5:30 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 16,
+      "fixtureId": "fc-20261117-16",
+      "home": "ချီလီ",
+      "away": "ကိုလံဘီယာ",
+      "upperTeam": "ကိုလံဘီယာ",
+      "bodyOdds": "-75",
+      "goalTotalOdds": "2-40",
+      "forecast": "0-1",
+      "kickoff": "5:30 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 17,
+      "fixtureId": "fc-20261117-17",
+      "home": "အီကွေဒေါ",
+      "away": "ဘိုလီးဗီးယား",
+      "upperTeam": "အီကွေဒေါ",
+      "bodyOdds": "2+25",
+      "goalTotalOdds": "3+20",
+      "forecast": "3-0",
+      "kickoff": "6:00 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 18,
+      "fixtureId": "fc-20261117-18",
+      "home": "ဥရုဂွေး",
+      "away": "ဒိုမီနီကန်",
+      "upperTeam": "ဥရုဂွေး",
+      "bodyOdds": "3+100",
+      "goalTotalOdds": "4+90",
+      "forecast": "3-0",
+      "kickoff": "6:00 AM",
+      "kickoffCalendarDate": "2026-11-18",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 19,
+      "fixtureId": "fc-20261117-19",
+      "home": "ဘူရွန်ဒီ",
+      "away": "ဇမ်ဘီယာ",
+      "upperTeam": "ဘူရွန်ဒီ",
+      "bodyOdds": "-60",
+      "goalTotalOdds": "2+30",
+      "forecast": "1-0",
+      "kickoff": "7:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 20,
+      "fixtureId": "fc-20261117-20",
+      "home": "အီသီယိုးပီးယား",
+      "away": "မိုဇမ်ဘစ်",
+      "upperTeam": "မိုဇမ်ဘစ်",
+      "bodyOdds": "-5",
+      "goalTotalOdds": "2+5",
+      "forecast": "0-0",
+      "kickoff": "7:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 21,
+      "fixtureId": "fc-20261117-21",
+      "home": "လီဆိုသို",
+      "away": "ဂါဘွန်",
+      "upperTeam": "ဂါဘွန်",
+      "bodyOdds": "1-15",
+      "goalTotalOdds": "2-40",
+      "forecast": "0-2",
+      "kickoff": "7:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 22,
+      "fixtureId": "fc-20261117-22",
+      "home": "မာလာဝီ",
+      "away": "အီဂျစ်",
+      "upperTeam": "အီဂျစ်",
+      "bodyOdds": "2+20",
+      "goalTotalOdds": "3+70",
+      "forecast": "0-3",
+      "kickoff": "7:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 23,
+      "fixtureId": "fc-20261117-23",
+      "home": "တောင်ဆူဒန်",
+      "away": "အန်ဂိုလာ",
+      "upperTeam": "အန်ဂိုလာ",
+      "bodyOdds": "2+70",
+      "goalTotalOdds": "2-80",
+      "forecast": "0-2",
+      "kickoff": "7:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    },
+    {
+      "pdfRow": 24,
+      "fixtureId": "fc-20261117-24",
+      "home": "ဂမ်ဘီယာ",
+      "away": "အိုင်ဗရီကို့စ်",
+      "upperTeam": "အိုင်ဗရီကို့စ်",
+      "bodyOdds": "1+40",
+      "goalTotalOdds": "2-40",
+      "forecast": "0-1",
+      "kickoff": "10:30 PM",
+      "kickoffCalendarDate": "2026-11-17",
+      "eligibleForPreview": false,
+      "exclusionReason": "Owner explicitly requested Nations League previews only",
+      "sourcePDF": "17.pdf",
+      "sourcePage": 1,
+      "sourceUrls": [],
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for every fixture; omitted unless specifically cited"
+      }
+    }
+  ]
+}

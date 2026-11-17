@@ -1,0 +1,60 @@
+{
+  "reportDate": "2026-11-17",
+  "timezone": "Asia/Yangon",
+  "items": [
+    {
+      "fixtureId": "fc-20261117-01",
+      "home": "Denmark",
+      "away": "Norway",
+      "score": "2-1",
+      "sourceName": "Forebet",
+      "sourceUrl": "https://www.forebet.com/en/football/matches/denmark-norway-2552381",
+      "sourceDate": "2026-11-16"
+    },
+    {
+      "fixtureId": "fc-20261117-02",
+      "home": "Wales",
+      "away": "Portugal",
+      "score": "1-2",
+      "sourceName": "FootballPredictions.com",
+      "sourceUrl": "https://footballpredictions.com/footballpredictions/nations-league-predictions/wales-vs-portugal-prediction-17-11-2026/",
+      "sourceDate": "2026-11-16"
+    },
+    {
+      "fixtureId": "fc-20261117-03",
+      "home": "Bosnia-Herzegovina",
+      "away": "Romania",
+      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+    },
+    {
+      "fixtureId": "fc-20261117-04",
+      "home": "Hungary",
+      "away": "Northern Ireland",
+      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+    },
+    {
+      "fixtureId": "fc-20261117-05",
+      "home": "Republic of Ireland",
+      "away": "Kosovo",
+      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+    },
+    {
+      "fixtureId": "fc-20261117-06",
+      "home": "Israel",
+      "away": "Austria",
+      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+    },
+    {
+      "fixtureId": "fc-20261117-07",
+      "home": "Poland",
+      "away": "Sweden",
+      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+    },
+    {
+      "fixtureId": "fc-20261117-08",
+      "home": "Ukraine",
+      "away": "Georgia",
+      "unavailableReason": "No independently verified date-matched external exact-score forecast retrieved; displayed as unavailable."
+    }
+  ]
+}
