@@ -3,8 +3,8 @@
   "timezone": "Asia/Yangon",
   "sourcePDF": "17.pdf",
   "sourceRows": 24,
-  "priceSheetType": "owner morning prices",
-  "currentPricesAvailable": false,
+  "priceSheetType": "owner morning and current prices",
+  "currentPricesAvailable": true,
   "matches": [
     {
       "fixtureId": "fc-20261117-01",
@@ -28,8 +28,8 @@
       "upperTeam": "ဒိန်းမတ်",
       "bodyOdds": "-40",
       "goalTotalOdds": "3-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-35",
+      "currentGoalTotalOdds": "3-90",
       "internetPrediction": "2-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -40,8 +40,8 @@
         "upperTeam": "ဒိန်းမတ်",
         "bodyOdds": "-40",
         "goalTotalOdds": "3-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "3-90"
       },
       "espnEventId": "401861194",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861194",
@@ -219,7 +219,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Correct-score table: Denmark 2-1 Norway"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-02",
@@ -243,8 +245,8 @@
       "upperTeam": "ပေါ်တူဂီ",
       "bodyOdds": "1-50",
       "goalTotalOdds": "3-15",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-50",
+      "currentGoalTotalOdds": "3-25",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -255,8 +257,8 @@
         "upperTeam": "ပေါ်တူဂီ",
         "bodyOdds": "1-50",
         "goalTotalOdds": "3-15",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-50",
+        "currentGoalTotalOdds": "3-25"
       },
       "espnEventId": "401861189",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861189",
@@ -393,7 +395,7 @@
       },
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-14/482.png",
-      "homeOdds": 6.0,
+      "homeOdds": 6,
       "drawOdds": 4.7,
       "awayOdds": 1.4167,
       "totalGoalsLine": 3.5,
@@ -441,7 +443,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Our prediction: Wales 1-2 Portugal"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-03",
@@ -465,8 +469,8 @@
       "upperTeam": "ဘော့စနီးယား",
       "bodyOdds": "1+90",
       "goalTotalOdds": "3+80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "3+45",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -477,8 +481,8 @@
         "upperTeam": "ဘော့စနီးယား",
         "bodyOdds": "1+90",
         "goalTotalOdds": "3+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "3+45"
       },
       "espnEventId": "401861196",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861196",
@@ -620,7 +624,7 @@
       "awayOdds": 3.65,
       "totalGoalsLine": 2.5,
       "overOdds": 1.8,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861196",
       "oddsVerifiedDate": "2026-11-17",
       "oddsProvider": "DraftKings via ESPN; retrieved 2026-11-17",
@@ -656,7 +660,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Published algorithm prediction: Bosnia and Herzegovina and Romania draw 2-2"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-04",
@@ -680,8 +686,8 @@
       "upperTeam": "ဟန်ဂေရီ",
       "bodyOdds": "-90",
       "goalTotalOdds": "2-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-85",
+      "currentGoalTotalOdds": "2-10",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -692,8 +698,8 @@
         "upperTeam": "ဟန်ဂေရီ",
         "bodyOdds": "-90",
         "goalTotalOdds": "2-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-85",
+        "currentGoalTotalOdds": "2-10"
       },
       "espnEventId": "401861191",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861191",
@@ -871,7 +877,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Headline, correct-score market and verdict explicitly predict Hungary 1-0 Northern Ireland"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-05",
@@ -895,8 +903,8 @@
       "upperTeam": "အိုင်ယာလန်",
       "bodyOdds": "-75",
       "goalTotalOdds": "2-25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "2-20",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -907,8 +915,8 @@
         "upperTeam": "အိုင်ယာလန်",
         "bodyOdds": "-75",
         "goalTotalOdds": "2-25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "2-20"
       },
       "espnEventId": "401861192",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861192",
@@ -1086,7 +1094,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Correct-score FAQ explicitly predicts Republic of Ireland 1-0 Kosovo"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-06",
@@ -1110,8 +1120,8 @@
       "upperTeam": "ဩစတြီးယား",
       "bodyOdds": "1+75",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+85",
+      "currentGoalTotalOdds": "3+10",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1122,8 +1132,8 @@
         "upperTeam": "ဩစတြီးယား",
         "bodyOdds": "1+75",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+85",
+        "currentGoalTotalOdds": "3+10"
       },
       "espnEventId": "401861193",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861193",
@@ -1308,7 +1318,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Opening forecast and preview consistently predict Israel 0-1 Austria; rejected inconsistent FootyMind snapshot"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-07",
@@ -1332,8 +1344,8 @@
       "upperTeam": "ပိုလန်",
       "bodyOdds": "-40",
       "goalTotalOdds": "3+25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-35",
+      "currentGoalTotalOdds": "3-20",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1344,8 +1356,8 @@
         "upperTeam": "ပိုလန်",
         "bodyOdds": "-40",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "3-20"
       },
       "espnEventId": "401861195",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861195",
@@ -1523,7 +1535,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Headline score, verdict and FAQ consistently predict Poland 1-2 Sweden"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-08",
@@ -1547,8 +1561,8 @@
       "upperTeam": "ယူကရိန်း",
       "bodyOdds": "-70",
       "goalTotalOdds": "2-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "2-35",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1559,8 +1573,8 @@
         "upperTeam": "ယူကရိန်း",
         "bodyOdds": "-70",
         "goalTotalOdds": "2-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "2-35"
       },
       "espnEventId": "401861190",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861190",
@@ -1738,7 +1752,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Explicit correct-score forecast Ukraine 1-0 Georgia"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-09",
@@ -1762,8 +1778,8 @@
       "upperTeam": "တောင်ကိုရီးယား",
       "bodyOdds": "1-20",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-55",
+      "currentGoalTotalOdds": "3+60",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1774,8 +1790,8 @@
         "upperTeam": "တောင်ကိုရီးယား",
         "bodyOdds": "1-20",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-55",
+        "currentGoalTotalOdds": "3+60"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401931477",
@@ -1784,7 +1800,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/4398.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/451.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-10",
@@ -1808,8 +1826,8 @@
       "upperTeam": "ယူအေအီး",
       "bodyOdds": "1-65",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-70",
+      "currentGoalTotalOdds": "3+90",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1820,8 +1838,8 @@
         "upperTeam": "ယူအေအီး",
         "bodyOdds": "1-65",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-70",
+        "currentGoalTotalOdds": "3+90"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401932718",
@@ -1830,7 +1848,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/4397.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/uae.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/4380.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/syr.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/syr.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-11",
@@ -1854,8 +1874,8 @@
       "upperTeam": "ဆော်ဒီ",
       "bodyOdds": "-30",
       "goalTotalOdds": "2-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "2-60",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1866,8 +1886,8 @@
         "upperTeam": "ဆော်ဒီ",
         "bodyOdds": "-30",
         "goalTotalOdds": "2-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "2-60"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/2570.png",
@@ -1876,7 +1896,9 @@
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fifa.friendly.png",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/655.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ksa.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-12",
@@ -1900,8 +1922,8 @@
       "upperTeam": "ဩစတြေးလျ",
       "bodyOdds": "1+80",
       "goalTotalOdds": "2-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+70",
+      "currentGoalTotalOdds": "2-90",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1912,8 +1934,8 @@
         "upperTeam": "ဩစတြေးလျ",
         "bodyOdds": "1+80",
         "goalTotalOdds": "2-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+70",
+        "currentGoalTotalOdds": "2-90"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401919974",
@@ -1922,7 +1944,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/2917.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/jor.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/628.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-13",
@@ -1946,8 +1970,8 @@
       "upperTeam": "ရုရှား",
       "bodyOdds": "1+5",
       "goalTotalOdds": "3+80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1=",
+      "currentGoalTotalOdds": "3+80",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1958,8 +1982,8 @@
         "upperTeam": "ရုရှား",
         "bodyOdds": "1+5",
         "goalTotalOdds": "3+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1=",
+        "currentGoalTotalOdds": "3+80"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/454.png",
@@ -1968,7 +1992,9 @@
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fifa.friendly.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/rus.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/213.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ven.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ven.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-14",
@@ -1992,8 +2018,8 @@
       "upperTeam": "ဟွန်ဒူးရပ်စ်",
       "bodyOdds": "1+95",
       "goalTotalOdds": "2-75",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-100",
+      "currentGoalTotalOdds": "2-70",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2004,8 +2030,8 @@
         "upperTeam": "ဟွန်ဒူးရပ်စ်",
         "bodyOdds": "1+95",
         "goalTotalOdds": "2-75",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-100",
+        "currentGoalTotalOdds": "2-70"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401931956",
@@ -2014,7 +2040,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/841.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/kuw.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/215.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/hon.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/hon.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-15",
@@ -2038,8 +2066,8 @@
       "upperTeam": "အာဂျင်တီးနား",
       "bodyOdds": "2-100",
       "goalTotalOdds": "3-50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-95",
+      "currentGoalTotalOdds": "3-50",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2050,8 +2078,8 @@
         "upperTeam": "အာဂျင်တီးနား",
         "bodyOdds": "2-100",
         "goalTotalOdds": "3-50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-95",
+        "currentGoalTotalOdds": "3-50"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401930895",
@@ -2060,7 +2088,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/202.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/214.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/crc.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/crc.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-16",
@@ -2084,8 +2114,8 @@
       "upperTeam": "ကိုလံဘီယာ",
       "bodyOdds": "-75",
       "goalTotalOdds": "2-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-70",
+      "currentGoalTotalOdds": "2-40",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2096,8 +2126,8 @@
         "upperTeam": "ကိုလံဘီယာ",
         "bodyOdds": "-75",
         "goalTotalOdds": "2-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-70",
+        "currentGoalTotalOdds": "2-40"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401921304",
@@ -2106,7 +2136,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/207.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/chi.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/208.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/col.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-17",
@@ -2130,8 +2162,8 @@
       "upperTeam": "အီကွေဒေါ",
       "bodyOdds": "2+25",
       "goalTotalOdds": "3+20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+25",
+      "currentGoalTotalOdds": "3+10",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2142,8 +2174,8 @@
         "upperTeam": "အီကွေဒေါ",
         "bodyOdds": "2+25",
         "goalTotalOdds": "3+20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+25",
+        "currentGoalTotalOdds": "3+10"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401930899",
@@ -2152,7 +2184,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/209.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/204.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/bol.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/bol.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-18",
@@ -2176,8 +2210,8 @@
       "upperTeam": "ဥရုဂွေး",
       "bodyOdds": "3+100",
       "goalTotalOdds": "4+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "3+90",
+      "currentGoalTotalOdds": "4+90",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2188,8 +2222,8 @@
         "upperTeam": "ဥရုဂွေး",
         "bodyOdds": "3+100",
         "goalTotalOdds": "4+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "3+90",
+        "currentGoalTotalOdds": "4+90"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401932215",
@@ -2198,7 +2232,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/212.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/2649.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/dom.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/dom.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-19",
@@ -2222,8 +2258,8 @@
       "upperTeam": "ဘူရွန်ဒီ",
       "bodyOdds": "-60",
       "goalTotalOdds": "2+30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "2+20",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2234,8 +2270,8 @@
         "upperTeam": "ဘူရွန်ဒီ",
         "bodyOdds": "-60",
         "goalTotalOdds": "2+30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "2+20"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/5779.png",
@@ -2244,7 +2280,9 @@
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927169",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/bdi.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/zam.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/zam.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-20",
@@ -2268,8 +2306,8 @@
       "upperTeam": "မိုဇမ်ဘစ်",
       "bodyOdds": "-5",
       "goalTotalOdds": "2+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-5",
+      "currentGoalTotalOdds": "2+20",
       "internetPrediction": "0-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2280,8 +2318,8 @@
         "upperTeam": "မိုဇမ်ဘစ်",
         "bodyOdds": "-5",
         "goalTotalOdds": "2+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-5",
+        "currentGoalTotalOdds": "2+20"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/5777.png",
@@ -2290,7 +2328,9 @@
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927168",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/eth.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/moz.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/moz.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-21",
@@ -2314,8 +2354,8 @@
       "upperTeam": "ဂါဘွန်",
       "bodyOdds": "1-15",
       "goalTotalOdds": "2-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-20",
+      "currentGoalTotalOdds": "2-50",
       "internetPrediction": "0-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2326,8 +2366,8 @@
         "upperTeam": "ဂါဘွန်",
         "bodyOdds": "1-15",
         "goalTotalOdds": "2-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-20",
+        "currentGoalTotalOdds": "2-50"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/6640.png",
@@ -2336,7 +2376,9 @@
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927181",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/les.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/gab.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/gab.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-22",
@@ -2360,8 +2402,8 @@
       "upperTeam": "အီဂျစ်",
       "bodyOdds": "2+20",
       "goalTotalOdds": "3+70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+20",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2372,8 +2414,8 @@
         "upperTeam": "အီဂျစ်",
         "bodyOdds": "2+20",
         "goalTotalOdds": "3+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+20",
+        "currentGoalTotalOdds": "3+40"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/4325.png",
@@ -2382,7 +2424,9 @@
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401927179",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/caf.nations.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/mwi.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-23",
@@ -2406,8 +2450,8 @@
       "upperTeam": "အန်ဂိုလာ",
       "bodyOdds": "2+70",
       "goalTotalOdds": "2-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+70",
+      "currentGoalTotalOdds": "2-95",
       "internetPrediction": "0-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2418,8 +2462,8 @@
         "upperTeam": "အန်ဂိုလာ",
         "bodyOdds": "2+70",
         "goalTotalOdds": "2-80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+70",
+        "currentGoalTotalOdds": "2-95"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401927178",
@@ -2428,7 +2472,9 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/14075.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/14075.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/653.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ang.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/ang.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-24",
@@ -2452,8 +2498,8 @@
       "upperTeam": "အိုင်ဗရီကို့စ်",
       "bodyOdds": "1+40",
       "goalTotalOdds": "2-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+40",
+      "currentGoalTotalOdds": "2-40",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -2464,8 +2510,8 @@
         "upperTeam": "အိုင်ဗရီကို့စ်",
         "bodyOdds": "1+40",
         "goalTotalOdds": "2-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+40",
+        "currentGoalTotalOdds": "2-40"
       },
       "previewExclusionReason": "Owner explicitly requested Nations League previews only",
       "espnEventId": "401927182",
@@ -2474,7 +2520,11 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/7368.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/gam.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-17/4789.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png",
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     }
-  ]
+  ],
+  "currentPriceSourcePDF": "17 စျေး.pdf",
+  "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
 }

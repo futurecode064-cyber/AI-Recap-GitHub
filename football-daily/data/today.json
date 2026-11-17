@@ -26,8 +26,8 @@
       "upperTeam": "ဒိန်းမတ်",
       "bodyOdds": "-40",
       "goalTotalOdds": "3-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-35",
+      "currentGoalTotalOdds": "3-90",
       "internetPrediction": "2-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -38,8 +38,8 @@
         "upperTeam": "ဒိန်းမတ်",
         "bodyOdds": "-40",
         "goalTotalOdds": "3-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "3-90"
       },
       "espnEventId": "401861194",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861194",
@@ -217,7 +217,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Correct-score table: Denmark 2-1 Norway"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-02",
@@ -241,8 +243,8 @@
       "upperTeam": "ပေါ်တူဂီ",
       "bodyOdds": "1-50",
       "goalTotalOdds": "3-15",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-50",
+      "currentGoalTotalOdds": "3-25",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -253,8 +255,8 @@
         "upperTeam": "ပေါ်တူဂီ",
         "bodyOdds": "1-50",
         "goalTotalOdds": "3-15",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-50",
+        "currentGoalTotalOdds": "3-25"
       },
       "espnEventId": "401861189",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861189",
@@ -391,7 +393,7 @@
       },
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-14/482.png",
-      "homeOdds": 6.0,
+      "homeOdds": 6,
       "drawOdds": 4.7,
       "awayOdds": 1.4167,
       "totalGoalsLine": 3.5,
@@ -439,7 +441,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Our prediction: Wales 1-2 Portugal"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-03",
@@ -463,8 +467,8 @@
       "upperTeam": "ဘော့စနီးယား",
       "bodyOdds": "1+90",
       "goalTotalOdds": "3+80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "3+45",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -475,8 +479,8 @@
         "upperTeam": "ဘော့စနီးယား",
         "bodyOdds": "1+90",
         "goalTotalOdds": "3+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "3+45"
       },
       "espnEventId": "401861196",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861196",
@@ -618,7 +622,7 @@
       "awayOdds": 3.65,
       "totalGoalsLine": 2.5,
       "overOdds": 1.8,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861196",
       "oddsVerifiedDate": "2026-11-17",
       "oddsProvider": "DraftKings via ESPN; retrieved 2026-11-17",
@@ -654,7 +658,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Published algorithm prediction: Bosnia and Herzegovina and Romania draw 2-2"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-04",
@@ -678,8 +684,8 @@
       "upperTeam": "ဟန်ဂေရီ",
       "bodyOdds": "-90",
       "goalTotalOdds": "2-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-85",
+      "currentGoalTotalOdds": "2-10",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -690,8 +696,8 @@
         "upperTeam": "ဟန်ဂေရီ",
         "bodyOdds": "-90",
         "goalTotalOdds": "2-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-85",
+        "currentGoalTotalOdds": "2-10"
       },
       "espnEventId": "401861191",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861191",
@@ -869,7 +875,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Headline, correct-score market and verdict explicitly predict Hungary 1-0 Northern Ireland"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-05",
@@ -893,8 +901,8 @@
       "upperTeam": "အိုင်ယာလန်",
       "bodyOdds": "-75",
       "goalTotalOdds": "2-25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "2-20",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -905,8 +913,8 @@
         "upperTeam": "အိုင်ယာလန်",
         "bodyOdds": "-75",
         "goalTotalOdds": "2-25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "2-20"
       },
       "espnEventId": "401861192",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861192",
@@ -1084,7 +1092,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Correct-score FAQ explicitly predicts Republic of Ireland 1-0 Kosovo"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-06",
@@ -1108,8 +1118,8 @@
       "upperTeam": "ဩစတြီးယား",
       "bodyOdds": "1+75",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+85",
+      "currentGoalTotalOdds": "3+10",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1120,8 +1130,8 @@
         "upperTeam": "ဩစတြီးယား",
         "bodyOdds": "1+75",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+85",
+        "currentGoalTotalOdds": "3+10"
       },
       "espnEventId": "401861193",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861193",
@@ -1306,7 +1316,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Opening forecast and preview consistently predict Israel 0-1 Austria; rejected inconsistent FootyMind snapshot"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-07",
@@ -1330,8 +1342,8 @@
       "upperTeam": "ပိုလန်",
       "bodyOdds": "-40",
       "goalTotalOdds": "3+25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-35",
+      "currentGoalTotalOdds": "3-20",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1342,8 +1354,8 @@
         "upperTeam": "ပိုလန်",
         "bodyOdds": "-40",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "3-20"
       },
       "espnEventId": "401861195",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861195",
@@ -1521,7 +1533,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Headline score, verdict and FAQ consistently predict Poland 1-2 Sweden"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     },
     {
       "fixtureId": "fc-20261117-08",
@@ -1545,8 +1559,8 @@
       "upperTeam": "ယူကရိန်း",
       "bodyOdds": "-70",
       "goalTotalOdds": "2-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "2-35",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "17.pdf",
@@ -1557,8 +1571,8 @@
         "upperTeam": "ယူကရိန်း",
         "bodyOdds": "-70",
         "goalTotalOdds": "2-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "2-35"
       },
       "espnEventId": "401861190",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401861190",
@@ -1736,7 +1750,9 @@
           "predictionType": "external-published-exact-score",
           "sourceEvidence": "Explicit correct-score forecast Ukraine 1-0 Georgia"
         }
-      }
+      },
+      "currentPriceSourcePDF": "17 စျေး.pdf",
+      "currentPriceSourceSha256": "d0e5610aec55dfd9c2b183487d6e5a4cb31e15837a877a79e3a72c2f4c0c7d7b"
     }
   ]
 }
