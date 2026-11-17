@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'portal/**'
+      - 'renttrack/**'
       - 'training-app/assets/**'
       - 'scripts/build_portal.py'
       - 'tests/**'
@@ -36,6 +37,13 @@ jobs:
           node tests/portal.test.js
           node tests/download-tracking.test.js
           node tests/language-apps.test.js
+      - name: Include RentTrack signed APK and download landing page
+        run: |
+          mkdir -p portal/renttrack/releases
+          cp renttrack/index.html portal/renttrack/index.html
+          cp renttrack/icon.webp portal/renttrack/icon.webp
+          cp renttrack/releases/FutureCode-RentTrack-v1.0.1.apk portal/renttrack/releases/FutureCode-RentTrack-v1.0.1.apk
+          echo 'd5980de5bad18e8a949b78747f1662c335620e3eafea65ea35c427722fa52a31  portal/renttrack/releases/FutureCode-RentTrack-v1.0.1.apk' | sha256sum --check
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
