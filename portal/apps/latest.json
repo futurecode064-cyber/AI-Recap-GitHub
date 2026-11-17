@@ -2,6 +2,22 @@
   "updatedAt": "2026-11-08",
   "apps": [
     {
+      "id": "riderent",
+      "name": "Future Code RideRent",
+      "packageName": "com.futurecode.riderent",
+      "versionName": "1.0.1",
+      "versionCode": 2,
+      "minSdk": 26,
+      "file": "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCode-RideRent-v1.0.1.apk",
+      "apkUrl": "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCode-RideRent-v1.0.1.apk",
+      "sizeBytes": 2103542,
+      "sha256": "a18b8c02511e2cbeea6b9c7ca3d204630bb653627b177ce8360ff662cad355d8",
+      "certificateSha256": "31bceefea8f81259d8cf301739dfca39616aaa447c622ccc8130ec943273d340",
+      "releaseChannel": "stable",
+      "releasedAt": "2026-11-17",
+      "releaseNotes": "E-bike, motorbike, camera and equipment rental; booking overlap protection, maintenance lock, deposits, returns, update notifications. Separate from property RentTrack."
+    },
+    {
       "id": "stockguard",
       "name": "Future Code StockGuard",
       "packageName": "com.futurecode.stockguard",
