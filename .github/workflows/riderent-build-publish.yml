@@ -1,0 +1,157 @@
+name: Future Code RideRent - Signed APK and Download Website
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/riderent-build-publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: future-code-riderent-release
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - name: Checkout actual Future Code Android source
+        uses: actions/checkout@v4
+
+      - name: Verify original E-Bike equipment rental source bytes
+        shell: bash
+        run: echo '2c238e2ba5c018646c69a671bc931ee8148952952646bab65b5b6b1fa4b9ab42  renttrack/RentTrack-Android-v1.0.1-source.zip' | sha256sum --check
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle 8.9
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Prepare Android SDK 35
+        shell: bash
+        run: |
+          set -euo pipefail
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | head -n1)"
+          "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0'
+          test -x "$ANDROID_HOME/build-tools/35.0.0/apksigner"
+
+      - name: Setup image renderer
+        shell: bash
+        run: |
+          python3 -m venv "$RUNNER_TEMP/ridevenv"
+          "$RUNNER_TEMP/ridevenv/bin/pip" install --quiet pillow
+          echo "$RUNNER_TEMP/ridevenv/bin" >> "$GITHUB_PATH"
+
+      - name: Unpack and rebrand ONLY the equipment rental source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p riderent-build
+          unzip -q renttrack/RentTrack-Android-v1.0.1-source.zip -d riderent-build
+          printf 'android.useAndroidX=true\norg.gradle.jvmargs=-Xmx3072m -Dfile.encoding=UTF-8\n' > riderent-build/RentTrack/gradle.properties
+          python scripts/prepare_riderent.py prepare
+
+      - name: Build original Kotlin features under RideRent branding
+        working-directory: riderent-build/RentTrack
+        run: gradle --no-daemon --stacktrace :app:assembleRelease
+
+      - name: Restore existing protected Future Code signing certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          API='https://mxwervqihaqlxybghdak.supabase.co/functions/v1/fc-renttrack-signing'
+          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-renttrack-signing-v1" | jq -er '.value')"
+          echo "::add-mask::$OIDC"
+          curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o "$RUNNER_TEMP/ride-key.json"
+          jq -e '.ready == true and .key_alias == "renttrack"' "$RUNNER_TEMP/ride-key.json" >/dev/null
+          jq -er '.keystore_b64' "$RUNNER_TEMP/ride-key.json" | base64 --decode > "$RUNNER_TEMP/ride-release.jks"
+          PASS="$(jq -er '.store_password' "$RUNNER_TEMP/ride-key.json")"
+          echo "::add-mask::$PASS"
+          echo "RIDE_SIGN_PASSWORD=$PASS" >> "$GITHUB_ENV"
+          echo "RIDE_SIGN_KEYSTORE=$RUNNER_TEMP/ride-release.jks" >> "$GITHUB_ENV"
+          rm "$RUNNER_TEMP/ride-key.json"
+
+      - name: Align and sign production RideRent APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOOL="$ANDROID_HOME/build-tools/35.0.0"
+          SOURCE='riderent-build/RentTrack/app/build/outputs/apk/release/app-release-unsigned.apk'
+          test -s "$SOURCE"
+          "$TOOL/zipalign" -f -p 4 "$SOURCE" "$RUNNER_TEMP/riderent-aligned.apk"
+          "$TOOL/apksigner" sign --ks "$RIDE_SIGN_KEYSTORE" --ks-key-alias renttrack --ks-pass env:RIDE_SIGN_PASSWORD --key-pass env:RIDE_SIGN_PASSWORD --out portal/apps/FutureCode-RideRent-v1.0.1.apk "$RUNNER_TEMP/riderent-aligned.apk"
+          "$TOOL/apksigner" verify --verbose --print-certs portal/apps/FutureCode-RideRent-v1.0.1.apk | tee "$RUNNER_TEMP/ride-verify.txt"
+          "$TOOL/aapt" dump badging portal/apps/FutureCode-RideRent-v1.0.1.apk | tee "$RUNNER_TEMP/ride-badging.txt"
+          grep -q "package: name='com.futurecode.riderent' versionCode='2' versionName='1.0.1'" "$RUNNER_TEMP/ride-badging.txt"
+          grep -q "application-label:'Future Code RideRent'" "$RUNNER_TEMP/ride-badging.txt"
+          CERT="$(sed -nE 's/^Signer #1 certificate SHA-256 digest: ([0-9a-fA-F]{64}).*/\1/p' "$RUNNER_TEMP/ride-verify.txt" | head -n1)"
+          test "${#CERT}" -eq 64
+          echo "RIDERENT_CERT_SHA256=$CERT" >> "$GITHUB_ENV"
+          echo "Signed APK SHA256: $(sha256sum portal/apps/FutureCode-RideRent-v1.0.1.apk)"
+
+      - name: Validate Android 10 install and launch
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          arch: x86_64
+          target: default
+          disable-animations: true
+          script: |
+            adb install -r portal/apps/FutureCode-RideRent-v1.0.1.apk
+            adb shell am start -n com.futurecode.riderent/com.futurecode.renttrack.MainActivity
+            sleep 8
+            adb shell pidof com.futurecode.riderent
+
+      - name: Add RideRent website listing and live analytics integration
+        run: |
+          python scripts/prepare_riderent.py publish
+          test -s portal/apps/FutureCode-RideRent-v1.0.1.apk
+          grep -q 'data-app="riderent"' portal/apps/index.html
+          grep -q 'data-app-key="riderent"' portal/apps/index.html
+          grep -q 'riderent/channel.json' riderent-build/RentTrack/app/src/main/java/com/futurecode/renttrack/UpdateService.kt
+
+      - name: Upload verified app APK build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: FutureCode-RideRent-v1.0.1-signed-APK
+          path: portal/apps/FutureCode-RideRent-v1.0.1.apk
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish only RideRent resources to EXISTING GitHub Pages repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add portal/apps/index.html portal/apps/latest.json portal/apps/stats.js portal/apps/FutureCode-RideRent-v1.0.1.apk portal/apps/riderent-icon.png portal/apps/riderent-update.json portal/riderent/index.html riderent/channel.json riderent/README.md
+          git diff --cached --check
+          git commit -m "Publish signed Future Code RideRent equipment rental APK and download counter"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Publish mirrored GitHub Release asset with provider download count
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: riderent-v1.0.1
+          name: Future Code RideRent v1.0.1 (Equipment Rentals)
+          body: |
+            Future Code RideRent, a distinct equipment-rental Android app.
+            E-Bike, motorbike, camera and other equipment asset rentals.
+            Original Kotlin rental features preserved; rebranded name and launcher icon.
+            Package ID: com.futurecode.riderent
+            Android 8.0+; release is signed and verified.
+            IMPORTANT: not an in-place update of the previous com.futurecode.renttrack APK, because app ID changed.
+            Physical-device acceptance testing remains recommended; Android emulator smoke test runs before publication.
+          files: portal/apps/FutureCode-RideRent-v1.0.1.apk
