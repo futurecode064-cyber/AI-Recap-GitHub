@@ -82,7 +82,7 @@ const kyarTag = kyarHtml.match(/<a\b[^>]*class="download"[^>]*>/)?.[0];
 assert.ok(kyarTag && kyarTag.includes('data-app-key="myanmar-kyar"'));
 const kyarUrl = kyarTag.match(/href="([^"]+)"/)?.[1];
 const kyarFilename = kyarTag.match(/download="([^"]+)"/)?.[1];
-assert.equal(kyarUrl, 'https://myanmar-kyar.futurecode-dubai-86851bf2.workers.dev/download.apk');
+assert.equal(kyarUrl, 'https://future-code-kyar-connect.cheeky-elf-5504.chatgpt.site/updates/Myanmar-Kyar-v4.2.26.apk');
 assert.match(kyarFilename, /^Myanmar-Kyar-v\d+\.\d+\.\d+\.apk$/);
 const kyarAnchor = {
   href: kyarUrl,
