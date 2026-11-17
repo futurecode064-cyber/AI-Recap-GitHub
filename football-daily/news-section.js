@@ -21,7 +21,8 @@
   if(cls)e.className=cls;
   return e;
  };
- const isGoalZone=location.pathname.startsWith("/future-code-journal/");
+ const isEnglish=location.pathname.startsWith("/goal-zone-english/");
+ const isGoalZone=isEnglish||location.pathname.startsWith("/future-code-journal/");
  const exportBrand=isGoalZone?"GOAL ZONE":"FUTURE CODE";
  section.dataset.newsBrand=isGoalZone?"goal-zone":"future-code";
  let newsFont;
@@ -179,7 +180,7 @@
    ctx.fillStyle="rgba(6,16,26,.92)";ctx.fillRect(tagX,tagY,tagW,tagH);
    ctx.fillStyle=trim;ctx.fillRect(tagX,tagY,7,tagH);
    ctx.font='700 22px "FCNewsMyanmar"';
-   ctx.fillStyle="#ffffff";ctx.fillText("မှတ်တမ်းဓာတ်ပုံ",tagX+19,tagY+43);
+   ctx.fillStyle="#ffffff";ctx.fillText(isEnglish?"ARCHIVE PHOTO":"မှတ်တမ်းဓာတ်ပုံ",tagX+19,tagY+43);
    ctx.restore();
   }
   // Headline layers: safe white keyline, dark extrusion, alternating ink and accent.
