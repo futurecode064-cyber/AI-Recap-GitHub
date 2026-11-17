@@ -65,22 +65,31 @@ jobs:
         working-directory: riderent-build/RentTrack
         run: gradle --no-daemon --stacktrace :app:assembleRelease
 
-      - name: Restore existing protected Future Code signing certificate
+      - name: Restore or initialize permanent private RideRent signing certificate
         shell: bash
         run: |
           set -euo pipefail
           umask 077
-          API='https://mxwervqihaqlxybghdak.supabase.co/functions/v1/fc-renttrack-signing'
-          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-renttrack-signing-v1" | jq -er '.value')"
+          API='https://mxwervqihaqlxybghdak.supabase.co/functions/v1/fc-riderent-signing'
+          OIDC="$(curl -fsS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=future-code-riderent-signing-v1" | jq -er '.value')"
           echo "::add-mask::$OIDC"
           curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o "$RUNNER_TEMP/ride-key.json"
-          jq -e '.ready == true and .key_alias == "renttrack"' "$RUNNER_TEMP/ride-key.json" >/dev/null
+          if [ "$(jq -r '.ready' "$RUNNER_TEMP/ride-key.json")" != 'true' ]; then
+            PASS="$(openssl rand -hex 32)"
+            echo "::add-mask::$PASS"
+            keytool -genkeypair -storetype PKCS12 -keystore "$RUNNER_TEMP/ride-init.p12" -storepass "$PASS" -keypass "$PASS" -alias riderent -keyalg RSA -keysize 3072 -validity 10000 -dname "CN=Future Code RideRent, O=Future Code AI Studio, C=MM" -noprompt
+            jq -nc --arg p "$PASS" --arg k "$(base64 -w0 "$RUNNER_TEMP/ride-init.p12")" '{action:"initialize",store_password:$p,keystore_b64:$k}' > "$RUNNER_TEMP/ride-init.json"
+            curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data-binary @"$RUNNER_TEMP/ride-init.json" "$API" -o "$RUNNER_TEMP/ride-init-result.json"
+            jq -e '.ok == true' "$RUNNER_TEMP/ride-init-result.json" >/dev/null
+            curl -fsS --retry 3 -H "Authorization: Bearer $OIDC" -H "Content-Type: application/json" --data '{"action":"get"}' "$API" -o "$RUNNER_TEMP/ride-key.json"
+          fi
+          jq -e '.ready == true and .key_alias == "riderent"' "$RUNNER_TEMP/ride-key.json" >/dev/null
           jq -er '.keystore_b64' "$RUNNER_TEMP/ride-key.json" | base64 --decode > "$RUNNER_TEMP/ride-release.jks"
           PASS="$(jq -er '.store_password' "$RUNNER_TEMP/ride-key.json")"
           echo "::add-mask::$PASS"
           echo "RIDE_SIGN_PASSWORD=$PASS" >> "$GITHUB_ENV"
           echo "RIDE_SIGN_KEYSTORE=$RUNNER_TEMP/ride-release.jks" >> "$GITHUB_ENV"
-          rm "$RUNNER_TEMP/ride-key.json"
+          rm -f "$RUNNER_TEMP/ride-key.json" "$RUNNER_TEMP/ride-init.p12" "$RUNNER_TEMP/ride-init.json" "$RUNNER_TEMP/ride-init-result.json"
 
       - name: Align and sign production RideRent APK
         shell: bash
@@ -90,7 +99,7 @@ jobs:
           SOURCE='riderent-build/RentTrack/app/build/outputs/apk/release/app-release-unsigned.apk'
           test -s "$SOURCE"
           "$TOOL/zipalign" -f -p 4 "$SOURCE" "$RUNNER_TEMP/riderent-aligned.apk"
-          "$TOOL/apksigner" sign --ks "$RIDE_SIGN_KEYSTORE" --ks-key-alias renttrack --ks-pass env:RIDE_SIGN_PASSWORD --key-pass env:RIDE_SIGN_PASSWORD --out portal/apps/FutureCode-RideRent-v1.0.1.apk "$RUNNER_TEMP/riderent-aligned.apk"
+          "$TOOL/apksigner" sign --ks "$RIDE_SIGN_KEYSTORE" --ks-key-alias riderent --ks-pass env:RIDE_SIGN_PASSWORD --key-pass env:RIDE_SIGN_PASSWORD --out portal/apps/FutureCode-RideRent-v1.0.1.apk "$RUNNER_TEMP/riderent-aligned.apk"
           "$TOOL/apksigner" verify --verbose --print-certs portal/apps/FutureCode-RideRent-v1.0.1.apk | tee "$RUNNER_TEMP/ride-verify.txt"
           "$TOOL/aapt" dump badging portal/apps/FutureCode-RideRent-v1.0.1.apk | tee "$RUNNER_TEMP/ride-badging.txt"
           grep -q "package: name='com.futurecode.riderent' versionCode='2' versionName='1.0.1'" "$RUNNER_TEMP/ride-badging.txt"
