@@ -1,0 +1,30 @@
+name: Publish RentTrack GitHub Release
+on:
+  push:
+    paths:
+      - '.github/workflows/renttrack-release.yml'
+      - 'renttrack/releases/FutureCode-RentTrack-v1.0.1.apk'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify owner-signed APK bytes
+        run: echo 'd5980de5bad18e8a949b78747f1662c335620e3eafea65ea35c427722fa52a31  renttrack/releases/FutureCode-RentTrack-v1.0.1.apk' | sha256sum --check
+      - name: Publish signed release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: renttrack-v1.0.1
+          name: Future Code RentTrack v1.0.1
+          body: |
+            Future Code RentTrack v1.0.1 - offline rental manager for E-Bike, motorbike and equipment rental shops.
+            Application ID: com.futurecode.renttrack
+            Android: 8.0+
+            APK SHA-256: d5980de5bad18e8a949b78747f1662c335620e3eafea65ea35c427722fa52a31
+            Signed with a dedicated RSA 3072-bit key. v2/v3 verified.
+            Android API 29 emulator debug APK installation/startup smoke test passed.
+            Real-phone installation and upgrade preservation were not independently verified.
+          files: renttrack/releases/FutureCode-RentTrack-v1.0.1.apk

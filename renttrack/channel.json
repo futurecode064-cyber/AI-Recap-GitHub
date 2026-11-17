@@ -1,8 +1,14 @@
 {
   "versionCode": 2,
   "versionName": "1.0.1",
-  "apkUrl": "",
-  "sha256": "",
-  "releaseNotes": "Future Code RentTrack source v1.0.1. The signed APK is not published yet.",
-  "announcements": []
+  "apkUrl": "https://github.com/futurecode064-cyber/AI-Recap-GitHub/releases/download/renttrack-v1.0.1/FutureCode-RentTrack-v1.0.1.apk",
+  "sha256": "d5980de5bad18e8a949b78747f1662c335620e3eafea65ea35c427722fa52a31",
+  "releaseNotes": "Future Code RentTrack v1.0.1 • Offline rental manager, maintenance lock, booking protection, rental returns, verified user-approved updates and notifications.",
+  "announcements": [
+    {
+      "id": "renttrack-initial-release-1-0-1",
+      "title": "RentTrack v1.0.1 ထွက်ရှိပါပြီ",
+      "body": "Offline အငှားစာရင်းနဲ့ ပစ္စည်းပြန်အပ်စနစ်ကို အသုံးပြုနိုင်ပါပြီ။"
+    }
+  ]
 }
