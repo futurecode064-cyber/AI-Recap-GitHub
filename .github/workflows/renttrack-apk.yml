@@ -1,0 +1,65 @@
+name: RentTrack Android APK Build
+
+on:
+  push:
+    paths:
+      - '.github/workflows/renttrack-apk.yml'
+      - 'renttrack/RentTrack-Android-v1.0.1-source.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate original RentTrack source archive
+        run: echo '2c238e2ba5c018646c69a671bc931ee8148952952646bab65b5b6b1fa4b9ab42  renttrack/RentTrack-Android-v1.0.1-source.zip' | sha256sum --check
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Install Android 35 platform and build tools
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Set up Gradle 8.9
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Unpack the real Kotlin source project
+        run: mkdir -p rt-build && unzip -q renttrack/RentTrack-Android-v1.0.1-source.zip -d rt-build
+      - name: Build debug and unsigned release APKs
+        working-directory: rt-build/RentTrack
+        run: gradle --no-daemon --stacktrace assembleDebug assembleRelease
+      - name: Prepare release APK for offline owner signing
+        run: |
+          mkdir -p dist
+          "$ANDROID_HOME/build-tools/35.0.0/zipalign" -f -p 4 rt-build/RentTrack/app/build/outputs/apk/release/app-release-unsigned.apk dist/FutureCode-RentTrack-v1.0.1-unsigned-aligned.apk
+          cp rt-build/RentTrack/app/build/outputs/apk/debug/app-debug.apk dist/FutureCode-RentTrack-v1.0.1-debug.apk
+          cp "$ANDROID_HOME/build-tools/35.0.0/lib/apksigner.jar" dist/apksigner.jar
+          sha256sum dist/*.apk > dist/build-checksums.txt
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: RentTrack-v1.0.1-unsigned-and-debug
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Android emulator install and startup smoke test (debug APK)
+        continue-on-error: true
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          arch: x86_64
+          target: default
+          disable-animations: true
+          script: |
+            adb install -r dist/FutureCode-RentTrack-v1.0.1-debug.apk
+            adb shell am start -n com.futurecode.renttrack/.MainActivity
+            sleep 7
+            adb shell pidof com.futurecode.renttrack
