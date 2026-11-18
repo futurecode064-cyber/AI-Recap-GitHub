@@ -11,7 +11,7 @@ on:
       - 'tests/**'
       - '.github/workflows/future-code-portal-pages.yml'
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -37,6 +37,19 @@ jobs:
           node tests/portal.test.js
           node tests/download-tracking.test.js
           node tests/language-apps.test.js
+      - name: Repair APK names using SHA-256 verified local mirrors
+        run: |
+          python3 scripts/repair_apk_downloads.py
+          node tests/download-tracking.test.js
+      - name: Save verified Android APK mirrors and fixed links
+        run: |
+          git add portal/apps/index.html portal/apps/latest.json portal/apps/*.apk
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "fix: ship verified same-origin APK download filenames"
+            git push origin HEAD:main || echo "::warning::Mirrors were deployed but could not be committed to main"
+          fi
       - name: Include RentTrack signed APK and download landing page
         run: |
           mkdir -p portal/renttrack/releases
