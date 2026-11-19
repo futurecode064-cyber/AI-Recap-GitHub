@@ -1072,7 +1072,7 @@
     "oss-webodm-opensplat": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:45+00:00",
+      "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "github-api"
     },
     "oss-jimliu-baocut": {
@@ -1268,12 +1268,6 @@
       "source": "github-api"
     },
     "oss-browser-use-video-use": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:47+00:00",
-      "source": "github-api"
-    },
-    "oss-aiming-lab-autoresearchclaw": {
       "status": "ok",
       "http": 200,
       "checkedAt": "2026-11-17T02:58:47+00:00",
@@ -1726,7 +1720,7 @@
     "oss-builderz-labs-mission-control": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:33+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-crestalnetwork-intentkit": {
@@ -2020,7 +2014,7 @@
     "oss-openai-whisper": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-microsoft-bitnet": {
@@ -2116,7 +2110,7 @@
     "oss-datalab-to-indra": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-docling-project-docling-serve": {
@@ -2128,25 +2122,25 @@
     "oss-khoj-ai-khoj": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-deepfakes-faceswap": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-jaidedai-easyocr": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-dottxt-ai-outlines": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-openai-gpt-oss": {
@@ -2164,25 +2158,25 @@
     "oss-deepseek-ai-deepep": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-hips-autograd": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-swe-bench-swe-bench": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-nmslib-hnswlib": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "github-api"
     },
     "oss-picovoice-porcupine": {
@@ -2200,25 +2194,25 @@
     "oss-transformerlab-transformerlab-app": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "github-api"
     },
     "oss-giovannipasq-agentic-rag-for-dummies": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "github-api"
     },
     "oss-ucbepic-docetl": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "github-api"
     },
     "oss-ailia-ai-ailia-models": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "github-api"
     },
     "oss-dongrixinyu-jionlp": {
@@ -2230,22 +2224,664 @@
     "oss-qwenaudio-cosyvoice": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "github-api"
     },
     "oss-deezer-spleeter": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
+      "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "github-api"
+    },
+    "oss-safetensors-safetensors": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "github-api"
+    },
+    "oss-strands-labs-strands-decider": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "github-api"
+    },
+    "oss-state-spaces-mamba": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "github-api"
+    },
+    "oss-memvid-memvid": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "github-api"
+    },
+    "claude": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "external-https"
+    },
+    "oss-greydgl-pentestgpt": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "github-api"
+    },
+    "perplexity": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "external-https"
+    },
+    "oss-datawhalechina-easy-rl": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "github-api"
+    },
+    "chatgpt": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "external-https"
+    },
+    "copilot": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "external-https"
+    },
+    "oss-openmoss-moss": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "github-api"
+    },
+    "gemini": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "external-https"
+    },
+    "poe": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "source": "external-https"
+    },
+    "deepseek": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "grok": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "consensus": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "elicit": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "chatpdf": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "openrouter": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "midjourney": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "notebooklm": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "mistral": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "leonardo": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "recraft": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "ideogram": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "krea": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "canva": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "firefly": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "openart": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "pika": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "heygen": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "runway": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "synthesia": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "freepik": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "luma": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "invideo": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "veed": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "suno": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "capcut": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "elevenlabs": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "source": "external-https"
+    },
+    "adobepodcast": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "cursor": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "replit": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "udio": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "otter": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "lovable": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "descript": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "githubcopilot": {
+      "status": "unknown",
+      "http": 406,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "huggingface": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "v0": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "googleaistudio": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "n8n": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "make": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "kling": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "lmstudio": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "gamma": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "zapier": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "bardeen": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "napkin": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "beautifulai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "grammarly": {
+      "status": "unknown",
+      "http": 405,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "quillbot": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "bolt": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:18+00:00",
+      "source": "external-https"
+    },
+    "characterai": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "wordtune": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "notion": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "phind": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "tactiq": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "deepl": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "youcom": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "metaai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "huggingchat": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "typingmind": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "fathom": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "anythingllm": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "microsoftdesigner": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "jan": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "qwen": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "photoroom": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "clipdrop": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "kimi": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "picwish": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "fotor": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "pixlr": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:19+00:00",
+      "source": "external-https"
+    },
+    "removebg": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "cleanup": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "topaz": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "upscayl": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "tensorart": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "civitai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "blackforest": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "getimg": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "dreamstudio": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "adobeexpress": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "mage": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "artbreeder": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "picsart": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "kaiber": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "pixverse": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "nightcafe": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "genmo": {
+      "status": "unknown",
+      "http": 429,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "opusclip": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "vidu": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "did": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "colossyan": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:20+00:00",
+      "source": "external-https"
+    },
+    "captions": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:21+00:00",
+      "source": "external-https"
+    },
+    "hailuo": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-19T01:54:21+00:00",
+      "source": "external-https"
     }
   },
   "batchSize": 125,
-  "checkedAt": "2026-11-18T02:28:36+00:00",
+  "checkedAt": "2026-11-19T01:54:21+00:00",
   "summary": {
-    "ok": 373,
+    "ok": 459,
     "broken": 0,
-    "unknown": 0
+    "unknown": 20
   },
-  "remainingUnverified": 827
+  "remainingUnverified": 721
 }
