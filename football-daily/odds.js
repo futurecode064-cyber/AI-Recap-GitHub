@@ -47,9 +47,9 @@ if(isMainOdds){
  Object.assign(groups,{"Premier League":"အင်္ဂလန် ပရီးမီးယားလိဂ်","Serie A":"အီတလီ စီးရီးအေ","La Liga":"စပိန် လာလီဂါ","Allsvenskan":"ဆွီဒင် လိဂ်","Danish Superliga":"ဒိန်းမတ် စူပါလိဂ်","Primeira Liga":"ပေါ်တူဂီ ပရီးမီးယားလိဂ်","La Liga 2":"စပိန် လာလီဂါ ၂","Ligue 2":"ပြင်သစ် လိဂ် ၂","Turkish Super Lig":"တူရကီ စူပါလိဂ်","Swedish Superettan":"ဆွီဒင် စူပါအက်တန်လိဂ်"});
  for(const [league,file] of Object.entries(mainLeagueFiles))leagueLogos[league]="./assets/league-logos/"+file+".png";
 }
-function leagueHeading(league){
+function leagueHeading(league,source){
  const heading=element("h2","odds-league-heading");
- const logo=safeLogo(window.FutureCodeMainLogoAssets?.leagueCrest(league)||window.FutureCodeBrandExportData?.leagueCrest(league)||leagueLogos[league]);
+ const logo=safeLogo(source?.leagueLogoUrl||window.FutureCodeMainLogoAssets?.leagueCrest(league)||window.FutureCodeBrandExportData?.leagueCrest(league)||leagueLogos[league]);
  if(logo){
   const icon=element("img","league-crest");icon.src=logo;icon.alt=groups[league]||league;icon.loading="eager";icon.decoding="sync";
   icon.onerror=()=>{icon.replaceWith(element("span","league-mark","⚽"));};
@@ -171,7 +171,7 @@ function render(data){
  for(const match of data.matches){if(!grouped.has(match.league))grouped.set(match.league,[]);grouped.get(match.league).push(match);}
  for(const [league,matches] of grouped){
   const section=element("section","odds-group"),header=element("div","odds-league-header");
-  if(!isMainOdds)header.appendChild(leagueHeading(league));
+  if(!isMainOdds)header.appendChild(leagueHeading(league,matches[0]));
   const leagueButtons=element("div","odds-league-png-parts");
   makeOddsPngButtons(leagueButtons,data,matches,league);
   header.appendChild(leagueButtons);section.appendChild(header);
@@ -185,7 +185,7 @@ function render(data){
   if(isMainOdds){
    section.classList.add("main-compact-odds");
    const logoCell=element("th","main-league-logo");logoCell.rowSpan=2;
-   const heading=leagueHeading(league);
+   const heading=leagueHeading(league,matches[0]);
    logoCell.appendChild(heading.firstElementChild);
    const nameCell=element("th","main-league-name",groups[league]||league);nameCell.rowSpan=2;
    const upperCell=element("th","odds-heading-fixed","ကြေးပေးအသင်း");upperCell.rowSpan=2;

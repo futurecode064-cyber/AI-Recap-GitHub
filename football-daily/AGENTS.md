@@ -178,3 +178,11 @@ Goal Zone reuses the Main V4 renderer and verified Results V2 renderer, with its
 - `scripts/validate_daily_news.py` is part of the daily package guard: ten original articles, distinct source/event keys, fresh sources, and photo attribution. Compare the previous seven editions before release.
 - `news-freshness.js` uses Asia/Yangon midnight. Yesterday's feed must show a clear update-pending message, not old stories presented as today's hot news. This is a freshness safeguard, not an automatic research service.
 - Read back latest.json and the dated archive, verify ten new live titles and actual licensed photographs on both sites, and download a real news PNG.
+
+## Permanent daily PNG/ZIP release gate — owner 2026-11-20
+- Every requested daily edition must pass `node football-daily/scripts/validate_export_assets.cjs football-daily YYYY-MM-DD`, now also called by `daily_package_guard.py`. Check the actual candidate report and complete odds sheet; do not hardcode a previous date or fixture list.
+- Every team and competition crest must resolve to an existing same-origin PNG. Register current canonical AND owner Myanmar competition labels in both Main and brand logo registries. Never skip missing-crest checks or publish a partial ZIP as complete.
+- `odds.js` must prefer the fixture's verified `leagueLogoUrl` when rendering competition headings. A new competition name must not produce a blank badge merely because a historical alias is absent.
+- Bump affected HTML script cache versions after registry/export repairs. Reopen the actual deployed odds page, verify all competition badges loaded, export a real all-league PNG and ZIP with selected frames, and inspect the resulting files before claiming the download repair is complete.
+- A brand's `data-football-hold-date` rewrites the daily report to `data/brand-hold/DATE-today.json`; changing the date attribute without creating the matching report breaks that brand. For brands included in the owner's requested daily update, use the shared live report or create and validate the exact matching snapshot. Preserve unrelated explicit owner holds.
+- English release QA includes both DOM labels and real Canvas PNG text; DOM-only translation does not translate Canvas draw calls. Preserve original news attribution, archive photo dates, full prose, actual odds and selections.

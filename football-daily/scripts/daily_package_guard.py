@@ -122,5 +122,10 @@ if day >= date(2026,11,16):
         past=a.root/f'data/news/archive/{day-timedelta(days=age)}.json'
         if past.exists():previous_news.append(json.loads(past.read_text(encoding='utf-8')))
     errors.extend(validate_news_freshness(n,day,previous_news))
+# The actual candidate must have drawable crests and valid brand hold targets.
+import subprocess
+asset_gate=subprocess.run(['node',str(a.root/'scripts/validate_export_assets.cjs'),str(a.root),str(day)],capture_output=True,text=True)
+if asset_gate.returncode:
+    errors.append('Export asset/brand-date gate: '+asset_gate.stdout.strip()+' '+asset_gate.stderr.strip())
 print(json.dumps({'date':str(day),'status':'FAIL' if errors else 'STRUCTURAL_PASS','counts':{'previews':len(ms),'odds':len(rows),'special':len(choices),'tips':len(tids),'news':len(n.get('items',[]))},'errors':errors,'requires':'Independent source audit plus actual live section/PNG/ZIP/video verification'},ensure_ascii=False,indent=2))
 raise SystemExit(bool(errors))
