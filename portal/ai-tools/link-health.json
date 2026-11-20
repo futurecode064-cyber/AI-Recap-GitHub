@@ -1069,12 +1069,6 @@
       "checkedAt": "2026-11-17T02:58:45+00:00",
       "source": "github-api"
     },
-    "oss-webodm-opensplat": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
     "oss-jimliu-baocut": {
       "status": "ok",
       "http": 200,
@@ -1381,12 +1375,6 @@
       "checkedAt": "2026-11-17T02:58:48+00:00",
       "source": "github-api"
     },
-    "oss-promtengineer-localgpt": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:48+00:00",
-      "source": "github-api"
-    },
     "oss-chigwell-telegram-mcp": {
       "status": "ok",
       "http": 200,
@@ -1651,12 +1639,6 @@
       "checkedAt": "2026-11-18T02:28:32+00:00",
       "source": "github-api"
     },
-    "oss-metarank-metarank": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:32+00:00",
-      "source": "github-api"
-    },
     "oss-phronesis-io-eigenflux": {
       "status": "ok",
       "http": 200,
@@ -1687,12 +1669,6 @@
       "checkedAt": "2026-11-18T02:28:32+00:00",
       "source": "github-api"
     },
-    "oss-neuroaihub-brainpilot": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:32+00:00",
-      "source": "github-api"
-    },
     "oss-wan-video-wan2-2": {
       "status": "ok",
       "http": 200,
@@ -1715,12 +1691,6 @@
       "status": "ok",
       "http": 200,
       "checkedAt": "2026-11-18T02:28:33+00:00",
-      "source": "github-api"
-    },
-    "oss-builderz-labs-mission-control": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
       "source": "github-api"
     },
     "oss-crestalnetwork-intentkit": {
@@ -1783,12 +1753,6 @@
       "checkedAt": "2026-11-18T02:28:33+00:00",
       "source": "github-api"
     },
-    "oss-foundationagents-openmanus": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:33+00:00",
-      "source": "github-api"
-    },
     "oss-googleads-google-ads-mcp": {
       "status": "ok",
       "http": 200,
@@ -1796,12 +1760,6 @@
       "source": "github-api"
     },
     "oss-jacobgil-pytorch-grad-cam": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:33+00:00",
-      "source": "github-api"
-    },
-    "oss-tencent-hunyuan-hunyuanvideo": {
       "status": "ok",
       "http": 200,
       "checkedAt": "2026-11-18T02:28:33+00:00",
@@ -1879,60 +1837,6 @@
       "checkedAt": "2026-11-18T02:28:34+00:00",
       "source": "github-api"
     },
-    "oss-zhuyansen-new-term-radar": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-pyro-ppl-numpyro": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-agenui-agenui": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-karpathy-nanochat": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-2noise-chattts": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-k2-fsa-omnivoice": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-memorilabs-memori": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-microsoft-trellis": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-hkustdial-supervisor-skills": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
     "oss-nvidia-apex": {
       "status": "ok",
       "http": 200,
@@ -1940,12 +1844,6 @@
       "source": "github-api"
     },
     "oss-evidentlyai-evidently": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:34+00:00",
-      "source": "github-api"
-    },
-    "oss-charliedream1-ai-quant-trade": {
       "status": "ok",
       "http": 200,
       "checkedAt": "2026-11-18T02:28:34+00:00",
@@ -1987,90 +1885,6 @@
       "checkedAt": "2026-11-18T02:28:35+00:00",
       "source": "github-api"
     },
-    "oss-tnt-likely-panwatch": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-traceroot-ai-traceroot": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-rockbenben-subtitle-translator": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-openlair-dr-claw": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-openai-whisper": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-microsoft-bitnet": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-andrewyng-aisuite": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-datatalksclub-mlops-zoomcamp": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-hkuds-vimax": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-chathub-dev-chathub": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-ai4finance-foundation-finrobot": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-helicone-helicone": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-grobidorg-grobid": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-yangjian102621-geekai": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
     "oss-1186258278-openclawchinesetranslation": {
       "status": "ok",
       "http": 200,
@@ -2089,169 +1903,7 @@
       "checkedAt": "2026-11-18T02:28:35+00:00",
       "source": "github-api"
     },
-    "oss-perplexityai-space": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-liaohch3-claude-tap": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-nvidia-ai-blueprints-video-search-and-summarization": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:35+00:00",
-      "source": "github-api"
-    },
-    "oss-datalab-to-indra": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-docling-project-docling-serve": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
-      "source": "github-api"
-    },
-    "oss-khoj-ai-khoj": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-deepfakes-faceswap": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-jaidedai-easyocr": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-dottxt-ai-outlines": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-openai-gpt-oss": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
-      "source": "github-api"
-    },
-    "oss-emily2040-seedance-2-0": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
-      "source": "github-api"
-    },
-    "oss-deepseek-ai-deepep": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-hips-autograd": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-swe-bench-swe-bench": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:15+00:00",
-      "source": "github-api"
-    },
-    "oss-nmslib-hnswlib": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-picovoice-porcupine": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
-      "source": "github-api"
-    },
-    "oss-google-deepmind-open-spiel": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
-      "source": "github-api"
-    },
-    "oss-transformerlab-transformerlab-app": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-giovannipasq-agentic-rag-for-dummies": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-ucbepic-docetl": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-ailia-ai-ailia-models": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-dongrixinyu-jionlp": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:36+00:00",
-      "source": "github-api"
-    },
-    "oss-qwenaudio-cosyvoice": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-deezer-spleeter": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
     "oss-safetensors-safetensors": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-strands-labs-strands-decider": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-state-spaces-mamba": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
-    "oss-memvid-memvid": {
       "status": "ok",
       "http": 200,
       "checkedAt": "2026-11-19T01:54:16+00:00",
@@ -2263,23 +1915,11 @@
       "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "external-https"
     },
-    "oss-greydgl-pentestgpt": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
-    },
     "perplexity": {
       "status": "unknown",
       "http": 403,
       "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "external-https"
-    },
-    "oss-datawhalechina-easy-rl": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
     },
     "chatgpt": {
       "status": "ok",
@@ -2292,12 +1932,6 @@
       "http": 200,
       "checkedAt": "2026-11-19T01:54:16+00:00",
       "source": "external-https"
-    },
-    "oss-openmoss-moss": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
-      "source": "github-api"
     },
     "gemini": {
       "status": "ok",
@@ -2874,14 +2508,764 @@
       "http": 200,
       "checkedAt": "2026-11-19T01:54:21+00:00",
       "source": "external-https"
+    },
+    "qodo": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "sourcegraph": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "submagic": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "amazonq": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "windsurf": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "blackbox": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "aider": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "jetbrains": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "coderabbit": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "pieces": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "continue": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "flutterflow": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "stackblitz": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "bubble": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:46+00:00",
+      "source": "external-https"
+    },
+    "tabnine": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "framer": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "adalo": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "glide": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "figma": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "uizard": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "webflow": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "speechify": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "murf": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "resemble": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "lovo": {
+      "status": "unknown",
+      "http": 402,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "softr": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "durable": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "playht": {
+      "status": "unknown",
+      "http": null,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "wisecut": {
+      "status": "unknown",
+      "http": 406,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "kits": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "lalalai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "krisp": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "beatoven": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "soundraw": {
+      "status": "unknown",
+      "http": 406,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "turboscribe": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "jasper": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "copyai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "riverside": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "rytr": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "writesonic": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "novelai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:47+00:00",
+      "source": "external-https"
+    },
+    "hyperwrite": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "jenni": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "scite": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "paperpal": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "mubert": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "semanticscholar": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "researchrabbit": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "aiva": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "sudowrite": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "litmaps": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "humata": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "scholarcy": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "scispace": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "pdfgear": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "ifttt": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "activepieces": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "gumloop": {
+      "status": "unknown",
+      "http": 406,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "relevance": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "pipedream": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "langflow": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "dify": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "relay": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "botpress": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "manychat": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "tidio": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "hubspot": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "lindy": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:48+00:00",
+      "source": "external-https"
+    },
+    "crewai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "voiceflow": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "pitch": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "flowise": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "presentationsai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "decktopus": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "plusai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "visme": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "piktochart": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "reverso": {
+      "status": "unknown",
+      "http": 403,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "magicslides": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "googletranslate": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "slidesai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "prezi": {
+      "status": "unknown",
+      "http": 406,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "meshy": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "weglot": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "rask": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "spline": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "scenario": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "julius": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:49+00:00",
+      "source": "external-https"
+    },
+    "tripo": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "lokalise": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "hex": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "smartcat": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "papago": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "h2o": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "datarobot": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "frase": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "surfer": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "akkio": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "ahrefs": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "semrush": {
+      "status": "unknown",
+      "http": 405,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "clearscope": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "hootsuite": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "buffer": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "predis": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "publer": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "metricool": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "ocoya": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "marketmuse": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "rows": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "fathomvideo": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "later": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "socialbee": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "shortwave": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "teal": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "textio": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "rezi": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "harvey": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:50+00:00",
+      "source": "external-https"
+    },
+    "superhuman": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:51+00:00",
+      "source": "external-https"
+    },
+    "luminance": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:51+00:00",
+      "source": "external-https"
+    },
+    "robinai": {
+      "status": "unknown",
+      "http": null,
+      "checkedAt": "2026-11-20T01:47:51+00:00",
+      "source": "external-https"
+    },
+    "sanebox": {
+      "status": "unknown",
+      "http": 406,
+      "checkedAt": "2026-11-20T01:47:51+00:00",
+      "source": "external-https"
+    },
+    "spellbook": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:51+00:00",
+      "source": "external-https"
+    },
+    "fortinet": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:51+00:00",
+      "source": "external-https"
+    },
+    "crowdstrike": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:51+00:00",
+      "source": "external-https"
+    },
+    "kickresume": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-20T01:47:52+00:00",
+      "source": "external-https"
     }
   },
   "batchSize": 125,
-  "checkedAt": "2026-11-19T01:54:21+00:00",
+  "checkedAt": "2026-11-20T01:47:52+00:00",
   "summary": {
-    "ok": 459,
+    "ok": 509,
     "broken": 0,
-    "unknown": 20
+    "unknown": 34
   },
-  "remainingUnverified": 721
+  "remainingUnverified": 657
 }
