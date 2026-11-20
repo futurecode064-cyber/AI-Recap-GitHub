@@ -1,0 +1,282 @@
+{
+  "reportDate": "2026-11-20",
+  "sourcePDF": "20(1).pdf",
+  "pdfSha256": "f605c342d91e4fe6f2710a7e3ec35632783893608c5877aaf46b4b8154598fe8",
+  "legacyRawText": "                                    ( 20.11.2026 &ufae habmvH;k yGJ aygufaMu;rsm; )\n                                                                                       တ   ့်ဒီ           ဂျို်းတ ေါင့်း\n အခ ျိန့်               တ   ွေ့ဆုမည့်အသင့်း                  အထက့်အသင့်း                                                     အင့်   နက့်\n                                                                                 မူလ              ယခု   မူလ            ယခု\n                                                             pydef vmvD*g\n2:30 AM      bDbmtdv\n                   k f          နှင့်   tufpfyefndK            bDbmtdv\n                                                                     k f         1-20                   3+75                    2-1\n                                                          *smref bGef'pfvD*g\n2:00 AM       bdik ,\n                   f ef         နှင့်         udv\n                                                k ;Hk            bdik ,\n                                                                      f ef       3-20                   5+80                    4-0\n                                                            jyifopf vD*l; 1\n2:15 AM        x&GdKif;         နှင့်    vD[maA;vf               x&GdKif;        -50                    3+95                    2-1\n                                                          *smref bGef'pfvD*g 2\n12:00 AM     bDvzD ;D vf        နှင့်    rwf'b\n                                             D wf               bDvzD ;D vf      -50                    3+60                    2-1\n12:00 AM     'ef;pwuf           နှင့်   [du\n                                          k f'ef[drf;         [du\n                                                                k f'ef[drf;      -80                    3-20                    1-2\n                                                              aemfa0;vd*f\n12:30 AM       rdkv'f D         နှင့်     bd'k k*d vifh         bd'k k*d vifh    1+65                    4=                     1-3\n                                                            'de;f rwf plygvd*f\n12:30 AM      tm[yfpf           နှင့်     vif;bdkif             tm[yfpf          1+40                   3+5                     2-1\n                                                           b,f*sD,Hv*d f at\n2:15 AM     qmu,fb&k            နှင့်    0ufpw\n                                             f mvdk           qmu,fb&k           -80                    3-40                    2-1\n                                                            tDwvD pD;&D;bD\n2:00 AM        AD&ked m         နှင့်         pDpeD m             AD&ked m       1+40                   3+45                    2-1\n                                                            pydef vmvD*g 2\n12:00 AM      tef'k&d m         နှင့်    vD*ef;eufpf             tef'k&d m       1+90                   3+85                    2-1\n                                                            jyifopf vD*l; 2\n1:30 AM       tefeefpD          နှင့်   uvJ,m;armifh            tefeefpD         -70                    2-85                    1-0\n1:30 AM       *GdKif*ef h       နှင့်     taA;&Gef               *GdKif*ef h     -70                    3+25                    2-1\n1:30 AM        rwfZf            နှင့်     bdak vmheD              rwfZf          -65                    2-95                    2-1\n1:30 AM         eefpD           နှင့်         'D*sG ef             eefpD         1+85                   3+55                    2-0\n1:30 AM     &wfpwm;pdef h       နှင့်          yD&;l          &wfpwm;pdef h      -75                    3+90                    2-1\n\f",
+  "rows": [
+    {
+      "pdfRow": 1,
+      "fixtureId": "fc-20261120-01",
+      "home": "ဘီဘာအိုလ်",
+      "away": "အက်စ်ပန်ညို",
+      "upperTeam": "ဘီဘာအိုလ်",
+      "bodyOdds": "1-20",
+      "goalTotalOdds": "3+75",
+      "forecast": "2-1",
+      "sourceKickoff": "02:30",
+      "kickoff": "02:30",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882805",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 2,
+      "fixtureId": "fc-20261120-02",
+      "home": "ဘိုင်ယန်",
+      "away": "ကိုလုံး",
+      "upperTeam": "ဘိုင်ယန်",
+      "bodyOdds": "3-20",
+      "goalTotalOdds": "5+80",
+      "forecast": "4-0",
+      "sourceKickoff": "02:00",
+      "kickoff": "02:00",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884736",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 3,
+      "fixtureId": "fc-20261120-03",
+      "home": "ထရွိုင်း",
+      "away": "လီဟာဗေးလ်",
+      "upperTeam": "ထရွိုင်း",
+      "bodyOdds": "-50",
+      "goalTotalOdds": "3+95",
+      "forecast": "2-1",
+      "sourceKickoff": "02:15",
+      "kickoff": "02:15",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876395",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 4,
+      "fixtureId": "fc-20261120-04",
+      "home": "ဘီလီဖီးလ်",
+      "away": "မတ်ဒီဘတ်",
+      "upperTeam": "ဘီလီဖီးလ်",
+      "bodyOdds": "-50",
+      "goalTotalOdds": "3+60",
+      "forecast": "2-1",
+      "sourceKickoff": "00:00",
+      "kickoff": "00:00",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885049",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 5,
+      "fixtureId": "fc-20261120-05",
+      "home": "ဒမ်းစတက်",
+      "away": "ဟိုက်ဒန်ဟိမ်း",
+      "upperTeam": "ဟိုက်ဒန်ဟိမ်း",
+      "bodyOdds": "-80",
+      "goalTotalOdds": "3-20",
+      "forecast": "1-2",
+      "sourceKickoff": "00:00",
+      "kickoff": "00:00",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885053",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 6,
+      "fixtureId": "fc-20261120-06",
+      "home": "မိုလ်ဒီ",
+      "away": "ဘိုဒိုဂလင့်",
+      "upperTeam": "ဘိုဒိုဂလင့်",
+      "bodyOdds": "1+65",
+      "goalTotalOdds": "4=",
+      "forecast": "1-3",
+      "sourceKickoff": "00:30",
+      "kickoff": "00:30",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843486",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 7,
+      "fixtureId": "fc-20261120-07",
+      "home": "အာဟပ်စ်",
+      "away": "လင်းဘိုင်",
+      "upperTeam": "အာဟပ်စ်",
+      "bodyOdds": "1+40",
+      "goalTotalOdds": "3+5",
+      "forecast": "2-1",
+      "sourceKickoff": "00:30",
+      "kickoff": "00:30",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874492",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 8,
+      "fixtureId": "fc-20261120-08",
+      "home": "ဆာကယ်ဘရု",
+      "away": "ဝက်စ်တာလို",
+      "upperTeam": "ဆာကယ်ဘရု",
+      "bodyOdds": "-80",
+      "goalTotalOdds": "3-40",
+      "forecast": "2-1",
+      "sourceKickoff": "02:15",
+      "kickoff": "02:15",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878937",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 9,
+      "fixtureId": "fc-20261120-09",
+      "home": "ဗီရိုနာ",
+      "away": "စီဆီနာ",
+      "upperTeam": "ဗီရိုနာ",
+      "bodyOdds": "1+40",
+      "goalTotalOdds": "3+45",
+      "forecast": "2-1",
+      "sourceKickoff": "02:00",
+      "kickoff": "02:00",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899543",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 10,
+      "fixtureId": "fc-20261120-10",
+      "home": "အန်ဒိုရာ",
+      "away": "လီဂန်နက်စ်",
+      "upperTeam": "အန်ဒိုရာ",
+      "bodyOdds": "1+90",
+      "goalTotalOdds": "3+85",
+      "forecast": "2-1",
+      "sourceKickoff": "00:00",
+      "kickoff": "02:00",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883112",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": {
+        "pdf": "00:00",
+        "verified": "02:00",
+        "reason": "ESPN fixture schedule verified; PDF time preserved in sourceKickoff"
+      }
+    },
+    {
+      "pdfRow": 11,
+      "fixtureId": "fc-20261120-11",
+      "home": "အန်နန်စီ",
+      "away": "ကလဲယားမောင့်",
+      "upperTeam": "အန်နန်စီ",
+      "bodyOdds": "-70",
+      "goalTotalOdds": "2-85",
+      "forecast": "1-0",
+      "sourceKickoff": "01:30",
+      "kickoff": "01:30",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876691",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 12,
+      "fixtureId": "fc-20261120-12",
+      "home": "ဂွိုင်းဂမ့်",
+      "away": "အေဗေးရွန်",
+      "upperTeam": "ဂွိုင်းဂမ့်",
+      "bodyOdds": "-70",
+      "goalTotalOdds": "3+25",
+      "forecast": "2-1",
+      "sourceKickoff": "01:30",
+      "kickoff": "01:30",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876690",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 13,
+      "fixtureId": "fc-20261120-13",
+      "home": "မတ်ဇ်",
+      "away": "ဘိုလော့နီ",
+      "upperTeam": "မတ်ဇ်",
+      "bodyOdds": "-65",
+      "goalTotalOdds": "2-95",
+      "forecast": "2-1",
+      "sourceKickoff": "01:30",
+      "kickoff": "01:30",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876688",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 14,
+      "fixtureId": "fc-20261120-14",
+      "home": "နန်စီ",
+      "away": "ဒီဂျွန်",
+      "upperTeam": "နန်စီ",
+      "bodyOdds": "1+85",
+      "goalTotalOdds": "3+55",
+      "forecast": "2-0",
+      "sourceKickoff": "01:30",
+      "kickoff": "01:30",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876687",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    },
+    {
+      "pdfRow": 15,
+      "fixtureId": "fc-20261120-15",
+      "home": "ရက်စတားစိန့်",
+      "away": "ပီယူ",
+      "upperTeam": "ရက်စတားစိန့်",
+      "bodyOdds": "-75",
+      "goalTotalOdds": "3+90",
+      "forecast": "2-1",
+      "sourceKickoff": "01:30",
+      "kickoff": "01:30",
+      "kickoffCalendarDate": "2026-11-21",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876685",
+      "unavailableFields": {
+        "coachAndInjuries": "Not independently confirmed for all fixtures; omitted unless individually sourced"
+      },
+      "kickoffSourceDiscrepancy": null
+    }
+  ]
+}
