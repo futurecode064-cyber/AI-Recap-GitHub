@@ -19,6 +19,7 @@ Object.assign(teamFiles,{"https://future-code-football-daily.pages.dev/assets/te
  Object.assign(names,{"FA Cup": "အင်္ဂလန် FA ဖလား", "Eliteserien": "နော်ဝေး လိဂ်", "Segunda Division": "စပိန် လာလီဂါ ၂", "1st Division": "ဒိန်းမတ် လိဂ် ၁", "Liga I": "ရိုမေနီးယားလိဂ် ၁", "Liga Portugal 2": "ပေါ်တူဂီ လိဂ် ၂", "Primera Division": "ပါရာဂွေး ပရီးမီးယားလိဂ်"});
  Object.assign(local,{"J.League Cup": "jpn.cup", "UEFA U19 Championship Qualification": "uefa.u19"});
  Object.assign(local,{"UEFA Nations League B":"uefa.nations","UEFA Nations League D":"uefa.nations","LaLiga 2":"esp.2","Africa Cup of Nations Qualification":"caf.nations"});
+ Object.assign(local,{"Spanish LALIGA":"esp.1","စပိန် လာလီဂါ":"esp.1","German Bundesliga":"ger.1","ဂျာမန် ဘွန်ဒက်စ်လီဂါ":"ger.1","French Ligue 1":"fra.1","ပြင်သစ် လီဂူး ၁":"fra.1","German 2. Bundesliga":"ger.2","ဂျာမန် ဘွန်ဒက်စ်လီဂါ ၂":"ger.2","Norwegian Eliteserien":"nor.1","နော်ဝေးလိဂ်":"nor.1","Danish Superliga":"den.1","ဒိန်းမတ် စူပါလိဂ်":"den.1","Belgian Pro League":"bel.1","ဘယ်လ်ဂျီယံ လိဂ် အေ":"bel.1","Italian Serie B":"ita.2","အီတလီ စီးရီးဘီ":"ita.2","Spanish LALIGA 2":"esp.2","စပိန် လာလီဂါ ၂":"esp.2","French Ligue 2":"fra.2","ပြင်သစ် လီဂူး ၂":"fra.2","Serie B":"ita.2","Brazilian Serie A":"bra.1","ဘရာဇီး စီးရီးအေ":"bra.1"});
  function leagueCrest(league){
   if(local[league])return new URL(local[league]+".png",root).href;
   return remote[league]?"https://crests.football-data.org/"+remote[league]+".png":"";
