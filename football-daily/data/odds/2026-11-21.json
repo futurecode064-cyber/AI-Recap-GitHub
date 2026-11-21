@@ -100,10 +100,11 @@
           "canonicalOpponent": "Brighton & Hove Albion",
           "teamGoals": 2,
           "opponentGoals": 2,
-          "result": "W",
+          "result": "D",
           "venueSide": "home",
           "competition": "2026-27 English Carabao Cup",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921834/brighton-hove-albion-manchester-city"
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921834/brighton-hove-albion-manchester-city",
+          "advancementResult": "W"
         },
         {
           "date": "2026-10-24",
@@ -701,10 +702,11 @@
           "canonicalOpponent": "Liverpool",
           "teamGoals": 1,
           "opponentGoals": 1,
-          "result": "L",
+          "result": "D",
           "venueSide": "away",
           "competition": "2026-27 English Carabao Cup",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921842/chelsea-liverpool"
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921842/chelsea-liverpool",
+          "advancementResult": "L"
         },
         {
           "date": "2026-10-24",
@@ -1393,10 +1395,11 @@
           "canonicalOpponent": "Fleetwood Town",
           "teamGoals": 1,
           "opponentGoals": 1,
-          "result": "L",
+          "result": "D",
           "venueSide": "away",
           "competition": "2026-27 English Carabao Cup",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921835/arsenal-fleetwood-town"
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921835/arsenal-fleetwood-town",
+          "advancementResult": "L"
         },
         {
           "date": "2026-10-24",
@@ -3626,10 +3629,11 @@
           "canonicalOpponent": "Holstein Kiel",
           "teamGoals": 1,
           "opponentGoals": 1,
-          "result": "L",
+          "result": "D",
           "venueSide": "away",
           "competition": "2026-27 German Cup",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917034/tsg-hoffenheim-holstein-kiel"
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917034/tsg-hoffenheim-holstein-kiel",
+          "advancementResult": "L"
         },
         {
           "date": "2026-10-25",
