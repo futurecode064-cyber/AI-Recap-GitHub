@@ -279,41 +279,11 @@
       "releaseNotes": "Battery runtime, solar panel and inverter estimates, offline project quotation and PDF export; verified signed APK, automatic update check with Android install approval; physical-device QA pending."
     },
     {
-      "id": "ykz-family",
-      "name": "YKZ FAMILY",
-      "version": "1.2.4",
-      "file": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/journal-compatible-update-20261115/FC-ykz-v1.2.4-UPDATE.apk"
-    },
-    {
-      "id": "bw-sport",
-      "name": "BW SPORT",
-      "version": "1.0.5",
-      "file": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/journal-compatible-update-20261115/FC-bw-v1.0.5-UPDATE.apk"
-    },
-    {
-      "id": "kmm-sport-hub",
-      "name": "KMM SPORT HUB",
-      "version": "1.0.5",
-      "file": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/journal-compatible-update-20261115/FC-kmm-v1.0.5-UPDATE.apk"
-    },
-    {
-      "id": "ko-thet-family",
-      "name": "Ko Thet Family",
-      "version": "1.0.6",
-      "file": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/journal-compatible-update-20261115/FC-kothet-v1.0.6-UPDATE.apk"
-    },
-    {
-      "id": "bet-city-family",
-      "name": "BCF Bet City Family",
-      "version": "1.0.3",
-      "file": "https://github.com/futurecode064-cyber/future-code-football-daily/releases/download/fc-bcf-v1.0.3-signed-20261031/FC-BCF-v1.0.3-FreshInstall.apk"
-    },
-    {
       "id": "renttrack",
       "name": "Future Code RentTrack",
       "version": "1.1.1",
       "file": "https://futurecode064-cyber.github.io/AI-Recap-GitHub/apps/FutureCodeRentTrack-v1.1.1.apk"
     }
   ],
-  "count": 25
+  "count": 20
 }
