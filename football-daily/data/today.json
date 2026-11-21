@@ -98,10 +98,11 @@
           "canonicalOpponent": "Brighton & Hove Albion",
           "teamGoals": 2,
           "opponentGoals": 2,
-          "result": "W",
+          "result": "D",
           "venueSide": "home",
           "competition": "2026-27 English Carabao Cup",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921834/brighton-hove-albion-manchester-city"
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921834/brighton-hove-albion-manchester-city",
+          "advancementResult": "W"
         },
         {
           "date": "2026-10-24",
@@ -744,10 +745,11 @@
           "canonicalOpponent": "Liverpool",
           "teamGoals": 1,
           "opponentGoals": 1,
-          "result": "L",
+          "result": "D",
           "venueSide": "away",
           "competition": "2026-27 English Carabao Cup",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921842/chelsea-liverpool"
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921842/chelsea-liverpool",
+          "advancementResult": "L"
         },
         {
           "date": "2026-10-24",
@@ -1481,10 +1483,11 @@
           "canonicalOpponent": "Fleetwood Town",
           "teamGoals": 1,
           "opponentGoals": 1,
-          "result": "L",
+          "result": "D",
           "venueSide": "away",
           "competition": "2026-27 English Carabao Cup",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921835/arsenal-fleetwood-town"
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401921835/arsenal-fleetwood-town",
+          "advancementResult": "L"
         },
         {
           "date": "2026-10-24",
@@ -3885,10 +3888,11 @@
           "canonicalOpponent": "Holstein Kiel",
           "teamGoals": 1,
           "opponentGoals": 1,
-          "result": "L",
+          "result": "D",
           "venueSide": "away",
           "competition": "2026-27 German Cup",
-          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917034/tsg-hoffenheim-holstein-kiel"
+          "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401917034/tsg-hoffenheim-holstein-kiel",
+          "advancementResult": "L"
         },
         {
           "date": "2026-10-25",
@@ -3918,7 +3922,7 @@
       "aiModelDataStatus": "verified",
       "crestStatus": "cached verified ESPN team identity",
       "previewPhotoStatus": "team crests only per current owner V3/V4 format",
-      "dailyPreviewText": "ဖရန့်ဖတ်နဲ့ ဟော့ဖန်ဟိမ်းက ၁၂ မှတ်စီနဲ့ ကပ်လျက်ရပ်တည်နေတာကြောင့် အသာစီးကြီးရှိတဲ့ပွဲလို့ မမြင်သင့်ပါဘူး။ ဖရန့်ဖတ်က နောက်ဆုံးသုံးပွဲမရှုံးထားပြီး ပတ်ဒါဘွန်းနဲ့ သရေမကျခင် နှစ်ပွဲဆက်နိုင်ခဲ့တာက အိမ်ကွင်းယုံကြည်မှုအတွက် အားဖြစ်စေပါတယ်။ ဟော့ဖန်ဟိမ်းက ရှော်ကေးကိုနိုင်ပြီး ပြန်လည်တုံ့ပြန်ထားပေမယ့် ငါးပွဲအတွင်း နှစ်ပွဲရှုံးထားလို့ အတက်အကျရှိနေသေးပါတယ်။ နှစ်သင်းလုံး ငါးပွဲမှာ ငါးဂိုးစီပေးထားတဲ့အတွက် ပွဲအလယ်ပိုင်းဆုံးရှုံးမှုနဲ့ အဆုံးသတ်တိကျမှုက ဆုံးဖြတ်နိုင်ပါတယ်။ ဟော့ဖန်ဟိမ်းကို တန်ပြန်တိုက်စစ်အခွင့်အရေးမပေးဘဲ ထိန်းကစားနိုင်ဖို့လိုပေမယ့် လက်ရှိရလဒ်ဆက်ထိန်းမှုနဲ့ အိမ်ကွင်းကိုအခြေခံပြီး ဖရန့်ဖတ်ကို ရွေးချယ်ပါတယ်။",
+      "dailyPreviewText": "ဖရန့်ဖတ်နဲ့ ဟော့ဖန်ဟိမ်းက ၁၂ မှတ်စီနဲ့ ကပ်လျက်ရပ်တည်နေတာကြောင့် အသာစီးကြီးရှိတဲ့ပွဲလို့ မမြင်သင့်ပါဘူး။ ဖရန့်ဖတ်က နောက်ဆုံးသုံးပွဲမရှုံးထားပြီး ပတ်ဒါဘွန်းနဲ့ သရေမကျခင် နှစ်ပွဲဆက်နိုင်ခဲ့တာက အိမ်ကွင်းယုံကြည်မှုအတွက် အားဖြစ်စေပါတယ်။ ဟော့ဖန်ဟိမ်းက ရှော်ကေးကိုနိုင်ပြီး ပြန်လည်တုံ့ပြန်ထားပေမယ့် ငါးပွဲအတွင်း တစ်ပွဲရှုံးထားလို့ အတက်အကျရှိနေသေးပါတယ်။ နှစ်သင်းလုံး ငါးပွဲမှာ ငါးဂိုးစီပေးထားတဲ့အတွက် ပွဲအလယ်ပိုင်းဆုံးရှုံးမှုနဲ့ အဆုံးသတ်တိကျမှုက ဆုံးဖြတ်နိုင်ပါတယ်။ ဟော့ဖန်ဟိမ်းကို တန်ပြန်တိုက်စစ်အခွင့်အရေးမပေးဘဲ ထိန်းကစားနိုင်ဖို့လိုပေမယ့် လက်ရှိရလဒ်ဆက်ထိန်းမှုနဲ့ အိမ်ကွင်းကိုအခြေခံပြီး ဖရန့်ဖတ်ကို ရွေးချယ်ပါတယ်။",
       "previewStatus": "reviewed original Myanmar editorial",
       "previewV2Summary": "၁၂ မှတ်စီတူနေလို့ ကွာဟမှုနည်းတဲ့ပွဲပါ။ သုံးပွဲမရှုံးထားတဲ့ ရလဒ်ဆက်တိုက်မှုနဲ့ အိမ်ကွင်းအားကြောင့် ဖရန့်ဖတ်ကို အနည်းငယ်အသာပေးထားပါတယ်။ လက်ရှိ ဖရန့်ဖတ် က 12 မှတ်၊ ဟော့ဖန်ဟိမ်း က 12 မှတ်ရထားပါတယ်။ တရားဝင်နောက်ဆုံးငါးပွဲ ဂိုးသွင်းအားက 9 ဂိုးနဲ့ 7 ဂိုး ဖြစ်ပါတယ်။  ဖရန့်ဖတ် အတွက် ပွဲအစအခွင့်အရေးကို ထိရောက်စွာအသုံးချနိုင်ဖို့ အရေးကြီးပါတယ်။ ဖရန့်ဖတ်ကို ရွေးချယ်ပါတယ်။",
       "previewV2Selection": "ဖရန့်ဖတ်",
