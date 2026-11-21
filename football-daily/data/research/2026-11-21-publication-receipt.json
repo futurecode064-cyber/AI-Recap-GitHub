@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-21",
+  "rollbackCommit": "50949c2548d871b2acd45810f7aabc9b235490ab",
+  "candidateGuard": {
+    "date": "2026-11-21",
+    "status": "STRUCTURAL_PASS",
+    "counts": {
+      "previews": 37,
+      "odds": 37,
+      "special": 2,
+      "tips": 37,
+      "news": 10
+    },
+    "errors": [],
+    "requires": "Independent source audit plus actual live section/PNG/ZIP/video verification"
+  },
+  "previewV2Guard": {
+    "ok": true,
+    "formatVersion": "2.1",
+    "date": "2026-11-21",
+    "checked": 37,
+    "errors": [],
+    "warnings": [
+      "fc-20261121-01: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-02: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-03: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-04: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-05: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-06: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-07: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-08: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-09: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-10: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-11: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-12: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-13: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-14: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-15: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-16: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-17: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-18: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-19: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-20: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-21: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-22: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-23: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-24: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-25: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-26: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-27: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-28: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-29: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-30: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-31: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-32: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-33: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-34: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-35: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-36: no verified fixture photograph; correct team crests fallback",
+      "fc-20261121-37: no verified fixture photograph; correct team crests fallback"
+    ]
+  },
+  "counts": {
+    "odds": 37,
+    "previews": 37,
+    "special": 2,
+    "yesterdayFT": 15,
+    "vipSourced": 37,
+    "news": 10
+  },
+  "specialChoices": [
+    "Real Madrid",
+    "Borussia Dortmund"
+  ],
+  "editorialNote": "Only independently confirmed manager/player availability is included. Friendlies removed from official last-five records. News images are licensed contextual archive photos, not current-event photographs. Arsenal availability story uses explicitly captioned Declan Rice contextual photograph.",
+  "validationNotes": [
+    "12-hour clock conversion tests pass; historical odds-clock suite has two existing hard-coded version/BCF-suspended-page assertions",
+    "Local Chromium cannot open required sockets in executor; live browser/download checks pending public deployment"
+  ],
+  "status": "CANDIDATE_VALIDATED_LIVE_QA_PENDING"
+}
