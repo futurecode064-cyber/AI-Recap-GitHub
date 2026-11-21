@@ -32,7 +32,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401882805",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882805",
@@ -217,7 +217,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ဘီဘာအိုလ်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "0-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882805",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-02",
@@ -247,7 +250,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "espnEventId": "401884736",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884736",
@@ -437,7 +440,10 @@
         "ကွန်ပနီပြန်လာတဲ့ညမှာ ဘိုင်ယန်ရဲ့ အားသာချက်ဟာ နာမည်ကြီးကစားသမားများမှုထက် ပြိုင်ပွဲစုံရလဒ်နဲ့ ပွဲထိန်းချုပ်ပုံမှာ ပိုထင်ရှားပါတယ်။ လိဂ်ကိုးပွဲမှာ ခြောက်ပွဲနိုင်၊ သုံးပွဲသရေနဲ့ ရှုံးပွဲမရှိသေးသလို ၂၉ ဂိုးသွင်းပြီး ၉ ဂိုးပဲပေးထားတာက တိုက်စစ်နဲ့ ခံစစ်ကြား ဟန်ချက်ရှိကြောင်း ပြနေပါတယ်။ အိမ်ကွင်းလေးပွဲမှာ သုံးပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ဂိုး ၂၀ သွင်းထားတဲ့မှတ်တမ်းကြောင့် ကိုလုံးအတွက် ပထမဆုံးစမ်းသပ်ချက်က ဖိအားပေးမှုအောက်မှာ ဘောလုံးမပျက်ဘဲ ထွက်နိုင်မလားဆိုတာပါ။ ကိုလုံးက နောက်ဆုံးလိဂ်လေးပွဲဆက် အနိုင်မရသေးတဲ့အပြင် ဒီရာသီအဝေးကွင်းသုံးပွဲစလုံး အမှတ်မရထားတာကြောင့် ခံစစ်ရှေ့မှာ ရပ်တည်ရုံနဲ့ ပွဲတစ်ပွဲလုံး ထိန်းထားဖို့ခက်နိုင်ပါတယ်။ ဘိုင်ယန်ဘက်မှာ နူအာ၊ ဂနာဘရီ၊ ဒေးဗီးစ်၊ ဒီယက်ဇ်နဲ့ ဆိုင်ဘာရီတို့ မပါနိုင်တာကို လျှော့မတွက်သင့်ပေမယ့် မူစီယာလာ ပြန်ပါနိုင်ခြေရှိသလို ကွန်ပနီကလည်း မိမိတို့ကစားပုံကို ပြန်ဦးဆောင်နိုင်ပါပြီ။ ကိုလုံးရဲ့ အဲလ်မာလာနဲ့ အာချီတို့က တန်ပြန်အခွင့်အရေးမှာ သတိထားရမယ့်အမည်တွေဖြစ်ပေမယ့် ဧည့်သည်ခံစစ်မှာလည်း ဟူးဘားစ်နဲ့ ဗန်ဒန်ဘတ်တို့ မပါနိုင်တာကြောင့် အချိန်ကြာလာတာနဲ့ နေရာလွတ်တွေ ပေါ်လာနိုင်ပါတယ်။ ဘိုင်ယန်အနေနဲ့ အစောပိုင်းမှာ အလျင်မလိုဘဲ ဘောလုံးပြန်ရယူမှုနဲ့ တိုက်စစ်အဆက်မပြတ်မှုကို ထိန်းနိုင်ရင် အိမ်ကွင်းအသာစီးကို ရလဒ်အဖြစ် ပြောင်းနိုင်မှာဖြစ်လို့ ဘိုင်ယန်ကို ရွေးချယ်ပါတယ်။"
       ],
       "specialSelection": "ဘိုင်ယန်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884736",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-03",
@@ -467,7 +473,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876395",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876395",
@@ -652,7 +658,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ထရွိုင်း",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "3-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876395",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-04",
@@ -682,7 +691,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401885049",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885049",
@@ -867,7 +876,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ဘီလီဖီးလ်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885049",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-05",
@@ -897,7 +909,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401885053",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885053",
@@ -1082,7 +1094,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ဟိုက်ဒန်ဟိမ်း",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "3-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885053",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-06",
@@ -1112,7 +1127,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401843486",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843486",
@@ -1297,7 +1312,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ဘိုဒိုဂလင့်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "2-4",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843486",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-07",
@@ -1327,7 +1345,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401874492",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874492",
@@ -1512,7 +1530,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "အာဟပ်စ်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874492",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-08",
@@ -1542,7 +1563,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401878937",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878937",
@@ -1707,7 +1728,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ဆာကယ်ဘရု",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878937",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-09",
@@ -1737,7 +1761,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401899543",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899543",
@@ -1922,7 +1946,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ဗီရိုနာ",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899543",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-10",
@@ -1952,7 +1979,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401883112",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883112",
@@ -2142,7 +2169,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "လီဂန်နက်စ်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "1-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883112",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-11",
@@ -2172,7 +2202,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876691",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876691",
@@ -2357,7 +2387,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ကလဲယားမောင့်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "4-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876691",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-12",
@@ -2387,7 +2420,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876690",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876690",
@@ -2572,7 +2605,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "ဂွိုင်းဂမ့်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "1-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876690",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-13",
@@ -2602,7 +2638,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876688",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876688",
@@ -2787,7 +2823,10 @@
       "previewV2EditorialStatus": "reviewed original editorial summary",
       "previewV2FormatVersion": "2.1",
       "selection": "မတ်ဇ်",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876688",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-14",
@@ -2817,7 +2856,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "espnEventId": "401876687",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876687",
@@ -3006,7 +3045,10 @@
         "နန်စီကို ဒီနေ့အထူးရွေးချယ်မှုထဲ ထည့်ရတဲ့အကြောင်းက ဇယားဒုတိယနေရာတစ်ခုတည်းကြောင့် မဟုတ်ပါဘူး။ နောက်ဆုံးလိဂ်လေးပွဲကို ဆက်တိုက်နိုင်လာတဲ့ပုံစံမှာ လိုအပ်တဲ့အချိန် ဂိုးရအောင်လုပ်နိုင်မှုနဲ့ ရပြီးတဲ့အသာစီးကို ကာကွယ်နိုင်မှု နှစ်မျိုးလုံးကို တွေ့ရပါတယ်။ အန်နန်စီကို အနိုင်ရပြီးနောက် လာဗယ်လ်နဲ့ပွဲမှာ ဂိုးမပေးခဲ့သလို ရက်စတားစိန့်ကို ဂိုးများများသွင်းနိုင်ခဲ့ပြီး ဆိုချော့နဲ့ပွဲမှာလည်း ပေးဂိုးမရှိခဲ့တာက ပွဲအမျိုးအစားမတူပေမယ့် ရလဒ်ထုတ်နိုင်ခဲ့တဲ့ အထောက်အထားပါ။ ဒီဂျွန်ဟာ အဆင့် ၆ နဲ့ ၁၈ မှတ်ရထားပြီး နောက်ဆုံးလိဂ်နှစ်ပွဲမှာ ဂရီနိုဘယ်လ်နဲ့ ရက်စတားစိန့်ကို နိုင်ထားလို့ အိမ်ရှင်အတွက် တကယ်စမ်းသပ်မှုဖြစ်နိုင်ပါတယ်။ ဒါပေမယ့် အဲဒီမတိုင်ခင် ရိမ်းစ်နဲ့ အေဗေးရွန်တို့ကို ရှုံးခဲ့ရာမှာ ပေးဂိုးတွေရှိခဲ့သလို ဖလားပွဲမှာလည်း အော်လီယွန်ကို အရေးနိမ့်ခဲ့တာကြောင့် ခံစစ်ယုံကြည်မှုက နန်စီလောက် ဆက်တိုက်မခိုင်မာသေးပါဘူး။ နန်စီရဲ့ ဖလားပွဲရလဒ်ကိုတော့ ကစားချိန်အတွင်းသရေကနေ ပင်နယ်တီနဲ့ တက်ခဲ့တာအဖြစ် ခွဲထားရပြီး နိုင်ပွဲငါးပွဲဆက်ဆိုတဲ့ အရိုးရှင်းတွက်ချက်မှုမျိုး မလုပ်သင့်ပါဘူး။ ဒီပွဲမှာ အိမ်ရှင်အနေနဲ့ ဒီဂျွန်ရဲ့ လတ်တလောတိုက်စစ်အားကို လျှော့မတွက်ဘဲ ကွင်းလယ်အကာအကွယ်နဲ့ ဘောလုံးပျက်ချိန် ပြန်စုဖွဲ့မှုကို ထိန်းနိုင်ဖို့လိုပါတယ်။ အဲဒီစည်းကမ်းကို ထိန်းနိုင်ရင် ရမှတ်ခုနစ်မှတ်အသာစီး၊ လိဂ်လေးပွဲဆက်အနိုင်နဲ့ အိမ်ကွင်းပံ့ပိုးမှုတွေက နန်စီဘက်မှာ ပိုခိုင်မာနေတာကြောင့် နန်စီကို ရွေးချယ်ပါတယ်။"
       ],
       "specialSelection": "နန်စီ",
-      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified"
+      "previewPhotoStatus": "unavailable: match-relevant reusable photograph not yet verified",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876687",
+      "resultVerifiedDate": "2026-11-21"
     },
     {
       "fixtureId": "fc-20261120-15",
@@ -3036,7 +3078,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "20(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876685",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876685",
@@ -3221,7 +3263,10 @@
       "underOdds": 1.95,
       "oddsSourceUrl": "https://footballpredictions.ai/football-predictions/red-star-fc-93-vs-pau-predictions-tips-20-nov-2026/",
       "oddsVerifiedDate": "2026-11-20",
-      "oddsProvider": "Published market snapshot via FootballPredictions.ai; underlying bookmaker not specified"
+      "oddsProvider": "Published market snapshot via FootballPredictions.ai; underlying bookmaker not specified",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876685",
+      "resultVerifiedDate": "2026-11-21"
     }
   ]
 }
