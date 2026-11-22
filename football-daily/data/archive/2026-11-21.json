@@ -26,13 +26,13 @@
       "upperTeam": "မန်စီးတီး",
       "bodyOdds": "1-80",
       "goalTotalOdds": "3-65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-75",
+      "currentGoalTotalOdds": "3-65",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401879233",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879233",
@@ -45,8 +45,8 @@
         "upperTeam": "မန်စီးတီး",
         "bodyOdds": "1-80",
         "goalTotalOdds": "3-65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-75",
+        "currentGoalTotalOdds": "3-65"
       },
       "homeStanding": {
         "position": 3,
@@ -189,9 +189,9 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
       "homeOdds": 1.3922,
       "drawOdds": 5.25,
-      "awayOdds": 7.0,
+      "awayOdds": 7,
       "totalGoalsLine": 3.5,
-      "overOdds": 2.0,
+      "overOdds": 2,
       "underOdds": 1.8,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879233",
       "oddsVerifiedDate": "2026-11-21",
@@ -222,7 +222,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "homeScore": 1,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879233",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-02",
@@ -246,13 +251,13 @@
       "upperTeam": "အေဗီလာ",
       "bodyOdds": "1+60",
       "goalTotalOdds": "3+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+65",
+      "currentGoalTotalOdds": "3+60",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401878756",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878756",
@@ -265,8 +270,8 @@
         "upperTeam": "အေဗီလာ",
         "bodyOdds": "1+60",
         "goalTotalOdds": "3+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+65",
+        "currentGoalTotalOdds": "3+60"
       },
       "homeStanding": {
         "position": 10,
@@ -441,7 +446,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-0",
+      "homeScore": 0,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878756",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-03",
@@ -465,13 +475,13 @@
       "upperTeam": "ဘုန်းမောက်",
       "bodyOdds": "1+100",
       "goalTotalOdds": "3+95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-100",
+      "currentGoalTotalOdds": "2-80",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401879238",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879238",
@@ -484,8 +494,8 @@
         "upperTeam": "ဘုန်းမောက်",
         "bodyOdds": "1+100",
         "goalTotalOdds": "3+95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-100",
+        "currentGoalTotalOdds": "2-80"
       },
       "homeStanding": {
         "position": 7,
@@ -627,7 +637,7 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
       "homeOdds": 1.9091,
       "drawOdds": 3.6,
-      "awayOdds": 4.0,
+      "awayOdds": 4,
       "totalGoalsLine": 2.5,
       "overOdds": 1.8696,
       "underOdds": 1.9091,
@@ -660,7 +670,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-0",
+      "homeScore": 2,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879238",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-04",
@@ -684,13 +699,13 @@
       "upperTeam": "ချဲလ်ဆီး",
       "bodyOdds": "-90",
       "goalTotalOdds": "3+85",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-80",
+      "currentGoalTotalOdds": "3+95",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401879236",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879236",
@@ -703,8 +718,8 @@
         "upperTeam": "ချဲလ်ဆီး",
         "bodyOdds": "-90",
         "goalTotalOdds": "3+85",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-80",
+        "currentGoalTotalOdds": "3+95"
       },
       "homeStanding": {
         "position": 5,
@@ -845,7 +860,7 @@
       ],
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-21/357.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
-      "homeOdds": 2.0,
+      "homeOdds": 2,
       "drawOdds": 3.6,
       "awayOdds": 3.7,
       "totalGoalsLine": 2.5,
@@ -880,7 +895,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-4",
+      "homeScore": 1,
+      "awayScore": 4,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879236",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-05",
@@ -904,13 +924,13 @@
       "upperTeam": "ကိုဗင်ထရီ",
       "bodyOdds": "-10",
       "goalTotalOdds": "3+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-15",
+      "currentGoalTotalOdds": "3+60",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401879235",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879235",
@@ -923,8 +943,8 @@
         "upperTeam": "ကိုဗင်ထရီ",
         "bodyOdds": "-10",
         "goalTotalOdds": "3+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-15",
+        "currentGoalTotalOdds": "3+60"
       },
       "homeStanding": {
         "position": 17,
@@ -1099,7 +1119,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "3-2",
+      "homeScore": 3,
+      "awayScore": 2,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879235",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-06",
@@ -1123,13 +1148,13 @@
       "upperTeam": "စပါး",
       "bodyOdds": "1-5",
       "goalTotalOdds": "3=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1=",
+      "currentGoalTotalOdds": "3+5",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401878754",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878754",
@@ -1142,8 +1167,8 @@
         "upperTeam": "စပါး",
         "bodyOdds": "1-5",
         "goalTotalOdds": "3=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1=",
+        "currentGoalTotalOdds": "3+5"
       },
       "homeStanding": {
         "position": 11,
@@ -1318,7 +1343,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-0",
+      "homeScore": 2,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878754",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-07",
@@ -1342,13 +1372,13 @@
       "upperTeam": "အာဆင်နယ်",
       "bodyOdds": "1=",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+5",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401879232",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879232",
@@ -1361,8 +1391,8 @@
         "upperTeam": "အာဆင်နယ်",
         "bodyOdds": "1=",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+5",
+        "currentGoalTotalOdds": "3+40"
       },
       "homeStanding": {
         "position": 12,
@@ -1538,7 +1568,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-2",
+      "homeScore": 2,
+      "awayScore": 2,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879232",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-08",
@@ -1562,13 +1597,13 @@
       "upperTeam": "ကိုမို",
       "bodyOdds": "2+90",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+70",
+      "currentGoalTotalOdds": "3-35",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401875056",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875056",
@@ -1580,8 +1615,8 @@
         "upperTeam": "ကိုမို",
         "bodyOdds": "2+90",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+70",
+        "currentGoalTotalOdds": "3-35"
       },
       "homeStanding": {
         "position": 5,
@@ -1756,7 +1791,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-0",
+      "homeScore": 2,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875056",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-09",
@@ -1780,13 +1820,13 @@
       "upperTeam": "လာဇီယို",
       "bodyOdds": "1-55",
       "goalTotalOdds": "3+10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-25",
+      "currentGoalTotalOdds": "3+30",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401874981",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874981",
@@ -1798,8 +1838,8 @@
         "upperTeam": "လာဇီယို",
         "bodyOdds": "1-55",
         "goalTotalOdds": "3+10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-25",
+        "currentGoalTotalOdds": "3+30"
       },
       "homeStanding": {
         "position": 1,
@@ -1941,7 +1981,7 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
       "homeOdds": 1.3774,
       "drawOdds": 4.7,
-      "awayOdds": 7.0,
+      "awayOdds": 7,
       "totalGoalsLine": 2.5,
       "overOdds": 1.6061,
       "underOdds": 2.3,
@@ -1974,7 +2014,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "3-0",
+      "homeScore": 3,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874981",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-10",
@@ -1998,13 +2043,13 @@
       "upperTeam": "ရိုးမား",
       "bodyOdds": "2+65",
       "goalTotalOdds": "3-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+40",
+      "currentGoalTotalOdds": "3-50",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401874967",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874967",
@@ -2016,8 +2061,8 @@
         "upperTeam": "ရိုးမား",
         "bodyOdds": "2+65",
         "goalTotalOdds": "3-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+40",
+        "currentGoalTotalOdds": "3-50"
       },
       "homeStanding": {
         "position": 16,
@@ -2192,7 +2237,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-5",
+      "homeScore": 1,
+      "awayScore": 5,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874967",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-11",
@@ -2216,13 +2266,13 @@
       "upperTeam": "နာပိုလီ",
       "bodyOdds": "1-15",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-15",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401875067",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875067",
@@ -2234,8 +2284,8 @@
         "upperTeam": "နာပိုလီ",
         "bodyOdds": "1-15",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-15",
+        "currentGoalTotalOdds": "3+40"
       },
       "homeStanding": {
         "position": 10,
@@ -2377,7 +2427,7 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
       "homeOdds": 1.4651,
       "drawOdds": 4.4,
-      "awayOdds": 6.0,
+      "awayOdds": 6,
       "totalGoalsLine": 2.5,
       "overOdds": 1.6667,
       "underOdds": 2.15,
@@ -2410,7 +2460,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "homeScore": 1,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875067",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-12",
@@ -2434,13 +2489,13 @@
       "upperTeam": "အလာဗက်စ်",
       "bodyOdds": "-35",
       "goalTotalOdds": "2-50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-35",
+      "currentGoalTotalOdds": "2-45",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401882806",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882806",
@@ -2452,8 +2507,8 @@
         "upperTeam": "အလာဗက်စ်",
         "bodyOdds": "-35",
         "goalTotalOdds": "2-50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-35",
+        "currentGoalTotalOdds": "2-45"
       },
       "homeStanding": {
         "position": 13,
@@ -2628,7 +2683,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "3-1",
+      "homeScore": 3,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882806",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-13",
@@ -2652,13 +2712,13 @@
       "upperTeam": "ဗယ်လီကာနို",
       "bodyOdds": "1+95",
       "goalTotalOdds": "2-70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-100",
+      "currentGoalTotalOdds": "2-75",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401882799",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882799",
@@ -2670,8 +2730,8 @@
         "upperTeam": "ဗယ်လီကာနို",
         "bodyOdds": "1+95",
         "goalTotalOdds": "2-70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-100",
+        "currentGoalTotalOdds": "2-75"
       },
       "homeStanding": {
         "position": 14,
@@ -2813,9 +2873,9 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
       "homeOdds": 1.9524,
       "drawOdds": 3.55,
-      "awayOdds": 4.0,
+      "awayOdds": 4,
       "totalGoalsLine": 2.5,
-      "overOdds": 2.0,
+      "overOdds": 2,
       "underOdds": 1.8333,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882799",
       "oddsVerifiedDate": "2026-11-21",
@@ -2846,7 +2906,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "homeScore": 0,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882799",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-14",
@@ -2870,13 +2935,13 @@
       "upperTeam": "ဘက်တစ်",
       "bodyOdds": "-30",
       "goalTotalOdds": "3+100",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "2-90",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401882797",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882797",
@@ -2888,8 +2953,8 @@
         "upperTeam": "ဘက်တစ်",
         "bodyOdds": "-30",
         "goalTotalOdds": "3+100",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2-90"
       },
       "homeStanding": {
         "position": 6,
@@ -3064,7 +3129,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "homeScore": 1,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882797",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-15",
@@ -3088,13 +3158,13 @@
       "upperTeam": "ရီးရဲလ်မက်ဒရစ်",
       "bodyOdds": "2-35",
       "goalTotalOdds": "3-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-20",
+      "currentGoalTotalOdds": "3-90",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "espnEventId": "401882798",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882798",
@@ -3106,8 +3176,8 @@
         "upperTeam": "ရီးရဲလ်မက်ဒရစ်",
         "bodyOdds": "2-35",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-20",
+        "currentGoalTotalOdds": "3-90"
       },
       "homeStanding": {
         "position": 2,
@@ -3248,8 +3318,8 @@
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-21/85.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
       "homeOdds": 1.1667,
-      "drawOdds": 8.0,
-      "awayOdds": 16.0,
+      "drawOdds": 8,
+      "awayOdds": 16,
       "totalGoalsLine": 3.5,
       "overOdds": 1.9524,
       "underOdds": 1.8333,
@@ -3285,7 +3355,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "homeScore": 2,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882798",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-16",
@@ -3309,13 +3384,13 @@
       "upperTeam": "လေဗာကူဆင်",
       "bodyOdds": "2+50",
       "goalTotalOdds": "3-95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+40",
+      "currentGoalTotalOdds": "4+50",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401884735",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884735",
@@ -3327,8 +3402,8 @@
         "upperTeam": "လေဗာကူဆင်",
         "bodyOdds": "2+50",
         "goalTotalOdds": "3-95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+40",
+        "currentGoalTotalOdds": "4+50"
       },
       "homeStanding": {
         "position": 5,
@@ -3469,8 +3544,8 @@
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-21/3307.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
       "homeOdds": 1.2564,
-      "drawOdds": 6.0,
-      "awayOdds": 8.0,
+      "drawOdds": 6,
+      "awayOdds": 8,
       "totalGoalsLine": 3.5,
       "overOdds": 1.8696,
       "underOdds": 1.9091,
@@ -3503,7 +3578,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "4-0",
+      "homeScore": 4,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884735",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-17",
@@ -3527,13 +3607,13 @@
       "upperTeam": "ဒေါ့မွန်",
       "bodyOdds": "1+5",
       "goalTotalOdds": "3-35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+5",
+      "currentGoalTotalOdds": "3-30",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "espnEventId": "401884731",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884731",
@@ -3545,8 +3625,8 @@
         "upperTeam": "ဒေါ့မွန်",
         "bodyOdds": "1+5",
         "goalTotalOdds": "3-35",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+5",
+        "currentGoalTotalOdds": "3-30"
       },
       "homeStanding": {
         "position": 18,
@@ -3724,7 +3804,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "homeScore": 0,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884731",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-18",
@@ -3748,13 +3833,13 @@
       "upperTeam": "ဖရန့်ဖတ်",
       "bodyOdds": "-10",
       "goalTotalOdds": "4+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "ဒဲ့",
+      "currentGoalTotalOdds": "4+70",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401884734",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884734",
@@ -3766,8 +3851,8 @@
         "upperTeam": "ဖရန့်ဖတ်",
         "bodyOdds": "-10",
         "goalTotalOdds": "4+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "ဒဲ့",
+        "currentGoalTotalOdds": "4+70"
       },
       "homeStanding": {
         "position": 10,
@@ -3943,7 +4028,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "homeScore": 1,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884734",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-19",
@@ -3967,13 +4057,13 @@
       "upperTeam": "ဖရိုင်းဘတ်",
       "bodyOdds": "-85",
       "goalTotalOdds": "3=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-75",
+      "currentGoalTotalOdds": "3-5",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401884728",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884728",
@@ -3985,8 +4075,8 @@
         "upperTeam": "ဖရိုင်းဘတ်",
         "bodyOdds": "-85",
         "goalTotalOdds": "3=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "3-5"
       },
       "homeStanding": {
         "position": 7,
@@ -4161,7 +4251,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "homeScore": 0,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884728",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-20",
@@ -4185,13 +4280,13 @@
       "upperTeam": "လစ်ဇစ်",
       "bodyOdds": "1-35",
       "goalTotalOdds": "3-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-30",
+      "currentGoalTotalOdds": "3-55",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401884732",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884732",
@@ -4203,8 +4298,8 @@
         "upperTeam": "လစ်ဇစ်",
         "bodyOdds": "1-35",
         "goalTotalOdds": "3-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-30",
+        "currentGoalTotalOdds": "3-55"
       },
       "homeStanding": {
         "position": 16,
@@ -4379,7 +4474,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-5",
+      "homeScore": 1,
+      "awayScore": 5,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884732",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-21",
@@ -4403,13 +4503,13 @@
       "upperTeam": "စတုဂတ်",
       "bodyOdds": "1+80",
       "goalTotalOdds": "3-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+85",
+      "currentGoalTotalOdds": "3-30",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401884729",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884729",
@@ -4421,8 +4521,8 @@
         "upperTeam": "စတုဂတ်",
         "bodyOdds": "1+80",
         "goalTotalOdds": "3-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+85",
+        "currentGoalTotalOdds": "3-30"
       },
       "homeStanding": {
         "position": 17,
@@ -4597,7 +4697,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-0",
+      "homeScore": 0,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401884729",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-22",
@@ -4621,13 +4726,13 @@
       "upperTeam": "ပီအက်စ်ဂျီ",
       "bodyOdds": "1-50",
       "goalTotalOdds": "3-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-50",
+      "currentGoalTotalOdds": "3-85",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876398",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876398",
@@ -4639,8 +4744,8 @@
         "upperTeam": "ပီအက်စ်ဂျီ",
         "bodyOdds": "1-50",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-50",
+        "currentGoalTotalOdds": "3-85"
       },
       "homeStanding": {
         "position": 6,
@@ -4780,8 +4885,8 @@
       ],
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-21/160.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
-      "homeOdds": 6.0,
-      "drawOdds": 5.0,
+      "homeOdds": 6,
+      "drawOdds": 5,
       "awayOdds": 1.4651,
       "totalGoalsLine": 3.5,
       "overOdds": 1.9524,
@@ -4815,7 +4920,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-3",
+      "homeScore": 2,
+      "awayScore": 3,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876398",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-23",
@@ -4839,13 +4949,13 @@
       "upperTeam": "မိုနာကို",
       "bodyOdds": "1-60",
       "goalTotalOdds": "3-35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-35",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876399",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876399",
@@ -4857,8 +4967,8 @@
         "upperTeam": "မိုနာကို",
         "bodyOdds": "1-60",
         "goalTotalOdds": "3-35",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-35",
+        "currentGoalTotalOdds": "3+40"
       },
       "homeStanding": {
         "position": 7,
@@ -4999,7 +5109,7 @@
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-21/172.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
       "homeOdds": 1.4255,
-      "drawOdds": 5.0,
+      "drawOdds": 5,
       "awayOdds": 6.5,
       "totalGoalsLine": 3.5,
       "overOdds": 2.25,
@@ -5033,7 +5143,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "homeScore": 1,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876399",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-24",
@@ -5057,13 +5172,13 @@
       "upperTeam": "လိုင်လီ",
       "bodyOdds": "-55",
       "goalTotalOdds": "2-75",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-40",
+      "currentGoalTotalOdds": "2-65",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876402",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876402",
@@ -5075,8 +5190,8 @@
         "upperTeam": "လိုင်လီ",
         "bodyOdds": "-55",
         "goalTotalOdds": "2-75",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-40",
+        "currentGoalTotalOdds": "2-65"
       },
       "homeStanding": {
         "position": 2,
@@ -5220,7 +5335,7 @@
       "drawOdds": 3.3,
       "awayOdds": 3.25,
       "totalGoalsLine": 2.5,
-      "overOdds": 2.0,
+      "overOdds": 2,
       "underOdds": 1.7692,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876402",
       "oddsVerifiedDate": "2026-11-21",
@@ -5251,7 +5366,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "homeScore": 0,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876402",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-25",
@@ -5275,13 +5395,13 @@
       "upperTeam": "လန်းစ်",
       "bodyOdds": "-70",
       "goalTotalOdds": "3+25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3+90",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876403",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876403",
@@ -5293,8 +5413,8 @@
         "upperTeam": "လန်းစ်",
         "bodyOdds": "-70",
         "goalTotalOdds": "3+25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3+90"
       },
       "homeStanding": {
         "position": 11,
@@ -5469,7 +5589,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "homeScore": 1,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876403",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-26",
@@ -5493,13 +5618,13 @@
       "upperTeam": "စထရာဘော့",
       "bodyOdds": "-40",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-50",
+      "currentGoalTotalOdds": "3+50",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401876396",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876396",
@@ -5511,8 +5636,8 @@
         "upperTeam": "စထရာဘော့",
         "bodyOdds": "-40",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-50",
+        "currentGoalTotalOdds": "3+50"
       },
       "homeStanding": {
         "position": 14,
@@ -5687,7 +5812,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "homeScore": 0,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876396",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-27",
@@ -5711,13 +5841,13 @@
       "upperTeam": "နော်ဝှစ်",
       "bodyOdds": "1+65",
       "goalTotalOdds": "4+80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+65",
+      "currentGoalTotalOdds": "4+85",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880155",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880155",
@@ -5729,8 +5859,8 @@
         "upperTeam": "နော်ဝှစ်",
         "bodyOdds": "1+65",
         "goalTotalOdds": "4+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+65",
+        "currentGoalTotalOdds": "4+85"
       },
       "homeStanding": {
         "position": 12,
@@ -5905,7 +6035,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "homeScore": 2,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880155",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-28",
@@ -5929,13 +6064,13 @@
       "upperTeam": "ကျူပီအာ",
       "bodyOdds": "-5",
       "goalTotalOdds": "3+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-5",
+      "currentGoalTotalOdds": "3+60",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880156",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880156",
@@ -5947,8 +6082,8 @@
         "upperTeam": "ကျူပီအာ",
         "bodyOdds": "-5",
         "goalTotalOdds": "3+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-5",
+        "currentGoalTotalOdds": "3+60"
       },
       "homeStanding": {
         "position": 16,
@@ -6123,7 +6258,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "homeScore": 0,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880156",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-29",
@@ -6147,13 +6287,13 @@
       "upperTeam": "ဆောက်သမ်တန်",
       "bodyOdds": "1-100",
       "goalTotalOdds": "3-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-85",
+      "currentGoalTotalOdds": "3-5",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880153",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880153",
@@ -6165,8 +6305,8 @@
         "upperTeam": "ဆောက်သမ်တန်",
         "bodyOdds": "1-100",
         "goalTotalOdds": "3-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-85",
+        "currentGoalTotalOdds": "3-5"
       },
       "homeStanding": {
         "position": 7,
@@ -6308,7 +6448,7 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
       "homeOdds": 1.3571,
       "drawOdds": 5.5,
-      "awayOdds": 8.0,
+      "awayOdds": 8,
       "totalGoalsLine": 3.5,
       "overOdds": 2.25,
       "underOdds": 1.6452,
@@ -6341,7 +6481,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-0",
+      "homeScore": 2,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880153",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-30",
@@ -6365,13 +6510,13 @@
       "upperTeam": "ပို့စ်မောက်",
       "bodyOdds": "-30",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "3+90",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880160",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880160",
@@ -6383,8 +6528,8 @@
         "upperTeam": "ပို့စ်မောက်",
         "bodyOdds": "-30",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "3+90"
       },
       "homeStanding": {
         "position": 18,
@@ -6559,7 +6704,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "homeScore": 1,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880160",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-31",
@@ -6583,13 +6733,13 @@
       "upperTeam": "ဘာမင်ဂမ်",
       "bodyOdds": "-30",
       "goalTotalOdds": "2-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "2-45",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880152",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880152",
@@ -6601,8 +6751,8 @@
         "upperTeam": "ဘာမင်ဂမ်",
         "bodyOdds": "-30",
         "goalTotalOdds": "2-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2-45"
       },
       "homeStanding": {
         "position": 3,
@@ -6777,7 +6927,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-0",
+      "homeScore": 1,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880152",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-32",
@@ -6801,13 +6956,13 @@
       "upperTeam": "လင်ကွန်း",
       "bodyOdds": "-5",
       "goalTotalOdds": "2-65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-10",
+      "currentGoalTotalOdds": "2-40",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880158",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880158",
@@ -6819,8 +6974,8 @@
         "upperTeam": "လင်ကွန်း",
         "bodyOdds": "-5",
         "goalTotalOdds": "2-65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "2-40"
       },
       "homeStanding": {
         "position": 21,
@@ -6995,7 +7150,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "0-1",
+      "homeScore": 0,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880158",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-33",
@@ -7019,13 +7179,13 @@
       "upperTeam": "ဝက်ဘရွန်း",
       "bodyOdds": "-10",
       "goalTotalOdds": "2-85",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-5",
+      "currentGoalTotalOdds": "2-85",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880151",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880151",
@@ -7037,8 +7197,8 @@
         "upperTeam": "ဝက်ဘရွန်း",
         "bodyOdds": "-10",
         "goalTotalOdds": "2-85",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-5",
+        "currentGoalTotalOdds": "2-85"
       },
       "homeStanding": {
         "position": 6,
@@ -7182,7 +7342,7 @@
       "drawOdds": 3.35,
       "awayOdds": 2.8,
       "totalGoalsLine": 2.5,
-      "overOdds": 2.0,
+      "overOdds": 2,
       "underOdds": 1.8,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880151",
       "oddsVerifiedDate": "2026-11-21",
@@ -7213,7 +7373,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-2",
+      "homeScore": 2,
+      "awayScore": 2,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880151",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-34",
@@ -7237,13 +7402,13 @@
       "upperTeam": "မစ်ဒယ်ဘရော့",
       "bodyOdds": "1-65",
       "goalTotalOdds": "3-20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-60",
+      "currentGoalTotalOdds": "3-20",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880157",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880157",
@@ -7255,8 +7420,8 @@
         "upperTeam": "မစ်ဒယ်ဘရော့",
         "bodyOdds": "1-65",
         "goalTotalOdds": "3-20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-60",
+        "currentGoalTotalOdds": "3-20"
       },
       "homeStanding": {
         "position": 2,
@@ -7431,7 +7596,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-0",
+      "homeScore": 2,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880157",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-35",
@@ -7455,13 +7625,13 @@
       "upperTeam": "ဝက်စ်ဟမ်း",
       "bodyOdds": "2+30",
       "goalTotalOdds": "3-60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+35",
+      "currentGoalTotalOdds": "3-55",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880150",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880150",
@@ -7473,8 +7643,8 @@
         "upperTeam": "ဝက်စ်ဟမ်း",
         "bodyOdds": "2+30",
         "goalTotalOdds": "3-60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+35",
+        "currentGoalTotalOdds": "3-55"
       },
       "homeStanding": {
         "position": 9,
@@ -7615,8 +7785,8 @@
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-21/394.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
       "homeOdds": 1.2222,
-      "drawOdds": 7.0,
-      "awayOdds": 11.0,
+      "drawOdds": 7,
+      "awayOdds": 11,
       "totalGoalsLine": 3.5,
       "overOdds": 2.05,
       "underOdds": 1.7692,
@@ -7649,7 +7819,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "1-1",
+      "homeScore": 1,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880150",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-36",
@@ -7673,13 +7848,13 @@
       "upperTeam": "ဝုဗ်",
       "bodyOdds": "1-95",
       "goalTotalOdds": "3+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-95",
+      "currentGoalTotalOdds": "3+10",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880149",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880149",
@@ -7691,8 +7866,8 @@
         "upperTeam": "ဝုဗ်",
         "bodyOdds": "1-95",
         "goalTotalOdds": "3+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-95",
+        "currentGoalTotalOdds": "3+10"
       },
       "homeStanding": {
         "position": 4,
@@ -7834,7 +8009,7 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
       "homeOdds": 1.3226,
       "drawOdds": 5.5,
-      "awayOdds": 9.0,
+      "awayOdds": 9,
       "totalGoalsLine": 2.5,
       "overOdds": 1.6061,
       "underOdds": 2.3,
@@ -7867,7 +8042,12 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "2-1",
+      "homeScore": 2,
+      "awayScore": 1,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880149",
+      "resultVerifiedDate": "2026-11-22"
     },
     {
       "fixtureId": "fc-20261121-37",
@@ -7897,7 +8077,7 @@
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "21(1).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401880154",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880154",
@@ -8055,7 +8235,7 @@
       "awayOdds": 5.5,
       "totalGoalsLine": 2.5,
       "overOdds": 1.7692,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880154",
       "oddsVerifiedDate": "2026-11-21",
       "oddsProvider": "DraftKings",
@@ -8085,7 +8265,17 @@
           "fixtureDate": "2026-11-21",
           "verifiedDate": "2026-11-21"
         }
-      }
+      },
+      "finalScore": "4-0",
+      "homeScore": 4,
+      "awayScore": 0,
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880154",
+      "resultVerifiedDate": "2026-11-22"
     }
-  ]
+  ],
+  "currentPricesAvailable": true,
+  "currentSourcePDF": "21 စျေး(1).pdf",
+  "currentSourceSha256": "89e35391a9e47440c0f1a3d5a628b2dcb643e407937436b67fa52c423ec9bc92",
+  "currentSourceRows": 36,
+  "currentSourcePage": 1
 }
