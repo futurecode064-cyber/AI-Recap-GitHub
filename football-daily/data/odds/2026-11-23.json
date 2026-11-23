@@ -4,7 +4,7 @@
   "sourcePDF": "23(2).pdf",
   "sourceRows": 14,
   "priceSheetType": "owner morning opening prices",
-  "currentPricesAvailable": false,
+  "currentPricesAvailable": true,
   "matches": [
     {
       "fixtureId": "fc-20261123-01",
@@ -28,8 +28,8 @@
       "upperTeam": "ဘရန်းဖို့ဒ်",
       "bodyOdds": "-35",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-45",
+      "currentGoalTotalOdds": "3+85",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -42,8 +42,8 @@
         "upperTeam": "ဘရန်းဖို့ဒ်",
         "bodyOdds": "-35",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-45",
+        "currentGoalTotalOdds": "3+85"
       },
       "espnEventId": "401879237",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879237",
@@ -224,8 +224,8 @@
       "upperTeam": "ဖီအိုရင်တီးနား",
       "bodyOdds": "-90",
       "goalTotalOdds": "3-5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-85",
+      "currentGoalTotalOdds": "3=",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -238,8 +238,8 @@
         "upperTeam": "ဖီအိုရင်တီးနား",
         "bodyOdds": "-90",
         "goalTotalOdds": "3-5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-85",
+        "currentGoalTotalOdds": "3="
       },
       "espnEventId": "401875009",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875009",
@@ -420,8 +420,8 @@
       "upperTeam": "လီဗန်တေး",
       "bodyOdds": "-60",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -434,8 +434,8 @@
         "upperTeam": "လီဗန်တေး",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3+40"
       },
       "espnEventId": "401882802",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882802",
@@ -616,8 +616,8 @@
       "upperTeam": "ဟမ်းမားဘိုက်",
       "bodyOdds": "2+15",
       "goalTotalOdds": "3-55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-10",
+      "currentGoalTotalOdds": "3-90",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -630,8 +630,8 @@
         "upperTeam": "ဟမ်းမားဘိုက်",
         "bodyOdds": "2+15",
         "goalTotalOdds": "3-55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-10",
+        "currentGoalTotalOdds": "3-90"
       },
       "espnEventId": "401842888",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842888",
@@ -671,8 +671,8 @@
       "upperTeam": "ကဲမာ",
       "bodyOdds": "-70",
       "goalTotalOdds": "3+65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-95",
+      "currentGoalTotalOdds": "3+60",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -685,8 +685,8 @@
         "upperTeam": "ကဲမာ",
         "bodyOdds": "-70",
         "goalTotalOdds": "3+65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-95",
+        "currentGoalTotalOdds": "3+60"
       },
       "espnEventId": "401842884",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401842884",
@@ -726,8 +726,8 @@
       "upperTeam": "ဘရွန်းဘိုင်",
       "bodyOdds": "-5",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-10",
+      "currentGoalTotalOdds": "3-10",
       "internetPrediction": "2-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -740,8 +740,8 @@
         "upperTeam": "ဘရွန်းဘိုင်",
         "bodyOdds": "-5",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "3-10"
       },
       "espnEventId": "401874538",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401874538",
@@ -781,8 +781,8 @@
       "upperTeam": "အယ်မာရီးယား",
       "bodyOdds": "1+100",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-95",
+      "currentGoalTotalOdds": "3+30",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -795,8 +795,8 @@
         "upperTeam": "အယ်မာရီးယား",
         "bodyOdds": "1+100",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-95",
+        "currentGoalTotalOdds": "3+30"
       },
       "espnEventId": "401883110",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401883110",
@@ -836,8 +836,8 @@
       "upperTeam": "နန့်တက်",
       "bodyOdds": "1-20",
       "goalTotalOdds": "2-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-20",
+      "currentGoalTotalOdds": "2-80",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -850,8 +850,8 @@
         "upperTeam": "နန့်တက်",
         "bodyOdds": "1-20",
         "goalTotalOdds": "2-80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-20",
+        "currentGoalTotalOdds": "2-80"
       },
       "espnEventId": "401876686",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401876686",
@@ -891,8 +891,8 @@
       "upperTeam": "မွန်ပယ်လီယာ",
       "bodyOdds": "-40",
       "goalTotalOdds": "3+95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "3+100",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -905,8 +905,8 @@
         "upperTeam": "မွန်ပယ်လီယာ",
         "bodyOdds": "-40",
         "goalTotalOdds": "3+95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "3+100"
       },
       "fixtureVerification": "CONFLICT: PDF names Montpellier; ESPN and official Sochaux ticket notice name Sochaux. No external fixture joined.",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/70f6b8fe8273.png",
@@ -937,8 +937,8 @@
       "upperTeam": "အစ္စတန်ဘူ",
       "bodyOdds": "-100",
       "goalTotalOdds": "3=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-95",
+      "currentGoalTotalOdds": "3=",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -951,8 +951,8 @@
         "upperTeam": "အစ္စတန်ဘူ",
         "bodyOdds": "-100",
         "goalTotalOdds": "3=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-95",
+        "currentGoalTotalOdds": "3="
       },
       "fixtureVerification": "PDF only; external identity unavailable or conflicting",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/basaksehir.png",
@@ -989,8 +989,8 @@
       "upperTeam": "ခရာကော့",
       "bodyOdds": "-15",
       "goalTotalOdds": "3-50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "ဒဲ့",
+      "currentGoalTotalOdds": "3-45",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -1003,8 +1003,8 @@
         "upperTeam": "ခရာကော့",
         "bodyOdds": "-15",
         "goalTotalOdds": "3-50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "ဒဲ့",
+        "currentGoalTotalOdds": "3-45"
       },
       "fixtureVerification": "PDF only; external identity unavailable or conflicting",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/Cracovia.png",
@@ -1034,8 +1034,8 @@
       "upperTeam": "ဂျွန်အေဂျက်",
       "bodyOdds": "-40",
       "goalTotalOdds": "4+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-40",
+      "currentGoalTotalOdds": "4+50",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -1048,8 +1048,8 @@
         "upperTeam": "ဂျွန်အေဂျက်",
         "bodyOdds": "-40",
         "goalTotalOdds": "4+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-40",
+        "currentGoalTotalOdds": "4+50"
       },
       "espnEventId": "401875836",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875836",
@@ -1089,8 +1089,8 @@
       "upperTeam": "ဂျွန် ပီအက်စ်ဗွီ",
       "bodyOdds": "-25",
       "goalTotalOdds": "4+80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-20",
+      "currentGoalTotalOdds": "4+90",
       "internetPrediction": "2-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -1103,8 +1103,8 @@
         "upperTeam": "ဂျွန် ပီအက်စ်ဗွီ",
         "bodyOdds": "-25",
         "goalTotalOdds": "4+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-20",
+        "currentGoalTotalOdds": "4+90"
       },
       "espnEventId": "401875835",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875835",
@@ -1144,8 +1144,8 @@
       "upperTeam": "ဗစ်တက်စ်",
       "bodyOdds": "-90",
       "goalTotalOdds": "3-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-75",
+      "currentGoalTotalOdds": "3=",
       "internetPrediction": "2-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -1158,8 +1158,8 @@
         "upperTeam": "ဗစ်တက်စ်",
         "bodyOdds": "-90",
         "goalTotalOdds": "3-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "3="
       },
       "espnEventId": "401875856",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875856",
@@ -1177,5 +1177,8 @@
       "oddsVerifiedDate": "2026-11-23",
       "aiModelDataStatus": "baseline model; verified last-five unavailable"
     }
-  ]
+  ],
+  "currentOddsSourceFile": "23 စျေး(1).pdf",
+  "currentOddsSourceSha256": "4ddb064f9b6cd520dc7be22f9e87b6f481b8b69f2451bc0ff5e1d1f546275406",
+  "currentOddsSourceDate": "2026-11-23"
 }
