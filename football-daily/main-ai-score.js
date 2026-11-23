@@ -346,9 +346,31 @@ Object.assign(leagueNames,{"Danish Cup":"ဒိန်းမတ် ဖလား",
    if(!response.ok)throw new Error("Match report unavailable");
    const data=await response.json();
    if(data.reportDate!==todayKey()||data.published!==true||!Array.isArray(data.matches))throw new Error("Daily report not yet published");
-   report=data;
+   // All PDF rows belong in the three-source score grid, even when the
+   // owner selects only three editorial previews. Do not change today.json.
+   let aiFixtures=data.matches;
+   try{
+    const read=(window.FootballData?window.FootballData.fetch:fetch);
+    const oddsResponse=await read("./data/odds/"+encodeURIComponent(data.reportDate)+".json?fc-ai="+Date.now(),{cache:"no-store"});
+    if(oddsResponse.ok){
+     const sheet=await oddsResponse.json();
+     if(sheet.reportDate===data.reportDate&&Array.isArray(sheet.matches)&&sheet.matches.length>=data.matches.length){
+      const originals=new Map(data.matches.filter(m=>m?.fixtureId).map(m=>[m.fixtureId,m]));
+      const seen=new Set();
+      const all=sheet.matches.filter(m=>m?.fixtureId&&m.canonicalHome&&m.canonicalAway&&!seen.has(m.fixtureId)).map(m=>{
+       seen.add(m.fixtureId);
+       // Existing three professionally researched preview objects win;
+       // remaining odds-only rows are for the AI/Bookies/VIP grid, not previews.
+       return originals.get(m.fixtureId)||{...m,home:m.canonicalHome,away:m.canonicalAway};
+      });
+      for(const m of data.matches)if(m?.fixtureId&&!seen.has(m.fixtureId))all.push(m);
+      if(all.length>=data.matches.length)aiFixtures=all;
+     }
+    }
+   }catch(error){console.warn("Full daily AI tips fixture sheet unavailable; retaining published previews",error);}
+   report={...data,matches:aiFixtures};
    await tipModel?.load(data.reportDate,(window.FootballData?window.FootballData.fetch:fetch));
-   options(data.matches);
+   options(report.matches);
    createDownloadLeagueChoices(publishedFixtures());
    status.textContent="";render();
   }catch(err){

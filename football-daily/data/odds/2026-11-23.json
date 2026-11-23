@@ -58,7 +58,7 @@
       "drawOdds": 3.5,
       "totalGoalsLine": 2.5,
       "overOdds": 1.8,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879237",
       "oddsProvider": "DraftKings",
       "oddsVerifiedDate": "2026-11-23",
@@ -640,7 +640,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/d77a8fcc34e1.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2556.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/7047b5575537.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
+      "homeOdds": 1.22,
+      "drawOdds": 7,
+      "awayOdds": 9.5,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     },
     {
       "fixtureId": "fc-20261123-05",
@@ -688,7 +695,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/04f91b7ffd3e.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/3052.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/4e1a98bce38c.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/swe.1.png",
+      "homeOdds": 3.3,
+      "drawOdds": 3.6,
+      "awayOdds": 2.05,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     },
     {
       "fixtureId": "fc-20261123-06",
@@ -736,7 +750,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/83579110f1a1.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/572.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/70f9b191cc1e.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/den.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/den.1.png",
+      "homeOdds": 2.38,
+      "drawOdds": 4,
+      "awayOdds": 2.55,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     },
     {
       "fixtureId": "fc-20261123-07",
@@ -784,7 +805,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-15/5404.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6832.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-14/6832.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/esp.2.png",
+      "homeOdds": 3.7,
+      "drawOdds": 3.7,
+      "awayOdds": 1.9,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     },
     {
       "fixtureId": "fc-20261123-08",
@@ -832,7 +860,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/57595eb90348.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/6994.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/fa3e25c6771d.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.2.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.2.png",
+      "homeOdds": 1.42,
+      "drawOdds": 3.7,
+      "awayOdds": 7.5,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     },
     {
       "fixtureId": "fc-20261123-09",
@@ -877,7 +912,8 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/70f6b8fe8273.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/dunkerque.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/fra.2.png",
-      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7732.png"
+      "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/7732.png",
+      "aiModelDataStatus": "unavailable"
     },
     {
       "fixtureId": "fc-20261123-10",
@@ -922,7 +958,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/basaksehir.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/Corum-FK.png",
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/tur.1.png",
-      "homeCrestSourceUrl": "https://raw.githubusercontent.com/luukhopman/football-logos/master/logos/T%C3%BCrkiye%20-%20S%C3%BCper%20Lig/Basaksehir%20FK.png"
+      "homeCrestSourceUrl": "https://raw.githubusercontent.com/luukhopman/football-logos/master/logos/T%C3%BCrkiye%20-%20S%C3%BCper%20Lig/Basaksehir%20FK.png",
+      "homeOdds": 1.8,
+      "drawOdds": 3.75,
+      "awayOdds": 3.75,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     },
     {
       "fixtureId": "fc-20261123-11",
@@ -966,7 +1009,8 @@
       "fixtureVerification": "PDF only; external identity unavailable or conflicting",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/Cracovia.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/Motor-Lublin.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/pol.1.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/pol.1.png",
+      "aiModelDataStatus": "unavailable"
     },
     {
       "fixtureId": "fc-20261123-12",
@@ -1014,7 +1058,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/974799e294f8.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/18748.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/f1f913b7adf7.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ned.2.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ned.2.png",
+      "homeOdds": 2.25,
+      "drawOdds": 3.8,
+      "awayOdds": 2.8,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     },
     {
       "fixtureId": "fc-20261123-13",
@@ -1062,7 +1113,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/2fdf9ca0dbad.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/18278.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-23/f37790f59256.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ned.2.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ned.2.png",
+      "homeOdds": 2.25,
+      "drawOdds": 3.75,
+      "awayOdds": 2.88,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     },
     {
       "fixtureId": "fc-20261123-14",
@@ -1110,7 +1168,14 @@
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-15/154.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/144.png",
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-14/144.png",
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ned.2.png"
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/ned.2.png",
+      "homeOdds": 2,
+      "drawOdds": 4,
+      "awayOdds": 3.3,
+      "oddsSourceUrl": "https://www.wbookie.com/en/odds?date=2026-11-23",
+      "oddsProvider": "Bet365 (listed by WBookie)",
+      "oddsVerifiedDate": "2026-11-23",
+      "aiModelDataStatus": "baseline model; verified last-five unavailable"
     }
   ]
 }
