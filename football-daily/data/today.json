@@ -26,8 +26,8 @@
       "upperTeam": "ဘရန်းဖို့ဒ်",
       "bodyOdds": "-35",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-45",
+      "currentGoalTotalOdds": "3+85",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -40,8 +40,8 @@
         "upperTeam": "ဘရန်းဖို့ဒ်",
         "bodyOdds": "-35",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-45",
+        "currentGoalTotalOdds": "3+85"
       },
       "espnEventId": "401879237",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879237",
@@ -56,7 +56,7 @@
       "drawOdds": 3.5,
       "totalGoalsLine": 2.5,
       "overOdds": 1.8,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401879237",
       "oddsProvider": "DraftKings",
       "oddsVerifiedDate": "2026-11-23",
@@ -243,8 +243,8 @@
       "upperTeam": "ဖီအိုရင်တီးနား",
       "bodyOdds": "-90",
       "goalTotalOdds": "3-5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-85",
+      "currentGoalTotalOdds": "3=",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -257,8 +257,8 @@
         "upperTeam": "ဖီအိုရင်တီးနား",
         "bodyOdds": "-90",
         "goalTotalOdds": "3-5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-85",
+        "currentGoalTotalOdds": "3="
       },
       "espnEventId": "401875009",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401875009",
@@ -462,8 +462,8 @@
       "upperTeam": "လီဗန်တေး",
       "bodyOdds": "-60",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
       "sourcePDF": "23(2).pdf",
@@ -476,8 +476,8 @@
         "upperTeam": "လီဗန်တေး",
         "bodyOdds": "-60",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3+40"
       },
       "espnEventId": "401882802",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882802",
@@ -657,9 +657,12 @@
       }
     }
   ],
-  "currentPricesAvailable": false,
+  "currentPricesAvailable": true,
   "sourceVerificationDate": "2026-11-23",
   "dailyMasterPromptVersion": "V7 with owner 2026-11-23 override: 3 previews; 1 Special Choice",
   "sourceLedgerPath": "data/research/2026-11-23-source-ledger.json",
-  "oddsSheetPath": "data/odds/2026-11-23.json"
+  "oddsSheetPath": "data/odds/2026-11-23.json",
+  "currentOddsSourceFile": "23 စျေး(1).pdf",
+  "currentOddsSourceSha256": "4ddb064f9b6cd520dc7be22f9e87b6f481b8b69f2451bc0ff5e1d1f546275406",
+  "currentOddsSourceDate": "2026-11-23"
 }
