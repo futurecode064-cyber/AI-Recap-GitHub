@@ -1,0 +1,36 @@
+{
+  "reportDate": "2026-11-23",
+  "timezone": "Asia/Yangon",
+  "items": [
+    {
+      "fixtureId": "fc-20261123-01",
+      "score": "1-0",
+      "sourceName": "Kings Odds",
+      "sourceUrl": "https://www.kingsodds.com/predictions/2026-11-23",
+      "sourceDate": "2026-11-23",
+      "checkedDate": "2026-11-23",
+      "home": "Brentford",
+      "away": "Everton"
+    },
+    {
+      "fixtureId": "fc-20261123-02",
+      "score": "1-2",
+      "sourceName": "Kings Odds",
+      "sourceUrl": "https://www.kingsodds.com/predictions/2026-11-23",
+      "sourceDate": "2026-11-23",
+      "checkedDate": "2026-11-23",
+      "home": "Monza",
+      "away": "Fiorentina"
+    },
+    {
+      "fixtureId": "fc-20261123-03",
+      "score": "2-1",
+      "sourceName": "Kings Odds",
+      "sourceUrl": "https://www.kingsodds.com/predictions/2026-11-23",
+      "sourceDate": "2026-11-23",
+      "checkedDate": "2026-11-23",
+      "home": "Levante",
+      "away": "Elche"
+    }
+  ]
+}
