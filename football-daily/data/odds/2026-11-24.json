@@ -31,7 +31,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "2-1",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -210,7 +210,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-01",
+          "score": "2-1",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 1,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Bodø/Glimt",
+          "away": "LASK Linz"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-02",
@@ -237,7 +252,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "1-2",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -416,7 +431,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-02",
+          "score": "1-2",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 2,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Galatasaray",
+          "away": "Aston Villa"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-03",
@@ -443,7 +473,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "2-0",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -622,7 +652,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-03",
+          "score": "2-0",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 3,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Arsenal",
+          "away": "Borussia Dortmund"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-04",
@@ -649,7 +694,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "3-1",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -828,7 +873,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-04",
+          "score": "3-1",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 4,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Como",
+          "away": "AEK Athens"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-05",
@@ -855,7 +915,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "1-2",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -1036,7 +1096,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-05",
+          "score": "1-2",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 5,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Feyenoord",
+          "away": "FC Porto"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-06",
@@ -1063,7 +1138,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "3-0",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -1242,7 +1317,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-06",
+          "score": "3-0",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 6,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Manchester City",
+          "away": "Napoli"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-07",
@@ -1269,7 +1359,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "2-0",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -1448,7 +1538,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-07",
+          "score": "2-0",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 7,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "RB Leipzig",
+          "away": "Lens"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-08",
@@ -1475,7 +1580,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "3-0",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -1654,7 +1759,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-08",
+          "score": "3-0",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 8,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Real Madrid",
+          "away": "PSV Eindhoven"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-09",
@@ -1681,7 +1801,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "0-3",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -1860,7 +1980,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-09",
+          "score": "0-3",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 9,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Slovan Bratislava",
+          "away": "Real Betis"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-10",
@@ -1887,7 +2022,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "1-0",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -2066,7 +2201,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-10",
+          "score": "1-0",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 10,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Bristol City",
+          "away": "Wrexham"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-11",
@@ -2093,7 +2243,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "2-1",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -2272,7 +2422,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-11",
+          "score": "2-1",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 11,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Cardiff City",
+          "away": "Preston North End"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-12",
@@ -2299,7 +2464,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "0-1",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -2480,7 +2645,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-12",
+          "score": "0-1",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 12,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Charlton Athletic",
+          "away": "Lincoln City"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-13",
@@ -2507,7 +2687,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "2-1",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -2686,7 +2866,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-13",
+          "score": "2-1",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 13,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Middlesbrough",
+          "away": "Swansea City"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-14",
@@ -2713,7 +2908,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "2-1",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -2892,7 +3087,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-14",
+          "score": "2-1",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 14,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Norwich City",
+          "away": "Queens Park Rangers"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-15",
@@ -2919,7 +3129,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "0-2",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -3098,7 +3308,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-15",
+          "score": "0-2",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 15,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Portsmouth",
+          "away": "West Ham United"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-16",
@@ -3125,7 +3350,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "2-1",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -3304,7 +3529,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-16",
+          "score": "2-1",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 16,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Sheffield United",
+          "away": "Southampton"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-17",
@@ -3331,7 +3571,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "3-0",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": true,
       "previewExclusionReason": "",
@@ -3512,7 +3752,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "bundled same-origin PNG",
-      "awayCrestDelivery": "bundled same-origin PNG"
+      "awayCrestDelivery": "bundled same-origin PNG",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-17",
+          "score": "3-0",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 17,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Wolverhampton Wanderers",
+          "away": "Derby County"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-18",
@@ -3539,7 +3794,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "2-1",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": false,
       "previewExclusionReason": "Owner requested only Champions League and Championship previews",
@@ -3710,7 +3965,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "same-origin restricted team crest relay",
-      "awayCrestDelivery": "same-origin restricted team crest relay"
+      "awayCrestDelivery": "same-origin restricted team crest relay",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-18",
+          "score": "2-1",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 18,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Hibernian",
+          "away": "Dundee"
+        }
+      }
     },
     {
       "fixtureId": "fc-20261124-19",
@@ -3737,7 +4007,7 @@
       "currentBodyOdds": "",
       "currentGoalTotalOdds": "",
       "internetPrediction": "3-0",
-      "sourcePredictionType": "Owner PDF forecast; not external VIP or AI model",
+      "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
       "eligibleForPreview": false,
       "previewExclusionReason": "Owner requested only Champions League and Championship previews",
@@ -3908,7 +4178,22 @@
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
       "homeCrestDelivery": "same-origin restricted team crest relay",
-      "awayCrestDelivery": "same-origin restricted team crest relay"
+      "awayCrestDelivery": "same-origin restricted team crest relay",
+      "tipPredictions": {
+        "vipInternet": {
+          "fixtureId": "fc-20261124-19",
+          "score": "3-0",
+          "sourceName": "Owner PDF — Internet column",
+          "sourceType": "owner-pdf-internet",
+          "sourcePDF": "24(4).pdf",
+          "sourcePage": 1,
+          "pdfRow": 19,
+          "sourceDate": "2026-11-24",
+          "checkedDate": "2026-11-24",
+          "home": "Rangers",
+          "away": "Aberdeen"
+        }
+      }
     }
   ]
 }
