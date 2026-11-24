@@ -74,7 +74,7 @@
       },
       "espnEventId": "401915380",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-20/2980.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/2980.png",
       "homeLastFive": [
         {
           "date": "2026-11-20",
@@ -143,7 +143,7 @@
         }
       ],
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/4411.png",
       "awayLastFive": [
         {
           "date": "2026-11-21",
@@ -213,7 +213,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-02",
@@ -268,7 +270,7 @@
         "https://www.espn.com/soccer/match/_/gameId/401915300"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/c275d579f1b7a4d5.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/362.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
       "dailyPreviewText": "ဂါလာတာစာရေးက ၆ မှတ်နဲ့ အဆင့် ၁၈ မှာ ရပ်တည်နေပြီး ချန်ပီယံလိဂ်နောက်ဆုံးနှစ်ပွဲဆက် အနိုင်ရထားပါတယ်။ အူနိုင်းအမ်မရီရဲ့ အက်စတွန်ဗီလာကတော့ ၉ မှတ်နဲ့ အဆင့် ၆ မှာ ရပ်တည်နေပြီး တိုက်စစ်ပိုင်းကောင်းမွန်နေပါတယ်။ ဒါပေမယ့် ဂါလာတာစာရေးရဲ့ အိမ်ကွင်းမှာ ဗီလာအနေနဲ့ လွတ်လွတ်လပ်လပ် တိုက်စစ်ဆင်နိုင်ဖို့ မလွယ်သလို နှစ်သင်းစလုံး အမှတ်ရရှိရေးကို ဦးစားပေးလာနိုင်တာကြောင့် **ဂိုးအောက်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဂါလာတာစာရေးက ၆ မှတ်နဲ့ အဆင့် ၁၈ မှာ ရပ်တည်နေပြီး ချန်ပီယံလိဂ်နောက်ဆုံးနှစ်ပွဲဆက် အနိုင်ရထားပါတယ်။ အူနိုင်းအမ်မရီရဲ့ အက်စတွန်ဗီလာကတော့ ၉ မှတ်နဲ့ အဆင့် ၆ မှာ ရပ်တည်နေပြီး တိုက်စစ်ပိုင်းကောင်းမွန်နေပါတယ်။ ဒါပေမယ့် ဂါလာတာစာရေးရဲ့ အိမ်ကွင်းမှာ ဗီလာအနေနဲ့ လွတ်လွတ်လပ်လပ် တိုက်စစ်ဆင်နိုင်ဖို့ မလွယ်သလို နှစ်သင်းစလုံး အမှတ်ရရှိရေးကို ဦးစားပေးလာနိုင်တာကြောင့် **ဂိုးအောက်ကို ရွေးချယ်ပါတယ်။**",
@@ -287,7 +289,7 @@
       },
       "espnEventId": "401915300",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/432.png",
       "homeLastFive": [
         {
           "date": "2026-11-21",
@@ -424,7 +426,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-03",
@@ -479,9 +483,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915295"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/9ccb335946107299.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/359.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/1d45340173cd7622.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/124.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
       "dailyPreviewText": "အာတီတာရဲ့ အာဆင်နယ်က ချန်ပီယံလိဂ်မှာ ရှုံးပွဲမရှိသေးဘဲ ၁၀ မှတ်နဲ့ အဆင့် ၃ မှာ ရပ်တည်နေပါတယ်။ ခံစစ်ပိုင်းတည်ငြိမ်မှုက အာဆင်နယ်ရဲ့ အဓိကအားသာချက်ဖြစ်ပေမယ့် ဒေါ့မွန်ကလည်း လေးပွဲမှာ သုံးပွဲအနိုင်ရရှိထားတဲ့ အသင်းဖြစ်ပါတယ်။ အာဆင်နယ်က အိမ်ကွင်းမှာ အသာစီးရနိုင်ပေမယ့် ဒေါ့မွန်ကို ဂိုးပြတ်အနိုင်ယူနိုင်ဖို့ မလွယ်တာကြောင့် **ဒေါ့မွန်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "အာတီတာရဲ့ အာဆင်နယ်က ချန်ပီယံလိဂ်မှာ ရှုံးပွဲမရှိသေးဘဲ ၁၀ မှတ်နဲ့ အဆင့် ၃ မှာ ရပ်တည်နေပါတယ်။ ခံစစ်ပိုင်းတည်ငြိမ်မှုက အာဆင်နယ်ရဲ့ အဓိကအားသာချက်ဖြစ်ပေမယ့် ဒေါ့မွန်ကလည်း လေးပွဲမှာ သုံးပွဲအနိုင်ရရှိထားတဲ့ အသင်းဖြစ်ပါတယ်။ အာဆင်နယ်က အိမ်ကွင်းမှာ အသာစီးရနိုင်ပေမယ့် ဒေါ့မွန်ကို ဂိုးပြတ်အနိုင်ယူနိုင်ဖို့ မလွယ်တာကြောင့် **ဒေါ့မွန်ကို ရွေးချယ်ပါတယ်။**",
@@ -635,7 +639,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-04",
@@ -690,9 +696,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915296"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/b5fcd4772270cd34.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/2572.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/67c444439b138b15.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/887.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
       "dailyPreviewText": "ကိုမိုက ဒီရာသီ ချန်ပီယံလိဂ်မှာ တိုက်စစ်ပိုင်း အထင်ကြီးစရာခြေစွမ်းပြသနေပါတယ်။ ဒူဗီကတ်စ်ရဲ့ ဂိုးသွင်းနိုင်မှုနဲ့ နီကိုပက်ဇ်ရဲ့ တိုက်စစ်ဖန်တီးပေးနိုင်မှုက အေကေအေသင်နောက်တန်းအတွက် အခက်အခဲဖြစ်လာနိုင်ပါတယ်။ အေကေအေသင်က ခံစစ်ပိုင်းအားနည်းပေမယ့် ဂိုးပြန်သွင်းနိုင်စွမ်းရှိတဲ့ အသင်းဖြစ်တာကြောင့် ဒီပွဲမှာတော့ **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ကိုမိုက ဒီရာသီ ချန်ပီယံလိဂ်မှာ တိုက်စစ်ပိုင်း အထင်ကြီးစရာခြေစွမ်းပြသနေပါတယ်။ ဒူဗီကတ်စ်ရဲ့ ဂိုးသွင်းနိုင်မှုနဲ့ နီကိုပက်ဇ်ရဲ့ တိုက်စစ်ဖန်တီးပေးနိုင်မှုက အေကေအေသင်နောက်တန်းအတွက် အခက်အခဲဖြစ်လာနိုင်ပါတယ်။ အေကေအေသင်က ခံစစ်ပိုင်းအားနည်းပေမယ့် ဂိုးပြန်သွင်းနိုင်စွမ်းရှိတဲ့ အသင်းဖြစ်တာကြောင့် ဒီပွဲမှာတော့ **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
@@ -846,7 +852,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-05",
@@ -901,7 +909,7 @@
         "https://www.espn.com/soccer/match/_/gameId/401915294"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/d1fd4480efe7143f.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/437.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
       "dailyPreviewText": "ဖီယင်နုနဲ့ ပေါ်တိုတို့ဟာ ချန်ပီယံလိဂ်မှာ သုံးမှတ်စီသာ ရရှိထားကြပြီး နှစ်သင်းစလုံးအတွက် အနိုင်ရလဒ်လိုအပ်နေတဲ့ပွဲဖြစ်ပါတယ်။ ဖီယင်နုက ခံစစ်ပိုင်းမှာ ပေးဂိုးများနေသလို ပေါ်တိုကလည်း တိုက်စစ်ပိုင်းမှာ ယုံကြည်မှုရရှိနေပါတယ်။ နှစ်သင်းစလုံး အနိုင်ရဖို့ တိုက်စစ်ဖွင့်ကစားလာနိုင်ပြီး ခံစစ်ပိုင်းမှာလည်း အားနည်းချက်တွေရှိနေတာကြောင့် **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဖီယင်နုနဲ့ ပေါ်တိုတို့ဟာ ချန်ပီယံလိဂ်မှာ သုံးမှတ်စီသာ ရရှိထားကြပြီး နှစ်သင်းစလုံးအတွက် အနိုင်ရလဒ်လိုအပ်နေတဲ့ပွဲဖြစ်ပါတယ်။ ဖီယင်နုက ခံစစ်ပိုင်းမှာ ပေးဂိုးများနေသလို ပေါ်တိုကလည်း တိုက်စစ်ပိုင်းမှာ ယုံကြည်မှုရရှိနေပါတယ်။ နှစ်သင်းစလုံး အနိုင်ရဖို့ တိုက်စစ်ဖွင့်ကစားလာနိုင်ပြီး ခံစစ်ပိုင်းမှာလည်း အားနည်းချက်တွေရှိနေတာကြောင့် **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
@@ -925,7 +933,7 @@
       ],
       "espnEventId": "401915294",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/142.png",
       "homeLastFive": [
         {
           "date": "2026-11-21",
@@ -1062,7 +1070,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-06",
@@ -1117,9 +1127,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915379"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/3e9f9da7593e8aa9.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/382.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/307cbddd83c59faa.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/114.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
       "dailyPreviewText": "မန်စီးတီးက ချန်ပီယံလိဂ်လေးပွဲမှာ ၁၂ ဂိုးသွင်းယူထားပြီး ၉ မှတ်နဲ့ အဆင့် ၇ မှာ ရပ်တည်နေပါတယ်။ နာပိုလီကတော့ ခံစစ်ပိုင်းမှာ ပေးဂိုးများနေတာကြောင့် ဟာလန်းဦးဆောင်လာမယ့် မန်စီးတီးတိုက်စစ်ကို ထိန်းချုပ်ဖို့ ခက်ခဲနိုင်ပါတယ်။ နာပိုလီဘက်မှာလည်း ဒီဘရိုင်း၊ မက်တော်မီနေးနဲ့ ဟွိုင်လန်းတို့ရဲ့ တိုက်စစ်အင်အားရှိနေတာကြောင့် အပြန်အလှန်ဂိုးသွင်းယူနိုင်မယ့်ပွဲအဖြစ် **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "မန်စီးတီးက ချန်ပီယံလိဂ်လေးပွဲမှာ ၁၂ ဂိုးသွင်းယူထားပြီး ၉ မှတ်နဲ့ အဆင့် ၇ မှာ ရပ်တည်နေပါတယ်။ နာပိုလီကတော့ ခံစစ်ပိုင်းမှာ ပေးဂိုးများနေတာကြောင့် ဟာလန်းဦးဆောင်လာမယ့် မန်စီးတီးတိုက်စစ်ကို ထိန်းချုပ်ဖို့ ခက်ခဲနိုင်ပါတယ်။ နာပိုလီဘက်မှာလည်း ဒီဘရိုင်း၊ မက်တော်မီနေးနဲ့ ဟွိုင်လန်းတို့ရဲ့ တိုက်စစ်အင်အားရှိနေတာကြောင့် အပြန်အလှန်ဂိုးသွင်းယူနိုင်မယ့်ပွဲအဖြစ် **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
@@ -1273,7 +1283,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-07",
@@ -1328,9 +1340,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915299"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/11420.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/38bf88e115acc674.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/175.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
       "dailyPreviewText": "လိုက်ပ်ဇစ်နဲ့ လန်းစ်တို့ဟာ ချန်ပီယံလိဂ်မှာ ရလဒ်ပိုင်းရုန်းကန်နေကြပေမယ့် လန်းစ်ရဲ့ ခံစစ်အားနည်းချက်က ပိုမိုသိသာနေပါတယ်။ လိုက်ပ်ဇစ်က တိုက်စစ်ပိုင်းမှာ ဂိုးသွင်းနိုင်စွမ်းရှိနေသလို အိမ်ကွင်းမှာလည်း လန်းစ်ကို ဖိအားပေးကစားနိုင်မှာပါ။ လန်းစ်ရဲ့ ခံစစ်ပြဿနာနဲ့ အဝေးကွင်းအားနည်းချက်တွေကြောင့် **လိုက်ပ်ဇစ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "လိုက်ပ်ဇစ်နဲ့ လန်းစ်တို့ဟာ ချန်ပီယံလိဂ်မှာ ရလဒ်ပိုင်းရုန်းကန်နေကြပေမယ့် လန်းစ်ရဲ့ ခံစစ်အားနည်းချက်က ပိုမိုသိသာနေပါတယ်။ လိုက်ပ်ဇစ်က တိုက်စစ်ပိုင်းမှာ ဂိုးသွင်းနိုင်စွမ်းရှိနေသလို အိမ်ကွင်းမှာလည်း လန်းစ်ကို ဖိအားပေးကစားနိုင်မှာပါ။ လန်းစ်ရဲ့ ခံစစ်ပြဿနာနဲ့ အဝေးကွင်းအားနည်းချက်တွေကြောင့် **လိုက်ပ်ဇစ်ကို ရွေးချယ်ပါတယ်။**",
@@ -1484,7 +1496,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-08",
@@ -1539,9 +1553,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915298"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/6b0b9bab7a077037.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/86.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/b658fba5e772a9bb.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/148.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
       "dailyPreviewText": "ရီးယဲလ်မက်ဒရစ်က ချန်ပီယံလိဂ်လေးပွဲစလုံး အနိုင်ရရှိထားပြီး တိုက်စစ်ပိုင်းမှာလည်း အင်အားတောင့်တင်းနေပါတယ်။ ဒါပေမယ့် ပီအက်စ်ဗွီက ခံစစ်ပိုင်းမှာ စနစ်တကျကစားနိုင်တဲ့အသင်းဖြစ်သလို ရီးယဲလ်မက်ဒရစ်ကို အခက်တွေ့အောင် ကစားနိုင်စွမ်းရှိပါတယ်။ ရီးယဲလ်မက်ဒရစ် အနိုင်ရနိုင်ပေမယ့် ဂိုးပြတ်ရလဒ်တစ်ခုရရှိဖို့ မလွယ်ကူတာကြောင့် **ပီအက်စ်ဗွီကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ရီးယဲလ်မက်ဒရစ်က ချန်ပီယံလိဂ်လေးပွဲစလုံး အနိုင်ရရှိထားပြီး တိုက်စစ်ပိုင်းမှာလည်း အင်အားတောင့်တင်းနေပါတယ်။ ဒါပေမယ့် ပီအက်စ်ဗွီက ခံစစ်ပိုင်းမှာ စနစ်တကျကစားနိုင်တဲ့အသင်းဖြစ်သလို ရီးယဲလ်မက်ဒရစ်ကို အခက်တွေ့အောင် ကစားနိုင်စွမ်းရှိပါတယ်။ ရီးယဲလ်မက်ဒရစ် အနိုင်ရနိုင်ပေမယ့် ဂိုးပြတ်ရလဒ်တစ်ခုရရှိဖို့ မလွယ်ကူတာကြောင့် **ပီအက်စ်ဗွီကို ရွေးချယ်ပါတယ်။**",
@@ -1695,7 +1709,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-09",
@@ -1750,7 +1766,7 @@
         "https://www.espn.com/soccer/match/_/gameId/401915297"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/73eea6fd581d8839.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/244.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
       "dailyPreviewText": "ဆလိုဗန်ဘရာတစ်လာဗာက ချန်ပီယံလိဂ်လေးပွဲစလုံး ရှုံးနိမ့်ထားပြီး တိုက်စစ်နဲ့ ခံစစ်နှစ်ပိုင်းစလုံးမှာ အားနည်းနေပါတယ်။ ရီးယဲလ်ဘက်တစ်ကတော့ ၉ မှတ်ရရှိထားပြီး အစ္စကိုနဲ့ အန်တိုနီတို့ရဲ့ တိုက်စစ်ဖန်တီးနိုင်မှုက ဆလိုဗန်နောက်တန်းအတွက် အဓိကခြိမ်းခြောက်မှုဖြစ်လာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ ခြေစွမ်းကွာဟမှုအရ ဂိုးပြတ်ရလဒ်တစ်ခုပါ မျှော်လင့်နိုင်တာကြောင့် **ရီးယဲလ်ဘက်တစ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဆလိုဗန်ဘရာတစ်လာဗာက ချန်ပီယံလိဂ်လေးပွဲစလုံး ရှုံးနိမ့်ထားပြီး တိုက်စစ်နဲ့ ခံစစ်နှစ်ပိုင်းစလုံးမှာ အားနည်းနေပါတယ်။ ရီးယဲလ်ဘက်တစ်ကတော့ ၉ မှတ်ရရှိထားပြီး အစ္စကိုနဲ့ အန်တိုနီတို့ရဲ့ တိုက်စစ်ဖန်တီးနိုင်မှုက ဆလိုဗန်နောက်တန်းအတွက် အဓိကခြိမ်းခြောက်မှုဖြစ်လာနိုင်ပါတယ်။ နှစ်သင်းရဲ့ ခြေစွမ်းကွာဟမှုအရ ဂိုးပြတ်ရလဒ်တစ်ခုပါ မျှော်လင့်နိုင်တာကြောင့် **ရီးယဲလ်ဘက်တစ်ကို ရွေးချယ်ပါတယ်။**",
@@ -1769,7 +1785,7 @@
       },
       "espnEventId": "401915297",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/9bf97657ddb75c04.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/521.png",
       "homeLastFive": [
         {
           "date": "2026-11-03",
@@ -1906,7 +1922,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-10",
@@ -1961,9 +1979,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880148"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/333.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/cef83304ce773915.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/352.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
       "dailyPreviewText": "ဘရစ္စတိုးလ်စီးတီးက ၁၈ မှတ်နဲ့ အဆင့် ၁၈ မှာ ရပ်တည်နေပြီး နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာ အနိုင်ရရှိထားပါတယ်။ အိမ်ကွင်းမှာလည်း ရလဒ်ကောင်းရရှိဖို့ ရုန်းကန်နေရပါတယ်။ ရက်စ်ဟမ်းကတော့ ၂၁ မှတ်နဲ့ အဆင့် ၁၄ မှာ ရပ်တည်နေပြီး နောက်ဆုံးသုံးပွဲဆက် ရှုံးပွဲမရှိထားပါဘူး။ နှစ်သင်းရဲ့ လတ်တလောခြေစွမ်းနဲ့ ရလဒ်ပိုင်းတည်ငြိမ်မှုကို နှိုင်းယှဉ်ကြည့်ရင် **ရက်စ်ဟမ်းကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဘရစ္စတိုးလ်စီးတီးက ၁၈ မှတ်နဲ့ အဆင့် ၁၈ မှာ ရပ်တည်နေပြီး နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာ အနိုင်ရရှိထားပါတယ်။ အိမ်ကွင်းမှာလည်း ရလဒ်ကောင်းရရှိဖို့ ရုန်းကန်နေရပါတယ်။ ရက်စ်ဟမ်းကတော့ ၂၁ မှတ်နဲ့ အဆင့် ၁၄ မှာ ရပ်တည်နေပြီး နောက်ဆုံးသုံးပွဲဆက် ရှုံးပွဲမရှိထားပါဘူး။ နှစ်သင်းရဲ့ လတ်တလောခြေစွမ်းနဲ့ ရလဒ်ပိုင်းတည်ငြိမ်မှုကို နှိုင်းယှဉ်ကြည့်ရင် **ရက်စ်ဟမ်းကို ရွေးချယ်ပါတယ်။**",
@@ -2117,7 +2135,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-11",
@@ -2172,9 +2192,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880147"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/347.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/394.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
       "dailyPreviewText": "ကာဒစ်ဖ်က ဒီရာသီ အိမ်ကွင်းရှစ်ပွဲစလုံး ရှုံးပွဲမရှိသေးဘဲ အိမ်ကွင်းမှာ ရလဒ်ကောင်းတွေ ရယူထားနိုင်ပါတယ်။ ပရက်စတန်ကတော့ ၉ မှတ်နဲ့ အမှတ်ပေးဇယားအောက်ဆုံးမှာ ရပ်တည်နေပြီး ခံစစ်ပိုင်းမှာလည်း ပေးဂိုးများနေပါတယ်။ ကာဒစ်ဖ်ရဲ့ အိမ်ကွင်းခြေစွမ်းနဲ့ ပရက်စတန်ရဲ့ အားနည်းချက်တွေကို ချိန်ဆကြည့်ရင် **ကာဒစ်ဖ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ကာဒစ်ဖ်က ဒီရာသီ အိမ်ကွင်းရှစ်ပွဲစလုံး ရှုံးပွဲမရှိသေးဘဲ အိမ်ကွင်းမှာ ရလဒ်ကောင်းတွေ ရယူထားနိုင်ပါတယ်။ ပရက်စတန်ကတော့ ၉ မှတ်နဲ့ အမှတ်ပေးဇယားအောက်ဆုံးမှာ ရပ်တည်နေပြီး ခံစစ်ပိုင်းမှာလည်း ပေးဂိုးများနေပါတယ်။ ကာဒစ်ဖ်ရဲ့ အိမ်ကွင်းခြေစွမ်းနဲ့ ပရက်စတန်ရဲ့ အားနည်းချက်တွေကို ချိန်ဆကြည့်ရင် **ကာဒစ်ဖ်ကို ရွေးချယ်ပါတယ်။**",
@@ -2328,7 +2348,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-12",
@@ -2383,9 +2405,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880146"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/372.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/314.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
       "dailyPreviewText": "ချာလ်တန်နဲ့ လင်ကွန်းစီးတီးတို့ဟာ အမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရပ်တည်နေကြပြီး နောက်ဆုံးငါးပွဲမှာလည်း လေးပွဲစီ ရှုံးနိမ့်ထားကြပါတယ်။ နှစ်သင်းစလုံး တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ အားနည်းနေသလို တန်းဆင်းဇုန်နားက အသင်းတွေဖြစ်တာကြောင့် အမှတ်ဆုံးရှုံးမှုမရှိအောင် သတိထားကစားလာနိုင်ပါတယ်။ တိုက်စစ်ပိုင်းရုန်းကန်နေရတဲ့ နှစ်သင်းရဲ့ တွေ့ဆုံမှုမှာတော့ **ဂိုးအောက်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ချာလ်တန်နဲ့ လင်ကွန်းစီးတီးတို့ဟာ အမှတ်ပေးဇယားအောက်ပိုင်းမှာ ရပ်တည်နေကြပြီး နောက်ဆုံးငါးပွဲမှာလည်း လေးပွဲစီ ရှုံးနိမ့်ထားကြပါတယ်။ နှစ်သင်းစလုံး တိုက်စစ်အဆုံးသတ်ပိုင်းမှာ အားနည်းနေသလို တန်းဆင်းဇုန်နားက အသင်းတွေဖြစ်တာကြောင့် အမှတ်ဆုံးရှုံးမှုမရှိအောင် သတိထားကစားလာနိုင်ပါတယ်။ တိုက်စစ်ပိုင်းရုန်းကန်နေရတဲ့ နှစ်သင်းရဲ့ တွေ့ဆုံမှုမှာတော့ **ဂိုးအောက်ကို ရွေးချယ်ပါတယ်။**",
@@ -2544,7 +2566,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-13",
@@ -2599,9 +2623,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880145"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/3fc5a3767ec3e2ae.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/369.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/318.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
       "dailyPreviewText": "မစ်ဒယ်ဘရော့က ၃၂ မှတ်နဲ့ အမှတ်ပေးဇယားထိပ်ဆုံးမှာ ရပ်တည်နေပြီး ၁၆ ပွဲမှာ ၃၂ ဂိုးအထိ သွင်းယူထားပါတယ်။ အိမ်ကွင်းမှာလည်း ရှုံးပွဲမရှိသေးတဲ့အထိ ခြေစွမ်းကောင်းမွန်နေပါတယ်။ ဆွမ်ဆီးက လတ်တလောရလဒ်ပိုင်း အနည်းငယ်ကျဆင်းနေပေမယ့် တိုက်စစ်ပိုင်းမှာ ဂိုးသွင်းနိုင်စွမ်းရှိတဲ့အသင်းဖြစ်ပါတယ်။ မစ်ဒယ်ဘရော့ရဲ့ အိမ်ကွင်းဂိုးသွင်းအားနဲ့ ဆွမ်ဆီးရဲ့ ဂိုးပြန်သွင်းနိုင်စွမ်းတို့ကြောင့် **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "မစ်ဒယ်ဘရော့က ၃၂ မှတ်နဲ့ အမှတ်ပေးဇယားထိပ်ဆုံးမှာ ရပ်တည်နေပြီး ၁၆ ပွဲမှာ ၃၂ ဂိုးအထိ သွင်းယူထားပါတယ်။ အိမ်ကွင်းမှာလည်း ရှုံးပွဲမရှိသေးတဲ့အထိ ခြေစွမ်းကောင်းမွန်နေပါတယ်။ ဆွမ်ဆီးက လတ်တလောရလဒ်ပိုင်း အနည်းငယ်ကျဆင်းနေပေမယ့် တိုက်စစ်ပိုင်းမှာ ဂိုးသွင်းနိုင်စွမ်းရှိတဲ့အသင်းဖြစ်ပါတယ်။ မစ်ဒယ်ဘရော့ရဲ့ အိမ်ကွင်းဂိုးသွင်းအားနဲ့ ဆွမ်ဆီးရဲ့ ဂိုးပြန်သွင်းနိုင်စွမ်းတို့ကြောင့် **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
@@ -2755,7 +2779,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-14",
@@ -2810,9 +2836,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880144"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/381.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/334.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
       "dailyPreviewText": "နောဝစ်ချ်က နောက်ဆုံးလိဂ်ငါးပွဲဆက် အနိုင်ရရှိထားပြီး တိုက်စစ်ပိုင်းမှာ အတော်လေးခြေစွမ်းကောင်းမွန်နေပါတယ်။ ကျူပီအာကလည်း အမှတ်ပေးဇယားအဆင့် ၇ မှာ ရပ်တည်နေပြီး နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာ ရှုံးနိမ့်ထားပါတယ်။ နှစ်သင်းစလုံး လတ်တလောခြေစွမ်းကောင်းမွန်နေသလို တိုက်စစ်ပိုင်းမှာလည်း အားကိုးစရာရှိတာကြောင့် အပြန်အလှန်ဂိုးသွင်းယူနိုင်မယ့်ပွဲအဖြစ် **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "နောဝစ်ချ်က နောက်ဆုံးလိဂ်ငါးပွဲဆက် အနိုင်ရရှိထားပြီး တိုက်စစ်ပိုင်းမှာ အတော်လေးခြေစွမ်းကောင်းမွန်နေပါတယ်။ ကျူပီအာကလည်း အမှတ်ပေးဇယားအဆင့် ၇ မှာ ရပ်တည်နေပြီး နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာ ရှုံးနိမ့်ထားပါတယ်။ နှစ်သင်းစလုံး လတ်တလောခြေစွမ်းကောင်းမွန်နေသလို တိုက်စစ်ပိုင်းမှာလည်း အားကိုးစရာရှိတာကြောင့် အပြန်အလှန်ဂိုးသွင်းယူနိုင်မယ့်ပွဲအဖြစ် **ဂိုးပေါ်ကို ရွေးချယ်ပါတယ်။**",
@@ -2966,7 +2992,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-15",
@@ -3021,9 +3049,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880143"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/5eeb36adae644400.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/385.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/371.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
       "dailyPreviewText": "ပို့စ်မောက်က နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာ ရှုံးနိမ့်ထားပြီး ရလဒ်ပိုင်းတည်ငြိမ်နေပါတယ်။ ဝက်စ်ဟမ်းကတော့ တိုက်စစ်အင်အားကောင်းမွန်ပေမယ့် နောက်ဆုံးငါးပွဲဆက် နိုင်ပွဲပျောက်ဆုံးနေပါတယ်။ အသင်းအင်အားအရ ဝက်စ်ဟမ်းက သာလွန်ပေမယ့် လတ်တလောခြေစွမ်းနဲ့ ပို့စ်မောက်ရဲ့ အိမ်ကွင်းအားသာချက်ကို ထည့်တွက်ကြည့်ရင် **ပို့စ်မောက်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ပို့စ်မောက်က နောက်ဆုံးငါးပွဲမှာ တစ်ပွဲသာ ရှုံးနိမ့်ထားပြီး ရလဒ်ပိုင်းတည်ငြိမ်နေပါတယ်။ ဝက်စ်ဟမ်းကတော့ တိုက်စစ်အင်အားကောင်းမွန်ပေမယ့် နောက်ဆုံးငါးပွဲဆက် နိုင်ပွဲပျောက်ဆုံးနေပါတယ်။ အသင်းအင်အားအရ ဝက်စ်ဟမ်းက သာလွန်ပေမယ့် လတ်တလောခြေစွမ်းနဲ့ ပို့စ်မောက်ရဲ့ အိမ်ကွင်းအားသာချက်ကို ထည့်တွက်ကြည့်ရင် **ပို့စ်မောက်ကို ရွေးချယ်ပါတယ်။**",
@@ -3177,7 +3205,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-16",
@@ -3232,9 +3262,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880142"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/90969f5884bf50ed.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/398.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/376.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
       "dailyPreviewText": "ရှက်ဖီးလ်ယူနိုက်တက်က ၂၅ မှတ်နဲ့ အဆင့် ၉ မှာ ရပ်တည်နေပြီး ဆောက်သမ်တန်ကတော့ ၂၇ မှတ်နဲ့ အဆင့် ၆ မှာ ရှိနေပါတယ်။ ဆောက်သမ်တန်ရဲ့ ခံစစ်ပိုင်းတည်ငြိမ်မှုက ရှက်ဖီးလ်ယူနိုက်တက်အတွက် ဂိုးရရှိဖို့ ခက်ခဲစေနိုင်သလို ရှက်ဖီးလ်ကလည်း အိမ်ကွင်းမှာ လွယ်လွယ်နဲ့ အရှုံးပေးမယ့်အသင်း မဟုတ်ပါဘူး။ ခြေစွမ်းနီးစပ်နေတဲ့ နှစ်သင်းရဲ့ တွေ့ဆုံမှုမှာ **ဂိုးအောက်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ရှက်ဖီးလ်ယူနိုက်တက်က ၂၅ မှတ်နဲ့ အဆင့် ၉ မှာ ရပ်တည်နေပြီး ဆောက်သမ်တန်ကတော့ ၂၇ မှတ်နဲ့ အဆင့် ၆ မှာ ရှိနေပါတယ်။ ဆောက်သမ်တန်ရဲ့ ခံစစ်ပိုင်းတည်ငြိမ်မှုက ရှက်ဖီးလ်ယူနိုက်တက်အတွက် ဂိုးရရှိဖို့ ခက်ခဲစေနိုင်သလို ရှက်ဖီးလ်ကလည်း အိမ်ကွင်းမှာ လွယ်လွယ်နဲ့ အရှုံးပေးမယ့်အသင်း မဟုတ်ပါဘူး။ ခြေစွမ်းနီးစပ်နေတဲ့ နှစ်သင်းရဲ့ တွေ့ဆုံမှုမှာ **ဂိုးအောက်ကို ရွေးချယ်ပါတယ်။**",
@@ -3388,7 +3418,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-17",
@@ -3443,9 +3475,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880141"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/efbd01bcaac12cb1.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/380.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/374.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
       "dailyPreviewText": "ဝုလ်ဗ်က ၃၁ မှတ်နဲ့ အဆင့် ၃ မှာ ရပ်တည်နေပြီး နောက်ဆုံးငါးပွဲမှာ လေးပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ခြေစွမ်းကောင်းမွန်နေပါတယ်။ ဒါဘီကတော့ ၁၀ မှတ်နဲ့ အဆင့် ၂၃ မှာ ရပ်တည်နေပြီး တိုက်စစ်ပိုင်းအားနည်းသလို ခံစစ်ပိုင်းမှာလည်း ပေးဂိုးများနေပါတယ်။ ဝုလ်ဗ်ရဲ့ လက်ရှိခြေစွမ်းနဲ့ အိမ်ကွင်းတိုက်စစ်အင်အားအရ ဂိုးပြတ်အနိုင်ရရှိနိုင်မယ့် အလားအလာရှိတာကြောင့် **ဝုလ်ဗ်ကို ရွေးချယ်ပါတယ်။**",
       "previewV2Summary": "ဝုလ်ဗ်က ၃၁ မှတ်နဲ့ အဆင့် ၃ မှာ ရပ်တည်နေပြီး နောက်ဆုံးငါးပွဲမှာ လေးပွဲနိုင်၊ တစ်ပွဲသရေနဲ့ ခြေစွမ်းကောင်းမွန်နေပါတယ်။ ဒါဘီကတော့ ၁၀ မှတ်နဲ့ အဆင့် ၂၃ မှာ ရပ်တည်နေပြီး တိုက်စစ်ပိုင်းအားနည်းသလို ခံစစ်ပိုင်းမှာလည်း ပေးဂိုးများနေပါတယ်။ ဝုလ်ဗ်ရဲ့ လက်ရှိခြေစွမ်းနဲ့ အိမ်ကွင်းတိုက်စစ်အင်အားအရ ဂိုးပြတ်အနိုင်ရရှိနိုင်မယ့် အလားအလာရှိတာကြောင့် **ဝုလ်ဗ်ကို ရွေးချယ်ပါတယ်။**",
@@ -3604,7 +3636,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     }
   ],
   "currentPricesAvailable": false,

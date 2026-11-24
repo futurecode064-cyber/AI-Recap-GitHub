@@ -69,7 +69,7 @@
       "previewPhotoStatus": "team crests only; no unverified photo",
       "espnEventId": "401915380",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-20/2980.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/2980.png",
       "homeLastFive": [
         {
           "date": "2026-11-20",
@@ -138,7 +138,7 @@
         }
       ],
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/4411.png",
       "awayLastFive": [
         {
           "date": "2026-11-21",
@@ -208,7 +208,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-02",
@@ -263,7 +265,7 @@
         "https://www.espn.com/soccer/match/_/gameId/401915300"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/c275d579f1b7a4d5.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/362.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
       "previewV2Selection": "ဂိုးအောက်",
       "selection": "ဂိုးအောက်",
@@ -275,7 +277,7 @@
       "previewPhotoStatus": "team crests only; no unverified photo",
       "espnEventId": "401915300",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/432.png",
       "homeLastFive": [
         {
           "date": "2026-11-21",
@@ -412,7 +414,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-03",
@@ -467,9 +471,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915295"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/9ccb335946107299.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/359.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/1d45340173cd7622.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/124.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
       "previewV2Selection": "ဒေါ့မွန်",
       "selection": "ဒေါ့မွန်",
@@ -616,7 +620,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-04",
@@ -671,9 +677,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915296"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/b5fcd4772270cd34.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/2572.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/67c444439b138b15.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/887.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
       "previewV2Selection": "ဂိုးပေါ်",
       "selection": "ဂိုးပေါ်",
@@ -820,7 +826,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-05",
@@ -875,7 +883,7 @@
         "https://www.espn.com/soccer/match/_/gameId/401915294"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/d1fd4480efe7143f.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/437.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
       "previewV2Selection": "ဂိုးပေါ်",
       "selection": "ဂိုးပေါ်",
@@ -889,7 +897,7 @@
       "specialPreparedDate": "2026-11-24",
       "espnEventId": "401915294",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/142.png",
       "homeLastFive": [
         {
           "date": "2026-11-21",
@@ -1026,7 +1034,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-06",
@@ -1081,9 +1091,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915379"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/3e9f9da7593e8aa9.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/382.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/307cbddd83c59faa.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/114.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
       "previewV2Selection": "ဂိုးပေါ်",
       "selection": "ဂိုးပေါ်",
@@ -1230,7 +1240,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-07",
@@ -1285,9 +1297,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915299"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/11420.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/38bf88e115acc674.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/175.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
       "previewV2Selection": "လိုက်ပ်ဇစ်",
       "selection": "လိုက်ပ်ဇစ်",
@@ -1434,7 +1446,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-08",
@@ -1489,9 +1503,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401915298"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/6b0b9bab7a077037.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/86.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/b658fba5e772a9bb.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/148.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
       "previewV2Selection": "ပီအက်စ်ဗွီ",
       "selection": "ပီအက်စ်ဗွီ",
@@ -1638,7 +1652,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-09",
@@ -1693,7 +1709,7 @@
         "https://www.espn.com/soccer/match/_/gameId/401915297"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/uefa.champions.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/73eea6fd581d8839.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/244.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
       "previewV2Selection": "ရီးယဲလ်ဘက်တစ်",
       "selection": "ရီးယဲလ်ဘက်တစ်",
@@ -1705,7 +1721,7 @@
       "previewPhotoStatus": "team crests only; no unverified photo",
       "espnEventId": "401915297",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/9bf97657ddb75c04.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/521.png",
       "homeLastFive": [
         {
           "date": "2026-11-03",
@@ -1842,7 +1858,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-10",
@@ -1897,9 +1915,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880148"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/333.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/cef83304ce773915.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/352.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
       "previewV2Selection": "ရက်စ်ဟမ်း",
       "selection": "ရက်စ်ဟမ်း",
@@ -2046,7 +2064,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-11",
@@ -2101,9 +2121,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880147"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/347.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/394.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
       "previewV2Selection": "ကာဒစ်ဖ်",
       "selection": "ကာဒစ်ဖ်",
@@ -2250,7 +2270,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-12",
@@ -2305,9 +2327,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880146"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/372.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/314.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
       "previewV2Selection": "ဂိုးအောက်",
       "selection": "ဂိုးအောက်",
@@ -2456,7 +2478,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-13",
@@ -2511,9 +2535,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880145"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/3fc5a3767ec3e2ae.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/369.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/318.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
       "previewV2Selection": "ဂိုးပေါ်",
       "selection": "ဂိုးပေါ်",
@@ -2660,7 +2684,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-14",
@@ -2715,9 +2741,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880144"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/381.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/334.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
       "previewV2Selection": "ဂိုးပေါ်",
       "selection": "ဂိုးပေါ်",
@@ -2864,7 +2890,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-15",
@@ -2919,9 +2947,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880143"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/5eeb36adae644400.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/385.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/371.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
       "previewV2Selection": "ပို့စ်မောက်",
       "selection": "ပို့စ်မောက်",
@@ -3068,7 +3096,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-16",
@@ -3123,9 +3153,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880142"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/brand-export-teams/90969f5884bf50ed.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/398.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/376.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
       "previewV2Selection": "ဂိုးအောက်",
       "selection": "ဂိုးအောက်",
@@ -3272,7 +3302,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-17",
@@ -3327,9 +3359,9 @@
         "https://www.espn.com/soccer/match/_/gameId/401880141"
       ],
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/eng.2.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/main-export-teams/efbd01bcaac12cb1.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/380.png",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/374.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
       "previewV2Selection": "ဝုလ်ဗ်",
       "selection": "ဝုလ်ဗ်",
@@ -3478,7 +3510,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG"
     },
     {
       "fixtureId": "fc-20261124-18",
@@ -3535,7 +3569,7 @@
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/sco.1.png",
       "espnEventId": "401878348",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/258.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/258.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/api/team-crest/258.png",
       "homeLastFive": [
         {
           "date": "2026-11-21",
@@ -3604,7 +3638,7 @@
         }
       ],
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/261.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/261.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/api/team-crest/261.png",
       "awayLastFive": [
         {
           "date": "2026-11-21",
@@ -3674,7 +3708,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "same-origin restricted team crest relay",
+      "awayCrestDelivery": "same-origin restricted team crest relay"
     },
     {
       "fixtureId": "fc-20261124-19",
@@ -3731,7 +3767,7 @@
       "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/sco.1.png",
       "espnEventId": "401878345",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/257.png",
-      "homeCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/257.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/api/team-crest/257.png",
       "homeLastFive": [
         {
           "date": "2026-11-21",
@@ -3800,7 +3836,7 @@
         }
       ],
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/263.png",
-      "awayCrestUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/263.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/api/team-crest/263.png",
       "awayLastFive": [
         {
           "date": "2026-11-21",
@@ -3870,7 +3906,9 @@
       ],
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
-      "crestStatus": "ESPN team ID matched; cached logo where available"
+      "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
+      "homeCrestDelivery": "same-origin restricted team crest relay",
+      "awayCrestDelivery": "same-origin restricted team crest relay"
     }
   ]
 }

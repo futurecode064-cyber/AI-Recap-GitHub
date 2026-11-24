@@ -370,6 +370,7 @@ async function handleRequest(request, env) {
     const path = new URL(request.url).pathname;
     if (path === "/api/editor/notifications/send" || path === "/api/editor/notifications/status") return fcNotifyApi(request, env, path);
     if (path === "/api/maung-sheet") return maungSheetApi(request, env);
+    if (path.startsWith("/api/team-crest/")) return serveTeamCrest(request,path);
      if (path === "/api/news-image") return serveNewsImage(request);
     if (path === "/bet-city-family" || path.startsWith("/bet-city-family/")) return suspendedBetCity(request);
     if (path === "/api/editor/sites" || path.startsWith("/api/editor/sites/")) return sbApi(request, env, path);
@@ -1150,4 +1151,21 @@ async function fcNotifyApi(request,env,path){
   }catch(error){
     return gzJson({phase:"failed",error:error.message||"Notification ပို့ခြင်း မအောင်မြင်ပါ"},502);
   }
+}
+
+
+// Fixed team crest relay: only the listed ESPN team IDs, no caller-controlled host or path.
+async function serveTeamCrest(request, path){
+ const match=/^\/api\/team-crest\/(\d+)\.png$/.exec(path);
+ if(!match||!["258","261","257","263"].includes(match[1]))return new Response("Not found",{status:404});
+ if(request.method!=="GET"&&request.method!=="HEAD")return new Response("Method Not Allowed",{status:405,headers:{"Allow":"GET, HEAD"}});
+ try{
+  const r=await fetch("https://a.espncdn.com/i/teamlogos/soccer/500/"+match[1]+".png",{redirect:"error",headers:{"Accept":"image/png"},cf:{cacheEverything:true,cacheTtl:86400}});
+  if(!r.ok||!(r.headers.get("content-type")||"").toLowerCase().startsWith("image/png"))return new Response("Crest unavailable",{status:502});
+  const bytes=await r.arrayBuffer();
+  if(bytes.byteLength>1048576||bytes.byteLength<8)return new Response("Invalid crest",{status:502});
+  const b=new Uint8Array(bytes);
+  if(![137,80,78,71,13,10,26,10].every((n,i)=>b[i]===n))return new Response("Invalid crest",{status:502});
+  return new Response(request.method==="HEAD"?null:bytes,{headers:{"Content-Type":"image/png","Cache-Control":"public,max-age=86400,s-maxage=604800","X-Content-Type-Options":"nosniff","Cross-Origin-Resource-Policy":"same-origin"}});
+ }catch{return new Response("Crest unavailable",{status:502});}
 }

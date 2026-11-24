@@ -31,7 +31,8 @@
     "/bet-city-family",
     "/bet-city-family/*",
     "/api/news-image",
-    "/api/maung-sheet"
+    "/api/maung-sheet",
+    "/api/team-crest/*"
   ],
   "exclude": []
 }
