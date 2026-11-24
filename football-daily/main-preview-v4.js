@@ -9,7 +9,7 @@
  const clean=s=>String(s??"").normalize("NFC").replace(/\*\*|&nbsp;/g,"").replace(/\s+/gu," ").trim();
  const selection=m=>m.previewV2Selection||window.FutureCodePreviewV2?.choice(m)||"—";
  const editorial=m=>clean(window.FutureCodePreviewV2?.summary(m)||m.previewV2Summary);
- const eligible=m=>!!(m?.fixtureId&&editorial(m)&&[m.homeDisplay,m.awayDisplay].includes(selection(m))&&m.dailyPreviewText);
+ const eligible=m=>!!(m?.fixtureId&&editorial(m)&&[m.homeDisplay,m.awayDisplay,"ဂိုးပေါ်","ဂိုးအောက်","Over","Under"].includes(selection(m))&&m.dailyPreviewText);
  const clock=m=>m.kickoffDisplay||window.FutureCodeTime?.clock?.(m)||m.kickoff||"—";
  const resultForm=(m,side)=>{const arr=m[side+"LastFive"];return Array.isArray(arr)?arr.slice(0,5).map(x=>["W","D","L"].includes(x?.result)?x.result:"—"):[];};
  const formColor={W:"#08b783",D:"#337eaa",L:"#d63859","—":"#526679"};

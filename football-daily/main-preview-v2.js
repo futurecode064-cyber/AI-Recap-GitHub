@@ -11,7 +11,7 @@
  function summary(m){return clean(m.previewV2Summary)||(m.previewV2EditorialStatus?"":"ဤပွဲအတွက် အတိုချုပ်စာကို အတည်ပြုနေဆဲ ဖြစ်ပါသည်။");}
  function previewText(m){return summary(m);}
  function choice(m){
-  if(m.previewV2Selection && [m.homeDisplay,m.awayDisplay].includes(m.previewV2Selection))return m.previewV2Selection;
+  if(m.previewV2Selection && [m.homeDisplay,m.awayDisplay,"ဂိုးပေါ်","ဂိုးအောက်","Over","Under"].includes(m.previewV2Selection))return m.previewV2Selection;
   const last=clean(m.dailyPreviewText).slice(-260);
   for(const side of ["home","away"]){
    const name=m[side+"Display"]||m[side];
@@ -120,7 +120,7 @@
   if(!res.ok)throw Error("Published data မရပါ");
   const j=await res.json();if(!j.published||!Array.isArray(j.matches))throw Error("ပွဲကြိုဒေတာ မရပါ");
   const eligible=j.matches.filter(m=>m.fixtureId&&m.dailyPreviewText&&m.myanmarOdds);
-  const missing=eligible.filter(m=>!clean(m.previewV2Summary)||m.previewV2EditorialDate!==j.reportDate||m.previewV2SourcePreviewDate!==j.reportDate||m.previewV2FormatVersion!=="2.1"||![m.homeDisplay,m.awayDisplay].includes(m.previewV2Selection));
+  const missing=eligible.filter(m=>!clean(m.previewV2Summary)||m.previewV2EditorialDate!==j.reportDate||m.previewV2SourcePreviewDate!==j.reportDate||m.previewV2FormatVersion!=="2.1"||![m.homeDisplay,m.awayDisplay,"ဂိုးပေါ်","ဂိုးအောက်","Over","Under"].includes(m.previewV2Selection));
   if(missing.length)throw Error("Version 2 အတိုချုပ်/ရွေးချယ်မှု အတည်မပြုရသေးသောပွဲ "+missing.length+" ပွဲရှိပါတယ်။ အချက်အလက်ကို ပြန်စစ်ရန် လိုအပ်ပါတယ်။");
   items=eligible;date=j.reportDate;
   const selector=el("fcV2League"),prior=selector.value;selector.replaceChildren(new Option("လိဂ်အားလုံး","all"));
