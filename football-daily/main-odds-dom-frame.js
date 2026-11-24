@@ -635,6 +635,29 @@
       ]);
     } finally {clearTimeout(timeout);}
   }
+  // Read the actual PNG bytes once per export source and embed them before
+  // html2canvas clones the document. A stale HTML/502 response must never
+  // masquerade as a decoded team or league badge.
+  const crestBytesCache=new Map();
+  async function embeddedCrest(src){
+    const u=new URL(src,document.baseURI);
+    if(u.origin!==location.origin||!/^\/assets\/(?:team-logos|league-logos)\//.test(u.pathname)||!u.pathname.endsWith(".png"))return null;
+    if(!crestBytesCache.has(u.href)){
+      const task=(async()=>{
+        const r=await fetch(u.href,{cache:"no-store"});
+        if(!r.ok)throw Error("HTTP "+r.status);
+        const b=await r.arrayBuffer(),v=new Uint8Array(b);
+        if(v.length<24||![137,80,78,71,13,10,26,10].every((n,i)=>v[i]===n))throw Error("not a valid PNG response");
+        return await new Promise((ok,bad)=>{
+          const reader=new FileReader();reader.onload=()=>ok(reader.result);
+          reader.onerror=()=>bad(Error("PNG byte read failed"));
+          reader.readAsDataURL(new Blob([b],{type:"image/png"}));
+        });
+      })();
+      crestBytesCache.set(u.href,task);task.catch(()=>crestBytesCache.delete(u.href));
+    }
+    return crestBytesCache.get(u.href);
+  }
   async function captureWebsite(rows,theme,date) {
     const {stage,root,width}=cloneWebsiteOdds(rows,theme,date);
     try {
@@ -660,8 +683,15 @@
       // export. Legacy code used Promise.allSettled with a four-second race,
       // silently continuing after SVG decode errors and producing blank logos.
       await limited(Promise.all(images.map(async img=>{
-        if(img.decode)await img.decode();
-        else if(!img.complete||!img.naturalWidth){
+        const source=img.src,label=img.alt||source;
+        try{
+          const embedded=await embeddedCrest(source);
+          if(embedded){img.removeAttribute("srcset");img.src=embedded;}
+          if(img.decode)await img.decode();
+        }catch(err){
+          throw Error("PNG ပုံဖိုင်ဖတ်မရပါ — "+label+" ["+source+"] : "+(err?.message||err));
+        }
+        if(!img.decode&&(!img.complete||!img.naturalWidth)){
           await new Promise((resolve,reject)=>{
             img.addEventListener("load",resolve,{once:true});
             img.addEventListener("error",reject,{once:true});

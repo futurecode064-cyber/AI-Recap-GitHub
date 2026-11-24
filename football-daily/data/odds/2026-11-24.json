@@ -3821,7 +3821,7 @@
         "https://m.24score.com/football/?date=2026-11-24",
         "https://www.espn.com/soccer/match/_/gameId/401878348"
       ],
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/api/team-crest/league-45.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/sco.1.png",
       "espnEventId": "401878348",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/258.png",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/258.png",
@@ -3982,7 +3982,8 @@
         }
       },
       "homeCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
-      "awayCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched"
+      "awayCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
+      "leagueLogoSourceUrl": "https://github.com/ItsDenaos/Leyenda/blob/main/app/public/assets/escudos/ligas/premiership-escocesa.png"
     },
     {
       "fixtureId": "fc-20261124-19",
@@ -4036,7 +4037,7 @@
         "https://m.24score.com/football/?date=2026-11-24",
         "https://www.espn.com/soccer/match/_/gameId/401878345"
       ],
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/api/team-crest/league-45.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/sco.1.png",
       "espnEventId": "401878345",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/257.png",
       "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/257.png",
@@ -4197,7 +4198,8 @@
         }
       },
       "homeCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
-      "awayCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched"
+      "awayCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
+      "leagueLogoSourceUrl": "https://github.com/ItsDenaos/Leyenda/blob/main/app/public/assets/escudos/ligas/premiership-escocesa.png"
     }
   ]
 }
