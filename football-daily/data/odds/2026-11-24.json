@@ -4,7 +4,7 @@
   "sourcePDF": "24(4).pdf",
   "sourceRows": 19,
   "priceSheetType": "owner morning opening prices",
-  "currentPricesAvailable": false,
+  "currentPricesAvailable": true,
   "matches": [
     {
       "fixtureId": "fc-20261124-01",
@@ -28,8 +28,8 @@
       "upperTeam": "ဘိုဒိုဂလင့်",
       "bodyOdds": "1-40",
       "goalTotalOdds": "4+45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-40",
+      "currentGoalTotalOdds": "4+45",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -42,8 +42,8 @@
         "upperTeam": "ဘိုဒိုဂလင့်",
         "bodyOdds": "1-40",
         "goalTotalOdds": "4+45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-40",
+        "currentGoalTotalOdds": "4+45"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915380",
       "fixtureVerification": "verified fixture and kickoff",
@@ -225,7 +225,9 @@
           "home": "Bodø/Glimt",
           "away": "LASK Linz"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-02",
@@ -249,8 +251,8 @@
       "upperTeam": "အက်စတွန်ဗီလာ",
       "bodyOdds": "-35",
       "goalTotalOdds": "3-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-40",
+      "currentGoalTotalOdds": "3-35",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -263,8 +265,8 @@
         "upperTeam": "အက်စတွန်ဗီလာ",
         "bodyOdds": "-35",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-40",
+        "currentGoalTotalOdds": "3-35"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915300",
       "fixtureVerification": "verified fixture and kickoff",
@@ -446,7 +448,9 @@
           "home": "Galatasaray",
           "away": "Aston Villa"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-03",
@@ -470,8 +474,8 @@
       "upperTeam": "အာဆင်နယ်",
       "bodyOdds": "1-50",
       "goalTotalOdds": "3+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-30",
+      "currentGoalTotalOdds": "3+45",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -484,8 +488,8 @@
         "upperTeam": "အာဆင်နယ်",
         "bodyOdds": "1-50",
         "goalTotalOdds": "3+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-30",
+        "currentGoalTotalOdds": "3+45"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915295",
       "fixtureVerification": "verified fixture and kickoff",
@@ -667,7 +671,9 @@
           "home": "Arsenal",
           "away": "Borussia Dortmund"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-04",
@@ -691,8 +697,8 @@
       "upperTeam": "ကိုမို",
       "bodyOdds": "2+35",
       "goalTotalOdds": "4+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+40",
+      "currentGoalTotalOdds": "4+100",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -705,8 +711,8 @@
         "upperTeam": "ကိုမို",
         "bodyOdds": "2+35",
         "goalTotalOdds": "4+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+40",
+        "currentGoalTotalOdds": "4+100"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915296",
       "fixtureVerification": "verified fixture and kickoff",
@@ -888,7 +894,9 @@
           "home": "Como",
           "away": "AEK Athens"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-05",
@@ -912,8 +920,8 @@
       "upperTeam": "ပေါ်တို",
       "bodyOdds": "-35",
       "goalTotalOdds": "3+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-50",
+      "currentGoalTotalOdds": "3+10",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -926,8 +934,8 @@
         "upperTeam": "ပေါ်တို",
         "bodyOdds": "-35",
         "goalTotalOdds": "3+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-50",
+        "currentGoalTotalOdds": "3+10"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915294",
       "fixtureVerification": "verified fixture and kickoff",
@@ -1111,7 +1119,9 @@
           "home": "Feyenoord",
           "away": "FC Porto"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-06",
@@ -1135,8 +1145,8 @@
       "upperTeam": "မန်စီးတီး",
       "bodyOdds": "2+50",
       "goalTotalOdds": "4+70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+50",
+      "currentGoalTotalOdds": "4+70",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -1149,8 +1159,8 @@
         "upperTeam": "မန်စီးတီး",
         "bodyOdds": "2+50",
         "goalTotalOdds": "4+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+50",
+        "currentGoalTotalOdds": "4+70"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915379",
       "fixtureVerification": "verified fixture and kickoff",
@@ -1332,7 +1342,9 @@
           "home": "Manchester City",
           "away": "Napoli"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-07",
@@ -1356,8 +1368,8 @@
       "upperTeam": "လိုက်ပ်ဇစ်",
       "bodyOdds": "1-100",
       "goalTotalOdds": "4+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-100",
+      "currentGoalTotalOdds": "4+60",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -1370,8 +1382,8 @@
         "upperTeam": "လိုက်ပ်ဇစ်",
         "bodyOdds": "1-100",
         "goalTotalOdds": "4+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-100",
+        "currentGoalTotalOdds": "4+60"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915299",
       "fixtureVerification": "verified fixture and kickoff",
@@ -1553,7 +1565,9 @@
           "home": "RB Leipzig",
           "away": "Lens"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-08",
@@ -1577,8 +1591,8 @@
       "upperTeam": "ရီးယဲလ်မက်ဒရစ်",
       "bodyOdds": "2-80",
       "goalTotalOdds": "4-70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-80",
+      "currentGoalTotalOdds": "4-65",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -1591,8 +1605,8 @@
         "upperTeam": "ရီးယဲလ်မက်ဒရစ်",
         "bodyOdds": "2-80",
         "goalTotalOdds": "4-70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-80",
+        "currentGoalTotalOdds": "4-65"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915298",
       "fixtureVerification": "verified fixture and kickoff",
@@ -1774,7 +1788,9 @@
           "home": "Real Madrid",
           "away": "PSV Eindhoven"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-09",
@@ -1798,8 +1814,8 @@
       "upperTeam": "ရီးယဲလ်ဘက်တစ်",
       "bodyOdds": "2+45",
       "goalTotalOdds": "3-95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+45",
+      "currentGoalTotalOdds": "3-85",
       "internetPrediction": "0-3",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -1812,8 +1828,8 @@
         "upperTeam": "ရီးယဲလ်ဘက်တစ်",
         "bodyOdds": "2+45",
         "goalTotalOdds": "3-95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+45",
+        "currentGoalTotalOdds": "3-85"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915297",
       "fixtureVerification": "verified fixture and kickoff",
@@ -1995,7 +2011,9 @@
           "home": "Slovan Bratislava",
           "away": "Real Betis"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-10",
@@ -2019,8 +2037,8 @@
       "upperTeam": "ဘရစ္စတိုးလ်စီးတီး",
       "bodyOdds": "-10",
       "goalTotalOdds": "2-65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-40",
+      "currentGoalTotalOdds": "2-60",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -2033,8 +2051,8 @@
         "upperTeam": "ဘရစ္စတိုးလ်စီးတီး",
         "bodyOdds": "-10",
         "goalTotalOdds": "2-65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-40",
+        "currentGoalTotalOdds": "2-60"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880148",
       "fixtureVerification": "verified fixture and kickoff",
@@ -2216,7 +2234,9 @@
           "home": "Bristol City",
           "away": "Wrexham"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-11",
@@ -2240,8 +2260,8 @@
       "upperTeam": "ကာဒစ်ဖ်",
       "bodyOdds": "1-10",
       "goalTotalOdds": "3-50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-20",
+      "currentGoalTotalOdds": "3-50",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -2254,8 +2274,8 @@
         "upperTeam": "ကာဒစ်ဖ်",
         "bodyOdds": "1-10",
         "goalTotalOdds": "3-50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-20",
+        "currentGoalTotalOdds": "3-50"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880147",
       "fixtureVerification": "verified fixture and kickoff",
@@ -2437,7 +2457,9 @@
           "home": "Cardiff City",
           "away": "Preston North End"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-12",
@@ -2461,8 +2483,8 @@
       "upperTeam": "လင်ကွန်းစီးတီး",
       "bodyOdds": "-5",
       "goalTotalOdds": "2-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "ဒဲ့",
+      "currentGoalTotalOdds": "2-80",
       "internetPrediction": "0-1",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -2475,8 +2497,8 @@
         "upperTeam": "လင်ကွန်းစီးတီး",
         "bodyOdds": "-5",
         "goalTotalOdds": "2-80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "ဒဲ့",
+        "currentGoalTotalOdds": "2-80"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880146",
       "fixtureVerification": "verified fixture and kickoff",
@@ -2660,7 +2682,9 @@
           "home": "Charlton Athletic",
           "away": "Lincoln City"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-13",
@@ -2684,8 +2708,8 @@
       "upperTeam": "မစ်ဒယ်ဘရော့",
       "bodyOdds": "1-40",
       "goalTotalOdds": "3-20",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-35",
+      "currentGoalTotalOdds": "3-25",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -2698,8 +2722,8 @@
         "upperTeam": "မစ်ဒယ်ဘရော့",
         "bodyOdds": "1-40",
         "goalTotalOdds": "3-20",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-35",
+        "currentGoalTotalOdds": "3-25"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880145",
       "fixtureVerification": "verified fixture and kickoff",
@@ -2881,7 +2905,9 @@
           "home": "Middlesbrough",
           "away": "Swansea City"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-14",
@@ -2905,8 +2931,8 @@
       "upperTeam": "နောဝစ်ချ်",
       "bodyOdds": "-85",
       "goalTotalOdds": "3+35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-70",
+      "currentGoalTotalOdds": "3+30",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -2919,8 +2945,8 @@
         "upperTeam": "နောဝစ်ချ်",
         "bodyOdds": "-85",
         "goalTotalOdds": "3+35",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-70",
+        "currentGoalTotalOdds": "3+30"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880144",
       "fixtureVerification": "verified fixture and kickoff",
@@ -3102,7 +3128,9 @@
           "home": "Norwich City",
           "away": "Queens Park Rangers"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-15",
@@ -3126,8 +3154,8 @@
       "upperTeam": "ဝက်စ်ဟမ်း",
       "bodyOdds": "1+80",
       "goalTotalOdds": "3+70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+85",
+      "currentGoalTotalOdds": "3+80",
       "internetPrediction": "0-2",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -3140,8 +3168,8 @@
         "upperTeam": "ဝက်စ်ဟမ်း",
         "bodyOdds": "1+80",
         "goalTotalOdds": "3+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+85",
+        "currentGoalTotalOdds": "3+80"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880143",
       "fixtureVerification": "verified fixture and kickoff",
@@ -3323,7 +3351,9 @@
           "home": "Portsmouth",
           "away": "West Ham United"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-16",
@@ -3347,8 +3377,8 @@
       "upperTeam": "ရှက်ဖီးလ်ယူနိုက်တက်",
       "bodyOdds": "-10",
       "goalTotalOdds": "3+45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "ဒဲ့",
+      "currentGoalTotalOdds": "3+60",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -3361,8 +3391,8 @@
         "upperTeam": "ရှက်ဖီးလ်ယူနိုက်တက်",
         "bodyOdds": "-10",
         "goalTotalOdds": "3+45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "ဒဲ့",
+        "currentGoalTotalOdds": "3+60"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880142",
       "fixtureVerification": "verified fixture and kickoff",
@@ -3544,7 +3574,9 @@
           "home": "Sheffield United",
           "away": "Southampton"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-17",
@@ -3568,8 +3600,8 @@
       "upperTeam": "ဝုလ်ဗ်",
       "bodyOdds": "1-100",
       "goalTotalOdds": "3+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-100",
+      "currentGoalTotalOdds": "3+15",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -3582,8 +3614,8 @@
         "upperTeam": "ဝုလ်ဗ်",
         "bodyOdds": "1-100",
         "goalTotalOdds": "3+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-100",
+        "currentGoalTotalOdds": "3+15"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880141",
       "fixtureVerification": "verified fixture and kickoff",
@@ -3767,7 +3799,9 @@
           "home": "Wolverhampton Wanderers",
           "away": "Derby County"
         }
-      }
+      },
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-18",
@@ -3791,8 +3825,8 @@
       "upperTeam": "ဟီဘာနီယံ",
       "bodyOdds": "1+30",
       "goalTotalOdds": "3+55",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+30",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -3805,8 +3839,8 @@
         "upperTeam": "ဟီဘာနီယံ",
         "bodyOdds": "1+30",
         "goalTotalOdds": "3+55",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+30",
+        "currentGoalTotalOdds": "3+40"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878348",
       "fixtureVerification": "verified fixture and kickoff",
@@ -3983,7 +4017,9 @@
       },
       "homeCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
       "awayCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
-      "leagueLogoSourceUrl": "https://github.com/ItsDenaos/Leyenda/blob/main/app/public/assets/escudos/ligas/premiership-escocesa.png"
+      "leagueLogoSourceUrl": "https://github.com/ItsDenaos/Leyenda/blob/main/app/public/assets/escudos/ligas/premiership-escocesa.png",
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     },
     {
       "fixtureId": "fc-20261124-19",
@@ -4007,8 +4043,8 @@
       "upperTeam": "ရိန်းဂျား",
       "bodyOdds": "2+40",
       "goalTotalOdds": "3-60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+40",
+      "currentGoalTotalOdds": "3-60",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF Internet column; not independently sourced or generated",
       "sourcePDF": "24(4).pdf",
@@ -4021,8 +4057,8 @@
         "upperTeam": "ရိန်းဂျား",
         "bodyOdds": "2+40",
         "goalTotalOdds": "3-60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+40",
+        "currentGoalTotalOdds": "3-60"
       },
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878345",
       "fixtureVerification": "PDF 02:15; published fixture 02:30 Yangon",
@@ -4199,7 +4235,12 @@
       },
       "homeCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
       "awayCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
-      "leagueLogoSourceUrl": "https://github.com/ItsDenaos/Leyenda/blob/main/app/public/assets/escudos/ligas/premiership-escocesa.png"
+      "leagueLogoSourceUrl": "https://github.com/ItsDenaos/Leyenda/blob/main/app/public/assets/escudos/ligas/premiership-escocesa.png",
+      "currentOddsSourceFile": "24 စျေး(1).pdf",
+      "currentOddsSourceDate": "2026-11-24"
     }
-  ]
+  ],
+  "currentOddsSourceFile": "24 စျေး(1).pdf",
+  "currentOddsSourceSha256": "e71718cf51d321db0e431fb8aecc4628a624df9899d9e5f82aa4e8769e8ce43c",
+  "currentOddsSourceDate": "2026-11-24"
 }
