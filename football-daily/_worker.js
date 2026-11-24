@@ -1156,11 +1156,12 @@ async function fcNotifyApi(request,env,path){
 
 // Fixed team crest relay: only the listed ESPN team IDs, no caller-controlled host or path.
 async function serveTeamCrest(request, path){
+ const league=path==="/api/team-crest/league-45.png";
  const match=/^\/api\/team-crest\/(\d+)\.png$/.exec(path);
- if(!match||!["258","261","257","263"].includes(match[1]))return new Response("Not found",{status:404});
+ if(!league&&(!match||!["258","261","257","263"].includes(match[1])))return new Response("Not found",{status:404});
  if(request.method!=="GET"&&request.method!=="HEAD")return new Response("Method Not Allowed",{status:405,headers:{"Allow":"GET, HEAD"}});
  try{
-  const r=await fetch("https://a.espncdn.com/i/teamlogos/soccer/500/"+match[1]+".png",{redirect:"error",headers:{"Accept":"image/png"},cf:{cacheEverything:true,cacheTtl:86400}});
+  const r=await fetch(league?"https://a.espncdn.com/i/leaguelogos/soccer/500/45.png":"https://a.espncdn.com/i/teamlogos/soccer/500/"+match[1]+".png",{redirect:"error",headers:{"Accept":"image/png"},cf:{cacheEverything:true,cacheTtl:86400}});
   if(!r.ok||!(r.headers.get("content-type")||"").toLowerCase().startsWith("image/png"))return new Response("Crest unavailable",{status:502});
   const bytes=await r.arrayBuffer();
   if(bytes.byteLength>1048576||bytes.byteLength<8)return new Response("Invalid crest",{status:502});

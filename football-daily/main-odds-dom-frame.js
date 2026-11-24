@@ -232,6 +232,33 @@
         cell.textContent=window.FutureCodeOddsClock?.short(fixture)||"—";
         cell.title=window.FutureCodeTime?.full(fixture)||String(fixture?.kickoffDisplay||fixture?.kickoff||"");
       });
+      // Rebuild actual crest images from selected data, even if live DOM has fallback initials.
+      const mapLogo=src=>{
+        const a=window.FutureCodeMainLogoAssets?.imageUrl?.(src), b=window.FutureCodeBrandExportData?.imageUrl?.(src);
+        return a&&a!==src?a:b||a||src;
+      };
+      trs.forEach((tr,i)=>{
+        if(!tr.parentNode)return;
+        const m=originals[i],matchup=tr.querySelector(".odds-matchup");
+        if(!matchup)return;
+        const badges=[...matchup.querySelectorAll(".team-badge")];
+        if(badges.length!==2)throw Error("PNG team badge layout missing: "+(m.fixtureId||i+1));
+        for(const [n,side] of ["home","away"].entries()){
+          const badge=badges[n],src=mapLogo(m[side+"CrestUrl"]||m[side+"CrestSourceUrl"]);
+          if(!src)throw Error("PNG အသင်းလိုဂို URL မရှိပါ: "+(m[side+"Display"]||m[side]));
+          const img=document.createElement("img");img.className="team-logo";
+          img.alt=m[side+"Display"]||m[side]||side;img.loading="eager";img.decoding="sync";
+          img.src=src;badge.replaceChildren(img);
+        }
+      });
+      const leagueSource=included[0]?.leagueLogoUrl||window.FutureCodeMainLogoAssets?.leagueCrest?.(league)||window.FutureCodeBrandExportData?.leagueCrest?.(league);
+      if(leagueSource){
+        const previous=group.querySelector(".league-crest, .league-mark");
+        if(previous){
+          const img=document.createElement("img");img.className="league-crest";img.alt=league;
+          img.loading="eager";img.decoding="sync";img.src=mapLogo(leagueSource);previous.replaceWith(img);
+        }
+      }
       // Export-only edits operate on a CLONE; the website's odds are untouched.
       const edits=!document.documentElement?.dataset?.footballBrandName
         ?window.FutureCodeFrameEditor?.exportNames(date):null;

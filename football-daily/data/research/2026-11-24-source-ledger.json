@@ -3947,10 +3947,10 @@
         "https://m.24score.com/football/?date=2026-11-24",
         "https://www.espn.com/soccer/match/_/gameId/401878348"
       ],
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/sco.1.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/api/team-crest/league-45.png",
       "espnEventId": "401878348",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/258.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/api/team-crest/258.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/258.png",
       "homeLastFive": [
         {
           "date": "2026-11-21",
@@ -4019,7 +4019,7 @@
         }
       ],
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/261.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/api/team-crest/261.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/261.png",
       "awayLastFive": [
         {
           "date": "2026-11-21",
@@ -4090,8 +4090,8 @@
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
-      "homeCrestDelivery": "same-origin restricted team crest relay",
-      "awayCrestDelivery": "same-origin restricted team crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG",
       "tipPredictions": {
         "vipInternet": {
           "fixtureId": "fc-20261124-18",
@@ -4106,7 +4106,9 @@
           "home": "Hibernian",
           "away": "Dundee"
         }
-      }
+      },
+      "homeCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
+      "awayCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched"
     },
     {
       "fixtureId": "fc-20261124-19",
@@ -4160,10 +4162,10 @@
         "https://m.24score.com/football/?date=2026-11-24",
         "https://www.espn.com/soccer/match/_/gameId/401878345"
       ],
-      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/assets/league-logos/sco.1.png",
+      "leagueLogoUrl": "https://future-code-football-daily.pages.dev/api/team-crest/league-45.png",
       "espnEventId": "401878345",
       "homeCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/257.png",
-      "homeCrestUrl": "https://future-code-football-daily.pages.dev/api/team-crest/257.png",
+      "homeCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/257.png",
       "homeLastFive": [
         {
           "date": "2026-11-21",
@@ -4232,7 +4234,7 @@
         }
       ],
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/263.png",
-      "awayCrestUrl": "https://future-code-football-daily.pages.dev/api/team-crest/263.png",
+      "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-24/263.png",
       "awayLastFive": [
         {
           "date": "2026-11-21",
@@ -4303,8 +4305,8 @@
       "formStatus": "ESPN completed last five",
       "aiModelDataStatus": "ESPN recent match form; season totals not independently refreshed",
       "crestStatus": "both teams ESPN-ID matched; bundled PNG or same-origin crest relay",
-      "homeCrestDelivery": "same-origin restricted team crest relay",
-      "awayCrestDelivery": "same-origin restricted team crest relay",
+      "homeCrestDelivery": "bundled same-origin PNG",
+      "awayCrestDelivery": "bundled same-origin PNG",
       "tipPredictions": {
         "vipInternet": {
           "fixtureId": "fc-20261124-19",
@@ -4319,7 +4321,9 @@
           "home": "Rangers",
           "away": "Aberdeen"
         }
-      }
+      },
+      "homeCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched",
+      "awayCrestAssetSource": "luukhopman/football-logos Scottish Premiership; club matched"
     }
   ],
   "notes": [
