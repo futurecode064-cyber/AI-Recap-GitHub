@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-25",
+  "sourcePDF": "25(2).pdf",
+  "sourceRows": 17,
+  "rows": [
+    {
+      "fixtureId": "fc-20261125-01",
+      "pdfRow": 1,
+      "homeDisplay": "ဆားဘတ်",
+      "awayDisplay": "ဘာစီလိုနာ",
+      "upperTeam": "ဘာစီလိုနာ",
+      "bodyOdds": "3-25",
+      "goalTotalOdds": "5+40",
+      "internetPrediction": "0-4",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915378"
+    },
+    {
+      "fixtureId": "fc-20261125-02",
+      "pdfRow": 2,
+      "homeDisplay": "စလားဗီးယား",
+      "awayDisplay": "ဗီလာရီးရဲလ်",
+      "upperTeam": "ဗီလာရီးရဲလ်",
+      "bodyOdds": "-55",
+      "goalTotalOdds": "3-40",
+      "internetPrediction": "1-2",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915293"
+    },
+    {
+      "fixtureId": "fc-20261125-03",
+      "pdfRow": 3,
+      "homeDisplay": "အေတီကို",
+      "awayDisplay": "ဗိုက်ကင်း",
+      "upperTeam": "အေတီကို",
+      "bodyOdds": "3+100",
+      "goalTotalOdds": "4+30",
+      "internetPrediction": "3-0",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915291"
+    },
+    {
+      "fixtureId": "fc-20261125-04",
+      "pdfRow": 4,
+      "homeDisplay": "ကလပ်ဘရု",
+      "awayDisplay": "လီဗာပူးလ်",
+      "upperTeam": "လီဗာပူးလ်",
+      "bodyOdds": "1+10",
+      "goalTotalOdds": "4+50",
+      "internetPrediction": "1-2",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915292"
+    },
+    {
+      "fixtureId": "fc-20261125-05",
+      "pdfRow": 5,
+      "homeDisplay": "အင်တာမီလန်",
+      "awayDisplay": "စတုဂတ်",
+      "upperTeam": "အင်တာမီလန်",
+      "bodyOdds": "1-85",
+      "goalTotalOdds": "4+5",
+      "internetPrediction": "3-1",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915376"
+    },
+    {
+      "fixtureId": "fc-20261125-06",
+      "pdfRow": 6,
+      "homeDisplay": "လိုင်လီ",
+      "awayDisplay": "ဘိုင်ယန်",
+      "upperTeam": "ဘိုင်ယန်",
+      "bodyOdds": "1+30",
+      "goalTotalOdds": "3+10",
+      "internetPrediction": "1-2",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915377"
+    },
+    {
+      "fixtureId": "fc-20261125-07",
+      "pdfRow": 7,
+      "homeDisplay": "ပီအက်စ်ဂျီ",
+      "awayDisplay": "ရိုးမား",
+      "upperTeam": "ပီအက်စ်ဂျီ",
+      "bodyOdds": "1-55",
+      "goalTotalOdds": "4+60",
+      "internetPrediction": "3-0",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915374"
+    },
+    {
+      "fixtureId": "fc-20261125-08",
+      "pdfRow": 8,
+      "homeDisplay": "ရှက်တာဒိုးနက်",
+      "awayDisplay": "ဖီနာဘာချီ",
+      "upperTeam": "ဖီနာဘာချီ",
+      "bodyOdds": "-35",
+      "goalTotalOdds": "3+60",
+      "internetPrediction": "1-2",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915375"
+    },
+    {
+      "fixtureId": "fc-20261125-09",
+      "pdfRow": 9,
+      "homeDisplay": "စပို့တင်",
+      "awayDisplay": "မန်ယူ",
+      "upperTeam": "စပို့တင်",
+      "bodyOdds": "-5",
+      "goalTotalOdds": "3-25",
+      "internetPrediction": "2-1",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915373"
+    },
+    {
+      "fixtureId": "fc-20261125-10",
+      "pdfRow": 10,
+      "homeDisplay": "ဘော်တန်",
+      "awayDisplay": "ဝက်ဘရွန်း",
+      "upperTeam": "ဝက်ဘရွန်း",
+      "bodyOdds": "-85",
+      "goalTotalOdds": "3+60",
+      "internetPrediction": "1-2",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880140"
+    },
+    {
+      "fixtureId": "fc-20261125-11",
+      "pdfRow": 11,
+      "homeDisplay": "ဘန်လေ",
+      "awayDisplay": "ဘာမင်ဂမ်",
+      "upperTeam": "ဘာမင်ဂမ်",
+      "bodyOdds": "-10",
+      "goalTotalOdds": "3+60",
+      "internetPrediction": "1-1",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880139"
+    },
+    {
+      "fixtureId": "fc-20261125-12",
+      "pdfRow": 12,
+      "homeDisplay": "ဝက်ဖို့ဒ်",
+      "awayDisplay": "ဘလက်ဘန်း",
+      "upperTeam": "ဝက်ဖို့ဒ်",
+      "bodyOdds": "-15",
+      "goalTotalOdds": "2-100",
+      "internetPrediction": "1-1",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880137"
+    },
+    {
+      "fixtureId": "fc-20261125-13",
+      "pdfRow": 13,
+      "homeDisplay": "စတုတ်စီးတီး",
+      "awayDisplay": "မီဝေါ",
+      "upperTeam": "စတုတ်စီးတီး",
+      "bodyOdds": "-40",
+      "goalTotalOdds": "2-80",
+      "internetPrediction": "2-1",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880138"
+    },
+    {
+      "fixtureId": "fc-20261125-14",
+      "pdfRow": 14,
+      "homeDisplay": "ခရီမိုနီဆီ",
+      "awayDisplay": "အဗယ်လီနို",
+      "upperTeam": "ခရီမိုနီဆီ",
+      "bodyOdds": "-75",
+      "goalTotalOdds": "2-65",
+      "internetPrediction": "1-0",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899537"
+    },
+    {
+      "fixtureId": "fc-20261125-15",
+      "pdfRow": 15,
+      "homeDisplay": "မန်တိုဗာ",
+      "awayDisplay": "အရီဇို",
+      "upperTeam": "မန်တိုဗာ",
+      "bodyOdds": "1+40",
+      "goalTotalOdds": "3+80",
+      "internetPrediction": "2-0",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899534"
+    },
+    {
+      "fixtureId": "fc-20261125-16",
+      "pdfRow": 16,
+      "homeDisplay": "ပတ်ဒိုဗာ",
+      "awayDisplay": "ဆမ်ဒိုးရီးယား",
+      "upperTeam": "ဆမ်ဒိုးရီးယား",
+      "bodyOdds": "-35",
+      "goalTotalOdds": "2-60",
+      "internetPrediction": "1-1",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899533"
+    },
+    {
+      "fixtureId": "fc-20261125-17",
+      "pdfRow": 17,
+      "homeDisplay": "ပီဆာ",
+      "awayDisplay": "မိုဒီနာ",
+      "upperTeam": "ပီဆာ",
+      "bodyOdds": "-30",
+      "goalTotalOdds": "3+80",
+      "internetPrediction": "1-1",
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899531"
+    }
+  ],
+  "verifiedFinished": 19,
+  "formGaps": [],
+  "specialChoiceCount": 1,
+  "domesticFormVerifiedSources": [
+    "https://www.uefa.com/uefachampionsleague/clubs/2609356--sabah/matches/",
+    "https://compactstats.com/match/2026-11-25/slavia-praha-v-villarreal/"
+  ]
+}
