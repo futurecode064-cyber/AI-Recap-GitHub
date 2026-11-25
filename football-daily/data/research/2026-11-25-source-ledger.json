@@ -12,7 +12,9 @@
       "bodyOdds": "3-25",
       "goalTotalOdds": "5+40",
       "internetPrediction": "0-4",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915378"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915378",
+      "currentBodyOdds": "3=",
+      "currentGoalTotalOdds": "5+100"
     },
     {
       "fixtureId": "fc-20261125-02",
@@ -23,7 +25,9 @@
       "bodyOdds": "-55",
       "goalTotalOdds": "3-40",
       "internetPrediction": "1-2",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915293"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915293",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3+35"
     },
     {
       "fixtureId": "fc-20261125-03",
@@ -34,7 +38,9 @@
       "bodyOdds": "3+100",
       "goalTotalOdds": "4+30",
       "internetPrediction": "3-0",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915291"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915291",
+      "currentBodyOdds": "3+95",
+      "currentGoalTotalOdds": "4+45"
     },
     {
       "fixtureId": "fc-20261125-04",
@@ -45,7 +51,9 @@
       "bodyOdds": "1+10",
       "goalTotalOdds": "4+50",
       "internetPrediction": "1-2",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915292"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915292",
+      "currentBodyOdds": "1+15",
+      "currentGoalTotalOdds": "4+60"
     },
     {
       "fixtureId": "fc-20261125-05",
@@ -56,7 +64,9 @@
       "bodyOdds": "1-85",
       "goalTotalOdds": "4+5",
       "internetPrediction": "3-1",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915376"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915376",
+      "currentBodyOdds": "1-75",
+      "currentGoalTotalOdds": "4+40"
     },
     {
       "fixtureId": "fc-20261125-06",
@@ -67,7 +77,9 @@
       "bodyOdds": "1+30",
       "goalTotalOdds": "3+10",
       "internetPrediction": "1-2",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915377"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915377",
+      "currentBodyOdds": "1+25",
+      "currentGoalTotalOdds": "3+85"
     },
     {
       "fixtureId": "fc-20261125-07",
@@ -78,7 +90,9 @@
       "bodyOdds": "1-55",
       "goalTotalOdds": "4+60",
       "internetPrediction": "3-0",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915374"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915374",
+      "currentBodyOdds": "1-35",
+      "currentGoalTotalOdds": "3-90"
     },
     {
       "fixtureId": "fc-20261125-08",
@@ -89,7 +103,9 @@
       "bodyOdds": "-35",
       "goalTotalOdds": "3+60",
       "internetPrediction": "1-2",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915375"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915375",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "3+70"
     },
     {
       "fixtureId": "fc-20261125-09",
@@ -100,7 +116,9 @@
       "bodyOdds": "-5",
       "goalTotalOdds": "3-25",
       "internetPrediction": "2-1",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915373"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915373",
+      "currentBodyOdds": "ဒဲ့",
+      "currentGoalTotalOdds": "3-20"
     },
     {
       "fixtureId": "fc-20261125-10",
@@ -111,7 +129,9 @@
       "bodyOdds": "-85",
       "goalTotalOdds": "3+60",
       "internetPrediction": "1-2",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880140"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880140",
+      "currentBodyOdds": "-85",
+      "currentGoalTotalOdds": "3+50"
     },
     {
       "fixtureId": "fc-20261125-11",
@@ -122,7 +142,9 @@
       "bodyOdds": "-10",
       "goalTotalOdds": "3+60",
       "internetPrediction": "1-1",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880139"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880139",
+      "currentBodyOdds": "-10",
+      "currentGoalTotalOdds": "3+70"
     },
     {
       "fixtureId": "fc-20261125-12",
@@ -133,7 +155,9 @@
       "bodyOdds": "-15",
       "goalTotalOdds": "2-100",
       "internetPrediction": "1-1",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880137"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880137",
+      "currentBodyOdds": "-15",
+      "currentGoalTotalOdds": "2-85"
     },
     {
       "fixtureId": "fc-20261125-13",
@@ -144,7 +168,9 @@
       "bodyOdds": "-40",
       "goalTotalOdds": "2-80",
       "internetPrediction": "2-1",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880138"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880138",
+      "currentBodyOdds": "-50",
+      "currentGoalTotalOdds": "2-80"
     },
     {
       "fixtureId": "fc-20261125-14",
@@ -155,7 +181,9 @@
       "bodyOdds": "-75",
       "goalTotalOdds": "2-65",
       "internetPrediction": "1-0",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899537"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899537",
+      "currentBodyOdds": "-75",
+      "currentGoalTotalOdds": "2-60"
     },
     {
       "fixtureId": "fc-20261125-15",
@@ -166,7 +194,9 @@
       "bodyOdds": "1+40",
       "goalTotalOdds": "3+80",
       "internetPrediction": "2-0",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899534"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899534",
+      "currentBodyOdds": "1+50",
+      "currentGoalTotalOdds": "3+70"
     },
     {
       "fixtureId": "fc-20261125-16",
@@ -177,7 +207,9 @@
       "bodyOdds": "-35",
       "goalTotalOdds": "2-60",
       "internetPrediction": "1-1",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899533"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899533",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "2-60"
     },
     {
       "fixtureId": "fc-20261125-17",
@@ -188,7 +220,9 @@
       "bodyOdds": "-30",
       "goalTotalOdds": "3+80",
       "internetPrediction": "1-1",
-      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899531"
+      "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899531",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "3+85"
     }
   ],
   "verifiedFinished": 19,
@@ -197,5 +231,9 @@
   "domesticFormVerifiedSources": [
     "https://www.uefa.com/uefachampionsleague/clubs/2609356--sabah/matches/",
     "https://compactstats.com/match/2026-11-25/slavia-praha-v-villarreal/"
-  ]
+  ],
+  "currentPricesAvailable": true,
+  "currentOddsSourceFile": "25 စျေး.pdf",
+  "currentOddsSourceSha256": "398f9389d486b4dd3a4d4b2054ad2fc54913be41347f3c5e1505a7dd3e6b4234",
+  "currentOddsSourceDate": "2026-11-25"
 }

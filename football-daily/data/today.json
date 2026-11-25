@@ -26,8 +26,8 @@
       "upperTeam": "ဘာစီလိုနာ",
       "bodyOdds": "3-25",
       "goalTotalOdds": "5+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "3=",
+      "currentGoalTotalOdds": "5+100",
       "internetPrediction": "0-4",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -47,8 +47,8 @@
         "upperTeam": "ဘာစီလိုနာ",
         "bodyOdds": "3-25",
         "goalTotalOdds": "5+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "3=",
+        "currentGoalTotalOdds": "5+100"
       },
       "homeStanding": {
         "position": 30,
@@ -188,8 +188,8 @@
       ],
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-22/83.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
-      "homeOdds": 21.0,
-      "drawOdds": 13.0,
+      "homeOdds": 21,
+      "drawOdds": 13,
       "awayOdds": 1.0833,
       "totalGoalsLine": 4.5,
       "overOdds": 1.7143,
@@ -254,8 +254,8 @@
       "upperTeam": "ဗီလာရီးရဲလ်",
       "bodyOdds": "-55",
       "goalTotalOdds": "3-40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3+35",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -275,8 +275,8 @@
         "upperTeam": "ဗီလာရီးရဲလ်",
         "bodyOdds": "-55",
         "goalTotalOdds": "3-40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3+35"
       },
       "homeStanding": {
         "position": 34,
@@ -416,7 +416,7 @@
       ],
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-22/102.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
-      "homeOdds": 3.0,
+      "homeOdds": 3,
       "drawOdds": 3.9,
       "awayOdds": 2.15,
       "totalGoalsLine": 3.5,
@@ -482,8 +482,8 @@
       "upperTeam": "အေတီကို",
       "bodyOdds": "3+100",
       "goalTotalOdds": "4+30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "3+95",
+      "currentGoalTotalOdds": "4+45",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -500,8 +500,8 @@
         "upperTeam": "အေတီကို",
         "bodyOdds": "3+100",
         "goalTotalOdds": "4+30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "3+95",
+        "currentGoalTotalOdds": "4+45"
       },
       "homeStanding": {
         "position": 26,
@@ -642,8 +642,8 @@
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-25/510.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
       "homeOdds": 1.1,
-      "drawOdds": 11.0,
-      "awayOdds": 21.0,
+      "drawOdds": 11,
+      "awayOdds": 21,
       "totalGoalsLine": 3.5,
       "overOdds": 1.6667,
       "underOdds": 2.2,
@@ -707,8 +707,8 @@
       "upperTeam": "လီဗာပူးလ်",
       "bodyOdds": "1+10",
       "goalTotalOdds": "4+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+15",
+      "currentGoalTotalOdds": "4+60",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -725,8 +725,8 @@
         "upperTeam": "လီဗာပူးလ်",
         "bodyOdds": "1+10",
         "goalTotalOdds": "4+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+15",
+        "currentGoalTotalOdds": "4+60"
       },
       "homeStanding": {
         "position": 11,
@@ -932,8 +932,8 @@
       "upperTeam": "အင်တာမီလန်",
       "bodyOdds": "1-85",
       "goalTotalOdds": "4+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-75",
+      "currentGoalTotalOdds": "4+40",
       "internetPrediction": "3-1",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -950,8 +950,8 @@
         "upperTeam": "အင်တာမီလန်",
         "bodyOdds": "1-85",
         "goalTotalOdds": "4+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-75",
+        "currentGoalTotalOdds": "4+40"
       },
       "homeStanding": {
         "position": 17,
@@ -1093,7 +1093,7 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
       "homeOdds": 1.4167,
       "drawOdds": 5.5,
-      "awayOdds": 6.0,
+      "awayOdds": 6,
       "totalGoalsLine": 3.5,
       "overOdds": 1.6452,
       "underOdds": 2.25,
@@ -1157,8 +1157,8 @@
       "upperTeam": "ဘိုင်ယန်",
       "bodyOdds": "1+30",
       "goalTotalOdds": "3+10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+25",
+      "currentGoalTotalOdds": "3+85",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -1176,8 +1176,8 @@
         "upperTeam": "ဘိုင်ယန်",
         "bodyOdds": "1+30",
         "goalTotalOdds": "3+10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+25",
+        "currentGoalTotalOdds": "3+85"
       },
       "homeStanding": {
         "position": 35,
@@ -1383,8 +1383,8 @@
       "upperTeam": "ပီအက်စ်ဂျီ",
       "bodyOdds": "1-55",
       "goalTotalOdds": "4+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-35",
+      "currentGoalTotalOdds": "3-90",
       "internetPrediction": "3-0",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -1401,8 +1401,8 @@
         "upperTeam": "ပီအက်စ်ဂျီ",
         "bodyOdds": "1-55",
         "goalTotalOdds": "4+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-35",
+        "currentGoalTotalOdds": "3-90"
       },
       "homeStanding": {
         "position": 2,
@@ -1543,7 +1543,7 @@
       "awayCrestUrl": "https://future-code-football-daily.pages.dev/assets/team-logos/2026-11-21/104.png",
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
       "homeOdds": 1.4444,
-      "drawOdds": 5.0,
+      "drawOdds": 5,
       "awayOdds": 6.5,
       "totalGoalsLine": 3.5,
       "overOdds": 1.7692,
@@ -1608,8 +1608,8 @@
       "upperTeam": "ဖီနာဘာချီ",
       "bodyOdds": "-35",
       "goalTotalOdds": "3+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "3+70",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -1627,8 +1627,8 @@
         "upperTeam": "ဖီနာဘာချီ",
         "bodyOdds": "-35",
         "goalTotalOdds": "3+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "3+70"
       },
       "homeStanding": {
         "position": 24,
@@ -1834,8 +1834,8 @@
       "upperTeam": "စပို့တင်",
       "bodyOdds": "-5",
       "goalTotalOdds": "3-25",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "ဒဲ့",
+      "currentGoalTotalOdds": "3-20",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -1852,8 +1852,8 @@
         "upperTeam": "စပို့တင်",
         "bodyOdds": "-5",
         "goalTotalOdds": "3-25",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "ဒဲ့",
+        "currentGoalTotalOdds": "3-20"
       },
       "homeStanding": {
         "position": 12,
@@ -2059,8 +2059,8 @@
       "upperTeam": "ဝက်ဘရွန်း",
       "bodyOdds": "-85",
       "goalTotalOdds": "3+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-85",
+      "currentGoalTotalOdds": "3+50",
       "internetPrediction": "1-2",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -2077,8 +2077,8 @@
         "upperTeam": "ဝက်ဘရွန်း",
         "bodyOdds": "-85",
         "goalTotalOdds": "3+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-85",
+        "currentGoalTotalOdds": "3+50"
       },
       "homeStanding": {
         "position": 19,
@@ -2220,7 +2220,7 @@
       "awayCrestSourceUrl": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
       "homeOdds": 3.55,
       "drawOdds": 3.7,
-      "awayOdds": 2.0,
+      "awayOdds": 2,
       "totalGoalsLine": 2.5,
       "overOdds": 1.7407,
       "underOdds": 2.05,
@@ -2284,8 +2284,8 @@
       "upperTeam": "ဘာမင်ဂမ်",
       "bodyOdds": "-10",
       "goalTotalOdds": "3+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-10",
+      "currentGoalTotalOdds": "3+70",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -2302,8 +2302,8 @@
         "upperTeam": "ဘာမင်ဂမ်",
         "bodyOdds": "-10",
         "goalTotalOdds": "3+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-10",
+        "currentGoalTotalOdds": "3+70"
       },
       "homeStanding": {
         "position": 23,
@@ -2509,8 +2509,8 @@
       "upperTeam": "ဝက်ဖို့ဒ်",
       "bodyOdds": "-15",
       "goalTotalOdds": "2-100",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-15",
+      "currentGoalTotalOdds": "2-85",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -2527,8 +2527,8 @@
         "upperTeam": "ဝက်ဖို့ဒ်",
         "bodyOdds": "-15",
         "goalTotalOdds": "2-100",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-15",
+        "currentGoalTotalOdds": "2-85"
       },
       "homeStanding": {
         "position": 20,
@@ -2734,8 +2734,8 @@
       "upperTeam": "စတုတ်စီးတီး",
       "bodyOdds": "-40",
       "goalTotalOdds": "2-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-50",
+      "currentGoalTotalOdds": "2-80",
       "internetPrediction": "2-1",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -2752,8 +2752,8 @@
         "upperTeam": "စတုတ်စီးတီး",
         "bodyOdds": "-40",
         "goalTotalOdds": "2-80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-50",
+        "currentGoalTotalOdds": "2-80"
       },
       "homeStanding": {
         "position": 3,
@@ -2897,7 +2897,7 @@
       "drawOdds": 3.35,
       "awayOdds": 3.15,
       "totalGoalsLine": 2.5,
-      "overOdds": 2.0,
+      "overOdds": 2,
       "underOdds": 1.8,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401880138",
       "oddsVerifiedDate": "2026-11-25",
@@ -2968,8 +2968,8 @@
       "upperTeam": "ခရီမိုနီဆီ",
       "bodyOdds": "-75",
       "goalTotalOdds": "2-65",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-75",
+      "currentGoalTotalOdds": "2-60",
       "internetPrediction": "1-0",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -2986,8 +2986,8 @@
         "upperTeam": "ခရီမိုနီဆီ",
         "bodyOdds": "-75",
         "goalTotalOdds": "2-65",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-75",
+        "currentGoalTotalOdds": "2-60"
       },
       "homeStanding": {
         "position": 13,
@@ -3193,8 +3193,8 @@
       "upperTeam": "မန်တိုဗာ",
       "bodyOdds": "1+40",
       "goalTotalOdds": "3+80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+50",
+      "currentGoalTotalOdds": "3+70",
       "internetPrediction": "2-0",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -3211,8 +3211,8 @@
         "upperTeam": "မန်တိုဗာ",
         "bodyOdds": "1+40",
         "goalTotalOdds": "3+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+50",
+        "currentGoalTotalOdds": "3+70"
       },
       "homeStanding": {
         "position": 7,
@@ -3357,7 +3357,7 @@
       "awayOdds": 4.8,
       "totalGoalsLine": 2.5,
       "overOdds": 1.7692,
-      "underOdds": 2.0,
+      "underOdds": 2,
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401899534",
       "oddsVerifiedDate": "2026-11-25",
       "oddsProvider": "DraftKings",
@@ -3418,8 +3418,8 @@
       "upperTeam": "ဆမ်ဒိုးရီးယား",
       "bodyOdds": "-35",
       "goalTotalOdds": "2-60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "2-60",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -3436,8 +3436,8 @@
         "upperTeam": "ဆမ်ဒိုးရီးယား",
         "bodyOdds": "-35",
         "goalTotalOdds": "2-60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "2-60"
       },
       "homeStanding": {
         "position": 10,
@@ -3643,8 +3643,8 @@
       "upperTeam": "ပီဆာ",
       "bodyOdds": "-30",
       "goalTotalOdds": "3+80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-25",
+      "currentGoalTotalOdds": "3+85",
       "internetPrediction": "1-1",
       "sourcePredictionType": "Owner PDF Internet column; not AI or Bookies output",
       "sourcePDF": "25(2).pdf",
@@ -3661,8 +3661,8 @@
         "upperTeam": "ပီဆာ",
         "bodyOdds": "-30",
         "goalTotalOdds": "3+80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-25",
+        "currentGoalTotalOdds": "3+85"
       },
       "homeStanding": {
         "position": 6,
@@ -3851,5 +3851,9 @@
     "specialChoiceCount": 1,
     "formGaps": [],
     "currentPrices": "Blank until separate current-price PDF is supplied"
-  }
+  },
+  "currentPricesAvailable": true,
+  "currentOddsSourceFile": "25 စျေး.pdf",
+  "currentOddsSourceSha256": "398f9389d486b4dd3a4d4b2054ad2fc54913be41347f3c5e1505a7dd3e6b4234",
+  "currentOddsSourceDate": "2026-11-25"
 }
