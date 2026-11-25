@@ -139,7 +139,7 @@
    // League banner and column titles are the ONLY colored table areas.
    fill(ctx,M,y,W-M*2,52,palette.header,9);
    crest(ctx,leagueCrest(league),M+12,y+9,34,"⚽");
-   text(ctx,window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league,M+58,y+27,23,headerText,true,"left",W-M*2-72);
+   text(ctx,matches[0]?.leagueDisplay||window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league,M+58,y+27,23,headerText,true,"left",W-M*2-72);
    y+=58;
    fill(ctx,M,y,W-M*2,56,palette.deep);
    const titles=["ပွဲချိန်","ယှဉ်ပြိုင်မည့်အသင်း","အပေါ်အသင်း","ဘော်ဒီကြေး","ဂိုးပေါင်းကြေး","အင်တာနက်ခန့်မှန်းချက်"];
@@ -189,7 +189,7 @@
       text(ctx,updated,x+half*1.5,y+34,fit(ctx,updated,half-8,19,15),isFCJ?"#17130b":"#164c3d",true,"center",half-8);
      }
     }
-    text(ctx,m.pdfLastColumn??"—",xs[5]+widths[5]/2,y+34,19,palette.bodyText,true,"center",widths[5]-10);
+    text(ctx,m.pdfLastColumn??m.internetPrediction??"—",xs[5]+widths[5]/2,y+34,19,palette.bodyText,true,"center",widths[5]-10);
     y+=68;
    }
    y+=12;
@@ -218,11 +218,11 @@
    fill(ctx,M,y,W-M*2,54,C.head,10);
    const leagueLogo=brandData?.leagueCrest(league);
    if(leagueLogo)crest(ctx,leagueLogo,M+10,y+8,38,"");
-   text(ctx,window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league,M+(leagueLogo?60:19),y+27,23,C.orange,true);y+=66;
+   text(ctx,matches[0]?.leagueDisplay||window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league,M+(leagueLogo?60:19),y+27,23,C.orange,true);y+=66;
    for(const m of items){
     fill(ctx,M,y,W-M*2,200,C.panel,12);
     fill(ctx,M,y,W-M*2,44,C.head,10);
-    text(ctx,"◈ "+(window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league),M+18,y+23,17,C.orange,true);
+    text(ctx,"◈ "+(matches[0]?.leagueDisplay||window.FutureCodeBrandExportData?.leagueName(league)||leagues[league]||league),M+18,y+23,17,C.orange,true);
     text(ctx,window.FutureCodeTime?.clock(m)||m.kickoffYangon||"",W-M-19,y+23,15,C.muted,false,"right");
     crest(ctx,m.homeCrestUrl,M+62,y+59,78,m.homeDisplay||m.home);
     crest(ctx,m.awayCrestUrl,W-M-140,y+59,78,m.awayDisplay||m.away);
