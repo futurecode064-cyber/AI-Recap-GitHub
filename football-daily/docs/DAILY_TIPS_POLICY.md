@@ -1,8 +1,12 @@
+## Owner clarification — 2026-11-26: football-only published prose
+
+Evaluate handicap and total-goals prices privately when deciding between teams, Over or Under. NEVER include odds/prices, required goal margins, partial settlements, profit/loss percentages, or price/value arguments in published preview prose, V2/V3/V4 summaries, Special Choice or their English translations. Public reasoning must explain verified form, attacking/defensive performance, availability and tactics. Keep the final selected team/Over/Under consistent. Existing separate odds tables and market fields remain intact. This overrides the earlier instruction to explain price requirements inside the article.
+
 ## Owner correction — 2026-11-26: all PDF fixtures and price-aware selections
 
 Every fixture in the owner’s current PDF must appear in the daily previews, odds, and VIP Internet / Bookies / AI Tips coverage. Do not restrict the edition to three matches or only Premier League, Serie A and LaLiga. Retain every row and verify its identity. Special Choice remains ONE unless the owner changes it.
 
-Preview selections must target the actual Myanmar handicap or total-goals price, not simply the team most likely to win the match. Evaluate both the giving and receiving sides and Over/Under independently. A famous club or a favourite is not a reason to select it. Explain the required margin and partial settlement, relate current form/availability to that price, and select the best-supported market without quotas or guarantees. Allowed selection labels are the exact PDF home/away display name, `ဂိုးပေါ်`, or `ဂိုးအောက်`. Keep full preview, V2/V3/V4 selection, Special Choice, results, English translation and every PNG/ZIP consistent. Do not force all selections into team-winner fields. A missing 1X2 quote stays explicitly unavailable and may not be invented; other verified markets can still be analysed.
+Preview selections must target the actual Myanmar handicap or total-goals price, not simply the team most likely to win the match. Evaluate both the giving and receiving sides and Over/Under independently. A famous club or a favourite is not a reason to select it. Assess margin and settlement privately; publish only football reasons for the selected outcome, without quotas or guarantees. Allowed selection labels are the exact PDF home/away display name, `ဂိုးပေါ်`, or `ဂိုးအောက်`. Keep full preview, V2/V3/V4 selection, Special Choice, results, English translation and every PNG/ZIP consistent. Do not force all selections into team-winner fields. A missing 1X2 quote stays explicitly unavailable and may not be invented; other verified markets can still be analysed.
 
 # Future Code Daily Tips – Publishing Contract (every morning, Asia/Yangon)
 
