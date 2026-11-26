@@ -108,7 +108,7 @@ function appendBoldText(parent,plainText){
  }
  return parent;
 }
-function goodUrl(url){try{let u=new URL(url);return u.protocol==="https:"||u.protocol==="http:"}catch{return false}}
+function goodUrl(url){try{let u=new URL(url,document.baseURI);return u.protocol==="https:"||u.protocol==="http:"}catch{return false}}
 function teamLabel(match,side){return textOrEmpty(match[side+"Display"])||textOrEmpty(match[side])||"Team"}
 function textOrEmpty(value){return typeof value==="string"&&value.trim()?value.trim():""}
 function teamSide(match,prefix){
