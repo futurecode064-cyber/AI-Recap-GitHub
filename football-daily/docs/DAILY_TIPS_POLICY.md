@@ -1,3 +1,9 @@
+## Owner correction — 2026-11-26: all PDF fixtures and price-aware selections
+
+Every fixture in the owner’s current PDF must appear in the daily previews, odds, and VIP Internet / Bookies / AI Tips coverage. Do not restrict the edition to three matches or only Premier League, Serie A and LaLiga. Retain every row and verify its identity. Special Choice remains ONE unless the owner changes it.
+
+Preview selections must target the actual Myanmar handicap or total-goals price, not simply the team most likely to win the match. Evaluate both the giving and receiving sides and Over/Under independently. A famous club or a favourite is not a reason to select it. Explain the required margin and partial settlement, relate current form/availability to that price, and select the best-supported market without quotas or guarantees. Allowed selection labels are the exact PDF home/away display name, `ဂိုးပေါ်`, or `ဂိုးအောက်`. Keep full preview, V2/V3/V4 selection, Special Choice, results, English translation and every PNG/ZIP consistent. Do not force all selections into team-winner fields. A missing 1X2 quote stays explicitly unavailable and may not be invented; other verified markets can still be analysed.
+
 # Future Code Daily Tips – Publishing Contract (every morning, Asia/Yangon)
 
 This is a standing instruction for every future day's publication, not a one-off prompt. When creating or updating \`data/today.json\`, always prepare the companion file \`data/tips/YYYY-MM-DD.json\` with independently sourced VIP tips. Never copy a score from a bookmaker calculation or the Poisson model into the VIP field and call it a web tip.

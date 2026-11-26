@@ -1,3 +1,9 @@
+## Owner correction — 2026-11-26: all PDF fixtures and price-aware selections
+
+Every fixture in the owner’s current PDF must appear in the daily previews, odds, and VIP Internet / Bookies / AI Tips coverage. Do not restrict the edition to three matches or only Premier League, Serie A and LaLiga. Retain every row and verify its identity. Special Choice remains ONE unless the owner changes it.
+
+Preview selections must target the actual Myanmar handicap or total-goals price, not simply the team most likely to win the match. Evaluate both the giving and receiving sides and Over/Under independently. A famous club or a favourite is not a reason to select it. Explain the required margin and partial settlement, relate current form/availability to that price, and select the best-supported market without quotas or guarantees. Allowed selection labels are the exact PDF home/away display name, `ဂိုးပေါ်`, or `ဂိုးအောက်`. Keep full preview, V2/V3/V4 selection, Special Choice, results, English translation and every PNG/ZIP consistent. Do not force all selections into team-winner fields. A missing 1X2 quote stays explicitly unavailable and may not be invented; other verified markets can still be analysed.
+
 ## PERMANENT GOAL ZONE ENGLISH EDITION DAILY PUBLISHING — OWNER 2026-11-16
 
 **Mandatory seventh public route:** `/goal-zone-english/` (and its `odds.html`) is a REQUIRED part of every owner-invoked daily publication, alongside the six established routes. The English site is an existing mirror, not a newly created site. Main and Goal Zone Myanmar alone do not qualify as daily publication COMPLETE when the English edition is stale.

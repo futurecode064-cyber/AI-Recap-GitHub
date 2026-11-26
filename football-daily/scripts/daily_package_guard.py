@@ -37,7 +37,8 @@ for m in ms:
     for side in ['home','away']:
         form=m.get(side+'LastFive',[]);check(len(form)==5,f'{ident}: {side} last five incomplete')
         for game in form:check(game.get('result') in ['W','D','L'] and bool(game.get('date')),f'{ident}: invalid last-five entry')
-    for f in ['homeOdds','drawOdds','awayOdds','homeCrestUrl','awayCrestUrl','leagueLogoUrl','oddsSourceUrl']:check(bool(m.get(f)),f'{ident}: missing {f}')
+    for f in ['homeCrestUrl','awayCrestUrl','leagueLogoUrl','oddsSourceUrl']:check(bool(m.get(f)),f'{ident}: missing {f}')
+    for f in ['homeOdds','drawOdds','awayOdds']:check(bool(m.get(f)) or bool(m.get('oddsUnavailableReason')),f'{ident}: missing {f} without explicit unavailable reason')
 # Permanent Preview V2 candidate guard from 2026-11-01 onward.
 # Prevent publishing a new day with copied/opening sentence summaries or duplicate banners.
 if day >= date(2026,11,1):
@@ -50,7 +51,7 @@ if day >= date(2026,11,1):
         check(m.get('previewV2EditorialDate')==str(day) and m.get('previewV2SourcePreviewDate')==str(day),f'{ident}: stale V2 editorial/source date')
         check(isinstance(summary,str) and 180<=len(summary.strip())<=720 and summary.count('။')>=2,f'{ident}: unreviewed or incomplete V2 editorial')
         check(isinstance(summary,str) and not source.startswith(summary[:110]),f'{ident}: V2 mechanically clipped from original')
-        check(isinstance(chosen,str) and chosen in [m.get('homeDisplay'),m.get('awayDisplay')],f'{ident}: V2 selection must match PDF Myanmar team name')
+        check(isinstance(chosen,str) and chosen in [m.get('homeDisplay'),m.get('awayDisplay'),'ဂိုးပေါ်','ဂိုးအောက်'],f'{ident}: V2 selection must match a PDF Myanmar team or Over/Under')
         check('reviewed' in str(m.get('previewV2EditorialStatus','')),f'{ident}: V2 human/editorial review marker missing')
 choices=[m for m in ms if m.get('specialChoice')];check(len(choices)==a.special_count,'Special Choice count differs from requested count')
 for m in choices:
@@ -62,7 +63,7 @@ for m in choices:
           bool(re.search(r'ကို ရွေး(?:ချယ်)?ပါတယ်။(?:\*\*)?$',paragraphs[0])),
           f"{m.get('fixtureId')}: premium one-paragraph special analysis incomplete")
 for m in ms:
-    check(m.get('oddsVerifiedDate')==str(day),f"{m.get('fixtureId')}: 1X2 not reverified for today's probability section")
+    check(m.get('oddsVerifiedDate')==str(day) or bool(m.get('oddsUnavailableReason')),f"{m.get('fixtureId')}: 1X2 not reverified for today's probability section")
 tids={x.get('fixtureId') for x in t.get('items',[])}
 for ident in byid:check(ident in tids,f'{ident}: VIP source or explicit unavailable record missing')
 for item in t.get('items',[]):

@@ -8,7 +8,7 @@ const myanmar=s=>typeof s==="string"&&(/[\u1000-\u109f]/u.test(s)||s==="KuPS");
 const clean=s=>String(s??"").replace(/\*\*/g,"").normalize("NFC").replace(/\s+/gu," ").trim();
 function sourcePicks(match){
  const tail=clean(match.dailyPreviewText).slice(-330);
- const names=[match.homeDisplay,match.awayDisplay].filter(Boolean);
+ const names=[match.homeDisplay,match.awayDisplay,"ဂိုးပေါ်","ဂိုးအောက်"].filter(Boolean);
  return names.filter(name=>{
   const short=name.split(/\s+/u).at(-1);
   const variants=[name,short].filter(v=>v&&!/^\d+$/u.test(v));
@@ -35,7 +35,7 @@ function validateReport(report){
   if(short.length<CONFIG.content.summaryMinLength||short.length>CONFIG.content.summaryMaxLength)error(who,"V2 summary length outside readable card bounds");
   if((short.match(/။/gu)||[]).length<CONFIG.content.minSentences)error(who,"V2 summary lacks cohesive complete sentences");
   if(!short.includes(m.homeDisplay)||!short.includes(m.awayDisplay))error(who,"V2 summary must cover both Myanmar teams");
-  if(!short.endsWith(m.previewV2Selection+"ကို ရွေးချယ်ပါတယ်။"))error(who,"V2 summary must end with the approved team choice");
+  if(!short.endsWith(m.previewV2Selection+"ကို ရွေးချယ်ပါတယ်။"))error(who,"V2 summary must end with the approved market choice");
   if((short.match(/။/gu)||[]).length>6)warnings.push(who+": V2 summary may be too long for a readable four-point card");
   if(short&&long.startsWith(short.slice(0,Math.min(110,short.length))))error(who,"mechanically copied opening of full preview");
   if(seenSummaries.has(short))error(who,"duplicate generic summary");
@@ -45,7 +45,7 @@ function validateReport(report){
   if(m?.previewV2EditorialDate!==date||m?.previewV2SourcePreviewDate!==date)error(who,"stale editorial/source date");
   if(!String(m?.previewV2EditorialStatus||"").includes("reviewed"))error(who,"reviewed editorial provenance missing");
   const chosen=m?.previewV2Selection;
-  if(!chosen||![m.homeDisplay,m.awayDisplay].includes(chosen))error(who,"V2 choice must name one of the two PDF Myanmar teams");
+  if(!chosen||![m.homeDisplay,m.awayDisplay,"ဂိုးပေါ်","ဂိုးအောက်"].includes(chosen))error(who,"V2 choice must name a PDF Myanmar team or Over/Under");
   const source=sourcePicks(m);
   if(source.length!==1||source[0]!==chosen)error(who,"V2 choice mismatches original approved preview");
   for(const field of ["homeCrestUrl","awayCrestUrl"]){
