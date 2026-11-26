@@ -8,8 +8,8 @@
   const clean=s=>String(s??"").replace(/\*\*/g,"").normalize("NFC").trim();
   function pick(m){
     if(!m)return "";
-    const names=[clean(m.homeDisplay||m.home),clean(m.awayDisplay||m.away)].filter(Boolean);
-    for(const field of ["previewV2Selection","editorialSelection","selectedTeam","selectionTeam"]){
+    const names=[clean(m.homeDisplay||m.home),clean(m.awayDisplay||m.away),"ဂိုးပေါ်","ဂိုးအောက်","Over","Under"].filter(Boolean);
+    for(const field of ["previewV2Selection","editorialSelection","selectedTeam","selectionTeam","selection"]){
       const value=clean(m[field]);
       if(value&&names.includes(value))return value;
     }
