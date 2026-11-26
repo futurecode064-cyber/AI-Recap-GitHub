@@ -3,7 +3,7 @@
   "timezone": "Asia/Yangon",
   "sourcePDF": "26(4).pdf",
   "sourceRows": 36,
-  "currentPricesAvailable": false,
+  "currentPricesAvailable": true,
   "matches": [
     {
       "fixtureId": "fc-20261126-01",
@@ -25,8 +25,8 @@
       "upperTeam": "ဘီဆစ်တပ်",
       "bodyOdds": "2+45",
       "goalTotalOdds": "4+85",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+50",
+      "currentGoalTotalOdds": "3-80",
       "internetPrediction": "3-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -42,8 +42,8 @@
         "upperTeam": "ဘီဆစ်တပ်",
         "bodyOdds": "2+45",
         "goalTotalOdds": "4+85",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+50",
+        "currentGoalTotalOdds": "3-80"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/1895.png",
       "homeLastFive": [
@@ -268,8 +268,8 @@
       "upperTeam": "ဘုန်းမောက်",
       "bodyOdds": "-70",
       "goalTotalOdds": "3+90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-100",
+      "currentGoalTotalOdds": "2-90",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -285,8 +285,8 @@
         "upperTeam": "ဘုန်းမောက်",
         "bodyOdds": "-70",
         "goalTotalOdds": "3+90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-100",
+        "currentGoalTotalOdds": "2-90"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/85.png",
       "homeLastFive": [
@@ -517,8 +517,8 @@
       "upperTeam": "လေဗာကူဆင်",
       "bodyOdds": "1+40",
       "goalTotalOdds": "3-35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+40",
+      "currentGoalTotalOdds": "3-30",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -534,8 +534,8 @@
         "upperTeam": "လေဗာကူဆင်",
         "bodyOdds": "1+40",
         "goalTotalOdds": "3-35",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+40",
+        "currentGoalTotalOdds": "3-30"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/597.png",
       "homeLastFive": [
@@ -760,8 +760,8 @@
       "upperTeam": "အေစီမီလန်",
       "bodyOdds": "-15",
       "goalTotalOdds": "3+70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "3+100",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -777,8 +777,8 @@
         "upperTeam": "အေစီမီလန်",
         "bodyOdds": "-15",
         "goalTotalOdds": "3+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "3+100"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/435.png",
       "homeLastFive": [
@@ -1004,8 +1004,8 @@
       "upperTeam": "မာဆေးလ်",
       "bodyOdds": "1-90",
       "goalTotalOdds": "3+15",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-85",
+      "currentGoalTotalOdds": "3+5",
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -1021,8 +1021,8 @@
         "upperTeam": "မာဆေးလ်",
         "bodyOdds": "1-90",
         "goalTotalOdds": "3+15",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-85",
+        "currentGoalTotalOdds": "3+5"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/176.png",
       "homeLastFive": [
@@ -1247,8 +1247,8 @@
       "upperTeam": "ဆဲလ်ဘတ်",
       "bodyOdds": "2-55",
       "goalTotalOdds": "4+60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-50",
+      "currentGoalTotalOdds": "4+65",
       "internetPrediction": "3-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -1264,8 +1264,8 @@
         "upperTeam": "ဆဲလ်ဘတ်",
         "bodyOdds": "2-55",
         "goalTotalOdds": "4+60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-50",
+        "currentGoalTotalOdds": "4+65"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/2790.png",
       "homeLastFive": [
@@ -1405,7 +1405,7 @@
       },
       "homeOdds": 1.1538,
       "drawOdds": 8.5,
-      "awayOdds": 15.0,
+      "awayOdds": 15,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915520",
       "oddsProvider": "DraftKings",
@@ -1490,8 +1490,8 @@
       "upperTeam": "ယူနီယံစိန့်",
       "bodyOdds": "1-90",
       "goalTotalOdds": "3-45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-80",
+      "currentGoalTotalOdds": "3-40",
       "internetPrediction": "2-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -1507,8 +1507,8 @@
         "upperTeam": "ယူနီယံစိန့်",
         "bodyOdds": "1-90",
         "goalTotalOdds": "3-45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-80",
+        "currentGoalTotalOdds": "3-40"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/5807.png",
       "homeLastFive": [
@@ -1733,8 +1733,8 @@
       "upperTeam": "ဘင်ဖီကာ",
       "bodyOdds": "1-45",
       "goalTotalOdds": "3-60",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-40",
+      "currentGoalTotalOdds": "3-55",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -1750,8 +1750,8 @@
         "upperTeam": "ဘင်ဖီကာ",
         "bodyOdds": "1-45",
         "goalTotalOdds": "3-60",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-40",
+        "currentGoalTotalOdds": "3-55"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/11706.png",
       "homeLastFive": [
@@ -1890,7 +1890,7 @@
         "season": "2026-27"
       },
       "homeOdds": 5.75,
-      "drawOdds": 5.0,
+      "drawOdds": 5,
       "awayOdds": 1.4878,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915518",
@@ -1976,8 +1976,8 @@
       "upperTeam": "ပဲလေ့စ်",
       "bodyOdds": "-60",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "3-5",
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -1993,8 +1993,8 @@
         "upperTeam": "ပဲလေ့စ်",
         "bodyOdds": "-60",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "3-5"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/384.png",
       "homeLastFive": [
@@ -2219,8 +2219,8 @@
       "upperTeam": "ဖာရန်စီဗာရို့စ်",
       "bodyOdds": "1-90",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-65",
+      "currentGoalTotalOdds": "3-10",
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -2236,8 +2236,8 @@
         "upperTeam": "ဖာရန်စီဗာရို့စ်",
         "bodyOdds": "1-90",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-65",
+        "currentGoalTotalOdds": "3-10"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/622.png",
       "homeLastFive": [
@@ -2462,8 +2462,8 @@
       "upperTeam": "ဂျူဗင်တပ်",
       "bodyOdds": "2-25",
       "goalTotalOdds": "3-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-20",
+      "currentGoalTotalOdds": "3-80",
       "internetPrediction": "3-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -2479,8 +2479,8 @@
         "upperTeam": "ဂျူဗင်တပ်",
         "bodyOdds": "2-25",
         "goalTotalOdds": "3-80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-20",
+        "currentGoalTotalOdds": "3-80"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/111.png",
       "homeLastFive": [
@@ -2599,8 +2599,8 @@
         }
       ],
       "homeOdds": 1.1739,
-      "drawOdds": 8.0,
-      "awayOdds": 15.0,
+      "drawOdds": 8,
+      "awayOdds": 15,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915502",
       "oddsProvider": "DraftKings",
@@ -2705,8 +2705,8 @@
       "upperTeam": "ရင်းနက်စ်",
       "bodyOdds": "-65",
       "goalTotalOdds": "3-35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3-30",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -2722,8 +2722,8 @@
         "upperTeam": "ရင်းနက်စ်",
         "bodyOdds": "-65",
         "goalTotalOdds": "3-35",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3-30"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/147.png",
       "homeLastFive": [
@@ -2948,8 +2948,8 @@
       "upperTeam": "အန်းဒါးလက်",
       "bodyOdds": "1+70",
       "goalTotalOdds": "3+45",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+70",
+      "currentGoalTotalOdds": "3+50",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -2965,8 +2965,8 @@
         "upperTeam": "အန်းဒါးလက်",
         "bodyOdds": "1+70",
         "goalTotalOdds": "3+45",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+70",
+        "currentGoalTotalOdds": "3+50"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/1010.png",
       "homeLastFive": [
@@ -3191,8 +3191,8 @@
       "upperTeam": "လိုင်ယွန်",
       "bodyOdds": "2+10",
       "goalTotalOdds": "3-85",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+5",
+      "currentGoalTotalOdds": "3-80",
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -3208,8 +3208,8 @@
         "upperTeam": "လိုင်ယွန်",
         "bodyOdds": "2+10",
         "goalTotalOdds": "3-85",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+5",
+        "currentGoalTotalOdds": "3-80"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/167.png",
       "homeLastFive": [
@@ -3348,8 +3348,8 @@
         "season": "2026-27"
       },
       "homeOdds": 1.2105,
-      "drawOdds": 7.0,
-      "awayOdds": 12.0,
+      "drawOdds": 7,
+      "awayOdds": 12,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915501",
       "oddsProvider": "DraftKings",
@@ -3434,8 +3434,8 @@
       "upperTeam": "ဆဲလ်တစ်",
       "bodyOdds": "1+25",
       "goalTotalOdds": "3-5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+20",
+      "currentGoalTotalOdds": "3-35",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -3451,8 +3451,8 @@
         "upperTeam": "ဆဲလ်တစ်",
         "bodyOdds": "1+25",
         "goalTotalOdds": "3-5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+20",
+        "currentGoalTotalOdds": "3-35"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/21615.png",
       "homeLastFive": [
@@ -3677,8 +3677,8 @@
       "upperTeam": "အယ်ခမာ",
       "bodyOdds": "-45",
       "goalTotalOdds": "3+35",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "3+40",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -3694,8 +3694,8 @@
         "upperTeam": "အယ်ခမာ",
         "bodyOdds": "-45",
         "goalTotalOdds": "3+35",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "3+40"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/433.png",
       "homeLastFive": [
@@ -3920,8 +3920,8 @@
       "upperTeam": "ဆန်းဒါးလန်း",
       "bodyOdds": "2+50",
       "goalTotalOdds": "3=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+45",
+      "currentGoalTotalOdds": "3=",
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -3937,8 +3937,8 @@
         "upperTeam": "ဆန်းဒါးလန်း",
         "bodyOdds": "2+50",
         "goalTotalOdds": "3=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+45",
+        "currentGoalTotalOdds": "3="
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/366.png",
       "homeLastFive": [
@@ -4057,8 +4057,8 @@
         }
       ],
       "homeOdds": 1.2564,
-      "drawOdds": 6.0,
-      "awayOdds": 11.0,
+      "drawOdds": 6,
+      "awayOdds": 11,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915513",
       "oddsProvider": "DraftKings",
@@ -4163,8 +4163,8 @@
       "upperTeam": "ဟော့ဖန်ဟိမ်း",
       "bodyOdds": "2+90",
       "goalTotalOdds": "3-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+90",
+      "currentGoalTotalOdds": "3-85",
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -4180,8 +4180,8 @@
         "upperTeam": "ဟော့ဖန်ဟိမ်း",
         "bodyOdds": "2+90",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+90",
+        "currentGoalTotalOdds": "3-85"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/7911.png",
       "homeLastFive": [
@@ -4406,8 +4406,8 @@
       "upperTeam": "ကိုင်ရတ်",
       "bodyOdds": "-75",
       "goalTotalOdds": "3+95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-60",
+      "currentGoalTotalOdds": "2-100",
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -4423,8 +4423,8 @@
         "upperTeam": "ကိုင်ရတ်",
         "bodyOdds": "-75",
         "goalTotalOdds": "3+95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "2-100"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/2528.png",
       "homeLastFive": [
@@ -4649,8 +4649,8 @@
       "upperTeam": "အေဂျက်",
       "bodyOdds": "2-60",
       "goalTotalOdds": "4+10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-50",
+      "currentGoalTotalOdds": "4+5",
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -4666,8 +4666,8 @@
         "upperTeam": "အေဂျက်",
         "bodyOdds": "2-60",
         "goalTotalOdds": "4+10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-50",
+        "currentGoalTotalOdds": "4+5"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/139.png",
       "homeLastFive": [
@@ -4787,7 +4787,7 @@
       ],
       "homeOdds": 1.1739,
       "drawOdds": 8.5,
-      "awayOdds": 13.0,
+      "awayOdds": 13,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915815",
       "oddsProvider": "DraftKings",
@@ -4894,8 +4894,8 @@
       "upperTeam": "ဘရန်း",
       "bodyOdds": "-65",
       "goalTotalOdds": "3-30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-45",
+      "currentGoalTotalOdds": "3-20",
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -4911,8 +4911,8 @@
         "upperTeam": "ဘရန်း",
         "bodyOdds": "-65",
         "goalTotalOdds": "3-30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-45",
+        "currentGoalTotalOdds": "3-20"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/620.png",
       "homeLastFive": [
@@ -5032,7 +5032,7 @@
       ],
       "homeOdds": 2.15,
       "drawOdds": 3.95,
-      "awayOdds": 3.0,
+      "awayOdds": 3,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915808",
       "oddsProvider": "DraftKings",
@@ -5137,8 +5137,8 @@
       "upperTeam": "ဘရိုက်တန်",
       "bodyOdds": "2-90",
       "goalTotalOdds": "3-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-65",
+      "currentGoalTotalOdds": "3-65",
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -5154,8 +5154,8 @@
         "upperTeam": "ဘရိုက်တန်",
         "bodyOdds": "2-90",
         "goalTotalOdds": "3-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-65",
+        "currentGoalTotalOdds": "3-65"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/331.png",
       "homeLastFive": [
@@ -5295,7 +5295,7 @@
       },
       "homeOdds": 1.125,
       "drawOdds": 9.5,
-      "awayOdds": 19.0,
+      "awayOdds": 19,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915814",
       "oddsProvider": "DraftKings",
@@ -5380,8 +5380,8 @@
       "upperTeam": "ရိုဂိုဇင့်",
       "bodyOdds": "1+10",
       "goalTotalOdds": "3+15",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1=",
+      "currentGoalTotalOdds": "3+10",
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -5397,8 +5397,8 @@
         "upperTeam": "ရိုဂိုဇင့်",
         "bodyOdds": "1+10",
         "goalTotalOdds": "3+15",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1=",
+        "currentGoalTotalOdds": "3+10"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/21943.png",
       "homeLastFive": [
@@ -5538,7 +5538,7 @@
       },
       "homeOdds": 1.6061,
       "drawOdds": 4.5,
-      "awayOdds": 5.0,
+      "awayOdds": 5,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915810",
       "oddsProvider": "DraftKings",
@@ -5623,8 +5623,8 @@
       "upperTeam": "လူဂန်နို",
       "bodyOdds": "-65",
       "goalTotalOdds": "3+50",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-60",
+      "currentGoalTotalOdds": "3+60",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -5640,8 +5640,8 @@
         "upperTeam": "လူဂန်နို",
         "bodyOdds": "-65",
         "goalTotalOdds": "3+50",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "3+60"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/7922.png",
       "homeLastFive": [
@@ -5866,8 +5866,8 @@
       "upperTeam": "မိုနာကို",
       "bodyOdds": "1-5",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-5",
+      "currentGoalTotalOdds": "3=",
       "internetPrediction": "1-3",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -5883,8 +5883,8 @@
         "upperTeam": "မိုနာကို",
         "bodyOdds": "1-5",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-5",
+        "currentGoalTotalOdds": "3="
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/262.png",
       "homeLastFive": [
@@ -6109,8 +6109,8 @@
       "upperTeam": "ဂီတာဖေး",
       "bodyOdds": "1-35",
       "goalTotalOdds": "2-90",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-30",
+      "currentGoalTotalOdds": "2-60",
       "internetPrediction": "0-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -6126,8 +6126,8 @@
         "upperTeam": "ဂီတာဖေး",
         "bodyOdds": "1-35",
         "goalTotalOdds": "2-90",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-30",
+        "currentGoalTotalOdds": "2-60"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/20025.png",
       "homeLastFive": [
@@ -6245,7 +6245,7 @@
           "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401928526"
         }
       ],
-      "homeOdds": 7.0,
+      "homeOdds": 7,
       "drawOdds": 4.4,
       "awayOdds": 1.4651,
       "oddsVerifiedDate": "2026-11-26",
@@ -6352,8 +6352,8 @@
       "upperTeam": "ရီဂါ",
       "bodyOdds": "-75",
       "goalTotalOdds": "3+95",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-65",
+      "currentGoalTotalOdds": "2-95",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -6369,8 +6369,8 @@
         "upperTeam": "ရီဂါ",
         "bodyOdds": "-75",
         "goalTotalOdds": "3+95",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-65",
+        "currentGoalTotalOdds": "2-95"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/20028.png",
       "homeLastFive": [
@@ -6595,8 +6595,8 @@
       "upperTeam": "မစ်ဂျေးလန်း",
       "bodyOdds": "-50",
       "goalTotalOdds": "3+5",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-30",
+      "currentGoalTotalOdds": "3+5",
       "internetPrediction": "1-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -6612,8 +6612,8 @@
         "upperTeam": "မစ်ဂျေးလန်း",
         "bodyOdds": "-50",
         "goalTotalOdds": "3+5",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-30",
+        "currentGoalTotalOdds": "3+5"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/22281.png",
       "homeLastFive": [
@@ -6847,8 +6847,8 @@
       "upperTeam": "ထရာဇွန်စပေါ",
       "bodyOdds": "1+50",
       "goalTotalOdds": "3=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1+60",
+      "currentGoalTotalOdds": "3-5",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -6864,8 +6864,8 @@
         "upperTeam": "ထရာဇွန်စပေါ",
         "bodyOdds": "1+50",
         "goalTotalOdds": "3=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1+60",
+        "currentGoalTotalOdds": "3-5"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/10834.png",
       "homeLastFive": [
@@ -6984,7 +6984,7 @@
         }
       ],
       "homeOdds": 4.2,
-      "drawOdds": 4.0,
+      "drawOdds": 4,
       "awayOdds": 1.7692,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915803",
@@ -7090,8 +7090,8 @@
       "upperTeam": "အတ္တလန္တာ",
       "bodyOdds": "1-60",
       "goalTotalOdds": "3-30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "1-55",
+      "currentGoalTotalOdds": "3-20",
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -7107,8 +7107,8 @@
         "upperTeam": "အတ္တလန္တာ",
         "bodyOdds": "1-60",
         "goalTotalOdds": "3-30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "1-55",
+        "currentGoalTotalOdds": "3-20"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/20710.png",
       "homeLastFive": [
@@ -7246,8 +7246,8 @@
         "sourceUrl": "https://www.espn.com/soccer/table/_/league/uefa.europa.conf",
         "season": "2026-27"
       },
-      "homeOdds": 6.0,
-      "drawOdds": 5.0,
+      "homeOdds": 6,
+      "drawOdds": 5,
       "awayOdds": 1.4545,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915806",
@@ -7333,8 +7333,8 @@
       "upperTeam": "ဟတ်ဒက်",
       "bodyOdds": "-70",
       "goalTotalOdds": "3+40",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-60",
+      "currentGoalTotalOdds": "3+55",
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -7350,8 +7350,8 @@
         "upperTeam": "ဟတ်ဒက်",
         "bodyOdds": "-70",
         "goalTotalOdds": "3+40",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-60",
+        "currentGoalTotalOdds": "3+55"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/489.png",
       "homeLastFive": [
@@ -7578,8 +7578,8 @@
       "upperTeam": "ကိုပင်ဟေဂင်",
       "bodyOdds": "2+20",
       "goalTotalOdds": "3-10",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2+55",
+      "currentGoalTotalOdds": "3+25",
       "internetPrediction": "1-3",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -7595,8 +7595,8 @@
         "upperTeam": "ကိုပင်ဟေဂင်",
         "bodyOdds": "2+20",
         "goalTotalOdds": "3-10",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2+55",
+        "currentGoalTotalOdds": "3+25"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/20703.png",
       "homeLastFive": [
@@ -7734,7 +7734,7 @@
         "sourceUrl": "https://www.espn.com/soccer/table/_/league/uefa.europa.conf",
         "season": "2026-27"
       },
-      "homeOdds": 12.0,
+      "homeOdds": 12,
       "drawOdds": 6.5,
       "awayOdds": 1.2353,
       "oddsVerifiedDate": "2026-11-26",
@@ -7821,8 +7821,8 @@
       "upperTeam": "ကေအေအေဂျန့်",
       "bodyOdds": "-70",
       "goalTotalOdds": "3+70",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-55",
+      "currentGoalTotalOdds": "3+85",
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -7838,8 +7838,8 @@
         "upperTeam": "ကေအေအေဂျန့်",
         "bodyOdds": "-70",
         "goalTotalOdds": "3+70",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-55",
+        "currentGoalTotalOdds": "3+85"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/3611.png",
       "homeLastFive": [
@@ -8064,8 +8064,8 @@
       "upperTeam": "နော့ဂျေးလန်း",
       "bodyOdds": "-5",
       "goalTotalOdds": "3+30",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-5",
+      "currentGoalTotalOdds": "3+35",
       "internetPrediction": "1-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -8081,8 +8081,8 @@
         "upperTeam": "နော့ဂျေးလန်း",
         "bodyOdds": "-5",
         "goalTotalOdds": "3+30",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-5",
+        "currentGoalTotalOdds": "3+35"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/3101.png",
       "homeLastFive": [
@@ -8307,8 +8307,8 @@
       "upperTeam": "ဖရိုင်းဘတ်",
       "bodyOdds": "-70",
       "goalTotalOdds": "3=",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "-100",
+      "currentGoalTotalOdds": "3+10",
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -8324,8 +8324,8 @@
         "upperTeam": "ဖရိုင်းဘတ်",
         "bodyOdds": "-70",
         "goalTotalOdds": "3=",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "-100",
+        "currentGoalTotalOdds": "3+10"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/126.png",
       "homeLastFive": [
@@ -8550,8 +8550,8 @@
       "upperTeam": "စပို့တင်းဘရာဂါ",
       "bodyOdds": "2-70",
       "goalTotalOdds": "3-80",
-      "currentBodyOdds": "",
-      "currentGoalTotalOdds": "",
+      "currentBodyOdds": "2-50",
+      "currentGoalTotalOdds": "3-50",
       "internetPrediction": "3-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
@@ -8567,8 +8567,8 @@
         "upperTeam": "စပို့တင်းဘရာဂါ",
         "bodyOdds": "2-70",
         "goalTotalOdds": "3-80",
-        "currentBodyOdds": "",
-        "currentGoalTotalOdds": ""
+        "currentBodyOdds": "2-50",
+        "currentGoalTotalOdds": "3-50"
       },
       "homeCrestUrl": "/assets/team-logos/2026-11-26/2994.png",
       "homeLastFive": [
@@ -8707,8 +8707,8 @@
         "season": "2026-27"
       },
       "homeOdds": 1.1333,
-      "drawOdds": 9.0,
-      "awayOdds": 18.0,
+      "drawOdds": 9,
+      "awayOdds": 18,
       "oddsVerifiedDate": "2026-11-26",
       "oddsSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915802",
       "oddsProvider": "DraftKings",
@@ -8773,5 +8773,8 @@
       "awayFormScope": "european",
       "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
     }
-  ]
+  ],
+  "currentOddsSourceFile": "26 စျေး(1).pdf",
+  "currentOddsSourceSha256": "c4d413356f683babd57bee2e7cf5be943f53ddd11a2225e0c4ad96e156ef4225",
+  "currentOddsSourceDate": "2026-11-26"
 }
