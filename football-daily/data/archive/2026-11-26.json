@@ -29,7 +29,7 @@
       "internetPrediction": "3-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915506",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915506",
@@ -245,7 +245,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915506",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-02",
@@ -272,7 +275,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": true,
       "espnEventId": "401915519",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915519",
@@ -494,7 +497,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915519",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-03",
@@ -521,7 +527,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915517",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915517",
@@ -737,7 +743,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915517",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-04",
@@ -764,7 +773,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915521",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915521",
@@ -981,7 +990,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "2-4",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915521",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-05",
@@ -1008,7 +1020,7 @@
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915507",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915507",
@@ -1224,7 +1236,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915507",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-06",
@@ -1251,7 +1266,7 @@
       "internetPrediction": "3-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915520",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915520",
@@ -1467,7 +1482,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915520",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-07",
@@ -1494,7 +1512,7 @@
       "internetPrediction": "2-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915508",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915508",
@@ -1710,7 +1728,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "2-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915508",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-08",
@@ -1737,7 +1758,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915518",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915518",
@@ -1953,7 +1974,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "4-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915518",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-09",
@@ -1980,7 +2004,7 @@
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915504",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915504",
@@ -2196,7 +2220,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915504",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-10",
@@ -2223,7 +2250,7 @@
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915516",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915516",
@@ -2439,7 +2466,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915516",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-11",
@@ -2466,7 +2496,7 @@
       "internetPrediction": "3-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915502",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915502",
@@ -2682,7 +2712,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "4-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915502",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-12",
@@ -2709,7 +2742,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915505",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915505",
@@ -2925,7 +2958,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "3-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915505",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-13",
@@ -2952,7 +2988,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915503",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915503",
@@ -3168,7 +3204,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "1-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915503",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-14",
@@ -3195,7 +3234,7 @@
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915501",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915501",
@@ -3411,7 +3450,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "0-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915501",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-15",
@@ -3438,7 +3480,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915512",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915512",
@@ -3654,7 +3696,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915512",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-16",
@@ -3681,7 +3726,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915514",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915514",
@@ -3897,7 +3942,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "2-4",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915514",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-17",
@@ -3924,7 +3972,7 @@
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915513",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915513",
@@ -4140,7 +4188,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915513",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-18",
@@ -4167,7 +4218,7 @@
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915515",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915515",
@@ -4383,7 +4434,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "3-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915515",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-19",
@@ -4410,7 +4464,7 @@
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915816",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915816",
@@ -4626,7 +4680,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915816",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-20",
@@ -4653,7 +4710,7 @@
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915815",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915815",
@@ -4871,7 +4928,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "4-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915815",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-21",
@@ -4898,7 +4958,7 @@
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915808",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915808",
@@ -5114,7 +5174,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "1-4",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915808",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-22",
@@ -5141,7 +5204,7 @@
       "internetPrediction": "3-0",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915814",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915814",
@@ -5357,7 +5420,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "4-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915814",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-23",
@@ -5384,7 +5450,7 @@
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915810",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915810",
@@ -5600,7 +5666,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915810",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-24",
@@ -5627,7 +5696,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915812",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915812",
@@ -5843,7 +5912,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915812",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-25",
@@ -5870,7 +5942,7 @@
       "internetPrediction": "1-3",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915811",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915811",
@@ -6086,7 +6158,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "2-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915811",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-26",
@@ -6113,7 +6188,7 @@
       "internetPrediction": "0-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915813",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915813",
@@ -6329,7 +6404,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "1-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915813",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-27",
@@ -6356,7 +6434,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915739",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915739",
@@ -6572,7 +6650,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915739",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-28",
@@ -6599,7 +6680,7 @@
       "internetPrediction": "1-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915809",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915809",
@@ -6824,7 +6905,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915809",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-29",
@@ -6851,7 +6935,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915803",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915803",
@@ -7067,7 +7151,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "1-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915803",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-30",
@@ -7094,7 +7181,7 @@
       "internetPrediction": "1-2",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915806",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915806",
@@ -7310,7 +7397,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "2-3",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915806",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-31",
@@ -7337,7 +7427,7 @@
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915805",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915805",
@@ -7555,7 +7645,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "0-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915805",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-32",
@@ -7582,7 +7675,7 @@
       "internetPrediction": "1-3",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915738",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915738",
@@ -7798,7 +7891,10 @@
       "homeFormScope": "european",
       "homeFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "2-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915738",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-33",
@@ -7825,7 +7921,7 @@
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915804",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915804",
@@ -8041,7 +8137,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "1-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915804",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-34",
@@ -8068,7 +8167,7 @@
       "internetPrediction": "1-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915807",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915807",
@@ -8284,7 +8383,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "3-2",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915807",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-35",
@@ -8311,7 +8413,7 @@
       "internetPrediction": "2-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915801",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915801",
@@ -8527,7 +8629,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "all-official",
-      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
+      "finalScore": "2-1",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915801",
+      "resultVerifiedDate": "2026-11-27"
     },
     {
       "fixtureId": "fc-20261126-36",
@@ -8554,7 +8659,7 @@
       "internetPrediction": "3-1",
       "sourcePDF": "26(4).pdf",
       "eligibleForPreview": true,
-      "status": "scheduled",
+      "status": "finished",
       "specialChoice": false,
       "espnEventId": "401915802",
       "fixtureSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915802",
@@ -8770,7 +8875,10 @@
       "homeFormScope": "all-official",
       "homeFormLabel": "နောက်ဆုံး ၅ တရားဝင်ပွဲ",
       "awayFormScope": "european",
-      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ"
+      "awayFormLabel": "နောက်ဆုံး ၅ ဥရောပပွဲ",
+      "finalScore": "4-0",
+      "resultSourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915802",
+      "resultVerifiedDate": "2026-11-27"
     }
   ],
   "publicationNotes": {
