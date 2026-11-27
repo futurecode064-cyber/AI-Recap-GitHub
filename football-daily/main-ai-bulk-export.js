@@ -60,7 +60,8 @@
   return {width:WIDTH,height:HEADER+FOOTER+page.groups.length*LEAGUE_H+page.matchCount*ROW_H};
  }
  function safeHttps(url){
-  try{const a=new URL(url);return a.protocol==="https:"?a.href:null;}catch{return null;}
+  if(typeof url!=="string"||!url.trim())return null;
+  try{const a=new URL(url,document.baseURI);return a.protocol==="https:"?a.href:null;}catch{return null;}
  }
  function loadImage(url,cache,timeoutMs=9000){
   const src=safeHttps(window.FutureCodeMainLogoAssets?.imageUrl(url)||url);
