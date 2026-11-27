@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-27",
+  "timezone": "Asia/Yangon",
+  "status": "PUBLISHED_AND_CORE_QA_VERIFIED",
+  "contentCommit": "336dd751af203536eea64bf3551679075a9e5718",
+  "rollbackCommit": "60d254e4b90c026fb4715b532fc3d98e67c6a3ae",
+  "counts": {
+    "pdfRows": 13,
+    "previews": 13,
+    "specialChoice": 2,
+    "vipInternet": 13,
+    "bookies": 13,
+    "aiTips": 13,
+    "yesterdayFinalResults": 36,
+    "news": 10
+  },
+  "sites": [
+    "Main",
+    "YKZ FAMILY",
+    "BW Sport",
+    "Ko Thet Family",
+    "KMM Sport Hub",
+    "Goal Zone MM",
+    "Goal Zone EN"
+  ],
+  "liveChecks": {
+    "eachHomeDate": "27/11/2026",
+    "eachHomePreviewCount": 13,
+    "eachOddsLeagueTables": 12,
+    "englishNewsTranslations": 10,
+    "englishOddsHasBurmeseText": false,
+    "archivePhotoLabels": 10
+  },
+  "actualDownloads": {
+    "previewTwoPng": {
+      "width": 1200,
+      "height": 1066,
+      "bytes": 359338
+    },
+    "previewThreePng": {
+      "width": 1200,
+      "height": 1587,
+      "bytes": 536889
+    },
+    "previewZip": {
+      "bytes": 359600,
+      "entries": [
+        {
+          "name": "ပွဲကြိုသုံးသပ်ချက် Version 2/Preview-V2-01.png",
+          "bytes": 359338
+        }
+      ]
+    },
+    "oddsPng": {
+      "width": 2160,
+      "height": 419,
+      "bytes": 310285
+    },
+    "englishPreviewPng": {
+      "width": 1200,
+      "height": 1137,
+      "bytes": 1288207
+    },
+    "newsPng": {
+      "width": 2400,
+      "height": 3664,
+      "bytes": 4060948
+    },
+    "resultPng": {
+      "width": 1080,
+      "height": 878,
+      "bytes": 891027
+    },
+    "videoSample": {
+      "format": "MP4",
+      "width": 720,
+      "height": 1280,
+      "seconds": 19,
+      "bytes": 160132
+    }
+  },
+  "validation": {
+    "packageGuard": "PASS",
+    "previewV2Format": "PASS",
+    "focusedImageTimeAndGoalZoneTests": {
+      "passed": 18,
+      "failed": 0
+    }
+  },
+  "limits": [
+    "Physical Android handset Gallery persistence was not tested.",
+    "Dedicated narrow-mobile viewport QA was not run.",
+    "Two legacy odds-clock assertions expect active BCF; owner-suspended BCF was preserved.",
+    "Current V2 renderer omits photographs; existing design was preserved while dated licensed source media is retained."
+  ],
+  "sourceCorrection": {
+    "fixture": "Leganes vs Sabadell",
+    "printed": "12:00 AM",
+    "verified": "2:00 AM",
+    "date": "2026-11-28"
+  },
+  "currentOdds": "Blank until a separately supplied current-price source exists."
+}
