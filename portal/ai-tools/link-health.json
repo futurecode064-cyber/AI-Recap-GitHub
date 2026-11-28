@@ -118,7 +118,7 @@
     "oss-nirdiamant-prompt-engineering": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-26T02:54:13+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-tmc-langchaingo": {
@@ -190,7 +190,7 @@
     "oss-sybil-solutions-local-studio": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:23+00:00",
+      "checkedAt": "2026-11-28T02:46:19+00:00",
       "source": "github-api"
     },
     "oss-openbmb-voxcpm": {
@@ -214,7 +214,7 @@
     "oss-fishaudio-fish-speech": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:23+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-carla-simulator-carla": {
@@ -304,7 +304,7 @@
     "oss-clearml-clearml": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:45+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-google-ai-edge-litert-lm": {
@@ -448,19 +448,19 @@
     "oss-paddlepaddle-paddleocr": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:26+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-labmlai-annotated-deep-learning-paper-implementations": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:26+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-hankcs-hanlp": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:26+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-baidu-unlimited-ocr": {
@@ -478,13 +478,13 @@
     "oss-ryancodrai-turbovec": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:26+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-dlr-rm-stable-baselines3": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:45+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-nvidia-tensorrt": {
@@ -577,28 +577,22 @@
       "checkedAt": "2026-11-25T03:35:09+00:00",
       "source": "github-api"
     },
-    "oss-sipeed-picoclaw": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-16T01:56:27+00:00",
-      "source": "github-api"
-    },
     "oss-virattt-dexter": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:27+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-m-bain-whisperx": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:27+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-googlecloudplatform-generative-ai": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-16T01:56:27+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-microsoft-rd-agent": {
@@ -742,31 +736,25 @@
     "oss-lightning-ai-litgpt": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:42+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-deepinsight-insightface": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:42+00:00",
-      "source": "github-api"
-    },
-    "oss-huggingface-agents-course": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:42+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-stanfordnlp-corenlp": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:45+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-funstory-ai-babeldoc": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:45+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-deeplabcut-deeplabcut": {
@@ -862,49 +850,25 @@
     "oss-kizuna-ai-lab-sokuji": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:43+00:00",
+      "checkedAt": "2026-11-28T02:46:19+00:00",
       "source": "github-api"
     },
     "oss-enterpilot-gomodel": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:43+00:00",
-      "source": "github-api"
-    },
-    "oss-lucidrains-vit-pytorch": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
-      "source": "github-api"
-    },
-    "oss-deepseek-ai-deepinfer": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
-      "source": "github-api"
-    },
-    "oss-browser-use-jev-ultrafast": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-mlc-ai-mlc-llm": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-spmallick-learnopencv": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
-      "source": "github-api"
-    },
-    "oss-mleveryday-100-days-of-ml-code": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-swivid-f5-tts": {
@@ -916,25 +880,25 @@
     "oss-asyncfuncai-deepwiki-open": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-llmware-ai-llmware": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-nofxaios-nofx": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-huggingface-chat-ui": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-arcee-ai-mergekit": {
@@ -952,7 +916,7 @@
     "oss-h2oai-h2o-3": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:44+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-opensensenova-sensenova-u1": {
@@ -970,7 +934,7 @@
     "oss-deeplethe-sandstorm": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:45+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-nvidia-cuml": {
@@ -988,7 +952,7 @@
     "oss-atilaahmettaner-tradingview-mcp": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:45+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-opennmt-ctranslate2": {
@@ -1000,7 +964,7 @@
     "oss-jetbrains-koog": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:45+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-unum-cloud-usearch": {
@@ -1042,25 +1006,25 @@
     "oss-jimliu-baocut": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:45+00:00",
+      "checkedAt": "2026-11-28T02:46:19+00:00",
       "source": "github-api"
     },
     "oss-robbyant-lingbot-map": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:45+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-aws-amazon-sagemaker-examples": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:45+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-ryze-ai-adgent-open-seo-mcp-skills": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:46+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-modelscope-funclip": {
@@ -1072,7 +1036,7 @@
     "oss-microsoft-agent-governance-toolkit": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:45+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-tradermonty-claude-trading-skills": {
@@ -1090,7 +1054,7 @@
     "oss-microsoft-skill-recorder": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:45+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-hao-ai-lab-fastvideo": {
@@ -1159,12 +1123,6 @@
       "checkedAt": "2026-11-26T02:54:16+00:00",
       "source": "github-api"
     },
-    "oss-tutti-os-tutti": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:47+00:00",
-      "source": "github-api"
-    },
     "oss-neptunehub-audiomuse-ai": {
       "status": "ok",
       "http": 200,
@@ -1186,25 +1144,13 @@
     "oss-mic-dkfz-nnunet": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:48+00:00",
-      "source": "github-api"
-    },
-    "oss-tigerless-labs-cost-xray": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:48+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "github-api"
     },
     "oss-clusterzx-paperless-ai": {
       "status": "ok",
       "http": 200,
       "checkedAt": "2026-11-25T03:35:06+00:00",
-      "source": "github-api"
-    },
-    "oss-deanmalmgren-textract": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:48+00:00",
       "source": "github-api"
     },
     "oss-uber-causalml": {
@@ -1261,12 +1207,6 @@
       "checkedAt": "2026-11-26T02:54:17+00:00",
       "source": "github-api"
     },
-    "oss-zai-org-glm-5": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-17T02:58:49+00:00",
-      "source": "github-api"
-    },
     "oss-walkinglabs-hands-on-modern-rl": {
       "status": "ok",
       "http": 200,
@@ -1282,7 +1222,7 @@
     "oss-modelcontextprotocol-csharp-sdk": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-17T02:58:49+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-minglink-dsh-infinite-gen-5": {
@@ -1345,12 +1285,6 @@
       "checkedAt": "2026-11-27T02:55:43+00:00",
       "source": "github-api"
     },
-    "oss-ludwig-ai-ludwig": {
-      "status": "ok",
-      "http": 200,
-      "checkedAt": "2026-11-18T02:28:32+00:00",
-      "source": "github-api"
-    },
     "oss-openmined-pysyft": {
       "status": "ok",
       "http": 200,
@@ -1360,7 +1294,7 @@
     "oss-didilili-ai-agents-from-zero": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:32+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "github-api"
     },
     "oss-darkzogx-youtube-automation-agent": {
@@ -1390,7 +1324,7 @@
     "oss-ilysenko-codex-desktop-linux": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:32+00:00",
+      "checkedAt": "2026-11-28T02:46:21+00:00",
       "source": "github-api"
     },
     "oss-uberi-speech-recognition": {
@@ -1402,7 +1336,7 @@
     "oss-torchgeo-torchgeo": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:33+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-yilewang-llm-for-zotero": {
@@ -1414,157 +1348,157 @@
     "oss-xororz-local-dream": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:33+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-brightdata-brightdata-mcp": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-18T02:28:33+00:00",
+      "checkedAt": "2026-11-28T02:46:19+00:00",
       "source": "github-api"
     },
     "oss-safetensors-safetensors": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "checkedAt": "2026-11-28T02:46:21+00:00",
       "source": "github-api"
     },
     "claude": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "checkedAt": "2026-11-28T02:46:22+00:00",
       "source": "external-https"
     },
     "perplexity": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "chatgpt": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "copilot": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "gemini": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "poe": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:16+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "deepseek": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "grok": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "consensus": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "elicit": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "chatpdf": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "openrouter": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "midjourney": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "notebooklm": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "mistral": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "leonardo": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "recraft": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "ideogram": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "krea": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "canva": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "firefly": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "openart": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "pika": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "heygen": {
@@ -1576,7 +1510,7 @@
     "runway": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "synthesia": {
@@ -1588,7 +1522,7 @@
     "freepik": {
       "status": "unknown",
       "http": 403,
-      "checkedAt": "2026-11-19T01:54:17+00:00",
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "external-https"
     },
     "luma": {
@@ -6088,7 +6022,7 @@
     "oss-ace-step-ace-step-1-5": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-25T03:35:10+00:00",
+      "checkedAt": "2026-11-28T02:46:20+00:00",
       "source": "github-api"
     },
     "oss-nvidia-cosmos": {
@@ -6310,7 +6244,7 @@
     "oss-shankarpandala-lazypredict": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-26T02:54:15+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-hydropix-translatebookswithllms": {
@@ -6616,7 +6550,7 @@
     "oss-holaboss-ai-holaos": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:45+00:00",
+      "checkedAt": "2026-11-28T02:46:18+00:00",
       "source": "github-api"
     },
     "oss-flashml-org-freevideo": {
@@ -6658,13 +6592,13 @@
     "oss-zafer-liu-data-analysis-agent": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:46+00:00",
+      "checkedAt": "2026-11-28T02:46:19+00:00",
       "source": "github-api"
     },
     "oss-youssofal-mtplx": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:46+00:00",
+      "checkedAt": "2026-11-28T02:46:19+00:00",
       "source": "github-api"
     },
     "oss-bitterbot-ai-bitterbot-desktop": {
@@ -6694,16 +6628,328 @@
     "oss-sgl-project-sglang-omni": {
       "status": "ok",
       "http": 200,
-      "checkedAt": "2026-11-27T02:55:46+00:00",
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-pnnbao97-vieneu-tts": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:18+00:00",
+      "source": "github-api"
+    },
+    "oss-rsxdalv-tts-webui": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:18+00:00",
+      "source": "github-api"
+    },
+    "oss-michaelfeil-infinity": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-openlake-project-openlake": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-bestruirui-octopus": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-nvidia-nemo-agent-toolkit": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-meta-pytorch-torchrec": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-bionic-gpt-bionic-gpt": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-orhanerday-open-ai": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-openbkn-ai-bkn-foundry": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-google-agentmesh": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-joasasantos-neurosploit": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-open-edge-platform-geti": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-agentrq-agentrq": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-braindecode-braindecode": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-smart-mcp-proxy-mcpproxy-go": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-genomoncology-biomcp": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:19+00:00",
+      "source": "github-api"
+    },
+    "oss-blockrunai-blockrun-mcp": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:20+00:00",
+      "source": "github-api"
+    },
+    "oss-datawhalechina-self-llm": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:20+00:00",
+      "source": "github-api"
+    },
+    "oss-pinchtab-pinchtab": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:20+00:00",
+      "source": "github-api"
+    },
+    "oss-maif-shapash": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-agnesai-labs-agnes-harness": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-biohub-esm": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-roryclear-clearcam": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-incoai-splash": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-ggozad-oterm": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-isair-jarvis": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-cvcuda-cv-cuda": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-angusdevgo-seep-reverse-lab": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-photon-hq-spectrum-ts": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-rubixml-ml": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-jundizhou-easy-stock": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-johannfaouzi-pyts": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-roy3838-observer": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-software-mansion-react-native-executorch": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-bitbonsai-mcpvault": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-verl-project-verl-omni": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-mirascope-mirascope": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-open-source-legal-opencontracts": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-ollaya-dev-ollaya": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:21+00:00",
+      "source": "github-api"
+    },
+    "oss-xalgorix-xalgorix": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-kitops-ml-kitops": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-tsinghua-fib-lab-agentsociety": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-fancyboi999-ai-engineering-from-scratch-zh": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-bingeljell-image-to-3dlab": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-brainlid-langchain": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-hashgraph-online-hol-guard": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-dpro-at-tel-agent": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-samvallad33-vestige": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-sbroenne-mcp-server-excel": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:22+00:00",
+      "source": "github-api"
+    },
+    "oss-interpretml-interpret": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:23+00:00",
+      "source": "github-api"
+    },
+    "oss-ed-donner-agents": {
+      "status": "ok",
+      "http": 200,
+      "checkedAt": "2026-11-28T02:46:23+00:00",
       "source": "github-api"
     }
   },
   "batchSize": 125,
-  "checkedAt": "2026-11-27T02:55:46+00:00",
+  "checkedAt": "2026-11-28T02:46:23+00:00",
   "summary": {
-    "ok": 1080,
+    "ok": 1121,
     "broken": 2,
     "unknown": 34
   },
-  "remainingUnverified": 84
+  "remainingUnverified": 43
 }
