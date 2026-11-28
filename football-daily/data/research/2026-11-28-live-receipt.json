@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-28",
+  "publishedCommit": "4abd3b8669d0f0b01028b3e180d53f102d566e36",
+  "rollbackCommit": "e6a9ff849f4a6cfec80cfcdda1c26a401f150407",
+  "liveResources": [
+    {
+      "path": "data/today.json",
+      "sameBytes": true,
+      "date": "2026-11-28",
+      "count": 30,
+      "sha256": "0d9ecd04d28a762a6e91166e7f40bde8e5917a52d420781cf4cc74e0f6ea5ece"
+    },
+    {
+      "path": "data/odds/2026-11-28.json",
+      "sameBytes": true,
+      "date": "2026-11-28",
+      "count": 30,
+      "sha256": "5c812fe06f9240e972b17eb9ebe08e5d308c97632ac5974a089ef7f9645b3b80"
+    },
+    {
+      "path": "data/tips/2026-11-28.json",
+      "sameBytes": true,
+      "date": "2026-11-28",
+      "count": 30,
+      "sha256": "b4bcaf7b157e23884e256a89df6055afc269ee4e82ebf0fe3a3a6aa445d43b05"
+    },
+    {
+      "path": "data/archive/2026-11-27.json",
+      "sameBytes": true,
+      "date": "2026-11-27",
+      "count": 13,
+      "sha256": "0f67f8ebf139efdbe2986424d79d07f1c87a11b95dc7189f9915daa6350bff1e"
+    },
+    {
+      "path": "data/news/latest.json",
+      "sameBytes": true,
+      "date": "2026-11-28",
+      "count": 10,
+      "sha256": "1003e2eab6c4e738b07365bb877f6b7c7ac7cc5bf6b63417985fcfc228333afe"
+    },
+    {
+      "path": "goal-zone-english/english-data.js",
+      "sameBytes": true,
+      "date": null,
+      "count": 0,
+      "sha256": "dfd7586bfa54f8460193924f428d92d0aebaf24b0cb2f21fb4f5f343ea458d92"
+    }
+  ],
+  "browserRoutesVerified": [
+    "/",
+    "/ykz-family/",
+    "/bw-sport/",
+    "/ko-thet-family/",
+    "/future-code-journal/",
+    "/kmm-sport-hub/",
+    "/goal-zone-english/"
+  ],
+  "counts": {
+    "previews": 30,
+    "morningOdds": 30,
+    "vipInternetOwnerPDF": 30,
+    "specialChoice": 1,
+    "yesterdayFT": 13,
+    "news": 10,
+    "complete1X2": 29
+  },
+  "checks": {
+    "packageGuard": "PASS",
+    "previewV2Guard": "PASS with missing-photo warnings",
+    "englishSyntax": "PASS",
+    "mainPreviewPNG": "Downloaded, opened, visually inspected; 1200x957",
+    "englishOddsZIP": "Downloaded, CRC valid, contains one 1200x960 PNG with three current fixtures",
+    "mainTipsCrests": "live DOM checked: no empty image sources after absolute-URL correction",
+    "newsPhotos": "10 existing licensed archive photos visually inspected; attribution preserved",
+    "timeFormatTests": "4 pass, 2 pre-existing failures from old cache-key and BCF service-suspension expectations"
+  },
+  "limitations": [
+    "26 V2 fixture photographs unavailable; correct verified club crests remain available.",
+    "Hamburg-Bayern current complete 1X2 snapshot unavailable; Bookies shows em dash.",
+    "Mobile and every export permutation were not independently exercised.",
+    "BCF service suspension preserved."
+  ]
+}
